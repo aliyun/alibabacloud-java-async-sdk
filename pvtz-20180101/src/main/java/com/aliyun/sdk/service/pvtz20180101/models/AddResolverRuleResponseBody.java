@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddResolverRuleResponseBody} extends {@link TeaModel}
  *
  * <p>AddResolverRuleResponseBody</p>
@@ -49,7 +50,10 @@ public class AddResolverRuleResponseBody extends TeaModel {
         private String ruleId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>725B8BED-901F-480C-BBAC-FA59A18580C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class AddResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The forwarding rule ID.
+         * <p>The ID of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;

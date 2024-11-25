@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchCustomLinesResponseBody} extends {@link TeaModel}
  *
  * <p>SearchCustomLinesResponseBody</p>
@@ -97,7 +98,7 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * CustomLines.
+         * <p>The custom lines.</p>
          */
         public Builder customLines(CustomLines customLines) {
             this.customLines = customLines;
@@ -105,7 +106,10 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class SearchCustomLinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchCustomLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchCustomLinesResponseBody</p>
+     */
     public static class Ipv4s extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv4")
         private java.util.List < String > ipv4;
@@ -191,6 +213,12 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchCustomLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchCustomLinesResponseBody</p>
+     */
     public static class CustomLine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -326,7 +354,10 @@ public class SearchCustomLinesResponseBody extends TeaModel {
             private Long updateTimestamp; 
 
             /**
-             * CreateTime.
+             * <p>The time when the custom line was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-27 18:16:38</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -334,7 +365,10 @@ public class SearchCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>The time when the custom line was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671174074000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -342,7 +376,10 @@ public class SearchCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The ID of the creator for the custom line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1851321989648462</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -350,7 +387,16 @@ public class SearchCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorSubType.
+             * <p>The creator type. Valid values:</p>
+             * <ul>
+             * <li>CUSTOM: Alibaba Cloud account</li>
+             * <li>SUB: RAM user</li>
+             * <li>STS: assumed role that obtains the Security Token Service (STS) token of a RAM role</li>
+             * <li>OTHER: other types</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUB</p>
              */
             public Builder creatorSubType(String creatorSubType) {
                 this.creatorSubType = creatorSubType;
@@ -358,7 +404,14 @@ public class SearchCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorType.
+             * <p>The role of the creator for the custom line. Valid values:</p>
+             * <ul>
+             * <li>USER: user</li>
+             * <li>SYSTEM: system</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder creatorType(String creatorType) {
                 this.creatorType = creatorType;
@@ -366,7 +419,7 @@ public class SearchCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv4s.
+             * <p>The IPv4 CIDR blocks.</p>
              */
             public Builder ipv4s(Ipv4s ipv4s) {
                 this.ipv4s = ipv4s;
@@ -374,7 +427,10 @@ public class SearchCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * LineId.
+             * <p>The unique ID of the custom line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11730</p>
              */
             public Builder lineId(String lineId) {
                 this.lineId = lineId;
@@ -382,7 +438,7 @@ public class SearchCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the custom line.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -390,7 +446,10 @@ public class SearchCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the custom line was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-14 14:04:08</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -398,7 +457,10 @@ public class SearchCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>The time when the custom line was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672136518000</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -412,6 +474,12 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchCustomLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchCustomLinesResponseBody</p>
+     */
     public static class CustomLines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomLine")
         private java.util.List < CustomLine> customLine;

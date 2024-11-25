@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResolverEndpointsRequest} extends {@link RequestModel}
  *
  * <p>DescribeResolverEndpointsRequest</p>
@@ -125,7 +126,10 @@ public class DescribeResolverEndpointsRequest extends Request {
         } 
 
         /**
-         * The keyword used to filter endpoints in %keyword% mode.
+         * <p>The keyword of the endpoint name, which is used for fuzzy searches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -134,7 +138,15 @@ public class DescribeResolverEndpointsRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -143,7 +155,10 @@ public class DescribeResolverEndpointsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +167,10 @@ public class DescribeResolverEndpointsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. Maximum value: 100.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,15 +179,21 @@ public class DescribeResolverEndpointsRequest extends Request {
         }
 
         /**
-         * The state of the endpoint that you want to query. If you do not specify this parameter, all endpoints are returned. Valid values:
-         * <p>
+         * <p>The state of the endpoint that you want to query. Valid values:</p>
+         * <ul>
+         * <li>SUCCESS: The endpoint works as expected.</li>
+         * <li>INIT: The endpoint is being created.</li>
+         * <li>FAILED: The endpoint failed to be created.</li>
+         * <li>CHANGE_INIT: The endpoint is being modified.</li>
+         * <li>CHANGE_FAILED: The endpoint failed to be modified.</li>
+         * <li>EXCEPTION: The endpoint encountered an exception.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, endpoints in all states are returned.</p>
+         * </blockquote>
          * 
-         * *   SUCCESS: The endpoint works as expected.
-         * *   INIT: The endpoint is being created.
-         * *   FAILED: The endpoint fails to be created.
-         * *   CHANGE_INIT: The endpoint is being modified.
-         * *   CHANGE_FAILED: The endpoint fails to be modified.
-         * *   EXCEPTION: The endpoint encounters an exception.
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -178,7 +202,10 @@ public class DescribeResolverEndpointsRequest extends Request {
         }
 
         /**
-         * VpcRegionId.
+         * <p>The region ID of the outbound virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder vpcRegionId(String vpcRegionId) {
             this.putQueryParameter("VpcRegionId", vpcRegionId);

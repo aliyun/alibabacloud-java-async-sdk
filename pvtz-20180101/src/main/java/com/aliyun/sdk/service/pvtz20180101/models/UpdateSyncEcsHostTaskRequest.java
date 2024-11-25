@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSyncEcsHostTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateSyncEcsHostTaskRequest</p>
@@ -98,7 +99,15 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
         } 
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -107,7 +116,8 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
         }
 
         /**
-         * The information about regions to be synchronized.
+         * <p>The regions to be synchronized.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder region(java.util.List < Region> region) {
             this.putQueryParameter("Region", region);
@@ -116,11 +126,15 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
         }
 
         /**
-         * The state of the task. Valid values:
-         * <p>
+         * <p>The state of the hostname synchronization task. Valid values:</p>
+         * <ul>
+         * <li>ON: The task is started.</li>
+         * <li>OFF: The task is ended.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ON
-         * *   OFF
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -129,7 +143,11 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID. This ID uniquely identifies the zone.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>df2d03865266bd9842306db586d3****</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -144,6 +162,12 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSyncEcsHostTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateSyncEcsHostTaskRequest</p>
+     */
     public static class Region extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -183,7 +207,10 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
             private Long userId; 
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -191,7 +218,10 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
             }
 
             /**
-             * The Alibaba Cloud account to which the region belongs. This parameter is used in cross-account synchronization scenarios.
+             * <p>The user ID to which the region belongs. This parameter is used in cross-account synchronization scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141339776561****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

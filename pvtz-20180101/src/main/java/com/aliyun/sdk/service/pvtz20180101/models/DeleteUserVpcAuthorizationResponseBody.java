@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserVpcAuthorizationResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteUserVpcAuthorizationResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteUserVpcAuthorizationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

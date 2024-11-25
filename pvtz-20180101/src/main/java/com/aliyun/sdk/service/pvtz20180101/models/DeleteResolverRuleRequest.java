@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteResolverRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteResolverRuleRequest</p>
@@ -68,7 +69,10 @@ public class DeleteResolverRuleRequest extends Request {
         } 
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,11 @@ public class DeleteResolverRuleRequest extends Request {
         }
 
         /**
-         * The forwarding rule ID.
+         * <p>The forwarding rule ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

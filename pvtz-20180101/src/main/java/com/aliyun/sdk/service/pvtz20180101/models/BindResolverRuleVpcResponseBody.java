@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindResolverRuleVpcResponseBody} extends {@link TeaModel}
  *
  * <p>BindResolverRuleVpcResponseBody</p>
@@ -37,7 +38,10 @@ public class BindResolverRuleVpcResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12FE6E98-3885-423E-B18B-88CC17052A31</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

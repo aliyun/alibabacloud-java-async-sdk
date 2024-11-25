@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetZoneRecordStatusRequest} extends {@link RequestModel}
  *
  * <p>SetZoneRecordStatusRequest</p>
@@ -111,7 +112,10 @@ public class SetZoneRecordStatusRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6447728c8578e66aacf062d2df4446dc</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -120,7 +124,15 @@ public class SetZoneRecordStatusRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -129,7 +141,11 @@ public class SetZoneRecordStatusRequest extends Request {
         }
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>207541****</p>
          */
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -138,11 +154,15 @@ public class SetZoneRecordStatusRequest extends Request {
         }
 
         /**
-         * The state of the DNS record. Valid values:
-         * <p>
+         * <p>The state of the DNS record. Valid values:</p>
+         * <ul>
+         * <li>ENABLE: enables the DNS record.</li>
+         * <li>DISABLE: suspends the DNS record.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ENABLE: enables the DNS record.
-         * *   DISABLE: suspends the DNS record.
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -151,7 +171,10 @@ public class SetZoneRecordStatusRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.XX.XX</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

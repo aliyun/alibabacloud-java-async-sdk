@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeZoneDnsGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeZoneDnsGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class ChangeZoneDnsGroupResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ChangeZoneDnsGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The global ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0cff188756b1d4579b25e54b66cb830</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

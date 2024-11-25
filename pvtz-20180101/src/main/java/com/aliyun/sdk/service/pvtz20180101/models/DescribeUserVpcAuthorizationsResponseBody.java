@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserVpcAuthorizationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserVpcAuthorizationsResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,7 +109,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: 20. Maximum value: 100.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +120,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -129,7 +142,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -137,7 +153,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the Alibaba Cloud accounts.
+         * <p>The Alibaba Cloud accounts to which the permissions on the resources are granted.</p>
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -150,6 +166,12 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserVpcAuthorizationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserVpcAuthorizationsResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
@@ -225,10 +247,14 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             private Long createTimestamp; 
 
             /**
-             * The authorization scope. Valid value:
-             * <p>
+             * <p>The authorization scope. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: general authorization</li>
+             * <li>CLOUD_PRODUCT: cloud service-related authorization</li>
+             * </ul>
              * 
-             * *   NORMAL: general authorization.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -236,7 +262,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud account.
+             * <p>The name of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alidn****@test.com</p>
              */
             public Builder authorizedAliyunId(String authorizedAliyunId) {
                 this.authorizedAliyunId = authorizedAliyunId;
@@ -244,7 +273,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141339776561****</p>
              */
             public Builder authorizedUserId(Long authorizedUserId) {
                 this.authorizedUserId = authorizedUserId;
@@ -252,7 +284,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the authorization was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the authorization was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-08T02:31Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -260,7 +295,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the authorization was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the authorization was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672740294000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;

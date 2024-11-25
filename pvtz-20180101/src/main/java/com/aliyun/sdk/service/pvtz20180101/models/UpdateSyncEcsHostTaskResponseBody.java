@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSyncEcsHostTaskResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateSyncEcsHostTaskResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateSyncEcsHostTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-FC9A-4595-8D96-089D73D7A63D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class UpdateSyncEcsHostTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the task was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

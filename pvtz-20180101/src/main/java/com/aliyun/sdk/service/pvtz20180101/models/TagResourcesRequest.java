@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -112,7 +113,15 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -121,11 +130,14 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Specifies whether to replace the original tags added to the resources. Valid values:
-         * <p>
+         * <p>Specifies whether to replace the original tags added to the resources. Valid values:</p>
+         * <ul>
+         * <li>True: replaces the original tags.</li>
+         * <li>False (default): appends the specified one or more tags to the original tags. If a new tag has the same key but a different value from an original tag, the new tag replaces the original tag.</li>
+         * </ul>
          * 
-         * *   True: replaces the original tags.
-         * *   False|Null: appends the specified one or more tags to the original tags. If a new tag has the same key but a different value from an original tag, the new tag replaces the original tag.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder overWrite(Boolean overWrite) {
             this.putQueryParameter("OverWrite", overWrite);
@@ -134,7 +146,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs, which are zone IDs. You can specify **1 to 50** IDs.
+         * <p>The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97fe9321a476d0861f624d3f738dcc38</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -143,7 +159,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type.
+         * <p>The resource type. Valid value: ZONE.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZONE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -152,7 +172,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags to add to the resources.
+         * <p>The tags to add to the resources.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -167,6 +188,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -206,7 +233,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource.
+             * <p>The key of tag N to add to the resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -214,7 +244,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource.
+             * <p>The value of tag N to add to the resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily</p>
              */
             public Builder value(String value) {
                 this.value = value;

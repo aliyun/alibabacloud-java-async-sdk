@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddCustomLine  AddCustomLineRequest
+     * @return AddCustomLineResponse
+     */
     @Override
     public CompletableFuture<AddCustomLineResponse> addCustomLine(AddCustomLineRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddResolverEndpoint  AddResolverEndpointRequest
+     * @return AddResolverEndpointResponse
+     */
     @Override
     public CompletableFuture<AddResolverEndpointResponse> addResolverEndpoint(AddResolverEndpointRequest request) {
         try {
@@ -67,6 +75,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h4><a href="#"></a><strong>Precautions</strong></h4>
+     * <p>If a virtual private cloud (VPC) serves as both an inbound VPC and an outbound VPC, the IP addresses of external Domain Name System (DNS) servers cannot be the same as the IP addresses of the inbound endpoint in the VPC. The IP addresses of the external DNS servers are specified in the forwarding rule associated with the outbound endpoint in the same VPC. If the IP addresses are the same, the DNS requests sent from the IP addresses of the inbound endpoint are returned to the VPC. This results in resolution failures.</p>
+     * 
+     * @param request the request parameters of AddResolverRule  AddResolverRuleRequest
+     * @return AddResolverRuleResponse
+     */
     @Override
     public CompletableFuture<AddResolverRuleResponse> addResolverRule(AddResolverRuleRequest request) {
         try {
@@ -81,6 +97,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h4><strong>Limits</strong></h4>
+     * <ul>
+     * <li>You can set an effective scope across accounts only by using an Alibaba Cloud account instead of a RAM user. You can set an effective scope across accounts registered on the same site. For example, you can perform the operation across accounts that are both registered on the Alibaba Cloud China site or Alibaba Cloud international site. You cannot set an effective scope across accounts registered on different sites. For example, you cannot perform the operation across accounts that are separately registered on the Alibaba Cloud China site and Alibaba Cloud international site.</li>
+     * <li>No API operation is provided for sending the verification codes that are required for authorization.</li>
+     * </ul>
+     * <h4><strong>Precautions</strong></h4>
+     * <p>If you set an effective scope across accounts, bills are settled within the account that is used to perform routine management on built-in authoritative zones.</p>
+     * 
+     * @param request the request parameters of AddUserVpcAuthorization  AddUserVpcAuthorizationRequest
+     * @return AddUserVpcAuthorizationResponse
+     */
     @Override
     public CompletableFuture<AddUserVpcAuthorizationResponse> addUserVpcAuthorization(AddUserVpcAuthorizationRequest request) {
         try {
@@ -95,6 +124,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddZone  AddZoneRequest
+     * @return AddZoneResponse
+     */
     @Override
     public CompletableFuture<AddZoneResponse> addZone(AddZoneRequest request) {
         try {
@@ -109,6 +142,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddZoneRecord  AddZoneRecordRequest
+     * @return AddZoneRecordResponse
+     */
     @Override
     public CompletableFuture<AddZoneRecordResponse> addZoneRecord(AddZoneRecordRequest request) {
         try {
@@ -123,6 +160,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindResolverRuleVpc  BindResolverRuleVpcRequest
+     * @return BindResolverRuleVpcResponse
+     */
     @Override
     public CompletableFuture<BindResolverRuleVpcResponse> bindResolverRuleVpc(BindResolverRuleVpcRequest request) {
         try {
@@ -137,6 +178,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h5><a href="#"></a>Precautions:</h5>
+     * <p>We recommend that you set the effective scope of a zone after you configure all Domain Name System (DNS) records. If you set an effective scope before you configure DNS records, the DNS resolution for the zone within the effective scope will fail unless you enable the recursive resolution proxy for subdomain names.</p>
+     * 
+     * @param request the request parameters of BindZoneVpc  BindZoneVpcRequest
+     * @return BindZoneVpcResponse
+     */
     @Override
     public CompletableFuture<BindZoneVpcResponse> bindZoneVpc(BindZoneVpcRequest request) {
         try {
@@ -151,6 +200,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeZoneDnsGroup  ChangeZoneDnsGroupRequest
+     * @return ChangeZoneDnsGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeZoneDnsGroupResponse> changeZoneDnsGroup(ChangeZoneDnsGroupRequest request) {
         try {
@@ -165,6 +218,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckZoneName  CheckZoneNameRequest
+     * @return CheckZoneNameResponse
+     */
     @Override
     public CompletableFuture<CheckZoneNameResponse> checkZoneName(CheckZoneNameRequest request) {
         try {
@@ -179,6 +236,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomLine  DeleteCustomLineRequest
+     * @return DeleteCustomLineResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomLineResponse> deleteCustomLine(DeleteCustomLineRequest request) {
         try {
@@ -193,6 +254,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteResolverEndpoint  DeleteResolverEndpointRequest
+     * @return DeleteResolverEndpointResponse
+     */
     @Override
     public CompletableFuture<DeleteResolverEndpointResponse> deleteResolverEndpoint(DeleteResolverEndpointRequest request) {
         try {
@@ -207,6 +272,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteResolverRule  DeleteResolverRuleRequest
+     * @return DeleteResolverRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteResolverRuleResponse> deleteResolverRule(DeleteResolverRuleRequest request) {
         try {
@@ -221,6 +290,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUserVpcAuthorization  DeleteUserVpcAuthorizationRequest
+     * @return DeleteUserVpcAuthorizationResponse
+     */
     @Override
     public CompletableFuture<DeleteUserVpcAuthorizationResponse> deleteUserVpcAuthorization(DeleteUserVpcAuthorizationRequest request) {
         try {
@@ -235,6 +308,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h4><a href="#"></a>Precautions</h4>
+     * <p>If you want to delete a built-in authoritative zone whose effective scope is configured, you must disassociate the zone from the effective scope first.</p>
+     * 
+     * @param request the request parameters of DeleteZone  DeleteZoneRequest
+     * @return DeleteZoneResponse
+     */
     @Override
     public CompletableFuture<DeleteZoneResponse> deleteZone(DeleteZoneRequest request) {
         try {
@@ -249,6 +330,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>Deleted DNS records cannot be restored. Exercise caution when you perform this operation.</p>
+     * 
+     * @param request the request parameters of DeleteZoneRecord  DeleteZoneRecordRequest
+     * @return DeleteZoneRecordResponse
+     */
     @Override
     public CompletableFuture<DeleteZoneRecordResponse> deleteZoneRecord(DeleteZoneRecordRequest request) {
         try {
@@ -263,6 +352,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>You can query the operation logs of Private DNS that are generated within the last six months.</p>
+     * 
+     * @param request the request parameters of DescribeChangeLogs  DescribeChangeLogsRequest
+     * @return DescribeChangeLogsResponse
+     */
     @Override
     public CompletableFuture<DescribeChangeLogsResponse> describeChangeLogs(DescribeChangeLogsRequest request) {
         try {
@@ -277,6 +374,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCustomLineInfo  DescribeCustomLineInfoRequest
+     * @return DescribeCustomLineInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeCustomLineInfoResponse> describeCustomLineInfo(DescribeCustomLineInfoRequest request) {
         try {
@@ -291,6 +392,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCustomLines  DescribeCustomLinesRequest
+     * @return DescribeCustomLinesResponse
+     */
     @Override
     public CompletableFuture<DescribeCustomLinesResponse> describeCustomLines(DescribeCustomLinesRequest request) {
         try {
@@ -305,6 +410,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -319,6 +428,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRequestGraph  DescribeRequestGraphRequest
+     * @return DescribeRequestGraphResponse
+     */
     @Override
     public CompletableFuture<DescribeRequestGraphResponse> describeRequestGraph(DescribeRequestGraphRequest request) {
         try {
@@ -333,6 +446,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeResolverAvailableZones  DescribeResolverAvailableZonesRequest
+     * @return DescribeResolverAvailableZonesResponse
+     */
     @Override
     public CompletableFuture<DescribeResolverAvailableZonesResponse> describeResolverAvailableZones(DescribeResolverAvailableZonesRequest request) {
         try {
@@ -347,6 +464,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeResolverEndpoint  DescribeResolverEndpointRequest
+     * @return DescribeResolverEndpointResponse
+     */
     @Override
     public CompletableFuture<DescribeResolverEndpointResponse> describeResolverEndpoint(DescribeResolverEndpointRequest request) {
         try {
@@ -361,6 +482,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeResolverEndpoints  DescribeResolverEndpointsRequest
+     * @return DescribeResolverEndpointsResponse
+     */
     @Override
     public CompletableFuture<DescribeResolverEndpointsResponse> describeResolverEndpoints(DescribeResolverEndpointsRequest request) {
         try {
@@ -375,6 +500,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeResolverRule  DescribeResolverRuleRequest
+     * @return DescribeResolverRuleResponse
+     */
     @Override
     public CompletableFuture<DescribeResolverRuleResponse> describeResolverRule(DescribeResolverRuleRequest request) {
         try {
@@ -389,6 +518,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeResolverRules  DescribeResolverRulesRequest
+     * @return DescribeResolverRulesResponse
+     */
     @Override
     public CompletableFuture<DescribeResolverRulesResponse> describeResolverRules(DescribeResolverRulesRequest request) {
         try {
@@ -403,6 +536,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeStatisticSummary  DescribeStatisticSummaryRequest
+     * @return DescribeStatisticSummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeStatisticSummaryResponse> describeStatisticSummary(DescribeStatisticSummaryRequest request) {
         try {
@@ -417,6 +554,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call the DescribeSyncEcsHostTask operation to query the information about a hostname synchronization task based on a zone ID.</p>
+     * 
+     * @param request the request parameters of DescribeSyncEcsHostTask  DescribeSyncEcsHostTaskRequest
+     * @return DescribeSyncEcsHostTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeSyncEcsHostTaskResponse> describeSyncEcsHostTask(DescribeSyncEcsHostTaskRequest request) {
         try {
@@ -431,6 +575,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>You can call this API operation to query the information about tags added only to zones.</p>
+     * 
+     * @param request the request parameters of DescribeTags  DescribeTagsRequest
+     * @return DescribeTagsResponse
+     */
     @Override
     public CompletableFuture<DescribeTagsResponse> describeTags(DescribeTagsRequest request) {
         try {
@@ -445,6 +597,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUserServiceStatus  DescribeUserServiceStatusRequest
+     * @return DescribeUserServiceStatusResponse
+     */
+    @Override
+    public CompletableFuture<DescribeUserServiceStatusResponse> describeUserServiceStatus(DescribeUserServiceStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeUserServiceStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeUserServiceStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeUserServiceStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeUserVpcAuthorizations  DescribeUserVpcAuthorizationsRequest
+     * @return DescribeUserVpcAuthorizationsResponse
+     */
     @Override
     public CompletableFuture<DescribeUserVpcAuthorizationsResponse> describeUserVpcAuthorizations(DescribeUserVpcAuthorizationsRequest request) {
         try {
@@ -459,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeZoneInfo  DescribeZoneInfoRequest
+     * @return DescribeZoneInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeZoneInfoResponse> describeZoneInfo(DescribeZoneInfoRequest request) {
         try {
@@ -473,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeZoneRecord  DescribeZoneRecordRequest
+     * @return DescribeZoneRecordResponse
+     */
     @Override
     public CompletableFuture<DescribeZoneRecordResponse> describeZoneRecord(DescribeZoneRecordRequest request) {
         try {
@@ -487,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeZoneRecords  DescribeZoneRecordsRequest
+     * @return DescribeZoneRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeZoneRecordsResponse> describeZoneRecords(DescribeZoneRecordsRequest request) {
         try {
@@ -502,8 +688,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * We recommend that you do not call this API operation due to its poor performance. Instead, you can call the DescribeZones operation to query a list of zones. If you want to query the information about VPCs to which a zone is bound, you can call the DescribeZoneInfo operation based on the zone ID.
-      *
+     * <b>description</b> :
+     * <p>We recommend that you do not call this API operation due to its poor performance. Instead, you can call the DescribeZones operation to query a list of zones. If you want to query the information about VPCs with which a zone is associated, you can call the DescribeZoneInfo operation based on the zone ID.</p>
+     * 
+     * @param request the request parameters of DescribeZoneVpcTree  DescribeZoneVpcTreeRequest
+     * @return DescribeZoneVpcTreeResponse
      */
     @Override
     public CompletableFuture<DescribeZoneVpcTreeResponse> describeZoneVpcTree(DescribeZoneVpcTreeRequest request) {
@@ -519,6 +708,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeZones  DescribeZonesRequest
+     * @return DescribeZonesResponse
+     */
     @Override
     public CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request) {
         try {
@@ -533,6 +726,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h4><a href="#"></a><strong>Precautions</strong></h4>
+     * <p>You can call this API operation to query tags added only to zones.</p>
+     * 
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -547,6 +748,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h4><a href="#"></a>Precautions</h4>
+     * <p>You can call this API operation to change a resource group only for a zone.</p>
+     * 
+     * @param request the request parameters of MoveResourceGroup  MoveResourceGroupRequest
+     * @return MoveResourceGroupResponse
+     */
     @Override
     public CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request) {
         try {
@@ -561,6 +770,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchCustomLines  SearchCustomLinesRequest
+     * @return SearchCustomLinesResponse
+     */
     @Override
     public CompletableFuture<SearchCustomLinesResponse> searchCustomLines(SearchCustomLinesRequest request) {
         try {
@@ -575,6 +788,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetProxyPattern  SetProxyPatternRequest
+     * @return SetProxyPatternResponse
+     */
     @Override
     public CompletableFuture<SetProxyPatternResponse> setProxyPattern(SetProxyPatternRequest request) {
         try {
@@ -589,6 +806,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetZoneRecordStatus  SetZoneRecordStatusRequest
+     * @return SetZoneRecordStatusResponse
+     */
     @Override
     public CompletableFuture<SetZoneRecordStatusResponse> setZoneRecordStatus(SetZoneRecordStatusRequest request) {
         try {
@@ -603,6 +824,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h5><a href="#"></a>Precautions</h5>
+     * <p>You can configure tags only for zones.</p>
+     * 
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -617,6 +846,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h4><a href="#"></a><strong>Precautions</strong></h4>
+     * <p>You can call this API operation to remove tags added only to zones.</p>
+     * 
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -631,6 +868,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCustomLine  UpdateCustomLineRequest
+     * @return UpdateCustomLineResponse
+     */
     @Override
     public CompletableFuture<UpdateCustomLineResponse> updateCustomLine(UpdateCustomLineRequest request) {
         try {
@@ -645,6 +886,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRecordRemark  UpdateRecordRemarkRequest
+     * @return UpdateRecordRemarkResponse
+     */
     @Override
     public CompletableFuture<UpdateRecordRemarkResponse> updateRecordRemark(UpdateRecordRemarkRequest request) {
         try {
@@ -659,6 +904,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateResolverEndpoint  UpdateResolverEndpointRequest
+     * @return UpdateResolverEndpointResponse
+     */
     @Override
     public CompletableFuture<UpdateResolverEndpointResponse> updateResolverEndpoint(UpdateResolverEndpointRequest request) {
         try {
@@ -673,6 +922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateResolverRule  UpdateResolverRuleRequest
+     * @return UpdateResolverRuleResponse
+     */
     @Override
     public CompletableFuture<UpdateResolverRuleResponse> updateResolverRule(UpdateResolverRuleRequest request) {
         try {
@@ -687,6 +940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSyncEcsHostTask  UpdateSyncEcsHostTaskRequest
+     * @return UpdateSyncEcsHostTaskResponse
+     */
     @Override
     public CompletableFuture<UpdateSyncEcsHostTaskResponse> updateSyncEcsHostTask(UpdateSyncEcsHostTaskRequest request) {
         try {
@@ -701,6 +958,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>The DNS record modification for a zone in the regular module takes effect only after the time to live (TTL) expires. The DNS record modification for a zone in the acceleration module takes effect immediately.</p>
+     * 
+     * @param request the request parameters of UpdateZoneRecord  UpdateZoneRecordRequest
+     * @return UpdateZoneRecordResponse
+     */
     @Override
     public CompletableFuture<UpdateZoneRecordResponse> updateZoneRecord(UpdateZoneRecordRequest request) {
         try {
@@ -715,6 +980,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateZoneRemark  UpdateZoneRemarkRequest
+     * @return UpdateZoneRemarkResponse
+     */
     @Override
     public CompletableFuture<UpdateZoneRemarkResponse> updateZoneRemark(UpdateZoneRemarkRequest request) {
         try {

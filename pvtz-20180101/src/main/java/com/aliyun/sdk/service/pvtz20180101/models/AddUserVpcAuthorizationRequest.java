@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserVpcAuthorizationRequest} extends {@link RequestModel}
  *
  * <p>AddUserVpcAuthorizationRequest</p>
@@ -96,12 +97,15 @@ public class AddUserVpcAuthorizationRequest extends Request {
         } 
 
         /**
-         * The authorization method. Valid values:
-         * <p>
+         * <p>The authorization channel. Valid values:</p>
+         * <ul>
+         * <li>AUTH_CODE: A verification code is used for authorization.</li>
+         * <li>RESOURCE_DIRECTORY: A resource directory is used for authorization.</li>
+         * </ul>
+         * <p>Default value: AUTH_CODE.</p>
          * 
-         * *   AUTH_CODE: An authorization code is used to associate VPCs across accounts. The system checks whether the value of AuthCode is valid.
-         * *   RESOURCE_DIRECTORY: A resource directory is used to associate VPCs across accounts. The system checks whether the value of AuthorizedUserId and the current account are in the same resource directory.
-         * *   If this parameter is empty, an authorization code is used to associate VPCs across accounts.
+         * <strong>example:</strong>
+         * <p>AUTH_CODE</p>
          */
         public Builder authChannel(String authChannel) {
             this.putQueryParameter("AuthChannel", authChannel);
@@ -110,10 +114,18 @@ public class AddUserVpcAuthorizationRequest extends Request {
         }
 
         /**
-         * The verification code.
-         * <p>
+         * <p>The verification code.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The specified authentication code is used if the value of AuthChannel is left empty or is set to AUTH_CODE.</p>
+         * </li>
+         * <li><p>In other cases, a random 6-digit number is used. Example: 123456.</p>
+         * </li>
+         * </ul>
          * 
-         * This parameter is required when AuthType is set to NORMAL or is left empty and AuthChannel is set to AUTH_CODE or is left empty.
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -122,11 +134,14 @@ public class AddUserVpcAuthorizationRequest extends Request {
         }
 
         /**
-         * The authorization scope. Valid values:
-         * <p>
+         * <p>The authorization scope. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: general authorization</li>
+         * <li>CLOUD_PRODUCT: cloud service-related authorization</li>
+         * </ul>
          * 
-         * *   NORMAL: general authorization.
-         * *   CLOUD_PRODUCT: cloud service-related authorization
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -135,7 +150,14 @@ public class AddUserVpcAuthorizationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+         * <blockquote>
+         * <p> You can set an effective scope across accounts only by using an Alibaba Cloud account instead of a RAM user. You can set an effective scope across accounts registered on the same site. For example, you can perform the operation across accounts that are both registered on the Alibaba Cloud China site or Alibaba Cloud international site. You cannot set an effective scope across accounts registered on different sites. For example, you cannot perform the operation across accounts that are separately registered on the Alibaba Cloud China site and Alibaba Cloud international site.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141339776561****</p>
          */
         public Builder authorizedUserId(Long authorizedUserId) {
             this.putQueryParameter("AuthorizedUserId", authorizedUserId);

@@ -7,31 +7,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeResolverRuleRequest} extends {@link RequestModel}
+ * {@link DescribeUserServiceStatusRequest} extends {@link RequestModel}
  *
- * <p>DescribeResolverRuleRequest</p>
+ * <p>DescribeUserServiceStatusRequest</p>
  */
-public class DescribeResolverRuleRequest extends Request {
+public class DescribeUserServiceStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RuleId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String ruleId;
-
-    private DescribeResolverRuleRequest(Builder builder) {
+    private DescribeUserServiceStatusRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
-        this.ruleId = builder.ruleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeResolverRuleRequest create() {
+    public static DescribeUserServiceStatusRequest create() {
         return builder().build();
     }
 
@@ -47,25 +41,16 @@ public class DescribeResolverRuleRequest extends Request {
         return this.lang;
     }
 
-    /**
-     * @return ruleId
-     */
-    public String getRuleId() {
-        return this.ruleId;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeResolverRuleRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeUserServiceStatusRequest, Builder> {
         private String lang; 
-        private String ruleId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeResolverRuleRequest request) {
+        private Builder(DescribeUserServiceStatusRequest request) {
             super(request);
             this.lang = request.lang;
-            this.ruleId = request.ruleId;
         } 
 
         /**
@@ -85,22 +70,9 @@ public class DescribeResolverRuleRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>The ID of the forwarding rule.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hr****</p>
-         */
-        public Builder ruleId(String ruleId) {
-            this.putQueryParameter("RuleId", ruleId);
-            this.ruleId = ruleId;
-            return this;
-        }
-
         @Override
-        public DescribeResolverRuleRequest build() {
-            return new DescribeResolverRuleRequest(this);
+        public DescribeUserServiceStatusRequest build() {
+            return new DescribeUserServiceStatusRequest(this);
         } 
 
     } 

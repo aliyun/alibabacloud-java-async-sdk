@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckZoneNameResponseBody} extends {@link TeaModel}
  *
  * <p>CheckZoneNameResponseBody</p>
@@ -61,11 +62,14 @@ public class CheckZoneNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the zone name is valid. Valid values:
-         * <p>
+         * <p>Indicates whether the zone name can be added. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder check(Boolean check) {
             this.check = check;
@@ -73,7 +77,10 @@ public class CheckZoneNameResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA29B88F-A571-4123-80D5-768AC2F7F806</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +88,10 @@ public class CheckZoneNameResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

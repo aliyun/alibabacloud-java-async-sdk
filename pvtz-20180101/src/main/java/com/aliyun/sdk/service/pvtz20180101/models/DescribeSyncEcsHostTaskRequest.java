@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSyncEcsHostTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeSyncEcsHostTaskRequest</p>
@@ -68,7 +69,15 @@ public class DescribeSyncEcsHostTaskRequest extends Request {
         } 
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +86,11 @@ public class DescribeSyncEcsHostTaskRequest extends Request {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID. This ID uniquely identifies the zone.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pvtz-test-id-2989149d628c5****</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

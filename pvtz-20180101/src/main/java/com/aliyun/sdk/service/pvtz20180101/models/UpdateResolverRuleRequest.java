@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResolverRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateResolverRuleRequest</p>
@@ -110,7 +111,10 @@ public class UpdateResolverRuleRequest extends Request {
         } 
 
         /**
-         * EndpointId.
+         * <p>The endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -119,7 +123,10 @@ public class UpdateResolverRuleRequest extends Request {
         }
 
         /**
-         * The destination IP address and port number.
+         * <p>The IP addresses and ports of the external Domain Name System (DNS) servers. Enter the IP addresses and ports of the destination servers to which the DNS requests are forwarded. You can enter up to six IP addresses and ports. Both private and public IP addresses are supported.</p>
+         * <blockquote>
+         * <p> If you specify public IP addresses as the IP addresses of the external DNS servers and Elastic Compute Service (ECS) instances in the outbound virtual private cloud (VPC) are not assigned public IP addresses, you need to activate NAT Gateway for the VPC and create and manage SNAT entries on a NAT gateway.</p>
+         * </blockquote>
          */
         public Builder forwardIp(java.util.List < ForwardIp> forwardIp) {
             this.putQueryParameter("ForwardIp", forwardIp);
@@ -128,7 +135,15 @@ public class UpdateResolverRuleRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -137,7 +152,10 @@ public class UpdateResolverRuleRequest extends Request {
         }
 
         /**
-         * The name of the forwarding rule.
+         * <p>The name of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>forward rule-test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -146,7 +164,11 @@ public class UpdateResolverRuleRequest extends Request {
         }
 
         /**
-         * The forwarding rule ID.
+         * <p>The ID of the forwarding rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -161,6 +183,12 @@ public class UpdateResolverRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateResolverRuleRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateResolverRuleRequest</p>
+     */
     public static class ForwardIp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -200,7 +228,13 @@ public class UpdateResolverRuleRequest extends Request {
             private Integer port; 
 
             /**
-             * The destination IP address.
+             * <p>The IP address of the destination server.</p>
+             * <blockquote>
+             * <p> You cannot specify the following IP addresses as the IP addresses of the external DNS servers because the IP addresses are reserved by the system: 100.100.2.136 to 100.100.2.138, and 100.100.2.116 to 100.100.2.118.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -208,7 +242,10 @@ public class UpdateResolverRuleRequest extends Request {
             }
 
             /**
-             * The port number.
+             * <p>The port of the destination server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserVpcAuthorizationRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserVpcAuthorizationRequest</p>
@@ -68,11 +69,15 @@ public class DeleteUserVpcAuthorizationRequest extends Request {
         } 
 
         /**
-         * The authorization scope. Valid values:
-         * <p>
+         * <p>The authorization scope. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: general authorization</li>
+         * <li>NORMAL: cloud service-related authorization</li>
+         * </ul>
+         * <p>Default value: NORMAL.</p>
          * 
-         * *   NORMAL: general authorization
-         * *   NORMAL: cloud service-related authorization
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -81,7 +86,11 @@ public class DeleteUserVpcAuthorizationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141339776561****</p>
          */
         public Builder authorizedUserId(Long authorizedUserId) {
             this.putQueryParameter("AuthorizedUserId", authorizedUserId);

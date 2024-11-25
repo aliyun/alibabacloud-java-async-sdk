@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindResolverRuleVpcRequest} extends {@link RequestModel}
  *
  * <p>BindResolverRuleVpcRequest</p>
@@ -82,7 +83,15 @@ public class BindResolverRuleVpcRequest extends Request {
         } 
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -91,7 +100,11 @@ public class BindResolverRuleVpcRequest extends Request {
         }
 
         /**
-         * The forwarding rule ID.
+         * <p>The ID of the forwarding rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -100,7 +113,7 @@ public class BindResolverRuleVpcRequest extends Request {
         }
 
         /**
-         * The VPCs.
+         * <p>The VPCs that you want to associate with the forwarding rule.</p>
          */
         public Builder vpc(java.util.List < Vpc> vpc) {
             this.putQueryParameter("Vpc", vpc);
@@ -115,6 +128,12 @@ public class BindResolverRuleVpcRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BindResolverRuleVpcRequest} extends {@link TeaModel}
+     *
+     * <p>BindResolverRuleVpcRequest</p>
+     */
     public static class Vpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -166,7 +185,10 @@ public class BindResolverRuleVpcRequest extends Request {
             private String vpcType; 
 
             /**
-             * The region ID.
+             * <p>The region ID of the outbound VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -174,7 +196,10 @@ public class BindResolverRuleVpcRequest extends Request {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-f8zvrvr1payllgz38****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -182,11 +207,14 @@ public class BindResolverRuleVpcRequest extends Request {
             }
 
             /**
-             * The VPC type. Valid values:
-             * <p>
+             * <p>The VPC type. Valid values:</p>
+             * <ul>
+             * <li>STANDARD: standard VPC</li>
+             * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+             * </ul>
              * 
-             * *   STANDARD: standard VPC
-             * *   EDS: Elastic Desktop Service (EDS) workspace VPC
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;

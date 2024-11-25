@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserVpcAuthorizationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserVpcAuthorizationsRequest</p>
@@ -97,11 +98,14 @@ public class DescribeUserVpcAuthorizationsRequest extends Request {
         } 
 
         /**
-         * The authorization scope. Valid values:
-         * <p>
+         * <p>The authorization scope. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: general authorization</li>
+         * <li>CLOUD_PRODUCT: cloud service-related authorization</li>
+         * </ul>
          * 
-         * *   NORMAL: general authorization.
-         * *   CLOUD_PRODUCT: cloud service-related authorization
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -110,7 +114,10 @@ public class DescribeUserVpcAuthorizationsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141339776561****</p>
          */
         public Builder authorizedUserId(Long authorizedUserId) {
             this.putQueryParameter("AuthorizedUserId", authorizedUserId);
@@ -119,7 +126,10 @@ public class DescribeUserVpcAuthorizationsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -128,7 +138,10 @@ public class DescribeUserVpcAuthorizationsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. Maximum value: 100.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

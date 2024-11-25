@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRecordRemarkRequest} extends {@link RequestModel}
  *
  * <p>UpdateRecordRemarkRequest</p>
@@ -96,7 +97,10 @@ public class UpdateRecordRemarkRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6447728c8578e66aacf062d2df4446dc</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -105,7 +109,15 @@ public class UpdateRecordRemarkRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +126,11 @@ public class UpdateRecordRemarkRequest extends Request {
         }
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202991****</p>
          */
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -123,7 +139,10 @@ public class UpdateRecordRemarkRequest extends Request {
         }
 
         /**
-         * The description of the DNS record.
+         * <p>The description of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test record</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

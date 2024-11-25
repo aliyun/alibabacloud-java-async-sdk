@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResolverRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResolverRulesResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,7 +109,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +120,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A10E03D7-808C-422D-9144-F8586C2E2297</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The forwarding rules.
+         * <p>The forwarding rules.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -129,7 +139,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResolverRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResolverRulesResponseBody</p>
+     */
     public static class BindVpcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -237,7 +259,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             private String vpcUserId; 
 
             /**
-             * The region ID.
+             * <p>The region ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -245,7 +270,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The region name.
+             * <p>The name of the region to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -253,7 +281,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID. This ID uniquely identifies the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-0jl96awrjt75ezglc****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -261,7 +292,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC name.
+             * <p>The VPC name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-name-test</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -269,11 +303,14 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the virtual private cloud (VPC). Valid values:
-             * <p>
+             * <p>The VPC type. Valid values:</p>
+             * <ul>
+             * <li>STANDARD: standard VPC</li>
+             * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+             * </ul>
              * 
-             * *   STANDARD: standard VPC
-             * *   EDS: Elastic Desktop Service (EDS) workspace VPC
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;
@@ -281,7 +318,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account to which the VPC belongs.
+             * <p>The user ID to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141339776561****</p>
              */
             public Builder vpcUserId(String vpcUserId) {
                 this.vpcUserId = vpcUserId;
@@ -295,6 +335,12 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResolverRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResolverRulesResponseBody</p>
+     */
     public static class ForwardIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -334,7 +380,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             private Integer port; 
 
             /**
-             * The IP address.
+             * <p>The IP address of the destination server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -342,7 +391,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port of the destination server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -356,6 +408,12 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResolverRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResolverRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindVpcs")
         private java.util.List < BindVpcs> bindVpcs;
@@ -515,7 +573,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * The VPCs associated with the forwarding rule.
+             * <p>The VPCs associated with the forwarding rule.</p>
              */
             public Builder bindVpcs(java.util.List < BindVpcs> bindVpcs) {
                 this.bindVpcs = bindVpcs;
@@ -523,7 +581,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the forwarding was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The time when the forwarding was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-13 10:51:44</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -531,7 +592,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the forwarding rule was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the forwarding rule was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1594608704000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -539,7 +603,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint ID.
+             * <p>The endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hr****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -547,7 +614,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint name.
+             * <p>The endpoint name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>endpoint-test</p>
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -555,7 +625,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The destination IP addresses.
+             * <p>The IP addresses and ports of the external DNS servers. Enter the IP addresses and ports of the destination servers to which the DNS requests are forwarded.</p>
              */
             public Builder forwardIps(java.util.List < ForwardIps> forwardIps) {
                 this.forwardIps = forwardIps;
@@ -563,7 +633,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the forwarding rule.
+             * <p>The ID of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hr****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -571,7 +644,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the forwarding rule.
+             * <p>The name of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>forward rule-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -579,10 +655,11 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the forwarding rule. Valid value:
-             * <p>
+             * <p>The type of the forwarding rule.</p>
+             * <p>The parameter value can only be OUTBOUND, which indicates that Domain Name System (DNS) requests are forwarded to one or more external IP addresses.</p>
              * 
-             * *   OUTBOUND: Domain Name System (DNS) requests are forwarded to one or more IP addresses.
+             * <strong>example:</strong>
+             * <p>OUTBOUND</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -590,7 +667,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the forwarding rule was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The time when the forwarding rule was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-13 10:51:44</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -598,7 +678,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the forwarding rule was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the forwarding rule was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1594608704000</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -606,7 +689,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the forward zone.
+             * <p>The zone for which you want to forward DNS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;

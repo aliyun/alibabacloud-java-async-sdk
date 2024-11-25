@@ -7,22 +7,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetZoneRecordStatusResponseBody} extends {@link TeaModel}
+ * {@link DescribeUserServiceStatusResponseBody} extends {@link TeaModel}
  *
- * <p>SetZoneRecordStatusResponseBody</p>
+ * <p>DescribeUserServiceStatusResponseBody</p>
  */
-public class SetZoneRecordStatusResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("RecordId")
-    private Long recordId;
-
+public class DescribeUserServiceStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    private SetZoneRecordStatusResponseBody(Builder builder) {
-        this.recordId = builder.recordId;
+    private DescribeUserServiceStatusResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.status = builder.status;
     }
@@ -31,15 +27,8 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SetZoneRecordStatusResponseBody create() {
+    public static DescribeUserServiceStatusResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return recordId
-     */
-    public Long getRecordId() {
-        return this.recordId;
     }
 
     /**
@@ -57,26 +46,14 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Long recordId; 
         private String requestId; 
         private String status; 
-
-        /**
-         * <p>The ID of the DNS record.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>207541****</p>
-         */
-        public Builder recordId(Long recordId) {
-            this.recordId = recordId;
-            return this;
-        }
 
         /**
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>39CB16E5-4180-49F2-A060-23C0ECEB80D9</p>
+         * <p>99626905-678A-4E8A-984E-6AEB09993996</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -84,22 +61,24 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the DNS record. Valid values:</p>
+         * <p>Current user&quot;s service status:</p>
          * <ul>
-         * <li>ENABLE: The DNS record is enabled.</li>
-         * <li>DISABLE: The DNS record is disabled.</li>
+         * <li><strong>CLOSED</strong>: Not activated</li>
+         * <li><strong>OPENED</strong>: Activated</li>
+         * <li><strong>IN_DEBT</strong>: Overdue payment</li>
+         * <li><strong>IN_DEBT_OVER_DUE</strong>: Payment overdue</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>DISABLE</p>
+         * <p>OPENED</p>
          */
         public Builder status(String status) {
             this.status = status;
             return this;
         }
 
-        public SetZoneRecordStatusResponseBody build() {
-            return new SetZoneRecordStatusResponseBody(this);
+        public DescribeUserServiceStatusResponseBody build() {
+            return new DescribeUserServiceStatusResponseBody(this);
         } 
 
     } 

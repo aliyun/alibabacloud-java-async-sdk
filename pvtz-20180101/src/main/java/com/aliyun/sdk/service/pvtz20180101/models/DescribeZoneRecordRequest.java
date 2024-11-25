@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZoneRecordRequest} extends {@link RequestModel}
  *
  * <p>DescribeZoneRecordRequest</p>
@@ -54,7 +55,11 @@ public class DescribeZoneRecordRequest extends Request {
         } 
 
         /**
-         * RecordId.
+         * <p>The ID of the DNS record.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5808</p>
          */
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);

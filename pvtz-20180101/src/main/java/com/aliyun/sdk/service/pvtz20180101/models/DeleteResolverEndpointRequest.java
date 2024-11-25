@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteResolverEndpointRequest} extends {@link RequestModel}
  *
  * <p>DeleteResolverEndpointRequest</p>
@@ -68,7 +69,11 @@ public class DeleteResolverEndpointRequest extends Request {
         } 
 
         /**
-         * The endpoint ID.
+         * <p>The endpoint ID. This ID uniquely identifies the endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -77,7 +82,15 @@ public class DeleteResolverEndpointRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

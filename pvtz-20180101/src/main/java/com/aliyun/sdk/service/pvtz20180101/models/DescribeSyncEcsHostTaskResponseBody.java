@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSyncEcsHostTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSyncEcsHostTaskResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * The information about regions.
+         * <p>The synchronized regions where the ECS instances are deployed.</p>
          */
         public Builder ecsRegions(EcsRegions ecsRegions) {
             this.ecsRegions = ecsRegions;
@@ -105,7 +106,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the regions within the current account.
+         * <p>The synchronized region IDs of the ECS instances.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -113,7 +114,10 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75446CC1-FC9A-4595-8D96-089D73D7A63D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +125,14 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the task. Valid values:
-         * <p>
+         * <p>Indicates whether hostname automatic synchronization is enabled. Valid values:</p>
+         * <ul>
+         * <li>ON: Hostname automatic synchronization is enabled. After this feature is enabled, the system automatically reads the hostnames of the Elastic Compute Service (ECS) instances in the specified regions and updates Domain Name System (DNS) records at an interval of 1 minute.</li>
+         * <li>OFF: Hostname automatic synchronization is disabled.</li>
+         * </ul>
          * 
-         * *   ON
-         * *   OFF
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -133,11 +140,14 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the task was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the task was successful. Valid values:</p>
+         * <ul>
+         * <li>True</li>
+         * <li>False</li>
+         * </ul>
          * 
-         * *   True
-         * *   False
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -145,7 +155,10 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID. This ID uniquely identifies the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pvtz-test-id-2989149d628c56****</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -158,6 +171,12 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSyncEcsHostTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSyncEcsHostTaskResponseBody</p>
+     */
     public static class RegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private java.util.List < String > regionId;
@@ -199,6 +218,12 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSyncEcsHostTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSyncEcsHostTaskResponseBody</p>
+     */
     public static class EcsRegion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionIds")
         private RegionIds regionIds;
@@ -238,7 +263,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * The region IDs.
+             * <p>The synchronized region IDs.</p>
              */
             public Builder regionIds(RegionIds regionIds) {
                 this.regionIds = regionIds;
@@ -246,7 +271,10 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account to which the region belongs. This parameter is used in cross-account synchronization scenarios.
+             * <p>The user ID to which the region belongs. This parameter is used in cross-account synchronization scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141339776561****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -260,6 +288,12 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSyncEcsHostTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSyncEcsHostTaskResponseBody</p>
+     */
     public static class EcsRegions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsRegion")
         private java.util.List < EcsRegion> ecsRegion;
@@ -301,6 +335,12 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSyncEcsHostTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSyncEcsHostTaskResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private java.util.List < String > regionId;

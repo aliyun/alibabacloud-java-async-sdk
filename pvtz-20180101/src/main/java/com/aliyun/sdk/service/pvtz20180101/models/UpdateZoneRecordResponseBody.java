@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateZoneRecordResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateZoneRecordResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateZoneRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172223****</p>
          */
         public Builder recordId(Long recordId) {
             this.recordId = recordId;
@@ -57,7 +61,10 @@ public class UpdateZoneRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>250E2C38-D0AD-4518-851D-1C1055805F82</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

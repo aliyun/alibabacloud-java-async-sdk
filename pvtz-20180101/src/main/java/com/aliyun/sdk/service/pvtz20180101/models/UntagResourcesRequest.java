@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -111,11 +112,15 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the specified one or more resources. This parameter is valid only if the TagKey parameter is left empty. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags of the specified zones. Valid values:</p>
+         * <ul>
+         * <li>true: removes all tags of the specified zones.</li>
+         * <li>false: removes only the tags with the specified tag keys.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -124,7 +129,15 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -133,7 +146,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.
+         * <p>The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97fe9321a476d0861f624d3f738dcc38</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -142,7 +159,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Valid value: ZONE.
+         * <p>The resource type. The value of ResourceType can only be ZONE.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZONE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -151,7 +172,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The keys of tags that you want to remove. You can specify up to 20 tag keys.
+         * <p>The keys of tags that you want to remove. You can specify up to 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

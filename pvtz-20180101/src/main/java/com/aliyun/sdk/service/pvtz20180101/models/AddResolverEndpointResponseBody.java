@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddResolverEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>AddResolverEndpointResponseBody</p>
@@ -49,7 +50,10 @@ public class AddResolverEndpointResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The outbound endpoint ID.
+         * <p>The endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0**</p>
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -57,7 +61,10 @@ public class AddResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32436208-E1AF-4DAB-B3B8-24F5F25B0950</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

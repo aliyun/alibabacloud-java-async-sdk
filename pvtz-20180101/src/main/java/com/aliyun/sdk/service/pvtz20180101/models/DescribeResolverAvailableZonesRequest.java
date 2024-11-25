@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResolverAvailableZonesRequest} extends {@link RequestModel}
  *
  * <p>DescribeResolverAvailableZonesRequest</p>
@@ -82,7 +83,10 @@ public class DescribeResolverAvailableZonesRequest extends Request {
         } 
 
         /**
-         * The zone ID.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou-a</p>
          */
         public Builder azId(String azId) {
             this.putQueryParameter("AzId", azId);
@@ -91,7 +95,15 @@ public class DescribeResolverAvailableZonesRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +112,11 @@ public class DescribeResolverAvailableZonesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder resolverRegionId(String resolverRegionId) {
             this.putQueryParameter("ResolverRegionId", resolverRegionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesRequest} extends {@link RequestModel}
  *
  * <p>DescribeZonesRequest</p>
@@ -194,7 +195,10 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * The keyword of the zone name. The search is performed in the %KeyWord % mode and is not case-sensitive.
+         * <p>The keyword of the zone name. The value is not case-sensitive. You can set SearchMode to LIKE or EXACT. The default value of SearchMode is LIKE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -203,7 +207,15 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -212,7 +224,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +236,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +248,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID of the virtual private cloud (VPC) associated with the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder queryRegionId(String queryRegionId) {
             this.putQueryParameter("QueryRegionId", queryRegionId);
@@ -239,7 +260,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) ID.
+         * <p>The ID of the VPC associated with the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-f8zvrvr1payllgz38****</p>
          */
         public Builder queryVpcId(String queryVpcId) {
             this.putQueryParameter("QueryVpcId", queryVpcId);
@@ -248,7 +272,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group to which the zone belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz2qj7awz****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -257,7 +284,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The tag added to the resource.
+         * <p>The tags added to the zone.</p>
          */
         public Builder resourceTag(java.util.List < ResourceTag> resourceTag) {
             this.putQueryParameter("ResourceTag", resourceTag);
@@ -266,11 +293,15 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The search mode. Valid values:
-         * <p>
+         * <p>The search mode. The value of Keyword is the search scope. Valid values:</p>
+         * <ul>
+         * <li><strong>LIKE</strong> (default): fuzzy search</li>
+         * <li><strong>EXACT</strong>: exact search</li>
+         * </ul>
+         * <p>Default value: <strong>LIKE</strong>.</p>
          * 
-         * *   **LIKE (default)**: fuzzy search
-         * *   **EXACT**: exact search
+         * <strong>example:</strong>
+         * <p>LIKE</p>
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -279,7 +310,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The type of the cloud service.
+         * <p>The types of cloud services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BLINK</p>
          */
         public Builder zoneTag(java.util.List < String > zoneTag) {
             this.putQueryParameter("ZoneTag", zoneTag);
@@ -288,13 +322,15 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The type of zones to query. Default value: AUTH_ZONE.
-         * <p>
+         * <p>The zone type. Valid values:</p>
+         * <ul>
+         * <li><strong>AUTH_ZONE</strong>: authoritative zone</li>
+         * <li><strong>CLOUD_PRODUCT_ZONE</strong>: authoritative zone for cloud services</li>
+         * </ul>
+         * <p>Default value: <strong>AUTH_ZONE</strong>.</p>
          * 
-         * Valid values:
-         * 
-         * *   **AUTH_ZONE**: authoritative zone
-         * *   **CLOUD_PRODUCT_ZONE**: authoritative zone for cloud services
+         * <strong>example:</strong>
+         * <p>CLOUD_PRODUCT_ZONE</p>
          */
         public Builder zoneType(String zoneType) {
             this.putQueryParameter("ZoneType", zoneType);
@@ -309,6 +345,12 @@ public class DescribeZonesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesRequest</p>
+     */
     public static class ResourceTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -348,7 +390,10 @@ public class DescribeZonesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N added to the resource.
+             * <p>The key of tag N added to the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -356,7 +401,10 @@ public class DescribeZonesRequest extends Request {
             }
 
             /**
-             * The value of tag N added to the resource.
+             * <p>The value of tag N added to the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily</p>
              */
             public Builder value(String value) {
                 this.value = value;

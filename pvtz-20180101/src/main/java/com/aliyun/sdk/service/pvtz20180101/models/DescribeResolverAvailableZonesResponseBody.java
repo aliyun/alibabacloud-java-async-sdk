@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResolverAvailableZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResolverAvailableZonesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the queried zones.
+         * <p>The queried zones.</p>
          */
         public Builder availableZones(java.util.List < AvailableZones> availableZones) {
             this.availableZones = availableZones;
@@ -57,7 +58,10 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23268E49-0C3E-4A2C-AB70-B4C7D092470B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResolverAvailableZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResolverAvailableZonesResponseBody</p>
+     */
     public static class AvailableZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AzId")
         private String azId;
@@ -109,7 +119,10 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou-a</p>
              */
             public Builder azId(String azId) {
                 this.azId = azId;
@@ -117,11 +130,14 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of resources in the zone. Valid values:
-             * <p>
+             * <p>The state of resources in the zone. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The resources are in the normal state.</li>
+             * <li>SOLD_OUT: The resources are sold out.</li>
+             * </ul>
              * 
-             * *   NORMAL: The resources are in the normal state.
-             * *   SOLD_OUT: The resources are sold out.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;

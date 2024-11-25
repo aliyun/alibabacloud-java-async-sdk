@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchCustomLinesRequest} extends {@link RequestModel}
  *
  * <p>SearchCustomLinesRequest</p>
@@ -181,7 +182,10 @@ public class SearchCustomLinesRequest extends Request {
         } 
 
         /**
-         * CreateTimestampEnd.
+         * <p>The end of the time range during which the custom lines are created to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672136518234</p>
          */
         public Builder createTimestampEnd(Long createTimestampEnd) {
             this.putQueryParameter("CreateTimestampEnd", createTimestampEnd);
@@ -190,7 +194,10 @@ public class SearchCustomLinesRequest extends Request {
         }
 
         /**
-         * CreateTimestampStart.
+         * <p>The beginning of the time range during which the custom lines are created to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672136518123</p>
          */
         public Builder createTimestampStart(Long createTimestampStart) {
             this.putQueryParameter("CreateTimestampStart", createTimestampStart);
@@ -199,7 +206,7 @@ public class SearchCustomLinesRequest extends Request {
         }
 
         /**
-         * Creator.
+         * <p>The IDs of the creators for the custom lines.</p>
          */
         public Builder creator(java.util.List < String > creator) {
             this.putQueryParameter("Creator", creator);
@@ -208,7 +215,10 @@ public class SearchCustomLinesRequest extends Request {
         }
 
         /**
-         * Ipv4.
+         * <p>The IPv4 address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         public Builder ipv4(String ipv4) {
             this.putQueryParameter("Ipv4", ipv4);
@@ -217,7 +227,10 @@ public class SearchCustomLinesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -226,7 +239,7 @@ public class SearchCustomLinesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the custom line.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -235,7 +248,10 @@ public class SearchCustomLinesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -244,7 +260,10 @@ public class SearchCustomLinesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -253,7 +272,10 @@ public class SearchCustomLinesRequest extends Request {
         }
 
         /**
-         * UpdateTimestampEnd.
+         * <p>The end of the time range during which the custom lines are updated to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672136518000</p>
          */
         public Builder updateTimestampEnd(Long updateTimestampEnd) {
             this.putQueryParameter("UpdateTimestampEnd", updateTimestampEnd);
@@ -262,7 +284,10 @@ public class SearchCustomLinesRequest extends Request {
         }
 
         /**
-         * UpdateTimestampStart.
+         * <p>The beginning of the time range during which the custom lines are updated to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672136515000</p>
          */
         public Builder updateTimestampStart(Long updateTimestampStart) {
             this.putQueryParameter("UpdateTimestampStart", updateTimestampStart);

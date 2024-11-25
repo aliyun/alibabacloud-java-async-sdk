@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResolverRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeResolverRulesRequest</p>
@@ -125,7 +126,10 @@ public class DescribeResolverRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the outbound endpoint.
+         * <p>The outbound endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -134,7 +138,10 @@ public class DescribeResolverRulesRequest extends Request {
         }
 
         /**
-         * The keyword used to filter forwarding rules in %keyword% mode.
+         * <p>The keyword of the forwarding rule name. Fuzzy search is supported. The value is not case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -143,7 +150,15 @@ public class DescribeResolverRulesRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -152,11 +167,15 @@ public class DescribeResolverRulesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return additional information. Default value: false.
-         * <p>
+         * <p>Specifies whether to return virtual private clouds (VPCs) associated with the forwarding rule. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   If you set this parameter to true, additional information, such as the virtual private clouds (VPCs) that are associated with the queried forwarding rule, is returned.
-         * *   If you set this parameter to false, no additional information is returned.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needDetailAttributes(Boolean needDetailAttributes) {
             this.putQueryParameter("NeedDetailAttributes", needDetailAttributes);
@@ -165,7 +184,10 @@ public class DescribeResolverRulesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -174,7 +196,10 @@ public class DescribeResolverRulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. Maximum value: 100.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

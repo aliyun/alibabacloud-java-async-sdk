@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateZoneRemarkResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateZoneRemarkResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateZoneRemarkResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class UpdateZoneRemarkResponseBody extends TeaModel {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID. This ID uniquely identifies the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>df2d03865266bd9842306db586d3****</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddZoneResponseBody} extends {@link TeaModel}
  *
  * <p>AddZoneResponseBody</p>
@@ -73,7 +74,10 @@ public class AddZoneResponseBody extends TeaModel {
         private String zoneName; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +85,10 @@ public class AddZoneResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -89,7 +96,10 @@ public class AddZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The global ID of the zone.
+         * <p>The zone ID. This ID uniquely identifies the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6fc186295683a131f63bb8b0cddc****</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -97,7 +107,10 @@ public class AddZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the zone.
+         * <p>The name of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder zoneName(String zoneName) {
             this.zoneName = zoneName;

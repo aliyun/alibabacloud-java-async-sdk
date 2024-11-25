@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -124,7 +125,15 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The language of the values for specific response parameters. Valid values: en, zh, and ja.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -133,7 +142,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23423****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -142,7 +154,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.
+         * <p>The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97fe9321a476d0861f624d3f738dcc38</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -151,7 +166,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Valid value: ZONE.
+         * <p>The resource type. Valid value: ZONE.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZONE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -160,7 +179,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: `1 to 200`. Default value: 20.
+         * <p>The number of entries per page. Maximum value: 200. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -169,7 +191,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags added to the resources.
+         * <p>The tags added to the resources.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -184,6 +206,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -223,7 +251,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N added to the resource.
+             * <p>The key of tag N added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +262,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N added to the resource.
+             * <p>The value of tag N added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily</p>
              */
             public Builder value(String value) {
                 this.value = value;

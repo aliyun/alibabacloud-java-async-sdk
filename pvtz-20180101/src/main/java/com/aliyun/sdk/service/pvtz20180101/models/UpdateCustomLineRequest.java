@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomLineRequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomLineRequest</p>
@@ -97,7 +98,8 @@ public class UpdateCustomLineRequest extends Request {
         } 
 
         /**
-         * Ipv4s.
+         * <p>The IPv4 CIDR blocks.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ipv4s(java.util.List < String > ipv4s) {
             this.putQueryParameter("Ipv4s", ipv4s);
@@ -106,7 +108,10 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +120,11 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * LineId.
+         * <p>The unique ID of the custom line.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100003</p>
          */
         public Builder lineId(String lineId) {
             this.putQueryParameter("LineId", lineId);
@@ -124,7 +133,7 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the custom line.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZoneRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeZoneRecordsRequest</p>
@@ -153,7 +154,10 @@ public class DescribeZoneRecordsRequest extends Request {
         } 
 
         /**
-         * The hostname keyword based on which the system queries the DNS records.
+         * <p>The keyword of the hostname. The value is not case-sensitive. You can set SearchMode to LIKE or EXACT. The default value of SearchMode is EXACT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -162,7 +166,15 @@ public class DescribeZoneRecordsRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -171,7 +183,10 @@ public class DescribeZoneRecordsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -180,7 +195,10 @@ public class DescribeZoneRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,11 +207,15 @@ public class DescribeZoneRecordsRequest extends Request {
         }
 
         /**
-         * The search mode. Valid values:
-         * <p>
+         * <p>The search mode. Valid values:</p>
+         * <ul>
+         * <li><strong>LIKE</strong>: fuzzy search</li>
+         * <li><strong>EXACT</strong> (default): exact search</li>
+         * </ul>
+         * <p>The value of Keyword is the search scope.</p>
          * 
-         * *   **LIKE**: fuzzy search
-         * *   **EXACT (default)**: exact search
+         * <strong>example:</strong>
+         * <p>LIKE</p>
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -202,11 +224,14 @@ public class DescribeZoneRecordsRequest extends Request {
         }
 
         /**
-         * The tags added to the DNS record.
-         * <p>
+         * <p>The tag added to the DNS record. Valid values:</p>
+         * <ul>
+         * <li>ecs: If you set Tag to ecs, the DNS records added to the hostnames of Elastic Compute Service (ECS) instances in the zone are queried.</li>
+         * <li>If Tag is left empty, the DNS records in the zone are queried.</li>
+         * </ul>
          * 
-         * *   This parameter is left empty by default. In this case, the DNS records of the zone are queried.
-         * *   If you set Tag to ecs, the DNS records added to the hostnames of Elastic Compute Service (ECS) instances in the zone are queried.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -215,7 +240,10 @@ public class DescribeZoneRecordsRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.XX.XX</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -224,7 +252,11 @@ public class DescribeZoneRecordsRequest extends Request {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID. This ID uniquely identifies the zone.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a96d70eb4ab8ef01503dc5486914****</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

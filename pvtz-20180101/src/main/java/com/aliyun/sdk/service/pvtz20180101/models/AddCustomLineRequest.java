@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCustomLineRequest} extends {@link RequestModel}
  *
  * <p>AddCustomLineRequest</p>
@@ -111,7 +112,10 @@ public class AddCustomLineRequest extends Request {
         } 
 
         /**
-         * DnsCategory.
+         * <p>This parameter is not available. You can ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INTRANET</p>
          */
         public Builder dnsCategory(String dnsCategory) {
             this.putQueryParameter("DnsCategory", dnsCategory);
@@ -120,7 +124,8 @@ public class AddCustomLineRequest extends Request {
         }
 
         /**
-         * Ipv4s.
+         * <p>The IPv4 CIDR blocks.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ipv4s(java.util.List < String > ipv4s) {
             this.putQueryParameter("Ipv4s", ipv4s);
@@ -129,7 +134,10 @@ public class AddCustomLineRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -138,7 +146,8 @@ public class AddCustomLineRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the custom line.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -147,7 +156,10 @@ public class AddCustomLineRequest extends Request {
         }
 
         /**
-         * ShareScope.
+         * <p>This parameter is not available. You can ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GLOBAL</p>
          */
         public Builder shareScope(String shareScope) {
             this.putQueryParameter("ShareScope", shareScope);

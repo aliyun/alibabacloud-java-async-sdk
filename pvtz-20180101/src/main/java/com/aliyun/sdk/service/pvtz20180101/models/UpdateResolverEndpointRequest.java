@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResolverEndpointRequest} extends {@link RequestModel}
  *
  * <p>UpdateResolverEndpointRequest</p>
@@ -96,7 +97,11 @@ public class UpdateResolverEndpointRequest extends Request {
         } 
 
         /**
-         * The endpoint ID.
+         * <p>The endpoint ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -105,7 +110,10 @@ public class UpdateResolverEndpointRequest extends Request {
         }
 
         /**
-         * The source IP addresses of outbound traffic. You must add two to six source IP addresses to ensure high availability.
+         * <p>The source IP addresses of outbound traffic. You can add two to six IP addresses.</p>
+         * <blockquote>
+         * <p> You must add at least two source IP addresses for outbound traffic to ensure high availability. We recommend that you add two IP addresses that reside in different zones. You can add up to six source IP addresses.</p>
+         * </blockquote>
          */
         public Builder ipConfig(java.util.List < IpConfig> ipConfig) {
             this.putQueryParameter("IpConfig", ipConfig);
@@ -114,7 +122,15 @@ public class UpdateResolverEndpointRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -123,7 +139,10 @@ public class UpdateResolverEndpointRequest extends Request {
         }
 
         /**
-         * The endpoint name.
+         * <p>The endpoint name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>endpoint-test-name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -138,6 +157,12 @@ public class UpdateResolverEndpointRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateResolverEndpointRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateResolverEndpointRequest</p>
+     */
     public static class IpConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AzId")
         private String azId;
@@ -201,7 +226,10 @@ public class UpdateResolverEndpointRequest extends Request {
             private String vSwitchId; 
 
             /**
-             * The zone ID.
+             * <p>The ID of the zone to which the vSwitch belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder azId(String azId) {
                 this.azId = azId;
@@ -209,7 +237,10 @@ public class UpdateResolverEndpointRequest extends Request {
             }
 
             /**
-             * The IPv4 CIDR block of the vSwitch.
+             * <p>The IPv4 CIDR block of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -217,7 +248,10 @@ public class UpdateResolverEndpointRequest extends Request {
             }
 
             /**
-             * The IP address.
+             * <p>The source IP address of outbound traffic. The IP address must be within the specified CIDR block. If you leave this parameter empty, the system automatically allocates an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -225,7 +259,10 @@ public class UpdateResolverEndpointRequest extends Request {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-0jlgeyq4oazkh5xue****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddResolverEndpointRequest} extends {@link RequestModel}
  *
  * <p>AddResolverEndpointRequest</p>
@@ -128,7 +129,11 @@ public class AddResolverEndpointRequest extends Request {
         } 
 
         /**
-         * The source IP addresses of outbound traffic. You must add two to six source IP addresses to ensure high availability.
+         * <p>The source IP addresses of outbound traffic. You must add two to six source IP addresses.</p>
+         * <blockquote>
+         * <p> You must add at least two source IP addresses for outbound traffic to ensure high availability. We recommend that you add two IP addresses that reside in different zones. You can add up to six source IP addresses.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
         public Builder ipConfig(java.util.List < IpConfig> ipConfig) {
             this.putQueryParameter("IpConfig", ipConfig);
@@ -137,7 +142,15 @@ public class AddResolverEndpointRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,7 +159,11 @@ public class AddResolverEndpointRequest extends Request {
         }
 
         /**
-         * The endpoint name. The name can be up to 20 characters in length. If the upper limit is exceeded, an error message is returned.
+         * <p>The endpoint name. The name can be up to 20 characters in length. If the upper limit is exceeded, an error message is returned.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>endpoint-test-name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -155,7 +172,14 @@ public class AddResolverEndpointRequest extends Request {
         }
 
         /**
-         * The security group ID.
+         * <p>The ID of the security group. The security group rules are applied to the outbound VPC.</p>
+         * <blockquote>
+         * <p> After you create the outbound endpoint, you cannot change the value of SecurityGroupId. This prevents the forwarding of DNS requests from being interrupted due to misoperations.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kqlqlqjqqkq</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -164,7 +188,14 @@ public class AddResolverEndpointRequest extends Request {
         }
 
         /**
-         * The outbound VPC ID.
+         * <p>The outbound VPC ID. All outbound Domain Name System (DNS) requests of the resolver are forwarded by this VPC.</p>
+         * <blockquote>
+         * <p> After you create the outbound endpoint, you cannot change the value of VpcId. This prevents the forwarding of DNS requests from being interrupted due to misoperations.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-129343jslslsks</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -173,7 +204,11 @@ public class AddResolverEndpointRequest extends Request {
         }
 
         /**
-         * The region ID of the outbound virtual private cloud (VPC).
+         * <p>The region ID of the outbound virtual private cloud (VPC).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder vpcRegionId(String vpcRegionId) {
             this.putQueryParameter("VpcRegionId", vpcRegionId);
@@ -188,6 +223,12 @@ public class AddResolverEndpointRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddResolverEndpointRequest} extends {@link TeaModel}
+     *
+     * <p>AddResolverEndpointRequest</p>
+     */
     public static class IpConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AzId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -254,7 +295,11 @@ public class AddResolverEndpointRequest extends Request {
             private String vSwitchId; 
 
             /**
-             * The zone ID.
+             * <p>The ID of the zone to which the vSwitch belongs.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder azId(String azId) {
                 this.azId = azId;
@@ -262,7 +307,11 @@ public class AddResolverEndpointRequest extends Request {
             }
 
             /**
-             * The IPv4 CIDR block of the vSwitch.
+             * <p>The IPv4 CIDR block of the vSwitch.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.0.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -270,7 +319,10 @@ public class AddResolverEndpointRequest extends Request {
             }
 
             /**
-             * The source IP address of outbound traffic. The IP address must be within the specified CIDR block.
+             * <p>The source IP address of outbound traffic. The IP address must be within the specified CIDR block. If you leave this parameter empty, the system automatically allocates an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.xx.xx</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -278,7 +330,11 @@ public class AddResolverEndpointRequest extends Request {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sjqkql</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

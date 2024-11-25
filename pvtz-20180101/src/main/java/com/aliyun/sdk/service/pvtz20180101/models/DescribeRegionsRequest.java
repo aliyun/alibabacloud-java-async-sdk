@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRegionsRequest</p>
@@ -123,12 +124,18 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The supported language. Valid values:
-         * <p>
+         * <p>The supported language. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * </ul>
+         * <p>Default value: en-US.</p>
+         * <blockquote>
+         * <p> AcceptLanguage has a higher priority than Lang.</p>
+         * </blockquote>
          * 
-         * *   zh-CN: Chinese
-         * *   en-US: English
-         * *   ja: Japanese
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -137,7 +144,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the permissions on the resources are granted.
+         * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141339776561****</p>
          */
         public Builder authorizedUserId(Long authorizedUserId) {
             this.putQueryParameter("AuthorizedUserId", authorizedUserId);
@@ -146,7 +156,18 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * <blockquote>
+         * <p> Lang has a lower priority than AcceptLanguage.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -155,12 +176,15 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The scenario. Valid values:
-         * <p>
+         * <p>The scenario. Valid values:</p>
+         * <ul>
+         * <li>AUTH: the built-in authoritative module</li>
+         * <li>FWD: the forward module</li>
+         * <li>RA: the traffic analysis module</li>
+         * </ul>
          * 
-         * *   AUTH: the built-in authoritative module
-         * *   FWD: the forward module
-         * *   RA: the traffic analysis module
+         * <strong>example:</strong>
+         * <p>AUTH</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
@@ -169,7 +193,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -178,11 +205,14 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The type of the virtual private cloud (VPC). Valid values:
-         * <p>
+         * <p>The VPC type. Valid values:</p>
+         * <ul>
+         * <li>STANDARD: standard VPC</li>
+         * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+         * </ul>
          * 
-         * *   STANDARD: standard VPC
-         * *   EDS: Elastic Desktop Service (EDS) workspace VPC
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder vpcType(String vpcType) {
             this.putQueryParameter("VpcType", vpcType);

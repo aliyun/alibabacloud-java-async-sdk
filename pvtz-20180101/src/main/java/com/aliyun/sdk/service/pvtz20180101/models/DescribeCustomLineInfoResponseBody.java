@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomLineInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomLineInfoResponseBody</p>
@@ -157,7 +158,10 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         private Long updateTimestamp; 
 
         /**
-         * CreateTime.
+         * <p>The time when the custom line was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-23T03:15Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -165,7 +169,10 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimestamp.
+         * <p>The time when the custom line was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1516775741000</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -173,7 +180,10 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>The creator of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>260282302749096109</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -181,7 +191,16 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CreatorSubType.
+         * <p>The type of the creator. Valid values:</p>
+         * <ul>
+         * <li>CUSTOM: Alibaba Cloud account</li>
+         * <li>SUB: RAM user</li>
+         * <li>STS: assumed role that obtains the Security Token Service (STS) token of a RAM role</li>
+         * <li>OTHER: other roles</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
          */
         public Builder creatorSubType(String creatorSubType) {
             this.creatorSubType = creatorSubType;
@@ -189,7 +208,14 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CreatorType.
+         * <p>The role of the creator. Valid values:</p>
+         * <ul>
+         * <li>USER: user</li>
+         * <li>SYSTEM: system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder creatorType(String creatorType) {
             this.creatorType = creatorType;
@@ -197,7 +223,7 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv4s.
+         * <p>The IPv4 CIDR blocks.</p>
          */
         public Builder ipv4s(java.util.List < String > ipv4s) {
             this.ipv4s = ipv4s;
@@ -205,7 +231,10 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         }
 
         /**
-         * LineId.
+         * <p>The unique ID of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100003</p>
          */
         public Builder lineId(String lineId) {
             this.lineId = lineId;
@@ -213,7 +242,7 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the custom line.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -221,7 +250,10 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B7AD377-7E86-44A8-B9A8-53E8666E72FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -229,7 +261,10 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the custom line was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-24T06:35Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -237,7 +272,10 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTimestamp.
+         * <p>The time when the custom line was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1516775741000</p>
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
