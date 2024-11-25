@@ -160,6 +160,26 @@ public class DescribePolicyInstancesResponse extends Response {
         @com.aliyun.core.annotation.NameInMap("policy_action")
         private String policyAction;
 
+        @com.aliyun.core.annotation.NameInMap("Created")
+        @Deprecated
+        private String created;
+
+        @com.aliyun.core.annotation.NameInMap("Updated")
+        @Deprecated
+        private String updated;
+
+        @com.aliyun.core.annotation.NameInMap("resource_id")
+        @Deprecated
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("total_violations")
+        @Deprecated
+        private Long totalViolations;
+
+        @com.aliyun.core.annotation.NameInMap("is_deleted")
+        @Deprecated
+        private Long isDeleted;
+
         private DescribePolicyInstancesResponseBody(Builder builder) {
             this.aliUid = builder.aliUid;
             this.clusterId = builder.clusterId;
@@ -171,6 +191,11 @@ public class DescribePolicyInstancesResponse extends Response {
             this.policySeverity = builder.policySeverity;
             this.policyScope = builder.policyScope;
             this.policyAction = builder.policyAction;
+            this.created = builder.created;
+            this.updated = builder.updated;
+            this.resourceId = builder.resourceId;
+            this.totalViolations = builder.totalViolations;
+            this.isDeleted = builder.isDeleted;
         }
 
         public static Builder builder() {
@@ -251,6 +276,41 @@ public class DescribePolicyInstancesResponse extends Response {
             return this.policyAction;
         }
 
+        /**
+         * @return created
+         */
+        public String getCreated() {
+            return this.created;
+        }
+
+        /**
+         * @return updated
+         */
+        public String getUpdated() {
+            return this.updated;
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return totalViolations
+         */
+        public Long getTotalViolations() {
+            return this.totalViolations;
+        }
+
+        /**
+         * @return isDeleted
+         */
+        public Long getIsDeleted() {
+            return this.isDeleted;
+        }
+
         public static final class Builder {
             private String aliUid; 
             private String clusterId; 
@@ -262,6 +322,11 @@ public class DescribePolicyInstancesResponse extends Response {
             private String policySeverity; 
             private String policyScope; 
             private String policyAction; 
+            private String created; 
+            private String updated; 
+            private String resourceId; 
+            private Long totalViolations; 
+            private Long isDeleted; 
 
             /**
              * <p>The UID of the Alibaba Cloud account that is used to deploy the policy instance.</p>
@@ -378,6 +443,61 @@ public class DescribePolicyInstancesResponse extends Response {
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;
+                return this;
+            }
+
+            /**
+             * <p>Creation time (deprecated, do not use).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-29T18:09:12+08:00</p>
+             */
+            public Builder created(String created) {
+                this.created = created;
+                return this;
+            }
+
+            /**
+             * <p>Update time (deprecated, do not use).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-29T18:09:12+08:00</p>
+             */
+            public Builder updated(String updated) {
+                this.updated = updated;
+                return this;
+            }
+
+            /**
+             * <p>Resource ID (deprecated, do not use).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456***</p>
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * <p>Violation count processing in the cluster (deprecated, do not use).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder totalViolations(Long totalViolations) {
+                this.totalViolations = totalViolations;
+                return this;
+            }
+
+            /**
+             * <p>Deletion status (deprecated, do not use).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder isDeleted(Long isDeleted) {
+                this.isDeleted = isDeleted;
                 return this;
             }
 

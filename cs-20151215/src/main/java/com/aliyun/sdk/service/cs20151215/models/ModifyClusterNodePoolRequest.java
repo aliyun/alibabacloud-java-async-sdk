@@ -431,7 +431,7 @@ public class ModifyClusterNodePoolRequest extends Request {
              * <p>Specifies whether to enable auto scaling. Valid values:</p>
              * <ul>
              * <li><code>true</code>: enables auto scaling for the node pool.</li>
-             * <li><code>false</code>: disables auto scaling for the node pool. If you set this parameter to false, other parameters in the <code>auto_scaling</code> section do not take effect.</li>
+             * <li><code>false</code>: disables auto scaling for the node pool. If you set this parameter to false, other parameters in <code>auto_scaling</code> do not take effect.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
              * 
@@ -482,7 +482,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The instance types that can be used for the auto scaling of the node pool. Valid values:</p>
+             * <p>The instance type that is used for auto scaling. Valid values:</p>
              * <ul>
              * <li><code>cpu</code>: regular instance.</li>
              * <li><code>gpu</code>: GPU-accelerated instance.</li>
@@ -651,7 +651,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+             * <p>The CPU management policy of nodes. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
              * <ul>
              * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
              * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
@@ -679,7 +679,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * pre_user_data.
+             * <p>The user-defined script that is executed before nodes are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Prepare user data</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFDSyEi</p>
              */
             public Builder preUserData(String preUserData) {
                 this.preUserData = preUserData;
@@ -728,7 +731,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The user data of the node pool. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Prepare user data</a>.</p>
+             * <p>The user-defined script that is executed after nodes are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Prepare user data</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFDSyEi</p>
@@ -1068,7 +1071,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             /**
              * <p>The maximum number of nodes that can be in the Unavailable state.</p>
              * <p>Valid values: 1 to 1000.</p>
-             * <p>Default value: 1</p>
+             * <p>Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1252,7 +1255,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable auto update. Valid values:</p>
+             * <p>Indicates whether auto update is enabled. Valid values:</p>
              * <ul>
              * <li><code>true</code>: enables auto update.</li>
              * <li><code>false</code>: disables auto update.</li>
@@ -1525,7 +1528,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String priceLimit; 
 
             /**
-             * <p>The instance type of preemptible instances.</p>
+             * <p>The price cap of a preemptible instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.c6.large</p>
@@ -2062,7 +2065,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             /**
              * <p>Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the cost or insufficient inventory. This parameter takes effect only when you set <code>multi_az_policy</code> to <code>COST_OPTIMIZED</code>. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created</li>
+             * <li><code>true</code>: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.</li>
              * <li><code>false</code>: does not create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.</li>
              * </ul>
              * 
@@ -2159,10 +2162,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The billing method of the public IP address. Valid values:</p>
+             * <p>The metering method of the public IP address. Valid values:</p>
              * <ul>
              * <li><code>PayByBandwidth</code>: pay-by-bandwidth.</li>
-             * <li><code>PayByTraffic</code>: pay-by-data-transfer.</li>
+             * <li><code>PayByTraffic</code>: pay-by-data-transfer</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2185,7 +2188,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The name of the key pair. You must specify this parameter or the <code>login_password</code> parameter. You must specify the <code>key_pair</code> parameter if the node pool is a managed node pool.</p>
+             * <p>The name of the key pair. You must specify this parameter or <code>login_password</code>. You must specify the <code>key_pair</code> parameter if the node pool is a managed node pool.</p>
              * 
              * <strong>example:</strong>
              * <p>pro-nodepool</p>
@@ -2196,7 +2199,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The password for SSH logon. You must specify this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+             * <p>The password for SSH logon. You must specify this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
              * 
              * <strong>example:</strong>
              * <p>Hello1234</p>
@@ -2293,7 +2296,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The configurations of the private node pool.</p>
+             * <p>The configuration of the private node pool.</p>
              */
             public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
                 this.privatePoolOptions = privatePoolOptions;
@@ -2301,7 +2304,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>A list of ApsaraDB RDS instances.</p>
+             * <p>The ApsaraDB RDS instances.</p>
              */
             public Builder rdsInstances(java.util.List < String > rdsInstances) {
                 this.rdsInstances = rdsInstances;
@@ -2394,10 +2397,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The type of the system disk. Valid values:</p>
+             * <p>The type of system disk. Valid values:</p>
              * <ul>
              * <li><code>cloud_efficiency</code>: ultra disk.</li>
-             * <li><code>cloud_ssd</code>: standard SSD.</li>
+             * <li><code>cloud_ssd</code>: standard SSD</li>
              * </ul>
              * <p>Default value: <code>cloud_ssd</code>.</p>
              * 
@@ -2410,7 +2413,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The encryption algorithm that is used by the system disk. Set the value to aes-256.</p>
+             * <p>The encryption algorithm that is used by the system disk. The value is aes-256.</p>
              * 
              * <strong>example:</strong>
              * <p>aes-256</p>
@@ -2421,7 +2424,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to encrypt the system disk. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.</p>
+             * <p>Indicates whether the system disk is encrypted. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2479,7 +2482,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The labels that you want to add only to ECS instances.</p>
+             * <p>The tags that you want to add only to ECS instances.</p>
              * <p>The label key must be unique and cannot exceed 128 characters in length. The label key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
              */
             public Builder tags(java.util.List < Tag > tags) {

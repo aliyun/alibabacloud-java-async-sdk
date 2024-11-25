@@ -38,6 +38,10 @@ public class ModifyClusterRequest extends Request {
     private String clusterName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("control_plane_config")
+    private ControlPlaneConfig controlPlaneConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("deletion_protection")
     private Boolean deletionProtection;
 
@@ -85,6 +89,7 @@ public class ModifyClusterRequest extends Request {
         this.apiServerEip = builder.apiServerEip;
         this.apiServerEipId = builder.apiServerEipId;
         this.clusterName = builder.clusterName;
+        this.controlPlaneConfig = builder.controlPlaneConfig;
         this.deletionProtection = builder.deletionProtection;
         this.enableRrsa = builder.enableRrsa;
         this.ingressDomainRebinding = builder.ingressDomainRebinding;
@@ -150,6 +155,13 @@ public class ModifyClusterRequest extends Request {
      */
     public String getClusterName() {
         return this.clusterName;
+    }
+
+    /**
+     * @return controlPlaneConfig
+     */
+    public ControlPlaneConfig getControlPlaneConfig() {
+        return this.controlPlaneConfig;
     }
 
     /**
@@ -229,6 +241,7 @@ public class ModifyClusterRequest extends Request {
         private Boolean apiServerEip; 
         private String apiServerEipId; 
         private String clusterName; 
+        private ControlPlaneConfig controlPlaneConfig; 
         private Boolean deletionProtection; 
         private Boolean enableRrsa; 
         private Boolean ingressDomainRebinding; 
@@ -252,6 +265,7 @@ public class ModifyClusterRequest extends Request {
             this.apiServerEip = request.apiServerEip;
             this.apiServerEipId = request.apiServerEipId;
             this.clusterName = request.clusterName;
+            this.controlPlaneConfig = request.controlPlaneConfig;
             this.deletionProtection = request.deletionProtection;
             this.enableRrsa = request.enableRrsa;
             this.ingressDomainRebinding = request.ingressDomainRebinding;
@@ -333,6 +347,15 @@ public class ModifyClusterRequest extends Request {
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("cluster_name", clusterName);
             this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * control_plane_config.
+         */
+        public Builder controlPlaneConfig(ControlPlaneConfig controlPlaneConfig) {
+            this.putBodyParameter("control_plane_config", controlPlaneConfig);
+            this.controlPlaneConfig = controlPlaneConfig;
             return this;
         }
 
@@ -539,6 +562,513 @@ public class ModifyClusterRequest extends Request {
 
             public ApiServerCustomCertSans build() {
                 return new ApiServerCustomCertSans(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterRequest</p>
+     */
+    public static class ControlPlaneConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("auto_renew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("auto_renew_period")
+        private Long autoRenewPeriod;
+
+        @com.aliyun.core.annotation.NameInMap("charge_type")
+        private String chargeType;
+
+        @com.aliyun.core.annotation.NameInMap("cloud_monitor_flags")
+        private Boolean cloudMonitorFlags;
+
+        @com.aliyun.core.annotation.NameInMap("cpu_policy")
+        private String cpuPolicy;
+
+        @com.aliyun.core.annotation.NameInMap("deploymentset_id")
+        private String deploymentsetId;
+
+        @com.aliyun.core.annotation.NameInMap("image_id")
+        private String imageId;
+
+        @com.aliyun.core.annotation.NameInMap("image_type")
+        private String imageType;
+
+        @com.aliyun.core.annotation.NameInMap("instance_types")
+        private java.util.List < String > instanceTypes;
+
+        @com.aliyun.core.annotation.NameInMap("key_pair")
+        private String keyPair;
+
+        @com.aliyun.core.annotation.NameInMap("login_password")
+        private String loginPassword;
+
+        @com.aliyun.core.annotation.NameInMap("node_port_range")
+        private String nodePortRange;
+
+        @com.aliyun.core.annotation.NameInMap("period")
+        private Long period;
+
+        @com.aliyun.core.annotation.NameInMap("period_unit")
+        private String periodUnit;
+
+        @com.aliyun.core.annotation.NameInMap("runtime")
+        private String runtime;
+
+        @com.aliyun.core.annotation.NameInMap("security_hardening_os")
+        private Boolean securityHardeningOs;
+
+        @com.aliyun.core.annotation.NameInMap("size")
+        private Long size;
+
+        @com.aliyun.core.annotation.NameInMap("soc_enabled")
+        private Boolean socEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_bursting_enabled")
+        private Boolean systemDiskBurstingEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_category")
+        private String systemDiskCategory;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_performance_level")
+        private String systemDiskPerformanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_provisioned_iops")
+        private Long systemDiskProvisionedIops;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_size")
+        private Long systemDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_snapshot_policy_id")
+        private String systemDiskSnapshotPolicyId;
+
+        private ControlPlaneConfig(Builder builder) {
+            this.autoRenew = builder.autoRenew;
+            this.autoRenewPeriod = builder.autoRenewPeriod;
+            this.chargeType = builder.chargeType;
+            this.cloudMonitorFlags = builder.cloudMonitorFlags;
+            this.cpuPolicy = builder.cpuPolicy;
+            this.deploymentsetId = builder.deploymentsetId;
+            this.imageId = builder.imageId;
+            this.imageType = builder.imageType;
+            this.instanceTypes = builder.instanceTypes;
+            this.keyPair = builder.keyPair;
+            this.loginPassword = builder.loginPassword;
+            this.nodePortRange = builder.nodePortRange;
+            this.period = builder.period;
+            this.periodUnit = builder.periodUnit;
+            this.runtime = builder.runtime;
+            this.securityHardeningOs = builder.securityHardeningOs;
+            this.size = builder.size;
+            this.socEnabled = builder.socEnabled;
+            this.systemDiskBurstingEnabled = builder.systemDiskBurstingEnabled;
+            this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
+            this.systemDiskProvisionedIops = builder.systemDiskProvisionedIops;
+            this.systemDiskSize = builder.systemDiskSize;
+            this.systemDiskSnapshotPolicyId = builder.systemDiskSnapshotPolicyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ControlPlaneConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return autoRenewPeriod
+         */
+        public Long getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
+         * @return cloudMonitorFlags
+         */
+        public Boolean getCloudMonitorFlags() {
+            return this.cloudMonitorFlags;
+        }
+
+        /**
+         * @return cpuPolicy
+         */
+        public String getCpuPolicy() {
+            return this.cpuPolicy;
+        }
+
+        /**
+         * @return deploymentsetId
+         */
+        public String getDeploymentsetId() {
+            return this.deploymentsetId;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
+         * @return imageType
+         */
+        public String getImageType() {
+            return this.imageType;
+        }
+
+        /**
+         * @return instanceTypes
+         */
+        public java.util.List < String > getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        /**
+         * @return keyPair
+         */
+        public String getKeyPair() {
+            return this.keyPair;
+        }
+
+        /**
+         * @return loginPassword
+         */
+        public String getLoginPassword() {
+            return this.loginPassword;
+        }
+
+        /**
+         * @return nodePortRange
+         */
+        public String getNodePortRange() {
+            return this.nodePortRange;
+        }
+
+        /**
+         * @return period
+         */
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return periodUnit
+         */
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        /**
+         * @return runtime
+         */
+        public String getRuntime() {
+            return this.runtime;
+        }
+
+        /**
+         * @return securityHardeningOs
+         */
+        public Boolean getSecurityHardeningOs() {
+            return this.securityHardeningOs;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return socEnabled
+         */
+        public Boolean getSocEnabled() {
+            return this.socEnabled;
+        }
+
+        /**
+         * @return systemDiskBurstingEnabled
+         */
+        public Boolean getSystemDiskBurstingEnabled() {
+            return this.systemDiskBurstingEnabled;
+        }
+
+        /**
+         * @return systemDiskCategory
+         */
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        /**
+         * @return systemDiskPerformanceLevel
+         */
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
+        /**
+         * @return systemDiskProvisionedIops
+         */
+        public Long getSystemDiskProvisionedIops() {
+            return this.systemDiskProvisionedIops;
+        }
+
+        /**
+         * @return systemDiskSize
+         */
+        public Long getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
+        /**
+         * @return systemDiskSnapshotPolicyId
+         */
+        public String getSystemDiskSnapshotPolicyId() {
+            return this.systemDiskSnapshotPolicyId;
+        }
+
+        public static final class Builder {
+            private Boolean autoRenew; 
+            private Long autoRenewPeriod; 
+            private String chargeType; 
+            private Boolean cloudMonitorFlags; 
+            private String cpuPolicy; 
+            private String deploymentsetId; 
+            private String imageId; 
+            private String imageType; 
+            private java.util.List < String > instanceTypes; 
+            private String keyPair; 
+            private String loginPassword; 
+            private String nodePortRange; 
+            private Long period; 
+            private String periodUnit; 
+            private String runtime; 
+            private Boolean securityHardeningOs; 
+            private Long size; 
+            private Boolean socEnabled; 
+            private Boolean systemDiskBurstingEnabled; 
+            private String systemDiskCategory; 
+            private String systemDiskPerformanceLevel; 
+            private Long systemDiskProvisionedIops; 
+            private Long systemDiskSize; 
+            private String systemDiskSnapshotPolicyId; 
+
+            /**
+             * auto_renew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * auto_renew_period.
+             */
+            public Builder autoRenewPeriod(Long autoRenewPeriod) {
+                this.autoRenewPeriod = autoRenewPeriod;
+                return this;
+            }
+
+            /**
+             * charge_type.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * cloud_monitor_flags.
+             */
+            public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
+                this.cloudMonitorFlags = cloudMonitorFlags;
+                return this;
+            }
+
+            /**
+             * cpu_policy.
+             */
+            public Builder cpuPolicy(String cpuPolicy) {
+                this.cpuPolicy = cpuPolicy;
+                return this;
+            }
+
+            /**
+             * deploymentset_id.
+             */
+            public Builder deploymentsetId(String deploymentsetId) {
+                this.deploymentsetId = deploymentsetId;
+                return this;
+            }
+
+            /**
+             * image_id.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * image_type.
+             */
+            public Builder imageType(String imageType) {
+                this.imageType = imageType;
+                return this;
+            }
+
+            /**
+             * instance_types.
+             */
+            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+                this.instanceTypes = instanceTypes;
+                return this;
+            }
+
+            /**
+             * key_pair.
+             */
+            public Builder keyPair(String keyPair) {
+                this.keyPair = keyPair;
+                return this;
+            }
+
+            /**
+             * login_password.
+             */
+            public Builder loginPassword(String loginPassword) {
+                this.loginPassword = loginPassword;
+                return this;
+            }
+
+            /**
+             * node_port_range.
+             */
+            public Builder nodePortRange(String nodePortRange) {
+                this.nodePortRange = nodePortRange;
+                return this;
+            }
+
+            /**
+             * period.
+             */
+            public Builder period(Long period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * period_unit.
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * runtime.
+             */
+            public Builder runtime(String runtime) {
+                this.runtime = runtime;
+                return this;
+            }
+
+            /**
+             * security_hardening_os.
+             */
+            public Builder securityHardeningOs(Boolean securityHardeningOs) {
+                this.securityHardeningOs = securityHardeningOs;
+                return this;
+            }
+
+            /**
+             * size.
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * soc_enabled.
+             */
+            public Builder socEnabled(Boolean socEnabled) {
+                this.socEnabled = socEnabled;
+                return this;
+            }
+
+            /**
+             * system_disk_bursting_enabled.
+             */
+            public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
+                this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
+                return this;
+            }
+
+            /**
+             * system_disk_category.
+             */
+            public Builder systemDiskCategory(String systemDiskCategory) {
+                this.systemDiskCategory = systemDiskCategory;
+                return this;
+            }
+
+            /**
+             * system_disk_performance_level.
+             */
+            public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+                this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+                return this;
+            }
+
+            /**
+             * system_disk_provisioned_iops.
+             */
+            public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
+                this.systemDiskProvisionedIops = systemDiskProvisionedIops;
+                return this;
+            }
+
+            /**
+             * system_disk_size.
+             */
+            public Builder systemDiskSize(Long systemDiskSize) {
+                this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * system_disk_snapshot_policy_id.
+             */
+            public Builder systemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
+                this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
+                return this;
+            }
+
+            public ControlPlaneConfig build() {
+                return new ControlPlaneConfig(this);
             } 
 
         } 

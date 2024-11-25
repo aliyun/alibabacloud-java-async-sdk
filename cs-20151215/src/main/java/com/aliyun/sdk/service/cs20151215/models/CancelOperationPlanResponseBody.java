@@ -38,7 +38,10 @@ public class CancelOperationPlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db82195b-75a8-40e5-9be4-16f1829dc624</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

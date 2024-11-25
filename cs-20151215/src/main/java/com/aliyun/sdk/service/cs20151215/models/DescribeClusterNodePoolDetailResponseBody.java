@@ -15,11 +15,17 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("auto_scaling")
     private AutoScaling autoScaling;
 
+    @com.aliyun.core.annotation.NameInMap("host_network")
+    private Boolean hostNetwork;
+
     @com.aliyun.core.annotation.NameInMap("interconnect_config")
     private InterconnectConfig interconnectConfig;
 
     @com.aliyun.core.annotation.NameInMap("interconnect_mode")
     private String interconnectMode;
+
+    @com.aliyun.core.annotation.NameInMap("intranet")
+    private Boolean intranet;
 
     @com.aliyun.core.annotation.NameInMap("kubernetes_config")
     private KubernetesConfig kubernetesConfig;
@@ -47,8 +53,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     private DescribeClusterNodePoolDetailResponseBody(Builder builder) {
         this.autoScaling = builder.autoScaling;
+        this.hostNetwork = builder.hostNetwork;
         this.interconnectConfig = builder.interconnectConfig;
         this.interconnectMode = builder.interconnectMode;
+        this.intranet = builder.intranet;
         this.kubernetesConfig = builder.kubernetesConfig;
         this.management = builder.management;
         this.maxNodes = builder.maxNodes;
@@ -75,6 +83,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return hostNetwork
+     */
+    public Boolean getHostNetwork() {
+        return this.hostNetwork;
+    }
+
+    /**
      * @return interconnectConfig
      */
     public InterconnectConfig getInterconnectConfig() {
@@ -86,6 +101,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
      */
     public String getInterconnectMode() {
         return this.interconnectMode;
+    }
+
+    /**
+     * @return intranet
+     */
+    public Boolean getIntranet() {
+        return this.intranet;
     }
 
     /**
@@ -146,8 +168,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private AutoScaling autoScaling; 
+        private Boolean hostNetwork; 
         private InterconnectConfig interconnectConfig; 
         private String interconnectMode; 
+        private Boolean intranet; 
         private KubernetesConfig kubernetesConfig; 
         private Management management; 
         private Long maxNodes; 
@@ -162,6 +186,17 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
          */
         public Builder autoScaling(AutoScaling autoScaling) {
             this.autoScaling = autoScaling;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether the pods in the edge node pool can use the host network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder hostNetwork(Boolean hostNetwork) {
+            this.hostNetwork = hostNetwork;
             return this;
         }
 
@@ -185,7 +220,18 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration of the cluster where the node pool is deployed.</p>
+         * <p>Indicates whether all nodes in the edge node pool can communicate with each other at Layer 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder intranet(Boolean intranet) {
+            this.intranet = intranet;
+            return this;
+        }
+
+        /**
+         * <p>The configurations of the cluster.</p>
          */
         public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
             this.kubernetesConfig = kubernetesConfig;
@@ -212,7 +258,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Node configuration.</p>
+         * <p>The node configurations.</p>
          */
         public Builder nodeConfig(NodeConfig nodeConfig) {
             this.nodeConfig = nodeConfig;
@@ -228,7 +274,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configurations of the scaling group.</p>
+         * <p>The configurations of the scaling group used by the node pool.</p>
          */
         public Builder scalingGroup(ScalingGroup scalingGroup) {
             this.scalingGroup = scalingGroup;
@@ -776,10 +822,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The labels of the nodes in the node pool. You can add labels to the nodes in the cluster. You must add labels based on the following rules:</p>
+             * <p>The labels that you want to add to the nodes in the cluster. You must add labels based on the following rules:</p>
              * <ul>
-             * <li>Each label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
-             * <li>A key must be unique and cannot exceed 64 characters in length. A value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+             * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
+             * <li>The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
              * </ul>
              */
             public Builder labels(java.util.List < Tag > labels) {
@@ -804,7 +850,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * pre_user_data.
+             * <p>The custom script to be executed before nodes in the node pool are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dGhpcyBpcyBhIGV4YW1wbGU</p>
              */
             public Builder preUserData(String preUserData) {
                 this.preUserData = preUserData;
@@ -834,7 +883,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The taints of the nodes in the node pool. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
+             * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to prevent pods from being scheduled to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
              */
             public Builder taints(java.util.List < Taint > taints) {
                 this.taints = taints;
@@ -853,7 +902,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user data of the node pool. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user data</a>.</p>
+             * <p>The custom script to be executed after nodes in the node pool are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>IyEvYmluL3NoCmVjaG8gIkhlbGxvIEFDSyEi</p>
@@ -1407,7 +1456,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private KubeletConfig kubeletConfiguration; 
 
             /**
-             * <p>Kubelet parameter configuration.</p>
+             * <p>The configurations of the kubelet.</p>
              */
             public Builder kubeletConfiguration(KubeletConfig kubeletConfiguration) {
                 this.kubeletConfiguration = kubeletConfiguration;
@@ -2436,7 +2485,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the data disks that are attached to the nodes in the node pool. The configurations include the disk type and disk size.</p>
+             * <p>The configurations of the data disks that are attached to the nodes in the node pool. The configurations include the disk category and disk size.</p>
              */
             public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
                 this.dataDisks = dataDisks;
@@ -2503,7 +2552,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance attributes</p>
+             * <p>The instance properties.</p>
              */
             public Builder instancePatterns(java.util.List < InstancePatterns > instancePatterns) {
                 this.instancePatterns = instancePatterns;
@@ -2832,14 +2881,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system disk types. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: Valid values:</p>
+             * <p>The categories of the system disk for nodes. The system attempts to create system disks of a disk category with a lower priority if the disk category with a higher priority is unavailable. Valid values: Valid values:</p>
              * <ul>
-             * <li><code>cloud</code>: basic disk</li>
-             * <li><code>cloud_efficiency</code>: ultra disk</li>
-             * <li><code>cloud_ssd</code>: standard SSD</li>
-             * <li><code>cloud_essd</code>: ESSD</li>
-             * <li><code>cloud_auto</code>: ESSD AutoPL disk</li>
-             * <li><code>cloud_essd_entry</code>: ESSD Entry disk</li>
+             * <li><code>cloud</code>: basic disk.</li>
+             * <li><code>cloud_efficiency</code>: ultra disk.</li>
+             * <li><code>cloud_ssd</code>: standard SSD.</li>
+             * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
+             * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
+             * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
              * </ul>
              * <p>Default value: <code>cloud_efficiency</code>.</p>
              */
@@ -2869,7 +2918,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Encryption algorithm used for the system disk. Valid values: aes-256.</p>
+             * <p>The encryption algorithm that is used to encrypt the system disk. Set the value to aes-256.</p>
              * 
              * <strong>example:</strong>
              * <p>aes-256</p>
@@ -2940,8 +2989,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The labels that you want to add to the ECS instances.</p>
-             * <p>A key must be unique and cannot exceed 128 characters in length. Neither keys nor values can start with aliyun or acs:. Neither keys nor values can contain https:// or http://.</p>
+             * <p>The labels that you want to add only to ECS instances.</p>
+             * <p>The label key must be unique and cannot exceed 128 characters in length. The label key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;

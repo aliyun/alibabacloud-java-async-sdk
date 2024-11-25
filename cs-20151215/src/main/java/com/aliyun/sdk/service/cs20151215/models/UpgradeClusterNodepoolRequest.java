@@ -248,7 +248,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * <p>The version of the container runtime that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime version information returned in the runtime parameter.</p>
+         * <p>The version of the container runtime that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime version returned in the runtime parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5.10</p>
@@ -351,7 +351,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of unavailable nodes.</p>
+             * <p>The maximum number of nodes per batch.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

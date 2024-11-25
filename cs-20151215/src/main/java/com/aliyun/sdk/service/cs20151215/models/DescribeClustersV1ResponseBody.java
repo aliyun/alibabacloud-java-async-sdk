@@ -116,7 +116,16 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             private Boolean enabled; 
 
             /**
-             * channel.
+             * <p>The frequency of auto cluster updates. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>patch: the latest patch version.</li>
+             * <li>stables: the second-latest minor version.</li>
+             * <li>rapid: the latest minor version.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>patch</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -124,7 +133,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable auto cluster update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -171,7 +183,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             private ClusterAutoUpgrade clusterAutoUpgrade; 
 
             /**
-             * cluster_auto_upgrade.
+             * <p>The configurations of auto cluster update.</p>
              */
             public Builder clusterAutoUpgrade(ClusterAutoUpgrade clusterAutoUpgrade) {
                 this.clusterAutoUpgrade = clusterAutoUpgrade;
@@ -653,7 +665,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * cluster_domain.
+             * <p>The domain name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster.local</p>
              */
             public Builder clusterDomain(String clusterDomain) {
                 this.clusterDomain = clusterDomain;
@@ -702,7 +717,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * container_cidr.
+             * <p>The pod CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.20.0.0/16</p>
              */
             public Builder containerCidr(String containerCidr) {
                 this.containerCidr = containerCidr;
@@ -782,7 +800,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * ip_stack.
+             * <p>The IP stack of the cluster. Valid values:</p>
+             * <ul>
+             * <li>ipv4: The cluster is an IPv4 cluster.</li>
+             * <li>dual: The cluster is a dual-stack cluster.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder ipStack(String ipStack) {
                 this.ipStack = ipStack;
@@ -860,7 +885,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * operation_policy.
+             * <p>The automatic O&amp;M policy of the cluster.</p>
              */
             public Builder operationPolicy(OperationPolicy operationPolicy) {
                 this.operationPolicy = operationPolicy;
@@ -900,7 +925,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * proxy_mode.
+             * <p>The kube-proxy mode. Valid values: ipvs and iptables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipvs</p>
              */
             public Builder proxyMode(String proxyMode) {
                 this.proxyMode = proxyMode;
@@ -941,6 +969,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The Service CIDR block.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -952,7 +981,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes in the cluster, including master nodes and worker nodes.</p>
+             * <p>The number of nodes in the cluster, including control planes and worker nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -993,7 +1022,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              * <li>192.168.0.0/16</li>
              * </ul>
              * <p>The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
-             * <p>For more information about the network planning of ACK clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster</a>.</p>
+             * <p>For more information about the network planning of Container Service for Kubernetes (ACK) clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>172.21.0.0/16</p>
@@ -1012,7 +1041,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * timezone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -1042,7 +1074,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.</p>
+             * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-2vc41xuumx5z2rdma****,vsw-2vc41xuumx5z2rdma****</p>
@@ -1053,7 +1085,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * vswitch_ids.
+             * <p>The vSwitches of the control planes.</p>
              */
             public Builder vswitchIds(java.util.List < String > vswitchIds) {
                 this.vswitchIds = vswitchIds;

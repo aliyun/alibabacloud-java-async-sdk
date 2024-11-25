@@ -100,7 +100,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the resource.</p>
+         * <p>The ID of the region in which the resource resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of resource that you want to label. Set the value to <code>CLUSTER</code>.</p>
+         * <p>The type of resources that you want to label. Valid value: <code>CLUSTER</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,11 +136,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Usage notes:</p>
+         * <p>The tags that you want to add to the resources in key-value pairs. You can add up to 20 key-value pairs. Note:</p>
          * <ul>
-         * <li>Label values must not be empty strings. A label value must be 1 to 128 characters in length.</li>
-         * <li>The label value must not start with <code>aliyun</code> or <code>acs:</code>.</li>
-         * <li>The label value must not contain <code>http://</code> or <code>https://</code>.</li>
+         * <li>The values must not be empty strings. A value must be 1 to 128 characters in length.</li>
+         * <li>A key or value must not start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>A key or value must not contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          */

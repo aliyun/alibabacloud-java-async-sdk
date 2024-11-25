@@ -203,6 +203,9 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
 
             /**
              * <p>Indicates whether a restart is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder needReboot(Boolean needReboot) {
                 this.needReboot = needReboot;

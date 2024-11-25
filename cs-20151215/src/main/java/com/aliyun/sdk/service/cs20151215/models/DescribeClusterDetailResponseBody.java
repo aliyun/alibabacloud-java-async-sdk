@@ -27,6 +27,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("container_cidr")
     private String containerCidr;
 
+    @com.aliyun.core.annotation.NameInMap("control_plane_config")
+    private ControlPlaneConfig controlPlaneConfig;
+
     @com.aliyun.core.annotation.NameInMap("created")
     private String created;
 
@@ -138,6 +141,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         this.clusterSpec = builder.clusterSpec;
         this.clusterType = builder.clusterType;
         this.containerCidr = builder.containerCidr;
+        this.controlPlaneConfig = builder.controlPlaneConfig;
         this.created = builder.created;
         this.currentVersion = builder.currentVersion;
         this.deletionProtection = builder.deletionProtection;
@@ -215,6 +219,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      */
     public String getContainerCidr() {
         return this.containerCidr;
+    }
+
+    /**
+     * @return controlPlaneConfig
+     */
+    public ControlPlaneConfig getControlPlaneConfig() {
+        return this.controlPlaneConfig;
     }
 
     /**
@@ -461,6 +472,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private String clusterSpec; 
         private String clusterType; 
         private String containerCidr; 
+        private ControlPlaneConfig controlPlaneConfig; 
         private String created; 
         private String currentVersion; 
         private Boolean deletionProtection; 
@@ -497,7 +509,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * cluster_domain.
+         * <p>The on-premises domain name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster.local</p>
          */
         public Builder clusterDomain(String clusterDomain) {
             this.clusterDomain = clusterDomain;
@@ -546,10 +561,21 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * container_cidr.
+         * <p>The CIDR block of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.20.0.0/16</p>
          */
         public Builder containerCidr(String containerCidr) {
             this.containerCidr = containerCidr;
+            return this;
+        }
+
+        /**
+         * control_plane_config.
+         */
+        public Builder controlPlaneConfig(ControlPlaneConfig controlPlaneConfig) {
+            this.controlPlaneConfig = controlPlaneConfig;
             return this;
         }
 
@@ -602,7 +628,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * external_loadbalancer_id.
+         * <p>The ID of the Server Load Balancer (SLB) instance that is created for the Ingress of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-2zehc05z3b8dwiifh****</p>
          */
         public Builder externalLoadbalancerId(String externalLoadbalancerId) {
             this.externalLoadbalancerId = externalLoadbalancerId;
@@ -621,7 +650,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ip_stack.
+         * <p>The IP protocol stack of the cluster. Valid values:</p>
+         * <ul>
+         * <li>ipv4: creates a cluster that supports only the IPv4 protocol stack.</li>
+         * <li>dual: creates a cluster that supports IPv4/IPv6 dual-stack.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder ipStack(String ipStack) {
             this.ipStack = ipStack;
@@ -671,7 +707,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * network_mode.
+         * <p>The network type of the cluster. Example: Virtual Private Cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkMode(String networkMode) {
             this.networkMode = networkMode;
@@ -679,7 +718,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * next_version.
+         * <p>The Kubernetes version to which the cluster can be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.18.8-aliyun.1</p>
          */
         public Builder nextVersion(String nextVersion) {
             this.nextVersion = nextVersion;
@@ -687,7 +729,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * node_cidr_mask.
+         * <p>The number of the IP addresses of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
          */
         public Builder nodeCidrMask(String nodeCidrMask) {
             this.nodeCidrMask = nodeCidrMask;
@@ -695,7 +740,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * operation_policy.
+         * <p>The automatic O&amp;M policy of the cluster.</p>
          */
         public Builder operationPolicy(OperationPolicy operationPolicy) {
             this.operationPolicy = operationPolicy;
@@ -703,7 +748,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ROS parameters of the cluster.</p>
+         * <p>The Resource Orchestration Service (ROS) parameters of the cluster.</p>
          */
         public Builder parameters(java.util.Map < String, String > parameters) {
             this.parameters = parameters;
@@ -711,7 +756,15 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * private_zone.
+         * <p>Indicates whether Alibaba Cloud DNS PrivateZone (PrivateZone) is enabled for the cluster. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: PrivateZone is enabled.</li>
+         * <li><code>false</code>: PrivateZone is dislabled.</li>
+         * </ul>
+         * <p>Default value: false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder privateZone(Boolean privateZone) {
             this.privateZone = privateZone;
@@ -736,7 +789,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * proxy_mode.
+         * <p>The proxy mode. Valid values: ipvs and iptables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipvs</p>
          */
         public Builder proxyMode(String proxyMode) {
             this.proxyMode = proxyMode;
@@ -777,6 +833,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The CIDR block of the Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -830,8 +887,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
          * <li>172.16-31.0.0/12-16</li>
          * <li>192.168.0.0/16</li>
          * </ul>
-         * <p>The pod CIDR block cannot overlap with the CIDR block of the VPC or the CIDR blocks of the clusters in the VPC.</p>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/186964.html">Plan CIDR blocks for an ACK cluster</a>.</p>
+         * <p>The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
+         * <p>For more information about the network planning of ACK clusters, see <a href="https://help.aliyun.com/document_detail/186964.html">Plan CIDR blocks for an ACK cluster</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>172.20.0.0/16</p>
@@ -850,7 +907,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * timezone.
+         * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timezone(String timezone) {
             this.timezone = timezone;
@@ -880,7 +940,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.</p>
+         * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-2zete8s4qocqg0mf6****,vsw-2zete8s4qocqg0mf6****</p>
@@ -891,7 +951,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * vswitch_ids.
+         * <p>The vSwitch for the control plane of the cluster.</p>
          */
         public Builder vswitchIds(java.util.List < String > vswitchIds) {
             this.vswitchIds = vswitchIds;
@@ -910,7 +970,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * zone_id.
+         * <p>The ID of the zone within the region where the cluster is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-a</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -923,6 +986,496 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterDetailResponseBody</p>
+     */
+    public static class ControlPlaneConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("auto_renew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("auto_renew_period")
+        private Long autoRenewPeriod;
+
+        @com.aliyun.core.annotation.NameInMap("charge_type")
+        private String chargeType;
+
+        @com.aliyun.core.annotation.NameInMap("cloud_monitor_flags")
+        private Boolean cloudMonitorFlags;
+
+        @com.aliyun.core.annotation.NameInMap("cpu_policy")
+        private String cpuPolicy;
+
+        @com.aliyun.core.annotation.NameInMap("deploymentset_id")
+        private String deploymentsetId;
+
+        @com.aliyun.core.annotation.NameInMap("image_id")
+        private String imageId;
+
+        @com.aliyun.core.annotation.NameInMap("image_type")
+        private String imageType;
+
+        @com.aliyun.core.annotation.NameInMap("instance_types")
+        private java.util.List < String > instanceTypes;
+
+        @com.aliyun.core.annotation.NameInMap("key_pair")
+        private String keyPair;
+
+        @com.aliyun.core.annotation.NameInMap("node_port_range")
+        private String nodePortRange;
+
+        @com.aliyun.core.annotation.NameInMap("period")
+        private Long period;
+
+        @com.aliyun.core.annotation.NameInMap("period_unit")
+        private String periodUnit;
+
+        @com.aliyun.core.annotation.NameInMap("runtime")
+        private String runtime;
+
+        @com.aliyun.core.annotation.NameInMap("security_hardening_os")
+        private Boolean securityHardeningOs;
+
+        @com.aliyun.core.annotation.NameInMap("size")
+        private Long size;
+
+        @com.aliyun.core.annotation.NameInMap("soc_enabled")
+        private Boolean socEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_bursting_enabled")
+        private Boolean systemDiskBurstingEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_category")
+        private String systemDiskCategory;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_performance_level")
+        private String systemDiskPerformanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_provisioned_iops")
+        private Long systemDiskProvisionedIops;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_size")
+        private Long systemDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_snapshot_policy_id")
+        private String systemDiskSnapshotPolicyId;
+
+        private ControlPlaneConfig(Builder builder) {
+            this.autoRenew = builder.autoRenew;
+            this.autoRenewPeriod = builder.autoRenewPeriod;
+            this.chargeType = builder.chargeType;
+            this.cloudMonitorFlags = builder.cloudMonitorFlags;
+            this.cpuPolicy = builder.cpuPolicy;
+            this.deploymentsetId = builder.deploymentsetId;
+            this.imageId = builder.imageId;
+            this.imageType = builder.imageType;
+            this.instanceTypes = builder.instanceTypes;
+            this.keyPair = builder.keyPair;
+            this.nodePortRange = builder.nodePortRange;
+            this.period = builder.period;
+            this.periodUnit = builder.periodUnit;
+            this.runtime = builder.runtime;
+            this.securityHardeningOs = builder.securityHardeningOs;
+            this.size = builder.size;
+            this.socEnabled = builder.socEnabled;
+            this.systemDiskBurstingEnabled = builder.systemDiskBurstingEnabled;
+            this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
+            this.systemDiskProvisionedIops = builder.systemDiskProvisionedIops;
+            this.systemDiskSize = builder.systemDiskSize;
+            this.systemDiskSnapshotPolicyId = builder.systemDiskSnapshotPolicyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ControlPlaneConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return autoRenewPeriod
+         */
+        public Long getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
+         * @return cloudMonitorFlags
+         */
+        public Boolean getCloudMonitorFlags() {
+            return this.cloudMonitorFlags;
+        }
+
+        /**
+         * @return cpuPolicy
+         */
+        public String getCpuPolicy() {
+            return this.cpuPolicy;
+        }
+
+        /**
+         * @return deploymentsetId
+         */
+        public String getDeploymentsetId() {
+            return this.deploymentsetId;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
+         * @return imageType
+         */
+        public String getImageType() {
+            return this.imageType;
+        }
+
+        /**
+         * @return instanceTypes
+         */
+        public java.util.List < String > getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        /**
+         * @return keyPair
+         */
+        public String getKeyPair() {
+            return this.keyPair;
+        }
+
+        /**
+         * @return nodePortRange
+         */
+        public String getNodePortRange() {
+            return this.nodePortRange;
+        }
+
+        /**
+         * @return period
+         */
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return periodUnit
+         */
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        /**
+         * @return runtime
+         */
+        public String getRuntime() {
+            return this.runtime;
+        }
+
+        /**
+         * @return securityHardeningOs
+         */
+        public Boolean getSecurityHardeningOs() {
+            return this.securityHardeningOs;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return socEnabled
+         */
+        public Boolean getSocEnabled() {
+            return this.socEnabled;
+        }
+
+        /**
+         * @return systemDiskBurstingEnabled
+         */
+        public Boolean getSystemDiskBurstingEnabled() {
+            return this.systemDiskBurstingEnabled;
+        }
+
+        /**
+         * @return systemDiskCategory
+         */
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        /**
+         * @return systemDiskPerformanceLevel
+         */
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
+        /**
+         * @return systemDiskProvisionedIops
+         */
+        public Long getSystemDiskProvisionedIops() {
+            return this.systemDiskProvisionedIops;
+        }
+
+        /**
+         * @return systemDiskSize
+         */
+        public Long getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
+        /**
+         * @return systemDiskSnapshotPolicyId
+         */
+        public String getSystemDiskSnapshotPolicyId() {
+            return this.systemDiskSnapshotPolicyId;
+        }
+
+        public static final class Builder {
+            private Boolean autoRenew; 
+            private Long autoRenewPeriod; 
+            private String chargeType; 
+            private Boolean cloudMonitorFlags; 
+            private String cpuPolicy; 
+            private String deploymentsetId; 
+            private String imageId; 
+            private String imageType; 
+            private java.util.List < String > instanceTypes; 
+            private String keyPair; 
+            private String nodePortRange; 
+            private Long period; 
+            private String periodUnit; 
+            private String runtime; 
+            private Boolean securityHardeningOs; 
+            private Long size; 
+            private Boolean socEnabled; 
+            private Boolean systemDiskBurstingEnabled; 
+            private String systemDiskCategory; 
+            private String systemDiskPerformanceLevel; 
+            private Long systemDiskProvisionedIops; 
+            private Long systemDiskSize; 
+            private String systemDiskSnapshotPolicyId; 
+
+            /**
+             * auto_renew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * auto_renew_period.
+             */
+            public Builder autoRenewPeriod(Long autoRenewPeriod) {
+                this.autoRenewPeriod = autoRenewPeriod;
+                return this;
+            }
+
+            /**
+             * charge_type.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * cloud_monitor_flags.
+             */
+            public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
+                this.cloudMonitorFlags = cloudMonitorFlags;
+                return this;
+            }
+
+            /**
+             * cpu_policy.
+             */
+            public Builder cpuPolicy(String cpuPolicy) {
+                this.cpuPolicy = cpuPolicy;
+                return this;
+            }
+
+            /**
+             * deploymentset_id.
+             */
+            public Builder deploymentsetId(String deploymentsetId) {
+                this.deploymentsetId = deploymentsetId;
+                return this;
+            }
+
+            /**
+             * image_id.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * image_type.
+             */
+            public Builder imageType(String imageType) {
+                this.imageType = imageType;
+                return this;
+            }
+
+            /**
+             * instance_types.
+             */
+            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+                this.instanceTypes = instanceTypes;
+                return this;
+            }
+
+            /**
+             * key_pair.
+             */
+            public Builder keyPair(String keyPair) {
+                this.keyPair = keyPair;
+                return this;
+            }
+
+            /**
+             * node_port_range.
+             */
+            public Builder nodePortRange(String nodePortRange) {
+                this.nodePortRange = nodePortRange;
+                return this;
+            }
+
+            /**
+             * period.
+             */
+            public Builder period(Long period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * period_unit.
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * runtime.
+             */
+            public Builder runtime(String runtime) {
+                this.runtime = runtime;
+                return this;
+            }
+
+            /**
+             * security_hardening_os.
+             */
+            public Builder securityHardeningOs(Boolean securityHardeningOs) {
+                this.securityHardeningOs = securityHardeningOs;
+                return this;
+            }
+
+            /**
+             * <p>The number of nodes in the cluster. Master nodes and worker nodes are included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * soc_enabled.
+             */
+            public Builder socEnabled(Boolean socEnabled) {
+                this.socEnabled = socEnabled;
+                return this;
+            }
+
+            /**
+             * system_disk_bursting_enabled.
+             */
+            public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
+                this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
+                return this;
+            }
+
+            /**
+             * system_disk_category.
+             */
+            public Builder systemDiskCategory(String systemDiskCategory) {
+                this.systemDiskCategory = systemDiskCategory;
+                return this;
+            }
+
+            /**
+             * system_disk_performance_level.
+             */
+            public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+                this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+                return this;
+            }
+
+            /**
+             * system_disk_provisioned_iops.
+             */
+            public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
+                this.systemDiskProvisionedIops = systemDiskProvisionedIops;
+                return this;
+            }
+
+            /**
+             * system_disk_size.
+             */
+            public Builder systemDiskSize(Long systemDiskSize) {
+                this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * system_disk_snapshot_policy_id.
+             */
+            public Builder systemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
+                this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
+                return this;
+            }
+
+            public ControlPlaneConfig build() {
+                return new ControlPlaneConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeClusterDetailResponseBody} extends {@link TeaModel}
@@ -968,7 +1521,16 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             private Boolean enabled; 
 
             /**
-             * channel.
+             * <p>The frequency of auto cluster updates. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>patch: specifies the latest patch version.</li>
+             * <li>stable: specifies the second-latest minor version.</li>
+             * <li>rapid: specifies the latest minor version.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>patch</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -976,7 +1538,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable auto cluster update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1023,7 +1588,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             private ClusterAutoUpgrade clusterAutoUpgrade; 
 
             /**
-             * cluster_auto_upgrade.
+             * <p>The configurations of auto cluster update.</p>
              */
             public Builder clusterAutoUpgrade(ClusterAutoUpgrade clusterAutoUpgrade) {
                 this.clusterAutoUpgrade = clusterAutoUpgrade;

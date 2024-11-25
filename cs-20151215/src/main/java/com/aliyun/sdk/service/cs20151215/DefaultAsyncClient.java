@@ -247,7 +247,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</li>
+     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permission.</li>
      * <li>You cannot revoke the permissions of an Alibaba Cloud account.</li>
      * <li>You cannot revoke the permissions of the account that you use to call this operation.</li>
      * </ul>
@@ -1005,6 +1005,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeClustersForRegion  DescribeClustersForRegionRequest
+     * @return DescribeClustersForRegionResponse
+     */
+    @Override
+    public CompletableFuture<DescribeClustersForRegionResponse> describeClustersForRegion(DescribeClustersForRegionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeClustersForRegion").setMethod(HttpMethod.GET).setPathRegex("/regions/{region_id}/clusters").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClustersForRegionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeClustersForRegionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeClustersV1  DescribeClustersV1Request
      * @return DescribeClustersV1Response
      */
@@ -1107,6 +1125,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeEventsForRegion  DescribeEventsForRegionRequest
+     * @return DescribeEventsForRegionResponse
+     */
+    @Override
+    public CompletableFuture<DescribeEventsForRegionResponse> describeEventsForRegion(DescribeEventsForRegionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeEventsForRegion").setMethod(HttpMethod.GET).setPathRegex("/regions/{region_id}/events").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEventsForRegionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeEventsForRegionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1607,8 +1643,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p><em>Precautions</em>*:</p>
      * <ul>
-     * <li>Make sure that you have attached a RAM policy that has at least the read-only permissions on the cluster to the RAM user or RAM role in the RAM console. Otherwise, the <code>ErrorRamPolicyConfig</code> error code is returned when you call the operation. For more information about how to authorize a RAM user by attaching RAM policies, see <a href="https://help.aliyun.com/document_detail/86485.html">Create a custom RAM policy</a>.</li>
-     * <li>If you use a RAM user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned when you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</li>
+     * <li>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</li>
      * <li>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</li>
      * </ul>
      * 

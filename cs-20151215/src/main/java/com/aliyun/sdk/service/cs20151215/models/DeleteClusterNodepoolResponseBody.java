@@ -61,7 +61,10 @@ public class DeleteClusterNodepoolResponseBody extends TeaModel {
         }
 
         /**
-         * task_id.
+         * <p>task IDs</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-655ace947e0e6603af000004</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

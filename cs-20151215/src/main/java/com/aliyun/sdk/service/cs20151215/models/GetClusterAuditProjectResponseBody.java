@@ -50,7 +50,11 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
         private String slsProjectName; 
 
         /**
-         * <p>Indicates whether the cluster auditing feature is enabled for the cluster. <code>true</code>: The cluster auditing feature is enabled for the cluster. <code>false</code>: The cluster auditing feature is disabled for the cluster.</p>
+         * <p>Indicates whether the cluster auditing feature is enabled for the cluster. </p>
+         * <ul>
+         * <li><code>true</code>: The cluster auditing feature is enabled for the cluster. </li>
+         * <li><code>false</code>: The cluster auditing feature is disabled for the cluster.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
