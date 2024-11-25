@@ -21,6 +21,9 @@ public class RgeoCodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
@@ -28,6 +31,7 @@ public class RgeoCodeResponseBody extends TeaModel {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
+        this.requestId = builder.requestId;
         this.success = builder.success;
     }
 
@@ -61,6 +65,13 @@ public class RgeoCodeResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -71,6 +82,7 @@ public class RgeoCodeResponseBody extends TeaModel {
         private Data data; 
         private Integer errorCode; 
         private String errorMessage; 
+        private String requestId; 
         private Boolean success; 
 
         /**
@@ -94,6 +106,14 @@ public class RgeoCodeResponseBody extends TeaModel {
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
