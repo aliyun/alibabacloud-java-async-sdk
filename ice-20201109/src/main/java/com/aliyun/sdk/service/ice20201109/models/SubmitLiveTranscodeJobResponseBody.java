@@ -50,7 +50,10 @@ public class SubmitLiveTranscodeJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * <p>The ID of the transcoding job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +61,10 @@ public class SubmitLiveTranscodeJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

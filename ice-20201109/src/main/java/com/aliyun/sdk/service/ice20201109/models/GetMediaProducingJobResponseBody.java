@@ -111,6 +111,9 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
+        @com.aliyun.core.annotation.NameInMap("Progress")
+        private Integer progress;
+
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
@@ -143,6 +146,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             this.mediaURL = builder.mediaURL;
             this.message = builder.message;
             this.modifiedTime = builder.modifiedTime;
+            this.progress = builder.progress;
             this.projectId = builder.projectId;
             this.status = builder.status;
             this.subJobMaterials = builder.subJobMaterials;
@@ -231,6 +235,13 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return progress
+         */
+        public Integer getProgress() {
+            return this.progress;
+        }
+
+        /**
          * @return projectId
          */
         public String getProjectId() {
@@ -290,6 +301,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             private String mediaURL; 
             private String message; 
             private String modifiedTime; 
+            private Integer progress; 
             private String projectId; 
             private String status; 
             private String subJobMaterials; 
@@ -411,6 +423,14 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
+                return this;
+            }
+
+            /**
+             * Progress.
+             */
+            public Builder progress(Integer progress) {
+                this.progress = progress;
                 return this;
             }
 

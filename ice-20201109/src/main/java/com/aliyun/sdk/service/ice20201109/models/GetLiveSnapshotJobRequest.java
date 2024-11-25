@@ -55,6 +55,7 @@ public class GetLiveSnapshotJobRequest extends Request {
         } 
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

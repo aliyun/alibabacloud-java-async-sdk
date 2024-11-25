@@ -50,7 +50,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
         private TemplateContent templateContent; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateContent.
+         * <p>The content of the template.</p>
          */
         public Builder templateContent(TemplateContent templateContent) {
             this.templateContent = templateContent;
@@ -152,7 +155,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             private String samplerate; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate of the output audio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -160,7 +166,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * <p>The number of sound channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -168,7 +177,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Codec.
+             * <p>The audio codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -176,7 +188,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The audio codec profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -184,7 +199,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Samplerate.
+             * <p>The audio sampling rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -303,7 +321,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate of the output video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2500</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -311,7 +332,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Codec.
+             * <p>The encoding type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -319,7 +343,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The frame rate of the output video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -327,7 +354,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Gop.
+             * <p>The group of pictures (GOP) of the output video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder gop(String gop) {
                 this.gop = gop;
@@ -335,7 +365,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the output video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -343,7 +376,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The encoding profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -351,7 +387,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the output video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -410,7 +449,7 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             private VideoParams videoParams; 
 
             /**
-             * AudioParams.
+             * <p>The audio parameters.</p>
              */
             public Builder audioParams(AudioParams audioParams) {
                 this.audioParams = audioParams;
@@ -418,7 +457,7 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * VideoParams.
+             * <p>The video parameters.</p>
              */
             public Builder videoParams(VideoParams videoParams) {
                 this.videoParams = videoParams;
@@ -525,7 +564,14 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Category.
+             * <p>The category of the template. Valid values:</p>
+             * <ul>
+             * <li>system</li>
+             * <li>customized</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>customized</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -533,7 +579,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-25T06:15:14Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -541,7 +590,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-template</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -549,7 +601,7 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * <p>The configuration of the template.</p>
              */
             public Builder templateConfig(TemplateConfig templateConfig) {
                 this.templateConfig = templateConfig;
@@ -557,7 +609,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bcfa57950bc649b2abfb476ecd36ea4f</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -565,7 +620,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -84,6 +84,7 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The name of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,7 +97,7 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>The configuration of the template.</p>
          */
         public Builder templateConfig(TemplateConfig templateConfig) {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");
@@ -106,6 +107,13 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
         }
 
         /**
+         * <p>The type of the template. Valid values:</p>
+         * <ul>
+         * <li>normal</li>
+         * <li>narrow-band</li>
+         * <li>audio-only</li>
+         * <li>origin</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +213,10 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             private String samplerate; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate of the output audio. Unit: Kbit/s. Valid values: 1 to 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -213,7 +224,10 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Channels.
+             * <p>The number of sound channels. Valid values: 1: mono 2: binaural</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -221,7 +235,14 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Codec.
+             * <p>The audio codec. Valid values:</p>
+             * <ul>
+             * <li>AAC</li>
+             * <li>MP3</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -229,7 +250,16 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Profile.
+             * <p>The audio codec profile. Valid values when the Codec parameter is set to AAC:</p>
+             * <ul>
+             * <li>aac_low</li>
+             * <li>aac_he</li>
+             * <li>aac_he_v2</li>
+             * <li>aac_ld</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>aaclow</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -237,7 +267,11 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Samplerate.
+             * <p>The audio sampling rate. Valid values: 22050 to 96000.</p>
+             * <p>Note: If you set AudioProfile to aac_ld, the audio sampling rate cannot exceed 44,100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -356,7 +390,10 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             private String width; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate of the output video. Unit: Kbit/s. Valid values: 1 to 6000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2500</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -364,7 +401,14 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Codec.
+             * <p>The encoding type. Valid values:</p>
+             * <ul>
+             * <li>H.264</li>
+             * <li>H.265</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -372,7 +416,10 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Fps.
+             * <p>The frame rate of the output video. Unit: frames per second (FPS). Valid values: 1 to 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -380,7 +427,10 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Gop.
+             * <p>The group of pictures (GOP) of the output video. Unit: frame. Valid values: 1 to 3000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder gop(String gop) {
                 this.gop = gop;
@@ -388,7 +438,11 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>The height of the output video. Valid values: Height ≥ 128 max (Height,Width) ≤ 2560 min (Height,Width) ≤ 1440</p>
+             * <p>Note: The resolution of the output video that is transcoded by using the H.265 Narrowband HD transcoding template cannot exceed 1280 × 720 pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -396,7 +450,10 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Profile.
+             * <p>The encoding profile. The profile determines how a video is encoded. In most cases, a greater value indicates better image quality and higher resource consumption. Valid values: 1: baseline. This value is suitable for mobile devices. 2: main. This value is suitable for standard-definition devices. 3: high. This value is suitable for high-definition devices.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -404,7 +461,11 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the output video. Valid values: Width ≥ 128 max (Height,Width) ≤ 2560 min (Height,Width) ≤ 1440</p>
+             * <p>Note: The resolution of the output video that is transcoded by using the H.265 Narrowband HD transcoding template cannot exceed 1280 × 720 pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -463,7 +524,7 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             private VideoParams videoParams; 
 
             /**
-             * AudioParams.
+             * <p>The audio parameters.</p>
              */
             public Builder audioParams(AudioParams audioParams) {
                 this.audioParams = audioParams;
@@ -471,7 +532,7 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * VideoParams.
+             * <p>The video parameters.</p>
              */
             public Builder videoParams(VideoParams videoParams) {
                 this.videoParams = videoParams;

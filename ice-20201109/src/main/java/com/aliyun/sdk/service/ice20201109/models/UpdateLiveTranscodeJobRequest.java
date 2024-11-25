@@ -112,6 +112,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         } 
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mytest3</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -133,7 +137,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * StreamInput.
+         * <p>The information about the input stream.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
             String streamInputShrink = shrink(streamInput, "StreamInput", "json");
@@ -143,7 +147,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * TimedConfig.
+         * <p>The configuration of a timed transcoding job.</p>
          */
         public Builder timedConfig(TimedConfig timedConfig) {
             String timedConfigShrink = shrink(timedConfig, "TimedConfig", "json");
@@ -153,7 +157,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * TranscodeOutput.
+         * <p>The information about the transcoding output.</p>
          */
         public Builder transcodeOutput(TranscodeOutput transcodeOutput) {
             String transcodeOutputShrink = shrink(transcodeOutput, "TranscodeOutput", "json");
@@ -216,6 +220,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             private String type; 
 
             /**
+             * <p>The URL of the input stream.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -227,6 +232,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the input stream. The value can only be rtmp.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -289,7 +295,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             private String startTime; 
 
             /**
-             * EndTime.
+             * <p>The stop time of the transcoding job. Note: The time span between the stop time and the current time cannot exceed seven days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-05T06:08:31Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -297,7 +306,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the transcoding job. Note: The time span between the start time and the current time cannot exceed seven days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-19T02:16:41Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -358,6 +370,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             private String type; 
 
             /**
+             * <p>The streaming domain name of ApsaraVideo Live.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -369,6 +382,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the output stream. A value of LiveCenter indicates that the URL of the output stream is generated based on the domain name of ApsaraVideo Live. The value can only be LiveCenter.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

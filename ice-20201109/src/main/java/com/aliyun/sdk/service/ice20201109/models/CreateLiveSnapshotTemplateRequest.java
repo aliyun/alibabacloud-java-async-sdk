@@ -98,7 +98,17 @@ public class CreateLiveSnapshotTemplateRequest extends Request {
         } 
 
         /**
-         * OverwriteFormat.
+         * <p>The naming format of the snapshot captured in overwrite mode.</p>
+         * <ul>
+         * <li>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</li>
+         * <li>It cannot exceed 255 characters in length.</li>
+         * <li>The {JobId} placeholder is supported. It specifies the ID of the snapshot job.</li>
+         * <li>Placeholders such as {UnixTimestamp}, {Sequence}, and {Date} are not allowed.</li>
+         * <li>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot/{JobId}.jpg</p>
          */
         public Builder overwriteFormat(String overwriteFormat) {
             this.putBodyParameter("OverwriteFormat", overwriteFormat);
@@ -107,7 +117,16 @@ public class CreateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * SequenceFormat.
+         * <p>The naming format of the snapshot captured in time series mode.</p>
+         * <ul>
+         * <li>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</li>
+         * <li>It cannot exceed 255 characters in length.</li>
+         * <li>The {JobId}, {Date}, {UnixTimestamp}, and {Sequence} placeholders are supported. {JobId} specifies the ID of the snapshot job. {Date} specifies the date on which the snapshot is captured. {UnixTimestamp} specifies the timestamp of the snapshot. {Sequence} specifies the sequence number of the snapshot. You must specify at least one of the {UnixTimestamp} and {Sequence} placeholders.</li>
+         * <li>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot/{JobId}/{UnixTimestamp}.jpg</p>
          */
         public Builder sequenceFormat(String sequenceFormat) {
             this.putBodyParameter("SequenceFormat", sequenceFormat);
@@ -116,6 +135,10 @@ public class CreateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
+         * <p>The name of the template.</p>
+         * <ul>
+         * <li>It cannot exceed 128 characters in length.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         public Builder templateName(String templateName) {
@@ -125,6 +148,10 @@ public class CreateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
+         * <p>The interval between two adjacent snapshots. Unit: seconds.</p>
+         * <ul>
+         * <li>Valid values: [5,3600].</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

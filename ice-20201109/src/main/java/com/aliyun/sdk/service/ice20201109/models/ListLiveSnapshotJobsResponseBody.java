@@ -98,7 +98,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * JobList.
+         * <p>The list of jobs.</p>
          */
         public Builder jobList(java.util.List < JobList> jobList) {
             this.jobList = jobList;
@@ -106,7 +106,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -114,7 +117,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order of the jobs by creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.sortBy = sortBy;
@@ -138,7 +150,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -208,7 +223,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * Bucket.
+             * <p>The bucket of the output endpoint. If the storage type is set to oss, the OSS bucket is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testbucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -216,7 +234,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * <p>The output endpoint. If the storage type is set to oss, the Object Storage Service (OSS) domain name is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -224,7 +245,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type. The value can only be oss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -355,7 +379,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             private Integer timeInterval; 
 
             /**
-             * CreateTime.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T02:48:58Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -363,7 +390,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -371,7 +401,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The name of the job.</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -379,7 +409,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotOutput.
+             * <p>The output information.</p>
              */
             public Builder snapshotOutput(SnapshotOutput snapshotOutput) {
                 this.snapshotOutput = snapshotOutput;
@@ -387,7 +417,16 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the job.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>init: The job is not started.</li>
+             * <li>paused: The job is paused.</li>
+             * <li>started: The job is in progress.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>started</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -395,7 +434,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -403,7 +445,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -411,7 +453,10 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeInterval.
+             * <p>The interval between two adjacent snapshots. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder timeInterval(Integer timeInterval) {
                 this.timeInterval = timeInterval;

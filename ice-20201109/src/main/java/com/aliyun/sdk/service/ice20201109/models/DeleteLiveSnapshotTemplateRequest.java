@@ -55,6 +55,7 @@ public class DeleteLiveSnapshotTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

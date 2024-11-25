@@ -98,7 +98,10 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.pageNo = pageNo;
@@ -106,7 +109,10 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +120,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RecordTemplateList.
+         * <p>The list of recording templates.</p>
          */
         public Builder recordTemplateList(java.util.List < RecordTemplateList> recordTemplateList) {
             this.recordTemplateList = recordTemplateList;
@@ -122,7 +128,10 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA98A0C-7870-15FE-B96F-8880BB600A2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,15 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>asc: sorts the query results in ascending order.</li>
+         * <li>desc: sorts the query results in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.sortBy = sortBy;
@@ -138,7 +155,10 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -232,7 +252,10 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             private String sliceOssObjectPrefix; 
 
             /**
-             * CycleDuration.
+             * <p>The duration of the recording cycle. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21600</p>
              */
             public Builder cycleDuration(Integer cycleDuration) {
                 this.cycleDuration = cycleDuration;
@@ -240,7 +263,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>格式</p>
+             * <p>The output file format.</p>
              * 
              * <strong>example:</strong>
              * <p>m3u8</p>
@@ -251,7 +274,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Oss对象名，不包含后缀</p>
+             * <p>The name of the recording file that is stored in Object Storage Service (OSS).</p>
              * 
              * <strong>example:</strong>
              * <p>record/{JobId}/{Sequence}<em>{EscapedStartTime}</em>{EscapedEndTime}</p>
@@ -262,7 +285,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>切片时长</p>
+             * <p>The duration of a single segment. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -273,7 +296,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>切片Oss对象名，不包含后缀</p>
+             * <p>The name of the TS segment.</p>
              * 
              * <strong>example:</strong>
              * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
@@ -383,7 +406,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>代表创建时间的资源属性字段</p>
+             * <p>The time when the job was created.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -395,7 +418,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最后修改时间</p>
+             * <p>The time when the template was last modified.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -407,7 +430,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源名称的资源属性字段</p>
+             * <p>The template name.</p>
              * 
              * <strong>example:</strong>
              * <p>test template</p>
@@ -418,7 +441,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>录制格式</p>
+             * <p>The list of recording formats.</p>
              */
             public Builder recordFormatList(java.util.List < RecordFormatList> recordFormatList) {
                 this.recordFormatList = recordFormatList;
@@ -426,7 +449,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源一级ID的资源属性字段</p>
+             * <p>The template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
@@ -437,7 +460,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源名称的资源属性字段</p>
+             * <p>The type of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>

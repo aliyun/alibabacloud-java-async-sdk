@@ -50,7 +50,10 @@ public class CreateLiveTranscodeTemplateResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class CreateLiveTranscodeTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

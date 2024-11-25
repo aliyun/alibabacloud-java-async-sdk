@@ -50,7 +50,10 @@ public class CreateLiveRecordTemplateResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class CreateLiveRecordTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>

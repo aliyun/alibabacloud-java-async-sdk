@@ -129,6 +129,7 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         } 
 
         /**
+         * <p>The name of the transcoding job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +142,11 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         }
 
         /**
+         * <p>The start mode of the transcoding job.</p>
+         * <ul>
+         * <li>0: The transcoding job immediately starts.</li>
+         * <li>1: The transcoding job starts at the scheduled time.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +159,7 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         }
 
         /**
+         * <p>The information about the input stream.</p>
          * <p>This parameter is required.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
@@ -163,6 +170,7 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +183,7 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * TimedConfig.
+         * <p>The configuration of a timed transcoding job. This parameter is required if you set StartMode to 1.</p>
          */
         public Builder timedConfig(TimedConfig timedConfig) {
             String timedConfigShrink = shrink(timedConfig, "TimedConfig", "json");
@@ -185,6 +193,7 @@ public class SubmitLiveTranscodeJobRequest extends Request {
         }
 
         /**
+         * <p>The information about the transcoding output.</p>
          * <p>This parameter is required.</p>
          */
         public Builder transcodeOutput(TranscodeOutput transcodeOutput) {
@@ -248,6 +257,7 @@ public class SubmitLiveTranscodeJobRequest extends Request {
             private String type; 
 
             /**
+             * <p>The URL of the input stream.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -259,6 +269,7 @@ public class SubmitLiveTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the input stream. The value can only be rtmp.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -321,7 +332,10 @@ public class SubmitLiveTranscodeJobRequest extends Request {
             private String startTime; 
 
             /**
-             * EndTime.
+             * <p>The stop time of the transcoding job. Note: The time span between the stop time and the current time cannot exceed seven days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T08:20:32Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -329,7 +343,10 @@ public class SubmitLiveTranscodeJobRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the transcoding job. Note: The time span between the start time and the current time cannot exceed seven days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-21T00:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -389,7 +406,10 @@ public class SubmitLiveTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * DomainName.
+             * <p>The streaming domain name of ApsaraVideo Live.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mydomain</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -397,6 +417,7 @@ public class SubmitLiveTranscodeJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the output stream. A value of LiveCenter indicates that the URL of the output stream is generated based on the domain name of ApsaraVideo Live. The value can only be LiveCenter.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

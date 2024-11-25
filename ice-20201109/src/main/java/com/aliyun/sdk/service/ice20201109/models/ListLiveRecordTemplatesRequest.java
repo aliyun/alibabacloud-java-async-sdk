@@ -124,7 +124,10 @@ public class ListLiveRecordTemplatesRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>The search keyword. You can use the template ID or name as the keyword to search for templates. If you search for templates by name, fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test template</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -133,7 +136,10 @@ public class ListLiveRecordTemplatesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -142,7 +148,10 @@ public class ListLiveRecordTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +160,15 @@ public class ListLiveRecordTemplatesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>asc: sorts the query results in ascending order.</li>
+         * <li>desc: sorts the query results in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -169,7 +186,15 @@ public class ListLiveRecordTemplatesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the template.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>system</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

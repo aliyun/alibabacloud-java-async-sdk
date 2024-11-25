@@ -114,7 +114,14 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         } 
 
         /**
-         * CallbackUrl.
+         * <p>The snapshot callback URL.</p>
+         * <ul>
+         * <li>It cannot exceed 255 characters in length.</li>
+         * <li>Both HTTP and HTTPS URLs are supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com/snapshot/callback">http://www.aliyun.com/snapshot/callback</a></p>
          */
         public Builder callbackUrl(String callbackUrl) {
             this.putBodyParameter("CallbackUrl", callbackUrl);
@@ -123,6 +130,10 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the job.</p>
+         * <ul>
+         * <li>It cannot exceed 128 characters in length.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         public Builder jobName(String jobName) {
@@ -132,6 +143,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         }
 
         /**
+         * <p>The information about the output snapshot.</p>
          * <p>This parameter is required.</p>
          */
         public Builder snapshotOutput(SnapshotOutput snapshotOutput) {
@@ -142,6 +154,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         }
 
         /**
+         * <p>The information about the input stream.</p>
          * <p>This parameter is required.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
@@ -152,6 +165,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +244,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             private String storageType; 
 
             /**
+             * <p>The bucket of the snapshot output endpoint.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -241,6 +256,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             }
 
             /**
+             * <p>The output endpoint of the snapshot.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -252,6 +268,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             }
 
             /**
+             * <p>The storage type of the snapshot. The value can only be oss.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -316,6 +333,7 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             private String url; 
 
             /**
+             * <p>The type of the input stream. The value can only be rtmp.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -327,6 +345,10 @@ public class SubmitLiveSnapshotJobRequest extends Request {
             }
 
             /**
+             * <p>The URL of the input stream.</p>
+             * <ul>
+             * <li>It cannot exceed 255 characters in length.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

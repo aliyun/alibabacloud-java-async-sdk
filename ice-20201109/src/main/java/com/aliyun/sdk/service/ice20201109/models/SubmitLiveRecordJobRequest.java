@@ -114,7 +114,7 @@ public class SubmitLiveRecordJobRequest extends Request {
         } 
 
         /**
-         * <p>代表资源名称的资源属性字段</p>
+         * <p>The name of the recording job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * <p>回调地址</p>
+         * <p>The callback URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
@@ -139,6 +139,7 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
+         * <p>The storage address of the recording.</p>
          * <p>This parameter is required.</p>
          */
         public Builder recordOutput(RecordOutput recordOutput) {
@@ -149,6 +150,7 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
+         * <p>The URL of the live stream.</p>
          * <p>This parameter is required.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
@@ -159,7 +161,7 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * <p>录制模板ID</p>
+         * <p>The ID of the recording template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +238,10 @@ public class SubmitLiveRecordJobRequest extends Request {
             private String type; 
 
             /**
-             * Bucket.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imsbucket1</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -244,7 +249,10 @@ public class SubmitLiveRecordJobRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint of the storage service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -252,6 +260,7 @@ public class SubmitLiveRecordJobRequest extends Request {
             }
 
             /**
+             * <p>The type of the storage address.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -315,6 +324,7 @@ public class SubmitLiveRecordJobRequest extends Request {
             private String url; 
 
             /**
+             * <p>The type of the live stream URL. The value can only be rtmp.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -326,7 +336,10 @@ public class SubmitLiveRecordJobRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The URL of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://example.com/live/stream1</p>
              */
             public Builder url(String url) {
                 this.url = url;

@@ -69,7 +69,10 @@ public class GetLiveRecordTemplateRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the recording job. You can specify the JobId parameter to retrieve the snapshot of the template used by the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -78,6 +81,7 @@ public class GetLiveRecordTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -138,7 +138,14 @@ public class ListLiveTranscodeTemplatesRequest extends Request {
         } 
 
         /**
-         * Category.
+         * <p>The category of the template. Valid values:</p>
+         * <ul>
+         * <li>system</li>
+         * <li>customized</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>customized</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -147,7 +154,10 @@ public class ListLiveTranscodeTemplatesRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * <p>The search keyword. You can use the template ID or name as the keyword to search for templates. If you search for templates by name, fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_template</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -156,7 +166,10 @@ public class ListLiveTranscodeTemplatesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -165,7 +178,10 @@ public class ListLiveTranscodeTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +190,14 @@ public class ListLiveTranscodeTemplatesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</p>
+         * <ul>
+         * <li>asc</li>
+         * <li>desc</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -183,7 +206,16 @@ public class ListLiveTranscodeTemplatesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the template. Valid values:</p>
+         * <ul>
+         * <li>normal</li>
+         * <li>narrow-band</li>
+         * <li>audio-only</li>
+         * <li>origin</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -192,7 +224,14 @@ public class ListLiveTranscodeTemplatesRequest extends Request {
         }
 
         /**
-         * VideoCodec.
+         * <p>The video codec. Valid values:</p>
+         * <ul>
+         * <li>H.264</li>
+         * <li>H.265</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>H.264</p>
          */
         public Builder videoCodec(String videoCodec) {
             this.putQueryParameter("VideoCodec", videoCodec);

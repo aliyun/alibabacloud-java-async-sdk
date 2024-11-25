@@ -147,7 +147,10 @@ public class SetEventCallbackRequest extends Request {
         }
 
         /**
-         * AuthKey.
+         * <p>The authentication key. The key can be up to 32 characters in length and must contain uppercase letters, lowercase letters, and digits. This parameter takes effect only if you set CallbackType to <strong>HTTP</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey001</p>
          */
         public Builder authKey(String authKey) {
             this.putQueryParameter("AuthKey", authKey);
@@ -156,7 +159,14 @@ public class SetEventCallbackRequest extends Request {
         }
 
         /**
-         * AuthSwitch.
+         * <p>Specifies whether to enable callback authentication. This parameter takes effect only if you set CallbackType to <strong>HTTP</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder authSwitch(String authSwitch) {
             this.putQueryParameter("AuthSwitch", authSwitch);
@@ -165,7 +175,10 @@ public class SetEventCallbackRequest extends Request {
         }
 
         /**
-         * CallbackQueueName.
+         * <p>The name of the Simple Message Queue (SMQ) queue in the region. The name must start with ice-callback-.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ice-callback-queue</p>
          */
         public Builder callbackQueueName(String callbackQueueName) {
             this.putQueryParameter("CallbackQueueName", callbackQueueName);
@@ -174,7 +187,14 @@ public class SetEventCallbackRequest extends Request {
         }
 
         /**
-         * CallbackType.
+         * <p>The callback method. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP</strong></li>
+         * <li><strong>MNS</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder callbackType(String callbackType) {
             this.putQueryParameter("CallbackType", callbackType);
@@ -183,7 +203,10 @@ public class SetEventCallbackRequest extends Request {
         }
 
         /**
-         * CallbackURL.
+         * <p>The callback URL. This parameter is required if you set CallbackType to <strong>HTTP</strong>. The callback URL cannot exceed 256 bytes in length. You can specify only one callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.yyy/callback">http://xxx.yyy/callback</a></p>
          */
         public Builder callbackURL(String callbackURL) {
             this.putQueryParameter("CallbackURL", callbackURL);
@@ -192,7 +215,10 @@ public class SetEventCallbackRequest extends Request {
         }
 
         /**
-         * EventTypeList.
+         * <p>The type of the callback event. You can specify multiple values separated with commas (,). ProduceMediaComplete: indicates that the editing and production task is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProduceMediaComplete</p>
          */
         public Builder eventTypeList(String eventTypeList) {
             this.putQueryParameter("EventTypeList", eventTypeList);

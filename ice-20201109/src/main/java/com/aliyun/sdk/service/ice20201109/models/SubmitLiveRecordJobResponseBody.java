@@ -50,7 +50,10 @@ public class SubmitLiveRecordJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * <p>The ID of the recording job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +61,10 @@ public class SubmitLiveRecordJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA98A0C-7870-15FE-B96F-8880BB600A2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

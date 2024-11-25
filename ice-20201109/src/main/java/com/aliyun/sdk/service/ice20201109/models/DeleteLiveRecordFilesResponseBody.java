@@ -62,7 +62,7 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeleteFileInfoList.
+         * <p>The list of files deleted.</p>
          */
         public Builder deleteFileInfoList(java.util.List < DeleteFileInfoList> deleteFileInfoList) {
             this.deleteFileInfoList = deleteFileInfoList;
@@ -70,7 +70,10 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the state returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +154,10 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
             private String recordId; 
 
             /**
-             * Code.
+             * <p>The code that identifies the result of the deletion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -159,7 +165,10 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The result of deletion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -167,7 +176,10 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * <p>The ID of the deleted recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13cbb83e-043c-4728-ac35-*****</p>
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;

@@ -98,7 +98,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * LiveRecordJobs.
+         * <p>The list of live stream recording jobs.</p>
          */
         public Builder liveRecordJobs(java.util.List < LiveRecordJobs> liveRecordJobs) {
             this.liveRecordJobs = liveRecordJobs;
@@ -106,7 +106,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.pageNo = pageNo;
@@ -114,7 +117,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A27DFFA4-F272-5563-8363-CB0BC42740BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.sortBy = sortBy;
@@ -138,7 +150,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -208,7 +223,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Bucket.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imsbucket1</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -216,7 +234,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint of the storage service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -224,7 +245,15 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the storage address.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>vod</li>
+             * <li>oss</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -283,7 +312,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Type.
+             * <p>The type of the live stream URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -291,7 +323,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://example-live.com/live/stream1</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -434,7 +469,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * <p>代表创建时间的资源属性字段</p>
+             * <p>The time when the job was created.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -446,7 +481,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the recording job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -454,7 +492,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源名称的资源属性字段</p>
+             * <p>The name of the recording job.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -462,7 +500,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>回调地址</p>
+             * <p>The callback URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
@@ -473,7 +511,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordOutput.
+             * <p>The storage address of the recording.</p>
              */
             public Builder recordOutput(RecordOutput recordOutput) {
                 this.recordOutput = recordOutput;
@@ -481,7 +519,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the recording job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>paused</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -489,7 +530,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StreamInput.
+             * <p>The URL of the live stream.</p>
              */
             public Builder streamInput(StreamInput streamInput) {
                 this.streamInput = streamInput;
@@ -497,7 +538,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>录制模板ID</p>
+             * <p>The ID of the recording template.</p>
              * 
              * <strong>example:</strong>
              * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
@@ -508,7 +549,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The name of the recording template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

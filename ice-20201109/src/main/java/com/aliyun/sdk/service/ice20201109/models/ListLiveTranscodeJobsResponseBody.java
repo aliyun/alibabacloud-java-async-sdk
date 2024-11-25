@@ -62,7 +62,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * JobList.
+         * <p>The list of transcoding jobs.</p>
          */
         public Builder jobList(java.util.List < JobList> jobList) {
             this.jobList = jobList;
@@ -70,7 +70,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -136,7 +142,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * OutputUrl.
+             * <p>The URL of the output stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://mydomain/app/mytranscode1</p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -144,7 +153,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the output stream protocol. Only the RTMP protocol is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -191,7 +203,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             private java.util.List < StreamInfos> streamInfos; 
 
             /**
-             * StreamInfos.
+             * <p>The list of stream URLs.</p>
              */
             public Builder streamInfos(java.util.List < StreamInfos> streamInfos) {
                 this.streamInfos = streamInfos;
@@ -250,7 +262,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * InputUrl.
+             * <p>The URL of the input stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://mydomain/app/stream1</p>
              */
             public Builder inputUrl(String inputUrl) {
                 this.inputUrl = inputUrl;
@@ -258,7 +273,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the input stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -413,7 +431,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T02:48:58Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -421,7 +442,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -429,7 +453,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the transcoding job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mytask</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -437,7 +464,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputStream.
+             * <p>The information about the output stream.</p>
              */
             public Builder outputStream(OutputStream outputStream) {
                 this.outputStream = outputStream;
@@ -445,7 +472,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartMode.
+             * <p>The start mode of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startMode(Integer startMode) {
                 this.startMode = startMode;
@@ -453,7 +483,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -461,7 +494,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StreamInput.
+             * <p>The information about the input stream.</p>
              */
             public Builder streamInput(StreamInput streamInput) {
                 this.streamInput = streamInput;
@@ -469,7 +502,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the transcoding template used by the transcoding job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -477,7 +513,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -485,7 +521,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The type of the transcoding template used by the transcoding job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

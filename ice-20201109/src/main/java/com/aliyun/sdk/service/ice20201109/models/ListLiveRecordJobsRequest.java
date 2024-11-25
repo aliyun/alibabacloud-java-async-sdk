@@ -138,6 +138,7 @@ public class ListLiveRecordJobsRequest extends Request {
         } 
 
         /**
+         * <p>The end of the time range to query. The maximum time range between EndTime and StartTime cannot exceed 30 days. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +151,10 @@ public class ListLiveRecordJobsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword. You can use the job ID or name as the keyword to search for jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -159,7 +163,10 @@ public class ListLiveRecordJobsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -168,7 +175,10 @@ public class ListLiveRecordJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -177,7 +187,15 @@ public class ListLiveRecordJobsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>asc: sorts the query results in ascending order.</li>
+         * <li>desc: sorts the query results in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -186,6 +204,7 @@ public class ListLiveRecordJobsRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +217,16 @@ public class ListLiveRecordJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The state of the job. By default, the state is not filtered.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>paused: The job is paused.</li>
+         * <li>initial: The job is not started.</li>
+         * <li>started: The job is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>started</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

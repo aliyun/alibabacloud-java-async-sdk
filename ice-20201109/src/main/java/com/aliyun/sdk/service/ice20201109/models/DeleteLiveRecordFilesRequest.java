@@ -69,6 +69,7 @@ public class DeleteLiveRecordFilesRequest extends Request {
         } 
 
         /**
+         * <p>The collection of IDs of recording files.</p>
          * <p>This parameter is required.</p>
          */
         public Builder recordIds(java.util.List < String > recordIds) {
@@ -78,7 +79,10 @@ public class DeleteLiveRecordFilesRequest extends Request {
         }
 
         /**
-         * RemoveFile.
+         * <p>Specifies whether to delete the original files in OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder removeFile(Boolean removeFile) {
             this.putQueryParameter("RemoveFile", removeFile);

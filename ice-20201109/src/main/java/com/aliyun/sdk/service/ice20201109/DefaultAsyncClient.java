@@ -386,6 +386,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must specify a recording template for live stream recording. You can configure information such as the format and duration of a recording in a recording template. The recording format can be M3U8, MP4, or FLV.</p>
+     * 
      * @param request the request parameters of CreateLiveRecordTemplate  CreateLiveRecordTemplateRequest
      * @return CreateLiveRecordTemplateResponse
      */
@@ -3553,6 +3556,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
+     * Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
+     * If the preset recording template does not meet your requirements, you can create a custom recording template.</p>
+     * 
      * @param request the request parameters of SubmitLiveRecordJob  SubmitLiveRecordJobRequest
      * @return SubmitLiveRecordJobResponse
      */
@@ -3589,6 +3597,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  When you submit a transcoding job that immediately takes effect, make sure that the input stream can be streamed.</p>
+     * <ul>
+     * <li>When you submit a timed transcoding job, make sure that the input stream can be streamed before the specified time.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitLiveTranscodeJob  SubmitLiveTranscodeJobRequest
      * @return SubmitLiveTranscodeJobResponse
      */
@@ -3989,6 +4003,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only user-created templates can be updated. The preset template cannot be updated.</p>
+     * 
      * @param request the request parameters of UpdateLiveRecordTemplate  UpdateLiveRecordTemplateRequest
      * @return UpdateLiveRecordTemplateResponse
      */
@@ -4025,6 +4042,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  For a non-timed transcoding job, you can modify the Name parameter of the job, regardless of the job state.</p>
+     * <ul>
+     * <li>For a timed job, you can modify the Name, StreamInput, TranscodeOutput, and TimedConfig parameters. However, the StreamInput, TranscodeOutput, and TimedConfig parameters can be modified only when the job is not started.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateLiveTranscodeJob  UpdateLiveTranscodeJobRequest
      * @return UpdateLiveTranscodeJobResponse
      */

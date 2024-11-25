@@ -62,7 +62,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FileList.
+         * <p>The list of files.</p>
          */
         public Builder fileList(java.util.List < FileList> fileList) {
             this.fileList = fileList;
@@ -70,7 +70,10 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
         }
 
         /**
-         * NextStartTime.
+         * <p>The start time of the next page. If no value is returned, the pagination ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-02T22:22:22Z</p>
          */
         public Builder nextStartTime(String nextStartTime) {
             this.nextStartTime = nextStartTime;
@@ -78,7 +81,10 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -184,7 +190,10 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
             private String ossObject; 
 
             /**
-             * CreateTime.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-02T22:22:22Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -192,7 +201,10 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>The creation timestamp that is used as an input parameter for a delete API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1619503516000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -200,7 +212,10 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * IsOverlay.
+             * <p>Specifies whether to overlay snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isOverlay(Boolean isOverlay) {
                 this.isOverlay = isOverlay;
@@ -208,7 +223,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS bucket。</p>
+             * <p>The OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>testbucket</p>
@@ -219,7 +234,10 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OssEndpoint.
+             * <p>The Object Storage Service (OSS) domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai.aliyuncs.com</p>
              */
             public Builder ossEndpoint(String ossEndpoint) {
                 this.ossEndpoint = ossEndpoint;
@@ -227,7 +245,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OssObject.
+             * <p>The location in which the OSS object is stored.</p>
              */
             public Builder ossObject(String ossObject) {
                 this.ossObject = ossObject;
