@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLicenseResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLicenseResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeLicenseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLicenseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLicenseResponseBody</p>
+     */
     public static class LicenseAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -131,6 +138,12 @@ public class DescribeLicenseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLicenseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLicenseResponseBody</p>
+     */
     public static class ExtendArray extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LicenseAttribute")
         private java.util.List < LicenseAttribute> licenseAttribute;
@@ -172,6 +185,12 @@ public class DescribeLicenseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLicenseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLicenseResponseBody</p>
+     */
     public static class ExtendInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountQuantity")
         private Long accountQuantity;
@@ -273,6 +292,12 @@ public class DescribeLicenseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLicenseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLicenseResponseBody</p>
+     */
     public static class License extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivateTime")
         private String activateTime;

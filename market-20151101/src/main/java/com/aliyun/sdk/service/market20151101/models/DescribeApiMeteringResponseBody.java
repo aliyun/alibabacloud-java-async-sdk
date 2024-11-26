@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiMeteringResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiMeteringResponseBody</p>
@@ -161,7 +162,10 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         }
 
         /**
-         * fatal
+         * <p>fatal</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fatal(Boolean fatal) {
             this.fatal = fatal;
@@ -230,6 +234,12 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiMeteringResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiMeteringResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliyunPk")
         private Long aliyunPk;

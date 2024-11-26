@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProductsRequest} extends {@link RequestModel}
  *
  * <p>DescribeProductsRequest</p>
@@ -137,6 +138,12 @@ public class DescribeProductsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProductsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeProductsRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FinishCurrentProjectNodeRequest} extends {@link RequestModel}
  *
  * <p>FinishCurrentProjectNodeRequest</p>
@@ -97,7 +98,10 @@ public class FinishCurrentProjectNodeRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4****89</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -106,7 +110,10 @@ public class FinishCurrentProjectNodeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1924</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putQueryParameter("NodeId", nodeId);

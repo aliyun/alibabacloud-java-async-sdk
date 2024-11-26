@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiMeteringRequest} extends {@link RequestModel}
  *
  * <p>DescribeApiMeteringRequest</p>
@@ -82,7 +83,10 @@ public class DescribeApiMeteringRequest extends Request {
         } 
 
         /**
-         * pageNum.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("pageNum", pageNum);

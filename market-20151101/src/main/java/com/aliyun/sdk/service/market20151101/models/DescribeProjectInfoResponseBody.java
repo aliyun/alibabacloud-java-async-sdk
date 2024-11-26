@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProjectInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProjectInfoResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProjectInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProjectInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentStepNo")
         private Integer currentStepNo;

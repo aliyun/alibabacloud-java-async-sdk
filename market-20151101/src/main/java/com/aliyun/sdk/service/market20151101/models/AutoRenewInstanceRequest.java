@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AutoRenewInstanceRequest} extends {@link RequestModel}
  *
  * <p>AutoRenewInstanceRequest</p>
@@ -129,7 +130,7 @@ public class AutoRenewInstanceRequest extends Request {
         }
 
         /**
-         * OrderBizId.
+         * <p>This parameter is required.</p>
          */
         public Builder orderBizId(Long orderBizId) {
             this.putBodyParameter("OrderBizId", orderBizId);
@@ -147,7 +148,7 @@ public class AutoRenewInstanceRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

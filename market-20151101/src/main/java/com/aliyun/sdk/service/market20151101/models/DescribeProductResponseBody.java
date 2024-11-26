@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProductResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProductResponseBody</p>
@@ -430,6 +431,12 @@ public class DescribeProductResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class ProductExtra extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -551,6 +558,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class ProductExtras extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductExtra")
         private java.util.List < ProductExtra> productExtra;
@@ -592,6 +605,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class PropertyValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -753,6 +772,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class PropertyValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private java.util.List < PropertyValue> propertyValue;
@@ -794,6 +819,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class Property extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayUnit")
         private String displayUnit;
@@ -915,6 +946,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Property")
         private java.util.List < Property> property;
@@ -956,6 +993,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -1057,6 +1100,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class Modules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Module")
         private java.util.List < Module> module;
@@ -1098,6 +1147,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class OrderPeriod extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1159,6 +1214,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class OrderPeriods extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrderPeriod")
         private java.util.List < OrderPeriod> orderPeriod;
@@ -1200,6 +1261,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class ProductSku extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
@@ -1361,6 +1428,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class ProductSkus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductSku")
         private java.util.List < ProductSku> productSku;
@@ -1402,6 +1475,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class Telephones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Telephone")
         private java.util.List < String > telephone;
@@ -1443,6 +1522,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class WangWang extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
@@ -1504,6 +1589,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class WangWangs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WangWang")
         private java.util.List < WangWang> wangWang;
@@ -1545,6 +1636,12 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class ShopInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Emails")
         private String emails;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ActivateLicenseRequest} extends {@link RequestModel}
  *
  * <p>ActivateLicenseRequest</p>
@@ -77,7 +78,10 @@ public class ActivateLicenseRequest extends Request {
         }
 
         /**
-         * LicenseCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APSEDH8TA5CSGK-********_6CNTACBH9EQPOATFXJQL4B2COE7M43VVQ7GUGKAA</p>
          */
         public Builder licenseCode(String licenseCode) {
             this.putQueryParameter("LicenseCode", licenseCode);

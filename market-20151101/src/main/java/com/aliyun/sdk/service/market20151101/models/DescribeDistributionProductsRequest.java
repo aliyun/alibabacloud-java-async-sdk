@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDistributionProductsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDistributionProductsRequest</p>
@@ -92,7 +93,10 @@ public class DescribeDistributionProductsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -101,7 +105,10 @@ public class DescribeDistributionProductsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -116,6 +123,12 @@ public class DescribeDistributionProductsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDistributionProductsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDistributionProductsRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -157,7 +170,10 @@ public class DescribeDistributionProductsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supplierName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -165,7 +181,10 @@ public class DescribeDistributionProductsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmj0000000</p>
              */
             public Builder value(String value) {
                 this.value = value;

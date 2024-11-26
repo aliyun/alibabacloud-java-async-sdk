@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProjectAttachmentsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProjectAttachmentsResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProjectAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProjectAttachmentsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachmentToken")
         private String attachmentToken;

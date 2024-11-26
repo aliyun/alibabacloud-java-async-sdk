@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDistributionProductsLinkRequest} extends {@link RequestModel}
  *
  * <p>DescribeDistributionProductsLinkRequest</p>
@@ -54,7 +55,7 @@ public class DescribeDistributionProductsLinkRequest extends Request {
         } 
 
         /**
-         * Codes.
+         * <p>This parameter is required.</p>
          */
         public Builder codes(java.util.List < String > codes) {
             String codesShrink = shrink(codes, "Codes", "json");

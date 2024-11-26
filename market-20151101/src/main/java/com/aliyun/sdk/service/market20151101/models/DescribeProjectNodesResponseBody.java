@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProjectNodesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProjectNodesResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProjectNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProjectNodesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowRollbackNode")
         private Boolean allowRollbackNode;

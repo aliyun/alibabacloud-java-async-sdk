@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CrossAccountVerifyTokenResponseBody} extends {@link TeaModel}
  *
  * <p>CrossAccountVerifyTokenResponseBody</p>
@@ -101,7 +102,10 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * <p>RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C19D103F-EA2D-50A5-8441-0267CE9FBA56</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +134,12 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CrossAccountVerifyTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>CrossAccountVerifyTokenResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthRoles")
         private java.util.List < String > authRoles;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateOrderRequest</p>
@@ -127,7 +128,10 @@ public class CreateOrderRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2709c68a-d569-4819-9c5d-1222ed2ee924</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -136,7 +140,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * Commodity.
+         * <p>This parameter is required.</p>
          */
         public Builder commodity(String commodity) {
             this.putQueryParameter("Commodity", commodity);
@@ -154,7 +158,10 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE_BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -172,7 +179,10 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HAND</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
