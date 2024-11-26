@@ -230,6 +230,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartServiceInstanceResponse> restartServiceInstance(RestartServiceInstanceRequest request);
 
     /**
+     * @param request the request parameters of RollbackServiceInstance  RollbackServiceInstanceRequest
+     * @return RollbackServiceInstanceResponse
+     */
+    CompletableFuture<RollbackServiceInstanceResponse> rollbackServiceInstance(RollbackServiceInstanceRequest request);
+
+    /**
      * @param request the request parameters of StartServiceInstance  StartServiceInstanceRequest
      * @return StartServiceInstanceResponse
      */
