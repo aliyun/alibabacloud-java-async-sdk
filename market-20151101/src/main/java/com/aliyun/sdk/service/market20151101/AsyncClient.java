@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceResponse> describeInstance(DescribeInstanceRequest request);
 
     /**
+     * @param request the request parameters of DescribeInstanceForIsv  DescribeInstanceForIsvRequest
+     * @return DescribeInstanceForIsvResponse
+     */
+    CompletableFuture<DescribeInstanceForIsvResponse> describeInstanceForIsv(DescribeInstanceForIsvRequest request);
+
+    /**
      * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
      * @return DescribeInstancesResponse
      */
@@ -90,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeOrderResponse
      */
     CompletableFuture<DescribeOrderResponse> describeOrder(DescribeOrderRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOrderForIsv  DescribeOrderForIsvRequest
+     * @return DescribeOrderForIsvResponse
+     */
+    CompletableFuture<DescribeOrderForIsvResponse> describeOrderForIsv(DescribeOrderForIsvRequest request);
 
     /**
      * @param request the request parameters of DescribePrice  DescribePriceRequest
