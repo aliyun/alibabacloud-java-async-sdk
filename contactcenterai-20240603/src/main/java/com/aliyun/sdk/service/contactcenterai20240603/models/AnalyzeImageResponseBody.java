@@ -7,17 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AnalyzeConversationResponseBody} extends {@link TeaModel}
+ * {@link AnalyzeImageResponseBody} extends {@link TeaModel}
  *
- * <p>AnalyzeConversationResponseBody</p>
+ * <p>AnalyzeImageResponseBody</p>
  */
-public class AnalyzeConversationResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("errorCode")
-    private String errorCode;
-
-    @com.aliyun.core.annotation.NameInMap("errorInfo")
-    private String errorInfo;
-
+public class AnalyzeImageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("finishReason")
     private String finishReason;
 
@@ -39,9 +33,7 @@ public class AnalyzeConversationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("totalTokens")
     private String totalTokens;
 
-    private AnalyzeConversationResponseBody(Builder builder) {
-        this.errorCode = builder.errorCode;
-        this.errorInfo = builder.errorInfo;
+    private AnalyzeImageResponseBody(Builder builder) {
         this.finishReason = builder.finishReason;
         this.inputTokens = builder.inputTokens;
         this.outputTokens = builder.outputTokens;
@@ -55,22 +47,8 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static AnalyzeConversationResponseBody create() {
+    public static AnalyzeImageResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return errorCode
-     */
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    /**
-     * @return errorInfo
-     */
-    public String getErrorInfo() {
-        return this.errorInfo;
     }
 
     /**
@@ -123,8 +101,6 @@ public class AnalyzeConversationResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String errorCode; 
-        private String errorInfo; 
         private String finishReason; 
         private String inputTokens; 
         private String outputTokens; 
@@ -132,22 +108,6 @@ public class AnalyzeConversationResponseBody extends TeaModel {
         private Boolean success; 
         private String text; 
         private String totalTokens; 
-
-        /**
-         * errorCode.
-         */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * errorInfo.
-         */
-        public Builder errorInfo(String errorInfo) {
-            this.errorInfo = errorInfo;
-            return this;
-        }
 
         /**
          * finishReason.
@@ -205,8 +165,8 @@ public class AnalyzeConversationResponseBody extends TeaModel {
             return this;
         }
 
-        public AnalyzeConversationResponseBody build() {
-            return new AnalyzeConversationResponseBody(this);
+        public AnalyzeImageResponseBody build() {
+            return new AnalyzeImageResponseBody(this);
         } 
 
     } 

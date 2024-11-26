@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateConversationAnalysisTaskResponse} extends {@link TeaModel}
+ * {@link AnalyzeImageResponse} extends {@link TeaModel}
  *
- * <p>CreateConversationAnalysisTaskResponse</p>
+ * <p>AnalyzeImageResponse</p>
  */
-public class CreateConversationAnalysisTaskResponse extends Response {
+public class AnalyzeImageResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class CreateConversationAnalysisTaskResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateConversationAnalysisTaskResponseBody body;
+    private AnalyzeImageResponseBody body;
 
-    private CreateConversationAnalysisTaskResponse(BuilderImpl builder) {
+    private AnalyzeImageResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateConversationAnalysisTaskResponse create() {
+    public static AnalyzeImageResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class CreateConversationAnalysisTaskResponse extends Response {
     /**
      * @return body
      */
-    public CreateConversationAnalysisTaskResponseBody getBody() {
+    public AnalyzeImageResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateConversationAnalysisTaskResponse, Builder> {
+    public interface Builder extends Response.Builder<AnalyzeImageResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateConversationAnalysisTaskResponseBody body);
+        Builder body(AnalyzeImageResponseBody body);
 
         @Override
-        CreateConversationAnalysisTaskResponse build();
+        AnalyzeImageResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateConversationAnalysisTaskResponse, Builder>
+            extends Response.BuilderImpl<AnalyzeImageResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateConversationAnalysisTaskResponseBody body; 
+        private AnalyzeImageResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateConversationAnalysisTaskResponse response) {
+        private BuilderImpl(AnalyzeImageResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class CreateConversationAnalysisTaskResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateConversationAnalysisTaskResponseBody body) {
+        public Builder body(AnalyzeImageResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateConversationAnalysisTaskResponse build() {
-            return new CreateConversationAnalysisTaskResponse(this);
+        public AnalyzeImageResponse build() {
+            return new AnalyzeImageResponse(this);
         } 
 
     } 

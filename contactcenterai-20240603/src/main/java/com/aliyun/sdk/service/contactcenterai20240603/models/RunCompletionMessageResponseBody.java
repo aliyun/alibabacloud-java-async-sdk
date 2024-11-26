@@ -21,10 +21,22 @@ public class RunCompletionMessageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Text")
     private String text;
 
+    @com.aliyun.core.annotation.NameInMap("inputTokens")
+    private String inputTokens;
+
+    @com.aliyun.core.annotation.NameInMap("outputTokens")
+    private String outputTokens;
+
+    @com.aliyun.core.annotation.NameInMap("totalTokens")
+    private String totalTokens;
+
     private RunCompletionMessageResponseBody(Builder builder) {
         this.finishReason = builder.finishReason;
         this.requestId = builder.requestId;
         this.text = builder.text;
+        this.inputTokens = builder.inputTokens;
+        this.outputTokens = builder.outputTokens;
+        this.totalTokens = builder.totalTokens;
     }
 
     public static Builder builder() {
@@ -56,10 +68,34 @@ public class RunCompletionMessageResponseBody extends TeaModel {
         return this.text;
     }
 
+    /**
+     * @return inputTokens
+     */
+    public String getInputTokens() {
+        return this.inputTokens;
+    }
+
+    /**
+     * @return outputTokens
+     */
+    public String getOutputTokens() {
+        return this.outputTokens;
+    }
+
+    /**
+     * @return totalTokens
+     */
+    public String getTotalTokens() {
+        return this.totalTokens;
+    }
+
     public static final class Builder {
         private String finishReason; 
         private String requestId; 
         private String text; 
+        private String inputTokens; 
+        private String outputTokens; 
+        private String totalTokens; 
 
         /**
          * FinishReason.
@@ -82,6 +118,30 @@ public class RunCompletionMessageResponseBody extends TeaModel {
          */
         public Builder text(String text) {
             this.text = text;
+            return this;
+        }
+
+        /**
+         * inputTokens.
+         */
+        public Builder inputTokens(String inputTokens) {
+            this.inputTokens = inputTokens;
+            return this;
+        }
+
+        /**
+         * outputTokens.
+         */
+        public Builder outputTokens(String outputTokens) {
+            this.outputTokens = outputTokens;
+            return this;
+        }
+
+        /**
+         * totalTokens.
+         */
+        public Builder totalTokens(String totalTokens) {
+            this.totalTokens = totalTokens;
             return this;
         }
 

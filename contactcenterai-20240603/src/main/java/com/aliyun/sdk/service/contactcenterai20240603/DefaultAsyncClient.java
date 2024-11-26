@@ -84,21 +84,31 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateConversationAnalysisTask  CreateConversationAnalysisTaskRequest
-     * @return CreateConversationAnalysisTaskResponse
+     * @param request the request parameters of AnalyzeImage  AnalyzeImageRequest
+     * @return AnalyzeImageResponse
      */
     @Override
-    public CompletableFuture<CreateConversationAnalysisTaskResponse> createConversationAnalysisTask(CreateConversationAnalysisTaskRequest request) {
+    public CompletableFuture<AnalyzeImageResponse> analyzeImage(AnalyzeImageRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateConversationAnalysisTask").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/ccai/app/{appId}/createConversationAnalysisTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateConversationAnalysisTaskResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AnalyzeImage").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/ccai/app/{appId}/analyzeImage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AnalyzeImageResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<CreateConversationAnalysisTaskResponse> future = new CompletableFuture<>();
+            CompletableFuture<AnalyzeImageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    @Override
+    public ResponseIterable<AnalyzeImageResponseBody> analyzeImageWithResponseIterable(AnalyzeImageRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("AnalyzeImage").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/ccai/app/{appId}/analyzeImage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        AnalyzeImageResponseBodyIterator iterator = AnalyzeImageResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**

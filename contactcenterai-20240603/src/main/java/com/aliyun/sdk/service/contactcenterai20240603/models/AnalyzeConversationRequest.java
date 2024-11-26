@@ -66,6 +66,10 @@ public class AnalyzeConversationRequest extends Request {
     private Boolean stream;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("timeConstraintList")
+    private java.util.List < String > timeConstraintList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("userProfiles")
     private java.util.List < UserProfiles> userProfiles;
 
@@ -83,6 +87,7 @@ public class AnalyzeConversationRequest extends Request {
         this.sceneName = builder.sceneName;
         this.serviceInspection = builder.serviceInspection;
         this.stream = builder.stream;
+        this.timeConstraintList = builder.timeConstraintList;
         this.userProfiles = builder.userProfiles;
     }
 
@@ -184,6 +189,13 @@ public class AnalyzeConversationRequest extends Request {
     }
 
     /**
+     * @return timeConstraintList
+     */
+    public java.util.List < String > getTimeConstraintList() {
+        return this.timeConstraintList;
+    }
+
+    /**
      * @return userProfiles
      */
     public java.util.List < UserProfiles> getUserProfiles() {
@@ -203,6 +215,7 @@ public class AnalyzeConversationRequest extends Request {
         private String sceneName; 
         private ServiceInspection serviceInspection; 
         private Boolean stream; 
+        private java.util.List < String > timeConstraintList; 
         private java.util.List < UserProfiles> userProfiles; 
 
         private Builder() {
@@ -223,6 +236,7 @@ public class AnalyzeConversationRequest extends Request {
             this.sceneName = request.sceneName;
             this.serviceInspection = request.serviceInspection;
             this.stream = request.stream;
+            this.timeConstraintList = request.timeConstraintList;
             this.userProfiles = request.userProfiles;
         } 
 
@@ -340,6 +354,15 @@ public class AnalyzeConversationRequest extends Request {
         public Builder stream(Boolean stream) {
             this.putBodyParameter("stream", stream);
             this.stream = stream;
+            return this;
+        }
+
+        /**
+         * timeConstraintList.
+         */
+        public Builder timeConstraintList(java.util.List < String > timeConstraintList) {
+            this.putBodyParameter("timeConstraintList", timeConstraintList);
+            this.timeConstraintList = timeConstraintList;
             return this;
         }
 

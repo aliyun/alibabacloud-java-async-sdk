@@ -30,10 +30,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<AnalyzeConversationResponseBody> analyzeConversationWithResponseIterable(AnalyzeConversationRequest request);
 
     /**
-     * @param request the request parameters of CreateConversationAnalysisTask  CreateConversationAnalysisTaskRequest
-     * @return CreateConversationAnalysisTaskResponse
+     * @param request the request parameters of AnalyzeImage  AnalyzeImageRequest
+     * @return AnalyzeImageResponse
      */
-    CompletableFuture<CreateConversationAnalysisTaskResponse> createConversationAnalysisTask(CreateConversationAnalysisTaskRequest request);
+    CompletableFuture<AnalyzeImageResponse> analyzeImage(AnalyzeImageRequest request);
+
+    ResponseIterable<AnalyzeImageResponseBody> analyzeImageWithResponseIterable(AnalyzeImageRequest request);
 
     /**
      * @param request the request parameters of CreateTask  CreateTaskRequest
