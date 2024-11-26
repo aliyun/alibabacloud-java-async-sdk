@@ -620,6 +620,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetDataLevelPermissionWhiteListResponse> setDataLevelPermissionWhiteList(SetDataLevelPermissionWhiteListRequest request);
 
     /**
+     * @param request the request parameters of SmartqQueryAbility  SmartqQueryAbilityRequest
+     * @return SmartqQueryAbilityResponse
+     */
+    CompletableFuture<SmartqQueryAbilityResponse> smartqQueryAbility(SmartqQueryAbilityRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The execution result of the interface. Valid values:</p>
      * <ul>

@@ -13,6 +13,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddUserRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @Deprecated
+    private String accountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
@@ -41,6 +46,7 @@ public class AddUserRequest extends Request {
 
     private AddUserRequest(Builder builder) {
         super(builder);
+        this.accountId = builder.accountId;
         this.accountName = builder.accountName;
         this.adminUser = builder.adminUser;
         this.authAdminUser = builder.authAdminUser;
@@ -60,6 +66,13 @@ public class AddUserRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountId
+     */
+    public String getAccountId() {
+        return this.accountId;
     }
 
     /**
@@ -105,6 +118,7 @@ public class AddUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddUserRequest, Builder> {
+        private String accountId; 
         private String accountName; 
         private Boolean adminUser; 
         private Boolean authAdminUser; 
@@ -118,6 +132,7 @@ public class AddUserRequest extends Request {
 
         private Builder(AddUserRequest request) {
             super(request);
+            this.accountId = request.accountId;
             this.accountName = request.accountName;
             this.adminUser = request.adminUser;
             this.authAdminUser = request.authAdminUser;
@@ -125,6 +140,15 @@ public class AddUserRequest extends Request {
             this.roleIds = request.roleIds;
             this.userType = request.userType;
         } 
+
+        /**
+         * AccountId.
+         */
+        public Builder accountId(String accountId) {
+            this.putQueryParameter("AccountId", accountId);
+            this.accountId = accountId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
