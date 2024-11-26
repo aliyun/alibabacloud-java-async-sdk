@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayRequest} extends {@link RequestModel}
  *
  * <p>GetGatewayRequest</p>
@@ -53,7 +54,10 @@ public class GetGatewayRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>Cloud-native API Gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cpv4sqdl*****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);

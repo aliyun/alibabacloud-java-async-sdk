@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHttpApiRequest} extends {@link RequestModel}
  *
  * <p>DeleteHttpApiRequest</p>
@@ -54,7 +55,11 @@ public class DeleteHttpApiRequest extends Request {
         } 
 
         /**
-         * httpApiId.
+         * <p>The ID of the HTTP API to be deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxx</p>
          */
         public Builder httpApiId(String httpApiId) {
             this.putPathParameter("httpApiId", httpApiId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HttpDubboTranscoder} extends {@link TeaModel}
  *
  * <p>HttpDubboTranscoder</p>
@@ -110,6 +111,12 @@ public class HttpDubboTranscoder extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HttpDubboTranscoder} extends {@link TeaModel}
+     *
+     * <p>HttpDubboTranscoder</p>
+     */
     public static class ParamMapsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extractKey")
         private String extractKey;
@@ -191,6 +198,12 @@ public class HttpDubboTranscoder extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HttpDubboTranscoder} extends {@link TeaModel}
+     *
+     * <p>HttpDubboTranscoder</p>
+     */
     public static class MothedMapList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dubboMothedName")
         private String dubboMothedName;

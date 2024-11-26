@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEnvironmentResponseBody} extends {@link TeaModel}
  *
  * <p>GetEnvironmentResponseBody</p>
@@ -73,7 +74,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID, used for tracing the API call chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F8EE674-BB08-5E92-BE6F-E4756A748B0F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,79 @@ public class GetEnvironmentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEnvironmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnvironmentResponseBody</p>
+     */
+    public static class StatisticsInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("resourceStatistics")
+        private java.util.List < ResourceStatistic > resourceStatistics;
+
+        @com.aliyun.core.annotation.NameInMap("totalCount")
+        private Integer totalCount;
+
+        private StatisticsInfo(Builder builder) {
+            this.resourceStatistics = builder.resourceStatistics;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StatisticsInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceStatistics
+         */
+        public java.util.List < ResourceStatistic > getResourceStatistics() {
+            return this.resourceStatistics;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private java.util.List < ResourceStatistic > resourceStatistics; 
+            private Integer totalCount; 
+
+            /**
+             * resourceStatistics.
+             */
+            public Builder resourceStatistics(java.util.List < ResourceStatistic > resourceStatistics) {
+                this.resourceStatistics = resourceStatistics;
+                return this;
+            }
+
+            /**
+             * totalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public StatisticsInfo build() {
+                return new StatisticsInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetEnvironmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnvironmentResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alias")
         private String alias;
@@ -132,6 +215,12 @@ public class GetEnvironmentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("statisticsInfo")
+        private StatisticsInfo statisticsInfo;
+
         @com.aliyun.core.annotation.NameInMap("subDomainInfos")
         private java.util.List < SubDomainInfo > subDomainInfos;
 
@@ -146,6 +235,8 @@ public class GetEnvironmentResponseBody extends TeaModel {
             this.environmentId = builder.environmentId;
             this.gatewayInfo = builder.gatewayInfo;
             this.name = builder.name;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.statisticsInfo = builder.statisticsInfo;
             this.subDomainInfos = builder.subDomainInfos;
             this.updateTimestamp = builder.updateTimestamp;
         }
@@ -208,6 +299,20 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return statisticsInfo
+         */
+        public StatisticsInfo getStatisticsInfo() {
+            return this.statisticsInfo;
+        }
+
+        /**
          * @return subDomainInfos
          */
         public java.util.List < SubDomainInfo > getSubDomainInfos() {
@@ -229,11 +334,16 @@ public class GetEnvironmentResponseBody extends TeaModel {
             private String environmentId; 
             private GatewayInfo gatewayInfo; 
             private String name; 
+            private String resourceGroupId; 
+            private StatisticsInfo statisticsInfo; 
             private java.util.List < SubDomainInfo > subDomainInfos; 
             private Long updateTimestamp; 
 
             /**
-             * alias.
+             * <p>Environment alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试环境</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -241,7 +351,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * createTimestamp.
+             * <p>Creation timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -249,7 +362,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * default.
+             * <p>Whether it is the default environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder _default(Boolean _default) {
                 this._default = _default;
@@ -257,7 +373,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Environment description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是xxx的xx项目测试环境</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -265,7 +384,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * environmentId.
+             * <p>Environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-cq7l5s5lhtgi6qasrdc0</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -273,7 +395,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayInfo.
+             * <p>Gateway information</p>
              */
             public Builder gatewayInfo(GatewayInfo gatewayInfo) {
                 this.gatewayInfo = gatewayInfo;
@@ -281,7 +403,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Environment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -289,7 +414,23 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * subDomainInfos.
+             * resourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * statisticsInfo.
+             */
+            public Builder statisticsInfo(StatisticsInfo statisticsInfo) {
+                this.statisticsInfo = statisticsInfo;
+                return this;
+            }
+
+            /**
+             * <p>List of subdomains.</p>
              */
             public Builder subDomainInfos(java.util.List < SubDomainInfo > subDomainInfos) {
                 this.subDomainInfos = subDomainInfos;
@@ -297,7 +438,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * updateTimestamp.
+             * <p>Update timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;

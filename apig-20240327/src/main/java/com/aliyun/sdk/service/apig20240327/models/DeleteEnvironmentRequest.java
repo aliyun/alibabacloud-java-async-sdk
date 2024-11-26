@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEnvironmentRequest} extends {@link RequestModel}
  *
  * <p>DeleteEnvironmentRequest</p>
@@ -54,7 +55,11 @@ public class DeleteEnvironmentRequest extends Request {
         } 
 
         /**
-         * environmentId.
+         * <p>Environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder environmentId(String environmentId) {
             this.putPathParameter("environmentId", environmentId);

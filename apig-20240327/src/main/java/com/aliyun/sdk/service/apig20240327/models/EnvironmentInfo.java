@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnvironmentInfo} extends {@link TeaModel}
  *
  * <p>EnvironmentInfo</p>
@@ -32,6 +33,9 @@ public class EnvironmentInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
     @com.aliyun.core.annotation.NameInMap("subDomainInfos")
     private java.util.List < SubDomainInfo > subDomainInfos;
 
@@ -46,6 +50,7 @@ public class EnvironmentInfo extends TeaModel {
         this.environmentId = builder.environmentId;
         this.gatewayInfo = builder.gatewayInfo;
         this.name = builder.name;
+        this.resourceGroupId = builder.resourceGroupId;
         this.subDomainInfos = builder.subDomainInfos;
         this.updateTimestamp = builder.updateTimestamp;
     }
@@ -108,6 +113,13 @@ public class EnvironmentInfo extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return subDomainInfos
      */
     public java.util.List < SubDomainInfo > getSubDomainInfos() {
@@ -129,6 +141,7 @@ public class EnvironmentInfo extends TeaModel {
         private String environmentId; 
         private GatewayInfo gatewayInfo; 
         private String name; 
+        private String resourceGroupId; 
         private java.util.List < SubDomainInfo > subDomainInfos; 
         private Long updateTimestamp; 
 
@@ -185,6 +198,14 @@ public class EnvironmentInfo extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

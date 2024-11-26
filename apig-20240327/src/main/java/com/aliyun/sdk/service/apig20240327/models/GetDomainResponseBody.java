@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDomainResponseBody} extends {@link TeaModel}
  *
  * <p>GetDomainResponseBody</p>
@@ -73,7 +74,10 @@ public class GetDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class GetDomainResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class GetDomainResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class GetDomainResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID, used for tracing the API call chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,79 @@ public class GetDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDomainResponseBody</p>
+     */
+    public static class StatisticsInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("resourceStatistics")
+        private java.util.List < ResourceStatistic > resourceStatistics;
+
+        @com.aliyun.core.annotation.NameInMap("totalCount")
+        private String totalCount;
+
+        private StatisticsInfo(Builder builder) {
+            this.resourceStatistics = builder.resourceStatistics;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StatisticsInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceStatistics
+         */
+        public java.util.List < ResourceStatistic > getResourceStatistics() {
+            return this.resourceStatistics;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public String getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private java.util.List < ResourceStatistic > resourceStatistics; 
+            private String totalCount; 
+
+            /**
+             * resourceStatistics.
+             */
+            public Builder resourceStatistics(java.util.List < ResourceStatistic > resourceStatistics) {
+                this.resourceStatistics = resourceStatistics;
+                return this;
+            }
+
+            /**
+             * totalCount.
+             */
+            public Builder totalCount(String totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public StatisticsInfo build() {
+                return new StatisticsInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDomainResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("algorithm")
         private String algorithm;
@@ -156,8 +239,14 @@ public class GetDomainResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("sans")
         private String sans;
+
+        @com.aliyun.core.annotation.NameInMap("statisticsInfo")
+        private StatisticsInfo statisticsInfo;
 
         @com.aliyun.core.annotation.NameInMap("tlsMax")
         private String tlsMax;
@@ -184,7 +273,9 @@ public class GetDomainResponseBody extends TeaModel {
             this.notAfterTimstamp = builder.notAfterTimstamp;
             this.notBeforeTimestamp = builder.notBeforeTimestamp;
             this.protocol = builder.protocol;
+            this.resourceGroupId = builder.resourceGroupId;
             this.sans = builder.sans;
+            this.statisticsInfo = builder.statisticsInfo;
             this.tlsMax = builder.tlsMax;
             this.tlsMin = builder.tlsMin;
             this.updatetimestamp = builder.updatetimestamp;
@@ -304,10 +395,24 @@ public class GetDomainResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return sans
          */
         public String getSans() {
             return this.sans;
+        }
+
+        /**
+         * @return statisticsInfo
+         */
+        public StatisticsInfo getStatisticsInfo() {
+            return this.statisticsInfo;
         }
 
         /**
@@ -347,13 +452,18 @@ public class GetDomainResponseBody extends TeaModel {
             private Long notAfterTimstamp; 
             private Long notBeforeTimestamp; 
             private String protocol; 
+            private String resourceGroupId; 
             private String sans; 
+            private StatisticsInfo statisticsInfo; 
             private String tlsMax; 
             private String tlsMin; 
             private Long updatetimestamp; 
 
             /**
-             * algorithm.
+             * <p>Encryption algorithm name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -361,7 +471,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * caCertIndentifier.
+             * <p>Cloud Shield CA certificate identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223576-cn-hangzhou</p>
              */
             public Builder caCertIndentifier(String caCertIndentifier) {
                 this.caCertIndentifier = caCertIndentifier;
@@ -369,7 +482,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * certIndentifier.
+             * <p>Cloud Shield certificate identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123576-cn-hangzhou</p>
              */
             public Builder certIndentifier(String certIndentifier) {
                 this.certIndentifier = certIndentifier;
@@ -377,7 +493,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * certName.
+             * <p>Certificate name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-cert</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -385,7 +504,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * createFrom.
+             * <p>Where it was created from.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Console</p>
              */
             public Builder createFrom(String createFrom) {
                 this.createFrom = createFrom;
@@ -393,7 +515,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * createTimestamp.
+             * <p>Creation timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -401,7 +526,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * default.
+             * <p>Whether it is the default domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder _default(Boolean _default) {
                 this._default = _default;
@@ -409,7 +537,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * domainId.
+             * <p>Domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-cq1m3utlhtgvgkv7sitg</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -417,7 +548,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * forceHttps.
+             * <p>Setting for HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder forceHttps(Boolean forceHttps) {
                 this.forceHttps = forceHttps;
@@ -425,7 +559,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * http2Option.
+             * <p>HTTP/2 setting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder http2Option(String http2Option) {
                 this.http2Option = http2Option;
@@ -433,7 +570,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * issuer.
+             * <p>Certificate issuer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -441,7 +581,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc.com</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -449,7 +592,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * notAfterTimstamp.
+             * <p>Certificate expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder notAfterTimstamp(Long notAfterTimstamp) {
                 this.notAfterTimstamp = notAfterTimstamp;
@@ -457,7 +603,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * notBeforeTimestamp.
+             * <p>Certificate effective time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder notBeforeTimestamp(Long notBeforeTimestamp) {
                 this.notBeforeTimestamp = notBeforeTimestamp;
@@ -465,7 +614,14 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The protocol types supported by the domain.</p>
+             * <ul>
+             * <li>HTTP: Supports only HTTP protocol.</li>
+             * <li>HTTPS: Supports only HTTPS protocol.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -473,7 +629,18 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * sans.
+             * resourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>All domain names bound to the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun.com</p>
              */
             public Builder sans(String sans) {
                 this.sans = sans;
@@ -481,7 +648,18 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * tlsMax.
+             * statisticsInfo.
+             */
+            public Builder statisticsInfo(StatisticsInfo statisticsInfo) {
+                this.statisticsInfo = statisticsInfo;
+                return this;
+            }
+
+            /**
+             * <p>Maximum TLS protocol version, supports up to TLS 1.3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLS 1.3</p>
              */
             public Builder tlsMax(String tlsMax) {
                 this.tlsMax = tlsMax;
@@ -489,7 +667,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * tlsMin.
+             * <p>Minimum TLS protocol version, supports down to TLS 1.0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLS 1.0</p>
              */
             public Builder tlsMin(String tlsMin) {
                 this.tlsMin = tlsMin;
@@ -497,7 +678,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * updatetimestamp.
+             * <p>Update timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder updatetimestamp(Long updatetimestamp) {
                 this.updatetimestamp = updatetimestamp;

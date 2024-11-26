@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDomainsResponseBody</p>
@@ -73,7 +74,10 @@ public class ListDomainsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID, used for tracing the API call chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C61E30D3-579A-5B43-994E-31E02EDC9129</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ListDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDomainsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < DomainInfo > items;
@@ -173,7 +189,7 @@ public class ListDomainsResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * items.
+             * <p>List of domain information.</p>
              */
             public Builder items(java.util.List < DomainInfo > items) {
                 this.items = items;
@@ -181,7 +197,10 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -189,7 +208,10 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Number of items per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -197,7 +219,10 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>Total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

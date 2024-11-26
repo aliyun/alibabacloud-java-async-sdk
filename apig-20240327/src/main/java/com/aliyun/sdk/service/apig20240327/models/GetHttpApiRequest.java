@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHttpApiRequest} extends {@link RequestModel}
  *
  * <p>GetHttpApiRequest</p>
@@ -54,7 +55,11 @@ public class GetHttpApiRequest extends Request {
         } 
 
         /**
-         * httpApiId.
+         * <p>Target HTTP API ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxx</p>
          */
         public Builder httpApiId(String httpApiId) {
             this.putPathParameter("httpApiId", httpApiId);

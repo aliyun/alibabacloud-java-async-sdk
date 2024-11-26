@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDomainsRequest} extends {@link RequestModel}
  *
  * <p>ListDomainsRequest</p>
@@ -27,12 +28,17 @@ public class ListDomainsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
     private ListDomainsRequest(Builder builder) {
         super(builder);
         this.gatewayId = builder.gatewayId;
         this.nameLike = builder.nameLike;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -76,11 +82,19 @@ public class ListDomainsRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ListDomainsRequest, Builder> {
         private String gatewayId; 
         private String nameLike; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -92,10 +106,14 @@ public class ListDomainsRequest extends Request {
             this.nameLike = request.nameLike;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * gatewayId.
+         * <p>Gateway Id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxx</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -104,7 +122,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>Domain name, fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -113,7 +134,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>Page number, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -122,11 +146,23 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Number of items per page, default is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

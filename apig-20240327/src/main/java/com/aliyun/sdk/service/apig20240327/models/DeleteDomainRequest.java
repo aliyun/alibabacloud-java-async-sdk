@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDomainRequest} extends {@link RequestModel}
  *
  * <p>DeleteDomainRequest</p>
@@ -54,7 +55,11 @@ public class DeleteDomainRequest extends Request {
         } 
 
         /**
-         * domainId.
+         * <p>The ID of the domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-cpqnfn5lhtgqbga95svg</p>
          */
         public Builder domainId(String domainId) {
             this.putPathParameter("domainId", domainId);

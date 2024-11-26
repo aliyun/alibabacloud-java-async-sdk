@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHttpApiOperationRequest} extends {@link RequestModel}
  *
  * <p>GetHttpApiOperationRequest</p>
@@ -69,7 +70,11 @@ public class GetHttpApiOperationRequest extends Request {
         } 
 
         /**
-         * httpApiId.
+         * <p>The HTTP API ID to which the operation belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxx</p>
          */
         public Builder httpApiId(String httpApiId) {
             this.putPathParameter("httpApiId", httpApiId);
@@ -78,7 +83,11 @@ public class GetHttpApiOperationRequest extends Request {
         }
 
         /**
-         * operationId.
+         * <p>The operation ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-xxx</p>
          */
         public Builder operationId(String operationId) {
             this.putPathParameter("operationId", operationId);

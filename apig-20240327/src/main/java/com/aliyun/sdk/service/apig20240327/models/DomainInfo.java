@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DomainInfo} extends {@link TeaModel}
  *
  * <p>DomainInfo</p>
@@ -32,6 +33,9 @@ public class DomainInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -46,6 +50,7 @@ public class DomainInfo extends TeaModel {
         this.forceHttps = builder.forceHttps;
         this.name = builder.name;
         this.protocol = builder.protocol;
+        this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
         this.updateTimestamp = builder.updateTimestamp;
     }
@@ -108,6 +113,13 @@ public class DomainInfo extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -129,6 +141,7 @@ public class DomainInfo extends TeaModel {
         private Boolean forceHttps; 
         private String name; 
         private String protocol; 
+        private String resourceGroupId; 
         private String status; 
         private Long updateTimestamp; 
 
@@ -185,6 +198,14 @@ public class DomainInfo extends TeaModel {
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

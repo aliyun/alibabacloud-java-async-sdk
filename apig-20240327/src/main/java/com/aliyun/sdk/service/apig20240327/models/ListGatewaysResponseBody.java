@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewaysResponseBody} extends {@link TeaModel}
  *
  * <p>ListGatewaysResponseBody</p>
@@ -73,7 +74,10 @@ public class ListGatewaysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Result of the gateway list query.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5B626361-070A-56A7-B127-ADAC8F3655DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ListGatewaysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
     public static class Ports extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
@@ -149,7 +165,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * port.
+             * <p>Port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -157,7 +176,14 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>Protocol:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -171,6 +197,12 @@ public class ListGatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
     public static class LoadBalancers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("address")
         private String address;
@@ -294,7 +326,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * address.
+             * <p>Load balancer address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nlb-xoh3pghr***.cn-hangzhou.nlb.aliyuncs.com</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -302,7 +337,14 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * addressIpVersion.
+             * <p>IP version:</p>
+             * <ul>
+             * <li>ipv4: IPv4.</li>
+             * <li>ipv6: IPv6.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder addressIpVersion(String addressIpVersion) {
                 this.addressIpVersion = addressIpVersion;
@@ -310,7 +352,14 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * addressType.
+             * <p>Load balancer address type:</p>
+             * <ul>
+             * <li>Internet: Public network.</li>
+             * <li>Intranet: Private network.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -318,7 +367,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayDefault.
+             * <p>Indicates whether this is the default entry address for the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder gatewayDefault(Boolean gatewayDefault) {
                 this.gatewayDefault = gatewayDefault;
@@ -326,7 +378,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancerId.
+             * <p>Load balancer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nlb-xqwioje1c91r***</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -334,7 +389,13 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * mode.
+             * <p>Mode of load balancer provision for the gateway:</p>
+             * <ul>
+             * <li>Managed: Managed by the Cloud Native API Gateway.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -342,7 +403,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * ports.
+             * <p>List of listening ports.</p>
              */
             public Builder ports(java.util.List < Ports> ports) {
                 this.ports = ports;
@@ -350,7 +411,14 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Status of the load balancer:</p>
+             * <ul>
+             * <li>Ready: Available.</li>
+             * <li>NotCreate: No associated instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -358,7 +426,14 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Type of load balancer for the gateway:</p>
+             * <ul>
+             * <li>NLB: Network Load Balancer.</li>
+             * <li>CLB: Classic Load Balancer.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NLB</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -372,6 +447,346 @@ public class ListGatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
+    public static class SecurityGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupId")
+        private String securityGroupId;
+
+        private SecurityGroup(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroup create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+
+            /**
+             * <p>The Security Group ID.</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            public SecurityGroup build() {
+                return new SecurityGroup(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * tagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * tagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
+    public static class VSwitch extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        private VSwitch(Builder builder) {
+            this.vSwitchId = builder.vSwitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitch create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public static final class Builder {
+            private String vSwitchId; 
+
+            /**
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxxx</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            public VSwitch build() {
+                return new VSwitch(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
+    public static class Vpc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private Vpc(Builder builder) {
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Vpc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String vpcId; 
+
+            /**
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxx</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public Vpc build() {
+                return new Vpc(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
+    public static class ZonesVSwitch extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        private ZonesVSwitch(Builder builder) {
+            this.vSwitchId = builder.vSwitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ZonesVSwitch create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public static final class Builder {
+            private String vSwitchId; 
+
+            /**
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxxx</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            public ZonesVSwitch build() {
+                return new ZonesVSwitch(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
+    public static class Zones extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("vSwitch")
+        private ZonesVSwitch vSwitch;
+
+        @com.aliyun.core.annotation.NameInMap("zoneId")
+        private String zoneId;
+
+        private Zones(Builder builder) {
+            this.vSwitch = builder.vSwitch;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Zones create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vSwitch
+         */
+        public ZonesVSwitch getVSwitch() {
+            return this.vSwitch;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private ZonesVSwitch vSwitch; 
+            private String zoneId; 
+
+            /**
+             * <p>The vSwitch.</p>
+             */
+            public Builder vSwitch(ZonesVSwitch vSwitch) {
+                this.vSwitch = vSwitch;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the current zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public Zones build() {
+                return new Zones(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
@@ -397,11 +812,20 @@ public class ListGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("replicas")
         private String replicas;
 
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("securityGroup")
+        private SecurityGroup securityGroup;
+
         @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List < Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("targetVersion")
         private String targetVersion;
@@ -409,8 +833,17 @@ public class ListGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("updateTimestamp")
         private Long updateTimestamp;
 
+        @com.aliyun.core.annotation.NameInMap("vSwitch")
+        private VSwitch vSwitch;
+
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
+
+        @com.aliyun.core.annotation.NameInMap("vpc")
+        private Vpc vpc;
+
+        @com.aliyun.core.annotation.NameInMap("zones")
+        private java.util.List < Zones> zones;
 
         private Items(Builder builder) {
             this.chargeType = builder.chargeType;
@@ -421,11 +854,17 @@ public class ListGatewaysResponseBody extends TeaModel {
             this.loadBalancers = builder.loadBalancers;
             this.name = builder.name;
             this.replicas = builder.replicas;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.securityGroup = builder.securityGroup;
             this.spec = builder.spec;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.targetVersion = builder.targetVersion;
             this.updateTimestamp = builder.updateTimestamp;
+            this.vSwitch = builder.vSwitch;
             this.version = builder.version;
+            this.vpc = builder.vpc;
+            this.zones = builder.zones;
         }
 
         public static Builder builder() {
@@ -493,6 +932,20 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return securityGroup
+         */
+        public SecurityGroup getSecurityGroup() {
+            return this.securityGroup;
+        }
+
+        /**
          * @return spec
          */
         public String getSpec() {
@@ -504,6 +957,13 @@ public class ListGatewaysResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -521,10 +981,31 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return vSwitch
+         */
+        public VSwitch getVSwitch() {
+            return this.vSwitch;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
             return this.version;
+        }
+
+        /**
+         * @return vpc
+         */
+        public Vpc getVpc() {
+            return this.vpc;
+        }
+
+        /**
+         * @return zones
+         */
+        public java.util.List < Zones> getZones() {
+            return this.zones;
         }
 
         public static final class Builder {
@@ -536,14 +1017,27 @@ public class ListGatewaysResponseBody extends TeaModel {
             private java.util.List < LoadBalancers> loadBalancers; 
             private String name; 
             private String replicas; 
+            private String resourceGroupId; 
+            private SecurityGroup securityGroup; 
             private String spec; 
             private String status; 
+            private java.util.List < Tags> tags; 
             private String targetVersion; 
             private Long updateTimestamp; 
+            private VSwitch vSwitch; 
             private String version; 
+            private Vpc vpc; 
+            private java.util.List < Zones> zones; 
 
             /**
-             * chargeType.
+             * <p>Charge type</p>
+             * <ul>
+             * <li>POSTPAY: Postpaid (pay-as-you-go)</li>
+             * <li>PREPAY: Prepaid (subscription)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -551,7 +1045,13 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * createFrom.
+             * <p>Source of gateway creation:</p>
+             * <ul>
+             * <li>Console: Console.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Console</p>
              */
             public Builder createFrom(String createFrom) {
                 this.createFrom = createFrom;
@@ -559,7 +1059,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * createTimestamp.
+             * <p>Creation timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -567,7 +1070,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * expireTimestamp.
+             * <p>Expiration timestamp for the prepaid (annual or monthly) plan. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172086834548</p>
              */
             public Builder expireTimestamp(Long expireTimestamp) {
                 this.expireTimestamp = expireTimestamp;
@@ -575,7 +1081,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>Gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-cpv54p5***</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -583,7 +1092,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * loadBalancers.
+             * <p>List of gateway entry addresses.</p>
              */
             public Builder loadBalancers(java.util.List < LoadBalancers> loadBalancers) {
                 this.loadBalancers = loadBalancers;
@@ -591,7 +1100,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Gateway name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>itemcenter-gateway</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -599,7 +1111,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * replicas.
+             * <p>Number of gateway instance nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replicas(String replicas) {
                 this.replicas = replicas;
@@ -607,7 +1122,29 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * resourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The Security Group.</p>
+             */
+            public Builder securityGroup(SecurityGroup securityGroup) {
+                this.securityGroup = securityGroup;
+                return this;
+            }
+
+            /**
+             * <p>Gateway specification:</p>
+             * <ul>
+             * <li>apigw.small.x1: Small specification.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>apigw.small.x1</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -615,7 +1152,21 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Gateway status:</p>
+             * <ul>
+             * <li>Running: Running.</li>
+             * <li>Creating: Creating.</li>
+             * <li>CreateFailed: Creation failed.</li>
+             * <li>Upgrading: Upgrading.</li>
+             * <li>UpgradeFailed: Upgrade failed.</li>
+             * <li>Restarting: Restarting.</li>
+             * <li>RestartFailed: Restart failed.</li>
+             * <li>Deleting: Deleting.</li>
+             * <li>DeleteFailed: Deletion failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -623,7 +1174,18 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * targetVersion.
+             * tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * <p>Target version of the gateway. When it is inconsistent with <code>version</code>, a version upgrade can be performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0.2</p>
              */
             public Builder targetVersion(String targetVersion) {
                 this.targetVersion = targetVersion;
@@ -631,7 +1193,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * updateTimestamp.
+             * <p>Update timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -639,10 +1204,37 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The vSwitch.</p>
+             */
+            public Builder vSwitch(VSwitch vSwitch) {
+                this.vSwitch = vSwitch;
+                return this;
+            }
+
+            /**
+             * <p>Gateway version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0.2</p>
              */
             public Builder version(String version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * vpc.
+             */
+            public Builder vpc(Vpc vpc) {
+                this.vpc = vpc;
+                return this;
+            }
+
+            /**
+             * zones.
+             */
+            public Builder zones(java.util.List < Zones> zones) {
+                this.zones = zones;
                 return this;
             }
 
@@ -653,6 +1245,12 @@ public class ListGatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewaysResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
@@ -716,7 +1314,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * items.
+             * <p>Gateway list</p>
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -724,7 +1322,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -732,7 +1333,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -740,7 +1344,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

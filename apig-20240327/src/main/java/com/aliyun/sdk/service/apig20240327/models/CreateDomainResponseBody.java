@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDomainResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDomainResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class CreateDomainResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class CreateDomainResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class CreateDomainResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID, used for tracing the API call chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C2D1C68-0D93-5561-8EE6-FDB7BF067A30</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class CreateDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDomainResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domainId")
         private String domainId;
@@ -137,7 +153,10 @@ public class CreateDomainResponseBody extends TeaModel {
             private String domainId; 
 
             /**
-             * domainId.
+             * <p>Domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-cpu1aullhtgkidg7sa4g</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;

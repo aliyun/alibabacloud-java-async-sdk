@@ -6,13 +6,17 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteGatewayRouteResponseBody} extends {@link TeaModel}
+ * 
+ * {@link GetHttpApiRouteResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteGatewayRouteResponseBody</p>
+ * <p>GetHttpApiRouteResponseBody</p>
  */
-public class DeleteGatewayRouteResponseBody extends TeaModel {
+public class GetHttpApiRouteResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("data")
+    private HttpRoute data;
 
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
@@ -20,8 +24,9 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private DeleteGatewayRouteResponseBody(Builder builder) {
+    private GetHttpApiRouteResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
     }
@@ -30,7 +35,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteGatewayRouteResponseBody create() {
+    public static GetHttpApiRouteResponseBody create() {
         return builder().build();
     }
 
@@ -39,6 +44,13 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public HttpRoute getData() {
+        return this.data;
     }
 
     /**
@@ -57,6 +69,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private HttpRoute data; 
         private String message; 
         private String requestId; 
 
@@ -65,6 +78,14 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * data.
+         */
+        public Builder data(HttpRoute data) {
+            this.data = data;
             return this;
         }
 
@@ -84,8 +105,8 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             return this;
         }
 
-        public DeleteGatewayRouteResponseBody build() {
-            return new DeleteGatewayRouteResponseBody(this);
+        public GetHttpApiRouteResponseBody build() {
+            return new GetHttpApiRouteResponseBody(this);
         } 
 
     } 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HttpApiResponseContract} extends {@link TeaModel}
  *
  * <p>HttpApiResponseContract</p>
@@ -50,7 +51,10 @@ public class HttpApiResponseContract extends TeaModel {
         private java.util.List < Items> items; 
 
         /**
-         * contentType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/json</p>
          */
         public Builder contentType(String contentType) {
             this.contentType = contentType;
@@ -71,6 +75,12 @@ public class HttpApiResponseContract extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HttpApiResponseContract} extends {@link TeaModel}
+     *
+     * <p>HttpApiResponseContract</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private Integer code;

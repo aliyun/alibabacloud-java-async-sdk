@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnvironmentResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEnvironmentResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateEnvironmentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class CreateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class CreateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class CreateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID, used for tracing the API call chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C3B9A12-3868-5EB9-8BEA-F99E03DD125C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class CreateEnvironmentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEnvironmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateEnvironmentResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("environmentId")
         private String environmentId;
@@ -137,7 +153,10 @@ public class CreateEnvironmentResponseBody extends TeaModel {
             private String environmentId; 
 
             /**
-             * environmentId.
+             * <p>Environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-cq7l5s5lhtgi6qasrdc0</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvironmentsRequest} extends {@link RequestModel}
  *
  * <p>ListEnvironmentsRequest</p>
@@ -35,6 +36,10 @@ public class ListEnvironmentsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
     private ListEnvironmentsRequest(Builder builder) {
         super(builder);
         this.aliasLike = builder.aliasLike;
@@ -43,6 +48,7 @@ public class ListEnvironmentsRequest extends Request {
         this.nameLike = builder.nameLike;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -100,6 +106,13 @@ public class ListEnvironmentsRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ListEnvironmentsRequest, Builder> {
         private String aliasLike; 
         private String gatewayId; 
@@ -107,6 +120,7 @@ public class ListEnvironmentsRequest extends Request {
         private String nameLike; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -120,10 +134,14 @@ public class ListEnvironmentsRequest extends Request {
             this.nameLike = request.nameLike;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * aliasLike.
+         * <p>Environment alias, fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder aliasLike(String aliasLike) {
             this.putQueryParameter("aliasLike", aliasLike);
@@ -132,7 +150,10 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>Gateway ID, exact search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cptv6ktlhtgnqr73h8d1</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -141,7 +162,10 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * gatewayNameLike.
+         * <p>Gateway name, fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-gw</p>
          */
         public Builder gatewayNameLike(String gatewayNameLike) {
             this.putQueryParameter("gatewayNameLike", gatewayNameLike);
@@ -150,7 +174,10 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>Environment name, fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -159,7 +186,10 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>Page number, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -168,11 +198,23 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size, default is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

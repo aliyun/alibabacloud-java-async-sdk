@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HttpApiOperation} extends {@link TeaModel}
  *
  * <p>HttpApiOperation</p>
@@ -120,7 +121,10 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * method.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         public Builder method(String method) {
             this.method = method;
@@ -136,7 +140,10 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GetUserInfo</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -144,7 +151,10 @@ public class HttpApiOperation extends TeaModel {
         }
 
         /**
-         * path.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/user</p>
          */
         public Builder path(String path) {
             this.path = path;

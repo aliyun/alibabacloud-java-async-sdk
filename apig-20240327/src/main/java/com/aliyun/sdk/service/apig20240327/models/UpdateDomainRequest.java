@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDomainRequest} extends {@link RequestModel}
  *
  * <p>UpdateDomainRequest</p>
@@ -153,7 +154,11 @@ public class UpdateDomainRequest extends Request {
         } 
 
         /**
-         * domainId.
+         * <p>Domain ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-cpqnfn5lhtgqbga95sv1</p>
          */
         public Builder domainId(String domainId) {
             this.putPathParameter("domainId", domainId);
@@ -162,7 +167,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * caCertIndentifier.
+         * <p>Cloud Shield CA certificate identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123455-cn-hangzhou</p>
          */
         public Builder caCertIndentifier(String caCertIndentifier) {
             this.putBodyParameter("caCertIndentifier", caCertIndentifier);
@@ -171,7 +179,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * certIndentifier.
+         * <p>Cloud Shield certificate identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123458-cn-hangzhou</p>
          */
         public Builder certIndentifier(String certIndentifier) {
             this.putBodyParameter("certIndentifier", certIndentifier);
@@ -180,7 +191,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * forceHttps.
+         * <p>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceHttps(Boolean forceHttps) {
             this.putBodyParameter("forceHttps", forceHttps);
@@ -189,7 +203,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * http2Option.
+         * <p>HTTP/2 settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         public Builder http2Option(String http2Option) {
             this.putBodyParameter("http2Option", http2Option);
@@ -198,7 +215,15 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * protocol.
+         * <p>The protocol type supported by the domain.</p>
+         * <ul>
+         * <li>HTTP: Supports only HTTP protocol.</li>
+         * <li>HTTPS: Supports only HTTPS protocol.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("protocol", protocol);
@@ -207,7 +232,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * tlsMax.
+         * <p>Maximum TLS protocol version, supports up to TLS 1.3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.3</p>
          */
         public Builder tlsMax(String tlsMax) {
             this.putBodyParameter("tlsMax", tlsMax);
@@ -216,7 +244,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * tlsMin.
+         * <p>Minimum TLS protocol version, supports down to TLS 1.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.0</p>
          */
         public Builder tlsMin(String tlsMin) {
             this.putBodyParameter("tlsMin", tlsMin);

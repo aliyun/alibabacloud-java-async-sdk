@@ -6,18 +6,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RouteRulesConflictInfo} extends {@link TeaModel}
+ * 
+ * {@link ApiRouteConflictInfo} extends {@link TeaModel}
  *
- * <p>RouteRulesConflictInfo</p>
+ * <p>ApiRouteConflictInfo</p>
  */
-public class RouteRulesConflictInfo extends TeaModel {
+public class ApiRouteConflictInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("conflicts")
     private java.util.List < Conflicts> conflicts;
 
     @com.aliyun.core.annotation.NameInMap("domainInfo")
     private DomainInfo domainInfo;
 
-    private RouteRulesConflictInfo(Builder builder) {
+    private ApiRouteConflictInfo(Builder builder) {
         this.conflicts = builder.conflicts;
         this.domainInfo = builder.domainInfo;
     }
@@ -26,7 +27,7 @@ public class RouteRulesConflictInfo extends TeaModel {
         return new Builder();
     }
 
-    public static RouteRulesConflictInfo create() {
+    public static ApiRouteConflictInfo create() {
         return builder().build();
     }
 
@@ -64,12 +65,18 @@ public class RouteRulesConflictInfo extends TeaModel {
             return this;
         }
 
-        public RouteRulesConflictInfo build() {
-            return new RouteRulesConflictInfo(this);
+        public ApiRouteConflictInfo build() {
+            return new ApiRouteConflictInfo(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link ApiRouteConflictInfo} extends {@link TeaModel}
+     *
+     * <p>ApiRouteConflictInfo</p>
+     */
     public static class OperationInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -131,6 +138,12 @@ public class RouteRulesConflictInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApiRouteConflictInfo} extends {@link TeaModel}
+     *
+     * <p>ApiRouteConflictInfo</p>
+     */
     public static class ConflictingMatch extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("match")
         private HttpRouteMatch match;
@@ -192,6 +205,12 @@ public class RouteRulesConflictInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApiRouteConflictInfo} extends {@link TeaModel}
+     *
+     * <p>ApiRouteConflictInfo</p>
+     */
     public static class DetectedMatchOperationInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -253,6 +272,12 @@ public class RouteRulesConflictInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApiRouteConflictInfo} extends {@link TeaModel}
+     *
+     * <p>ApiRouteConflictInfo</p>
+     */
     public static class DetectedMatch extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("match")
         private HttpRouteMatch match;
@@ -314,6 +339,12 @@ public class RouteRulesConflictInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApiRouteConflictInfo} extends {@link TeaModel}
+     *
+     * <p>ApiRouteConflictInfo</p>
+     */
     public static class Details extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("conflictingMatch")
         private ConflictingMatch conflictingMatch;
@@ -395,6 +426,12 @@ public class RouteRulesConflictInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApiRouteConflictInfo} extends {@link TeaModel}
+     *
+     * <p>ApiRouteConflictInfo</p>
+     */
     public static class EnvironmentInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("environmentId")
         private String environmentId;
@@ -456,6 +493,79 @@ public class RouteRulesConflictInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApiRouteConflictInfo} extends {@link TeaModel}
+     *
+     * <p>ApiRouteConflictInfo</p>
+     */
+    public static class RouteInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("routeId")
+        private String routeId;
+
+        private RouteInfo(Builder builder) {
+            this.name = builder.name;
+            this.routeId = builder.routeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RouteInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return routeId
+         */
+        public String getRouteId() {
+            return this.routeId;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String routeId; 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * routeId.
+             */
+            public Builder routeId(String routeId) {
+                this.routeId = routeId;
+                return this;
+            }
+
+            public RouteInfo build() {
+                return new RouteInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApiRouteConflictInfo} extends {@link TeaModel}
+     *
+     * <p>ApiRouteConflictInfo</p>
+     */
     public static class Conflicts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("details")
         private java.util.List < Details> details;
@@ -472,12 +582,16 @@ public class RouteRulesConflictInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
+        @com.aliyun.core.annotation.NameInMap("routeInfo")
+        private RouteInfo routeInfo;
+
         private Conflicts(Builder builder) {
             this.details = builder.details;
             this.environmentInfo = builder.environmentInfo;
             this.resourceId = builder.resourceId;
             this.resourceName = builder.resourceName;
             this.resourceType = builder.resourceType;
+            this.routeInfo = builder.routeInfo;
         }
 
         public static Builder builder() {
@@ -523,12 +637,20 @@ public class RouteRulesConflictInfo extends TeaModel {
             return this.resourceType;
         }
 
+        /**
+         * @return routeInfo
+         */
+        public RouteInfo getRouteInfo() {
+            return this.routeInfo;
+        }
+
         public static final class Builder {
             private java.util.List < Details> details; 
             private EnvironmentInfo environmentInfo; 
             private String resourceId; 
             private String resourceName; 
             private String resourceType; 
+            private RouteInfo routeInfo; 
 
             /**
              * details.
@@ -570,6 +692,14 @@ public class RouteRulesConflictInfo extends TeaModel {
                 return this;
             }
 
+            /**
+             * routeInfo.
+             */
+            public Builder routeInfo(RouteInfo routeInfo) {
+                this.routeInfo = routeInfo;
+                return this;
+            }
+
             public Conflicts build() {
                 return new Conflicts(this);
             } 
@@ -577,6 +707,12 @@ public class RouteRulesConflictInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApiRouteConflictInfo} extends {@link TeaModel}
+     *
+     * <p>ApiRouteConflictInfo</p>
+     */
     public static class DomainInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domainId")
         private String domainId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHttpApiOperationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHttpApiOperationResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Operation information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHttpApiOperationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHttpApiOperationResponseBody</p>
+     */
     public static class Operations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operationId")
         private String operationId;
@@ -137,7 +153,10 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
             private String operationId; 
 
             /**
-             * operationId.
+             * <p>Operation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>op-xxx</p>
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -151,6 +170,12 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHttpApiOperationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHttpApiOperationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operations")
         private java.util.List < Operations> operations;
@@ -178,7 +203,7 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
             private java.util.List < Operations> operations; 
 
             /**
-             * operations.
+             * <p>Operation information.</p>
              */
             public Builder operations(java.util.List < Operations> operations) {
                 this.operations = operations;

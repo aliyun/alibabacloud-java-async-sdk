@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEnvironmentRequest} extends {@link RequestModel}
  *
  * <p>UpdateEnvironmentRequest</p>
@@ -83,7 +84,11 @@ public class UpdateEnvironmentRequest extends Request {
         } 
 
         /**
-         * environmentId.
+         * <p>Environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder environmentId(String environmentId) {
             this.putPathParameter("environmentId", environmentId);
@@ -92,7 +97,11 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * alias.
+         * <p>Environment alias.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试环境</p>
          */
         public Builder alias(String alias) {
             this.putBodyParameter("alias", alias);
@@ -101,7 +110,10 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description of the environment, which can include information such as the purpose of the environment and its users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是xx的xx项目测试环境</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvironmentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnvironmentsResponseBody</p>
@@ -73,7 +74,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Paged query environment list response.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID, used for tracing the call chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE857A85-251D-5018-8103-A38957D71E20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnvironmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvironmentsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < EnvironmentInfo > items;
@@ -173,7 +189,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * items.
+             * <p>List of environment information.</p>
              */
             public Builder items(java.util.List < EnvironmentInfo > items) {
                 this.items = items;
@@ -181,7 +197,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -189,7 +208,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Number of items per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -197,7 +219,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>Total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

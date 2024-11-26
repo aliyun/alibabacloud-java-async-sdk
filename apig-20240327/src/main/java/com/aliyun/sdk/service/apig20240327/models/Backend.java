@@ -6,28 +6,36 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GatewayRouteBackendConfig} extends {@link TeaModel}
+ * 
+ * {@link Backend} extends {@link TeaModel}
  *
- * <p>GatewayRouteBackendConfig</p>
+ * <p>Backend</p>
  */
-public class GatewayRouteBackendConfig extends TeaModel {
+public class Backend extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("scene")
+    private String scene;
+
     @com.aliyun.core.annotation.NameInMap("services")
     private java.util.List < Services> services;
 
-    @com.aliyun.core.annotation.NameInMap("type")
-    private String type;
-
-    private GatewayRouteBackendConfig(Builder builder) {
+    private Backend(Builder builder) {
+        this.scene = builder.scene;
         this.services = builder.services;
-        this.type = builder.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GatewayRouteBackendConfig create() {
+    public static Backend create() {
         return builder().build();
+    }
+
+    /**
+     * @return scene
+     */
+    public String getScene() {
+        return this.scene;
     }
 
     /**
@@ -37,16 +45,17 @@ public class GatewayRouteBackendConfig extends TeaModel {
         return this.services;
     }
 
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
     public static final class Builder {
+        private String scene; 
         private java.util.List < Services> services; 
-        private String type; 
+
+        /**
+         * scene.
+         */
+        public Builder scene(String scene) {
+            this.scene = scene;
+            return this;
+        }
 
         /**
          * services.
@@ -56,23 +65,21 @@ public class GatewayRouteBackendConfig extends TeaModel {
             return this;
         }
 
-        /**
-         * type.
-         */
-        public Builder type(String type) {
-            this.type = type;
-            return this;
-        }
-
-        public GatewayRouteBackendConfig build() {
-            return new GatewayRouteBackendConfig(this);
+        public Backend build() {
+            return new Backend(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link Backend} extends {@link TeaModel}
+     *
+     * <p>Backend</p>
+     */
     public static class Services extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("gatewayServiceId")
-        private String gatewayServiceId;
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
 
         @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
@@ -80,17 +87,21 @@ public class GatewayRouteBackendConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
-        @com.aliyun.core.annotation.NameInMap("sourceType")
-        private String sourceType;
+        @com.aliyun.core.annotation.NameInMap("serviceId")
+        private String serviceId;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
 
         @com.aliyun.core.annotation.NameInMap("weight")
-        private Float weight;
+        private Integer weight;
 
         private Services(Builder builder) {
-            this.gatewayServiceId = builder.gatewayServiceId;
+            this.name = builder.name;
             this.port = builder.port;
             this.protocol = builder.protocol;
-            this.sourceType = builder.sourceType;
+            this.serviceId = builder.serviceId;
+            this.version = builder.version;
             this.weight = builder.weight;
         }
 
@@ -103,10 +114,10 @@ public class GatewayRouteBackendConfig extends TeaModel {
         }
 
         /**
-         * @return gatewayServiceId
+         * @return name
          */
-        public String getGatewayServiceId() {
-            return this.gatewayServiceId;
+        public String getName() {
+            return this.name;
         }
 
         /**
@@ -124,31 +135,39 @@ public class GatewayRouteBackendConfig extends TeaModel {
         }
 
         /**
-         * @return sourceType
+         * @return serviceId
          */
-        public String getSourceType() {
-            return this.sourceType;
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
         }
 
         /**
          * @return weight
          */
-        public Float getWeight() {
+        public Integer getWeight() {
             return this.weight;
         }
 
         public static final class Builder {
-            private String gatewayServiceId; 
+            private String name; 
             private Integer port; 
             private String protocol; 
-            private String sourceType; 
-            private Float weight; 
+            private String serviceId; 
+            private String version; 
+            private Integer weight; 
 
             /**
-             * gatewayServiceId.
+             * name.
              */
-            public Builder gatewayServiceId(String gatewayServiceId) {
-                this.gatewayServiceId = gatewayServiceId;
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -169,17 +188,25 @@ public class GatewayRouteBackendConfig extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * serviceId.
              */
-            public Builder sourceType(String sourceType) {
-                this.sourceType = sourceType;
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * version.
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 
             /**
              * weight.
              */
-            public Builder weight(Float weight) {
+            public Builder weight(Integer weight) {
                 this.weight = weight;
                 return this;
             }

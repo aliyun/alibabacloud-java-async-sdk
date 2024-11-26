@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHttpApiResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHttpApiResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateHttpApiResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class CreateHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>API information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class CreateHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class CreateHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1994B10-C6A8-58FA-8347-6A08B0D4EFDE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class CreateHttpApiResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHttpApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHttpApiResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("httpApiId")
         private String httpApiId;
@@ -149,7 +165,10 @@ public class CreateHttpApiResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * httpApiId.
+             * <p>HTTP API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-xxx</p>
              */
             public Builder httpApiId(String httpApiId) {
                 this.httpApiId = httpApiId;
@@ -157,7 +176,10 @@ public class CreateHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-api</p>
              */
             public Builder name(String name) {
                 this.name = name;

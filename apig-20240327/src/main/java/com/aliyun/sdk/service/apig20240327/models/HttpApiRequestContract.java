@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HttpApiRequestContract} extends {@link TeaModel}
  *
  * <p>HttpApiRequestContract</p>
@@ -110,6 +111,12 @@ public class HttpApiRequestContract extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HttpApiRequestContract} extends {@link TeaModel}
+     *
+     * <p>HttpApiRequestContract</p>
+     */
     public static class HttpApiRequestContractBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contentType")
         private String contentType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HttpRouteMatch} extends {@link TeaModel}
  *
  * <p>HttpRouteMatch</p>
@@ -130,6 +131,12 @@ public class HttpRouteMatch extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HttpRouteMatch} extends {@link TeaModel}
+     *
+     * <p>HttpRouteMatch</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -211,6 +218,12 @@ public class HttpRouteMatch extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HttpRouteMatch} extends {@link TeaModel}
+     *
+     * <p>HttpRouteMatch</p>
+     */
     public static class HttpRouteMatchPath extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -272,6 +285,12 @@ public class HttpRouteMatch extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HttpRouteMatch} extends {@link TeaModel}
+     *
+     * <p>HttpRouteMatch</p>
+     */
     public static class QueryParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;

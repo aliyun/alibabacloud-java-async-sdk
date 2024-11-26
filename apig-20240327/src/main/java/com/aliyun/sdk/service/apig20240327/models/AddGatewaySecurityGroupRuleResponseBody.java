@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGatewaySecurityGroupRuleResponseBody} extends {@link TeaModel}
  *
  * <p>AddGatewaySecurityGroupRuleResponseBody</p>
@@ -61,7 +62,10 @@ public class AddGatewaySecurityGroupRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -69,7 +73,10 @@ public class AddGatewaySecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -77,7 +84,10 @@ public class AddGatewaySecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A6E90D5-A711-54F4-A489-E33C2021EDDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

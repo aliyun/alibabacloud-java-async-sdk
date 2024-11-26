@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GatewayLogConfig} extends {@link TeaModel}
  *
  * <p>GatewayLogConfig</p>
@@ -50,6 +51,12 @@ public class GatewayLogConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GatewayLogConfig} extends {@link TeaModel}
+     *
+     * <p>GatewayLogConfig</p>
+     */
     public static class SlsConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;

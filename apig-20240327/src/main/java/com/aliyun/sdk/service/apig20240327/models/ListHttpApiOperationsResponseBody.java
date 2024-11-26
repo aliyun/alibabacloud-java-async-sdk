@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHttpApiOperationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHttpApiOperationsResponseBody</p>
@@ -73,7 +74,10 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>List of operations.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHttpApiOperationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHttpApiOperationsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < HttpApiOperationInfo > items;
@@ -173,7 +189,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * items.
+             * <p>List of operations.</p>
              */
             public Builder items(java.util.List < HttpApiOperationInfo > items) {
                 this.items = items;
@@ -181,7 +197,10 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -189,7 +208,10 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -197,7 +219,10 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

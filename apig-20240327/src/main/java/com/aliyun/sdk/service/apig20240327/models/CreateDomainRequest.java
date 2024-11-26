@@ -6,18 +6,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDomainRequest} extends {@link RequestModel}
  *
  * <p>CreateDomainRequest</p>
  */
 public class CreateDomainRequest extends Request {
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("caCertIndentifier")
-    private String caCertIndentifier;
+    @com.aliyun.core.annotation.NameInMap("caCertIdentifier")
+    private String caCertIdentifier;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("certIndentifier")
-    private String certIndentifier;
+    @com.aliyun.core.annotation.NameInMap("certIdentifier")
+    private String certIdentifier;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("forceHttps")
@@ -38,6 +39,10 @@ public class CreateDomainRequest extends Request {
     private String protocol;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tlsMax")
     private String tlsMax;
 
@@ -47,12 +52,13 @@ public class CreateDomainRequest extends Request {
 
     private CreateDomainRequest(Builder builder) {
         super(builder);
-        this.caCertIndentifier = builder.caCertIndentifier;
-        this.certIndentifier = builder.certIndentifier;
+        this.caCertIdentifier = builder.caCertIdentifier;
+        this.certIdentifier = builder.certIdentifier;
         this.forceHttps = builder.forceHttps;
         this.http2Option = builder.http2Option;
         this.name = builder.name;
         this.protocol = builder.protocol;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tlsMax = builder.tlsMax;
         this.tlsMin = builder.tlsMin;
     }
@@ -71,17 +77,17 @@ public class CreateDomainRequest extends Request {
     }
 
     /**
-     * @return caCertIndentifier
+     * @return caCertIdentifier
      */
-    public String getCaCertIndentifier() {
-        return this.caCertIndentifier;
+    public String getCaCertIdentifier() {
+        return this.caCertIdentifier;
     }
 
     /**
-     * @return certIndentifier
+     * @return certIdentifier
      */
-    public String getCertIndentifier() {
-        return this.certIndentifier;
+    public String getCertIdentifier() {
+        return this.certIdentifier;
     }
 
     /**
@@ -113,6 +119,13 @@ public class CreateDomainRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tlsMax
      */
     public String getTlsMax() {
@@ -127,12 +140,13 @@ public class CreateDomainRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDomainRequest, Builder> {
-        private String caCertIndentifier; 
-        private String certIndentifier; 
+        private String caCertIdentifier; 
+        private String certIdentifier; 
         private Boolean forceHttps; 
         private String http2Option; 
         private String name; 
         private String protocol; 
+        private String resourceGroupId; 
         private String tlsMax; 
         private String tlsMin; 
 
@@ -142,36 +156,46 @@ public class CreateDomainRequest extends Request {
 
         private Builder(CreateDomainRequest request) {
             super(request);
-            this.caCertIndentifier = request.caCertIndentifier;
-            this.certIndentifier = request.certIndentifier;
+            this.caCertIdentifier = request.caCertIdentifier;
+            this.certIdentifier = request.certIdentifier;
             this.forceHttps = request.forceHttps;
             this.http2Option = request.http2Option;
             this.name = request.name;
             this.protocol = request.protocol;
+            this.resourceGroupId = request.resourceGroupId;
             this.tlsMax = request.tlsMax;
             this.tlsMin = request.tlsMin;
         } 
 
         /**
-         * caCertIndentifier.
+         * <p>CA Certificate Identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
          */
-        public Builder caCertIndentifier(String caCertIndentifier) {
-            this.putBodyParameter("caCertIndentifier", caCertIndentifier);
-            this.caCertIndentifier = caCertIndentifier;
+        public Builder caCertIdentifier(String caCertIdentifier) {
+            this.putBodyParameter("caCertIdentifier", caCertIdentifier);
+            this.caCertIdentifier = caCertIdentifier;
             return this;
         }
 
         /**
-         * certIndentifier.
+         * <p>Certificate Unique Identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
          */
-        public Builder certIndentifier(String certIndentifier) {
-            this.putBodyParameter("certIndentifier", certIndentifier);
-            this.certIndentifier = certIndentifier;
+        public Builder certIdentifier(String certIdentifier) {
+            this.putBodyParameter("certIdentifier", certIdentifier);
+            this.certIdentifier = certIdentifier;
             return this;
         }
 
         /**
-         * forceHttps.
+         * <p>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceHttps(Boolean forceHttps) {
             this.putBodyParameter("forceHttps", forceHttps);
@@ -180,7 +204,10 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * http2Option.
+         * <p>HTTP/2 settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         public Builder http2Option(String http2Option) {
             this.putBodyParameter("http2Option", http2Option);
@@ -189,7 +216,11 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.com</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -198,7 +229,15 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * protocol.
+         * <p>The protocol type supported by the domain.</p>
+         * <ul>
+         * <li>HTTP: Supports only HTTP protocol.</li>
+         * <li>HTTPS: Supports only HTTPS protocol.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("protocol", protocol);
@@ -207,7 +246,19 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * tlsMax.
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>Maximum TLS protocol version, supports up to TLS 1.3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS1.3</p>
          */
         public Builder tlsMax(String tlsMax) {
             this.putBodyParameter("tlsMax", tlsMax);
@@ -216,7 +267,10 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * tlsMin.
+         * <p>Minimum TLS protocol version, supports down to TLS 1.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS1.0</p>
          */
         public Builder tlsMin(String tlsMin) {
             this.putBodyParameter("tlsMin", tlsMin);

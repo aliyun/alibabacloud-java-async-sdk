@@ -6,13 +6,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HttpApiApiInfo} extends {@link TeaModel}
  *
  * <p>HttpApiApiInfo</p>
  */
 public class HttpApiApiInfo extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("aiProtocols")
+    private java.util.List < String > aiProtocols;
+
     @com.aliyun.core.annotation.NameInMap("basePath")
     private String basePath;
+
+    @com.aliyun.core.annotation.NameInMap("deployConfigs")
+    private java.util.List < HttpApiDeployConfig > deployConfigs;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -23,22 +30,36 @@ public class HttpApiApiInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("httpApiId")
     private String httpApiId;
 
+    @com.aliyun.core.annotation.NameInMap("ingressInfo")
+    private IngressInfo ingressInfo;
+
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("protocols")
     private java.util.List < String > protocols;
 
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.NameInMap("type")
+    private String type;
+
     @com.aliyun.core.annotation.NameInMap("versionInfo")
     private HttpApiVersionInfo versionInfo;
 
     private HttpApiApiInfo(Builder builder) {
+        this.aiProtocols = builder.aiProtocols;
         this.basePath = builder.basePath;
+        this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
         this.environments = builder.environments;
         this.httpApiId = builder.httpApiId;
+        this.ingressInfo = builder.ingressInfo;
         this.name = builder.name;
         this.protocols = builder.protocols;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.type = builder.type;
         this.versionInfo = builder.versionInfo;
     }
 
@@ -51,10 +72,24 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     /**
+     * @return aiProtocols
+     */
+    public java.util.List < String > getAiProtocols() {
+        return this.aiProtocols;
+    }
+
+    /**
      * @return basePath
      */
     public String getBasePath() {
         return this.basePath;
+    }
+
+    /**
+     * @return deployConfigs
+     */
+    public java.util.List < HttpApiDeployConfig > getDeployConfigs() {
+        return this.deployConfigs;
     }
 
     /**
@@ -79,6 +114,13 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     /**
+     * @return ingressInfo
+     */
+    public IngressInfo getIngressInfo() {
+        return this.ingressInfo;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -93,6 +135,20 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
      * @return versionInfo
      */
     public HttpApiVersionInfo getVersionInfo() {
@@ -100,19 +156,40 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < String > aiProtocols; 
         private String basePath; 
+        private java.util.List < HttpApiDeployConfig > deployConfigs; 
         private String description; 
         private java.util.List < Environments> environments; 
         private String httpApiId; 
+        private IngressInfo ingressInfo; 
         private String name; 
         private java.util.List < String > protocols; 
+        private String resourceGroupId; 
+        private String type; 
         private HttpApiVersionInfo versionInfo; 
+
+        /**
+         * aiProtocols.
+         */
+        public Builder aiProtocols(java.util.List < String > aiProtocols) {
+            this.aiProtocols = aiProtocols;
+            return this;
+        }
 
         /**
          * basePath.
          */
         public Builder basePath(String basePath) {
             this.basePath = basePath;
+            return this;
+        }
+
+        /**
+         * deployConfigs.
+         */
+        public Builder deployConfigs(java.util.List < HttpApiDeployConfig > deployConfigs) {
+            this.deployConfigs = deployConfigs;
             return this;
         }
 
@@ -141,6 +218,14 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
+         * ingressInfo.
+         */
+        public Builder ingressInfo(IngressInfo ingressInfo) {
+            this.ingressInfo = ingressInfo;
+            return this;
+        }
+
+        /**
          * name.
          */
         public Builder name(String name) {
@@ -153,6 +238,22 @@ public class HttpApiApiInfo extends TeaModel {
          */
         public Builder protocols(java.util.List < String > protocols) {
             this.protocols = protocols;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * type.
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 
@@ -170,58 +271,37 @@ public class HttpApiApiInfo extends TeaModel {
 
     } 
 
-    public static class ContainerServiceConfigs extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("gatewayServiceId")
-        private String gatewayServiceId;
-
-        @com.aliyun.core.annotation.NameInMap("match")
-        private HttpApiBackendMatchConditions match;
+    /**
+     * 
+     * {@link HttpApiApiInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiApiInfo</p>
+     */
+    public static class GatewayInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("gatewayId")
+        private String gatewayId;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @com.aliyun.core.annotation.NameInMap("namespace")
-        private String namespace;
-
-        @com.aliyun.core.annotation.NameInMap("port")
-        private Integer port;
-
-        @com.aliyun.core.annotation.NameInMap("protocol")
-        private String protocol;
-
-        @com.aliyun.core.annotation.NameInMap("weight")
-        private Integer weight;
-
-        private ContainerServiceConfigs(Builder builder) {
-            this.gatewayServiceId = builder.gatewayServiceId;
-            this.match = builder.match;
+        private GatewayInfo(Builder builder) {
+            this.gatewayId = builder.gatewayId;
             this.name = builder.name;
-            this.namespace = builder.namespace;
-            this.port = builder.port;
-            this.protocol = builder.protocol;
-            this.weight = builder.weight;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static ContainerServiceConfigs create() {
+        public static GatewayInfo create() {
             return builder().build();
         }
 
         /**
-         * @return gatewayServiceId
+         * @return gatewayId
          */
-        public String getGatewayServiceId() {
-            return this.gatewayServiceId;
-        }
-
-        /**
-         * @return match
-         */
-        public HttpApiBackendMatchConditions getMatch() {
-            return this.match;
+        public String getGatewayId() {
+            return this.gatewayId;
         }
 
         /**
@@ -231,56 +311,15 @@ public class HttpApiApiInfo extends TeaModel {
             return this.name;
         }
 
-        /**
-         * @return namespace
-         */
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        /**
-         * @return port
-         */
-        public Integer getPort() {
-            return this.port;
-        }
-
-        /**
-         * @return protocol
-         */
-        public String getProtocol() {
-            return this.protocol;
-        }
-
-        /**
-         * @return weight
-         */
-        public Integer getWeight() {
-            return this.weight;
-        }
-
         public static final class Builder {
-            private String gatewayServiceId; 
-            private HttpApiBackendMatchConditions match; 
+            private String gatewayId; 
             private String name; 
-            private String namespace; 
-            private Integer port; 
-            private String protocol; 
-            private Integer weight; 
 
             /**
-             * gatewayServiceId.
+             * gatewayId.
              */
-            public Builder gatewayServiceId(String gatewayServiceId) {
-                this.gatewayServiceId = gatewayServiceId;
-                return this;
-            }
-
-            /**
-             * match.
-             */
-            public Builder match(HttpApiBackendMatchConditions match) {
-                this.match = match;
+            public Builder gatewayId(String gatewayId) {
+                this.gatewayId = gatewayId;
                 return this;
             }
 
@@ -292,489 +331,19 @@ public class HttpApiApiInfo extends TeaModel {
                 return this;
             }
 
-            /**
-             * namespace.
-             */
-            public Builder namespace(String namespace) {
-                this.namespace = namespace;
-                return this;
-            }
-
-            /**
-             * port.
-             */
-            public Builder port(Integer port) {
-                this.port = port;
-                return this;
-            }
-
-            /**
-             * protocol.
-             */
-            public Builder protocol(String protocol) {
-                this.protocol = protocol;
-                return this;
-            }
-
-            /**
-             * weight.
-             */
-            public Builder weight(Integer weight) {
-                this.weight = weight;
-                return this;
-            }
-
-            public ContainerServiceConfigs build() {
-                return new ContainerServiceConfigs(this);
+            public GatewayInfo build() {
+                return new GatewayInfo(this);
             } 
 
         } 
 
     }
-    public static class FunctionConfigs extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("gatewayServiceId")
-        private String gatewayServiceId;
-
-        @com.aliyun.core.annotation.NameInMap("match")
-        private HttpApiBackendMatchConditions match;
-
-        @com.aliyun.core.annotation.NameInMap("name")
-        private String name;
-
-        @com.aliyun.core.annotation.NameInMap("qualifier")
-        private String qualifier;
-
-        @com.aliyun.core.annotation.NameInMap("weight")
-        private Integer weight;
-
-        private FunctionConfigs(Builder builder) {
-            this.gatewayServiceId = builder.gatewayServiceId;
-            this.match = builder.match;
-            this.name = builder.name;
-            this.qualifier = builder.qualifier;
-            this.weight = builder.weight;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static FunctionConfigs create() {
-            return builder().build();
-        }
-
-        /**
-         * @return gatewayServiceId
-         */
-        public String getGatewayServiceId() {
-            return this.gatewayServiceId;
-        }
-
-        /**
-         * @return match
-         */
-        public HttpApiBackendMatchConditions getMatch() {
-            return this.match;
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
-         * @return qualifier
-         */
-        public String getQualifier() {
-            return this.qualifier;
-        }
-
-        /**
-         * @return weight
-         */
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-        public static final class Builder {
-            private String gatewayServiceId; 
-            private HttpApiBackendMatchConditions match; 
-            private String name; 
-            private String qualifier; 
-            private Integer weight; 
-
-            /**
-             * gatewayServiceId.
-             */
-            public Builder gatewayServiceId(String gatewayServiceId) {
-                this.gatewayServiceId = gatewayServiceId;
-                return this;
-            }
-
-            /**
-             * match.
-             */
-            public Builder match(HttpApiBackendMatchConditions match) {
-                this.match = match;
-                return this;
-            }
-
-            /**
-             * name.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * qualifier.
-             */
-            public Builder qualifier(String qualifier) {
-                this.qualifier = qualifier;
-                return this;
-            }
-
-            /**
-             * weight.
-             */
-            public Builder weight(Integer weight) {
-                this.weight = weight;
-                return this;
-            }
-
-            public FunctionConfigs build() {
-                return new FunctionConfigs(this);
-            } 
-
-        } 
-
-    }
-    public static class MseNacosConfigs extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("gatewayServiceId")
-        private String gatewayServiceId;
-
-        @com.aliyun.core.annotation.NameInMap("groupName")
-        private String groupName;
-
-        @com.aliyun.core.annotation.NameInMap("match")
-        private HttpApiBackendMatchConditions match;
-
-        @com.aliyun.core.annotation.NameInMap("name")
-        private String name;
-
-        @com.aliyun.core.annotation.NameInMap("namespace")
-        private String namespace;
-
-        @com.aliyun.core.annotation.NameInMap("weight")
-        private Integer weight;
-
-        private MseNacosConfigs(Builder builder) {
-            this.gatewayServiceId = builder.gatewayServiceId;
-            this.groupName = builder.groupName;
-            this.match = builder.match;
-            this.name = builder.name;
-            this.namespace = builder.namespace;
-            this.weight = builder.weight;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static MseNacosConfigs create() {
-            return builder().build();
-        }
-
-        /**
-         * @return gatewayServiceId
-         */
-        public String getGatewayServiceId() {
-            return this.gatewayServiceId;
-        }
-
-        /**
-         * @return groupName
-         */
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        /**
-         * @return match
-         */
-        public HttpApiBackendMatchConditions getMatch() {
-            return this.match;
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
-         * @return namespace
-         */
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        /**
-         * @return weight
-         */
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-        public static final class Builder {
-            private String gatewayServiceId; 
-            private String groupName; 
-            private HttpApiBackendMatchConditions match; 
-            private String name; 
-            private String namespace; 
-            private Integer weight; 
-
-            /**
-             * gatewayServiceId.
-             */
-            public Builder gatewayServiceId(String gatewayServiceId) {
-                this.gatewayServiceId = gatewayServiceId;
-                return this;
-            }
-
-            /**
-             * groupName.
-             */
-            public Builder groupName(String groupName) {
-                this.groupName = groupName;
-                return this;
-            }
-
-            /**
-             * match.
-             */
-            public Builder match(HttpApiBackendMatchConditions match) {
-                this.match = match;
-                return this;
-            }
-
-            /**
-             * name.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * namespace.
-             */
-            public Builder namespace(String namespace) {
-                this.namespace = namespace;
-                return this;
-            }
-
-            /**
-             * weight.
-             */
-            public Builder weight(Integer weight) {
-                this.weight = weight;
-                return this;
-            }
-
-            public MseNacosConfigs build() {
-                return new MseNacosConfigs(this);
-            } 
-
-        } 
-
-    }
-    public static class CloudProductConfig extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("cloudProductType")
-        private String cloudProductType;
-
-        @com.aliyun.core.annotation.NameInMap("containerServiceConfigs")
-        private java.util.List < ContainerServiceConfigs> containerServiceConfigs;
-
-        @com.aliyun.core.annotation.NameInMap("functionConfigs")
-        private java.util.List < FunctionConfigs> functionConfigs;
-
-        @com.aliyun.core.annotation.NameInMap("mseNacosConfigs")
-        private java.util.List < MseNacosConfigs> mseNacosConfigs;
-
-        private CloudProductConfig(Builder builder) {
-            this.cloudProductType = builder.cloudProductType;
-            this.containerServiceConfigs = builder.containerServiceConfigs;
-            this.functionConfigs = builder.functionConfigs;
-            this.mseNacosConfigs = builder.mseNacosConfigs;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static CloudProductConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return cloudProductType
-         */
-        public String getCloudProductType() {
-            return this.cloudProductType;
-        }
-
-        /**
-         * @return containerServiceConfigs
-         */
-        public java.util.List < ContainerServiceConfigs> getContainerServiceConfigs() {
-            return this.containerServiceConfigs;
-        }
-
-        /**
-         * @return functionConfigs
-         */
-        public java.util.List < FunctionConfigs> getFunctionConfigs() {
-            return this.functionConfigs;
-        }
-
-        /**
-         * @return mseNacosConfigs
-         */
-        public java.util.List < MseNacosConfigs> getMseNacosConfigs() {
-            return this.mseNacosConfigs;
-        }
-
-        public static final class Builder {
-            private String cloudProductType; 
-            private java.util.List < ContainerServiceConfigs> containerServiceConfigs; 
-            private java.util.List < FunctionConfigs> functionConfigs; 
-            private java.util.List < MseNacosConfigs> mseNacosConfigs; 
-
-            /**
-             * cloudProductType.
-             */
-            public Builder cloudProductType(String cloudProductType) {
-                this.cloudProductType = cloudProductType;
-                return this;
-            }
-
-            /**
-             * containerServiceConfigs.
-             */
-            public Builder containerServiceConfigs(java.util.List < ContainerServiceConfigs> containerServiceConfigs) {
-                this.containerServiceConfigs = containerServiceConfigs;
-                return this;
-            }
-
-            /**
-             * functionConfigs.
-             */
-            public Builder functionConfigs(java.util.List < FunctionConfigs> functionConfigs) {
-                this.functionConfigs = functionConfigs;
-                return this;
-            }
-
-            /**
-             * mseNacosConfigs.
-             */
-            public Builder mseNacosConfigs(java.util.List < MseNacosConfigs> mseNacosConfigs) {
-                this.mseNacosConfigs = mseNacosConfigs;
-                return this;
-            }
-
-            public CloudProductConfig build() {
-                return new CloudProductConfig(this);
-            } 
-
-        } 
-
-    }
-    public static class DnsConfigs extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("dnsList")
-        private java.util.List < String > dnsList;
-
-        @com.aliyun.core.annotation.NameInMap("match")
-        private HttpApiBackendMatchConditions match;
-
-        @com.aliyun.core.annotation.NameInMap("weight")
-        private Integer weight;
-
-        private DnsConfigs(Builder builder) {
-            this.dnsList = builder.dnsList;
-            this.match = builder.match;
-            this.weight = builder.weight;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DnsConfigs create() {
-            return builder().build();
-        }
-
-        /**
-         * @return dnsList
-         */
-        public java.util.List < String > getDnsList() {
-            return this.dnsList;
-        }
-
-        /**
-         * @return match
-         */
-        public HttpApiBackendMatchConditions getMatch() {
-            return this.match;
-        }
-
-        /**
-         * @return weight
-         */
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > dnsList; 
-            private HttpApiBackendMatchConditions match; 
-            private Integer weight; 
-
-            /**
-             * dnsList.
-             */
-            public Builder dnsList(java.util.List < String > dnsList) {
-                this.dnsList = dnsList;
-                return this;
-            }
-
-            /**
-             * match.
-             */
-            public Builder match(HttpApiBackendMatchConditions match) {
-                this.match = match;
-                return this;
-            }
-
-            /**
-             * weight.
-             */
-            public Builder weight(Integer weight) {
-                this.weight = weight;
-                return this;
-            }
-
-            public DnsConfigs build() {
-                return new DnsConfigs(this);
-            } 
-
-        } 
-
-    }
+    /**
+     * 
+     * {@link HttpApiApiInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiApiInfo</p>
+     */
     public static class ServiceConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayServiceId")
         private String gatewayServiceId;
@@ -791,6 +360,9 @@ public class HttpApiApiInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
+        @com.aliyun.core.annotation.NameInMap("serviceId")
+        private String serviceId;
+
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
@@ -803,6 +375,7 @@ public class HttpApiApiInfo extends TeaModel {
             this.name = builder.name;
             this.port = builder.port;
             this.protocol = builder.protocol;
+            this.serviceId = builder.serviceId;
             this.version = builder.version;
             this.weight = builder.weight;
         }
@@ -851,6 +424,13 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -870,6 +450,7 @@ public class HttpApiApiInfo extends TeaModel {
             private String name; 
             private String port; 
             private String protocol; 
+            private String serviceId; 
             private String version; 
             private Integer weight; 
 
@@ -914,6 +495,14 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
+             * serviceId.
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
              * version.
              */
             public Builder version(String version) {
@@ -936,117 +525,161 @@ public class HttpApiApiInfo extends TeaModel {
         } 
 
     }
-    public static class VipConfigs extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("endpoints")
-        private java.util.List < String > endpoints;
+    /**
+     * 
+     * {@link HttpApiApiInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiApiInfo</p>
+     */
+    public static class SubDomains extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("domainId")
+        private String domainId;
 
-        @com.aliyun.core.annotation.NameInMap("match")
-        private HttpApiBackendMatchConditions match;
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
 
-        @com.aliyun.core.annotation.NameInMap("weight")
-        private Integer weight;
+        @com.aliyun.core.annotation.NameInMap("networkType")
+        private String networkType;
 
-        private VipConfigs(Builder builder) {
-            this.endpoints = builder.endpoints;
-            this.match = builder.match;
-            this.weight = builder.weight;
+        @com.aliyun.core.annotation.NameInMap("protocol")
+        private String protocol;
+
+        private SubDomains(Builder builder) {
+            this.domainId = builder.domainId;
+            this.name = builder.name;
+            this.networkType = builder.networkType;
+            this.protocol = builder.protocol;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static VipConfigs create() {
+        public static SubDomains create() {
             return builder().build();
         }
 
         /**
-         * @return endpoints
+         * @return domainId
          */
-        public java.util.List < String > getEndpoints() {
-            return this.endpoints;
+        public String getDomainId() {
+            return this.domainId;
         }
 
         /**
-         * @return match
+         * @return name
          */
-        public HttpApiBackendMatchConditions getMatch() {
-            return this.match;
+        public String getName() {
+            return this.name;
         }
 
         /**
-         * @return weight
+         * @return networkType
          */
-        public Integer getWeight() {
-            return this.weight;
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
         }
 
         public static final class Builder {
-            private java.util.List < String > endpoints; 
-            private HttpApiBackendMatchConditions match; 
-            private Integer weight; 
+            private String domainId; 
+            private String name; 
+            private String networkType; 
+            private String protocol; 
 
             /**
-             * endpoints.
+             * domainId.
              */
-            public Builder endpoints(java.util.List < String > endpoints) {
-                this.endpoints = endpoints;
+            public Builder domainId(String domainId) {
+                this.domainId = domainId;
                 return this;
             }
 
             /**
-             * match.
+             * name.
              */
-            public Builder match(HttpApiBackendMatchConditions match) {
-                this.match = match;
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
             /**
-             * weight.
+             * networkType.
              */
-            public Builder weight(Integer weight) {
-                this.weight = weight;
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
                 return this;
             }
 
-            public VipConfigs build() {
-                return new VipConfigs(this);
+            /**
+             * protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public SubDomains build() {
+                return new SubDomains(this);
             } 
 
         } 
 
     }
+    /**
+     * 
+     * {@link HttpApiApiInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiApiInfo</p>
+     */
     public static class Environments extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("alias")
+        private String alias;
+
         @com.aliyun.core.annotation.NameInMap("backendScene")
         private String backendScene;
 
         @com.aliyun.core.annotation.NameInMap("backendType")
         private String backendType;
 
-        @com.aliyun.core.annotation.NameInMap("cloudProductConfig")
-        private CloudProductConfig cloudProductConfig;
+        @com.aliyun.core.annotation.NameInMap("customDomains")
+        private java.util.List < HttpApiDomainInfo > customDomains;
 
-        @com.aliyun.core.annotation.NameInMap("dnsConfigs")
-        private java.util.List < DnsConfigs> dnsConfigs;
+        @com.aliyun.core.annotation.NameInMap("deployStatus")
+        private String deployStatus;
 
         @com.aliyun.core.annotation.NameInMap("environmentId")
         private String environmentId;
 
+        @com.aliyun.core.annotation.NameInMap("gatewayInfo")
+        private GatewayInfo gatewayInfo;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
         @com.aliyun.core.annotation.NameInMap("serviceConfigs")
         private java.util.List < ServiceConfigs> serviceConfigs;
 
-        @com.aliyun.core.annotation.NameInMap("vipConfigs")
-        private java.util.List < VipConfigs> vipConfigs;
+        @com.aliyun.core.annotation.NameInMap("subDomains")
+        private java.util.List < SubDomains> subDomains;
 
         private Environments(Builder builder) {
+            this.alias = builder.alias;
             this.backendScene = builder.backendScene;
             this.backendType = builder.backendType;
-            this.cloudProductConfig = builder.cloudProductConfig;
-            this.dnsConfigs = builder.dnsConfigs;
+            this.customDomains = builder.customDomains;
+            this.deployStatus = builder.deployStatus;
             this.environmentId = builder.environmentId;
+            this.gatewayInfo = builder.gatewayInfo;
+            this.name = builder.name;
             this.serviceConfigs = builder.serviceConfigs;
-            this.vipConfigs = builder.vipConfigs;
+            this.subDomains = builder.subDomains;
         }
 
         public static Builder builder() {
@@ -1055,6 +688,13 @@ public class HttpApiApiInfo extends TeaModel {
 
         public static Environments create() {
             return builder().build();
+        }
+
+        /**
+         * @return alias
+         */
+        public String getAlias() {
+            return this.alias;
         }
 
         /**
@@ -1072,17 +712,17 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * @return cloudProductConfig
+         * @return customDomains
          */
-        public CloudProductConfig getCloudProductConfig() {
-            return this.cloudProductConfig;
+        public java.util.List < HttpApiDomainInfo > getCustomDomains() {
+            return this.customDomains;
         }
 
         /**
-         * @return dnsConfigs
+         * @return deployStatus
          */
-        public java.util.List < DnsConfigs> getDnsConfigs() {
-            return this.dnsConfigs;
+        public String getDeployStatus() {
+            return this.deployStatus;
         }
 
         /**
@@ -1093,6 +733,20 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
+         * @return gatewayInfo
+         */
+        public GatewayInfo getGatewayInfo() {
+            return this.gatewayInfo;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
          * @return serviceConfigs
          */
         public java.util.List < ServiceConfigs> getServiceConfigs() {
@@ -1100,20 +754,31 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * @return vipConfigs
+         * @return subDomains
          */
-        public java.util.List < VipConfigs> getVipConfigs() {
-            return this.vipConfigs;
+        public java.util.List < SubDomains> getSubDomains() {
+            return this.subDomains;
         }
 
         public static final class Builder {
+            private String alias; 
             private String backendScene; 
             private String backendType; 
-            private CloudProductConfig cloudProductConfig; 
-            private java.util.List < DnsConfigs> dnsConfigs; 
+            private java.util.List < HttpApiDomainInfo > customDomains; 
+            private String deployStatus; 
             private String environmentId; 
+            private GatewayInfo gatewayInfo; 
+            private String name; 
             private java.util.List < ServiceConfigs> serviceConfigs; 
-            private java.util.List < VipConfigs> vipConfigs; 
+            private java.util.List < SubDomains> subDomains; 
+
+            /**
+             * alias.
+             */
+            public Builder alias(String alias) {
+                this.alias = alias;
+                return this;
+            }
 
             /**
              * backendScene.
@@ -1132,18 +797,18 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * cloudProductConfig.
+             * customDomains.
              */
-            public Builder cloudProductConfig(CloudProductConfig cloudProductConfig) {
-                this.cloudProductConfig = cloudProductConfig;
+            public Builder customDomains(java.util.List < HttpApiDomainInfo > customDomains) {
+                this.customDomains = customDomains;
                 return this;
             }
 
             /**
-             * dnsConfigs.
+             * deployStatus.
              */
-            public Builder dnsConfigs(java.util.List < DnsConfigs> dnsConfigs) {
-                this.dnsConfigs = dnsConfigs;
+            public Builder deployStatus(String deployStatus) {
+                this.deployStatus = deployStatus;
                 return this;
             }
 
@@ -1156,6 +821,22 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
+             * gatewayInfo.
+             */
+            public Builder gatewayInfo(GatewayInfo gatewayInfo) {
+                this.gatewayInfo = gatewayInfo;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
              * serviceConfigs.
              */
             public Builder serviceConfigs(java.util.List < ServiceConfigs> serviceConfigs) {
@@ -1164,15 +845,256 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * vipConfigs.
+             * subDomains.
              */
-            public Builder vipConfigs(java.util.List < VipConfigs> vipConfigs) {
-                this.vipConfigs = vipConfigs;
+            public Builder subDomains(java.util.List < SubDomains> subDomains) {
+                this.subDomains = subDomains;
                 return this;
             }
 
             public Environments build() {
                 return new Environments(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HttpApiApiInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiApiInfo</p>
+     */
+    public static class EnvironmentInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("environmentId")
+        private String environmentId;
+
+        private EnvironmentInfo(Builder builder) {
+            this.environmentId = builder.environmentId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EnvironmentInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return environmentId
+         */
+        public String getEnvironmentId() {
+            return this.environmentId;
+        }
+
+        public static final class Builder {
+            private String environmentId; 
+
+            /**
+             * environmentId.
+             */
+            public Builder environmentId(String environmentId) {
+                this.environmentId = environmentId;
+                return this;
+            }
+
+            public EnvironmentInfo build() {
+                return new EnvironmentInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HttpApiApiInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiApiInfo</p>
+     */
+    public static class K8sClusterInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("clusterId")
+        private String clusterId;
+
+        private K8sClusterInfo(Builder builder) {
+            this.clusterId = builder.clusterId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static K8sClusterInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+
+            /**
+             * clusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            public K8sClusterInfo build() {
+                return new K8sClusterInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HttpApiApiInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiApiInfo</p>
+     */
+    public static class IngressInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("environmentInfo")
+        private EnvironmentInfo environmentInfo;
+
+        @com.aliyun.core.annotation.NameInMap("ingressClass")
+        private String ingressClass;
+
+        @com.aliyun.core.annotation.NameInMap("k8sClusterInfo")
+        private K8sClusterInfo k8sClusterInfo;
+
+        @com.aliyun.core.annotation.NameInMap("overrideIngressIp")
+        private Boolean overrideIngressIp;
+
+        @com.aliyun.core.annotation.NameInMap("sourceId")
+        private String sourceId;
+
+        @com.aliyun.core.annotation.NameInMap("watchNamespace")
+        private String watchNamespace;
+
+        private IngressInfo(Builder builder) {
+            this.environmentInfo = builder.environmentInfo;
+            this.ingressClass = builder.ingressClass;
+            this.k8sClusterInfo = builder.k8sClusterInfo;
+            this.overrideIngressIp = builder.overrideIngressIp;
+            this.sourceId = builder.sourceId;
+            this.watchNamespace = builder.watchNamespace;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IngressInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return environmentInfo
+         */
+        public EnvironmentInfo getEnvironmentInfo() {
+            return this.environmentInfo;
+        }
+
+        /**
+         * @return ingressClass
+         */
+        public String getIngressClass() {
+            return this.ingressClass;
+        }
+
+        /**
+         * @return k8sClusterInfo
+         */
+        public K8sClusterInfo getK8sClusterInfo() {
+            return this.k8sClusterInfo;
+        }
+
+        /**
+         * @return overrideIngressIp
+         */
+        public Boolean getOverrideIngressIp() {
+            return this.overrideIngressIp;
+        }
+
+        /**
+         * @return sourceId
+         */
+        public String getSourceId() {
+            return this.sourceId;
+        }
+
+        /**
+         * @return watchNamespace
+         */
+        public String getWatchNamespace() {
+            return this.watchNamespace;
+        }
+
+        public static final class Builder {
+            private EnvironmentInfo environmentInfo; 
+            private String ingressClass; 
+            private K8sClusterInfo k8sClusterInfo; 
+            private Boolean overrideIngressIp; 
+            private String sourceId; 
+            private String watchNamespace; 
+
+            /**
+             * environmentInfo.
+             */
+            public Builder environmentInfo(EnvironmentInfo environmentInfo) {
+                this.environmentInfo = environmentInfo;
+                return this;
+            }
+
+            /**
+             * ingressClass.
+             */
+            public Builder ingressClass(String ingressClass) {
+                this.ingressClass = ingressClass;
+                return this;
+            }
+
+            /**
+             * k8sClusterInfo.
+             */
+            public Builder k8sClusterInfo(K8sClusterInfo k8sClusterInfo) {
+                this.k8sClusterInfo = k8sClusterInfo;
+                return this;
+            }
+
+            /**
+             * overrideIngressIp.
+             */
+            public Builder overrideIngressIp(Boolean overrideIngressIp) {
+                this.overrideIngressIp = overrideIngressIp;
+                return this;
+            }
+
+            /**
+             * sourceId.
+             */
+            public Builder sourceId(String sourceId) {
+                this.sourceId = sourceId;
+                return this;
+            }
+
+            /**
+             * watchNamespace.
+             */
+            public Builder watchNamespace(String watchNamespace) {
+                this.watchNamespace = watchNamespace;
+                return this;
+            }
+
+            public IngressInfo build() {
+                return new IngressInfo(this);
             } 
 
         } 

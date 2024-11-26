@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGatewaySecurityGroupRuleRequest} extends {@link RequestModel}
  *
  * <p>AddGatewaySecurityGroupRuleRequest</p>
@@ -95,7 +96,10 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>Cloud-native API Gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cpv4sqdlh***</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);
@@ -104,7 +108,10 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description of the security group rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>商品中心访问安全组</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -113,7 +120,7 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * portRanges.
+         * <p>Port ranges.</p>
          */
         public Builder portRanges(java.util.List < String > portRanges) {
             this.putBodyParameter("portRanges", portRanges);
@@ -122,7 +129,10 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * securityGroupId.
+         * <p>Security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-wz929kxhcdp****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putBodyParameter("securityGroupId", securityGroupId);

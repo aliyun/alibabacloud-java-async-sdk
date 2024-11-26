@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HttpApiParameter} extends {@link TeaModel}
  *
  * <p>HttpApiParameter</p>
@@ -123,7 +124,7 @@ public class HttpApiParameter extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -139,7 +140,10 @@ public class HttpApiParameter extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         public Builder type(String type) {
             this.type = type;

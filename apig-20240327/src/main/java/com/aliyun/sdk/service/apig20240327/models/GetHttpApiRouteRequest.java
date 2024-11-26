@@ -6,32 +6,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link OfflineHttpApiRequest} extends {@link RequestModel}
+ * 
+ * {@link GetHttpApiRouteRequest} extends {@link RequestModel}
  *
- * <p>OfflineHttpApiRequest</p>
+ * <p>GetHttpApiRouteRequest</p>
  */
-public class OfflineHttpApiRequest extends Request {
+public class GetHttpApiRouteRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("httpApiId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String httpApiId;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("environmentId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String environmentId;
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("routeId")
+    private String routeId;
 
-    private OfflineHttpApiRequest(Builder builder) {
+    private GetHttpApiRouteRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
-        this.environmentId = builder.environmentId;
+        this.routeId = builder.routeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static OfflineHttpApiRequest create() {
+    public static GetHttpApiRouteRequest create() {
         return builder().build();
     }
 
@@ -48,28 +47,31 @@ public class OfflineHttpApiRequest extends Request {
     }
 
     /**
-     * @return environmentId
+     * @return routeId
      */
-    public String getEnvironmentId() {
-        return this.environmentId;
+    public String getRouteId() {
+        return this.routeId;
     }
 
-    public static final class Builder extends Request.Builder<OfflineHttpApiRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetHttpApiRouteRequest, Builder> {
         private String httpApiId; 
-        private String environmentId; 
+        private String routeId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(OfflineHttpApiRequest request) {
+        private Builder(GetHttpApiRouteRequest request) {
             super(request);
             this.httpApiId = request.httpApiId;
-            this.environmentId = request.environmentId;
+            this.routeId = request.routeId;
         } 
 
         /**
-         * httpApiId.
+         * <p>HTTP API ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-cqu95allhtgii6***</p>
          */
         public Builder httpApiId(String httpApiId) {
             this.putPathParameter("httpApiId", httpApiId);
@@ -78,17 +80,17 @@ public class OfflineHttpApiRequest extends Request {
         }
 
         /**
-         * environmentId.
+         * routeId.
          */
-        public Builder environmentId(String environmentId) {
-            this.putBodyParameter("environmentId", environmentId);
-            this.environmentId = environmentId;
+        public Builder routeId(String routeId) {
+            this.putPathParameter("routeId", routeId);
+            this.routeId = routeId;
             return this;
         }
 
         @Override
-        public OfflineHttpApiRequest build() {
-            return new OfflineHttpApiRequest(this);
+        public GetHttpApiRouteRequest build() {
+            return new GetHttpApiRouteRequest(this);
         } 
 
     } 

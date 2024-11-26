@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnvironmentRequest} extends {@link RequestModel}
  *
  * <p>CreateEnvironmentRequest</p>
@@ -30,12 +31,17 @@ public class CreateEnvironmentRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
     private CreateEnvironmentRequest(Builder builder) {
         super(builder);
         this.alias = builder.alias;
         this.description = builder.description;
         this.gatewayId = builder.gatewayId;
         this.name = builder.name;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -79,11 +85,19 @@ public class CreateEnvironmentRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<CreateEnvironmentRequest, Builder> {
         private String alias; 
         private String description; 
         private String gatewayId; 
         private String name; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -95,10 +109,15 @@ public class CreateEnvironmentRequest extends Request {
             this.description = request.description;
             this.gatewayId = request.gatewayId;
             this.name = request.name;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * alias.
+         * <p>Environment alias.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试环境</p>
          */
         public Builder alias(String alias) {
             this.putBodyParameter("alias", alias);
@@ -107,7 +126,10 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description of the environment, which can include information such as the purpose of the environment and its owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是xxx的xx项目测试环境</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -116,7 +138,11 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>Gateway ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cq7l5s5lhtgi6qasrdc0</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putBodyParameter("gatewayId", gatewayId);
@@ -125,11 +151,24 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Environment name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

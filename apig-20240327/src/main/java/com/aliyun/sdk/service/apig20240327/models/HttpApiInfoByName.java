@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HttpApiInfoByName} extends {@link TeaModel}
  *
  * <p>HttpApiInfoByName</p>
@@ -13,6 +14,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class HttpApiInfoByName extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
+
+    @com.aliyun.core.annotation.NameInMap("type")
+    private String type;
 
     @com.aliyun.core.annotation.NameInMap("versionEnabled")
     private Boolean versionEnabled;
@@ -22,6 +26,7 @@ public class HttpApiInfoByName extends TeaModel {
 
     private HttpApiInfoByName(Builder builder) {
         this.name = builder.name;
+        this.type = builder.type;
         this.versionEnabled = builder.versionEnabled;
         this.versionedHttpApis = builder.versionedHttpApis;
     }
@@ -42,6 +47,13 @@ public class HttpApiInfoByName extends TeaModel {
     }
 
     /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
      * @return versionEnabled
      */
     public Boolean getVersionEnabled() {
@@ -57,6 +69,7 @@ public class HttpApiInfoByName extends TeaModel {
 
     public static final class Builder {
         private String name; 
+        private String type; 
         private Boolean versionEnabled; 
         private java.util.List < HttpApiApiInfo > versionedHttpApis; 
 
@@ -65,6 +78,14 @@ public class HttpApiInfoByName extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * type.
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 

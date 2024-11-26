@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDomainRequest} extends {@link RequestModel}
  *
  * <p>GetDomainRequest</p>
@@ -16,9 +17,14 @@ public class GetDomainRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String domainId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("withStatistics")
+    private Boolean withStatistics;
+
     private GetDomainRequest(Builder builder) {
         super(builder);
         this.domainId = builder.domainId;
+        this.withStatistics = builder.withStatistics;
     }
 
     public static Builder builder() {
@@ -41,8 +47,16 @@ public class GetDomainRequest extends Request {
         return this.domainId;
     }
 
+    /**
+     * @return withStatistics
+     */
+    public Boolean getWithStatistics() {
+        return this.withStatistics;
+    }
+
     public static final class Builder extends Request.Builder<GetDomainRequest, Builder> {
         private String domainId; 
+        private Boolean withStatistics; 
 
         private Builder() {
             super();
@@ -51,14 +65,28 @@ public class GetDomainRequest extends Request {
         private Builder(GetDomainRequest request) {
             super(request);
             this.domainId = request.domainId;
+            this.withStatistics = request.withStatistics;
         } 
 
         /**
-         * domainId.
+         * <p>Domain ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-cpqnfn5lhtgqbga95sv1</p>
          */
         public Builder domainId(String domainId) {
             this.putPathParameter("domainId", domainId);
             this.domainId = domainId;
+            return this;
+        }
+
+        /**
+         * withStatistics.
+         */
+        public Builder withStatistics(Boolean withStatistics) {
+            this.putQueryParameter("withStatistics", withStatistics);
+            this.withStatistics = withStatistics;
             return this;
         }
 

@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteGatewayServiceVersionResponse} extends {@link TeaModel}
+ * 
+ * {@link GetHttpApiRouteResponse} extends {@link TeaModel}
  *
- * <p>DeleteGatewayServiceVersionResponse</p>
+ * <p>GetHttpApiRouteResponse</p>
  */
-public class DeleteGatewayServiceVersionResponse extends Response {
+public class GetHttpApiRouteResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +19,16 @@ public class DeleteGatewayServiceVersionResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteGatewayServiceVersionResponseBody body;
+    private GetHttpApiRouteResponseBody body;
 
-    private DeleteGatewayServiceVersionResponse(BuilderImpl builder) {
+    private GetHttpApiRouteResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteGatewayServiceVersionResponse create() {
+    public static GetHttpApiRouteResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +54,35 @@ public class DeleteGatewayServiceVersionResponse extends Response {
     /**
      * @return body
      */
-    public DeleteGatewayServiceVersionResponseBody getBody() {
+    public GetHttpApiRouteResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteGatewayServiceVersionResponse, Builder> {
+    public interface Builder extends Response.Builder<GetHttpApiRouteResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteGatewayServiceVersionResponseBody body);
+        Builder body(GetHttpApiRouteResponseBody body);
 
         @Override
-        DeleteGatewayServiceVersionResponse build();
+        GetHttpApiRouteResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteGatewayServiceVersionResponse, Builder>
+            extends Response.BuilderImpl<GetHttpApiRouteResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteGatewayServiceVersionResponseBody body; 
+        private GetHttpApiRouteResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteGatewayServiceVersionResponse response) {
+        private BuilderImpl(GetHttpApiRouteResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +111,14 @@ public class DeleteGatewayServiceVersionResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteGatewayServiceVersionResponseBody body) {
+        public Builder body(GetHttpApiRouteResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteGatewayServiceVersionResponse build() {
-            return new DeleteGatewayServiceVersionResponse(this);
+        public GetHttpApiRouteResponse build() {
+            return new GetHttpApiRouteResponse(this);
         } 
 
     } 

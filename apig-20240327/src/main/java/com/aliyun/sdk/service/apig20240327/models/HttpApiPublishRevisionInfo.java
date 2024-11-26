@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HttpApiPublishRevisionInfo} extends {@link TeaModel}
  *
  * <p>HttpApiPublishRevisionInfo</p>
@@ -290,6 +291,12 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HttpApiPublishRevisionInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiPublishRevisionInfo</p>
+     */
     public static class ContainerServiceConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayServiceId")
         private String gatewayServiceId;
@@ -451,6 +458,12 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HttpApiPublishRevisionInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiPublishRevisionInfo</p>
+     */
     public static class FunctionConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayServiceId")
         private String gatewayServiceId;
@@ -572,6 +585,12 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HttpApiPublishRevisionInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiPublishRevisionInfo</p>
+     */
     public static class MseNacosConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayServiceId")
         private String gatewayServiceId;
@@ -713,6 +732,12 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HttpApiPublishRevisionInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiPublishRevisionInfo</p>
+     */
     public static class CloudProductConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cloudProductType")
         private String cloudProductType;
@@ -814,6 +839,12 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HttpApiPublishRevisionInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiPublishRevisionInfo</p>
+     */
     public static class DnsConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dnsList")
         private java.util.List < String > dnsList;
@@ -895,6 +926,12 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HttpApiPublishRevisionInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiPublishRevisionInfo</p>
+     */
     public static class GatewayInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayId")
         private String gatewayId;
@@ -956,6 +993,12 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HttpApiPublishRevisionInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiPublishRevisionInfo</p>
+     */
     public static class EnvironmentInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alias")
         private String alias;
@@ -1057,6 +1100,12 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HttpApiPublishRevisionInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiPublishRevisionInfo</p>
+     */
     public static class ServiceConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayServiceId")
         private String gatewayServiceId;
@@ -1198,6 +1247,12 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HttpApiPublishRevisionInfo} extends {@link TeaModel}
+     *
+     * <p>HttpApiPublishRevisionInfo</p>
+     */
     public static class VipConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endpoints")
         private java.util.List < String > endpoints;

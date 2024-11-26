@@ -6,19 +6,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GatewayService} extends {@link TeaModel}
+ * 
+ * {@link Service} extends {@link TeaModel}
  *
- * <p>GatewayService</p>
+ * <p>Service</p>
  */
-public class GatewayService extends TeaModel {
+public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("addresses")
     private java.util.List < String > addresses;
+
+    @com.aliyun.core.annotation.NameInMap("aiServiceConfig")
+    private AiServiceConfig aiServiceConfig;
 
     @com.aliyun.core.annotation.NameInMap("createTimestamp")
     private Long createTimestamp;
 
-    @com.aliyun.core.annotation.NameInMap("gatewayServiceId")
-    private String gatewayServiceId;
+    @com.aliyun.core.annotation.NameInMap("gatewayId")
+    private String gatewayId;
+
+    @com.aliyun.core.annotation.NameInMap("groupName")
+    private String groupName;
 
     @com.aliyun.core.annotation.NameInMap("healthCheck")
     private ServiceHealthCheck healthCheck;
@@ -35,8 +42,17 @@ public class GatewayService extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ports")
     private java.util.List < Ports> ports;
 
+    @com.aliyun.core.annotation.NameInMap("protocol")
+    private String protocol;
+
     @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
+
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.NameInMap("serviceId")
+    private String serviceId;
 
     @com.aliyun.core.annotation.NameInMap("sourceType")
     private String sourceType;
@@ -47,16 +63,21 @@ public class GatewayService extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("updateTimestamp")
     private Long updateTimestamp;
 
-    private GatewayService(Builder builder) {
+    private Service(Builder builder) {
         this.addresses = builder.addresses;
+        this.aiServiceConfig = builder.aiServiceConfig;
         this.createTimestamp = builder.createTimestamp;
-        this.gatewayServiceId = builder.gatewayServiceId;
+        this.gatewayId = builder.gatewayId;
+        this.groupName = builder.groupName;
         this.healthCheck = builder.healthCheck;
         this.healthStatus = builder.healthStatus;
         this.name = builder.name;
         this.namespace = builder.namespace;
         this.ports = builder.ports;
+        this.protocol = builder.protocol;
         this.qualifier = builder.qualifier;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.serviceId = builder.serviceId;
         this.sourceType = builder.sourceType;
         this.unhealthyEndpoints = builder.unhealthyEndpoints;
         this.updateTimestamp = builder.updateTimestamp;
@@ -66,7 +87,7 @@ public class GatewayService extends TeaModel {
         return new Builder();
     }
 
-    public static GatewayService create() {
+    public static Service create() {
         return builder().build();
     }
 
@@ -78,6 +99,13 @@ public class GatewayService extends TeaModel {
     }
 
     /**
+     * @return aiServiceConfig
+     */
+    public AiServiceConfig getAiServiceConfig() {
+        return this.aiServiceConfig;
+    }
+
+    /**
      * @return createTimestamp
      */
     public Long getCreateTimestamp() {
@@ -85,10 +113,17 @@ public class GatewayService extends TeaModel {
     }
 
     /**
-     * @return gatewayServiceId
+     * @return gatewayId
      */
-    public String getGatewayServiceId() {
-        return this.gatewayServiceId;
+    public String getGatewayId() {
+        return this.gatewayId;
+    }
+
+    /**
+     * @return groupName
+     */
+    public String getGroupName() {
+        return this.groupName;
     }
 
     /**
@@ -127,10 +162,31 @@ public class GatewayService extends TeaModel {
     }
 
     /**
+     * @return protocol
+     */
+    public String getProtocol() {
+        return this.protocol;
+    }
+
+    /**
      * @return qualifier
      */
     public String getQualifier() {
         return this.qualifier;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return serviceId
+     */
+    public String getServiceId() {
+        return this.serviceId;
     }
 
     /**
@@ -156,14 +212,19 @@ public class GatewayService extends TeaModel {
 
     public static final class Builder {
         private java.util.List < String > addresses; 
+        private AiServiceConfig aiServiceConfig; 
         private Long createTimestamp; 
-        private String gatewayServiceId; 
+        private String gatewayId; 
+        private String groupName; 
         private ServiceHealthCheck healthCheck; 
         private String healthStatus; 
         private String name; 
         private String namespace; 
         private java.util.List < Ports> ports; 
+        private String protocol; 
         private String qualifier; 
+        private String resourceGroupId; 
+        private String serviceId; 
         private String sourceType; 
         private java.util.List < String > unhealthyEndpoints; 
         private Long updateTimestamp; 
@@ -177,6 +238,14 @@ public class GatewayService extends TeaModel {
         }
 
         /**
+         * aiServiceConfig.
+         */
+        public Builder aiServiceConfig(AiServiceConfig aiServiceConfig) {
+            this.aiServiceConfig = aiServiceConfig;
+            return this;
+        }
+
+        /**
          * createTimestamp.
          */
         public Builder createTimestamp(Long createTimestamp) {
@@ -185,10 +254,18 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * gatewayServiceId.
+         * gatewayId.
          */
-        public Builder gatewayServiceId(String gatewayServiceId) {
-            this.gatewayServiceId = gatewayServiceId;
+        public Builder gatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * groupName.
+         */
+        public Builder groupName(String groupName) {
+            this.groupName = groupName;
             return this;
         }
 
@@ -233,10 +310,34 @@ public class GatewayService extends TeaModel {
         }
 
         /**
+         * protocol.
+         */
+        public Builder protocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+
+        /**
          * qualifier.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * serviceId.
+         */
+        public Builder serviceId(String serviceId) {
+            this.serviceId = serviceId;
             return this;
         }
 
@@ -264,12 +365,18 @@ public class GatewayService extends TeaModel {
             return this;
         }
 
-        public GatewayService build() {
-            return new GatewayService(this);
+        public Service build() {
+            return new Service(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link Service} extends {@link TeaModel}
+     *
+     * <p>Service</p>
+     */
     public static class Ports extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
