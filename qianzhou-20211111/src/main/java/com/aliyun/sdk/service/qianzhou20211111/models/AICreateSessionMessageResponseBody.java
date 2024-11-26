@@ -24,6 +24,9 @@ public class AICreateSessionMessageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
 
+    @com.aliyun.core.annotation.NameInMap("reference")
+    private java.util.List < Reference> reference;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
@@ -35,6 +38,7 @@ public class AICreateSessionMessageResponseBody extends TeaModel {
         this.code = builder.code;
         this.data = builder.data;
         this.msg = builder.msg;
+        this.reference = builder.reference;
         this.requestId = builder.requestId;
         this.sessionId = builder.sessionId;
     }
@@ -76,6 +80,13 @@ public class AICreateSessionMessageResponseBody extends TeaModel {
     }
 
     /**
+     * @return reference
+     */
+    public java.util.List < Reference> getReference() {
+        return this.reference;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -94,6 +105,7 @@ public class AICreateSessionMessageResponseBody extends TeaModel {
         private Long code; 
         private String data; 
         private String msg; 
+        private java.util.List < Reference> reference; 
         private String requestId; 
         private String sessionId; 
 
@@ -130,6 +142,14 @@ public class AICreateSessionMessageResponseBody extends TeaModel {
         }
 
         /**
+         * reference.
+         */
+        public Builder reference(java.util.List < Reference> reference) {
+            this.reference = reference;
+            return this;
+        }
+
+        /**
          * requestId.
          */
         public Builder requestId(String requestId) {
@@ -151,4 +171,71 @@ public class AICreateSessionMessageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AICreateSessionMessageResponseBody} extends {@link TeaModel}
+     *
+     * <p>AICreateSessionMessageResponseBody</p>
+     */
+    public static class Reference extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        private Reference(Builder builder) {
+            this.title = builder.title;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Reference create() {
+            return builder().build();
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String title; 
+            private String url; 
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public Reference build() {
+                return new Reference(this);
+            } 
+
+        } 
+
+    }
 }
