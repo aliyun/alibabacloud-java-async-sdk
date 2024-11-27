@@ -389,6 +389,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNetworkAclEntryResponse> createNetworkAclEntry(CreateNetworkAclEntryRequest request);
 
     /**
+     * @param request the request parameters of CreateNetworkInterface  CreateNetworkInterfaceRequest
+     * @return CreateNetworkInterfaceResponse
+     */
+    CompletableFuture<CreateNetworkInterfaceResponse> createNetworkInterface(CreateNetworkInterfaceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:</p>
      * <ul>
@@ -585,6 +591,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteNetworkAclEntryResponse
      */
     CompletableFuture<DeleteNetworkAclEntryResponse> deleteNetworkAclEntry(DeleteNetworkAclEntryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteNetworkInterfaces  DeleteNetworkInterfacesRequest
+     * @return DeleteNetworkInterfacesResponse
+     */
+    CompletableFuture<DeleteNetworkInterfacesResponse> deleteNetworkInterfaces(DeleteNetworkInterfacesRequest request);
 
     /**
      * @param request the request parameters of DeleteObject  DeleteObjectRequest

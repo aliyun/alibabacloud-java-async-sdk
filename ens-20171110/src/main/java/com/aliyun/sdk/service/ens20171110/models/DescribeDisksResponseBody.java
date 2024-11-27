@@ -179,6 +179,12 @@ public class DescribeDisksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
+        private Boolean deleteWithInstance;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("DiskChargeType")
         private String diskChargeType;
 
@@ -224,6 +230,8 @@ public class DescribeDisksResponseBody extends TeaModel {
         private DisksDisks(Builder builder) {
             this.category = builder.category;
             this.creationTime = builder.creationTime;
+            this.deleteWithInstance = builder.deleteWithInstance;
+            this.description = builder.description;
             this.diskChargeType = builder.diskChargeType;
             this.diskId = builder.diskId;
             this.diskName = builder.diskName;
@@ -260,6 +268,20 @@ public class DescribeDisksResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return deleteWithInstance
+         */
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -363,6 +385,8 @@ public class DescribeDisksResponseBody extends TeaModel {
         public static final class Builder {
             private String category; 
             private String creationTime; 
+            private Boolean deleteWithInstance; 
+            private String description; 
             private String diskChargeType; 
             private String diskId; 
             private String diskName; 
@@ -403,6 +427,22 @@ public class DescribeDisksResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DeleteWithInstance.
+             */
+            public Builder deleteWithInstance(Boolean deleteWithInstance) {
+                this.deleteWithInstance = deleteWithInstance;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 

@@ -24,6 +24,7 @@ public class ExportImageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OSSPrefix")
+    @com.aliyun.core.annotation.Validation(maxLength = 30)
     private String OSSPrefix;
 
     @com.aliyun.core.annotation.Query

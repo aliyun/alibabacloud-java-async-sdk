@@ -21,6 +21,10 @@ public class DescribeSnapshotsRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
+    private String ensRegionIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -36,14 +40,20 @@ public class DescribeSnapshotsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotName")
+    private String snapshotName;
+
     private DescribeSnapshotsRequest(Builder builder) {
         super(builder);
         this.diskId = builder.diskId;
         this.ensRegionId = builder.ensRegionId;
+        this.ensRegionIds = builder.ensRegionIds;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.snapshotId = builder.snapshotId;
+        this.snapshotName = builder.snapshotName;
     }
 
     public static Builder builder() {
@@ -74,6 +84,13 @@ public class DescribeSnapshotsRequest extends Request {
     }
 
     /**
+     * @return ensRegionIds
+     */
+    public String getEnsRegionIds() {
+        return this.ensRegionIds;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -101,13 +118,22 @@ public class DescribeSnapshotsRequest extends Request {
         return this.snapshotId;
     }
 
+    /**
+     * @return snapshotName
+     */
+    public String getSnapshotName() {
+        return this.snapshotName;
+    }
+
     public static final class Builder extends Request.Builder<DescribeSnapshotsRequest, Builder> {
         private String diskId; 
         private String ensRegionId; 
+        private String ensRegionIds; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String snapshotId; 
+        private String snapshotName; 
 
         private Builder() {
             super();
@@ -117,10 +143,12 @@ public class DescribeSnapshotsRequest extends Request {
             super(request);
             this.diskId = request.diskId;
             this.ensRegionId = request.ensRegionId;
+            this.ensRegionIds = request.ensRegionIds;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.snapshotId = request.snapshotId;
+            this.snapshotName = request.snapshotName;
         } 
 
         /**
@@ -144,6 +172,15 @@ public class DescribeSnapshotsRequest extends Request {
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
+            return this;
+        }
+
+        /**
+         * EnsRegionIds.
+         */
+        public Builder ensRegionIds(String ensRegionIds) {
+            this.putQueryParameter("EnsRegionIds", ensRegionIds);
+            this.ensRegionIds = ensRegionIds;
             return this;
         }
 
@@ -192,6 +229,15 @@ public class DescribeSnapshotsRequest extends Request {
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
+            return this;
+        }
+
+        /**
+         * SnapshotName.
+         */
+        public Builder snapshotName(String snapshotName) {
+            this.putQueryParameter("SnapshotName", snapshotName);
+            this.snapshotName = snapshotName;
             return this;
         }
 

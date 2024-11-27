@@ -156,6 +156,9 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountType")
         private String mountType;
 
+        @com.aliyun.core.annotation.NameInMap("Phase")
+        private String phase;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -168,6 +171,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         private DeploymentStatus(Builder builder) {
             this.instanceId = builder.instanceId;
             this.mountType = builder.mountType;
+            this.phase = builder.phase;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.updateTime = builder.updateTime;
@@ -196,6 +200,13 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return phase
+         */
+        public String getPhase() {
+            return this.phase;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -219,6 +230,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private String mountType; 
+            private String phase; 
             private String regionId; 
             private String status; 
             private String updateTime; 
@@ -247,6 +259,14 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
              */
             public Builder mountType(String mountType) {
                 this.mountType = mountType;
+                return this;
+            }
+
+            /**
+             * Phase.
+             */
+            public Builder phase(String phase) {
+                this.phase = phase;
                 return this;
             }
 
