@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSqlStatementResponse> getSqlStatement(GetSqlStatementRequest request);
 
     /**
+     * @param request the request parameters of GetTemplate  GetTemplateRequest
+     * @return GetTemplateResponse
+     */
+    CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
+
+    /**
      * @param request the request parameters of GrantRoleToUsers  GrantRoleToUsersRequest
      * @return GrantRoleToUsersResponse
      */
