@@ -116,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachEnsInstancesResponse> attachEnsInstances(AttachEnsInstancesRequest request);
 
     /**
+     * @param request the request parameters of AttachInstanceSDG  AttachInstanceSDGRequest
+     * @return AttachInstanceSDGResponse
+     */
+    CompletableFuture<AttachInstanceSDGResponse> attachInstanceSDG(AttachInstanceSDGRequest request);
+
+    /**
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
@@ -993,6 +999,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceMonitorDataResponse> describeInstanceMonitorData(DescribeInstanceMonitorDataRequest request);
 
     /**
+     * @param request the request parameters of DescribeInstanceSDGStatus  DescribeInstanceSDGStatusRequest
+     * @return DescribeInstanceSDGStatusResponse
+     */
+    CompletableFuture<DescribeInstanceSDGStatusResponse> describeInstanceSDGStatus(DescribeInstanceSDGStatusRequest request);
+
+    /**
      * @param request the request parameters of DescribeInstanceSpec  DescribeInstanceSpecRequest
      * @return DescribeInstanceSpecResponse
      */
@@ -1342,6 +1354,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetachDiskResponse> detachDisk(DetachDiskRequest request);
 
     /**
+     * @param request the request parameters of DetachInstanceSDG  DetachInstanceSDGRequest
+     * @return DetachInstanceSDGResponse
+     */
+    CompletableFuture<DetachInstanceSDGResponse> detachInstanceSDG(DetachInstanceSDGRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -1627,6 +1645,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyVSwitchAttributeResponse
      */
     CompletableFuture<ModifyVSwitchAttributeResponse> modifyVSwitchAttribute(ModifyVSwitchAttributeRequest request);
+
+    /**
+     * @param request the request parameters of MountInstanceSDG  MountInstanceSDGRequest
+     * @return MountInstanceSDGResponse
+     */
+    CompletableFuture<MountInstanceSDGResponse> mountInstanceSDG(MountInstanceSDGRequest request);
 
     /**
      * @param request the request parameters of PreloadRegionSDG  PreloadRegionSDGRequest
@@ -2103,6 +2127,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnloadRegionSDGResponse
      */
     CompletableFuture<UnloadRegionSDGResponse> unloadRegionSDG(UnloadRegionSDGRequest request);
+
+    /**
+     * @param request the request parameters of UnmountInstanceSDG  UnmountInstanceSDGRequest
+     * @return UnmountInstanceSDGResponse
+     */
+    CompletableFuture<UnmountInstanceSDGResponse> unmountInstanceSDG(UnmountInstanceSDGRequest request);
 
     /**
      * @param request the request parameters of UntagResources  UntagResourcesRequest
