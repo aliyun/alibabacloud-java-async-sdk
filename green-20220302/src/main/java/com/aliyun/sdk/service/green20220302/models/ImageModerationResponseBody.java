@@ -2376,7 +2376,10 @@ public class ImageModerationResponseBody extends TeaModel {
             private String outputText; 
 
             /**
-             * OutputText.
+             * <p>the vl output content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a cat</p>
              */
             public Builder outputText(String outputText) {
                 this.outputText = outputText;
@@ -2563,7 +2566,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * VlContent.
+             * <p>the vl output content</p>
              */
             public Builder vlContent(VlContent vlContent) {
                 this.vlContent = vlContent;

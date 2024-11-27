@@ -75,6 +75,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImageAsyncModerationResponse> imageAsyncModeration(ImageAsyncModerationRequest request);
 
     /**
+     * @param request the request parameters of ImageBatchModeration  ImageBatchModerationRequest
+     * @return ImageBatchModerationResponse
+     */
+    CompletableFuture<ImageBatchModerationResponse> imageBatchModeration(ImageBatchModerationRequest request);
+
+    /**
      * <b>description</b> :
      * <p>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/467826.html">billing</a><a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag"></a> of Image Moderation 2.0.</p>
      * 
