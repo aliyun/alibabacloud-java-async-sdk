@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddAuthorityTemplateItems  AddAuthorityTemplateItemsRequest
+     * @return AddAuthorityTemplateItemsResponse
+     */
+    CompletableFuture<AddAuthorityTemplateItemsResponse> addAuthorityTemplateItems(AddAuthorityTemplateItemsRequest request);
+
+    /**
      * @param request the request parameters of AddDesensitizationRule  AddDesensitizationRuleRequest
      * @return AddDesensitizationRuleResponse
      */
@@ -129,6 +135,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CloseOrderResponse
      */
     CompletableFuture<CloseOrderResponse> closeOrder(CloseOrderRequest request);
+
+    /**
+     * @param request the request parameters of CreateAbacAuthorization  CreateAbacAuthorizationRequest
+     * @return CreateAbacAuthorizationResponse
+     */
+    CompletableFuture<CreateAbacAuthorizationResponse> createAbacAuthorization(CreateAbacAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of CreateAbacPolicy  CreateAbacPolicyRequest
+     * @return CreateAbacPolicyResponse
+     */
+    CompletableFuture<CreateAbacPolicyResponse> createAbacPolicy(CreateAbacPolicyRequest request);
 
     /**
      * <b>description</b> :
@@ -330,6 +348,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUploadOSSFileJobResponse> createUploadOSSFileJob(CreateUploadOSSFileJobRequest request);
 
     /**
+     * @param request the request parameters of DeleteAbacAuthorization  DeleteAbacAuthorizationRequest
+     * @return DeleteAbacAuthorizationResponse
+     */
+    CompletableFuture<DeleteAbacAuthorizationResponse> deleteAbacAuthorization(DeleteAbacAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAbacPolicy  DeleteAbacPolicyRequest
+     * @return DeleteAbacPolicyResponse
+     */
+    CompletableFuture<DeleteAbacPolicyResponse> deleteAbacPolicy(DeleteAbacPolicyRequest request);
+
+    /**
      * @param request the request parameters of DeleteAuthorityTemplate  DeleteAuthorityTemplateRequest
      * @return DeleteAuthorityTemplateResponse
      */
@@ -505,6 +535,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteStructSyncResponse> executeStructSync(ExecuteStructSyncRequest request);
 
     /**
+     * @param request the request parameters of GetAbacPolicy  GetAbacPolicyRequest
+     * @return GetAbacPolicyResponse
+     */
+    CompletableFuture<GetAbacPolicyResponse> getAbacPolicy(GetAbacPolicyRequest request);
+
+    /**
      * @param request the request parameters of GetApprovalDetail  GetApprovalDetailRequest
      * @return GetApprovalDetailResponse
      */
@@ -629,6 +665,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDataImportSQLResponse
      */
     CompletableFuture<GetDataImportSQLResponse> getDataImportSQL(GetDataImportSQLRequest request);
+
+    /**
+     * @param request the request parameters of GetDataLakeCatalog  GetDataLakeCatalogRequest
+     * @return GetDataLakeCatalogResponse
+     */
+    CompletableFuture<GetDataLakeCatalogResponse> getDataLakeCatalog(GetDataLakeCatalogRequest request);
+
+    /**
+     * @param request the request parameters of GetDataLakeDatabase  GetDataLakeDatabaseRequest
+     * @return GetDataLakeDatabaseResponse
+     */
+    CompletableFuture<GetDataLakeDatabaseResponse> getDataLakeDatabase(GetDataLakeDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of GetDataLakeTable  GetDataLakeTableRequest
+     * @return GetDataLakeTableResponse
+     */
+    CompletableFuture<GetDataLakeTableResponse> getDataLakeTable(GetDataLakeTableRequest request);
 
     /**
      * @param request the request parameters of GetDataTrackJobDegree  GetDataTrackJobDegreeRequest
@@ -922,10 +976,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InspectProxyAccessSecretResponse> inspectProxyAccessSecret(InspectProxyAccessSecretRequest request);
 
     /**
+     * @param request the request parameters of ListAbacAuthorizations  ListAbacAuthorizationsRequest
+     * @return ListAbacAuthorizationsResponse
+     */
+    CompletableFuture<ListAbacAuthorizationsResponse> listAbacAuthorizations(ListAbacAuthorizationsRequest request);
+
+    /**
+     * @param request the request parameters of ListAbacPolicies  ListAbacPoliciesRequest
+     * @return ListAbacPoliciesResponse
+     */
+    CompletableFuture<ListAbacPoliciesResponse> listAbacPolicies(ListAbacPoliciesRequest request);
+
+    /**
      * @param request the request parameters of ListAuthorityTemplate  ListAuthorityTemplateRequest
      * @return ListAuthorityTemplateResponse
      */
     CompletableFuture<ListAuthorityTemplateResponse> listAuthorityTemplate(ListAuthorityTemplateRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizedDatabasesForUser  ListAuthorizedDatabasesForUserRequest
+     * @return ListAuthorizedDatabasesForUserResponse
+     */
+    CompletableFuture<ListAuthorizedDatabasesForUserResponse> listAuthorizedDatabasesForUser(ListAuthorizedDatabasesForUserRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizedInstancesForUser  ListAuthorizedInstancesForUserRequest
+     * @return ListAuthorizedInstancesForUserResponse
+     */
+    CompletableFuture<ListAuthorizedInstancesForUserResponse> listAuthorizedInstancesForUser(ListAuthorizedInstancesForUserRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizedUsersForDatabase  ListAuthorizedUsersForDatabaseRequest
+     * @return ListAuthorizedUsersForDatabaseResponse
+     */
+    CompletableFuture<ListAuthorizedUsersForDatabaseResponse> listAuthorizedUsersForDatabase(ListAuthorizedUsersForDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizedUsersForInstance  ListAuthorizedUsersForInstanceRequest
+     * @return ListAuthorizedUsersForInstanceResponse
+     */
+    CompletableFuture<ListAuthorizedUsersForInstanceResponse> listAuthorizedUsersForInstance(ListAuthorizedUsersForInstanceRequest request);
 
     /**
      * @param request the request parameters of ListClassificationTemplates  ListClassificationTemplatesRequest
@@ -1001,6 +1091,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDataImportSQLTypeResponse
      */
     CompletableFuture<ListDataImportSQLTypeResponse> listDataImportSQLType(ListDataImportSQLTypeRequest request);
+
+    /**
+     * @param request the request parameters of ListDataLakeCatalog  ListDataLakeCatalogRequest
+     * @return ListDataLakeCatalogResponse
+     */
+    CompletableFuture<ListDataLakeCatalogResponse> listDataLakeCatalog(ListDataLakeCatalogRequest request);
+
+    /**
+     * @param request the request parameters of ListDataLakeDatabase  ListDataLakeDatabaseRequest
+     * @return ListDataLakeDatabaseResponse
+     */
+    CompletableFuture<ListDataLakeDatabaseResponse> listDataLakeDatabase(ListDataLakeDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of ListDataLakeTablebaseInfo  ListDataLakeTablebaseInfoRequest
+     * @return ListDataLakeTablebaseInfoResponse
+     */
+    CompletableFuture<ListDataLakeTablebaseInfoResponse> listDataLakeTablebaseInfo(ListDataLakeTablebaseInfoRequest request);
 
     /**
      * @param request the request parameters of ListDatabaseUserPermssions  ListDatabaseUserPermssionsRequest
@@ -1444,6 +1552,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetOwnersResponse> setOwners(SetOwnersRequest request);
 
     /**
+     * @param request the request parameters of SetWorkflowExtraInfo  SetWorkflowExtraInfoRequest
+     * @return SetWorkflowExtraInfoResponse
+     */
+    CompletableFuture<SetWorkflowExtraInfoResponse> setWorkflowExtraInfo(SetWorkflowExtraInfoRequest request);
+
+    /**
      * @param request the request parameters of SkipDataCorrectRowCheck  SkipDataCorrectRowCheckRequest
      * @return SkipDataCorrectRowCheckResponse
      */
@@ -1493,6 +1607,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SyncInstanceMetaResponse
      */
     CompletableFuture<SyncInstanceMetaResponse> syncInstanceMeta(SyncInstanceMetaRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAbacPolicy  UpdateAbacPolicyRequest
+     * @return UpdateAbacPolicyResponse
+     */
+    CompletableFuture<UpdateAbacPolicyResponse> updateAbacPolicy(UpdateAbacPolicyRequest request);
 
     /**
      * <b>description</b> :

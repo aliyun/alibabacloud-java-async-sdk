@@ -1,0 +1,126 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dms_enterprise20181101.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListDataLakeDatabaseResponse} extends {@link TeaModel}
+ *
+ * <p>ListDataLakeDatabaseResponse</p>
+ */
+public class ListDataLakeDatabaseResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map < String, String > headers;
+
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
+    private ListDataLakeDatabaseResponseBody body;
+
+    private ListDataLakeDatabaseResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static ListDataLakeDatabaseResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public ListDataLakeDatabaseResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ListDataLakeDatabaseResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(ListDataLakeDatabaseResponseBody body);
+
+        @Override
+        ListDataLakeDatabaseResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<ListDataLakeDatabaseResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
+        private ListDataLakeDatabaseResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(ListDataLakeDatabaseResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(ListDataLakeDatabaseResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ListDataLakeDatabaseResponse build() {
+            return new ListDataLakeDatabaseResponse(this);
+        } 
+
+    } 
+
+}

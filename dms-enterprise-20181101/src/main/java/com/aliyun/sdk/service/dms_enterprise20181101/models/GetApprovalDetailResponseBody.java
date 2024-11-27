@@ -609,6 +609,12 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
+        @com.aliyun.core.annotation.NameInMap("ThirdpartyWorkflowComment")
+        private String thirdpartyWorkflowComment;
+
+        @com.aliyun.core.annotation.NameInMap("ThirdpartyWorkflowUrl")
+        private String thirdpartyWorkflowUrl;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
@@ -627,6 +633,8 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             this.orderType = builder.orderType;
             this.reasonList = builder.reasonList;
             this.templateId = builder.templateId;
+            this.thirdpartyWorkflowComment = builder.thirdpartyWorkflowComment;
+            this.thirdpartyWorkflowUrl = builder.thirdpartyWorkflowUrl;
             this.title = builder.title;
             this.workflowInsCode = builder.workflowInsCode;
             this.workflowNodes = builder.workflowNodes;
@@ -697,6 +705,20 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdpartyWorkflowComment
+         */
+        public String getThirdpartyWorkflowComment() {
+            return this.thirdpartyWorkflowComment;
+        }
+
+        /**
+         * @return thirdpartyWorkflowUrl
+         */
+        public String getThirdpartyWorkflowUrl() {
+            return this.thirdpartyWorkflowUrl;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -726,6 +748,8 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             private String orderType; 
             private ReasonList reasonList; 
             private Long templateId; 
+            private String thirdpartyWorkflowComment; 
+            private String thirdpartyWorkflowUrl; 
             private String title; 
             private String workflowInsCode; 
             private WorkflowNodes workflowNodes; 
@@ -819,6 +843,28 @@ public class GetApprovalDetailResponseBody extends TeaModel {
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * <p>Third-party approval flow remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder thirdpartyWorkflowComment(String thirdpartyWorkflowComment) {
+                this.thirdpartyWorkflowComment = thirdpartyWorkflowComment;
+                return this;
+            }
+
+            /**
+             * <p>The third-party approval flow link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx">https://xxx</a></p>
+             */
+            public Builder thirdpartyWorkflowUrl(String thirdpartyWorkflowUrl) {
+                this.thirdpartyWorkflowUrl = thirdpartyWorkflowUrl;
                 return this;
             }
 
