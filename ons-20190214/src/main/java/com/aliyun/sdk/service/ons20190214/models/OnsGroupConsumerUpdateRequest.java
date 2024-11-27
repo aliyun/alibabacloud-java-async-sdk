@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsGroupConsumerUpdateRequest} extends {@link RequestModel}
  *
  * <p>OnsGroupConsumerUpdateRequest</p>
  */
 public class OnsGroupConsumerUpdateRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("ReadEnable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReadEnable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean readEnable;
 
     private OnsGroupConsumerUpdateRequest(Builder builder) {
@@ -84,7 +84,11 @@ public class OnsGroupConsumerUpdateRequest extends Request {
         } 
 
         /**
-         * The ID of the consumer group for which you want to configure the read permissions.
+         * <p>The ID of the consumer group for which you want to configure read permissions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test_groupId</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -93,7 +97,10 @@ public class OnsGroupConsumerUpdateRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the consumer group you want to configure belongs.
+         * <p>The ID of the instance to which the consumer group you want to configure belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,13 +109,16 @@ public class OnsGroupConsumerUpdateRequest extends Request {
         }
 
         /**
-         * Specifies whether to authorize the consumer group with the specified ID to read messages. Valid values:
-         * <p>
+         * <p>Specifies whether to authorize the consumer group to read messages. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The consumer group can read messages.</li>
+         * <li><strong>false</strong>: The consumer group cannot read messages.</li>
+         * </ul>
+         * <p>Default value: <strong>true</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: Authorize the consumer group with the specified ID to read messages.
-         * *   **false**: Do not authorize the consumer group with the specified group ID to read messages.
-         * 
-         * Default value: **true**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder readEnable(Boolean readEnable) {
             this.putQueryParameter("ReadEnable", readEnable);

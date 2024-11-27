@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsConsumerGetConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>OnsConsumerGetConnectionResponseBody</p>
  */
 public class OnsConsumerGetConnectionResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsConsumerGetConnectionResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data that is returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE4140C7-F42D-473D-A5FF-B1E31692****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +74,23 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsConsumerGetConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerGetConnectionResponseBody</p>
+     */
     public static class ConnectionDo extends TeaModel {
-        @NameInMap("ClientAddr")
+        @com.aliyun.core.annotation.NameInMap("ClientAddr")
         private String clientAddr;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ConnectionDo(Builder builder) {
@@ -134,7 +143,10 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The IP address and port number of the consumer instance.
+             * <p>The IP address and port number of the consumer client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.5.121.**</p>
              */
             public Builder clientAddr(String clientAddr) {
                 this.clientAddr = clientAddr;
@@ -142,7 +154,10 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer instance.
+             * <p>The ID of the consumer client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.5.121.**@24813#-1999745829#-1737591554#453111174894656</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -150,7 +165,10 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The programming language in which the consumer application was developed.
+             * <p>The programming language in which the consumer application was developed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JAVA</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -158,7 +176,10 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the consumer client.
+             * <p>The version of the consumer client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V4_3_6</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -172,8 +193,14 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerGetConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerGetConnectionResponseBody</p>
+     */
     public static class ConnectionList extends TeaModel {
-        @NameInMap("ConnectionDo")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDo")
         private java.util.List < ConnectionDo> connectionDo;
 
         private ConnectionList(Builder builder) {
@@ -213,8 +240,14 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerGetConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerGetConnectionResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConnectionList")
+        @com.aliyun.core.annotation.NameInMap("ConnectionList")
         private ConnectionList connectionList;
 
         private Data(Builder builder) {
@@ -240,7 +273,7 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             private ConnectionList connectionList; 
 
             /**
-             * The connection information about the consumers in the specified group.
+             * <p>The client connection information of the consumer group.</p>
              */
             public Builder connectionList(ConnectionList connectionList) {
                 this.connectionList = connectionList;

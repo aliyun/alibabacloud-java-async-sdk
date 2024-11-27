@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsMessageGetByKeyRequest} extends {@link RequestModel}
  *
  * <p>OnsMessageGetByKeyRequest</p>
  */
 public class OnsMessageGetByKeyRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private OnsMessageGetByKeyRequest(Builder builder) {
@@ -84,7 +84,10 @@ public class OnsMessageGetByKeyRequest extends Request {
         } 
 
         /**
-         * The ID of the instance where the message that you want to query resides.
+         * <p>The ID of the instance to which the messages that you want to query belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +96,11 @@ public class OnsMessageGetByKeyRequest extends Request {
         }
 
         /**
-         * The key of the message that you want to query.
+         * <p>The key of the messages that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>messageKey1</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -102,7 +109,11 @@ public class OnsMessageGetByKeyRequest extends Request {
         }
 
         /**
-         * The topic that contains the message that you want to query.
+         * <p>The topic that contains the messages that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq_topic</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

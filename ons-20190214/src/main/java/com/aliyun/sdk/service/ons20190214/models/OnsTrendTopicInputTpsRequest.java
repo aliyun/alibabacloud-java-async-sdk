@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsTrendTopicInputTpsRequest} extends {@link RequestModel}
  *
  * <p>OnsTrendTopicInputTpsRequest</p>
  */
 public class OnsTrendTopicInputTpsRequest extends Request {
-    @Query
-    @NameInMap("BeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long beginTime;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Long period;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer type;
 
     private OnsTrendTopicInputTpsRequest(Builder builder) {
@@ -128,7 +128,11 @@ public class OnsTrendTopicInputTpsRequest extends Request {
         } 
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <p>The timestamp that indicates the beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570852800000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -137,7 +141,11 @@ public class OnsTrendTopicInputTpsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <p>The timestamp that indicates the end of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570868400000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -146,7 +154,10 @@ public class OnsTrendTopicInputTpsRequest extends Request {
         }
 
         /**
-         * The ID of the Message Queue for Apache RocketMQ instance which contains the topic you want to query.
+         * <p>The ID of the instance to which the topic you want to query belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -155,7 +166,10 @@ public class OnsTrendTopicInputTpsRequest extends Request {
         }
 
         /**
-         * The sampling period. Unit: minutes. Valid values: 1, 5, and 10.
+         * <p>The sampling period. Unit: minutes. Valid values: 1, 5, and 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -164,7 +178,11 @@ public class OnsTrendTopicInputTpsRequest extends Request {
         }
 
         /**
-         * The name of the topic that you want to query.
+         * <p>The name of the topic that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);
@@ -173,11 +191,15 @@ public class OnsTrendTopicInputTpsRequest extends Request {
         }
 
         /**
-         * The type of information that you want to query. Valid values:
-         * <p>
+         * <p>The type of information that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the number of messages that are published to the topic during each sampling period.</li>
+         * <li><strong>1</strong>: the TPS for message publishing in the topic during each sampling period.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: the number of the messages that are published to the specified topic during each sampling period.
-         * *   **1**: the TPS for message publishing to the specified topic during each sampling period.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

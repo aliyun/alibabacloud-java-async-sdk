@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
  */
 public class ListTagResourcesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagResources")
+    @com.aliyun.core.annotation.NameInMap("TagResources")
     private java.util.List < TagResources> tagResources;
 
     private ListTagResourcesResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * The token that determines the start point of the query.
+         * <p>The token that determines the start point of the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0****be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +73,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>301D2CBE-66F8-403D-AEC0-82582478****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the resource and tags, including the resource ID, the resource type, and the keys and values of tags.
+         * <p>Details of the resource and tags, including the resource ID, the resource type, tag keys, and tag values.</p>
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -91,20 +97,26 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagResources(Builder builder) {
@@ -166,7 +178,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_188077086902****_BXSuW61e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -174,7 +189,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>Indicates the ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TopicA</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -182,12 +200,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource to which you want to attach tags.
-             * <p>
+             * <p>The type of the resource whose tags you want to query.</p>
+             * <ul>
+             * <li>ALIYUN::MQ::INSTANCE: indicates that the resource is a ApsaraMQ for RocketMQ instance.</li>
+             * <li>ALIYUN::MQ::TOPIC: indicates that the resource is a topic.</li>
+             * <li>ALIYUN::MQ::GROUP: indicates that the resource is a group.</li>
+             * </ul>
              * 
-             * *   ALIYUN::MQ::INSTANCE: indicates that the resource is an instance.
-             * *   ALIYUN::MQ::TOPIC: indicates that the resource is a topic.
-             * *   ALIYUN::MQ::GROUP: indicates that the resource is a group.
+             * <strong>example:</strong>
+             * <p>ALIYUN::MQ::TOPIC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -195,7 +216,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CartService</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -203,7 +227,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceA</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

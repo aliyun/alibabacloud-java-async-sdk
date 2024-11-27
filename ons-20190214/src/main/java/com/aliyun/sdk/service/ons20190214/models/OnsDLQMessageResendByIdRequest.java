@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsDLQMessageResendByIdRequest} extends {@link RequestModel}
  *
  * <p>OnsDLQMessageResendByIdRequest</p>
  */
 public class OnsDLQMessageResendByIdRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("MsgId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MsgId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String msgId;
 
     private OnsDLQMessageResendByIdRequest(Builder builder) {
@@ -84,7 +84,11 @@ public class OnsDLQMessageResendByIdRequest extends Request {
         } 
 
         /**
-         * The ID of the consumer group whose dead-letter messages you want to query.
+         * <p>The ID of the consumer group in which you want to query dead-letter messages.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test_group_id</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -93,7 +97,10 @@ public class OnsDLQMessageResendByIdRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the message you want to query belongs.
+         * <p>The ID of the instance in which the dead-letter message you want to query resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_188077086902****_BXSuW61e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +109,11 @@ public class OnsDLQMessageResendByIdRequest extends Request {
         }
 
         /**
-         * The ID of the dead-letter message that you want to query.
+         * <p>The ID of the dead-letter message that you want to send to a consumer group for consumption.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0BC16699343051CD9F1D798E7734****</p>
          */
         public Builder msgId(String msgId) {
             this.putQueryParameter("MsgId", msgId);

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsInstanceCreateRequest} extends {@link RequestModel}
  *
  * <p>OnsInstanceCreateRequest</p>
  */
 public class OnsInstanceCreateRequest extends Request {
-    @Query
-    @NameInMap("InstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
     private OnsInstanceCreateRequest(Builder builder) {
@@ -69,11 +69,15 @@ public class OnsInstanceCreateRequest extends Request {
         } 
 
         /**
-         * The name of the instance. Valid values:
-         * <p>
+         * <p>The name of the instance. The name must meet the following rules:</p>
+         * <ul>
+         * <li>The name of the instance must be unique in the region where the instance is deployed.</li>
+         * <li>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name of the instance must be unique in the region where the instance is deployed.
-         * *   The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+         * <strong>example:</strong>
+         * <p>Test instance</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -82,7 +86,10 @@ public class OnsInstanceCreateRequest extends Request {
         }
 
         /**
-         * The description of the instance.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

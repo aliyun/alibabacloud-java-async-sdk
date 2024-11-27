@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsConsumerAccumulateResponseBody} extends {@link TeaModel}
  *
  * <p>OnsConsumerAccumulateResponseBody</p>
  */
 public class OnsConsumerAccumulateResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsConsumerAccumulateResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about message accumulation of topics to which the consumer group subscribes.
+         * <p>The message accumulation information about topics to which the specified consumer subscribes.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE817BFF-B389-43CD-9419-95011AC9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +74,23 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsConsumerAccumulateResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerAccumulateResponseBody</p>
+     */
     public static class DetailInTopicDo extends TeaModel {
-        @NameInMap("DelayTime")
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
         private Long delayTime;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("TotalDiff")
+        @com.aliyun.core.annotation.NameInMap("TotalDiff")
         private Long totalDiff;
 
         private DetailInTopicDo(Builder builder) {
@@ -134,7 +143,10 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             private Long totalDiff; 
 
             /**
-             * The maximum latency of message consumption in the topic.
+             * <p>The maximum latency of message consumption in the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder delayTime(Long delayTime) {
                 this.delayTime = delayTime;
@@ -142,7 +154,10 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the latest consumed message in the topic was produced.
+             * <p>The point in time when the latest consumed message in the topic was produced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1566231000000</p>
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -150,7 +165,10 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-mq-topic</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -158,7 +176,10 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             }
 
             /**
-             * The number of accumulated messages in the topic.
+             * <p>The number of accumulated messages in the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;
@@ -172,8 +193,14 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerAccumulateResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerAccumulateResponseBody</p>
+     */
     public static class DetailInTopicList extends TeaModel {
-        @NameInMap("DetailInTopicDo")
+        @com.aliyun.core.annotation.NameInMap("DetailInTopicDo")
         private java.util.List < DetailInTopicDo> detailInTopicDo;
 
         private DetailInTopicList(Builder builder) {
@@ -213,23 +240,29 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerAccumulateResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerAccumulateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConsumeTps")
+        @com.aliyun.core.annotation.NameInMap("ConsumeTps")
         private Float consumeTps;
 
-        @NameInMap("DelayTime")
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
         private Long delayTime;
 
-        @NameInMap("DetailInTopicList")
+        @com.aliyun.core.annotation.NameInMap("DetailInTopicList")
         private DetailInTopicList detailInTopicList;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("TotalDiff")
+        @com.aliyun.core.annotation.NameInMap("TotalDiff")
         private Long totalDiff;
 
         private Data(Builder builder) {
@@ -300,7 +333,10 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             private Long totalDiff; 
 
             /**
-             * The transactions per second (TPS) for message consumption performed by consumers in the group.
+             * <p>The transactions per second (TPS) for message consumption performed by consumers in the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder consumeTps(Float consumeTps) {
                 this.consumeTps = consumeTps;
@@ -308,7 +344,10 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption latency.
+             * <p>The consumption latency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder delayTime(Long delayTime) {
                 this.delayTime = delayTime;
@@ -316,7 +355,7 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             }
 
             /**
-             * The information about each topic to which the consumer group subscribes. If the **Detail** parameter in the request is set to **false**, the value of this parameter is empty.
+             * <p>The information about each topic to which the consumer group subscribes. If the <strong>Detail</strong> parameter in the request is set to <strong>false</strong>, the value of this parameter is empty.</p>
              */
             public Builder detailInTopicList(DetailInTopicList detailInTopicList) {
                 this.detailInTopicList = detailInTopicList;
@@ -324,7 +363,10 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the latest message that was consumed by a consumer in the consumer group was produced.
+             * <p>The point in time when the latest message consumed by a consumer in the consumer group was produced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1566231000000</p>
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -332,11 +374,14 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the consumer group is online. The group is online if one of the consumers in the group is online. Valid values:
-             * <p>
+             * <p>Indicates whether the consumer group is online. The consumer group is online if one of the consumers in the group is online. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The consumer group is online.</li>
+             * <li><strong>false</strong>: The consumer group is offline.</li>
+             * </ul>
              * 
-             * *   **true**: The consumer group is online.
-             * *   **false**: The consumer group is offline.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -344,7 +389,10 @@ public class OnsConsumerAccumulateResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of accumulated messages in all topics to which the consumer group subscribes.
+             * <p>The total number of accumulated messages in all topics to which the consumer group subscribes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;

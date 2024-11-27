@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsMessageDetailResponseBody} extends {@link TeaModel}
  *
  * <p>OnsMessageDetailResponseBody</p>
  */
 public class OnsMessageDetailResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsMessageDetailResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsMessageDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EAE5BE23-37A1-4354-94D6-E44AE17E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class OnsMessageDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsMessageDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsMessageDetailResponseBody</p>
+     */
     public static class PropertyList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PropertyList(Builder builder) {
@@ -110,16 +119,18 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the attribute. Valid values:
-             * <p>
+             * <p>The name of the attribute. Valid values:</p>
+             * <ul>
+             * <li><strong>TRACE_ON</strong>: indicates whether the trace of the message exists.</li>
+             * <li><strong>MSG_REGION</strong>: The region ID of the instance to which the topic belongs.</li>
+             * <li><strong>__MESSAGE_DECODED_TIME</strong>: The time when the message was decoded.</li>
+             * <li><strong>__BORNHOST</strong>: The IP address of the producer client.</li>
+             * <li><strong>UNIQ_KEY</strong>: The ID of the message.</li>
+             * </ul>
+             * <p>For information about the terms that are used in ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/29533.html">Terms</a>.</p>
              * 
-             * *   **BODY**: indicates the message body
-             * *   **TRACE_ON**: indicates whether the trace of the message exists.
-             * *   **KEYS**: indicates the key of the message.
-             * *   **TAGS**: indicates the tag that is attached to the message.
-             * *   **INSTANCE_ID**: indicates the ID of the instance that contains the message.
-             * 
-             * For more information about the terms that are used in Message Queue for Apache RocketMQ, see [Terms](~~29533~~).
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -127,7 +138,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the attribute.
+             * <p>The value of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSG_REGION</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -141,44 +155,50 @@ public class OnsMessageDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsMessageDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsMessageDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private String body;
 
-        @NameInMap("BodyCRC")
+        @com.aliyun.core.annotation.NameInMap("BodyCRC")
         private Integer bodyCRC;
 
-        @NameInMap("BodyStr")
+        @com.aliyun.core.annotation.NameInMap("BodyStr")
         private String bodyStr;
 
-        @NameInMap("BornHost")
+        @com.aliyun.core.annotation.NameInMap("BornHost")
         private String bornHost;
 
-        @NameInMap("BornTimestamp")
+        @com.aliyun.core.annotation.NameInMap("BornTimestamp")
         private Long bornTimestamp;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MsgId")
+        @com.aliyun.core.annotation.NameInMap("MsgId")
         private String msgId;
 
-        @NameInMap("PropertyList")
+        @com.aliyun.core.annotation.NameInMap("PropertyList")
         private java.util.List < PropertyList> propertyList;
 
-        @NameInMap("ReconsumeTimes")
+        @com.aliyun.core.annotation.NameInMap("ReconsumeTimes")
         private Integer reconsumeTimes;
 
-        @NameInMap("StoreHost")
+        @com.aliyun.core.annotation.NameInMap("StoreHost")
         private String storeHost;
 
-        @NameInMap("StoreSize")
+        @com.aliyun.core.annotation.NameInMap("StoreSize")
         private Integer storeSize;
 
-        @NameInMap("StoreTimestamp")
+        @com.aliyun.core.annotation.NameInMap("StoreTimestamp")
         private Long storeTimestamp;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private Data(Builder builder) {
@@ -312,7 +332,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The body of the message.
+             * <p>The string that is obtained after the message body is encrypted by using the Base 64 algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aGVsbG8=</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -320,7 +343,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The cyclic redundancy check (CRC) value of the message body.
+             * <p>The cyclic redundancy check (CRC) value of the message body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>907060870</p>
              */
             public Builder bodyCRC(Integer bodyCRC) {
                 this.bodyCRC = bodyCRC;
@@ -328,7 +354,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 消息体内容。
+             * <p>The information about the message body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder bodyStr(String bodyStr) {
                 this.bodyStr = bodyStr;
@@ -336,7 +365,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The producer instance that generated the message.
+             * <p>The producer instance that generated the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>42.120.**.**</code>:64646</p>
              */
             public Builder bornHost(String bornHost) {
                 this.bornHost = bornHost;
@@ -344,7 +376,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the point in time when the message was generated. Unit: milliseconds.
+             * <p>The timestamp that indicates the point in time when the message was generated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570761026630</p>
              */
             public Builder bornTimestamp(Long bornTimestamp) {
                 this.bornTimestamp = bornTimestamp;
@@ -352,7 +387,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Message Queue for Apache RocketMQ Instance.
+             * <p>The ID of the ApsaraMQ for RocketMQ Instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_184681981******_BXig0x6A</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -360,7 +398,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the message.
+             * <p>The ID of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1E0578FE110F18B4AAC235C05F2*****</p>
              */
             public Builder msgId(String msgId) {
                 this.msgId = msgId;
@@ -368,7 +409,7 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The attributes of the message.
+             * <p>The attributes of the message.</p>
              */
             public Builder propertyList(java.util.List < PropertyList> propertyList) {
                 this.propertyList = propertyList;
@@ -376,7 +417,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of retries that Message Queue for Apache RocketMQ performed to send the message to consumers.
+             * <p>The number of retries that ApsaraMQ for RocketMQ performed to send the message to consumers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reconsumeTimes(Integer reconsumeTimes) {
                 this.reconsumeTimes = reconsumeTimes;
@@ -384,7 +428,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The Message Queue for Apache RocketMQ broker that stores the message.
+             * <p>The ApsaraMQ for RocketMQ broker that stores the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.220.<em><strong>.</strong></em>:10911</p>
              */
             public Builder storeHost(String storeHost) {
                 this.storeHost = storeHost;
@@ -392,7 +439,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the message. Unit: KB.
+             * <p>The size of the message. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder storeSize(Integer storeSize) {
                 this.storeSize = storeSize;
@@ -400,7 +450,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the point in time when the Message Queue for Apache RocketMQ broker stored the message. Unit: milliseconds.
+             * <p>The timestamp that indicates the point in time when the ApsaraMQ for RocketMQ broker stored the message. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570761026708</p>
              */
             public Builder storeTimestamp(Long storeTimestamp) {
                 this.storeTimestamp = storeTimestamp;
@@ -408,7 +461,10 @@ public class OnsMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The topic to which the message belongs.
+             * <p>The topic to which the message belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-mq_topic</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;

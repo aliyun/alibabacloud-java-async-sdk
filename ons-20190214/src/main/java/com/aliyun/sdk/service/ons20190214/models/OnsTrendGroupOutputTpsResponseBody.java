@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsTrendGroupOutputTpsResponseBody} extends {@link TeaModel}
  *
  * <p>OnsTrendGroupOutputTpsResponseBody</p>
  */
 public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsTrendGroupOutputTpsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data that is returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE57AEDC-8FD2-43ED-8E3B-1F878077****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsTrendGroupOutputTpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTrendGroupOutputTpsResponseBody</p>
+     */
     public static class StatsDataDo extends TeaModel {
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Long x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
         private StatsDataDo(Builder builder) {
@@ -110,7 +119,10 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
             private Float y; 
 
             /**
-             * Indicates the timestamp. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The X axis. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570867800000</p>
              */
             public Builder x(Long x) {
                 this.x = x;
@@ -118,7 +130,10 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the TPS for message consumption or the number of messages that are consumed.
+             * <p>The Y axis. This parameter indicates the TPS for message consumption or the number of messages that are consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder y(Float y) {
                 this.y = y;
@@ -132,8 +147,14 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTrendGroupOutputTpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTrendGroupOutputTpsResponseBody</p>
+     */
     public static class Records extends TeaModel {
-        @NameInMap("StatsDataDo")
+        @com.aliyun.core.annotation.NameInMap("StatsDataDo")
         private java.util.List < StatsDataDo> statsDataDo;
 
         private Records(Builder builder) {
@@ -173,17 +194,23 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTrendGroupOutputTpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTrendGroupOutputTpsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Records")
+        @com.aliyun.core.annotation.NameInMap("Records")
         private Records records;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("XUnit")
+        @com.aliyun.core.annotation.NameInMap("XUnit")
         private String xUnit;
 
-        @NameInMap("YUnit")
+        @com.aliyun.core.annotation.NameInMap("YUnit")
         private String yUnit;
 
         private Data(Builder builder) {
@@ -236,7 +263,7 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
             private String yUnit; 
 
             /**
-             * The data set that is returned based on sampling period.
+             * <p>The data set returned based on sampling period.</p>
              */
             public Builder records(Records records) {
                 this.records = records;
@@ -244,7 +271,10 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table that stores the data.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_111111111111_DOxxxxxx%test@MQ_INST_111111111111_DOxxxxxx%GID_test trend chart of delivered messages</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -252,7 +282,10 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the timestamp. Unit: milliseconds.
+             * <p>The unit of the timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>time</p>
              */
             public Builder xUnit(String xUnit) {
                 this.xUnit = xUnit;
@@ -260,7 +293,10 @@ public class OnsTrendGroupOutputTpsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the value of the Y parameter.
+             * <p>The total number of messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>msg</p>
              */
             public Builder yUnit(String yUnit) {
                 this.yUnit = yUnit;

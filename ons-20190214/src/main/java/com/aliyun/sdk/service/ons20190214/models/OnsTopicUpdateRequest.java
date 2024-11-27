@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsTopicUpdateRequest} extends {@link RequestModel}
  *
  * <p>OnsTopicUpdateRequest</p>
  */
 public class OnsTopicUpdateRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Perm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Perm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer perm;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private OnsTopicUpdateRequest(Builder builder) {
@@ -84,7 +84,10 @@ public class OnsTopicUpdateRequest extends Request {
         } 
 
         /**
-         * The ID of the instance to which the topic belongs.
+         * <p>The ID of the instance to which the topic belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,12 +96,16 @@ public class OnsTopicUpdateRequest extends Request {
         }
 
         /**
-         * The read/write mode that you want to configure for the topic. Valid values:
-         * <p>
+         * <p>The read/write mode that you want to configure for the topic. Valid values:</p>
+         * <ul>
+         * <li><strong>6</strong>: Both read and write operations are allowed.</li>
+         * <li><strong>4</strong>: Write operations are forbidden.</li>
+         * <li><strong>2</strong>: Read operations are forbidden.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **6:** Both read and write operations are allowed.
-         * *   **4:** Write operations are forbidden.
-         * *   **2:** Read operations are forbidden.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder perm(Integer perm) {
             this.putQueryParameter("Perm", perm);
@@ -107,7 +114,11 @@ public class OnsTopicUpdateRequest extends Request {
         }
 
         /**
-         * The name of the topic that you want to manage.
+         * <p>The name of the topic that you want to manage.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

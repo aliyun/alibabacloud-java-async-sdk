@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsConsumerTimeSpanRequest} extends {@link RequestModel}
  *
  * <p>OnsConsumerTimeSpanRequest</p>
  */
 public class OnsConsumerTimeSpanRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private OnsConsumerTimeSpanRequest(Builder builder) {
@@ -84,7 +84,11 @@ public class OnsConsumerTimeSpanRequest extends Request {
         } 
 
         /**
-         * The ID of the consumer group whose reset time range you want to query.
+         * <p>The ID of the consumer group whose reset time range you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test_group_id</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -93,7 +97,10 @@ public class OnsConsumerTimeSpanRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the consumer group belongs.
+         * <p>The ID of the instance to which the consumer group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +109,11 @@ public class OnsConsumerTimeSpanRequest extends Request {
         }
 
         /**
-         * The topic to which the consumer group subscribes.
+         * <p>The topic to which the consumer group subscribes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq_topic</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

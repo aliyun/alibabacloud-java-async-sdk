@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsConsumerTimeSpanResponseBody} extends {@link TeaModel}
  *
  * <p>OnsConsumerTimeSpanResponseBody</p>
  */
 public class OnsConsumerTimeSpanResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsConsumerTimeSpanResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The query results.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A07E3902-B92E-44A6-B6C5-6AA111111****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +74,26 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsConsumerTimeSpanResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerTimeSpanResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConsumeTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("ConsumeTimeStamp")
         private Long consumeTimeStamp;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaxTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("MaxTimeStamp")
         private Long maxTimeStamp;
 
-        @NameInMap("MinTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("MinTimeStamp")
         private Long minTimeStamp;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private Data(Builder builder) {
@@ -146,7 +155,10 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The most recent point in time when a message in the topic was consumed by the customer group.
+             * <p>The most recent point in time when a message in the topic was consumed by the customer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570761026400</p>
              */
             public Builder consumeTimeStamp(Long consumeTimeStamp) {
                 this.consumeTimeStamp = consumeTimeStamp;
@@ -154,7 +166,10 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the consumer group belongs.
+             * <p>The ID of the instance to which the consumer group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_111111111111_DOxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -162,7 +177,10 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
             }
 
             /**
-             * The earliest point in time when a message was published to the topic.
+             * <p>The point in time when the earliest stored message was published to the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570761026804</p>
              */
             public Builder maxTimeStamp(Long maxTimeStamp) {
                 this.maxTimeStamp = maxTimeStamp;
@@ -170,7 +188,10 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent point in time when a message was published to the topic.
+             * <p>The point in time when the most recently stored message was published to the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570701231122</p>
              */
             public Builder minTimeStamp(Long minTimeStamp) {
                 this.minTimeStamp = minTimeStamp;
@@ -178,7 +199,10 @@ public class OnsConsumerTimeSpanResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic that you want to query.
+             * <p>The name of the topic that you want to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-mq_topic</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsDLQMessageResendByIdResponseBody} extends {@link TeaModel}
  *
  * <p>OnsDLQMessageResendByIdResponseBody</p>
  */
 public class OnsDLQMessageResendByIdResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsDLQMessageResendByIdResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsDLQMessageResendByIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned messages.
+         * <p>The returned messages.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsDLQMessageResendByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D94CC769-4DC3-4690-A868-9D0631B1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +74,14 @@ public class OnsDLQMessageResendByIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsDLQMessageResendByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsDLQMessageResendByIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("MsgId")
+        @com.aliyun.core.annotation.NameInMap("MsgId")
         private java.util.List < String > msgId;
 
         private Data(Builder builder) {

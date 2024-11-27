@@ -1,31 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsTopicListRequest} extends {@link RequestModel}
  *
  * <p>OnsTopicListRequest</p>
  */
 public class OnsTopicListRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("Topic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
     private String topic;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private OnsTopicListRequest(Builder builder) {
@@ -96,7 +96,10 @@ public class OnsTopicListRequest extends Request {
         } 
 
         /**
-         * The ID of the instance that contains the topics you want to query.
+         * <p>The ID of the instance that contains the topics you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_188077086902****_BXSuW61e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +108,7 @@ public class OnsTopicListRequest extends Request {
         }
 
         /**
-         * The list of tags that are attached to the topic. A maximum of 20 tags can be included in the list.
+         * <p>The list of tags that are attached to the topic. A maximum of 20 tags can be included in the list.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -114,7 +117,10 @@ public class OnsTopicListRequest extends Request {
         }
 
         /**
-         * The name of the topic that you want to query. This parameter is required when you want to query a specific topic. If you do not include this parameter in a request, all topics that you can access are queried.
+         * <p>The name of the topic that you want to query. This parameter is required if you want to query a specific topic. If you do not include this parameter in a request, all topics that you can access are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);
@@ -123,7 +129,10 @@ public class OnsTopicListRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID of the topic owner. Set this parameter to an Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138015630679****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -138,13 +147,19 @@ public class OnsTopicListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link OnsTopicListRequest} extends {@link TeaModel}
+     *
+     * <p>OnsTopicListRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Tag(Builder builder) {
@@ -179,11 +194,15 @@ public class OnsTopicListRequest extends Request {
             private String value; 
 
             /**
-             * The key of a tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Tag.N.Value** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tags. If you do not include these parameters in a request, this operation queries all topics that you can access.
-             * <p>
+             * <p>The key of the tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the <strong>Value</strong> parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tag. If you do not include these parameters in a request, this operation queries all topics that you can access.</p>
+             * <ul>
+             * <li>The value of this parameter cannot be an empty string.</li>
+             * <li>A tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   The value of this parameter cannot be an empty string.
-             * *   The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>CartService</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -191,11 +210,15 @@ public class OnsTopicListRequest extends Request {
             }
 
             /**
-             * The value of a tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Tag.N.Key** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tags. If you do not include these parameters in a request, this operation queries all topics that you can access.
-             * <p>
+             * <p>The value of the tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the <strong>Key</strong> parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tag. If you do not include these parameters in a request, this operation queries all topics that you can access.</p>
+             * <ul>
+             * <li>The value of this parameter can be an empty string.</li>
+             * <li>A tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   The value of this parameter can be an empty string.
-             * *   The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>ServiceA</p>
              */
             public Builder value(String value) {
                 this.value = value;

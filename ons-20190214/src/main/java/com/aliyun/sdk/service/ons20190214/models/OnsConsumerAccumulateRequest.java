@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsConsumerAccumulateRequest} extends {@link RequestModel}
  *
  * <p>OnsConsumerAccumulateRequest</p>
  */
 public class OnsConsumerAccumulateRequest extends Request {
-    @Query
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private Boolean detail;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
     private OnsConsumerAccumulateRequest(Builder builder) {
@@ -83,11 +83,14 @@ public class OnsConsumerAccumulateRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the details of each topic to which the consumer group subscribes. Valid values:
-         * <p>
+         * <p>Specifies whether to query the details of each topic to which the consumer group subscribes. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The details of each topic are queried. You can obtain the details from the <strong>DetailInTopicList</strong> response parameter.</li>
+         * <li><strong>false</strong>: The details of each topic are not queried. This is the default value. If you use this value, the value of the <strong>DetailInTopicList</strong> response parameter is empty.</li>
+         * </ul>
          * 
-         * *   **true**: The details of each topic are queried. You can obtain the details from the **DetailInTopicList** response parameter.
-         * *   **false**: The details of each topic are not queried. This is the default value. If you use this value, the value of the **DetailInTopicList** response parameter is empty.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder detail(Boolean detail) {
             this.putQueryParameter("Detail", detail);
@@ -96,7 +99,11 @@ public class OnsConsumerAccumulateRequest extends Request {
         }
 
         /**
-         * The ID of the consumer group whose message accumulation you want to query.
+         * <p>The ID of the consumer group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test_consumer_id</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -105,7 +112,10 @@ public class OnsConsumerAccumulateRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

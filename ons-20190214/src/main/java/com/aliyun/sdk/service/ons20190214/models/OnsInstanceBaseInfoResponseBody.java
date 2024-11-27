@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsInstanceBaseInfoResponseBody} extends {@link TeaModel}
  *
  * <p>OnsInstanceBaseInfoResponseBody</p>
  */
 public class OnsInstanceBaseInfoResponseBody extends TeaModel {
-    @NameInMap("InstanceBaseInfo")
+    @com.aliyun.core.annotation.NameInMap("InstanceBaseInfo")
     private InstanceBaseInfo instanceBaseInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsInstanceBaseInfoResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the instance.
+         * <p>The information about the instance.</p>
          */
         public Builder instanceBaseInfo(InstanceBaseInfo instanceBaseInfo) {
             this.instanceBaseInfo = instanceBaseInfo;
@@ -58,7 +58,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CC46974-65E8-4C20-AB07-D20D102E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +74,26 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsInstanceBaseInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsInstanceBaseInfoResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
-        @NameInMap("HttpInternalEndpoint")
+        @com.aliyun.core.annotation.NameInMap("HttpInternalEndpoint")
         private String httpInternalEndpoint;
 
-        @NameInMap("HttpInternetEndpoint")
+        @com.aliyun.core.annotation.NameInMap("HttpInternetEndpoint")
         private String httpInternetEndpoint;
 
-        @NameInMap("HttpInternetSecureEndpoint")
+        @com.aliyun.core.annotation.NameInMap("HttpInternetSecureEndpoint")
         private String httpInternetSecureEndpoint;
 
-        @NameInMap("TcpEndpoint")
+        @com.aliyun.core.annotation.NameInMap("TcpEndpoint")
         private String tcpEndpoint;
 
-        @NameInMap("TcpInternetEndpoint")
+        @com.aliyun.core.annotation.NameInMap("TcpInternetEndpoint")
         private String tcpInternetEndpoint;
 
         private Endpoints(Builder builder) {
@@ -146,7 +155,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             private String tcpInternetEndpoint; 
 
             /**
-             * The private HTTP endpoint of the instance.
+             * <p>The private HTTP endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://138015630679****.mqrest.cn-chengdu-internal.aliyuncs.com">http://138015630679****.mqrest.cn-chengdu-internal.aliyuncs.com</a></p>
              */
             public Builder httpInternalEndpoint(String httpInternalEndpoint) {
                 this.httpInternalEndpoint = httpInternalEndpoint;
@@ -154,7 +166,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The public HTTP endpoint of the instance.
+             * <p>The public HTTP endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://138015630679****.mqrest.cn-chengdu.aliyuncs.com">http://138015630679****.mqrest.cn-chengdu.aliyuncs.com</a></p>
              */
             public Builder httpInternetEndpoint(String httpInternetEndpoint) {
                 this.httpInternetEndpoint = httpInternetEndpoint;
@@ -162,7 +177,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The public HTTPS endpoint of the instance.
+             * <p>The public HTTPS endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://138015630679****.mqrest.cn-chengdu.aliyuncs.com">https://138015630679****.mqrest.cn-chengdu.aliyuncs.com</a></p>
              */
             public Builder httpInternetSecureEndpoint(String httpInternetSecureEndpoint) {
                 this.httpInternetSecureEndpoint = httpInternetSecureEndpoint;
@@ -170,7 +188,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The private TCP endpoint of the instance.
+             * <p>The private TCP endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://MQ_INST_138015630679****_BAAy1Hac.cn-chengdu.mq-internal.aliyuncs.com:8080">http://MQ_INST_138015630679****_BAAy1Hac.cn-chengdu.mq-internal.aliyuncs.com:8080</a></p>
              */
             public Builder tcpEndpoint(String tcpEndpoint) {
                 this.tcpEndpoint = tcpEndpoint;
@@ -178,17 +199,22 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The public TCP endpoint of the instance.
-             * <p>
+             * <p>The public TCP endpoint of the instance.</p>
+             * <ul>
+             * <li><p>Only instances that are deployed in the China (Chengdu), China (Qingdao), or China (Shenzhen) region can be accessed by using public TCP endpoints.</p>
+             * </li>
+             * <li><p>Before you use a public TCP endpoint, make sure that your client SDK meets the following requirements:</p>
+             * <ul>
+             * <li>TCP client SDK for Java: V2.0.0.Final or later For more information, see <a href="https://help.aliyun.com/document_detail/325569.html">Release notes for the SDK for Java</a>.</li>
+             * <li>TCP client SDK for C++: V3.0.0 or later For more information, see <a href="https://help.aliyun.com/document_detail/325570.html">Release notes for the SDK for C++</a>.</li>
+             * </ul>
+             * </li>
+             * <li><p>You are charged for Internet traffic when you use a public TCP endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/325571.html">Internet traffic fee</a>.</p>
+             * </li>
+             * </ul>
              * 
-             * *   Only instances that are deployed in the China (Chengdu), China (Qingdao), or China (Shenzhen) region can be accessed by using public TCP endpoints.
-             * 
-             * *   Before you use a public TCP endpoint, make sure that your client SDK meets the following requirements:
-             * 
-             *     *   TCP client SDK for Java: V2.0.0.Final or later For more information, see [Release notes for the SDK for Java](~~325569~~).
-             *     *   TCP client SDK for C++: V3.0.0 or later For more information, see [Release notes for the SDK for C++](~~325570~~).
-             * 
-             * *   You must pay the data transfer cost when you use a public TCP endpoint. For more information, see [Internet traffic fee](~~325571~~).
+             * <strong>example:</strong>
+             * <p><a href="http://MQ_INST_138015630679****_BAAy1Hac.mq.cn-chengdu.aliyuncs.com:80">http://MQ_INST_138015630679****_BAAy1Hac.mq.cn-chengdu.aliyuncs.com:80</a></p>
              */
             public Builder tcpInternetEndpoint(String tcpInternetEndpoint) {
                 this.tcpInternetEndpoint = tcpInternetEndpoint;
@@ -202,44 +228,50 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsInstanceBaseInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsInstanceBaseInfoResponseBody</p>
+     */
     public static class InstanceBaseInfo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private Endpoints endpoints;
 
-        @NameInMap("IndependentNaming")
+        @com.aliyun.core.annotation.NameInMap("IndependentNaming")
         private Boolean independentNaming;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private Integer instanceStatus;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private Integer instanceType;
 
-        @NameInMap("MaxTps")
+        @com.aliyun.core.annotation.NameInMap("MaxTps")
         private Long maxTps;
 
-        @NameInMap("ReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private Long releaseTime;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("TopicCapacity")
+        @com.aliyun.core.annotation.NameInMap("TopicCapacity")
         private Integer topicCapacity;
 
-        @NameInMap("spInstanceId")
+        @com.aliyun.core.annotation.NameInMap("spInstanceId")
         private String spInstanceId;
 
-        @NameInMap("spInstanceType")
+        @com.aliyun.core.annotation.NameInMap("spInstanceType")
         private Integer spInstanceType;
 
         private InstanceBaseInfo(Builder builder) {
@@ -373,7 +405,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             private Integer spInstanceType; 
 
             /**
-             * CreateTime.
+             * <p>The time when the instance was created. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570701259403</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -381,7 +416,7 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoints that correspond to different protocols.
+             * <p>The endpoints used to access ApsaraMQ for RocketMQ over different protocols.</p>
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
@@ -389,11 +424,14 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance uses a namespace. Valid values:
-             * <p>
+             * <p>Indicates whether the instance uses a namespace. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</li>
+             * <li><strong>false</strong>: The instance does not use a separate namespace. The name of each resource must be globally unique within the instance and across all instances.</li>
+             * </ul>
              * 
-             * *   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.
-             * *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within and across all instances.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder independentNaming(Boolean independentNaming) {
                 this.independentNaming = independentNaming;
@@ -401,7 +439,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_138015630679****_BAAy1Hac</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -409,10 +450,11 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
-             * <p>
+             * <p>The name of the instance.</p>
+             * <p>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
              * 
-             * The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -420,13 +462,16 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The instance is being deployed. This value is valid only for Enterprise Platinum Edition instances.</li>
+             * <li><strong>2</strong>: The instance has overdue payments. This value is valid only for Standard Edition instances.</li>
+             * <li><strong>5</strong>: The instance is running. This value is valid for Standard Edition instances and Enterprise Platinum Edition instances.</li>
+             * <li><strong>7</strong>: The instance is being upgraded and is running. This value is valid only for Enterprise Platinum Edition instances.</li>
+             * </ul>
              * 
-             * *   **0**: The instance is being deployed. This value is valid only for Enterprise Platinum Edition instances.
-             * *   **2**: The instance has overdue payments. This value is valid only for Standard Edition instances.
-             * *   **5**: The instance is running. This value is valid for Standard Edition instances and Enterprise Platinum Edition instances.
-             * *   **7**: The instance is being upgraded and is running. This value is valid only for Enterprise Platinum Edition instances.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder instanceStatus(Integer instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -434,13 +479,15 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type. Valid values:
-             * <p>
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Standard Edition instances that use the pay-as-you-go billing method.</li>
+             * <li><strong>2</strong>: Enterprise Platinum Edition instances that use the subscription billing method.</li>
+             * </ul>
+             * <p>For information about the editions and specifications of ApsaraMQ for RocketMQ instances, see <a href="https://help.aliyun.com/document_detail/185261.html">Instance editions</a>.</p>
              * 
-             * *   **1**: The instance is a Standard Edition instance that uses the pay-as-you-go billing method.
-             * *   **2**: The instance is an Enterprise Platinum Edition instance that uses the subscription billing method.
-             * 
-             * For information about the editions and specifications of Message Queue for Apache RocketMQ instances, see [Instance editions](~~185261~~).
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder instanceType(Integer instanceType) {
                 this.instanceType = instanceType;
@@ -448,12 +495,14 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum transactions per second (TPS) for sending and receiving messages. Valid values: 5000, 10000, 20000, 50000, 100000, 200000, 300000, 500000, 800000, and 1000000.
-             * <p>
+             * <p>The maximum messaging transactions per second (TPS). Valid values: 5000, 10000, 20000, 50000, 100000, 200000, 300000, 500000, 800000, and 1000000.</p>
+             * <p>You can view the details about messaging TPS on the buy page of ApsaraMQ for RocketMQ.</p>
+             * <blockquote>
+             * <p>This parameter is available only to the ApsaraMQ for RocketMQ Enterprise Platinum Edition instances.</p>
+             * </blockquote>
              * 
-             * For more information, see the description on the buy page.
-             * 
-             * >  This parameter is available only for Message Queue for Apache RocketMQ instances of the Enterprise Platinum Edition.
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder maxTps(Long maxTps) {
                 this.maxTps = maxTps;
@@ -461,7 +510,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the Enterprise Platinum Edition instance expires.
+             * <p>The time when the Enterprise Platinum Edition instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1603555200000</p>
              */
             public Builder releaseTime(Long releaseTime) {
                 this.releaseTime = releaseTime;
@@ -469,7 +521,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ons-cn-m7r1r5f****</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -477,10 +532,13 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of topics that can be created on the instance. Valid values: 25, 50, 100, 300, and 500.
-             * <p>
+             * <p>The maximum number of topics that can be created on the instance. Valid values: 25, 50, 100, 300, and 500.</p>
+             * <blockquote>
+             * <p>This parameter is available only to the ApsaraMQ for RocketMQ Enterprise Platinum Edition instances.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only for Message Queue for Apache RocketMQ instances of the Enterprise Platinum Edition.
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder topicCapacity(Integer topicCapacity) {
                 this.topicCapacity = topicCapacity;
@@ -488,7 +546,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * spInstanceId.
+             * <p>The commodity ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ons-cn-m7r1r5f****</p>
              */
             public Builder spInstanceId(String spInstanceId) {
                 this.spInstanceId = spInstanceId;
@@ -496,7 +557,10 @@ public class OnsInstanceBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * spInstanceType.
+             * <p>The commodity type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder spInstanceType(Integer spInstanceType) {
                 this.spInstanceType = spInstanceType;

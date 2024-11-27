@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsGroupDeleteRequest} extends {@link RequestModel}
  *
  * <p>OnsGroupDeleteRequest</p>
  */
 public class OnsGroupDeleteRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
     private OnsGroupDeleteRequest(Builder builder) {
@@ -69,7 +69,11 @@ public class OnsGroupDeleteRequest extends Request {
         } 
 
         /**
-         * The ID of the consumer group that you want to delete.
+         * <p>The ID of the consumer group that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test_groupId</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -78,7 +82,10 @@ public class OnsGroupDeleteRequest extends Request {
         }
 
         /**
-         * The ID of the Message Queue for Apache RocketMQ instance that contains the specified group.
+         * <p>The ID of the ApsaraMQ for RocketMQ instance to which the specified consumer group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

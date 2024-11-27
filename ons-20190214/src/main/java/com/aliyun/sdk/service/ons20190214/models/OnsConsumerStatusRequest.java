@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsConsumerStatusRequest} extends {@link RequestModel}
  *
  * <p>OnsConsumerStatusRequest</p>
  */
 public class OnsConsumerStatusRequest extends Request {
-    @Query
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private Boolean detail;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("NeedJstack")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedJstack")
     private Boolean needJstack;
 
     private OnsConsumerStatusRequest(Builder builder) {
@@ -97,11 +97,14 @@ public class OnsConsumerStatusRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the details of the consumer group. Valid values:
-         * <p>
+         * <p>Specifies whether to query the details of the consumer group. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The details of the consumer group are queried. You can obtain details from the <strong>ConsumerConnectionInfoList</strong> and <strong>DetailInTopicList</strong> response parameters.</li>
+         * <li><strong>false</strong>: The details of the consumer group are not queried. The values of the <strong>ConsumerConnectionInfoList</strong> and <strong>DetailInTopicList</strong> response parameters are empty. This value is the default value of the Detail parameter.</li>
+         * </ul>
          * 
-         * *   **true**: The details of the consumer group are queried. You can obtain details from the **ConsumerConnectionInfoList** and **DetailInTopicList** response parameters.
-         * *   **false**: The details of the consumer group are not queried. The values of the **ConsumerConnectionInfoList** and **DetailInTopicList** response parameters are empty. This value is the default value of the Detail parameter.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder detail(Boolean detail) {
             this.putQueryParameter("Detail", detail);
@@ -110,7 +113,11 @@ public class OnsConsumerStatusRequest extends Request {
         }
 
         /**
-         * The ID of the consumer group whose details you want to query.
+         * <p>The ID of the consumer group whose details you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test_group_id</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -119,7 +126,10 @@ public class OnsConsumerStatusRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the consumer group belongs.
+         * <p>The ID of the instance to which the consumer group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,14 +138,19 @@ public class OnsConsumerStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the information about thread stack traces. Valid values:
-         * <p>
+         * <p>Specifies whether to query the information about thread stack traces. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The information about thread stack traces is queried. You can obtain the information from the <strong>Jstack</strong> response parameter.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you want to obtain the information about thread stack traces, make sure that the <strong>Detail</strong> parameter in the request is set to <strong>true</strong>.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>false</strong>: The information about thread stack traces is not queried. The value of the <strong>Jstack</strong> response parameter is empty. This value is the default value of the NeedJstack parameter.</li>
+         * </ul>
          * 
-         * *   **true**: The information about thread stack traces is queried. You can obtain the information from the **Jstack** response parameter.
-         * 
-         * >  If you want to obtain the information about thread stack traces, make sure that the **Detail** parameter in the request is set to **true**.
-         * 
-         * *   **false**: The information about thread stack traces is not queried. The value of the **Jstack** response parameter is empty. This value is the default value of the NeedJstack parameter.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needJstack(Boolean needJstack) {
             this.putQueryParameter("NeedJstack", needJstack);
