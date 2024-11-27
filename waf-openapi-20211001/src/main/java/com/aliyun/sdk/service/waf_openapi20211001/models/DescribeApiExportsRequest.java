@@ -126,7 +126,10 @@ public class DescribeApiExportsRequest extends Request {
         } 
 
         /**
-         * <p>The returned data export tasks.</p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +142,11 @@ public class DescribeApiExportsRequest extends Request {
         }
 
         /**
-         * <p>The response parameters.</p>
+         * <p>Language type. Valid values:</p>
+         * <ul>
+         * <li><strong>cn</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -151,7 +158,7 @@ public class DescribeApiExportsRequest extends Request {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,7 +170,7 @@ public class DescribeApiExportsRequest extends Request {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -175,7 +182,11 @@ public class DescribeApiExportsRequest extends Request {
         }
 
         /**
-         * <p>The returned data export task.</p>
+         * <p>The region ID of the Web Application Firewall (WAF) instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -187,7 +198,7 @@ public class DescribeApiExportsRequest extends Request {
         }
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>

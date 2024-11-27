@@ -222,10 +222,10 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends Request {
         }
 
         /**
-         * <p>The sorting order.</p>
+         * <p>The sorting order. Valid values:</p>
          * <ul>
-         * <li>asc: ascending order.</li>
-         * <li>desc: descending order.</li>
+         * <li><strong>asc</strong>: ascending order.</li>
+         * <li><strong>desc</strong>: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,10 +250,10 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page. Default value: <strong>5</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>5</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -302,10 +302,10 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends Request {
         }
 
         /**
-         * <p>The sensitive data type.</p>
+         * <p>The sensitive data type. Valid values:</p>
          * <ul>
-         * <li>request: sensitive data in requests.</li>
-         * <li>response: sensitive data in responses.</li>
+         * <li><strong>request</strong>: sensitive data in requests.</li>
+         * <li><strong>response</strong>: sensitive data in responses.</li>
          * </ul>
          * 
          * <strong>example:</strong>

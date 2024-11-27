@@ -119,6 +119,9 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchedHost")
         private String matchedHost;
 
+        @com.aliyun.core.annotation.NameInMap("RemoteCountryId")
+        private String remoteCountryId;
+
         @com.aliyun.core.annotation.NameInMap("RequestTime")
         private Long requestTime;
 
@@ -134,6 +137,7 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
             this.clientIP = builder.clientIP;
             this.count = builder.count;
             this.matchedHost = builder.matchedHost;
+            this.remoteCountryId = builder.remoteCountryId;
             this.requestTime = builder.requestTime;
             this.sensitiveList = builder.sensitiveList;
             this.traceId = builder.traceId;
@@ -183,6 +187,13 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         }
 
         /**
+         * @return remoteCountryId
+         */
+        public String getRemoteCountryId() {
+            return this.remoteCountryId;
+        }
+
+        /**
          * @return requestTime
          */
         public Long getRequestTime() {
@@ -209,6 +220,7 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
             private String clientIP; 
             private Long count; 
             private String matchedHost; 
+            private String remoteCountryId; 
             private Long requestTime; 
             private String sensitiveList; 
             private String traceId; 
@@ -265,6 +277,14 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
              */
             public Builder matchedHost(String matchedHost) {
                 this.matchedHost = matchedHost;
+                return this;
+            }
+
+            /**
+             * RemoteCountryId.
+             */
+            public Builder remoteCountryId(String remoteCountryId) {
+                this.remoteCountryId = remoteCountryId;
                 return this;
             }
 

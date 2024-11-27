@@ -288,7 +288,13 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             private String resourceService; 
 
             /**
-             * HttpPortCount.
+             * <p>The number of the HTTP ports that are added to WAF.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the cloud service is ECS or CLB.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder httpPortCount(Integer httpPortCount) {
                 this.httpPortCount = httpPortCount;
@@ -296,7 +302,13 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPortCount.
+             * <p>The number of the HTTPS ports that are added to WAF.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the cloud service is ECS or CLB.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder httpsPortCount(Integer httpsPortCount) {
                 this.httpsPortCount = httpsPortCount;
@@ -348,7 +360,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceId.
+             * <p>The ID of the instance that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-uf60ub45fr9b***</p>
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -356,7 +371,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceIp.
+             * <p>The IP address of the instance that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder resourceInstanceIp(String resourceInstanceIp) {
                 this.resourceInstanceIp = resourceInstanceIp;
@@ -364,7 +382,10 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceName.
+             * <p>The name of the instance that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-name</p>
              */
             public Builder resourceInstanceName(String resourceInstanceName) {
                 this.resourceInstanceName = resourceInstanceName;
@@ -389,6 +410,9 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
              * <li><strong>mse</strong>: MSE.</li>
              * <li><strong>fc</strong>: Function Compute.</li>
              * <li><strong>sae</strong>: SAE.</li>
+             * <li><strong>ecs</strong>: ECS.</li>
+             * <li><strong>clb4</strong>: Layer 4 CLB.</li>
+             * <li><strong>clb7</strong>: Layer 7 CLB.</li>
              * </ul>
              * 
              * <strong>example:</strong>

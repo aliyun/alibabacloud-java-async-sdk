@@ -155,6 +155,9 @@ public class DescribeUserApiRequestRequest extends Request {
 
         /**
          * <p>The API.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is deprecated, please use ApiId to query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>/api/v1/know</p>
@@ -195,6 +198,9 @@ public class DescribeUserApiRequestRequest extends Request {
 
         /**
          * <p>The domain name or IP address of the API.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is deprecated, please use ApiId to query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>c.***.com</p>

@@ -386,7 +386,7 @@ public class DescribeSensitiveOutboundStatisticRequest extends Request {
         /**
          * <p>The type of the sensitive data. Separate multiple types with commas (,).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the supported types of sensitive data. Only built-in types of sensitive data are supported for this operation.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data. Only built-in types of sensitive data are supported for this operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

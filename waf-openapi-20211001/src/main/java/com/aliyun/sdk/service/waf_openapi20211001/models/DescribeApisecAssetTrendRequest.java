@@ -137,7 +137,7 @@ public class DescribeApisecAssetTrendRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+         * <p>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683183599</p>
@@ -151,7 +151,7 @@ public class DescribeApisecAssetTrendRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -193,7 +193,7 @@ public class DescribeApisecAssetTrendRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+         * <p>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1668496310</p>

@@ -169,6 +169,9 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
 
         /**
          * <p>The ID of the hybrid cloud cluster.</p>
+         * <blockquote>
+         * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>428</p>
@@ -180,7 +183,7 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+         * <p>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1686895256</p>
@@ -208,10 +211,10 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * <p>The sorting order.</p>
+         * <p>The sorting order. Valid values:</p>
          * <ul>
-         * <li>asc: ascending order.</li>
-         * <li>desc: descending order.</li>
+         * <li><strong>asc</strong>: ascending order.</li>
+         * <li><strong>desc</strong>: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +227,7 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -236,10 +239,10 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page. Default value: <strong>5</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>5</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -276,7 +279,7 @@ public class DescribeApisecEventDomainStatisticRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
+         * <p>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1668496310</p>

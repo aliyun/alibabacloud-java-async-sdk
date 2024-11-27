@@ -70,7 +70,7 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>56B40D30-4960-4F19-B7D5-2B1F***6CB70</p>
@@ -201,6 +201,9 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
 
             /**
              * <p>The code of the sensitive data.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -211,7 +214,12 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
             }
 
             /**
-             * <p>The sensitivity level of the sensitive data.</p>
+             * <p>The sensitivity level of the sensitive data.Valid values:</p>
+             * <ul>
+             * <li><strong>S1</strong>: low sensitivity.</li>
+             * <li><strong>S2</strong>: moderate sensitivity.</li>
+             * <li><strong>S3</strong>: high sensitivity.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>L3</p>

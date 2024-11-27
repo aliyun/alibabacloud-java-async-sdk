@@ -113,6 +113,9 @@ public class DeleteApisecEventsRequest extends Request {
 
         /**
          * <p>The ID of the hybrid cloud cluster.</p>
+         * <blockquote>
+         * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>428</p>
@@ -166,7 +169,7 @@ public class DeleteApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * <p>阿里云资源组ID。</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>

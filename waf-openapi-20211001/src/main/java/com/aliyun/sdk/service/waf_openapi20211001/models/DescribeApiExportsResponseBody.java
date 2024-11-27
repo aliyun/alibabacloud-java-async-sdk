@@ -62,7 +62,7 @@ public class DescribeApiExportsResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * <p>The time when the data export task was created. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The returned data export tasks.</p>
          */
         public Builder apiExports(java.util.List < ApiExports> apiExports) {
             this.apiExports = apiExports;
@@ -70,7 +70,7 @@ public class DescribeApiExportsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The format of the exported file.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D9532525-E885-54E7-A178-D5554D563AFB</p>
