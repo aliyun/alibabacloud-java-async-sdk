@@ -33,6 +33,10 @@ public class UpdateVideoInfoRequest extends Request {
     private String title;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
+    private String userData;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
@@ -44,6 +48,7 @@ public class UpdateVideoInfoRequest extends Request {
         this.description = builder.description;
         this.tags = builder.tags;
         this.title = builder.title;
+        this.userData = builder.userData;
         this.videoId = builder.videoId;
     }
 
@@ -96,6 +101,13 @@ public class UpdateVideoInfoRequest extends Request {
     }
 
     /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
+    /**
      * @return videoId
      */
     public String getVideoId() {
@@ -108,6 +120,7 @@ public class UpdateVideoInfoRequest extends Request {
         private String description; 
         private String tags; 
         private String title; 
+        private String userData; 
         private String videoId; 
 
         private Builder() {
@@ -121,6 +134,7 @@ public class UpdateVideoInfoRequest extends Request {
             this.description = request.description;
             this.tags = request.tags;
             this.title = request.title;
+            this.userData = request.userData;
             this.videoId = request.videoId;
         } 
 
@@ -194,6 +208,15 @@ public class UpdateVideoInfoRequest extends Request {
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
             this.title = title;
+            return this;
+        }
+
+        /**
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.putQueryParameter("UserData", userData);
+            this.userData = userData;
             return this;
         }
 
