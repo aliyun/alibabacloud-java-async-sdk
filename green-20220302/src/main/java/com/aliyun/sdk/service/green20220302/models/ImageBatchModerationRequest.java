@@ -13,17 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ImageBatchModerationRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Service")
+    private String service;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceParameters")
     private String serviceParameters;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Services")
-    private String services;
-
     private ImageBatchModerationRequest(Builder builder) {
         super(builder);
+        this.service = builder.service;
         this.serviceParameters = builder.serviceParameters;
-        this.services = builder.services;
     }
 
     public static Builder builder() {
@@ -40,22 +40,22 @@ public class ImageBatchModerationRequest extends Request {
     }
 
     /**
+     * @return service
+     */
+    public String getService() {
+        return this.service;
+    }
+
+    /**
      * @return serviceParameters
      */
     public String getServiceParameters() {
         return this.serviceParameters;
     }
 
-    /**
-     * @return services
-     */
-    public String getServices() {
-        return this.services;
-    }
-
     public static final class Builder extends Request.Builder<ImageBatchModerationRequest, Builder> {
+        private String service; 
         private String serviceParameters; 
-        private String services; 
 
         private Builder() {
             super();
@@ -63,9 +63,18 @@ public class ImageBatchModerationRequest extends Request {
 
         private Builder(ImageBatchModerationRequest request) {
             super(request);
+            this.service = request.service;
             this.serviceParameters = request.serviceParameters;
-            this.services = request.services;
         } 
+
+        /**
+         * Service.
+         */
+        public Builder service(String service) {
+            this.putQueryParameter("Service", service);
+            this.service = service;
+            return this;
+        }
 
         /**
          * ServiceParameters.
@@ -73,15 +82,6 @@ public class ImageBatchModerationRequest extends Request {
         public Builder serviceParameters(String serviceParameters) {
             this.putQueryParameter("ServiceParameters", serviceParameters);
             this.serviceParameters = serviceParameters;
-            return this;
-        }
-
-        /**
-         * Services.
-         */
-        public Builder services(String services) {
-            this.putQueryParameter("Services", services);
-            this.services = services;
             return this;
         }
 
