@@ -140,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateViewPointResponse> generateViewPoint(GenerateViewPointRequest request);
 
     /**
+     * @param request the request parameters of GetCategoriesByTaskId  GetCategoriesByTaskIdRequest
+     * @return GetCategoriesByTaskIdResponse
+     */
+    CompletableFuture<GetCategoriesByTaskIdResponse> getCategoriesByTaskId(GetCategoriesByTaskIdRequest request);
+
+    /**
      * @param request the request parameters of GetCustomHotTopicBroadcastJob  GetCustomHotTopicBroadcastJobRequest
      * @return GetCustomHotTopicBroadcastJobResponse
      */
@@ -168,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDocClusterTaskResponse
      */
     CompletableFuture<GetDocClusterTaskResponse> getDocClusterTask(GetDocClusterTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetEnterpriseVocAnalysisTask  GetEnterpriseVocAnalysisTaskRequest
+     * @return GetEnterpriseVocAnalysisTaskResponse
+     */
+    CompletableFuture<GetEnterpriseVocAnalysisTaskResponse> getEnterpriseVocAnalysisTask(GetEnterpriseVocAnalysisTaskRequest request);
 
     /**
      * @param request the request parameters of GetGeneratedContent  GetGeneratedContentRequest
@@ -252,6 +264,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InsertInterveneRuleResponse
      */
     CompletableFuture<InsertInterveneRuleResponse> insertInterveneRule(InsertInterveneRuleRequest request);
+
+    /**
+     * @param request the request parameters of ListAnalysisTagDetailByTaskId  ListAnalysisTagDetailByTaskIdRequest
+     * @return ListAnalysisTagDetailByTaskIdResponse
+     */
+    CompletableFuture<ListAnalysisTagDetailByTaskIdResponse> listAnalysisTagDetailByTaskId(ListAnalysisTagDetailByTaskIdRequest request);
 
     /**
      * @param request the request parameters of ListAsyncTasks  ListAsyncTasksRequest
@@ -552,6 +570,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitDocClusterTaskResponse> submitDocClusterTask(SubmitDocClusterTaskRequest request);
 
     /**
+     * @param request the request parameters of SubmitEnterpriseVocAnalysisTask  SubmitEnterpriseVocAnalysisTaskRequest
+     * @return SubmitEnterpriseVocAnalysisTaskResponse
+     */
+    CompletableFuture<SubmitEnterpriseVocAnalysisTaskResponse> submitEnterpriseVocAnalysisTask(SubmitEnterpriseVocAnalysisTaskRequest request);
+
+    /**
      * @param request the request parameters of SubmitTopicSelectionPerspectiveAnalysisTask  SubmitTopicSelectionPerspectiveAnalysisTaskRequest
      * @return SubmitTopicSelectionPerspectiveAnalysisTaskResponse
      */
@@ -574,5 +598,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMaterialDocumentResponse
      */
     CompletableFuture<UpdateMaterialDocumentResponse> updateMaterialDocument(UpdateMaterialDocumentRequest request);
+
+    /**
+     * @param request the request parameters of ValidateUploadTemplate  ValidateUploadTemplateRequest
+     * @return ValidateUploadTemplateResponse
+     */
+    CompletableFuture<ValidateUploadTemplateResponse> validateUploadTemplate(ValidateUploadTemplateRequest request);
 
 }
