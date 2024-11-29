@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateIpv6AddressRequest} extends {@link RequestModel}
  *
  * <p>AllocateIpv6AddressRequest</p>
@@ -237,11 +238,14 @@ public class AllocateIpv6AddressRequest extends Request {
         } 
 
         /**
-         * The type of the IPv6 address. Valid values:
-         * <p>
+         * <p>The type of the IPv6 address. Valid values:</p>
+         * <ul>
+         * <li>IPv6Address (default): an IPv6 address.</li>
+         * <li>IPv6Prefix: an IPv6 CIDR block.</li>
+         * </ul>
          * 
-         * *   IPv6Address (default): an IPv6 address.
-         * *   IPv6Prefix: an IPv6 CIDR block.
+         * <strong>example:</strong>
+         * <p>IPv6Address</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -250,10 +254,13 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -262,11 +269,14 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li>false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
-         * *   false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -275,7 +285,10 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * The IPv6 address. The IPv6 address must be an idle one that falls within the vSwitch CIDR block.
+         * <p>The IPv6 address. The IPv6 address must be an idle one that falls within the vSwitch CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:153:3921:851c:c435:7b12:1c5f</p>
          */
         public Builder ipv6Address(String ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -284,7 +297,10 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * The description of the IPv6 address.
+         * <p>The description of the IPv6 address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6-description</p>
          */
         public Builder ipv6AddressDescription(String ipv6AddressDescription) {
             this.putQueryParameter("Ipv6AddressDescription", ipv6AddressDescription);
@@ -293,7 +309,10 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * The name of the IPv6 address.
+         * <p>The name of the IPv6 address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6-name</p>
          */
         public Builder ipv6AddressName(String ipv6AddressName) {
             this.putQueryParameter("Ipv6AddressName", ipv6AddressName);
@@ -320,7 +339,11 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -329,7 +352,10 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * The resource group ID. For more information about resource groups, see related documentation.
+         * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -356,7 +382,7 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * The tag list.
+         * <p>The tag list.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -365,7 +391,11 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the IPv6 address belongs.
+         * <p>The ID of the vSwitch to which the IPv6 address belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-asdfjlnaue4g****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -380,6 +410,12 @@ public class AllocateIpv6AddressRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AllocateIpv6AddressRequest} extends {@link TeaModel}
+     *
+     * <p>AllocateIpv6AddressRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -419,10 +455,11 @@ public class AllocateIpv6AddressRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -430,10 +467,11 @@ public class AllocateIpv6AddressRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
              * 
-             * The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddBgpNetworkResponseBody} extends {@link TeaModel}
  *
  * <p>AddBgpNetworkResponseBody</p>
@@ -37,7 +38,10 @@ public class AddBgpNetworkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C7FA9D6-72E0-48A9-A9C3-2DA8569CD5EB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

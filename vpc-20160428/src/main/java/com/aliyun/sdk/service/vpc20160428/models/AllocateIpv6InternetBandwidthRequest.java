@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateIpv6InternetBandwidthRequest} extends {@link RequestModel}
  *
  * <p>AllocateIpv6InternetBandwidthRequest</p>
@@ -197,7 +198,11 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         } 
 
         /**
-         * The Internet bandwidth of the IPv6 gateway. Unit: Mbit/s. Valid values: **1 to 5000**.
+         * <p>The Internet bandwidth of the IPv6 gateway. Unit: Mbit/s. Valid values: <strong>1 to 5000</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -206,12 +211,14 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -229,11 +236,14 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The metering method of the Internet bandwidth for the IPv6 address. Valid values:
-         * <p>
+         * <p>The metering method of the Internet bandwidth for the IPv6 address. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+         * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth</li>
+         * </ul>
          * 
-         * *   **PayByTraffic**: pay-by-data-transfer
-         * *   **PayByBandwidth** (default): pay-by-bandwidth
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -242,7 +252,11 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 address.
+         * <p>The ID of the IPv6 address.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6-2zen5j4axcp5l5qyy****</p>
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.putQueryParameter("Ipv6AddressId", ipv6AddressId);
@@ -251,7 +265,11 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 gateway.
+         * <p>The ID of the IPv6 gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6gw-uf6hcyzu65v98v3du****</p>
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -278,7 +296,11 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

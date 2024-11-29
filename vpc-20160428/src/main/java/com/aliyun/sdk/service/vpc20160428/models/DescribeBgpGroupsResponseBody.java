@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBgpGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBgpGroupsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The detailed information about the BGP group.
+         * <p>The detailed information about the BGP group.</p>
          */
         public Builder bgpGroups(BgpGroups bgpGroups) {
             this.bgpGroups = bgpGroups;
@@ -93,7 +94,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1D0971B2-A35A-42C1-A44C-E91360C36C0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBgpGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBgpGroupsResponseBody</p>
+     */
     public static class BgpGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthKey")
         private String authKey;
@@ -313,7 +332,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The key used by the BGP group.
+             * <p>The key used by the BGP group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>!PWZ****</p>
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -321,7 +343,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the BGP group.
+             * <p>The ID of the BGP group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bgpg-bp1k25cyp26cllath****</p>
              */
             public Builder bgpGroupId(String bgpGroupId) {
                 this.bgpGroupId = bgpGroupId;
@@ -329,7 +354,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the BGP group.
+             * <p>The description of the BGP group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the BGP group.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -337,10 +365,13 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The hold time to receive BGP messages. Unit: seconds.
-             * <p>
+             * <p>The hold time to receive BGP messages. Unit: seconds.</p>
+             * <blockquote>
+             * <p> If no message is received within the hold time, the BGP peer is considered disconnected.</p>
+             * </blockquote>
              * 
-             * >  If no message is received within the hold time, the BGP peer is considered disconnected.
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder hold(String hold) {
                 this.hold = hold;
@@ -348,11 +379,14 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version of the BGP group. Valid values:
-             * <p>
+             * <p>The IP version of the BGP group. Valid values:</p>
+             * <ul>
+             * <li><strong>ipv4</strong>: IPv4</li>
+             * <li><strong>ipv6</strong>: IPv6. IPv6 is supported only if the VBR of the BGP group has IPv6 enabled.</li>
+             * </ul>
              * 
-             * *   **ipv4**: IPv4
-             * *   **ipv6**: IPv6. IPv6 is supported only if the VBR of the BGP group has IPv6 enabled.
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -360,11 +394,14 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ASN is fake. Valid values:
-             * <p>
+             * <p>Indicates whether the ASN is fake. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFake(String isFake) {
                 this.isFake = isFake;
@@ -372,7 +409,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The keepalive time. Unit: seconds.
+             * <p>The keepalive time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder keepalive(String keepalive) {
                 this.keepalive = keepalive;
@@ -380,7 +420,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ASN of the device on the Alibaba Cloud side.
+             * <p>The ASN of the device on the Alibaba Cloud side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45104</p>
              */
             public Builder localAsn(String localAsn) {
                 this.localAsn = localAsn;
@@ -388,7 +431,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the BGP group.
+             * <p>The name of the BGP group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -396,7 +442,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The autonomous system number (ASN) of the on-premises device in the data center.
+             * <p>The autonomous system number (ASN) of the on-premises device in the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1****</p>
              */
             public Builder peerAsn(String peerAsn) {
                 this.peerAsn = peerAsn;
@@ -404,7 +453,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the BGP group belongs.
+             * <p>The ID of the region to which the BGP group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -412,7 +464,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of route entries for BGP dynamic route learning.
+             * <p>The maximum number of route entries for BGP dynamic route learning.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder routeLimit(String routeLimit) {
                 this.routeLimit = routeLimit;
@@ -420,7 +475,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR.
+             * <p>The ID of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vbr-bp1ctxy813985gkuk****</p>
              */
             public Builder routerId(String routerId) {
                 this.routerId = routerId;
@@ -428,7 +486,10 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the BGP group.
+             * <p>The status of the BGP group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -442,6 +503,12 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBgpGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBgpGroupsResponseBody</p>
+     */
     public static class BgpGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BgpGroup")
         private java.util.List < BgpGroup> bgpGroup;

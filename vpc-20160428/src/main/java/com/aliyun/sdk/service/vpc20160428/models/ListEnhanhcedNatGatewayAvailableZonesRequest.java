@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnhanhcedNatGatewayAvailableZonesRequest} extends {@link RequestModel}
  *
  * <p>ListEnhanhcedNatGatewayAvailableZonesRequest</p>
@@ -138,11 +139,14 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         } 
 
         /**
-         * The language to display the results. Valid values:
-         * <p>
+         * <p>The language to display the results. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-CN</strong> (default): Chinese</li>
+         * <li><strong>en-US</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh-CN** (default): Chinese
-         * *   **en-US**: English
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -151,7 +155,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         }
 
         /**
-         * The filter information. You can specify a filter key and a filter value.
+         * <p>The filter information. You can specify a filter key and a filter value.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -178,12 +182,13 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         }
 
         /**
-         * The ID of the region that you want to query.
-         * <p>
+         * <p>The ID of the region that you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
-         * 
-         * In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.
+         * <strong>example:</strong>
+         * <p>me-east-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,6 +221,12 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnhanhcedNatGatewayAvailableZonesRequest} extends {@link TeaModel}
+     *
+     * <p>ListEnhanhcedNatGatewayAvailableZonesRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -255,7 +266,10 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
             private String value; 
 
             /**
-             * The filter key. Only **PrivateLinkEnabled** is supported.
+             * <p>The filter key. Only <strong>PrivateLinkEnabled</strong> is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateLinkEnabled</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -263,10 +277,13 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
             }
 
             /**
-             * The value of the filter key.
-             * <p>
+             * <p>The value of the filter key.</p>
+             * <blockquote>
+             * <p> If the filter key is set to <strong>PrivateLinkEnabled</strong>, you must specify a filter value. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * </blockquote>
              * 
-             * >  If the filter key is set to **PrivateLinkEnabled**, you must specify a filter value. Valid values: **true** and **false**.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishVpnRouteEntryRequest} extends {@link RequestModel}
  *
  * <p>PublishVpnRouteEntryRequest</p>
@@ -199,12 +200,14 @@ public class PublishVpnRouteEntryRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>d7d24a21-f4ba-4454-9173-b382****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -213,7 +216,11 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * The next hop of the VPN gateway route.
+         * <p>The next hop of the VPN gateway route.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-bp15oes1py4i66rmd****</p>
          */
         public Builder nextHop(String nextHop) {
             this.putQueryParameter("NextHop", nextHop);
@@ -240,11 +247,15 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * Specifies whether to advertise the VPN gateway route to the VPC route table. Valid values:
-         * <p>
+         * <p>Specifies whether to advertise the VPN gateway route to the VPC route table. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publishVpc(Boolean publishVpc) {
             this.putQueryParameter("PublishVpc", publishVpc);
@@ -253,10 +264,12 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VPN gateway is created.
-         * <p>
+         * <p>The ID of the region where the VPN gateway is created.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -283,7 +296,11 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the VPN gateway route.
+         * <p>The destination CIDR block of the VPN gateway route.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         public Builder routeDest(String routeDest) {
             this.putQueryParameter("RouteDest", routeDest);
@@ -292,11 +309,15 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * The type of the VPN gateway route. Valid values:
-         * <p>
+         * <p>The type of the VPN gateway route. Valid values:</p>
+         * <ul>
+         * <li><strong>pbr</strong>: policy-based route</li>
+         * <li><strong>dbr</strong>: destination-based route</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **pbr**: policy-based route
-         * *   **dbr**: destination-based route
+         * <strong>example:</strong>
+         * <p>pbr</p>
          */
         public Builder routeType(String routeType) {
             this.putQueryParameter("RouteType", routeType);
@@ -305,7 +326,11 @@ public class PublishVpnRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp1a3kqjiiq9legfx****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiagnoseVpnConnectionsRequest} extends {@link RequestModel}
  *
  * <p>DiagnoseVpnConnectionsRequest</p>
@@ -138,7 +139,10 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -147,7 +151,10 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -156,10 +163,12 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * The region ID of the IPsec-VPN connection.
-         * <p>
+         * <p>The region ID of the IPsec-VPN connection.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -177,7 +186,7 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * The list of tunnel IDs.
+         * <p>The list of tunnel IDs.</p>
          */
         public Builder tunnelIds(java.util.List < String > tunnelIds) {
             this.putQueryParameter("TunnelIds", tunnelIds);
@@ -186,7 +195,7 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * The IDs of IPsec-VPN connections.
+         * <p>The IDs of IPsec-VPN connections.</p>
          */
         public Builder vpnConnectionIds(java.util.List < String > vpnConnectionIds) {
             this.putQueryParameter("VpnConnectionIds", vpnConnectionIds);
@@ -195,7 +204,10 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp10hz6b0mbp39flt****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

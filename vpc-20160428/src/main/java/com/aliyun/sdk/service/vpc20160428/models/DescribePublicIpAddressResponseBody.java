@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePublicIpAddressResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePublicIpAddressResponseBody</p>
@@ -133,7 +134,10 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The HTTP status codes returned.
+         * <p>The HTTP status codes returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -141,7 +145,10 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The response messages.
+         * <p>The response messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +156,10 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -157,7 +167,10 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -165,7 +178,10 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The range of the public IP addresses of the VPC in the region.
+         * <p>The range of the public IP addresses of the VPC in the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110.11.1.0/24</p>
          */
         public Builder publicIpAddress(java.util.List < String > publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
@@ -173,7 +189,10 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region to which the public IP addresses belong.
+         * <p>The ID of the region to which the public IP addresses belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -181,7 +200,10 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,11 +211,14 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +226,10 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned entries.
+         * <p>The number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

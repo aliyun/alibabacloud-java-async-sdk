@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHaVipsRequest} extends {@link RequestModel}
  *
  * <p>DescribeHaVipsRequest</p>
@@ -181,7 +182,7 @@ public class DescribeHaVipsRequest extends Request {
         } 
 
         /**
-         * The details of the filter condition.
+         * <p>The details of the filter condition.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -208,7 +209,10 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -217,7 +221,10 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -226,10 +233,12 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * The region ID of the HAVIP.
-         * <p>
+         * <p>The region ID of the HAVIP.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +247,10 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the HAVIP belongs.
+         * <p>The ID of the resource group to which the HAVIP belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -265,7 +277,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * The tag list.
+         * <p>The tag list.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -280,6 +292,12 @@ public class DescribeHaVipsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHaVipsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -319,18 +337,19 @@ public class DescribeHaVipsRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The filter keys. You can specify at most five filter keys. Valid values of **N**: **1 to 5**. The following filter keys are supported:
-             * <p>
+             * <p>The filter keys. You can specify at most five filter keys. Valid values of <strong>N</strong>: <strong>1 to 5</strong>. The following filter keys are supported:</p>
+             * <ul>
+             * <li><strong>VpcId</strong>: virtual private cloud (VPC) ID</li>
+             * <li><strong>VSwitchId</strong>: vSwitch ID</li>
+             * <li><strong>Status</strong>: HAVIP status</li>
+             * <li><strong>HaVipId</strong>: HAVIP ID</li>
+             * <li><strong>HaVipAddress</strong>: HAVIP IP address</li>
+             * </ul>
+             * <p>You can specify multiple values for each filter key. The logical operator among multiple values is OR. If one value is matched, the filter key is matched.</p>
+             * <p>The logical operator among multiple filter keys is AND. HAVIPs can be queried only if all filter keys are matched.</p>
              * 
-             * *   **VpcId**: virtual private cloud (VPC) ID
-             * *   **VSwitchId**: vSwitch ID
-             * *   **Status**: HAVIP status
-             * *   **HaVipId**: HAVIP ID
-             * *   **HaVipAddress**: HAVIP IP address
-             * 
-             * You can specify multiple values for each filter key. The logical operator among multiple values is OR. If one value is matched, the filter key is matched.
-             * 
-             * The logical operator among multiple filter keys is AND. HAVIPs can be queried only if all filter keys are matched.
+             * <strong>example:</strong>
+             * <p>HaVipId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -338,7 +357,10 @@ public class DescribeHaVipsRequest extends Request {
             }
 
             /**
-             * The value of the filter key. Valid values of **N**: **1 to 5**.
+             * <p>The value of the filter key. Valid values of <strong>N</strong>: <strong>1 to 5</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>havip-bp19o63nequs01i8d****</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -352,6 +374,12 @@ public class DescribeHaVipsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHaVipsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -391,10 +419,11 @@ public class DescribeHaVipsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -402,10 +431,11 @@ public class DescribeHaVipsRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

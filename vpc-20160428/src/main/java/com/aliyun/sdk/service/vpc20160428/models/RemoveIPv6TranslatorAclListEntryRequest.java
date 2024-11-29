@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveIPv6TranslatorAclListEntryRequest} extends {@link RequestModel}
  *
  * <p>RemoveIPv6TranslatorAclListEntryRequest</p>
@@ -154,7 +155,11 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
         } 
 
         /**
-         * The ID of the ACL entry to be deleted.
+         * <p>The ID of the ACL entry to be deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transaclentry-bp105jrs****</p>
          */
         public Builder aclEntryId(String aclEntryId) {
             this.putQueryParameter("AclEntryId", aclEntryId);
@@ -163,7 +168,11 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * The ID of the ACL to which the ACL entry belongs.
+         * <p>The ID of the ACL to which the ACL entry belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transacl-bp1de2****</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -172,10 +181,11 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -202,7 +212,11 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * The region of the ACL.
+         * <p>The region of the ACL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

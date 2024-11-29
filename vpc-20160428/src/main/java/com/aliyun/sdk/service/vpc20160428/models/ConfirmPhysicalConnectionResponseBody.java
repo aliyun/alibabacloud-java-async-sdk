@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmPhysicalConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>ConfirmPhysicalConnectionResponseBody</p>
@@ -37,7 +38,10 @@ public class ConfirmPhysicalConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API-20365164-5b0d-460a-83c2-2189972b****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

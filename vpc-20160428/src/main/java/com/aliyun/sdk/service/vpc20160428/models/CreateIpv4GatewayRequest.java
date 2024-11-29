@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIpv4GatewayRequest} extends {@link RequestModel}
  *
  * <p>CreateIpv4GatewayRequest</p>
@@ -209,12 +210,14 @@ public class CreateIpv4GatewayRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system sets <strong>ClientToken</strong> to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request is different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request is different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -223,11 +226,14 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -236,10 +242,11 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * The description of the IPv4 gateway.
-         * <p>
+         * <p>The description of the IPv4 gateway.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ipv4GatewayDescription(String ipv4GatewayDescription) {
             this.putQueryParameter("Ipv4GatewayDescription", ipv4GatewayDescription);
@@ -248,10 +255,11 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * The name of the IPv4 gateway.
-         * <p>
+         * <p>The name of the IPv4 gateway.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder ipv4GatewayName(String ipv4GatewayName) {
             this.putQueryParameter("Ipv4GatewayName", ipv4GatewayName);
@@ -278,10 +286,12 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to create the IPv4 gateway.
-         * <p>
+         * <p>The ID of the region where you want to create the IPv4 gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>ap-southeast-6</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -290,7 +300,10 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -317,7 +330,7 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -326,10 +339,12 @@ public class CreateIpv4GatewayRequest extends Request {
         }
 
         /**
-         * The ID of the VPC where you want to create the IPv4 gateway.
-         * <p>
+         * <p>The ID of the VPC where you want to create the IPv4 gateway.</p>
+         * <p>You can create only one IPv4 gateway in a VPC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can create only one IPv4 gateway in a VPC.
+         * <strong>example:</strong>
+         * <p>vpc-5tss06uvoyps5xoya****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -344,6 +359,12 @@ public class CreateIpv4GatewayRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateIpv4GatewayRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIpv4GatewayRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -383,10 +404,11 @@ public class CreateIpv4GatewayRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -394,10 +416,11 @@ public class CreateIpv4GatewayRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

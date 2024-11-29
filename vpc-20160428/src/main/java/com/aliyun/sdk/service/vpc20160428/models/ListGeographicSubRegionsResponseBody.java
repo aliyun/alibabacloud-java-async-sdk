@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGeographicSubRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListGeographicSubRegionsResponseBody</p>
@@ -61,7 +62,10 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of entries.
+         * <p>The number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -69,7 +73,7 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The region list.
+         * <p>The region list.</p>
          */
         public Builder geographicSubRegions(java.util.List < String > geographicSubRegions) {
             this.geographicSubRegions = geographicSubRegions;
@@ -77,7 +81,10 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

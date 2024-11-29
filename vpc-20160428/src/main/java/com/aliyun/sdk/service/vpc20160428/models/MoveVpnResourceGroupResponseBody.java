@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveVpnResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>MoveVpnResourceGroupResponseBody</p>
@@ -37,7 +38,10 @@ public class MoveVpnResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89ED47AF-3319-566E-A5F5-94E3F47F54A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

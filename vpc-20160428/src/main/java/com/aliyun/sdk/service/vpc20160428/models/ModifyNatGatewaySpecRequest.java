@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNatGatewaySpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyNatGatewaySpecRequest</p>
@@ -168,11 +169,14 @@ public class ModifyNatGatewaySpecRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically complete the payment.
-         * <p>
+         * <p>Specifies whether to automatically complete the payment.</p>
+         * <ul>
+         * <li><strong>true</strong>: enables automatic payment. Payments are automatically completed.</li>
+         * <li><strong>false</strong> (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</li>
+         * </ul>
          * 
-         * *   **true**: enables automatic payment. Payments are automatically completed.
-         * *   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -181,10 +185,11 @@ public class ModifyNatGatewaySpecRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -193,7 +198,11 @@ public class ModifyNatGatewaySpecRequest extends Request {
         }
 
         /**
-         * The ID of the Internet NAT gateway that you want to upgrade.
+         * <p>The ID of the Internet NAT gateway that you want to upgrade.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1uewa15k4iy5770****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -220,10 +229,12 @@ public class ModifyNatGatewaySpecRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Internet NAT gateway is deployed.
-         * <p>
+         * <p>The ID of the region where the Internet NAT gateway is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -250,12 +261,16 @@ public class ModifyNatGatewaySpecRequest extends Request {
         }
 
         /**
-         * The size of the Internet NAT gateway. Valid values:
-         * <p>
+         * <p>The size of the Internet NAT gateway. Valid values:</p>
+         * <ul>
+         * <li><strong>Small</strong>: small</li>
+         * <li><strong>Middle</strong>: medium</li>
+         * <li><strong>Large</strong>: large</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Small**: small
-         * *   **Middle**: medium
-         * *   **Large**: large
+         * <strong>example:</strong>
+         * <p>Middle</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

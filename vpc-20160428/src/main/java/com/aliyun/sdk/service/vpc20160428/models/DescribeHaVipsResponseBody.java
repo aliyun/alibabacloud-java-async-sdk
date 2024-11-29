@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHaVipsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the HAVIP.
+         * <p>The details about the HAVIP.</p>
          */
         public Builder haVips(HaVips haVips) {
             this.haVips = haVips;
@@ -93,7 +94,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33E480C5-B46F-4CA5-B6FD-D77C746E86AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class AssociatedEipAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("associatedEipAddresse")
         private java.util.List < String > associatedEipAddresse;
@@ -171,6 +190,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class AssociatedInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("associatedInstance")
         private java.util.List < String > associatedInstance;
@@ -212,6 +237,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -251,7 +282,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N added to the resource.
+             * <p>The key of tag N added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -259,7 +293,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N added to the resource.
+             * <p>The value of tag N added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -273,6 +310,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -314,6 +357,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class HaVip extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedEipAddresses")
         private AssociatedEipAddresses associatedEipAddresses;
@@ -521,7 +570,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The list of EIPs associated with the HAVIP.
+             * <p>The list of EIPs associated with the HAVIP.</p>
              */
             public Builder associatedEipAddresses(AssociatedEipAddresses associatedEipAddresses) {
                 this.associatedEipAddresses = associatedEipAddresses;
@@ -529,11 +578,14 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance with which the HAVIP is associated. Valid values:
-             * <p>
+             * <p>The type of the instance with which the HAVIP is associated. Valid values:</p>
+             * <ul>
+             * <li><strong>EcsInstance</strong>: Elastic Compute Service (ECS) instance</li>
+             * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
+             * </ul>
              * 
-             * *   **EcsInstance**: Elastic Compute Service (ECS) instance
-             * *   **NetworkInterface**: elastic network interface (ENI)
+             * <strong>example:</strong>
+             * <p>EcsInstance</p>
              */
             public Builder associatedInstanceType(String associatedInstanceType) {
                 this.associatedInstanceType = associatedInstanceType;
@@ -541,7 +593,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the instance associated with the HAVIP.
+             * <p>The information about the instance associated with the HAVIP.</p>
              */
             public Builder associatedInstances(AssociatedInstances associatedInstances) {
                 this.associatedInstances = associatedInstances;
@@ -549,7 +601,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter is invalid. No value is returned.
+             * <p>The parameter is invalid. No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -557,7 +612,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the HAVIP was created.
+             * <p>The time when the HAVIP was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-03T14:25:26Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -565,7 +623,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the HAVIP.
+             * <p>The description of the HAVIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My HaVip</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -573,7 +634,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the HAVIP.
+             * <p>The ID of the HAVIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>havip-bp149uyvut73dpld****</p>
              */
             public Builder haVipId(String haVipId) {
                 this.haVipId = haVipId;
@@ -581,7 +645,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the HAVIP.
+             * <p>The private IP address of the HAVIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.24.5</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -589,7 +656,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the active instance that is associated with the HAVIP.
+             * <p>The ID of the active instance that is associated with the HAVIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp145q7glnuzdvz****</p>
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -597,7 +667,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the HAVIP.
+             * <p>The name of the HAVIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -605,7 +678,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the HAVIP belongs.
+             * <p>The ID of the region to which the HAVIP belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -613,7 +689,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the HAVIP belongs.
+             * <p>The ID of the resource group to which the HAVIP belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -621,12 +700,15 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the HAVIP. Valid values:
-             * <p>
+             * <p>The status of the HAVIP. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong>: The server group is being created.</li>
+             * <li><strong>Available</strong>: The FULLNAT entry is available.</li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**: The server group is being created.
-             * *   **Available**: The FULLNAT entry is available.
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -634,7 +716,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag list.
+             * <p>The tag list.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -642,7 +724,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which the HAVIP belongs.
+             * <p>The ID of the vSwitch to which the HAVIP belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1pkt1fba8e824ez****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -650,7 +735,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the HAVIP belongs.
+             * <p>The ID of the VPC to which the HAVIP belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1kcm36tevkpms97****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -664,6 +752,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class HaVips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HaVip")
         private java.util.List < HaVip> haVip;

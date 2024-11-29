@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVSwitchAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyVSwitchAttributeRequest</p>
@@ -194,10 +195,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         } 
 
         /**
-         * The new description for the vSwitch.
-         * <p>
+         * <p>The new description for the vSwitch.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>This is my vswitch.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -206,11 +208,14 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the IPv6 feature for the vSwitch. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the IPv6 feature for the vSwitch. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the IPv6 feature.</li>
+         * <li><strong>false</strong>: disables the IPv6 feature. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: enables the IPv6 feature.
-         * *   **false**: disables the IPv6 feature. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableIPv6(Boolean enableIPv6) {
             this.putQueryParameter("EnableIPv6", enableIPv6);
@@ -219,10 +224,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.
-         * <p>
+         * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.</p>
+         * <p>You can set this parameter only when the IPv6 feature is enabled for the virtual private cloud (VPC) to which the vSwitch belongs.</p>
          * 
-         * You can set this parameter only when the IPv6 feature is enabled for the virtual private cloud (VPC) to which the vSwitch belongs.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder ipv6CidrBlock(Integer ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -249,7 +255,10 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the vSwitch is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region where the vSwitch is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -276,7 +285,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-25nacdfvue4****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -285,10 +298,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The new name for the vSwitch.
-         * <p>
+         * <p>The new name for the vSwitch.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>VSwitch-1</p>
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
@@ -297,10 +311,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The IPv6 CIDR block of the VPC to which the vSwitch belongs.
-         * <p>
+         * <p>The IPv6 CIDR block of the VPC to which the vSwitch belongs.</p>
+         * <p>You can set this parameter only when the IPv6 feature is enabled for the VPC.</p>
          * 
-         * You can set this parameter only when the IPv6 feature is enabled for the VPC.
+         * <strong>example:</strong>
+         * <p>2408:XXXX:312:3e00::/56</p>
          */
         public Builder vpcIpv6CidrBlock(String vpcIpv6CidrBlock) {
             this.putQueryParameter("VpcIpv6CidrBlock", vpcIpv6CidrBlock);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpconnFromVbrResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVpconnFromVbrResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateVpconnFromVbrResponseBody extends TeaModel {
         private String virtualPhysicalConnection; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5356F028-0F5C-56FC-8574-897D24379041</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateVpconnFromVbrResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the hosted connection.
+         * <p>The ID of the hosted connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1mrgfbtmc9brre7****</p>
          */
         public Builder virtualPhysicalConnection(String virtualPhysicalConnection) {
             this.virtualPhysicalConnection = virtualPhysicalConnection;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrafficMirrorSessionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrafficMirrorSessionsResponseBody</p>
@@ -73,11 +74,14 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         private java.util.List < TrafficMirrorSessions> trafficMirrorSessions; 
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+         * </ul>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -85,7 +89,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>739CA01C-92EB-4C69-BCC0-280149C6F41E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -93,7 +100,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -101,7 +111,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the traffic mirror session.
+         * <p>The details about the traffic mirror session.</p>
          */
         public Builder trafficMirrorSessions(java.util.List < TrafficMirrorSessions> trafficMirrorSessions) {
             this.trafficMirrorSessions = trafficMirrorSessions;
@@ -114,6 +124,12 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTrafficMirrorSessionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrafficMirrorSessionsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -153,7 +169,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -161,7 +180,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -175,6 +197,12 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrafficMirrorSessionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrafficMirrorSessionsResponseBody</p>
+     */
     public static class TrafficMirrorSessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -382,7 +410,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             private Integer virtualNetworkId; 
 
             /**
-             * The time when the session is created.
+             * <p>The time when the session is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-05T15:26Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -390,11 +421,14 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the traffic mirror session was enabled.
-             * <p>
+             * <p>Indicates whether the traffic mirror session was enabled.</p>
+             * <ul>
+             * <li><strong>false</strong> </li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false** 
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -402,7 +436,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum transmission unit.
+             * <p>The maximum transmission unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder packetLength(Integer packetLength) {
                 this.packetLength = packetLength;
@@ -410,10 +447,11 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the traffic mirror session.
-             * <p>
+             * <p>The priority of the traffic mirror session.</p>
+             * <p>A smaller value indicates a higher priority.</p>
              * 
-             * A smaller value indicates a higher priority.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -421,7 +459,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the traffic mirror session belongs.
+             * <p>The ID of the resource group to which the traffic mirror session belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -429,7 +470,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag list.
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -437,7 +478,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the filter.
+             * <p>The ID of the filter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tmf-j6cmls82xnc86vtpe****</p>
              */
             public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
                 this.trafficMirrorFilterId = trafficMirrorFilterId;
@@ -445,11 +489,14 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the traffic mirror session.
-             * <p>
+             * <p>The status of the traffic mirror session.</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>FinancialLocked</strong></li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **FinancialLocked**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder trafficMirrorSessionBusinessStatus(String trafficMirrorSessionBusinessStatus) {
                 this.trafficMirrorSessionBusinessStatus = trafficMirrorSessionBusinessStatus;
@@ -457,7 +504,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the traffic mirror session.
+             * <p>The description of the traffic mirror session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a session.</p>
              */
             public Builder trafficMirrorSessionDescription(String trafficMirrorSessionDescription) {
                 this.trafficMirrorSessionDescription = trafficMirrorSessionDescription;
@@ -465,7 +515,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the traffic mirror session.
+             * <p>The ID of the traffic mirror session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tms-j6cla50buc44ap8tu****</p>
              */
             public Builder trafficMirrorSessionId(String trafficMirrorSessionId) {
                 this.trafficMirrorSessionId = trafficMirrorSessionId;
@@ -473,7 +526,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the traffic mirror session.
+             * <p>The name of the traffic mirror session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder trafficMirrorSessionName(String trafficMirrorSessionName) {
                 this.trafficMirrorSessionName = trafficMirrorSessionName;
@@ -481,13 +537,16 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the traffic mirror session. Valid values:
-             * <p>
+             * <p>The status of the traffic mirror session. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Modifying</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Created**
-             * *   **Modifying**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder trafficMirrorSessionStatus(String trafficMirrorSessionStatus) {
                 this.trafficMirrorSessionStatus = trafficMirrorSessionStatus;
@@ -495,7 +554,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the traffic mirror source.
+             * <p>The ID of the traffic mirror source.</p>
              */
             public Builder trafficMirrorSourceIds(java.util.List < String > trafficMirrorSourceIds) {
                 this.trafficMirrorSourceIds = trafficMirrorSourceIds;
@@ -503,7 +562,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the traffic mirror destination.
+             * <p>The ID of the traffic mirror destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-j6c2fp57q8rr47rp****</p>
              */
             public Builder trafficMirrorTargetId(String trafficMirrorTargetId) {
                 this.trafficMirrorTargetId = trafficMirrorTargetId;
@@ -511,11 +573,14 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the traffic mirror destination. Valid values:
-             * <p>
+             * <p>The type of the traffic mirror destination. Valid values:</p>
+             * <ul>
+             * <li><strong>NetworkInterface</strong>: an elastic network interface (ENI)</li>
+             * <li><strong>SLB</strong>: an internal-facing Server Load Balancer (SLB) instance</li>
+             * </ul>
              * 
-             * *   **NetworkInterface**: an elastic network interface (ENI)
-             * *   **SLB**: an internal-facing Server Load Balancer (SLB) instance
+             * <strong>example:</strong>
+             * <p>NetworkInterface</p>
              */
             public Builder trafficMirrorTargetType(String trafficMirrorTargetType) {
                 this.trafficMirrorTargetType = trafficMirrorTargetType;
@@ -523,7 +588,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * You can specify VNIs to distinguish different mirrored traffic.
+             * <p>You can specify VNIs to distinguish different mirrored traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder virtualNetworkId(Integer virtualNetworkId) {
                 this.virtualNetworkId = virtualNetworkId;

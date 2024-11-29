@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelCommonBandwidthPackageIpBandwidthRequest} extends {@link RequestModel}
  *
  * <p>CancelCommonBandwidthPackageIpBandwidthRequest</p>
@@ -140,7 +141,11 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
         } 
 
         /**
-         * The ID of the Internet Shared Bandwidth instance.
+         * <p>The ID of the Internet Shared Bandwidth instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-bp13d0m4e2qv8xxxxxxxx</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -149,7 +154,11 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the EIP that is associated with the Internet Shared Bandwidth instance.
+         * <p>The ID of the EIP that is associated with the Internet Shared Bandwidth instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-2zewysoansu0sxxxxxxxx</p>
          */
         public Builder eipId(String eipId) {
             this.putQueryParameter("EipId", eipId);
@@ -176,7 +185,11 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
         }
 
         /**
-         * The region ID of the Internet Shared Bandwidth instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region ID of the Internet Shared Bandwidth instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

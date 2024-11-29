@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySslVpnServerRequest} extends {@link RequestModel}
  *
  * <p>ModifySslVpnServerRequest</p>
@@ -293,13 +294,16 @@ public class ModifySslVpnServerRequest extends Request {
         } 
 
         /**
-         * The encryption algorithm that is used in the SSL-VPN connection. Valid values:
-         * <p>
+         * <p>The encryption algorithm that is used in the SSL-VPN connection. Valid values:</p>
+         * <ul>
+         * <li><strong>AES-128-CBC</strong> (default)</li>
+         * <li><strong>AES-192-CBC</strong></li>
+         * <li><strong>AES-256-CBC</strong></li>
+         * <li><strong>none</strong></li>
+         * </ul>
          * 
-         * *   **AES-128-CBC** (default)
-         * *   **AES-192-CBC**
-         * *   **AES-256-CBC**
-         * *   **none**
+         * <strong>example:</strong>
+         * <p>AES-128-CBC</p>
          */
         public Builder cipher(String cipher) {
             this.putQueryParameter("Cipher", cipher);
@@ -308,7 +312,10 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The client IP address pool.
+         * <p>The client IP address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.30.30.0/24</p>
          */
         public Builder clientIpPool(String clientIpPool) {
             this.putQueryParameter("ClientIpPool", clientIpPool);
@@ -317,12 +324,14 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> is different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** is different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -331,11 +340,14 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable data compression. Valid values:
-         * <p>
+         * <p>Specifies whether to enable data compression. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true** (default)
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder compress(Boolean compress) {
             this.putQueryParameter("Compress", compress);
@@ -344,14 +356,20 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must also specify an IDaaS instance ID. Valid values:
-         * <p>
+         * <p>Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must also specify an IDaaS instance ID. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Two-factor authentication supports only IDaaS instances of earlier versions. If you do not have and cannot create IDaaS instances of earlier versions, you cannot enable two-factor authentication.</li>
+         * <li>For existing SSL servers, if two-factor authentication is already enabled, you can continue to use two-factor authentication.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * > *   Two-factor authentication supports only IDaaS instances of earlier versions. If you do not have and cannot create IDaaS instances of earlier versions, you cannot enable two-factor authentication.
-         * > *   For existing SSL servers, if two-factor authentication is already enabled, you can continue to use two-factor authentication.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableMultiFactorAuth(Boolean enableMultiFactorAuth) {
             this.putQueryParameter("EnableMultiFactorAuth", enableMultiFactorAuth);
@@ -369,7 +387,10 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The ID of the Identity as a Service (IDaaS) instance.
+         * <p>The ID of the Identity as a Service (IDaaS) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas-cn-hangzhou-****</p>
          */
         public Builder iDaaSInstanceId(String iDaaSInstanceId) {
             this.putQueryParameter("IDaaSInstanceId", iDaaSInstanceId);
@@ -378,7 +399,10 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The ID of the region where the IDaaS instance is created.
+         * <p>The ID of the region where the IDaaS instance is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder iDaaSRegionId(String iDaaSRegionId) {
             this.putQueryParameter("IDaaSRegionId", iDaaSRegionId);
@@ -387,7 +411,10 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The CIDR block of the client.
+         * <p>The CIDR block of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.20.20.0/24</p>
          */
         public Builder localSubnet(String localSubnet) {
             this.putQueryParameter("LocalSubnet", localSubnet);
@@ -396,10 +423,11 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The name of the SSL server.
-         * <p>
+         * <p>The name of the SSL server.</p>
+         * <p>The name must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -426,10 +454,11 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The port that is used by the SSL server. Valid values of port numbers: **1** to **65535**. Default value: **1194**.
-         * <p>
+         * <p>The port that is used by the SSL server. Valid values of port numbers: <strong>1</strong> to <strong>65535</strong>. Default value: <strong>1194</strong>.</p>
+         * <p>The following ports are not supported: <strong>22</strong>, <strong>2222</strong>, <strong>22222</strong>, <strong>9000</strong>, <strong>9001</strong>, <strong>9002</strong>, <strong>7505</strong>, <strong>80</strong>, <strong>443</strong>, <strong>53</strong>, <strong>68</strong>, <strong>123</strong>, <strong>4510</strong>, <strong>4560</strong>, <strong>500</strong>, and <strong>4500</strong>.</p>
          * 
-         * The following ports are not supported: **22**, **2222**, **22222**, **9000**, **9001**, **9002**, **7505**, **80**, **443**, **53**, **68**, **123**, **4510**, **4560**, **500**, and **4500**.
+         * <strong>example:</strong>
+         * <p>1194</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -438,11 +467,14 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The protocol that is used by the SSL server. Valid values:
-         * <p>
+         * <p>The protocol that is used by the SSL server. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong> (default)</li>
+         * <li><strong>UDP</strong></li>
+         * </ul>
          * 
-         * *   **TCP** (default)
-         * *   **UDP**
+         * <strong>example:</strong>
+         * <p>UDP</p>
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -451,10 +483,12 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The region ID of the VPN gateway.
-         * <p>
+         * <p>The region ID of the VPN gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -481,7 +515,11 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The ID of the SSL server.
+         * <p>The ID of the SSL server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vss-bp18q7hzj6largv4v****</p>
          */
         public Builder sslVpnServerId(String sslVpnServerId) {
             this.putQueryParameter("SslVpnServerId", sslVpnServerId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagsResponseBody</p>
@@ -61,11 +62,14 @@ public class DescribeTagsResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+         * </ul>
          * 
-         * *   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.
-         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -73,7 +77,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C46FF5A8-C5F0-4024-8262-B16B639225A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +88,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of tags that meet the filter conditions.
+         * <p>The list of tags that meet the filter conditions.</p>
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -94,6 +101,12 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class TagResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -133,7 +146,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -141,7 +157,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -155,6 +174,12 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagResource")
         private java.util.List < TagResource> tagResource;

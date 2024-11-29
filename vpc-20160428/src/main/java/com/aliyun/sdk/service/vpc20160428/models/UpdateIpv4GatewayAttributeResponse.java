@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIpv4GatewayAttributeResponse} extends {@link TeaModel}
  *
  * <p>UpdateIpv4GatewayAttributeResponse</p>

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpv6AddressesRequest} extends {@link RequestModel}
  *
  * <p>DescribeIpv6AddressesRequest</p>
@@ -344,7 +345,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The ID of the instance that is assigned the IPv6 address.
+         * <p>The ID of the instance that is assigned the IPv6 address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze72wuqj4y3jl4f****</p>
          */
         public Builder associatedInstanceId(String associatedInstanceId) {
             this.putQueryParameter("AssociatedInstanceId", associatedInstanceId);
@@ -353,11 +357,14 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The type of instance associated with the IPv6 address. Valid values:
-         * <p>
+         * <p>The type of instance associated with the IPv6 address. Valid values:</p>
+         * <ul>
+         * <li><strong>EcsInstance</strong>: Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)</li>
+         * <li><strong>NetworkInterface</strong>: secondary elastic network interface (ENI)</li>
+         * </ul>
          * 
-         * *   **EcsInstance**: Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)
-         * *   **NetworkInterface**: secondary elastic network interface (ENI)
+         * <strong>example:</strong>
+         * <p>EcsInstance</p>
          */
         public Builder associatedInstanceType(String associatedInstanceType) {
             this.putQueryParameter("AssociatedInstanceType", associatedInstanceType);
@@ -366,11 +373,14 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return information about pending orders. Valid values:
-         * <p>
+         * <p>Specifies whether to return information about pending orders. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false** (default)
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -379,7 +389,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The IPv6 address that you want to query.
+         * <p>The IPv6 address that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:153:3921:851c:c435:7b12:1c5f</p>
          */
         public Builder ipv6Address(String ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -388,7 +401,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 address that you want to query. You can enter at most 20 IPv6 address IDs in each API request. Separate IPv6 address IDs with commas (,).
+         * <p>The ID of the IPv6 address that you want to query. You can enter at most 20 IPv6 address IDs in each API request. Separate IPv6 address IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6-2zen5j4axcp5l5qyy****</p>
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.putQueryParameter("Ipv6AddressId", ipv6AddressId);
@@ -397,7 +413,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The ID of the Internet bandwidth that you purchased for the IPv6 address.
+         * <p>The ID of the Internet bandwidth that you purchased for the IPv6 address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6bw-uf6hcyzu65v98v3du****</p>
          */
         public Builder ipv6InternetBandwidthId(String ipv6InternetBandwidthId) {
             this.putQueryParameter("Ipv6InternetBandwidthId", ipv6InternetBandwidthId);
@@ -406,10 +425,11 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The name of the IPv6 address that you want to query.
-         * <p>
+         * <p>The name of the IPv6 address that you want to query.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -418,11 +438,14 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The type of communication supported by the IPv6 address. Valid values:
-         * <p>
+         * <p>The type of communication supported by the IPv6 address. Valid values:</p>
+         * <ul>
+         * <li><strong>Private</strong></li>
+         * <li><strong>Public</strong></li>
+         * </ul>
          * 
-         * *   **Private**
-         * *   **Public**
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -449,7 +472,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -458,7 +484,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries to return per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -467,7 +496,11 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you want to query IPv6 addresses. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region in which you want to query IPv6 addresses. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -476,7 +509,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the IPv6 gateway belongs.
+         * <p>The ID of the resource group to which the IPv6 gateway belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -503,13 +539,15 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * Indicates whether the instance is managed. Valid values:
-         * <p>
+         * <p>Indicates whether the instance is managed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>If you do not specify this parameter, all instances are queried.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * If you do not specify this parameter, all instances are queried.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.putQueryParameter("ServiceManaged", serviceManaged);
@@ -518,7 +556,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The tag list.
+         * <p>The tag list.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -527,7 +565,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the IPv6 address belongs.
+         * <p>The ID of the vSwitch to which the IPv6 address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-25navfgbue4g****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -536,7 +577,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the IPv6 address belongs.
+         * <p>The ID of the VPC to which the IPv6 address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72zv****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -551,6 +595,12 @@ public class DescribeIpv6AddressesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpv6AddressesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6AddressesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -590,10 +640,11 @@ public class DescribeIpv6AddressesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -601,12 +652,12 @@ public class DescribeIpv6AddressesRequest extends Request {
             }
 
             /**
-             * The value of tag N.
-             * <p>
+             * <p>The value of tag N.</p>
+             * <p>The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.</p>
              * 
-             * The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with aliyun or acs:, and cannot contain http:// or https://.
-             * 
-             * Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.
+             * <strong>example:</strong>
+             * <p>yunke</p>
              */
             public Builder value(String value) {
                 this.value = value;

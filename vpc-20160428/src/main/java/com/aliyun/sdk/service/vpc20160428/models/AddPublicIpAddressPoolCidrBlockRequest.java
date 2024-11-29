@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPublicIpAddressPoolCidrBlockRequest} extends {@link RequestModel}
  *
  * <p>AddPublicIpAddressPoolCidrBlockRequest</p>
@@ -181,10 +182,13 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         } 
 
         /**
-         * The CIDR block.
-         * <p>
+         * <p>The CIDR block.</p>
+         * <blockquote>
+         * <p> You can specify only one of <strong>CidrBlock</strong> and <strong>CidrMask</strong>.</p>
+         * </blockquote>
          * 
-         * >  You can specify only one of **CidrBlock** and **CidrMask**.
+         * <strong>example:</strong>
+         * <p>47.0.XX.XX/24</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -193,12 +197,14 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         }
 
         /**
-         * The subnet mask of the CIDR block. After you enter the subnet mask, the system automatically allocates IP addresses.
-         * <p>
+         * <p>The subnet mask of the CIDR block. After you enter the subnet mask, the system automatically allocates IP addresses.</p>
+         * <p>Valid values: <strong>24</strong> to <strong>28</strong>.</p>
+         * <blockquote>
+         * <p> You can specify only one of <strong>CidrBlock</strong> and <strong>CidrMask</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **24** to **28**.
-         * 
-         * >  You can specify only one of **CidrBlock** and **CidrMask**.
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder cidrMask(Integer cidrMask) {
             this.putQueryParameter("CidrMask", cidrMask);
@@ -207,12 +213,14 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -221,11 +229,14 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -252,7 +263,11 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         }
 
         /**
-         * The ID of the IP address pool.
+         * <p>The ID of the IP address pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pippool-6wetvn6fumkgycssx****</p>
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);
@@ -261,7 +276,11 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends Request {
         }
 
         /**
-         * The region ID of the IP address pool to which you want to add the CIDR block.
+         * <p>The region ID of the IP address pool to which you want to add the CIDR block.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPublicIpAddressPoolCidrBlockResponseBody} extends {@link TeaModel}
  *
  * <p>AddPublicIpAddressPoolCidrBlockResponseBody</p>
@@ -49,7 +50,10 @@ public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The CIDR block.
+         * <p>The CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.0.XX.XX/28</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
@@ -57,7 +61,10 @@ public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

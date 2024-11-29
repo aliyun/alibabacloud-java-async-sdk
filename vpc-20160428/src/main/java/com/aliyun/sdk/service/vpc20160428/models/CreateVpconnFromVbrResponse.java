@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpconnFromVbrResponse} extends {@link TeaModel}
  *
  * <p>CreateVpconnFromVbrResponse</p>

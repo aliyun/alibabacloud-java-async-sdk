@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVcoRouteEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVcoRouteEntriesResponseBody</p>
@@ -26,12 +27,16 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("VcoRouteEntries")
     private java.util.List < VcoRouteEntries> vcoRouteEntries;
 
+    @com.aliyun.core.annotation.NameInMap("VpnRouteCounts")
+    private java.util.List < VpnRouteCounts> vpnRouteCounts;
+
     private DescribeVcoRouteEntriesResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
         this.vcoRouteEntries = builder.vcoRouteEntries;
+        this.vpnRouteCounts = builder.vpnRouteCounts;
     }
 
     public static Builder builder() {
@@ -77,15 +82,26 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         return this.vcoRouteEntries;
     }
 
+    /**
+     * @return vpnRouteCounts
+     */
+    public java.util.List < VpnRouteCounts> getVpnRouteCounts() {
+        return this.vpnRouteCounts;
+    }
+
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
         private java.util.List < VcoRouteEntries> vcoRouteEntries; 
+        private java.util.List < VpnRouteCounts> vpnRouteCounts; 
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +109,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +120,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E18980E8-C8C2-31BD-8156-AE2BBDEC87E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +131,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,10 +142,18 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of routes.
+         * <p>The list of routes.</p>
          */
         public Builder vcoRouteEntries(java.util.List < VcoRouteEntries> vcoRouteEntries) {
             this.vcoRouteEntries = vcoRouteEntries;
+            return this;
+        }
+
+        /**
+         * VpnRouteCounts.
+         */
+        public Builder vpnRouteCounts(java.util.List < VpnRouteCounts> vpnRouteCounts) {
+            this.vpnRouteCounts = vpnRouteCounts;
             return this;
         }
 
@@ -130,6 +163,12 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVcoRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVcoRouteEntriesResponseBody</p>
+     */
     public static class VcoRouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsPath")
         private String asPath;
@@ -142,6 +181,9 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NextHop")
         private String nextHop;
+
+        @com.aliyun.core.annotation.NameInMap("NextHopTunnelIdList")
+        private java.util.List < String > nextHopTunnelIdList;
 
         @com.aliyun.core.annotation.NameInMap("RouteDest")
         private String routeDest;
@@ -166,6 +208,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             this.community = builder.community;
             this.createTime = builder.createTime;
             this.nextHop = builder.nextHop;
+            this.nextHopTunnelIdList = builder.nextHopTunnelIdList;
             this.routeDest = builder.routeDest;
             this.routeEntryType = builder.routeEntryType;
             this.source = builder.source;
@@ -208,6 +251,13 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
          */
         public String getNextHop() {
             return this.nextHop;
+        }
+
+        /**
+         * @return nextHopTunnelIdList
+         */
+        public java.util.List < String > getNextHopTunnelIdList() {
+            return this.nextHopTunnelIdList;
         }
 
         /**
@@ -257,6 +307,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             private String community; 
             private Long createTime; 
             private String nextHop; 
+            private java.util.List < String > nextHopTunnelIdList; 
             private String routeDest; 
             private String routeEntryType; 
             private String source; 
@@ -265,7 +316,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The list of autonomous system (AS) numbers that the BGP route goes through.
+             * <p>The list of autonomous system (AS) numbers that the BGP route goes through.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[12000]</p>
              */
             public Builder asPath(String asPath) {
                 this.asPath = asPath;
@@ -273,7 +327,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The community value carried by the BGP route.
+             * <p>The community value carried by the BGP route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65535:65510</p>
              */
             public Builder community(String community) {
                 this.community = community;
@@ -281,10 +338,11 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the route was created.
-             * <p>
+             * <p>The timestamp when the route was created.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1658217008000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -292,7 +350,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The next hop of the route.
+             * <p>The next hop of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vco-p0w2jpkhi2eeop6q6****</p>
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -300,7 +361,18 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR block of the route.
+             * NextHopTunnelIdList.
+             */
+            public Builder nextHopTunnelIdList(java.util.List < String > nextHopTunnelIdList) {
+                this.nextHopTunnelIdList = nextHopTunnelIdList;
+                return this;
+            }
+
+            /**
+             * <p>The destination CIDR block of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.0/24</p>
              */
             public Builder routeDest(String routeDest) {
                 this.routeDest = routeDest;
@@ -308,11 +380,14 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The route type. Valid values:
-             * <p>
+             * <p>The route type. Valid values:</p>
+             * <ul>
+             * <li><strong>custom</strong>: a destination-based route</li>
+             * <li><strong>bgp</strong>: a BGP route</li>
+             * </ul>
              * 
-             * *   **custom**: a destination-based route
-             * *   **bgp**: a BGP route
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder routeEntryType(String routeEntryType) {
                 this.routeEntryType = routeEntryType;
@@ -320,11 +395,14 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the BGP route. Valid values:
-             * <p>
+             * <p>The source of the BGP route. Valid values:</p>
+             * <ul>
+             * <li><strong>CLOUD</strong>: indicates that the current BGP route is learned by the IPsec-VPN connection from the transit router.</li>
+             * <li><strong>VPN_BGP</strong>: indicates that the current BGP route is learned by the IPsec-VPN connection from the data center.</li>
+             * </ul>
              * 
-             * *   **CLOUD**: indicates that the current BGP route is learned by the IPsec-VPN connection from the transit router.
-             * *   **VPN_BGP**: indicates that the current BGP route is learned by the IPsec-VPN connection from the data center.
+             * <strong>example:</strong>
+             * <p>CLOUD</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -332,11 +410,14 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route.
-             * <p>
+             * <p>The status of the route.</p>
+             * <ul>
+             * <li><strong>published</strong>: indicates that the current route is advertised to the transit router.</li>
+             * <li><strong>Active</strong>: indicates that the current BGP route is available.</li>
+             * </ul>
              * 
-             * *   **published**: indicates that the current route is advertised to the transit router.
-             * *   **Active**: indicates that the current BGP route is available.
+             * <strong>example:</strong>
+             * <p>published</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -344,7 +425,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IPsec-VPN connection.
+             * <p>The ID of the IPsec-VPN connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vco-p0w2jpkhi2eeop6q6****</p>
              */
             public Builder vpnConnectionId(String vpnConnectionId) {
                 this.vpnConnectionId = vpnConnectionId;
@@ -352,11 +436,14 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the destination-based route. Valid values:
-             * <p>
+             * <p>The weight of the destination-based route. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: a low priority</li>
+             * <li><strong>100</strong>: a high priority</li>
+             * </ul>
              * 
-             * *   **0**: a low priority
-             * *   **100**: a high priority
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -365,6 +452,107 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
 
             public VcoRouteEntries build() {
                 return new VcoRouteEntries(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeVcoRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVcoRouteEntriesResponseBody</p>
+     */
+    public static class VpnRouteCounts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RouteCount")
+        private Integer routeCount;
+
+        @com.aliyun.core.annotation.NameInMap("RouteEntryType")
+        private String routeEntryType;
+
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
+        private VpnRouteCounts(Builder builder) {
+            this.routeCount = builder.routeCount;
+            this.routeEntryType = builder.routeEntryType;
+            this.source = builder.source;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpnRouteCounts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return routeCount
+         */
+        public Integer getRouteCount() {
+            return this.routeCount;
+        }
+
+        /**
+         * @return routeEntryType
+         */
+        public String getRouteEntryType() {
+            return this.routeEntryType;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        public static final class Builder {
+            private Integer routeCount; 
+            private String routeEntryType; 
+            private String source; 
+
+            /**
+             * RouteCount.
+             */
+            public Builder routeCount(Integer routeCount) {
+                this.routeCount = routeCount;
+                return this;
+            }
+
+            /**
+             * <p>The route type. Valid values:</p>
+             * <ul>
+             * <li><strong>custom</strong>: a destination-based route</li>
+             * <li><strong>bgp</strong>: a BGP route</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
+             */
+            public Builder routeEntryType(String routeEntryType) {
+                this.routeEntryType = routeEntryType;
+                return this;
+            }
+
+            /**
+             * <p>The source of the BGP route. Valid values:</p>
+             * <ul>
+             * <li><strong>CLOUD</strong>: indicates that the current BGP route is learned by the IPsec-VPN connection from the transit router.</li>
+             * <li><strong>VPN_BGP</strong>: indicates that the current BGP route is learned by the IPsec-VPN connection from the data center.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUD</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            public VpnRouteCounts build() {
+                return new VpnRouteCounts(this);
             } 
 
         } 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIPv6TranslatorAclListEntryRequest} extends {@link RequestModel}
  *
  * <p>ModifyIPv6TranslatorAclListEntryRequest</p>
@@ -155,10 +156,12 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         } 
 
         /**
-         * The remarks of the ACL rule.
-         * <p>
+         * <p>The remarks of the ACL rule.</p>
+         * <p>It must be 2 to 100 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * It must be 2 to 100 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>client IP</p>
          */
         public Builder aclEntryComment(String aclEntryComment) {
             this.putQueryParameter("AclEntryComment", aclEntryComment);
@@ -167,7 +170,11 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * The ID of the ACL rule to which the IP entry belongs.
+         * <p>The ID of the ACL rule to which the IP entry belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transaclentry-bp1jzyn7ra8pyxehd****</p>
          */
         public Builder aclEntryId(String aclEntryId) {
             this.putQueryParameter("AclEntryId", aclEntryId);
@@ -176,7 +183,11 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * The ID of the ACL to which the IP entry belongs.
+         * <p>The ID of the ACL to which the IP entry belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transacl-bp1b4z3tleyhq1s50****</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -203,7 +214,11 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * The region of the ACL.
+         * <p>The region of the ACL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

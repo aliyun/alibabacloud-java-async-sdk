@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpnPbrRouteEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpnPbrRouteEntriesResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         private VpnPbrRouteEntries vpnPbrRouteEntries; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +130,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of policy-based routes.
+         * <p>The list of policy-based routes.</p>
          */
         public Builder vpnPbrRouteEntries(VpnPbrRouteEntries vpnPbrRouteEntries) {
             this.vpnPbrRouteEntries = vpnPbrRouteEntries;
@@ -130,6 +143,12 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpnPbrRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpnPbrRouteEntriesResponseBody</p>
+     */
     public static class VpnPbrRouteEntry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -253,10 +272,11 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The time when the policy-based route was created. Unit: millisecond.
-             * <p>
+             * <p>The time when the policy-based route was created. Unit: millisecond.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1492747187000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -264,7 +284,10 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The next hop of the policy-based route.
+             * <p>The next hop of the policy-based route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vco-bp15oes1py4i66rmd****</p>
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -272,10 +295,11 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tunnel associated with the next hop of the policy-based route.
-             * <p>
+             * <p>The ID of the tunnel associated with the next hop of the policy-based route.</p>
+             * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.</p>
              * 
-             * This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.
+             * <strong>example:</strong>
+             * <p>tun-opsqc4d97wni2****</p>
              */
             public Builder nextHopTunnelId(String nextHopTunnelId) {
                 this.nextHopTunnelId = nextHopTunnelId;
@@ -283,10 +307,11 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the policy-based route.
-             * <p>
+             * <p>The priority of the policy-based route.</p>
+             * <p>A smaller value indicates a higher priority.</p>
              * 
-             * A smaller value indicates a higher priority.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -294,7 +319,10 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR block of the policy-based route.
+             * <p>The destination CIDR block of the policy-based route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder routeDest(String routeDest) {
                 this.routeDest = routeDest;
@@ -302,7 +330,10 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The source CIDR block of the policy-based route.
+             * <p>The source CIDR block of the policy-based route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/24</p>
              */
             public Builder routeSource(String routeSource) {
                 this.routeSource = routeSource;
@@ -310,11 +341,14 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the policy-based route. Valid values:
-             * <p>
+             * <p>The status of the policy-based route. Valid values:</p>
+             * <ul>
+             * <li><strong>published</strong>: advertised to the VPC route table.</li>
+             * <li><strong>normal</strong>: not advertised to the VPC route table.</li>
+             * </ul>
              * 
-             * *   **published**: advertised to the VPC route table.
-             * *   **normal**: not advertised to the VPC route table.
+             * <strong>example:</strong>
+             * <p>published</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -322,7 +356,10 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPN gateway.
+             * <p>The ID of the VPN gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpn-bp1a3kqjiiq9legfx****</p>
              */
             public Builder vpnInstanceId(String vpnInstanceId) {
                 this.vpnInstanceId = vpnInstanceId;
@@ -330,15 +367,18 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the policy-based route.
-             * <p>
+             * <p>The weight of the policy-based route.</p>
+             * <p>For a VPN gateway that supports IPsec-VPN connections in single-tunnel mode, the weight of a policy-based route indicates the priority of the route.</p>
+             * <ul>
+             * <li><strong>100</strong>: a high priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.</li>
+             * <li><strong>0</strong>: a low priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.</li>
+             * </ul>
+             * <blockquote>
+             * <p> For a VPN gateway that does not support IPsec-VPN connections in single-tunnel mode, this parameter does not take effect.</p>
+             * </blockquote>
              * 
-             * For a VPN gateway that supports IPsec-VPN connections in single-tunnel mode, the weight of a policy-based route indicates the priority of the route.
-             * 
-             * *   **100**: a high priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.
-             * *   **0**: a low priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.
-             * 
-             * >  For a VPN gateway that does not support IPsec-VPN connections in single-tunnel mode, this parameter does not take effect.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -352,6 +392,12 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpnPbrRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpnPbrRouteEntriesResponseBody</p>
+     */
     public static class VpnPbrRouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpnPbrRouteEntry")
         private java.util.List < VpnPbrRouteEntry> vpnPbrRouteEntry;

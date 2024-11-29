@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIpv6GatewayRequest} extends {@link RequestModel}
  *
  * <p>DeleteIpv6GatewayRequest</p>
@@ -171,7 +172,11 @@ public class DeleteIpv6GatewayRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 gateway that you want to delete.
+         * <p>The ID of the IPv6 gateway that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6gw-hp3y0l3ln89j8****</p>
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -198,7 +203,11 @@ public class DeleteIpv6GatewayRequest extends Request {
         }
 
         /**
-         * The region ID of the IPv6 gateway. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region ID of the IPv6 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesForExpressConnectResponseBody} extends {@link TeaModel}
  *
  * <p>UntagResourcesForExpressConnectResponseBody</p>
@@ -37,7 +38,10 @@ public class UntagResourcesForExpressConnectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE65F6B7-7566-4802-9007-96F2494AC512</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

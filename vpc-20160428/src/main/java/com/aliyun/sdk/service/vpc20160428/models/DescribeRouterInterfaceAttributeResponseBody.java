@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouterInterfaceAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRouterInterfaceAttributeResponseBody</p>
@@ -577,7 +578,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         private String vpcInstanceId; 
 
         /**
-         * The ID of the access point.
+         * <p>The ID of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-cn-qingdao-ls-A</p>
          */
         public Builder accessPointId(String accessPointId) {
             this.accessPointId = accessPointId;
@@ -585,7 +589,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The bandwidth of the router interface. Unit: Mbit/s.
+         * <p>The bandwidth of the router interface. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -593,12 +600,15 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the router interface. Valid values:
-         * <p>
+         * <p>The status of the router interface. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * <li><strong>SecurityLocked</strong></li>
+         * </ul>
          * 
-         * *   **Normal**
-         * *   **FinancialLocked**
-         * *   **SecurityLocked**
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder businessStatus(String businessStatus) {
             this.businessStatus = businessStatus;
@@ -606,11 +616,14 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>AfterPay</strong>: pay-as-you-go</li>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * </ul>
          * 
-         * *   **AfterPay**: pay-as-you-go
-         * *   **PrePaid**: subscription
+         * <strong>example:</strong>
+         * <p>AfterPay</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -618,7 +631,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -626,7 +642,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the connection was established.
+         * <p>The time when the connection was established.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-14T08:58:04Z</p>
          */
         public Builder connectedTime(String connectedTime) {
             this.connectedTime = connectedTime;
@@ -634,7 +653,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the router interface was created.
+         * <p>The time when the router interface was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-14T08:57:24Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -642,11 +664,14 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the connection is a cross-border connection. Valid values:
-         * <p>
+         * <p>Indicates whether the connection is a cross-border connection. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false**
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder crossBorder(Boolean crossBorder) {
             this.crossBorder = crossBorder;
@@ -654,7 +679,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the router interface.
+         * <p>The description of the router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Peer interface.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -662,7 +690,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2999-09-08T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -670,17 +701,22 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:
-         * <p>
+         * <p>Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter takes effect only when <strong>RouterType</strong> is set to <strong>VBR</strong> and <strong>OppositeRouterType</strong> is set to <strong>VRouter</strong>.</p>
+         * </li>
+         * <li><p>When <strong>FastLinkMode</strong> is set to <strong>true</strong>, <strong>Role</strong> must be set to <strong>InitiatingSide</strong>. <strong>AccessPointId</strong>, <strong>OppositeRouterType</strong>, <strong>OpppsiteRouterId</strong>, and <strong>OppositeInterfaceOwnerId</strong> are required.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
-         * 
-         * > 
-         * 
-         * *   This parameter takes effect only when **RouterType** is set to **VBR** and **OppositeRouterType** is set to **VRouter**.
-         * 
-         * *   When **FastLinkMode** is set to **true**, **Role** must be set to **InitiatingSide**. **AccessPointId**, **OppositeRouterType**, **OpppsiteRouterId**, and **OppositeInterfaceOwnerId** are required.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fastLinkMode(String fastLinkMode) {
             this.fastLinkMode = fastLinkMode;
@@ -688,7 +724,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the router interface was modified.
+         * <p>The time when the router interface was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-28T10:02:12Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -696,11 +735,14 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether renewal data is included. Valid values:
-         * <p>
+         * <p>Indicates whether renewal data is included. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false**
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hasReservationData(String hasReservationData) {
             this.hasReservationData = hasReservationData;
@@ -708,7 +750,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The rate of health checks. Unit: seconds. The value indicates the interval at which probe packets are sent during a health check.
+         * <p>The rate of health checks. Unit: seconds. The value indicates the interval at which probe packets are sent during a health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder hcRate(Integer hcRate) {
             this.hcRate = hcRate;
@@ -716,7 +761,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The healthy threshold. This value indicates the number of probe packets that are sent during a health check. Unit: packets.
+         * <p>The healthy threshold. This value indicates the number of probe packets that are sent during a health check. Unit: packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder hcThreshold(Integer hcThreshold) {
             this.hcThreshold = hcThreshold;
@@ -724,7 +772,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The source IP address that is used for the health check.
+         * <p>The source IP address that is used for the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         public Builder healthCheckSourceIp(String healthCheckSourceIp) {
             this.healthCheckSourceIp = healthCheckSourceIp;
@@ -732,13 +783,16 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the health check. Valid values:
-         * <p>
+         * <p>The status of the health check. Valid values:</p>
+         * <ul>
+         * <li><strong>Abnormal</strong></li>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>NoRedundantRoute</strong></li>
+         * <li><strong>NoHealthCheckConfig</strong></li>
+         * </ul>
          * 
-         * *   **Abnormal**
-         * *   **Normal**
-         * *   **NoRedundantRoute**
-         * *   **NoHealthCheckConfig**
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder healthCheckStatus(String healthCheckStatus) {
             this.healthCheckStatus = healthCheckStatus;
@@ -746,7 +800,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The destination IP address that is used for the health check.
+         * <p>The destination IP address that is used for the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.2.XX.XX</p>
          */
         public Builder healthCheckTargetIp(String healthCheckTargetIp) {
             this.healthCheckTargetIp = healthCheckTargetIp;
@@ -754,7 +811,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -762,7 +822,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the router interface.
+         * <p>The name of the router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RouterInterface1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -770,7 +833,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the peer access point.
+         * <p>The ID of the peer access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-cn-qingdao-ls-B</p>
          */
         public Builder oppositeAccessPointId(String oppositeAccessPointId) {
             this.oppositeAccessPointId = oppositeAccessPointId;
@@ -778,7 +844,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum bandwidth of the peer router interface. Unit: Mbit/s.
+         * <p>The maximum bandwidth of the peer router interface. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder oppositeBandwidth(Integer oppositeBandwidth) {
             this.oppositeBandwidth = oppositeBandwidth;
@@ -786,12 +855,15 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The service status of the peer router interface. Valid values:
-         * <p>
+         * <p>The service status of the peer router interface. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * <li><strong>SecurityLocked</strong></li>
+         * </ul>
          * 
-         * *   **Normal**
-         * *   **FinancialLocked**
-         * *   **SecurityLocked**
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder oppositeInterfaceBusinessStatus(String oppositeInterfaceBusinessStatus) {
             this.oppositeInterfaceBusinessStatus = oppositeInterfaceBusinessStatus;
@@ -799,7 +871,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the peer router interface.
+         * <p>The ID of the peer router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-bp1xkrzttximaoxbl****</p>
          */
         public Builder oppositeInterfaceId(String oppositeInterfaceId) {
             this.oppositeInterfaceId = oppositeInterfaceId;
@@ -807,7 +882,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the peer router interface belongs.
+         * <p>The ID of the Alibaba Cloud account to which the peer router interface belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1321932713****</p>
          */
         public Builder oppositeInterfaceOwnerId(String oppositeInterfaceOwnerId) {
             this.oppositeInterfaceOwnerId = oppositeInterfaceOwnerId;
@@ -815,22 +893,25 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The specification of the peer router interface. Valid values:
-         * <p>
+         * <p>The specification of the peer router interface. Valid values:</p>
+         * <ul>
+         * <li><strong>Mini.2</strong>: 2 Mbit/s</li>
+         * <li><strong>Mini.5</strong>: 5 Mbit/s</li>
+         * <li><strong>Small.1</strong>: 10 Mbit/s</li>
+         * <li><strong>Small.2</strong>: 20 Mbit/s</li>
+         * <li><strong>Small.5</strong>: 50 Mbit/s</li>
+         * <li><strong>Middle.1</strong>: 100 Mbit/s</li>
+         * <li><strong>Middle.2</strong>: 200 Mbit/s</li>
+         * <li><strong>Middle.5</strong>: 500 Mbit/s</li>
+         * <li><strong>Large.1</strong>: 1,000 Mbit/s</li>
+         * <li><strong>Large.2</strong>: 2,000 Mbit/s</li>
+         * <li><strong>Large.5</strong>: 5,000 Mbit/s</li>
+         * <li><strong>Xlarge.1</strong>: 10,000 Mbit/s</li>
+         * <li><strong>Negative</strong>: not applicable</li>
+         * </ul>
          * 
-         * *   **Mini.2**: 2 Mbit/s
-         * *   **Mini.5**: 5 Mbit/s
-         * *   **Small.1**: 10 Mbit/s
-         * *   **Small.2**: 20 Mbit/s
-         * *   **Small.5**: 50 Mbit/s
-         * *   **Middle.1**: 100 Mbit/s
-         * *   **Middle.2**: 200 Mbit/s
-         * *   **Middle.5**: 500 Mbit/s
-         * *   **Large.1**: 1,000 Mbit/s
-         * *   **Large.2**: 2,000 Mbit/s
-         * *   **Large.5**: 5,000 Mbit/s
-         * *   **Xlarge.1**: 10,000 Mbit/s
-         * *   **Negative**: not applicable
+         * <strong>example:</strong>
+         * <p>Negative</p>
          */
         public Builder oppositeInterfaceSpec(String oppositeInterfaceSpec) {
             this.oppositeInterfaceSpec = oppositeInterfaceSpec;
@@ -838,19 +919,22 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the peer router interface. Valid values:
-         * <p>
+         * <p>The status of the peer router interface. Valid values:</p>
+         * <ul>
+         * <li><strong>Idle</strong></li>
+         * <li><strong>AcceptingConnecting</strong></li>
+         * <li><strong>Connecting</strong></li>
+         * <li><strong>Activating</strong></li>
+         * <li><strong>Active</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * <li><strong>Deactivating</strong></li>
+         * <li><strong>Inactive</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
          * 
-         * *   **Idle**
-         * *   **AcceptingConnecting**
-         * *   **Connecting**
-         * *   **Activating**
-         * *   **Active**
-         * *   **Modifying**
-         * *   **Deactivating**
-         * *   **Inactive**
-         * *   **Deleting**
-         * *   **Deleted**
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder oppositeInterfaceStatus(String oppositeInterfaceStatus) {
             this.oppositeInterfaceStatus = oppositeInterfaceStatus;
@@ -858,7 +942,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the peer router interface.
+         * <p>The region ID of the peer router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder oppositeRegionId(String oppositeRegionId) {
             this.oppositeRegionId = oppositeRegionId;
@@ -866,7 +953,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the router to which the peer router interface belongs.
+         * <p>The ID of the router to which the peer router interface belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp11xvy6lb9photuu****</p>
          */
         public Builder oppositeRouterId(String oppositeRouterId) {
             this.oppositeRouterId = oppositeRouterId;
@@ -874,11 +964,14 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the router to which the peer router interface belongs. Valid values:
-         * <p>
+         * <p>The type of the router to which the peer router interface belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>VRouter</strong></li>
+         * <li><strong>VBR</strong></li>
+         * </ul>
          * 
-         * *   **VRouter**
-         * *   **VBR**
+         * <strong>example:</strong>
+         * <p>VRouter</p>
          */
         public Builder oppositeRouterType(String oppositeRouterType) {
             this.oppositeRouterType = oppositeRouterType;
@@ -886,7 +979,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the peer VPC.
+         * <p>The ID of the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1b49rqrybk45nio****</p>
          */
         public Builder oppositeVpcInstanceId(String oppositeVpcInstanceId) {
             this.oppositeVpcInstanceId = oppositeVpcInstanceId;
@@ -894,7 +990,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01818199-04F6-47F4-9ADF-7CC824CF57A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -902,7 +1001,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the renewal takes effect.
+         * <p>The time when the renewal takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-11T16:00:00Z</p>
          */
         public Builder reservationActiveTime(String reservationActiveTime) {
             this.reservationActiveTime = reservationActiveTime;
@@ -910,7 +1012,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.
+         * <p>The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder reservationBandwidth(String reservationBandwidth) {
             this.reservationBandwidth = reservationBandwidth;
@@ -918,7 +1023,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The metering method that is used after the renewal takes effect. Valid values: If **PayByBandwidth** is returned, it indicates that the Express Connect circuit is billed on a pay-by-bandwidth basis.
+         * <p>The metering method that is used after the renewal takes effect. Valid values: If <strong>PayByBandwidth</strong> is returned, it indicates that the Express Connect circuit is billed on a pay-by-bandwidth basis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         public Builder reservationInternetChargeType(String reservationInternetChargeType) {
             this.reservationInternetChargeType = reservationInternetChargeType;
@@ -926,7 +1034,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the renewal order. Only **RENEW** may be returned, which indicates that the order is placed for service renewal.
+         * <p>The type of the renewal order. Only <strong>RENEW</strong> may be returned, which indicates that the order is placed for service renewal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RENEW</p>
          */
         public Builder reservationOrderType(String reservationOrderType) {
             this.reservationOrderType = reservationOrderType;
@@ -934,10 +1045,11 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The resource group ID.
-         * <p>
+         * <p>The resource group ID.</p>
+         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></p>
          * 
-         * For more information about resource groups, see [What is a resource group?](~~94475~~)
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -945,7 +1057,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The role of the router interface in the peering connection.
+         * <p>The role of the router interface in the peering connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InitiatingSide</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -953,7 +1068,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the router to which the router interface belongs.
+         * <p>The ID of the router to which the router interface belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-m5ex0xf63xk8s5bob****</p>
          */
         public Builder routerId(String routerId) {
             this.routerId = routerId;
@@ -961,7 +1079,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the router interface.
+         * <p>The ID of the router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-m5egfc10sednwk2yt****</p>
          */
         public Builder routerInterfaceId(String routerInterfaceId) {
             this.routerInterfaceId = routerInterfaceId;
@@ -969,11 +1090,14 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the router to which the route table belongs. Valid values:
-         * <p>
+         * <p>The type of the router to which the route table belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>VRouter</strong></li>
+         * <li><strong>VBR</strong></li>
+         * </ul>
          * 
-         * *   **VRouter**
-         * *   **VBR**
+         * <strong>example:</strong>
+         * <p>VRouter</p>
          */
         public Builder routerType(String routerType) {
             this.routerType = routerType;
@@ -981,21 +1105,24 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The specification of the router interface. Valid values:
-         * <p>
+         * <p>The specification of the router interface. Valid values:</p>
+         * <ul>
+         * <li><strong>Mini.2</strong>: 2 Mbit/s</li>
+         * <li><strong>Mini.5</strong>: 5 Mbit/s</li>
+         * <li><strong>Small.1</strong>: 10 Mbit/s</li>
+         * <li><strong>Small.2</strong>: 20 Mbit/s</li>
+         * <li><strong>Small.5</strong>: 50 Mbit/s</li>
+         * <li><strong>Middle.1</strong>: 100 Mbit/s</li>
+         * <li><strong>Middle.2</strong>: 200 Mbit/s</li>
+         * <li><strong>Middle.5</strong>: 500 Mbit/s</li>
+         * <li><strong>Large.1</strong>: 1,000 Mbit/s</li>
+         * <li><strong>Large.2</strong>: 2,000 Mbit/s</li>
+         * <li><strong>Large.5</strong>: 5,000 Mbit/s</li>
+         * <li><strong>Xlarge.1</strong>: 10,000 Mbit/s</li>
+         * </ul>
          * 
-         * *   **Mini.2**: 2 Mbit/s
-         * *   **Mini.5**: 5 Mbit/s
-         * *   **Small.1**: 10 Mbit/s
-         * *   **Small.2**: 20 Mbit/s
-         * *   **Small.5**: 50 Mbit/s
-         * *   **Middle.1**: 100 Mbit/s
-         * *   **Middle.2**: 200 Mbit/s
-         * *   **Middle.5**: 500 Mbit/s
-         * *   **Large.1**: 1,000 Mbit/s
-         * *   **Large.2**: 2,000 Mbit/s
-         * *   **Large.5**: 5,000 Mbit/s
-         * *   **Xlarge.1**: 10,000 Mbit/s
+         * <strong>example:</strong>
+         * <p>Mini.2</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;
@@ -1003,18 +1130,21 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the router interface. Valid values:
-         * <p>
+         * <p>The status of the router interface. Valid values:</p>
+         * <ul>
+         * <li><strong>Idle</strong></li>
+         * <li><strong>AcceptingConnecting</strong></li>
+         * <li><strong>Connecting</strong></li>
+         * <li><strong>Activating</strong></li>
+         * <li><strong>Active</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * <li><strong>Deactivating</strong></li>
+         * <li><strong>Inactive</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
          * 
-         * *   **Idle**
-         * *   **AcceptingConnecting**
-         * *   **Connecting**
-         * *   **Activating**
-         * *   **Active**
-         * *   **Modifying**
-         * *   **Deactivating**
-         * *   **Inactive**
-         * *   **Deleting**
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -1022,7 +1152,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -1030,7 +1163,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tag of the resource.
+         * <p>The tag of the resource.</p>
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -1038,7 +1171,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the router interface belongs.
+         * <p>The ID of the virtual private cloud (VPC) to which the router interface belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1b49rqrybk45nio****</p>
          */
         public Builder vpcInstanceId(String vpcInstanceId) {
             this.vpcInstanceId = vpcInstanceId;
@@ -1051,6 +1187,12 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRouterInterfaceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouterInterfaceAttributeResponseBody</p>
+     */
     public static class TagsTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1090,10 +1232,11 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N added to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N added to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1101,10 +1244,11 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1118,6 +1262,12 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouterInterfaceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouterInterfaceAttributeResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < TagsTags> tags;
@@ -1145,7 +1295,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
             private java.util.List < TagsTags> tags; 
 
             /**
-             * The tag of the resource.
+             * <p>The tag of the resource.</p>
              */
             public Builder tags(java.util.List < TagsTags> tags) {
                 this.tags = tags;

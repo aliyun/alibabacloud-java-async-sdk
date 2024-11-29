@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExpressConnectTrafficQosResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExpressConnectTrafficQosResponseBody</p>
@@ -150,6 +151,12 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExpressConnectTrafficQosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressConnectTrafficQosResponseBody</p>
+     */
     public static class AssociatedInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -251,6 +258,12 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExpressConnectTrafficQosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressConnectTrafficQosResponseBody</p>
+     */
     public static class QueueList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthPercent")
         private String bandwidthPercent;
@@ -412,6 +425,12 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExpressConnectTrafficQosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressConnectTrafficQosResponseBody</p>
+     */
     public static class QosList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedInstanceList")
         private java.util.List < AssociatedInstanceList> associatedInstanceList;

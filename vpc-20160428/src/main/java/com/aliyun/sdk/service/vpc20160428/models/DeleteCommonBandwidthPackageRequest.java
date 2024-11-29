@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCommonBandwidthPackageRequest} extends {@link RequestModel}
  *
  * <p>DeleteCommonBandwidthPackageRequest</p>
@@ -139,7 +140,11 @@ public class DeleteCommonBandwidthPackageRequest extends Request {
         } 
 
         /**
-         * The ID of the Internet Shared Bandwidth instance.
+         * <p>The ID of the Internet Shared Bandwidth instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-2ze2ic1xd2qeqk145pn4u</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -148,11 +153,14 @@ public class DeleteCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully delete the Internet Shared Bandwidth instance. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully delete the Internet Shared Bandwidth instance. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): deletes the Internet Shared Bandwidth instance only when no EIPs are associated with the Internet Shared Bandwidth instance.</li>
+         * <li><strong>true</strong>: disassociates all EIPs from the Internet Shared Bandwidth instance and deletes the Internet Shared Bandwidth instance.</li>
+         * </ul>
          * 
-         * *   **false** (default): deletes the Internet Shared Bandwidth instance only when no EIPs are associated with the Internet Shared Bandwidth instance.
-         * *   **true**: disassociates all EIPs from the Internet Shared Bandwidth instance and deletes the Internet Shared Bandwidth instance.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(String force) {
             this.putQueryParameter("Force", force);
@@ -179,10 +187,12 @@ public class DeleteCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Internet Shared Bandwidth instance is created.
-         * <p>
+         * <p>The ID of the region where the Internet Shared Bandwidth instance is created.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

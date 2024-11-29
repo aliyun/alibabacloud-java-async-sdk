@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDhcpOptionsSetsRequest} extends {@link RequestModel}
  *
  * <p>ListDhcpOptionsSetsRequest</p>
@@ -209,7 +210,10 @@ public class ListDhcpOptionsSetsRequest extends Request {
         } 
 
         /**
-         * The ID of the DHCP options set. You can specify at most 20 IDs.
+         * <p>The ID of the DHCP options set. You can specify at most 20 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dopt-o6w0df4epg9zo8isy****</p>
          */
         public Builder dhcpOptionsSetId(java.util.List < String > dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
@@ -218,26 +222,25 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * The name of the DHCP options set.
-         * <p>
+         * <p>The name of the DHCP options set.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>tf-testAccVpcDhcpOptionsSets-1585169790614573448</p>
+         * <!-- -->
          * 
-         * The name must be 1 to 128 characters in length and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * <p>:</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>tf-testAccVpcDhcpOptionsSets-1585169790614573448</p>
+         * <!-- -->
          * 
-         * *   tf-testAccVpcDhcpOptionsSets-1585169790614573448
+         * <p>.</p>
+         * </li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     tf-testAccVpcDhcpOptionsSets-1585169790614573448
-         * 
-         *     <!-- -->
-         * 
-         *     .
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dhcpOptionsSetName(String dhcpOptionsSetName) {
             this.putQueryParameter("DhcpOptionsSetName", dhcpOptionsSetName);
@@ -246,10 +249,11 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * The root domain. For example, you can set the value to example.com.
-         * <p>
+         * <p>The root domain. For example, you can set the value to example.com.</p>
+         * <p>After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the ECS instances in the VPC.</p>
          * 
-         * After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the ECS instances in the VPC.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -258,7 +262,10 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -267,11 +274,14 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of the <strong>NextToken</strong> parameter.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of the **NextToken** parameter.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -298,10 +308,12 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * The region ID of the DHCP options sets that you want to query.
-         * <p>
+         * <p>The region ID of the DHCP options sets that you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -310,7 +322,10 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the DHCP options set belongs.
+         * <p>The ID of the resource group to which the DHCP options set belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -337,7 +352,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * The tag list.
+         * <p>The tag list.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -352,6 +367,12 @@ public class ListDhcpOptionsSetsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListDhcpOptionsSetsRequest} extends {@link TeaModel}
+     *
+     * <p>ListDhcpOptionsSetsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -391,10 +412,11 @@ public class ListDhcpOptionsSetsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The tag key must start with a letter but cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -402,10 +424,11 @@ public class ListDhcpOptionsSetsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag value must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The tag value must start with a letter but cannot start with `aliyun` or `acs:`. The tag value cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVirtualBorderRouterAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyVirtualBorderRouterAttributeRequest</p>
@@ -377,14 +378,17 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         } 
 
         /**
-         * The information about the Express Connect circuit associated with the VBR, including the following parameters:
-         * <p>
+         * <p>The information about the Express Connect circuit associated with the VBR, including the following parameters:</p>
+         * <ul>
+         * <li><strong>CircuitCode</strong>: the circuit code provided by the connectivity provider for the Express Connect circuit.</li>
+         * <li><strong>LocalGatewayIp</strong>: the IP address of the gateway device on the Alibaba Cloud side.</li>
+         * <li><strong>PeerGatewayIp</strong>: the IP address of the gateway device on the customer side.</li>
+         * <li><strong>PeeringSubnetMask</strong>: the subnet mask for the IP addresses of gateway devices on the Alibaba Cloud side and the customer side.</li>
+         * <li><strong>PhysicalConnectionId</strong>: the ID of the Express Connect circuit.</li>
+         * </ul>
          * 
-         * *   **CircuitCode**: the circuit code provided by the connectivity provider for the Express Connect circuit.
-         * *   **LocalGatewayIp**: the IP address of the gateway device on the Alibaba Cloud side.
-         * *   **PeerGatewayIp**: the IP address of the gateway device on the customer side.
-         * *   **PeeringSubnetMask**: the subnet mask for the IP addresses of gateway devices on the Alibaba Cloud side and the customer side.
-         * *   **PhysicalConnectionId**: the ID of the Express Connect circuit.
+         * <strong>example:</strong>
+         * <p>[   {     &quot;CircuitCode &quot;: &quot;longtel001&quot;,     &quot; LocalGatewayIp &quot;: &quot;192.168.XX.XX&quot;,     &quot;PeerGatewayIp&quot; : &quot;192.168.XX.XX&quot;,     &quot; PeeringSubnetMask &quot;: &quot;255.255.255.252&quot;,     &quot; PhysicalConnectionId &quot;: &quot;pc-kojok19****&quot;   } ]</p>
          */
         public Builder associatedPhysicalConnections(String associatedPhysicalConnections) {
             this.putQueryParameter("AssociatedPhysicalConnections", associatedPhysicalConnections);
@@ -393,7 +397,10 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The bandwidth value. Unit: Mbit/s.
+         * <p>The bandwidth value. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -402,10 +409,13 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
-         * <p>
+         * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+         * <blockquote>
+         * <p> Only the owner of the Express Connect circuit can set this property.</p>
+         * </blockquote>
          * 
-         * >  Only the owner of the Express Connect circuit can set this property.
+         * <strong>example:</strong>
+         * <p>longtel001</p>
          */
         public Builder circuitCode(String circuitCode) {
             this.putQueryParameter("CircuitCode", circuitCode);
@@ -414,12 +424,14 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-00****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -428,10 +440,11 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The description of the VBR.
-         * <p>
+         * <p>The description of the VBR.</p>
+         * <p>It must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * It must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -440,10 +453,11 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The maximum number of dropped packets that is allowed by the receiver when the initiator transmits packets. This value can be used to check whether a connection works as expected.
-         * <p>
+         * <p>The maximum number of dropped packets that is allowed by the receiver when the initiator transmits packets. This value can be used to check whether a connection works as expected.</p>
+         * <p>Valid values: <strong>3 to 10</strong>.</p>
          * 
-         * Valid values: **3 to 10**.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder detectMultiplier(Long detectMultiplier) {
             this.putQueryParameter("DetectMultiplier", detectMultiplier);
@@ -452,11 +466,14 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable IPv6. Valid values:
-         * <p>
+         * <p>Specifies whether to enable IPv6. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableIpv6(Boolean enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
@@ -465,10 +482,11 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The IP address of the VBR.
-         * <p>
+         * <p>The IP address of the VBR.</p>
+         * <p>Only the owner of the VBR can set or modify this parameter.</p>
          * 
-         * Only the owner of the VBR can set or modify this parameter.
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder localGatewayIp(String localGatewayIp) {
             this.putQueryParameter("LocalGatewayIp", localGatewayIp);
@@ -477,7 +495,10 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The IPv6 address of the VBR.
+         * <p>The IPv6 address of the VBR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</p>
          */
         public Builder localIpv6GatewayIp(String localIpv6GatewayIp) {
             this.putQueryParameter("LocalIpv6GatewayIp", localIpv6GatewayIp);
@@ -486,7 +507,10 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The time interval to receive BFD packets. Valid values: **200 to 1000**. Unit: milliseconds.
+         * <p>The time interval to receive BFD packets. Valid values: <strong>200 to 1000</strong>. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder minRxInterval(Long minRxInterval) {
             this.putQueryParameter("MinRxInterval", minRxInterval);
@@ -495,7 +519,10 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The time interval to send BFD packets. Valid values: **200 to 1000**. Unit: milliseconds.
+         * <p>The time interval to send BFD packets. Valid values: <strong>200 to 1000</strong>. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder minTxInterval(Long minTxInterval) {
             this.putQueryParameter("MinTxInterval", minTxInterval);
@@ -504,10 +531,11 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The name of the VBR.
-         * <p>
+         * <p>The name of the VBR.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter. It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter. It cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>VBR</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -534,10 +562,11 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The IP address of the gateway device in the data center.
-         * <p>
+         * <p>The IP address of the gateway device in the data center.</p>
+         * <p>Only the owner of the VBR can set or modify this parameter.</p>
          * 
-         * Only the owner of the VBR can set or modify this parameter.
+         * <strong>example:</strong>
+         * <p>192.168.XX.X</p>
          */
         public Builder peerGatewayIp(String peerGatewayIp) {
             this.putQueryParameter("PeerGatewayIp", peerGatewayIp);
@@ -546,11 +575,14 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The IPv6 address of the gateway device in the data center.
-         * <p>
+         * <p>The IPv6 address of the gateway device in the data center.</p>
+         * <ul>
+         * <li>Only the owner of the VBR can set or modify this property.</li>
+         * <li>This property is required when you create a VBR for the owner of the Express Connect circuit. You can ignore this property when you create a VBR for another Alibaba Cloud account.</li>
+         * </ul>
          * 
-         * *   Only the owner of the VBR can set or modify this property.
-         * *   This property is required when you create a VBR for the owner of the Express Connect circuit. You can ignore this property when you create a VBR for another Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>2001:XXXX:3c4d:0015:0000:0000:0000:2a2b</p>
          */
         public Builder peerIpv6GatewayIp(String peerIpv6GatewayIp) {
             this.putQueryParameter("PeerIpv6GatewayIp", peerIpv6GatewayIp);
@@ -559,10 +591,11 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.
-         * <p>
+         * <p>The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.</p>
+         * <p>The two IPv6 addresses must fall within the same subnet.</p>
          * 
-         * The two IPv6 addresses must fall within the same subnet.
+         * <strong>example:</strong>
+         * <p>2408:4004:cc:400::/56</p>
          */
         public Builder peeringIpv6SubnetMask(String peeringIpv6SubnetMask) {
             this.putQueryParameter("PeeringIpv6SubnetMask", peeringIpv6SubnetMask);
@@ -571,10 +604,11 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The subnet mask for the IP addresses of the gateway devices on the Alibaba Cloud side and on the customer side. Only the owner of the VBR can set or modify this parameter.
-         * <p>
+         * <p>The subnet mask for the IP addresses of the gateway devices on the Alibaba Cloud side and on the customer side. Only the owner of the VBR can set or modify this parameter.</p>
+         * <p>The two IP addresses must fall within the same subnet.</p>
          * 
-         * The two IP addresses must fall within the same subnet.
+         * <strong>example:</strong>
+         * <p>255.255.255.252</p>
          */
         public Builder peeringSubnetMask(String peeringSubnetMask) {
             this.putQueryParameter("PeeringSubnetMask", peeringSubnetMask);
@@ -583,10 +617,12 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the VBR.
-         * <p>
+         * <p>The region ID of the VBR.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -622,7 +658,11 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The VBR ID.
+         * <p>The VBR ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp1lhl0taikrte****</p>
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);
@@ -631,10 +671,13 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The VLAN ID of the VBR. Valid values: **0 to 2999**.
-         * <p>
+         * <p>The VLAN ID of the VBR. Valid values: <strong>0 to 2999</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is available only to Express Connect owners. The VLAN IDs of VBRs on the same Express Connect circuit must be unique.</p>
+         * </blockquote>
          * 
-         * >  This parameter is available only to Express Connect owners. The VLAN IDs of VBRs on the same Express Connect circuit must be unique.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vlanId(Integer vlanId) {
             this.putQueryParameter("VlanId", vlanId);

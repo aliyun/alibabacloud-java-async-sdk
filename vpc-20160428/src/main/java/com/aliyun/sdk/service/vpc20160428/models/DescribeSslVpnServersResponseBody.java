@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSslVpnServersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSslVpnServersResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D350187B-EA41-4577-950B-95434C8302E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information about the SSL-VPN server.
+         * <p>The detailed information about the SSL-VPN server.</p>
          */
         public Builder sslVpnServers(SslVpnServers sslVpnServers) {
             this.sslVpnServers = sslVpnServers;
@@ -117,7 +127,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSslVpnServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSslVpnServersResponseBody</p>
+     */
     public static class SslVpnServer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cipher")
         private String cipher;
@@ -385,7 +404,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             private String vpnGatewayId; 
 
             /**
-             * The encryption algorithm.
+             * <p>The encryption algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AES-128-CBC</p>
              */
             public Builder cipher(String cipher) {
                 this.cipher = cipher;
@@ -393,7 +415,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The client CIDR block.
+             * <p>The client CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.1.0/24</p>
              */
             public Builder clientIpPool(String clientIpPool) {
                 this.clientIpPool = clientIpPool;
@@ -401,11 +426,14 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether data compression is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether data compression is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false** (default)
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder compress(Boolean compress) {
                 this.compress = compress;
@@ -413,7 +441,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of current connections.
+             * <p>The total number of current connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder connections(Integer connections) {
                 this.connections = connections;
@@ -421,7 +452,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the SSL-VPN server was created.
+             * <p>The timestamp generated when the SSL-VPN server was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1613800884000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -429,11 +463,14 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether two-factor authentication is enabled.
-             * <p>
+             * <p>Indicates whether two-factor authentication is enabled.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false** (default)
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableMultiFactorAuth(Boolean enableMultiFactorAuth) {
                 this.enableMultiFactorAuth = enableMultiFactorAuth;
@@ -449,7 +486,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IDaaS instance.
+             * <p>The ID of the IDaaS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas-cn-hangzhou-****</p>
              */
             public Builder iDaaSInstanceId(String iDaaSInstanceId) {
                 this.iDaaSInstanceId = iDaaSInstanceId;
@@ -465,7 +505,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the IDaaS instance.
+             * <p>The region ID of the IDaaS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder iDaaSRegionId(String iDaaSRegionId) {
                 this.iDaaSRegionId = iDaaSRegionId;
@@ -473,7 +516,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the VPN gateway.
+             * <p>The public IP address of the VPN gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.5.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -481,7 +527,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The local CIDR block.
+             * <p>The local CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/24</p>
              */
             public Builder localSubnet(String localSubnet) {
                 this.localSubnet = localSubnet;
@@ -489,7 +538,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of connections.
+             * <p>The maximum number of connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
@@ -497,7 +549,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SSL-VPN server.
+             * <p>The name of the SSL-VPN server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -505,7 +560,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used by the SSL-VPN server.
+             * <p>The port that is used by the SSL-VPN server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1194</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -513,7 +571,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used by the SSL-VPN server.
+             * <p>The protocol that is used by the SSL-VPN server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UDP</p>
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -521,7 +582,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the SSL-VPN server.
+             * <p>The region ID of the SSL-VPN server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -529,10 +593,11 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID of the SSL-VPN server.
-             * <p>
+             * <p>The resource group ID of the SSL-VPN server.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
              * 
-             * You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
+             * <strong>example:</strong>
+             * <p>rg-acfmzs372yg****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -540,7 +605,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SSL-VPN server.
+             * <p>The ID of the SSL-VPN server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vss-bp15j3du13gq1dgey****</p>
              */
             public Builder sslVpnServerId(String sslVpnServerId) {
                 this.sslVpnServerId = sslVpnServerId;
@@ -548,7 +616,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPN gateway.
+             * <p>The ID of the VPN gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpn-bp1on0xae9d771ggi****</p>
              */
             public Builder vpnGatewayId(String vpnGatewayId) {
                 this.vpnGatewayId = vpnGatewayId;
@@ -562,6 +633,12 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSslVpnServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSslVpnServersResponseBody</p>
+     */
     public static class SslVpnServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SslVpnServer")
         private java.util.List < SslVpnServer> sslVpnServer;

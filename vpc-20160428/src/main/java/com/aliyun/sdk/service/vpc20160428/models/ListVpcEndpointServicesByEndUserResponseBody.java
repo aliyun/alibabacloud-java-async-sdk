@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcEndpointServicesByEndUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListVpcEndpointServicesByEndUserResponseBody</p>
@@ -85,7 +86,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +97,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value is the token that is used for the next query.</li>
+         * </ul>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If **NextToken** is returned, the value is the token that is used for the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +112,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AB1129F-32C1-5E4D-9E22-E4A859CA46EB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +123,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The list of entries returned.
+         * <p>The list of entries returned.</p>
          */
         public Builder services(java.util.List < Services> services) {
             this.services = services;
@@ -121,7 +131,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +147,12 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcEndpointServicesByEndUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcEndpointServicesByEndUserResponseBody</p>
+     */
     public static class Services extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultPolicyDocument")
         private String defaultPolicyDocument;
@@ -209,7 +228,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             private Boolean supportPolicy; 
 
             /**
-             * The default access policy.
+             * <p>The default access policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{   &quot;Version&quot; : &quot;1&quot;,   &quot;Statement&quot; : [ {     &quot;Effect&quot; : &quot;Allow&quot;,     &quot;Action&quot; : &quot;<em>&quot;,     &quot;Principal&quot; : &quot;</em>&quot;,     &quot;Resource&quot; : &quot;*&quot;   } ] }</p>
              */
             public Builder defaultPolicyDocument(String defaultPolicyDocument) {
                 this.defaultPolicyDocument = defaultPolicyDocument;
@@ -217,7 +239,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the cloud service to which the endpoint service belongs.
+             * <p>The domain name of the cloud service to which the endpoint service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-admin.aliyuncs.com</p>
              */
             public Builder serviceDomain(String serviceDomain) {
                 this.serviceDomain = serviceDomain;
@@ -225,7 +250,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the endpoint service.
+             * <p>The ID of the endpoint service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpces-m5enwdmilo210aibo9****</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -233,7 +261,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the endpoint service.
+             * <p>The name of the endpoint service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aliyun.cn-hangzhou.oss</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -241,11 +272,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * Indicate whether the endpoint service supports the access policy. Valid values:
-             * <p>
+             * <p>Indicate whether the endpoint service supports the access policy. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportPolicy(Boolean supportPolicy) {
                 this.supportPolicy = supportPolicy;

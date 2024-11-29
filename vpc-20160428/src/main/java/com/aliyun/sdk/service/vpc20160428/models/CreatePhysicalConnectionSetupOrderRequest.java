@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePhysicalConnectionSetupOrderRequest} extends {@link RequestModel}
  *
  * <p>CreatePhysicalConnectionSetupOrderRequest</p>
@@ -196,7 +197,11 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         } 
 
         /**
-         * The ID of the access point.
+         * <p>The ID of the access point.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-cn-beijing-ft-A</p>
          */
         public Builder accessPointId(String accessPointId) {
             this.putQueryParameter("AccessPointId", accessPointId);
@@ -205,11 +210,14 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payments. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payments. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): disables automatic payment.</li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false** (default): disables automatic payment.
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -218,12 +226,14 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>318BB676-0A2B-43A0-9AD8-F1D34E93750F</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -232,15 +242,19 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The connectivity provider of the Express Connect circuit. Valid values:
-         * <p>
+         * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li><strong>CT</strong>: China Telecom</li>
+         * <li><strong>CU</strong>: China Unicom</li>
+         * <li><strong>CM</strong>: China Mobile</li>
+         * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland</li>
+         * <li><strong>Equinix</strong>: Equinix</li>
+         * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CT**: China Telecom
-         * *   **CU**: China Unicom
-         * *   **CM**: China Mobile
-         * *   **CO**: other connectivity providers in the Chinese mainland
-         * *   **Equinix**: Equinix
-         * *   **Other**: other connectivity providers outside the Chinese mainland
+         * <strong>example:</strong>
+         * <p>CT</p>
          */
         public Builder lineOperator(String lineOperator) {
             this.putQueryParameter("LineOperator", lineOperator);
@@ -267,18 +281,22 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The port type of the Express Connect circuit. Valid values:
-         * <p>
+         * <p>The port type of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
+         * <li><strong>1000Base-T</strong> (default): 1,000 Mbit/s copper Ethernet port</li>
+         * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km)</li>
+         * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
+         * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km)</li>
+         * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
+         * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+         * </ul>
+         * <blockquote>
+         * <p> Whether 40GBase-LR and 100GBase-LR ports can be created depends on resource supplies. For more information, contact your account manager.</p>
+         * </blockquote>
          * 
-         * *   **100Base-T**: 100 Mbit/s copper Ethernet port
-         * *   **1000Base-T** (default): 1,000 Mbit/s copper Ethernet port
-         * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)
-         * *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
-         * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)
-         * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
-         * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
-         * 
-         * >  Whether 40GBase-LR and 100GBase-LR ports can be created depends on resource supplies. For more information, contact your account manager.
+         * <strong>example:</strong>
+         * <p>100Base-T</p>
          */
         public Builder portType(String portType) {
             this.putQueryParameter("PortType", portType);
@@ -287,7 +305,10 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The ID of the redundant physical connection. The redundant physical connection must be in the **Allocated**, **Confirmed**, or **Enabled** state.
+         * <p>The ID of the redundant physical connection. The redundant physical connection must be in the <strong>Allocated</strong>, <strong>Confirmed</strong>, or <strong>Enabled</strong> state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp10zsv5ntp****</p>
          */
         public Builder redundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
             this.putQueryParameter("RedundantPhysicalConnectionId", redundantPhysicalConnectionId);
@@ -296,10 +317,12 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The region ID of the Express Connect circuit.
-         * <p>
+         * <p>The region ID of the Express Connect circuit.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

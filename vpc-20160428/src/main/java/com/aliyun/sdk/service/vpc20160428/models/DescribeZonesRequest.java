@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesRequest} extends {@link RequestModel}
  *
  * <p>DescribeZonesRequest</p>
@@ -138,12 +139,15 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * The language used in the **LocalName** parameter. Valid values:
-         * <p>
+         * <p>The language used in the <strong>LocalName</strong> parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-cn</strong>: Chinese</li>
+         * <li><strong>en-us</strong>: English</li>
+         * <li><strong>ja</strong>: Japanese</li>
+         * </ul>
          * 
-         * *   **zh-cn**: Chinese
-         * *   **en-us**: English
-         * *   **ja**: Japanese
+         * <strong>example:</strong>
+         * <p>zh-cn</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -170,7 +174,11 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The region ID of the zone. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -197,7 +205,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The zone type. Default value: **AvailabilityZone**.
+         * <p>The zone type. Default value: <strong>AvailabilityZone</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AvailabilityZone</p>
          */
         public Builder zoneType(String zoneType) {
             this.putQueryParameter("ZoneType", zoneType);

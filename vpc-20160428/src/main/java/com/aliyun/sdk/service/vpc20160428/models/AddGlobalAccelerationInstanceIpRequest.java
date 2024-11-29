@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGlobalAccelerationInstanceIpRequest} extends {@link RequestModel}
  *
  * <p>AddGlobalAccelerationInstanceIpRequest</p>
@@ -140,7 +141,11 @@ public class AddGlobalAccelerationInstanceIpRequest extends Request {
         } 
 
         /**
-         * The ID of the shared-bandwidth GA instance.
+         * <p>The ID of the shared-bandwidth GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-Ldefrgbttnyyf****</p>
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -149,10 +154,14 @@ public class AddGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * The EIP ID. You can call the [DescribeEipAddresses](~~36018~~) operation to query EIP IDs.
-         * <p>
+         * <p>The EIP ID. You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> operation to query EIP IDs.</p>
+         * <blockquote>
+         * <p> Make sure that the billing method of the EIP is pay-as-you-go, and the EIP and the shared-bandwidth GA instance belong to the same region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Make sure that the billing method of the EIP is pay-as-you-go, and the EIP and the shared-bandwidth GA instance belong to the same region.
+         * <strong>example:</strong>
+         * <p>eip-rw434rwfdeaf****</p>
          */
         public Builder ipInstanceId(String ipInstanceId) {
             this.putQueryParameter("IpInstanceId", ipInstanceId);
@@ -179,10 +188,12 @@ public class AddGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * The region of the shared-bandwidth GA instance.
-         * <p>
+         * <p>The region of the shared-bandwidth GA instance.</p>
+         * <p>You can call the <strong>DescribeRegions</strong> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the **DescribeRegions** operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

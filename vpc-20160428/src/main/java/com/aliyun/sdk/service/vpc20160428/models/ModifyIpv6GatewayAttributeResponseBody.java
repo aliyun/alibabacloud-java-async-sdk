@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIpv6GatewayAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyIpv6GatewayAttributeResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyIpv6GatewayAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DFEDBEE-E5AB-49E8-A2DC-CC114C67AF75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

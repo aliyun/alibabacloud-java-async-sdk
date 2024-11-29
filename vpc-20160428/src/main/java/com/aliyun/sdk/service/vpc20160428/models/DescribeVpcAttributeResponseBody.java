@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcAttributeResponseBody</p>
@@ -361,10 +362,8 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         private String vpcName; 
 
         /**
-         * The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.
-         * <p>
-         * 
-         * If the VPC is not attached to a CEN instance, the parameter is not returned.
+         * <p>The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.</p>
+         * <p>If the VPC is not attached to a CEN instance, the parameter is not returned.</p>
          */
         public Builder associatedCens(AssociatedCens associatedCens) {
             this.associatedCens = associatedCens;
@@ -372,7 +371,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The route source associated with the VPC.
+         * <p>The route source associated with the VPC.</p>
          */
         public Builder associatedPropagationSources(AssociatedPropagationSources associatedPropagationSources) {
             this.associatedPropagationSources = associatedPropagationSources;
@@ -380,7 +379,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The IPv4 CIDR block of the VPC.
+         * <p>The IPv4 CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
@@ -388,11 +390,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the ClassicLink feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the ClassicLink feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder classicLinkEnabled(Boolean classicLinkEnabled) {
             this.classicLinkEnabled = classicLinkEnabled;
@@ -400,7 +405,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The list of resources deployed in the VPC.
+         * <p>The list of resources deployed in the VPC.</p>
          */
         public Builder cloudResources(CloudResources cloudResources) {
             this.cloudResources = cloudResources;
@@ -408,7 +413,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the VPC was created.
+         * <p>The time when the VPC was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-16T07:31:09Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -416,7 +424,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the VPC.
+         * <p>The description of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -424,7 +435,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the DHCP options set.
+         * <p>The ID of the DHCP options set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dopt-o6w0df4epg9zo8isy****</p>
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.dhcpOptionsSetId = dhcpOptionsSetId;
@@ -432,13 +446,16 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the DHCP options set. Valid values:
-         * <p>
+         * <p>The status of the DHCP options set. Valid values:</p>
+         * <ul>
+         * <li><strong>Available</strong></li>
+         * <li><strong>InUse</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * <li><strong>Pending</strong></li>
+         * </ul>
          * 
-         * *   **Available**
-         * *   **InUse**
-         * *   **Deleted**
-         * *   **Pending**
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder dhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
             this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
@@ -454,10 +471,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the VPC enables IPv6 .
-         * <p>
-         * - true
-         * - false
+         * <p>Indicates whether the VPC enables IPv6 .</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enabledIpv6(Boolean enabledIpv6) {
             this.enabledIpv6 = enabledIpv6;
@@ -465,7 +486,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the IPv4 gateway.
+         * <p>The ID of the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
          */
         public Builder ipv4GatewayId(String ipv4GatewayId) {
             this.ipv4GatewayId = ipv4GatewayId;
@@ -473,7 +497,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The IPv6 CIDR block of the VPC.
+         * <p>The IPv6 CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:a600::/56</p>
          */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
@@ -481,7 +508,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The IPv6 CIDR block of the VPC.
+         * <p>The IPv6 CIDR block of the VPC.</p>
          */
         public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
@@ -489,11 +516,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the VPC is the default VPC. Valid values:
-         * <p>
+         * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = isDefault;
@@ -501,7 +531,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the VPC belongs.
+         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28311773240248****</p>
          */
         public Builder ownerId(Long ownerId) {
             this.ownerId = ownerId;
@@ -509,7 +542,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region to which the VPC belongs.
+         * <p>The ID of the region to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -517,7 +553,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7486AE4A-129D-43DB-A714-2432C074BA04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -525,7 +564,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazbvgb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -533,7 +575,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The secondary IPv4 CIDR block of the VPC.
+         * <p>The secondary IPv4 CIDR block of the VPC.</p>
          */
         public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
             this.secondaryCidrBlocks = secondaryCidrBlocks;
@@ -541,11 +583,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the VPC. Valid values:
-         * <p>
+         * <p>The status of the VPC. Valid values:</p>
+         * <ul>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Pending</strong></li>
+         * </ul>
          * 
-         * *   **Available**
-         * *   **Pending**
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -553,11 +598,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the VPC supports IPv4 gateways.
-         * <p>
+         * <p>Indicates whether the VPC supports IPv4 gateways.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportIpv4Gateway(Boolean supportIpv4Gateway) {
             this.supportIpv4Gateway = supportIpv4Gateway;
@@ -565,7 +613,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the tags.
+         * <p>The information about the tags.</p>
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -573,7 +621,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The user CIDR block. Multiple CIDR blocks are separated by commas (,). At most three CIDR blocks are returned.
+         * <p>The user CIDR block. Multiple CIDR blocks are separated by commas (,). At most three CIDR blocks are returned.</p>
          */
         public Builder userCidrs(UserCidrs userCidrs) {
             this.userCidrs = userCidrs;
@@ -581,7 +629,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vRouter that belongs to the VPC.
+         * <p>The ID of the vRouter that belongs to the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1jso6ng1at0ajsc****</p>
          */
         public Builder vRouterId(String vRouterId) {
             this.vRouterId = vRouterId;
@@ -589,7 +640,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The list of vSwitches deployed in the VPC.
+         * <p>The list of vSwitches deployed in the VPC.</p>
          */
         public Builder vSwitchIds(VSwitchIds vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -597,7 +648,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp18sth14qii3pnvo****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -605,7 +659,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the VPC.
+         * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doctest2</p>
          */
         public Builder vpcName(String vpcName) {
             this.vpcName = vpcName;
@@ -618,6 +675,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class AssociatedCen extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
@@ -669,7 +732,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String cenStatus; 
 
             /**
-             * The ID of the CEN instance to which the VPC is attached.
+             * <p>The ID of the CEN instance to which the VPC is attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-7qthudw0ll6jmc****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -677,7 +743,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account to which the CEN instance belongs.
+             * <p>The ID of the account to which the CEN instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28311773240248****</p>
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
@@ -685,10 +754,11 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the CEN instance.
-             * <p>
+             * <p>The status of the CEN instance.</p>
+             * <p><strong>Attached</strong> is returned only when the VPC is attached to a CEN instance.</p>
              * 
-             * **Attached** is returned only when the VPC is attached to a CEN instance.
+             * <strong>example:</strong>
+             * <p>Attached</p>
              */
             public Builder cenStatus(String cenStatus) {
                 this.cenStatus = cenStatus;
@@ -702,6 +772,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class AssociatedCens extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedCen")
         private java.util.List < AssociatedCen> associatedCen;
@@ -743,6 +819,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class AssociatedPropagationSourcesAssociatedPropagationSources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoutePropagated")
         private Boolean routePropagated;
@@ -818,7 +900,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Indicates whether routes are advertised to the VPC.
+             * <p>Indicates whether routes are advertised to the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder routePropagated(Boolean routePropagated) {
                 this.routePropagated = routePropagated;
@@ -826,7 +911,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the source.
+             * <p>The instance ID of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-dc4vwznpwbobrl****</p>
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -834,7 +922,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The account ID of the source.
+             * <p>The account ID of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>153980532164****</p>
              */
             public Builder sourceOwnerId(Long sourceOwnerId) {
                 this.sourceOwnerId = sourceOwnerId;
@@ -842,13 +933,16 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The source type.
-             * <p>
+             * <p>The source type.</p>
+             * <ul>
+             * <li><strong>CEN</strong></li>
+             * <li><strong>VPN</strong></li>
+             * <li><strong>TR</strong></li>
+             * <li><strong>ECR</strong></li>
+             * </ul>
              * 
-             * *   **CEN**
-             * *   **VPN**
-             * *   **TR**
-             * *   **ECR**
+             * <strong>example:</strong>
+             * <p>CEN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -856,12 +950,15 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The binding status.
-             * <p>
+             * <p>The binding status.</p>
+             * <ul>
+             * <li><strong>Attaching</strong></li>
+             * <li><strong>Attached</strong></li>
+             * <li><strong>Detaching</strong></li>
+             * </ul>
              * 
-             * *   **Attaching**
-             * *   **Attached**
-             * *   **Detaching**
+             * <strong>example:</strong>
+             * <p>Attaching</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -875,6 +972,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class AssociatedPropagationSources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedPropagationSources")
         private java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources;
@@ -902,7 +1005,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources; 
 
             /**
-             * The route source associated with the VPC.
+             * <p>The route source associated with the VPC.</p>
              */
             public Builder associatedPropagationSources(java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources) {
                 this.associatedPropagationSources = associatedPropagationSources;
@@ -916,6 +1019,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class CloudResourceSetType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private Integer resourceCount;
@@ -955,7 +1064,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The number of resources in the VPC.
+             * <p>The number of resources in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceCount(Integer resourceCount) {
                 this.resourceCount = resourceCount;
@@ -963,12 +1075,15 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of resource deployed in the VPC. Valid values: Valid values:
-             * <p>
+             * <p>The type of resource deployed in the VPC. Valid values: Valid values:</p>
+             * <ul>
+             * <li><strong>VSwitch</strong></li>
+             * <li><strong>VRouter</strong></li>
+             * <li><strong>RouteTable</strong></li>
+             * </ul>
              * 
-             * *   **VSwitch**
-             * *   **VRouter**
-             * *   **RouteTable**
+             * <strong>example:</strong>
+             * <p>VSwitch</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -982,6 +1097,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class CloudResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudResourceSetType")
         private java.util.List < CloudResourceSetType> cloudResourceSetType;
@@ -1023,6 +1144,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class Ipv6CidrBlock extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
         private String ipv6CidrBlock;
@@ -1062,7 +1189,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String ipv6Isp; 
 
             /**
-             * The IPv6 CIDR block of the VPC.
+             * <p>The IPv6 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:XXXX:0:6a::/56</p>
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -1070,15 +1200,19 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 CIDR block type of the VPC. Valid values:
-             * <p>
+             * <p>The IPv6 CIDR block type of the VPC. Valid values:</p>
+             * <ul>
+             * <li><strong>BGP</strong> (default)</li>
+             * <li><strong>ChinaMobile</strong></li>
+             * <li><strong>ChinaUnicom</strong></li>
+             * <li><strong>ChinaTelecom</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> If you are allowed to use single-ISP bandwidth, valid values are <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, and <strong>ChinaMobile</strong></p>
+             * </blockquote>
              * 
-             * *   **BGP** (default)
-             * *   **ChinaMobile**
-             * *   **ChinaUnicom**
-             * *   **ChinaTelecom**
-             * 
-             * >  If you are allowed to use single-ISP bandwidth, valid values are **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -1092,6 +1226,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class Ipv6CidrBlocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
         private java.util.List < Ipv6CidrBlock> ipv6CidrBlock;
@@ -1119,7 +1259,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private java.util.List < Ipv6CidrBlock> ipv6CidrBlock; 
 
             /**
-             * The IPv6 CIDR block of the VPC.
+             * <p>The IPv6 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:XXXX:0:6a::/56</p>
              */
             public Builder ipv6CidrBlock(java.util.List < Ipv6CidrBlock> ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -1133,6 +1276,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class SecondaryCidrBlocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlock")
         private java.util.List < String > secondaryCidrBlock;
@@ -1174,6 +1323,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1213,7 +1368,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1221,7 +1379,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1235,6 +1396,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -1276,6 +1443,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class UserCidrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserCidr")
         private java.util.List < String > userCidr;
@@ -1317,6 +1490,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAttributeResponseBody</p>
+     */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private java.util.List < String > vSwitchId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCanAllocateVpcPrivateIpAddressResponseBody} extends {@link TeaModel}
  *
  * <p>CheckCanAllocateVpcPrivateIpAddressResponseBody</p>
@@ -49,11 +50,14 @@ public class CheckCanAllocateVpcPrivateIpAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the private IP address is available. Valid values:
-         * <p>
+         * <p>Indicates whether the private IP address is available. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canAllocate(Boolean canAllocate) {
             this.canAllocate = canAllocate;
@@ -61,7 +65,10 @@ public class CheckCanAllocateVpcPrivateIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93360B0-2969-40BF-8542-EBB34FD358AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

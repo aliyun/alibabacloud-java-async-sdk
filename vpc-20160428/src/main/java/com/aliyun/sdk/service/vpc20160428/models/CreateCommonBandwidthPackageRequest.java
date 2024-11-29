@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommonBandwidthPackageRequest} extends {@link RequestModel}
  *
  * <p>CreateCommonBandwidthPackageRequest</p>
@@ -252,10 +253,12 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         } 
 
         /**
-         * The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.
-         * <p>
+         * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **1** to **1000**. Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -264,14 +267,14 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * > 
-         * 
-         * If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -280,10 +283,11 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The description of the Internet Shared Bandwidth instance.
-         * <p>
+         * <p>The description of the Internet Shared Bandwidth instance.</p>
+         * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length and start with a letter. The description cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -292,22 +296,24 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The line type. Valid values:
-         * <p>
+         * <p>The line type. Valid values:</p>
+         * <ul>
+         * <li><strong>BGP</strong> (default) All regions support BGP (Multi-ISP).</li>
+         * <li><strong>BGP_PRO</strong> BGP (Multi-ISP) Pro lines are available in the China (Hong Kong), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
+         * </ul>
+         * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
+         * <ul>
+         * <li><strong>ChinaTelecom</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaTelecom_L2</strong></li>
+         * <li><strong>ChinaUnicom_L2</strong></li>
+         * <li><strong>ChinaMobile_L2</strong></li>
+         * </ul>
+         * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
          * 
-         * *   **BGP** All regions support BGP (Multi-ISP).
-         * *   **BGP_PRO** BGP (Multi-ISP) Pro lines are available in the China (Hong Kong), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.
-         * 
-         * If you are allowed to use single-ISP bandwidth, you can also use one of the following values:
-         * 
-         * *   **ChinaTelecom**
-         * *   **ChinaUnicom**
-         * *   **ChinaMobile**
-         * *   **ChinaTelecom_L2**
-         * *   **ChinaUnicom_L2**
-         * *   **ChinaMobile_L2**
-         * 
-         * If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         public Builder ISP(String ISP) {
             this.putQueryParameter("ISP", ISP);
@@ -316,7 +322,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The billing method of the Internet Shared Bandwidth instance. Set the value to **PayByTraffic**, which specifies the pay-by-data-transfer billing method.
+         * <p>The billing method of the Internet Shared Bandwidth instance. Set the value to <strong>PayByTraffic</strong>, which specifies the pay-by-data-transfer billing method.</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -325,10 +331,11 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The name of the Internet Shared Bandwidth instance.
-         * <p>
+         * <p>The name of the Internet Shared Bandwidth instance.</p>
+         * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -355,12 +362,13 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The percentage of the minimum bandwidth commitment. Set the parameter to **20**.
-         * <p>
+         * <p>The percentage of the minimum bandwidth commitment. Set the parameter to <strong>20</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is available only on the Alibaba Cloud China site.</p>
+         * </blockquote>
          * 
-         * > 
-         * 
-         * This parameter is available only on the Alibaba Cloud China site.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder ratio(Integer ratio) {
             this.putQueryParameter("Ratio", ratio);
@@ -369,10 +377,12 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The region ID of the Internet Shared Bandwidth instance.
-         * <p>
+         * <p>The region ID of the Internet Shared Bandwidth instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -381,7 +391,10 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazdjdhd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -417,7 +430,10 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The zone of the Internet Shared Bandwidth instance. This parameter is required if you create an Internet Shared Bandwidth instance for a cloud box.
+         * <p>The zone of the Internet Shared Bandwidth instance. This parameter is required if you create an Internet Shared Bandwidth instance for a cloud box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1-lzdvn-cb</p>
          */
         public Builder zone(String zone) {
             this.putQueryParameter("Zone", zone);

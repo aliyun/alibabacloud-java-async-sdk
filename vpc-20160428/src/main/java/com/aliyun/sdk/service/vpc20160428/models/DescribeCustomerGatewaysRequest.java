@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomerGatewaysRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomerGatewaysRequest</p>
@@ -180,10 +181,13 @@ public class DescribeCustomerGatewaysRequest extends Request {
         } 
 
         /**
-         * The ID of the customer gateway.
-         * <p>
+         * <p>The ID of the customer gateway.</p>
+         * <blockquote>
+         * <p>If you do not specify a customer gateway ID, the system queries all customer gateways in the current region by default.</p>
+         * </blockquote>
          * 
-         * > If you do not specify a customer gateway ID, the system queries all customer gateways in the current region by default.
+         * <strong>example:</strong>
+         * <p>cgw-bp1pvpl9r9adju6l5****</p>
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.putQueryParameter("CustomerGatewayId", customerGatewayId);
@@ -210,7 +214,10 @@ public class DescribeCustomerGatewaysRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -219,7 +226,10 @@ public class DescribeCustomerGatewaysRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -228,10 +238,12 @@ public class DescribeCustomerGatewaysRequest extends Request {
         }
 
         /**
-         * The ID of the region where the customer gateway is deployed.
-         * <p>
+         * <p>The ID of the region where the customer gateway is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,10 +252,11 @@ public class DescribeCustomerGatewaysRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the customer gateway belongs.
-         * <p>
+         * <p>The ID of the resource group to which the customer gateway belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group list.</p>
          * 
-         * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.
+         * <strong>example:</strong>
+         * <p>rg-acfmzs372yg****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -270,7 +283,7 @@ public class DescribeCustomerGatewaysRequest extends Request {
         }
 
         /**
-         * The tags to be added to the customer gateway.
+         * <p>The tags to be added to the customer gateway.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -285,6 +298,12 @@ public class DescribeCustomerGatewaysRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomerGatewaysRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomerGatewaysRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -324,12 +343,12 @@ public class DescribeCustomerGatewaysRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>You can specify at most 20 tag keys at a time.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
-             * 
-             * You can specify at most 20 tag keys at a time.
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -337,12 +356,12 @@ public class DescribeCustomerGatewaysRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <p>The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.</p>
              * 
-             * The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
-             * 
-             * Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcsRequest</p>
@@ -265,7 +266,10 @@ public class DescribeVpcsRequest extends Request {
         } 
 
         /**
-         * The ID of the DHCP options set.
+         * <p>The ID of the DHCP options set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dopt-o6w0df4epg9zo8isy****</p>
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
@@ -274,11 +278,14 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system prechecks whether your AccessKey pair is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and VPCs are queried.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system prechecks whether your AccessKey pair is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and VPCs are queried.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -296,11 +303,14 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the default VPC in the specified region. Valid values:
-         * <p>
+         * <p>Specifies whether to query the default VPC in the specified region. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true** (default)
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -327,7 +337,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -336,7 +349,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -345,10 +361,12 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC.
-         * <p>
+         * <p>The region ID of the VPC.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -357,7 +375,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the VPC to be queried belongs.
+         * <p>The ID of the resource group to which the VPC to be queried belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxvfvazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -384,7 +405,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -393,10 +414,11 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The VPC ID.
-         * <p>
+         * <p>The VPC ID.</p>
+         * <p>You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).</p>
          * 
-         * You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>vpc-bp1b1xjllp3ve5yze****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -405,7 +427,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The name of the VPC.
+         * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vpc-1</p>
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);
@@ -414,7 +439,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the VPC belongs.
+         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253460731706911258</p>
          */
         public Builder vpcOwnerId(Long vpcOwnerId) {
             this.putQueryParameter("VpcOwnerId", vpcOwnerId);
@@ -429,6 +457,12 @@ public class DescribeVpcsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -468,10 +502,11 @@ public class DescribeVpcsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -479,10 +514,11 @@ public class DescribeVpcsRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

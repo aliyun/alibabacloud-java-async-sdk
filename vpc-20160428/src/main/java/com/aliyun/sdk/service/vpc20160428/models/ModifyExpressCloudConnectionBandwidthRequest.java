@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyExpressCloudConnectionBandwidthRequest} extends {@link RequestModel}
  *
  * <p>ModifyExpressCloudConnectionBandwidthRequest</p>
@@ -139,7 +140,10 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends Request {
         } 
 
         /**
-         * The bandwidth of the ECC instance.
+         * <p>The bandwidth of the ECC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -148,7 +152,11 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the ECC instance.
+         * <p>The ID of the ECC instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecc-xxxxxxxxx</p>
          */
         public Builder eccId(String eccId) {
             this.putQueryParameter("EccId", eccId);
@@ -175,7 +183,11 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

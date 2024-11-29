@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIpv6GatewayAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyIpv6GatewayAttributeRequest</p>
@@ -190,7 +191,10 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
         }
 
         /**
-         * The description of the IPv6 gateway.
+         * <p>The description of the IPv6 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -208,7 +212,11 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 gateway that you want to modify.
+         * <p>The ID of the IPv6 gateway that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6gw-hp39kh1ya51yzp2lu****</p>
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -217,10 +225,11 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
         }
 
         /**
-         * The name of the IPv6 gateway.
-         * <p>
+         * <p>The name of the IPv6 gateway.</p>
+         * <p>It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>ipv6name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -247,7 +256,11 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the IPv6 gateway. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region ID of the IPv6 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

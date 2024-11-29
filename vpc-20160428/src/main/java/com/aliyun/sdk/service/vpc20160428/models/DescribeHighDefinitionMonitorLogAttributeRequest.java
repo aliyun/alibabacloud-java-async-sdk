@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHighDefinitionMonitorLogAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeHighDefinitionMonitorLogAttributeRequest</p>
@@ -139,7 +140,11 @@ public class DescribeHighDefinitionMonitorLogAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the instance whose fine-grained monitoring configurations you want to query.
+         * <p>The ID of the instance whose fine-grained monitoring configurations you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-wz9fi6qboho9fwgx7****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -148,7 +153,10 @@ public class DescribeHighDefinitionMonitorLogAttributeRequest extends Request {
         }
 
         /**
-         * The type of the instance. Set the value to **EIP**.
+         * <p>The type of the instance. Set the value to <strong>EIP</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -175,10 +183,12 @@ public class DescribeHighDefinitionMonitorLogAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
-         * <p>
+         * <p>The region ID of the instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

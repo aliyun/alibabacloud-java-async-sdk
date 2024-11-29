@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomerGatewaysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomerGatewaysResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about customer gateways.
+         * <p>The information about customer gateways.</p>
          */
         public Builder customerGateways(CustomerGateways customerGateways) {
             this.customerGateways = customerGateways;
@@ -93,7 +94,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E82612A9-CB90-4D7E-B394-1DB7F6509B29</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned entries.
+         * <p>The number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomerGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomerGatewaysResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -169,7 +188,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +199,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,6 +216,12 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCustomerGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomerGatewaysResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -232,6 +263,12 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCustomerGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomerGatewaysResponseBody</p>
+     */
     public static class CustomerGateway extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Asn")
         private Long asn;
@@ -355,7 +392,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The autonomous system number (ASN) of the gateway device in the data center.
+             * <p>The autonomous system number (ASN) of the gateway device in the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65530</p>
              */
             public Builder asn(Long asn) {
                 this.asn = asn;
@@ -363,7 +403,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication key that is used to connect to the gateway device in the data center by using Border Gateway Protocol (BGP).
+             * <p>The authentication key that is used to connect to the gateway device in the data center by using Border Gateway Protocol (BGP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AuthKey****</p>
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -371,10 +414,11 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the customer gateway was created. Unit: millisecond.
-             * <p>
+             * <p>The time when the customer gateway was created. Unit: millisecond.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1492747187000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -382,7 +426,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The customer gateway ID.
+             * <p>The customer gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cgw-bp1pvpl9r9adju6l5****</p>
              */
             public Builder customerGatewayId(String customerGatewayId) {
                 this.customerGatewayId = customerGatewayId;
@@ -390,7 +437,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the customer gateway.
+             * <p>The description of the customer gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -398,7 +448,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the gateway device in the data center.
+             * <p>The IP address of the gateway device in the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139.32.XX.XX</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -406,7 +459,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the customer gateway.
+             * <p>The name of the customer gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -414,10 +470,11 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the customer gateway belongs.
-             * <p>
+             * <p>The ID of the resource group to which the customer gateway belongs.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
              * 
-             * You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
+             * <strong>example:</strong>
+             * <p>rg-acfmzs372yg****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -425,7 +482,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are added to the customer gateway.
+             * <p>The tags that are added to the customer gateway.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -439,6 +496,12 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCustomerGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomerGatewaysResponseBody</p>
+     */
     public static class CustomerGateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomerGateway")
         private java.util.List < CustomerGateway> customerGateway;

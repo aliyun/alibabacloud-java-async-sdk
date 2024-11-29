@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNatIpsResponseBody} extends {@link TeaModel}
  *
  * <p>ListNatIpsResponseBody</p>
@@ -73,7 +74,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The list of IP addresses of the NAT gateway.
+         * <p>The list of IP addresses of the NAT gateway.</p>
          */
         public Builder natIps(java.util.List < NatIps> natIps) {
             this.natIps = natIps;
@@ -81,11 +82,14 @@ public class ListNatIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
+         * <li>If the value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
          * 
-         * *   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.
-         * *   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -93,7 +97,10 @@ public class ListNatIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E78CEEA-BF8F-44D1-9DCD-D9141135B71E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,10 @@ public class ListNatIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of IP addresses that are returned.
+         * <p>The number of IP addresses that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -114,6 +124,12 @@ public class ListNatIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNatIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNatIpsResponseBody</p>
+     */
     public static class NatIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
@@ -225,11 +241,14 @@ public class ListNatIpsResponseBody extends TeaModel {
             private String natIpStatus; 
 
             /**
-             * Indicates whether the IP address is the default IP address of the NAT gateway. Valid values:
-             * <p>
+             * <p>Indicates whether the IP address is the default IP address of the NAT gateway. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -237,7 +256,10 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Virtual Private Cloud (VPC) NAT gateway to which the IP address is assigned.
+             * <p>The ID of the Virtual Private Cloud (VPC) NAT gateway to which the IP address is assigned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-gw8v16wgvtq26vh59****</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -245,7 +267,10 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.126</p>
              */
             public Builder natIp(String natIp) {
                 this.natIp = natIp;
@@ -253,7 +278,10 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block to which the IP address belongs.
+             * <p>The CIDR block to which the IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/24</p>
              */
             public Builder natIpCidr(String natIpCidr) {
                 this.natIpCidr = natIpCidr;
@@ -261,7 +289,10 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the IP address.
+             * <p>The description of the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder natIpDescription(String natIpDescription) {
                 this.natIpDescription = natIpDescription;
@@ -269,7 +300,10 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IP address.
+             * <p>The ID of the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpcnatip-gw8a863sut1zijxh0****</p>
              */
             public Builder natIpId(String natIpId) {
                 this.natIpId = natIpId;
@@ -277,7 +311,10 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP address.
+             * <p>The name of the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder natIpName(String natIpName) {
                 this.natIpName = natIpName;
@@ -285,15 +322,18 @@ public class ListNatIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the IP address. Valid values:
-             * <p>
+             * <p>The status of the IP address. Valid values:</p>
+             * <ul>
+             * <li><strong>Available</strong>: available</li>
+             * <li><strong>Deleted</strong>: deleted</li>
+             * <li><strong>Deleting</strong>: deleting</li>
+             * <li><strong>Creating</strong>: creating</li>
+             * <li><strong>Associated</strong>: specified in an SNAT or DNAT entry</li>
+             * <li><strong>Associating</strong>: being specified in an SNAT or DNAT entry</li>
+             * </ul>
              * 
-             * *   **Available**: available
-             * *   **Deleted**: deleted
-             * *   **Deleting**: deleting
-             * *   **Creating**: creating
-             * *   **Associated**: specified in an SNAT or DNAT entry
-             * *   **Associating**: being specified in an SNAT or DNAT entry
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder natIpStatus(String natIpStatus) {
                 this.natIpStatus = natIpStatus;

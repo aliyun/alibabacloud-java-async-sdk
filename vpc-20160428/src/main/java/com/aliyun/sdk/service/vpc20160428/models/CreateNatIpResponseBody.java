@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNatIpResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNatIpResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateNatIpResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The NAT IP address.
+         * <p>The NAT IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.34</p>
          */
         public Builder natIp(String natIp) {
             this.natIp = natIp;
@@ -69,7 +73,10 @@ public class CreateNatIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the NAT IP address.
+         * <p>The ID of the NAT IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpcnatip-gw8y7q3cpk3fggs8****</p>
          */
         public Builder natIpId(String natIpId) {
             this.natIpId = natIpId;
@@ -77,7 +84,10 @@ public class CreateNatIpResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9AD97A0-5338-43F8-8A80-5E274CCBA11B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

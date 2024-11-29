@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DissociateVpnGatewayWithCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>DissociateVpnGatewayWithCertificateResponseBody</p>
@@ -37,7 +38,10 @@ public class DissociateVpnGatewayWithCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

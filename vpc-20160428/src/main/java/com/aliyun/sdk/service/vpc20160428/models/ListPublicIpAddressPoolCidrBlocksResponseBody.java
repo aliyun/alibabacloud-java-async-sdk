@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicIpAddressPoolCidrBlocksResponseBody} extends {@link TeaModel}
  *
  * <p>ListPublicIpAddressPoolCidrBlocksResponseBody</p>
@@ -73,11 +74,14 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
+         * <li>If <strong>NextToken</strong> is returned, the value is the token that is used for the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** was not returned, it indicates that no additional results exist.
-         * *   If **NextToken** is returned, the value is the token that is used for the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -85,7 +89,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
          */
         public Builder publicIpPoolCidrBlockList(java.util.List < PublicIpPoolCidrBlockList> publicIpPoolCidrBlockList) {
             this.publicIpPoolCidrBlockList = publicIpPoolCidrBlockList;
@@ -93,7 +97,10 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,10 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned. Valid values: **10** to **100**. Default value: **10**.
+         * <p>The maximum number of entries returned. Valid values: <strong>10</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -114,6 +124,12 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPublicIpAddressPoolCidrBlocksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublicIpAddressPoolCidrBlocksResponseBody</p>
+     */
     public static class PublicIpPoolCidrBlockList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
@@ -201,7 +217,10 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             private Integer usedIpNum; 
 
             /**
-             * The ID of the IP address pool.
+             * <p>The ID of the IP address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.0.XX.XX/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -209,7 +228,10 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR blocks.
+             * <p>The CIDR blocks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-10T01:37:38Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -217,7 +239,10 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the CIDR blocks.
+             * <p>The information about the CIDR blocks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pippool-6wetvn6fumkgycssx****</p>
              */
             public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
                 this.publicIpAddressPoolId = publicIpAddressPoolId;
@@ -225,7 +250,10 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the CIDR block was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the CIDR block was created. The time is displayed in <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -233,7 +261,10 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of available IP addresses in the CIDR block.
+             * <p>The total number of available IP addresses in the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalIpNum(Integer totalIpNum) {
                 this.totalIpNum = totalIpNum;
@@ -241,12 +272,15 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the CIDR block in the IP address pool. Valid values:
-             * <p>
+             * <p>The status of the CIDR block in the IP address pool. Valid values:</p>
+             * <ul>
+             * <li><strong>Created</strong>: available</li>
+             * <li><strong>Deleting</strong>: being deleted</li>
+             * <li><strong>Modifying</strong>: being modified</li>
+             * </ul>
              * 
-             * *   **Created**: available
-             * *   **Deleting**: being deleted
-             * *   **Modifying**: being modified
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder usedIpNum(Integer usedIpNum) {
                 this.usedIpNum = usedIpNum;

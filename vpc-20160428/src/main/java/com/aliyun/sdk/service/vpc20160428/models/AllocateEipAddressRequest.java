@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateEipAddressRequest} extends {@link RequestModel}
  *
  * <p>AllocateEipAddressRequest</p>
@@ -362,7 +363,10 @@ public class AllocateEipAddressRequest extends Request {
         } 
 
         /**
-         * The promotion code. This parameter is not required.
+         * <p>The promotion code. This parameter is not required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder activityId(Long activityId) {
             this.putQueryParameter("ActivityId", activityId);
@@ -371,13 +375,15 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): The automatic payment is disabled. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</li>
+         * <li><strong>true</strong>: The automatic payment is enabled. Payments are automatically complete after an order is generated.</li>
+         * </ul>
+         * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, this parameter is required. If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, this parameter is not required.</p>
          * 
-         * *   **false** (default): The automatic payment is disabled. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
-         * *   **true**: The automatic payment is enabled. Payments are automatically complete after an order is generated.
-         * 
-         * If **InstanceChargeType** is set to **PrePaid**, this parameter is required. If **InstanceChargeType** is set to **PostPaid**, this parameter is not required.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -386,14 +392,16 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The maximum bandwidth of the EIP. Unit: Mbit/s.
-         * <p>
+         * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
+         * <ul>
+         * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>: <strong>1</strong> to <strong>500</strong>.****</li>
+         * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>: <strong>1</strong> to <strong>200</strong>.****</li>
+         * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>: <strong>1</strong> to <strong>1000</strong>.****</li>
+         * </ul>
+         * <p>Default value: <strong>5</strong>. Unit: Mbit/s.</p>
          * 
-         * *   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**: **1** to **500**.****
-         * *   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**: **1** to **200**.****
-         * *   Valid values when **InstanceChargeType** is set to **PrePaid**: **1** to **1000**.****
-         * 
-         * Default value: **5**. Unit: Mbit/s.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -402,12 +410,14 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The <strong>client token</strong> can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the <strong>client token</strong>. The value of <strong>RequestId</strong> is different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate a token, but you must make sure that the token is unique among different requests. The **client token** can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the **client token**. The value of **RequestId** is different for each API request.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -416,12 +426,14 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The description of the EIP.
-         * <p>
+         * <p>The description of the EIP.</p>
+         * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <blockquote>
+         * <p> You cannot specify this parameter if you create a subscription EIP.</p>
+         * </blockquote>
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
-         * 
-         * >  You cannot specify this parameter if you create a subscription EIP.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -430,24 +442,29 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The line type. Valid values:
-         * <p>
+         * <p>The line type. Valid values:</p>
+         * <ul>
+         * <li><strong>BGP</strong> (default): BGP (Multi-ISP) All regions support BGP (Multi-ISP) EIPs.</li>
+         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</li>
+         * </ul>
+         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the &quot;Line types&quot; section of <a href="https://help.aliyun.com/document_detail/32321.html">What is EIP?</a></p>
+         * <ul>
+         * <li><p>If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
+         * <ul>
+         * <li><strong>ChinaTelecom</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaTelecom_L2</strong></li>
+         * <li><strong>ChinaUnicom_L2</strong></li>
+         * <li><strong>ChinaMobile_L2</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **BGP** (default): BGP (Multi-ISP) All regions support BGP (Multi-ISP) EIPs.
-         * *   **BGP_PRO**: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
-         * 
-         * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the "Line types" section of [What is EIP?](~~32321~~)
-         * 
-         * *   If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
-         * 
-         *     *   **ChinaTelecom**
-         *     *   **ChinaUnicom**
-         *     *   **ChinaMobile**
-         *     *   **ChinaTelecom_L2**
-         *     *   **ChinaUnicom_L2**
-         *     *   **ChinaMobile_L2**
-         * 
-         * *   If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         public Builder ISP(String ISP) {
             this.putQueryParameter("ISP", ISP);
@@ -456,13 +473,15 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The billing method of the EIP. Valid values:
-         * <p>
+         * <p>The billing method of the EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong> (default): pay-as-you-go</li>
+         * </ul>
+         * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong>. If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid** (default): pay-as-you-go
-         * 
-         * If **InstanceChargeType** is set to **PrePaid**, set **InternetChargeType** to **PayByBandwidth**. If **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -471,10 +490,11 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The EIP ID.
-         * <p>
+         * <p>The EIP ID.</p>
+         * <p>Specify <strong>IpAddress</strong> or <strong>InstanceId</strong>. If you leave both parameters empty, the system randomly allocates an EIP.</p>
          * 
-         * Specify **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.
+         * <strong>example:</strong>
+         * <p>eip-25877c70gddh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -483,15 +503,16 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The metering method of the EIP. Valid values:
-         * <p>
+         * <p>The metering method of the EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth</li>
+         * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+         * </ul>
+         * <p>When <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong>.</p>
+         * <p>When <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
          * 
-         * *   **PayByBandwidth** (default): pay-by-bandwidth
-         * *   **PayByTraffic**: pay-by-data-transfer
-         * 
-         * When **InstanceChargeType** is set to **PrePaid**, set **InternetChargeType** to **PayByBandwidth**.
-         * 
-         * When **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -500,10 +521,11 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The IP address of the EIP that you want to request.
-         * <p>
+         * <p>The IP address of the EIP that you want to request.</p>
+         * <p>Specify <strong>IpAddress</strong> or <strong>InstanceId</strong>. If you leave both parameters empty, the system randomly allocates an EIP.</p>
          * 
-         * Specify **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder ipAddress(String ipAddress) {
             this.putQueryParameter("IpAddress", ipAddress);
@@ -512,12 +534,14 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The EIP name.
-         * <p>
+         * <p>The EIP name.</p>
+         * <p>The name must be 1 to 128 characters in length and start with a letter, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <blockquote>
+         * <p> You cannot specify this parameter if you create a subscription EIP.</p>
+         * </blockquote>
          * 
-         * The name must be 1 to 128 characters in length and start with a letter, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
-         * 
-         * >  You cannot specify this parameter if you create a subscription EIP.
+         * <strong>example:</strong>
+         * <p>EIP1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -526,7 +550,10 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The network type. Default value: **public**.
+         * <p>The network type. Default value: <strong>public</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder netmode(String netmode) {
             this.putQueryParameter("Netmode", netmode);
@@ -553,14 +580,13 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The subscription duration of the EIP.
-         * <p>
+         * <p>The subscription duration of the EIP.</p>
+         * <p>Valid values when <strong>PricingCycle</strong> is set to <strong>Month</strong>: <strong>1</strong> to <strong>9</strong>.****</p>
+         * <p>Valid values when <strong>PricingCycle</strong> is set to <strong>Year</strong>: <strong>1</strong> to <strong>5</strong>.****</p>
+         * <p>This parameter must be specified when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>. This parameter is optional when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
          * 
-         * Valid values when **PricingCycle** is set to **Month**: **1** to **9**.****
-         * 
-         * Valid values when **PricingCycle** is set to **Year**: **1** to **5**.****
-         * 
-         * This parameter must be specified when **InstanceChargeType** is set to **PrePaid**. This parameter is optional when **InstanceChargeType** is set to **PostPaid**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -569,13 +595,15 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The billing cycle of the subscription EIP. Valid values:
-         * <p>
+         * <p>The billing cycle of the subscription EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong> (default)</li>
+         * <li><strong>Year</strong></li>
+         * </ul>
+         * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, this parameter is required. If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, this parameter is not required.</p>
          * 
-         * *   **Month** (default)
-         * *   **Year**
-         * 
-         * If **InstanceChargeType** is set to **PrePaid**, this parameter is required. If **InstanceChargeType** is set to **PostPaid**, this parameter is not required.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -584,12 +612,12 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the IP address pool.
-         * <p>
+         * <p>The ID of the IP address pool.</p>
+         * <p>The EIP is allocated from the IP address pool.</p>
+         * <p>By default, the IP address pool feature is unavailable. To use the IP address pool, apply for the privilege in the Quota Center console. For more information, see the &quot;Request a quota increase in the Quota Center console&quot; section in <a href="https://help.aliyun.com/document_detail/108213.html">Manage EIP quotas</a>.</p>
          * 
-         * The EIP is allocated from the IP address pool.
-         * 
-         * By default, the IP address pool feature is unavailable. To use the IP address pool, apply for the privilege in the Quota Center console. For more information, see the "Request a quota increase in the Quota Center console" section in [Manage EIP quotas](~~108213~~).
+         * <strong>example:</strong>
+         * <p>pippool-2vc0kxcedhquybdsz****</p>
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);
@@ -598,10 +626,12 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the EIP belongs.
-         * <p>
+         * <p>The ID of the region to which the EIP belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -610,7 +640,10 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazffggds****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -637,13 +670,15 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The editions of Anti-DDoS.
-         * <p>
+         * <p>The editions of Anti-DDoS.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, Anti-DDoS Origin Basic is used.</li>
+         * <li>If you set the parameter to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Pro/Premium is used.</li>
+         * </ul>
+         * <p>You can specify up to 10 editions of Anti-DDoS.</p>
          * 
-         * *   If you do not specify this parameter, Anti-DDoS Origin Basic is used.
-         * *   If you set the parameter to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.
-         * 
-         * You can specify up to 10 editions of Anti-DDoS.
+         * <strong>example:</strong>
+         * <p>AntiDDoS_Enhanced</p>
          */
         public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
             this.putQueryParameter("SecurityProtectionTypes", securityProtectionTypes);
@@ -652,12 +687,12 @@ public class AllocateEipAddressRequest extends Request {
         }
 
         /**
-         * The zone of the EIP.
-         * <p>
+         * <p>The zone of the EIP.</p>
+         * <p>When the service type of the IP address pool specified by <strong>PublicIpAddressPoolId</strong> is CloudBox, the default value is the zone of the IP address pool.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/429433.html">ListPublicIpAddressPools</a>.</p>
          * 
-         * When the service type of the IP address pool specified by **PublicIpAddressPoolId** is CloudBox, the default value is the zone of the IP address pool.
-         * 
-         * For more information, see [ListPublicIpAddressPools](~~429433~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         public Builder zone(String zone) {
             this.putQueryParameter("Zone", zone);

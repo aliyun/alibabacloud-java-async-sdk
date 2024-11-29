@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFlowLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeFlowLogsRequest</p>
@@ -306,10 +307,11 @@ public class DescribeFlowLogsRequest extends Request {
         } 
 
         /**
-         * The description of the flow log.
-         * <p>
+         * <p>The description of the flow log.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>This is my Flowlog.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -318,7 +320,10 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The ID of the flow log.
+         * <p>The ID of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fl-bp1f6qqhsrc2c12ta****</p>
          */
         public Builder flowLogId(String flowLogId) {
             this.putQueryParameter("FlowLogId", flowLogId);
@@ -327,10 +332,11 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The name of the flow log.
-         * <p>
+         * <p>The name of the flow log.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>myFlowlog</p>
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
@@ -339,7 +345,10 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The Logstore that stores the captured traffic data.
+         * <p>The Logstore that stores the captured traffic data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FlowLogStore</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putQueryParameter("LogStoreName", logStoreName);
@@ -366,7 +375,10 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -375,7 +387,10 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **20**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -384,7 +399,10 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The project that manages the captured traffic data.
+         * <p>The project that manages the captured traffic data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FlowLogProject</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -393,10 +411,12 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The region ID of the flow log.
-         * <p>
+         * <p>The region ID of the flow log.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -405,7 +425,10 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the flow log belongs.
+         * <p>The ID of the resource group to which the flow log belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -414,7 +437,10 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The ID of the resource from which traffic is captured.
+         * <p>The ID of the resource from which traffic is captured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-askldfas****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -441,12 +467,15 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The type of resource from which traffic is captured. Valid values:
-         * <p>
+         * <p>The type of resource from which traffic is captured. Valid values:</p>
+         * <ul>
+         * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
+         * <li><strong>VSwitch</strong>: all ENIs in a vSwitch</li>
+         * <li><strong>VPC</strong>: all ENIs in a virtual private cloud (VPC)</li>
+         * </ul>
          * 
-         * *   **NetworkInterface**: elastic network interface (ENI)
-         * *   **VSwitch**: all ENIs in a vSwitch
-         * *   **VPC**: all ENIs in a virtual private cloud (VPC)
+         * <strong>example:</strong>
+         * <p>NetworkInterface</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -455,12 +484,15 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The status of the flow log. Valid values:
-         * <p>
+         * <p>The status of the flow log. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong></li>
+         * <li><strong>Activating</strong></li>
+         * <li><strong>Inactive</strong></li>
+         * </ul>
          * 
-         * *   **Active**
-         * *   **Activating**
-         * *   **Inactive**
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -469,7 +501,7 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -478,12 +510,15 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The type of traffic that is captured. Valid values:
-         * <p>
+         * <p>The type of traffic that is captured. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong>: all traffic</li>
+         * <li><strong>Allow</strong>: traffic that is allowed by access control</li>
+         * <li><strong>Drop</strong>: traffic that is denied by access control</li>
+         * </ul>
          * 
-         * *   **All**: all traffic
-         * *   **Allow**: traffic that is allowed by access control
-         * *   **Drop**: traffic that is denied by access control
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);
@@ -492,7 +527,10 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the flow log belongs.
+         * <p>The ID of the VPC to which the flow log belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1nwd16gvo1wgs****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -507,6 +545,12 @@ public class DescribeFlowLogsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFlowLogsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeFlowLogsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -546,10 +590,11 @@ public class DescribeFlowLogsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -557,10 +602,11 @@ public class DescribeFlowLogsRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

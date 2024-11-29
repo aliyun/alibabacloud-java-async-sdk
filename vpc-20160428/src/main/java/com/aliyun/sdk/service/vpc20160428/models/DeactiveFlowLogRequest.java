@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeactiveFlowLogRequest} extends {@link RequestModel}
  *
  * <p>DeactiveFlowLogRequest</p>
@@ -125,7 +126,11 @@ public class DeactiveFlowLogRequest extends Request {
         } 
 
         /**
-         * The ID of the flow log.
+         * <p>The ID of the flow log.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fl-m5e8vhz2t21sel1nq****</p>
          */
         public Builder flowLogId(String flowLogId) {
             this.putQueryParameter("FlowLogId", flowLogId);
@@ -152,7 +157,11 @@ public class DeactiveFlowLogRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to create the flow log. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region where you want to create the flow log. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

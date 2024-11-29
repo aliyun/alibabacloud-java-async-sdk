@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         private Vpcs vpcs; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C6532AA8-D0F7-497F-A8EE-094126D441F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +130,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the VPC.
+         * <p>The details about the VPC.</p>
          */
         public Builder vpcs(Vpcs vpcs) {
             this.vpcs = vpcs;
@@ -130,6 +143,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class Ipv6CidrBlock extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
         private String ipv6CidrBlock;
@@ -169,7 +188,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             private String ipv6Isp; 
 
             /**
-             * The IPv6 CIDR block of the VPC.
+             * <p>The IPv6 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:XXXX:0:a600::/56</p>
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -177,15 +199,19 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of IPv6 CIDR block. Valid values:
-             * <p>
+             * <p>The type of IPv6 CIDR block. Valid values:</p>
+             * <ul>
+             * <li><strong>BGP</strong></li>
+             * <li><strong>ChinaMobile</strong></li>
+             * <li><strong>ChinaUnicom</strong></li>
+             * <li><strong>ChinaTelecom</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+             * </blockquote>
              * 
-             * *   **BGP**
-             * *   **ChinaMobile**
-             * *   **ChinaUnicom**
-             * *   **ChinaTelecom**
-             * 
-             * >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -199,6 +225,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class Ipv6CidrBlocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
         private java.util.List < Ipv6CidrBlock> ipv6CidrBlock;
@@ -226,7 +258,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             private java.util.List < Ipv6CidrBlock> ipv6CidrBlock; 
 
             /**
-             * The IPv6 CIDR block of the VPC.
+             * <p>The IPv6 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:XXXX:0:a600::/56</p>
              */
             public Builder ipv6CidrBlock(java.util.List < Ipv6CidrBlock> ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -240,6 +275,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class NatGatewayIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NatGatewayIds")
         private java.util.List < String > natGatewayIds;
@@ -281,6 +322,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class RouterTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouterTableIds")
         private java.util.List < String > routerTableIds;
@@ -322,6 +369,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class SecondaryCidrBlocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlock")
         private java.util.List < String > secondaryCidrBlock;
@@ -363,6 +416,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -402,7 +461,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -410,7 +472,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>internal</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -424,6 +489,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -465,6 +536,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class UserCidrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserCidr")
         private java.util.List < String > userCidr;
@@ -506,6 +583,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private java.util.List < String > vSwitchId;
@@ -547,6 +630,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class Vpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenStatus")
         private String cenStatus;
@@ -850,7 +939,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached. **Attached** is returned only if the VPC is attached to a CEN instance.
+             * <p>The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached. <strong>Attached</strong> is returned only if the VPC is attached to a CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Attached</p>
              */
             public Builder cenStatus(String cenStatus) {
                 this.cenStatus = cenStatus;
@@ -858,7 +950,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv4 CIDR block of the VPC.
+             * <p>The IPv4 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -866,7 +961,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VPC was created.
+             * <p>The time when the VPC was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-18T15:02:37Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -874,7 +972,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the VPC.
+             * <p>The description of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is my VPC.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -882,7 +983,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DHCP options set.
+             * <p>The ID of the DHCP options set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dopt-o6w0df4epg9zo8isy****</p>
              */
             public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
                 this.dhcpOptionsSetId = dhcpOptionsSetId;
@@ -890,13 +994,16 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the DHCP options set. Valid values:
-             * <p>
+             * <p>The status of the DHCP options set. Valid values:</p>
+             * <ul>
+             * <li><strong>Available</strong></li>
+             * <li><strong>InUse</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * <li><strong>Pending</strong></li>
+             * </ul>
              * 
-             * *   **Available**
-             * *   **InUse**
-             * *   **Deleted**
-             * *   **Pending**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder dhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
                 this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
@@ -920,7 +1027,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 CIDR block of the VPC.
+             * <p>The IPv6 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:XXXX:0:a600::/56</p>
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -928,7 +1038,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 CIDR block of the VPC.
+             * <p>The IPv6 CIDR block of the VPC.</p>
              */
             public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
                 this.ipv6CidrBlocks = ipv6CidrBlocks;
@@ -936,11 +1046,14 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the VPC is the default VPC in the region. Valid values:
-             * <p>
+             * <p>Indicates whether the VPC is the default VPC in the region. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -948,7 +1061,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Internet NAT gateway.
+             * <p>The ID of the Internet NAT gateway.</p>
              */
             public Builder natGatewayIds(NatGatewayIds natGatewayIds) {
                 this.natGatewayIds = natGatewayIds;
@@ -956,7 +1069,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the VPC belongs.
+             * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253460731706911258</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -964,7 +1080,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the VPC belongs.
+             * <p>The ID of the region to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -972,7 +1091,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the VPC belongs.
+             * <p>The ID of the resource group to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -980,7 +1102,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the route table.
+             * <p>The information about the route table.</p>
              */
             public Builder routerTableIds(RouterTableIds routerTableIds) {
                 this.routerTableIds = routerTableIds;
@@ -988,7 +1110,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the secondary CIDR block.
+             * <p>The information about the secondary CIDR block.</p>
              */
             public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
                 this.secondaryCidrBlocks = secondaryCidrBlocks;
@@ -996,11 +1118,14 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VPC. Valid values:
-             * <p>
+             * <p>The status of the VPC. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Available</strong></li>
+             * </ul>
              * 
-             * *   **Pending**
-             * *   **Available**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1008,7 +1133,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag information about the VPC.
+             * <p>The tag information about the VPC.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1016,7 +1141,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of user CIDR blocks.
+             * <p>The list of user CIDR blocks.</p>
              */
             public Builder userCidrs(UserCidrs userCidrs) {
                 this.userCidrs = userCidrs;
@@ -1024,7 +1149,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vRouter.
+             * <p>The ID of the vRouter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vrt-bp1jcg5cmxjbl9xgc****</p>
              */
             public Builder vRouterId(String vRouterId) {
                 this.vRouterId = vRouterId;
@@ -1032,10 +1160,8 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitches in the VPC.
-             * <p>
-             * 
-             * You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the [DescribeVSwitches](~~35748~~) operation.
+             * <p>The vSwitches in the VPC.</p>
+             * <p>You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation.</p>
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -1043,7 +1169,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1qpo0kug3a20qqe****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1051,7 +1180,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc1</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -1065,6 +1197,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class Vpcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vpc")
         private java.util.List < Vpc> vpc;

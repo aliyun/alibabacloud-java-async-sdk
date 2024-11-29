@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UnTagResourcesRequest</p>
@@ -168,11 +169,14 @@ public class UnTagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the specified resource. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -199,10 +203,12 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resource.
-         * <p>
+         * <p>The region ID of the resource.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +217,11 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource ID. You can specify up to 20 resource IDs.
+         * <p>The resource ID. You can specify up to 20 resource IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16qjewdsunr41m1****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -238,16 +248,20 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>VSWITCH</strong></li>
+         * <li><strong>ROUTETABLE</strong></li>
+         * <li><strong>EIP</strong></li>
+         * <li><strong>VpnGateway</strong></li>
+         * <li><strong>NATGATEWAY</strong></li>
+         * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VPC**
-         * *   **VSWITCH**
-         * *   **ROUTETABLE**
-         * *   **EIP**
-         * *   **VpnGateway**
-         * *   **NATGATEWAY**
-         * *   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -256,10 +270,11 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The key of the tag that you want to remove. You can specify at most 20 tag keys. It can be an empty string.
-         * <p>
+         * <p>The key of the tag that you want to remove. You can specify at most 20 tag keys. It can be an empty string.</p>
+         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

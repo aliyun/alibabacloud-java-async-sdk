@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCustomerGatewayAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCustomerGatewayAttributeResponseBody</p>
@@ -109,7 +110,10 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The timestamp generated when the customer gateway was created.
+         * <p>The timestamp generated when the customer gateway was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1492747187000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -117,7 +121,10 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the customer gateway.
+         * <p>The ID of the customer gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cgw-bp1pvpl9r9adju6l5****</p>
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.customerGatewayId = customerGatewayId;
@@ -125,7 +132,10 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the customer gateway.
+         * <p>The description of the customer gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -133,7 +143,10 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The public IP address of the gateway device in the data center.
+         * <p>The public IP address of the gateway device in the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139.32.XX.XX</p>
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;
@@ -141,7 +154,10 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the customer gateway.
+         * <p>The name of the customer gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -149,7 +165,10 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8AA5CE21-2E6A-4530-BDF5-F055849476E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,10 +176,11 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the customer gateway belongs.
-         * <p>
+         * <p>The ID of the resource group to which the customer gateway belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
          * 
-         * You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
+         * <strong>example:</strong>
+         * <p>rg-acfmzs372yg****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

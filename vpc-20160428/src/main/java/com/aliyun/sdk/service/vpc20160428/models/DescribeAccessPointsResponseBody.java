@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessPointsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the access point.
+         * <p>The information about the access point.</p>
          */
         public Builder accessPointSet(AccessPointSet accessPointSet) {
             this.accessPointSet = accessPointSet;
@@ -93,7 +94,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries returned per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E85D803-C7CF-4BCD-9CFE-6DBA1DFFA027</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointsResponseBody</p>
+     */
     public static class AccessPointFeatureModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FeatureKey")
         private String featureKey;
@@ -169,7 +188,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             private String featureValue; 
 
             /**
-             * The feature of the access point.
+             * <p>The feature of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AP_Support_VbrBandwidthLimit</p>
              */
             public Builder featureKey(String featureKey) {
                 this.featureKey = featureKey;
@@ -177,7 +199,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The feature value of the access point.
+             * <p>The feature value of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder featureValue(String featureValue) {
                 this.featureValue = featureValue;
@@ -191,6 +216,12 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointsResponseBody</p>
+     */
     public static class AccessPointFeatureModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointFeatureModel")
         private java.util.List < AccessPointFeatureModel> accessPointFeatureModel;
@@ -232,6 +263,12 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointsResponseBody</p>
+     */
     public static class AccessPointType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointFeatureModels")
         private AccessPointFeatureModels accessPointFeatureModels;
@@ -355,7 +392,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The feature model of the access point.
+             * <p>The feature model of the access point.</p>
              */
             public Builder accessPointFeatureModels(AccessPointFeatureModels accessPointFeatureModels) {
                 this.accessPointFeatureModels = accessPointFeatureModels;
@@ -363,7 +400,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the access point.
+             * <p>The ID of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-cn-hangzhou-****</p>
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -371,7 +411,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the access point.
+             * <p>The region ID of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder attachedRegionNo(String attachedRegionNo) {
                 this.attachedRegionNo = attachedRegionNo;
@@ -379,7 +422,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the access point.
+             * <p>The description of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the access point.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -387,7 +433,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet service provider (ISP) of the access point. Valid values:
+             * <p>The Internet service provider (ISP) of the access point. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Telehouse</p>
              */
             public Builder hostOperator(String hostOperator) {
                 this.hostOperator = hostOperator;
@@ -395,7 +444,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The location of the access point.
+             * <p>The location of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -403,7 +455,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access point.
+             * <p>The name of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -411,13 +466,16 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the access point. Valid values:
-             * <p>
+             * <p>The status of the access point. Valid values:</p>
+             * <ul>
+             * <li><strong>recommended</strong>: The access point is ready for use.</li>
+             * <li><strong>hot</strong>: A large number of Express Connect circuits are connected to the access point.</li>
+             * <li><strong>full</strong>: The number of Express Connect circuits connected to the access point has reached the upper limit.</li>
+             * <li><strong>disabled</strong>: The access point is unavailable.</li>
+             * </ul>
              * 
-             * *   **recommended**: The access point is ready for use.
-             * *   **hot**: A large number of Express Connect circuits are connected to the access point.
-             * *   **full**: The number of Express Connect circuits connected to the access point has reached the upper limit.
-             * *   **disabled**: The access point is unavailable.
+             * <strong>example:</strong>
+             * <p>recommended</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -425,7 +483,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the Express Connect circuit. Default value: **VPC**.
+             * <p>The network type of the Express Connect circuit. Default value: <strong>VPC</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -439,6 +500,12 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointsResponseBody</p>
+     */
     public static class AccessPointSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointType")
         private java.util.List < AccessPointType> accessPointType;

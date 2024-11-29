@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ActivateRouterInterfaceRequest} extends {@link RequestModel}
  *
  * <p>ActivateRouterInterfaceRequest</p>
@@ -120,10 +121,12 @@ public class ActivateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * The region ID of the router interface.
-         * <p>
+         * <p>The region ID of the router interface.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,7 +153,11 @@ public class ActivateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the router interface.
+         * <p>The ID of the router interface.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-2zeo3xzyf38r4urz****</p>
          */
         public Builder routerInterfaceId(String routerInterfaceId) {
             this.putQueryParameter("RouterInterfaceId", routerInterfaceId);

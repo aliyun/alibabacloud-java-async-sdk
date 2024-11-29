@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHighReliablePhysicalConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHighReliablePhysicalConnectionResponseBody</p>
@@ -90,6 +91,12 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHighReliablePhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHighReliablePhysicalConnectionResponseBody</p>
+     */
     public static class ErrorInfoListErrorInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -171,6 +178,12 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHighReliablePhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHighReliablePhysicalConnectionResponseBody</p>
+     */
     public static class ErrorInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("errorInfoList")
         private java.util.List < ErrorInfoListErrorInfoList> errorInfoList;
@@ -212,6 +225,12 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHighReliablePhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHighReliablePhysicalConnectionResponseBody</p>
+     */
     public static class PhysicalConnectionListPhysicalConnectionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -273,6 +292,12 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHighReliablePhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHighReliablePhysicalConnectionResponseBody</p>
+     */
     public static class PhysicalConnectionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("physicalConnectionList")
         private java.util.List < PhysicalConnectionListPhysicalConnectionList> physicalConnectionList;

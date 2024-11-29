@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPublicIpAddressPoolServiceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetPublicIpAddressPoolServiceStatusResponseBody</p>
@@ -49,11 +50,14 @@ public class GetPublicIpAddressPoolServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the IP address pool feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the IP address pool feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> You can call OpenPublicIpAddressPoolService to enable the IP address pool feature.</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** You can call OpenPublicIpAddressPoolService to enable the IP address pool feature.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -61,7 +65,10 @@ public class GetPublicIpAddressPoolServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-06F82A1B457</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

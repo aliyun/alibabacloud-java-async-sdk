@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpnCrossAccountAuthorizationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpnCrossAccountAuthorizationsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         private Integer totalCount; 
 
         /**
-         * The cross-account authorization information about the IPsec-VPN connection.
+         * <p>The cross-account authorization information about the IPsec-VPN connection.</p>
          */
         public Builder crossAccountAuthorizations(java.util.List < CrossAccountAuthorizations> crossAccountAuthorizations) {
             this.crossAccountAuthorizations = crossAccountAuthorizations;
@@ -93,7 +94,10 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB04E39A-6F0C-36AC-BCA0-B6D371B90062</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpnCrossAccountAuthorizationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpnCrossAccountAuthorizationsResponseBody</p>
+     */
     public static class CrossAccountAuthorizations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -217,7 +236,10 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             private String vpnConnectionId; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.
+             * <p>The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1250123456123456</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -225,7 +247,10 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the CEN instance.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-vv8h0t3klfpaae****</p>
              */
             public Builder bindInstance(String bindInstance) {
                 this.bindInstance = bindInstance;
@@ -233,10 +258,11 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * The resource type of the authorization.
-             * <p>
+             * <p>The resource type of the authorization.</p>
+             * <p>The value is set to <strong>CEN</strong>, which indicates that the IPsec-VPN connection can be associated with a transit router of a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.</p>
              * 
-             * The value is set to **CEN**, which indicates that the IPsec-VPN connection can be associated with a transit router of a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.
+             * <strong>example:</strong>
+             * <p>CEN</p>
              */
             public Builder bindProduct(String bindProduct) {
                 this.bindProduct = bindProduct;
@@ -244,7 +270,10 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the Alibaba Cloud account whose resource the IPsec-VPN connection can be associated with.
+             * <p>The ID of the Alibaba Cloud account whose resource the IPsec-VPN connection can be associated with.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1210123456123456</p>
              */
             public Builder bindUid(Long bindUid) {
                 this.bindUid = bindUid;
@@ -252,10 +281,11 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * The timestamp when the authorization for the IPsec-VPN connection was created.
-             * <p>
+             * <p>The timestamp when the authorization for the IPsec-VPN connection was created.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1658201810000</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -263,7 +293,10 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the IPsec-VPN connection.
+             * <p>The ID of the IPsec-VPN connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vco-p0w2jpkhi2eeop6q6****</p>
              */
             public Builder vpnConnectionId(String vpnConnectionId) {
                 this.vpnConnectionId = vpnConnectionId;

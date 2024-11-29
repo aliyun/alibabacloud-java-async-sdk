@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySnatEntryRequest} extends {@link RequestModel}
  *
  * <p>ModifySnatEntryRequest</p>
@@ -210,12 +211,14 @@ public class ModifySnatEntryRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -260,10 +263,12 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * The region ID of the NAT gateway.
-         * <p>
+         * <p>The region ID of the NAT gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -290,7 +295,11 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * The ID of the SNAT entry that you want to modify.
+         * <p>The ID of the SNAT entry that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-bp1vcgcf8tm0plqcg****</p>
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -299,10 +308,11 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * The name of the SNAT entry.
-         * <p>
+         * <p>The name of the SNAT entry.</p>
+         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>SnatEntry-1</p>
          */
         public Builder snatEntryName(String snatEntryName) {
             this.putQueryParameter("SnatEntryName", snatEntryName);
@@ -311,12 +321,16 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * *   The elastic IP addresses (EIPs) specified in the SNAT entry when you modify an SNAT entry of an Internet NAT gateway. Separate EIPs with commas (,).
-         * <p>
+         * <ul>
+         * <li><p>The elastic IP addresses (EIPs) specified in the SNAT entry when you modify an SNAT entry of an Internet NAT gateway. Separate EIPs with commas (,).</p>
+         * <p>If you select multiple EIPs to create an SNAT address pool, connections are hashed to these EIPs. Network traffic may not be evenly distributed to the EIPs because the amount of traffic passes through each connection varies. We recommend that you associate these EIPs with the same EIP bandwidth plan to prevent service interruptions due to the bandwidth limit of an individual EIP.</p>
+         * </li>
+         * <li><p>When you modify an SNAT entry of a VPC NAT gateway, this parameter specifies the NAT IP address in the SNAT entry.</p>
+         * </li>
+         * </ul>
          * 
-         *     If you select multiple EIPs to create an SNAT address pool, connections are hashed to these EIPs. Network traffic may not be evenly distributed to the EIPs because the amount of traffic passes through each connection varies. We recommend that you associate these EIPs with the same EIP bandwidth plan to prevent service interruptions due to the bandwidth limit of an individual EIP.
-         * 
-         * *   When you modify an SNAT entry of a VPC NAT gateway, this parameter specifies the NAT IP address in the SNAT entry.
+         * <strong>example:</strong>
+         * <p>47.98.XX.XX</p>
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);
@@ -325,7 +339,11 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * The ID of the SNAT table to which the SNAT entry belongs.
+         * <p>The ID of the SNAT table to which the SNAT entry belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stb-8vbczigrhop8x5u3t****</p>
          */
         public Builder snatTableId(String snatTableId) {
             this.putQueryParameter("SnatTableId", snatTableId);

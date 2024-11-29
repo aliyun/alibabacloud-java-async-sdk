@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsRequest} extends {@link RequestModel}
  *
  * <p>DescribeTagsRequest</p>
@@ -181,7 +182,10 @@ public class DescribeTagsRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.
+         * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -190,11 +194,14 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query or no next query is to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -221,10 +228,12 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the resource belongs.
-         * <p>
+         * <p>The ID of the region to which the resource belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -260,16 +269,19 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>VSWITCH</strong>: vSwitch</li>
+         * <li><strong>ROUTETABLE</strong>: route table</li>
+         * <li><strong>EIP</strong>: elastic IP address (EIP)</li>
+         * <li><strong>VpnGateway</strong>: VPN gateway</li>
+         * <li><strong>NATGATEWAY</strong>: NAT gateway</li>
+         * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
+         * </ul>
          * 
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **VSWITCH**: vSwitch
-         * *   **ROUTETABLE**: route table
-         * *   **EIP**: elastic IP address (EIP)
-         * *   **VpnGateway**: VPN gateway
-         * *   **NATGATEWAY**: NAT gateway
-         * *   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -293,6 +305,12 @@ public class DescribeTagsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -332,10 +350,11 @@ public class DescribeTagsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -343,10 +362,11 @@ public class DescribeTagsRequest extends Request {
             }
 
             /**
-             * The value of the tag that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of the tag that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

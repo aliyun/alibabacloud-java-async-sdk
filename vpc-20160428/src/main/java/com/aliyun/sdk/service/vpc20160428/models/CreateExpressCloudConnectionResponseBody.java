@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExpressCloudConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateExpressCloudConnectionResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateExpressCloudConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the ECC instance.
+         * <p>The ID of the ECC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecc-jg************</p>
          */
         public Builder eccId(String eccId) {
             this.eccId = eccId;
@@ -57,7 +61,10 @@ public class CreateExpressCloudConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C004F022-1CC2-4958-9937-675513A2CD7E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

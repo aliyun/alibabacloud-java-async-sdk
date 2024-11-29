@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGlobalAccelerationInstanceSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyGlobalAccelerationInstanceSpecRequest</p>
@@ -140,7 +141,11 @@ public class ModifyGlobalAccelerationInstanceSpecRequest extends Request {
         } 
 
         /**
-         * The maximum bandwidth of the GA instance. Unit: Mbit/s. Set the value to **10**.
+         * <p>The maximum bandwidth of the GA instance. Unit: Mbit/s. Set the value to <strong>10</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -149,7 +154,11 @@ public class ModifyGlobalAccelerationInstanceSpecRequest extends Request {
         }
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-32s33s****</p>
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -176,10 +185,12 @@ public class ModifyGlobalAccelerationInstanceSpecRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance.
-         * <p>
+         * <p>The region ID of the GA instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

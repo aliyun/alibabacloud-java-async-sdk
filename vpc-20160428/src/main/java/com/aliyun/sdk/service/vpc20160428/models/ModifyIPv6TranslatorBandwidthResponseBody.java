@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIPv6TranslatorBandwidthResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyIPv6TranslatorBandwidthResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyIPv6TranslatorBandwidthResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202304500950739</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -57,7 +61,10 @@ public class ModifyIPv6TranslatorBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF8198EE-8FC9-49C2-A22E-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpv6GatewayAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeIpv6GatewayAttributeRequest</p>
@@ -125,7 +126,11 @@ public class DescribeIpv6GatewayAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the IPv6 gateway that you want to query.
+         * <p>The ID of the IPv6 gateway that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6gw-hp3y0l3ln89j8cdvf****</p>
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -152,7 +157,11 @@ public class DescribeIpv6GatewayAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

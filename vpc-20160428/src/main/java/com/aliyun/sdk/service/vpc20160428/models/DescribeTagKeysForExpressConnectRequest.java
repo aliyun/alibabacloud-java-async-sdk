@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagKeysForExpressConnectRequest} extends {@link RequestModel}
  *
  * <p>DescribeTagKeysForExpressConnectRequest</p>
@@ -181,7 +182,10 @@ public class DescribeTagKeysForExpressConnectRequest extends Request {
         } 
 
         /**
-         * The keyword of the tag. Fuzzy match is supported. You can specify a keyword to query all tags that contain the keyword.
+         * <p>The keyword of the tag. Fuzzy match is supported. You can specify a keyword to query all tags that contain the keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>keyword</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -190,7 +194,10 @@ public class DescribeTagKeysForExpressConnectRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -199,11 +206,14 @@ public class DescribeTagKeysForExpressConnectRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -230,10 +240,12 @@ public class DescribeTagKeysForExpressConnectRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the resource resides.
-         * <p>
+         * <p>The ID of the region to which the resource resides.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,7 +254,7 @@ public class DescribeTagKeysForExpressConnectRequest extends Request {
         }
 
         /**
-         * The IDs of the resources. You can specify up to 20 resource IDs.
+         * <p>The IDs of the resources. You can specify up to 20 resource IDs.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -269,7 +281,10 @@ public class DescribeTagKeysForExpressConnectRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to **PHYSICALCONNECTION**, which specifies an Express Connect circuit.
+         * <p>The type of the resource. Set the value to <strong>PHYSICALCONNECTION</strong>, which specifies an Express Connect circuit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHYSICALCONNECTION</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

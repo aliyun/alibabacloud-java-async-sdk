@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVRouterAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyVRouterAttributeRequest</p>
@@ -152,10 +153,11 @@ public class ModifyVRouterAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the vRouter.
-         * <p>
+         * <p>The description of the vRouter.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>My VRouter</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -182,10 +184,11 @@ public class ModifyVRouterAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the vRouter.
-         * <p>
+         * <p>The region ID of the vRouter.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -212,7 +215,11 @@ public class ModifyVRouterAttributeRequest extends Request {
         }
 
         /**
-         * The vRouter ID.
+         * <p>The vRouter ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-gw0p7zigake75znix****</p>
          */
         public Builder vRouterId(String vRouterId) {
             this.putQueryParameter("VRouterId", vRouterId);
@@ -221,10 +228,11 @@ public class ModifyVRouterAttributeRequest extends Request {
         }
 
         /**
-         * The name of the vRouter.
-         * <p>
+         * <p>The name of the vRouter.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>VRouter-1</p>
          */
         public Builder vRouterName(String vRouterName) {
             this.putQueryParameter("VRouterName", vRouterName);

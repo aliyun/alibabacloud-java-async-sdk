@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePublicIpAddressPoolRequest} extends {@link RequestModel}
  *
  * <p>CreatePublicIpAddressPoolRequest</p>
@@ -250,11 +251,14 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         } 
 
         /**
-         * The service type of the IP address pool. Valid values:
-         * <p>
+         * <p>The service type of the IP address pool. Valid values:</p>
+         * <ul>
+         * <li><strong>CloudBox</strong> Only cloud box users can select this type.</li>
+         * <li><strong>Default</strong>: This is the default value.</li>
+         * </ul>
          * 
-         * *   **CloudBox** Only cloud box users can select this type.
-         * *   **Default**: This is the default value.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -263,12 +267,14 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The value of <strong>RequestId</strong> for each API request is different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request is different.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -277,10 +283,11 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * The description of the IP address pool.
-         * <p>
+         * <p>The description of the IP address pool.</p>
+         * <p>This parameter is optional. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * This parameter is optional. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.
+         * <strong>example:</strong>
+         * <p>AddressPoolDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -289,11 +296,14 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * Specifies whether to precheck only this request. Valid values:
-         * <p>
+         * <p>Specifies whether to precheck only this request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request without creating an IP address pool. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: sends the request. This is the default value. If the request passes the precheck, a 2xx HTTP status code is returned and the IP address pool is created.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request without creating an IP address pool. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false**: sends the request. This is the default value. If the request passes the precheck, a 2xx HTTP status code is returned and the IP address pool is created.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -302,24 +312,29 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * The line type. Valid values:
-         * <p>
+         * <p>The line type. Valid values:</p>
+         * <ul>
+         * <li><strong>BGP</strong> (default)</li>
+         * <li><strong>BGP_PRO</strong></li>
+         * </ul>
+         * <p>For more information about BGP (Multi-ISP) lines and BGP (Multi-ISP) Pro lines, see the &quot;Line types&quot; section in the <a href="https://help.aliyun.com/document_detail/32321.html">What is EIP?</a> topic.</p>
+         * <ul>
+         * <li><p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
+         * <ul>
+         * <li><strong>ChinaTelecom</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaTelecom_L2</strong></li>
+         * <li><strong>ChinaUnicom_L2</strong></li>
+         * <li><strong>ChinaMobile_L2</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **BGP** (default)
-         * *   **BGP_PRO**
-         * 
-         * For more information about BGP (Multi-ISP) lines and BGP (Multi-ISP) Pro lines, see the "Line types" section in the [What is EIP?](~~32321~~) topic.
-         * 
-         * *   If you are allowed to use single-ISP bandwidth, you can also use one of the following values:
-         * 
-         *     *   **ChinaTelecom**
-         *     *   **ChinaUnicom**
-         *     *   **ChinaMobile**
-         *     *   **ChinaTelecom_L2**
-         *     *   **ChinaUnicom_L2**
-         *     *   **ChinaMobile_L2**
-         * 
-         * *   If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -328,10 +343,11 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * The name of the IP address pool.
-         * <p>
+         * <p>The name of the IP address pool.</p>
+         * <p>This parameter is optional. The name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * This parameter is optional. The name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>AddressPoolName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -358,7 +374,11 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to create the IP address pool.
+         * <p>The ID of the region where you want to create the IP address pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -367,7 +387,10 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the IP address pool belongs.
+         * <p>The ID of the resource group to which the IP address pool belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4pcdvf****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -394,10 +417,11 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * The editions of Anti-DDoS.
-         * <p>
-         * - If you do not specify this parameter, Anti-DDoS Origin Basic is used.
-         * - If you set the parameter to AntiDDoS_Enhanced, Anti-DDoS Pro/Premium is used.
+         * <p>The editions of Anti-DDoS.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, Anti-DDoS Origin Basic is used.</li>
+         * <li>If you set the parameter to AntiDDoS_Enhanced, Anti-DDoS Pro/Premium is used.</li>
+         * </ul>
          */
         public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
             this.putQueryParameter("SecurityProtectionTypes", securityProtectionTypes);
@@ -406,7 +430,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * The tag of the resource.
+         * <p>The tag of the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -415,7 +439,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * The zone of the IP address pool. If you set **BizType** to **CloudBox**, this parameter is required.
+         * <p>The zone of the IP address pool. If you set <strong>BizType</strong> to <strong>CloudBox</strong>, this parameter is required.</p>
          */
         public Builder zones(java.util.List < String > zones) {
             this.putQueryParameter("Zones", zones);
@@ -430,6 +454,12 @@ public class CreatePublicIpAddressPoolRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePublicIpAddressPoolRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePublicIpAddressPoolRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -469,10 +499,11 @@ public class CreatePublicIpAddressPoolRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * A tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -480,10 +511,11 @@ public class CreatePublicIpAddressPoolRequest extends Request {
             }
 
             /**
-             * The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNatGatewayAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyNatGatewayAttributeResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyNatGatewayAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB5F62CF-2B60-4458-A756-42C9DFE108D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

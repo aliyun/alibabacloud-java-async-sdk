@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVpcRouteEntrySummaryRequest} extends {@link RequestModel}
  *
  * <p>GetVpcRouteEntrySummaryRequest</p>
@@ -172,10 +173,12 @@ public class GetVpcRouteEntrySummaryRequest extends Request {
         }
 
         /**
-         * The region ID of the route table.
-         * <p>
+         * <p>The region ID of the route table.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,14 +205,18 @@ public class GetVpcRouteEntrySummaryRequest extends Request {
         }
 
         /**
-         * The type of the route. Valid values:
-         * <p>
+         * <p>The type of the route. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong>: all route types</li>
+         * <li><strong>Custom</strong>: a custom route</li>
+         * <li><strong>System</strong>: a system route</li>
+         * <li><strong>BGP</strong>: a BGP route</li>
+         * <li><strong>CEN</strong>: a Cloud Enterprise Network (CEN) route</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **All**: all route types
-         * *   **Custom**: a custom route
-         * *   **System**: a system route
-         * *   **BGP**: a BGP route
-         * *   **CEN**: a Cloud Enterprise Network (CEN) route
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder routeEntryType(String routeEntryType) {
             this.putQueryParameter("RouteEntryType", routeEntryType);
@@ -218,7 +225,10 @@ public class GetVpcRouteEntrySummaryRequest extends Request {
         }
 
         /**
-         * The ID of the route table that you want to query.
+         * <p>The ID of the route table that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdvzu2****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -227,7 +237,11 @@ public class GetVpcRouteEntrySummaryRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the route table belongs.
+         * <p>The ID of the virtual private cloud (VPC) to which the route table belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

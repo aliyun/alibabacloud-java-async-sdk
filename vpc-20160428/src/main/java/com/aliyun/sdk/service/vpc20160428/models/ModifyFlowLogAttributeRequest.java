@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyFlowLogAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyFlowLogAttributeRequest</p>
@@ -27,6 +28,10 @@ public class ModifyFlowLogAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowLogName")
     private String flowLogName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
+    private String ipVersion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -55,6 +60,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         this.description = builder.description;
         this.flowLogId = builder.flowLogId;
         this.flowLogName = builder.flowLogName;
+        this.ipVersion = builder.ipVersion;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -104,6 +110,13 @@ public class ModifyFlowLogAttributeRequest extends Request {
     }
 
     /**
+     * @return ipVersion
+     */
+    public String getIpVersion() {
+        return this.ipVersion;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -143,6 +156,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         private String description; 
         private String flowLogId; 
         private String flowLogName; 
+        private String ipVersion; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -159,6 +173,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
             this.description = request.description;
             this.flowLogId = request.flowLogId;
             this.flowLogName = request.flowLogName;
+            this.ipVersion = request.ipVersion;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -167,7 +182,10 @@ public class ModifyFlowLogAttributeRequest extends Request {
         } 
 
         /**
-         * The new sampling interval of the flow log. Unit: minutes. Valid values: **1**, **5**, and **10**.
+         * <p>The new sampling interval of the flow log. Unit: minutes. Valid values: <strong>1</strong>, <strong>5</strong>, and <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder aggregationInterval(Integer aggregationInterval) {
             this.putQueryParameter("AggregationInterval", aggregationInterval);
@@ -176,10 +194,11 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the flow log.
-         * <p>
+         * <p>The new description of the flow log.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>This is my Flowlog.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -188,7 +207,11 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the flow log.
+         * <p>The ID of the flow log.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fl-m5e8vhz2t21sel1nq****</p>
          */
         public Builder flowLogId(String flowLogId) {
             this.putQueryParameter("FlowLogId", flowLogId);
@@ -197,14 +220,24 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the flow log.
-         * <p>
+         * <p>The new name of the flow log.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>myFlowlog</p>
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
             this.flowLogName = flowLogName;
+            return this;
+        }
+
+        /**
+         * IpVersion.
+         */
+        public Builder ipVersion(String ipVersion) {
+            this.putQueryParameter("IpVersion", ipVersion);
+            this.ipVersion = ipVersion;
             return this;
         }
 
@@ -227,10 +260,12 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the flow log is created.
-         * <p>
+         * <p>The ID of the region where the flow log is created.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

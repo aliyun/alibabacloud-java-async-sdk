@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRouteEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRouteEntriesResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         private Integer successCount; 
 
         /**
-         * The number of custom route entries that failed to be added.
+         * <p>The number of custom route entries that failed to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -93,7 +97,7 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the custom route entry that failed to be added.
+         * <p>The details about the custom route entry that failed to be added.</p>
          */
         public Builder failedRouteEntries(java.util.List < FailedRouteEntries> failedRouteEntries) {
             this.failedRouteEntries = failedRouteEntries;
@@ -101,7 +105,10 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,7 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the ID of the custom route entry that was successfully added.
+         * <p>The information about the ID of the custom route entry that was successfully added.</p>
          */
         public Builder routeEntryIds(java.util.List < String > routeEntryIds) {
             this.routeEntryIds = routeEntryIds;
@@ -117,7 +124,10 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of custom route entries that were successfully added.
+         * <p>The number of custom route entries that were successfully added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -130,6 +140,12 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRouteEntriesResponseBody</p>
+     */
     public static class FailedRouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DstCidrBlock")
         private String dstCidrBlock;
@@ -193,7 +209,10 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
             private String nextHop; 
 
             /**
-             * The destination CIDR block of the custom route entry that failed to be added.
+             * <p>The destination CIDR block of the custom route entry that failed to be added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/24</p>
              */
             public Builder dstCidrBlock(String dstCidrBlock) {
                 this.dstCidrBlock = dstCidrBlock;
@@ -201,7 +220,10 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC_ROUTE_ENTRY_CIDR_BLOCK_DUPLICATE</p>
              */
             public Builder failedCode(String failedCode) {
                 this.failedCode = failedCode;
@@ -209,7 +231,10 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Specified CIDR block is already exists, entry.cidrBlock=xxxx</p>
              */
             public Builder failedMessage(String failedMessage) {
                 this.failedMessage = failedMessage;
@@ -217,7 +242,10 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the next hop of the custom route entry that failed to be added.
+             * <p>The ID of the next hop of the custom route entry that failed to be added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-j6c2fp57q8rr4jlu****</p>
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;

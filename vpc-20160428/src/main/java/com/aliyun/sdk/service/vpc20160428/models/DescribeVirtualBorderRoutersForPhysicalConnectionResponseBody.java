@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         private VirtualBorderRouterForPhysicalConnectionSet virtualBorderRouterForPhysicalConnectionSet; 
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C5AE8B3-A2D8-428D-A2FF-93A225C0821E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +130,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         }
 
         /**
-         * The information about VBRs.
+         * <p>The information about VBRs.</p>
          */
         public Builder virtualBorderRouterForPhysicalConnectionSet(VirtualBorderRouterForPhysicalConnectionSet virtualBorderRouterForPhysicalConnectionSet) {
             this.virtualBorderRouterForPhysicalConnectionSet = virtualBorderRouterForPhysicalConnectionSet;
@@ -130,6 +143,12 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody</p>
+     */
     public static class VirtualBorderRouterForPhysicalConnectionType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivationTime")
         private String activationTime;
@@ -421,7 +440,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             private Integer vlanId; 
 
             /**
-             * The time when the VBR was first activated.
+             * <p>The time when the VBR was first activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-08T12:20:55</p>
              */
             public Builder activationTime(String activationTime) {
                 this.activationTime = activationTime;
@@ -429,7 +451,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The bandwidth of the VBR that is associated with the Express Connect circuit. Unit: Mbit/s.
+             * <p>The bandwidth of the VBR that is associated with the Express Connect circuit. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -437,11 +462,14 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The status of the bandwidth. Valid values:
-             * <p>
+             * <p>The status of the bandwidth. Valid values:</p>
+             * <ul>
+             * <li><strong>Active</strong></li>
+             * <li><strong>Inactive</strong></li>
+             * </ul>
              * 
-             * *   **Active**
-             * *   **Inactive**
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder bandwidthStatus(String bandwidthStatus) {
                 this.bandwidthStatus = bandwidthStatus;
@@ -449,7 +477,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
+             * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>longtel0**</p>
              */
             public Builder circuitCode(String circuitCode) {
                 this.circuitCode = circuitCode;
@@ -457,7 +488,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The time when the VBR was created.
+             * <p>The time when the VBR was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-08T12:20:55</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -465,7 +499,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The ID of the ECC instance.
+             * <p>The ID of the ECC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecc-sjghe****</p>
              */
             public Builder eccId(String eccId) {
                 this.eccId = eccId;
@@ -473,11 +510,14 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * Indicates whether IPv6 is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableIpv6(Boolean enableIpv6) {
                 this.enableIpv6 = enableIpv6;
@@ -485,7 +525,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The IPv4 address of the gateway device on the Alibaba Cloud side.
+             * <p>The IPv4 address of the gateway device on the Alibaba Cloud side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.X</p>
              */
             public Builder localGatewayIp(String localGatewayIp) {
                 this.localGatewayIp = localGatewayIp;
@@ -493,7 +536,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The IPv6 address of the gateway device on the Alibaba Cloud side.
+             * <p>The IPv6 address of the gateway device on the Alibaba Cloud side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6bw-uf6hcyzu65v98v3du****</p>
              */
             public Builder localIpv6GatewayIp(String localIpv6GatewayIp) {
                 this.localIpv6GatewayIp = localIpv6GatewayIp;
@@ -501,11 +547,14 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The status of the VBR associated with the Express Connect circuit. Valid values:
-             * <p>
+             * <p>The status of the VBR associated with the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>FinancialLocked</strong></li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **FinancialLocked**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder pConnVbrBussinessStatus(String pConnVbrBussinessStatus) {
                 this.pConnVbrBussinessStatus = pConnVbrBussinessStatus;
@@ -513,11 +562,14 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The billing method of the VBR. Valid values:
-             * <p>
+             * <p>The billing method of the VBR. Valid values:</p>
+             * <ul>
+             * <li><strong>PrePaid</strong>: subscription. If you choose this billing method, make sure that your Apsara Stack account supports balance payments or credit payments.</li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+             * </ul>
              * 
-             * *   **PrePaid**: subscription. If you choose this billing method, make sure that your Apsara Stack account supports balance payments or credit payments.
-             * *   **PostPaid**: pay-as-you-go.
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder pConnVbrChargeType(String pConnVbrChargeType) {
                 this.pConnVbrChargeType = pConnVbrChargeType;
@@ -525,7 +577,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The time when the VBR associated with the Express Connect circuit expires.
+             * <p>The time when the VBR associated with the Express Connect circuit expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-10T12:20:55</p>
              */
             public Builder pConnVbrExpireTime(String pConnVbrExpireTime) {
                 this.pConnVbrExpireTime = pConnVbrExpireTime;
@@ -533,7 +588,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The IPv4 address of the gateway device on the user side.
+             * <p>The IPv4 address of the gateway device on the user side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162.62.XX.XX</p>
              */
             public Builder peerGatewayIp(String peerGatewayIp) {
                 this.peerGatewayIp = peerGatewayIp;
@@ -541,10 +599,11 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The IPv6 address of the gateway device on the user side.
-             * <p>
+             * <p>The IPv6 address of the gateway device on the user side.</p>
+             * <p>This parameter is required when you create a VBR for the owner of the Express Connect circuit. You can ignore this parameter when you create a VBR for another Alibaba Cloud account.</p>
              * 
-             * This parameter is required when you create a VBR for the owner of the Express Connect circuit. You can ignore this parameter when you create a VBR for another Alibaba Cloud account.
+             * <strong>example:</strong>
+             * <p>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</p>
              */
             public Builder peerIpv6GatewayIp(String peerIpv6GatewayIp) {
                 this.peerIpv6GatewayIp = peerIpv6GatewayIp;
@@ -552,10 +611,11 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The subnet mask for the IPv6 addresses of the gateway devices on the Alibaba Cloud side and on the user side.
-             * <p>
+             * <p>The subnet mask for the IPv6 addresses of the gateway devices on the Alibaba Cloud side and on the user side.</p>
+             * <p>The two IPv6 addresses must fall within the same subnet.</p>
              * 
-             * The two IPv6 addresses must fall within the same subnet.
+             * <strong>example:</strong>
+             * <p>2408:4004:cc:400::/56</p>
              */
             public Builder peeringIpv6SubnetMask(String peeringIpv6SubnetMask) {
                 this.peeringIpv6SubnetMask = peeringIpv6SubnetMask;
@@ -563,10 +623,11 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The subnet mask of the IPv4 addresses configured on the user side and Alibaba Cloud side.
-             * <p>
+             * <p>The subnet mask of the IPv4 addresses configured on the user side and Alibaba Cloud side.</p>
+             * <p>The two IPv4 addresses must fall within the same subnet.</p>
              * 
-             * The two IPv4 addresses must fall within the same subnet.
+             * <strong>example:</strong>
+             * <p>255.255.255.0</p>
              */
             public Builder peeringSubnetMask(String peeringSubnetMask) {
                 this.peeringSubnetMask = peeringSubnetMask;
@@ -574,7 +635,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The last time when the status of the VBR changed from Terminated to Active.
+             * <p>The last time when the status of the VBR changed from Terminated to Active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-08T12:20:55</p>
              */
             public Builder recoveryTime(String recoveryTime) {
                 this.recoveryTime = recoveryTime;
@@ -582,15 +646,18 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The status of the VBR. Valid values:
-             * <p>
+             * <p>The status of the VBR. Valid values:</p>
+             * <ul>
+             * <li><strong>unconfirmed</strong></li>
+             * <li><strong>active</strong></li>
+             * <li><strong>terminating</strong></li>
+             * <li><strong>terminated</strong></li>
+             * <li><strong>recovering</strong></li>
+             * <li><strong>deleting</strong></li>
+             * </ul>
              * 
-             * *   **unconfirmed**
-             * *   **active**
-             * *   **terminating**
-             * *   **terminated**
-             * *   **recovering**
-             * *   **deleting**
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -598,7 +665,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The last time when the VBR was disabled.
+             * <p>The last time when the VBR was disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-07T12:20:55</p>
              */
             public Builder terminationTime(String terminationTime) {
                 this.terminationTime = terminationTime;
@@ -606,7 +676,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The VBR type.
+             * <p>The VBR type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pconnVBR</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -614,7 +687,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The VBR ID.
+             * <p>The VBR ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vbr-bp16ksp61j7e0tk****</p>
              */
             public Builder vbrId(String vbrId) {
                 this.vbrId = vbrId;
@@ -622,10 +698,11 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the VBR belongs.
-             * <p>
+             * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+             * <p>If the owner of the VBR is the same as that of the Express Connect circuit, this parameter is empty.</p>
              * 
-             * If the owner of the VBR is the same as that of the Express Connect circuit, this parameter is empty.
+             * <strong>example:</strong>
+             * <p>253460731706911258</p>
              */
             public Builder vbrOwnerUid(Long vbrOwnerUid) {
                 this.vbrOwnerUid = vbrOwnerUid;
@@ -633,7 +710,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The VLAN ID of the VBR.
+             * <p>The VLAN ID of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1678</p>
              */
             public Builder vlanId(Integer vlanId) {
                 this.vlanId = vlanId;
@@ -647,6 +727,12 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody</p>
+     */
     public static class VirtualBorderRouterForPhysicalConnectionSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterForPhysicalConnectionType")
         private java.util.List < VirtualBorderRouterForPhysicalConnectionType> virtualBorderRouterForPhysicalConnectionType;

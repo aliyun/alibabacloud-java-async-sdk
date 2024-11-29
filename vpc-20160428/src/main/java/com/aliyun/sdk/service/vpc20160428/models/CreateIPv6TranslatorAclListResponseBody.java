@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIPv6TranslatorAclListResponseBody} extends {@link TeaModel}
  *
  * <p>CreateIPv6TranslatorAclListResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateIPv6TranslatorAclListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ACL ID.
+         * <p>The ACL ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transacl-bp1de2xxxx</p>
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -57,7 +61,10 @@ public class CreateIPv6TranslatorAclListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B2F5262-6B57-43F2-xxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

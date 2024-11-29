@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualBorderRoutersRequest} extends {@link RequestModel}
  *
  * <p>DescribeVirtualBorderRoutersRequest</p>
@@ -181,7 +182,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         } 
 
         /**
-         * The information about the filter.
+         * <p>The information about the filter.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -190,11 +191,14 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * Specifies whether cross-account VBRs are included.
-         * <p>
+         * <p>Specifies whether cross-account VBRs are included.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeCrossAccountVbr(Boolean includeCrossAccountVbr) {
             this.putQueryParameter("IncludeCrossAccountVbr", includeCrossAccountVbr);
@@ -212,7 +216,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +228,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +240,11 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the VBR is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * <p>The ID of the region in which the VBR is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,10 +253,11 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * The resource group ID.
-         * <p>
+         * <p>The resource group ID.</p>
+         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></p>
          * 
-         * For more information about resource groups, see [What is a resource group?](~~94475~~)
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -269,7 +284,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -284,6 +299,12 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -323,16 +344,19 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The filter conditions. You can specify up to five filter conditions. Valid values:
-             * <p>
+             * <p>The filter conditions. You can specify up to five filter conditions. Valid values:</p>
+             * <ul>
+             * <li><strong>PhysicalConnectionId</strong>: Filter by Express Connect circuit ID.</li>
+             * <li><strong>VbrId</strong>: Filter by VBR ID.</li>
+             * <li><strong>Status</strong>: Filter by VBR status.</li>
+             * <li><strong>Name</strong>: Filter by VBR name.</li>
+             * <li><strong>AccessPointId</strong>: Filter by access point ID.</li>
+             * <li><strong>eccId:</strong> Filter by Express Cloud Connect (ECC) instance ID.</li>
+             * <li><strong>type</strong>: Filter by Express Connect circuit type.</li>
+             * </ul>
              * 
-             * *   **PhysicalConnectionId**: Filter by Express Connect circuit ID.
-             * *   **VbrId**: Filter by VBR ID.
-             * *   **Status**: Filter by VBR status.
-             * *   **Name**: Filter by VBR name.
-             * *   **AccessPointId**: Filter by access point ID.
-             * *   **eccId:** Filter by Express Cloud Connect (ECC) instance ID.
-             * *   **type**: Filter by Express Connect circuit type.
+             * <strong>example:</strong>
+             * <p>Status</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -340,7 +364,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             }
 
             /**
-             * The filter values for keys. You can specify multiple filter values for one key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.
+             * <p>The filter values for keys. You can specify multiple filter values for one key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -354,6 +381,12 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -393,10 +426,11 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The key cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The key cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -404,10 +438,11 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

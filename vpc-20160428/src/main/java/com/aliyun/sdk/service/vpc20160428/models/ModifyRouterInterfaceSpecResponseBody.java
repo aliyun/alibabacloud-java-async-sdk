@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRouterInterfaceSpecResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyRouterInterfaceSpecResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyRouterInterfaceSpecResponseBody extends TeaModel {
         private String spec; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,21 +61,24 @@ public class ModifyRouterInterfaceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The specification of the router interface. Valid values:
-         * <p>
+         * <p>The specification of the router interface. Valid values:</p>
+         * <ul>
+         * <li><strong>Mini.2</strong>: 2 Mbit/s</li>
+         * <li><strong>Mini.5</strong>: 5 Mbit/s</li>
+         * <li><strong>Small.1</strong>: 10 Mbit/s</li>
+         * <li><strong>Small.2</strong>: 20 Mbit/s</li>
+         * <li><strong>Small.5</strong>: 50 Mbit/s</li>
+         * <li><strong>Middle.1</strong>: 100 Mbit/s</li>
+         * <li><strong>Middle.2</strong>: 200 Mbit/s</li>
+         * <li><strong>Middle.5</strong>: 500 Mbit/s</li>
+         * <li><strong>Large.1</strong>: 1,000 Mbit/s</li>
+         * <li><strong>Large.2</strong>: 2,000 Mbit/s</li>
+         * <li><strong>Large.5</strong>: 5,000 Mbit/s</li>
+         * <li><strong>Xlarge.1</strong>: 10,000 Mbit/s</li>
+         * </ul>
          * 
-         * *   **Mini.2**: 2 Mbit/s
-         * *   **Mini.5**: 5 Mbit/s
-         * *   **Small.1**: 10 Mbit/s
-         * *   **Small.2**: 20 Mbit/s
-         * *   **Small.5**: 50 Mbit/s
-         * *   **Middle.1**: 100 Mbit/s
-         * *   **Middle.2**: 200 Mbit/s
-         * *   **Middle.5**: 500 Mbit/s
-         * *   **Large.1**: 1,000 Mbit/s
-         * *   **Large.2**: 2,000 Mbit/s
-         * *   **Large.5**: 5,000 Mbit/s
-         * *   **Xlarge.1**: 10,000 Mbit/s
+         * <strong>example:</strong>
+         * <p>Small.1</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

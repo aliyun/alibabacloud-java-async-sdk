@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVSwitchCidrReservationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVSwitchCidrReservationResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateVSwitchCidrReservationResponseBody extends TeaModel {
         private String vSwitchCidrReservationId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateVSwitchCidrReservationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the reserved CIDR block.
+         * <p>The ID of the reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcr-bp1m12saqteraw3rp****</p>
          */
         public Builder vSwitchCidrReservationId(String vSwitchCidrReservationId) {
             this.vSwitchCidrReservationId = vSwitchCidrReservationId;

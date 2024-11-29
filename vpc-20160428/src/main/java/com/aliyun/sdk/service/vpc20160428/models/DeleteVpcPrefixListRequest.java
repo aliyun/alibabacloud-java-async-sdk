@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpcPrefixListRequest} extends {@link RequestModel}
  *
  * <p>DeleteVpcPrefixListRequest</p>
@@ -153,12 +154,14 @@ public class DeleteVpcPrefixListRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -167,11 +170,14 @@ public class DeleteVpcPrefixListRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
-         * <p>
+         * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -198,7 +204,11 @@ public class DeleteVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The ID of the prefix list that you want to delete.
+         * <p>The ID of the prefix list that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-0b78hw45f****</p>
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -207,10 +217,12 @@ public class DeleteVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The region ID of the prefix list.
-         * <p>
+         * <p>The region ID of the prefix list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

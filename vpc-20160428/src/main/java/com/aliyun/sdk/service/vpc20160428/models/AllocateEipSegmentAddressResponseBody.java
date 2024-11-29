@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateEipSegmentAddressResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateEipSegmentAddressResponseBody</p>
@@ -49,7 +50,10 @@ public class AllocateEipSegmentAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the contiguous EIP group.
+         * <p>The ID of the contiguous EIP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eipsg-2zett8ba055tbsxme****</p>
          */
         public Builder eipSegmentInstanceId(String eipSegmentInstanceId) {
             this.eipSegmentInstanceId = eipSegmentInstanceId;
@@ -57,7 +61,10 @@ public class AllocateEipSegmentAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7A6301A-64BA-41EC-8284-8F4838C15D1F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrafficMirrorServiceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetTrafficMirrorServiceStatusResponseBody</p>
@@ -49,11 +50,14 @@ public class GetTrafficMirrorServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the traffic mirroring feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the traffic mirroring feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -61,7 +65,10 @@ public class GetTrafficMirrorServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37626066-2C6C-4B62-ADD3-498920C409C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

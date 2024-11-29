@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePublicIpAddressPoolResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePublicIpAddressPoolResponseBody</p>
@@ -82,7 +83,10 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the IP address pool.
+         * <p>The ID of the IP address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pippool-6wetvn6fumkgycssx****</p>
          */
         public Builder pulbicIpAddressPoolId(String pulbicIpAddressPoolId) {
             this.pulbicIpAddressPoolId = pulbicIpAddressPoolId;
@@ -90,7 +94,10 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +105,10 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the IP address pool belongs.
+         * <p>The ID of the resource group to which the IP address pool belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4pcdvf****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

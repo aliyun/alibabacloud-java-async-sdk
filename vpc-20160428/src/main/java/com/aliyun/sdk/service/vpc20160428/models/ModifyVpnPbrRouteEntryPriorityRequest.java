@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpnPbrRouteEntryPriorityRequest} extends {@link RequestModel}
  *
  * <p>ModifyVpnPbrRouteEntryPriorityRequest</p>
@@ -228,12 +229,14 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>d7d24a21-f4ba-4454-9173-b3****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -242,10 +245,12 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * The new priority of the policy-based route. Valid values: **1** to **100**.
-         * <p>
+         * <p>The new priority of the policy-based route. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+         * <p>A smaller value indicates a higher priority.</p>
+         * <p>This parameter is required.</p>
          * 
-         * A smaller value indicates a higher priority.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder newPriority(Integer newPriority) {
             this.putQueryParameter("NewPriority", newPriority);
@@ -254,7 +259,11 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * The next hop of the policy-based route.
+         * <p>The next hop of the policy-based route.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-bp15oes1py4i66rmd****</p>
          */
         public Builder nextHop(String nextHop) {
             this.putQueryParameter("NextHop", nextHop);
@@ -281,10 +290,11 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * The original priority of the policy-based route. Valid values: **1** to **100**.
-         * <p>
+         * <p>The original priority of the policy-based route. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+         * <p>A smaller value indicates a higher priority.</p>
          * 
-         * A smaller value indicates a higher priority.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -293,10 +303,12 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VPN gateway is created.
-         * <p>
+         * <p>The ID of the region where the VPN gateway is created.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-henyuan</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -323,7 +335,11 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the policy-based route.
+         * <p>The destination CIDR block of the policy-based route.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         public Builder routeDest(String routeDest) {
             this.putQueryParameter("RouteDest", routeDest);
@@ -332,7 +348,11 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * The source CIDR block of the policy-based route.
+         * <p>The source CIDR block of the policy-based route.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         public Builder routeSource(String routeSource) {
             this.putQueryParameter("RouteSource", routeSource);
@@ -341,7 +361,11 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp1a3kqjiiq9legfx****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);
@@ -350,7 +374,11 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends Request {
         }
 
         /**
-         * The weight of the policy-based route. Valid values:
+         * <p>The weight of the policy-based route. Valid values:</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

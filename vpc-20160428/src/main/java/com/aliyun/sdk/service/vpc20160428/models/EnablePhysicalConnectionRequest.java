@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnablePhysicalConnectionRequest} extends {@link RequestModel}
  *
  * <p>EnablePhysicalConnectionRequest</p>
@@ -153,13 +154,17 @@ public class EnablePhysicalConnectionRequest extends Request {
         } 
 
         /**
-         * Specifies whether to skip the order lifecycle. Valid values:
-         * <p>
+         * <p>Specifies whether to skip the order lifecycle. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> To use this feature, you must contact your account manager.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false** (default)
-         * 
-         * >  To use this feature, you must contact your account manager.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder byPassSp(Boolean byPassSp) {
             this.putQueryParameter("ByPassSp", byPassSp);
@@ -168,10 +173,11 @@ public class EnablePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -198,7 +204,11 @@ public class EnablePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the Express Connect circuit.
+         * <p>The ID of the Express Connect circuit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-119mfjz****</p>
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -207,10 +217,12 @@ public class EnablePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The region where the Express Connect circuit is deployed.
-         * <p>
+         * <p>The region where the Express Connect circuit is deployed.</p>
+         * <p>You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the DescribeRegions operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

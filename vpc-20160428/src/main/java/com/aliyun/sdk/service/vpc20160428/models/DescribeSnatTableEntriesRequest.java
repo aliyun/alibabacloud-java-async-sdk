@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnatTableEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnatTableEntriesRequest</p>
@@ -251,10 +252,13 @@ public class DescribeSnatTableEntriesRequest extends Request {
         } 
 
         /**
-         * The ID of the NAT gateway.
-         * <p>
+         * <p>The ID of the NAT gateway.</p>
+         * <blockquote>
+         * <p> You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of **SnatTableId** and **NatGatewayId**.
+         * <strong>example:</strong>
+         * <p>ngw-bp1uewa15k4iy5770****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -290,7 +294,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -299,7 +306,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -308,10 +318,12 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to create the NAT gateway.
-         * <p>
+         * <p>The ID of the region where you want to create the NAT gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -338,7 +350,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the SNAT entry.
+         * <p>The ID of the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-8vbae8uqh7rjpk7d2****</p>
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -347,10 +362,11 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The name of the SNAT entry.
-         * <p>
+         * <p>The name of the SNAT entry.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>SnatEntry-1</p>
          */
         public Builder snatEntryName(String snatEntryName) {
             this.putQueryParameter("SnatEntryName", snatEntryName);
@@ -359,9 +375,13 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * *   When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.
-         * <p>
-         * *   When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.
+         * <ul>
+         * <li>When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.</li>
+         * <li>When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>116.22.XX.XX</p>
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);
@@ -370,10 +390,13 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the SNAT table.
-         * <p>
+         * <p>The ID of the SNAT table.</p>
+         * <blockquote>
+         * <p> You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of **SnatTableId** and **NatGatewayId**.
+         * <strong>example:</strong>
+         * <p>stb-8vbczigrhop8x5u3t****</p>
          */
         public Builder snatTableId(String snatTableId) {
             this.putQueryParameter("SnatTableId", snatTableId);
@@ -382,7 +405,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The source CIDR block specified in the SNAT entry.
+         * <p>The source CIDR block specified in the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.22.XX.XX/24</p>
          */
         public Builder sourceCIDR(String sourceCIDR) {
             this.putQueryParameter("SourceCIDR", sourceCIDR);
@@ -391,11 +417,14 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
-         * <p>
+         * <p>The ID of the vSwitch.</p>
+         * <ul>
+         * <li>When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.</li>
+         * <li>When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.</li>
+         * </ul>
          * 
-         * *   When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.
-         * *   When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.
+         * <strong>example:</strong>
+         * <p>vsw-3xbjkhjshjdf****</p>
          */
         public Builder sourceVSwitchId(String sourceVSwitchId) {
             this.putQueryParameter("SourceVSwitchId", sourceVSwitchId);

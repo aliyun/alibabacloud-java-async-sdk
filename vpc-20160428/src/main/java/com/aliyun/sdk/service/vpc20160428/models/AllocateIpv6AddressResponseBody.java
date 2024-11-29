@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateIpv6AddressResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateIpv6AddressResponseBody</p>
@@ -73,7 +74,10 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The IPv6 address.
+         * <p>The IPv6 address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:153:3921:851c:c435:7b12:1c5f</p>
          */
         public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = ipv6Address;
@@ -81,7 +85,10 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the IPv6 address.
+         * <p>The ID of the IPv6 address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6-2zen5j4axcp5l5qyy****</p>
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.ipv6AddressId = ipv6AddressId;
@@ -89,7 +96,10 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazdjdhd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

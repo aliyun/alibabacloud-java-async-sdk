@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExpressConnectTrafficQosRequest} extends {@link RequestModel}
  *
  * <p>CreateExpressConnectTrafficQosRequest</p>
@@ -138,12 +139,14 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> in each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** in each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -170,10 +173,11 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * The description of the QoS policy.
-         * <p>
+         * <p>The description of the QoS policy.</p>
+         * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>qos-test</p>
          */
         public Builder qosDescription(String qosDescription) {
             this.putQueryParameter("QosDescription", qosDescription);
@@ -182,10 +186,11 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * The name of the QoS policy.
-         * <p>
+         * <p>The name of the QoS policy.</p>
+         * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>qos-test</p>
          */
         public Builder qosName(String qosName) {
             this.putQueryParameter("QosName", qosName);
@@ -194,10 +199,12 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * The region ID of the QoS policy.
-         * <p>
+         * <p>The region ID of the QoS policy.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

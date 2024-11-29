@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFailoverTestJobsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFailoverTestJobsResponseBody</p>
@@ -105,7 +106,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of failover tests.
+         * <p>The list of failover tests.</p>
          */
         public Builder failoverTestJobList(java.util.List < FailoverTestJobList> failoverTestJobList) {
             this.failoverTestJobList = failoverTestJobList;
@@ -113,7 +114,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 100**. Default value: 20.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -150,6 +154,12 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFailoverTestJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFailoverTestJobsResponseBody</p>
+     */
     public static class FailoverTestJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -285,10 +295,11 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             private String stopTime; 
 
             /**
-             * The description of the failover test.
-             * <p>
+             * <p>The description of the failover test.</p>
+             * <p>The description must be 0 to 256 characters in length and cannot start with **http:// <strong>or</strong> https://**.</p>
              * 
-             * The description must be 0 to 256 characters in length and cannot start with \*\*http:// **or** https://\*\*.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -296,7 +307,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the failover test. Unit: minutes. Valid values: **1 to 4320**.
+             * <p>The duration of the failover test. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder jobDuration(String jobDuration) {
                 this.jobDuration = jobDuration;
@@ -304,7 +318,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the failover test.
+             * <p>The ID of the failover test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ftj-xxxxxxxxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -312,11 +329,14 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the failover test is performed immediately. Valid values:
-             * <p>
+             * <p>Indicates whether the failover test is performed immediately. Valid values:</p>
+             * <ul>
+             * <li><strong>StartNow</strong></li>
+             * <li><strong>StartLater</strong></li>
+             * </ul>
              * 
-             * *   **StartNow**
-             * *   **StartLater**
+             * <strong>example:</strong>
+             * <p>StartNow</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -324,10 +344,11 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the failover test.
-             * <p>
+             * <p>The name of the failover test.</p>
+             * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The name must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -335,7 +356,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the failover test resources.
+             * <p>The IDs of the failover test resources.</p>
              */
             public Builder resourceId(java.util.List < String > resourceId) {
                 this.resourceId = resourceId;
@@ -343,7 +364,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the failover test resource. Only **PHYSICALCONNECTION** is returned.
+             * <p>The type of the failover test resource. Only <strong>PHYSICALCONNECTION</strong> is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICALCONNECTION</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -359,14 +383,17 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the failover test. Valid values:
-             * <p>
+             * <p>The status of the failover test. Valid values:</p>
+             * <ul>
+             * <li><strong>Init</strong></li>
+             * <li><strong>Starting</strong></li>
+             * <li><strong>Testing</strong></li>
+             * <li><strong>Stopping</strong></li>
+             * <li><strong>Stopped</strong></li>
+             * </ul>
              * 
-             * *   **Init**
-             * *   **Starting**
-             * *   **Testing**
-             * *   **Stopping**
-             * *   **Stopped**
+             * <strong>example:</strong>
+             * <p>Init</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRouteEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteRouteEntriesResponseBody</p>
@@ -73,7 +74,10 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         private Integer successCount; 
 
         /**
-         * The number of route entries that failed to be deleted.
+         * <p>The number of route entries that failed to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -81,7 +85,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the route entry that failed to be deleted.
+         * <p>The information about the route entry that failed to be deleted.</p>
          */
         public Builder failedRouteEntries(java.util.List < FailedRouteEntries> failedRouteEntries) {
             this.failedRouteEntries = failedRouteEntries;
@@ -89,7 +93,10 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of route entries that were deleted.
+         * <p>The number of route entries that were deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -110,6 +120,12 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteRouteEntriesResponseBody</p>
+     */
     public static class FailedRouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DstCidrBlock")
         private String dstCidrBlock;
@@ -185,7 +201,10 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             private String routeEntryId; 
 
             /**
-             * The destination CIDR block of the route entry that failed to be deleted. IPv4 and IPv6 CIDR blocks are supported.
+             * <p>The destination CIDR block of the route entry that failed to be deleted. IPv4 and IPv6 CIDR blocks are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX/24</p>
              */
             public Builder dstCidrBlock(String dstCidrBlock) {
                 this.dstCidrBlock = dstCidrBlock;
@@ -193,7 +212,10 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC_ROUTER_ENTRY_NOT_EXIST</p>
              */
             public Builder failedCode(String failedCode) {
                 this.failedCode = failedCode;
@@ -201,7 +223,10 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vRouterEntry not exists</p>
              */
             public Builder failedMessage(String failedMessage) {
                 this.failedMessage = failedMessage;
@@ -209,7 +234,10 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the next hop that failed to be deleted.
+             * <p>The ID of the next hop that failed to be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-j6c2fp57q8rr4jlu****</p>
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -217,7 +245,10 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route entry that failed to be deleted.
+             * <p>The ID of the route entry that failed to be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rte-bp1mnnr2al0naomnpv****</p>
              */
             public Builder routeEntryId(String routeEntryId) {
                 this.routeEntryId = routeEntryId;

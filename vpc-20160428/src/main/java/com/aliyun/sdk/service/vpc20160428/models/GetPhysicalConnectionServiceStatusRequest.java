@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhysicalConnectionServiceStatusRequest} extends {@link RequestModel}
  *
  * <p>GetPhysicalConnectionServiceStatusRequest</p>
@@ -128,10 +129,12 @@ public class GetPhysicalConnectionServiceStatusRequest extends Request {
         }
 
         /**
-         * The ID of the region for which you want to query the status of outbound data transfer billing.
-         * <p>
+         * <p>The ID of the region for which you want to query the status of outbound data transfer billing.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTrafficMirrorFilterAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateTrafficMirrorFilterAttributeResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateTrafficMirrorFilterAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5816D35F-94D5-48CE-838F-2327C8EE8D49</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSslVpnClientCertResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSslVpnClientCertResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateSslVpnClientCertResponseBody extends TeaModel {
         private String sslVpnClientCertId; 
 
         /**
-         * The name of the SSL client certificate.
+         * <p>The name of the SSL client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SslVpnClientCert</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -69,7 +73,10 @@ public class CreateSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>079874CD-AEC1-43E6-AC03-ADD96B6E4907</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the SSL client certificate.
+         * <p>The ID of the SSL client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsc-m5euof6s5jy8vs5kd****</p>
          */
         public Builder sslVpnClientCertId(String sslVpnClientCertId) {
             this.sslVpnClientCertId = sslVpnClientCertId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIpv6GatewayRequest} extends {@link RequestModel}
  *
  * <p>CreateIpv6GatewayRequest</p>
@@ -195,12 +196,14 @@ public class CreateIpv6GatewayRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -209,10 +212,11 @@ public class CreateIpv6GatewayRequest extends Request {
         }
 
         /**
-         * The description of the IPv6 gateway.
-         * <p>
+         * <p>The description of the IPv6 gateway.</p>
+         * <p>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>ipv6gatewayforVPC1</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -221,10 +225,11 @@ public class CreateIpv6GatewayRequest extends Request {
         }
 
         /**
-         * The name of the IPv6 gateway.
-         * <p>
+         * <p>The name of the IPv6 gateway.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>ipv6GW</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -251,7 +256,11 @@ public class CreateIpv6GatewayRequest extends Request {
         }
 
         /**
-         * The region ID of the IPv6 gateway. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region ID of the IPv6 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -260,7 +269,10 @@ public class CreateIpv6GatewayRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the IPv6 gateway belongs.
+         * <p>The ID of the resource group to which the IPv6 gateway belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -287,7 +299,7 @@ public class CreateIpv6GatewayRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -296,7 +308,11 @@ public class CreateIpv6GatewayRequest extends Request {
         }
 
         /**
-         * The ID of the VPC in which you want to create the IPv6 gateway.
+         * <p>The ID of the VPC in which you want to create the IPv6 gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-123sedrfswd23****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -311,6 +327,12 @@ public class CreateIpv6GatewayRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateIpv6GatewayRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIpv6GatewayRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -350,10 +372,11 @@ public class CreateIpv6GatewayRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -361,10 +384,11 @@ public class CreateIpv6GatewayRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcPublishedRouteEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListVpcPublishedRouteEntriesResponseBody</p>
@@ -90,15 +91,25 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcPublishedRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcPublishedRouteEntriesResponseBody</p>
+     */
     public static class RoutePublishTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PublishStatus")
         private String publishStatus;
+
+        @com.aliyun.core.annotation.NameInMap("PublishTargetInstanceId")
+        private String publishTargetInstanceId;
 
         @com.aliyun.core.annotation.NameInMap("PublishTargetType")
         private String publishTargetType;
 
         private RoutePublishTargets(Builder builder) {
             this.publishStatus = builder.publishStatus;
+            this.publishTargetInstanceId = builder.publishTargetInstanceId;
             this.publishTargetType = builder.publishTargetType;
         }
 
@@ -118,6 +129,13 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return publishTargetInstanceId
+         */
+        public String getPublishTargetInstanceId() {
+            return this.publishTargetInstanceId;
+        }
+
+        /**
          * @return publishTargetType
          */
         public String getPublishTargetType() {
@@ -126,6 +144,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String publishStatus; 
+            private String publishTargetInstanceId; 
             private String publishTargetType; 
 
             /**
@@ -133,6 +152,14 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
              */
             public Builder publishStatus(String publishStatus) {
                 this.publishStatus = publishStatus;
+                return this;
+            }
+
+            /**
+             * PublishTargetInstanceId.
+             */
+            public Builder publishTargetInstanceId(String publishTargetInstanceId) {
+                this.publishTargetInstanceId = publishTargetInstanceId;
                 return this;
             }
 
@@ -151,6 +178,12 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVpcPublishedRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcPublishedRouteEntriesResponseBody</p>
+     */
     public static class RouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;

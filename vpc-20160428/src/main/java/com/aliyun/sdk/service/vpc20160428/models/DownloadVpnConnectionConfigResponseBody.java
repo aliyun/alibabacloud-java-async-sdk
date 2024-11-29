@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadVpnConnectionConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DownloadVpnConnectionConfigResponseBody</p>
@@ -49,7 +50,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         private VpnConnectionConfig vpnConnectionConfig; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C68048B-0F70-40DA-B8AE-1B79B5CF62E3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the peer gateway device.
+         * <p>The configurations of the peer gateway device.</p>
          */
         public Builder vpnConnectionConfig(VpnConnectionConfig vpnConnectionConfig) {
             this.vpnConnectionConfig = vpnConnectionConfig;
@@ -70,6 +74,12 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DownloadVpnConnectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadVpnConnectionConfigResponseBody</p>
+     */
     public static class IkeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IkeAuthAlg")
         private String ikeAuthAlg;
@@ -193,7 +203,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String remoteId; 
 
             /**
-             * The authentication algorithm in the IKE phase.
+             * <p>The authentication algorithm in the IKE phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha1</p>
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -201,7 +214,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption algorithm in the IKE phase.
+             * <p>The encryption algorithm in the IKE phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aes</p>
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -209,7 +225,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The lifetime in the IKE phase. Unit: seconds.
+             * <p>The lifetime in the IKE phase. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -217,11 +236,14 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE negotiation mode. Valid values:
-             * <p>
+             * <p>The IKE negotiation mode. Valid values:</p>
+             * <ul>
+             * <li><strong>main</strong>: This mode offers higher security during negotiations.</li>
+             * <li><strong>aggressive</strong>: This mode is faster and has a higher success rate.</li>
+             * </ul>
              * 
-             * *   **main**: This mode offers higher security during negotiations.
-             * *   **aggressive**: This mode is faster and has a higher success rate.
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -229,7 +251,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The DH group in the IKE phase.
+             * <p>The DH group in the IKE phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group2</p>
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -237,7 +262,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE version.
+             * <p>The IKE version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ikev1</p>
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -245,7 +273,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the customer gateway. FQDN and IP formats are supported. The default value is the IP address of the customer gateway.
+             * <p>The identifier of the customer gateway. FQDN and IP formats are supported. The default value is the IP address of the customer gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.62.XX.XX</p>
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -253,7 +284,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The pre-shared key.
+             * <p>The pre-shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pgw6dy7d1i8i****</p>
              */
             public Builder psk(String psk) {
                 this.psk = psk;
@@ -261,7 +295,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the VPN gateway. FQDN and IP formats are supported. The default value is the IP address of the VPN gateway.
+             * <p>The identifier of the VPN gateway. FQDN and IP formats are supported. The default value is the IP address of the VPN gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139.196.XX.XX</p>
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -275,6 +312,12 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DownloadVpnConnectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadVpnConnectionConfigResponseBody</p>
+     */
     public static class IpsecConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpsecAuthAlg")
         private String ipsecAuthAlg;
@@ -338,7 +381,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String ipsecPfs; 
 
             /**
-             * The authentication algorithm in the IPsec phase.
+             * <p>The authentication algorithm in the IPsec phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha1</p>
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -346,7 +392,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption algorithm in the IPsec phase.
+             * <p>The encryption algorithm in the IPsec phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aes</p>
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -354,7 +403,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The lifetime in the IPsec phase. Unit: seconds.
+             * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder ipsecLifetime(Long ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -362,7 +414,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The DH group in the IPsec phase.
+             * <p>The DH group in the IPsec phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group2</p>
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;
@@ -376,6 +431,12 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DownloadVpnConnectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadVpnConnectionConfigResponseBody</p>
+     */
     public static class TunnelConfigIkeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IkeAuthAlg")
         private String ikeAuthAlg;
@@ -499,7 +560,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String remoteId; 
 
             /**
-             * The authentication algorithm in the IKE phase.
+             * <p>The authentication algorithm in the IKE phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha1</p>
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -507,7 +571,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption algorithm in the IKE phase.
+             * <p>The encryption algorithm in the IKE phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aes</p>
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -515,7 +582,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The lifetime in the IKE phase. Unit: seconds.
+             * <p>The lifetime in the IKE phase. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -523,11 +593,14 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE negotiation mode. Valid values:
-             * <p>
+             * <p>The IKE negotiation mode. Valid values:</p>
+             * <ul>
+             * <li><strong>main</strong>: This mode offers higher security during negotiations.</li>
+             * <li><strong>aggressive</strong>: This mode is faster and has a higher success rate.</li>
+             * </ul>
              * 
-             * *   **main**: This mode offers higher security during negotiations.
-             * *   **aggressive**: This mode is faster and has a higher success rate.
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -535,7 +608,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The DH group in the IKE phase.
+             * <p>The DH group in the IKE phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group2</p>
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -543,7 +619,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE version.
+             * <p>The IKE version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ikev1</p>
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -551,7 +630,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the tunnel on the data center side.
+             * <p>The identifier of the tunnel on the data center side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.21.XX.XX</p>
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -559,7 +641,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The pre-shared key.
+             * <p>The pre-shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pgw6dy7d1i8i****</p>
              */
             public Builder psk(String psk) {
                 this.psk = psk;
@@ -567,7 +652,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the tunnel on the Alibaba Cloud side.
+             * <p>The identifier of the tunnel on the Alibaba Cloud side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.24.XX.XX</p>
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -581,6 +669,12 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DownloadVpnConnectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadVpnConnectionConfigResponseBody</p>
+     */
     public static class TunnelConfigIpsecConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpsecAuthAlg")
         private String ipsecAuthAlg;
@@ -644,7 +738,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String ipsecPfs; 
 
             /**
-             * The authentication algorithm in the IPsec phase.
+             * <p>The authentication algorithm in the IPsec phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha1</p>
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -652,7 +749,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption algorithm in the IPsec phase.
+             * <p>The encryption algorithm in the IPsec phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aes</p>
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -660,7 +760,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The lifetime in the IPsec phase. Unit: seconds.
+             * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder ipsecLifetime(Long ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -668,7 +771,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The DH group in the IPsec phase.
+             * <p>The DH group in the IPsec phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group2</p>
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;
@@ -682,6 +788,12 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DownloadVpnConnectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadVpnConnectionConfigResponseBody</p>
+     */
     public static class TunnelConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IkeConfig")
         private TunnelConfigIkeConfig ikeConfig;
@@ -757,7 +869,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private String tunnelId; 
 
             /**
-             * The configurations of Phase 1 negotiations.
+             * <p>The configurations of Phase 1 negotiations.</p>
              */
             public Builder ikeConfig(TunnelConfigIkeConfig ikeConfig) {
                 this.ikeConfig = ikeConfig;
@@ -765,7 +877,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of Phase 2 negotiations.
+             * <p>The configurations of Phase 2 negotiations.</p>
              */
             public Builder ipsecConfig(TunnelConfigIpsecConfig ipsecConfig) {
                 this.ipsecConfig = ipsecConfig;
@@ -773,7 +885,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the tunnel on the data center side.
+             * <p>The identifier of the tunnel on the data center side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.21.XX.XX</p>
              */
             public Builder local(String local) {
                 this.local = local;
@@ -781,7 +896,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the tunnel on the Alibaba Cloud side.
+             * <p>The identifier of the tunnel on the Alibaba Cloud side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.24.XX.XX</p>
              */
             public Builder remote(String remote) {
                 this.remote = remote;
@@ -789,7 +907,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The tunnel ID.
+             * <p>The tunnel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tun-opsqc4d97wni27****</p>
              */
             public Builder tunnelId(String tunnelId) {
                 this.tunnelId = tunnelId;
@@ -803,6 +924,12 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DownloadVpnConnectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadVpnConnectionConfigResponseBody</p>
+     */
     public static class TunnelsConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TunnelConfig")
         private java.util.List < TunnelConfig> tunnelConfig;
@@ -844,6 +971,12 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DownloadVpnConnectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadVpnConnectionConfigResponseBody</p>
+     */
     public static class VpnConnectionConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IkeConfig")
         private IkeConfig ikeConfig;
@@ -943,7 +1076,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private TunnelsConfig tunnelsConfig; 
 
             /**
-             * The configurations of Phase 1 negotiations.
+             * <p>The configurations of Phase 1 negotiations.</p>
              */
             public Builder ikeConfig(IkeConfig ikeConfig) {
                 this.ikeConfig = ikeConfig;
@@ -951,7 +1084,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of Phase 2 negotiations.
+             * <p>The configurations of Phase 2 negotiations.</p>
              */
             public Builder ipsecConfig(IpsecConfig ipsecConfig) {
                 this.ipsecConfig = ipsecConfig;
@@ -959,7 +1092,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the customer gateway.
+             * <p>The identifier of the customer gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139.196.XX.XX</p>
              */
             public Builder local(String local) {
                 this.local = local;
@@ -967,7 +1103,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block on the data center side.
+             * <p>The CIDR block on the data center side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/8</p>
              */
             public Builder localSubnet(String localSubnet) {
                 this.localSubnet = localSubnet;
@@ -975,7 +1114,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the VPN gateway.
+             * <p>The identifier of the VPN gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.62.XX.XX</p>
              */
             public Builder remote(String remote) {
                 this.remote = remote;
@@ -983,7 +1125,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block on the virtual private cloud (VPC) side.
+             * <p>The CIDR block on the virtual private cloud (VPC) side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder remoteSubnet(String remoteSubnet) {
                 this.remoteSubnet = remoteSubnet;
@@ -991,10 +1136,8 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The tunnel configurations of the peer gateway device.
-             * <p>
-             * 
-             * The parameters in **TunnelsConfig** are returned only when the IPsec-VPN connection supports the dual-tunnel mode.
+             * <p>The tunnel configurations of the peer gateway device.</p>
+             * <p>The parameters in <strong>TunnelsConfig</strong> are returned only when the IPsec-VPN connection supports the dual-tunnel mode.</p>
              */
             public Builder tunnelsConfig(TunnelsConfig tunnelsConfig) {
                 this.tunnelsConfig = tunnelsConfig;

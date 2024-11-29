@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDhcpOptionsSetResponseBody} extends {@link TeaModel}
  *
  * <p>GetDhcpOptionsSetResponseBody</p>
@@ -145,7 +146,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         private java.util.List < Tags> tags; 
 
         /**
-         * The information about the virtual private cloud (VPC) that is associated with the DHCP options set.
+         * <p>The information about the virtual private cloud (VPC) that is associated with the DHCP options set.</p>
          */
         public Builder associateVpcs(java.util.List < AssociateVpcs> associateVpcs) {
             this.associateVpcs = associateVpcs;
@@ -153,7 +154,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration information about the DHCP options set.
+         * <p>The configuration information about the DHCP options set.</p>
          */
         public Builder dhcpOptions(DhcpOptions dhcpOptions) {
             this.dhcpOptions = dhcpOptions;
@@ -161,7 +162,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the DHCP options set.
+         * <p>The description of the DHCP options set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dhcpOptionsSetDescription(String dhcpOptionsSetDescription) {
             this.dhcpOptionsSetDescription = dhcpOptionsSetDescription;
@@ -169,7 +173,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the DHCP options set.
+         * <p>The ID of the DHCP options set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dopt-o6w0df4epg9zo8isy****</p>
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.dhcpOptionsSetId = dhcpOptionsSetId;
@@ -177,7 +184,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the DHCP options set.
+         * <p>The name of the DHCP options set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dhcpOptionsSetName(String dhcpOptionsSetName) {
             this.dhcpOptionsSetName = dhcpOptionsSetName;
@@ -185,7 +195,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the DHCP options set belongs.
+         * <p>The ID of the Alibaba Cloud account to which the DHCP options set belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>283117732402483989</p>
          */
         public Builder ownerId(Long ownerId) {
             this.ownerId = ownerId;
@@ -193,7 +206,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +217,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -209,13 +228,16 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the DHCP options set. Valid values:
-         * <p>
+         * <p>The status of the DHCP options set. Valid values:</p>
+         * <ul>
+         * <li><strong>Available</strong>: available</li>
+         * <li><strong>InUse</strong>: in use</li>
+         * <li><strong>Deleted</strong>: deleted</li>
+         * <li><strong>Pending</strong>: being configured</li>
+         * </ul>
          * 
-         * *   **Available**: available
-         * *   **InUse**: in use
-         * *   **Deleted**: deleted
-         * *   **Pending**: being configured
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -223,7 +245,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The tag list.
+         * <p>The tag list.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -236,6 +258,12 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDhcpOptionsSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDhcpOptionsSetResponseBody</p>
+     */
     public static class AssociateVpcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociateStatus")
         private String associateStatus;
@@ -275,11 +303,14 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The status of the VPC that is associated with the DHCP options set. Valid values:
-             * <p>
+             * <p>The status of the VPC that is associated with the DHCP options set. Valid values:</p>
+             * <ul>
+             * <li><strong>InUse</strong>: in use</li>
+             * <li><strong>Pending</strong>: being configured</li>
+             * </ul>
              * 
-             * *   **InUse**: in use
-             * *   **Pending**: being configured
+             * <strong>example:</strong>
+             * <p>InUse</p>
              */
             public Builder associateStatus(String associateStatus) {
                 this.associateStatus = associateStatus;
@@ -287,7 +318,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC that is associated with the DHCP options set.
+             * <p>The ID of the VPC that is associated with the DHCP options set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-eb3b54r6otues4tjj****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -301,6 +335,12 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDhcpOptionsSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDhcpOptionsSetResponseBody</p>
+     */
     public static class DhcpOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -364,7 +404,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             private String leaseTime; 
 
             /**
-             * The suffix of the hostname.
+             * <p>The suffix of the hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -372,7 +415,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the DNS server.
+             * <p>The IP address of the DNS server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.XX.XX.123</p>
              */
             public Builder domainNameServers(String domainNameServers) {
                 this.domainNameServers = domainNameServers;
@@ -380,11 +426,14 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             }
 
             /**
-             * The lease time of the IPv6 addresses for the DHCP options set.
-             * <p>
+             * <p>The lease time of the IPv6 addresses for the DHCP options set.</p>
+             * <ul>
+             * <li>If you use hours as the unit, Valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
+             * <li>If you use days as the unit, Valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+             * </ul>
              * 
-             * *   If you use hours as the unit, Valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
-             * *   If you use days as the unit, Valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
+             * <strong>example:</strong>
+             * <p>3650d</p>
              */
             public Builder ipv6LeaseTime(String ipv6LeaseTime) {
                 this.ipv6LeaseTime = ipv6LeaseTime;
@@ -392,11 +441,14 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             }
 
             /**
-             * The lease time of the IPv4 addresses for the DHCP options set.
-             * <p>
+             * <p>The lease time of the IPv4 addresses for the DHCP options set.</p>
+             * <ul>
+             * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
+             * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+             * </ul>
              * 
-             * *   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
-             * *   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
+             * <strong>example:</strong>
+             * <p>3650d</p>
              */
             public Builder leaseTime(String leaseTime) {
                 this.leaseTime = leaseTime;
@@ -410,6 +462,12 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDhcpOptionsSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDhcpOptionsSetResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -449,7 +507,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -457,7 +518,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

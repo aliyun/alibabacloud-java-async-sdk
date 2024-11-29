@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEcGrantRelationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEcGrantRelationResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -105,7 +109,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The query results.
+         * <p>The query results.</p>
          */
         public Builder ecGrantRelations(java.util.List < EcGrantRelations> ecGrantRelations) {
             this.ecGrantRelations = ecGrantRelations;
@@ -113,7 +117,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -121,7 +128,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6E90F6B-2B41-5AAF-ABEB-236ADBAAD91D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEcGrantRelationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEcGrantRelationResponseBody</p>
+     */
     public static class EcGrantRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -297,7 +319,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             private String vbrRegionNo; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the VPC belongs.
+             * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1250123456123456</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -305,7 +330,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when permissions on the VPC were granted to the VBR.
+             * <p>The time when permissions on the VPC were granted to the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-02T11:46Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -313,11 +341,14 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The VBRs that have permissions on the VPC. Valid values:
-             * <p>
+             * <p>The VBRs that have permissions on the VPC. Valid values:</p>
+             * <ul>
+             * <li><strong>All</strong>: VBRs that reside in the specified region and belong to the specified Alibaba Cloud account all have permissions on the VPC.</li>
+             * <li><strong>Specify</strong>: Only the specified VBR has permissions on the VPC.</li>
+             * </ul>
              * 
-             * *   **All**: VBRs that reside in the specified region and belong to the specified Alibaba Cloud account all have permissions on the VPC.
-             * *   **Specify**: Only the specified VBR has permissions on the VPC.
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder grantType(String grantType) {
                 this.grantType = grantType;
@@ -325,7 +356,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1brjuegjc88v3u9****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -333,7 +367,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPCname</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -341,7 +378,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vRouter.
+             * <p>The ID of the vRouter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vrt-bp1i0yzgjd8ra05ec****</p>
              */
             public Builder instanceRouterId(String instanceRouterId) {
                 this.instanceRouterId = instanceRouterId;
@@ -349,7 +389,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the VPC is deployed.
+             * <p>The ID of the region where the VPC is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -357,11 +400,14 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The query result. Valid values:
-             * <p>
+             * <p>The query result. Valid values:</p>
+             * <ul>
+             * <li><strong>Created</strong>: The VBR has permissions on the VPC.</li>
+             * <li><strong>Deleted</strong>: The VBR does not have permissions on the VPC.</li>
+             * </ul>
              * 
-             * *   **Created**: The VBR has permissions on the VPC.
-             * *   **Deleted**: The VBR does not have permissions on the VPC.
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -369,7 +415,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR.
+             * <p>The ID of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vbr-m5ex0xf63xk8s5bob****</p>
              */
             public Builder vbrInstanceId(String vbrInstanceId) {
                 this.vbrInstanceId = vbrInstanceId;
@@ -377,7 +426,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the VBR belongs.
+             * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1210123456123456</p>
              */
             public Builder vbrOwnerUid(Long vbrOwnerUid) {
                 this.vbrOwnerUid = vbrOwnerUid;
@@ -385,7 +437,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the VBR is deployed.
+             * <p>The ID of the region where the VBR is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder vbrRegionNo(String vbrRegionNo) {
                 this.vbrRegionNo = vbrRegionNo;

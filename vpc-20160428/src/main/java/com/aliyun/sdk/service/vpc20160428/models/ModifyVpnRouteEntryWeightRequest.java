@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpnRouteEntryWeightRequest} extends {@link RequestModel}
  *
  * <p>ModifyVpnRouteEntryWeightRequest</p>
@@ -213,12 +214,14 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>d7d24a21-f4ba-4454-9173-b3828dae492b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -227,11 +230,15 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * The new weight of the destination-based route. Valid values:
-         * <p>
+         * <p>The new weight of the destination-based route. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: a low priority</li>
+         * <li><strong>100</strong>: a high priority</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: a low priority
-         * *   **100**: a high priority
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder newWeight(Integer newWeight) {
             this.putQueryParameter("NewWeight", newWeight);
@@ -240,7 +247,11 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * The next hop of the destination-based route.
+         * <p>The next hop of the destination-based route.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-bp15oes1py4i66rmd****</p>
          */
         public Builder nextHop(String nextHop) {
             this.putQueryParameter("NextHop", nextHop);
@@ -249,7 +260,10 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * The tunneling protocol. Set the value to **Ipsec**.
+         * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ipsec</p>
          */
         public Builder overlayMode(String overlayMode) {
             this.putQueryParameter("OverlayMode", overlayMode);
@@ -276,7 +290,11 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region where the VPN gateway is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -303,7 +321,11 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the destination-based route.
+         * <p>The destination CIDR block of the destination-based route.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         public Builder routeDest(String routeDest) {
             this.putQueryParameter("RouteDest", routeDest);
@@ -312,7 +334,11 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp1a3kqjiiq9legfx****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);
@@ -321,11 +347,15 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * The original weight of the destination-based route. Valid values:
-         * <p>
+         * <p>The original weight of the destination-based route. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: a low priority</li>
+         * <li><strong>100</strong>: a high priority</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: a low priority
-         * *   **100**: a high priority
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

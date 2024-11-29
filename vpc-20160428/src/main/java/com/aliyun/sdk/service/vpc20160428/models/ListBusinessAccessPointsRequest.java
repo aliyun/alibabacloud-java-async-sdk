@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBusinessAccessPointsRequest} extends {@link RequestModel}
  *
  * <p>ListBusinessAccessPointsRequest</p>
@@ -53,10 +54,11 @@ public class ListBusinessAccessPointsRequest extends Request {
         } 
 
         /**
-         * The region ID of the Express Connect circuit.
-         * <p>
+         * <p>The region ID of the Express Connect circuit.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

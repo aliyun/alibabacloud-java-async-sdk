@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIPv6TranslatorRequest} extends {@link RequestModel}
  *
  * <p>DeleteIPv6TranslatorRequest</p>
@@ -139,10 +140,11 @@ public class DeleteIPv6TranslatorRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>ClientToken</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -151,7 +153,11 @@ public class DeleteIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 Translation Service instance.
+         * <p>The ID of the IPv6 Translation Service instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6trans-bp1i8ahxut1ie****</p>
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -178,7 +184,11 @@ public class DeleteIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * The region ID of the IPv6 Translation Service instance.
+         * <p>The region ID of the IPv6 Translation Service instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

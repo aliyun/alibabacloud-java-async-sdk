@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGlobalAccelerationInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateGlobalAccelerationInstanceRequest</p>
@@ -196,7 +197,11 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         } 
 
         /**
-         * The maximum bandwidth of the GA instance. Set the value to **10**. Unit: Mbit/s.
+         * <p>The maximum bandwidth of the GA instance. Set the value to <strong>10</strong>. Unit: Mbit/s.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -205,11 +210,14 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * The bandwidth type. Valid values:
-         * <p>
+         * <p>The bandwidth type. Valid values:</p>
+         * <ul>
+         * <li><strong>Sharing</strong></li>
+         * <li><strong>Exclusive</strong></li>
+         * </ul>
          * 
-         * *   **Sharing**
-         * *   **Exclusive**
+         * <strong>example:</strong>
+         * <p>Exclusive</p>
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -218,10 +226,11 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -230,10 +239,11 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * The description of the GA instance.
-         * <p>
+         * <p>The description of the GA instance.</p>
+         * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>My GA</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -242,10 +252,11 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * The name of the GA instance.
-         * <p>
+         * <p>The name of the GA instance.</p>
+         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>GA-1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -272,10 +283,12 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance.
-         * <p>
+         * <p>The region ID of the GA instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -302,13 +315,17 @@ public class CreateGlobalAccelerationInstanceRequest extends Request {
         }
 
         /**
-         * The acceleration area. Valid values:
-         * <p>
+         * <p>The acceleration area. Valid values:</p>
+         * <ul>
+         * <li><strong>china-mainland</strong></li>
+         * <li><strong>north-america</strong></li>
+         * <li><strong>asia-pacific</strong></li>
+         * <li><strong>europe</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **china-mainland**
-         * *   **north-america**
-         * *   **asia-pacific**
-         * *   **europe**
+         * <strong>example:</strong>
+         * <p>china-mainland</p>
          */
         public Builder serviceLocation(String serviceLocation) {
             this.putQueryParameter("ServiceLocation", serviceLocation);

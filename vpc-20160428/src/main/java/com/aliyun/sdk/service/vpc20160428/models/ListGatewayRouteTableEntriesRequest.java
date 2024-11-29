@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayRouteTableEntriesRequest} extends {@link RequestModel}
  *
  * <p>ListGatewayRouteTableEntriesRequest</p>
@@ -167,7 +168,10 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         } 
 
         /**
-         * The destination CIDR block of the route entry in the gateway route table.
+         * <p>The destination CIDR block of the route entry in the gateway route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.5</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -176,7 +180,11 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the gateway route table that you want to query.
+         * <p>The ID of the gateway route table that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-5ts0ohchwkp3dydt2****</p>
          */
         public Builder gatewayRouteTableId(String gatewayRouteTableId) {
             this.putQueryParameter("GatewayRouteTableId", gatewayRouteTableId);
@@ -185,7 +193,10 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -194,11 +205,14 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -225,10 +239,12 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * The region ID of the gateway route table.
-         * <p>
+         * <p>The region ID of the gateway route table.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.
+         * <strong>example:</strong>
+         * <p>ap-southeast-6</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

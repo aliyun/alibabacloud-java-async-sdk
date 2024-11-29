@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIpv6InternetBandwidthRequest} extends {@link RequestModel}
  *
  * <p>DeleteIpv6InternetBandwidthRequest</p>
@@ -184,10 +185,13 @@ public class DeleteIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 address.
-         * <p>
+         * <p>The ID of the IPv6 address.</p>
+         * <blockquote>
+         * <p> You must specify one of <strong>Ipv6AddressId</strong> and <strong>Ipv6InternetBandwidthId</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.
+         * <strong>example:</strong>
+         * <p>ipv6-2zen5j4axcp5l5qyy****</p>
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.putQueryParameter("Ipv6AddressId", ipv6AddressId);
@@ -196,7 +200,10 @@ public class DeleteIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The instance ID of the Internet bandwidth of the IPv6 address.
+         * <p>The instance ID of the Internet bandwidth of the IPv6 address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6bw-uf6hcyzu65v98v3du****</p>
          */
         public Builder ipv6InternetBandwidthId(String ipv6InternetBandwidthId) {
             this.putQueryParameter("Ipv6InternetBandwidthId", ipv6InternetBandwidthId);
@@ -223,10 +230,12 @@ public class DeleteIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The region ID of the IPv6 gateway.
-         * <p>
+         * <p>The region ID of the IPv6 gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

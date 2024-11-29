@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirtualBorderRouterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVirtualBorderRouterResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateVirtualBorderRouterResponseBody extends TeaModel {
         private String vbrId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateVirtualBorderRouterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VBR.
+         * <p>The ID of the VBR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp1jcg5cmxjbl9xgc****</p>
          */
         public Builder vbrId(String vbrId) {
             this.vbrId = vbrId;

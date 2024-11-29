@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatGatewayAssociateNetworkInterfacesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNatGatewayAssociateNetworkInterfacesResponseBody</p>
@@ -150,6 +151,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNatGatewayAssociateNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewayAssociateNetworkInterfacesResponseBody</p>
+     */
     public static class IPv4Set extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPv4Address")
         private String iPv4Address;
@@ -211,6 +218,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNatGatewayAssociateNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewayAssociateNetworkInterfacesResponseBody</p>
+     */
     public static class IPv4Sets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPv4Set")
         private java.util.List < IPv4Set> iPv4Set;
@@ -252,6 +265,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNatGatewayAssociateNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewayAssociateNetworkInterfacesResponseBody</p>
+     */
     public static class AssociateNetworkInterface extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPv4Sets")
         private IPv4Sets iPv4Sets;
@@ -268,12 +287,16 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
+        @com.aliyun.core.annotation.NameInMap("TunnelIndex")
+        private String tunnelIndex;
+
         private AssociateNetworkInterface(Builder builder) {
             this.iPv4Sets = builder.iPv4Sets;
             this.networkInterfaceId = builder.networkInterfaceId;
             this.resourceId = builder.resourceId;
             this.resourceOwnerId = builder.resourceOwnerId;
             this.resourceType = builder.resourceType;
+            this.tunnelIndex = builder.tunnelIndex;
         }
 
         public static Builder builder() {
@@ -319,12 +342,20 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             return this.resourceType;
         }
 
+        /**
+         * @return tunnelIndex
+         */
+        public String getTunnelIndex() {
+            return this.tunnelIndex;
+        }
+
         public static final class Builder {
             private IPv4Sets iPv4Sets; 
             private String networkInterfaceId; 
             private String resourceId; 
             private String resourceOwnerId; 
             private String resourceType; 
+            private String tunnelIndex; 
 
             /**
              * IPv4Sets.
@@ -366,6 +397,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
                 return this;
             }
 
+            /**
+             * TunnelIndex.
+             */
+            public Builder tunnelIndex(String tunnelIndex) {
+                this.tunnelIndex = tunnelIndex;
+                return this;
+            }
+
             public AssociateNetworkInterface build() {
                 return new AssociateNetworkInterface(this);
             } 
@@ -373,6 +412,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNatGatewayAssociateNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewayAssociateNetworkInterfacesResponseBody</p>
+     */
     public static class AssociateNetworkInterfaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociateNetworkInterface")
         private java.util.List < AssociateNetworkInterface> associateNetworkInterface;

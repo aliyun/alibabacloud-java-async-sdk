@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExpressConnectTrafficQosRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateExpressConnectTrafficQosRuleResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         private String ruleId; 
 
         /**
-         * The ID of the QoS policy.
+         * <p>The ID of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-2giu0a6vd5x0mv4700</p>
          */
         public Builder qosId(String qosId) {
             this.qosId = qosId;
@@ -81,7 +85,10 @@ public class CreateExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the QoS queue.
+         * <p>The ID of the QoS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
          */
         public Builder queueId(String queueId) {
             this.queueId = queueId;
@@ -89,7 +96,10 @@ public class CreateExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>606998F0-B94D-48FE-8316-ACA81BB230DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class CreateExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the QoS rule.
+         * <p>The ID of the QoS rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-rule-iugg0l9x27f2nocouj</p>
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;

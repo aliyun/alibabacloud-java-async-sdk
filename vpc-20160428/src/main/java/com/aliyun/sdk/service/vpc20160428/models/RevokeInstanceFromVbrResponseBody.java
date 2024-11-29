@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeInstanceFromVbrResponseBody} extends {@link TeaModel}
  *
  * <p>RevokeInstanceFromVbrResponseBody</p>
@@ -37,7 +38,10 @@ public class RevokeInstanceFromVbrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45B7AA4A-4658-5FFC-90DD-9B8729F301BB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

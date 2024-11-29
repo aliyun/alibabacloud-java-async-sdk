@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishVpcRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>PublishVpcRouteEntriesRequest</p>
@@ -230,7 +231,10 @@ public class PublishVpcRouteEntriesRequest extends Request {
         }
 
         /**
-         * TargetInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-dhw2xsds5****</p>
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putQueryParameter("TargetInstanceId", targetInstanceId);
@@ -239,7 +243,10 @@ public class PublishVpcRouteEntriesRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECR</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -254,6 +261,12 @@ public class PublishVpcRouteEntriesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PublishVpcRouteEntriesRequest} extends {@link TeaModel}
+     *
+     * <p>PublishVpcRouteEntriesRequest</p>
+     */
     public static class RouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -295,7 +308,10 @@ public class PublishVpcRouteEntriesRequest extends Request {
             private String routeTableId; 
 
             /**
-             * DestinationCidrBlock.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121.41.165.123/32</p>
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -303,7 +319,10 @@ public class PublishVpcRouteEntriesRequest extends Request {
             }
 
             /**
-             * RouteTableId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-2ze3jgygk9bmsj23s****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

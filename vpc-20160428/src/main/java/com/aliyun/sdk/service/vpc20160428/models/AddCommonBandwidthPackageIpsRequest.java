@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCommonBandwidthPackageIpsRequest} extends {@link RequestModel}
  *
  * <p>AddCommonBandwidthPackageIpsRequest</p>
@@ -168,7 +169,11 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         } 
 
         /**
-         * The ID of the Internet Shared Bandwidth instance.
+         * <p>The ID of the Internet Shared Bandwidth instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-2ze2ic1xd2qeqasdf****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -177,12 +182,14 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,10 +198,9 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         }
 
         /**
-         * The list of EIPs that you want to associate with the Internet Shared Bandwidth instance.
-         * <p>
-         * 
-         * You can specify at most 10 EIP IDs at a time.
+         * <p>The list of EIPs that you want to associate with the Internet Shared Bandwidth instance.</p>
+         * <p>You can specify at most 10 EIP IDs at a time.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ipInstanceIds(java.util.List < String > ipInstanceIds) {
             this.putQueryParameter("IpInstanceIds", ipInstanceIds);
@@ -203,7 +209,10 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         }
 
         /**
-         * The type of the IP address. Set the value to **EIP** to associate EIPs with the EIP bandwidth plan.
+         * <p>The type of the IP address. Set the value to <strong>EIP</strong> to associate EIPs with the EIP bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP</p>
          */
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -230,10 +239,12 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
         }
 
         /**
-         * The region ID of the Internet Shared Bandwidth instance.
-         * <p>
+         * <p>The region ID of the Internet Shared Bandwidth instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~448570~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

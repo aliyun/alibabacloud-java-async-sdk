@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhysicalConnectionServiceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetPhysicalConnectionServiceStatusResponseBody</p>
@@ -49,11 +50,14 @@ public class GetPhysicalConnectionServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether billing for outbound data transfer is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether billing for outbound data transfer is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -61,7 +65,10 @@ public class GetPhysicalConnectionServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

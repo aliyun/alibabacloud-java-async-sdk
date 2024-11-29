@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVpcPrefixListAssociationsResponseBody} extends {@link TeaModel}
  *
  * <p>GetVpcPrefixListAssociationsResponseBody</p>
@@ -85,7 +86,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The number of entries.
+         * <p>The number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -93,11 +97,14 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +112,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the network instances that are associated with the prefix list.
+         * <p>The information about the network instances that are associated with the prefix list.</p>
          */
         public Builder prefixListAssociation(java.util.List < PrefixListAssociation> prefixListAssociation) {
             this.prefixListAssociation = prefixListAssociation;
@@ -113,7 +120,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +147,12 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVpcPrefixListAssociationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVpcPrefixListAssociationsResponseBody</p>
+     */
     public static class PrefixListAssociation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
@@ -245,7 +264,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the prefix list belongs.
+             * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>153460731706****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -253,7 +275,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix list ID.
+             * <p>The prefix list ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-0b7hwu67****</p>
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
@@ -261,7 +286,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the association failed.
+             * <p>The reason why the association failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>failed</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -269,7 +297,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the prefix list.
+             * <p>The region ID of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -277,7 +308,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the associated resource.
+             * <p>The ID of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp1drpcfz9srr393h****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -285,11 +319,14 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the associated resource. Valid values:
-             * <p>
+             * <p>The type of the associated resource. Valid values:</p>
+             * <ul>
+             * <li><strong>vpcRouteTable</strong>: virtual private cloud (VPC) route table.</li>
+             * <li><strong>trRouteTable</strong>: route table of a transit router.</li>
+             * </ul>
              * 
-             * *   **vpcRouteTable**: virtual private cloud (VPC) route table.
-             * *   **trRouteTable**: route table of a transit router.
+             * <strong>example:</strong>
+             * <p>vpcRouteTable</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -297,7 +334,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource associated with the prefix list belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource associated with the prefix list belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132193271328****</p>
              */
             public Builder resourceUid(String resourceUid) {
                 this.resourceUid = resourceUid;
@@ -305,15 +345,18 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the prefix list. Valid values:
-             * <p>
+             * <p>The status of the prefix list. Valid values:</p>
+             * <ul>
+             * <li><strong>Created</strong></li>
+             * <li><strong>ModifyFailed</strong></li>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Modifying</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
              * 
-             * *   **Created**
-             * *   **ModifyFailed**
-             * *   **Creating**
-             * *   **Modifying**
-             * *   **Deleting**
-             * *   **Deleted**
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

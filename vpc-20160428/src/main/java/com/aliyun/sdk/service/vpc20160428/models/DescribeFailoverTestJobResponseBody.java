@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFailoverTestJobResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFailoverTestJobResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The failover test.
+         * <p>The failover test.</p>
          */
         public Builder failoverTestJobModel(FailoverTestJobModel failoverTestJobModel) {
             this.failoverTestJobModel = failoverTestJobModel;
@@ -57,7 +58,10 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C44F62BE-9CE7-4277-B117-69243F3988BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFailoverTestJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFailoverTestJobResponseBody</p>
+     */
     public static class FailoverTestJobModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -205,10 +215,11 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             private String stopTime; 
 
             /**
-             * The description of the failover test.
-             * <p>
+             * <p>The description of the failover test.</p>
+             * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -216,7 +227,10 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the failover test. Unit: minutes. Valid values: **1 to 4320**.
+             * <p>The duration of the failover test. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder jobDuration(String jobDuration) {
                 this.jobDuration = jobDuration;
@@ -224,7 +238,10 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the failover test.
+             * <p>The ID of the failover test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ftj-xxxxxxxxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -232,11 +249,14 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the failover test is performed immediately. Valid values:
-             * <p>
+             * <p>Indicates whether the failover test is performed immediately. Valid values:</p>
+             * <ul>
+             * <li><strong>StartNow</strong></li>
+             * <li><strong>StartLater</strong></li>
+             * </ul>
              * 
-             * *   **StartNow**
-             * *   **StartLater**
+             * <strong>example:</strong>
+             * <p>StartNow</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -244,10 +264,11 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the failover test.
-             * <p>
+             * <p>The name of the failover test.</p>
+             * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The name must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -255,7 +276,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of failover test resources.
+             * <p>The IDs of failover test resources.</p>
              */
             public Builder resourceId(java.util.List < String > resourceId) {
                 this.resourceId = resourceId;
@@ -263,7 +284,10 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * The type of failover test resource. Only **PHYSICALCONNECTION** is returned.
+             * <p>The type of failover test resource. Only <strong>PHYSICALCONNECTION</strong> is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICALCONNECTION</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -271,7 +295,10 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the failover test. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The start time of the failover test. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-21T14:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -279,14 +306,17 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the failover test. Valid values:
-             * <p>
+             * <p>The status of the failover test. Valid values:</p>
+             * <ul>
+             * <li><strong>Init</strong></li>
+             * <li><strong>Starting</strong></li>
+             * <li><strong>Testing</strong></li>
+             * <li><strong>Stopping</strong></li>
+             * <li><strong>Stopped</strong></li>
+             * </ul>
              * 
-             * *   **Init**
-             * *   **Starting**
-             * *   **Testing**
-             * *   **Stopping**
-             * *   **Stopped**
+             * <strong>example:</strong>
+             * <p>Init</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -294,7 +324,10 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the failover test. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The end time of the failover test. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-21T15:00:00Z</p>
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;

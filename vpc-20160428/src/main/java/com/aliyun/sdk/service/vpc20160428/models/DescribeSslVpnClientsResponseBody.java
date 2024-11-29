@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSslVpnClientsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSslVpnClientsResponseBody</p>
@@ -109,7 +110,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         private String vpnGatewayId; 
 
         /**
-         * The list of clients.
+         * <p>The list of clients.</p>
          */
         public Builder clientInfoList(java.util.List < ClientInfoList> clientInfoList) {
             this.clientInfoList = clientInfoList;
@@ -117,7 +118,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -125,7 +129,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -133,7 +140,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eu-central-1</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -141,7 +151,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>885E117D-06A9-38A3-8DD2-40BDAC429FFC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +162,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned entries.
+         * <p>The number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -157,7 +173,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-gw8gfb947ctddabja****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
@@ -170,6 +189,12 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSslVpnClientsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSslVpnClientsResponseBody</p>
+     */
     public static class ClientInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
@@ -281,10 +306,13 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The SSL client certificate used by the client.
-             * <p>
+             * <p>The SSL client certificate used by the client.</p>
+             * <blockquote>
+             * <p> If the client uses two-factor authentication to establish an SSL-VPN connection to Alibaba Cloud, the return value is the username of the client.</p>
+             * </blockquote>
              * 
-             * >  If the client uses two-factor authentication to establish an SSL-VPN connection to Alibaba Cloud, the return value is the username of the client.
+             * <strong>example:</strong>
+             * <p>CN=vsc-gw8gkh6gtilf1whgc****</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -292,10 +320,11 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the client connected to Alibaba Cloud through an SSL-VPN connection. Unit: milliseconds.
-             * <p>
+             * <p>The timestamp that indicates when the client connected to Alibaba Cloud through an SSL-VPN connection. Unit: milliseconds.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1670985008000</p>
              */
             public Builder connectedTime(Long connectedTime) {
                 this.connectedTime = connectedTime;
@@ -303,7 +332,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The actual public IP address used by the client when the client established an SSL-VPN connection to Alibaba Cloud.
+             * <p>The actual public IP address used by the client when the client established an SSL-VPN connection to Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.XX.XX.15</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -311,7 +343,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The port used by the client when the client established an SSL-VPN connection to Alibaba Cloud.
+             * <p>The port used by the client when the client established an SSL-VPN connection to Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4****</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -319,7 +354,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address allocated to the client by the VPN gateway when the client established an SSL-VPN connection to Alibaba Cloud.
+             * <p>The private IP address allocated to the client by the VPN gateway when the client established an SSL-VPN connection to Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.10.10</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -327,7 +365,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data transferred from the client to the VPN gateway through the SSL-VPN connection. Unit: bytes.
+             * <p>The amount of data transferred from the client to the VPN gateway through the SSL-VPN connection. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60782</p>
              */
             public Builder receiveBytes(Long receiveBytes) {
                 this.receiveBytes = receiveBytes;
@@ -335,7 +376,10 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data transferred from the VPN gateway to the client through the SSL-VPN connection. Unit: bytes.
+             * <p>The amount of data transferred from the VPN gateway to the client through the SSL-VPN connection. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>57144</p>
              */
             public Builder sendBytes(Long sendBytes) {
                 this.sendBytes = sendBytes;
@@ -343,10 +387,11 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SSL-VPN connection.
-             * <p>
+             * <p>The status of the SSL-VPN connection.</p>
+             * <p>The value is set to <strong>online</strong>, which indicates that the client has connected to Alibaba Cloud through an SSL-VPN connection.</p>
              * 
-             * The value is set to **online**, which indicates that the client has connected to Alibaba Cloud through an SSL-VPN connection.
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;

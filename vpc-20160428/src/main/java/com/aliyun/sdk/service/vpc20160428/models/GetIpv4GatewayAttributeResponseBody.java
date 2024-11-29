@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIpv4GatewayAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>GetIpv4GatewayAttributeResponseBody</p>
@@ -157,7 +158,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * The time when the IPv4 gateway was created.
+         * <p>The time when the IPv4 gateway was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-24T09:02:36Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -165,11 +169,14 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the IPv4 gateway is activated. Valid values:
-         * <p>
+         * <p>Indicates whether the IPv4 gateway is activated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -177,7 +184,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the IPv4 gateway.
+         * <p>The description of the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new</p>
          */
         public Builder ipv4GatewayDescription(String ipv4GatewayDescription) {
             this.ipv4GatewayDescription = ipv4GatewayDescription;
@@ -185,7 +195,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the IPv4 gateway.
+         * <p>The ID of the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
          */
         public Builder ipv4GatewayId(String ipv4GatewayId) {
             this.ipv4GatewayId = ipv4GatewayId;
@@ -193,7 +206,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the IPv4 gateway.
+         * <p>The name of the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder ipv4GatewayName(String ipv4GatewayName) {
             this.ipv4GatewayName = ipv4GatewayName;
@@ -201,7 +217,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the route table associated with the IPv4 gateway.
+         * <p>The ID of the route table associated with the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-5ts0ohchwkp3dydt2****</p>
          */
         public Builder ipv4GatewayRouteTableId(String ipv4GatewayRouteTableId) {
             this.ipv4GatewayRouteTableId = ipv4GatewayRouteTableId;
@@ -209,7 +228,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F79A919-6FE9-50C4-967B-45705E1F9C38</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +239,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the IPv4 gateway belongs.
+         * <p>The ID of the resource group to which the IPv4 gateway belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -225,15 +250,18 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the IPv4 gateway. Valid values:
-         * <p>
+         * <p>The status of the IPv4 gateway. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * <li><strong>Activating</strong></li>
+         * </ul>
          * 
-         * *   **Creating**
-         * *   **Created**
-         * *   **Modifying**
-         * *   **Deleting**
-         * *   **Deleted**
-         * *   **Activating**
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -241,7 +269,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tag list.
+         * <p>The tag list.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -249,7 +277,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPC with which the IPv4 gateway is associated.
+         * <p>The ID of the VPC with which the IPv4 gateway is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-5tsrxlw7dv074gci4****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -262,6 +293,12 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetIpv4GatewayAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIpv4GatewayAttributeResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -301,7 +338,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N added to the resource.
+             * <p>The key of tag N added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -309,7 +349,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N added to the resource.
+             * <p>The value of tag N added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDhcpOptionsSetRequest} extends {@link RequestModel}
  *
  * <p>CreateDhcpOptionsSetRequest</p>
@@ -250,12 +251,14 @@ public class CreateDhcpOptionsSetRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -264,10 +267,11 @@ public class CreateDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * The description of the DHCP options set.
-         * <p>
+         * <p>The description of the DHCP options set.</p>
+         * <p>The description must be 1 to 256 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder dhcpOptionsSetDescription(String dhcpOptionsSetDescription) {
             this.putQueryParameter("DhcpOptionsSetDescription", dhcpOptionsSetDescription);
@@ -276,10 +280,11 @@ public class CreateDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * The name of the DHCP options set.
-         * <p>
+         * <p>The name of the DHCP options set.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
          * 
-         * The name must be 1 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder dhcpOptionsSetName(String dhcpOptionsSetName) {
             this.putQueryParameter("DhcpOptionsSetName", dhcpOptionsSetName);
@@ -288,10 +293,11 @@ public class CreateDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * The root domain. For example, you can set the value to example.com.
-         * <p>
+         * <p>The root domain. For example, you can set the value to example.com.</p>
+         * <p>After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the ECS instances in the VPC.</p>
          * 
-         * After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the ECS instances in the VPC.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -300,10 +306,13 @@ public class CreateDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * The IP address of the DNS server. You can enter at most four DNS server IP addresses. Separate IP addresses with commas (,).
-         * <p>
+         * <p>The IP address of the DNS server. You can enter at most four DNS server IP addresses. Separate IP addresses with commas (,).</p>
+         * <blockquote>
+         * <p> If no IP address is specified, the Elastic Compute Service (ECS) instance uses the IP addresses 100.100.2.136 and 100.100.2.138, which are provided by Alibaba Cloud by default.</p>
+         * </blockquote>
          * 
-         * >  If no IP address is specified, the Elastic Compute Service (ECS) instance uses the IP addresses 100.100.2.136 and 100.100.2.138, which are provided by Alibaba Cloud by default.
+         * <strong>example:</strong>
+         * <p>192.XX.XX.123</p>
          */
         public Builder domainNameServers(String domainNameServers) {
             this.putQueryParameter("DomainNameServers", domainNameServers);
@@ -312,12 +321,12 @@ public class CreateDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request.
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+         * <p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+         * <p><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
          * 
-         * **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * 
-         * **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -326,13 +335,17 @@ public class CreateDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * The lease time of the IPv6 addresses for the DHCP options set.
-         * <p>
+         * <p>The lease time of the IPv6 addresses for the DHCP options set.</p>
+         * <ul>
+         * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
+         * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> When you enter a value, you must also specify the unit.</p>
+         * </blockquote>
          * 
-         * *   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
-         * *   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
-         * 
-         * >  When you enter a value, you must also specify the unit.
+         * <strong>example:</strong>
+         * <p>3650d</p>
          */
         public Builder ipv6LeaseTime(String ipv6LeaseTime) {
             this.putQueryParameter("Ipv6LeaseTime", ipv6LeaseTime);
@@ -341,13 +354,17 @@ public class CreateDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * The lease time of the IPv4 addresses for the DHCP options set.
-         * <p>
+         * <p>The lease time of the IPv4 addresses for the DHCP options set.</p>
+         * <ul>
+         * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
+         * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> When you enter a value, you must also specify the unit.</p>
+         * </blockquote>
          * 
-         * *   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
-         * *   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
-         * 
-         * >  When you enter a value, you must also specify the unit.
+         * <strong>example:</strong>
+         * <p>3650d</p>
          */
         public Builder leaseTime(String leaseTime) {
             this.putQueryParameter("LeaseTime", leaseTime);
@@ -374,10 +391,12 @@ public class CreateDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * The region to which the DHCP options set belongs.
-         * <p>
+         * <p>The region to which the DHCP options set belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -386,7 +405,10 @@ public class CreateDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the DHCP options set belongs.
+         * <p>The ID of the resource group to which the DHCP options set belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -413,7 +435,7 @@ public class CreateDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * The tag of the resource.
+         * <p>The tag of the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -428,6 +450,12 @@ public class CreateDhcpOptionsSetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDhcpOptionsSetRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDhcpOptionsSetRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -467,10 +495,11 @@ public class CreateDhcpOptionsSetRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>A tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * A tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -478,10 +507,11 @@ public class CreateDhcpOptionsSetRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

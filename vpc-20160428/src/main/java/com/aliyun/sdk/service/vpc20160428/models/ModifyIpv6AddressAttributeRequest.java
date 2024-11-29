@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIpv6AddressAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyIpv6AddressAttributeRequest</p>
@@ -190,10 +191,11 @@ public class ModifyIpv6AddressAttributeRequest extends Request {
         }
 
         /**
-         * The description of the IPv6 address.
-         * <p>
+         * <p>The description of the IPv6 address.</p>
+         * <p>It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -211,7 +213,11 @@ public class ModifyIpv6AddressAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 address.
+         * <p>The ID of the IPv6 address.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6-hp32vv2klzw4yerdf****</p>
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.putQueryParameter("Ipv6AddressId", ipv6AddressId);
@@ -220,10 +226,11 @@ public class ModifyIpv6AddressAttributeRequest extends Request {
         }
 
         /**
-         * The name of the IPv6 address.
-         * <p>
+         * <p>The name of the IPv6 address.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -250,7 +257,11 @@ public class ModifyIpv6AddressAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the IPv6 address. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region ID of the IPv6 address. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

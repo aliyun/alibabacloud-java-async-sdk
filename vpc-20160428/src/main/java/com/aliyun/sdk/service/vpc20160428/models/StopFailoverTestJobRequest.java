@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopFailoverTestJobRequest} extends {@link RequestModel}
  *
  * <p>StopFailoverTestJobRequest</p>
@@ -133,7 +134,10 @@ public class StopFailoverTestJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ftj-xxxxxxxxx</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

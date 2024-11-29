@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHaVipAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyHaVipAttributeRequest</p>
@@ -167,12 +168,14 @@ public class ModifyHaVipAttributeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e0****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -181,10 +184,11 @@ public class ModifyHaVipAttributeRequest extends Request {
         }
 
         /**
-         * The description of the HAVIP.
-         * <p>
+         * <p>The description of the HAVIP.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>This is my HaVip.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -193,7 +197,11 @@ public class ModifyHaVipAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the HAVIP.
+         * <p>The ID of the HAVIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>havip-2zeo05qre24nhrqp****</p>
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -202,10 +210,11 @@ public class ModifyHaVipAttributeRequest extends Request {
         }
 
         /**
-         * The name of the HAVIP.
-         * <p>
+         * <p>The name of the HAVIP.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -232,10 +241,12 @@ public class ModifyHaVipAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the HAVIP belongs.
-         * <p>
+         * <p>The ID of the region to which the HAVIP belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

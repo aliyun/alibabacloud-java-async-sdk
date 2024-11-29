@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRouteTablesResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC668356-BCB4-42FD-9BC3-FA2B2E04B634</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information about the route tables.
+         * <p>The detailed information about the route tables.</p>
          */
         public Builder routeTables(RouteTables routeTables) {
             this.routeTables = routeTables;
@@ -117,7 +127,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class NextHop extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Integer enabled;
@@ -193,11 +212,14 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Indicates whether the route is available. Valid values:
-             * <p>
+             * <p>Indicates whether the route is available. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unavailable</li>
+             * <li><strong>1</strong>: available</li>
+             * </ul>
              * 
-             * *   **0**: unavailable
-             * *   **1**: available
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enabled(Integer enabled) {
                 this.enabled = enabled;
@@ -205,7 +227,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the next hop.
+             * <p>The ID of the next hop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ri-2zeo3xzyf38r4urzdpvqw</p>
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -213,17 +238,20 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the next hop. Valid values:
-             * <p>
+             * <p>The type of the next hop. Valid values:</p>
+             * <ul>
+             * <li><strong>Instance</strong>: an ECS instance</li>
+             * <li><strong>HaVip</strong>: an HAVIP</li>
+             * <li><strong>VpnGateway</strong>: a VPN gateway</li>
+             * <li><strong>NatGateway</strong>: a NAT gateway</li>
+             * <li><strong>NetworkInterface</strong>: a secondary ENI</li>
+             * <li><strong>RouterInterface</strong>: a router interface</li>
+             * <li><strong>IPv6Gateway</strong>: an IPv6 gateway</li>
+             * <li><strong>Attachment</strong>: a transit router</li>
+             * </ul>
              * 
-             * *   **Instance**: an ECS instance
-             * *   **HaVip**: an HAVIP
-             * *   **VpnGateway**: a VPN gateway
-             * *   **NatGateway**: a NAT gateway
-             * *   **NetworkInterface**: a secondary ENI
-             * *   **RouterInterface**: a router interface
-             * *   **IPv6Gateway**: an IPv6 gateway
-             * *   **Attachment**: a transit router
+             * <strong>example:</strong>
+             * <p>HaVip</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -231,7 +259,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the route.
+             * <p>The weight of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -245,6 +276,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class NextHops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextHop")
         private java.util.List < NextHop> nextHop;
@@ -286,6 +323,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class RouteEntry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -421,7 +464,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The description of the route. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+             * <p>The description of the route. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RouteEntryDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -429,11 +475,14 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR block of the route. The destination CIDR block supports IPv4 and IPv6. Make sure that the destination CIDR block meets the following requirements:
-             * <p>
+             * <p>The destination CIDR block of the route. The destination CIDR block supports IPv4 and IPv6. Make sure that the destination CIDR block meets the following requirements:</p>
+             * <ul>
+             * <li>The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.</li>
+             * <li>The destination CIDR block of each route in the route table is unique.</li>
+             * </ul>
              * 
-             * *   The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.
-             * *   The destination CIDR block of each route in the route table is unique.
+             * <strong>example:</strong>
+             * <p>192.168.0.1/24</p>
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -441,7 +490,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance associated with the next hop.
+             * <p>The ID of the instance associated with the next hop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ri-2zeo3xzyf38r4urzd****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -449,17 +501,20 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the next hop. Valid values:
-             * <p>
+             * <p>The type of the next hop. Valid values:</p>
+             * <ul>
+             * <li><strong>Instance</strong> (default): an Elastic Compute Service (ECS) instance</li>
+             * <li><strong>HaVip</strong>: a high-availability virtual IP address (HAVIP).</li>
+             * <li><strong>VpnGateway</strong>: a VPN gateway</li>
+             * <li><strong>NatGateway</strong>: a NAT gateway</li>
+             * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI)</li>
+             * <li><strong>RouterInterface</strong>: a router interface</li>
+             * <li><strong>IPv6Gateway</strong>: an IPv6 gateway</li>
+             * <li><strong>Attachment</strong>: a transit router</li>
+             * </ul>
              * 
-             * *   **Instance** (default): an Elastic Compute Service (ECS) instance
-             * *   **HaVip**: a high-availability virtual IP address (HAVIP).
-             * *   **VpnGateway**: a VPN gateway
-             * *   **NatGateway**: a NAT gateway
-             * *   **NetworkInterface**: a secondary elastic network interface (ENI)
-             * *   **RouterInterface**: a router interface
-             * *   **IPv6Gateway**: an IPv6 gateway
-             * *   **Attachment**: a transit router
+             * <strong>example:</strong>
+             * <p>local</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -467,7 +522,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the next hop.
+             * <p>The information about the next hop.</p>
              */
             public Builder nextHops(NextHops nextHops) {
                 this.nextHops = nextHops;
@@ -475,7 +530,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route.
+             * <p>The ID of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rte-bp1mnnr2al0naomnpxxx</p>
              */
             public Builder routeEntryId(String routeEntryId) {
                 this.routeEntryId = routeEntryId;
@@ -483,10 +541,11 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The route name.
-             * <p>
+             * <p>The route name.</p>
+             * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
              * 
-             * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder routeEntryName(String routeEntryName) {
                 this.routeEntryName = routeEntryName;
@@ -494,7 +553,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The route table ID.
+             * <p>The route table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp145q7glnuzdvzu2****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -502,12 +564,15 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The route status. Valid values:
-             * <p>
+             * <p>The route status. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Modifying</strong></li>
+             * </ul>
              * 
-             * *   **Pending**
-             * *   **Available**
-             * *   **Modifying**
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -515,13 +580,16 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The route type. Valid values:
-             * <p>
+             * <p>The route type. Valid values:</p>
+             * <ul>
+             * <li><strong>Custom</strong></li>
+             * <li><strong>System</strong></li>
+             * <li><strong>BGP</strong></li>
+             * <li><strong>CEN</strong></li>
+             * </ul>
              * 
-             * *   **Custom**
-             * *   **System**
-             * *   **BGP**
-             * *   **CEN**
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -535,6 +603,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class RouteEntrys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteEntry")
         private java.util.List < RouteEntry> routeEntry;
@@ -576,6 +650,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private java.util.List < String > vSwitchId;
@@ -617,6 +697,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class RouteTable extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -728,10 +814,11 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             private VSwitchIds vSwitchIds; 
 
             /**
-             * The time when the route table was created.
-             * <p>
+             * <p>The time when the route table was created.</p>
+             * <p>The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format in UTC.</p>
              * 
-             * The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.
+             * <strong>example:</strong>
+             * <p>2017-08-22T10:40:25Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -739,7 +826,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the route table belongs.
+             * <p>The ID of the resource group to which the route table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -747,7 +837,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the route.
+             * <p>The information about the route.</p>
              */
             public Builder routeEntrys(RouteEntrys routeEntrys) {
                 this.routeEntrys = routeEntrys;
@@ -755,7 +845,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route table.
+             * <p>The ID of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp145q7glnuzdvzu2****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -763,11 +856,14 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route table. Valid values:
-             * <p>
+             * <p>The type of the route table. Valid values:</p>
+             * <ul>
+             * <li><strong>Custom</strong></li>
+             * <li><strong>System</strong></li>
+             * </ul>
              * 
-             * *   **Custom**
-             * *   **System**
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder routeTableType(String routeTableType) {
                 this.routeTableType = routeTableType;
@@ -775,11 +871,14 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route table. Valid values:
-             * <p>
+             * <p>The status of the route table. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Available</strong></li>
+             * </ul>
              * 
-             * *   **Pending**
-             * *   **Available**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -787,7 +886,10 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The vRouter ID.
+             * <p>The vRouter ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vrt-bp1lhl0taikrteen8****</p>
              */
             public Builder vRouterId(String vRouterId) {
                 this.vRouterId = vRouterId;
@@ -795,7 +897,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -809,6 +911,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class RouteTables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteTable")
         private java.util.List < RouteTable> routeTable;

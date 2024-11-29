@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFlowLogRequest} extends {@link RequestModel}
  *
  * <p>CreateFlowLogRequest</p>
@@ -22,6 +23,10 @@ public class CreateFlowLogRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowLogName")
     private String flowLogName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
+    private String ipVersion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogStoreName")
@@ -86,6 +91,7 @@ public class CreateFlowLogRequest extends Request {
         this.aggregationInterval = builder.aggregationInterval;
         this.description = builder.description;
         this.flowLogName = builder.flowLogName;
+        this.ipVersion = builder.ipVersion;
         this.logStoreName = builder.logStoreName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -133,6 +139,13 @@ public class CreateFlowLogRequest extends Request {
      */
     public String getFlowLogName() {
         return this.flowLogName;
+    }
+
+    /**
+     * @return ipVersion
+     */
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     /**
@@ -230,6 +243,7 @@ public class CreateFlowLogRequest extends Request {
         private Integer aggregationInterval; 
         private String description; 
         private String flowLogName; 
+        private String ipVersion; 
         private String logStoreName; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -253,6 +267,7 @@ public class CreateFlowLogRequest extends Request {
             this.aggregationInterval = request.aggregationInterval;
             this.description = request.description;
             this.flowLogName = request.flowLogName;
+            this.ipVersion = request.ipVersion;
             this.logStoreName = request.logStoreName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -269,7 +284,10 @@ public class CreateFlowLogRequest extends Request {
         } 
 
         /**
-         * The sampling interval of the flow log. Unit: seconds. Valid values: **1**, **5**, and **10** (default).
+         * <p>The sampling interval of the flow log. Unit: seconds. Valid values: <strong>1</strong>, <strong>5</strong>, and <strong>10</strong> (default).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder aggregationInterval(Integer aggregationInterval) {
             this.putQueryParameter("AggregationInterval", aggregationInterval);
@@ -278,10 +296,11 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The description of the flow log.
-         * <p>
+         * <p>The description of the flow log.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>This is my Flowlog.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -290,10 +309,11 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The name of the flow log.
-         * <p>
+         * <p>The name of the flow log.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>myFlowlog</p>
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
@@ -302,12 +322,25 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The name of the Logstore that stores the captured traffic data.
-         * <p>
+         * IpVersion.
+         */
+        public Builder ipVersion(String ipVersion) {
+            this.putQueryParameter("IpVersion", ipVersion);
+            this.ipVersion = ipVersion;
+            return this;
+        }
+
+        /**
+         * <p>The name of the Logstore that stores the captured traffic data.</p>
+         * <ul>
+         * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name must start and end with a lowercase letter or a digit.</li>
+         * <li>The name must be 3 to 63 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).
-         * *   The name must start and end with a lowercase letter or a digit.
-         * *   The name must be 3 to 63 characters in length.
+         * <strong>example:</strong>
+         * <p>FlowLogStore</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putQueryParameter("LogStoreName", logStoreName);
@@ -334,12 +367,16 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The name of the project that stores the captured traffic data.
-         * <p>
+         * <p>The name of the project that stores the captured traffic data.</p>
+         * <ul>
+         * <li>The name can contain only lowercase letters, digits, and hyphens (-).</li>
+         * <li>The name must start and end with a lowercase letter or a digit.</li>
+         * <li>The name must be 3 to 63 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain only lowercase letters, digits, and hyphens (-).
-         * *   The name must start and end with a lowercase letter or a digit.
-         * *   The name must be 3 to 63 characters in length.
+         * <strong>example:</strong>
+         * <p>FlowLogProject</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -348,7 +385,11 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to create the flow log. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region where you want to create the flow log. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -357,7 +398,10 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazdjdhd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -366,7 +410,11 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The ID of the resource whose traffic you want to capture.
+         * <p>The ID of the resource whose traffic you want to capture.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-askldfas****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -393,12 +441,16 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The type of the resource whose traffic you want to capture. Valid values:
-         * <p>
+         * <p>The type of the resource whose traffic you want to capture. Valid values:</p>
+         * <ul>
+         * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
+         * <li><strong>VSwitch</strong>: all ENIs in a vSwitch</li>
+         * <li><strong>VPC</strong>: all ENIs in a virtual private cloud (VPC)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **NetworkInterface**: elastic network interface (ENI)
-         * *   **VSwitch**: all ENIs in a vSwitch
-         * *   **VPC**: all ENIs in a virtual private cloud (VPC)
+         * <strong>example:</strong>
+         * <p>NetworkInterface</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -407,7 +459,7 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The tag of the resource.
+         * <p>The tag of the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -416,11 +468,11 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The scope of the traffic that you want to capture. Valid values:
-         * <p>
-         * 
-         * *   **all**: all traffic.
-         * *   **internetGateway**: Internet traffic.
+         * <p>The scope of the traffic that you want to capture. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong>: all traffic.</li>
+         * <li><strong>internetGateway</strong>: Internet traffic.</li>
+         * </ul>
          */
         public Builder trafficPath(java.util.List < String > trafficPath) {
             this.putQueryParameter("TrafficPath", trafficPath);
@@ -429,12 +481,16 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The type of traffic that you want to capture. Valid values:
-         * <p>
+         * <p>The type of traffic that you want to capture. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong>: all traffic</li>
+         * <li><strong>Allow</strong>: traffic that is allowed</li>
+         * <li><strong>Drop</strong>: traffic that is rejected</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **All**: all traffic
-         * *   **Allow**: traffic that is allowed
-         * *   **Drop**: traffic that is rejected
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);
@@ -449,6 +505,12 @@ public class CreateFlowLogRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFlowLogRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFlowLogRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -488,10 +550,11 @@ public class CreateFlowLogRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -499,10 +562,11 @@ public class CreateFlowLogRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

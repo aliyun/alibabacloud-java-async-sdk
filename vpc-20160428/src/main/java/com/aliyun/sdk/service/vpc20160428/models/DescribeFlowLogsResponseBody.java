@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFlowLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFlowLogsResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The information about the flow logs.
+         * <p>The information about the flow logs.</p>
          */
         public Builder flowLogs(FlowLogs flowLogs) {
             this.flowLogs = flowLogs;
@@ -105,7 +106,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,11 +139,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -141,7 +154,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of flow logs that are queried.
+         * <p>The number of flow logs that are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -154,6 +170,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFlowLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFlowLogsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -193,7 +215,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -201,7 +226,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -215,6 +243,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFlowLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFlowLogsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -256,6 +290,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFlowLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFlowLogsResponseBody</p>
+     */
     public static class TrafficPath extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrafficPathList")
         private java.util.List < String > trafficPathList;
@@ -297,6 +337,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFlowLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFlowLogsResponseBody</p>
+     */
     public static class FlowLog extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AggregationInterval")
         private Integer aggregationInterval;
@@ -321,6 +367,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("FlowLogName")
         private String flowLogName;
+
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
+        private String ipVersion;
 
         @com.aliyun.core.annotation.NameInMap("LogStoreName")
         private String logStoreName;
@@ -364,6 +413,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             this.flowLogDeliverStatus = builder.flowLogDeliverStatus;
             this.flowLogId = builder.flowLogId;
             this.flowLogName = builder.flowLogName;
+            this.ipVersion = builder.ipVersion;
             this.logStoreName = builder.logStoreName;
             this.projectName = builder.projectName;
             this.regionId = builder.regionId;
@@ -439,6 +489,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
          */
         public String getFlowLogName() {
             return this.flowLogName;
+        }
+
+        /**
+         * @return ipVersion
+         */
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         /**
@@ -527,6 +584,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String flowLogDeliverStatus; 
             private String flowLogId; 
             private String flowLogName; 
+            private String ipVersion; 
             private String logStoreName; 
             private String projectName; 
             private String regionId; 
@@ -540,7 +598,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String trafficType; 
 
             /**
-             * The sampling interval of the flow log. Unit: minutes.
+             * <p>The sampling interval of the flow log. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder aggregationInterval(Integer aggregationInterval) {
                 this.aggregationInterval = aggregationInterval;
@@ -548,11 +609,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The business status of the flow log. Valid values:
-             * <p>
+             * <p>The business status of the flow log. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>FinancialLocked</strong></li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **FinancialLocked**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -560,7 +624,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the flow log was created.
+             * <p>The time when the flow log was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-21T03:08:50Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -568,7 +635,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the flow log.
+             * <p>The description of the flow log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -576,12 +646,15 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * If the flow log failed to be delivered, you can troubleshoot based on the following error messages that may be returned:
-             * <p>
+             * <p>If the flow log failed to be delivered, you can troubleshoot based on the following error messages that may be returned:</p>
+             * <ul>
+             * <li><strong>UnavaliableTarget</strong>: The Logstore of SLS is unavailable and cannot receive logs. Check whether the Logstore is available.</li>
+             * <li><strong>ProjectNotExist</strong>: The project of SLS does not exist. We recommend that you delete the project and create a new one.</li>
+             * <li><strong>UnknownError</strong>: An internal error occurred. Try again later.</li>
+             * </ul>
              * 
-             * *   **UnavaliableTarget**: The Logstore of SLS is unavailable and cannot receive logs. Check whether the Logstore is available.
-             * *   **ProjectNotExist**: The project of SLS does not exist. We recommend that you delete the project and create a new one.
-             * *   **UnknownError**: An internal error occurred. Try again later.
+             * <strong>example:</strong>
+             * <p>UnavaliableTarget</p>
              */
             public Builder flowLogDeliverErrorMessage(String flowLogDeliverErrorMessage) {
                 this.flowLogDeliverErrorMessage = flowLogDeliverErrorMessage;
@@ -589,10 +662,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the flow log is delivered. Valid values:
-             * <p>
-             * - **SUCCESS** 
-             * - **FAILED**
+             * <p>Indicates whether the flow log is delivered. Valid values:</p>
+             * <ul>
+             * <li><strong>SUCCESS</strong> </li>
+             * <li><strong>FAILED</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FAILED</p>
              */
             public Builder flowLogDeliverStatus(String flowLogDeliverStatus) {
                 this.flowLogDeliverStatus = flowLogDeliverStatus;
@@ -600,7 +677,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the flow log.
+             * <p>The ID of the flow log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fl-bp1f6qqhsrc2c12ta****</p>
              */
             public Builder flowLogId(String flowLogId) {
                 this.flowLogId = flowLogId;
@@ -608,7 +688,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the flow log.
+             * <p>The name of the flow log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myFlowlog</p>
              */
             public Builder flowLogName(String flowLogName) {
                 this.flowLogName = flowLogName;
@@ -616,7 +699,18 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The Logstore that stores the captured traffic data.
+             * IpVersion.
+             */
+            public Builder ipVersion(String ipVersion) {
+                this.ipVersion = ipVersion;
+                return this;
+            }
+
+            /**
+             * <p>The Logstore that stores the captured traffic data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FlowLogStore</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -624,7 +718,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The project that manages the captured traffic data.
+             * <p>The project that manages the captured traffic data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FlowLogProject</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -632,7 +729,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the flow log.
+             * <p>The region ID of the flow log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -640,7 +740,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the flow log belongs.
+             * <p>The ID of the resource group to which the flow log belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -648,7 +751,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource from which traffic is captured.
+             * <p>The ID of the resource from which traffic is captured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-askldfas****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -656,12 +762,15 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource from which traffic is captured. Valid values:
-             * <p>
+             * <p>The type of the resource from which traffic is captured. Valid values:</p>
+             * <ul>
+             * <li><strong>NetworkInterface</strong>: ENI</li>
+             * <li><strong>VSwitch</strong>: all ENIs in a vSwitch</li>
+             * <li><strong>VPC</strong>: all ENIs in a VPC</li>
+             * </ul>
              * 
-             * *   **NetworkInterface**: ENI
-             * *   **VSwitch**: all ENIs in a vSwitch
-             * *   **VPC**: all ENIs in a VPC
+             * <strong>example:</strong>
+             * <p>NetworkInterface</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -669,13 +778,17 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The hosting type of the cloud service.
-             * <p>
+             * <p>The hosting type of the cloud service.</p>
+             * <ul>
+             * <li>This parameter can be empty, which indicates that the flow log is created by the user.</li>
+             * <li>If this parameter is not empty, the value is set to <strong>sls</strong>. The value sls indicates that the flow log is created in the Simple Log Service (SLS) console.</li>
+             * </ul>
+             * <blockquote>
+             * <p>A flow log that is created in the SLS console can be displayed in the VPC list. However, you cannot modify, start, stop, or delete the flow log in the VPC console. If you want to manage the flow log, you can log on to the <a href="https://sls.console.aliyun.com">SLS console</a> and perform required operations.</p>
+             * </blockquote>
              * 
-             * *   This parameter can be empty, which indicates that the flow log is created by the user.
-             * *   If this parameter is not empty, the value is set to **sls**. The value sls indicates that the flow log is created in the Simple Log Service (SLS) console.
-             * 
-             * > A flow log that is created in the SLS console can be displayed in the VPC list. However, you cannot modify, start, stop, or delete the flow log in the VPC console. If you want to manage the flow log, you can log on to the [SLS console](https://sls.console.aliyun.com) and perform required operations.
+             * <strong>example:</strong>
+             * <p>sls</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -683,12 +796,15 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the flow log. Valid values:
-             * <p>
+             * <p>The status of the flow log. Valid values:</p>
+             * <ul>
+             * <li><strong>Active</strong></li>
+             * <li><strong>Activating</strong></li>
+             * <li><strong>Inactive</strong></li>
+             * </ul>
              * 
-             * *   **Active**
-             * *   **Activating**
-             * *   **Inactive**
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -696,7 +812,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -704,13 +820,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The sampling scope of the traffic that is collected. Valid values:
-             * <p>
-             * 
-             * *   **all** (default value): all traffic
-             * *   **internetGateway**: Internet traffic
-             * 
-             * > By default, the traffic path feature is unavailable. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).
+             * <p>The sampling scope of the traffic that is collected. Valid values:</p>
+             * <ul>
+             * <li><strong>all</strong> (default value): all traffic</li>
+             * <li><strong>internetGateway</strong>: Internet traffic</li>
+             * </ul>
+             * <blockquote>
+             * <p>By default, the traffic path feature is unavailable. To use this feature, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex">submit a ticket</a>.</p>
+             * </blockquote>
              */
             public Builder trafficPath(TrafficPath trafficPath) {
                 this.trafficPath = trafficPath;
@@ -718,12 +835,15 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of traffic that is captured by the flow log. Valid values:
-             * <p>
+             * <p>The type of traffic that is captured by the flow log. Valid values:</p>
+             * <ul>
+             * <li><strong>All</strong>: all traffic</li>
+             * <li><strong>Allow</strong>: traffic that is allowed by access control</li>
+             * <li><strong>Drop</strong>: traffic that is denied by access control</li>
+             * </ul>
              * 
-             * *   **All**: all traffic
-             * *   **Allow**: traffic that is allowed by access control
-             * *   **Drop**: traffic that is denied by access control
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder trafficType(String trafficType) {
                 this.trafficType = trafficType;
@@ -737,6 +857,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFlowLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFlowLogsResponseBody</p>
+     */
     public static class FlowLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowLog")
         private java.util.List < FlowLog> flowLog;

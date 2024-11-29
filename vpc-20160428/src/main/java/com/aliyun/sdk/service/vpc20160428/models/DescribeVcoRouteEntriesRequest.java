@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVcoRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVcoRouteEntriesRequest</p>
@@ -167,12 +168,14 @@ public class DescribeVcoRouteEntriesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-4266****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -190,7 +193,10 @@ public class DescribeVcoRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -199,7 +205,10 @@ public class DescribeVcoRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -208,10 +217,12 @@ public class DescribeVcoRouteEntriesRequest extends Request {
         }
 
         /**
-         * The region ID of the IPsec-VPN connection.
-         * <p>
+         * <p>The region ID of the IPsec-VPN connection.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,11 +249,14 @@ public class DescribeVcoRouteEntriesRequest extends Request {
         }
 
         /**
-         * The route type. Valid values:
-         * <p>
+         * <p>The route type. Valid values:</p>
+         * <ul>
+         * <li><strong>custom</strong> (default): a destination-based route</li>
+         * <li><strong>bgp</strong>: a BGP route</li>
+         * </ul>
          * 
-         * *   **custom** (default): a destination-based route
-         * *   **bgp**: a BGP route
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder routeEntryType(String routeEntryType) {
             this.putQueryParameter("RouteEntryType", routeEntryType);
@@ -251,7 +265,11 @@ public class DescribeVcoRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the IPsec-VPN connection.
+         * <p>The ID of the IPsec-VPN connection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-p0w2jpkhi2eeop6q6****</p>
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);

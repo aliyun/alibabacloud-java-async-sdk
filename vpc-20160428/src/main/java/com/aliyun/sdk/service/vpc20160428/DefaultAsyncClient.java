@@ -77,9 +77,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
-      * >  You cannot activate a router interface that has overdue payments.
-      *
+     * <b>description</b> :
+     * <p>After you call this operation, the router interface enters the <strong>Activating</strong> state. After the router interface is activated, it enters the <strong>Active</strong> state.</p>
+     * <blockquote>
+     * <p> You cannot activate a router interface that has overdue payments.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ActivateRouterInterface  ActivateRouterInterfaceRequest
+     * @return ActivateRouterInterfaceResponse
      */
     @Override
     public CompletableFuture<ActivateRouterInterfaceResponse> activateRouterInterface(ActivateRouterInterfaceRequest request) {
@@ -96,11 +101,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The **ActiveFlowLog** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
-      *     *   If the flow log is in the **Activating** state, the flow log is being started.
-      *     *   If the flow log is in the **Active** state, the flow log is started.
-      * *   You cannot repeatedly call the **ActiveFlowLog** operation to start a flow log within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  The <strong>ActiveFlowLog</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> operation to query the status of a flow log:
+     *     *   If the flow log is in the <strong>Activating</strong> state, the flow log is being started.
+     *     *   If the flow log is in the <strong>Active</strong> state, the flow log is started.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>ActiveFlowLog</strong> operation to start a flow log within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ActiveFlowLog  ActiveFlowLogRequest
+     * @return ActiveFlowLogResponse
      */
     @Override
     public CompletableFuture<ActiveFlowLogResponse> activeFlowLog(ActiveFlowLogRequest request) {
@@ -116,6 +126,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddBgpNetwork  AddBgpNetworkRequest
+     * @return AddBgpNetworkResponse
+     */
     @Override
     public CompletableFuture<AddBgpNetworkResponse> addBgpNetwork(AddBgpNetworkRequest request) {
         try {
@@ -131,15 +145,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following items:
-      * *   When you call this operation to associate an EIP with an Internet Shared Bandwidth instance, make sure that the EIP meets the following requirements:
-      *     *   The EIP uses the pay-as-you-go billing method.
-      *     *   The EIP and the Internet Shared Bandwidth instance belong to the same region.
-      *     *   The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.
-      * *   **AddCommonBandwidthPackageIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeCommonBandwidthPackages](~~120309~~) operation to query the status of the operation.
-      *     *   If the Internet Shared Bandwidth instance is in the **BINDING** state, the EIP is being associated with the Internet Shared Bandwidth instance. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.
-      *     *   If the Internet Shared Bandwidth instance is in the **BINDED** state, the EIP is associated with the Internet Shared Bandwidth instance.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>When you call this operation to associate an EIP with an Internet Shared Bandwidth instance, make sure that the EIP meets the following requirements:<ul>
+     * <li>The EIP uses the pay-as-you-go billing method.</li>
+     * <li>The EIP and the Internet Shared Bandwidth instance belong to the same region.</li>
+     * <li>The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.</li>
+     * </ul>
+     * </li>
+     * <li><strong>AddCommonBandwidthPackageIp</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> operation to query the status of the operation.<ul>
+     * <li>If the Internet Shared Bandwidth instance is in the <strong>BINDING</strong> state, the EIP is being associated with the Internet Shared Bandwidth instance. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.</li>
+     * <li>If the Internet Shared Bandwidth instance is in the <strong>BINDED</strong> state, the EIP is associated with the Internet Shared Bandwidth instance.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddCommonBandwidthPackageIp  AddCommonBandwidthPackageIpRequest
+     * @return AddCommonBandwidthPackageIpResponse
      */
     @Override
     public CompletableFuture<AddCommonBandwidthPackageIpResponse> addCommonBandwidthPackageIp(AddCommonBandwidthPackageIpRequest request) {
@@ -156,14 +179,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   When you call this operation to associate EIPs with an Internet Shared Bandwidth instance, make sure that the EIPs meet the following requirements:
-      *     *   The EIPs use the pay-as-you-go billing method.
-      *     *   The EIP and the Internet Shared Bandwidth instance belong to the same region.
-      *     *   The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.
-      * *   **AddCommonBandwidthPackageIps** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeCommonBandwidthPackages](~~DescribeCommonBandwidthPackages~~) operation to query the status of the task.
-      *     *   If the Internet Shared Bandwidth instance is in the **BINDING** state, the EIP is being associated with the Internet Shared Bandwidth instance. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.
-      *     *   If the Internet Shared Bandwidth instance is in the **BINDED** state, the EIP is associated with the Internet Shared Bandwidth instance.
-      *
+     * <b>description</b> :
+     * <p>  When you call this operation to associate EIPs with an Internet Shared Bandwidth instance, make sure that the EIPs meet the following requirements:
+     *     *   The EIPs use the pay-as-you-go billing method.
+     *     *   The EIP and the Internet Shared Bandwidth instance belong to the same region.
+     *     *   The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.</p>
+     * <ul>
+     * <li><strong>AddCommonBandwidthPackageIps</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="~~DescribeCommonBandwidthPackages~~">DescribeCommonBandwidthPackages</a> operation to query the status of the task.<ul>
+     * <li>If the Internet Shared Bandwidth instance is in the <strong>BINDING</strong> state, the EIP is being associated with the Internet Shared Bandwidth instance. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.</li>
+     * <li>If the Internet Shared Bandwidth instance is in the <strong>BINDED</strong> state, the EIP is associated with the Internet Shared Bandwidth instance.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddCommonBandwidthPackageIps  AddCommonBandwidthPackageIpsRequest
+     * @return AddCommonBandwidthPackageIpsResponse
      */
     @Override
     public CompletableFuture<AddCommonBandwidthPackageIpsResponse> addCommonBandwidthPackageIps(AddCommonBandwidthPackageIpsRequest request) {
@@ -179,6 +209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddGlobalAccelerationInstanceIp  AddGlobalAccelerationInstanceIpRequest
+     * @return AddGlobalAccelerationInstanceIpResponse
+     */
     @Override
     public CompletableFuture<AddGlobalAccelerationInstanceIpResponse> addGlobalAccelerationInstanceIp(AddGlobalAccelerationInstanceIpRequest request) {
         try {
@@ -194,9 +228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI AddIPv6TranslatorAclListEntry is deprecated  * @param request  the request parameters of AddIPv6TranslatorAclListEntry  AddIPv6TranslatorAclListEntryRequest
+     * @return AddIPv6TranslatorAclListEntryResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddIPv6TranslatorAclListEntryResponse> addIPv6TranslatorAclListEntry(AddIPv6TranslatorAclListEntryRequest request) {
         try {
@@ -212,14 +247,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following limits:
-      * *   The CIDR block and the IP address pool must belong to the same region.
-      * *   The CIDR block and the IP address pool must use the same line type.
-      * *   **AddPublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
-      *     *   If the CIDR block is in the **Modifying** state, the CIDR block is being added. In this state, you can only query the CIDR block and cannot perform other operations.
-      *     *   If the CIDR block is in the **Created** state, the CIDR block is added.
-      * *   You cannot repeatedly call the **AddPublicIpAddressPoolCidrBlock** operation to add a CIDR block to an IP address pool within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>The CIDR block and the IP address pool must belong to the same region.</li>
+     * <li>The CIDR block and the IP address pool must use the same line type.</li>
+     * <li><strong>AddPublicIpAddressPoolCidrBlock</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> operation to query the status of the task.<ul>
+     * <li>If the CIDR block is in the <strong>Modifying</strong> state, the CIDR block is being added. In this state, you can only query the CIDR block and cannot perform other operations.</li>
+     * <li>If the CIDR block is in the <strong>Created</strong> state, the CIDR block is added.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>AddPublicIpAddressPoolCidrBlock</strong> operation to add a CIDR block to an IP address pool within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddPublicIpAddressPoolCidrBlock  AddPublicIpAddressPoolCidrBlockRequest
+     * @return AddPublicIpAddressPoolCidrBlockResponse
      */
     @Override
     public CompletableFuture<AddPublicIpAddressPoolCidrBlockResponse> addPublicIpAddressPoolCidrBlock(AddPublicIpAddressPoolCidrBlockRequest request) {
@@ -236,11 +278,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **AddSourcesToTrafficMirrorSession** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of the task.
-      *     *   If the traffic mirror session is in the **Modifying** state, the traffic mirror source is being added to the traffic mirror session.
-      *     *   If the traffic mirror session is in the **Created** state, the traffic mirror source is added to the traffic mirror session.
-      * *   You cannot repeatedly call the **AddSourcesToTrafficMirrorSession** operation to add a traffic mirror source to a traffic mirror session within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>AddSourcesToTrafficMirrorSession</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the status of the task.
+     *     *   If the traffic mirror session is in the <strong>Modifying</strong> state, the traffic mirror source is being added to the traffic mirror session.
+     *     *   If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror source is added to the traffic mirror session.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>AddSourcesToTrafficMirrorSession</strong> operation to add a traffic mirror source to a traffic mirror session within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddSourcesToTrafficMirrorSession  AddSourcesToTrafficMirrorSessionRequest
+     * @return AddSourcesToTrafficMirrorSessionResponse
      */
     @Override
     public CompletableFuture<AddSourcesToTrafficMirrorSessionResponse> addSourcesToTrafficMirrorSession(AddSourcesToTrafficMirrorSessionRequest request) {
@@ -257,9 +304,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you are familiar with the billing methods and pricing of EIPs. For more information, see [Billing overview](~~122035~~).
-      * After you call this operation, the system randomly allocates an EIP that is in the **Available** state in the specified region. EIPs support only the ICMP, TCP, and UDP transport layer protocols. The IGMP and SCTP protocols are not supported.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the billing methods and pricing of EIPs. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
+     * After you call this operation, the system randomly allocates an EIP that is in the <strong>Available</strong> state in the specified region. EIPs support only the ICMP, TCP, and UDP transport layer protocols. The IGMP and SCTP protocols are not supported.</p>
+     * 
+     * @param request the request parameters of AllocateEipAddress  AllocateEipAddressRequest
+     * @return AllocateEipAddressResponse
      */
     @Override
     public CompletableFuture<AllocateEipAddressResponse> allocateEipAddress(AllocateEipAddressRequest request) {
@@ -275,6 +325,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AllocateEipAddressPro  AllocateEipAddressProRequest
+     * @return AllocateEipAddressProResponse
+     */
     @Override
     public CompletableFuture<AllocateEipAddressProResponse> allocateEipAddressPro(AllocateEipAddressProRequest request) {
         try {
@@ -290,10 +344,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **AllocateEipSegmentAddress** is an asynchronous operation. After a request is sent, the system returns the ID of a contiguous EIP group and runs the task in the background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of the task.
-      * *   If the contiguous EIP group is in the **Allocating** state, the EIPs are being allocated. In this case, you can only perform the query operation and cannot perform other operations.
-      * *   If the contiguous EIP group is in the **Allocated** state, the EIPs are allocated.
-      *
+     * <b>description</b> :
+     * <p><em>AllocateEipSegmentAddress</em>* is an asynchronous operation. After a request is sent, the system returns the ID of a contiguous EIP group and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/156063.html">DescribeEipSegment</a> operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the contiguous EIP group is in the <strong>Allocating</strong> state, the EIPs are being allocated. In this case, you can only perform the query operation and cannot perform other operations.</li>
+     * <li>If the contiguous EIP group is in the <strong>Allocated</strong> state, the EIPs are allocated.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AllocateEipSegmentAddress  AllocateEipSegmentAddressRequest
+     * @return AllocateEipSegmentAddressResponse
      */
     @Override
     public CompletableFuture<AllocateEipSegmentAddressResponse> allocateEipSegmentAddress(AllocateEipSegmentAddressRequest request) {
@@ -309,6 +368,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AllocateIpv6Address  AllocateIpv6AddressRequest
+     * @return AllocateIpv6AddressResponse
+     */
     @Override
     public CompletableFuture<AllocateIpv6AddressResponse> allocateIpv6Address(AllocateIpv6AddressRequest request) {
         try {
@@ -324,8 +387,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **AllocateIpv6InternetBandwidth** operation within a specific time period.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>AllocateIpv6InternetBandwidth</strong> operation within a specific time period.</p>
+     * 
+     * @param request the request parameters of AllocateIpv6InternetBandwidth  AllocateIpv6InternetBandwidthRequest
+     * @return AllocateIpv6InternetBandwidthResponse
      */
     @Override
     public CompletableFuture<AllocateIpv6InternetBandwidthResponse> allocateIpv6InternetBandwidth(AllocateIpv6InternetBandwidthRequest request) {
@@ -342,11 +408,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * # [](#)
-      * The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):
-      * 1.  Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.
-      * 2.  To allocate an IPv6 CIDR block to an existing VPC, call the [AssociateVpcCidrBlock](~~146745~~) operation. Set **RegionId**, **VpcId**, and **IPv6CidrBlock** to the IPv6 CIDR bock, and set **IpVersion** to **ipv6**. To allocate an IPv6 CIDR block when you create a VPC, call the [CreateVpc](~~35737~~) operation. Set **RegionId** and **Ipv6CidrBlock** to the IPv6 CIDR block, and set **EnableIpv6** to **true**.
-      *
+     * <b>description</b> :
+     * <h1><a href="#"></a></h1>
+     * <p>The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):</p>
+     * <ol>
+     * <li>Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.</li>
+     * <li>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <strong>RegionId</strong>, <strong>VpcId</strong>, and <strong>IPv6CidrBlock</strong> to the IPv6 CIDR bock, and set <strong>IpVersion</strong> to <strong>ipv6</strong>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <strong>RegionId</strong> and <strong>Ipv6CidrBlock</strong> to the IPv6 CIDR block, and set <strong>EnableIpv6</strong> to <strong>true</strong>.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of AllocateVpcIpv6Cidr  AllocateVpcIpv6CidrRequest
+     * @return AllocateVpcIpv6CidrResponse
      */
     @Override
     public CompletableFuture<AllocateVpcIpv6CidrResponse> allocateVpcIpv6Cidr(AllocateVpcIpv6CidrRequest request) {
@@ -362,6 +433,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyPhysicalConnectionLOA  ApplyPhysicalConnectionLOARequest
+     * @return ApplyPhysicalConnectionLOAResponse
+     */
     @Override
     public CompletableFuture<ApplyPhysicalConnectionLOAResponse> applyPhysicalConnectionLOA(ApplyPhysicalConnectionLOARequest request) {
         try {
@@ -377,12 +452,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can associate an EIP with an Elastic Compute Service (ECS) instance, a Classic Load Balancer (CLB) instance, a secondary elastic network interface (ENI), a NAT gateway, or a high-availability virtual IP address (HAVIP) in the same region. The ECS instance and CLB instance must be deployed in a virtual private cloud (VPC).
-      * *   **AssociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of the task.
-      *     *   If the EIP is in the **Associating** state, the EIP is being associated. In this state, you can only query the EIP and cannot perform other operations.
-      *     *   If the EIP is in the **InUse** state, the EIP is associated.
-      * *   You cannot call the **AssociateEipAddress** operation to associate an EIP with multiple instances at a time.
-      *
+     * <b>description</b> :
+     * <p>  You can associate an EIP with an Elastic Compute Service (ECS) instance, a Classic Load Balancer (CLB) instance, a secondary elastic network interface (ENI), a NAT gateway, or a high-availability virtual IP address (HAVIP) in the same region. The ECS instance and CLB instance must be deployed in a virtual private cloud (VPC).</p>
+     * <ul>
+     * <li><strong>AssociateEipAddress</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> operation to query the status of the task.<ul>
+     * <li>If the EIP is in the <strong>Associating</strong> state, the EIP is being associated. In this state, you can only query the EIP and cannot perform other operations.</li>
+     * <li>If the EIP is in the <strong>InUse</strong> state, the EIP is associated.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot call the <strong>AssociateEipAddress</strong> operation to associate an EIP with multiple instances at a time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociateEipAddress  AssociateEipAddressRequest
+     * @return AssociateEipAddressResponse
      */
     @Override
     public CompletableFuture<AssociateEipAddressResponse> associateEipAddress(AssociateEipAddressRequest request) {
@@ -399,12 +481,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call the **AssociateEipAddressBatch** operation to associate EIPs with an instance in the same region. The instance must be a NAT gateway or a secondary elastic network interface (ENI). For more information about how to associate EIPs with other instances, see [AssociateEipAddress](~~120195~~).
-      * *   **AssociateEipAddressBatch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of the task.
-      *     *   If the EIP is in the **Associating** state, the EIP is being associated. You can only query the EIP and cannot perform other operations.
-      *     *   If the EIP is in the **InUse** state, the EIP is associated.
-      * *   You cannot call the **AssociateEipAddressBatch** operation to associate an EIP with multiple instances at a time.
-      *
+     * <b>description</b> :
+     * <p>  You can call the <strong>AssociateEipAddressBatch</strong> operation to associate EIPs with an instance in the same region. The instance must be a NAT gateway or a secondary elastic network interface (ENI). For more information about how to associate EIPs with other instances, see <a href="https://help.aliyun.com/document_detail/120195.html">AssociateEipAddress</a>.</p>
+     * <ul>
+     * <li><strong>AssociateEipAddressBatch</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> operation to query the status of the task.<ul>
+     * <li>If the EIP is in the <strong>Associating</strong> state, the EIP is being associated. You can only query the EIP and cannot perform other operations.</li>
+     * <li>If the EIP is in the <strong>InUse</strong> state, the EIP is associated.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot call the <strong>AssociateEipAddressBatch</strong> operation to associate an EIP with multiple instances at a time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociateEipAddressBatch  AssociateEipAddressBatchRequest
+     * @return AssociateEipAddressBatchResponse
      */
     @Override
     public CompletableFuture<AssociateEipAddressBatchResponse> associateEipAddressBatch(AssociateEipAddressBatchRequest request) {
@@ -421,17 +510,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * *   An HAVIP immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HAVIP with the ENI of the ECS instance.
-      * *   The HAVIP and ECS instance must belong to the same vSwitch.
-      * *   You can associate an HAVIP with at most two ECS instances.
-      * *   The ECS instance must be in the **Running** or **Stopped** state.
-      * *   The HAVIP must be in the **Available** or **InUse** state.
-      * *   The **AssociateHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
-      *     *   If the HAVIP is in the **Associating** state, the HAVIP is being associated.
-      *     *   If the HAVIP is in the **InUse** state, the HAVIP is associated.
-      * *   You cannot repeatedly call the **AssociateHaVip** operation to associate an HAVIP within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HAVIP with the ENI of the ECS instance.</li>
+     * <li>The HAVIP and ECS instance must belong to the same vSwitch.</li>
+     * <li>You can associate an HAVIP with at most two ECS instances.</li>
+     * <li>The ECS instance must be in the <strong>Running</strong> or <strong>Stopped</strong> state.</li>
+     * <li>The HAVIP must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
+     * <li>The <strong>AssociateHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
+     * <li>If the HAVIP is in the <strong>Associating</strong> state, the HAVIP is being associated.</li>
+     * <li>If the HAVIP is in the <strong>InUse</strong> state, the HAVIP is associated.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>AssociateHaVip</strong> operation to associate an HAVIP within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociateHaVip  AssociateHaVipRequest
+     * @return AssociateHaVipResponse
      */
     @Override
     public CompletableFuture<AssociateHaVipResponse> associateHaVip(AssociateHaVipRequest request) {
@@ -448,12 +544,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * *   **AssociateNetworkAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
-      *     *   If the network ACL is in the **BINDING** state, the network ACL is being associated.
-      *     *   If the network ACL is in the **BINDED** state, the network ACL is associated.
-      * *   You cannot repeatedly call the **AssociateNetworkAcl** operation to associate a network ACL within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <ul>
+     * <li><strong>AssociateNetworkAcl</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> operation to query the status of the task.<ul>
+     * <li>If the network ACL is in the <strong>BINDING</strong> state, the network ACL is being associated.</li>
+     * <li>If the network ACL is in the <strong>BINDED</strong> state, the network ACL is associated.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>AssociateNetworkAcl</strong> operation to associate a network ACL within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociateNetworkAcl  AssociateNetworkAclRequest
+     * @return AssociateNetworkAclResponse
      */
     @Override
     public CompletableFuture<AssociateNetworkAclResponse> associateNetworkAcl(AssociateNetworkAclRequest request) {
@@ -469,6 +572,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssociatePhysicalConnectionToVirtualBorderRouter  AssociatePhysicalConnectionToVirtualBorderRouterRequest
+     * @return AssociatePhysicalConnectionToVirtualBorderRouterResponse
+     */
     @Override
     public CompletableFuture<AssociatePhysicalConnectionToVirtualBorderRouterResponse> associatePhysicalConnectionToVirtualBorderRouter(AssociatePhysicalConnectionToVirtualBorderRouterRequest request) {
         try {
@@ -484,10 +591,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **AssociateRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
-      * *   If the vSwitch is in the **Pending** state, the route table is being associated with the vSwitch.
-      * *   If the vSwitch is in the **Available** state, the route table is associated with the vSwitch.
-      *
+     * <b>description</b> :
+     * <p><em>AssociateRouteTable</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:</p>
+     * <ul>
+     * <li>If the vSwitch is in the <strong>Pending</strong> state, the route table is being associated with the vSwitch.</li>
+     * <li>If the vSwitch is in the <strong>Available</strong> state, the route table is associated with the vSwitch.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociateRouteTable  AssociateRouteTableRequest
+     * @return AssociateRouteTableResponse
      */
     @Override
     public CompletableFuture<AssociateRouteTableResponse> associateRouteTable(AssociateRouteTableRequest request) {
@@ -503,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssociateRouteTableWithGateway  AssociateRouteTableWithGatewayRequest
+     * @return AssociateRouteTableWithGatewayResponse
+     */
     @Override
     public CompletableFuture<AssociateRouteTableWithGatewayResponse> associateRouteTableWithGateway(AssociateRouteTableWithGatewayRequest request) {
         try {
@@ -518,18 +634,25 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * *   The gateway endpoint to be associated with the route table cannot be in one of the following states: **Creating**, **Modifying**, **Associating**, **Dissociating**, or **Deleting**.
-      * *   The route table cannot be in one of the following states: **Creating**, **Modifying**, **Associating**, **Dissociating**, or **Deleting**.
-      * *   The gateway endpoint and route table must belong to the same virtual private cloud (VPC).
-      * *   The route table cannot be shared.
-      * *   You cannot associate a gateway endpoint with a virtual border router (VBR) route table.
-      * *   You can associate a gateway endpoint with at most 20 route tables at a time.
-      * *   **AssociateRouteTablesWithVpcGatewayEndpoint** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcGatewayEndpointAttribute](~~311017~~) operation to query whether a route table is associated with a gateway endpoint.
-      *     *   If the **Associating** status is returned, the route table is being associated with the gateway endpoint.
-      *     *   If the **Created** status is returned, the route table is associated with the gateway endpoint.
-      * *   You cannot repeatedly call the **AssociateRouteTablesWithVpcGatewayEndpoint** operation within a specific period of time.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>The gateway endpoint to be associated with the route table cannot be in one of the following states: <strong>Creating</strong>, <strong>Modifying</strong>, <strong>Associating</strong>, <strong>Dissociating</strong>, or <strong>Deleting</strong>.</li>
+     * <li>The route table cannot be in one of the following states: <strong>Creating</strong>, <strong>Modifying</strong>, <strong>Associating</strong>, <strong>Dissociating</strong>, or <strong>Deleting</strong>.</li>
+     * <li>The gateway endpoint and route table must belong to the same virtual private cloud (VPC).</li>
+     * <li>The route table cannot be shared.</li>
+     * <li>You cannot associate a gateway endpoint with a virtual border router (VBR) route table.</li>
+     * <li>You can associate a gateway endpoint with at most 20 route tables at a time.</li>
+     * <li><strong>AssociateRouteTablesWithVpcGatewayEndpoint</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/311017.html">GetVpcGatewayEndpointAttribute</a> operation to query whether a route table is associated with a gateway endpoint.<ul>
+     * <li>If the <strong>Associating</strong> status is returned, the route table is being associated with the gateway endpoint.</li>
+     * <li>If the <strong>Created</strong> status is returned, the route table is associated with the gateway endpoint.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>AssociateRouteTablesWithVpcGatewayEndpoint</strong> operation within a specific period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociateRouteTablesWithVpcGatewayEndpoint  AssociateRouteTablesWithVpcGatewayEndpointRequest
+     * @return AssociateRouteTablesWithVpcGatewayEndpointResponse
      */
     @Override
     public CompletableFuture<AssociateRouteTablesWithVpcGatewayEndpointResponse> associateRouteTablesWithVpcGatewayEndpoint(AssociateRouteTablesWithVpcGatewayEndpointRequest request) {
@@ -546,12 +669,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)
-      * *   Take note of the following limits:
-      *     *   Each VPC can contain up to five secondary IPv4 CIDR blocks.
-      *     *   Each VPC can contain up to five secondary IPv6 CIDR blocks.
-      * *   You cannot repeatedly call the **AssociateVpcCidrBlock** operation to add secondary CIDR blocks to a VPC within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>Take note of the following limits:<ul>
+     * <li>Each VPC can contain up to five secondary IPv4 CIDR blocks.</li>
+     * <li>Each VPC can contain up to five secondary IPv6 CIDR blocks.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>AssociateVpcCidrBlock</strong> operation to add secondary CIDR blocks to a VPC within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociateVpcCidrBlock  AssociateVpcCidrBlockRequest
+     * @return AssociateVpcCidrBlockResponse
      */
     @Override
     public CompletableFuture<AssociateVpcCidrBlockResponse> associateVpcCidrBlock(AssociateVpcCidrBlockRequest request) {
@@ -568,17 +698,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you associate a VPN gateway with an SSL certificate, take note of the following items:
-      * *   You can associate only VPN gateways of the ShangMi (SM) type with SSL certificates. You need to associate a VPN gateway of the SM type with two SSL certificates, one as the encryption certificate and the other as the signature certificate.
-      * *   The SSL certificates must use the SM algorithm.
-      * *   You cannot specify one SSL certificate as both the encryption certificate and signature certificate for one VPN gateway.
-      * *   **AssociateVpnGatewayWithCertificate** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the task.
-      *     *   If the VPN gateway is in the **updating** state, the SSL certificate is being associated.
-      *     *   If the VPN gateway is in the **active** state, the SSL certificate is being associated.
-      * *   You cannot call **AssociateVpnGatewayWithCertificate** within a specific period of time.
-      * ### [](#)Prerequisites
-      * Make sure that you have two SSL certificates that use the SM algorithm in the Certificate Management Service console. For more information about SSL certificates, see [What is Certificate Management Service?](~~28535~~).
-      *
+     * <b>description</b> :
+     * <p>Before you associate a VPN gateway with an SSL certificate, take note of the following items:</p>
+     * <ul>
+     * <li>You can associate only VPN gateways of the ShangMi (SM) type with SSL certificates. You need to associate a VPN gateway of the SM type with two SSL certificates, one as the encryption certificate and the other as the signature certificate.</li>
+     * <li>The SSL certificates must use the SM algorithm.</li>
+     * <li>You cannot specify one SSL certificate as both the encryption certificate and signature certificate for one VPN gateway.</li>
+     * <li><strong>AssociateVpnGatewayWithCertificate</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the task.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL certificate is being associated.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL certificate is being associated.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot call <strong>AssociateVpnGatewayWithCertificate</strong> within a specific period of time.</li>
+     * </ul>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Make sure that you have two SSL certificates that use the SM algorithm in the Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</p>
+     * 
+     * @param request the request parameters of AssociateVpnGatewayWithCertificate  AssociateVpnGatewayWithCertificateRequest
+     * @return AssociateVpnGatewayWithCertificateResponse
      */
     @Override
     public CompletableFuture<AssociateVpnGatewayWithCertificateResponse> associateVpnGatewayWithCertificate(AssociateVpnGatewayWithCertificateRequest request) {
@@ -595,11 +732,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The **AttachDhcpOptionsSetToVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
-      *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being associated.
-      *     *   If the DHCP options set is in the **InUse** state, the DHCP options set is associated.
-      * *   You cannot repeatedly call the **AttachDhcpOptionsSetToVpc** operation to associate DHCP options sets with a VPC within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  The <strong>AttachDhcpOptionsSetToVpc</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a DHCP options set:
+     *     *   If the DHCP options set is in the <strong>Pending</strong> state, the DHCP options set is being associated.
+     *     *   If the DHCP options set is in the <strong>InUse</strong> state, the DHCP options set is associated.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>AttachDhcpOptionsSetToVpc</strong> operation to associate DHCP options sets with a VPC within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AttachDhcpOptionsSetToVpc  AttachDhcpOptionsSetToVpcRequest
+     * @return AttachDhcpOptionsSetToVpcResponse
      */
     @Override
     public CompletableFuture<AttachDhcpOptionsSetToVpcResponse> attachDhcpOptionsSetToVpc(AttachDhcpOptionsSetToVpcRequest request) {
@@ -615,6 +757,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AttachVbrToVpconn  AttachVbrToVpconnRequest
+     * @return AttachVbrToVpconnResponse
+     */
     @Override
     public CompletableFuture<AttachVbrToVpconnResponse> attachVbrToVpconn(AttachVbrToVpconnRequest request) {
         try {
@@ -630,10 +776,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following items:
-      * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the Internet Shared Bandwidth instance.
-      * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation within a specific time period.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>After this operation is performed, the maximum bandwidth of the EIP equals that of the Internet Shared Bandwidth instance.</li>
+     * <li>You cannot repeatedly call the <strong>CancelCommonBandwidthPackageIpBandwidth</strong> operation within a specific time period.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CancelCommonBandwidthPackageIpBandwidth  CancelCommonBandwidthPackageIpBandwidthRequest
+     * @return CancelCommonBandwidthPackageIpBandwidthResponse
      */
     @Override
     public CompletableFuture<CancelCommonBandwidthPackageIpBandwidthResponse> cancelCommonBandwidthPackageIpBandwidth(CancelCommonBandwidthPackageIpBandwidthRequest request) {
@@ -650,8 +801,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can cancel only an Express Connect circuit that is in the **Initial**, **Approved**, **Allocated**, or **Confirmed** state.
-      *
+     * <b>description</b> :
+     * <p>You can cancel only an Express Connect circuit that is in the <strong>Initial</strong>, <strong>Approved</strong>, <strong>Allocated</strong>, or <strong>Confirmed</strong> state.</p>
+     * 
+     * @param request the request parameters of CancelPhysicalConnection  CancelPhysicalConnectionRequest
+     * @return CancelPhysicalConnectionResponse
      */
     @Override
     public CompletableFuture<CancelPhysicalConnectionResponse> cancelPhysicalConnection(CancelPhysicalConnectionRequest request) {
@@ -668,9 +822,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)
-      * You cannot repeatedly call the **ChangeResourceGroup** operation to modify the resource group of the same Express Connect circuit.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>You cannot repeatedly call the <strong>ChangeResourceGroup</strong> operation to modify the resource group of the same Express Connect circuit.</p>
+     * 
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
      */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
@@ -686,6 +843,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckCanAllocateVpcPrivateIpAddress  CheckCanAllocateVpcPrivateIpAddressRequest
+     * @return CheckCanAllocateVpcPrivateIpAddressResponse
+     */
     @Override
     public CompletableFuture<CheckCanAllocateVpcPrivateIpAddressResponse> checkCanAllocateVpcPrivateIpAddress(CheckCanAllocateVpcPrivateIpAddressRequest request) {
         try {
@@ -700,6 +861,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckVpnBgpEnabled  CheckVpnBgpEnabledRequest
+     * @return CheckVpnBgpEnabledResponse
+     */
     @Override
     public CompletableFuture<CheckVpnBgpEnabledResponse> checkVpnBgpEnabled(CheckVpnBgpEnabledRequest request) {
         try {
@@ -714,6 +879,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CompletePhysicalConnectionLOA  CompletePhysicalConnectionLOARequest
+     * @return CompletePhysicalConnectionLOAResponse
+     */
     @Override
     public CompletableFuture<CompletePhysicalConnectionLOAResponse> completePhysicalConnectionLOA(CompletePhysicalConnectionLOARequest request) {
         try {
@@ -728,6 +897,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfirmPhysicalConnection  ConfirmPhysicalConnectionRequest
+     * @return ConfirmPhysicalConnectionResponse
+     */
     @Override
     public CompletableFuture<ConfirmPhysicalConnectionResponse> confirmPhysicalConnection(ConfirmPhysicalConnectionRequest request) {
         try {
@@ -743,12 +916,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you call this operation, the router interface enters the **Connecting** state. When the connection is established, it enters the **Active** state.
-      * When you call this operation, take note of the following items:
-      * *   Only an initiator router interface in the **Idle** state can initiate a connection.
-      * *   You can create only one pair of connected router interfaces between two routers.
-      * *   You cannot initiate a connection if your Alibaba Cloud account has a router interface with overdue payments.
-      *
+     * <b>description</b> :
+     * <p>After you call this operation, the router interface enters the <strong>Connecting</strong> state. When the connection is established, it enters the <strong>Active</strong> state.
+     * When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Only an initiator router interface in the <strong>Idle</strong> state can initiate a connection.</li>
+     * <li>You can create only one pair of connected router interfaces between two routers.</li>
+     * <li>You cannot initiate a connection if your Alibaba Cloud account has a router interface with overdue payments.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ConnectRouterInterface  ConnectRouterInterfaceRequest
+     * @return ConnectRouterInterfaceResponse
      */
     @Override
     public CompletableFuture<ConnectRouterInterfaceResponse> connectRouterInterface(ConnectRouterInterfaceRequest request) {
@@ -765,11 +943,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:
-      * *   You are not charged for the conversion.
-      * *   When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.
-      * *   After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.
-      *
+     * <b>description</b> :
+     * <p>Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:</p>
+     * <ul>
+     * <li>You are not charged for the conversion.</li>
+     * <li>When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.</li>
+     * <li>After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ConvertBandwidthPackage  ConvertBandwidthPackageRequest
+     * @return ConvertBandwidthPackageResponse
      */
     @Override
     public CompletableFuture<ConvertBandwidthPackageResponse> convertBandwidthPackage(ConvertBandwidthPackageRequest request) {
@@ -786,12 +969,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * *   **CopyNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
-      *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being copied.
-      *     *   If the network ACL is in the **Available** state, the rules of the network ACL are copied.
-      * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <ul>
+     * <li><strong>CopyNetworkAclEntries</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> operation to query the status of the task.<ul>
+     * <li>If the network ACL is in the <strong>Modifying</strong> state, the rules of the network ACL are being copied.</li>
+     * <li>If the network ACL is in the <strong>Available</strong> state, the rules of the network ACL are copied.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>CopyNetworkAclEntries</strong> operation within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CopyNetworkAclEntries  CopyNetworkAclEntriesRequest
+     * @return CopyNetworkAclEntriesResponse
      */
     @Override
     public CompletableFuture<CopyNetworkAclEntriesResponse> copyNetworkAclEntries(CopyNetworkAclEntriesRequest request) {
@@ -808,15 +998,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can connect a VBR to a data center through BGP. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
-      * BGP groups are used to simplify BGP configurations. You can add BGP peers that use the same configurations to one BGP group. Before you start, you must create a BGP group with the requested autonomous system number (ASN).
-      * When you call this operation, take note of the following limits:
-      * *   You can specify only the data center that is connected to the VBR through an Express Connect circuit as a BGP peer.
-      * *   VBRs support only BGP-4.
-      * *   You can create at most eight BGP peers for each VBR.
-      * *   Each BGP peer supports at most 110 dynamic routes.
-      * *   The ASN of Alibaba Cloud is 45104. You can specify a 2-byte or 4-byte ASN for the data center.
-      *
+     * <b>description</b> :
+     * <p>You can connect a VBR to a data center through BGP. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
+     * BGP groups are used to simplify BGP configurations. You can add BGP peers that use the same configurations to one BGP group. Before you start, you must create a BGP group with the requested autonomous system number (ASN).
+     * When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>You can specify only the data center that is connected to the VBR through an Express Connect circuit as a BGP peer.</li>
+     * <li>VBRs support only BGP-4.</li>
+     * <li>You can create at most eight BGP peers for each VBR.</li>
+     * <li>Each BGP peer supports at most 110 dynamic routes.</li>
+     * <li>The ASN of Alibaba Cloud is 45104. You can specify a 2-byte or 4-byte ASN for the data center.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateBgpGroup  CreateBgpGroupRequest
+     * @return CreateBgpGroupResponse
      */
     @Override
     public CompletableFuture<CreateBgpGroupResponse> createBgpGroup(CreateBgpGroupRequest request) {
@@ -832,6 +1027,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateBgpPeer  CreateBgpPeerRequest
+     * @return CreateBgpPeerResponse
+     */
     @Override
     public CompletableFuture<CreateBgpPeerResponse> createBgpPeer(CreateBgpPeerRequest request) {
         try {
@@ -846,6 +1045,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCommonBandwidthPackage  CreateCommonBandwidthPackageRequest
+     * @return CreateCommonBandwidthPackageResponse
+     */
     @Override
     public CompletableFuture<CreateCommonBandwidthPackageResponse> createCommonBandwidthPackage(CreateCommonBandwidthPackageRequest request) {
         try {
@@ -860,6 +1063,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCustomerGateway  CreateCustomerGatewayRequest
+     * @return CreateCustomerGatewayResponse
+     */
     @Override
     public CompletableFuture<CreateCustomerGatewayResponse> createCustomerGateway(CreateCustomerGatewayRequest request) {
         try {
@@ -875,17 +1082,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * *   The first IP address and last three IP addresses of a vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
-      * *   The number of instances in the default vSwitch cannot exceed the remaining number of instances supported by the VPC (15,000 minus the number of existing instances).
-      * *   Default vSwitches do not support multicasting or broadcasting.
-      * *   After you create a default vSwitch, you cannot modify its CIDR block.
-      * *   **CreateDefaultVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
-      *     *   If a default vSwitch is in the **Pending** state, it is being configured.
-      *     *   If a default vSwitch is in the **Available** state, it is available.
-      * *   If a default vSwitch already exists in a region, you cannot call this operation to create a default vSwitch in this region.
-      * *   Before you create a default vSwitch, make sure that a default VPC is created. You can call the [CreateDefaultVpc](~~609152~~) operation to create a default VPC.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>The first IP address and last three IP addresses of a vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.</li>
+     * <li>The number of instances in the default vSwitch cannot exceed the remaining number of instances supported by the VPC (15,000 minus the number of existing instances).</li>
+     * <li>Default vSwitches do not support multicasting or broadcasting.</li>
+     * <li>After you create a default vSwitch, you cannot modify its CIDR block.</li>
+     * <li><strong>CreateDefaultVSwitch</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of a default vSwitch:<ul>
+     * <li>If a default vSwitch is in the <strong>Pending</strong> state, it is being configured.</li>
+     * <li>If a default vSwitch is in the <strong>Available</strong> state, it is available.</li>
+     * </ul>
+     * </li>
+     * <li>If a default vSwitch already exists in a region, you cannot call this operation to create a default vSwitch in this region.</li>
+     * <li>Before you create a default vSwitch, make sure that a default VPC is created. You can call the <a href="https://help.aliyun.com/document_detail/609152.html">CreateDefaultVpc</a> operation to create a default VPC.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateDefaultVSwitch  CreateDefaultVSwitchRequest
+     * @return CreateDefaultVSwitchResponse
      */
     @Override
     public CompletableFuture<CreateDefaultVSwitchResponse> createDefaultVSwitch(CreateDefaultVSwitchRequest request) {
@@ -902,18 +1116,25 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * When you call this operation, take note of the following items:
-      * *   After you create a default VPC, you cannot change its CIDR block. However, you can add secondary IPv4 CIDR blocks to it.
-      * *   In each default VPC, cloud services can use a maximum of 60,000 private IP addresses. You cannot increase the quota.
-      * *   After you create a default VPC, a vRouter and a route table are automatically created for the VPC.
-      * *   At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.
-      * *   **CreateDefaultVpc** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of the task:
-      *     *   If the default VPC is in the **Pending** state, the VPC is being configured.
-      *     *   If the default VPC is in the **Available** state, the VPC is available.
-      * *   You cannot repeatedly call the **CreateDefaultVpc** operation within a specific time period.
-      * *   You can create only one default VPC in each region.
-      *
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>After you create a default VPC, you cannot change its CIDR block. However, you can add secondary IPv4 CIDR blocks to it.</li>
+     * <li>In each default VPC, cloud services can use a maximum of 60,000 private IP addresses. You cannot increase the quota.</li>
+     * <li>After you create a default VPC, a vRouter and a route table are automatically created for the VPC.</li>
+     * <li>At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.</li>
+     * <li><strong>CreateDefaultVpc</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of the task:<ul>
+     * <li>If the default VPC is in the <strong>Pending</strong> state, the VPC is being configured.</li>
+     * <li>If the default VPC is in the <strong>Available</strong> state, the VPC is available.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>CreateDefaultVpc</strong> operation within a specific time period.</li>
+     * <li>You can create only one default VPC in each region.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateDefaultVpc  CreateDefaultVpcRequest
+     * @return CreateDefaultVpcResponse
      */
     @Override
     public CompletableFuture<CreateDefaultVpcResponse> createDefaultVpc(CreateDefaultVpcRequest request) {
@@ -930,10 +1151,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **CreateDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetDhcpOptionsSet](~~448820~~) to query the status of the task.
-      *     *   If the vSwitch is in the **Pending** state, the DHCP options set is being configured.
-      *     *   If the vSwitch is in the **Available** state, the DHCP options set is available.
-      *
+     * <b>description</b> :
+     * <p>  <strong>CreateDhcpOptionsSet</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/448820.html">GetDhcpOptionsSet</a> to query the status of the task.
+     *     *   If the vSwitch is in the <strong>Pending</strong> state, the DHCP options set is being configured.
+     *     *   If the vSwitch is in the <strong>Available</strong> state, the DHCP options set is available.</p>
+     * 
+     * @param request the request parameters of CreateDhcpOptionsSet  CreateDhcpOptionsSetRequest
+     * @return CreateDhcpOptionsSetResponse
      */
     @Override
     public CompletableFuture<CreateDhcpOptionsSetResponse> createDhcpOptionsSet(CreateDhcpOptionsSetRequest request) {
@@ -949,6 +1173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateExpressCloudConnection  CreateExpressCloudConnectionRequest
+     * @return CreateExpressCloudConnectionResponse
+     */
     @Override
     public CompletableFuture<CreateExpressCloudConnectionResponse> createExpressCloudConnection(CreateExpressCloudConnectionRequest request) {
         try {
@@ -963,6 +1191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateExpressConnectTrafficQos  CreateExpressConnectTrafficQosRequest
+     * @return CreateExpressConnectTrafficQosResponse
+     */
     @Override
     public CompletableFuture<CreateExpressConnectTrafficQosResponse> createExpressConnectTrafficQos(CreateExpressConnectTrafficQosRequest request) {
         try {
@@ -977,6 +1209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateExpressConnectTrafficQosQueue  CreateExpressConnectTrafficQosQueueRequest
+     * @return CreateExpressConnectTrafficQosQueueResponse
+     */
     @Override
     public CompletableFuture<CreateExpressConnectTrafficQosQueueResponse> createExpressConnectTrafficQosQueue(CreateExpressConnectTrafficQosQueueRequest request) {
         try {
@@ -991,6 +1227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateExpressConnectTrafficQosRule  CreateExpressConnectTrafficQosRuleRequest
+     * @return CreateExpressConnectTrafficQosRuleResponse
+     */
     @Override
     public CompletableFuture<CreateExpressConnectTrafficQosRuleResponse> createExpressConnectTrafficQosRule(CreateExpressConnectTrafficQosRuleRequest request) {
         try {
@@ -1006,15 +1246,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot create a failover test in the following scenarios:
-      * *   You have created a failover test in the region and its type is StartNow.
-      * *   The Express Connect circuit or hosted connection has pending orders or overdue payments.
-      * *   A failover test is already performed on the Express Connect circuit or hosted connection.
-      * *   More than one hosted connection is created over the Express Connect circuit.
-      * *   More than one cross-account VBR is created on the Express Connect circuit.
-      * *   No VBR is associated with the hosted connection.
-      * *   The VLAN ID of the hosted connection is set to 0.
-      *
+     * <b>description</b> :
+     * <p>You cannot create a failover test in the following scenarios:</p>
+     * <ul>
+     * <li>You have created a failover test in the region and its type is StartNow.</li>
+     * <li>The Express Connect circuit or hosted connection has pending orders or overdue payments.</li>
+     * <li>A failover test is already performed on the Express Connect circuit or hosted connection.</li>
+     * <li>More than one hosted connection is created over the Express Connect circuit.</li>
+     * <li>More than one cross-account VBR is created on the Express Connect circuit.</li>
+     * <li>No VBR is associated with the hosted connection.</li>
+     * <li>The VLAN ID of the hosted connection is set to 0.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateFailoverTestJob  CreateFailoverTestJobRequest
+     * @return CreateFailoverTestJobResponse
      */
     @Override
     public CompletableFuture<CreateFailoverTestJobResponse> createFailoverTestJob(CreateFailoverTestJobRequest request) {
@@ -1031,10 +1276,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **CreateFlowLog** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of the flow log.
-      * *   If the flow log is in the **Activating** state, the flow log is being created.
-      * *   If the flow log is in the **Active** state, the flow log is created and started.
-      *
+     * <b>description</b> :
+     * <p><em>CreateFlowLog</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> operation to query the status of the flow log.</p>
+     * <ul>
+     * <li>If the flow log is in the <strong>Activating</strong> state, the flow log is being created.</li>
+     * <li>If the flow log is in the <strong>Active</strong> state, the flow log is created and started.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateFlowLog  CreateFlowLogRequest
+     * @return CreateFlowLogResponse
      */
     @Override
     public CompletableFuture<CreateFlowLogResponse> createFlowLog(CreateFlowLogRequest request) {
@@ -1051,19 +1301,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)
-      * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets over the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
-      * When you call this operation, take note of the following limits:
-      * *   **CreateForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
-      *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
-      *     *   If the DNAT entry is in the **Available** state, the DNAT entry is added.
-      * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within a specific period of time.
-      * *   All combinations of **ExternalIp**, **ExternalPort**, and **IpProtocol** used in DNAT entries must be unique. You cannot distribute requests to more than one Elastic Compute Service (ECS) instance if these requests are initiated from the same source IP address, received on the same port, and use the same protocol.
-      * *   The combinations of **IpProtocol**, **InternalIp**, and **InternalPort** must be unique.
-      * *   If one or more DNAT entries in the DNAT table are in the **Pending** or **Modifying** state, you cannot add DNAT entries to the DNAT table.
-      * *   You can add at most 100 DNAT entries to a DNAT table.
-      * *   For an elastic IP address (EIP) used by an Internet NAT gateway or a NAT IP address used by a Virtual Private Cloud (VPC) NAT gateway, take note of the following limit: If the IP address has IP mapping enabled and is specified in a DNAT entry, the IP address cannot be used by another DNAT or SNAT entry.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>Each DNAT entry consists of the following parameters: <strong>ExternalIp</strong>, <strong>ExternalPort</strong>, <strong>IpProtocol</strong>, <strong>InternalIp</strong>, and <strong>InternalPort</strong>. After you add a DNAT entry, the NAT gateway forwards packets over the specified protocol from <strong>ExternalIp:ExternalPort</strong> to <strong>InternalIp:InternalPort</strong> and sends responses back through the same route.
+     * When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li><strong>CreateForwardEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36053.html">DescribeForwardTableEntries</a> operation to query the status of the task.<ul>
+     * <li>If the DNAT entry is in the <strong>Pending</strong> state, the system is adding the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.</li>
+     * <li>If the DNAT entry is in the <strong>Available</strong> state, the DNAT entry is added.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>CreateForwardEntry</strong> operation to add a DNAT entry within a specific period of time.</li>
+     * <li>All combinations of <strong>ExternalIp</strong>, <strong>ExternalPort</strong>, and <strong>IpProtocol</strong> used in DNAT entries must be unique. You cannot distribute requests to more than one Elastic Compute Service (ECS) instance if these requests are initiated from the same source IP address, received on the same port, and use the same protocol.</li>
+     * <li>The combinations of <strong>IpProtocol</strong>, <strong>InternalIp</strong>, and <strong>InternalPort</strong> must be unique.</li>
+     * <li>If one or more DNAT entries in the DNAT table are in the <strong>Pending</strong> or <strong>Modifying</strong> state, you cannot add DNAT entries to the DNAT table.</li>
+     * <li>You can add at most 100 DNAT entries to a DNAT table.</li>
+     * <li>For an elastic IP address (EIP) used by an Internet NAT gateway or a NAT IP address used by a Virtual Private Cloud (VPC) NAT gateway, take note of the following limit: If the IP address has IP mapping enabled and is specified in a DNAT entry, the IP address cannot be used by another DNAT or SNAT entry.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateForwardEntry  CreateForwardEntryRequest
+     * @return CreateForwardEntryResponse
      */
     @Override
     public CompletableFuture<CreateForwardEntryResponse> createForwardEntry(CreateForwardEntryRequest request) {
@@ -1080,11 +1337,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **CreateFullNatEntry** is an asynchronous operation. After you send a request to call this operation, the system returns a FULLNAT entry and the FULLNAT entry is being added in the backend. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
-      *     *   If the FULLNAT entry is in the **Creating** state, the system is adding the FULLNAT entry. You can only query the status of the FULLNAT entry, but cannot perform other operations.
-      *     *   If the FULLNAT entry is in the **Available** state, the FULLNAT entry is added.
-      * *   You cannot repeatedly call the **CreateFullNatEntry** operation for the same VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>CreateFullNatEntry</strong> is an asynchronous operation. After you send a request to call this operation, the system returns a FULLNAT entry and the FULLNAT entry is being added in the backend. You can call the <a href="https://help.aliyun.com/document_detail/348779.html">ListFullNatEntries</a> operation to query the status of a FULLNAT entry.
+     *     *   If the FULLNAT entry is in the <strong>Creating</strong> state, the system is adding the FULLNAT entry. You can only query the status of the FULLNAT entry, but cannot perform other operations.
+     *     *   If the FULLNAT entry is in the <strong>Available</strong> state, the FULLNAT entry is added.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>CreateFullNatEntry</strong> operation for the same VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateFullNatEntry  CreateFullNatEntryRequest
+     * @return CreateFullNatEntryResponse
      */
     @Override
     public CompletableFuture<CreateFullNatEntryResponse> createFullNatEntry(CreateFullNatEntryRequest request) {
@@ -1101,11 +1363,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * ## Usage notes
-      * You can call this operation to create only pay-as-you-go GA instances.
-      *
+     * @deprecated OpenAPI CreateGlobalAccelerationInstance is deprecated  * @description ## Usage notes
+     * You can call this operation to create only pay-as-you-go GA instances.
+     * 
+     * @param request the request parameters of CreateGlobalAccelerationInstance  CreateGlobalAccelerationInstanceRequest
+     * @return CreateGlobalAccelerationInstanceResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateGlobalAccelerationInstanceResponse> createGlobalAccelerationInstance(CreateGlobalAccelerationInstanceRequest request) {
         try {
@@ -1121,10 +1385,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **CreateHaVip** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of the task:
-      * *   If the HAVIP is in the **Creating** state, the HAVIP is being created.
-      * *   If the HAVIP is in the **Available** state, the HAVIP is created.
-      *
+     * <b>description</b> :
+     * <p><em>CreateHaVip</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of the task:</p>
+     * <ul>
+     * <li>If the HAVIP is in the <strong>Creating</strong> state, the HAVIP is being created.</li>
+     * <li>If the HAVIP is in the <strong>Available</strong> state, the HAVIP is created.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateHaVip  CreateHaVipRequest
+     * @return CreateHaVipResponse
      */
     @Override
     public CompletableFuture<CreateHaVipResponse> createHaVip(CreateHaVipRequest request) {
@@ -1140,6 +1409,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHighReliablePhysicalConnection  CreateHighReliablePhysicalConnectionRequest
+     * @return CreateHighReliablePhysicalConnectionResponse
+     */
     @Override
     public CompletableFuture<CreateHighReliablePhysicalConnectionResponse> createHighReliablePhysicalConnection(CreateHighReliablePhysicalConnectionRequest request) {
         try {
@@ -1155,9 +1428,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI CreateIPv6Translator is deprecated  * @param request  the request parameters of CreateIPv6Translator  CreateIPv6TranslatorRequest
+     * @return CreateIPv6TranslatorResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateIPv6TranslatorResponse> createIPv6Translator(CreateIPv6TranslatorRequest request) {
         try {
@@ -1173,9 +1447,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI CreateIPv6TranslatorAclList is deprecated  * @param request  the request parameters of CreateIPv6TranslatorAclList  CreateIPv6TranslatorAclListRequest
+     * @return CreateIPv6TranslatorAclListResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateIPv6TranslatorAclListResponse> createIPv6TranslatorAclList(CreateIPv6TranslatorAclListRequest request) {
         try {
@@ -1191,9 +1466,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI CreateIPv6TranslatorEntry is deprecated  * @param request  the request parameters of CreateIPv6TranslatorEntry  CreateIPv6TranslatorEntryRequest
+     * @return CreateIPv6TranslatorEntryResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateIPv6TranslatorEntryResponse> createIPv6TranslatorEntry(CreateIPv6TranslatorEntryRequest request) {
         try {
@@ -1209,13 +1485,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~2794049~~).
-      * *   Before you create an IPsec server, make sure that no IPsec-VPN connection exists on the VPN gateway. For more information, see [DeleteVpnConnection](~~2526948~~).
-      * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~2794055~~) to query the status of the task.
-      *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
-      *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
-      * *   You cannot repeatedly call **CreateIpsecServer** within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</p>
+     * <ul>
+     * <li>Before you create an IPsec server, make sure that no IPsec-VPN connection exists on the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2526948.html">DeleteVpnConnection</a>.</li>
+     * <li><strong>CreateIpsecServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the task.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the IPsec server is being created.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the IPsec server is created.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call <strong>CreateIpsecServer</strong> within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateIpsecServer  CreateIpsecServerRequest
+     * @return CreateIpsecServerResponse
      */
     @Override
     public CompletableFuture<CreateIpsecServerResponse> createIpsecServer(CreateIpsecServerRequest request) {
@@ -1232,11 +1515,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **CreateIpv4Gateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway:
-      *     *   If the IPv4 gateway is in the **Creating** state, the IPv4 gateway is being created.
-      *     *   If the IPv4 gateway is in the **Created** state, the IPv4 gateway is created.
-      * *   You cannot repeatedly call the **CreateIpv4Gateway** operation to create IPv4 gateways in a virtual private cloud (VPC) within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>CreateIpv4Gateway</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/407670.html">GetIpv4GatewayAttribute</a> operation to query the status of an IPv4 gateway:
+     *     *   If the IPv4 gateway is in the <strong>Creating</strong> state, the IPv4 gateway is being created.
+     *     *   If the IPv4 gateway is in the <strong>Created</strong> state, the IPv4 gateway is created.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>CreateIpv4Gateway</strong> operation to create IPv4 gateways in a virtual private cloud (VPC) within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateIpv4Gateway  CreateIpv4GatewayRequest
+     * @return CreateIpv4GatewayResponse
      */
     @Override
     public CompletableFuture<CreateIpv4GatewayResponse> createIpv4Gateway(CreateIpv4GatewayRequest request) {
@@ -1253,11 +1541,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **CreateIpv6EgressOnlyRule** is an asynchronous operation. After a request is sent, the system returns a request ID and creates the rule in the background. You can call the [DescribeIpv6EgressOnlyRules](~~102208~~) operation to query the status of the task.
-      *     *   If the egress-only rule is in the **Creating** state, the egress-only rule is being created.
-      *     *   If the egress-only rule is in the **Created** state, the egress-only rule is created.
-      * *   You cannot repeatedly call the **CreateIpv6EgressOnlyRule** operation to add egress-only rules for an IPv6 address within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>CreateIpv6EgressOnlyRule</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and creates the rule in the background. You can call the <a href="https://help.aliyun.com/document_detail/102208.html">DescribeIpv6EgressOnlyRules</a> operation to query the status of the task.
+     *     *   If the egress-only rule is in the <strong>Creating</strong> state, the egress-only rule is being created.
+     *     *   If the egress-only rule is in the <strong>Created</strong> state, the egress-only rule is created.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>CreateIpv6EgressOnlyRule</strong> operation to add egress-only rules for an IPv6 address within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateIpv6EgressOnlyRule  CreateIpv6EgressOnlyRuleRequest
+     * @return CreateIpv6EgressOnlyRuleResponse
      */
     @Override
     public CompletableFuture<CreateIpv6EgressOnlyRuleResponse> createIpv6EgressOnlyRule(CreateIpv6EgressOnlyRuleRequest request) {
@@ -1274,11 +1567,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **CreateIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the status of the task.
-      *     *   If the IPv6 gateway is in the **Creating** state, the IPv6 gateway is being created.
-      *     *   If the IPv6 gateway is in the **Created** state, the IPv6 gateway is created.
-      * *   You cannot repeatedly call the **CreateIpv6Gateway** operation within a specific time period.
-      *
+     * <b>description</b> :
+     * <p>  <strong>CreateIpv6Gateway</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> operation to query the status of the task.
+     *     *   If the IPv6 gateway is in the <strong>Creating</strong> state, the IPv6 gateway is being created.
+     *     *   If the IPv6 gateway is in the <strong>Created</strong> state, the IPv6 gateway is created.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>CreateIpv6Gateway</strong> operation within a specific time period.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateIpv6Gateway  CreateIpv6GatewayRequest
+     * @return CreateIpv6GatewayResponse
      */
     @Override
     public CompletableFuture<CreateIpv6GatewayResponse> createIpv6Gateway(CreateIpv6GatewayRequest request) {
@@ -1295,16 +1593,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)
-      * Before you call this operation, take note of the following items:
-      * *   The first time you create a NAT gateway, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
-      * *   After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.
-      * *   **CreateNatGateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of the task.
-      *     *   If a NAT gateway is in the **Creating** state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.
-      *     *   If a NAT gateway is in the **Available** state, the NAT gateway is created.
-      * It takes 1 to 3 minutes to create a NAT gateway.
-      * *   You cannot repeatedly call the **CreateNatGateway** operation within a specific period of time.
-      *
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</li>
+     * <li>After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.</li>
+     * <li><strong>CreateNatGateway</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the task.<ul>
+     * <li>If a NAT gateway is in the <strong>Creating</strong> state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.</li>
+     * <li>If a NAT gateway is in the <strong>Available</strong> state, the NAT gateway is created.
+     * It takes 1 to 3 minutes to create a NAT gateway.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateNatGateway  CreateNatGatewayRequest
+     * @return CreateNatGatewayResponse
      */
     @Override
     public CompletableFuture<CreateNatGatewayResponse> createNatGateway(CreateNatGatewayRequest request) {
@@ -1321,12 +1625,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)
-      * **CreateNatIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of the task.
-      * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address and cannot perform other operations.
-      * *   If a NAT IP address is in the **Available** state, the NAT IP address is created.
-      * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within a specific period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p><strong>CreateNatIp</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/287000.html">ListNatIps</a> operation to query the status of the task.</p>
+     * <ul>
+     * <li>If a NAT IP address is in the <strong>Creating</strong> state, the NAT IP address is being created. In this case, you can only query the NAT IP address and cannot perform other operations.</li>
+     * <li>If a NAT IP address is in the <strong>Available</strong> state, the NAT IP address is created.
+     * You cannot repeatedly call the <strong>CreateNatIp</strong> operation to create a NAT IP address within a specific period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateNatIp  CreateNatIpRequest
+     * @return CreateNatIpResponse
      */
     @Override
     public CompletableFuture<CreateNatIpResponse> createNatIp(CreateNatIpRequest request) {
@@ -1343,9 +1652,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * You cannot repeatedly call the **CreateNatIpCidr** operation to create a NAT CIDR block within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <p>You cannot repeatedly call the <strong>CreateNatIpCidr</strong> operation to create a NAT CIDR block within the specified period of time.</p>
+     * 
+     * @param request the request parameters of CreateNatIpCidr  CreateNatIpCidrRequest
+     * @return CreateNatIpCidrResponse
      */
     @Override
     public CompletableFuture<CreateNatIpCidrResponse> createNatIpCidr(CreateNatIpCidrRequest request) {
@@ -1361,6 +1673,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNetworkAcl  CreateNetworkAclRequest
+     * @return CreateNetworkAclResponse
+     */
     @Override
     public CompletableFuture<CreateNetworkAclResponse> createNetworkAcl(CreateNetworkAclRequest request) {
         try {
@@ -1376,11 +1692,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can apply for a dedicated Express Connect circuit for yourself or create a hosted connection for a tenant. After your application is approved, the Express Connect circuit changes to the **Initial** state. You can contact the connectivity provider to start construction.
-      * When you call this operation, take note of the following limits:
-      * *   If your Alibaba Cloud account has more than five Express Connect circuits that are not in the **Enabled** state, you cannot apply for another Express Connect circuit.
-      * *   If your Alibaba Cloud account has an Express Connect circuit with overdue payments, you cannot apply for another Express Connect circuit.
-      *
+     * <b>description</b> :
+     * <p>You can apply for a dedicated Express Connect circuit for yourself or create a hosted connection for a tenant. After your application is approved, the Express Connect circuit changes to the <strong>Initial</strong> state. You can contact the connectivity provider to start construction.
+     * When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>If your Alibaba Cloud account has more than five Express Connect circuits that are not in the <strong>Enabled</strong> state, you cannot apply for another Express Connect circuit.</li>
+     * <li>If your Alibaba Cloud account has an Express Connect circuit with overdue payments, you cannot apply for another Express Connect circuit.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreatePhysicalConnection  CreatePhysicalConnectionRequest
+     * @return CreatePhysicalConnectionResponse
      */
     @Override
     public CompletableFuture<CreatePhysicalConnectionResponse> createPhysicalConnection(CreatePhysicalConnectionRequest request) {
@@ -1397,8 +1718,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation only when the Express Connect circuit is in the **Complete** state.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation only when the Express Connect circuit is in the <strong>Complete</strong> state.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreatePhysicalConnectionOccupancyOrder  CreatePhysicalConnectionOccupancyOrderRequest
+     * @return CreatePhysicalConnectionOccupancyOrderResponse
      */
     @Override
     public CompletableFuture<CreatePhysicalConnectionOccupancyOrderResponse> createPhysicalConnectionOccupancyOrder(CreatePhysicalConnectionOccupancyOrderRequest request) {
@@ -1414,6 +1740,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePhysicalConnectionSetupOrder  CreatePhysicalConnectionSetupOrderRequest
+     * @return CreatePhysicalConnectionSetupOrderResponse
+     */
     @Override
     public CompletableFuture<CreatePhysicalConnectionSetupOrderResponse> createPhysicalConnectionSetupOrder(CreatePhysicalConnectionSetupOrderRequest request) {
         try {
@@ -1429,8 +1759,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * By default, the IP address pool feature is unavailable. You can apply for the privilege to use the **IP address pool feature** in the Quota Center console. For more information, see the "Request a quota increase in the Quota Center console" section in the [Manage EIP quotas](~~108213~~) topic.
-      *
+     * <b>description</b> :
+     * <p>By default, the IP address pool feature is unavailable. You can apply for the privilege to use the <strong>IP address pool feature</strong> in the Quota Center console. For more information, see the &quot;Request a quota increase in the Quota Center console&quot; section in the <a href="https://help.aliyun.com/document_detail/108213.html">Manage EIP quotas</a> topic.</p>
+     * 
+     * @param request the request parameters of CreatePublicIpAddressPool  CreatePublicIpAddressPoolRequest
+     * @return CreatePublicIpAddressPoolResponse
      */
     @Override
     public CompletableFuture<CreatePublicIpAddressPoolResponse> createPublicIpAddressPool(CreatePublicIpAddressPoolRequest request) {
@@ -1447,20 +1780,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)References
-      * *   **CreateRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
-      *     *   If the route entry is in the **Creating** state, the route entry is being created.
-      *     *   If the route entry is in the **Created** state, the route entry is created.
-      * *   You cannot repeatedly call the **CreateRouteEntries** operation to create the same route entry within the specified period of time.
-      * **When you call this operation to add custom route entries to the route table of a vRouter, take note of the following items:**
-      * *   A route table can contain up to 200 custom route entries.
-      * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the VPC.
-      * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or its subnets.
-      * *   The destination CIDR blocks (**DstCidrBlock**) of route entries in the same route table must be unique.
-      * *   If you do not include the mask length when you specify the destination CIDR block (**DstCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
-      * *   Multiple custom route entries can point to the same next hop (**NextHop**).
-      * *   The next hop (**NextHop**) of a custom route entry must belong to the same VPC as the route table.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>References</h2>
+     * <ul>
+     * <li><strong>CreateRouteEntries</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the status of the task.<ul>
+     * <li>If the route entry is in the <strong>Creating</strong> state, the route entry is being created.</li>
+     * <li>If the route entry is in the <strong>Created</strong> state, the route entry is created.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>CreateRouteEntries</strong> operation to create the same route entry within the specified period of time.
+     * <strong>When you call this operation to add custom route entries to the route table of a vRouter, take note of the following items:</strong></li>
+     * <li>A route table can contain up to 200 custom route entries.</li>
+     * <li>The destination CIDR block (<strong>DstCidrBlock</strong>) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the VPC.</li>
+     * <li>The destination CIDR block (<strong>DstCidrBlock</strong>) of a custom route entry cannot be 100.64.0.0/10 or its subnets.</li>
+     * <li>The destination CIDR blocks (<strong>DstCidrBlock</strong>) of route entries in the same route table must be unique.</li>
+     * <li>If you do not include the mask length when you specify the destination CIDR block (<strong>DstCidrBlock</strong>), the destination CIDR block is considered a host IP address whose mask length is 32 bits.</li>
+     * <li>Multiple custom route entries can point to the same next hop (<strong>NextHop</strong>).</li>
+     * <li>The next hop (<strong>NextHop</strong>) of a custom route entry must belong to the same VPC as the route table.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateRouteEntries  CreateRouteEntriesRequest
+     * @return CreateRouteEntriesResponse
      */
     @Override
     public CompletableFuture<CreateRouteEntriesResponse> createRouteEntries(CreateRouteEntriesRequest request) {
@@ -1477,33 +1817,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **CreateRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task:
-      *     *   If a route is in the **Creating** state, the route is being added.
-      *     *   If a route is in the **Created** state, the route is added.
-      * *   You cannot repeatedly call **CreateRouteEntry** within a specific period of time.
-      * **When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following limits:**
-      * >  When you add a route entry from a prefix list, the quota usage is calculated by adding the number of existing route entries and the maximum number of route entries of the prefix list.
-      * *   A route table can contain up to 200 custom route entries.
-      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or be a subset of the CIDR block of a vSwitch in the virtual private cloud (VPC). The destination CIDR block can contain the CIDR block of a vSwitch.
-      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
-      * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
-      * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
-      * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
-      * *   The next hop (**NextHopId**) of a custom route entry must in the same VPC as the route table.
-      * *   Equal-cost multi-path (ECMP) routing can be configured by specifying the **NextHopList** parameter.
-      *     *   When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you must not specify **NextHopList**.
-      *     *   When you add route entries for ECMP routing, you must specify **DestinationCidrBlock** and **NextHopList**, and you must not specify **NextHopType** or **NextHopId**.
-      * **When you call this operation to add a custom route entry to the route table of a VBR, take note of the following limits:**
-      * *   A route table can contain up to 200 custom route entries.
-      * *   **NextHopList** is not supported.
-      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
-      * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
-      * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
-      * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
-      * *   The next hop (**NextHopId**) of a custom route entry must be a router interface associated with the VBR.
-      * *   You can add route entries only when the VBR is in the **Active** state, and the Express Connect circuit associated with the VBR is in the **Enabled** state and is not locked due to overdue payments.
-      * *   Only non-ECMP route entries are supported. When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you cannot specify **NextHopList**.
-      *
+     * <b>description</b> :
+     * <p>  <strong>CreateRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the status of the task:
+     *     *   If a route is in the <strong>Creating</strong> state, the route is being added.
+     *     *   If a route is in the <strong>Created</strong> state, the route is added.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>CreateRouteEntry</strong> within a specific period of time.
+     * <strong>When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following limits:</strong><blockquote>
+     * <p> When you add a route entry from a prefix list, the quota usage is calculated by adding the number of existing route entries and the maximum number of route entries of the prefix list.</p>
+     * </blockquote>
+     * </li>
+     * <li>A route table can contain up to 200 custom route entries.</li>
+     * <li>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry cannot be the same as or be a subset of the CIDR block of a vSwitch in the virtual private cloud (VPC). The destination CIDR block can contain the CIDR block of a vSwitch.</li>
+     * <li>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.</li>
+     * <li>The destination CIDR blocks (<strong>DestinationCidrBlock</strong>) of route entries in the same route table must be unique.</li>
+     * <li>If you do not include the mask length when you specify the destination CIDR block (<strong>DestinationCidrBlock</strong>), the destination CIDR block is considered a host IP address whose mask length is 32 bits.</li>
+     * <li>Multiple custom route entries can point to the same next hop (<strong>NextHopId</strong>).</li>
+     * <li>The next hop (<strong>NextHopId</strong>) of a custom route entry must in the same VPC as the route table.</li>
+     * <li>Equal-cost multi-path (ECMP) routing can be configured by specifying the <strong>NextHopList</strong> parameter.<ul>
+     * <li>When you add non-ECMP route entries, you must specify <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong>, and you must not specify <strong>NextHopList</strong>.</li>
+     * <li>When you add route entries for ECMP routing, you must specify <strong>DestinationCidrBlock</strong> and <strong>NextHopList</strong>, and you must not specify <strong>NextHopType</strong> or <strong>NextHopId</strong>.
+     * <strong>When you call this operation to add a custom route entry to the route table of a VBR, take note of the following limits:</strong></li>
+     * </ul>
+     * </li>
+     * <li>A route table can contain up to 200 custom route entries.</li>
+     * <li><strong>NextHopList</strong> is not supported.</li>
+     * <li>The destination CIDR block (<strong>DestinationCidrBlock</strong>) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.</li>
+     * <li>The destination CIDR blocks (<strong>DestinationCidrBlock</strong>) of route entries in the same route table must be unique.</li>
+     * <li>If you do not include the mask length when you specify the destination CIDR block (<strong>DestinationCidrBlock</strong>), the destination CIDR block is considered a host IP address whose mask length is 32 bits.</li>
+     * <li>Multiple custom route entries can point to the same next hop (<strong>NextHopId</strong>).</li>
+     * <li>The next hop (<strong>NextHopId</strong>) of a custom route entry must be a router interface associated with the VBR.</li>
+     * <li>You can add route entries only when the VBR is in the <strong>Active</strong> state, and the Express Connect circuit associated with the VBR is in the <strong>Enabled</strong> state and is not locked due to overdue payments.</li>
+     * <li>Only non-ECMP route entries are supported. When you add non-ECMP route entries, you must specify <strong>DestinationCidrBlock</strong>, <strong>NextHopType</strong>, and <strong>NextHopId</strong>, and you cannot specify <strong>NextHopList</strong>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateRouteEntry  CreateRouteEntryRequest
+     * @return CreateRouteEntryResponse
      */
     @Override
     public CompletableFuture<CreateRouteEntryResponse> createRouteEntry(CreateRouteEntryRequest request) {
@@ -1520,11 +1869,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **CreateRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the operation in the background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of the task.
-      *     *   If the custom route table is in the **Creating** state, the custom route table is being created.
-      *     *   If the custom route table is in the **Created** state, the custom route table is created.
-      * *   You cannot repeatedly call the **CreateRouteTable** operation within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>CreateRouteTable</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the operation in the background. You can call the <a href="https://help.aliyun.com/document_detail/87602.html">DescribeRouteTableList</a> operation to query the status of the task.
+     *     *   If the custom route table is in the <strong>Creating</strong> state, the custom route table is being created.
+     *     *   If the custom route table is in the <strong>Created</strong> state, the custom route table is created.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>CreateRouteTable</strong> operation within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateRouteTable  CreateRouteTableRequest
+     * @return CreateRouteTableResponse
      */
     @Override
     public CompletableFuture<CreateRouteTableResponse> createRouteTable(CreateRouteTableRequest request) {
@@ -1541,14 +1895,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * *   You can create only one pair of interfaces to be connected between two routers.
-      * *   You can create a maximum of five router interfaces for a router.
-      * *   If your Alibaba Cloud account has a router interface with overdue payments, you cannot create new router interfaces.
-      * *   Each destination CIDR block of route entries in the same route table must be unique.
-      * *   A virtual border router (VBR) can serve only as a requester. The VBR must be in the Activated state.
-      * *   You can call this operation to create subscription and pay-as-you-go router interfaces.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>You can create only one pair of interfaces to be connected between two routers.</li>
+     * <li>You can create a maximum of five router interfaces for a router.</li>
+     * <li>If your Alibaba Cloud account has a router interface with overdue payments, you cannot create new router interfaces.</li>
+     * <li>Each destination CIDR block of route entries in the same route table must be unique.</li>
+     * <li>A virtual border router (VBR) can serve only as a requester. The VBR must be in the Activated state.</li>
+     * <li>You can call this operation to create subscription and pay-as-you-go router interfaces.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateRouterInterface  CreateRouterInterfaceRequest
+     * @return CreateRouterInterfaceResponse
      */
     @Override
     public CompletableFuture<CreateRouterInterfaceResponse> createRouterInterface(CreateRouterInterfaceRequest request) {
@@ -1565,16 +1924,23 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT** gateway refers to both gateway types.
-      * Before you call this operation, take note of the following limits:
-      * *   **CreateSnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
-      *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, and cannot perform other operations.
-      *     *   If the SNAT entry is in the **Available** state, the SNAT entry is added.
-      * *   You cannot repeatedly call the **CreateSnatEntry** operation to add an SNAT entry to an SNAT table within the specified period of time.
-      * *   The vSwitch and Elastic Compute Service (ECS) instance specified in an SNAT entry must be created in the VPC where the NAT gateway is deployed.
-      * *   Each vSwitch or ECS instance can be specified in only one SNAT entry.
-      * *   If a high-availability virtual IP address (HAVIP) exists in a vSwitch, you cannot create SNAT entries.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a <strong>NAT</strong> gateway refers to both gateway types.
+     * Before you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li><strong>CreateSnatEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the task.<ul>
+     * <li>If the SNAT entry is in the <strong>Pending</strong> state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, and cannot perform other operations.</li>
+     * <li>If the SNAT entry is in the <strong>Available</strong> state, the SNAT entry is added.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>CreateSnatEntry</strong> operation to add an SNAT entry to an SNAT table within the specified period of time.</li>
+     * <li>The vSwitch and Elastic Compute Service (ECS) instance specified in an SNAT entry must be created in the VPC where the NAT gateway is deployed.</li>
+     * <li>Each vSwitch or ECS instance can be specified in only one SNAT entry.</li>
+     * <li>If a high-availability virtual IP address (HAVIP) exists in a vSwitch, you cannot create SNAT entries.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateSnatEntry  CreateSnatEntryRequest
+     * @return CreateSnatEntryResponse
      */
     @Override
     public CompletableFuture<CreateSnatEntryResponse> createSnatEntry(CreateSnatEntryRequest request) {
@@ -1590,6 +1956,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSslVpnClientCert  CreateSslVpnClientCertRequest
+     * @return CreateSslVpnClientCertResponse
+     */
     @Override
     public CompletableFuture<CreateSslVpnClientCertResponse> createSslVpnClientCert(CreateSslVpnClientCertRequest request) {
         try {
@@ -1605,13 +1975,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **CreateSslVpnServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the task.
-      *     *   If the VPN gateway is in the **updating** state, the SSL server is being created.
-      *     *   If the VPN gateway is in the **active** state, the SSL server is created.
-      * *   You cannot call the **CreateSslVpnServer** operation to create multiple SSL servers at a time for the same VPN gateway.
-      * ### [](#)Prerequisites
-      * A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see [CreateVpnGateway](~~2526913~~).
-      *
+     * <b>description</b> :
+     * <p>  <strong>CreateSslVpnServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.
+     *     *   If the VPN gateway is in the <strong>updating</strong> state, the SSL server is being created.
+     *     *   If the VPN gateway is in the <strong>active</strong> state, the SSL server is created.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>CreateSslVpnServer</strong> operation within the specified period of time.</li>
+     * </ul>
+     * <h3><a href="#"></a>Prerequisite</h3>
+     * <ul>
+     * <li>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
+     * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateSslVpnServer  CreateSslVpnServerRequest
+     * @return CreateSslVpnServerResponse
      */
     @Override
     public CompletableFuture<CreateSslVpnServerResponse> createSslVpnServer(CreateSslVpnServerRequest request) {
@@ -1628,10 +2006,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **CreateTrafficMirrorFilter** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of the task.
-      * *   If the filter is in the **Creating** state, the filter is being created.
-      * *   If the filter is in the **Created** state, the filter is created.
-      *
+     * <b>description</b> :
+     * <p><em>CreateTrafficMirrorFilter</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the filter is in the <strong>Creating</strong> state, the filter is being created.</li>
+     * <li>If the filter is in the <strong>Created</strong> state, the filter is created.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateTrafficMirrorFilter  CreateTrafficMirrorFilterRequest
+     * @return CreateTrafficMirrorFilterResponse
      */
     @Override
     public CompletableFuture<CreateTrafficMirrorFilterResponse> createTrafficMirrorFilter(CreateTrafficMirrorFilterRequest request) {
@@ -1648,11 +2031,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **CreateTrafficMirrorFilterRules** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListTrafficMirrorFilters](~~261353~~) to query the status of the task.
-      *     *   If the inbound or outbound rule is in the **Creating** state, the rule is being created.
-      *     *   If the inbound or outbound rule is in the **Created** state, the rule is created.
-      * *   You cannot call **CreateTrafficMirrorFilterRules** within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>CreateTrafficMirrorFilterRules</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> to query the status of the task.
+     *     *   If the inbound or outbound rule is in the <strong>Creating</strong> state, the rule is being created.
+     *     *   If the inbound or outbound rule is in the <strong>Created</strong> state, the rule is created.</p>
+     * <ul>
+     * <li>You cannot call <strong>CreateTrafficMirrorFilterRules</strong> within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateTrafficMirrorFilterRules  CreateTrafficMirrorFilterRulesRequest
+     * @return CreateTrafficMirrorFilterRulesResponse
      */
     @Override
     public CompletableFuture<CreateTrafficMirrorFilterRulesResponse> createTrafficMirrorFilterRules(CreateTrafficMirrorFilterRulesRequest request) {
@@ -1669,10 +2057,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **CreateTrafficMirrorSession** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListTrafficMirrorSessions](~~261367~~) to query the status of the task.
-      * *   If the traffic mirror session is in the **Creating** state, it is being created.
-      * *   If the traffic mirror session is in the **Created** state, it is created.
-      *
+     * <b>description</b> :
+     * <p><em>CreateTrafficMirrorSession</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the task.</p>
+     * <ul>
+     * <li>If the traffic mirror session is in the <strong>Creating</strong> state, it is being created.</li>
+     * <li>If the traffic mirror session is in the <strong>Created</strong> state, it is created.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateTrafficMirrorSession  CreateTrafficMirrorSessionRequest
+     * @return CreateTrafficMirrorSessionResponse
      */
     @Override
     public CompletableFuture<CreateTrafficMirrorSessionResponse> createTrafficMirrorSession(CreateTrafficMirrorSessionRequest request) {
@@ -1689,18 +2082,25 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * *   You can create at most 150 vSwitches in a virtual private cloud (VPC).
-      * *   The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
-      * *   The number of instances in a vSwitch cannot exceed the remaining capacity of the VPC. The remaining capacity is the difference between 15,000 and the current number of instances.
-      * *   Each instance can belong to only one vSwitch.
-      * *   vSwitches do not support multicast or broadcast.
-      * *   After you create a vSwitch, you cannot modify its CIDR block.
-      * *   **CreateVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVSwitchAttributes](~~94567~~) to query the status of the task.
-      *     *   If the vSwitch is in the **Pending** state, the vSwitch is being configured.
-      *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
-      * *   You cannot repeatedly call the **CreateVSwitch** operation to create a vSwitch in a VPC within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>You can create at most 150 vSwitches in a virtual private cloud (VPC).</li>
+     * <li>The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.</li>
+     * <li>The number of instances in a vSwitch cannot exceed the remaining capacity of the VPC. The remaining capacity is the difference between 15,000 and the current number of instances.</li>
+     * <li>Each instance can belong to only one vSwitch.</li>
+     * <li>vSwitches do not support multicast or broadcast.</li>
+     * <li>After you create a vSwitch, you cannot modify its CIDR block.</li>
+     * <li><strong>CreateVSwitch</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the status of the task.<ul>
+     * <li>If the vSwitch is in the <strong>Pending</strong> state, the vSwitch is being configured.</li>
+     * <li>If the vSwitch is in the <strong>Available</strong> state, the vSwitch is available.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>CreateVSwitch</strong> operation to create a vSwitch in a VPC within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateVSwitch  CreateVSwitchRequest
+     * @return CreateVSwitchResponse
      */
     @Override
     public CompletableFuture<CreateVSwitchResponse> createVSwitch(CreateVSwitchRequest request) {
@@ -1717,16 +2117,23 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * Take note of the following items:
-      * *   You can create at most 10 reserved IPv4 CIDR blocks and 10 reserved IPv6 CIDR blocks for each vSwitch in a virtual private cloud (VPC).
-      * *   After you create a reserved CIDR block for a vSwitch, the CIDR block cannot contain the IP address of the subnet gateway of the VPC to which the vSwitch belongs.
-      * *   **CreateVSwitchCidrReservation** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListVSwitchCidrReservations](~~610155~~) to query the status of the task:
-      *     *   If the vSwitch is in the **Assigning** state, the reserved CIDR block is being created.
-      *     *   If the vSwitch is in the **Assigned** state, the reserved CIDR block is created.
-      * *   When you create a reserved IPv4 CIDR block for a vSwitch, the first IP address and the last three IP addresses of the vSwitch are reserved by the system. The four IP addresses will not be allocated.
-      * *   When you create a reserved IPv6 CIDR block for a vSwitch, the first IP address and the last nine IP addresses of the vSwitch are reserved by the system. The 10 IP addresses will not be allocated. For example, if you create a reserved IPv4 CIDR block for a vSwitch whose CIDR block is 192.168.1.0/24, the reserved CIDR block cannot contain the following IP addresses: 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <p>Take note of the following items:</p>
+     * <ul>
+     * <li>You can create at most 10 reserved IPv4 CIDR blocks and 10 reserved IPv6 CIDR blocks for each vSwitch in a virtual private cloud (VPC).</li>
+     * <li>After you create a reserved CIDR block for a vSwitch, the CIDR block cannot contain the IP address of the subnet gateway of the VPC to which the vSwitch belongs.</li>
+     * <li><strong>CreateVSwitchCidrReservation</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the status of the task:<ul>
+     * <li>If the vSwitch is in the <strong>Assigning</strong> state, the reserved CIDR block is being created.</li>
+     * <li>If the vSwitch is in the <strong>Assigned</strong> state, the reserved CIDR block is created.</li>
+     * </ul>
+     * </li>
+     * <li>When you create a reserved IPv4 CIDR block for a vSwitch, the first IP address and the last three IP addresses of the vSwitch are reserved by the system. The four IP addresses will not be allocated.</li>
+     * <li>When you create a reserved IPv6 CIDR block for a vSwitch, the first IP address and the last nine IP addresses of the vSwitch are reserved by the system. The 10 IP addresses will not be allocated. For example, if you create a reserved IPv4 CIDR block for a vSwitch whose CIDR block is 192.168.1.0/24, the reserved CIDR block cannot contain the following IP addresses: 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateVSwitchCidrReservation  CreateVSwitchCidrReservationRequest
+     * @return CreateVSwitchCidrReservationResponse
      */
     @Override
     public CompletableFuture<CreateVSwitchCidrReservationResponse> createVSwitchCidrReservation(CreateVSwitchCidrReservationRequest request) {
@@ -1742,6 +2149,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateVbrHa  CreateVbrHaRequest
+     * @return CreateVbrHaResponse
+     */
     @Override
     public CompletableFuture<CreateVbrHaResponse> createVbrHa(CreateVbrHaRequest request) {
         try {
@@ -1757,14 +2168,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The IPsec-VPN connection must be associated with a transit router. For more information, see [CreateTransitRouterVpnAttachment](~~468249~~).
-      * *   You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.
-      * *   Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.
-      * *   **CreateVcoRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnConnection](~~53046~~) to query the status of the task.
-      *     *   If the IPsec-VPN connection is in the **updating** state, the destination-based route is being created.
-      *     *   If the IPsec-VPN connection is in the **attached** state, the destination-based route is created.
-      * *   You cannot repeatedly call **CreateVcoRouteEntry** within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  The IPsec-VPN connection must be associated with a transit router. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</p>
+     * <ul>
+     * <li>You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.</li>
+     * <li>Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.</li>
+     * <li><strong>CreateVcoRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the status of the task.<ul>
+     * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the destination-based route is being created.</li>
+     * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the destination-based route is created.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call <strong>CreateVcoRouteEntry</strong> within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateVcoRouteEntry  CreateVcoRouteEntryRequest
+     * @return CreateVcoRouteEntryResponse
      */
     @Override
     public CompletableFuture<CreateVcoRouteEntryResponse> createVcoRouteEntry(CreateVcoRouteEntryRequest request) {
@@ -1781,8 +2199,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you create a VBR, the VBR is in the **active** state.
-      *
+     * <b>description</b> :
+     * <p>After you create a VBR, the VBR is in the <strong>active</strong> state.</p>
+     * 
+     * @param request the request parameters of CreateVirtualBorderRouter  CreateVirtualBorderRouterRequest
+     * @return CreateVirtualBorderRouterResponse
      */
     @Override
     public CompletableFuture<CreateVirtualBorderRouterResponse> createVirtualBorderRouter(CreateVirtualBorderRouterRequest request) {
@@ -1799,9 +2220,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * # [](#)Description
-      * Before you call this operation, we recommend that you learn about the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview of hosted connections](~~146571~~) and [Operations performed by Express Connect partners](~~155987~~).
-      *
+     * <b>description</b> :
+     * <h1><a href="#"></a>Description</h1>
+     * <p>Before you call this operation, we recommend that you learn about the workflow for creating a hosted connection and the environment requirements. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of hosted connections</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Operations performed by Express Connect partners</a>.</p>
+     * 
+     * @param request the request parameters of CreateVirtualPhysicalConnection  CreateVirtualPhysicalConnectionRequest
+     * @return CreateVirtualPhysicalConnectionResponse
      */
     @Override
     public CompletableFuture<CreateVirtualPhysicalConnectionResponse> createVirtualPhysicalConnection(CreateVirtualPhysicalConnectionRequest request) {
@@ -1818,17 +2242,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   You can specify only one CIDR block for each VPC.
-      * *   After you create a VPC, you cannot change its CIDR block. However, you can add secondary IPv4 CIDR blocks to the VPC.
-      * *   In each VPC, cloud services can use a maximum of 60,000 private IP addresses. You cannot increase the quota.
-      * *   After you create a VPC, a vRouter and a route table are automatically created.
-      * *   At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if both 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.
-      * *   **CreateVpc** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of the task:
-      *     *   If the VPC is in the **Creating** state, the VPC is being created.
-      *     *   If the VPC is in the **Created** state, the VPC is created.
-      * *   You cannot repeatedly call the **DeleteRouteEntry** operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can specify only one CIDR block for each VPC.</li>
+     * <li>After you create a VPC, you cannot change its CIDR block. However, you can add secondary IPv4 CIDR blocks to the VPC.</li>
+     * <li>In each VPC, cloud services can use a maximum of 60,000 private IP addresses. You cannot increase the quota.</li>
+     * <li>After you create a VPC, a vRouter and a route table are automatically created.</li>
+     * <li>At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if both 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.</li>
+     * <li><strong>CreateVpc</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of the task:<ul>
+     * <li>If the VPC is in the <strong>Creating</strong> state, the VPC is being created.</li>
+     * <li>If the VPC is in the <strong>Created</strong> state, the VPC is created.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeleteRouteEntry</strong> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateVpc  CreateVpcRequest
+     * @return CreateVpcResponse
      */
     @Override
     public CompletableFuture<CreateVpcResponse> createVpc(CreateVpcRequest request) {
@@ -1845,11 +2276,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **CreateVpcGatewayEndpoint** is an asynchronous operation. After a request is sent, the system returns an **EndpointId** and runs the task in the background. You can call the [ListVpcGatewayEndpoints](~~448682~~) operation to query the status of the task.
-      *     *   If the gateway endpoint is in the **Creating** state, the gateway endpoint is being created.
-      *     *   If the gateway endpoint is in the **Created** state, the gateway endpoint is created.
-      * *   You cannot repeatedly call the **CreateVpcGatewayEndpoint** operation for the same endpoint service within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>CreateVpcGatewayEndpoint</strong> is an asynchronous operation. After a request is sent, the system returns an <strong>EndpointId</strong> and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/448682.html">ListVpcGatewayEndpoints</a> operation to query the status of the task.
+     *     *   If the gateway endpoint is in the <strong>Creating</strong> state, the gateway endpoint is being created.
+     *     *   If the gateway endpoint is in the <strong>Created</strong> state, the gateway endpoint is created.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>CreateVpcGatewayEndpoint</strong> operation for the same endpoint service within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateVpcGatewayEndpoint  CreateVpcGatewayEndpointRequest
+     * @return CreateVpcGatewayEndpointResponse
      */
     @Override
     public CompletableFuture<CreateVpcGatewayEndpointResponse> createVpcGatewayEndpoint(CreateVpcGatewayEndpointRequest request) {
@@ -1866,8 +2302,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **CreateVpcPrefixList** operation within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>CreateVpcPrefixList</strong> operation within the specified period of time.</p>
+     * 
+     * @param request the request parameters of CreateVpcPrefixList  CreateVpcPrefixListRequest
+     * @return CreateVpcPrefixListResponse
      */
     @Override
     public CompletableFuture<CreateVpcPrefixListResponse> createVpcPrefixList(CreateVpcPrefixListRequest request) {
@@ -1884,13 +2323,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If an Express Connect partner has created a virtual border router (VBR) for a tenant before, the Express Connect partner can push the Express Connect circuit that is associated with the VBR to the tenant account by adding a shared port for the tenant account. The service of the tenant is not interrupted in this process.
-      * Preparations:
-      * Before the Express Connect partner performs the operation, the Express Connect partner must notify the tenant and request the tenant to enable outbound data transfer billing. For more information, see [Enable outbound data transfer billing](~~274385~~).
-      * What to do next:
-      * 1.  After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
-      * 2.  Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
-      *
+     * <b>description</b> :
+     * <p>If an Express Connect partner has created a virtual border router (VBR) for a tenant before, the Express Connect partner can push the Express Connect circuit that is associated with the VBR to the tenant account by adding a shared port for the tenant account. The service of the tenant is not interrupted in this process.
+     * Preparations:
+     * Before the Express Connect partner performs the operation, the Express Connect partner must notify the tenant and request the tenant to enable outbound data transfer billing. For more information, see <a href="https://help.aliyun.com/document_detail/274385.html">Enable outbound data transfer billing</a>.
+     * What to do next:</p>
+     * <ol>
+     * <li>After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the <a href="https://help.aliyun.com/document_detail/324198.html">ConfirmPhysicalConnection</a> operation to accept the shared port.</li>
+     * <li>Then, the Express Connect partner must call the <a href="https://help.aliyun.com/document_detail/324191.html">AttachVbrToVpconn</a> operation to associate the VBR with the newly added shared port that belongs to the tenant account.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of CreateVpconnFromVbr  CreateVpconnFromVbrRequest
+     * @return CreateVpconnFromVbrResponse
      */
     @Override
     public CompletableFuture<CreateVpconnFromVbrResponse> createVpconnFromVbr(CreateVpconnFromVbrRequest request) {
@@ -1907,17 +2351,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * By default, an IPsec-VPN connection created by calling the `CreateVpnAttachment` operation is not associated with a resource. You can associate an IPsec-VPN connection with a transit router by calling the [CreateTransitRouterVpnAttachment](~~443993~~) operation.
-      * ### [](#)Prerequisites
-      * Before you create an IPsec-VPN connection, make sure that you created a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see [CreateCustomerGateway](~~120368~~).
-      * If you want to add BGP configurations to an IPsec-VPN connection, make sure that an autonomous system number (ASN) is assigned to the customer gateway.
-      *
+     * <b>description</b> :
+     * <p>By default, an IPsec-VPN connection created by calling the <code>CreateVpnAttachment</code> operation is not associated with a resource. You can associate an IPsec-VPN connection with a transit router by calling the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation.</p>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you create an IPsec-VPN connection, make sure that you created a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.
+     * If you want to add BGP configurations to an IPsec-VPN connection, make sure that an autonomous system number (ASN) is assigned to the customer gateway.</p>
+     * 
+     * @param request the request parameters of CreateVpnAttachment  CreateVpnAttachmentRequest
+     * @return CreateVpnAttachmentResponse
      */
     @Override
     public CompletableFuture<CreateVpnAttachmentResponse> createVpnAttachment(CreateVpnAttachmentRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateVpnAttachment").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateVpnAttachment").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateVpnAttachmentResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1928,16 +2375,23 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If the VPN gateway supports the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
-      *     **ClientToken**, **Name**, **EffectImmediately**, **AutoConfigRoute**, **Tags** array, **TunnelOptionsSpecification** array, and **EnableTunnelsBgp**.
-      *     For more information about the regions and zones that support the dual-tunnel mode, see [IPsec-VPN connections support the dual-tunnel mode](~~2358946~~).
-      * *   If the VPN gateway supports only the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call `CreateVpnConnection`:
-      *     **ClientToken**, **CustomerGatewayId**, **Name**, **EffectImmediately**, **IkeConfig**, **IpsecConfig**, **HealthCheckConfig**, **AutoConfigRoute**, **EnableDpd**, **EnableNatTraversal**, **BgpConfig**, **RemoteCaCertificate**, and **Tags** array.
-      * *   **CreateVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
-      *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being created.
-      *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is created.
-      * *   You cannot call **CreateVpnConnection** to create multiple IPsec-VPN connections associated with a VPN gateway at the same time.
-      *
+     * <b>description</b> :
+     * <p>  If the VPN gateway supports the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call <code>CreateVpnConnection</code>:
+     *     <strong>ClientToken</strong>, <strong>Name</strong>, <strong>EffectImmediately</strong>, <strong>AutoConfigRoute</strong>, <strong>Tags</strong> array, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.
+     *     For more information about the regions and zones that support the dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">IPsec-VPN connections support the dual-tunnel mode</a>.</p>
+     * <ul>
+     * <li>If the VPN gateway supports only the dual-tunnel mode, you can specify the following parameters in addition to the required parameters when you call <code>CreateVpnConnection</code>:
+     * <strong>ClientToken</strong>, <strong>CustomerGatewayId</strong>, <strong>Name</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>AutoConfigRoute</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, <strong>RemoteCaCertificate</strong>, and <strong>Tags</strong> array.</li>
+     * <li><strong>CreateVpnConnection</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the IPsec-VPN connection is being created.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the IPsec-VPN connection is created.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot call <strong>CreateVpnConnection</strong> to create multiple IPsec-VPN connections associated with a VPN gateway at the same time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateVpnConnection  CreateVpnConnectionRequest
+     * @return CreateVpnConnectionResponse
      */
     @Override
     public CompletableFuture<CreateVpnConnectionResponse> createVpnConnection(CreateVpnConnectionRequest request) {
@@ -1954,12 +2408,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Before you create a VPN gateway, we recommend that you know more about the limits of VPN gateways. For more information, see the [Limits](~~65290~~) section in the "Create and manage a VPN gateway" topic.
-      * *   VPN gateways in some regions support only IPsec-VPN connections in dual-tunnel mode. If you call `CreateVpnGateway` in these regions, you must specify **VSwitchId** and **DisasterRecoveryVSwitchId** in addition to the required parameters. For more information about the regions and zones that support the IPsec-VPN connections in dual-tunnel mode, see [IPsec-VPN connections support the dual-tunnel mode](~~2358946~~).
-      * *   **CreateVpnGateway** is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the endpoint service is being created in the backend. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
-      *     *   If the VPN gateway is in the **provisioning** state, the VPN gateway is being created.
-      *     *   If the VPN gateway is in the **active** state, the VPN gateway is created.
-      *
+     * <b>description</b> :
+     * <p>  Before you create a VPN gateway, we recommend that you know more about the limits of VPN gateways. For more information, see the <a href="https://help.aliyun.com/document_detail/65290.html">Limits</a> section in the &quot;Create and manage a VPN gateway&quot; topic.</p>
+     * <ul>
+     * <li>VPN gateways in some regions support only IPsec-VPN connections in dual-tunnel mode. If you call <code>CreateVpnGateway</code> in these regions, you must specify <strong>VSwitchId</strong> and <strong>DisasterRecoveryVSwitchId</strong> in addition to the required parameters. For more information about the regions and zones that support the IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">IPsec-VPN connections support the dual-tunnel mode</a>.</li>
+     * <li><strong>CreateVpnGateway</strong> is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the endpoint service is being created in the backend. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of a VPN gateway.<ul>
+     * <li>If the VPN gateway is in the <strong>provisioning</strong> state, the VPN gateway is being created.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the VPN gateway is created.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateVpnGateway  CreateVpnGatewayRequest
+     * @return CreateVpnGatewayResponse
      */
     @Override
     public CompletableFuture<CreateVpnGatewayResponse> createVpnGateway(CreateVpnGatewayRequest request) {
@@ -1976,13 +2437,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Before you call this operation, make sure that you are familiar with the match rules of and limits on policy-based routes. For more information, see [Manage policy-based routes](~~110777~~).
-      * *   Before you create a policy-based route, make sure that an IPsec-VPN connection is created. For more information, see [CreateVpnConnection](~~120391~~).
-      * *   **CreateVpnPbrRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the VPN gateway.
-      *     *   If the VPN gateway is in the **updating** state, the policy-based route is being created.
-      *     *   If the VPN gateway is in the **active** state, the policy-based route is created.
-      * *   You cannot call the **CreateVpnPbrRouteEntry** operation to create multiple policy-based routes for a VPN gateway at a time.
-      *
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the match rules of and limits on policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Manage policy-based routes</a>.</p>
+     * <ul>
+     * <li>Before you create a policy-based route, make sure that an IPsec-VPN connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</li>
+     * <li><strong>CreateVpnPbrRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the policy-based route is being created.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the policy-based route is created.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot call the <strong>CreateVpnPbrRouteEntry</strong> operation to create multiple policy-based routes for a VPN gateway at a time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateVpnPbrRouteEntry  CreateVpnPbrRouteEntryRequest
+     * @return CreateVpnPbrRouteEntryResponse
      */
     @Override
     public CompletableFuture<CreateVpnPbrRouteEntryResponse> createVpnPbrRouteEntry(CreateVpnPbrRouteEntryRequest request) {
@@ -1999,11 +2467,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **CreateVpnRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
-      *     *   If a VPN gateway is in the **updating** state, the destination-based route entry is being created.
-      *     *   If a VPN gateway is in the **active** state, the destination-based route entry has been created.
-      * *   You cannot repeatedly call **CreateVpnRouteEntry** to create a destination-based route entry for a VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>CreateVpnRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.
+     *     *   If a VPN gateway is in the <strong>updating</strong> state, the destination-based route entry is being created.
+     *     *   If a VPN gateway is in the <strong>active</strong> state, the destination-based route entry has been created.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>CreateVpnRouteEntry</strong> to create a destination-based route entry for a VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateVpnRouteEntry  CreateVpnRouteEntryRequest
+     * @return CreateVpnRouteEntryResponse
      */
     @Override
     public CompletableFuture<CreateVpnRouteEntryResponse> createVpnRouteEntry(CreateVpnRouteEntryRequest request) {
@@ -2019,6 +2492,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeactivateRouterInterface  DeactivateRouterInterfaceRequest
+     * @return DeactivateRouterInterfaceResponse
+     */
     @Override
     public CompletableFuture<DeactivateRouterInterfaceResponse> deactivateRouterInterface(DeactivateRouterInterfaceRequest request) {
         try {
@@ -2034,11 +2511,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The **DeactiveFlowLog** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
-      *     *   If the flow log is in the **Deactivating** state, the flow log is being disabled.
-      *     *   If the flow log is in the **Inactive** state, the flow log is disabled.
-      * *   You cannot repeatedly call the **DeactiveFlowLog** operation to disable a flow log within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  The <strong>DeactiveFlowLog</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> operation to query the status of a flow log:
+     *     *   If the flow log is in the <strong>Deactivating</strong> state, the flow log is being disabled.
+     *     *   If the flow log is in the <strong>Inactive</strong> state, the flow log is disabled.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>DeactiveFlowLog</strong> operation to disable a flow log within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeactiveFlowLog  DeactiveFlowLogRequest
+     * @return DeactiveFlowLogResponse
      */
     @Override
     public CompletableFuture<DeactiveFlowLogResponse> deactiveFlowLog(DeactiveFlowLogRequest request) {
@@ -2054,6 +2536,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBgpGroup  DeleteBgpGroupRequest
+     * @return DeleteBgpGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteBgpGroupResponse> deleteBgpGroup(DeleteBgpGroupRequest request) {
         try {
@@ -2068,6 +2554,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBgpNetwork  DeleteBgpNetworkRequest
+     * @return DeleteBgpNetworkResponse
+     */
     @Override
     public CompletableFuture<DeleteBgpNetworkResponse> deleteBgpNetwork(DeleteBgpNetworkRequest request) {
         try {
@@ -2082,6 +2572,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBgpPeer  DeleteBgpPeerRequest
+     * @return DeleteBgpPeerResponse
+     */
     @Override
     public CompletableFuture<DeleteBgpPeerResponse> deleteBgpPeer(DeleteBgpPeerRequest request) {
         try {
@@ -2097,8 +2591,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an Internet Shared Bandwidth instance within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>DeleteCommonBandwidthPackage</strong> operation to delete an Internet Shared Bandwidth instance within the specified period of time.</p>
+     * 
+     * @param request the request parameters of DeleteCommonBandwidthPackage  DeleteCommonBandwidthPackageRequest
+     * @return DeleteCommonBandwidthPackageResponse
      */
     @Override
     public CompletableFuture<DeleteCommonBandwidthPackageResponse> deleteCommonBandwidthPackage(DeleteCommonBandwidthPackageRequest request) {
@@ -2115,8 +2612,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you delete a customer gateway, make sure that no IPsec-VPN connection is associated with the customer gateway. For more information about how to delete an IPsec-VPN connection, see [DeleteVpnAttachment](~~2526938~~) or [DeleteVpnConnection](~~2526948~~).
-      *
+     * <b>description</b> :
+     * <p>Before you delete a customer gateway, make sure that no IPsec-VPN connection is associated with the customer gateway. For more information about how to delete an IPsec-VPN connection, see <a href="https://help.aliyun.com/document_detail/2526938.html">DeleteVpnAttachment</a> or <a href="https://help.aliyun.com/document_detail/2526948.html">DeleteVpnConnection</a>.</p>
+     * 
+     * @param request the request parameters of DeleteCustomerGateway  DeleteCustomerGatewayRequest
+     * @return DeleteCustomerGatewayResponse
      */
     @Override
     public CompletableFuture<DeleteCustomerGatewayResponse> deleteCustomerGateway(DeleteCustomerGatewayRequest request) {
@@ -2133,12 +2633,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * *   **DeleteDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of the task.
-      *     *   If the DHCP options set is in the **Deleting** state, the DHCP options set is being deleted.
-      *     *   If you cannot query the DHCP options set, the DHCP options set is deleted.
-      * *   You cannot repeatedly call the **DeleteDhcpOptionsSet** operation to delete a DHCP options set within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <ul>
+     * <li><strong>DeleteDhcpOptionsSet</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/189208.html">GetDhcpOptionsSet</a> operation to query the status of the task.<ul>
+     * <li>If the DHCP options set is in the <strong>Deleting</strong> state, the DHCP options set is being deleted.</li>
+     * <li>If you cannot query the DHCP options set, the DHCP options set is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeleteDhcpOptionsSet</strong> operation to delete a DHCP options set within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteDhcpOptionsSet  DeleteDhcpOptionsSetRequest
+     * @return DeleteDhcpOptionsSetResponse
      */
     @Override
     public CompletableFuture<DeleteDhcpOptionsSetResponse> deleteDhcpOptionsSet(DeleteDhcpOptionsSetRequest request) {
@@ -2154,6 +2661,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteExpressConnectTrafficQos  DeleteExpressConnectTrafficQosRequest
+     * @return DeleteExpressConnectTrafficQosResponse
+     */
     @Override
     public CompletableFuture<DeleteExpressConnectTrafficQosResponse> deleteExpressConnectTrafficQos(DeleteExpressConnectTrafficQosRequest request) {
         try {
@@ -2168,6 +2679,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteExpressConnectTrafficQosQueue  DeleteExpressConnectTrafficQosQueueRequest
+     * @return DeleteExpressConnectTrafficQosQueueResponse
+     */
     @Override
     public CompletableFuture<DeleteExpressConnectTrafficQosQueueResponse> deleteExpressConnectTrafficQosQueue(DeleteExpressConnectTrafficQosQueueRequest request) {
         try {
@@ -2182,6 +2697,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteExpressConnectTrafficQosRule  DeleteExpressConnectTrafficQosRuleRequest
+     * @return DeleteExpressConnectTrafficQosRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteExpressConnectTrafficQosRuleResponse> deleteExpressConnectTrafficQosRule(DeleteExpressConnectTrafficQosRuleRequest request) {
         try {
@@ -2197,8 +2716,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can delete only failover tests that are in the **Pending** or **Complete** state.
-      *
+     * <b>description</b> :
+     * <p>You can delete only failover tests that are in the <strong>Pending</strong> or <strong>Complete</strong> state.</p>
+     * 
+     * @param request the request parameters of DeleteFailoverTestJob  DeleteFailoverTestJobRequest
+     * @return DeleteFailoverTestJobResponse
      */
     @Override
     public CompletableFuture<DeleteFailoverTestJobResponse> deleteFailoverTestJob(DeleteFailoverTestJobRequest request) {
@@ -2215,11 +2737,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The **DeleteFlowLog** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
-      *     *   If the flow log is in the **Deleting** state, the flow log is being deleted.
-      *     *   If you cannot query the flow log, the flow log is deleted.
-      * *   You cannot repeatedly call the **DeleteFlowLog** operation to delete a flow log within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  The <strong>DeleteFlowLog</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> operation to query the status of a flow log:
+     *     *   If the flow log is in the <strong>Deleting</strong> state, the flow log is being deleted.
+     *     *   If you cannot query the flow log, the flow log is deleted.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>DeleteFlowLog</strong> operation to delete a flow log within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteFlowLog  DeleteFlowLogRequest
+     * @return DeleteFlowLogResponse
      */
     @Override
     public CompletableFuture<DeleteFlowLogResponse> deleteFlowLog(DeleteFlowLogRequest request) {
@@ -2236,13 +2763,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * *   **DeleteForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
-      *     *   If the DNAT entry is in the **Deleting** state, the system is deleting the DNAT entry. In this case, you can only query the status of the DNAT entry, but cannot perform other operations.
-      *     *   If the DNAT entry cannot be found, it is deleted.
-      * >  If a DNAT table has DNAT entries in the **Pending** state, you cannot delete the DNAT entries.
-      * *   You cannot repeatedly call the **DeleteForwardEntry** operation to delete a DNAT entry within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <ul>
+     * <li><strong>DeleteForwardEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36053.html">DescribeForwardTableEntries</a> operation to query the status of the task.<ul>
+     * <li>If the DNAT entry is in the <strong>Deleting</strong> state, the system is deleting the DNAT entry. In this case, you can only query the status of the DNAT entry, but cannot perform other operations.</li>
+     * <li>If the DNAT entry cannot be found, it is deleted.<blockquote>
+     * <p> If a DNAT table has DNAT entries in the <strong>Pending</strong> state, you cannot delete the DNAT entries.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeleteForwardEntry</strong> operation to delete a DNAT entry within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteForwardEntry  DeleteForwardEntryRequest
+     * @return DeleteForwardEntryResponse
      */
     @Override
     public CompletableFuture<DeleteForwardEntryResponse> deleteForwardEntry(DeleteForwardEntryRequest request) {
@@ -2259,12 +2795,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * **DeleteFullNatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
-      * *   If the FULLNAT entry is in the **Deleting** state, the system is deleting the FULLNAT entry. In this case, you can query the status of the FULLNAT entry, but cannot perform other operations.
-      * *   If the FULLNAT entry cannot be found, the FULLNAT entry is deleted.
-      * You cannot repeatedly call the **DeleteFullNatEntry** operation to delete a FULLNAT entry within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <p><strong>DeleteFullNatEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/348779.html">ListFullNatEntries</a> operation to query the status of a FULLNAT entry.</p>
+     * <ul>
+     * <li>If the FULLNAT entry is in the <strong>Deleting</strong> state, the system is deleting the FULLNAT entry. In this case, you can query the status of the FULLNAT entry, but cannot perform other operations.</li>
+     * <li>If the FULLNAT entry cannot be found, the FULLNAT entry is deleted.
+     * You cannot repeatedly call the <strong>DeleteFullNatEntry</strong> operation to delete a FULLNAT entry within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteFullNatEntry  DeleteFullNatEntryRequest
+     * @return DeleteFullNatEntryResponse
      */
     @Override
     public CompletableFuture<DeleteFullNatEntryResponse> deleteFullNatEntry(DeleteFullNatEntryRequest request) {
@@ -2281,11 +2822,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   You can delete only pay-as-you-go instances.
-      * *   Before you can delete a dedicated instance, disassociate the backend server from the instance first.
-      * *   Before you can delete a shared instance, disassociate the elastic IP address (EIP) from the instance first.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can delete only pay-as-you-go instances.</li>
+     * <li>Before you can delete a dedicated instance, disassociate the backend server from the instance first.</li>
+     * <li>Before you can delete a shared instance, disassociate the elastic IP address (EIP) from the instance first.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteGlobalAccelerationInstance  DeleteGlobalAccelerationInstanceRequest
+     * @return DeleteGlobalAccelerationInstanceResponse
      */
     @Override
     public CompletableFuture<DeleteGlobalAccelerationInstanceResponse> deleteGlobalAccelerationInstance(DeleteGlobalAccelerationInstanceRequest request) {
@@ -2302,15 +2848,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following rules:
-      * *   You can delete only HAVIPs that are in the Available state.
-      * *   Make sure that no route points to the HAVIP that you want to delete.
-      * *   Make sure that no elastic IP address (EIP) is associated with the HAVIP that you want to delete.
-      * *   The **DeleteHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
-      *     *   If the HAVIP is in the **Deleting** state, the HAVIP is being deleted.
-      *     *   If you cannot query the HAVIP, the HAVIP is deleted.
-      * *   You cannot repeatedly call the **DeleteHaVip** operation to delete an HAVIP within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following rules:</p>
+     * <ul>
+     * <li>You can delete only HAVIPs that are in the Available state.</li>
+     * <li>Make sure that no route points to the HAVIP that you want to delete.</li>
+     * <li>Make sure that no elastic IP address (EIP) is associated with the HAVIP that you want to delete.</li>
+     * <li>The <strong>DeleteHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
+     * <li>If the HAVIP is in the <strong>Deleting</strong> state, the HAVIP is being deleted.</li>
+     * <li>If you cannot query the HAVIP, the HAVIP is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeleteHaVip</strong> operation to delete an HAVIP within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteHaVip  DeleteHaVipRequest
+     * @return DeleteHaVipResponse
      */
     @Override
     public CompletableFuture<DeleteHaVipResponse> deleteHaVip(DeleteHaVipRequest request) {
@@ -2326,6 +2879,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIPv6Translator  DeleteIPv6TranslatorRequest
+     * @return DeleteIPv6TranslatorResponse
+     */
     @Override
     public CompletableFuture<DeleteIPv6TranslatorResponse> deleteIPv6Translator(DeleteIPv6TranslatorRequest request) {
         try {
@@ -2341,9 +2898,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DeleteIPv6TranslatorAclList is deprecated  * @param request  the request parameters of DeleteIPv6TranslatorAclList  DeleteIPv6TranslatorAclListRequest
+     * @return DeleteIPv6TranslatorAclListResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteIPv6TranslatorAclListResponse> deleteIPv6TranslatorAclList(DeleteIPv6TranslatorAclListRequest request) {
         try {
@@ -2359,9 +2917,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DeleteIPv6TranslatorEntry is deprecated  * @param request  the request parameters of DeleteIPv6TranslatorEntry  DeleteIPv6TranslatorEntryRequest
+     * @return DeleteIPv6TranslatorEntryResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteIPv6TranslatorEntryResponse> deleteIPv6TranslatorEntry(DeleteIPv6TranslatorEntryRequest request) {
         try {
@@ -2377,11 +2936,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **DeleteIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~2794055~~) to query the status of the task.
-      *     *   If a VPN gateway is in the **updating** state, the IPsec server is being deleted.
-      *     *   If a VPN gateway is in the **active** state, the IPsec server is deleted.
-      * *   You cannot repeatedly call **DeleteIpsecServer** to delete an IPsec server from a VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>DeleteIpsecServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the task.
+     *     *   If a VPN gateway is in the <strong>updating</strong> state, the IPsec server is being deleted.
+     *     *   If a VPN gateway is in the <strong>active</strong> state, the IPsec server is deleted.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>DeleteIpsecServer</strong> to delete an IPsec server from a VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteIpsecServer  DeleteIpsecServerRequest
+     * @return DeleteIpsecServerResponse
      */
     @Override
     public CompletableFuture<DeleteIpsecServerResponse> deleteIpsecServer(DeleteIpsecServerRequest request) {
@@ -2398,13 +2962,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Description
-      * *   Before you delete an IPv4 gateway, make sure that no route tables are associated with the IPv4 gateway.
-      * *   **DeleteIpv4Gateway** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the task.
-      *     *   If the IPv4 gateway is in the **Deleting** state, the IPv4 gateway is being deleted.
-      *     *   If the IPv4 gateway cannot be queried, the IPv4 gateway is deleted.
-      * *   After you call the **DeleteIpv4Gateway** operation to delete an IPv4 gateway, you cannot call the operation again to delete the IPv4 gateway until the deletion task is complete.
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Description</h3>
+     * <ul>
+     * <li>Before you delete an IPv4 gateway, make sure that no route tables are associated with the IPv4 gateway.</li>
+     * <li><strong>DeleteIpv4Gateway</strong> is an asynchronous operation. After a request is sent, the system returns a <strong>request ID</strong> and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/407670.html">GetIpv4GatewayAttribute</a> operation to query the status of the task.<ul>
+     * <li>If the IPv4 gateway is in the <strong>Deleting</strong> state, the IPv4 gateway is being deleted.</li>
+     * <li>If the IPv4 gateway cannot be queried, the IPv4 gateway is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>After you call the <strong>DeleteIpv4Gateway</strong> operation to delete an IPv4 gateway, you cannot call the operation again to delete the IPv4 gateway until the deletion task is complete.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteIpv4Gateway  DeleteIpv4GatewayRequest
+     * @return DeleteIpv4GatewayResponse
      */
     @Override
     public CompletableFuture<DeleteIpv4GatewayResponse> deleteIpv4Gateway(DeleteIpv4GatewayRequest request) {
@@ -2421,11 +2992,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **DeleteIpv6EgressOnlyRule** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6EgressOnlyRules](~~102208~~) operation to query the status of the task.
-      *     *   If the egress-only rule is in the **Deleting** state, the egress-only rule is being deleted.
-      *     *   If you cannot query the egress-only rule, the egress-only rule is deleted.
-      * *   You cannot call the **DeleteIpv6EgressOnlyRule** within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>DeleteIpv6EgressOnlyRule</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/102208.html">DescribeIpv6EgressOnlyRules</a> operation to query the status of the task.
+     *     *   If the egress-only rule is in the <strong>Deleting</strong> state, the egress-only rule is being deleted.
+     *     *   If you cannot query the egress-only rule, the egress-only rule is deleted.</p>
+     * <ul>
+     * <li>You cannot call the <strong>DeleteIpv6EgressOnlyRule</strong> within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteIpv6EgressOnlyRule  DeleteIpv6EgressOnlyRuleRequest
+     * @return DeleteIpv6EgressOnlyRuleResponse
      */
     @Override
     public CompletableFuture<DeleteIpv6EgressOnlyRuleResponse> deleteIpv6EgressOnlyRule(DeleteIpv6EgressOnlyRuleRequest request) {
@@ -2442,12 +3018,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you delete an IPv6 gateway, you must delete the egress-only rules of the IPv6 gateway. For more information, see [DeleteIpv6EgressOnlyRule](~~102201~~).
-      * *   **DeleteIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the status of the task:
-      *     *   If the IPv6 gateway is in the **Deleting** state, the IPv6 gateway is being deleted.
-      *     *   If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.
-      * *   You cannot repeatedly call the **DeleteIpv6Gateway** operation to delete an IPv6 gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>Before you delete an IPv6 gateway, you must delete the egress-only rules of the IPv6 gateway. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</p>
+     * <ul>
+     * <li><strong>DeleteIpv6Gateway</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> operation to query the status of the task:<ul>
+     * <li>If the IPv6 gateway is in the <strong>Deleting</strong> state, the IPv6 gateway is being deleted.</li>
+     * <li>If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeleteIpv6Gateway</strong> operation to delete an IPv6 gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteIpv6Gateway  DeleteIpv6GatewayRequest
+     * @return DeleteIpv6GatewayResponse
      */
     @Override
     public CompletableFuture<DeleteIpv6GatewayResponse> deleteIpv6Gateway(DeleteIpv6GatewayRequest request) {
@@ -2464,8 +3047,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot call the **DeleteIpv6InternetBandwidth** operation within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot call the <strong>DeleteIpv6InternetBandwidth</strong> operation within the specified period of time.</p>
+     * 
+     * @param request the request parameters of DeleteIpv6InternetBandwidth  DeleteIpv6InternetBandwidthRequest
+     * @return DeleteIpv6InternetBandwidthResponse
      */
     @Override
     public CompletableFuture<DeleteIpv6InternetBandwidthResponse> deleteIpv6InternetBandwidth(DeleteIpv6InternetBandwidthRequest request) {
@@ -2482,13 +3068,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * *   **DeleteNatGateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of the task.
-      *     *   If a NAT gateway is in the **Deleting** state, the NAT gateway is being deleted. In this case, you can query the NAT gateway but you cannot perform other operations.
-      *     *   If the NAT gateway cannot be found, the NAT gateway is deleted.
-      *         After you delete a NAT gateway, you cannot restore the NAT gateway. Proceed with caution.
-      * *   You cannot repeatedly call the **DeleteNatGateway** operation to delete a NAT gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <ul>
+     * <li><strong>DeleteNatGateway</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the task.<ul>
+     * <li>If a NAT gateway is in the <strong>Deleting</strong> state, the NAT gateway is being deleted. In this case, you can query the NAT gateway but you cannot perform other operations.</li>
+     * <li>If the NAT gateway cannot be found, the NAT gateway is deleted.
+     * After you delete a NAT gateway, you cannot restore the NAT gateway. Proceed with caution.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeleteNatGateway</strong> operation to delete a NAT gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteNatGateway  DeleteNatGatewayRequest
+     * @return DeleteNatGatewayResponse
      */
     @Override
     public CompletableFuture<DeleteNatGatewayResponse> deleteNatGateway(DeleteNatGatewayRequest request) {
@@ -2505,12 +3098,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * *   **DeleteNatIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of the task.
-      *     *   If the NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
-      *     *   If the NAT IP address cannot be found, it is deleted.
-      * *   You cannot repeatedly call the **DeleteNatIp** operation to delete a NAT IP address within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <ul>
+     * <li><strong>DeleteNatIp</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/281979.html">ListNatIps</a> operation to query the status of the task.<ul>
+     * <li>If the NAT IP address is in the <strong>Deleting</strong> state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.</li>
+     * <li>If the NAT IP address cannot be found, it is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeleteNatIp</strong> operation to delete a NAT IP address within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteNatIp  DeleteNatIpRequest
+     * @return DeleteNatIpResponse
      */
     @Override
     public CompletableFuture<DeleteNatIpResponse> deleteNatIp(DeleteNatIpRequest request) {
@@ -2527,9 +3127,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * You cannot repeatedly call the **DeleteNatIpCidr** operation to delete a NAT CIDR block within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <p>You cannot repeatedly call the <strong>DeleteNatIpCidr</strong> operation to delete a NAT CIDR block within the specified period of time.</p>
+     * 
+     * @param request the request parameters of DeleteNatIpCidr  DeleteNatIpCidrRequest
+     * @return DeleteNatIpCidrResponse
      */
     @Override
     public CompletableFuture<DeleteNatIpCidrResponse> deleteNatIpCidr(DeleteNatIpCidrRequest request) {
@@ -2546,9 +3149,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * You cannot repeatedly call the **DeleteNetworkAcl** operation within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <p>You cannot repeatedly call the <strong>DeleteNetworkAcl</strong> operation within the specified period of time.</p>
+     * 
+     * @param request the request parameters of DeleteNetworkAcl  DeleteNetworkAclRequest
+     * @return DeleteNetworkAclResponse
      */
     @Override
     public CompletableFuture<DeleteNetworkAclResponse> deleteNetworkAcl(DeleteNetworkAclRequest request) {
@@ -2565,8 +3171,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can only delete a connection over an Express Connect circuit that is in the **Rejected**, **Canceled**, **AllocationFailed**, or **Terminated** state.
-      *
+     * <b>description</b> :
+     * <p>You can only delete a connection over an Express Connect circuit that is in the <strong>Rejected</strong>, <strong>Canceled</strong>, <strong>AllocationFailed</strong>, or <strong>Terminated</strong> state.</p>
+     * 
+     * @param request the request parameters of DeletePhysicalConnection  DeletePhysicalConnectionRequest
+     * @return DeletePhysicalConnectionResponse
      */
     @Override
     public CompletableFuture<DeletePhysicalConnectionResponse> deletePhysicalConnection(DeletePhysicalConnectionRequest request) {
@@ -2583,13 +3192,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following items:
-      * *   Before you delete an IP address pool, make sure that no IP address in the pool is being used.
-      * *   **DeletePublicIpAddressPool** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPools](~~429433~~) operation to query the status of the task.
-      *     *   If the IP address pool is in the **Deleting** state, the IP address pool is being deleted. In this state. you can only query the IP address pool and cannot perform other operations.
-      *     *   If you cannot query the IP address pool, the IP address pool is deleted.
-      * *   You cannot repeatedly call the **DeletePublicIpAddressPool** operation to delete an IP address pool within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Before you delete an IP address pool, make sure that no IP address in the pool is being used.</li>
+     * <li><strong>DeletePublicIpAddressPool</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/429433.html">ListPublicIpAddressPools</a> operation to query the status of the task.<ul>
+     * <li>If the IP address pool is in the <strong>Deleting</strong> state, the IP address pool is being deleted. In this state. you can only query the IP address pool and cannot perform other operations.</li>
+     * <li>If you cannot query the IP address pool, the IP address pool is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeletePublicIpAddressPool</strong> operation to delete an IP address pool within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeletePublicIpAddressPool  DeletePublicIpAddressPoolRequest
+     * @return DeletePublicIpAddressPoolResponse
      */
     @Override
     public CompletableFuture<DeletePublicIpAddressPoolResponse> deletePublicIpAddressPool(DeletePublicIpAddressPoolRequest request) {
@@ -2606,13 +3222,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following items:
-      * *   Before you delete a CIDR block, make sure that it is not being used.
-      * *   **DeletePublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
-      *     *   If the CIDR block is in the **Deleting** state, the CIDR block is being deleted. In this state, you can only query the CIDR block and cannot perform other operations.
-      *     *   If you cannot query the CIDR block, the CIDR block is deleted.
-      * *   You cannot repeatedly call the **DeletePublicIpAddressPoolCidrBlock** operation to delete a CIDR block within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Before you delete a CIDR block, make sure that it is not being used.</li>
+     * <li><strong>DeletePublicIpAddressPoolCidrBlock</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> operation to query the status of the task.<ul>
+     * <li>If the CIDR block is in the <strong>Deleting</strong> state, the CIDR block is being deleted. In this state, you can only query the CIDR block and cannot perform other operations.</li>
+     * <li>If you cannot query the CIDR block, the CIDR block is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeletePublicIpAddressPoolCidrBlock</strong> operation to delete a CIDR block within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeletePublicIpAddressPoolCidrBlock  DeletePublicIpAddressPoolCidrBlockRequest
+     * @return DeletePublicIpAddressPoolCidrBlockResponse
      */
     @Override
     public CompletableFuture<DeletePublicIpAddressPoolCidrBlockResponse> deletePublicIpAddressPoolCidrBlock(DeletePublicIpAddressPoolCidrBlockRequest request) {
@@ -2629,14 +3252,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   You can delete only routes that are in the **Available** state.
-      * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or another route is being created or deleted.
-      * *   **DeleteRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
-      *     *   If the route is in the **Deleting** state, the route is being deleted.
-      *     *   If you cannot query the route, the route is deleted.
-      * *   You cannot repeatedly call **DeleteRouteEntries** within a specific period of time.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can delete only routes that are in the <strong>Available</strong> state.</li>
+     * <li>You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or another route is being created or deleted.</li>
+     * <li><strong>DeleteRouteEntries</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the status of the task.<ul>
+     * <li>If the route is in the <strong>Deleting</strong> state, the route is being deleted.</li>
+     * <li>If you cannot query the route, the route is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call <strong>DeleteRouteEntries</strong> within a specific period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteRouteEntries  DeleteRouteEntriesRequest
+     * @return DeleteRouteEntriesResponse
      */
     @Override
     public CompletableFuture<DeleteRouteEntriesResponse> deleteRouteEntries(DeleteRouteEntriesRequest request) {
@@ -2653,15 +3283,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   You can delete only routes that are in the **Available** state.
-      * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
-      * *   Before you call this operation to delete a route of a VBR route table, call the [DescribeRouteEntryList](~~138148~~) operation to query the **NextHopId** of the route first.
-      * *   **DeleteRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
-      *     *   If the route is in the **Deleting** state, the route is being deleted.
-      *     *   If you cannot query the route entry, the route entry is deleted.
-      * *   You cannot repeatedly call the **DeleteRouteEntry** operation to delete a route from the route table of a vRouter or a VBR within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can delete only routes that are in the <strong>Available</strong> state.</li>
+     * <li>You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.</li>
+     * <li>Before you call this operation to delete a route of a VBR route table, call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the <strong>NextHopId</strong> of the route first.</li>
+     * <li><strong>DeleteRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the status of the task.<ul>
+     * <li>If the route is in the <strong>Deleting</strong> state, the route is being deleted.</li>
+     * <li>If you cannot query the route entry, the route entry is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeleteRouteEntry</strong> operation to delete a route from the route table of a vRouter or a VBR within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteRouteEntry  DeleteRouteEntryRequest
+     * @return DeleteRouteEntryResponse
      */
     @Override
     public CompletableFuture<DeleteRouteEntryResponse> deleteRouteEntry(DeleteRouteEntryRequest request) {
@@ -2678,12 +3315,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * *   **DeleteRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of the task.
-      *     *   If the custom route table is in the **Deleting** state, the custom route table is being deleted.
-      *     *   If you cannot query the custom route table, the custom route table is deleted.
-      * *   You cannot repeatedly call the **DeleteRouteTable** operation to delete a custom route table within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <ul>
+     * <li><strong>DeleteRouteTable</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/87602.html">DescribeRouteTableList</a> operation to query the status of the task.<ul>
+     * <li>If the custom route table is in the <strong>Deleting</strong> state, the custom route table is being deleted.</li>
+     * <li>If you cannot query the custom route table, the custom route table is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeleteRouteTable</strong> operation to delete a custom route table within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteRouteTable  DeleteRouteTableRequest
+     * @return DeleteRouteTableResponse
      */
     @Override
     public CompletableFuture<DeleteRouteTableResponse> deleteRouteTable(DeleteRouteTableRequest request) {
@@ -2700,10 +3344,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * *   You can delete only a router interface that is in the **Idle** or **Inactive** state.
-      * *   Before you delete a router interface, you must delete all custom route entries destined for the router interface.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>You can delete only a router interface that is in the <strong>Idle</strong> or <strong>Inactive</strong> state.</li>
+     * <li>Before you delete a router interface, you must delete all custom route entries destined for the router interface.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteRouterInterface  DeleteRouterInterfaceRequest
+     * @return DeleteRouterInterfaceResponse
      */
     @Override
     public CompletableFuture<DeleteRouterInterfaceResponse> deleteRouterInterface(DeleteRouterInterfaceRequest request) {
@@ -2720,11 +3369,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * DeleteSnatEntry is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not deleted. The system deletes the SNAT entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of SNAT entries.
-      * *   If the SNAT entries are in the **Deleting** state, the system is deleting the SNAT entries. In this case, you can only query the status of the SNAT entries, and cannot perform other operations.
-      * *   If no SNAT entry is returned in the response, the SNAT entry is deleted.
-      * If some SNAT entries are in the **Pending** state, you cannot delete these SNAT entries.
-      *
+     * <b>description</b> :
+     * <p>DeleteSnatEntry is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not deleted. The system deletes the SNAT entry in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of SNAT entries.</p>
+     * <ul>
+     * <li>If the SNAT entries are in the <strong>Deleting</strong> state, the system is deleting the SNAT entries. In this case, you can only query the status of the SNAT entries, and cannot perform other operations.</li>
+     * <li>If no SNAT entry is returned in the response, the SNAT entry is deleted.
+     * If some SNAT entries are in the <strong>Pending</strong> state, you cannot delete these SNAT entries.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteSnatEntry  DeleteSnatEntryRequest
+     * @return DeleteSnatEntryResponse
      */
     @Override
     public CompletableFuture<DeleteSnatEntryResponse> deleteSnatEntry(DeleteSnatEntryRequest request) {
@@ -2741,11 +3395,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **DeleteSslVpnClientCert** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
-      *     *   If the VPN gateway is in the **updating** state, the SSL client certificate is being deleted.
-      *     *   If the VPN gateway is in the **active** state, the SSL client certificate is deleted.
-      * *   You cannot repeatedly call **DeleteSslVpnClientCert** to delete an SSL client certificate from the same VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>DeleteSslVpnClientCert</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.
+     *     *   If the VPN gateway is in the <strong>updating</strong> state, the SSL client certificate is being deleted.
+     *     *   If the VPN gateway is in the <strong>active</strong> state, the SSL client certificate is deleted.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>DeleteSslVpnClientCert</strong> to delete an SSL client certificate from the same VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteSslVpnClientCert  DeleteSslVpnClientCertRequest
+     * @return DeleteSslVpnClientCertResponse
      */
     @Override
     public CompletableFuture<DeleteSslVpnClientCertResponse> deleteSslVpnClientCert(DeleteSslVpnClientCertRequest request) {
@@ -2762,11 +3421,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **DeleteSslVpnServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~2794055~~) operation to query the status of the task.
-      *     *   If the VPN gateway is in the **updating** state, the SSL server is being deleted.
-      *     *   If the VPN gateway is in the **active** state, the SSL server is deleted.
-      * *   You cannot repeatedly call the **DeleteSslVpnServer** operation to delete an SSL server from the same VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>DeleteSslVpnServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.
+     *     *   If the VPN gateway is in the <strong>updating</strong> state, the SSL server is being deleted.
+     *     *   If the VPN gateway is in the <strong>active</strong> state, the SSL server is deleted.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>DeleteSslVpnServer</strong> operation to delete an SSL server from the same VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteSslVpnServer  DeleteSslVpnServerRequest
+     * @return DeleteSslVpnServerResponse
      */
     @Override
     public CompletableFuture<DeleteSslVpnServerResponse> deleteSslVpnServer(DeleteSslVpnServerRequest request) {
@@ -2783,11 +3447,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The **DeleteTrafficMirrorFilter** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of a filter:
-      *     *   If the filter is in the **Deleting** state, the filter is being deleted.
-      *     *   If you cannot query the filter, the filter is deleted.
-      * *   You cannot repeatedly call the **DeleteTrafficMirrorFilter** operation to delete a filter within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  The <strong>DeleteTrafficMirrorFilter</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> operation to query the status of a filter:
+     *     *   If the filter is in the <strong>Deleting</strong> state, the filter is being deleted.
+     *     *   If you cannot query the filter, the filter is deleted.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>DeleteTrafficMirrorFilter</strong> operation to delete a filter within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteTrafficMirrorFilter  DeleteTrafficMirrorFilterRequest
+     * @return DeleteTrafficMirrorFilterResponse
      */
     @Override
     public CompletableFuture<DeleteTrafficMirrorFilterResponse> deleteTrafficMirrorFilter(DeleteTrafficMirrorFilterRequest request) {
@@ -2804,11 +3473,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **DeleteTrafficMirrorFilterRules** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListTrafficMirrorFilters](~~261353~~) to query the status of the task.
-      *     *   If the inbound or outbound rule is in the **Deleting** state, the rule is being deleted.
-      *     *   If you cannot query the rule, the rule is deleted.
-      * *   You cannot repeatedly call **DeleteTrafficMirrorFilterRules** within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>DeleteTrafficMirrorFilterRules</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> to query the status of the task.
+     *     *   If the inbound or outbound rule is in the <strong>Deleting</strong> state, the rule is being deleted.
+     *     *   If you cannot query the rule, the rule is deleted.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>DeleteTrafficMirrorFilterRules</strong> within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteTrafficMirrorFilterRules  DeleteTrafficMirrorFilterRulesRequest
+     * @return DeleteTrafficMirrorFilterRulesResponse
      */
     @Override
     public CompletableFuture<DeleteTrafficMirrorFilterRulesResponse> deleteTrafficMirrorFilterRules(DeleteTrafficMirrorFilterRulesRequest request) {
@@ -2825,11 +3499,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **DeleteTrafficMirrorSession** is an asynchronous operation. After you send the request, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session.
-      *     *   If the traffic mirror session is in the **Deleting** state, the traffic mirror session is being deleted.
-      *     *   If you cannot query the traffic mirror session, the traffic mirror session is deleted.
-      * *   You cannot repeatedly call the **DeleteTrafficMirrorSession** operation to delete a traffic mirror session within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>DeleteTrafficMirrorSession</strong> is an asynchronous operation. After you send the request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the status of a traffic mirror session.
+     *     *   If the traffic mirror session is in the <strong>Deleting</strong> state, the traffic mirror session is being deleted.
+     *     *   If you cannot query the traffic mirror session, the traffic mirror session is deleted.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>DeleteTrafficMirrorSession</strong> operation to delete a traffic mirror session within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteTrafficMirrorSession  DeleteTrafficMirrorSessionRequest
+     * @return DeleteTrafficMirrorSessionResponse
      */
     @Override
     public CompletableFuture<DeleteTrafficMirrorSessionResponse> deleteTrafficMirrorSession(DeleteTrafficMirrorSessionRequest request) {
@@ -2846,15 +3525,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * *   Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).
-      * *   You can delete only vSwitches that are in the **Available** state.
-      * *   You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.
-      * *   **DeleteVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
-      *     *   If the vSwitch is in the **Pending** state, the vSwitch is being deleted.
-      *     *   If you cannot query the vSwitch, the vSwitch is deleted.
-      * *   You cannot repeatedly call the **DeleteVSwitch** operation to delete a vSwitch within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).</li>
+     * <li>You can delete only vSwitches that are in the <strong>Available</strong> state.</li>
+     * <li>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</li>
+     * <li><strong>DeleteVSwitch</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<ul>
+     * <li>If the vSwitch is in the <strong>Pending</strong> state, the vSwitch is being deleted.</li>
+     * <li>If you cannot query the vSwitch, the vSwitch is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeleteVSwitch</strong> operation to delete a vSwitch within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteVSwitch  DeleteVSwitchRequest
+     * @return DeleteVSwitchResponse
      */
     @Override
     public CompletableFuture<DeleteVSwitchResponse> deleteVSwitch(DeleteVSwitchRequest request) {
@@ -2871,12 +3557,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * *   Before you call this operation, make sure that the IP address allocated to an elastic network interface (ENI) from the reserved CIDR block is deleted. If the IP address of the ENI is not deleted, call [UnassignPrivateIpAddresses](~~85919~~) or [UnassignIpv6Addresses](~~98611~~) to delete the IPv4 or IPv6 address.
-      * *   **DeleteVSwitchCidrReservation** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListVSwitchCidrReservations](~~610155~~) to query the status of the task:
-      *     *   If the reserved CIDR block is in the **Releasing** state, it is being released.
-      *     *   If the reserved CIDR block is in the **Released** state, it is released.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <ul>
+     * <li>Before you call this operation, make sure that the IP address allocated to an elastic network interface (ENI) from the reserved CIDR block is deleted. If the IP address of the ENI is not deleted, call <a href="https://help.aliyun.com/document_detail/85919.html">UnassignPrivateIpAddresses</a> or <a href="https://help.aliyun.com/document_detail/98611.html">UnassignIpv6Addresses</a> to delete the IPv4 or IPv6 address.</li>
+     * <li><strong>DeleteVSwitchCidrReservation</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the status of the task:<ul>
+     * <li>If the reserved CIDR block is in the <strong>Releasing</strong> state, it is being released.</li>
+     * <li>If the reserved CIDR block is in the <strong>Released</strong> state, it is released.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteVSwitchCidrReservation  DeleteVSwitchCidrReservationRequest
+     * @return DeleteVSwitchCidrReservationResponse
      */
     @Override
     public CompletableFuture<DeleteVSwitchCidrReservationResponse> deleteVSwitchCidrReservation(DeleteVSwitchCidrReservationRequest request) {
@@ -2892,6 +3585,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVbrHa  DeleteVbrHaRequest
+     * @return DeleteVbrHaResponse
+     */
     @Override
     public CompletableFuture<DeleteVbrHaResponse> deleteVbrHa(DeleteVbrHaRequest request) {
         try {
@@ -2907,11 +3604,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **DeleteVcoRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of the task.
-      *     *   If the IPsec-VPN connection is in the **updating** state, the route is being deleted.
-      *     *   If the IPsec-VPN connection is in the **attached** state, the route is deleted.
-      * *   You cannot repeatedly call the **DeleteVcoRouteEntry** operation within a specific time period.
-      *
+     * <b>description</b> :
+     * <p>  <strong>DeleteVcoRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> operation to query the status of the task.
+     *     *   If the IPsec-VPN connection is in the <strong>updating</strong> state, the route is being deleted.
+     *     *   If the IPsec-VPN connection is in the <strong>attached</strong> state, the route is deleted.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>DeleteVcoRouteEntry</strong> operation within a specific time period.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteVcoRouteEntry  DeleteVcoRouteEntryRequest
+     * @return DeleteVcoRouteEntryResponse
      */
     @Override
     public CompletableFuture<DeleteVcoRouteEntryResponse> deleteVcoRouteEntry(DeleteVcoRouteEntryRequest request) {
@@ -2928,11 +3630,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following limits:
-      * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
-      * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
-      * *   The owner of an Express Connect circuit can delete a VBR that belongs to another account only if the VBR is in the **unconfirmed** state.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>Before you delete a VBR, you must delete all router interfaces of the VBR.</li>
+     * <li>You can delete only a VBR in the <strong>unconfirmed</strong>, <strong>active</strong>, or <strong>terminated</strong> state.</li>
+     * <li>The owner of an Express Connect circuit can delete a VBR that belongs to another account only if the VBR is in the <strong>unconfirmed</strong> state.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteVirtualBorderRouter  DeleteVirtualBorderRouterRequest
+     * @return DeleteVirtualBorderRouterResponse
      */
     @Override
     public CompletableFuture<DeleteVirtualBorderRouterResponse> deleteVirtualBorderRouter(DeleteVirtualBorderRouterRequest request) {
@@ -2949,14 +3656,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * *   Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HAVIPs).
-      * *   You can delete only a VPC that is in the **Available** state.
-      * *   The **DeleteVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a VPC:
-      *     *   If the VPC is in the **Deleting** state, the VPC is being deleted.
-      *     *   If you cannot query the VPC, the VPC is deleted.
-      * *   You cannot repeatedly call the **DeleteVpc** operation to delete a VPC within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HAVIPs).</li>
+     * <li>You can delete only a VPC that is in the <strong>Available</strong> state.</li>
+     * <li>The <strong>DeleteVpc</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a VPC:<ul>
+     * <li>If the VPC is in the <strong>Deleting</strong> state, the VPC is being deleted.</li>
+     * <li>If you cannot query the VPC, the VPC is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DeleteVpc</strong> operation to delete a VPC within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteVpc  DeleteVpcRequest
+     * @return DeleteVpcResponse
      */
     @Override
     public CompletableFuture<DeleteVpcResponse> deleteVpc(DeleteVpcRequest request) {
@@ -2972,6 +3686,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVpcGatewayEndpoint  DeleteVpcGatewayEndpointRequest
+     * @return DeleteVpcGatewayEndpointResponse
+     */
     @Override
     public CompletableFuture<DeleteVpcGatewayEndpointResponse> deleteVpcGatewayEndpoint(DeleteVpcGatewayEndpointRequest request) {
         try {
@@ -2987,8 +3705,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **DeleteDhcpOptionsSet** operation to delete a prefix list within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>DeleteDhcpOptionsSet</strong> operation to delete a prefix list within the specified period of time.</p>
+     * 
+     * @param request the request parameters of DeleteVpcPrefixList  DeleteVpcPrefixListRequest
+     * @return DeleteVpcPrefixListResponse
      */
     @Override
     public CompletableFuture<DeleteVpcPrefixListResponse> deleteVpcPrefixList(DeleteVpcPrefixListRequest request) {
@@ -3005,9 +3726,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If an IPsec-VPN connection is associated with a transit router, you must disassociate the transit router from the IPsec-VPN connection before you delete the IPsec-VPN connection. For more information, see [DeleteTransitRouterVpnAttachment](~~468251~~).
-      * *   If an IPsec-VPN connection is not associated with a resource, you can call `DeleteVpnAttachment` to directly delete the IPsec-VPN connection.
-      *
+     * <b>description</b> :
+     * <p>  If an IPsec-VPN connection is associated with a transit router, you must disassociate the transit router from the IPsec-VPN connection before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</p>
+     * <ul>
+     * <li>If an IPsec-VPN connection is not associated with a resource, you can call <code>DeleteVpnAttachment</code> to directly delete the IPsec-VPN connection.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteVpnAttachment  DeleteVpnAttachmentRequest
+     * @return DeleteVpnAttachmentResponse
      */
     @Override
     public CompletableFuture<DeleteVpnAttachmentResponse> deleteVpnAttachment(DeleteVpnAttachmentRequest request) {
@@ -3024,12 +3750,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **DeleteVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
-      *     *   If a VPN gateway is in the **updating** state, the IPsec-VPN connection is being deleted.
-      *     *   If a VPN gateway is in the **active** state, the IPsec-VPN connection has been deleted.
-      * *   You cannot call the **DeleteVpnConnection** operation to delete multiple IPsec-VPN connections for a VPN gateway at a time.
-      * >  After an IPsec-VPN connection between a data center and Alibaba Cloud is deleted, the connection between the data center and Alibaba Cloud is closed.
-      *
+     * <b>description</b> :
+     * <p>  <strong>DeleteVpnConnection</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of a VPN gateway.
+     *     *   If a VPN gateway is in the <strong>updating</strong> state, the IPsec-VPN connection is being deleted.
+     *     *   If a VPN gateway is in the <strong>active</strong> state, the IPsec-VPN connection has been deleted.</p>
+     * <ul>
+     * <li>You cannot call the <strong>DeleteVpnConnection</strong> operation to delete multiple IPsec-VPN connections for a VPN gateway at a time.<blockquote>
+     * <p> After an IPsec-VPN connection between a data center and Alibaba Cloud is deleted, the connection between the data center and Alibaba Cloud is closed.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteVpnConnection  DeleteVpnConnectionRequest
+     * @return DeleteVpnConnectionResponse
      */
     @Override
     public CompletableFuture<DeleteVpnConnectionResponse> deleteVpnConnection(DeleteVpnConnectionRequest request) {
@@ -3046,8 +3779,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You cannot delete a VPN gateway associated with existing IPsec-VPN connections.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot delete a VPN gateway associated with existing IPsec-VPN connections.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteVpnGateway  DeleteVpnGatewayRequest
+     * @return DeleteVpnGatewayResponse
      */
     @Override
     public CompletableFuture<DeleteVpnGatewayResponse> deleteVpnGateway(DeleteVpnGatewayRequest request) {
@@ -3064,11 +3802,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **DeleteVpnPbrRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
-      *     *   If a VPN gateway is in the **updating** state, the policy-based route is being deleted.
-      *     *   If a VPN gateway is in the **active** state, the policy-based route has been deleted.
-      * *   You cannot repeatedly call **DeleteVpnPbrRouteEntry** to delete a policy-based route within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>DeleteVpnPbrRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.
+     *     *   If a VPN gateway is in the <strong>updating</strong> state, the policy-based route is being deleted.
+     *     *   If a VPN gateway is in the <strong>active</strong> state, the policy-based route has been deleted.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>DeleteVpnPbrRouteEntry</strong> to delete a policy-based route within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteVpnPbrRouteEntry  DeleteVpnPbrRouteEntryRequest
+     * @return DeleteVpnPbrRouteEntryResponse
      */
     @Override
     public CompletableFuture<DeleteVpnPbrRouteEntryResponse> deleteVpnPbrRouteEntry(DeleteVpnPbrRouteEntryRequest request) {
@@ -3085,11 +3828,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **DeleteVpnRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
-      *     *   If a VPN gateway is in the **updating** state, the destination-based route is being deleted.
-      *     *   If the VPN gateway is in the **active** state, the destination-based route is deleted.
-      * *   You cannot repeatedly call **DeleteVpnRouteEntry** to delete a destination-based route from a VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>DeleteVpnRouteEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.
+     *     *   If a VPN gateway is in the <strong>updating</strong> state, the destination-based route is being deleted.
+     *     *   If the VPN gateway is in the <strong>active</strong> state, the destination-based route is deleted.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>DeleteVpnRouteEntry</strong> to delete a destination-based route from a VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteVpnRouteEntry  DeleteVpnRouteEntryRequest
+     * @return DeleteVpnRouteEntryResponse
      */
     @Override
     public CompletableFuture<DeleteVpnRouteEntryResponse> deleteVpnRouteEntry(DeleteVpnRouteEntryRequest request) {
@@ -3106,8 +3854,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you enable deletion protection for an instance, you cannot delete the instance. You must disable deletion protection before you can delete the instance.
-      *
+     * <b>description</b> :
+     * <p>After you enable deletion protection for an instance, you cannot delete the instance. You must disable deletion protection before you can delete the instance.</p>
+     * 
+     * @param request the request parameters of DeletionProtection  DeletionProtectionRequest
+     * @return DeletionProtectionResponse
      */
     @Override
     public CompletableFuture<DeletionProtectionResponse> deletionProtection(DeletionProtectionRequest request) {
@@ -3123,6 +3874,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Describe95Traffic  Describe95TrafficRequest
+     * @return Describe95TrafficResponse
+     */
     @Override
     public CompletableFuture<Describe95TrafficResponse> describe95Traffic(Describe95TrafficRequest request) {
         try {
@@ -3137,6 +3892,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccessPoints  DescribeAccessPointsRequest
+     * @return DescribeAccessPointsResponse
+     */
     @Override
     public CompletableFuture<DescribeAccessPointsResponse> describeAccessPoints(DescribeAccessPointsRequest request) {
         try {
@@ -3151,6 +3910,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBgpGroups  DescribeBgpGroupsRequest
+     * @return DescribeBgpGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribeBgpGroupsResponse> describeBgpGroups(DescribeBgpGroupsRequest request) {
         try {
@@ -3165,6 +3928,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBgpNetworks  DescribeBgpNetworksRequest
+     * @return DescribeBgpNetworksResponse
+     */
     @Override
     public CompletableFuture<DescribeBgpNetworksResponse> describeBgpNetworks(DescribeBgpNetworksRequest request) {
         try {
@@ -3179,6 +3946,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBgpPeers  DescribeBgpPeersRequest
+     * @return DescribeBgpPeersResponse
+     */
     @Override
     public CompletableFuture<DescribeBgpPeersResponse> describeBgpPeers(DescribeBgpPeersRequest request) {
         try {
@@ -3193,6 +3964,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCommonBandwidthPackages  DescribeCommonBandwidthPackagesRequest
+     * @return DescribeCommonBandwidthPackagesResponse
+     */
     @Override
     public CompletableFuture<DescribeCommonBandwidthPackagesResponse> describeCommonBandwidthPackages(DescribeCommonBandwidthPackagesRequest request) {
         try {
@@ -3207,6 +3982,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCustomerGateway  DescribeCustomerGatewayRequest
+     * @return DescribeCustomerGatewayResponse
+     */
     @Override
     public CompletableFuture<DescribeCustomerGatewayResponse> describeCustomerGateway(DescribeCustomerGatewayRequest request) {
         try {
@@ -3221,6 +4000,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCustomerGateways  DescribeCustomerGatewaysRequest
+     * @return DescribeCustomerGatewaysResponse
+     */
     @Override
     public CompletableFuture<DescribeCustomerGatewaysResponse> describeCustomerGateways(DescribeCustomerGatewaysRequest request) {
         try {
@@ -3235,6 +4018,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEcGrantRelation  DescribeEcGrantRelationRequest
+     * @return DescribeEcGrantRelationResponse
+     */
     @Override
     public CompletableFuture<DescribeEcGrantRelationResponse> describeEcGrantRelation(DescribeEcGrantRelationRequest request) {
         try {
@@ -3250,8 +4037,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query information about EIPs in a region, including maximum bandwidth, billing methods, and associated instances.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query information about EIPs in a region, including maximum bandwidth, billing methods, and associated instances.</p>
+     * 
+     * @param request the request parameters of DescribeEipAddresses  DescribeEipAddressesRequest
+     * @return DescribeEipAddressesResponse
      */
     @Override
     public CompletableFuture<DescribeEipAddressesResponse> describeEipAddresses(DescribeEipAddressesRequest request) {
@@ -3268,8 +4058,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can query only EIPs that are associated with secondary elastic network interfaces (ENIs) in multi-EIP-to-ENI mode.
-      *
+     * <b>description</b> :
+     * <p>You can query only EIPs that are associated with secondary elastic network interfaces (ENIs) in multi-EIP-to-ENI mode.</p>
+     * 
+     * @param request the request parameters of DescribeEipGatewayInfo  DescribeEipGatewayInfoRequest
+     * @return DescribeEipGatewayInfoResponse
      */
     @Override
     public CompletableFuture<DescribeEipGatewayInfoResponse> describeEipGatewayInfo(DescribeEipGatewayInfoRequest request) {
@@ -3286,8 +4079,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To improve user experience in querying monitoring data, we recommend that you call the DescribeMetricList API operation provided by CloudMonitor to query EIP monitoring data. For more information, see [DescribeMetricList](~~51936~~) and [EIP monitoring data](~~162874~~).
-      *
+     * <b>description</b> :
+     * <p>To improve user experience in querying monitoring data, we recommend that you call the DescribeMetricList API operation provided by CloudMonitor to query EIP monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a> and <a href="https://help.aliyun.com/document_detail/162874.html">EIP monitoring data</a>.</p>
+     * 
+     * @param request the request parameters of DescribeEipMonitorData  DescribeEipMonitorDataRequest
+     * @return DescribeEipMonitorDataResponse
      */
     @Override
     public CompletableFuture<DescribeEipMonitorDataResponse> describeEipMonitorData(DescribeEipMonitorDataRequest request) {
@@ -3303,6 +4099,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEipSegment  DescribeEipSegmentRequest
+     * @return DescribeEipSegmentResponse
+     */
     @Override
     public CompletableFuture<DescribeEipSegmentResponse> describeEipSegment(DescribeEipSegmentRequest request) {
         try {
@@ -3317,6 +4117,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExpressConnectTrafficQos  DescribeExpressConnectTrafficQosRequest
+     * @return DescribeExpressConnectTrafficQosResponse
+     */
     @Override
     public CompletableFuture<DescribeExpressConnectTrafficQosResponse> describeExpressConnectTrafficQos(DescribeExpressConnectTrafficQosRequest request) {
         try {
@@ -3331,6 +4135,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExpressConnectTrafficQosQueue  DescribeExpressConnectTrafficQosQueueRequest
+     * @return DescribeExpressConnectTrafficQosQueueResponse
+     */
     @Override
     public CompletableFuture<DescribeExpressConnectTrafficQosQueueResponse> describeExpressConnectTrafficQosQueue(DescribeExpressConnectTrafficQosQueueRequest request) {
         try {
@@ -3345,6 +4153,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExpressConnectTrafficQosRule  DescribeExpressConnectTrafficQosRuleRequest
+     * @return DescribeExpressConnectTrafficQosRuleResponse
+     */
     @Override
     public CompletableFuture<DescribeExpressConnectTrafficQosRuleResponse> describeExpressConnectTrafficQosRule(DescribeExpressConnectTrafficQosRuleRequest request) {
         try {
@@ -3359,6 +4171,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFailoverTestJob  DescribeFailoverTestJobRequest
+     * @return DescribeFailoverTestJobResponse
+     */
     @Override
     public CompletableFuture<DescribeFailoverTestJobResponse> describeFailoverTestJob(DescribeFailoverTestJobRequest request) {
         try {
@@ -3373,6 +4189,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFailoverTestJobs  DescribeFailoverTestJobsRequest
+     * @return DescribeFailoverTestJobsResponse
+     */
     @Override
     public CompletableFuture<DescribeFailoverTestJobsResponse> describeFailoverTestJobs(DescribeFailoverTestJobsRequest request) {
         try {
@@ -3387,6 +4207,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFlowLogs  DescribeFlowLogsRequest
+     * @return DescribeFlowLogsResponse
+     */
     @Override
     public CompletableFuture<DescribeFlowLogsResponse> describeFlowLogs(DescribeFlowLogsRequest request) {
         try {
@@ -3401,6 +4225,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeForwardTableEntries  DescribeForwardTableEntriesRequest
+     * @return DescribeForwardTableEntriesResponse
+     */
     @Override
     public CompletableFuture<DescribeForwardTableEntriesResponse> describeForwardTableEntries(DescribeForwardTableEntriesRequest request) {
         try {
@@ -3415,6 +4243,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGlobalAccelerationInstances  DescribeGlobalAccelerationInstancesRequest
+     * @return DescribeGlobalAccelerationInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeGlobalAccelerationInstancesResponse> describeGlobalAccelerationInstances(DescribeGlobalAccelerationInstancesRequest request) {
         try {
@@ -3429,6 +4261,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGrantRulesToCen  DescribeGrantRulesToCenRequest
+     * @return DescribeGrantRulesToCenResponse
+     */
     @Override
     public CompletableFuture<DescribeGrantRulesToCenResponse> describeGrantRulesToCen(DescribeGrantRulesToCenRequest request) {
         try {
@@ -3443,6 +4279,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeHaVips  DescribeHaVipsRequest
+     * @return DescribeHaVipsResponse
+     */
     @Override
     public CompletableFuture<DescribeHaVipsResponse> describeHaVips(DescribeHaVipsRequest request) {
         try {
@@ -3457,6 +4297,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeHighDefinitionMonitorLogAttribute  DescribeHighDefinitionMonitorLogAttributeRequest
+     * @return DescribeHighDefinitionMonitorLogAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeHighDefinitionMonitorLogAttributeResponse> describeHighDefinitionMonitorLogAttribute(DescribeHighDefinitionMonitorLogAttributeRequest request) {
         try {
@@ -3471,6 +4315,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIPv6TranslatorAclListAttributes  DescribeIPv6TranslatorAclListAttributesRequest
+     * @return DescribeIPv6TranslatorAclListAttributesResponse
+     */
     @Override
     public CompletableFuture<DescribeIPv6TranslatorAclListAttributesResponse> describeIPv6TranslatorAclListAttributes(DescribeIPv6TranslatorAclListAttributesRequest request) {
         try {
@@ -3486,9 +4334,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DescribeIPv6TranslatorAclLists is deprecated  * @param request  the request parameters of DescribeIPv6TranslatorAclLists  DescribeIPv6TranslatorAclListsRequest
+     * @return DescribeIPv6TranslatorAclListsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeIPv6TranslatorAclListsResponse> describeIPv6TranslatorAclLists(DescribeIPv6TranslatorAclListsRequest request) {
         try {
@@ -3504,9 +4353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DescribeIPv6TranslatorEntries is deprecated  * @param request  the request parameters of DescribeIPv6TranslatorEntries  DescribeIPv6TranslatorEntriesRequest
+     * @return DescribeIPv6TranslatorEntriesResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeIPv6TranslatorEntriesResponse> describeIPv6TranslatorEntries(DescribeIPv6TranslatorEntriesRequest request) {
         try {
@@ -3522,9 +4372,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DescribeIPv6Translators is deprecated  * @param request  the request parameters of DescribeIPv6Translators  DescribeIPv6TranslatorsRequest
+     * @return DescribeIPv6TranslatorsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeIPv6TranslatorsResponse> describeIPv6Translators(DescribeIPv6TranslatorsRequest request) {
         try {
@@ -3539,6 +4390,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIpv6Addresses  DescribeIpv6AddressesRequest
+     * @return DescribeIpv6AddressesResponse
+     */
     @Override
     public CompletableFuture<DescribeIpv6AddressesResponse> describeIpv6Addresses(DescribeIpv6AddressesRequest request) {
         try {
@@ -3553,6 +4408,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIpv6EgressOnlyRules  DescribeIpv6EgressOnlyRulesRequest
+     * @return DescribeIpv6EgressOnlyRulesResponse
+     */
     @Override
     public CompletableFuture<DescribeIpv6EgressOnlyRulesResponse> describeIpv6EgressOnlyRules(DescribeIpv6EgressOnlyRulesRequest request) {
         try {
@@ -3567,6 +4426,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIpv6GatewayAttribute  DescribeIpv6GatewayAttributeRequest
+     * @return DescribeIpv6GatewayAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeIpv6GatewayAttributeResponse> describeIpv6GatewayAttribute(DescribeIpv6GatewayAttributeRequest request) {
         try {
@@ -3581,6 +4444,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIpv6Gateways  DescribeIpv6GatewaysRequest
+     * @return DescribeIpv6GatewaysResponse
+     */
     @Override
     public CompletableFuture<DescribeIpv6GatewaysResponse> describeIpv6Gateways(DescribeIpv6GatewaysRequest request) {
         try {
@@ -3595,6 +4462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNatGatewayAssociateNetworkInterfaces  DescribeNatGatewayAssociateNetworkInterfacesRequest
+     * @return DescribeNatGatewayAssociateNetworkInterfacesResponse
+     */
     @Override
     public CompletableFuture<DescribeNatGatewayAssociateNetworkInterfacesResponse> describeNatGatewayAssociateNetworkInterfaces(DescribeNatGatewayAssociateNetworkInterfacesRequest request) {
         try {
@@ -3610,8 +4481,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query both Virtual Private Cloud (VPC) NAT gateways and Internet NAT gateways. NAT gateways in this topic refer to both VPC NAT gateways and Internet NAT gateways.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query both Virtual Private Cloud (VPC) NAT gateways and Internet NAT gateways. NAT gateways in this topic refer to both VPC NAT gateways and Internet NAT gateways.</p>
+     * 
+     * @param request the request parameters of DescribeNatGateways  DescribeNatGatewaysRequest
+     * @return DescribeNatGatewaysResponse
      */
     @Override
     public CompletableFuture<DescribeNatGatewaysResponse> describeNatGateways(DescribeNatGatewaysRequest request) {
@@ -3627,6 +4501,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNetworkAclAttributes  DescribeNetworkAclAttributesRequest
+     * @return DescribeNetworkAclAttributesResponse
+     */
     @Override
     public CompletableFuture<DescribeNetworkAclAttributesResponse> describeNetworkAclAttributes(DescribeNetworkAclAttributesRequest request) {
         try {
@@ -3641,6 +4519,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNetworkAcls  DescribeNetworkAclsRequest
+     * @return DescribeNetworkAclsResponse
+     */
     @Override
     public CompletableFuture<DescribeNetworkAclsResponse> describeNetworkAcls(DescribeNetworkAclsRequest request) {
         try {
@@ -3655,6 +4537,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePhysicalConnectionLOA  DescribePhysicalConnectionLOARequest
+     * @return DescribePhysicalConnectionLOAResponse
+     */
     @Override
     public CompletableFuture<DescribePhysicalConnectionLOAResponse> describePhysicalConnectionLOA(DescribePhysicalConnectionLOARequest request) {
         try {
@@ -3670,8 +4556,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * By default, the system queries information about all Express Connect circuits in the specified region. You can query Express Connect circuits that meet specific conditions by specifying filter conditions provided by the **DescribePhysicalConnections** operation. For more information about the supported filter conditions, see **Key** in the **Request parameters** section.
-      *
+     * <b>description</b> :
+     * <p>By default, the system queries information about all Express Connect circuits in the specified region. You can query Express Connect circuits that meet specific conditions by specifying filter conditions provided by the <strong>DescribePhysicalConnections</strong> operation. For more information about the supported filter conditions, see <strong>Key</strong> in the <strong>Request parameters</strong> section.</p>
+     * 
+     * @param request the request parameters of DescribePhysicalConnections  DescribePhysicalConnectionsRequest
+     * @return DescribePhysicalConnectionsResponse
      */
     @Override
     public CompletableFuture<DescribePhysicalConnectionsResponse> describePhysicalConnections(DescribePhysicalConnectionsRequest request) {
@@ -3688,8 +4577,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot query the range of public IP addresses of a classic network by calling the **DescribePublicIpAddress** operation.
-      *
+     * <b>description</b> :
+     * <p>You cannot query the range of public IP addresses of a classic network by calling the <strong>DescribePublicIpAddress</strong> operation.</p>
+     * 
+     * @param request the request parameters of DescribePublicIpAddress  DescribePublicIpAddressRequest
+     * @return DescribePublicIpAddressResponse
      */
     @Override
     public CompletableFuture<DescribePublicIpAddressResponse> describePublicIpAddress(DescribePublicIpAddressRequest request) {
@@ -3705,6 +4597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -3720,8 +4616,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
-      *
+     * <b>description</b> :
+     * <p>Before you call the <a href="https://help.aliyun.com/document_detail/36013.html">DeleteRouteEntry</a> operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.</p>
+     * 
+     * @param request the request parameters of DescribeRouteEntryList  DescribeRouteEntryListRequest
+     * @return DescribeRouteEntryListResponse
      */
     @Override
     public CompletableFuture<DescribeRouteEntryListResponse> describeRouteEntryList(DescribeRouteEntryListRequest request) {
@@ -3737,6 +4636,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRouteTableList  DescribeRouteTableListRequest
+     * @return DescribeRouteTableListResponse
+     */
     @Override
     public CompletableFuture<DescribeRouteTableListResponse> describeRouteTableList(DescribeRouteTableListRequest request) {
         try {
@@ -3752,9 +4655,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.  * @param request  the request parameters of DescribeRouteTables  DescribeRouteTablesRequest
+     * @return DescribeRouteTablesResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeRouteTablesResponse> describeRouteTables(DescribeRouteTablesRequest request) {
         try {
@@ -3769,6 +4673,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRouterInterfaceAttribute  DescribeRouterInterfaceAttributeRequest
+     * @return DescribeRouterInterfaceAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeRouterInterfaceAttributeResponse> describeRouterInterfaceAttribute(DescribeRouterInterfaceAttributeRequest request) {
         try {
@@ -3783,6 +4691,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRouterInterfaces  DescribeRouterInterfacesRequest
+     * @return DescribeRouterInterfacesResponse
+     */
     @Override
     public CompletableFuture<DescribeRouterInterfacesResponse> describeRouterInterfaces(DescribeRouterInterfacesRequest request) {
         try {
@@ -3798,8 +4710,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can call this operation to query only dedicated-bandwidth GA instances.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation to query only dedicated-bandwidth GA instances.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeServerRelatedGlobalAccelerationInstances  DescribeServerRelatedGlobalAccelerationInstancesRequest
+     * @return DescribeServerRelatedGlobalAccelerationInstancesResponse
      */
     @Override
     public CompletableFuture<DescribeServerRelatedGlobalAccelerationInstancesResponse> describeServerRelatedGlobalAccelerationInstances(DescribeServerRelatedGlobalAccelerationInstancesRequest request) {
@@ -3815,6 +4732,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSnatTableEntries  DescribeSnatTableEntriesRequest
+     * @return DescribeSnatTableEntriesResponse
+     */
     @Override
     public CompletableFuture<DescribeSnatTableEntriesResponse> describeSnatTableEntries(DescribeSnatTableEntriesRequest request) {
         try {
@@ -3829,6 +4750,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSslVpnClientCert  DescribeSslVpnClientCertRequest
+     * @return DescribeSslVpnClientCertResponse
+     */
     @Override
     public CompletableFuture<DescribeSslVpnClientCertResponse> describeSslVpnClientCert(DescribeSslVpnClientCertRequest request) {
         try {
@@ -3843,6 +4768,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSslVpnClientCerts  DescribeSslVpnClientCertsRequest
+     * @return DescribeSslVpnClientCertsResponse
+     */
     @Override
     public CompletableFuture<DescribeSslVpnClientCertsResponse> describeSslVpnClientCerts(DescribeSslVpnClientCertsRequest request) {
         try {
@@ -3858,9 +4787,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If your VPN gateway was created before December 10, 2022, you must upgrade your VPN gateway to the latest version before you can view connection information about SSL clients. For more information, see [Upgrade a VPN gateway](~~2671058~~).
-      * If your VPN gateway was created after December 10, 2022, you can view connection information about SSL clients by default.
-      *
+     * <b>description</b> :
+     * <p>If your VPN gateway was created before December 10, 2022, you must upgrade your VPN gateway to the latest version before you can view connection information about SSL clients. For more information, see <a href="https://help.aliyun.com/document_detail/2671058.html">Upgrade a VPN gateway</a>.
+     * If your VPN gateway was created after December 10, 2022, you can view connection information about SSL clients by default.</p>
+     * 
+     * @param request the request parameters of DescribeSslVpnClients  DescribeSslVpnClientsRequest
+     * @return DescribeSslVpnClientsResponse
      */
     @Override
     public CompletableFuture<DescribeSslVpnClientsResponse> describeSslVpnClients(DescribeSslVpnClientsRequest request) {
@@ -3876,6 +4808,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSslVpnServers  DescribeSslVpnServersRequest
+     * @return DescribeSslVpnServersResponse
+     */
     @Override
     public CompletableFuture<DescribeSslVpnServersResponse> describeSslVpnServers(DescribeSslVpnServersRequest request) {
         try {
@@ -3890,6 +4826,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTagKeys  DescribeTagKeysRequest
+     * @return DescribeTagKeysResponse
+     */
     @Override
     public CompletableFuture<DescribeTagKeysResponse> describeTagKeys(DescribeTagKeysRequest request) {
         try {
@@ -3904,6 +4844,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTagKeysForExpressConnect  DescribeTagKeysForExpressConnectRequest
+     * @return DescribeTagKeysForExpressConnectResponse
+     */
     @Override
     public CompletableFuture<DescribeTagKeysForExpressConnectResponse> describeTagKeysForExpressConnect(DescribeTagKeysForExpressConnectRequest request) {
         try {
@@ -3919,11 +4863,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object that you want to query.
-      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified tag key are returned. If you specify only **Tag.N.Value**, an error message is returned.
-      * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
-      * *   If you specify multiple key-value pairs, all tags that match the key-value pairs are returned.
-      *
+     * <b>description</b> :
+     * <p>  You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> that consists of <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong> in the request to specify the object that you want to query.</p>
+     * <ul>
+     * <li><strong>Tag.N</strong> is a resource tag that consists of a key-value pair. If you specify only <strong>Tag.N.Key</strong>, all tag values that are associated with the specified tag key are returned. If you specify only <strong>Tag.N.Value</strong>, an error message is returned.</li>
+     * <li>If you specify <strong>Tag.N</strong> and <strong>ResourceId.N</strong> to filter tags, <strong>ResourceId.N</strong> must match all specified key-value pairs.</li>
+     * <li>If you specify multiple key-value pairs, all tags that match the key-value pairs are returned.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeTags  DescribeTagsRequest
+     * @return DescribeTagsResponse
      */
     @Override
     public CompletableFuture<DescribeTagsResponse> describeTags(DescribeTagsRequest request) {
@@ -3939,6 +4888,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVRouters  DescribeVRoutersRequest
+     * @return DescribeVRoutersResponse
+     */
     @Override
     public CompletableFuture<DescribeVRoutersResponse> describeVRouters(DescribeVRoutersRequest request) {
         try {
@@ -3953,6 +4906,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVSwitchAttributes  DescribeVSwitchAttributesRequest
+     * @return DescribeVSwitchAttributesResponse
+     */
     @Override
     public CompletableFuture<DescribeVSwitchAttributesResponse> describeVSwitchAttributes(DescribeVSwitchAttributesRequest request) {
         try {
@@ -3967,6 +4924,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVSwitches  DescribeVSwitchesRequest
+     * @return DescribeVSwitchesResponse
+     */
     @Override
     public CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request) {
         try {
@@ -3981,6 +4942,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVbrHa  DescribeVbrHaRequest
+     * @return DescribeVbrHaResponse
+     */
     @Override
     public CompletableFuture<DescribeVbrHaResponse> describeVbrHa(DescribeVbrHaRequest request) {
         try {
@@ -3995,6 +4960,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVcoRouteEntries  DescribeVcoRouteEntriesRequest
+     * @return DescribeVcoRouteEntriesResponse
+     */
     @Override
     public CompletableFuture<DescribeVcoRouteEntriesResponse> describeVcoRouteEntries(DescribeVcoRouteEntriesRequest request) {
         try {
@@ -4009,6 +4978,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVirtualBorderRouters  DescribeVirtualBorderRoutersRequest
+     * @return DescribeVirtualBorderRoutersResponse
+     */
     @Override
     public CompletableFuture<DescribeVirtualBorderRoutersResponse> describeVirtualBorderRouters(DescribeVirtualBorderRoutersRequest request) {
         try {
@@ -4023,6 +4996,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVirtualBorderRoutersForPhysicalConnection  DescribeVirtualBorderRoutersForPhysicalConnectionRequest
+     * @return DescribeVirtualBorderRoutersForPhysicalConnectionResponse
+     */
     @Override
     public CompletableFuture<DescribeVirtualBorderRoutersForPhysicalConnectionResponse> describeVirtualBorderRoutersForPhysicalConnection(DescribeVirtualBorderRoutersForPhysicalConnectionRequest request) {
         try {
@@ -4037,6 +5014,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpcAttribute  DescribeVpcAttributeRequest
+     * @return DescribeVpcAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeVpcAttributeResponse> describeVpcAttribute(DescribeVpcAttributeRequest request) {
         try {
@@ -4051,6 +5032,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpcs  DescribeVpcsRequest
+     * @return DescribeVpcsResponse
+     */
     @Override
     public CompletableFuture<DescribeVpcsResponse> describeVpcs(DescribeVpcsRequest request) {
         try {
@@ -4065,6 +5050,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpnAttachments  DescribeVpnAttachmentsRequest
+     * @return DescribeVpnAttachmentsResponse
+     */
     @Override
     public CompletableFuture<DescribeVpnAttachmentsResponse> describeVpnAttachments(DescribeVpnAttachmentsRequest request) {
         try {
@@ -4079,6 +5068,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpnConnection  DescribeVpnConnectionRequest
+     * @return DescribeVpnConnectionResponse
+     */
     @Override
     public CompletableFuture<DescribeVpnConnectionResponse> describeVpnConnection(DescribeVpnConnectionRequest request) {
         try {
@@ -4093,6 +5086,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpnConnectionLogs  DescribeVpnConnectionLogsRequest
+     * @return DescribeVpnConnectionLogsResponse
+     */
     @Override
     public CompletableFuture<DescribeVpnConnectionLogsResponse> describeVpnConnectionLogs(DescribeVpnConnectionLogsRequest request) {
         try {
@@ -4107,6 +5104,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpnConnections  DescribeVpnConnectionsRequest
+     * @return DescribeVpnConnectionsResponse
+     */
     @Override
     public CompletableFuture<DescribeVpnConnectionsResponse> describeVpnConnections(DescribeVpnConnectionsRequest request) {
         try {
@@ -4121,6 +5122,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpnCrossAccountAuthorizations  DescribeVpnCrossAccountAuthorizationsRequest
+     * @return DescribeVpnCrossAccountAuthorizationsResponse
+     */
     @Override
     public CompletableFuture<DescribeVpnCrossAccountAuthorizationsResponse> describeVpnCrossAccountAuthorizations(DescribeVpnCrossAccountAuthorizationsRequest request) {
         try {
@@ -4135,6 +5140,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpnGateway  DescribeVpnGatewayRequest
+     * @return DescribeVpnGatewayResponse
+     */
     @Override
     public CompletableFuture<DescribeVpnGatewayResponse> describeVpnGateway(DescribeVpnGatewayRequest request) {
         try {
@@ -4149,6 +5158,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpnGatewayAvailableZones  DescribeVpnGatewayAvailableZonesRequest
+     * @return DescribeVpnGatewayAvailableZonesResponse
+     */
     @Override
     public CompletableFuture<DescribeVpnGatewayAvailableZonesResponse> describeVpnGatewayAvailableZones(DescribeVpnGatewayAvailableZonesRequest request) {
         try {
@@ -4163,6 +5176,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpnGateways  DescribeVpnGatewaysRequest
+     * @return DescribeVpnGatewaysResponse
+     */
     @Override
     public CompletableFuture<DescribeVpnGatewaysResponse> describeVpnGateways(DescribeVpnGatewaysRequest request) {
         try {
@@ -4177,6 +5194,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpnPbrRouteEntries  DescribeVpnPbrRouteEntriesRequest
+     * @return DescribeVpnPbrRouteEntriesResponse
+     */
     @Override
     public CompletableFuture<DescribeVpnPbrRouteEntriesResponse> describeVpnPbrRouteEntries(DescribeVpnPbrRouteEntriesRequest request) {
         try {
@@ -4191,6 +5212,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpnRouteEntries  DescribeVpnRouteEntriesRequest
+     * @return DescribeVpnRouteEntriesResponse
+     */
     @Override
     public CompletableFuture<DescribeVpnRouteEntriesResponse> describeVpnRouteEntries(DescribeVpnRouteEntriesRequest request) {
         try {
@@ -4205,6 +5230,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpnSslServerLogs  DescribeVpnSslServerLogsRequest
+     * @return DescribeVpnSslServerLogsResponse
+     */
     @Override
     public CompletableFuture<DescribeVpnSslServerLogsResponse> describeVpnSslServerLogs(DescribeVpnSslServerLogsRequest request) {
         try {
@@ -4219,6 +5248,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeZones  DescribeZonesRequest
+     * @return DescribeZonesResponse
+     */
     @Override
     public CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request) {
         try {
@@ -4234,12 +5267,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * *   **DetachDhcpOptionsSetFromVpc** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of the task.
-      *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being disassociated.
-      *     *   If the DHCP options set is in the **UnUsed** state, the DHCP options set is disassociated.
-      * *   You cannot repeatedly call the **DetachDhcpOptionsSetFromVpc** operation to disassociate a DHCP options set from a VPC within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <ul>
+     * <li><strong>DetachDhcpOptionsSetFromVpc</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of the task.<ul>
+     * <li>If the DHCP options set is in the <strong>Pending</strong> state, the DHCP options set is being disassociated.</li>
+     * <li>If the DHCP options set is in the <strong>UnUsed</strong> state, the DHCP options set is disassociated.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>DetachDhcpOptionsSetFromVpc</strong> operation to disassociate a DHCP options set from a VPC within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DetachDhcpOptionsSetFromVpc  DetachDhcpOptionsSetFromVpcRequest
+     * @return DetachDhcpOptionsSetFromVpcResponse
      */
     @Override
     public CompletableFuture<DetachDhcpOptionsSetFromVpcResponse> detachDhcpOptionsSetFromVpc(DetachDhcpOptionsSetFromVpcRequest request) {
@@ -4256,10 +5296,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If the IPsec-VPN connection is in single-tunnel mode, the request parameter `VpnConnectionIds` is required when you call the **DiagnoseVpnConnections** operation.
-      * *   If the IPsec-VPN connection is in dual-tunnel mode, the request parameter `TunnelIds` is required when you call the **DiagnoseVpnConnections** operation.
-      * *   After you call the **DiagnoseVpnConnections** operation, if the current IPsec-VPN connection is faulty, the operation returns the corresponding error code (**FailedReasonCode**) and log (**SourceLog**). You can troubleshoot based on the error code and log information. For more information, see [Common errors and troubleshooting methods for IPsec-VPN connections](~~477862~~).
-      *
+     * <b>description</b> :
+     * <p>  If the IPsec-VPN connection is in single-tunnel mode, the request parameter <code>VpnConnectionIds</code> is required when you call the <strong>DiagnoseVpnConnections</strong> operation.</p>
+     * <ul>
+     * <li>If the IPsec-VPN connection is in dual-tunnel mode, the request parameter <code>TunnelIds</code> is required when you call the <strong>DiagnoseVpnConnections</strong> operation.</li>
+     * <li>After you call the <strong>DiagnoseVpnConnections</strong> operation, if the current IPsec-VPN connection is faulty, the operation returns the corresponding error code (<strong>FailedReasonCode</strong>) and log (<strong>SourceLog</strong>). You can troubleshoot based on the error code and log information. For more information, see <a href="https://help.aliyun.com/document_detail/477862.html">Common errors and troubleshooting methods for IPsec-VPN connections</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DiagnoseVpnConnections  DiagnoseVpnConnectionsRequest
+     * @return DiagnoseVpnConnectionsResponse
      */
     @Override
     public CompletableFuture<DiagnoseVpnConnectionsResponse> diagnoseVpnConnections(DiagnoseVpnConnectionsRequest request) {
@@ -4276,8 +5321,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only VPN gateways in specific regions support the quick diagnostics feature. For more information about the supported regions, see [Supported regions](~~430697~~).
-      *
+     * <b>description</b> :
+     * <p>Only VPN gateways in specific regions support the quick diagnostics feature. For more information about the supported regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Supported regions</a>.</p>
+     * 
+     * @param request the request parameters of DiagnoseVpnGateway  DiagnoseVpnGatewayRequest
+     * @return DiagnoseVpnGatewayResponse
      */
     @Override
     public CompletableFuture<DiagnoseVpnGatewayResponse> diagnoseVpnGateway(DiagnoseVpnGatewayRequest request) {
@@ -4293,6 +5341,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI DisableNatGatewayEcsMetric is deprecated  * @param request  the request parameters of DisableNatGatewayEcsMetric  DisableNatGatewayEcsMetricRequest
+     * @return DisableNatGatewayEcsMetricResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<DisableNatGatewayEcsMetricResponse> disableNatGatewayEcsMetric(DisableNatGatewayEcsMetricRequest request) {
         try {
@@ -4307,6 +5360,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableVpcClassicLink  DisableVpcClassicLinkRequest
+     * @return DisableVpcClassicLinkResponse
+     */
     @Override
     public CompletableFuture<DisableVpcClassicLinkResponse> disableVpcClassicLink(DisableVpcClassicLinkRequest request) {
         try {
@@ -4321,6 +5378,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DissociateRouteTableFromGateway  DissociateRouteTableFromGatewayRequest
+     * @return DissociateRouteTableFromGatewayResponse
+     */
     @Override
     public CompletableFuture<DissociateRouteTableFromGatewayResponse> dissociateRouteTableFromGateway(DissociateRouteTableFromGatewayRequest request) {
         try {
@@ -4335,6 +5396,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DissociateRouteTablesFromVpcGatewayEndpoint  DissociateRouteTablesFromVpcGatewayEndpointRequest
+     * @return DissociateRouteTablesFromVpcGatewayEndpointResponse
+     */
     @Override
     public CompletableFuture<DissociateRouteTablesFromVpcGatewayEndpointResponse> dissociateRouteTablesFromVpcGatewayEndpoint(DissociateRouteTablesFromVpcGatewayEndpointRequest request) {
         try {
@@ -4350,11 +5415,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **DissociateVpnGatewayWithCertificate** is an asynchronous operation. After a request is sent, the system returns a request and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status the task.
-      *     *   If the VPN gateway is in the **updating** state, the SSL certificate is being disassociated from the VPN gateway.
-      *     *   If the VPN gateway is in the **active** state, the SSL certificate is disassociated from the VPN gateway.
-      * *   You cannot repeatedly call **DissociateVpnGatewayWithCertificate** within a specific period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>DissociateVpnGatewayWithCertificate</strong> is an asynchronous operation. After a request is sent, the system returns a request and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status the task.
+     *     *   If the VPN gateway is in the <strong>updating</strong> state, the SSL certificate is being disassociated from the VPN gateway.
+     *     *   If the VPN gateway is in the <strong>active</strong> state, the SSL certificate is disassociated from the VPN gateway.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>DissociateVpnGatewayWithCertificate</strong> within a specific period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DissociateVpnGatewayWithCertificate  DissociateVpnGatewayWithCertificateRequest
+     * @return DissociateVpnGatewayWithCertificateResponse
      */
     @Override
     public CompletableFuture<DissociateVpnGatewayWithCertificateResponse> dissociateVpnGatewayWithCertificate(DissociateVpnGatewayWithCertificateRequest request) {
@@ -4370,6 +5440,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DownloadVpnConnectionConfig  DownloadVpnConnectionConfigRequest
+     * @return DownloadVpnConnectionConfigResponse
+     */
     @Override
     public CompletableFuture<DownloadVpnConnectionConfigResponse> downloadVpnConnectionConfig(DownloadVpnConnectionConfigRequest request) {
         try {
@@ -4384,6 +5458,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI EnableNatGatewayEcsMetric is deprecated  * @param request  the request parameters of EnableNatGatewayEcsMetric  EnableNatGatewayEcsMetricRequest
+     * @return EnableNatGatewayEcsMetricResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<EnableNatGatewayEcsMetricResponse> enableNatGatewayEcsMetric(EnableNatGatewayEcsMetricRequest request) {
         try {
@@ -4399,12 +5478,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * *   You can enable only an Express Connect circuit that is in the **Confirmed** state.
-      * *   After you enable an Express Connect circuit, it enters the **Enabled** state.
-      * *   **EnablePhysicalConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribePhysicalConnections](~~36042~~) operation to query the status of the task.
-      * *   You cannot repeatedly call **EnablePhysicalConnection** for an Express Connect circuit in the **Confirmed** state within a specific time period.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>You can enable only an Express Connect circuit that is in the <strong>Confirmed</strong> state.</li>
+     * <li>After you enable an Express Connect circuit, it enters the <strong>Enabled</strong> state.</li>
+     * <li><strong>EnablePhysicalConnection</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36042.html">DescribePhysicalConnections</a> operation to query the status of the task.</li>
+     * <li>You cannot repeatedly call <strong>EnablePhysicalConnection</strong> for an Express Connect circuit in the <strong>Confirmed</strong> state within a specific time period.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of EnablePhysicalConnection  EnablePhysicalConnectionRequest
+     * @return EnablePhysicalConnectionResponse
      */
     @Override
     public CompletableFuture<EnablePhysicalConnectionResponse> enablePhysicalConnection(EnablePhysicalConnectionRequest request) {
@@ -4420,6 +5504,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableVpcClassicLink  EnableVpcClassicLinkRequest
+     * @return EnableVpcClassicLinkResponse
+     */
     @Override
     public CompletableFuture<EnableVpcClassicLinkResponse> enableVpcClassicLink(EnableVpcClassicLinkRequest request) {
         try {
@@ -4435,12 +5523,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * *   **EnableVpcIpv4Gateway** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway.
-      *     *   If the IPv4 gateway is in the **Activating** state, the IPv4 gateway is being activated.
-      *     *   If the IPv4 gateway is in the **Created** state, the IPv4 gateway is activated.
-      * *   You cannot repeatedly call the **EnableVpcIpv4Gateway** operation to activate an IPv4 gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <ul>
+     * <li><strong>EnableVpcIpv4Gateway</strong> is an asynchronous operation. After a request is sent, the system returns a <strong>request ID</strong> and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/407670.html">GetIpv4GatewayAttribute</a> operation to query the status of an IPv4 gateway.<ul>
+     * <li>If the IPv4 gateway is in the <strong>Activating</strong> state, the IPv4 gateway is being activated.</li>
+     * <li>If the IPv4 gateway is in the <strong>Created</strong> state, the IPv4 gateway is activated.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>EnableVpcIpv4Gateway</strong> operation to activate an IPv4 gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of EnableVpcIpv4Gateway  EnableVpcIpv4GatewayRequest
+     * @return EnableVpcIpv4GatewayResponse
      */
     @Override
     public CompletableFuture<EnableVpcIpv4GatewayResponse> enableVpcIpv4Gateway(EnableVpcIpv4GatewayRequest request) {
@@ -4456,6 +5551,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDhcpOptionsSet  GetDhcpOptionsSetRequest
+     * @return GetDhcpOptionsSetResponse
+     */
     @Override
     public CompletableFuture<GetDhcpOptionsSetResponse> getDhcpOptionsSet(GetDhcpOptionsSetRequest request) {
         try {
@@ -4470,6 +5569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFlowLogServiceStatus  GetFlowLogServiceStatusRequest
+     * @return GetFlowLogServiceStatusResponse
+     */
     @Override
     public CompletableFuture<GetFlowLogServiceStatusResponse> getFlowLogServiceStatus(GetFlowLogServiceStatusRequest request) {
         try {
@@ -4484,6 +5587,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetIpv4GatewayAttribute  GetIpv4GatewayAttributeRequest
+     * @return GetIpv4GatewayAttributeResponse
+     */
     @Override
     public CompletableFuture<GetIpv4GatewayAttributeResponse> getIpv4GatewayAttribute(GetIpv4GatewayAttributeRequest request) {
         try {
@@ -4499,8 +5606,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query information about a specified Internet NAT gateway or Virtual Private Cloud (VPC) NAT gateway. In this topic, "NAT gateway" refers to both gateway types.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query information about a specified Internet NAT gateway or Virtual Private Cloud (VPC) NAT gateway. In this topic, &quot;NAT gateway&quot; refers to both gateway types.</p>
+     * 
+     * @param request the request parameters of GetNatGatewayAttribute  GetNatGatewayAttributeRequest
+     * @return GetNatGatewayAttributeResponse
      */
     @Override
     public CompletableFuture<GetNatGatewayAttributeResponse> getNatGatewayAttribute(GetNatGatewayAttributeRequest request) {
@@ -4517,8 +5627,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query the status of outbound data transfer billing for the current account. For more information about outbound data transfer billing, see [Outbound data transfer billing](~~274385~~) and [Billing](~~54582~~).
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the status of outbound data transfer billing for the current account. For more information about outbound data transfer billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Outbound data transfer billing</a> and <a href="https://help.aliyun.com/document_detail/54582.html">Billing</a>.</p>
+     * 
+     * @param request the request parameters of GetPhysicalConnectionServiceStatus  GetPhysicalConnectionServiceStatusRequest
+     * @return GetPhysicalConnectionServiceStatusResponse
      */
     @Override
     public CompletableFuture<GetPhysicalConnectionServiceStatusResponse> getPhysicalConnectionServiceStatus(GetPhysicalConnectionServiceStatusRequest request) {
@@ -4534,6 +5647,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPublicIpAddressPoolServiceStatus  GetPublicIpAddressPoolServiceStatusRequest
+     * @return GetPublicIpAddressPoolServiceStatusResponse
+     */
     @Override
     public CompletableFuture<GetPublicIpAddressPoolServiceStatusResponse> getPublicIpAddressPoolServiceStatus(GetPublicIpAddressPoolServiceStatusRequest request) {
         try {
@@ -4548,6 +5665,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTrafficMirrorServiceStatus  GetTrafficMirrorServiceStatusRequest
+     * @return GetTrafficMirrorServiceStatusResponse
+     */
     @Override
     public CompletableFuture<GetTrafficMirrorServiceStatusResponse> getTrafficMirrorServiceStatus(GetTrafficMirrorServiceStatusRequest request) {
         try {
@@ -4562,6 +5683,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetVSwitchCidrReservationUsage  GetVSwitchCidrReservationUsageRequest
+     * @return GetVSwitchCidrReservationUsageResponse
+     */
     @Override
     public CompletableFuture<GetVSwitchCidrReservationUsageResponse> getVSwitchCidrReservationUsage(GetVSwitchCidrReservationUsageRequest request) {
         try {
@@ -4576,6 +5701,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetVpcGatewayEndpointAttribute  GetVpcGatewayEndpointAttributeRequest
+     * @return GetVpcGatewayEndpointAttributeResponse
+     */
     @Override
     public CompletableFuture<GetVpcGatewayEndpointAttributeResponse> getVpcGatewayEndpointAttribute(GetVpcGatewayEndpointAttributeRequest request) {
         try {
@@ -4590,6 +5719,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetVpcPrefixListAssociations  GetVpcPrefixListAssociationsRequest
+     * @return GetVpcPrefixListAssociationsResponse
+     */
     @Override
     public CompletableFuture<GetVpcPrefixListAssociationsResponse> getVpcPrefixListAssociations(GetVpcPrefixListAssociationsRequest request) {
         try {
@@ -4604,6 +5737,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetVpcPrefixListEntries  GetVpcPrefixListEntriesRequest
+     * @return GetVpcPrefixListEntriesResponse
+     */
     @Override
     public CompletableFuture<GetVpcPrefixListEntriesResponse> getVpcPrefixListEntries(GetVpcPrefixListEntriesRequest request) {
         try {
@@ -4618,6 +5755,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetVpcRouteEntrySummary  GetVpcRouteEntrySummaryRequest
+     * @return GetVpcRouteEntrySummaryResponse
+     */
     @Override
     public CompletableFuture<GetVpcRouteEntrySummaryResponse> getVpcRouteEntrySummary(GetVpcRouteEntrySummaryRequest request) {
         try {
@@ -4633,8 +5774,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call the **GetVpnGatewayDiagnoseResult** operation, you must specify one of **DiagnoseId** and **VpnGatewayId**.
-      *
+     * <b>description</b> :
+     * <p>When you call the <strong>GetVpnGatewayDiagnoseResult</strong> operation, you must specify one of <strong>DiagnoseId</strong> and <strong>VpnGatewayId</strong>.</p>
+     * 
+     * @param request the request parameters of GetVpnGatewayDiagnoseResult  GetVpnGatewayDiagnoseResultRequest
+     * @return GetVpnGatewayDiagnoseResultResponse
      */
     @Override
     public CompletableFuture<GetVpnGatewayDiagnoseResultResponse> getVpnGatewayDiagnoseResult(GetVpnGatewayDiagnoseResultRequest request) {
@@ -4651,10 +5795,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Before you can attach a network instance that belongs to another Alibaba Cloud account to your CEN instance, you must grant permissions to your CEN instance.
-      * >  **GrantInstanceToCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use the `vpc.aliyuncs.com` domain name to call this operation. The API version is `2016-04-28`.
-      * *   You cannot repeatedly call the **GrantInstanceToCen** operation to grant the permissions on a network instance to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-      *
+     * <b>description</b> :
+     * <p>  Before you can attach a network instance that belongs to another Alibaba Cloud account to your CEN instance, you must grant permissions to your CEN instance.</p>
+     * <blockquote>
+     * <p> <strong>GrantInstanceToCen</strong> is a Virtual Private Cloud (VPC) operation. Therefore, you must use the <code>vpc.aliyuncs.com</code> domain name to call this operation. The API version is <code>2016-04-28</code>.</p>
+     * </blockquote>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>GrantInstanceToCen</strong> operation to grant the permissions on a network instance to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GrantInstanceToCen  GrantInstanceToCenRequest
+     * @return GrantInstanceToCenResponse
      */
     @Override
     public CompletableFuture<GrantInstanceToCenResponse> grantInstanceToCen(GrantInstanceToCenRequest request) {
@@ -4671,9 +5822,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * When you connect a VBR to a VPC that belongs to another Alibaba Cloud account, the VBR must acquire the required permissions from the VPC.
-      *
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>When you connect a VBR to a VPC that belongs to another Alibaba Cloud account, the VBR must acquire the required permissions from the VPC.</p>
+     * 
+     * @param request the request parameters of GrantInstanceToVbr  GrantInstanceToVbrRequest
+     * @return GrantInstanceToVbrResponse
      */
     @Override
     public CompletableFuture<GrantInstanceToVbrResponse> grantInstanceToVbr(GrantInstanceToVbrRequest request) {
@@ -4689,6 +5843,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListBusinessAccessPoints  ListBusinessAccessPointsRequest
+     * @return ListBusinessAccessPointsResponse
+     */
     @Override
     public CompletableFuture<ListBusinessAccessPointsResponse> listBusinessAccessPoints(ListBusinessAccessPointsRequest request) {
         try {
@@ -4703,6 +5861,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDhcpOptionsSets  ListDhcpOptionsSetsRequest
+     * @return ListDhcpOptionsSetsResponse
+     */
     @Override
     public CompletableFuture<ListDhcpOptionsSetsResponse> listDhcpOptionsSets(ListDhcpOptionsSetsRequest request) {
         try {
@@ -4718,8 +5880,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query zones that support NAT gateways, including Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query zones that support NAT gateways, including Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways.</p>
+     * 
+     * @param request the request parameters of ListEnhanhcedNatGatewayAvailableZones  ListEnhanhcedNatGatewayAvailableZonesRequest
+     * @return ListEnhanhcedNatGatewayAvailableZonesResponse
      */
     @Override
     public CompletableFuture<ListEnhanhcedNatGatewayAvailableZonesResponse> listEnhanhcedNatGatewayAvailableZones(ListEnhanhcedNatGatewayAvailableZonesRequest request) {
@@ -4735,6 +5900,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFullNatEntries  ListFullNatEntriesRequest
+     * @return ListFullNatEntriesResponse
+     */
     @Override
     public CompletableFuture<ListFullNatEntriesResponse> listFullNatEntries(ListFullNatEntriesRequest request) {
         try {
@@ -4749,6 +5918,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGatewayRouteTableEntries  ListGatewayRouteTableEntriesRequest
+     * @return ListGatewayRouteTableEntriesResponse
+     */
     @Override
     public CompletableFuture<ListGatewayRouteTableEntriesResponse> listGatewayRouteTableEntries(ListGatewayRouteTableEntriesRequest request) {
         try {
@@ -4763,6 +5936,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGeographicSubRegions  ListGeographicSubRegionsRequest
+     * @return ListGeographicSubRegionsResponse
+     */
     @Override
     public CompletableFuture<ListGeographicSubRegionsResponse> listGeographicSubRegions(ListGeographicSubRegionsRequest request) {
         try {
@@ -4777,6 +5954,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIpsecServerLogs  ListIpsecServerLogsRequest
+     * @return ListIpsecServerLogsResponse
+     */
     @Override
     public CompletableFuture<ListIpsecServerLogsResponse> listIpsecServerLogs(ListIpsecServerLogsRequest request) {
         try {
@@ -4791,6 +5972,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIpsecServers  ListIpsecServersRequest
+     * @return ListIpsecServersResponse
+     */
     @Override
     public CompletableFuture<ListIpsecServersResponse> listIpsecServers(ListIpsecServersRequest request) {
         try {
@@ -4805,6 +5990,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIpv4Gateways  ListIpv4GatewaysRequest
+     * @return ListIpv4GatewaysResponse
+     */
     @Override
     public CompletableFuture<ListIpv4GatewaysResponse> listIpv4Gateways(ListIpv4GatewaysRequest request) {
         try {
@@ -4819,6 +6008,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNatIpCidrs  ListNatIpCidrsRequest
+     * @return ListNatIpCidrsResponse
+     */
     @Override
     public CompletableFuture<ListNatIpCidrsResponse> listNatIpCidrs(ListNatIpCidrsRequest request) {
         try {
@@ -4833,6 +6026,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNatIps  ListNatIpsRequest
+     * @return ListNatIpsResponse
+     */
     @Override
     public CompletableFuture<ListNatIpsResponse> listNatIps(ListNatIpsRequest request) {
         try {
@@ -4847,6 +6044,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPrefixLists  ListPrefixListsRequest
+     * @return ListPrefixListsResponse
+     */
     @Override
     public CompletableFuture<ListPrefixListsResponse> listPrefixLists(ListPrefixListsRequest request) {
         try {
@@ -4861,6 +6062,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublicIpAddressPoolCidrBlocks  ListPublicIpAddressPoolCidrBlocksRequest
+     * @return ListPublicIpAddressPoolCidrBlocksResponse
+     */
     @Override
     public CompletableFuture<ListPublicIpAddressPoolCidrBlocksResponse> listPublicIpAddressPoolCidrBlocks(ListPublicIpAddressPoolCidrBlocksRequest request) {
         try {
@@ -4875,6 +6080,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublicIpAddressPools  ListPublicIpAddressPoolsRequest
+     * @return ListPublicIpAddressPoolsResponse
+     */
     @Override
     public CompletableFuture<ListPublicIpAddressPoolsResponse> listPublicIpAddressPools(ListPublicIpAddressPoolsRequest request) {
         try {
@@ -4890,12 +6099,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * *   You must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object that you want to query.
-      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you specify only **Tag.N.Value**, an error message is returned.
-      * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
-      * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
-      *
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> that consists of <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong> in the request to specify the object that you want to query.</li>
+     * <li><strong>Tag.N</strong> is a resource tag that consists of a key-value pair. If you specify only <strong>Tag.N.Key</strong>, all tag values that are associated with the specified key are returned. If you specify only <strong>Tag.N.Value</strong>, an error message is returned.</li>
+     * <li>If you specify <strong>Tag.N</strong> and <strong>ResourceId.N</strong> to filter tags, <strong>ResourceId.N</strong> must match all specified key-value pairs.</li>
+     * <li>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
      */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
@@ -4912,12 +6126,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)
-      * *   If you want to query a specific object, you must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request.
-      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you specify only **Tag.N.Value**, an error message is returned.
-      * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
-      * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>If you want to query a specific object, you must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> that consists of <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong> in the request.</li>
+     * <li><strong>Tag.N</strong> is a resource tag that consists of a key-value pair. If you specify only <strong>Tag.N.Key</strong>, all tag values that are associated with the specified key are returned. If you specify only <strong>Tag.N.Value</strong>, an error message is returned.</li>
+     * <li>If you specify <strong>Tag.N</strong> and <strong>ResourceId.N</strong> to filter tags, <strong>ResourceId.N</strong> must match all specified key-value pairs.</li>
+     * <li>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListTagResourcesForExpressConnect  ListTagResourcesForExpressConnectRequest
+     * @return ListTagResourcesForExpressConnectResponse
      */
     @Override
     public CompletableFuture<ListTagResourcesForExpressConnectResponse> listTagResourcesForExpressConnect(ListTagResourcesForExpressConnectRequest request) {
@@ -4933,6 +6152,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrafficMirrorFilters  ListTrafficMirrorFiltersRequest
+     * @return ListTrafficMirrorFiltersResponse
+     */
     @Override
     public CompletableFuture<ListTrafficMirrorFiltersResponse> listTrafficMirrorFilters(ListTrafficMirrorFiltersRequest request) {
         try {
@@ -4947,6 +6170,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrafficMirrorSessions  ListTrafficMirrorSessionsRequest
+     * @return ListTrafficMirrorSessionsResponse
+     */
     @Override
     public CompletableFuture<ListTrafficMirrorSessionsResponse> listTrafficMirrorSessions(ListTrafficMirrorSessionsRequest request) {
         try {
@@ -4961,6 +6188,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVSwitchCidrReservations  ListVSwitchCidrReservationsRequest
+     * @return ListVSwitchCidrReservationsResponse
+     */
     @Override
     public CompletableFuture<ListVSwitchCidrReservationsResponse> listVSwitchCidrReservations(ListVSwitchCidrReservationsRequest request) {
         try {
@@ -4975,6 +6206,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVirtualPhysicalConnections  ListVirtualPhysicalConnectionsRequest
+     * @return ListVirtualPhysicalConnectionsResponse
+     */
     @Override
     public CompletableFuture<ListVirtualPhysicalConnectionsResponse> listVirtualPhysicalConnections(ListVirtualPhysicalConnectionsRequest request) {
         try {
@@ -4989,6 +6224,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVpcEndpointServicesByEndUser  ListVpcEndpointServicesByEndUserRequest
+     * @return ListVpcEndpointServicesByEndUserResponse
+     */
     @Override
     public CompletableFuture<ListVpcEndpointServicesByEndUserResponse> listVpcEndpointServicesByEndUser(ListVpcEndpointServicesByEndUserRequest request) {
         try {
@@ -5003,6 +6242,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVpcGatewayEndpoints  ListVpcGatewayEndpointsRequest
+     * @return ListVpcGatewayEndpointsResponse
+     */
     @Override
     public CompletableFuture<ListVpcGatewayEndpointsResponse> listVpcGatewayEndpoints(ListVpcGatewayEndpointsRequest request) {
         try {
@@ -5017,6 +6260,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVpcPublishedRouteEntries  ListVpcPublishedRouteEntriesRequest
+     * @return ListVpcPublishedRouteEntriesResponse
+     */
     @Override
     public CompletableFuture<ListVpcPublishedRouteEntriesResponse> listVpcPublishedRouteEntries(ListVpcPublishedRouteEntriesRequest request) {
         try {
@@ -5032,12 +6279,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call **ListVpnCertificateAssociations**, take note of the following information:
-      * *   If you specify only **RegionId**, the SSL certificates associated with all VPN gateways in the specified region are queried.
-      * *   If you specify **RegionId** and **CertificateType**, the SSL certificates of the specified type that are associated with the VPN gateways in the specified region are queried.
-      * *   If you specify **RegionId** and **VpnGatewayId**, the SSL certificates associated with the specified VPN gateway in the specified region are queried.
-      * *   If you specify **RegionId** and **CertificateId**, the VPN gateways associated with the specified SSL certificate in the specified region are queried.
-      *
+     * <b>description</b> :
+     * <p>When you call <strong>ListVpnCertificateAssociations</strong>, take note of the following information:</p>
+     * <ul>
+     * <li>If you specify only <strong>RegionId</strong>, the SSL certificates associated with all VPN gateways in the specified region are queried.</li>
+     * <li>If you specify <strong>RegionId</strong> and <strong>CertificateType</strong>, the SSL certificates of the specified type that are associated with the VPN gateways in the specified region are queried.</li>
+     * <li>If you specify <strong>RegionId</strong> and <strong>VpnGatewayId</strong>, the SSL certificates associated with the specified VPN gateway in the specified region are queried.</li>
+     * <li>If you specify <strong>RegionId</strong> and <strong>CertificateId</strong>, the VPN gateways associated with the specified SSL certificate in the specified region are queried.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListVpnCertificateAssociations  ListVpnCertificateAssociationsRequest
+     * @return ListVpnCertificateAssociationsResponse
      */
     @Override
     public CompletableFuture<ListVpnCertificateAssociationsResponse> listVpnCertificateAssociations(ListVpnCertificateAssociationsRequest request) {
@@ -5053,6 +6305,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBgpGroupAttribute  ModifyBgpGroupAttributeRequest
+     * @return ModifyBgpGroupAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyBgpGroupAttributeResponse> modifyBgpGroupAttribute(ModifyBgpGroupAttributeRequest request) {
         try {
@@ -5067,6 +6323,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBgpPeerAttribute  ModifyBgpPeerAttributeRequest
+     * @return ModifyBgpPeerAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyBgpPeerAttributeResponse> modifyBgpPeerAttribute(ModifyBgpPeerAttributeRequest request) {
         try {
@@ -5081,6 +6341,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCommonBandwidthPackageAttribute  ModifyCommonBandwidthPackageAttributeRequest
+     * @return ModifyCommonBandwidthPackageAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyCommonBandwidthPackageAttributeResponse> modifyCommonBandwidthPackageAttribute(ModifyCommonBandwidthPackageAttributeRequest request) {
         try {
@@ -5096,13 +6360,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the **ModifyCommonBandwidthPackageIpBandwidth** operation to set the maximum bandwidth of an EIP that is associated with an Internet Shared Bandwidth instance. This prevents an EIP from exhausting the bandwidth resources of an Internet Shared Bandwidth instance.
-      * For example, two EIPs are associated with an Internet Shared Bandwidth instance whose maximum bandwidth is 800 Mbit/s. In this case, you can set the maximum bandwidth of one EIP to 500 Mbit/s and that of the other EIP to 400 Mbit/s. After you set the maximum bandwidth values, the first EIP cannot consume bandwidth higher than 500 Mbit/s. The second EIP cannot consume bandwidth higher than 400 Mbit/s.
-      * When you call this operation, take note of the following items:
-      * *   This operation is valid only for EIPs that are associated with Elastic Compute Service (ECS) instances. This operation is invalid for EIPs that are associated with Server Load Balancer (SLB) instances, NAT gateways, secondary elastic network interfaces (ENIs), or high-availability virtual IP addresses (HAVIPs).
-      * *   This operation is in public preview. You can call this operation to set the maximum bandwidth of EIPs only if the EIPs are associated with an Internet Shared Bandwidth instance. The feature is not supported in the console.
-      * *   You cannot repeatedly call this operation to set the maximum bandwidth of an EIP within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You can call the <strong>ModifyCommonBandwidthPackageIpBandwidth</strong> operation to set the maximum bandwidth of an EIP that is associated with an Internet Shared Bandwidth instance. This prevents an EIP from exhausting the bandwidth resources of an Internet Shared Bandwidth instance.
+     * For example, two EIPs are associated with an Internet Shared Bandwidth instance whose maximum bandwidth is 800 Mbit/s. In this case, you can set the maximum bandwidth of one EIP to 500 Mbit/s and that of the other EIP to 400 Mbit/s. After you set the maximum bandwidth values, the first EIP cannot consume bandwidth higher than 500 Mbit/s. The second EIP cannot consume bandwidth higher than 400 Mbit/s.
+     * When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>This operation is valid only for EIPs that are associated with Elastic Compute Service (ECS) instances. This operation is invalid for EIPs that are associated with Server Load Balancer (SLB) instances, NAT gateways, secondary elastic network interfaces (ENIs), or high-availability virtual IP addresses (HAVIPs).</li>
+     * <li>This operation is in public preview. You can call this operation to set the maximum bandwidth of EIPs only if the EIPs are associated with an Internet Shared Bandwidth instance. The feature is not supported in the console.</li>
+     * <li>You cannot repeatedly call this operation to set the maximum bandwidth of an EIP within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyCommonBandwidthPackageIpBandwidth  ModifyCommonBandwidthPackageIpBandwidthRequest
+     * @return ModifyCommonBandwidthPackageIpBandwidthResponse
      */
     @Override
     public CompletableFuture<ModifyCommonBandwidthPackageIpBandwidthResponse> modifyCommonBandwidthPackageIpBandwidth(ModifyCommonBandwidthPackageIpBandwidthRequest request) {
@@ -5119,12 +6388,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following items:
-      * *   **ModifyCommonBandwidthPackageSpec** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeCommonBandwidthPackages](~~120309~~) operation to query the status of the task.
-      *     *   If the Internet Shared Bandwidth instance is in the **Modifying** state, the maximum bandwidth of the Internet Shared Bandwidth instance is being modified. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.
-      *     *   If the Internet Shared Bandwidth instance is in the **Available** state, the maximum bandwidth of the Internet Shared Bandwidth instance is modified.
-      * *   You cannot repeatedly call the **ModifyCommonBandwidthPackageSpec** operation to modify the maximum bandwidth of an Internet Shared Bandwidth instance within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li><strong>ModifyCommonBandwidthPackageSpec</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> operation to query the status of the task.<ul>
+     * <li>If the Internet Shared Bandwidth instance is in the <strong>Modifying</strong> state, the maximum bandwidth of the Internet Shared Bandwidth instance is being modified. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.</li>
+     * <li>If the Internet Shared Bandwidth instance is in the <strong>Available</strong> state, the maximum bandwidth of the Internet Shared Bandwidth instance is modified.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>ModifyCommonBandwidthPackageSpec</strong> operation to modify the maximum bandwidth of an Internet Shared Bandwidth instance within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyCommonBandwidthPackageSpec  ModifyCommonBandwidthPackageSpecRequest
+     * @return ModifyCommonBandwidthPackageSpecResponse
      */
     @Override
     public CompletableFuture<ModifyCommonBandwidthPackageSpecResponse> modifyCommonBandwidthPackageSpec(ModifyCommonBandwidthPackageSpecRequest request) {
@@ -5141,12 +6417,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   When you call **ModifyCustomerGatewayAttribute**, if a value is assigned to **AuthKey**, the operation is asynchronous. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
-      *     *   If a VPN gateway is in the **updating** state, the configurations are being modified.
-      *     *   If a VPN gateway is in the **active** state, the configurations are modified.
-      * *   When you call **ModifyCustomerGatewayAttribute**, if no value is assigned to **AuthKey**, the operation is synchronous.
-      * *   You cannot repeatedly call **ModifyCustomerGatewayAttribute** to modify the configurations of a customer gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  When you call <strong>ModifyCustomerGatewayAttribute</strong>, if a value is assigned to <strong>AuthKey</strong>, the operation is asynchronous. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.
+     *     *   If a VPN gateway is in the <strong>updating</strong> state, the configurations are being modified.
+     *     *   If a VPN gateway is in the <strong>active</strong> state, the configurations are modified.</p>
+     * <ul>
+     * <li>When you call <strong>ModifyCustomerGatewayAttribute</strong>, if no value is assigned to <strong>AuthKey</strong>, the operation is synchronous.</li>
+     * <li>You cannot repeatedly call <strong>ModifyCustomerGatewayAttribute</strong> to modify the configurations of a customer gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyCustomerGatewayAttribute  ModifyCustomerGatewayAttributeRequest
+     * @return ModifyCustomerGatewayAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyCustomerGatewayAttributeResponse> modifyCustomerGatewayAttribute(ModifyCustomerGatewayAttributeRequest request) {
@@ -5162,6 +6443,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyEipAddressAttribute  ModifyEipAddressAttributeRequest
+     * @return ModifyEipAddressAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyEipAddressAttributeResponse> modifyEipAddressAttribute(ModifyEipAddressAttributeRequest request) {
         try {
@@ -5176,6 +6461,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyExpressCloudConnectionAttribute  ModifyExpressCloudConnectionAttributeRequest
+     * @return ModifyExpressCloudConnectionAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyExpressCloudConnectionAttributeResponse> modifyExpressCloudConnectionAttribute(ModifyExpressCloudConnectionAttributeRequest request) {
         try {
@@ -5190,6 +6479,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyExpressCloudConnectionBandwidth  ModifyExpressCloudConnectionBandwidthRequest
+     * @return ModifyExpressCloudConnectionBandwidthResponse
+     */
     @Override
     public CompletableFuture<ModifyExpressCloudConnectionBandwidthResponse> modifyExpressCloudConnectionBandwidth(ModifyExpressCloudConnectionBandwidthRequest request) {
         try {
@@ -5204,6 +6497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyExpressConnectTrafficQos  ModifyExpressConnectTrafficQosRequest
+     * @return ModifyExpressConnectTrafficQosResponse
+     */
     @Override
     public CompletableFuture<ModifyExpressConnectTrafficQosResponse> modifyExpressConnectTrafficQos(ModifyExpressConnectTrafficQosRequest request) {
         try {
@@ -5218,6 +6515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyExpressConnectTrafficQosQueue  ModifyExpressConnectTrafficQosQueueRequest
+     * @return ModifyExpressConnectTrafficQosQueueResponse
+     */
     @Override
     public CompletableFuture<ModifyExpressConnectTrafficQosQueueResponse> modifyExpressConnectTrafficQosQueue(ModifyExpressConnectTrafficQosQueueRequest request) {
         try {
@@ -5232,6 +6533,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyExpressConnectTrafficQosRule  ModifyExpressConnectTrafficQosRuleRequest
+     * @return ModifyExpressConnectTrafficQosRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyExpressConnectTrafficQosRuleResponse> modifyExpressConnectTrafficQosRule(ModifyExpressConnectTrafficQosRuleRequest request) {
         try {
@@ -5247,11 +6552,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **ModifyFlowLogAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
-      *     *   If the flow log is in the **Modifying** state, the flow log is being modified.
-      *     *   If the flow log is in the **Active** or **Inactive** state, the flow log is modified.
-      * *   You cannot repeatedly call the **ModifyFlowLogAttribute** operation to modify a flow log within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>ModifyFlowLogAttribute</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> operation to query the status of a flow log:
+     *     *   If the flow log is in the <strong>Modifying</strong> state, the flow log is being modified.
+     *     *   If the flow log is in the <strong>Active</strong> or <strong>Inactive</strong> state, the flow log is modified.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>ModifyFlowLogAttribute</strong> operation to modify a flow log within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyFlowLogAttribute  ModifyFlowLogAttributeRequest
+     * @return ModifyFlowLogAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyFlowLogAttributeResponse> modifyFlowLogAttribute(ModifyFlowLogAttributeRequest request) {
@@ -5268,11 +6578,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **ModifyForwardEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of the task.
-      *     *   **Pending**: indicates that the system is modifying the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
-      *     *   **Available**: indicates that the DNAT entry is modified.
-      * *   You cannot repeatedly call the **ModifyForwardEntry** operation to modify a DNAT entry within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>ModifyForwardEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36053.html">DescribeForwardTableEntries</a> operation to query the status of the task.
+     *     *   <strong>Pending</strong>: indicates that the system is modifying the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
+     *     *   <strong>Available</strong>: indicates that the DNAT entry is modified.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>ModifyForwardEntry</strong> operation to modify a DNAT entry within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyForwardEntry  ModifyForwardEntryRequest
+     * @return ModifyForwardEntryResponse
      */
     @Override
     public CompletableFuture<ModifyForwardEntryResponse> modifyForwardEntry(ModifyForwardEntryRequest request) {
@@ -5289,12 +6604,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)
-      * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
-      *     *   **Modifying**: indicates that the system is modifying the FULLNAT entry. You can query the FULLNAT entry, but cannot perform other operations.
-      *     *   **Available**: indicates that the FULLNAT entry is modified.
-      * *   You cannot repeatedly call the **ModifyFullNatEntryAttribute** operation to modify a FULLNAT entry within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li><strong>ModifyFullNatEntryAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/348779.html">ListFullNatEntries</a> operation to query the status of a FULLNAT entry.<ul>
+     * <li><strong>Modifying</strong>: indicates that the system is modifying the FULLNAT entry. You can query the FULLNAT entry, but cannot perform other operations.</li>
+     * <li><strong>Available</strong>: indicates that the FULLNAT entry is modified.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>ModifyFullNatEntryAttribute</strong> operation to modify a FULLNAT entry within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyFullNatEntryAttribute  ModifyFullNatEntryAttributeRequest
+     * @return ModifyFullNatEntryAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyFullNatEntryAttributeResponse> modifyFullNatEntryAttribute(ModifyFullNatEntryAttributeRequest request) {
@@ -5310,6 +6632,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyGlobalAccelerationInstanceAttributes  ModifyGlobalAccelerationInstanceAttributesRequest
+     * @return ModifyGlobalAccelerationInstanceAttributesResponse
+     */
     @Override
     public CompletableFuture<ModifyGlobalAccelerationInstanceAttributesResponse> modifyGlobalAccelerationInstanceAttributes(ModifyGlobalAccelerationInstanceAttributesRequest request) {
         try {
@@ -5325,9 +6651,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * You cannot call this operation to modify the maximum bandwidth of a subscription GA instance.
-      *
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>You cannot call this operation to modify the maximum bandwidth of a subscription GA instance.</p>
+     * 
+     * @param request the request parameters of ModifyGlobalAccelerationInstanceSpec  ModifyGlobalAccelerationInstanceSpecRequest
+     * @return ModifyGlobalAccelerationInstanceSpecResponse
      */
     @Override
     public CompletableFuture<ModifyGlobalAccelerationInstanceSpecResponse> modifyGlobalAccelerationInstanceSpec(ModifyGlobalAccelerationInstanceSpecRequest request) {
@@ -5344,8 +6673,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **ModifyHaVipAttribute** operation to modify the name and description of an HAVIP within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>ModifyHaVipAttribute</strong> operation to modify the name and description of an HAVIP within the specified period of time.</p>
+     * 
+     * @param request the request parameters of ModifyHaVipAttribute  ModifyHaVipAttributeRequest
+     * @return ModifyHaVipAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyHaVipAttributeResponse> modifyHaVipAttribute(ModifyHaVipAttributeRequest request) {
@@ -5362,9 +6694,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI ModifyIPv6TranslatorAclAttribute is deprecated  * @param request  the request parameters of ModifyIPv6TranslatorAclAttribute  ModifyIPv6TranslatorAclAttributeRequest
+     * @return ModifyIPv6TranslatorAclAttributeResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ModifyIPv6TranslatorAclAttributeResponse> modifyIPv6TranslatorAclAttribute(ModifyIPv6TranslatorAclAttributeRequest request) {
         try {
@@ -5379,6 +6712,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyIPv6TranslatorAclListEntry  ModifyIPv6TranslatorAclListEntryRequest
+     * @return ModifyIPv6TranslatorAclListEntryResponse
+     */
     @Override
     public CompletableFuture<ModifyIPv6TranslatorAclListEntryResponse> modifyIPv6TranslatorAclListEntry(ModifyIPv6TranslatorAclListEntryRequest request) {
         try {
@@ -5393,6 +6730,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyIPv6TranslatorAttribute  ModifyIPv6TranslatorAttributeRequest
+     * @return ModifyIPv6TranslatorAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyIPv6TranslatorAttributeResponse> modifyIPv6TranslatorAttribute(ModifyIPv6TranslatorAttributeRequest request) {
         try {
@@ -5407,6 +6748,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyIPv6TranslatorBandwidth  ModifyIPv6TranslatorBandwidthRequest
+     * @return ModifyIPv6TranslatorBandwidthResponse
+     */
     @Override
     public CompletableFuture<ModifyIPv6TranslatorBandwidthResponse> modifyIPv6TranslatorBandwidth(ModifyIPv6TranslatorBandwidthRequest request) {
         try {
@@ -5422,9 +6767,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI ModifyIPv6TranslatorEntry is deprecated  * @param request  the request parameters of ModifyIPv6TranslatorEntry  ModifyIPv6TranslatorEntryRequest
+     * @return ModifyIPv6TranslatorEntryResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ModifyIPv6TranslatorEntryResponse> modifyIPv6TranslatorEntry(ModifyIPv6TranslatorEntryRequest request) {
         try {
@@ -5439,6 +6785,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyIpv6AddressAttribute  ModifyIpv6AddressAttributeRequest
+     * @return ModifyIpv6AddressAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyIpv6AddressAttributeResponse> modifyIpv6AddressAttribute(ModifyIpv6AddressAttributeRequest request) {
         try {
@@ -5453,6 +6803,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyIpv6GatewayAttribute  ModifyIpv6GatewayAttributeRequest
+     * @return ModifyIpv6GatewayAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyIpv6GatewayAttributeResponse> modifyIpv6GatewayAttribute(ModifyIpv6GatewayAttributeRequest request) {
         try {
@@ -5468,8 +6822,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **ModifyIpv6InternetBandwidth** operation to modify the Internet bandwidth value of an IPv6 CIDR block within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>ModifyIpv6InternetBandwidth</strong> operation to modify the Internet bandwidth value of an IPv6 CIDR block within the specified period of time.</p>
+     * 
+     * @param request the request parameters of ModifyIpv6InternetBandwidth  ModifyIpv6InternetBandwidthRequest
+     * @return ModifyIpv6InternetBandwidthResponse
      */
     @Override
     public CompletableFuture<ModifyIpv6InternetBandwidthResponse> modifyIpv6InternetBandwidth(ModifyIpv6InternetBandwidthRequest request) {
@@ -5486,9 +6843,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both NAT gateway types.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <p>You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both NAT gateway types.</p>
+     * 
+     * @param request the request parameters of ModifyNatGatewayAttribute  ModifyNatGatewayAttributeRequest
+     * @return ModifyNatGatewayAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyNatGatewayAttributeResponse> modifyNatGatewayAttribute(ModifyNatGatewayAttributeRequest request) {
@@ -5505,18 +6865,44 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * - You cannot call this operation to downgrade a subscription Internet NAT gateway. You can downgrade a subscription Internet NAT gateway only in the console.
-      * - When you call this operation to upgrade a subscription Internet NAT gateway, an order is generated. After you complete the payment in the order center, the Internet NAT gateway is upgraded.
-      * - **ModifyNatGatewaySpec** is an asynchronous operation. After you make a request, the ID of the request is returned but the Internet NAT gateway is not upgraded. The system upgrades the NAT gateway in the background. You can call the [DescribeNatGateways](/help/en/virtual-private-cloud/latest/describenatgateways) operation to query the status of an Internet NAT gateway.    - If an Internet NAT gateway is in the **Modifying** state, the NAT gateway is being upgraded. In this case, you can only query the NAT gateway but cannot perform other operations.
-      *   - If an Internet NAT gateway is in the **Available** state, the Internet NAT gateway is upgraded.
-      * - You cannot repeatedly call the **ModifyNatGatewaySpec** operation to resize a pay-by-specification NAT gateway.
-      * Internet NAT gateways are available in different sizes. The size of an Internet NAT gateway determines the SNAT performance, which includes the maximum number of connections and the number of new connections per second. However, the size of a NAT gateway does not affect the data throughput. The following table describes the correlations between different sizes of Internet NAT gateways and SNAT performance metrics.  
-      * | Size | Maximum number of connections | Number of new connections per second |
-      * | ---- | ----------------------------- | ------------------------------------ |
-      * | Small | 10,000 | 1,000 |
-      * | Medium | 50,000 | 5,000 |
-      * | Large | 200,000 | 10,000 |
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>You cannot call this operation to downgrade a subscription Internet NAT gateway. You can downgrade a subscription Internet NAT gateway only in the console.</li>
+     * <li>When you call this operation to upgrade a subscription Internet NAT gateway, an order is generated. After you complete the payment in the order center, the Internet NAT gateway is upgraded.</li>
+     * <li><strong>ModifyNatGatewaySpec</strong> is an asynchronous operation. After you make a request, the ID of the request is returned but the Internet NAT gateway is not upgraded. The system upgrades the NAT gateway in the background. You can call the <a href="/help/en/virtual-private-cloud/latest/describenatgateways">DescribeNatGateways</a> operation to query the status of an Internet NAT gateway.    - If an Internet NAT gateway is in the <strong>Modifying</strong> state, the NAT gateway is being upgraded. In this case, you can only query the NAT gateway but cannot perform other operations.<ul>
+     * <li>If an Internet NAT gateway is in the <strong>Available</strong> state, the Internet NAT gateway is upgraded.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>ModifyNatGatewaySpec</strong> operation to resize a pay-by-specification NAT gateway.
+     * Internet NAT gateways are available in different sizes. The size of an Internet NAT gateway determines the SNAT performance, which includes the maximum number of connections and the number of new connections per second. However, the size of a NAT gateway does not affect the data throughput. The following table describes the correlations between different sizes of Internet NAT gateways and SNAT performance metrics.  <table>
+     * <thead>
+     * <tr>
+     * <th>Size</th>
+     * <th>Maximum number of connections</th>
+     * <th>Number of new connections per second</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Small</td>
+     * <td>10,000</td>
+     * <td>1,000</td>
+     * </tr>
+     * <tr>
+     * <td>Medium</td>
+     * <td>50,000</td>
+     * <td>5,000</td>
+     * </tr>
+     * <tr>
+     * <td>Large</td>
+     * <td>200,000</td>
+     * <td>10,000</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyNatGatewaySpec  ModifyNatGatewaySpecRequest
+     * @return ModifyNatGatewaySpecResponse
      */
     @Override
     public CompletableFuture<ModifyNatGatewaySpecResponse> modifyNatGatewaySpec(ModifyNatGatewaySpecRequest request) {
@@ -5533,9 +6919,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * You cannot repeatedly call the **ModifyNatIpAttribute** operation to modify the name and description of a NAT IP address within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <p>You cannot repeatedly call the <strong>ModifyNatIpAttribute</strong> operation to modify the name and description of a NAT IP address within the specified period of time.</p>
+     * 
+     * @param request the request parameters of ModifyNatIpAttribute  ModifyNatIpAttributeRequest
+     * @return ModifyNatIpAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyNatIpAttributeResponse> modifyNatIpAttribute(ModifyNatIpAttributeRequest request) {
@@ -5551,6 +6940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyNatIpCidrAttribute  ModifyNatIpCidrAttributeRequest
+     * @return ModifyNatIpCidrAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyNatIpCidrAttributeResponse> modifyNatIpCidrAttribute(ModifyNatIpCidrAttributeRequest request) {
         try {
@@ -5565,6 +6958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyNetworkAclAttributes  ModifyNetworkAclAttributesRequest
+     * @return ModifyNetworkAclAttributesResponse
+     */
     @Override
     public CompletableFuture<ModifyNetworkAclAttributesResponse> modifyNetworkAclAttributes(ModifyNetworkAclAttributesRequest request) {
         try {
@@ -5580,11 +6977,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * *   If an Express Connect circuit is in the **Initial**, **Enabled**, or **Rejected** state, you can modify the specifications of the Express Connect circuit and the ID of the redundant circuit.
-      * *   If an Express Connect circuit is in the **Canceled**, **Allocating**, **AllocationFailed**, or **Terminated** state, you cannot modify the specifications of the Express Connect circuit.
-      * *   After you modify the specifications of an Express Connect circuit that is in the **Rejected** state, the Express Connect circuit enters the **Initial** state.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>If an Express Connect circuit is in the <strong>Initial</strong>, <strong>Enabled</strong>, or <strong>Rejected</strong> state, you can modify the specifications of the Express Connect circuit and the ID of the redundant circuit.</li>
+     * <li>If an Express Connect circuit is in the <strong>Canceled</strong>, <strong>Allocating</strong>, <strong>AllocationFailed</strong>, or <strong>Terminated</strong> state, you cannot modify the specifications of the Express Connect circuit.</li>
+     * <li>After you modify the specifications of an Express Connect circuit that is in the <strong>Rejected</strong> state, the Express Connect circuit enters the <strong>Initial</strong> state.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyPhysicalConnectionAttribute  ModifyPhysicalConnectionAttributeRequest
+     * @return ModifyPhysicalConnectionAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyPhysicalConnectionAttributeResponse> modifyPhysicalConnectionAttribute(ModifyPhysicalConnectionAttributeRequest request) {
@@ -5601,8 +7003,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **ModifyRouteEntry** operation to modify the name and description of a custom route within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>ModifyRouteEntry</strong> operation to modify the name and description of a custom route within the specified period of time.</p>
+     * 
+     * @param request the request parameters of ModifyRouteEntry  ModifyRouteEntryRequest
+     * @return ModifyRouteEntryResponse
      */
     @Override
     public CompletableFuture<ModifyRouteEntryResponse> modifyRouteEntry(ModifyRouteEntryRequest request) {
@@ -5619,8 +7024,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>ModifyRouteTableAttributes</strong> operation to modify the name and description of a route table within the specified period of time.</p>
+     * 
+     * @param request the request parameters of ModifyRouteTableAttributes  ModifyRouteTableAttributesRequest
+     * @return ModifyRouteTableAttributesResponse
      */
     @Override
     public CompletableFuture<ModifyRouteTableAttributesResponse> modifyRouteTableAttributes(ModifyRouteTableAttributesRequest request) {
@@ -5636,6 +7044,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyRouterInterfaceAttribute  ModifyRouterInterfaceAttributeRequest
+     * @return ModifyRouterInterfaceAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyRouterInterfaceAttributeResponse> modifyRouterInterfaceAttribute(ModifyRouterInterfaceAttributeRequest request) {
         try {
@@ -5651,9 +7063,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
-      * >  You cannot modify the specification of a router interface that has overdue payments.
-      *
+     * <b>description</b> :
+     * <p>After you call this operation, the router interface enters the <strong>Activating</strong> state. After the router interface is activated, the router interface enters the <strong>Active</strong> state.</p>
+     * <blockquote>
+     * <p> You cannot modify the specification of a router interface that has overdue payments.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyRouterInterfaceSpec  ModifyRouterInterfaceSpecRequest
+     * @return ModifyRouterInterfaceSpecResponse
      */
     @Override
     public CompletableFuture<ModifyRouterInterfaceSpecResponse> modifyRouterInterfaceSpec(ModifyRouterInterfaceSpecRequest request) {
@@ -5670,13 +7087,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)
-      * **ModifySnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
-      * *   **Pending**: indicates that the system is modifying the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
-      * *   **Available**: indicates that the SNAT entry is modified.
-      * >  If an SNAT entry is in the **Pending** state, it indicates that you cannot modify the SNAT entry.
-      * You cannot repeatedly call the **ModifySnatEntry** operation to modify an SNAT entry within a specific period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p><strong>ModifySnatEntry</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the task.</p>
+     * <ul>
+     * <li><strong>Pending</strong>: indicates that the system is modifying the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.</li>
+     * <li><strong>Available</strong>: indicates that the SNAT entry is modified.<blockquote>
+     * <p> If an SNAT entry is in the <strong>Pending</strong> state, it indicates that you cannot modify the SNAT entry.
+     * You cannot repeatedly call the <strong>ModifySnatEntry</strong> operation to modify an SNAT entry within a specific period of time.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifySnatEntry  ModifySnatEntryRequest
+     * @return ModifySnatEntryResponse
      */
     @Override
     public CompletableFuture<ModifySnatEntryResponse> modifySnatEntry(ModifySnatEntryRequest request) {
@@ -5692,6 +7116,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySslVpnClientCert  ModifySslVpnClientCertRequest
+     * @return ModifySslVpnClientCertResponse
+     */
     @Override
     public CompletableFuture<ModifySslVpnClientCertResponse> modifySslVpnClientCert(ModifySslVpnClientCertRequest request) {
         try {
@@ -5707,12 +7135,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If you modify only the **name** of the SSL server, the operation is synchronous. If you also modify other configurations besides the **name**, the operation is asynchronous.
-      * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~2794055~~) to query the status of the task.
-      *     *   If a VPN gateway is in the **updating** state, the configurations of the SSL server are being modified.
-      *     *   If a VPN gateway is in the **active** state, the configurations of the SSL server are modified.
-      * *   You cannot repeatedly call **ModifySslVpnServer** to modify the configurations of an SSL server within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  If you modify only the <strong>name</strong> of the SSL server, the operation is synchronous. If you also modify other configurations besides the <strong>name</strong>, the operation is asynchronous.</p>
+     * <ul>
+     * <li>When <strong>ModifySslVpnServer</strong> is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the task.<ul>
+     * <li>If a VPN gateway is in the <strong>updating</strong> state, the configurations of the SSL server are being modified.</li>
+     * <li>If a VPN gateway is in the <strong>active</strong> state, the configurations of the SSL server are modified.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call <strong>ModifySslVpnServer</strong> to modify the configurations of an SSL server within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifySslVpnServer  ModifySslVpnServerRequest
+     * @return ModifySslVpnServerResponse
      */
     @Override
     public CompletableFuture<ModifySslVpnServerResponse> modifySslVpnServer(ModifySslVpnServerRequest request) {
@@ -5728,6 +7163,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyTunnelAttribute  ModifyTunnelAttributeRequest
+     * @return ModifyTunnelAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyTunnelAttributeResponse> modifyTunnelAttribute(ModifyTunnelAttributeRequest request) {
         try {
@@ -5743,8 +7182,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **ModifyVRouterAttribute** operation within a specific period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>ModifyVRouterAttribute</strong> operation within a specific period of time.</p>
+     * 
+     * @param request the request parameters of ModifyVRouterAttribute  ModifyVRouterAttributeRequest
+     * @return ModifyVRouterAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyVRouterAttributeResponse> modifyVRouterAttribute(ModifyVRouterAttributeRequest request) {
@@ -5761,11 +7203,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **ModifyVSwitchAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
-      *     *   If the vSwitch is in the **Pending** state, the name and description of the vSwitch are being modified.
-      *     *   If the vSwitch is in the **Available** state, the name and description of the vSwitch are modified.
-      * *   You cannot repeatedly call the **ModifyVSwitchAttribute** operation to modify the name and description of a vSwitch within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>ModifyVSwitchAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:
+     *     *   If the vSwitch is in the <strong>Pending</strong> state, the name and description of the vSwitch are being modified.
+     *     *   If the vSwitch is in the <strong>Available</strong> state, the name and description of the vSwitch are modified.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>ModifyVSwitchAttribute</strong> operation to modify the name and description of a vSwitch within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVSwitchAttribute  ModifyVSwitchAttributeRequest
+     * @return ModifyVSwitchAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyVSwitchAttributeResponse> modifyVSwitchAttribute(ModifyVSwitchAttributeRequest request) {
@@ -5782,9 +7229,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Usage notes
-      * You cannot repeatedly call **ModifyVSwitchCidrReservationAttribute** within a specific time period.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You cannot repeatedly call <strong>ModifyVSwitchCidrReservationAttribute</strong> within a specific time period.</p>
+     * 
+     * @param request the request parameters of ModifyVSwitchCidrReservationAttribute  ModifyVSwitchCidrReservationAttributeRequest
+     * @return ModifyVSwitchCidrReservationAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyVSwitchCidrReservationAttributeResponse> modifyVSwitchCidrReservationAttribute(ModifyVSwitchCidrReservationAttributeRequest request) {
@@ -5801,11 +7251,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **ModifyVcoRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of the associated IPsec-VPN connection and determine whether the weight of the specified destination-based route is modified.
-      *     *   If the IPsec-VPN connection is in the **updating** state, the weight of the destination-based route is being modified.
-      *     *   If the IPsec-VPN connection is in the **attached** state, the weight of the destination-based route is modified.
-      * *   You cannot repeatedly call the **ModifyVcoRouteEntryWeight** operation for the same IPsec-VPN connection within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>ModifyVcoRouteEntryWeight</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> operation to query the status of the associated IPsec-VPN connection and determine whether the weight of the specified destination-based route is modified.
+     *     *   If the IPsec-VPN connection is in the <strong>updating</strong> state, the weight of the destination-based route is being modified.
+     *     *   If the IPsec-VPN connection is in the <strong>attached</strong> state, the weight of the destination-based route is modified.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>ModifyVcoRouteEntryWeight</strong> operation for the same IPsec-VPN connection within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVcoRouteEntryWeight  ModifyVcoRouteEntryWeightRequest
+     * @return ModifyVcoRouteEntryWeightResponse
      */
     @Override
     public CompletableFuture<ModifyVcoRouteEntryWeightResponse> modifyVcoRouteEntryWeight(ModifyVcoRouteEntryWeightRequest request) {
@@ -5822,14 +7277,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * # [](#)
-      * *   Only the owner of an Express Connect circuit can modify the **VlanId** parameter.
-      * *   One VLAN ID of an Express Connect circuit cannot be used only by one VBR at the same time.
-      * *   The VLAN ID of a VBR in the **Terminated** state is reserved for seven days and cannot be used by other VBRs. The VLAN ID can be used by other VBRs after 7 days.
-      * *   You cannot set **LocalGatewayIp**, **PeerGatewayIp**, or **PeeringSubnetMask** for VBRs that do not belong to your Alibaba Cloud account.
-      * *   Set **PeeringSubnetMask** to a subnet mask with 24 to 30 bits in length (255.255.255.0～255.255.255.252).
-      * *   Set **LocalGatewayIp** and **PeerGatewayIp** to IP addresses that belong to the same CIDR block. For example, you can set LocalGatewayIp to 192.168.XX.XX, PeerGatewayIp to 192.168.XX.XX, and PeeringSubnetMask to 255.255.255.248.
-      *
+     * <b>description</b> :
+     * <h1><a href="#"></a></h1>
+     * <ul>
+     * <li>Only the owner of an Express Connect circuit can modify the <strong>VlanId</strong> parameter.</li>
+     * <li>One VLAN ID of an Express Connect circuit cannot be used only by one VBR at the same time.</li>
+     * <li>The VLAN ID of a VBR in the <strong>Terminated</strong> state is reserved for seven days and cannot be used by other VBRs. The VLAN ID can be used by other VBRs after 7 days.</li>
+     * <li>You cannot set <strong>LocalGatewayIp</strong>, <strong>PeerGatewayIp</strong>, or <strong>PeeringSubnetMask</strong> for VBRs that do not belong to your Alibaba Cloud account.</li>
+     * <li>Set <strong>PeeringSubnetMask</strong> to a subnet mask with 24 to 30 bits in length (255.255.255.0～255.255.255.252).</li>
+     * <li>Set <strong>LocalGatewayIp</strong> and <strong>PeerGatewayIp</strong> to IP addresses that belong to the same CIDR block. For example, you can set LocalGatewayIp to 192.168.XX.XX, PeerGatewayIp to 192.168.XX.XX, and PeeringSubnetMask to 255.255.255.248.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVirtualBorderRouterAttribute  ModifyVirtualBorderRouterAttributeRequest
+     * @return ModifyVirtualBorderRouterAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyVirtualBorderRouterAttributeResponse> modifyVirtualBorderRouterAttribute(ModifyVirtualBorderRouterAttributeRequest request) {
@@ -5846,9 +7306,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * You cannot repeatedly call the **ModifyVpcAttribute** operation to modify the name and description of a VPC within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <p>You cannot repeatedly call the <strong>ModifyVpcAttribute</strong> operation to modify the name and description of a VPC within the specified period of time.</p>
+     * 
+     * @param request the request parameters of ModifyVpcAttribute  ModifyVpcAttributeRequest
+     * @return ModifyVpcAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyVpcAttributeResponse> modifyVpcAttribute(ModifyVpcAttributeRequest request) {
@@ -5865,12 +7328,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **ModifyVpcPrefixList** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPrefixLists](~~311535~~) to query the status of the task.
-      *     *   If the prefix list is in the **Modifying** state, the configuration of the prefix list is being modified.
-      *     *   If the prefix list is in the **Created** state, the configuration of the prefix list is modified.
-      *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query the information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
-      * *   You cannot repeatedly call **ModifyVpcPrefixList** to modify the configuration of a prefix list within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>ModifyVpcPrefixList</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/311535.html">ListPrefixLists</a> to query the status of the task.
+     *     *   If the prefix list is in the <strong>Modifying</strong> state, the configuration of the prefix list is being modified.
+     *     *   If the prefix list is in the <strong>Created</strong> state, the configuration of the prefix list is modified.
+     *     *   After the configuration of the prefix list is modified, you can call the <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> operation to query the information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association <strong>status</strong> of the prefix list is <strong>Created</strong>, the new CIDR blocks are used by the network instances that are associated with the prefix list.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>ModifyVpcPrefixList</strong> to modify the configuration of a prefix list within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVpcPrefixList  ModifyVpcPrefixListRequest
+     * @return ModifyVpcPrefixListResponse
      */
     @Override
     public CompletableFuture<ModifyVpcPrefixListResponse> modifyVpcPrefixList(ModifyVpcPrefixListRequest request) {
@@ -5887,20 +7355,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **ModifyVpnAttachmentAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task to modify the configuration of an IPsec-VPN connection in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of the task.
-      *     *   If the IPsec-VPN connection is in the **updating** state, the configuration of the IPsec-VPN connection is being modified.
-      *     *   If the IPsec-VPN connection is in the **attached** state, the configuration of the IPsec-VPN connection is modified.
-      * *   You cannot call the **ModifyVpnAttachmentAttribute** operation again on the same IPsec-VPN connection before the previous operation is complete.
-      * *   When you call the **ModifyVpnAttachmentAttribute** operation, take note of the following items:
-      *     *   If the IPsec-VPN connection is associated with a transit router, you cannot change the type of the gateway connected to the IPsec-VPN connection.
-      *     *   If the IPsec-VPN connection is not associated with a resource, you cannot change the type of the gateway connected to the IPsec-VPN connection or the customer gateway connected to the IPsec-VPN connection.
-      *
+     * <b>description</b> :
+     * <p>  <strong>ModifyVpnAttachmentAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task to modify the configuration of an IPsec-VPN connection in the background. You can call the <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> operation to query the status of the task.
+     *     *   If the IPsec-VPN connection is in the <strong>updating</strong> state, the configuration of the IPsec-VPN connection is being modified.
+     *     *   If the IPsec-VPN connection is in the <strong>attached</strong> state, the configuration of the IPsec-VPN connection is modified.</p>
+     * <ul>
+     * <li>You cannot call the <strong>ModifyVpnAttachmentAttribute</strong> operation again on the same IPsec-VPN connection before the previous operation is complete.</li>
+     * <li>When you call the <strong>ModifyVpnAttachmentAttribute</strong> operation, take note of the following items:<ul>
+     * <li>If the IPsec-VPN connection is associated with a transit router, you cannot change the type of the gateway connected to the IPsec-VPN connection.</li>
+     * <li>If the IPsec-VPN connection is not associated with a resource, you cannot change the type of the gateway connected to the IPsec-VPN connection or the customer gateway connected to the IPsec-VPN connection.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVpnAttachmentAttribute  ModifyVpnAttachmentAttributeRequest
+     * @return ModifyVpnAttachmentAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyVpnAttachmentAttributeResponse> modifyVpnAttachmentAttribute(ModifyVpnAttachmentAttributeRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyVpnAttachmentAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyVpnAttachmentAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyVpnAttachmentAttributeResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -5911,15 +7386,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If you want to modify a IPsec-VPN connection in dual-tunnel mode, call the `ModifyVpnConnectionAttribute` operation. You can modify the required parameters and the following request parameters:
-      *     **ClientToken**, **Name**, **LocalSubnet**, **RemoteSubnet**, **EffectImmediately**, **AutoConfigRoute**, **TunnelOptionsSpecification**, and **EnableTunnelsBgp**.
-      * *   If you want to modify a IPsec-VPN connection in single-tunnel mode, call the `ModifyVpnConnectionAttribute` operation. You can modify the required parameters and the following request parameters:
-      *     **ClientToken**, **Name**, **LocalSubnet**, **RemoteSubnet**, **EffectImmediately**, **IkeConfig**, **IpsecConfig**, **HealthCheckConfig**, **AutoConfigRoute**, **EnableDpd**, **EnableNatTraversal**, **BgpConfig**, and **RemoteCaCertificate**.
-      * *   **ModifyVpnConnectionAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and modifies the configuration of the IPsec-VPN connection in the backend. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
-      *     *   If the VPN gateway is in the **updating** state, the configuration of the IPsec-VPN connection is being modified.
-      *     *   If the VPN gateway is in the **active** state, the configuration of the IPsec-VPN connection is modified.
-      * *   You cannot repeatedly call the **ModifyVpnConnectionAttribute** operation for the same VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  If you want to modify a IPsec-VPN connection in dual-tunnel mode, call the <code>ModifyVpnConnectionAttribute</code> operation. You can modify the required parameters and the following request parameters:
+     *     <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>AutoConfigRoute</strong>, <strong>TunnelOptionsSpecification</strong>, and <strong>EnableTunnelsBgp</strong>.</p>
+     * <ul>
+     * <li>If you want to modify a IPsec-VPN connection in single-tunnel mode, call the <code>ModifyVpnConnectionAttribute</code> operation. You can modify the required parameters and the following request parameters:
+     * <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>AutoConfigRoute</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, and <strong>RemoteCaCertificate</strong>.</li>
+     * <li><strong>ModifyVpnConnectionAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and modifies the configuration of the IPsec-VPN connection in the backend. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of a VPN gateway.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the configuration of the IPsec-VPN connection is being modified.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the configuration of the IPsec-VPN connection is modified.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>ModifyVpnConnectionAttribute</strong> operation for the same VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVpnConnectionAttribute  ModifyVpnConnectionAttributeRequest
+     * @return ModifyVpnConnectionAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyVpnConnectionAttributeResponse> modifyVpnConnectionAttribute(ModifyVpnConnectionAttributeRequest request) {
@@ -5936,11 +7418,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **ModifyVpnGatewayAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
-      *     *   If the VPN gateway is in the **updating** state, the VPN gateway is being modified.
-      *     *   If the VPN gateway is in the **active** state, the VPN gateway is modified.
-      * *   You cannot repeatedly call **ModifyVpnGatewayAttribute** to modify a VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>ModifyVpnGatewayAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.
+     *     *   If the VPN gateway is in the <strong>updating</strong> state, the VPN gateway is being modified.
+     *     *   If the VPN gateway is in the <strong>active</strong> state, the VPN gateway is modified.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>ModifyVpnGatewayAttribute</strong> to modify a VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVpnGatewayAttribute  ModifyVpnGatewayAttributeRequest
+     * @return ModifyVpnGatewayAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyVpnGatewayAttributeResponse> modifyVpnGatewayAttribute(ModifyVpnGatewayAttributeRequest request) {
@@ -5957,15 +7444,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call the **ModifyVpnPbrRouteEntryAttribute** operation to modify the weight and priority of a policy-based route.
-      *     *   If you want to modify only the weight of a policy-based route, call [ModifyVpnPbrRouteEntryWeight](~~127249~~).
-      *     *   If you want to modify only the priority of a policy-based route, call [ModifyVpnPbrRouteEntryPriority](~~466870~~).
-      *     *   If a policy-based route does not support priorities, you can only call [ModifyVpnPbrRouteEntryWeight](~~127249~~) to modify its weight.
-      * *   The **ModifyVpnPbrRouteEntryAttribute** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
-      *     *   If a VPN gateway is in the **updating** state, the policy-based route entry is being modified.
-      *     *   If a VPN gateway is in the **active** state, the policy-based route entry is modified.
-      * *   You cannot repeatedly call the **ModifyVpnPbrRouteEntryAttribute** operation for the same VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  You can call the <strong>ModifyVpnPbrRouteEntryAttribute</strong> operation to modify the weight and priority of a policy-based route.
+     *     *   If you want to modify only the weight of a policy-based route, call <a href="https://help.aliyun.com/document_detail/127249.html">ModifyVpnPbrRouteEntryWeight</a>.
+     *     *   If you want to modify only the priority of a policy-based route, call <a href="https://help.aliyun.com/document_detail/466870.html">ModifyVpnPbrRouteEntryPriority</a>.
+     *     *   If a policy-based route does not support priorities, you can only call <a href="https://help.aliyun.com/document_detail/127249.html">ModifyVpnPbrRouteEntryWeight</a> to modify its weight.</p>
+     * <ul>
+     * <li>The <strong>ModifyVpnPbrRouteEntryAttribute</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of a VPN gateway.<ul>
+     * <li>If a VPN gateway is in the <strong>updating</strong> state, the policy-based route entry is being modified.</li>
+     * <li>If a VPN gateway is in the <strong>active</strong> state, the policy-based route entry is modified.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>ModifyVpnPbrRouteEntryAttribute</strong> operation for the same VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVpnPbrRouteEntryAttribute  ModifyVpnPbrRouteEntryAttributeRequest
+     * @return ModifyVpnPbrRouteEntryAttributeResponse
      */
     @Override
     public CompletableFuture<ModifyVpnPbrRouteEntryAttributeResponse> modifyVpnPbrRouteEntryAttribute(ModifyVpnPbrRouteEntryAttributeRequest request) {
@@ -5982,11 +7476,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **ModifyVpnPbrRouteEntryPriority** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
-      *     *   If a VPN gateway is in the **updating** state, the policy-based route entry is being modified.
-      *     *   If the VPN gateway is in the **active** state, the policy-based route is created.
-      * *   You cannot repeatedly call the **ModifyVpnPbrRouteEntryPriority** operation for the same VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>ModifyVpnPbrRouteEntryPriority</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.
+     *     *   If a VPN gateway is in the <strong>updating</strong> state, the policy-based route entry is being modified.
+     *     *   If the VPN gateway is in the <strong>active</strong> state, the policy-based route is created.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>ModifyVpnPbrRouteEntryPriority</strong> operation for the same VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVpnPbrRouteEntryPriority  ModifyVpnPbrRouteEntryPriorityRequest
+     * @return ModifyVpnPbrRouteEntryPriorityResponse
      */
     @Override
     public CompletableFuture<ModifyVpnPbrRouteEntryPriorityResponse> modifyVpnPbrRouteEntryPriority(ModifyVpnPbrRouteEntryPriorityRequest request) {
@@ -6003,11 +7502,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **ModifyVpnPbrRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
-      *     *   If a VPN gateway is in the **updating** state, the policy-based route entry is being modified.
-      *     *   If a VPN gateway is in the **active** state, the policy-based route entry is modified.
-      * *   You cannot repeatedly call the **ModifyVpnPbrRouteEntryWeight** operation for the same VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>ModifyVpnPbrRouteEntryWeight</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.
+     *     *   If a VPN gateway is in the <strong>updating</strong> state, the policy-based route entry is being modified.
+     *     *   If a VPN gateway is in the <strong>active</strong> state, the policy-based route entry is modified.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>ModifyVpnPbrRouteEntryWeight</strong> operation for the same VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVpnPbrRouteEntryWeight  ModifyVpnPbrRouteEntryWeightRequest
+     * @return ModifyVpnPbrRouteEntryWeightResponse
      */
     @Override
     public CompletableFuture<ModifyVpnPbrRouteEntryWeightResponse> modifyVpnPbrRouteEntryWeight(ModifyVpnPbrRouteEntryWeightRequest request) {
@@ -6024,12 +7528,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   In scenarios where a VPN gateway has an active and a standby destination-based route, if you need to modify the weight of the active destination-based route, you must first delete the standby destination-based route. After you modify the active destination-based route, configure a standby destination-based route. If you need to modify the weight of the standby destination-based route, you also need to delete the active destination-based route first. After you modify the standby destination-based route, configure an active destination-based route. For more information about how to delete a destination-based route, see [DeleteVpnRouteEntry](~~2526961~~).
-      * *   **ModifyVpnRouteEntryWeight** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
-      *     *   If the VPN gateway is in the **updating** state, the weight of the destination-based route is being modified.
-      *     *   If the VPN gateway is in the **active** state, the weight of the destination-based route is modified.
-      * *   You cannot repeatedly call the **ModifyVpnRouteEntryWeight** operation to modify the weight of destination-based route for the same VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  In scenarios where a VPN gateway has an active and a standby destination-based route, if you need to modify the weight of the active destination-based route, you must first delete the standby destination-based route. After you modify the active destination-based route, configure a standby destination-based route. If you need to modify the weight of the standby destination-based route, you also need to delete the active destination-based route first. After you modify the standby destination-based route, configure an active destination-based route. For more information about how to delete a destination-based route, see <a href="https://help.aliyun.com/document_detail/2526961.html">DeleteVpnRouteEntry</a>.</p>
+     * <ul>
+     * <li><strong>ModifyVpnRouteEntryWeight</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the weight of the destination-based route is being modified.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the weight of the destination-based route is modified.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>ModifyVpnRouteEntryWeight</strong> operation to modify the weight of destination-based route for the same VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVpnRouteEntryWeight  ModifyVpnRouteEntryWeightRequest
+     * @return ModifyVpnRouteEntryWeightResponse
      */
     @Override
     public CompletableFuture<ModifyVpnRouteEntryWeightResponse> modifyVpnRouteEntryWeight(ModifyVpnRouteEntryWeightRequest request) {
@@ -6045,6 +7556,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MoveResourceGroup  MoveResourceGroupRequest
+     * @return MoveResourceGroupResponse
+     */
     @Override
     public CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request) {
         try {
@@ -6059,6 +7574,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MoveVpnResourceGroup  MoveVpnResourceGroupRequest
+     * @return MoveVpnResourceGroupResponse
+     */
     @Override
     public CompletableFuture<MoveVpnResourceGroupResponse> moveVpnResourceGroup(MoveVpnResourceGroupRequest request) {
         try {
@@ -6074,9 +7593,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You cannot repeatedly call the **OpenFlowLogService** operation within the specified period of time by using an Alibaba Cloud account.
-      * *   You can call the [GetFlowLogServiceStatus](~~449624~~) operation to query the status of the flow log feature.
-      *
+     * <b>description</b> :
+     * <p>  You cannot repeatedly call the <strong>OpenFlowLogService</strong> operation within the specified period of time by using an Alibaba Cloud account.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/449624.html">GetFlowLogServiceStatus</a> operation to query the status of the flow log feature.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of OpenFlowLogService  OpenFlowLogServiceRequest
+     * @return OpenFlowLogServiceResponse
      */
     @Override
     public CompletableFuture<OpenFlowLogServiceResponse> openFlowLogService(OpenFlowLogServiceRequest request) {
@@ -6092,6 +7616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenPhysicalConnectionService  OpenPhysicalConnectionServiceRequest
+     * @return OpenPhysicalConnectionServiceResponse
+     */
     @Override
     public CompletableFuture<OpenPhysicalConnectionServiceResponse> openPhysicalConnectionService(OpenPhysicalConnectionServiceRequest request) {
         try {
@@ -6106,6 +7634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenPublicIpAddressPoolService  OpenPublicIpAddressPoolServiceRequest
+     * @return OpenPublicIpAddressPoolServiceResponse
+     */
     @Override
     public CompletableFuture<OpenPublicIpAddressPoolServiceResponse> openPublicIpAddressPoolService(OpenPublicIpAddressPoolServiceRequest request) {
         try {
@@ -6121,9 +7653,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Usage notes
-      * You can enable traffic mirroring for different regions. You cannot repeatedly call the **OpenTrafficMirrorService** operation to enable traffic mirroring for one region within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You can enable traffic mirroring for different regions. You cannot repeatedly call the <strong>OpenTrafficMirrorService</strong> operation to enable traffic mirroring for one region within the specified period of time.</p>
+     * 
+     * @param request the request parameters of OpenTrafficMirrorService  OpenTrafficMirrorServiceRequest
+     * @return OpenTrafficMirrorServiceResponse
      */
     @Override
     public CompletableFuture<OpenTrafficMirrorServiceResponse> openTrafficMirrorService(OpenTrafficMirrorServiceRequest request) {
@@ -6139,6 +7674,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishVpcRouteEntries  PublishVpcRouteEntriesRequest
+     * @return PublishVpcRouteEntriesResponse
+     */
     @Override
     public CompletableFuture<PublishVpcRouteEntriesResponse> publishVpcRouteEntries(PublishVpcRouteEntriesRequest request) {
         try {
@@ -6153,6 +7692,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishVpnRouteEntry  PublishVpnRouteEntryRequest
+     * @return PublishVpnRouteEntryResponse
+     */
     @Override
     public CompletableFuture<PublishVpnRouteEntryResponse> publishVpnRouteEntry(PublishVpnRouteEntryRequest request) {
         try {
@@ -6168,9 +7711,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * # [](#)Description
-      * You can call this API operation to resume a suspended Express Connect circuit. You can resume only shared Express Connect circuits by calling this API operation.
-      *
+     * <b>description</b> :
+     * <h1><a href="#"></a>Description</h1>
+     * <p>You can call this API operation to resume a suspended Express Connect circuit. You can resume only shared Express Connect circuits by calling this API operation.</p>
+     * 
+     * @param request the request parameters of RecoverPhysicalConnection  RecoverPhysicalConnectionRequest
+     * @return RecoverPhysicalConnectionResponse
      */
     @Override
     public CompletableFuture<RecoverPhysicalConnectionResponse> recoverPhysicalConnection(RecoverPhysicalConnectionRequest request) {
@@ -6187,11 +7733,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you call this operation, the VBR changes from the **terminated** state to the **recovering** state. After the operation is performed, the VBR enters the **active** state.
-      * When you call this operation, take note of the following items:
-      * *   Only the owner of the Express Connect circuit can call this operation.
-      * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
-      *
+     * <b>description</b> :
+     * <p>After you call this operation, the VBR changes from the <strong>terminated</strong> state to the <strong>recovering</strong> state. After the operation is performed, the VBR enters the <strong>active</strong> state.
+     * When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Only the owner of the Express Connect circuit can call this operation.</li>
+     * <li>The Express Connect circuit to which the VBR connects must be in the <strong>Enabled</strong> state.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RecoverVirtualBorderRouter  RecoverVirtualBorderRouterRequest
+     * @return RecoverVirtualBorderRouterResponse
      */
     @Override
     public CompletableFuture<RecoverVirtualBorderRouterResponse> recoverVirtualBorderRouter(RecoverVirtualBorderRouterRequest request) {
@@ -6208,15 +7759,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following items:
-      * *   Before you release an EIP, make sure that the EIP meets the following requirements:
-      *     *   You can release only an EIP that is in the **Available** state.
-      *     *   You can release only a pay-as-you-go EIP. You cannot release a subscription EIP.
-      * *   **ReleaseEipAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of the task:
-      *     *   If the EIP is in the **Releasing** state, the EIP is being released. In this state, you can only query the EIP and cannot perform other operations.
-      *     *   If you cannot query the EIP, the EIP is released.
-      * *   You cannot repeatedly call the **ReleaseEipAddress** operation to release an EIP within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Before you release an EIP, make sure that the EIP meets the following requirements:<ul>
+     * <li>You can release only an EIP that is in the <strong>Available</strong> state.</li>
+     * <li>You can release only a pay-as-you-go EIP. You cannot release a subscription EIP.</li>
+     * </ul>
+     * </li>
+     * <li><strong>ReleaseEipAddress</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> operation to query the status of the task:<ul>
+     * <li>If the EIP is in the <strong>Releasing</strong> state, the EIP is being released. In this state, you can only query the EIP and cannot perform other operations.</li>
+     * <li>If you cannot query the EIP, the EIP is released.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>ReleaseEipAddress</strong> operation to release an EIP within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ReleaseEipAddress  ReleaseEipAddressRequest
+     * @return ReleaseEipAddressResponse
      */
     @Override
     public CompletableFuture<ReleaseEipAddressResponse> releaseEipAddress(ReleaseEipAddressRequest request) {
@@ -6233,12 +7793,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   After you call the **ReleaseEipSegmentAddress** operation, all EIPs in the specified group are released.
-      * *   **ReleaseEipSegmentAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of the task.
-      *     *   If the group is in the **Releasing** state, EIPs in the group are being released. In this state, you can only query the group and cannot perform other operations.
-      *     *   If you cannot query the group of contiguous EIPs, the contiguous EIPs are released.
-      * *   You cannot repeatedly call the **ReleaseEipSegmentAddress** operation to release a group of contiguous EIPs within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  After you call the <strong>ReleaseEipSegmentAddress</strong> operation, all EIPs in the specified group are released.</p>
+     * <ul>
+     * <li><strong>ReleaseEipSegmentAddress</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/156063.html">DescribeEipSegment</a> operation to query the status of the task.<ul>
+     * <li>If the group is in the <strong>Releasing</strong> state, EIPs in the group are being released. In this state, you can only query the group and cannot perform other operations.</li>
+     * <li>If you cannot query the group of contiguous EIPs, the contiguous EIPs are released.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>ReleaseEipSegmentAddress</strong> operation to release a group of contiguous EIPs within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ReleaseEipSegmentAddress  ReleaseEipSegmentAddressRequest
+     * @return ReleaseEipSegmentAddressResponse
      */
     @Override
     public CompletableFuture<ReleaseEipSegmentAddressResponse> releaseEipSegmentAddress(ReleaseEipSegmentAddressRequest request) {
@@ -6254,6 +7821,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseIpv6Address  ReleaseIpv6AddressRequest
+     * @return ReleaseIpv6AddressResponse
+     */
     @Override
     public CompletableFuture<ReleaseIpv6AddressResponse> releaseIpv6Address(ReleaseIpv6AddressRequest request) {
         try {
@@ -6268,6 +7839,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveCommonBandwidthPackageIp  RemoveCommonBandwidthPackageIpRequest
+     * @return RemoveCommonBandwidthPackageIpResponse
+     */
     @Override
     public CompletableFuture<RemoveCommonBandwidthPackageIpResponse> removeCommonBandwidthPackageIp(RemoveCommonBandwidthPackageIpRequest request) {
         try {
@@ -6282,6 +7857,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveGlobalAccelerationInstanceIp  RemoveGlobalAccelerationInstanceIpRequest
+     * @return RemoveGlobalAccelerationInstanceIpResponse
+     */
     @Override
     public CompletableFuture<RemoveGlobalAccelerationInstanceIpResponse> removeGlobalAccelerationInstanceIp(RemoveGlobalAccelerationInstanceIpRequest request) {
         try {
@@ -6296,6 +7875,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveIPv6TranslatorAclListEntry  RemoveIPv6TranslatorAclListEntryRequest
+     * @return RemoveIPv6TranslatorAclListEntryResponse
+     */
     @Override
     public CompletableFuture<RemoveIPv6TranslatorAclListEntryResponse> removeIPv6TranslatorAclListEntry(RemoveIPv6TranslatorAclListEntryRequest request) {
         try {
@@ -6311,11 +7894,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **RemoveSourcesFromTrafficMirrorSession** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of the task.
-      *     *   If the traffic mirror session is in the **Modifying** state, the traffic mirror source is being deleted.
-      *     *   If the traffic mirror session is in the **Created** state, the traffic mirror source is deleted.
-      * *   You cannot repeatedly call **RemoveSourcesFromTrafficMirrorSession** within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>RemoveSourcesFromTrafficMirrorSession</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the status of the task.
+     *     *   If the traffic mirror session is in the <strong>Modifying</strong> state, the traffic mirror source is being deleted.
+     *     *   If the traffic mirror session is in the <strong>Created</strong> state, the traffic mirror source is deleted.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>RemoveSourcesFromTrafficMirrorSession</strong> within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveSourcesFromTrafficMirrorSession  RemoveSourcesFromTrafficMirrorSessionRequest
+     * @return RemoveSourcesFromTrafficMirrorSessionResponse
      */
     @Override
     public CompletableFuture<RemoveSourcesFromTrafficMirrorSessionResponse> removeSourcesFromTrafficMirrorSession(RemoveSourcesFromTrafficMirrorSessionRequest request) {
@@ -6332,11 +7920,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The **ReplaceVpcDhcpOptionsSet** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
-      *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being replaced.
-      *     *   If the DHCP options set is in the **InUse** state, the DHCP options set is replaced.
-      * *   You cannot repeatedly call the **ReplaceVpcDhcpOptionsSet** operation to replace the DHCP options set associated with a VPC within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  The <strong>ReplaceVpcDhcpOptionsSet</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a DHCP options set:
+     *     *   If the DHCP options set is in the <strong>Pending</strong> state, the DHCP options set is being replaced.
+     *     *   If the DHCP options set is in the <strong>InUse</strong> state, the DHCP options set is replaced.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>ReplaceVpcDhcpOptionsSet</strong> operation to replace the DHCP options set associated with a VPC within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ReplaceVpcDhcpOptionsSet  ReplaceVpcDhcpOptionsSetRequest
+     * @return ReplaceVpcDhcpOptionsSetResponse
      */
     @Override
     public CompletableFuture<ReplaceVpcDhcpOptionsSetResponse> replaceVpcDhcpOptionsSet(ReplaceVpcDhcpOptionsSetRequest request) {
@@ -6353,13 +7946,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If you modify the information about a prefix list but the modification is not automatically applied to the route table that is associated with the prefix list, you can call this operation to apply the latest prefix list to the associated route table.
-      * *   The **RetryVpcPrefixListAssociation** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the background. You can call the [GetVpcPrefixListAssociations](~~445478~~) to check whether the prefix list is re-applied.
-      *     *   If the prefix list is in the **Modifying** state, the prefix list is being re-applied.
-      *     *   If the prefix list is in the **ModifyFailed** state, the prefix list fails to be re-applied.
-      *     *   If the prefix list is in the **Created** state, the prefix list is re-applied.
-      * *   After you call the **RetryVpcPrefixListAssociation** operation to re-apply a prefix list, you cannot call the operation again until the current task is complete.
-      *
+     * <b>description</b> :
+     * <p>  If you modify the information about a prefix list but the modification is not automatically applied to the route table that is associated with the prefix list, you can call this operation to apply the latest prefix list to the associated route table.</p>
+     * <ul>
+     * <li>The <strong>RetryVpcPrefixListAssociation</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> to check whether the prefix list is re-applied.<ul>
+     * <li>If the prefix list is in the <strong>Modifying</strong> state, the prefix list is being re-applied.</li>
+     * <li>If the prefix list is in the <strong>ModifyFailed</strong> state, the prefix list fails to be re-applied.</li>
+     * <li>If the prefix list is in the <strong>Created</strong> state, the prefix list is re-applied.</li>
+     * </ul>
+     * </li>
+     * <li>After you call the <strong>RetryVpcPrefixListAssociation</strong> operation to re-apply a prefix list, you cannot call the operation again until the current task is complete.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RetryVpcPrefixListAssociation  RetryVpcPrefixListAssociationRequest
+     * @return RetryVpcPrefixListAssociationResponse
      */
     @Override
     public CompletableFuture<RetryVpcPrefixListAssociationResponse> retryVpcPrefixListAssociation(RetryVpcPrefixListAssociationRequest request) {
@@ -6376,10 +7976,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Usage notes
-      * *   **RevokeInstanceFromCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
-      * *   You cannot repeatedly call the **RevokeInstanceFromCen** operation to revoke the permissions on a network instance that is attached to a CEN instance within the specified period of time. The network instance can be a VPC, virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li><strong>RevokeInstanceFromCen</strong> is a Virtual Private Cloud (VPC) operation. Therefore, you must use <code>vpc.aliyuncs.com</code> as the domain name when you call this operation. The API version is <code>2016-04-28</code>.</li>
+     * <li>You cannot repeatedly call the <strong>RevokeInstanceFromCen</strong> operation to revoke the permissions on a network instance that is attached to a CEN instance within the specified period of time. The network instance can be a VPC, virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RevokeInstanceFromCen  RevokeInstanceFromCenRequest
+     * @return RevokeInstanceFromCenResponse
      */
     @Override
     public CompletableFuture<RevokeInstanceFromCenResponse> revokeInstanceFromCen(RevokeInstanceFromCenRequest request) {
@@ -6395,6 +8000,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokeInstanceFromVbr  RevokeInstanceFromVbrRequest
+     * @return RevokeInstanceFromVbrResponse
+     */
     @Override
     public CompletableFuture<RevokeInstanceFromVbrResponse> revokeInstanceFromVbr(RevokeInstanceFromVbrRequest request) {
         try {
@@ -6409,6 +8018,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SecondApplyPhysicalConnectionLOA  SecondApplyPhysicalConnectionLOARequest
+     * @return SecondApplyPhysicalConnectionLOAResponse
+     */
     @Override
     public CompletableFuture<SecondApplyPhysicalConnectionLOAResponse> secondApplyPhysicalConnectionLOA(SecondApplyPhysicalConnectionLOARequest request) {
         try {
@@ -6424,8 +8037,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call **SetHighDefinitionMonitorLogStatus** within a specific period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call <strong>SetHighDefinitionMonitorLogStatus</strong> within a specific period of time.</p>
+     * 
+     * @param request the request parameters of SetHighDefinitionMonitorLogStatus  SetHighDefinitionMonitorLogStatusRequest
+     * @return SetHighDefinitionMonitorLogStatusResponse
      */
     @Override
     public CompletableFuture<SetHighDefinitionMonitorLogStatusResponse> setHighDefinitionMonitorLogStatus(SetHighDefinitionMonitorLogStatusRequest request) {
@@ -6442,8 +8058,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can perform only failover tests that are in the **Pending** state.
-      *
+     * <b>description</b> :
+     * <p>You can perform only failover tests that are in the <strong>Pending</strong> state.</p>
+     * 
+     * @param request the request parameters of StartFailoverTestJob  StartFailoverTestJobRequest
+     * @return StartFailoverTestJobResponse
      */
     @Override
     public CompletableFuture<StartFailoverTestJobResponse> startFailoverTestJob(StartFailoverTestJobRequest request) {
@@ -6459,6 +8078,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopFailoverTestJob  StopFailoverTestJobRequest
+     * @return StopFailoverTestJobResponse
+     */
     @Override
     public CompletableFuture<StopFailoverTestJobResponse> stopFailoverTestJob(StopFailoverTestJobRequest request) {
         try {
@@ -6474,15 +8097,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:
-      * *   The keys of tags that are added to the same instance must be unique.
-      * *   You cannot create tags without adding them to instances. All tags must be added to instances.
-      * *   Tag information is not shared across regions.
-      *     For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.
-      * *   Virtual private clouds (VPCs), route tables, vSwitches, and elastic IP addresses (EIPs) that belong to the same Alibaba Cloud account and are deployed in the same region share tag information with each other.
-      *     For example, if you added a tag to a VPC, the tag is available to vSwitches, route tables, and EIPs that belong to the same account and are deployed in the same region in which the VPC is created. You can select this tag from the editing page without the need to enter the tag again. You can modify the key and the value of a tag or remove a tag from an instance. After you delete an instance, all tags that are added to the instance are deleted.
-      * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.
-      *
+     * <b>description</b> :
+     * <p>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:</p>
+     * <ul>
+     * <li>The keys of tags that are added to the same instance must be unique.</li>
+     * <li>You cannot create tags without adding them to instances. All tags must be added to instances.</li>
+     * <li>Tag information is not shared across regions.
+     * For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.</li>
+     * <li>Virtual private clouds (VPCs), route tables, vSwitches, and elastic IP addresses (EIPs) that belong to the same Alibaba Cloud account and are deployed in the same region share tag information with each other.
+     * For example, if you added a tag to a VPC, the tag is available to vSwitches, route tables, and EIPs that belong to the same account and are deployed in the same region in which the VPC is created. You can select this tag from the editing page without the need to enter the tag again. You can modify the key and the value of a tag or remove a tag from an instance. After you delete an instance, all tags that are added to the instance are deleted.</li>
+     * <li>You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
      */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
@@ -6499,14 +8127,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)
-      * Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:
-      * *   Each tag key that is added to an instance must be unique.
-      * *   You cannot create tags without adding them to instances. All tags must be added to instances.
-      * *   Tag information is not shared across regions.
-      *     For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.
-      * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:</p>
+     * <ul>
+     * <li>Each tag key that is added to an instance must be unique.</li>
+     * <li>You cannot create tags without adding them to instances. All tags must be added to instances.</li>
+     * <li>Tag information is not shared across regions.
+     * For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.</li>
+     * <li>You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of TagResourcesForExpressConnect  TagResourcesForExpressConnectRequest
+     * @return TagResourcesForExpressConnectResponse
      */
     @Override
     public CompletableFuture<TagResourcesForExpressConnectResponse> tagResourcesForExpressConnect(TagResourcesForExpressConnectRequest request) {
@@ -6523,10 +8156,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you call this operation, the specified Express Connect circuit changes to the **Terminating** state. After the Express Connect circuit is disabled, it changes to the **Terminated** state. When you call this operation, take note of the following limits:
-      * *   You can only disable an Express Connect circuit that is in the **Enabled** state.
-      * *   Before you disable an Express Connect circuit, you must delete the virtual border routers (VBRs) associated with it.
-      *
+     * <b>description</b> :
+     * <p>After you call this operation, the specified Express Connect circuit changes to the <strong>Terminating</strong> state. After the Express Connect circuit is disabled, it changes to the <strong>Terminated</strong> state. When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>You can only disable an Express Connect circuit that is in the <strong>Enabled</strong> state.</li>
+     * <li>Before you disable an Express Connect circuit, you must delete the virtual border routers (VBRs) associated with it.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of TerminatePhysicalConnection  TerminatePhysicalConnectionRequest
+     * @return TerminatePhysicalConnectionResponse
      */
     @Override
     public CompletableFuture<TerminatePhysicalConnectionResponse> terminatePhysicalConnection(TerminatePhysicalConnectionRequest request) {
@@ -6543,9 +8181,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you call this operation, the VBR enters the **terminating** state from the **active** state. After the VBR is terminated, the VBR enters the **terminated** state.
-      * >  Only the owner of an Express Connect circuit can call this operation.
-      *
+     * <b>description</b> :
+     * <p>After you call this operation, the VBR enters the <strong>terminating</strong> state from the <strong>active</strong> state. After the VBR is terminated, the VBR enters the <strong>terminated</strong> state.</p>
+     * <blockquote>
+     * <p> Only the owner of an Express Connect circuit can call this operation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of TerminateVirtualBorderRouter  TerminateVirtualBorderRouterRequest
+     * @return TerminateVirtualBorderRouterResponse
      */
     @Override
     public CompletableFuture<TerminateVirtualBorderRouterResponse> terminateVirtualBorderRouter(TerminateVirtualBorderRouterRequest request) {
@@ -6561,6 +8204,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnTagResources  UnTagResourcesRequest
+     * @return UnTagResourcesResponse
+     */
     @Override
     public CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request) {
         try {
@@ -6576,11 +8223,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **UnassociateEipAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of the task.
-      *     *   If the EIP is in the **Unassociating** state, the EIP is being disassociated. In this state, you can only query the EIP and cannot perform other operations.
-      *     *   If the EIP is in the **Available** state, the EIP is disassociated.
-      * *   You cannot repeatedly call the **UnassociateEipAddress** operation within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>UnassociateEipAddress</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> operation to query the status of the task.
+     *     *   If the EIP is in the <strong>Unassociating</strong> state, the EIP is being disassociated. In this state, you can only query the EIP and cannot perform other operations.
+     *     *   If the EIP is in the <strong>Available</strong> state, the EIP is disassociated.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>UnassociateEipAddress</strong> operation within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UnassociateEipAddress  UnassociateEipAddressRequest
+     * @return UnassociateEipAddressResponse
      */
     @Override
     public CompletableFuture<UnassociateEipAddressResponse> unassociateEipAddress(UnassociateEipAddressRequest request) {
@@ -6596,6 +8248,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnassociateGlobalAccelerationInstance  UnassociateGlobalAccelerationInstanceRequest
+     * @return UnassociateGlobalAccelerationInstanceResponse
+     */
     @Override
     public CompletableFuture<UnassociateGlobalAccelerationInstanceResponse> unassociateGlobalAccelerationInstance(UnassociateGlobalAccelerationInstanceRequest request) {
         try {
@@ -6611,15 +8267,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)
-      * When you call this operation, take note of the following limits:
-      * *   The ECS instance must be in the **Running** or **Stopped** state.
-      * *   The HAVIP must be in the **Available** or **InUse** state.
-      * *   **UnassociateHaVip** is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
-      *     *   If the HAVIP is in the **Unassociating** state, the HAVIP is being disassociated.
-      *     *   If the HAVIP is in the **Inuse** or **Available** state, the HAVIP is disassociated.
-      * *   You cannot repeatedly call the **UnassociateHaVip** operation to disassociate an HAVIP within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>The ECS instance must be in the <strong>Running</strong> or <strong>Stopped</strong> state.</li>
+     * <li>The HAVIP must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
+     * <li><strong>UnassociateHaVip</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
+     * <li>If the HAVIP is in the <strong>Unassociating</strong> state, the HAVIP is being disassociated.</li>
+     * <li>If the HAVIP is in the <strong>Inuse</strong> or <strong>Available</strong> state, the HAVIP is disassociated.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>UnassociateHaVip</strong> operation to disassociate an HAVIP within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UnassociateHaVip  UnassociateHaVipRequest
+     * @return UnassociateHaVipResponse
      */
     @Override
     public CompletableFuture<UnassociateHaVipResponse> unassociateHaVip(UnassociateHaVipRequest request) {
@@ -6636,12 +8299,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * *   **UnassociateNetworkAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
-      *     *   If the network ACL is in the **UNBINDING** state, the network ACL is being disassociated from the vSwitch.
-      *     *   If the network ACL is in the **UNBINDED** state, the network ACL is disassociated from the vSwitch.
-      * *   You cannot repeatedly call the **UnassociateNetworkAcl** operation to disassociate a network ACL from a vSwitch within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <ul>
+     * <li><strong>UnassociateNetworkAcl</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> operation to query the status of the task.<ul>
+     * <li>If the network ACL is in the <strong>UNBINDING</strong> state, the network ACL is being disassociated from the vSwitch.</li>
+     * <li>If the network ACL is in the <strong>UNBINDED</strong> state, the network ACL is disassociated from the vSwitch.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>UnassociateNetworkAcl</strong> operation to disassociate a network ACL from a vSwitch within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UnassociateNetworkAcl  UnassociateNetworkAclRequest
+     * @return UnassociateNetworkAclResponse
      */
     @Override
     public CompletableFuture<UnassociateNetworkAclResponse> unassociateNetworkAcl(UnassociateNetworkAclRequest request) {
@@ -6657,6 +8327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnassociatePhysicalConnectionFromVirtualBorderRouter  UnassociatePhysicalConnectionFromVirtualBorderRouterRequest
+     * @return UnassociatePhysicalConnectionFromVirtualBorderRouterResponse
+     */
     @Override
     public CompletableFuture<UnassociatePhysicalConnectionFromVirtualBorderRouterResponse> unassociatePhysicalConnectionFromVirtualBorderRouter(UnassociatePhysicalConnectionFromVirtualBorderRouterRequest request) {
         try {
@@ -6672,12 +8346,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)References
-      * *   **UnassociateRouteTable** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task.
-      *     *   If the vSwitch is in the **Pending** state, the route table is being disassociated.
-      *     *   If the vSwitch is in the **Available** state, the route table is disassociated.
-      * *   You cannot repeatedly call the **UnassociateRouteTable** operation to disassociate a route table from a vSwitch within the specified period of time.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>References</h2>
+     * <ul>
+     * <li><strong>UnassociateRouteTable</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task.<ul>
+     * <li>If the vSwitch is in the <strong>Pending</strong> state, the route table is being disassociated.</li>
+     * <li>If the vSwitch is in the <strong>Available</strong> state, the route table is disassociated.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>UnassociateRouteTable</strong> operation to disassociate a route table from a vSwitch within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UnassociateRouteTable  UnassociateRouteTableRequest
+     * @return UnassociateRouteTableResponse
      */
     @Override
     public CompletableFuture<UnassociateRouteTableResponse> unassociateRouteTable(UnassociateRouteTableRequest request) {
@@ -6694,9 +8375,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Before you delete a secondary CIDR block from a VPC, delete the vSwitch which is created with the CIDR block. For more information, see [DeleteVSwitch](~~35746~~).
-      * *   You cannot repeatedly call the **UnassociateVpcCidrBlock** operation to delete a secondary CIDR block from a VPC within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  Before you delete a secondary CIDR block from a VPC, delete the vSwitch which is created with the CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>UnassociateVpcCidrBlock</strong> operation to delete a secondary CIDR block from a VPC within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UnassociateVpcCidrBlock  UnassociateVpcCidrBlockRequest
+     * @return UnassociateVpcCidrBlockResponse
      */
     @Override
     public CompletableFuture<UnassociateVpcCidrBlockResponse> unassociateVpcCidrBlock(UnassociateVpcCidrBlockRequest request) {
@@ -6712,6 +8398,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResourcesForExpressConnect  UntagResourcesForExpressConnectRequest
+     * @return UntagResourcesForExpressConnectResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesForExpressConnectResponse> untagResourcesForExpressConnect(UntagResourcesForExpressConnectRequest request) {
         try {
@@ -6726,6 +8416,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDhcpOptionsSetAttribute  UpdateDhcpOptionsSetAttributeRequest
+     * @return UpdateDhcpOptionsSetAttributeResponse
+     */
     @Override
     public CompletableFuture<UpdateDhcpOptionsSetAttributeResponse> updateDhcpOptionsSetAttribute(UpdateDhcpOptionsSetAttributeRequest request) {
         try {
@@ -6740,6 +8434,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFailoverTestJob  UpdateFailoverTestJobRequest
+     * @return UpdateFailoverTestJobResponse
+     */
     @Override
     public CompletableFuture<UpdateFailoverTestJobResponse> updateFailoverTestJob(UpdateFailoverTestJobRequest request) {
         try {
@@ -6754,6 +8452,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateGatewayRouteTableEntryAttribute  UpdateGatewayRouteTableEntryAttributeRequest
+     * @return UpdateGatewayRouteTableEntryAttributeResponse
+     */
     @Override
     public CompletableFuture<UpdateGatewayRouteTableEntryAttributeResponse> updateGatewayRouteTableEntryAttribute(UpdateGatewayRouteTableEntryAttributeRequest request) {
         try {
@@ -6769,12 +8471,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If you modify only the **IpsecServerName** parameter, this operation is synchronous. If you modify parameters other than **IpsecServerName**, this operation is asynchronous.
-      * *   When the **UpdateIpsecServer** operation is asynchronous, the system returns a request ID after you send a request to call this operation and the IPsec server is being modified in the backend. You can call [DescribeVpnGateway](~~2794055~~) to query the status of a VPN gateway.
-      *     *   If the VPN gateway is in the **updating** state, the configuration of the IPsec server is being modified.
-      *     *   If the VPN gateway is in the **active** state, the configuration of the IPsec server is modified.
-      * *   You cannot repeatedly call the **UpdateIpsecServer** operation for the same VPN gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  If you modify only the <strong>IpsecServerName</strong> parameter, this operation is synchronous. If you modify parameters other than <strong>IpsecServerName</strong>, this operation is asynchronous.</p>
+     * <ul>
+     * <li>When the <strong>UpdateIpsecServer</strong> operation is asynchronous, the system returns a request ID after you send a request to call this operation and the IPsec server is being modified in the backend. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of a VPN gateway.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the configuration of the IPsec server is being modified.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the configuration of the IPsec server is modified.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>UpdateIpsecServer</strong> operation for the same VPN gateway within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateIpsecServer  UpdateIpsecServerRequest
+     * @return UpdateIpsecServerResponse
      */
     @Override
     public CompletableFuture<UpdateIpsecServerResponse> updateIpsecServer(UpdateIpsecServerRequest request) {
@@ -6791,8 +8500,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **UpdateIpv4GatewayAttribute** operation to modify the name or description of an IPv4 gateway within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>UpdateIpv4GatewayAttribute</strong> operation to modify the name or description of an IPv4 gateway within the specified period of time.</p>
+     * 
+     * @param request the request parameters of UpdateIpv4GatewayAttribute  UpdateIpv4GatewayAttributeRequest
+     * @return UpdateIpv4GatewayAttributeResponse
      */
     @Override
     public CompletableFuture<UpdateIpv4GatewayAttributeResponse> updateIpv4GatewayAttribute(UpdateIpv4GatewayAttributeRequest request) {
@@ -6809,17 +8521,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following limits:
-      * *   **UpdateNatGatewayNatType** is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the NAT gateway is still being upgraded in the backend. You can call the GetNatGatewayConvertStatus operation to query the upgrade progress of a NAT gateway. For more information, see [GetNatGatewayConvertStatus](~~184744~~).
-      *     *   If the NAT gateway is in the **processing** state, the NAT gateway is being upgraded. You can only query the status of the NAT gateway but cannot perform other operations.
-      *     *   If the NAT gateway is in the **successful** state, the NAT gateway is upgraded.
-      *     *   If the NAT gateway is in the **failed** state, the system failed to upgrade the NAT gateway.
-      * *   You cannot repeatedly call the **UpdateNatGatewayNatType** operation for the same VPN gateway within the specified period of time.
-      * *   The billing method and billable items remain the same after the upgrade.
-      * *   It takes about five minutes to upgrade a standard NAT gateway to an enhanced NAT gateway. During the upgrade, transient connection errors may occur once or twice. The service can be recovered by reconnection. You can determine whether to enable automatic reconnection or use manual reconnection based on your business requirements.
-      * *   You can only upgrade standard NAT gateways to enhanced NAT gateways. You are not allowed to downgrade enhanced NAT gateways to standard NAT gateways.
-      *
+     * @deprecated OpenAPI UpdateNatGatewayNatType is deprecated  * @description Before you call this operation, take note of the following limits:
+     * *   **UpdateNatGatewayNatType** is an asynchronous operation. After you send a request to call this operation, the system returns a request ID and the NAT gateway is still being upgraded in the backend. You can call the GetNatGatewayConvertStatus operation to query the upgrade progress of a NAT gateway. For more information, see [GetNatGatewayConvertStatus](https://help.aliyun.com/document_detail/184744.html).
+     *     *   If the NAT gateway is in the **processing** state, the NAT gateway is being upgraded. You can only query the status of the NAT gateway but cannot perform other operations.
+     *     *   If the NAT gateway is in the **successful** state, the NAT gateway is upgraded.
+     *     *   If the NAT gateway is in the **failed** state, the system failed to upgrade the NAT gateway.
+     * *   You cannot repeatedly call the **UpdateNatGatewayNatType** operation for the same VPN gateway within the specified period of time.
+     * *   The billing method and billable items remain the same after the upgrade.
+     * *   It takes about five minutes to upgrade a standard NAT gateway to an enhanced NAT gateway. During the upgrade, transient connection errors may occur once or twice. The service can be recovered by reconnection. You can determine whether to enable automatic reconnection or use manual reconnection based on your business requirements.
+     * *   You can only upgrade standard NAT gateways to enhanced NAT gateways. You are not allowed to downgrade enhanced NAT gateways to standard NAT gateways.
+     * 
+     * @param request the request parameters of UpdateNatGatewayNatType  UpdateNatGatewayNatTypeRequest
+     * @return UpdateNatGatewayNatTypeResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateNatGatewayNatTypeResponse> updateNatGatewayNatType(UpdateNatGatewayNatTypeRequest request) {
         try {
@@ -6835,11 +8550,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **UpdateNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
-      *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being updated.
-      *     *   If the network ACL is in the **Available** state, the rules of the network ACL are updated.
-      * *   You cannot repeatedly call the **UpdateNetworkAclEntries** operation to update the rules of a network ACL within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>UpdateNetworkAclEntries</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/116542.html">DescribeNetworkAclAttributes</a> operation to query the status of a network ACL:
+     *     *   If the network ACL is in the <strong>Modifying</strong> state, the rules of the network ACL are being updated.
+     *     *   If the network ACL is in the <strong>Available</strong> state, the rules of the network ACL are updated.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>UpdateNetworkAclEntries</strong> operation to update the rules of a network ACL within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateNetworkAclEntries  UpdateNetworkAclEntriesRequest
+     * @return UpdateNetworkAclEntriesResponse
      */
     @Override
     public CompletableFuture<UpdateNetworkAclEntriesResponse> updateNetworkAclEntries(UpdateNetworkAclEntriesRequest request) {
@@ -6856,8 +8576,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **UpdatePublicIpAddressPoolAttribute** operation to modify the attributes of an IP address pool within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>UpdatePublicIpAddressPoolAttribute</strong> operation to modify the attributes of an IP address pool within the specified period of time.</p>
+     * 
+     * @param request the request parameters of UpdatePublicIpAddressPoolAttribute  UpdatePublicIpAddressPoolAttributeRequest
+     * @return UpdatePublicIpAddressPoolAttributeResponse
      */
     @Override
     public CompletableFuture<UpdatePublicIpAddressPoolAttributeResponse> updatePublicIpAddressPoolAttribute(UpdatePublicIpAddressPoolAttributeRequest request) {
@@ -6874,8 +8597,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot repeatedly call the **UpdateTrafficMirrorFilterAttribute** operation to modify the configuration of a filter for traffic mirroring within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>You cannot repeatedly call the <strong>UpdateTrafficMirrorFilterAttribute</strong> operation to modify the configuration of a filter for traffic mirroring within the specified period of time.</p>
+     * 
+     * @param request the request parameters of UpdateTrafficMirrorFilterAttribute  UpdateTrafficMirrorFilterAttributeRequest
+     * @return UpdateTrafficMirrorFilterAttributeResponse
      */
     @Override
     public CompletableFuture<UpdateTrafficMirrorFilterAttributeResponse> updateTrafficMirrorFilterAttribute(UpdateTrafficMirrorFilterAttributeRequest request) {
@@ -6892,11 +8618,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The **UpdateTrafficMirrorFilterRuleAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of an inbound or outbound rule:
-      *     *   If the rule is in the **Modifying** state, the rule is being modified.
-      *     *   If the rule is in the **Created** state, the rule is modified.
-      * *   You cannot repeatedly call the **UpdateTrafficMirrorFilterRuleAttribute** operation to modify an inbound or outbound rule within the specified period of time.
-      *
+     * <b>description</b> :
+     * <p>  The <strong>UpdateTrafficMirrorFilterRuleAttribute</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/261353.html">ListTrafficMirrorFilters</a> operation to query the status of an inbound or outbound rule:
+     *     *   If the rule is in the <strong>Modifying</strong> state, the rule is being modified.
+     *     *   If the rule is in the <strong>Created</strong> state, the rule is modified.</p>
+     * <ul>
+     * <li>You cannot repeatedly call the <strong>UpdateTrafficMirrorFilterRuleAttribute</strong> operation to modify an inbound or outbound rule within the specified period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateTrafficMirrorFilterRuleAttribute  UpdateTrafficMirrorFilterRuleAttributeRequest
+     * @return UpdateTrafficMirrorFilterRuleAttributeResponse
      */
     @Override
     public CompletableFuture<UpdateTrafficMirrorFilterRuleAttributeResponse> updateTrafficMirrorFilterRuleAttribute(UpdateTrafficMirrorFilterRuleAttributeRequest request) {
@@ -6913,12 +8644,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * *   **UpdateTrafficMirrorSessionAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of the task.
-      *     *   If the traffic mirror session is in the **Modifying** state, the configuration of the traffic mirror session is being modified.
-      *     *   If the traffic mirror session is in the **Created** state, the configuration of the traffic mirror session is modified.
-      * *   You cannot repeatedly call the **UpdateTrafficMirrorSessionAttribute** operation within a specific period of time.
-      *
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li><strong>UpdateTrafficMirrorSessionAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the status of the task.<ul>
+     * <li>If the traffic mirror session is in the <strong>Modifying</strong> state, the configuration of the traffic mirror session is being modified.</li>
+     * <li>If the traffic mirror session is in the <strong>Created</strong> state, the configuration of the traffic mirror session is modified.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot repeatedly call the <strong>UpdateTrafficMirrorSessionAttribute</strong> operation within a specific period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateTrafficMirrorSessionAttribute  UpdateTrafficMirrorSessionAttributeRequest
+     * @return UpdateTrafficMirrorSessionAttributeResponse
      */
     @Override
     public CompletableFuture<UpdateTrafficMirrorSessionAttributeResponse> updateTrafficMirrorSessionAttribute(UpdateTrafficMirrorSessionAttributeRequest request) {
@@ -6934,6 +8672,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateVirtualBorderBandwidth  UpdateVirtualBorderBandwidthRequest
+     * @return UpdateVirtualBorderBandwidthResponse
+     */
     @Override
     public CompletableFuture<UpdateVirtualBorderBandwidthResponse> updateVirtualBorderBandwidth(UpdateVirtualBorderBandwidthRequest request) {
         try {
@@ -6948,6 +8690,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateVirtualPhysicalConnection  UpdateVirtualPhysicalConnectionRequest
+     * @return UpdateVirtualPhysicalConnectionResponse
+     */
     @Override
     public CompletableFuture<UpdateVirtualPhysicalConnectionResponse> updateVirtualPhysicalConnection(UpdateVirtualPhysicalConnectionRequest request) {
         try {
@@ -6963,11 +8709,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **UpdateVpcGatewayEndpointAttribute** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the [GetVpcGatewayEndpointAttribute](~~311017~~) operation to query the status of the task.
-      *     *   If the gateway endpoint is in the **Updating** state, it is being modified.
-      *     *   If the gateway endpoint is in the **Created** state, it is modified.
-      * *   You cannot call the **UpdateVpcGatewayEndpointAttribute** operation within a specific period of time.
-      *
+     * <b>description</b> :
+     * <p>  <strong>UpdateVpcGatewayEndpointAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a <strong>request ID</strong> and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/311017.html">GetVpcGatewayEndpointAttribute</a> operation to query the status of the task.
+     *     *   If the gateway endpoint is in the <strong>Updating</strong> state, it is being modified.
+     *     *   If the gateway endpoint is in the <strong>Created</strong> state, it is modified.</p>
+     * <ul>
+     * <li>You cannot call the <strong>UpdateVpcGatewayEndpointAttribute</strong> operation within a specific period of time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateVpcGatewayEndpointAttribute  UpdateVpcGatewayEndpointAttributeRequest
+     * @return UpdateVpcGatewayEndpointAttributeResponse
      */
     @Override
     public CompletableFuture<UpdateVpcGatewayEndpointAttributeResponse> updateVpcGatewayEndpointAttribute(UpdateVpcGatewayEndpointAttributeRequest request) {
@@ -6984,8 +8735,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that a VPC NAT gateway is created. For more information, see [CreateNatGateway](~~120219~~).
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that a VPC NAT gateway is created. For more information, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</p>
+     * 
+     * @param request the request parameters of VpcDescribeVpcNatGatewayNetworkInterfaceQuota  VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest
+     * @return VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse
      */
     @Override
     public CompletableFuture<VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse> vpcDescribeVpcNatGatewayNetworkInterfaceQuota(VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest request) {
@@ -7001,6 +8755,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of WithdrawVpcPublishedRouteEntries  WithdrawVpcPublishedRouteEntriesRequest
+     * @return WithdrawVpcPublishedRouteEntriesResponse
+     */
     @Override
     public CompletableFuture<WithdrawVpcPublishedRouteEntriesResponse> withdrawVpcPublishedRouteEntries(WithdrawVpcPublishedRouteEntriesRequest request) {
         try {

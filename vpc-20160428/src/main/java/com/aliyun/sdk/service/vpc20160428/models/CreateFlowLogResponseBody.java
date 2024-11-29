@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFlowLogResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFlowLogResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateFlowLogResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The ID of the flow log.
+         * <p>The ID of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fl-m5e8vhz2t21sel1nq****</p>
          */
         public Builder flowLogId(String flowLogId) {
             this.flowLogId = flowLogId;
@@ -81,7 +85,10 @@ public class CreateFlowLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B457</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,10 @@ public class CreateFlowLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazdjdhd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -97,11 +107,14 @@ public class CreateFlowLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

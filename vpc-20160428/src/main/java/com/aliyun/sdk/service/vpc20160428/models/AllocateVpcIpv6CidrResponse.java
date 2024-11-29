@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateVpcIpv6CidrResponse} extends {@link TeaModel}
  *
  * <p>AllocateVpcIpv6CidrResponse</p>

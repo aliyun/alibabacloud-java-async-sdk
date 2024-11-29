@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociatePhysicalConnectionToVirtualBorderRouterResponseBody} extends {@link TeaModel}
  *
  * <p>AssociatePhysicalConnectionToVirtualBorderRouterResponseBody</p>
@@ -37,7 +38,10 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterResponseBody extend
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>980960B0-2969-40BF-8542-EBB34FD358AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

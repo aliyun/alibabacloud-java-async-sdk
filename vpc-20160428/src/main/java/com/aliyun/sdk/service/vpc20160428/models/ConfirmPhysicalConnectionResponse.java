@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmPhysicalConnectionResponse} extends {@link TeaModel}
  *
  * <p>ConfirmPhysicalConnectionResponse</p>

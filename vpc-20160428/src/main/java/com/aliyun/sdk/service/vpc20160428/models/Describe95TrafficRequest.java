@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Describe95TrafficRequest} extends {@link RequestModel}
  *
  * <p>Describe95TrafficRequest</p>
@@ -155,7 +156,11 @@ public class Describe95TrafficRequest extends Request {
         } 
 
         /**
-         * The date in UTC+8. Format: year-month-day.
+         * <p>The date in UTC+8. Format: year-month-day.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-22</p>
          */
         public Builder day(String day) {
             this.putQueryParameter("Day", day);
@@ -164,7 +169,11 @@ public class Describe95TrafficRequest extends Request {
         }
 
         /**
-         * The resource ID.
+         * <p>The resource ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-wz9j19xrwf78fvz7*****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -191,10 +200,12 @@ public class Describe95TrafficRequest extends Request {
         }
 
         /**
-         * The region ID of the resource.
-         * <p>
+         * <p>The region ID of the resource.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -221,7 +232,11 @@ public class Describe95TrafficRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to cbwp, which specifies Internet Shared Bandwidth.
+         * <p>The resource type. Set the value to cbwp, which specifies Internet Shared Bandwidth.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

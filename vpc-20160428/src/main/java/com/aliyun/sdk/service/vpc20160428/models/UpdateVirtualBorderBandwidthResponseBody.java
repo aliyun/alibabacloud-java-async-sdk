@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVirtualBorderBandwidthResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateVirtualBorderBandwidthResponseBody</p>
@@ -85,7 +86,10 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -101,7 +108,10 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA4486A8-B6AE-469E-AB09-820EF8ECFA2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +130,14 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

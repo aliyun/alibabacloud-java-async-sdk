@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNatGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNatGatewayResponseBody</p>
@@ -85,7 +86,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         private SnatTableIds snatTableIds; 
 
         /**
-         * A list of DNAT entries.
+         * <p>A list of DNAT entries.</p>
          */
         public Builder forwardTableIds(ForwardTableIds forwardTableIds) {
             this.forwardTableIds = forwardTableIds;
@@ -93,7 +94,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * A list of FULLNAT entries.
+         * <p>A list of FULLNAT entries.</p>
          */
         public Builder fullNatTableIds(FullNatTableIds fullNatTableIds) {
             this.fullNatTableIds = fullNatTableIds;
@@ -101,7 +102,10 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-112za33e4****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
@@ -109,7 +113,10 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2315DEB7-5E92-423A-91F7-4C1EC9AD97C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +124,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * A list of SNAT entries.
+         * <p>A list of SNAT entries.</p>
          */
         public Builder snatTableIds(SnatTableIds snatTableIds) {
             this.snatTableIds = snatTableIds;
@@ -130,6 +137,12 @@ public class CreateNatGatewayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNatGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayResponseBody</p>
+     */
     public static class ForwardTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardTableId")
         private java.util.List < String > forwardTableId;
@@ -171,6 +184,12 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateNatGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayResponseBody</p>
+     */
     public static class FullNatTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FullNatTableId")
         private java.util.List < String > fullNatTableId;
@@ -212,6 +231,12 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateNatGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayResponseBody</p>
+     */
     public static class SnatTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SnatTableId")
         private java.util.List < String > snatTableId;

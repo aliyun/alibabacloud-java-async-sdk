@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesForExpressConnectRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesForExpressConnectRequest</p>
@@ -182,7 +183,10 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -191,11 +195,14 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -222,10 +229,12 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the resource resides.
-         * <p>
+         * <p>The ID of the region to which the resource resides.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,7 +243,7 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * <p>The resource IDs.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -261,12 +270,16 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
+         * <li><strong>VIRTUALBORDERROUTER</strong>: virtual border router (VBR).</li>
+         * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PHYSICALCONNECTION**: Express Connect circuit.
-         * *   **VIRTUALBORDERROUTER**: virtual border router (VBR).
-         * *   **ROUTERINTERFACE**: router interface.
+         * <strong>example:</strong>
+         * <p>PHYSICALCONNECTION</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -275,7 +288,7 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -290,6 +303,12 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesForExpressConnectRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesForExpressConnectRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -329,10 +348,11 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -340,10 +360,11 @@ public class ListTagResourcesForExpressConnectRequest extends Request {
             }
 
             /**
-             * The value of the tag to add to the resource. You can specify up to 20 tag values The tag value can be an empty string.
-             * <p>
+             * <p>The value of the tag to add to the resource. You can specify up to 20 tag values The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

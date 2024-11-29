@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckVpnBgpEnabledResponseBody} extends {@link TeaModel}
  *
  * <p>CheckVpnBgpEnabledResponseBody</p>
@@ -49,11 +50,14 @@ public class CheckVpnBgpEnabledResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the region supports BGP.
-         * <p>
+         * <p>Indicates whether the region supports BGP.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder bgpEnabled(Boolean bgpEnabled) {
             this.bgpEnabled = bgpEnabled;
@@ -61,7 +65,10 @@ public class CheckVpnBgpEnabledResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF448D2E-215D-334F-B10D-7C3B087EF996</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseEipAddressRequest} extends {@link RequestModel}
  *
  * <p>ReleaseEipAddressRequest</p>
@@ -124,7 +125,11 @@ public class ReleaseEipAddressRequest extends Request {
         } 
 
         /**
-         * The ID of the EIP that you want to release.
+         * <p>The ID of the EIP that you want to release.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-2zeerraiwb7uj6i0d****</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -151,7 +156,10 @@ public class ReleaseEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the EIP belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region to which the EIP belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

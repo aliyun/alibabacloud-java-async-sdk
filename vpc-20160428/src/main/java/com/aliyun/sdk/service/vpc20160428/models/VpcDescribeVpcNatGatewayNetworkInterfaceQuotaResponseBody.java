@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody</p>
@@ -49,7 +50,10 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody extends T
         private String requestId; 
 
         /**
-         * The number of endpoints that can be created.
+         * <p>The number of endpoints that can be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder quota(Long quota) {
             this.quota = quota;
@@ -57,7 +61,10 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody extends T
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetHighDefinitionMonitorLogStatusResponseBody} extends {@link TeaModel}
  *
  * <p>SetHighDefinitionMonitorLogStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class SetHighDefinitionMonitorLogStatusResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B457</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class SetHighDefinitionMonitorLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is performed. Valid values:
-         * <p>
+         * <p>Indicates whether the operation is performed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

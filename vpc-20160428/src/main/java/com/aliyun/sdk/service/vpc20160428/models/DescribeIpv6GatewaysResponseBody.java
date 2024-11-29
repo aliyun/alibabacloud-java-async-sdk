@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpv6GatewaysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpv6GatewaysResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the IPv6 gateway.
+         * <p>The information about the IPv6 gateway.</p>
          */
         public Builder ipv6Gateways(Ipv6Gateways ipv6Gateways) {
             this.ipv6Gateways = ipv6Gateways;
@@ -93,7 +94,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3A06196-3E7C-490D-8F39-CB4B5A0CE8AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpv6GatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6GatewaysResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -169,7 +188,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +199,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,6 +216,12 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpv6GatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6GatewaysResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -232,6 +263,12 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpv6GatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6GatewaysResponseBody</p>
+     */
     public static class Ipv6Gateway extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
@@ -391,12 +428,15 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The status of the IPv6 gateway. Valid values:
-             * <p>
+             * <p>The status of the IPv6 gateway. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>FinancialLocked</strong></li>
+             * <li><strong>SecurityLocked</strong></li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **FinancialLocked**
-             * *   **SecurityLocked**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -404,7 +444,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the IPv6 gateway was created.
+             * <p>The time when the IPv6 gateway was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-20T14:51:23Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -412,7 +455,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the IPv6 gateway.
+             * <p>The description of the IPv6 gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>descriptionforIPv6GW</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -420,7 +466,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the IPv6 gateway expires.
+             * <p>The time when the IPv6 gateway expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-20T14:51:23Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -428,10 +477,11 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the IPv6 gateway.
-             * <p>
+             * <p>The billing method of the IPv6 gateway.</p>
+             * <p>Only <strong>PostPaid</strong> may be returned, which indicates that the IPv6 gateway uses the pay-as-you-go billing method.</p>
              * 
-             * Only **PostPaid** may be returned, which indicates that the IPv6 gateway uses the pay-as-you-go billing method.
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -439,7 +489,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IPv6 gateway.
+             * <p>The ID of the IPv6 gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6gw-hp3rwmtmfhgisipv6gw-hp3rwmtmfhgis****</p>
              */
             public Builder ipv6GatewayId(String ipv6GatewayId) {
                 this.ipv6GatewayId = ipv6GatewayId;
@@ -447,7 +500,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IPv6 gateway.
+             * <p>The name of the IPv6 gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6GW</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -455,7 +511,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the IPv6 gateway is deployed.
+             * <p>The ID of the region in which the IPv6 gateway is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-huhehaote</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -463,7 +522,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -471,11 +533,14 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the IPv6 gateway. Valid values:
-             * <p>
+             * <p>The status of the IPv6 gateway. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Available</strong></li>
+             * </ul>
              * 
-             * *   **Pending**
-             * *   **Available**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -483,7 +548,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the tags.
+             * <p>The information about the tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -491,7 +556,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the IPv6 gateway belongs.
+             * <p>The ID of the VPC to which the IPv6 gateway belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-123sedrfswd23****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -505,6 +573,12 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpv6GatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6GatewaysResponseBody</p>
+     */
     public static class Ipv6Gateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6Gateway")
         private java.util.List < Ipv6Gateway> ipv6Gateway;

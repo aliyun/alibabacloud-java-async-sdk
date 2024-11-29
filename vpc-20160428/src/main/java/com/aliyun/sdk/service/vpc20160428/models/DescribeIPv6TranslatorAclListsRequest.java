@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIPv6TranslatorAclListsRequest} extends {@link RequestModel}
  *
  * <p>DescribeIPv6TranslatorAclListsRequest</p>
@@ -166,7 +167,10 @@ public class DescribeIPv6TranslatorAclListsRequest extends Request {
         } 
 
         /**
-         * The ID of the ACL.
+         * <p>The ID of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transacl-bp1de2****</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -175,7 +179,10 @@ public class DescribeIPv6TranslatorAclListsRequest extends Request {
         }
 
         /**
-         * The name of the ACL.
+         * <p>The name of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl1</p>
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -202,7 +209,10 @@ public class DescribeIPv6TranslatorAclListsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -211,7 +221,10 @@ public class DescribeIPv6TranslatorAclListsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -220,7 +233,11 @@ public class DescribeIPv6TranslatorAclListsRequest extends Request {
         }
 
         /**
-         * The region of the ACL.
+         * <p>The region of the ACL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

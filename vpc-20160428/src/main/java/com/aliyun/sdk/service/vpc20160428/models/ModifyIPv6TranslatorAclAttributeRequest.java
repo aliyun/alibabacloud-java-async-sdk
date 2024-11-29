@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIPv6TranslatorAclAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyIPv6TranslatorAclAttributeRequest</p>
@@ -154,7 +155,11 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the ACL that you want to modify.
+         * <p>The ID of the ACL that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transacl-bp1de2****</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -163,7 +168,11 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends Request {
         }
 
         /**
-         * The name of the ACL.
+         * <p>The name of the ACL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl1</p>
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -172,10 +181,11 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -202,7 +212,11 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends Request {
         }
 
         /**
-         * The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

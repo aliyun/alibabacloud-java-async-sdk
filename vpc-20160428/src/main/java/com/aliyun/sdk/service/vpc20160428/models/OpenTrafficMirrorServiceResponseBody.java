@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenTrafficMirrorServiceResponseBody} extends {@link TeaModel}
  *
  * <p>OpenTrafficMirrorServiceResponseBody</p>
@@ -61,7 +62,10 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -69,7 +73,10 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The information returned after traffic mirroring is enabled.
+         * <p>The information returned after traffic mirroring is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -77,7 +84,10 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FCCF008-4C13-4231-BE77-D5203801A9E2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

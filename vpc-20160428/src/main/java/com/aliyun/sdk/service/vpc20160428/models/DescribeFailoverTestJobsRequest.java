@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFailoverTestJobsRequest} extends {@link RequestModel}
  *
  * <p>DescribeFailoverTestJobsRequest</p>
@@ -151,12 +152,14 @@ public class DescribeFailoverTestJobsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -165,7 +168,7 @@ public class DescribeFailoverTestJobsRequest extends Request {
         }
 
         /**
-         * The filter information.
+         * <p>The filter information.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -174,7 +177,10 @@ public class DescribeFailoverTestJobsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 100**. Default value: 20.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -210,10 +216,11 @@ public class DescribeFailoverTestJobsRequest extends Request {
         }
 
         /**
-         * The region where you want to perform the failover test.
-         * <p>
+         * <p>The region where you want to perform the failover test.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -237,6 +244,12 @@ public class DescribeFailoverTestJobsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFailoverTestJobsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeFailoverTestJobsRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -276,17 +289,21 @@ public class DescribeFailoverTestJobsRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The filter key. Valid values:
-             * <p>
+             * <p>The filter key. Valid values:</p>
+             * <ul>
+             * <li><strong>JobId</strong></li>
+             * <li><strong>JobName</strong></li>
+             * <li><strong>JobStatus</strong></li>
+             * <li><strong>ResourceId</strong></li>
+             * <li><strong>ResourceName</strong></li>
+             * <li><strong>ResourceType</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>You can specify at most five different filter keys. If you specify ResourceId or ResourceName, you must also specify ResourceType. The logical operator among the filter keys is AND. Results that meet all specified filter keys are returned.</p>
+             * </blockquote>
              * 
-             * *   **JobId**
-             * *   **JobName**
-             * *   **JobStatus**
-             * *   **ResourceId**
-             * *   **ResourceName**
-             * *   **ResourceType**
-             * 
-             * > You can specify at most five different filter keys. If you specify ResourceId or ResourceName, you must also specify ResourceType. The logical operator among the filter keys is AND. Results that meet all specified filter keys are returned.
+             * <strong>example:</strong>
+             * <p>JobId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -294,10 +311,10 @@ public class DescribeFailoverTestJobsRequest extends Request {
             }
 
             /**
-             * The value of the filter key.
-             * <p>
-             * 
-             * > You can specify at most five filter values for each filter key. The logical operator among filter values is OR. If a filter value is matched, the filter key is considered matched.
+             * <p>The value of the filter key.</p>
+             * <blockquote>
+             * <p>You can specify at most five filter values for each filter key. The logical operator among filter values is OR. If a filter value is matched, the filter key is considered matched.</p>
+             * </blockquote>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

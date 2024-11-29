@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIpsecServerLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListIpsecServerLogsResponseBody</p>
@@ -97,7 +98,10 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of entries on the current page.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -105,10 +109,8 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * An array of strings.
-         * <p>
-         * 
-         * Each item in the array is a log entry.
+         * <p>An array of strings.</p>
+         * <p>Each item in the array is a log entry.</p>
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;
@@ -116,11 +118,14 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the log is accurate. Valid values:
-         * <p>
+         * <p>Indicates whether the log is accurate. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: accurate</li>
+         * <li><strong>false</strong>: inaccurate</li>
+         * </ul>
          * 
-         * *   **true**: accurate
-         * *   **false**: inaccurate
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isCompleted(Boolean isCompleted) {
             this.isCompleted = isCompleted;
@@ -128,7 +133,10 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -136,7 +144,10 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -144,7 +155,10 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEDAC5B1-9292-5BF7-BDDF-61BA58CFB2FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

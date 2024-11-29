@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFullNatEntriesRequest} extends {@link RequestModel}
  *
  * <p>ListFullNatEntriesRequest</p>
@@ -264,12 +265,14 @@ public class ListFullNatEntriesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -278,7 +281,10 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the FULLNAT entry that you want to query.
+         * <p>The ID of the FULLNAT entry that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fullnat-gw8fz23jezpbblf1j****</p>
          */
         public Builder fullNatEntryId(String fullNatEntryId) {
             this.putQueryParameter("FullNatEntryId", fullNatEntryId);
@@ -287,10 +293,8 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * The name of the FULLNAT entry that you want to query. You can specify at most 20 names.
-         * <p>
-         * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <p>The name of the FULLNAT entry that you want to query. You can specify at most 20 names.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          */
         public Builder fullNatEntryNames(java.util.List < String > fullNatEntryNames) {
             this.putQueryParameter("FullNatEntryNames", fullNatEntryNames);
@@ -299,10 +303,13 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the FULLNAT table to which the FULLNAT entries to be queried belong.
-         * <p>
+         * <p>The ID of the FULLNAT table to which the FULLNAT entries to be queried belong.</p>
+         * <blockquote>
+         * <p> You must specify at least one of <strong>FullNatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of **FullNatTableId** and **NatGatewayId**.
+         * <strong>example:</strong>
+         * <p>fulltb-gw88z7hhlv43rmb26****</p>
          */
         public Builder fullNatTableId(String fullNatTableId) {
             this.putQueryParameter("FullNatTableId", fullNatTableId);
@@ -311,11 +318,14 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * The protocol of the packets that are forwarded by the port. Valid values:
-         * <p>
+         * <p>The protocol of the packets that are forwarded by the port. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * </ul>
          * 
-         * *   **TCP**
-         * *   **UDP**
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -324,7 +334,10 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -333,10 +346,13 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
-         * <p>
+         * <p>The ID of the NAT gateway.</p>
+         * <blockquote>
+         * <p> You must specify at least one of <strong>FullNatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of **FullNatTableId** and **NatGatewayId**.
+         * <strong>example:</strong>
+         * <p>ngw-bp1uewa15k4iy5770****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -345,7 +361,10 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * The NAT IP address that provides address translation in FULLNAT entries.
+         * <p>The NAT IP address that provides address translation in FULLNAT entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX</p>
          */
         public Builder natIp(String natIp) {
             this.putQueryParameter("NatIp", natIp);
@@ -354,7 +373,10 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * The frontend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.
+         * <p>The frontend port to be modified in the mapping of FULLNAT port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder natIpPort(String natIpPort) {
             this.putQueryParameter("NatIpPort", natIpPort);
@@ -363,7 +385,7 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the elastic network interface (ENI) that you want to query.
+         * <p>The ID of the elastic network interface (ENI) that you want to query.</p>
          */
         public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
@@ -372,11 +394,14 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of the <strong>NextToken</strong> parameter.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of the **NextToken** parameter.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -403,10 +428,12 @@ public class ListFullNatEntriesRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual private cloud (VPC) NAT gateway to which the FULLNAT entries to be queried belong.
-         * <p>
+         * <p>The region ID of the virtual private cloud (VPC) NAT gateway to which the FULLNAT entries to be queried belong.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>eu-central-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

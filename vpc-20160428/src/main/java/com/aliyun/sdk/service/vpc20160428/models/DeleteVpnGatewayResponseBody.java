@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpnGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteVpnGatewayResponseBody</p>
@@ -37,7 +38,12 @@ public class DeleteVpnGatewayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
+         * </blockquote>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

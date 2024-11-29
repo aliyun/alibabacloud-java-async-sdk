@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIPv6TranslatorAclListAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIPv6TranslatorAclListAttributesResponseBody</p>
@@ -109,7 +110,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         private Integer totalCount; 
 
         /**
-         * The ACLs.
+         * <p>The ACLs.</p>
          */
         public Builder aclEntries(AclEntries aclEntries) {
             this.aclEntries = aclEntries;
@@ -117,7 +118,10 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * The ACL ID.
+         * <p>The ACL ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transacl-bp1de2****</p>
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -125,7 +129,10 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * The name of the ACL.
+         * <p>The name of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl1</p>
          */
         public Builder aclName(String aclName) {
             this.aclName = aclName;
@@ -133,7 +140,10 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -141,7 +151,10 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -149,7 +162,10 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +173,10 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,6 +189,12 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIPv6TranslatorAclListAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIPv6TranslatorAclListAttributesResponseBody</p>
+     */
     public static class AclEntry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclEntryComment")
         private String aclEntryComment;
@@ -221,7 +246,10 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
             private String aclEntryIp; 
 
             /**
-             * The remarks of the ACL entry.
+             * <p>The remarks of the ACL entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client IP</p>
              */
             public Builder aclEntryComment(String aclEntryComment) {
                 this.aclEntryComment = aclEntryComment;
@@ -229,7 +257,10 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
             }
 
             /**
-             * The ID of the ACL entry.
+             * <p>The ID of the ACL entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6transaclentry-bp105jrs****</p>
              */
             public Builder aclEntryId(String aclEntryId) {
                 this.aclEntryId = aclEntryId;
@@ -237,7 +268,10 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
             }
 
             /**
-             * The IP address specified in the ACL entry.
+             * <p>The IP address specified in the ACL entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12ab:0:0:XXXX::0102/128</p>
              */
             public Builder aclEntryIp(String aclEntryIp) {
                 this.aclEntryIp = aclEntryIp;
@@ -251,6 +285,12 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIPv6TranslatorAclListAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIPv6TranslatorAclListAttributesResponseBody</p>
+     */
     public static class AclEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclEntry")
         private java.util.List < AclEntry> aclEntry;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePhysicalConnectionOccupancyOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePhysicalConnectionOccupancyOrderResponseBody</p>
@@ -49,7 +50,7 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * The details.
+         * <p>The details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B9300FE-11E2-4E3B-949C-BED3B44DD26D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link CreatePhysicalConnectionOccupancyOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePhysicalConnectionOccupancyOrderResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
@@ -97,7 +107,10 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
             private String orderId; 
 
             /**
-             * The ID of the order that is placed.
+             * <p>The ID of the order that is placed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50187055895****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

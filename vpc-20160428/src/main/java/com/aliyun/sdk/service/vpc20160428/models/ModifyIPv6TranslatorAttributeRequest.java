@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIPv6TranslatorAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyIPv6TranslatorAttributeRequest</p>
@@ -167,10 +168,11 @@ public class ModifyIPv6TranslatorAttributeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>sha1111</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -179,7 +181,10 @@ public class ModifyIPv6TranslatorAttributeRequest extends Request {
         }
 
         /**
-         * The description of IPv6 Translation Service. This parameter is empty by default. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with http:// or [https://](https://。).
+         * <p>The description of IPv6 Translation Service. This parameter is empty by default. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instancedescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -188,7 +193,11 @@ public class ModifyIPv6TranslatorAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 Translation Service instance.
+         * <p>The ID of the IPv6 Translation Service instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6trans-bp1858ys****</p>
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -197,7 +206,10 @@ public class ModifyIPv6TranslatorAttributeRequest extends Request {
         }
 
         /**
-         * The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with http:// or [https://](https://。).
+         * <p>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instancename</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -224,7 +236,11 @@ public class ModifyIPv6TranslatorAttributeRequest extends Request {
         }
 
         /**
-         * The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.
+         * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCommonBandwidthPackageIpBandwidthResponse} extends {@link TeaModel}
  *
  * <p>ModifyCommonBandwidthPackageIpBandwidthResponse</p>

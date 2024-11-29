@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrefixListsRequest} extends {@link RequestModel}
  *
  * <p>ListPrefixListsRequest</p>
@@ -195,7 +196,10 @@ public class ListPrefixListsRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -204,11 +208,14 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -235,7 +242,10 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * The IDs of prefix lists to be queried. Valid values of **N** are **1** to **100**, which specifies that you can query up to 100 prefix lists at a time.
+         * <p>The IDs of prefix lists to be queried. Valid values of <strong>N</strong> are <strong>1</strong> to <strong>100</strong>, which specifies that you can query up to 100 prefix lists at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-m5estsqsdqwg88hjf****</p>
          */
         public Builder prefixListIds(java.util.List < String > prefixListIds) {
             this.putQueryParameter("PrefixListIds", prefixListIds);
@@ -244,10 +254,11 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * The name of the prefix list to query.
-         * <p>
+         * <p>The name of the prefix list to query.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -256,10 +267,12 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to query prefix lists.
-         * <p>
+         * <p>The ID of the region where you want to query prefix lists.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,7 +281,10 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the prefix list belongs.
+         * <p>The ID of the resource group to which the prefix list belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -295,7 +311,7 @@ public class ListPrefixListsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -310,6 +326,12 @@ public class ListPrefixListsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrefixListsRequest} extends {@link TeaModel}
+     *
+     * <p>ListPrefixListsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -349,10 +371,11 @@ public class ListPrefixListsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -360,10 +383,11 @@ public class ListPrefixListsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

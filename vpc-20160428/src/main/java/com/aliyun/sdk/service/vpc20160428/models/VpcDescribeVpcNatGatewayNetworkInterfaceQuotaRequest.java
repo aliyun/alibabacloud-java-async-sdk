@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest} extends {@link RequestModel}
  *
  * <p>VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest</p>
@@ -151,12 +152,14 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest extends Reques
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -165,7 +168,10 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest extends Reques
         }
 
         /**
-         * The ID of the VPC NAT gateway.
+         * <p>The ID of the VPC NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1uewa15k4iy5770****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -192,10 +198,11 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest extends Reques
         }
 
         /**
-         * The region ID of the VPC NAT gateway.
-         * <p>
+         * <p>The region ID of the VPC NAT gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,7 +229,10 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest extends Reques
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the resource belongs.
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132193271328****</p>
          */
         public Builder resourceUid(Long resourceUid) {
             this.putQueryParameter("ResourceUid", resourceUid);

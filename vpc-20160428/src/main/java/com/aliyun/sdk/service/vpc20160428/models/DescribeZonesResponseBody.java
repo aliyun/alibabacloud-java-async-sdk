@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZonesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The zone list.
+         * <p>The zone list.</p>
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -70,6 +74,12 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -121,7 +131,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneType; 
 
             /**
-             * The zone name.
+             * <p>The zone name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou Zone B</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -129,7 +142,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -137,7 +153,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone type. Default value: **AvailabilityZone**.
+             * <p>The zone type. Default value: <strong>AvailabilityZone</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AvailabilityZone</p>
              */
             public Builder zoneType(String zoneType) {
                 this.zoneType = zoneType;
@@ -151,6 +170,12 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Zone")
         private java.util.List < Zone> zone;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyExpressConnectTrafficQosQueueResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyExpressConnectTrafficQosQueueResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyExpressConnectTrafficQosQueueResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>079874CD-AEC1-43E6-AC03-ADD96B6E4907</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

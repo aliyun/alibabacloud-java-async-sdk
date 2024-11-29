@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCommonBandwidthPackageResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCommonBandwidthPackageResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteCommonBandwidthPackageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B400EF57-60E3-4D61-B8FB-7FA8F72DF5A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

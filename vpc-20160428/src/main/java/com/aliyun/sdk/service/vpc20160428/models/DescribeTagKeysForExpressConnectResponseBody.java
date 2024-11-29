@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagKeysForExpressConnectResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagKeysForExpressConnectResponseBody</p>
@@ -61,11 +62,14 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         private TagKeys tagKeys; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -73,7 +77,10 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +88,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The tag keys.
+         * <p>The tag keys.</p>
          */
         public Builder tagKeys(TagKeys tagKeys) {
             this.tagKeys = tagKeys;
@@ -94,6 +101,12 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagKeysForExpressConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagKeysForExpressConnectResponseBody</p>
+     */
     public static class TagKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -133,7 +146,10 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -141,7 +157,10 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. The value is set to **PHYSICALCONNECTION**, which indicates an Express Connect circuit.
+             * <p>The type of the resource. The value is set to <strong>PHYSICALCONNECTION</strong>, which indicates an Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICALCONNECTION</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -155,6 +174,12 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagKeysForExpressConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagKeysForExpressConnectResponseBody</p>
+     */
     public static class TagKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private java.util.List < TagKey> tagKey;
@@ -182,7 +207,10 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             private java.util.List < TagKey> tagKey; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder tagKey(java.util.List < TagKey> tagKey) {
                 this.tagKey = tagKey;

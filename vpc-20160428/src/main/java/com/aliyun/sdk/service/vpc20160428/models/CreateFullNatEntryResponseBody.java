@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFullNatEntryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFullNatEntryResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateFullNatEntryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The FULLNAT entry ID.
+         * <p>The FULLNAT entry ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fullnat-gw8fz23jezpbblf1j****</p>
          */
         public Builder fullNatEntryId(String fullNatEntryId) {
             this.fullNatEntryId = fullNatEntryId;
@@ -57,7 +61,10 @@ public class CreateFullNatEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2315DEB7-5E92-423A-91F7-4C1EC9AD97C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

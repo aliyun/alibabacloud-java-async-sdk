@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouteTableListRequest} extends {@link RequestModel}
  *
  * <p>DescribeRouteTableListRequest</p>
@@ -268,10 +269,11 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-         * <p>
+         * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -280,11 +282,14 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The type of the route table.
-         * <p>
+         * <p>The type of the route table.</p>
+         * <ul>
+         * <li><strong>System</strong></li>
+         * <li><strong>Custom</strong></li>
+         * </ul>
          * 
-         * *   **System**
-         * *   **Custom**
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -293,7 +298,11 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-6</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -302,7 +311,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The details of the route table.
+         * <p>The details of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -329,7 +341,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdvzu2****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -338,10 +353,11 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-         * <p>
+         * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>doctest</p>
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);
@@ -350,7 +366,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The time when the route table was created.
+         * <p>The time when the route table was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder routeTableType(String routeTableType) {
             this.putQueryParameter("RouteTableType", routeTableType);
@@ -359,10 +378,11 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC to which the route table belongs.
-         * <p>
+         * <p>The region ID of the VPC to which the route table belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>vrt-bp1lhl0taikrteen8****</p>
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);
@@ -371,7 +391,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the route table to be queried belongs.
+         * <p>The ID of the resource group to which the route table to be queried belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VRouter</p>
          */
         public Builder routerType(String routerType) {
             this.putQueryParameter("RouterType", routerType);
@@ -380,7 +403,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -389,7 +412,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * <p>The tags of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -404,6 +430,12 @@ public class DescribeRouteTableListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRouteTableListRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTableListRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -443,7 +475,10 @@ public class DescribeRouteTableListRequest extends Request {
             private String value; 
 
             /**
-             * The detailed information about the route tables.
+             * <p>The detailed information about the route tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -451,7 +486,10 @@ public class DescribeRouteTableListRequest extends Request {
             }
 
             /**
-             * The ID of the VPC to which the route table belongs.
+             * <p>The ID of the VPC to which the route table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

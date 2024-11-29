@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePhysicalConnectionOccupancyOrderRequest} extends {@link RequestModel}
  *
  * <p>CreatePhysicalConnectionOccupancyOrderRequest</p>
@@ -195,11 +196,14 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payments. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payments. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is automatically canceled.</li>
+         * <li><strong>false</strong>: disables automatic payment. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: yes Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is automatically canceled.
-         * *   **false**: disables automatic payment. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -208,10 +212,11 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * <strong>example:</strong>
+         * <p>CBCE910E-D396-4944</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -220,10 +225,11 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * The billing method. Set the value to
-         * <p>
+         * <p>The billing method. Set the value to</p>
+         * <p><strong>PrePaid</strong>, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</p>
          * 
-         * **PrePaid**, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -250,11 +256,14 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * The subscription duration.
-         * <p>
+         * <p>The subscription duration.</p>
+         * <ul>
+         * <li>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, set <strong>Period</strong> to a value from <strong>1 to 9</strong>.</li>
+         * <li>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, set <strong>Period</strong> to a value from <strong>1 to 5</strong>.</li>
+         * </ul>
          * 
-         * *   If **PricingCycle** is set to **Month**, set **Period** to a value from **1 to 9**.
-         * *   If **PricingCycle** is set to **Year**, set **Period** to a value from **1 to 5**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -263,7 +272,11 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * The ID of the Express Connect circuit.
+         * <p>The ID of the Express Connect circuit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1hp0wr072f6****</p>
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -272,11 +285,14 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * The billing cycle of the subscription. Valid values:
-         * <p>
+         * <p>The billing cycle of the subscription. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong> (default)</li>
+         * <li><strong>Year</strong></li>
+         * </ul>
          * 
-         * *   **Month** (default)
-         * *   **Year**
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -285,10 +301,12 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * The region ID of the Express Connect circuit.
-         * <p>
+         * <p>The region ID of the Express Connect circuit.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

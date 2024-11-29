@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyExpressConnectTrafficQosRequest} extends {@link RequestModel}
  *
  * <p>ModifyExpressConnectTrafficQosRequest</p>
@@ -181,7 +182,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         } 
 
         /**
-         * The instances to be added. Ignore this parameter if no instances are to be added.
+         * <p>The instances to be added. Ignore this parameter if no instances are to be added.</p>
          */
         public Builder addInstanceList(java.util.List < AddInstanceList> addInstanceList) {
             this.putQueryParameter("AddInstanceList", addInstanceList);
@@ -190,12 +191,14 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -222,7 +225,10 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * The description of the QoS policy.
+         * <p>The description of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-test</p>
          */
         public Builder qosDescription(String qosDescription) {
             this.putQueryParameter("QosDescription", qosDescription);
@@ -231,7 +237,11 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * The ID of the QoS policy.
+         * <p>The ID of the QoS policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-2giu0a6vd5x0mv4700</p>
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -240,7 +250,10 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * The name of the QoS policy.
+         * <p>The name of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-test</p>
          */
         public Builder qosName(String qosName) {
             this.putQueryParameter("QosName", qosName);
@@ -249,10 +262,12 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * The region ID of the resource.
-         * <p>
+         * <p>The region ID of the resource.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -261,7 +276,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * The instances to be removed. Ignore this parameter if no instances are to be removed.
+         * <p>The instances to be removed. Ignore this parameter if no instances are to be removed.</p>
          */
         public Builder removeInstanceList(java.util.List < RemoveInstanceList> removeInstanceList) {
             this.putQueryParameter("RemoveInstanceList", removeInstanceList);
@@ -285,6 +300,12 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyExpressConnectTrafficQosRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyExpressConnectTrafficQosRequest</p>
+     */
     public static class AddInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -324,7 +345,10 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
             private String instanceType; 
 
             /**
-             * The ID of the instance to be associated.
+             * <p>The ID of the instance to be associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp159zj8zujwy3p07****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -332,7 +356,10 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
             }
 
             /**
-             * The type of instance to be associated. Set the value to **PHYSICALCONNECTION**.
+             * <p>The type of instance to be associated. Set the value to <strong>PHYSICALCONNECTION</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICALCONNECTION</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -346,6 +373,12 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyExpressConnectTrafficQosRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyExpressConnectTrafficQosRequest</p>
+     */
     public static class RemoveInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -385,7 +418,10 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
             private String instanceType; 
 
             /**
-             * The ID of the associated instance.
+             * <p>The ID of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp1j37am632492qzw****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -393,7 +429,10 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
             }
 
             /**
-             * The type of the associated instance. Set the value to **PHYSICALCONNECTION**.
+             * <p>The type of the associated instance. Set the value to <strong>PHYSICALCONNECTION</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICALCONNECTION</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;

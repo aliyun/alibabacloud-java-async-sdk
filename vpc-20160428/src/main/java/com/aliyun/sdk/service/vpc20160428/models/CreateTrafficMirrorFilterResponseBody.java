@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTrafficMirrorFilterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTrafficMirrorFilterResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
         private String trafficMirrorFilterId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28DB147D-217B-43E8-9E94-A3F6837DDC8A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the mirrored traffic belongs.
+         * <p>The ID of the resource group to which the mirrored traffic belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -77,7 +84,10 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the filter.
+         * <p>The ID of the filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tmf-j6cmls82xnc86vtpe****</p>
          */
         public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
             this.trafficMirrorFilterId = trafficMirrorFilterId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIPv6TranslatorEntryRequest} extends {@link RequestModel}
  *
  * <p>DeleteIPv6TranslatorEntryRequest</p>
@@ -152,10 +153,11 @@ public class DeleteIPv6TranslatorEntryRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -164,7 +166,10 @@ public class DeleteIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 mapping entry to be deleted.
+         * <p>The ID of the IPv6 mapping entry to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transentry-bp1g8bhrde****</p>
          */
         public Builder ipv6TranslatorEntryId(String ipv6TranslatorEntryId) {
             this.putQueryParameter("Ipv6TranslatorEntryId", ipv6TranslatorEntryId);
@@ -173,10 +178,13 @@ public class DeleteIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 Translation Service instance.
-         * <p>
+         * <p>The ID of the IPv6 Translation Service instance.</p>
+         * <blockquote>
+         * <p>If you do not specify <strong>Ipv6TranslatorEntryId</strong>, all mapping entries in the specified instance are deleted.</p>
+         * </blockquote>
          * 
-         * > If you do not specify **Ipv6TranslatorEntryId**, all mapping entries in the specified instance are deleted.
+         * <strong>example:</strong>
+         * <p>ipv6trans-bp1858ys****</p>
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -203,7 +211,11 @@ public class DeleteIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.
+         * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

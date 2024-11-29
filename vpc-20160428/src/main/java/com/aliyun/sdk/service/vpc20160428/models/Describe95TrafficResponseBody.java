@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Describe95TrafficResponseBody} extends {@link TeaModel}
  *
  * <p>Describe95TrafficResponseBody</p>
@@ -49,7 +50,10 @@ public class Describe95TrafficResponseBody extends TeaModel {
         private Traffic95Summary traffic95Summary; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
         }
 
         /**
-         * The information returned.
+         * <p>The information returned.</p>
          */
         public Builder traffic95Summary(Traffic95Summary traffic95Summary) {
             this.traffic95Summary = traffic95Summary;
@@ -70,6 +74,12 @@ public class Describe95TrafficResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Describe95TrafficResponseBody} extends {@link TeaModel}
+     *
+     * <p>Describe95TrafficResponseBody</p>
+     */
     public static class Traffic95Detail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BillBandwidth")
         private String billBandwidth;
@@ -133,7 +143,10 @@ public class Describe95TrafficResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * The sampled bandwidth value, which is the larger bandwidth value in the inbound and outbound directions within a sampling interval. Unit: Mbit/s.
+             * <p>The sampled bandwidth value, which is the larger bandwidth value in the inbound and outbound directions within a sampling interval. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>118.5090322113037</p>
              */
             public Builder billBandwidth(String billBandwidth) {
                 this.billBandwidth = billBandwidth;
@@ -141,7 +154,10 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound bandwidth. Unit: Mbit/s.
+             * <p>The inbound bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>118.5090322113037</p>
              */
             public Builder inBandwidth(String inBandwidth) {
                 this.inBandwidth = inBandwidth;
@@ -149,7 +165,10 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound bandwidth. Unit: Mbit/s.
+             * <p>The outbound bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96.41217480977376</p>
              */
             public Builder outBandwidth(String outBandwidth) {
                 this.outBandwidth = outBandwidth;
@@ -157,7 +176,10 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical time. The value is a string.
+             * <p>The statistical time. The value is a string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T00:00:00Z</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -171,6 +193,12 @@ public class Describe95TrafficResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Describe95TrafficResponseBody} extends {@link TeaModel}
+     *
+     * <p>Describe95TrafficResponseBody</p>
+     */
     public static class Traffic95DetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Traffic95Detail")
         private java.util.List < Traffic95Detail> traffic95Detail;
@@ -212,6 +240,12 @@ public class Describe95TrafficResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Describe95TrafficResponseBody} extends {@link TeaModel}
+     *
+     * <p>Describe95TrafficResponseBody</p>
+     */
     public static class Traffic95Summary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
@@ -299,7 +333,10 @@ public class Describe95TrafficResponseBody extends TeaModel {
             private Traffic95DetailList traffic95DetailList; 
 
             /**
-             * The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.
+             * <p>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000.0</p>
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -307,9 +344,11 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The daily peak bandwidth. Unit: Mbit/s.
-             * <p>
-             * <props="china"> For more information, see [Daily peak bandwidth](~~89729~~).</props>
+             * <p>The daily peak bandwidth. Unit: Mbit/s.
+             * &lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/89729.html">Daily peak bandwidth</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1064.244837773641</p>
              */
             public Builder fifthPeakBandwidth(String fifthPeakBandwidth) {
                 this.fifthPeakBandwidth = fifthPeakBandwidth;
@@ -317,7 +356,10 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbwp-wz9j19xrwf78fvz7*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -325,12 +367,15 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method of the Internet Shared Bandwidth instance. Valid values:
-             * <p>
+             * <p>The metering method of the Internet Shared Bandwidth instance. Valid values:</p>
+             * <ul>
+             * <li>PayBy95: pay-by-enhanced-95th-percentile</li>
+             * <li>PayByBandwidth: pay-by-bandwidth</li>
+             * <li>PayByDominantTraffic: pay-by-dominant-traffic</li>
+             * </ul>
              * 
-             * *   PayBy95: pay-by-enhanced-95th-percentile
-             * *   PayByBandwidth: pay-by-bandwidth
-             * *   PayByDominantTraffic: pay-by-dominant-traffic
+             * <strong>example:</strong>
+             * <p>PayBy95</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -338,7 +383,10 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The guaranteed bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.
+             * <p>The guaranteed bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder minimumConsumeBandwidth(String minimumConsumeBandwidth) {
                 this.minimumConsumeBandwidth = minimumConsumeBandwidth;
@@ -346,7 +394,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The average bandwidth every 5 minutes in the inbound and outbound directions.
+             * <p>The average bandwidth every 5 minutes in the inbound and outbound directions.</p>
              */
             public Builder traffic95DetailList(Traffic95DetailList traffic95DetailList) {
                 this.traffic95DetailList = traffic95DetailList;

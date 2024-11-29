@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateIpv6InternetBandwidthResponse} extends {@link TeaModel}
  *
  * <p>AllocateIpv6InternetBandwidthResponse</p>

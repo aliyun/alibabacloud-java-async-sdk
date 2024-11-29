@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouteTableListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRouteTableListResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the route table.
+         * <p>The ID of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,11 +97,14 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the cloud resource with which the route table is associated. Valid values:
-         * <p>
+         * <p>The type of the cloud resource with which the route table is associated. Valid values:</p>
+         * <ul>
+         * <li><strong>VSwitch</strong>: vSwitch</li>
+         * <li><strong>Gateway</strong>: IPv4 gateway</li>
+         * </ul>
          * 
-         * *   **VSwitch**: vSwitch
-         * *   **Gateway**: IPv4 gateway
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -105,7 +112,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vRouter to which the route table belongs.
+         * <p>The ID of the vRouter to which the route table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC668356-BCB4-42FD-9BC3-FA2B2E04B634</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +123,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the route table.
+         * <p>The description of the route table.</p>
          */
         public Builder routerTableList(RouterTableList routerTableList) {
             this.routerTableList = routerTableList;
@@ -121,7 +131,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the route table belongs.
+         * <p>The ID of the Alibaba Cloud account to which the route table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +147,12 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRouteTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTableListResponseBody</p>
+     */
     public static class GatewayIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GatewayIds")
         private java.util.List < String > gatewayIds;
@@ -175,6 +194,12 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTableListResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -214,10 +239,11 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -225,10 +251,11 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
              * 
-             * The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>ingress</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -242,6 +269,12 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTableListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -283,6 +316,12 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTableListResponseBody</p>
+     */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private java.util.List < String > vSwitchId;
@@ -324,6 +363,12 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTableListResponseBody</p>
+     */
     public static class RouterTableListType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociateType")
         private String associateType;
@@ -531,7 +576,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VSwitch</p>
              */
             public Builder associateType(String associateType) {
                 this.associateType = associateType;
@@ -539,11 +587,14 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the router to which the route table belongs. Valid values:
-             * <p>
+             * <p>The type of the router to which the route table belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>VRouter</strong></li>
+             * <li><strong>VBR</strong></li>
+             * </ul>
              * 
-             * *   **VRouter**
-             * *   **VBR**
+             * <strong>example:</strong>
+             * <p>2021-08-22T10:40:25Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -551,7 +602,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the vSwitches.
+             * <p>The information about the vSwitches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is Route Table.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -559,7 +613,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information about the IPv4 gateway.
+             * <p>The detailed information about the IPv4 gateway.</p>
              */
             public Builder gatewayIds(GatewayIds gatewayIds) {
                 this.gatewayIds = gatewayIds;
@@ -567,7 +621,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N added to the resource.
+             * <p>The value of tag N added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253460731706911258</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -575,7 +632,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information about the IPv4 gateway.
+             * <p>The detailed information about the IPv4 gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -583,12 +643,16 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to receive the propagation routes. Valid Values:
-             * <p>
+             * <p>Whether to receive the propagation routes. Valid Values:</p>
+             * <ul>
+             * <li><p><strong>True</strong>: The propagation route is received.</p>
+             * </li>
+             * <li><p><strong>False</strong>: The propagation route is not received.</p>
+             * </li>
+             * </ul>
              * 
-             * *   **True**: The propagation route is received.
-             * 
-             * *   **False**: The propagation route is not received.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder routePropagationEnable(Boolean routePropagationEnable) {
                 this.routePropagationEnable = routePropagationEnable;
@@ -596,7 +660,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The key of tag N added to the resource.
+             * <p>The key of tag N added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp145q7glnuzdvzu2****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -604,7 +671,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route table.
+             * <p>The name of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doctest</p>
              */
             public Builder routeTableName(String routeTableName) {
                 this.routeTableName = routeTableName;
@@ -612,7 +682,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder routeTableType(String routeTableType) {
                 this.routeTableType = routeTableType;
@@ -620,7 +693,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag added to the route table.
+             * <p>The tag added to the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vrt-bp1lhl0taikrteen8****</p>
              */
             public Builder routerId(String routerId) {
                 this.routerId = routerId;
@@ -628,7 +704,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information about the IPv4 gateway.
+             * <p>The detailed information about the IPv4 gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VRouter</p>
              */
             public Builder routerType(String routerType) {
                 this.routerType = routerType;
@@ -636,7 +715,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route table.
+             * <p>The name of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -644,7 +726,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -652,7 +734,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch IDs.
+             * <p>The vSwitch IDs.</p>
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -660,7 +742,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the route table belongs.
+             * <p>The ID of the resource group to which the route table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp15zckdt37pq72****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -674,6 +759,12 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTableListResponseBody</p>
+     */
     public static class RouterTableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouterTableListType")
         private java.util.List < RouterTableListType> routerTableListType;

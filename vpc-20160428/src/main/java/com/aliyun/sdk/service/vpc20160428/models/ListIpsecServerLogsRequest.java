@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIpsecServerLogsRequest} extends {@link RequestModel}
  *
  * <p>ListIpsecServerLogsRequest</p>
@@ -139,10 +140,13 @@ public class ListIpsecServerLogsRequest extends Request {
         } 
 
         /**
-         * The beginning of the time range to query. The value must be a UNIX timestamp. For example, 1671003744 specifies 15:42:24 (UTC+8) on December 14, 2022.
-         * <p>
+         * <p>The beginning of the time range to query. The value must be a UNIX timestamp. For example, 1671003744 specifies 15:42:24 (UTC+8) on December 14, 2022.</p>
+         * <blockquote>
+         * <p> If you specify <strong>From</strong>, you must also specify <strong>To</strong> or <strong>MinutePeriod</strong>.</p>
+         * </blockquote>
          * 
-         * >  If you specify **From**, you must also specify **To** or **MinutePeriod**.
+         * <strong>example:</strong>
+         * <p>1671003744</p>
          */
         public Builder from(Integer from) {
             this.putQueryParameter("From", from);
@@ -151,7 +155,11 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * The ID of the IPsec server.
+         * <p>The ID of the IPsec server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iss-2zei2n5q5zhirfh73****</p>
          */
         public Builder ipsecServerId(String ipsecServerId) {
             this.putQueryParameter("IpsecServerId", ipsecServerId);
@@ -160,10 +168,13 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * The interval at which log data is queried. Valid values: **1** to **10**. Unit: minutes.
-         * <p>
+         * <p>The interval at which log data is queried. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: minutes.</p>
+         * <blockquote>
+         * <p> If both <strong>From</strong> and <strong>To</strong> are not specified, you must specify <strong>MinutePeriod</strong>.</p>
+         * </blockquote>
          * 
-         * >  If both **From** and **To** are not specified, you must specify **MinutePeriod**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minutePeriod(Integer minutePeriod) {
             this.putQueryParameter("MinutePeriod", minutePeriod);
@@ -172,7 +183,10 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -181,7 +195,10 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,10 +207,12 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the IPsec server is created.
-         * <p>
+         * <p>The ID of the region where the IPsec server is created.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,10 +221,13 @@ public class ListIpsecServerLogsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value must be a unix timestamp. For example, 1671004344 specifies 15:52:24 (UTC+8) on December 14, 2022.
-         * <p>
+         * <p>The end of the time range to query. The value must be a unix timestamp. For example, 1671004344 specifies 15:52:24 (UTC+8) on December 14, 2022.</p>
+         * <blockquote>
+         * <p> If you specify <strong>To</strong>, you must also specify <strong>From</strong> or <strong>MinutePeriod</strong>.</p>
+         * </blockquote>
          * 
-         * >  If you specify **To**, you must also specify **From** or **MinutePeriod**.
+         * <strong>example:</strong>
+         * <p>1671004344</p>
          */
         public Builder to(Integer to) {
             this.putQueryParameter("To", to);

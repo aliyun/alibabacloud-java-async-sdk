@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpv6EgressOnlyRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpv6EgressOnlyRulesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the egress-only rules.
+         * <p>The details about the egress-only rules.</p>
          */
         public Builder ipv6EgressOnlyRules(Ipv6EgressOnlyRules ipv6EgressOnlyRules) {
             this.ipv6EgressOnlyRules = ipv6EgressOnlyRules;
@@ -93,7 +94,10 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page. Default value: **1**.
+         * <p>The number of the returned page. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries returned per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E16671B7-DEA6-48E0-8E9C-41913DAD44DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpv6EgressOnlyRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6EgressOnlyRulesResponseBody</p>
+     */
     public static class Ipv6EgressOnlyRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -217,7 +236,10 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The description of the egress-only rule.
+             * <p>The description of the egress-only rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ruledescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -225,7 +247,10 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the egress-only rule applies.
+             * <p>The ID of the instance to which the egress-only rule applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6gw-bp1rhhs9zjlxukc5e****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -233,7 +258,10 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance to which the egress-only rule applies.
+             * <p>The type of the instance to which the egress-only rule applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ipv6Address</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -241,7 +269,10 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the egress-only rule.
+             * <p>The ID of the egress-only rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6py-bp1rr7fq1md8pbb3k****</p>
              */
             public Builder ipv6EgressOnlyRuleId(String ipv6EgressOnlyRuleId) {
                 this.ipv6EgressOnlyRuleId = ipv6EgressOnlyRuleId;
@@ -249,7 +280,10 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the egress-only rule.
+             * <p>The name of the egress-only rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rulename</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,7 +291,10 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the egress-only rule.
+             * <p>The status of the egress-only rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -271,6 +308,12 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpv6EgressOnlyRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6EgressOnlyRulesResponseBody</p>
+     */
     public static class Ipv6EgressOnlyRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6EgressOnlyRule")
         private java.util.List < Ipv6EgressOnlyRule> ipv6EgressOnlyRule;

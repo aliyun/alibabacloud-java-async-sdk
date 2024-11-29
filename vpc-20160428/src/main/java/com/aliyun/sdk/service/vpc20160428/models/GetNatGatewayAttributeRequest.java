@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNatGatewayAttributeRequest} extends {@link RequestModel}
  *
  * <p>GetNatGatewayAttributeRequest</p>
@@ -125,7 +126,11 @@ public class GetNatGatewayAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1b0lic8uz4r6vf2****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -152,10 +157,12 @@ public class GetNatGatewayAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the NAT gateway is deployed.
-         * <p>
+         * <p>The ID of the region where the NAT gateway is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

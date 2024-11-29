@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEipSegmentResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEipSegmentResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the contiguous EIP group.
+         * <p>The details of the contiguous EIP group.</p>
          */
         public Builder eipSegments(EipSegments eipSegments) {
             this.eipSegments = eipSegments;
@@ -93,7 +94,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7A6301A-64BA-41EC-8284-8F4838C15D1F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEipSegmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipSegmentResponseBody</p>
+     */
     public static class EipSegment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -253,7 +272,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * The time when the contiguous EIP group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the contiguous EIP group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03-06T12:30:07Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -261,7 +283,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the contiguous EIP group.
+             * <p>The description of the contiguous EIP group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyEipSegment</p>
              */
             public Builder descritpion(String descritpion) {
                 this.descritpion = descritpion;
@@ -269,7 +294,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the contiguous EIP group.
+             * <p>The ID of the contiguous EIP group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eipsg-2zett8ba055tbsxme****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -277,7 +305,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * The number of EIPs in the contiguous EIP group.
+             * <p>The number of EIPs in the contiguous EIP group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder ipCount(String ipCount) {
                 this.ipCount = ipCount;
@@ -285,7 +316,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the contiguous EIP group.
+             * <p>The name of the contiguous EIP group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyEipSegment</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -293,7 +327,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the contiguous EIP group belongs.
+             * <p>The ID of the region to which the contiguous EIP group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -301,7 +338,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block and mask of the contiguous EIP group.
+             * <p>The CIDR block and mask of the contiguous EIP group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161.xx.xx.32/28</p>
              */
             public Builder segment(String segment) {
                 this.segment = segment;
@@ -309,12 +349,15 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the contiguous EIP group. Valid values:
-             * <p>
+             * <p>The status of the contiguous EIP group. Valid values:</p>
+             * <ul>
+             * <li><strong>Allocating</strong></li>
+             * <li><strong>Allocated</strong></li>
+             * <li><strong>Releasing</strong></li>
+             * </ul>
              * 
-             * *   **Allocating**
-             * *   **Allocated**
-             * *   **Releasing**
+             * <strong>example:</strong>
+             * <p>Allocated</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -322,7 +365,10 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * The zone of the contiguous EIP group.
+             * <p>The zone of the contiguous EIP group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -336,6 +382,12 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEipSegmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipSegmentResponseBody</p>
+     */
     public static class EipSegments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipSegment")
         private java.util.List < EipSegment> eipSegment;

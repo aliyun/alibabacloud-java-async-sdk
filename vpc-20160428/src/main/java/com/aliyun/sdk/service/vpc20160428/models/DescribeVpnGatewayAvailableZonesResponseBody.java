@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpnGatewayAvailableZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpnGatewayAvailableZonesResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpnGatewayAvailableZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpnGatewayAvailableZonesResponseBody</p>
+     */
     public static class AvailableZoneIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;

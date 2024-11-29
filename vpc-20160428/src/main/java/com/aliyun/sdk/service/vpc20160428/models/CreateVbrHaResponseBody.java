@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVbrHaResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVbrHaResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateVbrHaResponseBody extends TeaModel {
         private String vbrHaId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VBR failover group.
+         * <p>The ID of the VBR failover group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbrha-sa1sxheuxtd98****</p>
          */
         public Builder vbrHaId(String vbrHaId) {
             this.vbrHaId = vbrHaId;

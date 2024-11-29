@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveSourcesFromTrafficMirrorSessionResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveSourcesFromTrafficMirrorSessionResponseBody</p>
@@ -37,7 +38,10 @@ public class RemoveSourcesFromTrafficMirrorSessionResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A33B2C6A-89D1-4DEA-A807-A6E8CC552484</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

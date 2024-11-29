@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicIpAddressPoolsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPublicIpAddressPoolsResponseBody</p>
@@ -73,11 +74,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -85,7 +89,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address pools.
+         * <p>The IP address pools.</p>
          */
         public Builder publicIpAddressPoolList(java.util.List < PublicIpAddressPoolList> publicIpAddressPoolList) {
             this.publicIpAddressPoolList = publicIpAddressPoolList;
@@ -93,7 +97,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -114,6 +124,12 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPublicIpAddressPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublicIpAddressPoolsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -153,7 +169,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -161,7 +180,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -175,6 +197,12 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPublicIpAddressPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublicIpAddressPoolsResponseBody</p>
+     */
     public static class PublicIpAddressPoolList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
@@ -418,11 +446,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             private java.util.List < String > zones; 
 
             /**
-             * The service type of the IP address pool.
-             * <p>
+             * <p>The service type of the IP address pool.</p>
+             * <ul>
+             * <li><strong>CloudBox</strong> Only cloud box users can select this type.</li>
+             * <li><strong>Default</strong> (default)</li>
+             * </ul>
              * 
-             * *   **CloudBox** Only cloud box users can select this type.
-             * *   **Default** (default)
+             * <strong>example:</strong>
+             * <p>CloudBox</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -430,11 +461,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the IP address pool.
-             * <p>
+             * <p>The status of the IP address pool.</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>FinancialLocked</strong></li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **FinancialLocked**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -442,7 +476,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the IP address pool was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the IP address pool was created. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-10T01:37:38Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -450,7 +487,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the IP address pool.
+             * <p>The description of the IP address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AddressPoolDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -458,11 +498,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether idle IP addresses exist.
-             * <p>
+             * <p>Indicates whether idle IP addresses exist.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ipAddressRemaining(Boolean ipAddressRemaining) {
                 this.ipAddressRemaining = ipAddressRemaining;
@@ -470,24 +513,25 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The line type.
-             * <p>
+             * <p>The line type.</p>
+             * <ul>
+             * <li><strong>BGP</strong>: BGP (Multi-ISP)</li>
+             * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro</li>
+             * </ul>
+             * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
+             * <p>If you are allowed to use single-ISP bandwidth, one of the following values may be returned:</p>
+             * <ul>
+             * <li><strong>ChinaTelecom</strong></li>
+             * <li><strong>ChinaUnicom</strong></li>
+             * <li><strong>ChinaMobile</strong></li>
+             * <li><strong>ChinaTelecom_L2</strong></li>
+             * <li><strong>ChinaUnicom_L2</strong></li>
+             * <li><strong>ChinaMobile_L2</strong></li>
+             * </ul>
+             * <p>If your services are deployed in China East 1 Finance, <strong>BGP_FinanceCloud</strong> is returned.</p>
              * 
-             * *   **BGP**: BGP (Multi-ISP)
-             * *   **BGP_PRO**: BGP (Multi-ISP) Pro
-             * 
-             * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
-             * 
-             * If you are allowed to use single-ISP bandwidth, one of the following values may be returned:
-             * 
-             * *   **ChinaTelecom**
-             * *   **ChinaUnicom**
-             * *   **ChinaMobile**
-             * *   **ChinaTelecom_L2**
-             * *   **ChinaUnicom_L2**
-             * *   **ChinaMobile_L2**
-             * 
-             * If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -495,7 +539,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP address pool.
+             * <p>The name of the IP address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AddressPoolName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -503,7 +550,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account to which the IP address pool belongs.
+             * <p>The Alibaba Cloud account to which the IP address pool belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121012345612****</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -511,7 +561,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IP address pool.
+             * <p>The ID of the IP address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pippool-6wetvn6fumkgycssx****</p>
              */
             public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
                 this.publicIpAddressPoolId = publicIpAddressPoolId;
@@ -519,7 +572,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the IP address pool.
+             * <p>The region ID of the IP address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -527,7 +583,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the IP address pool belongs.
+             * <p>The ID of the resource group to which the IP address pool belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4pcdvf****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -535,11 +594,11 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of Anti-DDoS.
-             * <p>
-             * 
-             * *   If you do not set this parameter, Anti-DDoS Origin Basic is used.
-             * *   If the value is set to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.
+             * <p>The edition of Anti-DDoS.</p>
+             * <ul>
+             * <li>If you do not set this parameter, Anti-DDoS Origin Basic is used.</li>
+             * <li>If the value is set to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Pro/Premium is used.</li>
+             * </ul>
              */
             public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
                 this.securityProtectionTypes = securityProtectionTypes;
@@ -547,11 +606,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The sharing type of the IP address pool.
-             * <p>
+             * <p>The sharing type of the IP address pool.</p>
+             * <ul>
+             * <li>If <strong>Shared</strong> is returned, the IP address pool is shared.</li>
+             * <li>If an empty value is returned, the IP address pool is not shared.</li>
+             * </ul>
              * 
-             * *   If **Shared** is returned, the IP address pool is shared.
-             * *   If an empty value is returned, the IP address pool is not shared.
+             * <strong>example:</strong>
+             * <p>Shared</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -559,12 +621,15 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the IP address pool.
-             * <p>
+             * <p>The status of the IP address pool.</p>
+             * <ul>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Modifying</strong></li>
+             * </ul>
              * 
-             * *   **Created**
-             * *   **Deleting**
-             * *   **Modifying**
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -572,7 +637,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag list.
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -580,7 +645,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of available IP addresses in the public IP address pool.
+             * <p>The total number of available IP addresses in the public IP address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalIpNum(Integer totalIpNum) {
                 this.totalIpNum = totalIpNum;
@@ -588,7 +656,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of used IP addresses in the public IP address pool.
+             * <p>The number of used IP addresses in the public IP address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder usedIpNum(Integer usedIpNum) {
                 this.usedIpNum = usedIpNum;
@@ -596,11 +667,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The user type. Valid values:
-             * <p>
+             * <p>The user type. Valid values:</p>
+             * <ul>
+             * <li><strong>admin</strong>: An administrator can delete, modify, and query IP address pools, and can assign elastic IP addresses (EIPs) to the pool.</li>
+             * <li><strong>user</strong>: A user can only assign EIPs to the IP address pool and query the IP address pool, but cannot modify or delete the IP address pool.</li>
+             * </ul>
              * 
-             * *   **admin**: An administrator can delete, modify, and query IP address pools, and can assign elastic IP addresses (EIPs) to the pool.
-             * *   **user**: A user can only assign EIPs to the IP address pool and query the IP address pool, but cannot modify or delete the IP address pool.
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;
@@ -608,7 +682,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The zone of the IP address pool. This parameter is returned only when the service type of the IP address pool is CloudBox.
+             * <p>The zone of the IP address pool. This parameter is returned only when the service type of the IP address pool is CloudBox.</p>
              */
             public Builder zones(java.util.List < String > zones) {
                 this.zones = zones;

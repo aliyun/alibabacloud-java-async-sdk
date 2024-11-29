@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIPv6TranslatorEntryRequest} extends {@link RequestModel}
  *
  * <p>ModifyIPv6TranslatorEntryRequest</p>
@@ -265,7 +266,10 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         } 
 
         /**
-         * The ID of the associated ACL.
+         * <p>The ID of the associated ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transacl-bp1de27sou71g0lf****</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -274,11 +278,14 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable access control lists (ACLs). Valid values:
-         * <p>
+         * <p>Specifies whether to enable access control lists (ACLs). Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder aclStatus(String aclStatus) {
             this.putQueryParameter("AclStatus", aclStatus);
@@ -287,11 +294,14 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The ACL type. Valid values:
-         * <p>
+         * <p>The ACL type. Valid values:</p>
+         * <ul>
+         * <li><strong>white</strong>: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</li>
+         * <li><strong>black</strong>: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</li>
+         * </ul>
          * 
-         * *   **white**: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.
-         * *   **black**: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.
+         * <strong>example:</strong>
+         * <p>white</p>
          */
         public Builder aclType(String aclType) {
             this.putQueryParameter("AclType", aclType);
@@ -300,7 +310,10 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The port that is used by the IPv6 address allocated to the IPv6 Translation Service instance.
+         * <p>The port that is used by the IPv6 address allocated to the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder allocateIpv6Port(Integer allocateIpv6Port) {
             this.putQueryParameter("AllocateIpv6Port", allocateIpv6Port);
@@ -309,7 +322,10 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The public IPv4 address that needs to provide IPv6 services.
+         * <p>The public IPv4 address that needs to provide IPv6 services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.11.XX.XX</p>
          */
         public Builder backendIpv4Addr(String backendIpv4Addr) {
             this.putQueryParameter("BackendIpv4Addr", backendIpv4Addr);
@@ -318,7 +334,10 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The port of the public IPv4 address that needs to provide IPv6 services.
+         * <p>The port of the public IPv4 address that needs to provide IPv6 services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder backendIpv4Port(Integer backendIpv4Port) {
             this.putQueryParameter("BackendIpv4Port", backendIpv4Port);
@@ -327,13 +346,17 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The maximum bandwidth specified in the IPv6 mapping entry. Unit: Mbit/s. Valid values:
-         * <p>
+         * <p>The maximum bandwidth specified in the IPv6 mapping entry. Unit: Mbit/s. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong> (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.</li>
+         * <li><strong>1</strong> to <strong>200</strong>: changes the maximum bandwidth specified in the IPv6 mapping entry.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The sum of maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.</p>
+         * </blockquote>
          * 
-         * *   **-1** (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.
-         * *   **1** to **200**: changes the maximum bandwidth specified in the IPv6 mapping entry.
-         * 
-         * > The sum of maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder entryBandwidth(Integer entryBandwidth) {
             this.putQueryParameter("EntryBandwidth", entryBandwidth);
@@ -342,7 +365,10 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The description of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).
+         * <p>The description of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entrydescription</p>
          */
         public Builder entryDescription(String entryDescription) {
             this.putQueryParameter("EntryDescription", entryDescription);
@@ -351,7 +377,10 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The name of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).
+         * <p>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entry1</p>
          */
         public Builder entryName(String entryName) {
             this.putQueryParameter("EntryName", entryName);
@@ -360,7 +389,11 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 mapping entry.
+         * <p>The ID of the IPv6 mapping entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6trans-bp1858ys****</p>
          */
         public Builder ipv6TranslatorEntryId(String ipv6TranslatorEntryId) {
             this.putQueryParameter("Ipv6TranslatorEntryId", ipv6TranslatorEntryId);
@@ -387,7 +420,11 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -414,11 +451,14 @@ public class ModifyIPv6TranslatorEntryRequest extends Request {
         }
 
         /**
-         * The protocol. Valid values:
-         * <p>
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
          * 
-         * *   **tcp**
-         * *   **udp**
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder transProtocol(String transProtocol) {
             this.putQueryParameter("TransProtocol", transProtocol);

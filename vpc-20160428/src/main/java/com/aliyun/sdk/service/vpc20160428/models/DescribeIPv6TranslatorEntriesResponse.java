@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIPv6TranslatorEntriesResponse} extends {@link TeaModel}
  *
  * <p>DescribeIPv6TranslatorEntriesResponse</p>

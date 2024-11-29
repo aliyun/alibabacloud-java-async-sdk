@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateNetworkAclRequest} extends {@link RequestModel}
  *
  * <p>AssociateNetworkAclRequest</p>
@@ -167,12 +168,14 @@ public class AssociateNetworkAclRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -181,7 +184,10 @@ public class AssociateNetworkAclRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -190,7 +196,11 @@ public class AssociateNetworkAclRequest extends Request {
         }
 
         /**
-         * The ID of the network ACL.
+         * <p>The ID of the network ACL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-a2do9e413e0sp****</p>
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -217,7 +227,11 @@ public class AssociateNetworkAclRequest extends Request {
         }
 
         /**
-         * The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region ID of the network ACL. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -226,7 +240,7 @@ public class AssociateNetworkAclRequest extends Request {
         }
 
         /**
-         * The information about the associated resources.
+         * <p>The information about the associated resources.</p>
          */
         public Builder resource(java.util.List < Resource> resource) {
             this.putQueryParameter("Resource", resource);
@@ -259,6 +273,12 @@ public class AssociateNetworkAclRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AssociateNetworkAclRequest} extends {@link TeaModel}
+     *
+     * <p>AssociateNetworkAclRequest</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -298,7 +318,10 @@ public class AssociateNetworkAclRequest extends Request {
             private String resourceType; 
 
             /**
-             * The ID of the associated resource.
+             * <p>The ID of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1de348lntdw****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -306,10 +329,11 @@ public class AssociateNetworkAclRequest extends Request {
             }
 
             /**
-             * The type of resource with which you want to associate the network ACL. Set the value to **VSwitch**.
-             * <p>
+             * <p>The type of resource with which you want to associate the network ACL. Set the value to <strong>VSwitch</strong>.</p>
+             * <p>Valid values of <strong>N</strong>: <strong>0</strong> to <strong>29</strong>. You can associate a network ACL with up to 30 vSwitches.</p>
              * 
-             * Valid values of **N**: **0** to **29**. You can associate a network ACL with up to 30 vSwitches.
+             * <strong>example:</strong>
+             * <p>VSwitch</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

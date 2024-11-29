@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSslVpnClientCertResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSslVpnClientCertResponseBody</p>
@@ -181,7 +182,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The CA certificate.
+         * <p>The CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA certificate</p>
          */
         public Builder caCert(String caCert) {
             this.caCert = caCert;
@@ -189,7 +193,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The client certificate.
+         * <p>The client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Client certificate</p>
          */
         public Builder clientCert(String clientCert) {
             this.clientCert = clientCert;
@@ -197,7 +204,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The client configuration.
+         * <p>The client configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Client configuration</p>
          */
         public Builder clientConfig(String clientConfig) {
             this.clientConfig = clientConfig;
@@ -205,7 +215,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The client key.
+         * <p>The client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The key of the client</p>
          */
         public Builder clientKey(String clientKey) {
             this.clientKey = clientKey;
@@ -213,10 +226,11 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.
-         * <p>
+         * <p>The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1552550980000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -224,10 +238,11 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.
-         * <p>
+         * <p>The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1647158980000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -235,7 +250,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the SSL client certificate.
+         * <p>The name of the SSL client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -243,7 +261,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the SSL client certificate is created.
+         * <p>The ID of the region where the SSL client certificate is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -251,7 +272,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -259,10 +283,11 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the SSL client certificate belongs.
-         * <p>
+         * <p>The ID of the resource group to which the SSL client certificate belongs.</p>
+         * <p>The SSL client certificate and the SSL server associated with the SSL client certificate belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
          * 
-         * The SSL client certificate and the SSL server associated with the SSL client certificate belong to the same resource group. You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
+         * <strong>example:</strong>
+         * <p>rg-acfmzs372yg****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -270,7 +295,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the SSL client certificate.
+         * <p>The ID of the SSL client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsc-bp13k5mp4tg8v3z9b****</p>
          */
         public Builder sslVpnClientCertId(String sslVpnClientCertId) {
             this.sslVpnClientCertId = sslVpnClientCertId;
@@ -278,7 +306,10 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the SSL server.
+         * <p>The ID of the SSL server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vss-bp155e9yclsg1xgq4****</p>
          */
         public Builder sslVpnServerId(String sslVpnServerId) {
             this.sslVpnServerId = sslVpnServerId;
@@ -286,12 +317,15 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the SSL client certificate. Valid values:
-         * <p>
+         * <p>The status of the SSL client certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>expiring-soon</strong></li>
+         * <li><strong>normal</strong></li>
+         * <li><strong>expired</strong></li>
+         * </ul>
          * 
-         * *   **expiring-soon**
-         * *   **normal**
-         * *   **expired**
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder status(String status) {
             this.status = status;

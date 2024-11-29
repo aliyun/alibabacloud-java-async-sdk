@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrafficMirrorSessionsRequest} extends {@link RequestModel}
  *
  * <p>ListTrafficMirrorSessionsRequest</p>
@@ -279,11 +280,14 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the traffic mirror session. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the traffic mirror session. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: does not enable the traffic mirror session.</li>
+         * <li><strong>true</strong>: enables the traffic mirror session.</li>
+         * </ul>
          * 
-         * *   **false**: does not enable the traffic mirror session.
-         * *   **true**: enables the traffic mirror session.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -292,7 +296,10 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. Valid values: **1** to **100**. Default value: **10**.
+         * <p>The maximum number of entries to return. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -301,11 +308,14 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
+         * <li>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -332,10 +342,11 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The priority of the traffic mirror session. Valid values: **1** to **32766**.
-         * <p>
+         * <p>The priority of the traffic mirror session. Valid values: <strong>1</strong> to <strong>32766</strong>.</p>
+         * <p>A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.</p>
          * 
-         * A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -344,7 +355,11 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
+         * <p>The ID of the region to which the traffic mirror session belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirroring</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hongkong</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -353,7 +368,10 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the mirrored traffic belongs.
+         * <p>The ID of the resource group to which the mirrored traffic belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -380,7 +398,7 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * <p>The tags of the resource.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -389,7 +407,10 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The ID of the traffic mirror filter.
+         * <p>The ID of the traffic mirror filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tmf-j6cmls82xnc86vtpe****</p>
          */
         public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
             this.putQueryParameter("TrafficMirrorFilterId", trafficMirrorFilterId);
@@ -398,7 +419,10 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The IDs of the traffic mirror session. The maximum value of N is 100, which indicates that you can query up to 100 traffic mirror sessions at a time.
+         * <p>The IDs of the traffic mirror session. The maximum value of N is 100, which indicates that you can query up to 100 traffic mirror sessions at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tms-j6cla50buc44ap8tu****</p>
          */
         public Builder trafficMirrorSessionIds(java.util.List < String > trafficMirrorSessionIds) {
             this.putQueryParameter("TrafficMirrorSessionIds", trafficMirrorSessionIds);
@@ -407,10 +431,11 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The name of the traffic mirror session.
-         * <p>
+         * <p>The name of the traffic mirror session.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder trafficMirrorSessionName(String trafficMirrorSessionName) {
             this.putQueryParameter("TrafficMirrorSessionName", trafficMirrorSessionName);
@@ -419,7 +444,10 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the mirror source.
+         * <p>The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the mirror source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-j6c8znm5l1yt4sox*****</p>
          */
         public Builder trafficMirrorSourceId(String trafficMirrorSourceId) {
             this.putQueryParameter("TrafficMirrorSourceId", trafficMirrorSourceId);
@@ -428,7 +456,10 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The ID of the traffic mirror destination. You can specify only an ENI or a Server Load Balancer (SLB) instance as a traffic mirror destination.
+         * <p>The ID of the traffic mirror destination. You can specify only an ENI or a Server Load Balancer (SLB) instance as a traffic mirror destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-j6c2fp57q8rr47rp****</p>
          */
         public Builder trafficMirrorTargetId(String trafficMirrorTargetId) {
             this.putQueryParameter("TrafficMirrorTargetId", trafficMirrorTargetId);
@@ -437,7 +468,10 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * The VXLAN network identifier (VNI) that is used to distinguish different mirrored traffic. Valid values: **0** to **16777215**. You can use VNIs to identify mirrored traffic from different sessions at the traffic mirror destination. You can specify a custom VNI or use a random VNI that is allocated by the system. If you want the system to randomly allocate a VNI, ignore this parameter.
+         * <p>The VXLAN network identifier (VNI) that is used to distinguish different mirrored traffic. Valid values: <strong>0</strong> to <strong>16777215</strong>. You can use VNIs to identify mirrored traffic from different sessions at the traffic mirror destination. You can specify a custom VNI or use a random VNI that is allocated by the system. If you want the system to randomly allocate a VNI, ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder virtualNetworkId(Integer virtualNetworkId) {
             this.putQueryParameter("VirtualNetworkId", virtualNetworkId);
@@ -452,6 +486,12 @@ public class ListTrafficMirrorSessionsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTrafficMirrorSessionsRequest} extends {@link TeaModel}
+     *
+     * <p>ListTrafficMirrorSessionsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -491,10 +531,11 @@ public class ListTrafficMirrorSessionsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -502,10 +543,11 @@ public class ListTrafficMirrorSessionsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

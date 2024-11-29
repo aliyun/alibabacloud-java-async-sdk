@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVcoRouteEntryWeightResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyVcoRouteEntryWeightResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyVcoRouteEntryWeightResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9496F8A-82F4-3130-A51A-2266ACC799B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRouteTableAttributesRequest} extends {@link RequestModel}
  *
  * <p>ModifyRouteTableAttributesRequest</p>
@@ -167,10 +168,11 @@ public class ModifyRouteTableAttributesRequest extends Request {
         } 
 
         /**
-         * The description of the route table.
-         * <p>
+         * <p>The description of the route table.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -197,10 +199,12 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual private cloud (VPC) to which the custom route table belongs.
-         * <p>
+         * <p>The region ID of the virtual private cloud (VPC) to which the custom route table belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,7 +240,11 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the route table.
+         * <p>The ID of the route table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdvzu2****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -245,10 +253,11 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * The name of the route table.
-         * <p>
+         * <p>The name of the route table.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>doctest</p>
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpnConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVpnConnectionResponseBody</p>
@@ -73,10 +74,11 @@ public class CreateVpnConnectionResponseBody extends TeaModel {
         private String vpnConnectionId; 
 
         /**
-         * The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.
-         * <p>
+         * <p>The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1544666102000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -84,7 +86,10 @@ public class CreateVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the IPsec-VPN connection.
+         * <p>The name of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -92,7 +97,10 @@ public class CreateVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>082AD562-B8DB-4BB2-861F-DA1FCA01FD76</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,7 +108,10 @@ public class CreateVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the IPsec-VPN connection.
+         * <p>The ID of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-bp15oes1py4i6****</p>
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.vpnConnectionId = vpnConnectionId;

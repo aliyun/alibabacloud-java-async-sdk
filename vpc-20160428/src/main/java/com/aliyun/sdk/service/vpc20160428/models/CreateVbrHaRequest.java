@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVbrHaRequest} extends {@link RequestModel}
  *
  * <p>CreateVbrHaRequest</p>
@@ -196,12 +197,14 @@ public class CreateVbrHaRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>CBCE910E-D396-4944-8****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -210,10 +213,11 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * The description of the VBR failover group.
-         * <p>
+         * <p>The description of the VBR failover group.</p>
+         * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>VBRHa</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -222,11 +226,14 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values: Valid Values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: Valid Values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -235,7 +242,10 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * The name of the VBR failover group.
+         * <p>The name of the VBR failover group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VBRHa</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -262,7 +272,11 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * The ID of the other VBR in the VBR failover group.
+         * <p>The ID of the other VBR in the VBR failover group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp12mw1f8k3jgygk9****</p>
          */
         public Builder peerVbrId(String peerVbrId) {
             this.putQueryParameter("PeerVbrId", peerVbrId);
@@ -271,7 +285,11 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the VBR is deployed.
+         * <p>The ID of the region in which the VBR is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -298,7 +316,11 @@ public class CreateVbrHaRequest extends Request {
         }
 
         /**
-         * The ID of the VBR.
+         * <p>The ID of the VBR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp1jcg5cmxjbl9xgc****</p>
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);

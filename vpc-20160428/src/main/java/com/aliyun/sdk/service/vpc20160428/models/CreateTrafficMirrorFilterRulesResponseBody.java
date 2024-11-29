@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTrafficMirrorFilterRulesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTrafficMirrorFilterRulesResponseBody</p>
@@ -61,7 +62,7 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of outbound rules.
+         * <p>The list of outbound rules.</p>
          */
         public Builder egressRules(java.util.List < EgressRules> egressRules) {
             this.egressRules = egressRules;
@@ -69,7 +70,7 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of inbound rules.
+         * <p>The list of inbound rules.</p>
          */
         public Builder ingressRules(java.util.List < IngressRules> ingressRules) {
             this.ingressRules = ingressRules;
@@ -77,7 +78,10 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07F272E2-6AD5-433A-8207-A607C76F1676</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTrafficMirrorFilterRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTrafficMirrorFilterRulesResponseBody</p>
+     */
     public static class EgressRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -117,7 +127,10 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the outbound rule.
+             * <p>The ID of the outbound rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tmr-j6cok23ugp53eeib5****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -131,6 +144,12 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTrafficMirrorFilterRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTrafficMirrorFilterRulesResponseBody</p>
+     */
     public static class IngressRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -158,7 +177,10 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the inbound rule.
+             * <p>The ID of the inbound rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tmr-j6c6rtallo51ouzv3****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRouteTableRequest} extends {@link RequestModel}
  *
  * <p>DeleteRouteTableRequest</p>
@@ -143,10 +144,12 @@ public class DeleteRouteTableRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual private cloud (VPC) to which the custom route table belongs.
-         * <p>
+         * <p>The region ID of the virtual private cloud (VPC) to which the custom route table belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +176,11 @@ public class DeleteRouteTableRequest extends Request {
         }
 
         /**
-         * The ID of the custom route table.
+         * <p>The ID of the custom route table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdvzu2****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

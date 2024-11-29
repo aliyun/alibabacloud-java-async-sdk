@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomerGatewayRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomerGatewayRequest</p>
@@ -125,7 +126,11 @@ public class DescribeCustomerGatewayRequest extends Request {
         } 
 
         /**
-         * The ID of the customer gateway.
+         * <p>The ID of the customer gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cgw-bp1pvpl9r9adju6l5****</p>
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.putQueryParameter("CustomerGatewayId", customerGatewayId);
@@ -152,10 +157,12 @@ public class DescribeCustomerGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the region where the customer gateway is deployed.
-         * <p>
+         * <p>The ID of the region where the customer gateway is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExpressConnectTrafficQosQueueResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExpressConnectTrafficQosQueueResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExpressConnectTrafficQosQueueResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressConnectTrafficQosQueueResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DstCidr")
         private String dstCidr;
@@ -411,6 +418,12 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExpressConnectTrafficQosQueueResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressConnectTrafficQosQueueResponseBody</p>
+     */
     public static class QueueList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthPercent")
         private String bandwidthPercent;

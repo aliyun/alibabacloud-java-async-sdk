@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIPv6TranslatorsRequest} extends {@link RequestModel}
  *
  * <p>DescribeIPv6TranslatorsRequest</p>
@@ -250,7 +251,10 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         } 
 
         /**
-         * The IPv4 address allocated to the IPv6 Translation Service instance.
+         * <p>The IPv4 address allocated to the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.99.XX.XX</p>
          */
         public Builder allocateIpv4Addr(String allocateIpv4Addr) {
             this.putQueryParameter("AllocateIpv4Addr", allocateIpv4Addr);
@@ -259,7 +263,10 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * The IPv6 address allocated to the IPv6 Translation Service instance.
+         * <p>The IPv6 address allocated to the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2400:3200:1600::XXXX</p>
          */
         public Builder allocateIpv6Addr(String allocateIpv6Addr) {
             this.putQueryParameter("AllocateIpv6Addr", allocateIpv6Addr);
@@ -268,11 +275,14 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * The business status of the IPv6 Translation Service instance. Valid values:
-         * <p>
+         * <p>The business status of the IPv6 Translation Service instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * </ul>
          * 
-         * *   **Normal**
-         * *   **FinancialLocked**
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder businessStatus(String businessStatus) {
             this.putQueryParameter("BusinessStatus", businessStatus);
@@ -281,7 +291,10 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 Translation Service instance.
+         * <p>The ID of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6trans-bp1858ys****</p>
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -290,7 +303,10 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * The name of the IPv6 Translation Service instance.
+         * <p>The name of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6_1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -317,7 +333,10 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -326,7 +345,10 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -335,11 +357,14 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * The billing method of the IPv6 Translation Service instance. Valid values:
-         * <p>
+         * <p>The billing method of the IPv6 Translation Service instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Prepay</strong>: subscription</li>
+         * <li><strong>Postpay</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **Prepay**: subscription
-         * *   **Postpay**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>Prepay</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -348,7 +373,11 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region of the IPv6 Translation Service instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -375,7 +404,10 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * The specification of the IPv6 Translation Service instance. Set the value to **small**.
+         * <p>The specification of the IPv6 Translation Service instance. Set the value to <strong>small</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>small</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -384,16 +416,19 @@ public class DescribeIPv6TranslatorsRequest extends Request {
         }
 
         /**
-         * The status of the IPv6 Translation Service instance. Valid values:
-         * <p>
+         * <p>The status of the IPv6 Translation Service instance. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong></li>
+         * <li><strong>provisioning</strong></li>
+         * <li><strong>active</strong></li>
+         * <li><strong>updating</strong></li>
+         * <li><strong>upgrading</strong></li>
+         * <li><strong>deleting</strong></li>
+         * <li><strong>deleted</strong></li>
+         * </ul>
          * 
-         * *   **init**
-         * *   **provisioning**
-         * *   **active**
-         * *   **updating**
-         * *   **upgrading**
-         * *   **deleting**
-         * *   **deleted**
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

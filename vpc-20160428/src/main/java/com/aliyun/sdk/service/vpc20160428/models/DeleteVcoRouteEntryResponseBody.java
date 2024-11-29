@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVcoRouteEntryResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteVcoRouteEntryResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteVcoRouteEntryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9208DDD8-0930-3CE6-AF7F-732B4E67B3DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

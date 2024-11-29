@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateVpcIpv6CidrResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateVpcIpv6CidrResponseBody</p>
@@ -49,7 +50,10 @@ public class AllocateVpcIpv6CidrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IPv6 CIDR block that is reserved.
+         * <p>The IPv6 CIDR block that is reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:a600::/56</p>
          */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
@@ -57,7 +61,10 @@ public class AllocateVpcIpv6CidrResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D20C13EA-2584-53BC-8393-69DE6D98EFF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

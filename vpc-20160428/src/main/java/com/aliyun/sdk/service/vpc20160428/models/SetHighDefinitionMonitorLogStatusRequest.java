@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetHighDefinitionMonitorLogStatusRequest} extends {@link RequestModel}
  *
  * <p>SetHighDefinitionMonitorLogStatusRequest</p>
@@ -184,7 +185,11 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the instance for which you want to configure fine-grained monitoring.
+         * <p>The ID of the instance for which you want to configure fine-grained monitoring.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-wz9fi6qboho9fwgx7****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -193,7 +198,10 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * The instance type. Set the value to **EIP**.
+         * <p>The instance type. Set the value to <strong>EIP</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -202,7 +210,11 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * The name of the Simple Log Service (SLS) project.
+         * <p>The name of the Simple Log Service (SLS) project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdmonitor-cn-shenzhen</p>
          */
         public Builder logProject(String logProject) {
             this.putQueryParameter("LogProject", logProject);
@@ -211,7 +223,11 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdmonitor</p>
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
@@ -238,10 +254,12 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
-         * <p>
+         * <p>The region ID of the instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,11 +286,15 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * The status of fine-grained monitoring. Valid values:
-         * <p>
+         * <p>The status of fine-grained monitoring. Valid values:</p>
+         * <ul>
+         * <li><strong>ON</strong></li>
+         * <li><strong>OFF</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ON**
-         * *   **OFF**
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

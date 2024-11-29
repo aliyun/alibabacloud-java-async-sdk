@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBgpPeerAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyBgpPeerAttributeResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyBgpPeerAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4B7649A-61BB-4C64-A586-1DFF1EDA6A42</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

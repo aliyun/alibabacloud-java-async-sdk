@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVpcGatewayEndpointAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateVpcGatewayEndpointAttributeResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9654534-5A38-5545-813F-0403D49042FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

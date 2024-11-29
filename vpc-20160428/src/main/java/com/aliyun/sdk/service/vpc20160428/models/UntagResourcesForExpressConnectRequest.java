@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesForExpressConnectRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesForExpressConnectRequest</p>
@@ -168,11 +169,14 @@ public class UntagResourcesForExpressConnectRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the specified resource. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -199,10 +203,12 @@ public class UntagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the resource is deployed.
-         * <p>
+         * <p>The ID of the region in which the resource is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +217,8 @@ public class UntagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * The IDs of the resources from which you want to remove tags.
+         * <p>The IDs of the resources from which you want to remove tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -238,12 +245,16 @@ public class UntagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
+         * <li><strong>VIRTUALBORDERROUTER</strong>: virtual border router (VBR).</li>
+         * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PHYSICALCONNECTION**: Express Connect circuit.
-         * *   **VIRTUALBORDERROUTER**: virtual border router (VBR).
-         * *   **ROUTERINTERFACE**: router interface.
+         * <strong>example:</strong>
+         * <p>PHYSICALCONNECTION</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -252,7 +263,7 @@ public class UntagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * The tags to remove from the specified resource.
+         * <p>The tags to remove from the specified resource.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

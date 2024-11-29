@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicIpAddressPoolCidrBlocksRequest} extends {@link RequestModel}
  *
  * <p>ListPublicIpAddressPoolCidrBlocksRequest</p>
@@ -181,7 +182,10 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         } 
 
         /**
-         * The CIDR blocks.
+         * <p>The CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.0.XX.XX/24</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -190,11 +194,14 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -203,7 +210,10 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. Valid values: **10** to **100**. Default value: **10**.
+         * <p>The maximum number of entries to return. Valid values: <strong>10</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -212,11 +222,14 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -243,7 +256,11 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         }
 
         /**
-         * The ID of the IP address pool.
+         * <p>The ID of the IP address pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pippool-6wetvn6fumkgycssx****</p>
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);
@@ -252,7 +269,11 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends Request {
         }
 
         /**
-         * The region ID of the CIDR blocks.
+         * <p>The region ID of the CIDR blocks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

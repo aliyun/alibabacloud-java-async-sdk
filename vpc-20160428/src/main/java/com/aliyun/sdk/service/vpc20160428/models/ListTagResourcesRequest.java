@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -182,7 +183,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values:**1** to **50**. Default value: **50**.
+         * <p>The number of entries to return on each page. Valid values:<strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -191,11 +195,14 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -222,10 +229,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resource.
-         * <p>
+         * <p>The region ID of the resource.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,7 +243,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource ID. You can specify up to 20 resource IDs.
+         * <p>The resource ID. You can specify up to 20 resource IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16qjewdsunr41m1****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -261,16 +273,20 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>VSWITCH</strong></li>
+         * <li><strong>ROUTETABLE</strong></li>
+         * <li><strong>EIP</strong></li>
+         * <li><strong>VpnGateway</strong></li>
+         * <li><strong>NATGATEWAY</strong></li>
+         * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VPC**
-         * *   **VSWITCH**
-         * *   **ROUTETABLE**
-         * *   **EIP**
-         * *   **VpnGateway**
-         * *   **NATGATEWAY**
-         * *   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -279,12 +295,14 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tag value. You can specify up to 20 tag values. It can be an empty string.
-         * <p>
+         * <p>The tag value. You can specify up to 20 tag values. It can be an empty string.</p>
+         * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <blockquote>
+         * <p> You must specify at least one of <strong>ResourceId.N</strong> and <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
+         * </blockquote>
          * 
-         * The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
-         * 
-         * >  You must specify at least one of **ResourceId.N** and **Tag.N** (**Tag.N.Key** and **Tag.N.Value**).
+         * <strong>example:</strong>
+         * <p>ListTagResources</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -299,6 +317,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -338,12 +362,14 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <blockquote>
+             * <p> Specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N</strong> parameters (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
+             * </blockquote>
              * 
-             * The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
-             * 
-             * >  Specify at least one of the **ResourceId.N** and **Tag.N** parameters (**Tag.N.Key** and **Tag.N.Value**).
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -351,12 +377,14 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of the tag that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <blockquote>
+             * <p> Specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N</strong> parameters (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
+             * </blockquote>
              * 
-             * The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
-             * 
-             * >  Specify at least one of the **ResourceId.N** and **Tag.N** parameters (**Tag.N.Key** and **Tag.N.Value**).
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

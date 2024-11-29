@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassociateVpcCidrBlockResponseBody} extends {@link TeaModel}
  *
  * <p>UnassociateVpcCidrBlockResponseBody</p>
@@ -37,7 +38,10 @@ public class UnassociateVpcCidrBlockResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1221A1F-2ACD-4592-8F27-474E02883159</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVSwitchesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVSwitchesRequest</p>
@@ -292,11 +293,14 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -305,13 +309,15 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query vSwitches with IPv6 enabled in the region. Valid values:
-         * <p>
+         * <p>Specifies whether to query vSwitches with IPv6 enabled in the region. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>If you do not set this parameter, the system queries all vSwitches in the specified region by default.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * If you do not set this parameter, the system queries all vSwitches in the specified region by default.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableIpv6(Boolean enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
@@ -320,13 +326,15 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the default vSwitches in the specified region. Valid values:
-         * <p>
+         * <p>Specifies whether to query the default vSwitches in the specified region. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>If you do not set this parameter, the system queries all vSwitches in the specified region by default.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * If you do not set this parameter, the system queries all vSwitches in the specified region by default.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -353,7 +361,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -362,7 +373,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -371,10 +385,13 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
-         * <p>
+         * <p>The region ID of the vSwitch. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <blockquote>
+         * <p> You must set at least one of <strong>RegionId</strong> and <strong>VpcId</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must set at least one of **RegionId** and **VpcId**.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -383,7 +400,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the vSwitch belongs.
+         * <p>The ID of the resource group to which the vSwitch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -410,7 +430,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the route table.
+         * <p>The ID of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdvzu2****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -419,7 +442,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -428,7 +451,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch that you want to query.
+         * <p>The ID of the vSwitch that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-23dscddcffvf3****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -437,10 +463,11 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The vSwitch name.
-         * <p>
+         * <p>The vSwitch name.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>vSwitch</p>
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
@@ -449,7 +476,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the vSwitch belongs.
+         * <p>The ID of the Alibaba Cloud account to which the vSwitch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2546073170691****</p>
          */
         public Builder vSwitchOwnerId(Long vSwitchOwnerId) {
             this.putQueryParameter("VSwitchOwnerId", vSwitchOwnerId);
@@ -458,10 +488,13 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the vSwitches belong.
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC) to which the vSwitches belong.</p>
+         * <blockquote>
+         * <p> You must set at least one of <strong>RegionId</strong> and <strong>VpcId</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must set at least one of **RegionId** and **VpcId**.
+         * <strong>example:</strong>
+         * <p>vpc-25cdvfeq58pl****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -470,7 +503,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the vSwitches belong. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+         * <p>The ID of the zone to which the vSwitches belong. You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-d</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -485,6 +521,12 @@ public class DescribeVSwitchesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVSwitchesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVSwitchesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -524,10 +566,11 @@ public class DescribeVSwitchesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -535,10 +578,11 @@ public class DescribeVSwitchesRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

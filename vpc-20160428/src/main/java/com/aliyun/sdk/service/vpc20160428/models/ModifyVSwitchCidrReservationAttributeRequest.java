@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVSwitchCidrReservationAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyVSwitchCidrReservationAttributeRequest</p>
@@ -217,10 +218,12 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the vSwitch is deployed.
-         * <p>
+         * <p>The ID of the region where the vSwitch is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -247,10 +250,11 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the reserved CIDR block. The default value is empty.
-         * <p>
+         * <p>The new description of the reserved CIDR block. The default value is empty.</p>
+         * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>ReservationDescription</p>
          */
         public Builder vSwitchCidrReservationDescription(String vSwitchCidrReservationDescription) {
             this.putQueryParameter("VSwitchCidrReservationDescription", vSwitchCidrReservationDescription);
@@ -259,7 +263,11 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the reserved CIDR block.
+         * <p>The ID of the reserved CIDR block.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcr-bp1m12saqteraw3rp****</p>
          */
         public Builder vSwitchCidrReservationId(String vSwitchCidrReservationId) {
             this.putQueryParameter("VSwitchCidrReservationId", vSwitchCidrReservationId);
@@ -268,10 +276,11 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the reserved CIDR block.
-         * <p>
+         * <p>The new name of the reserved CIDR block.</p>
+         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>ReservationName</p>
          */
         public Builder vSwitchCidrReservationName(String vSwitchCidrReservationName) {
             this.putQueryParameter("VSwitchCidrReservationName", vSwitchCidrReservationName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServerRelatedGlobalAccelerationInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeServerRelatedGlobalAccelerationInstancesRequest</p>
@@ -157,10 +158,12 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Req
         }
 
         /**
-         * The region ID of the GA instance.
-         * <p>
+         * <p>The region ID of the GA instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -187,7 +190,11 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Req
         }
 
         /**
-         * The ID of the backend service instance.
+         * <p>The ID of the backend service instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-12s3sdf****</p>
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);
@@ -196,11 +203,14 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Req
         }
 
         /**
-         * The type of the backend service instance. Valid values:
-         * <p>
+         * <p>The type of the backend service instance. Valid values:</p>
+         * <ul>
+         * <li><strong>EcsInstance</strong> (default): Elastic Compute Service (ECS)</li>
+         * <li><strong>SlbInstance</strong>: Server Load Balancer (SLB)</li>
+         * </ul>
          * 
-         * *   **EcsInstance** (default): Elastic Compute Service (ECS)
-         * *   **SlbInstance**: Server Load Balancer (SLB)
+         * <strong>example:</strong>
+         * <p>EcsInstance</p>
          */
         public Builder serverType(String serverType) {
             this.putQueryParameter("ServerType", serverType);

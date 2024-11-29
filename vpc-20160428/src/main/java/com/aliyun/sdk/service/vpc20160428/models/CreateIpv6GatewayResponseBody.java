@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIpv6GatewayResponseBody} extends {@link TeaModel}
  *
  * <p>CreateIpv6GatewayResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The ID of the IPv6 gateway.
+         * <p>The ID of the IPv6 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6gw-hp3y0l3ln89j8cdvf****</p>
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.ipv6GatewayId = ipv6GatewayId;
@@ -69,7 +73,10 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the IPv6 gateway belongs.
+         * <p>The ID of the resource group to which the IPv6 gateway belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

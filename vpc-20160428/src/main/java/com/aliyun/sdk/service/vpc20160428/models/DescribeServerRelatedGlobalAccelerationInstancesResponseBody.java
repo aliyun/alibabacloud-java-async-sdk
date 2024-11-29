@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServerRelatedGlobalAccelerationInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServerRelatedGlobalAccelerationInstancesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
         private String requestId; 
 
         /**
-         * The list of GA instances.
+         * <p>The list of GA instances.</p>
          */
         public Builder globalAccelerationInstances(GlobalAccelerationInstances globalAccelerationInstances) {
             this.globalAccelerationInstances = globalAccelerationInstances;
@@ -57,7 +58,10 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8252014-D8DE-4D85-AF35-AFEXXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServerRelatedGlobalAccelerationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerRelatedGlobalAccelerationInstancesResponseBody</p>
+     */
     public static class GlobalAccelerationInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstanceId")
         private String globalAccelerationInstanceId;
@@ -133,7 +143,10 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             private String serverIpAddress; 
 
             /**
-             * The ID of the GA instance.
+             * <p>The ID of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-t4nku6vv9****</p>
              */
             public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
                 this.globalAccelerationInstanceId = globalAccelerationInstanceId;
@@ -141,7 +154,10 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             }
 
             /**
-             * The public IP address of the GA instance.
+             * <p>The public IP address of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.34.56.78</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -149,7 +165,10 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             }
 
             /**
-             * The region ID of the GA instance.
+             * <p>The region ID of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -157,7 +176,10 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             }
 
             /**
-             * The IP address of the backend service.
+             * <p>The IP address of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.24.52.234</p>
              */
             public Builder serverIpAddress(String serverIpAddress) {
                 this.serverIpAddress = serverIpAddress;
@@ -171,6 +193,12 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerRelatedGlobalAccelerationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerRelatedGlobalAccelerationInstancesResponseBody</p>
+     */
     public static class GlobalAccelerationInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstance")
         private java.util.List < GlobalAccelerationInstance> globalAccelerationInstance;

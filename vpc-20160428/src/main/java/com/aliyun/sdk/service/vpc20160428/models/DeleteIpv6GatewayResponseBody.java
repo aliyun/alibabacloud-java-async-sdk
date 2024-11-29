@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIpv6GatewayResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteIpv6GatewayResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteIpv6GatewayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9A8AABE-A84B-4AF2-A68A-8E2EA190E7AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

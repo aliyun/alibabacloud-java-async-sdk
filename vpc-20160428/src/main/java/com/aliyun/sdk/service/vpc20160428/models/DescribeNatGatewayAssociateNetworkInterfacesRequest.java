@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatGatewayAssociateNetworkInterfacesRequest} extends {@link RequestModel}
  *
  * <p>DescribeNatGatewayAssociateNetworkInterfacesRequest</p>
@@ -236,7 +237,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
         }
 
         /**
-         * NatGatewayId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1uewa15k4iy5770****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -272,7 +276,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -323,6 +330,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNatGatewayAssociateNetworkInterfacesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewayAssociateNetworkInterfacesRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -384,6 +397,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNatGatewayAssociateNetworkInterfacesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewayAssociateNetworkInterfacesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

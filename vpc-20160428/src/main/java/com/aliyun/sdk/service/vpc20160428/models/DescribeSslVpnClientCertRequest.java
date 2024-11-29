@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSslVpnClientCertRequest} extends {@link RequestModel}
  *
  * <p>DescribeSslVpnClientCertRequest</p>
@@ -143,7 +144,11 @@ public class DescribeSslVpnClientCertRequest extends Request {
         }
 
         /**
-         * The region ID of the SSL client certificate. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region ID of the SSL client certificate. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +175,11 @@ public class DescribeSslVpnClientCertRequest extends Request {
         }
 
         /**
-         * The ID of the SSL client certificate that you want to query.
+         * <p>The ID of the SSL client certificate that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsc-bp17r58rjf5r1gjyr****</p>
          */
         public Builder sslVpnClientCertId(String sslVpnClientCertId) {
             this.putQueryParameter("SslVpnClientCertId", sslVpnClientCertId);

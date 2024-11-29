@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVpcGatewayEndpointAttributeRequest} extends {@link RequestModel}
  *
  * <p>GetVpcGatewayEndpointAttributeRequest</p>
@@ -125,7 +126,11 @@ public class GetVpcGatewayEndpointAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the gateway endpoint.
+         * <p>The ID of the gateway endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpce-bp1w1dmdqjpwul0v3****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -152,10 +157,12 @@ public class GetVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the gateway endpoint.
-         * <p>
+         * <p>The region ID of the gateway endpoint.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

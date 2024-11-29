@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SecondApplyPhysicalConnectionLOAResponseBody} extends {@link TeaModel}
  *
  * <p>SecondApplyPhysicalConnectionLOAResponseBody</p>
@@ -37,7 +38,10 @@ public class SecondApplyPhysicalConnectionLOAResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A47BD386-7FDE-42C4-8D22-C6223D18AA1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVirtualBorderBandwidthRequest} extends {@link RequestModel}
  *
  * <p>UpdateVirtualBorderBandwidthRequest</p>
@@ -154,7 +155,11 @@ public class UpdateVirtualBorderBandwidthRequest extends Request {
         } 
 
         /**
-         * The new maximum bandwidth value for the VBR. Unit: Mbit/s.
+         * <p>The new maximum bandwidth value for the VBR. Unit: Mbit/s.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -163,12 +168,14 @@ public class UpdateVirtualBorderBandwidthRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -195,10 +202,12 @@ public class UpdateVirtualBorderBandwidthRequest extends Request {
         }
 
         /**
-         * The region ID of the VBR.
-         * <p>
+         * <p>The region ID of the VBR.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -225,7 +234,11 @@ public class UpdateVirtualBorderBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the VBR.
+         * <p>The ID of the VBR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp15zckdt37pq72****</p>
          */
         public Builder virtualBorderRouterId(String virtualBorderRouterId) {
             this.putQueryParameter("VirtualBorderRouterId", virtualBorderRouterId);

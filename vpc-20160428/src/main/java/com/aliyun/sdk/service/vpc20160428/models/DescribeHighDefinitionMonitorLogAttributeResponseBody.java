@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHighDefinitionMonitorLogAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHighDefinitionMonitorLogAttributeResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         private String success; 
 
         /**
-         * The ID of the instance whose fine-grained monitoring configurations you want to query.
+         * <p>The ID of the instance whose fine-grained monitoring configurations you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-wz9fi6qboho9fwgx7****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -105,7 +109,10 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The type of instance for which you want to query fine-grained monitoring. Only **EIP** may be returned.
+         * <p>The type of instance for which you want to query fine-grained monitoring. Only <strong>EIP</strong> may be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -113,7 +120,10 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdmonitor-cn-shenzhen-1658206966225390</p>
          */
         public Builder logProject(String logProject) {
             this.logProject = logProject;
@@ -121,7 +131,10 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdmonitor</p>
          */
         public Builder logStore(String logStore) {
             this.logStore = logStore;
@@ -129,7 +142,10 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B457</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +153,14 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the operation is performed. Valid values:
-         * <p>
+         * <p>Indicates whether the operation is performed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

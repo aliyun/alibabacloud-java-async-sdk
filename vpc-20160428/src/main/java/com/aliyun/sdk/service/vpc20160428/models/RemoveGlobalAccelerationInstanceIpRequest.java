@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveGlobalAccelerationInstanceIpRequest} extends {@link RequestModel}
  *
  * <p>RemoveGlobalAccelerationInstanceIpRequest</p>
@@ -140,7 +141,11 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         } 
 
         /**
-         * The ID of the shared-bandwidth instance.
+         * <p>The ID of the shared-bandwidth instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-m5ex47zwya1sejyni****</p>
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -149,10 +154,12 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * The ID of the EIP.
-         * <p>
+         * <p>The ID of the EIP.</p>
+         * <p>To query the EIP ID, call DescribeEipAddresses.</p>
+         * <p>This parameter is required.</p>
          * 
-         * To query the EIP ID, call DescribeEipAddresses.
+         * <strong>example:</strong>
+         * <p>eip-bp13e9i2qst4g6jzi****</p>
          */
         public Builder ipInstanceId(String ipInstanceId) {
             this.putQueryParameter("IpInstanceId", ipInstanceId);
@@ -179,10 +186,12 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * The ID of the region where the shared-bandwidth instance is located.
-         * <p>
+         * <p>The ID of the region where the shared-bandwidth instance is located.</p>
+         * <p>To query the region ID, call DescribeRegions.</p>
+         * <p>This parameter is required.</p>
          * 
-         * To query the region ID, call DescribeRegions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

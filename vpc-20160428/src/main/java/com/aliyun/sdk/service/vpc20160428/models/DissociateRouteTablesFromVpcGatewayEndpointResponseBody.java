@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DissociateRouteTablesFromVpcGatewayEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>DissociateRouteTablesFromVpcGatewayEndpointResponseBody</p>
@@ -37,7 +38,10 @@ public class DissociateRouteTablesFromVpcGatewayEndpointResponseBody extends Tea
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59BDDA2D-FB52-59F9-9DC5-5EA7D6808B8E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

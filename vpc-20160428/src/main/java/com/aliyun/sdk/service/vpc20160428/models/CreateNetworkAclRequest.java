@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkAclRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkAclRequest</p>
@@ -195,12 +196,14 @@ public class CreateNetworkAclRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -209,10 +212,11 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * The description of the network ACL.
-         * <p>
+         * <p>The description of the network ACL.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>This is my NetworkAcl.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -221,11 +225,14 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -234,10 +241,11 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * The name of the network ACL.
-         * <p>
+         * <p>The name of the network ACL.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>acl-1</p>
          */
         public Builder networkAclName(String networkAclName) {
             this.putQueryParameter("NetworkAclName", networkAclName);
@@ -264,10 +272,12 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * The region ID of the network ACL.
-         * <p>
+         * <p>The region ID of the network ACL.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -294,7 +304,7 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -303,17 +313,20 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the network ACL belongs.
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC) to which the network ACL belongs.</p>
+         * <p>If the VPC contains Elastic Compute Service (ECS) instances of the following instance families, you must upgrade the ECS instances or release the ECS instances. Otherwise, you cannot create a network ACL for the VPC.</p>
+         * <p>ecs.c1, ecs.c2, ecs.c4, ecs.c5, ecs.ce4, ecs.cm4, ecs.d1, ecs.e3, ecs.e4, ecs.ga1, ecs.gn4, ecs.gn5, ecs.i1, ecs.m1, ecs.m2, ecs.mn4, ecs.n1, ecs.n2, ecs.n4, ecs.s1, ecs.s2, ecs.s3, ecs.se1, ecs.sn1, ecs.sn2, ecs.t1, and ecs.xn4.</p>
+         * <ul>
+         * <li>For more information about how to upgrade an ECS instance, see <a href="https://help.aliyun.com/document_detail/25438.html">Upgrade subscription instances</a> and <a href="https://help.aliyun.com/document_detail/60051.html">Change the specifications of pay-as-you-go instances</a>.</li>
+         * <li>For more information about how to release an ECS instance, see <a href="https://help.aliyun.com/document_detail/25442.html">Release an ECS instance</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the VPC contains an ECS instance that does not support network ACLs, upgrade the ECS instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * If the VPC contains Elastic Compute Service (ECS) instances of the following instance families, you must upgrade the ECS instances or release the ECS instances. Otherwise, you cannot create a network ACL for the VPC.
-         * 
-         * ecs.c1, ecs.c2, ecs.c4, ecs.c5, ecs.ce4, ecs.cm4, ecs.d1, ecs.e3, ecs.e4, ecs.ga1, ecs.gn4, ecs.gn5, ecs.i1, ecs.m1, ecs.m2, ecs.mn4, ecs.n1, ecs.n2, ecs.n4, ecs.s1, ecs.s2, ecs.s3, ecs.se1, ecs.sn1, ecs.sn2, ecs.t1, and ecs.xn4.
-         * 
-         * *   For more information about how to upgrade an ECS instance, see [Upgrade subscription instances](~~25438~~) and [Change the specifications of pay-as-you-go instances](~~60051~~).
-         * *   For more information about how to release an ECS instance, see [Release an ECS instance](~~25442~~).
-         * 
-         * >  If the VPC contains an ECS instance that does not support network ACLs, upgrade the ECS instance.
+         * <strong>example:</strong>
+         * <p>vpc-dsfd34356vdf****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -328,6 +341,12 @@ public class CreateNetworkAclRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNetworkAclRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNetworkAclRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -367,10 +386,11 @@ public class CreateNetworkAclRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -378,10 +398,11 @@ public class CreateNetworkAclRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

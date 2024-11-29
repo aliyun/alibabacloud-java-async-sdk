@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSslVpnClientCertsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSslVpnClientCertsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the SSL client certificates.
+         * <p>The information about the SSL client certificates.</p>
          */
         public Builder sslVpnClientCertKeys(SslVpnClientCertKeys sslVpnClientCertKeys) {
             this.sslVpnClientCertKeys = sslVpnClientCertKeys;
@@ -117,7 +127,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSslVpnClientCertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSslVpnClientCertsResponseBody</p>
+     */
     public static class SslVpnClientCertKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -241,10 +260,11 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The timestamp that indicates when the SSL client certificate was created. Unit: millisecond.
-             * <p>
+             * <p>The timestamp that indicates when the SSL client certificate was created. Unit: millisecond.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1492747187000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -252,10 +272,11 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the SSL client certificate expires. Unit: millisecond.
-             * <p>
+             * <p>The timestamp that indicates when the SSL client certificate expires. Unit: millisecond.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1494966335000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -263,7 +284,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SSL client certificate.
+             * <p>The name of the SSL client certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cert1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -271,7 +295,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the SSL client certificate is created.
+             * <p>The region where the SSL client certificate is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -279,10 +306,11 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the SSL client certificate belongs.
-             * <p>
+             * <p>The ID of the resource group to which the SSL client certificate belongs.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group information.</p>
              * 
-             * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+             * <strong>example:</strong>
+             * <p>rg-acfmzs372yg****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -290,7 +318,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SSL client certificate.
+             * <p>The ID of the SSL client certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsc-bp1n8wcf134yl0osr****</p>
              */
             public Builder sslVpnClientCertId(String sslVpnClientCertId) {
                 this.sslVpnClientCertId = sslVpnClientCertId;
@@ -298,7 +329,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SSL server.
+             * <p>The ID of the SSL server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vss-bp18q7hzj6largv4v****</p>
              */
             public Builder sslVpnServerId(String sslVpnServerId) {
                 this.sslVpnServerId = sslVpnServerId;
@@ -306,12 +340,15 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SSL client certificate. Valid values:
-             * <p>
+             * <p>The status of the SSL client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>expiring-soon</strong></li>
+             * <li><strong>normal</strong></li>
+             * <li><strong>expired</strong></li>
+             * </ul>
              * 
-             * *   **expiring-soon**
-             * *   **normal**
-             * *   **expired**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -325,6 +362,12 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSslVpnClientCertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSslVpnClientCertsResponseBody</p>
+     */
     public static class SslVpnClientCertKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SslVpnClientCertKey")
         private java.util.List < SslVpnClientCertKey> sslVpnClientCertKey;

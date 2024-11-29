@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcEndpointServicesByEndUserRequest} extends {@link RequestModel}
  *
  * <p>ListVpcEndpointServicesByEndUserRequest</p>
@@ -153,7 +154,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         } 
 
         /**
-         * The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -162,11 +166,14 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
+         * <li>If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.</li>
+         * </ul>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
-         * *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -193,10 +200,12 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The region ID of the gateway endpoint.
-         * <p>
+         * <p>The region ID of the gateway endpoint.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -223,7 +232,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The name of the endpoint service that you want to query.
+         * <p>The name of the endpoint service that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyun.cn-hangzhou.oss</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

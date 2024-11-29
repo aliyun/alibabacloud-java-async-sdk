@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>CreateRouteEntriesRequest</p>
@@ -142,10 +143,11 @@ public class CreateRouteEntriesRequest extends Request {
         }
 
         /**
-         * The region ID of the route table.
-         * <p>
+         * <p>The region ID of the route table.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -172,7 +174,8 @@ public class CreateRouteEntriesRequest extends Request {
         }
 
         /**
-         * The routes.
+         * <p>The routes.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder routeEntries(java.util.List < RouteEntries> routeEntries) {
             this.putQueryParameter("RouteEntries", routeEntries);
@@ -187,6 +190,12 @@ public class CreateRouteEntriesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRouteEntriesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRouteEntriesRequest</p>
+     */
     public static class RouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -290,10 +299,11 @@ public class CreateRouteEntriesRequest extends Request {
             private String routeTableId; 
 
             /**
-             * The description of the custom route. You can specify at most 50 descriptions.
-             * <p>
+             * <p>The description of the custom route. You can specify at most 50 descriptions.</p>
+             * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -301,11 +311,15 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * The destination CIDR block of the custom route. IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported. You can enter up to 50 destination CIDR blocks. Make sure that the following requirements are met:
-             * <p>
+             * <p>The destination CIDR block of the custom route. IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported. You can enter up to 50 destination CIDR blocks. Make sure that the following requirements are met:</p>
+             * <ul>
+             * <li>The destination CIDR block cannot point to 100.64.0.0/10 or belong to 100.64.0.0/10.</li>
+             * <li>The destination CIDR block of each route in the route table is unique.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   The destination CIDR block cannot point to 100.64.0.0/10 or belong to 100.64.0.0/10.
-             * *   The destination CIDR block of each route in the route table is unique.
+             * <strong>example:</strong>
+             * <p>192.168.0.0/24</p>
              */
             public Builder dstCidrBlock(String dstCidrBlock) {
                 this.dstCidrBlock = dstCidrBlock;
@@ -313,11 +327,14 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * The IP version. Valid values: You can specify at most 50 IP versions. Valid values:
-             * <p>
+             * <p>The IP version. Valid values: You can specify at most 50 IP versions. Valid values:</p>
+             * <ul>
+             * <li><strong>4</strong>: IPv4</li>
+             * <li><strong>6</strong>: IPv6</li>
+             * </ul>
              * 
-             * *   **4**: IPv4
-             * *   **6**: IPv6
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(Integer ipVersion) {
                 this.ipVersion = ipVersion;
@@ -325,10 +342,11 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * The name of the custom route that you want to add. You can specify at most 50 names.
-             * <p>
+             * <p>The name of the custom route that you want to add. You can specify at most 50 names.</p>
+             * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -336,7 +354,11 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * The ID of the next hop for the custom route. You can specify at most 50 instance IDs.
+             * <p>The ID of the next hop for the custom route. You can specify at most 50 instance IDs.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-j6c2fp57q8rr4jlu****</p>
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -344,22 +366,26 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * The type of next hop. You can specify at most 50 next hop types. Valid values:
-             * <p>
+             * <p>The type of next hop. You can specify at most 50 next hop types. Valid values:</p>
+             * <ul>
+             * <li><strong>Instance</strong>: Elastic Compute Service (ECS) instance. This is the default value.</li>
+             * <li><strong>HaVip</strong>: high-availability virtual IP address (HAVIP).</li>
+             * <li><strong>RouterInterface</strong>: router interface.</li>
+             * <li><strong>NetworkInterface</strong>: elastic network interface (ENI).</li>
+             * <li><strong>VpnGateway</strong>: VPN gateway.</li>
+             * <li><strong>IPv6Gateway</strong>: IPv6 gateway.</li>
+             * <li><strong>NatGateway</strong>: NAT gateway.</li>
+             * <li><strong>Attachment</strong>: transit router.</li>
+             * <li><strong>VpcPeer</strong>: VPC peering connection.</li>
+             * <li><strong>Ipv4Gateway</strong>: IPv4 gateway.</li>
+             * <li><strong>GatewayEndpoint</strong>: gateway endpoint.</li>
+             * <li><strong>CenBasic</strong>: CEN does not support transfer routers.</li>
+             * <li><strong>Ecr</strong>: Express Connect Router (ECR).</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **Instance**: Elastic Compute Service (ECS) instance. This is the default value.
-             * *   **HaVip**: high-availability virtual IP address (HAVIP).
-             * *   **RouterInterface**: router interface.
-             * *   **NetworkInterface**: elastic network interface (ENI).
-             * *   **VpnGateway**: VPN gateway.
-             * *   **IPv6Gateway**: IPv6 gateway.
-             * *   **NatGateway**: NAT gateway.
-             * *   **Attachment**: transit router.
-             * *   **VpcPeer**: VPC peering connection.
-             * *   **Ipv4Gateway**: IPv4 gateway.
-             * *   **GatewayEndpoint**: gateway endpoint.
-             * *   **CenBasic**: CEN does not support transfer routers.
-             * *   **Ecr**: Express Connect Router (ECR).
+             * <strong>example:</strong>
+             * <p>RouterInterface</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -367,7 +393,11 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * The ID of the route table to which you want to add custom route s. You can specify at most 50 route table IDs.
+             * <p>The ID of the route table to which you want to add custom route s. You can specify at most 50 route table IDs.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp145q7glnuzd****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

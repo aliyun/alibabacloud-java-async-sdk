@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHaVipRequest} extends {@link RequestModel}
  *
  * <p>CreateHaVipRequest</p>
@@ -209,12 +210,14 @@ public class CreateHaVipRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among all requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -223,10 +226,11 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * The description of the HAVIP.
-         * <p>
+         * <p>The description of the HAVIP.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>This is my HaVip.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -235,10 +239,11 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * The IP address of the HAVIP.
-         * <p>
+         * <p>The IP address of the HAVIP.</p>
+         * <p>The specified IP address must be an idle IP address that falls within the CIDR block of the vSwitch. If this parameter is not set, an idle IP address from the CIDR block of the vSwitch is randomly assigned to the HAVIP.</p>
          * 
-         * The specified IP address must be an idle IP address that falls within the CIDR block of the vSwitch. If this parameter is not set, an idle IP address from the CIDR block of the vSwitch is randomly assigned to the HAVIP.
+         * <strong>example:</strong>
+         * <p>192.XX.XX.10</p>
          */
         public Builder ipAddress(String ipAddress) {
             this.putQueryParameter("IpAddress", ipAddress);
@@ -247,10 +252,11 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * The name of the HAVIP.
-         * <p>
+         * <p>The name of the HAVIP.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -277,7 +283,11 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * The region ID of the HAVIP. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region ID of the HAVIP. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -286,7 +296,10 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the HAVIP belongs.
+         * <p>The ID of the resource group to which the HAVIP belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -313,7 +326,7 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * The tag of the resource.
+         * <p>The tag of the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -322,7 +335,11 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the HAVIP belongs.
+         * <p>The ID of the vSwitch to which the HAVIP belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-asdfjlnaue4g****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -337,6 +354,12 @@ public class CreateHaVipRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHaVipRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHaVipRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -376,10 +399,11 @@ public class CreateHaVipRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -387,10 +411,11 @@ public class CreateHaVipRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length, but cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpnCertificateAssociationsRequest} extends {@link RequestModel}
  *
  * <p>ListVpnCertificateAssociationsRequest</p>
@@ -126,10 +127,11 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         } 
 
         /**
-         * The list of certificate IDs.
-         * <p>
+         * <p>The list of certificate IDs.</p>
+         * <p>You can query the association between at most 20 SSL certificates and VPN gateways.</p>
          * 
-         * You can query the association between at most 20 SSL certificates and VPN gateways.
+         * <strong>example:</strong>
+         * <p>6bfe4218-ea1d****</p>
          */
         public Builder certificateId(java.util.List < String > certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -138,11 +140,14 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * The certificate type. Valid values:
-         * <p>
+         * <p>The certificate type. Valid values:</p>
+         * <ul>
+         * <li><strong>Encryption</strong></li>
+         * <li><strong>Signature</strong></li>
+         * </ul>
          * 
-         * *   **Encryption**
-         * *   **Signature**
+         * <strong>example:</strong>
+         * <p>Signature</p>
          */
         public Builder certificateType(String certificateType) {
             this.putQueryParameter("CertificateType", certificateType);
@@ -151,7 +156,10 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **20**. Default value: **1**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>20</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -160,11 +168,14 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be0****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -173,10 +184,12 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * The region ID of the VPN gateway.
-         * <p>
+         * <p>The region ID of the VPN gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -185,10 +198,11 @@ public class ListVpnCertificateAssociationsRequest extends Request {
         }
 
         /**
-         * The list of VPN gateway IDs.
-         * <p>
+         * <p>The list of VPN gateway IDs.</p>
+         * <p>You can query the association between at most 20 VPN gateways and SSL certificates.</p>
          * 
-         * You can query the association between at most 20 VPN gateways and SSL certificates.
+         * <strong>example:</strong>
+         * <p>vpn-bp1q8bgx4xnkm****</p>
          */
         public Builder vpnGatewayId(java.util.List < String > vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

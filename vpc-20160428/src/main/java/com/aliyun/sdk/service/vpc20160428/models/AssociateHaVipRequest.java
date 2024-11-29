@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateHaVipRequest} extends {@link RequestModel}
  *
  * <p>AssociateHaVipRequest</p>
@@ -168,12 +169,14 @@ public class AssociateHaVipRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> in each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -182,7 +185,11 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * The ID of the HAVIP.
+         * <p>The ID of the HAVIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>havip-2zeo05qre24nhrqpy****</p>
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -191,7 +198,11 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance to be associated with the HAVIP.
+         * <p>The ID of the ECS instance to be associated with the HAVIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-faf344422ffsfad****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -200,11 +211,14 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * The type of the instance to be associated with the HAVIP. Valid values:
-         * <p>
+         * <p>The type of the instance to be associated with the HAVIP. Valid values:</p>
+         * <ul>
+         * <li><strong>EcsInstance</strong>: an ECS instance</li>
+         * <li><strong>NetworkInterface</strong>: an ENI. If you want to associate the HAVIP with an ENI, this parameter is required.</li>
+         * </ul>
          * 
-         * *   **EcsInstance**: an ECS instance
-         * *   **NetworkInterface**: an ENI. If you want to associate the HAVIP with an ENI, this parameter is required.
+         * <strong>example:</strong>
+         * <p>EcsInstance</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -231,10 +245,12 @@ public class AssociateHaVipRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the HAVIP belongs.
-         * <p>
+         * <p>The ID of the region to which the HAVIP belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

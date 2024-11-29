@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpnConnectionLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpnConnectionLogsRequest</p>
@@ -209,10 +210,13 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         } 
 
         /**
-         * The start time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The start time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> If you specify <strong>From</strong>, you must specify <strong>To</strong> or <strong>MinutePeriod</strong>.</p>
+         * </blockquote>
          * 
-         * >  If you specify **From**, you must specify **To** or **MinutePeriod**.
+         * <strong>example:</strong>
+         * <p>1671003744</p>
          */
         public Builder from(Integer from) {
             this.putQueryParameter("From", from);
@@ -221,10 +225,13 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The interval at which log data is collected. Valid values: **1** to **10**. Unit: minutes.
-         * <p>
+         * <p>The interval at which log data is collected. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: minutes.</p>
+         * <blockquote>
+         * <p> If you do not specify <strong>From</strong> and <strong>To</strong>, you must specify <strong>MinutePeriod</strong>.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify **From** and **To**, you must specify **MinutePeriod**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minutePeriod(Integer minutePeriod) {
             this.putQueryParameter("MinutePeriod", minutePeriod);
@@ -251,7 +258,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -260,7 +270,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1** to **50**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -269,10 +282,12 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The region ID of the IPsec-VPN connection.
-         * <p>
+         * <p>The region ID of the IPsec-VPN connection.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>eu-central-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -299,10 +314,13 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The end time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> If you specify <strong>To</strong>, you must specify <strong>From</strong> or <strong>MinutePeriod</strong>.</p>
+         * </blockquote>
          * 
-         * >  If you specify **To**, you must specify **From** or **MinutePeriod**.
+         * <strong>example:</strong>
+         * <p>1671004344</p>
          */
         public Builder to(Integer to) {
             this.putQueryParameter("To", to);
@@ -311,10 +329,11 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The ID of the IPsec-VPN connection.
-         * <p>
+         * <p>The ID of the IPsec-VPN connection.</p>
+         * <p>This parameter is available only for a dual-tunnel IPsec-VPN connection.</p>
          * 
-         * This parameter is available only for a dual-tunnel IPsec-VPN connection.
+         * <strong>example:</strong>
+         * <p>tun-opsqc4d97wni27****</p>
          */
         public Builder tunnelId(String tunnelId) {
             this.putQueryParameter("TunnelId", tunnelId);
@@ -323,7 +342,11 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The ID of the IPsec-VPN connection.
+         * <p>The ID of the IPsec-VPN connection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-m5evqnds4y459flt3****</p>
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);

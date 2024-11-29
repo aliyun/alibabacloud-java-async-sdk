@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNatIpCidrResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNatIpCidrResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateNatIpCidrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the NAT CIDR block.
+         * <p>The ID of the NAT CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpcnatcidr-gw8lhqtvdn4qnea****</p>
          */
         public Builder natIpCidrId(String natIpCidrId) {
             this.natIpCidrId = natIpCidrId;
@@ -57,7 +61,10 @@ public class CreateNatIpCidrResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7021BEB1-210F-48A9-AB82-BE9A9110BB89</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSslVpnServersRequest} extends {@link RequestModel}
  *
  * <p>DescribeSslVpnServersRequest</p>
@@ -194,10 +195,11 @@ public class DescribeSslVpnServersRequest extends Request {
         } 
 
         /**
-         * The SSL server name.
-         * <p>
+         * <p>The SSL server name.</p>
+         * <p>The name must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -224,7 +226,10 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -233,7 +238,10 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,10 +250,12 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * The region ID of the SSL server.
-         * <p>
+         * <p>The region ID of the SSL server.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -254,12 +264,12 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the SSL server belongs.
-         * <p>
+         * <p>The ID of the resource group to which the SSL server belongs.</p>
+         * <p>The SSL server has the same resource group as its associated VPN gateway instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the ID of the resource group to which the VPN gateway instance belongs.</p>
          * 
-         * The SSL server has the same resource group as its associated VPN gateway instance.
-         * 
-         * You can call the [DescribeVpnGateway](~~2526915~~) operation to query the ID of the resource group to which the VPN gateway instance belongs.
+         * <strong>example:</strong>
+         * <p>rg-acfmzs372yg****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -286,7 +296,10 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * The ID of the SSL server.
+         * <p>The ID of the SSL server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vss-bp15j3du13gq1dgey****</p>
          */
         public Builder sslVpnServerId(String sslVpnServerId) {
             this.putQueryParameter("SslVpnServerId", sslVpnServerId);
@@ -295,7 +308,10 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp1on0xae9d771ggi****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

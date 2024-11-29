@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpnAttachmentsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpnAttachmentsRequest</p>
@@ -166,10 +167,11 @@ public class DescribeVpnAttachmentsRequest extends Request {
         } 
 
         /**
-         * The type of resource that is associated with the IPsec-VPN connection. Default value: **CEN**.
-         * <p>
+         * <p>The type of resource that is associated with the IPsec-VPN connection. Default value: <strong>CEN</strong>.</p>
+         * <p>Set the value to <strong>CEN</strong>, which specifies to query IPsec-VPN connections associated with the transit router.</p>
          * 
-         * Set the value to **CEN**, which specifies to query IPsec-VPN connections associated with the transit router.
+         * <strong>example:</strong>
+         * <p>CEN</p>
          */
         public Builder attachType(String attachType) {
             this.putQueryParameter("AttachType", attachType);
@@ -196,7 +198,10 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -205,7 +210,10 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -214,10 +222,12 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the IPsec-VPN connection is established.
-         * <p>
+         * <p>The ID of the region where the IPsec-VPN connection is established.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -244,10 +254,13 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * The ID of the IPsec-VPN connection.
-         * <p>
+         * <p>The ID of the IPsec-VPN connection.</p>
+         * <blockquote>
+         * <p> If you do not specify an IPsec-VPN connection ID, all IPsec-VPN connections associated with a transit router in the region are queried.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify an IPsec-VPN connection ID, all IPsec-VPN connections associated with a transit router in the region are queried.
+         * <strong>example:</strong>
+         * <p>vco-p0w2jpkhi2eeop6q6****</p>
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRouteTableRequest} extends {@link RequestModel}
  *
  * <p>CreateRouteTableRequest</p>
@@ -195,11 +196,14 @@ public class CreateRouteTableRequest extends Request {
         } 
 
         /**
-         * The type of the route table. Valid values:
-         * <p>
+         * <p>The type of the route table. Valid values:</p>
+         * <ul>
+         * <li><strong>VSwitch</strong> (default): vSwitch route table</li>
+         * <li><strong>Gateway</strong>: gateway route table</li>
+         * </ul>
          * 
-         * *   **VSwitch** (default): vSwitch route table
-         * *   **Gateway**: gateway route table
+         * <strong>example:</strong>
+         * <p>VSwitch</p>
          */
         public Builder associateType(String associateType) {
             this.putQueryParameter("AssociateType", associateType);
@@ -208,12 +212,14 @@ public class CreateRouteTableRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> in each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** in each API request may be different.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -222,10 +228,11 @@ public class CreateRouteTableRequest extends Request {
         }
 
         /**
-         * The description of the route table.
-         * <p>
+         * <p>The description of the route table.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -252,10 +259,12 @@ public class CreateRouteTableRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual private cloud (VPC) to which the custom route table belongs.
-         * <p>
+         * <p>The region ID of the virtual private cloud (VPC) to which the custom route table belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -282,10 +291,11 @@ public class CreateRouteTableRequest extends Request {
         }
 
         /**
-         * The name of the route table.
-         * <p>
+         * <p>The name of the route table.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>myRouteTable</p>
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);
@@ -294,7 +304,7 @@ public class CreateRouteTableRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -303,19 +313,21 @@ public class CreateRouteTableRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the custom route table belongs.
-         * <p>
+         * <p>The ID of the VPC to which the custom route table belongs.</p>
+         * <p>If a VPC contains an Elastic Compute Service (ECS) instance that belongs to one of the following instance families, you cannot create a custom route table for the VPC:</p>
+         * <p>ecs.c1, ecs.c2, ecs.c4, ecs.ce4, ecs.cm4, ecs.d1, ecs.e3, ecs.e4, ecs.ga1, ecs.gn4, ecs.gn5, ecs.i1, ecs.m1, ecs.m2, ecs.mn4, ecs.n1, ecs.n2, ecs.n4, ecs.s1, ecs.s2, ecs.s3, ecs.se1, ecs.sn1, ecs.sn2, ecs.t1, and ecs.xn4</p>
+         * <p>You must upgrade or release the ECS instance before you can create a custom route table for the VPC.</p>
+         * <ul>
+         * <li>For more information about how to upgrade an ECS instance, see <a href="https://help.aliyun.com/document_detail/25438.html">Upgrade subscription instances</a> and <a href="https://help.aliyun.com/document_detail/60051.html">Change specifications of pay-as-you-go instances</a>.</li>
+         * <li>For more information about how to release an ECS instance, see <a href="https://help.aliyun.com/document_detail/25442.html">Release an ECS instance</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If a custom route table is created for a VPC that contains an ECS instance from one of the preceding instance families, you must upgrade or release the ECS instance. Otherwise, the custom route table cannot work as expected.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * If a VPC contains an Elastic Compute Service (ECS) instance that belongs to one of the following instance families, you cannot create a custom route table for the VPC:
-         * 
-         * ecs.c1, ecs.c2, ecs.c4, ecs.ce4, ecs.cm4, ecs.d1, ecs.e3, ecs.e4, ecs.ga1, ecs.gn4, ecs.gn5, ecs.i1, ecs.m1, ecs.m2, ecs.mn4, ecs.n1, ecs.n2, ecs.n4, ecs.s1, ecs.s2, ecs.s3, ecs.se1, ecs.sn1, ecs.sn2, ecs.t1, and ecs.xn4
-         * 
-         * You must upgrade or release the ECS instance before you can create a custom route table for the VPC.
-         * 
-         * *   For more information about how to upgrade an ECS instance, see [Upgrade subscription instances](~~25438~~) and [Change specifications of pay-as-you-go instances](~~60051~~).
-         * *   For more information about how to release an ECS instance, see [Release an ECS instance](~~25442~~).
-         * 
-         * >  If a custom route table is created for a VPC that contains an ECS instance from one of the preceding instance families, you must upgrade or release the ECS instance. Otherwise, the custom route table cannot work as expected.
+         * <strong>example:</strong>
+         * <p>vpc-bp1qpo0kug3a20qqe****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -330,6 +342,12 @@ public class CreateRouteTableRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRouteTableRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRouteTableRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -369,10 +387,11 @@ public class CreateRouteTableRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -380,10 +399,11 @@ public class CreateRouteTableRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

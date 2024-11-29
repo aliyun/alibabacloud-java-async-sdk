@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>DeleteRouteEntriesRequest</p>
@@ -141,10 +142,11 @@ public class DeleteRouteEntriesRequest extends Request {
         }
 
         /**
-         * The region ID of the route table.
-         * <p>
+         * <p>The region ID of the route table.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +173,7 @@ public class DeleteRouteEntriesRequest extends Request {
         }
 
         /**
-         * The information about the routes that you want to delete.
+         * <p>The information about the routes that you want to delete.</p>
          */
         public Builder routeEntries(java.util.List < RouteEntries> routeEntries) {
             this.putQueryParameter("RouteEntries", routeEntries);
@@ -186,6 +188,12 @@ public class DeleteRouteEntriesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteRouteEntriesRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteRouteEntriesRequest</p>
+     */
     public static class RouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DstCidrBlock")
         private String dstCidrBlock;
@@ -250,10 +258,13 @@ public class DeleteRouteEntriesRequest extends Request {
             private String routeTableId; 
 
             /**
-             * The destination CIDR block of the route that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.
-             * <p>
+             * <p>The destination CIDR block of the route that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.</p>
+             * <blockquote>
+             * <p> If <strong>RouteEntryId</strong> is not specified, <strong>DstCidrBlock</strong> and <strong>NextHop</strong> are required.</p>
+             * </blockquote>
              * 
-             * >  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX/24</p>
              */
             public Builder dstCidrBlock(String dstCidrBlock) {
                 this.dstCidrBlock = dstCidrBlock;
@@ -261,10 +272,13 @@ public class DeleteRouteEntriesRequest extends Request {
             }
 
             /**
-             * The ID of the next hop that you want to delete. You can specify up to 50 next hop IDs.
-             * <p>
+             * <p>The ID of the next hop that you want to delete. You can specify up to 50 next hop IDs.</p>
+             * <blockquote>
+             * <p> If <strong>RouteEntryId</strong> is not specified, <strong>DstCidrBlock</strong> and <strong>NextHop</strong> are required.</p>
+             * </blockquote>
              * 
-             * >  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.
+             * <strong>example:</strong>
+             * <p>i-j6c2fp57q8rr4jlu****</p>
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -272,10 +286,13 @@ public class DeleteRouteEntriesRequest extends Request {
             }
 
             /**
-             * The ID of the route that you want to delete. You can specify up to 50 route IDs.
-             * <p>
+             * <p>The ID of the route that you want to delete. You can specify up to 50 route IDs.</p>
+             * <blockquote>
+             * <p> If <strong>RouteEntryId</strong> is not specified, <strong>DstCidrBlock</strong> and <strong>NextHop</strong> are required.</p>
+             * </blockquote>
              * 
-             * >  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.
+             * <strong>example:</strong>
+             * <p>rte-bp1mnnr2al0naomnpv****</p>
              */
             public Builder routeEntryId(String routeEntryId) {
                 this.routeEntryId = routeEntryId;
@@ -283,7 +300,11 @@ public class DeleteRouteEntriesRequest extends Request {
             }
 
             /**
-             * The ID of the route table to which the routes to be deleted belongs. You can specify up to 50 route table IDs.
+             * <p>The ID of the route table to which the routes to be deleted belongs. You can specify up to 50 route table IDs.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-2ze3jgygk9bmsj23s****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

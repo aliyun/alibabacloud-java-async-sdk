@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVpcGatewayEndpointAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateVpcGatewayEndpointAttributeRequest</p>
@@ -195,12 +196,14 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> of each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** of each API request may be different.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -209,11 +212,14 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks your AccessKey pair, the RAM user permissions, and the required parameters If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks your AccessKey pair, the RAM user permissions, and the required parameters If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -222,10 +228,11 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the gateway endpoint.
-         * <p>
+         * <p>The new description of the gateway endpoint.</p>
+         * <p>The description must be 1 to 255 characters in length.</p>
          * 
-         * The description must be 1 to 255 characters in length.
+         * <strong>example:</strong>
+         * <p>updateendpoint</p>
          */
         public Builder endpointDescription(String endpointDescription) {
             this.putQueryParameter("EndpointDescription", endpointDescription);
@@ -234,7 +241,11 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the gateway endpoint that you want to modify.
+         * <p>The ID of the gateway endpoint that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpce-bp1w1dmdqjpwul0v3****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -243,10 +254,11 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the gateway endpoint.
-         * <p>
+         * <p>The new name of the gateway endpoint.</p>
+         * <p>The name must be 1 to 128 characters in length.</p>
          * 
-         * The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>update</p>
          */
         public Builder endpointName(String endpointName) {
             this.putQueryParameter("EndpointName", endpointName);
@@ -273,10 +285,11 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * The access policy for the cloud service.
-         * <p>
+         * <p>The access policy for the cloud service.</p>
+         * <p>For more information about the syntax and structure of the access policy, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy syntax and structure</a>.</p>
          * 
-         * For more information about the syntax and structure of the access policy, see [Policy syntax and structure](~~93739~~).
+         * <strong>example:</strong>
+         * <p>{   &quot;Version&quot; : &quot;1&quot;,   &quot;Statement&quot; : [ {     &quot;Effect&quot; : &quot;Allow&quot;,     &quot;Resource&quot; : [ &quot;<em>&quot; ],     &quot;Action&quot; : [ &quot;</em>&quot; ],     &quot;Principal&quot; : [ &quot;*&quot; ]   } ] }</p>
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -285,10 +298,12 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the gateway endpoint.
-         * <p>
+         * <p>The region ID of the gateway endpoint.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIPv6TranslatorRequest} extends {@link RequestModel}
  *
  * <p>CreateIPv6TranslatorRequest</p>
@@ -222,7 +223,10 @@ public class CreateIPv6TranslatorRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment. Valid values: **true and false**.
+         * <p>Specifies whether to enable automatic payment. Valid values: <strong>true and false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -231,10 +235,13 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s. Valid values: **1** to **200**. If you do not specify the bandwidth for the mapping entry, the bandwidth is shared with the mapping entry.
-         * <p>
+         * <p>The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s. Valid values: <strong>1</strong> to <strong>200</strong>. If you do not specify the bandwidth for the mapping entry, the bandwidth is shared with the mapping entry.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the default bandwidth is 10 Mbit/s.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, the default bandwidth is 10 Mbit/s.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -243,7 +250,10 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha111</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -252,11 +262,14 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * The subscription duration.
-         * <p>
+         * <p>The subscription duration.</p>
+         * <ul>
+         * <li>If the billing cycle is <strong>Month</strong>, valid values are <strong>1</strong> to <strong>9</strong>.</li>
+         * <li>If the billing cycle is <strong>Year</strong>, set the value to <strong>3</strong>.</li>
+         * </ul>
          * 
-         * *   If the billing cycle is **Month**, valid values are **1** to **9**.
-         * *   If the billing cycle is **Year**, set the value to **3**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -265,7 +278,10 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length and must start with a letter. It can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `http://` or `https://`.
+         * <p>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length and must start with a letter. It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6_1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -292,11 +308,14 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * The billing method of the IPv6 Translation Service instance. Valid values:
-         * <p>
+         * <p>The billing method of the IPv6 Translation Service instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PREPAY</strong>: subscription</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **PREPAY**: subscription
-         * *   **POSTPAY**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -305,11 +324,14 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * The billing cycle of the subscription. Valid values:
-         * <p>
+         * <p>The billing cycle of the subscription. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong> (default)</li>
+         * <li><strong>Year</strong></li>
+         * </ul>
          * 
-         * *   **Month** (default)
-         * *   **Year**
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -318,7 +340,11 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region of the IPv6 Translation Service instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cm-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -345,7 +371,10 @@ public class CreateIPv6TranslatorRequest extends Request {
         }
 
         /**
-         * The specification of the IPv6 Translation Service instance. Set the value to **small**.
+         * <p>The specification of the IPv6 Translation Service instance. Set the value to <strong>small</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>small</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

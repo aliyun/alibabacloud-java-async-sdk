@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVpcRouteEntrySummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetVpcRouteEntrySummaryResponseBody</p>
@@ -49,7 +50,10 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         private java.util.List < RouteEntrySummarys> routeEntrySummarys; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC668356-BCB4-42FD-9BC3-FA2B2E04B634</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the routes in the route tables.
+         * <p>The information about the routes in the route tables.</p>
          */
         public Builder routeEntrySummarys(java.util.List < RouteEntrySummarys> routeEntrySummarys) {
             this.routeEntrySummarys = routeEntrySummarys;
@@ -70,6 +74,12 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVpcRouteEntrySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVpcRouteEntrySummaryResponseBody</p>
+     */
     public static class EntrySummarys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -109,7 +119,10 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
             private String routeEntryType; 
 
             /**
-             * The number of entries returned.
+             * <p>The number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -117,14 +130,17 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route. Valid values:
-             * <p>
+             * <p>The type of the route. Valid values:</p>
+             * <ul>
+             * <li><strong>All</strong>: all route types</li>
+             * <li><strong>Custom</strong>: a custom route</li>
+             * <li><strong>System</strong>: a system route</li>
+             * <li><strong>BGP</strong>: a BGP route</li>
+             * <li><strong>CEN</strong>: a CEN route</li>
+             * </ul>
              * 
-             * *   **All**: all route types
-             * *   **Custom**: a custom route
-             * *   **System**: a system route
-             * *   **BGP**: a BGP route
-             * *   **CEN**: a CEN route
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder routeEntryType(String routeEntryType) {
                 this.routeEntryType = routeEntryType;
@@ -138,6 +154,12 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVpcRouteEntrySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVpcRouteEntrySummaryResponseBody</p>
+     */
     public static class RouteEntrySummarys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntrySummarys")
         private java.util.List < EntrySummarys> entrySummarys;
@@ -177,7 +199,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
             private String routeTableId; 
 
             /**
-             * The information about the routes of different types in one route table.
+             * <p>The information about the routes of different types in one route table.</p>
              */
             public Builder entrySummarys(java.util.List < EntrySummarys> entrySummarys) {
                 this.entrySummarys = entrySummarys;
@@ -185,7 +207,10 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route table.
+             * <p>The ID of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp145q7glnuzdvzu2****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

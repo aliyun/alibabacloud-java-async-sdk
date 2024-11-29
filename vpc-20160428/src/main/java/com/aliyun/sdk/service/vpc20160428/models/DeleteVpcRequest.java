@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpcRequest} extends {@link RequestModel}
  *
  * <p>DeleteVpcRequest</p>
@@ -175,11 +176,14 @@ public class DeleteVpcRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * - **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * - **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -188,16 +192,19 @@ public class DeleteVpcRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully delete the VPC. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully delete the VPC. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <p>You can forcefully delete a VPC in the following scenarios:</p>
+         * <ul>
+         * <li>Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.</li>
+         * <li>Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.</li>
+         * </ul>
          * 
-         * - **true**: yes
-         * - **false** (default): no
-         * 
-         * You can forcefully delete a VPC in the following scenarios:
-         * 
-         * - Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.
-         * - Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDelete(Boolean forceDelete) {
             this.putQueryParameter("ForceDelete", forceDelete);
@@ -224,10 +231,11 @@ public class DeleteVpcRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VPC is deployed.
-         * <p>
+         * <p>The ID of the region where the VPC is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -254,7 +262,11 @@ public class DeleteVpcRequest extends Request {
         }
 
         /**
-         * The ID of the VPC that you want to delete.
+         * <p>The ID of the VPC that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1m7v25emi1h5mtc****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

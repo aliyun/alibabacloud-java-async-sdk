@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableVpcIpv4GatewayResponseBody} extends {@link TeaModel}
  *
  * <p>EnableVpcIpv4GatewayResponseBody</p>
@@ -37,7 +38,10 @@ public class EnableVpcIpv4GatewayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

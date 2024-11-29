@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateRouteTableWithGatewayRequest} extends {@link RequestModel}
  *
  * <p>AssociateRouteTableWithGatewayRequest</p>
@@ -182,12 +183,14 @@ public class AssociateRouteTableWithGatewayRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> of each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -196,11 +199,14 @@ public class AssociateRouteTableWithGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
-         * <p>
+         * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -209,10 +215,12 @@ public class AssociateRouteTableWithGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the IPv4 gateway.
-         * <p>
+         * <p>The ID of the IPv4 gateway.</p>
+         * <p>The IPv4 gateway must be in the <strong>Activated</strong> state.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The IPv4 gateway must be in the **Activated** state.
+         * <strong>example:</strong>
+         * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -221,7 +229,10 @@ public class AssociateRouteTableWithGatewayRequest extends Request {
         }
 
         /**
-         * The type of a gateway to be associated with a route table.
+         * <p>The type of a gateway to be associated with a route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ipv4Gateway</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("GatewayType", gatewayType);
@@ -248,10 +259,12 @@ public class AssociateRouteTableWithGatewayRequest extends Request {
         }
 
         /**
-         * The region ID of the IPv4 gateway with which you want to associate the gateway route table.
-         * <p>
+         * <p>The region ID of the IPv4 gateway with which you want to associate the gateway route table.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>ap-southeast-6</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -278,7 +291,11 @@ public class AssociateRouteTableWithGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the gateway route table.
+         * <p>The ID of the gateway route table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-5ts0ohchwkp3dydt2****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

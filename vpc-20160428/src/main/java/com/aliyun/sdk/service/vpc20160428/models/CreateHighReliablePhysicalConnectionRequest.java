@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHighReliablePhysicalConnectionRequest} extends {@link RequestModel}
  *
  * <p>CreateHighReliablePhysicalConnectionRequest</p>
@@ -247,7 +248,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * ApList.
+         * <p>This parameter is required.</p>
          */
         public Builder apList(java.util.List < ApList> apList) {
             this.putQueryParameter("ApList", apList);
@@ -283,7 +284,10 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * HighReliableType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MultiApMultiDevice</p>
          */
         public Builder highReliableType(String highReliableType) {
             this.putQueryParameter("HighReliableType", highReliableType);
@@ -310,7 +314,10 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * PortType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000Base-T</p>
          */
         public Builder portType(String portType) {
             this.putQueryParameter("PortType", portType);
@@ -370,6 +377,12 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHighReliablePhysicalConnectionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHighReliablePhysicalConnectionRequest</p>
+     */
     public static class ApList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -508,7 +521,10 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
             private String type; 
 
             /**
-             * AccessPointId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-cn-beijing-ft-A</p>
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -540,7 +556,10 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
             }
 
             /**
-             * LineOperator.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CT</p>
              */
             public Builder lineOperator(String lineOperator) {
                 this.lineOperator = lineOperator;
@@ -572,7 +591,10 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -594,6 +616,12 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHighReliablePhysicalConnectionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHighReliablePhysicalConnectionRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

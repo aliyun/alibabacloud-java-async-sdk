@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyNetworkAclEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>CopyNetworkAclEntriesResponseBody</p>
@@ -37,7 +38,10 @@ public class CopyNetworkAclEntriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6608E72F-F276-440F-ABEF-419971CEC4D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

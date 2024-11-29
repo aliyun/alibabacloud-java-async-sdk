@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadVpnConnectionConfigRequest} extends {@link RequestModel}
  *
  * <p>DownloadVpnConnectionConfigRequest</p>
@@ -143,10 +144,12 @@ public class DownloadVpnConnectionConfigRequest extends Request {
         }
 
         /**
-         * The ID of the region where the IPsec-VPN connection is created.
-         * <p>
+         * <p>The ID of the region where the IPsec-VPN connection is created.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +176,11 @@ public class DownloadVpnConnectionConfigRequest extends Request {
         }
 
         /**
-         * The ID of the IPsec-VPN connection.
+         * <p>The ID of the IPsec-VPN connection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-bp1bbi27hojx80nck****</p>
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);

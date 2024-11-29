@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIpv6EgressOnlyRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateIpv6EgressOnlyRuleRequest</p>
@@ -196,12 +197,14 @@ public class CreateIpv6EgressOnlyRuleRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the value of RequestId as the client token. The value of RequestId is different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the value of RequestId as the client token. The value of RequestId is different for each API request.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -210,10 +213,11 @@ public class CreateIpv6EgressOnlyRuleRequest extends Request {
         }
 
         /**
-         * The description of the egress-only rule.
-         * <p>
+         * <p>The description of the egress-only rule.</p>
+         * <p>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>ruledescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -222,7 +226,11 @@ public class CreateIpv6EgressOnlyRuleRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 address for which you want to create an egress-only rule.
+         * <p>The ID of the IPv6 address for which you want to create an egress-only rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6-hp3nxjkfxn5pnhgl5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -231,10 +239,11 @@ public class CreateIpv6EgressOnlyRuleRequest extends Request {
         }
 
         /**
-         * The type of the instance for which you want to create an egress-only rule.
-         * <p>
+         * <p>The type of the instance for which you want to create an egress-only rule.</p>
+         * <p>Default value: <strong>Ipv6Address</strong></p>
          * 
-         * Default value: **Ipv6Address**
+         * <strong>example:</strong>
+         * <p>Ipv6Address</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -243,7 +252,11 @@ public class CreateIpv6EgressOnlyRuleRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 gateway.
+         * <p>The ID of the IPv6 gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6gw-hp3c2paq0ywauasza****</p>
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -252,10 +265,11 @@ public class CreateIpv6EgressOnlyRuleRequest extends Request {
         }
 
         /**
-         * The name of the egress-only rule.
-         * <p>
+         * <p>The name of the egress-only rule.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>rulename</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -282,10 +296,12 @@ public class CreateIpv6EgressOnlyRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the IPv6 gateway is deployed.
-         * <p>
+         * <p>The ID of the region in which the IPv6 gateway is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

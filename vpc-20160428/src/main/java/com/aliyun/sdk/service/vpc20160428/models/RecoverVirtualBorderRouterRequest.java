@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecoverVirtualBorderRouterRequest} extends {@link RequestModel}
  *
  * <p>RecoverVirtualBorderRouterRequest</p>
@@ -139,10 +140,11 @@ public class RecoverVirtualBorderRouterRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -169,10 +171,12 @@ public class RecoverVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The region ID of the VBR.
-         * <p>
+         * <p>The region ID of the VBR.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +203,11 @@ public class RecoverVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The ID of the VBR.
+         * <p>The ID of the VBR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp1lhl0taikrte****</p>
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);

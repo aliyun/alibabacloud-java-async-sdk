@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpnRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpnRouteEntriesRequest</p>
@@ -185,7 +186,10 @@ public class DescribeVpnRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -194,7 +198,10 @@ public class DescribeVpnRouteEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,10 +210,12 @@ public class DescribeVpnRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VPN gateway is created.
-         * <p>
+         * <p>The ID of the region where the VPN gateway is created.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -233,11 +242,14 @@ public class DescribeVpnRouteEntriesRequest extends Request {
         }
 
         /**
-         * The type of the route entry. Valid values:
-         * <p>
+         * <p>The type of the route entry. Valid values:</p>
+         * <ul>
+         * <li><strong>Custom</strong>: custom</li>
+         * <li><strong>System</strong>: system</li>
+         * </ul>
          * 
-         * *   **Custom**: custom
-         * *   **System**: system
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder routeEntryType(String routeEntryType) {
             this.putQueryParameter("RouteEntryType", routeEntryType);
@@ -246,7 +258,11 @@ public class DescribeVpnRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp1cmw7jh1nfe43m9****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

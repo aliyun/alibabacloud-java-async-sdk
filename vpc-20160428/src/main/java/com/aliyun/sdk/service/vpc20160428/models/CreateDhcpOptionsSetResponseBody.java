@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDhcpOptionsSetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDhcpOptionsSetResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateDhcpOptionsSetResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The ID of the DHCP options set that is created.
+         * <p>The ID of the DHCP options set that is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dopt-o6w0df4epg9zo8isy****</p>
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.dhcpOptionsSetId = dhcpOptionsSetId;
@@ -69,7 +73,10 @@ public class CreateDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the DHCP options set belongs.
+         * <p>The ID of the resource group to which the DHCP options set belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

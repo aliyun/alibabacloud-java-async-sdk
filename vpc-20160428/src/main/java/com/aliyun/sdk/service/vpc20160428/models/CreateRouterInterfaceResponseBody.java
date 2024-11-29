@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRouterInterfaceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRouterInterfaceResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateRouterInterfaceResponseBody extends TeaModel {
         private String routerInterfaceId; 
 
         /**
-         * The order number. This parameter is returned if InstanceChargeType is set to PrePaid.
+         * <p>The order number. This parameter is returned if InstanceChargeType is set to PrePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202008594930117</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -69,7 +73,10 @@ public class CreateRouterInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>079874CD-AEC1-43E6-AC03-ADD96B6E4907</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateRouterInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the router interface.
+         * <p>The ID of the router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-2ze7fbuohm****</p>
          */
         public Builder routerInterfaceId(String routerInterfaceId) {
             this.routerInterfaceId = routerInterfaceId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpcPrefixListRequest} extends {@link RequestModel}
  *
  * <p>ModifyVpcPrefixListRequest</p>
@@ -223,7 +224,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         } 
 
         /**
-         * The information about CIDR blocks to be added to the prefix list.
+         * <p>The information about CIDR blocks to be added to the prefix list.</p>
          */
         public Builder addPrefixListEntry(java.util.List < AddPrefixListEntry> addPrefixListEntry) {
             this.putQueryParameter("AddPrefixListEntry", addPrefixListEntry);
@@ -232,12 +233,14 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -246,11 +249,14 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * Specifies whether to only precheck the request. Valid values:
-         * <p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -259,7 +265,10 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The maximum number of CIDR blocks supported by the prefix list after the configuration of the prefix list is modified.
+         * <p>The maximum number of CIDR blocks supported by the prefix list after the configuration of the prefix list is modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxEntries(Integer maxEntries) {
             this.putQueryParameter("MaxEntries", maxEntries);
@@ -286,10 +295,11 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The new description of the prefix list.
-         * <p>
+         * <p>The new description of the prefix list.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>newdescription</p>
          */
         public Builder prefixListDescription(String prefixListDescription) {
             this.putQueryParameter("PrefixListDescription", prefixListDescription);
@@ -298,7 +308,11 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The ID of the prefix list.
+         * <p>The ID of the prefix list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-0b7hwu67****</p>
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -307,10 +321,11 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The new name of the prefix list.
-         * <p>
+         * <p>The new name of the prefix list.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>newname</p>
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -319,7 +334,11 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The region ID of the prefix list.
+         * <p>The region ID of the prefix list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -328,7 +347,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The information about CIDR blocks to be deleted to the prefix list.
+         * <p>The information about CIDR blocks to be deleted to the prefix list.</p>
          */
         public Builder removePrefixListEntry(java.util.List < RemovePrefixListEntry> removePrefixListEntry) {
             this.putQueryParameter("RemovePrefixListEntry", removePrefixListEntry);
@@ -361,6 +380,12 @@ public class ModifyVpcPrefixListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyVpcPrefixListRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyVpcPrefixListRequest</p>
+     */
     public static class AddPrefixListEntry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
@@ -400,10 +425,13 @@ public class ModifyVpcPrefixListRequest extends Request {
             private String description; 
 
             /**
-             * The CIDR block to be added to the prefix list.
-             * <p>
+             * <p>The CIDR block to be added to the prefix list.</p>
+             * <blockquote>
+             * <p> If the CIDR block already exists in the prefix list, you can only modify the description of the CIDR block by setting the <strong>AddPrefixListEntry.N.Description</strong> parameter.</p>
+             * </blockquote>
              * 
-             * >  If the CIDR block already exists in the prefix list, you can only modify the description of the CIDR block by setting the **AddPrefixListEntry.N.Description** parameter.
+             * <strong>example:</strong>
+             * <p>172.16.0.0/12</p>
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -411,10 +439,11 @@ public class ModifyVpcPrefixListRequest extends Request {
             }
 
             /**
-             * The description of the CIDR block to be added to the prefix list.
-             * <p>
+             * <p>The description of the CIDR block to be added to the prefix list.</p>
+             * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>newcidr</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -428,6 +457,12 @@ public class ModifyVpcPrefixListRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyVpcPrefixListRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyVpcPrefixListRequest</p>
+     */
     public static class RemovePrefixListEntry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
@@ -467,7 +502,10 @@ public class ModifyVpcPrefixListRequest extends Request {
             private String description; 
 
             /**
-             * The CIDR block that you want to delete from the prefix list.
+             * <p>The CIDR block that you want to delete from the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -475,7 +513,10 @@ public class ModifyVpcPrefixListRequest extends Request {
             }
 
             /**
-             * The description of the CIDR block that you want to delete.
+             * <p>The description of the CIDR block that you want to delete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cidr</p>
              */
             public Builder description(String description) {
                 this.description = description;

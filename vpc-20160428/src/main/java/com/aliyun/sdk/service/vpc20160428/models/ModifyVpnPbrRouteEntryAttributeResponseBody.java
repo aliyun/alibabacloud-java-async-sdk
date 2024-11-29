@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpnPbrRouteEntryAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyVpnPbrRouteEntryAttributeResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyVpnPbrRouteEntryAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

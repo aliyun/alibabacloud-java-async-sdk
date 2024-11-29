@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVRoutersRequest} extends {@link RequestModel}
  *
  * <p>DescribeVRoutersRequest</p>
@@ -171,7 +172,10 @@ public class DescribeVRoutersRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -180,7 +184,10 @@ public class DescribeVRoutersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,10 +196,12 @@ public class DescribeVRoutersRequest extends Request {
         }
 
         /**
-         * The region ID of the vRouter that you want to query.
-         * <p>
+         * <p>The region ID of the vRouter that you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -219,7 +228,10 @@ public class DescribeVRoutersRequest extends Request {
         }
 
         /**
-         * The ID of the vRouter.
+         * <p>The ID of the vRouter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1lhl0taikrteen****</p>
          */
         public Builder vRouterId(String vRouterId) {
             this.putQueryParameter("VRouterId", vRouterId);

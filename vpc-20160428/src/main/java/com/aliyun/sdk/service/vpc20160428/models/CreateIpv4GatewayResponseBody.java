@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIpv4GatewayResponseBody} extends {@link TeaModel}
  *
  * <p>CreateIpv4GatewayResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateIpv4GatewayResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The ID of the IPv4 gateway.
+         * <p>The ID of the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
          */
         public Builder ipv4GatewayId(String ipv4GatewayId) {
             this.ipv4GatewayId = ipv4GatewayId;
@@ -69,7 +73,10 @@ public class CreateIpv4GatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F282742B-1BBB-5F63-A3AF-E92EC575A1A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class CreateIpv4GatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

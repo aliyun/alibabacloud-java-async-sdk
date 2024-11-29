@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVSwitchRequest} extends {@link RequestModel}
  *
  * <p>CreateVSwitchRequest</p>
@@ -238,12 +239,16 @@ public class CreateVSwitchRequest extends Request {
         } 
 
         /**
-         * The CIDR block of the vSwitch. Take note of the following limits:
-         * <p>
+         * <p>The CIDR block of the vSwitch. Take note of the following limits:</p>
+         * <ul>
+         * <li>The subnet mask of the CIDR block must be 16 to 29 bits in length.</li>
+         * <li>The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</li>
+         * <li>The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The subnet mask of the CIDR block must be 16 to 29 bits in length.
-         * *   The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.
-         * *   The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.
+         * <strong>example:</strong>
+         * <p>172.16.0.0/24</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -252,12 +257,14 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -266,10 +273,11 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The description of the vSwitch.
-         * <p>
+         * <p>The description of the vSwitch.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>vSwitch</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -278,7 +286,10 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.
+         * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder ipv6CidrBlock(Integer ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -305,10 +316,11 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The region ID of the vSwitch.
-         * <p>
+         * <p>The region ID of the vSwitch.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -335,7 +347,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The tag of the resource.
+         * <p>The tag of the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -344,10 +356,11 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The name of the vSwitch.
-         * <p>
+         * <p>The name of the vSwitch.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>vSwitch-1</p>
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
@@ -356,7 +369,11 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The ID of the VPC where you want to create the vSwitch.
+         * <p>The ID of the VPC where you want to create the vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-257gqcdfvx6n****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -365,7 +382,10 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The IPv6 CIDR block of the VPC.
+         * <p>The IPv6 CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:6a::/56</p>
          */
         public Builder vpcIpv6CidrBlock(String vpcIpv6CidrBlock) {
             this.putQueryParameter("VpcIpv6CidrBlock", vpcIpv6CidrBlock);
@@ -374,10 +394,12 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The zone ID of the vSwitch.
-         * <p>
+         * <p>The zone ID of the vSwitch.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -392,6 +414,12 @@ public class CreateVSwitchRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVSwitchRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVSwitchRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -431,10 +459,11 @@ public class CreateVSwitchRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -442,10 +471,11 @@ public class CreateVSwitchRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length, but cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnhanhcedNatGatewayAvailableZonesResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnhanhcedNatGatewayAvailableZonesResponseBody</p>
@@ -49,7 +50,10 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
         private java.util.List < Zones> zones; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8AE6F367-52EA-535D-9A3D-EF23D70527C8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
         }
 
         /**
-         * The list of zones.
+         * <p>The list of zones.</p>
          */
         public Builder zones(java.util.List < Zones> zones) {
             this.zones = zones;
@@ -70,6 +74,12 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link ListEnhanhcedNatGatewayAvailableZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnhanhcedNatGatewayAvailableZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -109,7 +119,10 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
             private String zoneId; 
 
             /**
-             * The name of the zone.
+             * <p>The name of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dubai Zone A</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -117,7 +130,10 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the zone where the instance is deployed.
+             * <p>The ID of the zone where the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>me-east-1a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

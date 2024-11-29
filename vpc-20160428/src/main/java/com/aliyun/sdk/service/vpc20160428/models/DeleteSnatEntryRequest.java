@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSnatEntryRequest} extends {@link RequestModel}
  *
  * <p>DeleteSnatEntryRequest</p>
@@ -154,12 +155,14 @@ public class DeleteSnatEntryRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -186,10 +189,12 @@ public class DeleteSnatEntryRequest extends Request {
         }
 
         /**
-         * The region ID of the NAT gateway.
-         * <p>
+         * <p>The region ID of the NAT gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +221,11 @@ public class DeleteSnatEntryRequest extends Request {
         }
 
         /**
-         * The ID of the SNAT entry that you want to delete.
+         * <p>The ID of the SNAT entry that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-bp1vcgcf8tm0plqcg****</p>
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -225,7 +234,11 @@ public class DeleteSnatEntryRequest extends Request {
         }
 
         /**
-         * The ID of the SNAT table to which the SNAT entry belongs.
+         * <p>The ID of the SNAT table to which the SNAT entry belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stb-bp190wu8io1vgev80****</p>
          */
         public Builder snatTableId(String snatTableId) {
             this.putQueryParameter("SnatTableId", snatTableId);

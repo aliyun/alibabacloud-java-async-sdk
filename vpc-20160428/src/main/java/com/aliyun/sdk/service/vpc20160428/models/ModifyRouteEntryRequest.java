@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRouteEntryRequest} extends {@link RequestModel}
  *
  * <p>ModifyRouteEntryRequest</p>
@@ -208,10 +209,11 @@ public class ModifyRouteEntryRequest extends Request {
         } 
 
         /**
-         * The description of the route entry.
-         * <p>
+         * <p>The description of the route entry.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>EntryDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -220,7 +222,10 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * <p>The destination CIDR block of the route entry. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -229,7 +234,10 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the new next hop instance.
+         * <p>The ID of the new next hop instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp17y37ytsenqyim****</p>
          */
         public Builder newNextHopId(String newNextHopId) {
             this.putQueryParameter("NewNextHopId", newNextHopId);
@@ -238,7 +246,10 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * The new next hop type of the route.
+         * <p>The new next hop type of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NetworkInterface</p>
          */
         public Builder newNextHopType(String newNextHopType) {
             this.putQueryParameter("NewNextHopType", newNextHopType);
@@ -265,10 +276,12 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the route belongs.
-         * <p>
+         * <p>The ID of the region to which the route belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -295,7 +308,10 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the custom route entry.
+         * <p>The ID of the custom route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rte-acfvgfsghfdd****</p>
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);
@@ -304,10 +320,11 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * The name of the route entry.
-         * <p>
+         * <p>The name of the route entry.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>EntryName</p>
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
@@ -316,7 +333,10 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * <p>The ID of the route table to which the route entry belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1nk7zk65du3pni8z9td</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

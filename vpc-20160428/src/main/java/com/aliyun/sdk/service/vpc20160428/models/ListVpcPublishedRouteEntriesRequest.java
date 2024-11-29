@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcPublishedRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>ListVpcPublishedRouteEntriesRequest</p>
@@ -268,7 +269,10 @@ public class ListVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzd****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -286,7 +290,10 @@ public class ListVpcPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECR</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGlobalAccelerationInstanceAttributesRequest} extends {@link RequestModel}
  *
  * <p>ModifyGlobalAccelerationInstanceAttributesRequest</p>
@@ -153,10 +154,11 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends Request {
         } 
 
         /**
-         * The description of the GA instance.
-         * <p>
+         * <p>The description of the GA instance.</p>
+         * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>My GA</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -165,7 +167,11 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-14fdsf3****</p>
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -174,10 +180,11 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends Request {
         }
 
         /**
-         * The name of the GA instance.
-         * <p>
+         * <p>The name of the GA instance.</p>
+         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>GA-1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -204,10 +211,12 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance.
-         * <p>
+         * <p>The region ID of the GA instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

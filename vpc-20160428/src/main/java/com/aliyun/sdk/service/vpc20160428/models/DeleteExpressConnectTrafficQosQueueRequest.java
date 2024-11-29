@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteExpressConnectTrafficQosQueueRequest} extends {@link RequestModel}
  *
  * <p>DeleteExpressConnectTrafficQosQueueRequest</p>
@@ -167,7 +168,10 @@ public class DeleteExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * QosId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-2giu0a6vd5x0mv4700</p>
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -176,7 +180,10 @@ public class DeleteExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * QueueId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
          */
         public Builder queueId(String queueId) {
             this.putQueryParameter("QueueId", queueId);
@@ -185,7 +192,10 @@ public class DeleteExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

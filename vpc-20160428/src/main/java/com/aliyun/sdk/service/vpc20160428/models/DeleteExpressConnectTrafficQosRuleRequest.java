@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteExpressConnectTrafficQosRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteExpressConnectTrafficQosRuleRequest</p>
@@ -155,10 +156,11 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-00****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -185,7 +187,11 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * The ID of the QoS policy.
+         * <p>The ID of the QoS policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-2giu0a6vd5x0mv4700</p>
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -194,7 +200,11 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * The ID of the QoS queue.
+         * <p>The ID of the QoS queue.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
          */
         public Builder queueId(String queueId) {
             this.putQueryParameter("QueueId", queueId);
@@ -203,10 +213,12 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * The region ID of the QoS policy.
-         * <p>
+         * <p>The region ID of the QoS policy.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -224,7 +236,11 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * The ID of the QoS rule.
+         * <p>The ID of the QoS rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-rule-iugg0l9x27f2nocouj</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

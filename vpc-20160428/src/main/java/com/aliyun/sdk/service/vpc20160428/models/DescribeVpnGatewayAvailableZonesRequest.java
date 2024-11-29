@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpnGatewayAvailableZonesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpnGatewayAvailableZonesRequest</p>
@@ -166,7 +167,10 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +197,10 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
         }
 
         /**
-         * Spec.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5M</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
