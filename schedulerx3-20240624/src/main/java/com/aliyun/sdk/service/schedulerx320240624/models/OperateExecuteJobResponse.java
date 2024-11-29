@@ -1,0 +1,126 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.schedulerx320240624.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link OperateExecuteJobResponse} extends {@link TeaModel}
+ *
+ * <p>OperateExecuteJobResponse</p>
+ */
+public class OperateExecuteJobResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map < String, String > headers;
+
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
+    private OperateExecuteJobResponseBody body;
+
+    private OperateExecuteJobResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static OperateExecuteJobResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public OperateExecuteJobResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<OperateExecuteJobResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(OperateExecuteJobResponseBody body);
+
+        @Override
+        OperateExecuteJobResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<OperateExecuteJobResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
+        private OperateExecuteJobResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(OperateExecuteJobResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(OperateExecuteJobResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public OperateExecuteJobResponse build() {
+            return new OperateExecuteJobResponse(this);
+        } 
+
+    } 
+
+}
