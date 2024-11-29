@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CancelCoupon  CancelCouponRequest
+     * @return CancelCouponResponse
+     */
+    CompletableFuture<CancelCouponResponse> cancelCoupon(CancelCouponRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
      * You can call this operation to cancel the subscription to only one type of bill at a time.
@@ -30,6 +36,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CancelSubscriptionBillResponse
      */
     CompletableFuture<CancelSubscriptionBillResponse> cancelSubscriptionBill(CancelSubscriptionBillRequest request);
+
+    /**
+     * @param request the request parameters of CouponApprovalStatusList  CouponApprovalStatusListRequest
+     * @return CouponApprovalStatusListResponse
+     */
+    CompletableFuture<CouponApprovalStatusListResponse> couponApprovalStatusList(CouponApprovalStatusListRequest request);
 
     /**
      * @param request the request parameters of CreateCouponTemplate  CreateCouponTemplateRequest
@@ -58,6 +70,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeductOutstandingBalanceResponse
      */
     CompletableFuture<DeductOutstandingBalanceResponse> deductOutstandingBalance(DeductOutstandingBalanceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCouponTemplate  DeleteCouponTemplateRequest
+     * @return DeleteCouponTemplateResponse
+     */
+    CompletableFuture<DeleteCouponTemplateResponse> deleteCouponTemplate(DeleteCouponTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -103,6 +121,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAccountInfoResponse
      */
     CompletableFuture<GetAccountInfoResponse> getAccountInfo(GetAccountInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetCouponTemplateDetail  GetCouponTemplateDetailRequest
+     * @return GetCouponTemplateDetailResponse
+     */
+    CompletableFuture<GetCouponTemplateDetailResponse> getCouponTemplateDetail(GetCouponTemplateDetailRequest request);
 
     /**
      * @param request the request parameters of GetCoupondeductProductCode  GetCoupondeductProductCodeRequest

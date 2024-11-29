@@ -98,7 +98,7 @@ public class GetAccountInfoRequest extends Request {
         } 
 
         /**
-         * <p>Message</p>
+         * <p>Pagination, current page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * <p>Success</p>
+         * <p>Pagination, record number on each page, maximum 20.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * <p>10 (Value &lt;= 20)</p>
+         * <p>Account UID of Distribution Customer. This parameter and the UserType parameter must have one filled. If this parameter is empty, then check all Distribution Customer accounts of the selected UserType.</p>
          * 
          * <strong>example:</strong>
          * <p>1215848086704806</p>
@@ -136,13 +136,11 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * <p>Result Code - Error Code. Value Range:</p>
+         * <p>Distribution Customer&quot;s Account Type:</p>
          * <ul>
-         * <li>200 OK</li>
-         * <li>1109 System Error</li>
-         * <li>3029: Invalid UID</li>
-         * <li>3062: UID and UserType are both empty.</li>
-         * <li>3063: UserType value out of range.</li>
+         * <li>1 End User</li>
+         * <li>2 Enterprise</li>
+         * <li>3 T2 Partner</li>
          * </ul>
          * 
          * <strong>example:</strong>
