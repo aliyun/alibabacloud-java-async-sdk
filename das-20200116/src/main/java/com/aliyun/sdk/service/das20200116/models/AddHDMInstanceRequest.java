@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddHDMInstanceRequest} extends {@link RequestModel}
  *
  * <p>AddHDMInstanceRequest</p>
@@ -222,18 +223,21 @@ public class AddHDMInstanceRequest extends Request {
         } 
 
         /**
-         * The database engine. Valid values:
-         * <p>
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * <li><strong>PolarDBMySQL</strong></li>
+         * <li><strong>PolarDBPostgreSQL</strong></li>
+         * <li><strong>Redis</strong></li>
+         * <li><strong>MongoDB</strong></li>
+         * <li><strong>PolarDBOracle</strong></li>
+         * <li><strong>PolarDBX</strong></li>
+         * </ul>
          * 
-         * *   **MySQL**
-         * *   **PostgreSQL**
-         * *   **SQLServer**
-         * *   **PolarDBMySQL**
-         * *   **PolarDBPostgreSQL**
-         * *   **Redis**
-         * *   **MongoDB**
-         * *   **PolarDBOracle**
-         * *   **PolarDBX**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -242,7 +246,10 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder flushAccount(String flushAccount) {
             this.putQueryParameter("FlushAccount", flushAccount);
@@ -251,7 +258,10 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yuecq--test****</p>
          */
         public Builder instanceAlias(String instanceAlias) {
             this.putQueryParameter("InstanceAlias", instanceAlias);
@@ -260,14 +270,19 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The type of the instance on which the database is deployed. Valid values:
-         * <p>
+         * <p>The type of the instance on which the database is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>RDS</strong>: an Alibaba Cloud database instance.</li>
+         * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</li>
+         * <li><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</li>
+         * </ul>
+         * <blockquote>
+         * <p> IDC refers to your data center.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RDS**: an Alibaba Cloud database instance.
-         * *   **ECS**: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.
-         * *   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.
-         * 
-         * >  IDC refers to your data center.
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder instanceArea(String instanceArea) {
             this.putQueryParameter("InstanceArea", instanceArea);
@@ -276,7 +291,10 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -285,7 +303,10 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The endpoint that is used to access the instance over internal networks.
+         * <p>The endpoint that is used to access the instance over internal networks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****.mysql.rds.aliyuncs.com</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -294,7 +315,10 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The network type of the instance.
+         * <p>The network type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -303,7 +327,10 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The password for the username.
+         * <p>The password for the username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122****</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -312,7 +339,10 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The port that is used to access the instance over internal networks.
+         * <p>The port that is used to access the instance over internal networks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -321,7 +351,10 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -330,7 +363,10 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The username that is used to log on to the database.
+         * <p>The username that is used to log on to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test****</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -339,7 +375,10 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) ID.
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-m5e666n89m2bx8jar****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -348,7 +387,10 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder context(String context) {
             this.putQueryParameter("__context", context);

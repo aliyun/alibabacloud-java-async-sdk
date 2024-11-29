@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopCloudBenchTaskResponse} extends {@link TeaModel}
+ * 
+ * {@link CreateLatestDeadLockAnalysisResponse} extends {@link TeaModel}
  *
- * <p>StopCloudBenchTaskResponse</p>
+ * <p>CreateLatestDeadLockAnalysisResponse</p>
  */
-public class StopCloudBenchTaskResponse extends Response {
+public class CreateLatestDeadLockAnalysisResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +19,16 @@ public class StopCloudBenchTaskResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private StopCloudBenchTaskResponseBody body;
+    private CreateLatestDeadLockAnalysisResponseBody body;
 
-    private StopCloudBenchTaskResponse(BuilderImpl builder) {
+    private CreateLatestDeadLockAnalysisResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static StopCloudBenchTaskResponse create() {
+    public static CreateLatestDeadLockAnalysisResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +54,35 @@ public class StopCloudBenchTaskResponse extends Response {
     /**
      * @return body
      */
-    public StopCloudBenchTaskResponseBody getBody() {
+    public CreateLatestDeadLockAnalysisResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<StopCloudBenchTaskResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateLatestDeadLockAnalysisResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(StopCloudBenchTaskResponseBody body);
+        Builder body(CreateLatestDeadLockAnalysisResponseBody body);
 
         @Override
-        StopCloudBenchTaskResponse build();
+        CreateLatestDeadLockAnalysisResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<StopCloudBenchTaskResponse, Builder>
+            extends Response.BuilderImpl<CreateLatestDeadLockAnalysisResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private StopCloudBenchTaskResponseBody body; 
+        private CreateLatestDeadLockAnalysisResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(StopCloudBenchTaskResponse response) {
+        private BuilderImpl(CreateLatestDeadLockAnalysisResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +111,14 @@ public class StopCloudBenchTaskResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(StopCloudBenchTaskResponseBody body) {
+        public Builder body(CreateLatestDeadLockAnalysisResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public StopCloudBenchTaskResponse build() {
-            return new StopCloudBenchTaskResponse(this);
+        public CreateLatestDeadLockAnalysisResponse build() {
+            return new CreateLatestDeadLockAnalysisResponse(this);
         } 
 
     } 

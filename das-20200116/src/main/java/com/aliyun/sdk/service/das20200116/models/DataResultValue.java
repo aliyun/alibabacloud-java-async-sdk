@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataResultValue} extends {@link TeaModel}
  *
  * <p>DataResultValue</p>
@@ -61,7 +62,7 @@ public class DataResultValue extends TeaModel {
         private Integer count; 
 
         /**
-         * The SQL ID.
+         * sqlId.
          */
         public Builder sqlId(String sqlId) {
             this.sqlId = sqlId;
@@ -69,7 +70,7 @@ public class DataResultValue extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -77,7 +78,7 @@ public class DataResultValue extends TeaModel {
         }
 
         /**
-         * The number of failed executions.
+         * count.
          */
         public Builder count(Integer count) {
             this.count = count;

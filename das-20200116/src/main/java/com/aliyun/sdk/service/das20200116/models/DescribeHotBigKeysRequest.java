@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHotBigKeysRequest} extends {@link RequestModel}
  *
  * <p>DescribeHotBigKeysRequest</p>
@@ -82,7 +83,10 @@ public class DescribeHotBigKeysRequest extends Request {
         } 
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -91,7 +95,11 @@ public class DescribeHotBigKeysRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID.
+         * <p>The ID of the ApsaraDB for Redis instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp18ff4a195d****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -100,7 +108,10 @@ public class DescribeHotBigKeysRequest extends Request {
         }
 
         /**
-         * The ID of the data shard on the ApsaraDB for Redis instance. You can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the ID.
+         * <p>The ID of the data shard on the ApsaraDB for Redis instance. You can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-****-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

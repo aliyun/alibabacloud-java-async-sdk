@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFullRequestOriginStatByInstanceIdRequest} extends {@link RequestModel}
  *
  * <p>GetFullRequestOriginStatByInstanceIdRequest</p>
@@ -198,7 +199,10 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends Request {
         } 
 
         /**
-         * Specifies whether to sort the results in ascending order. By default, the results are not sorted in ascending order.
+         * <p>Specifies whether to sort the results in ascending order. By default, the results are not sorted in ascending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder asc(Boolean asc) {
             this.putQueryParameter("Asc", asc);
@@ -207,10 +211,14 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
+         * <strong>example:</strong>
+         * <p>1644803409000</p>
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -219,7 +227,11 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -228,10 +240,13 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> This parameter must be specified if the database instance is a PolarDB for MySQL cluster.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified if the database instance is a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>pi-bp12v7243x012****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -240,15 +255,18 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends Request {
         }
 
         /**
-         * The field by which the results to be returned are sorted. Default value: **count**. Valid values:
-         * <p>
+         * <p>The field by which the results to be returned are sorted. Default value: <strong>count</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>count</strong>: the number of executions.</li>
+         * <li><strong>avgRt</strong>: the average execution duration.</li>
+         * <li><strong>rtRate</strong>: the execution duration percentage.</li>
+         * <li><strong>rowsExamined</strong>: the total number of scanned rows.</li>
+         * <li><strong>avgRowsExamined</strong>: the average number of scanned rows.</li>
+         * <li><strong>avgRowsReturned</strong>: the average number of returned rows.</li>
+         * </ul>
          * 
-         * *   **count**: the number of executions.
-         * *   **avgRt**: the average execution duration.
-         * *   **rtRate**: the execution duration percentage.
-         * *   **rowsExamined**: the total number of scanned rows.
-         * *   **avgRowsExamined**: the average number of scanned rows.
-         * *   **avgRowsReturned**: the average number of returned rows.
+         * <strong>example:</strong>
+         * <p>count</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -257,7 +275,11 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -266,7 +288,11 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -275,11 +301,14 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends Request {
         }
 
         /**
-         * The role of the PolarDB-X 2.0 node. Valid values:
-         * <p>
+         * <p>The role of the PolarDB-X 2.0 node. Valid values:</p>
+         * <ul>
+         * <li><strong>polarx_cn</strong>: compute node.</li>
+         * <li><strong>polarx_en</strong>: data node.</li>
+         * </ul>
          * 
-         * *   **polarx_cn**: compute node.
-         * *   **polarx_en**: data node.
+         * <strong>example:</strong>
+         * <p>polarx_cn</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -288,10 +317,13 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends Request {
         }
 
         /**
-         * The type of the SQL statement. Valid values: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **LOGIN**, **LOGOUT**, **MERGE**, **ALTER**, **CREATEINDEX**, **DROPINDEX**, **CREATE**, **DROP**, **SET**, **DESC**, **REPLACE**, **CALL**, **BEGIN**, **DESCRIBE**, **ROLLBACK**, **FLUSH**, **USE**, **SHOW**, **START**, **COMMIT**, and **RENAME**.
-         * <p>
+         * <p>The type of the SQL statement. Valid values: <strong>SELECT</strong>, <strong>INSERT</strong>, <strong>UPDATE</strong>, <strong>DELETE</strong>, <strong>MERGE</strong>, <strong>ALTER</strong>, <strong>CREATEINDEX</strong>, <strong>DROPINDEX</strong>, <strong>CREATE</strong>, <strong>DROP</strong>, <strong>SET</strong>, <strong>DESC</strong>, <strong>REPLACE</strong>, <strong>CALL</strong>, <strong>BEGIN</strong>, <strong>DESCRIBE</strong>, <strong>ROLLBACK</strong>, <strong>FLUSH</strong>, <strong>USE</strong>, <strong>SHOW</strong>, <strong>START</strong>, <strong>COMMIT</strong>, and <strong>RENAME</strong>.</p>
+         * <blockquote>
+         * <p> If the database instance is an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL instance, or a PolarDB-X 2.0 instance, statistics can be collected based on the SQL statement type.</p>
+         * </blockquote>
          * 
-         * >  If the database instance is an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, or a PolarDB-X 2.0 instance, the statistics can be collected based on the SQL statement type.
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder sqlType(String sqlType) {
             this.putQueryParameter("SqlType", sqlType);
@@ -300,10 +332,14 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The start time must be within the storage duration of the SQL Explorer of the database instance, and can be up to 90 days earlier than the current time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The start time must be within the storage duration of the SQL Explorer of the database instance, and can be up to 90 days earlier than the current time.
+         * <strong>example:</strong>
+         * <p>1644716649000</p>
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);
@@ -312,10 +348,13 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used to create the database instance.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+         * <blockquote>
+         * <p> This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+         * </blockquote>
          * 
-         * >  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.
+         * <strong>example:</strong>
+         * <p>196278346919****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

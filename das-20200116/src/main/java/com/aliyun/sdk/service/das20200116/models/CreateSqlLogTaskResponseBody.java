@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSqlLogTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSqlLogTaskResponseBody</p>
@@ -85,7 +86,10 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, error information such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, error information such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83D9D59B-057A-54A9-BFF9-CF2B42F05645</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSqlLogTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSqlLogTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -236,7 +255,10 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The time when the task was created. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the task was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1681363254423</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -244,7 +266,10 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1608888296000</p>
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -252,7 +277,10 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database instance.
+             * <p>The ID of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-2ze8g2am97624****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -260,7 +288,10 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Export_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -268,7 +299,10 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1596177993000</p>
              */
             public Builder start(Long start) {
                 this.start = start;
@@ -276,16 +310,20 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the task. Valid values:
-             * <p>
+             * <p>The state of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is to be scheduled.</li>
+             * <li><strong>RUNNING</strong>: The task is running.</li>
+             * <li><strong>FAILED</strong>: The task failed.</li>
+             * <li><strong>CANCELED</strong>: The task is canceled.</li>
+             * <li><strong>COMPLETED</strong>: The task is complete.</li>
+             * </ul>
+             * <blockquote>
+             * <p> You can view the result of a task that is in the <strong>COMPLETED</strong> state.</p>
+             * </blockquote>
              * 
-             * *   **INIT**: The task is to be scheduled.
-             * *   **RUNNING**: The task is running.
-             * *   **FAILED**: The task failed.
-             * *   **CANCELED**: The task is canceled.
-             * *   **COMPLETED**: The task is complete.
-             * 
-             * >  You can view the result of a task that is in the **COMPLETED** state.
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -293,7 +331,10 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54f8041743ca3a9ac5cb9342d050527c</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

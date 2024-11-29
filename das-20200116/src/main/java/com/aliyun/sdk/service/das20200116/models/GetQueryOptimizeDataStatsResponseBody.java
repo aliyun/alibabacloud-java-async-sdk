@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryOptimizeDataStatsResponseBody} extends {@link TeaModel}
  *
  * <p>GetQueryOptimizeDataStatsResponseBody</p>
@@ -85,7 +86,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQueryOptimizeDataStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeDataStatsResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -173,7 +192,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The rule name.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAS_NOT_IMPORTANT</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -181,11 +203,14 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>Predefined</strong></li>
+             * <li><strong>UserDefined</strong></li>
+             * </ul>
              * 
-             * * **Predefined**
-             * * **UserDefined**
+             * <strong>example:</strong>
+             * <p>Predefined</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -199,6 +224,12 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQueryOptimizeDataStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeDataStatsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgLockTime")
         private Double avgLockTime;
@@ -442,7 +473,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The average lock wait time. Unit: seconds.
+             * <p>The average lock wait time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder avgLockTime(Double avgLockTime) {
                 this.avgLockTime = avgLockTime;
@@ -450,7 +484,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The average query execution time. Unit: seconds.
+             * <p>The average query execution time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1</p>
              */
             public Builder avgQueryTime(Double avgQueryTime) {
                 this.avgQueryTime = avgQueryTime;
@@ -458,10 +495,13 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of rows affected by the SQL statement.
-             * <p>
+             * <p>The average number of rows affected by the SQL statement.</p>
+             * <blockquote>
+             * <p>A value of -1 indicates that this parameter is not collected.</p>
+             * </blockquote>
              * 
-             * > A value of -1 indicates that this parameter is not collected.
+             * <strong>example:</strong>
+             * <p>100.1</p>
              */
             public Builder avgRowsAffected(Double avgRowsAffected) {
                 this.avgRowsAffected = avgRowsAffected;
@@ -469,7 +509,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of scanned rows.
+             * <p>The average number of scanned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.1</p>
              */
             public Builder avgRowsExamined(Double avgRowsExamined) {
                 this.avgRowsExamined = avgRowsExamined;
@@ -477,7 +520,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of returned rows.
+             * <p>The average number of returned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.1</p>
              */
             public Builder avgRowsSent(Double avgRowsSent) {
                 this.avgRowsSent = avgRowsSent;
@@ -485,7 +531,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the SQL template is executed.
+             * <p>The number of times that the SQL template is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -493,7 +542,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database to which the SQL template belongs.
+             * <p>The name of the database to which the SQL template belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb01</p>
              */
             public Builder dbname(String dbname) {
                 this.dbname = dbname;
@@ -501,7 +553,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze8g2am97624****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -509,7 +564,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The longest lock wait time. Unit: seconds.
+             * <p>The longest lock wait time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder maxLockTime(Double maxLockTime) {
                 this.maxLockTime = maxLockTime;
@@ -517,7 +575,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The longest query execution time. Unit: seconds.
+             * <p>The longest query execution time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1</p>
              */
             public Builder maxQueryTime(Double maxQueryTime) {
                 this.maxQueryTime = maxQueryTime;
@@ -525,10 +586,13 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The largest number of rows affected by the SQL template.
-             * <p>
+             * <p>The largest number of rows affected by the SQL template.</p>
+             * <blockquote>
+             * <p>A value of -1 indicates that this parameter is not collected.</p>
+             * </blockquote>
              * 
-             * > A value of -1 indicates that this parameter is not collected.
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder maxRowsAffected(Long maxRowsAffected) {
                 this.maxRowsAffected = maxRowsAffected;
@@ -536,7 +600,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The largest number of scanned rows.
+             * <p>The largest number of scanned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder maxRowsExamined(Long maxRowsExamined) {
                 this.maxRowsExamined = maxRowsExamined;
@@ -544,7 +611,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The largest number of returned rows.
+             * <p>The largest number of returned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder maxRowsSent(Long maxRowsSent) {
                 this.maxRowsSent = maxRowsSent;
@@ -552,7 +622,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL template.
+             * <p>The SQL template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select 1</p>
              */
             public Builder psql(String psql) {
                 this.psql = psql;
@@ -560,7 +633,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the rules.
+             * <p>The information about the rules.</p>
              */
             public Builder ruleList(java.util.List < RuleList> ruleList) {
                 this.ruleList = ruleList;
@@ -568,7 +641,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL template ID.
+             * <p>The SQL template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2e8147b5ca2dfc640dfd5e43d96a****</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -576,7 +652,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The sample query that took the longest time to execute.
+             * <p>The sample query that took the longest time to execute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select 2</p>
              */
             public Builder sqlSample(String sqlSample) {
                 this.sqlSample = sqlSample;
@@ -584,7 +663,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement.
+             * <p>The type of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSERT</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -592,7 +674,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The account of the database.
+             * <p>The account of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testUser</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -606,6 +691,12 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQueryOptimizeDataStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeDataStatsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
@@ -681,7 +772,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -689,7 +783,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the SQL templates.
+             * <p>The information about the SQL templates.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -697,7 +791,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -705,7 +802,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -713,7 +813,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder total(Long total) {
                 this.total = total;

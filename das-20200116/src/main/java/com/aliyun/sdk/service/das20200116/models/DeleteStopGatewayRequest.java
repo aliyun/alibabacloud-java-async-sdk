@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteStopGatewayRequest} extends {@link RequestModel}
  *
  * <p>DeleteStopGatewayRequest</p>
@@ -54,7 +55,11 @@ public class DeleteStopGatewayRequest extends Request {
         } 
 
         /**
-         * The ID that can uniquely identify the DBGateway. You can obtain the DBGateway ID by calling the [DescribeCloudbenchTask](~~230669~~) operation. The DBGateway ID is the value of the **ClientGatewayId** field in the response.
+         * <p>The ID that can uniquely identify the DBGateway. You can obtain the DBGateway ID by calling the <a href="https://help.aliyun.com/document_detail/230669.html">DescribeCloudbenchTask</a> operation. The DBGateway ID is the value of the <strong>ClientGatewayId</strong> field in the response.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22938c83fcfbced4b4869b9695e3****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);

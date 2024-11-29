@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryOptimizeExecErrorStatsRequest} extends {@link RequestModel}
  *
  * <p>GetQueryOptimizeExecErrorStatsRequest</p>
@@ -197,11 +198,14 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to sort the returned entries in ascending order. Default value: **true**. Valid values:
-         * <p>
+         * <p>Specifies whether to sort the returned entries in ascending order. Default value: <strong>true</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: sorts the returned entries in ascending order.</li>
+         * <li><strong>false</strong>: does not sort the returned entries in ascending order.</li>
+         * </ul>
          * 
-         * *   **true**: sorts the returned entries in ascending order.
-         * *   **false**: does not sort the returned entries in ascending order.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder asc(String asc) {
             this.putQueryParameter("Asc", asc);
@@ -210,7 +214,10 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * The name of the database to be queried.
+         * <p>The name of the database to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb01</p>
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -219,12 +226,16 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * The database engine. Valid values:
-         * <p>
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PolarDBMySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**
-         * *   **PolarDBMySQL**
-         * *   **PostgreSQL**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -233,7 +244,10 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * The instance IDs. Separate multiple IDs with commas (,).
+         * <p>The instance IDs. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -242,7 +256,10 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * The keywords of the SQL template. Separate multiple keywords with spaces.
+         * <p>The keywords of the SQL template. Separate multiple keywords with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select update</p>
          */
         public Builder keywords(String keywords) {
             this.putQueryParameter("Keywords", keywords);
@@ -251,11 +268,14 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * The logical relationship between multiple keywords. Valid values:
-         * <p>
+         * <p>The logical relationship between multiple keywords. Valid values:</p>
+         * <ul>
+         * <li><strong>or</strong></li>
+         * <li><strong>and</strong></li>
+         * </ul>
          * 
-         * *   **or**
-         * *   **and**
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder logicalOperator(String logicalOperator) {
             this.putQueryParameter("LogicalOperator", logicalOperator);
@@ -264,7 +284,10 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * The field by which to sort the returned entries. Only error_count is supported, which specifies that the entries are sorted based on the number of failed executions.
+         * <p>The field by which to sort the returned entries. Only error_count is supported, which specifies that the entries are sorted based on the number of failed executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error_count</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -273,7 +296,11 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -282,7 +309,11 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -291,16 +322,19 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * The region in which the instance resides. Valid values:
-         * <p>
+         * <p>The region in which the instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-china</strong>: Chinese mainland</li>
+         * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * </ul>
+         * <p>This parameter takes effect only if <strong>InstanceIds</strong> is left empty. If you leave <strong>InstanceIds</strong> empty, the system obtains data from the region set by <strong>Region</strong>. By default, Region is set to <strong>cn-china</strong>. If you specify <strong>InstanceIds</strong>, <strong>Region</strong> does not take effect and the system obtains data from the region in which the first specified instance resides.****</p>
+         * <blockquote>
+         * <p> Set this parameter to <strong>cn-china</strong> for the instances that are created in the regions in the Chinese mainland.</p>
+         * </blockquote>
          * 
-         * *   **cn-china**: Chinese mainland
-         * *   **cn-hongkong**: China (Hong Kong)
-         * *   **ap-southeast-1**: Singapore
-         * 
-         * This parameter takes effect only if **InstanceIds** is left empty. If you leave **InstanceIds** empty, the system obtains data from the region set by **Region**. By default, Region is set to **cn-china**. If you specify **InstanceIds**, **Region** does not take effect and the system obtains data from the region in which the first specified instance resides.****
-         * 
-         * >  Set this parameter to **cn-china** for the instances that are created in the regions in the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-china</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -309,7 +343,11 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * The time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+         * <p>The time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642953600000</p>
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);

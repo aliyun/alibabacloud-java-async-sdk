@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMySQLAllSessionAsyncResponseBody} extends {@link TeaModel}
  *
  * <p>GetMySQLAllSessionAsyncResponseBody</p>
@@ -85,7 +86,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMySQLAllSessionAsyncResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMySQLAllSessionAsyncResponseBody</p>
+     */
     public static class ClientStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
@@ -212,10 +231,13 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private java.util.List < String > userList; 
 
             /**
-             * The number of active sessions that belong to the client IP address.
-             * <p>
+             * <p>The number of active sessions that belong to the client IP address.</p>
+             * <blockquote>
+             * <p> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+             * </blockquote>
              * 
-             * >  If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -223,7 +245,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +256,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the sessions that belong to the client IP address.
+             * <p>The IDs of the sessions that belong to the client IP address.</p>
              */
             public Builder threadIdList(java.util.List < Long > threadIdList) {
                 this.threadIdList = threadIdList;
@@ -239,7 +264,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of sessions that belong to the client IP address.
+             * <p>The total number of sessions that belong to the client IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -247,7 +275,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The database accounts to which the sessions belong.
+             * <p>The database accounts to which the sessions belong.</p>
              */
             public Builder userList(java.util.List < String > userList) {
                 this.userList = userList;
@@ -261,6 +289,12 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMySQLAllSessionAsyncResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMySQLAllSessionAsyncResponseBody</p>
+     */
     public static class DbStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
@@ -336,10 +370,13 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private java.util.List < String > userList; 
 
             /**
-             * The number of active sessions of the database.
-             * <p>
+             * <p>The number of active sessions of the database.</p>
+             * <blockquote>
+             * <p> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+             * </blockquote>
              * 
-             * >  If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -347,7 +384,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbTest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -355,7 +395,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the sessions of the database.
+             * <p>The IDs of the sessions of the database.</p>
              */
             public Builder threadIdList(java.util.List < Long > threadIdList) {
                 this.threadIdList = threadIdList;
@@ -363,7 +403,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of sessions of the database.
+             * <p>The total number of sessions of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -371,7 +414,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The database accounts to which the sessions belong.
+             * <p>The database accounts to which the sessions belong.</p>
              */
             public Builder userList(java.util.List < String > userList) {
                 this.userList = userList;
@@ -385,6 +428,12 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMySQLAllSessionAsyncResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMySQLAllSessionAsyncResponseBody</p>
+     */
     public static class SessionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Client")
         private String client;
@@ -544,7 +593,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private String userClientAlias; 
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX</p>
              */
             public Builder client(String client) {
                 this.client = client;
@@ -552,7 +604,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the command executed in the session.
+             * <p>The type of the command executed in the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -560,7 +615,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbTest</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -568,7 +626,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The session ID.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14521783</p>
              */
             public Builder sessionId(Long sessionId) {
                 this.sessionId = sessionId;
@@ -576,10 +637,13 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL template ID.
-             * <p>
+             * <p>The SQL template ID.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when you use a PolarDB-X 2.0 instance.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when you use a PolarDB-X 2.0 instance.
+             * <strong>example:</strong>
+             * <p>a7cac1a9</p>
              */
             public Builder sqlTemplateId(String sqlTemplateId) {
                 this.sqlTemplateId = sqlTemplateId;
@@ -587,7 +651,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement executed in the session.
+             * <p>The SQL statement executed in the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSERT INTO ...</p>
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -595,7 +662,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the session.
+             * <p>The status of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>starting</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -603,7 +673,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration of the session. Unit: seconds.
+             * <p>The execution duration of the session. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -611,7 +684,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the transaction. Unit: seconds.
+             * <p>The duration of the transaction. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder trxDuration(Long trxDuration) {
                 this.trxDuration = trxDuration;
@@ -619,7 +695,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transaction to which the session belongs.
+             * <p>The ID of the transaction to which the session belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>754300775132</p>
              */
             public Builder trxId(String trxId) {
                 this.trxId = trxId;
@@ -627,7 +706,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the database account.
+             * <p>The username of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testUser</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -635,7 +717,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the IP address of the client.
+             * <p>The alias of the IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master-shanghai</p>
              */
             public Builder userClientAlias(String userClientAlias) {
                 this.userClientAlias = userClientAlias;
@@ -649,6 +734,12 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMySQLAllSessionAsyncResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMySQLAllSessionAsyncResponseBody</p>
+     */
     public static class UserStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
@@ -724,10 +815,13 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private java.util.List < String > userList; 
 
             /**
-             * The number of active sessions within the account.
-             * <p>
+             * <p>The number of active sessions within the account.</p>
+             * <blockquote>
+             * <p> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+             * </blockquote>
              * 
-             * >  If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -735,7 +829,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The database account.
+             * <p>The database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testUser</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -743,7 +840,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the sessions within the account.
+             * <p>The IDs of the sessions within the account.</p>
              */
             public Builder threadIdList(java.util.List < Long > threadIdList) {
                 this.threadIdList = threadIdList;
@@ -751,7 +848,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of sessions within the account.
+             * <p>The total number of sessions within the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -759,7 +859,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The database accounts to which the sessions belong.
+             * <p>The database accounts to which the sessions belong.</p>
              */
             public Builder userList(java.util.List < String > userList) {
                 this.userList = userList;
@@ -773,6 +873,12 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMySQLAllSessionAsyncResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMySQLAllSessionAsyncResponseBody</p>
+     */
     public static class SessionData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveSessionCount")
         private Long activeSessionCount;
@@ -884,7 +990,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private java.util.List < UserStats> userStats; 
 
             /**
-             * The total number of active sessions.
+             * <p>The total number of active sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder activeSessionCount(Long activeSessionCount) {
                 this.activeSessionCount = activeSessionCount;
@@ -892,7 +1001,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The sessions that are counted by client IP address.
+             * <p>The sessions that are counted by client IP address.</p>
              */
             public Builder clientStats(java.util.List < ClientStats> clientStats) {
                 this.clientStats = clientStats;
@@ -900,7 +1009,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The sessions that are counted by database.
+             * <p>The sessions that are counted by database.</p>
              */
             public Builder dbStats(java.util.List < DbStats> dbStats) {
                 this.dbStats = dbStats;
@@ -908,7 +1017,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum execution duration of an active session. Unit: seconds.
+             * <p>The maximum execution duration of an active session. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder maxActiveTime(Long maxActiveTime) {
                 this.maxActiveTime = maxActiveTime;
@@ -916,7 +1028,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The sessions.
+             * <p>The sessions.</p>
              */
             public Builder sessionList(java.util.List < SessionList> sessionList) {
                 this.sessionList = sessionList;
@@ -924,7 +1036,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the session was queried. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the session was queried. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659581514000020</p>
              */
             public Builder timeStamp(Long timeStamp) {
                 this.timeStamp = timeStamp;
@@ -932,7 +1047,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of sessions.
+             * <p>The total number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>988</p>
              */
             public Builder totalSessionCount(Long totalSessionCount) {
                 this.totalSessionCount = totalSessionCount;
@@ -940,7 +1058,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The sessions that are counted by database account.
+             * <p>The sessions that are counted by database account.</p>
              */
             public Builder userStats(java.util.List < UserStats> userStats) {
                 this.userStats = userStats;
@@ -954,6 +1072,12 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMySQLAllSessionAsyncResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMySQLAllSessionAsyncResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Complete")
         private Boolean complete;
@@ -1053,11 +1177,14 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * Indicates whether the asynchronous request was complete. Valid values:
-             * <p>
+             * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder complete(Boolean complete) {
                 this.complete = complete;
@@ -1065,11 +1192,14 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the asynchronous request failed. Valid values:
-             * <p>
+             * <p>Indicates whether the asynchronous request failed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fail(Boolean fail) {
                 this.fail = fail;
@@ -1077,11 +1207,14 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the asynchronous request was complete. Valid values:
-             * <p>
+             * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFinish(Boolean isFinish) {
                 this.isFinish = isFinish;
@@ -1089,7 +1222,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asynchronous request.
+             * <p>The ID of the asynchronous request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>async__507044db6c4eadfa2dab9b084e80****</p>
              */
             public Builder resultId(String resultId) {
                 this.resultId = resultId;
@@ -1097,7 +1233,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The session data.
+             * <p>The session data.</p>
              */
             public Builder sessionData(SessionData sessionData) {
                 this.sessionData = sessionData;
@@ -1105,12 +1241,15 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the asynchronous request. Valid values:
-             * <p>
+             * <p>The state of the asynchronous request. Valid values:</p>
+             * <ul>
+             * <li><strong>RUNNING</strong></li>
+             * <li><strong>SUCCESS</strong></li>
+             * <li><strong>FAIL</strong></li>
+             * </ul>
              * 
-             * *   **RUNNING**
-             * *   **SUCCESS**
-             * *   **FAIL**
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1118,7 +1257,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1660100753556</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

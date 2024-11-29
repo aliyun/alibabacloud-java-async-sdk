@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceInspectionsResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceInspectionsResponseBody</p>
@@ -85,7 +86,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The details.
+         * <p>The details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceInspectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceInspectionsResponseBody</p>
+     */
     public static class AutoFunction extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoIndex")
         private Integer autoIndex;
@@ -212,12 +231,15 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             private Integer eventSubscription; 
 
             /**
-             * Indicates whether the feature of automatically creating and deleting indexes is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the feature of automatically creating and deleting indexes is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * <li><strong>2</strong>: not supported.</li>
+             * </ul>
              * 
-             * *   **0**: disabled.
-             * *   **1**: enabled.
-             * *   **2**: not supported.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder autoIndex(Integer autoIndex) {
                 this.autoIndex = autoIndex;
@@ -225,12 +247,15 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic throttling feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic throttling feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * <li><strong>2</strong>: not supported.</li>
+             * </ul>
              * 
-             * *   **0**: disabled.
-             * *   **1**: enabled.
-             * *   **2**: not supported.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder autoLimitedSql(Integer autoLimitedSql) {
                 this.autoLimitedSql = autoLimitedSql;
@@ -238,12 +263,15 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic fragment recycling feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * <li><strong>2</strong>: not supported.</li>
+             * </ul>
              * 
-             * *   **0**: disabled.
-             * *   **1**: enabled.
-             * *   **2**: not supported.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder autoResourceOptimize(Integer autoResourceOptimize) {
                 this.autoResourceOptimize = autoResourceOptimize;
@@ -251,12 +279,15 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the auto scaling feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the auto scaling feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * <li><strong>2</strong>: not supported.</li>
+             * </ul>
              * 
-             * *   **0**: disabled.
-             * *   **1**: enabled.
-             * *   **2**: not supported.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder autoScale(Integer autoScale) {
                 this.autoScale = autoScale;
@@ -264,12 +295,15 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the event subscription feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the event subscription feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * <li><strong>2</strong>: not supported.</li>
+             * </ul>
              * 
-             * *   **0**: disabled.
-             * *   **1**: enabled.
-             * *   **2**: not supported.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder eventSubscription(Integer eventSubscription) {
                 this.eventSubscription = eventSubscription;
@@ -283,6 +317,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceInspectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceInspectionsResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -490,7 +530,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The account ID. You can view the ID of the logon account by moving the pointer over the profile in the Alibaba Cloud management console.
+             * <p>The account ID. You can view the ID of the logon account by moving the pointer over the profile in the Alibaba Cloud management console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>108398049688****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -498,11 +541,14 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection mode of the instance. Valid values:
-             * <p>
+             * <p>The connection mode of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>standard</strong>: standard mode.</li>
+             * <li><strong>safe</strong>: database proxy mode.</li>
+             * </ul>
              * 
-             * *   **standard**: standard mode.
-             * *   **safe**: database proxy mode.
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -510,7 +556,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU specification of the instance. For example, if a value of 8 is returned, the instance has eight CPU cores.
+             * <p>The CPU specification of the instance. For example, if a value of 8 is returned, the instance has eight CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -518,12 +567,15 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine. Valid values:
-             * <p>
+             * <p>The database engine. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>Redis</strong></li>
+             * <li><strong>PolarDBMySQL</strong></li>
+             * </ul>
              * 
-             * *   **MySQL**
-             * *   **Redis**
-             * *   **PolarDBMySQL**
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -531,7 +583,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the database engine.
+             * <p>The version number of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -539,7 +594,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-01</p>
              */
             public Builder instanceAlias(String instanceAlias) {
                 this.instanceAlias = instanceAlias;
@@ -547,14 +605,18 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance on which the database is deployed. Valid values:
-             * <p>
+             * <p>The type of the instance on which the database is deployed. Valid values:</p>
+             * <ul>
+             * <li><strong>RDS</strong>: an Alibaba Cloud database instance.</li>
+             * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</li>
+             * <li><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The value IDC indicates that the instance is deployed in a data center.</p>
+             * </blockquote>
              * 
-             * *   **RDS**: an Alibaba Cloud database instance.
-             * *   **ECS**: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.
-             * *   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.
-             * 
-             * >  The value IDC indicates that the instance is deployed in a data center.
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceArea(String instanceArea) {
                 this.instanceArea = instanceArea;
@@ -562,7 +624,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds.mysql.s2.xlarge</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -570,7 +635,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp10usoc1erj7****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -578,7 +646,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory capacity of the database that is deployed on the instance. Unit: MB.
+             * <p>The memory capacity of the database that is deployed on the instance. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32768</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -586,7 +657,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the instance.
+             * <p>The network type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -594,7 +668,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node on the instance.
+             * <p>The ID of the node on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp10usoc1erj7****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -602,7 +679,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -610,7 +690,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage space of the instance. Unit: GB.
+             * <p>The storage space of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -618,7 +701,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the instance.
+             * <p>The unique identifier of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdm_3063db6792965c080a4bcb6e6304****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -626,7 +712,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) in which the instance is deployed.
+             * <p>The ID of the virtual private cloud (VPC) in which the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1knt7m55z9exoo7****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -640,6 +729,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceInspectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceInspectionsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoFunction")
         private AutoFunction autoFunction;
@@ -787,7 +882,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             private Integer taskType; 
 
             /**
-             * Indicates whether the autonomy service is enabled.
+             * <p>Indicates whether the autonomy service is enabled.</p>
              */
             public Builder autoFunction(AutoFunction autoFunction) {
                 this.autoFunction = autoFunction;
@@ -795,7 +890,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The data returned.
+             * <p>The data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;data&quot;: { &quot;hasDeadLock&quot;: false, &quot;exceptionTableMap&quot;: {}, &quot;bigTransactionCount&quot;: 0, &quot;cpu&quot;: 4, &quot;isRds&quot;: true, &quot;rdsEnable&quot;: true, &quot;enable&quot;: false, &quot;activeSessions&quot;: [], &quot;bigTransactionList&quot;: [], &quot;bigSessionList&quot;: [ { &quot;blockDuration&quot;: 0, &quot;active&quot;: false, &quot;Time&quot;: 0, &quot;db&quot;: &quot;&quot; },</p>
              */
             public Builder data(java.util.Map < String, ? > data) {
                 this.data = data;
@@ -803,12 +901,15 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DAS Enterprise Edition is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * <li><strong>2</strong>: not supported.</li>
+             * </ul>
              * 
-             * *   **0**: disabled.
-             * *   **1**: enabled.
-             * *   **2**: not supported.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enableDasPro(Integer enableDasPro) {
                 this.enableDasPro = enableDasPro;
@@ -816,10 +917,13 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-             * <p>
+             * <p>The end time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <blockquote>
+             * <p> The end time must be later than the start time.</p>
+             * </blockquote>
              * 
-             * >  The end time must be later than the start time.
+             * <strong>example:</strong>
+             * <p>1608888296001</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -827,7 +931,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1603247192000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -835,7 +942,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the instance.
+             * <p>The information about the instance.</p>
              */
             public Builder instance(Instance instance) {
                 this.instance = instance;
@@ -843,7 +950,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The inspection score of the instance.
+             * <p>The inspection score of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -851,7 +961,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The scores that are deducted for the instance.
+             * <p>The scores that are deducted for the instance.</p>
              */
             public Builder scoreMap(java.util.Map < String, ? > scoreMap) {
                 this.scoreMap = scoreMap;
@@ -859,7 +969,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the inspection and scoring task. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The start time of the inspection and scoring task. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1608888296000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -867,12 +980,15 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the inspection and scoring task. Valid values:
-             * <p>
+             * <p>The state of the inspection and scoring task. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The task is waiting for execution.</li>
+             * <li><strong>1</strong>: The task is in progress.</li>
+             * <li><strong>2</strong>: The task is complete.</li>
+             * </ul>
              * 
-             * *   **0**: The task is waiting for execution.
-             * *   **1**: The task is in progress.
-             * *   **2**: The task is complete.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder state(Integer state) {
                 this.state = state;
@@ -880,11 +996,14 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the inspection and scoring task was initiated. Valid values:
-             * <p>
+             * <p>The mode in which the inspection and scoring task was initiated. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: automatic mode.</li>
+             * <li><strong>1</strong>: manual mode.</li>
+             * </ul>
              * 
-             * *   **0**: automatic mode.
-             * *   **1**: manual mode.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;
@@ -898,6 +1017,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceInspectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceInspectionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
@@ -961,7 +1086,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The detailed information.
+             * <p>The detailed information.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -969,7 +1094,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number. The value returned is a positive integer. Default value: 1.
+             * <p>The page number. The value returned is a positive integer. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -977,7 +1105,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 10.
+             * <p>The number of entries per page. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -985,7 +1116,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder total(Long total) {
                 this.total = total;

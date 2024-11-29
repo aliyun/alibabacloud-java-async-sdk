@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStorageAnalysisResultRequest} extends {@link RequestModel}
  *
  * <p>GetStorageAnalysisResultRequest</p>
@@ -83,7 +84,11 @@ public class GetStorageAnalysisResultRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp10xxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,10 +97,13 @@ public class GetStorageAnalysisResultRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> This parameter is reserved.</p>
+         * </blockquote>
          * 
-         * >  This parameter is reserved.
+         * <strong>example:</strong>
+         * <p>202****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -104,7 +112,11 @@ public class GetStorageAnalysisResultRequest extends Request {
         }
 
         /**
-         * The task ID. You can obtain the task ID from the response of the [CreateStorageAnalysisTask](~~2639140~~) operation.
+         * <p>The task ID. You can obtain the task ID from the response of the <a href="https://help.aliyun.com/document_detail/2639140.html">CreateStorageAnalysisTask</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>910f83f4b96df0524ddc5749f615****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

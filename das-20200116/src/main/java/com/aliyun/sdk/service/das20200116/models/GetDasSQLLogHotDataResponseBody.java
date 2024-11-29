@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDasSQLLogHotDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetDasSQLLogHotDataResponseBody</p>
@@ -85,7 +86,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * > If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A74B755-98B7-59DB-8724-1321B394****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDasSQLLogHotDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDasSQLLogHotDataResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
@@ -380,7 +399,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             private Long updateRows; 
 
             /**
-             * The account of the database.
+             * <p>The account of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuser</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -388,7 +410,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDB</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -396,7 +421,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The execution time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The execution time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-23 T12:11:20Z</p>
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -404,7 +432,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information. This parameter is a reserved parameter.
+             * <p>The extended information. This parameter is a reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder ext(String ext) {
                 this.ext = ext;
@@ -412,7 +443,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -420,7 +454,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration. Unit: microseconds.
+             * <p>The execution duration. Unit: microseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder latancy(Long latancy) {
                 this.latancy = latancy;
@@ -428,7 +465,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The lock wait duration. Unit: microseconds.
+             * <p>The lock wait duration. Unit: microseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lockTime(Long lockTime) {
                 this.lockTime = lockTime;
@@ -436,7 +476,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logical reads.
+             * <p>The number of logical reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder logicRead(Long logicRead) {
                 this.logicRead = logicRead;
@@ -444,7 +487,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The execution time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The execution time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-23 T12:11:20.999Z</p>
              */
             public Builder originTime(String originTime) {
                 this.originTime = originTime;
@@ -452,7 +498,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical asynchronous reads.
+             * <p>The number of physical asynchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicAsyncRead(Long physicAsyncRead) {
                 this.physicAsyncRead = physicAsyncRead;
@@ -460,7 +509,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical synchronous reads.
+             * <p>The number of physical synchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicSyncRead(Long physicSyncRead) {
                 this.physicSyncRead = physicSyncRead;
@@ -468,7 +520,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows returned.
+             * <p>The number of rows returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder returnRows(Long returnRows) {
                 this.returnRows = returnRows;
@@ -476,7 +531,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the SQL statement.
+             * <p>The content of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select 1</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -484,7 +542,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows scanned by the SQL statement.
+             * <p>The number of rows scanned by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder scanRows(Long scanRows) {
                 this.scanRows = scanRows;
@@ -492,12 +553,15 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement. Valid values:
-             * <p>
+             * <p>The type of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>SELECT</strong></li>
+             * <li><strong>UPDATE</strong></li>
+             * <li><strong>DELETE</strong></li>
+             * </ul>
              * 
-             * * **SELECT**
-             * * **UPDATE**
-             * * **DELETE**
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -505,7 +569,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result. If a **0** is returned, the SQL statement was successfully executed. If an error code is returned, the SQL statement failed to be executed.
+             * <p>The execution result. If a <strong>0</strong> is returned, the SQL statement was successfully executed. If an error code is returned, the SQL statement failed to be executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -513,7 +580,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The thread ID.
+             * <p>The thread ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>657</p>
              */
             public Builder threadID(Long threadID) {
                 this.threadID = threadID;
@@ -521,7 +591,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction ID.
+             * <p>The transaction ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;
@@ -529,7 +602,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of updated rows.
+             * <p>The number of updated rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder updateRows(Long updateRows) {
                 this.updateRows = updateRows;
@@ -543,6 +619,12 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDasSQLLogHotDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDasSQLLogHotDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extra")
         private Object extra;
@@ -618,7 +700,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder extra(Object extra) {
                 this.extra = extra;
@@ -626,7 +711,7 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the data returned.
+             * <p>The details of the data returned.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -634,7 +719,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -642,7 +730,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -650,7 +741,10 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder total(Long total) {
                 this.total = total;

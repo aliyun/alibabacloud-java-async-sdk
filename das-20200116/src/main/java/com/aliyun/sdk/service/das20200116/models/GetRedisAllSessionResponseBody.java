@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRedisAllSessionResponseBody} extends {@link TeaModel}
  *
  * <p>GetRedisAllSessionResponseBody</p>
@@ -85,7 +86,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         }
 
         /**
-         * The session data.
+         * <p>The session data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40C6E9AF-6C23-5614-AA83-34344CC6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRedisAllSessionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRedisAllSessionResponseBody</p>
+     */
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addr")
         private String addr;
@@ -404,7 +423,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             private Long sub; 
 
             /**
-             * The IP address and port number of the client.
+             * <p>The IP address and port number of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX:53458</p>
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -412,7 +434,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The connection duration of the session. Unit: seconds.
+             * <p>The connection duration of the session. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder age(String age) {
                 this.age = age;
@@ -420,7 +445,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder client(String client) {
                 this.client = client;
@@ -428,7 +456,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the client.
+             * <p>The alias of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod ip</p>
              */
             public Builder clientDesc(String clientDesc) {
                 this.clientDesc = clientDesc;
@@ -436,7 +467,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The command that was last run.
+             * <p>The command that was last run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PING</p>
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -444,7 +478,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database that the client is using.
+             * <p>The ID of the database that the client is using.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder db(Long db) {
                 this.db = db;
@@ -452,11 +489,14 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The file descriptor event. Valid values:
-             * <p>
+             * <p>The file descriptor event. Valid values:</p>
+             * <ul>
+             * <li><strong>r</strong>: Client sockets are readable in the event loop.</li>
+             * <li><strong>w</strong>: Client sockets are writable in the event loop.</li>
+             * </ul>
              * 
-             * *   **r**: Client sockets are readable in the event loop.
-             * *   **w**: Client sockets are writable in the event loop.
+             * <strong>example:</strong>
+             * <p>r</p>
              */
             public Builder events(String events) {
                 this.events = events;
@@ -464,7 +504,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The file descriptor that is used by sockets.
+             * <p>The file descriptor that is used by sockets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73</p>
              */
             public Builder fd(Long fd) {
                 this.fd = fd;
@@ -472,22 +515,25 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The client flag. Valid values:
-             * <p>
+             * <p>The client flag. Valid values:</p>
+             * <ul>
+             * <li><strong>A</strong>: The connection needs to be closed at the earliest opportunity.</li>
+             * <li><strong>b</strong>: The client is waiting for blocked events.</li>
+             * <li><strong>c</strong>: The connection is closed after all replies are written.</li>
+             * <li><strong>d</strong>: The monitored keys have been modified, and the <code>EXEC</code> command is about to fail.</li>
+             * <li><strong>i</strong>: The client is waiting for VM I/O operations. This value is no longer used.</li>
+             * <li><strong>M</strong>: The client is the primary node.</li>
+             * <li><strong>N</strong>: No special flags are configured.</li>
+             * <li><strong>O</strong>: The client is in monitor mode.</li>
+             * <li><strong>r</strong>: The client is a cluster node in read-only mode.</li>
+             * <li><strong>S</strong>: The client is a replica node in normal mode.</li>
+             * <li><strong>u</strong>: The client is not blocked.</li>
+             * <li><strong>U</strong>: The client is connected by using UNIX domain sockets.</li>
+             * <li><strong>x</strong>: The client is executing a transaction.</li>
+             * </ul>
              * 
-             * *   **A**: The connection needs to be closed at the earliest opportunity.
-             * *   **b**: The client is waiting for blocked events.
-             * *   **c**: The connection is closed after all replies are written.
-             * *   **d**: The monitored keys have been modified, and the `EXEC` command is about to fail.
-             * *   **i**: The client is waiting for VM I/O operations. This value is no longer used.
-             * *   **M**: The client is the primary node.
-             * *   **N**: No special flags are configured.
-             * *   **O**: The client is in monitor mode.
-             * *   **r**: The client is a cluster node in read-only mode.
-             * *   **S**: The client is a replica node in normal mode.
-             * *   **u**: The client is not blocked.
-             * *   **U**: The client is connected by using UNIX domain sockets.
-             * *   **x**: The client is executing a transaction.
+             * <strong>example:</strong>
+             * <p>N</p>
              */
             public Builder flags(String flags) {
                 this.flags = flags;
@@ -495,7 +541,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The client ID.
+             * <p>The client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9080586</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -503,7 +552,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The duration during which the session is in the idle state. Unit: seconds.
+             * <p>The duration during which the session is in the idle state. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder idle(Long idle) {
                 this.idle = idle;
@@ -511,7 +563,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The number of commands in `MULTI` or `EXEC`.
+             * <p>The number of commands in <code>MULTI</code> or <code>EXEC</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder multi(Long multi) {
                 this.multi = multi;
@@ -519,7 +574,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the client.
+             * <p>The name of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -527,7 +585,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-2zemyfd1sh1u2i****-proxy-14#1679****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -535,7 +596,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the fixed output buffer. Unit: bytes.
+             * <p>The size of the fixed output buffer. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder obl(Long obl) {
                 this.obl = obl;
@@ -543,7 +607,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The number of objects contained in the output list.
+             * <p>The number of objects contained in the output list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder oll(Long oll) {
                 this.oll = oll;
@@ -551,7 +618,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the output buffer. Unit: bytes.
+             * <p>The size of the output buffer. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder omem(Long omem) {
                 this.omem = omem;
@@ -559,7 +629,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The number of subscriptions that match the pattern.
+             * <p>The number of subscriptions that match the pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder psub(Long psub) {
                 this.psub = psub;
@@ -567,7 +640,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the input buffer. Unit: bytes.
+             * <p>The size of the input buffer. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder qbuf(Long qbuf) {
                 this.qbuf = qbuf;
@@ -575,7 +651,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining size of the input buffer. Unit: bytes.
+             * <p>The remaining size of the input buffer. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder qbufFree(Long qbufFree) {
                 this.qbufFree = qbufFree;
@@ -583,7 +662,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The number of subscribed channels.
+             * <p>The number of subscribed channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sub(Long sub) {
                 this.sub = sub;
@@ -597,6 +679,12 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRedisAllSessionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRedisAllSessionResponseBody</p>
+     */
     public static class SourceStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
@@ -648,7 +736,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * The total number of sessions from the access source.
+             * <p>The total number of sessions from the access source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -656,7 +747,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The client IDs.
+             * <p>The client IDs.</p>
              */
             public Builder ids(java.util.List < Long > ids) {
                 this.ids = ids;
@@ -664,7 +755,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The access source.
+             * <p>The access source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -678,6 +772,12 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRedisAllSessionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRedisAllSessionResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sessions")
         private java.util.List < Sessions> sessions;
@@ -741,7 +841,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The information about the sessions.
+             * <p>The information about the sessions.</p>
              */
             public Builder sessions(java.util.List < Sessions> sessions) {
                 this.sessions = sessions;
@@ -749,7 +849,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics on the access source.
+             * <p>The statistics on the access source.</p>
              */
             public Builder sourceStats(java.util.List < SourceStats> sourceStats) {
                 this.sourceStats = sourceStats;
@@ -757,7 +857,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance sessions were returned. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance sessions were returned. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1660100753556</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -765,7 +868,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of sessions.
+             * <p>The total number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Long total) {
                 this.total = total;

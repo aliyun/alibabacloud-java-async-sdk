@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeadLockDetailListResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeadLockDetailListResponseBody</p>
@@ -85,7 +86,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>840F51F7-9C01-538D-94F6-AE712905****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeadLockDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeadLockDetailListResponseBody</p>
+     */
     public static class BlockProcessList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientApp")
         private String clientApp;
@@ -356,7 +375,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             private String waitResourceDescription; 
 
             /**
-             * The client application.
+             * <p>The name of the client that initiates the transaction in the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Microsoft SQL Server Management Studio - Query</p>
              */
             public Builder clientApp(String clientApp) {
                 this.clientApp = clientApp;
@@ -364,7 +386,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>school</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -372,7 +397,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The host name.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sd74020124</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -380,7 +408,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the transaction started.
+             * <p>The time when the transaction was started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1702301152000</p>
              */
             public Builder lastTranStarted(Long lastTranStarted) {
                 this.lastTranStarted = lastTranStarted;
@@ -388,7 +419,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The lock mode.
+             * <p>The mode of the lock. For more information, see <a href="https://help.aliyun.com/document_detail/2362804.html">Lock modes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>U</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -396,7 +430,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the logs generated by the session.
+             * <p>The size of the logs generated in the session. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352</p>
              */
             public Builder logUsed(Long logUsed) {
                 this.logUsed = logUsed;
@@ -404,7 +441,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The username that is used for login.
+             * <p>The logon name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sd74020124\Administrator</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -412,7 +452,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The locked object.
+             * <p>The locked object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>school.dbo.test2</p>
              */
             public Builder objectOwned(String objectOwned) {
                 this.objectOwned = objectOwned;
@@ -420,7 +463,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The object that the current transaction requested to lock.
+             * <p>The object that the transaction requested to lock.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>school.dbo.test1</p>
              */
             public Builder objectRequested(String objectRequested) {
                 this.objectRequested = objectRequested;
@@ -428,7 +474,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The holding mode.
+             * <p>The lock mode held by the session. For more information, see <a href="https://help.aliyun.com/document_detail/2362804.html">Lock modes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X</p>
              */
             public Builder ownMode(String ownMode) {
                 this.ownMode = ownMode;
@@ -436,7 +485,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the session that started the transaction.
+             * <p>The ID of the session in which the transaction is started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61</p>
              */
             public Builder spid(Long spid) {
                 this.spid = spid;
@@ -444,7 +496,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>update test1 set col1 =9</p>
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -452,7 +507,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction status.
+             * <p>The status of the transaction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>suspended</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -460,7 +518,14 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The victim.
+             * <p>Indicates whether the session is the victim of the deadlock. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no.</li>
+             * <li><strong>1</strong>: yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder victim(Long victim) {
                 this.victim = victim;
@@ -468,7 +533,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The wait mode.
+             * <p>The lock mode requested by the session. For more information, see <a href="https://help.aliyun.com/document_detail/2362804.html">Lock modes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>U</p>
              */
             public Builder waitMode(String waitMode) {
                 this.waitMode = waitMode;
@@ -476,7 +544,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The pending resource.
+             * <p>The resources requested by the transaction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RID: 5:1:312:0</p>
              */
             public Builder waitResource(String waitResource) {
                 this.waitResource = waitResource;
@@ -484,7 +555,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the pending resource.
+             * <p>The details of the resources requested by the transaction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RID:school:school.mdf:312:0</p>
              */
             public Builder waitResourceDescription(String waitResourceDescription) {
                 this.waitResourceDescription = waitResourceDescription;
@@ -498,6 +572,12 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeadLockDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeadLockDetailListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BatchId")
         private Long batchId;
@@ -741,7 +821,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             private String waitResourceDescription; 
 
             /**
-             * The time when the data was collected.
+             * <p>The time when the data was collected. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1702301170701</p>
              */
             public Builder batchId(Long batchId) {
                 this.batchId = batchId;
@@ -749,7 +832,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The blocking list.
+             * <p>The blocking details of the instance. The details are information about the session that caused the lock.</p>
              */
             public Builder blockProcessList(java.util.List < BlockProcessList> blockProcessList) {
                 this.blockProcessList = blockProcessList;
@@ -757,7 +840,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The client application.
+             * <p>The name of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Microsoft SQL Server Management Studio - Query</p>
              */
             public Builder clientApp(String clientApp) {
                 this.clientApp = clientApp;
@@ -765,7 +851,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>school</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -773,7 +862,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The host name.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sd74020124</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -781,7 +873,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the transaction started.
+             * <p>The time when the transaction was started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1702301141000</p>
              */
             public Builder lastTranStarted(Long lastTranStarted) {
                 this.lastTranStarted = lastTranStarted;
@@ -789,7 +884,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The lock mode.
+             * <p>The mode of the lock. For more information, see <a href="https://help.aliyun.com/document_detail/2362804.html">Lock modes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>U</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -797,7 +895,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the logs generated by the session.
+             * <p>The size of the logs generated in the session. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352</p>
              */
             public Builder logUsed(Long logUsed) {
                 this.logUsed = logUsed;
@@ -805,7 +906,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The username that is used for login.
+             * <p>The logon name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sd74020124\Administrator</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -813,7 +917,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The locked object.
+             * <p>The locked object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>school.dbo.test1</p>
              */
             public Builder objectOwned(String objectOwned) {
                 this.objectOwned = objectOwned;
@@ -821,7 +928,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The object that the current transaction requested to lock.
+             * <p>The object that the transaction requested to lock.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>school.dbo.test2</p>
              */
             public Builder objectRequested(String objectRequested) {
                 this.objectRequested = objectRequested;
@@ -829,7 +939,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The holding mode.
+             * <p>The lock mode held by the session. For more information, see <a href="https://help.aliyun.com/document_detail/2362804.html">Lock modes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X</p>
              */
             public Builder ownMode(String ownMode) {
                 this.ownMode = ownMode;
@@ -837,7 +950,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the session that started the transaction.
+             * <p>The ID of the session in which the transaction is started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56</p>
              */
             public Builder spid(Long spid) {
                 this.spid = spid;
@@ -845,7 +961,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>update test2 set col1 =88</p>
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -853,7 +972,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction status.
+             * <p>The status of the transaction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>suspended</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -861,7 +983,14 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The victim.
+             * <p>Indicates whether the session is the victim of the deadlock. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no.</li>
+             * <li><strong>1</strong>: yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder victim(Long victim) {
                 this.victim = victim;
@@ -869,7 +998,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The wait mode.
+             * <p>The lock mode requested by the session. For more information, see <a href="https://help.aliyun.com/document_detail/2362804.html">Lock modes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>U</p>
              */
             public Builder waitMode(String waitMode) {
                 this.waitMode = waitMode;
@@ -877,7 +1009,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The pending resource.
+             * <p>The resources requested by the transaction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RID: 5:1:376:0</p>
              */
             public Builder waitResource(String waitResource) {
                 this.waitResource = waitResource;
@@ -885,7 +1020,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the pending resource.
+             * <p>The details of the resources requested by the transaction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RID:school:school.mdf:376:0</p>
              */
             public Builder waitResourceDescription(String waitResourceDescription) {
                 this.waitResourceDescription = waitResourceDescription;
@@ -899,6 +1037,12 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeadLockDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeadLockDetailListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
@@ -962,7 +1106,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The details of the data returned.
+             * <p>The details of the data returned.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -970,7 +1114,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -978,7 +1125,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -986,7 +1136,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Long total) {
                 this.total = total;

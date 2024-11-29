@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTopBigKeysRequest} extends {@link RequestModel}
  *
  * <p>DescribeTopBigKeysRequest</p>
@@ -112,7 +113,10 @@ public class DescribeTopBigKeysRequest extends Request {
         } 
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -121,16 +125,21 @@ public class DescribeTopBigKeysRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The end time must be later than the start time.</p>
+         * </li>
+         * <li><p>Only data within the last four days can be queried.</p>
+         * </li>
+         * <li><p>The maximum interval between the <strong>start time</strong> and the** end time** is 3 hours.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The end time must be later than the start time.
-         * 
-         * *   Only data within the last four days can be queried.
-         * 
-         * *   The maximum interval between the **start time** and the** end time** is 3 hours.
+         * <strong>example:</strong>
+         * <p>1596177993001</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -139,7 +148,11 @@ public class DescribeTopBigKeysRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID.
+         * <p>The ID of the ApsaraDB for Redis instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp18ff4a195d****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -148,7 +161,10 @@ public class DescribeTopBigKeysRequest extends Request {
         }
 
         /**
-         * The ID of the data shard on the ApsaraDB for Redis instance. You can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the ID.
+         * <p>The ID of the data shard on the ApsaraDB for Redis instance. You can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -157,7 +173,11 @@ public class DescribeTopBigKeysRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596177993000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

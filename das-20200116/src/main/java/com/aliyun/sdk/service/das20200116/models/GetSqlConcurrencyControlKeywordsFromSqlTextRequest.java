@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSqlConcurrencyControlKeywordsFromSqlTextRequest} extends {@link RequestModel}
  *
  * <p>GetSqlConcurrencyControlKeywordsFromSqlTextRequest</p>
@@ -83,7 +84,10 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextRequest extends Request 
         } 
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -92,7 +96,11 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextRequest extends Request 
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze5hpn2b99d2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +109,11 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextRequest extends Request 
         }
 
         /**
-         * The SQL statement based on which a throttling keyword string is to be generated.
+         * <p>The SQL statement based on which a throttling keyword string is to be generated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM test where name = &quot;das&quot;</p>
          */
         public Builder sqlText(String sqlText) {
             this.putQueryParameter("SqlText", sqlText);

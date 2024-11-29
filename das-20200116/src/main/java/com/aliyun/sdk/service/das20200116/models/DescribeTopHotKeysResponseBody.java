@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTopHotKeysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTopHotKeysResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information about the hot keys.
+         * <p>The detailed information about the hot keys.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTopHotKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTopHotKeysResponseBody</p>
+     */
     public static class HotKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
@@ -221,7 +240,10 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             private String nodeId; 
 
             /**
-             * The database in which the key is stored.
+             * <p>The database in which the key is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -229,7 +251,10 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The frequency at which the key is accessed, which indicates the QPS of the key.
+             * <p>The frequency at which the key is accessed, which indicates the QPS of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5500~6000</p>
              */
             public Builder hot(String hot) {
                 this.hot = hot;
@@ -237,7 +262,10 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The key.
+             * <p>The key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc:def:eng</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -245,7 +273,10 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the key.
+             * <p>The type of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zset</p>
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -253,7 +284,10 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical value that is calculated based on the least frequently used (LFU) caching algorithm.
+             * <p>The statistical value that is calculated based on the least frequently used (LFU) caching algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253</p>
              */
             public Builder lfu(Integer lfu) {
                 this.lfu = lfu;
@@ -261,7 +295,10 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data shard on the ApsaraDB for Redis instance.
+             * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -275,6 +312,12 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTopHotKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTopHotKeysResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HotKey")
         private java.util.List < HotKey> hotKey;

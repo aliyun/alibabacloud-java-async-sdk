@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableAllSqlConcurrencyControlRulesRequest} extends {@link RequestModel}
  *
  * <p>DisableAllSqlConcurrencyControlRulesRequest</p>
@@ -68,7 +69,10 @@ public class DisableAllSqlConcurrencyControlRulesRequest extends Request {
         } 
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -77,10 +81,14 @@ public class DisableAllSqlConcurrencyControlRulesRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You must specify this parameter only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

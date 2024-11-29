@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetKillInstanceSessionTaskResultRequest} extends {@link RequestModel}
  *
  * <p>GetKillInstanceSessionTaskResultRequest</p>
@@ -83,7 +84,11 @@ public class GetKillInstanceSessionTaskResultRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,10 +97,13 @@ public class GetKillInstanceSessionTaskResultRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> You must specify this parameter if your database instance is a PolarDB for MySQL cluster.</p>
+         * </blockquote>
          * 
-         * >  You must specify this parameter if your database instance is a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>pi-8vbkfj5a756um****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -104,7 +112,11 @@ public class GetKillInstanceSessionTaskResultRequest extends Request {
         }
 
         /**
-         * The task ID. You can obtain the task ID from the response parameters of the [CreateKillInstanceSessionTask](~~609246~~) operation.
+         * <p>The task ID. You can obtain the task ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/609246.html">CreateKillInstanceSessionTask</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f77d535b45405bd462b21caa3ee8****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

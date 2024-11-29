@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoScalingHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoScalingHistoryResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code returned. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The history of auto scaling.
+         * <p>The history of auto scaling.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p>If the request was successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * > If the request was successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoScalingHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoScalingHistoryResponseBody</p>
+     */
     public static class SpecHistory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -272,13 +291,16 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             private Long taskTime; 
 
             /**
-             * The error code returned by the scaling task. Valid values:
-             * <p>
+             * <p>The error code returned by the scaling task. Valid values:</p>
+             * <ul>
+             * <li><strong>Insufficient_Balance</strong>: The account has insufficient balance or an unpaid order.</li>
+             * <li><strong>REACH_SPEC_UPPERBOUND</strong>: The instance type reaches the upper limit.</li>
+             * <li><strong>Control_Error_Timeout_Msg</strong>: The management task timed out.</li>
+             * <li><strong>Invoke_Rds_Api_Error_Msg</strong>: Failed to call the ApsaraDB RDS API.</li>
+             * </ul>
              * 
-             * *   **Insufficient_Balance**: The account has insufficient balance or an unpaid order.
-             * *   **REACH_SPEC_UPPERBOUND**: The instance type reaches the upper limit.
-             * *   **Control_Error_Timeout_Msg**: The management task timed out.
-             * *   **Invoke_Rds_Api_Error_Msg**: Failed to call the ApsaraDB RDS API.
+             * <strong>example:</strong>
+             * <p>Insufficient_Balance</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -286,7 +308,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The original number of CPU cores of the instance.
+             * <p>The original number of CPU cores of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder originCore(Integer originCore) {
                 this.originCore = originCore;
@@ -294,7 +319,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The original instance type.
+             * <p>The original instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.n2.large.2c</p>
              */
             public Builder originInstanceClass(String originInstanceClass) {
                 this.originInstanceClass = originInstanceClass;
@@ -302,7 +330,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The original memory size of the instance. Unit: GB.
+             * <p>The original memory size of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder originMemory(Double originMemory) {
                 this.originMemory = originMemory;
@@ -310,11 +341,14 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the automatic performance scaling task. Valid values:
-             * <p>
+             * <p>The type of the automatic performance scaling task. Valid values:</p>
+             * <ul>
+             * <li><strong>SCALE_UP</strong>: automatic instance type scale-up task.</li>
+             * <li><strong>SCALE_DOWN</strong>: automatic instance type scale-down task.</li>
+             * </ul>
              * 
-             * *   **SCALE_UP**: automatic instance type scale-up task.
-             * *   **SCALE_DOWN**: automatic instance type scale-down task.
+             * <strong>example:</strong>
+             * <p>SCALE_UP</p>
              */
             public Builder scaleType(String scaleType) {
                 this.scaleType = scaleType;
@@ -322,7 +356,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The destination number of CPU cores of the instance.
+             * <p>The destination number of CPU cores of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder targetCore(Integer targetCore) {
                 this.targetCore = targetCore;
@@ -330,7 +367,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The destination instance type.
+             * <p>The destination instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.n2.xlarge.2c</p>
              */
             public Builder targetInstanceClass(String targetInstanceClass) {
                 this.targetInstanceClass = targetInstanceClass;
@@ -338,7 +378,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The destination memory size of the instance. Unit: GB.
+             * <p>The destination memory size of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder targetMemory(Double targetMemory) {
                 this.targetMemory = targetMemory;
@@ -346,11 +389,14 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The task was successful.</li>
+             * <li><strong>false</strong>: The task failed.</li>
+             * </ul>
              * 
-             * *   **true**: The task was successful.
-             * *   **false**: The task failed.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder taskExcuteStatus(Boolean taskExcuteStatus) {
                 this.taskExcuteStatus = taskExcuteStatus;
@@ -358,7 +404,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was run. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the task was run. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684830763000</p>
              */
             public Builder taskTime(Long taskTime) {
                 this.taskTime = taskTime;
@@ -372,6 +421,12 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoScalingHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoScalingHistoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private java.util.List < java.util.Map<String, ?>> bandwidth;
@@ -459,7 +514,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             private java.util.List < java.util.Map<String, ?>> storage; 
 
             /**
-             * The history of automatic bandwidth scaling of ApsaraDB for Redis instances. This feature is not supported.
+             * <p>The history of automatic bandwidth scaling of ApsaraDB for Redis instances. This feature is not supported.</p>
              */
             public Builder bandwidth(java.util.List < java.util.Map<String, ?>> bandwidth) {
                 this.bandwidth = bandwidth;
@@ -467,7 +522,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1jdv45i7l6****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -475,7 +533,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The history of resource scale-out of ApsaraDB for Redis instances. This feature is not supported.
+             * <p>The history of resource scale-out of ApsaraDB for Redis instances. This feature is not supported.</p>
              */
             public Builder resource(java.util.List < java.util.Map<String, ?>> resource) {
                 this.resource = resource;
@@ -483,7 +541,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The history of automatic shard scale-out of ApsaraDB for Redis instances. This feature is not supported.
+             * <p>The history of automatic shard scale-out of ApsaraDB for Redis instances. This feature is not supported.</p>
              */
             public Builder shard(java.util.List < java.util.Map<String, ?>> shard) {
                 this.shard = shard;
@@ -491,7 +549,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The history of automatic performance scaling.
+             * <p>The history of automatic performance scaling.</p>
              */
             public Builder specHistory(java.util.List < SpecHistory> specHistory) {
                 this.specHistory = specHistory;
@@ -499,7 +557,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The history of storage expansion. This feature is not supported.
+             * <p>The history of storage expansion. This feature is not supported.</p>
              */
             public Builder storage(java.util.List < java.util.Map<String, ?>> storage) {
                 this.storage = storage;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudBenchTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudBenchTasksResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information, including the error codes and the number of entries that are returned.
+         * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudBenchTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudBenchTasksResponseBody</p>
+     */
     public static class CloudbenchTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArchiveJobId")
         private String archiveJobId;
@@ -644,7 +663,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             private String workDir; 
 
             /**
-             * The archiving task ID.
+             * <p>The archiving task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;202105211430070112231480820340758****</p>
              */
             public Builder archiveJobId(String archiveJobId) {
                 this.archiveJobId = archiveJobId;
@@ -652,7 +674,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table that was archived to Object Storage Service (OSS).
+             * <p>The name of the table that was archived to Object Storage Service (OSS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custins15546355_161604665****</p>
              */
             public Builder archiveOssTableName(String archiveOssTableName) {
                 this.archiveOssTableName = archiveOssTableName;
@@ -660,14 +685,17 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The archiving status of the file that stores the analysis result of full SQL statistics. Valid values:
-             * <p>
+             * <p>The archiving status of the file that stores the analysis result of full SQL statistics. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The file archiving is not started.</li>
+             * <li><strong>1</strong>: The file is archived.</li>
+             * <li><strong>2</strong>: An error occurred.</li>
+             * <li><strong>3</strong>: The file is being archived.</li>
+             * <li><strong>4</strong>: The archived file does not need to be downloaded.</li>
+             * </ul>
              * 
-             * * **0**: The file archiving is not started.
-             * * **1**: The file is archived.
-             * * **2**: An error occurred.
-             * * **3**: The file is being archived.
-             * * **4**: The archived file does not need to be downloaded.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder archiveState(Integer archiveState) {
                 this.archiveState = archiveState;
@@ -675,7 +703,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.
+             * <p>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/26273.html">DescribeBackups</a> operation to query the ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>229132</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -683,11 +714,14 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The backup type. Valid values:
-             * <p>
+             * <p>The backup type. Valid values:</p>
+             * <ul>
+             * <li><strong>TIMESTAMP</strong>: Data is restored to the state at a specific point in time.</li>
+             * <li><strong>BACKUPID</strong>: Data is restored from a backup set that is identified by an ID.</li>
+             * </ul>
              * 
-             * * **TIMESTAMP**: Data is restored to the state at a specific point in time.
-             * * **BACKUPID**: Data is restored from a backup set that is identified by an ID.
+             * <strong>example:</strong>
+             * <p>TIMESTAMP</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -695,21 +729,24 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The substep in the stress testing task. Valid values:
-             * <p>
+             * <p>The substep in the stress testing task. Valid values:</p>
+             * <ul>
+             * <li><strong>NEW</strong>: Initialize the stress testing task.</li>
+             * <li><strong>WAIT_BUY_ECS</strong>: Purchase an ECS instance.</li>
+             * <li><strong>WAIT_START_ECS</strong>: Start the ECS instance.</li>
+             * <li><strong>WAIT_INSTALL_JDK</strong>: Install the Java Development Kit (JDK).</li>
+             * <li><strong>WAIT_INSTALL_DBGATEWAY</strong>: Install the database gateway (DBGateway).</li>
+             * <li><strong>ADD_SECURITY_IPS_STEP</strong>: Configure the whitelist of the security group.</li>
+             * <li><strong>ARCHIVE</strong>: Archive the file that stores the analysis results of full SQL statistics.</li>
+             * <li><strong>DOWNLOAD</strong>: Download the file that stores the analysis result of full SQL statistics.</li>
+             * <li><strong>PROCEED</strong>: Preprocess the file that stores the analysis result of full SQL statistics.</li>
+             * <li><strong>PRE_LOAD</strong>: Preload the file that stores the analysis result of full SQL statistics.</li>
+             * <li><strong>VALIDATE</strong>: Verify the functionality of stress testing.</li>
+             * <li><strong>PRESSURE</strong>: Start the stress testing task.</li>
+             * </ul>
              * 
-             * * **NEW**: Initialize the stress testing task.
-             * * **WAIT_BUY_ECS**: Purchase an ECS instance.
-             * * **WAIT_START_ECS**: Start the ECS instance.
-             * * **WAIT_INSTALL_JDK**: Install the Java Development Kit (JDK).
-             * * **WAIT_INSTALL_DBGATEWAY**: Install the database gateway (DBGateway).
-             * * **ADD_SECURITY_IPS_STEP**: Configure the whitelist of the security group.
-             * * **ARCHIVE**: Archive the file that stores the analysis results of full SQL statistics.
-             * * **DOWNLOAD**: Download the file that stores the analysis result of full SQL statistics.
-             * * **PROCEED**: Preprocess the file that stores the analysis result of full SQL statistics.
-             * * **PRE_LOAD**: Preload the file that stores the analysis result of full SQL statistics.
-             * * **VALIDATE**: Verify the functionality of stress testing.
-             * * **PRESSURE**: Start the stress testing task.
+             * <strong>example:</strong>
+             * <p>PROCEED</p>
              */
             public Builder benchStep(String benchStep) {
                 this.benchStep = benchStep;
@@ -717,15 +754,18 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status that indicates the substep performed for the stress testing task. Valid values:
-             * <p>
+             * <p>The status that indicates the substep performed for the stress testing task. Valid values:</p>
+             * <ul>
+             * <li><strong>NEW</strong>: The task is being initialized.</li>
+             * <li><strong>RUNNING</strong>: The task is running.</li>
+             * <li><strong>FAILED</strong>: The task failed.</li>
+             * <li><strong>FINISHED</strong>: The task is complete.</li>
+             * <li><strong>Terminated</strong>: The task is terminated.</li>
+             * <li><strong>Deleted</strong>: The task is deleted.</li>
+             * </ul>
              * 
-             * * **NEW**: The task is being initialized.
-             * * **RUNNING**: The task is running.
-             * * **FAILED**: The task failed.
-             * * **FINISHED**: The task is complete.
-             * * **Terminated**: The task is terminated.
-             * * **Deleted**: The task is deleted.
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder benchStepStatus(String benchStepStatus) {
                 this.benchStepStatus = benchStepStatus;
@@ -733,7 +773,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The DBGateway ID of the stress testing client.
+             * <p>The DBGateway ID of the stress testing client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58598b2af48a0193dfc16fc6964ef****</p>
              */
             public Builder clientGatewayId(String clientGatewayId) {
                 this.clientGatewayId = clientGatewayId;
@@ -741,11 +784,14 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the stress testing client. Valid values:
-             * <p>
+             * <p>The type of the stress testing client. Valid values:</p>
+             * <ul>
+             * <li><strong>ECS</strong>: indicates that you must prepare the DBGateway.</li>
+             * <li><strong>DAS_ECS</strong>: indicates that DAS automatically purchases and deploys an ECS instance for stress testing.</li>
+             * </ul>
              * 
-             * * **ECS**: indicates that you must prepare the DBGateway.
-             * * **DAS_ECS**: indicates that DAS automatically purchases and deploys an ECS instance for stress testing.
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder clientType(String clientType) {
                 this.clientType = clientType;
@@ -753,7 +799,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the stress testing task.
+             * <p>The description of the stress testing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-das-bench-0501</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -761,7 +810,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the destination instance.
+             * <p>The UUID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdm_d887b5ccf99fa0dc9a1e5aaac368****</p>
              */
             public Builder dstInstanceUuid(String dstInstanceUuid) {
                 this.dstInstanceUuid = dstInstanceUuid;
@@ -769,7 +821,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder dstIp(String dstIp) {
                 this.dstIp = dstIp;
@@ -777,7 +832,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the destination instance.
+             * <p>The port number of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder dstPort(Integer dstPort) {
                 this.dstPort = dstPort;
@@ -785,11 +843,14 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the identifier that is used to indicate the destination instance. Valid values:
-             * <p>
+             * <p>The type of the identifier that is used to indicate the destination instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Instance</strong> (default): the instance ID.</li>
+             * <li><strong>ConnectionString</strong>: the endpoint of the instance.</li>
+             * </ul>
              * 
-             * * **Instance** (default): the instance ID.
-             * * **ConnectionString**: the endpoint of the instance.
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder dstType(String dstType) {
                 this.dstType = dstType;
@@ -797,10 +858,13 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the DTS instance.
-             * <p>
+             * <p>The specification of the DTS instance.</p>
+             * <blockquote>
+             * <p>For more information about the specifications of DTS instances and the test performance of each instance, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a>.</p>
+             * </blockquote>
              * 
-             * > For more information about the specifications of DTS instances and the test performance of each instance, see [Specifications of data migration instances](~~26606~~).
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder dtsJobClass(String dtsJobClass) {
                 this.dtsJobClass = dtsJobClass;
@@ -808,7 +872,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DTS migration task.
+             * <p>The ID of the DTS migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i03e3zty16i****</p>
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -816,7 +883,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Data Transmission Service (DTS) migration task.
+             * <p>The name of the Data Transmission Service (DTS) migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS_TO_RDS_MIGRATION</p>
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
@@ -824,24 +894,27 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the DTS migration task. Valid values:
-             * <p>
+             * <p>The status of the DTS migration task. Valid values:</p>
+             * <ul>
+             * <li><strong>NOT_STARTED</strong>: The task is not started.</li>
+             * <li><strong>PRE_CHECKING</strong>: The task is in precheck.</li>
+             * <li><strong>PRE_CHECK_FAILED</strong>: The precheck failed.</li>
+             * <li><strong>CHECKING</strong>: The task is being checked.</li>
+             * <li><strong>MIGRATING</strong>: The data is being migrated.</li>
+             * <li><strong>CATCHED</strong>: The data is migrated from the source instance to the destination instance.</li>
+             * <li><strong>SUSPENDING</strong>: The task is suspended.</li>
+             * <li><strong>MIGRATION_FAILED</strong>: The data failed to be migrated.</li>
+             * <li><strong>FINISHED</strong>: The task is complete.</li>
+             * <li><strong>INITIALIZING</strong>: The synchronization is being initialized.</li>
+             * <li><strong>INITIALIZE_FAILED</strong>: The synchronization failed to be initialized.</li>
+             * <li><strong>SYNCHRONIZING</strong>: The data is being synchronized.</li>
+             * <li><strong>MODIFYING</strong>: The roles of the instances are being changed.</li>
+             * <li><strong>SWITCHING</strong>: The roles of the instances are being switched.</li>
+             * <li><strong>FAILED</strong>: The task failed.</li>
+             * </ul>
              * 
-             * * **NOT_STARTED**: The task is not started.
-             * * **PRE_CHECKING**: The task is in precheck.
-             * * **PRE_CHECK_FAILED**: The precheck failed.
-             * * **CHECKING**: The task is being checked.
-             * * **MIGRATING**: The data is being migrated.
-             * * **CATCHED**: The data is migrated from the source instance to the destination instance.
-             * * **SUSPENDING**: The task is suspended.
-             * * **MIGRATION_FAILED**: The data failed to be migrated.
-             * * **FINISHED**: The task is complete.
-             * * **INITIALIZING**: The synchronization is being initialized.
-             * * **INITIALIZE_FAILED**: The synchronization failed to be initialized.
-             * * **SYNCHRONIZING**: The data is being synchronized.
-             * * **MODIFYING**: The roles of the instances are being changed.
-             * * **SWITCHING**: The roles of the instances are being switched.
-             * * **FAILED**: The task failed.
+             * <strong>example:</strong>
+             * <p>CHECKING</p>
              */
             public Builder dtsJobState(Integer dtsJobState) {
                 this.dtsJobState = dtsJobState;
@@ -849,24 +922,27 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the DTS migration task. Valid values:
-             * <p>
+             * <p>The status of the DTS migration task. Valid values:</p>
+             * <ul>
+             * <li><strong>NOT_STARTED</strong>: The task is not started.</li>
+             * <li><strong>PRE_CHECKING</strong>: The task is in precheck.</li>
+             * <li><strong>PRE_CHECK_FAILED</strong>: The precheck failed.</li>
+             * <li><strong>CHECKING</strong>: The task is being checked.</li>
+             * <li><strong>MIGRATING</strong>: The data is being migrated.</li>
+             * <li><strong>CATCHED</strong>: The data is migrated from the source instance to the destination instance.</li>
+             * <li><strong>SUSPENDING</strong>: The task is suspended.</li>
+             * <li><strong>MIGRATION_FAILED</strong>: The data failed to be migrated.</li>
+             * <li><strong>FINISHED</strong>: The task is complete.</li>
+             * <li><strong>INITIALIZING</strong>: The synchronization is being initialized.</li>
+             * <li><strong>INITIALIZE_FAILED</strong>: The synchronization failed to be initialized.</li>
+             * <li><strong>SYNCHRONIZING</strong>: The data is being synchronized.</li>
+             * <li><strong>MODIFYING</strong>: The roles of the instances are being changed.</li>
+             * <li><strong>SWITCHING</strong>: The roles of the instances are being switched.</li>
+             * <li><strong>FAILED</strong>: The task failed.</li>
+             * </ul>
              * 
-             * * **NOT_STARTED**: The task is not started.
-             * * **PRE_CHECKING**: The task is in precheck.
-             * * **PRE_CHECK_FAILED**: The precheck failed.
-             * * **CHECKING**: The task is being checked.
-             * * **MIGRATING**: The data is being migrated.
-             * * **CATCHED**: The data is migrated from the source instance to the destination instance.
-             * * **SUSPENDING**: The task is suspended.
-             * * **MIGRATION_FAILED**: The data failed to be migrated.
-             * * **FINISHED**: The task is complete.
-             * * **INITIALIZING**: The synchronization is being initialized.
-             * * **INITIALIZE_FAILED**: The synchronization failed to be initialized.
-             * * **SYNCHRONIZING**: The data is being synchronized.
-             * * **MODIFYING**: The roles of the instances are being changed.
-             * * **SWITCHING**: The roles of the instances are being switched.
-             * * **FAILED**: The task failed.
+             * <strong>example:</strong>
+             * <p>PRE_CHECK_FAILED</p>
              */
             public Builder dtsJobStatus(String dtsJobStatus) {
                 this.dtsJobStatus = dtsJobStatus;
@@ -874,7 +950,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Elastic Compute Service (ECS) instance.
+             * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1ecr5go2go1****</p>
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -882,15 +961,19 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The state that indicates the last operation performed for the stress testing task. Valid values:
-             * <p>
+             * <p>The state that indicates the last operation performed for the stress testing task. Valid values:</p>
+             * <ul>
+             * <li><strong>WAIT_TARGET</strong>: prepares the destination instance.</li>
+             * <li><strong>WAIT_DBGATEWAY</strong>: prepares the DBGateway.</li>
+             * <li><strong>WAIT_SQL</strong>: prepares the full SQL statistics.</li>
+             * <li><strong>WAIT_LOGIC</strong>: prepares to replay the traffic.</li>
+             * </ul>
+             * <blockquote>
+             * <p>When the state of a stress testing task changes to the state that is specified by the EndState parameter, the stress testing task is complete.</p>
+             * </blockquote>
              * 
-             * * **WAIT_TARGET**: prepares the destination instance.
-             * * **WAIT_DBGATEWAY**: prepares the DBGateway.
-             * * **WAIT_SQL**: prepares the full SQL statistics.
-             * * **WAIT_LOGIC**: prepares to replay the traffic.
-             * 
-             * > When the state of a stress testing task changes to the state that is specified by the EndState parameter, the stress testing task is complete.
+             * <strong>example:</strong>
+             * <p>WAIT_TARGET</p>
              */
             public Builder endState(String endState) {
                 this.endState = endState;
@@ -898,7 +981,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned for the substep of the stress testing task.
+             * <p>The error code returned for the substep of the stress testing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10109</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -906,7 +992,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the task failed.
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -914,7 +1003,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Null</p>
              */
             public Builder external(String external) {
                 this.external = external;
@@ -922,7 +1014,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The rate at which the stress testing task replayed the traffic. This value is a positive integer. Valid values: **0** to **30**. Default value: **1**.
+             * <p>The rate at which the stress testing task replayed the traffic. This value is a positive integer. Valid values: <strong>0</strong> to <strong>30</strong>. Default value: <strong>1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -930,7 +1025,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the stress testing task. Unit: millisecond.
+             * <p>The duration of the stress testing task. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400000</p>
              */
             public Builder requestDuration(Long requestDuration) {
                 this.requestDuration = requestDuration;
@@ -938,7 +1036,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the stress testing task of the smart pressure test type. Unit: millisecond.
+             * <p>The duration of the stress testing task of the smart pressure test type. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400000</p>
              */
             public Builder smartPressureTime(Integer smartPressureTime) {
                 this.smartPressureTime = smartPressureTime;
@@ -946,11 +1047,14 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the task. Valid values:
-             * <p>
+             * <p>The source of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>DAS</strong></li>
+             * <li><strong>OPEN_API</strong></li>
+             * </ul>
              * 
-             * * **DAS**
-             * * **OPEN_API**
+             * <strong>example:</strong>
+             * <p>DAS</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -958,7 +1062,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The reused information about the analysis result of full SQL statistics.
+             * <p>The reused information about the analysis result of full SQL statistics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;sqlUuid&quot;:&quot;task_a37d2f07-45cb-4413-a2a6-c66c68****&quot;,&quot;metaUuid&quot;:&quot;task_211e2561-5c0c-486b-864c-56b511****&quot;,&quot;sqlFile&quot;:&quot;cl-1620057600000-1800626.sc&quot;,&quot;metaFile&quot;:&quot;cl-1620057600000-1800626.meta&quot;}</p>
              */
             public Builder sqlCompleteReuse(String sqlCompleteReuse) {
                 this.sqlCompleteReuse = sqlCompleteReuse;
@@ -966,7 +1073,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the source instance. Valid values:
+             * <p>The database engine of the source instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder srcInstanceArea(String srcInstanceArea) {
                 this.srcInstanceArea = srcInstanceArea;
@@ -974,7 +1084,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the source instance.
+             * <p>The UUID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdm_3063db6792965c080a4bcb6e6304****</p>
              */
             public Builder srcInstanceUuid(String srcInstanceUuid) {
                 this.srcInstanceUuid = srcInstanceUuid;
@@ -982,7 +1095,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder srcPublicIp(String srcPublicIp) {
                 this.srcPublicIp = srcPublicIp;
@@ -990,13 +1106,16 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The state that indicates the operation performed for the stress testing task. Valid values:
-             * <p>
+             * <p>The state that indicates the operation performed for the stress testing task. Valid values:</p>
+             * <ul>
+             * <li><strong>WAIT_TARGET</strong>: prepares the destination instance.</li>
+             * <li><strong>WAIT_DBGATEWAY</strong>: prepares the DBGateway.</li>
+             * <li><strong>WAIT_SQL</strong>: prepares the full SQL statistics.</li>
+             * <li><strong>WAIT_LOGIC</strong>: prepares to replay the traffic.</li>
+             * </ul>
              * 
-             * * **WAIT_TARGET**: prepares the destination instance.
-             * * **WAIT_DBGATEWAY**: prepares the DBGateway.
-             * * **WAIT_SQL**: prepares the full SQL statistics.
-             * * **WAIT_LOGIC**: prepares to replay the traffic.
+             * <strong>example:</strong>
+             * <p>WAIT_TARGET</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1004,13 +1123,16 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the stress testing task. Valid values:
-             * <p>
+             * <p>The status of the stress testing task. Valid values:</p>
+             * <ul>
+             * <li><strong>SUCCESS</strong>: The task was successful.</li>
+             * <li><strong>IGNORED</strong>: The task was ignored.</li>
+             * <li><strong>RUNNING</strong>: The task is running.</li>
+             * <li><strong>EXCEPTION</strong>: The task is abnormal.</li>
+             * </ul>
              * 
-             * * **SUCCESS**: The task was successful.
-             * * **IGNORED**: The task was ignored.
-             * * **RUNNING**: The task is running.
-             * * **EXCEPTION**: The task is abnormal.
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1018,7 +1140,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table that is used for stress testing.
+             * <p>The name of the table that is used for stress testing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;TABLE_NAME&quot;:&quot;customer1&quot;,&quot;TABLE_SCHEMA&quot;:&quot;tpcc&quot;}]</p>
              */
             public Builder tableSchema(String tableSchema) {
                 this.tableSchema = tableSchema;
@@ -1026,7 +1151,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e5cec704-0518-430f-8263-76f4dcds****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1034,11 +1162,14 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the stress testing task. Valid values:
-             * <p>
+             * <p>The type of the stress testing task. Valid values:</p>
+             * <ul>
+             * <li><strong>pressure test</strong> (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.</li>
+             * <li><strong>smart pressure test</strong>: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.</li>
+             * </ul>
              * 
-             * * **pressure test** (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.
-             * * **smart pressure test**: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.
+             * <strong>example:</strong>
+             * <p>pressure test</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -1046,7 +1177,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The topic that contains the consumed data. This topic is a topic in Message Queue for Apache Kafka.
+             * <p>The topic that contains the consumed data. This topic is a topic in Message Queue for Apache Kafka.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>das</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -1054,7 +1188,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account ID.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1091411816252****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1062,11 +1199,14 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the stress testing task. Valid values:
-             * <p>
+             * <p>The version of the stress testing task. Valid values:</p>
+             * <ul>
+             * <li><strong>V2.0</strong></li>
+             * <li><strong>V3.0</strong></li>
+             * </ul>
              * 
-             * * **V2.0**
-             * * **V3.0**
+             * <strong>example:</strong>
+             * <p>V3.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1074,7 +1214,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the temporary directory that is generated for stress testing.
+             * <p>The path of the temporary directory that is generated for stress testing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/bench/</p>
              */
             public Builder workDir(String workDir) {
                 this.workDir = workDir;
@@ -1088,6 +1231,12 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudBenchTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudBenchTasksResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cloudbenchTasks")
         private java.util.List < CloudbenchTasks> cloudbenchTasks;
@@ -1129,6 +1278,12 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudBenchTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudBenchTasksResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
@@ -1204,7 +1359,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -1212,7 +1370,7 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information of the stress testing task.
+             * <p>The detailed information of the stress testing task.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -1220,7 +1378,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -1228,7 +1389,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1236,7 +1400,10 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Long total) {
                 this.total = total;

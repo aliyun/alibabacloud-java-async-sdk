@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPartitionsHeatmapResponseBody} extends {@link TeaModel}
  *
  * <p>GetPartitionsHeatmapResponseBody</p>
@@ -85,7 +86,10 @@ public class GetPartitionsHeatmapResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,52 @@ public class GetPartitionsHeatmapResponseBody extends TeaModel {
         }
 
         /**
-         * The hot data of the PolarDB-X 2.0 instance. The data is returned in JSON format.
+         * <p>The hot data of the PolarDB-X 2.0 instance. The data is returned in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;boundAxis&quot;: [
+         *         {
+         *             &quot;bound&quot;: &quot;A,B,C,D&quot;,
+         *             &quot;labels&quot;: [
+         *                 &quot;L1&quot;,
+         *                 &quot;L2&quot;,
+         *                 &quot;L3&quot;,
+         *                 &quot;L4&quot;
+         *             ],
+         *             &quot;rows&quot;: 3171
+         *         },
+         *         {
+         *             &quot;bound&quot;: &quot;A,B,C,D&quot;,
+         *             &quot;labels&quot;: [
+         *                 &quot;L1&quot;,
+         *                 &quot;L2&quot;,
+         *                 &quot;L3&quot;,
+         *                 &quot;L4&quot;
+         *             ],
+         *             &quot;rows&quot;: 277128
+         *         }
+         *     ],
+         *     &quot;dataMap&quot;: {
+         *         &quot;READ_WRITTEN_ROWS&quot;: [
+         *             [
+         *                 0,
+         *                 0,
+         *                 0
+         *             ],
+         *             [
+         *                 0,
+         *                 0,
+         *                 0
+         *             ]
+         *         ]
+         *     },
+         *     &quot;timeAxis&quot;: [
+         *         1671701056070,
+         *         1671701116551,
+         *         1671701177020
+         *     ]
+         * }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,10 +150,13 @@ public class GetPartitionsHeatmapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message that contains information such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +164,10 @@ public class GetPartitionsHeatmapResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D00DB161-FEF6-5428-B37A-8D29A4C2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +175,14 @@ public class GetPartitionsHeatmapResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

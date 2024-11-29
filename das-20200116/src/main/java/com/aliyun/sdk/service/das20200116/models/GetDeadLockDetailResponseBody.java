@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopCloudBenchTaskResponseBody} extends {@link TeaModel}
+ * 
+ * {@link GetDeadLockDetailResponseBody} extends {@link TeaModel}
  *
- * <p>StopCloudBenchTaskResponseBody</p>
+ * <p>GetDeadLockDetailResponseBody</p>
  */
-public class StopCloudBenchTaskResponseBody extends TeaModel {
+public class GetDeadLockDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -26,19 +27,23 @@ public class StopCloudBenchTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    private StopCloudBenchTaskResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("Synchro")
+    private String synchro;
+
+    private GetDeadLockDetailResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.synchro = builder.synchro;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static StopCloudBenchTaskResponseBody create() {
+    public static GetDeadLockDetailResponseBody create() {
         return builder().build();
     }
 
@@ -77,15 +82,23 @@ public class StopCloudBenchTaskResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return synchro
+     */
+    public String getSynchro() {
+        return this.synchro;
+    }
+
     public static final class Builder {
         private String code; 
         private String data; 
         private String message; 
         private String requestId; 
         private String success; 
+        private String synchro; 
 
         /**
-         * The HTTP status code returned.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +106,7 @@ public class StopCloudBenchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The reserved parameter.
+         * Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,10 +114,7 @@ public class StopCloudBenchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
-         * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +122,7 @@ public class StopCloudBenchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,19 +130,23 @@ public class StopCloudBenchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**
-         * *   **false**
+         * Success.
          */
         public Builder success(String success) {
             this.success = success;
             return this;
         }
 
-        public StopCloudBenchTaskResponseBody build() {
-            return new StopCloudBenchTaskResponseBody(this);
+        /**
+         * Synchro.
+         */
+        public Builder synchro(String synchro) {
+            this.synchro = synchro;
+            return this;
+        }
+
+        public GetDeadLockDetailResponseBody build() {
+            return new GetDeadLockDetailResponseBody(this);
         } 
 
     } 

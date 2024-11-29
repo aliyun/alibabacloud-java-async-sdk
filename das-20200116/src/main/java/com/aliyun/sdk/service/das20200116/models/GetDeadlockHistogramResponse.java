@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateAdamBenchTaskResponse} extends {@link TeaModel}
+ * 
+ * {@link GetDeadlockHistogramResponse} extends {@link TeaModel}
  *
- * <p>CreateAdamBenchTaskResponse</p>
+ * <p>GetDeadlockHistogramResponse</p>
  */
-public class CreateAdamBenchTaskResponse extends Response {
+public class GetDeadlockHistogramResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +19,16 @@ public class CreateAdamBenchTaskResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateAdamBenchTaskResponseBody body;
+    private GetDeadlockHistogramResponseBody body;
 
-    private CreateAdamBenchTaskResponse(BuilderImpl builder) {
+    private GetDeadlockHistogramResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateAdamBenchTaskResponse create() {
+    public static GetDeadlockHistogramResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +54,35 @@ public class CreateAdamBenchTaskResponse extends Response {
     /**
      * @return body
      */
-    public CreateAdamBenchTaskResponseBody getBody() {
+    public GetDeadlockHistogramResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateAdamBenchTaskResponse, Builder> {
+    public interface Builder extends Response.Builder<GetDeadlockHistogramResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateAdamBenchTaskResponseBody body);
+        Builder body(GetDeadlockHistogramResponseBody body);
 
         @Override
-        CreateAdamBenchTaskResponse build();
+        GetDeadlockHistogramResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateAdamBenchTaskResponse, Builder>
+            extends Response.BuilderImpl<GetDeadlockHistogramResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateAdamBenchTaskResponseBody body; 
+        private GetDeadlockHistogramResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateAdamBenchTaskResponse response) {
+        private BuilderImpl(GetDeadlockHistogramResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +111,14 @@ public class CreateAdamBenchTaskResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateAdamBenchTaskResponseBody body) {
+        public Builder body(GetDeadlockHistogramResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateAdamBenchTaskResponse build() {
-            return new CreateAdamBenchTaskResponse(this);
+        public GetDeadlockHistogramResponse build() {
+            return new GetDeadlockHistogramResponse(this);
         } 
 
     } 

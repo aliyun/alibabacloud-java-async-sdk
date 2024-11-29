@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutonomousNotifyEventContentResponseBody} extends {@link TeaModel}
  *
  * <p>GetAutonomousNotifyEventContentResponseBody</p>
@@ -85,7 +86,10 @@ public class GetAutonomousNotifyEventContentResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class GetAutonomousNotifyEventContentResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the notification events.
+         * <p>The details of the notification events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;taskId&quot;:&quot;7e1ba595-0889-48ff-a6ff-010f54991d****&quot;,&quot;taskType&quot;:&quot;SQL_OPTIMIZE&quot;,&quot;advisorId&quot;:&quot;636dc5f34664dd56ff0****&quot;,&quot;sqlId&quot;:&quot;e2b1d6c1ee1bb29555a828b59f16****&quot;,&quot;indexAdviceCount&quot;:1,&quot;indexAdvices&quot;:[{&quot;schemaName&quot;:&quot;das&quot;,&quot;tableName&quot;:&quot;students&quot;,&quot;indexName&quot;:&quot;idx_name&quot;,&quot;columns&quot;:[&quot;name&quot;],&quot;unique&quot;:false,&quot;ddlAddIndex&quot;:&quot;ALTER TABLE <code>das</code>.<code>students</code> ADD INDEX <code>idx_name</code> (<code>name</code>)&quot;,&quot;priority&quot;:0,&quot;optimizeId&quot;:&quot;96232794517277511&quot;}],&quot;tuningAdvices&quot;:[],&quot;improvement&quot;:8127.25,&quot;supportLevel&quot;:3,&quot;priority&quot;:&quot;HIGH&quot;}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,10 +108,13 @@ public class GetAutonomousNotifyEventContentResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +122,10 @@ public class GetAutonomousNotifyEventContentResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +133,14 @@ public class GetAutonomousNotifyEventContentResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

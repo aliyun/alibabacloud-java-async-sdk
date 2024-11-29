@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutonomousNotifyEventsInRangeRequest} extends {@link RequestModel}
  *
  * <p>GetAutonomousNotifyEventsInRangeRequest</p>
@@ -181,10 +182,14 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>1568265711221</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -193,7 +198,10 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder eventContext(String eventContext) {
             this.putQueryParameter("EventContext", eventContext);
@@ -202,7 +210,10 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-18ff4a195d****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -211,13 +222,16 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * The urgency level of the events. If you specify this parameter, the MinLevel parameter does not take effect. Valid values:
-         * <p>
+         * <p>The urgency level of the events. If you specify this parameter, the MinLevel parameter does not take effect. Valid values:</p>
+         * <ul>
+         * <li><strong>Notice</strong>: events for which the system sends notifications.</li>
+         * <li><strong>Optimization</strong>: events that need to be optimized.</li>
+         * <li><strong>Warn</strong>: events for which the system sends warnings.</li>
+         * <li><strong>Critical</strong>: critical events.</li>
+         * </ul>
          * 
-         * *   **Notice**: events for which the system sends notifications.
-         * *   **Optimization**: events that need to be optimized.
-         * *   **Warn**: events for which the system sends warnings.
-         * *   **Critical**: critical events.
+         * <strong>example:</strong>
+         * <p>Warn</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -226,13 +240,16 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * The minimum urgency level of the events. Valid values:
-         * <p>
+         * <p>The minimum urgency level of the events. Valid values:</p>
+         * <ul>
+         * <li><strong>Notice</strong>: events for which the system sends notifications.</li>
+         * <li><strong>Optimization</strong>: events that need to be optimized.</li>
+         * <li><strong>Warn</strong>: events for which the system sends warnings.</li>
+         * <li><strong>Critical</strong>: critical events.</li>
+         * </ul>
          * 
-         * *   **Notice**: events for which the system sends notifications.
-         * *   **Optimization**: events that need to be optimized.
-         * *   **Warn**: events for which the system sends warnings.
-         * *   **Critical**: critical events.
+         * <strong>example:</strong>
+         * <p>Notice</p>
          */
         public Builder minLevel(String minLevel) {
             this.putQueryParameter("MinLevel", minLevel);
@@ -241,10 +258,13 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * The ID of the node in a PolarDB for MySQL cluster. You can call the [DescribeDBClusters](~~98094~~) operation to query the node ID returned by the DBNodeId response parameter.
-         * <p>
+         * <p>The ID of the node in a PolarDB for MySQL cluster. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the node ID returned by the DBNodeId response parameter.</p>
+         * <blockquote>
+         * <p> You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</p>
+         * </blockquote>
          * 
-         * >  You must specify the node ID if your database instance is a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -253,7 +273,10 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * The page number. The value must be a positive integer. Default value: 1.
+         * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageOffset(String pageOffset) {
             this.putQueryParameter("PageOffset", pageOffset);
@@ -262,7 +285,10 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -271,7 +297,11 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568269711000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -280,7 +310,10 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder context(String context) {
             this.putQueryParameter("__context", context);

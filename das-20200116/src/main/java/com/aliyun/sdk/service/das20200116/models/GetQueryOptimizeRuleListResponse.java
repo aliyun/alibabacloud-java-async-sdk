@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryOptimizeRuleListResponse} extends {@link TeaModel}
  *
  * <p>GetQueryOptimizeRuleListResponse</p>

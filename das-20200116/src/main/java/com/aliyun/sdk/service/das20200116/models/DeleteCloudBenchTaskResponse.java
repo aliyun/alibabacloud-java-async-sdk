@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCloudBenchTaskResponse} extends {@link TeaModel}
  *
  * <p>DeleteCloudBenchTaskResponse</p>

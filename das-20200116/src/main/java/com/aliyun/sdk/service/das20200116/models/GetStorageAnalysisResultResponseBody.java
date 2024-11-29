@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStorageAnalysisResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetStorageAnalysisResultResponseBody</p>
@@ -85,7 +86,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStorageAnalysisResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStorageAnalysisResultResponseBody</p>
+     */
     public static class NeedOptimizeItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedData")
         private String associatedData;
@@ -212,7 +231,17 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The data associated with the items to be optimized, which is in the JSON format.
+             * <p>The data associated with the items to be optimized, which is in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;autoIncrementCurrentValue&quot;: 2147483647,
+             *     &quot;autoIncrementRatio&quot;: 1,
+             *     &quot;dbName&quot;: &quot;testdb01&quot;,
+             *     &quot;maximumValue&quot;: 2147483647,
+             *     &quot;columnName&quot;: &quot;id&quot;,
+             *     &quot;tableName&quot;: &quot;test_table&quot;
+             * }</p>
              */
             public Builder associatedData(String associatedData) {
                 this.associatedData = associatedData;
@@ -220,7 +249,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb01</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -228,17 +260,20 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The optimization suggestion. Valid values:
-             * <p>
+             * <p>The optimization suggestion. Valid values:</p>
+             * <ul>
+             * <li><strong>NEED_ANALYZE_TABLE</strong>: You can execute the <code>ANALYZE TABLE</code> statement on the table during off-peak hours. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
+             * <li><strong>NEED_OPTIMIZE_TABLE</strong>: You can reclaim fragments during off-peak hours.</li>
+             * <li><strong>CHANGE_TABLE_ENGINE_IF_NECESSARY</strong>: Change the storage engine type of a table after risk assessment. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
+             * <li><strong>AUTO_INCREMENT_ID_BE_TO_RUN_OUT</strong>: Pay attention to the usage of auto-increment IDs. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
+             * <li><strong>DUPLICATE_INDEX</strong>: Optimize indexes of tables. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
+             * <li><strong>TABLE_SIZE</strong>: Pay attention to the table size. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
+             * <li><strong>TABLE_ROWS_AND_AVG_ROW_LENGTH</strong>: Pay attention to the number of rows in a table and the average row length. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
+             * <li><strong>STORAGE_USED_PERCENT</strong>: Pay attention to the space usage to prevent the instance from being locked if the instance is full.</li>
+             * </ul>
              * 
-             * *   **NEED_ANALYZE_TABLE**: You can execute the `ANALYZE TABLE` statement on the table during off-peak hours. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * *   **NEED_OPTIMIZE_TABLE**: You can reclaim fragments during off-peak hours.
-             * *   **CHANGE_TABLE_ENGINE_IF_NECESSARY**: Change the storage engine type of a table after risk assessment. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * *   **AUTO_INCREMENT_ID_BE_TO_RUN_OUT**: Pay attention to the usage of auto-increment IDs. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * *   **DUPLICATE_INDEX**: Optimize indexes of tables. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * *   **TABLE_SIZE**: Pay attention to the table size. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * *   **TABLE_ROWS_AND_AVG_ROW_LENGTH**: Pay attention to the number of rows in a table and the average row length. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * *   **STORAGE_USED_PERCENT**: Pay attention to the space usage to prevent the instance from being locked if the instance is full.
+             * <strong>example:</strong>
+             * <p>NEED_OPTIMIZE_TABLE</p>
              */
             public Builder optimizeAdvice(String optimizeAdvice) {
                 this.optimizeAdvice = optimizeAdvice;
@@ -246,29 +281,34 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The item to be optimized. Valid values:
-             * <p>
+             * <p>The item to be optimized. Valid values:</p>
+             * <ul>
+             * <li><p><strong>NEED_ANALYZE_TABLE</strong>: tables whose storage statistics obtained from <code>information_schema.tables</code> are 50 GB larger or smaller than the physical file sizes. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+             * </li>
+             * <li><p><strong>NEED_OPTIMIZE_TABLE</strong>: tables whose space fragments are larger than 6 GB and whose fragmentation rates are greater than 30%. The fragmentation rate of a table is generally calculated based on the following formulas:</p>
+             * <ul>
+             * <li>ApsaraDB RDS for MySQL and PolarDB for MySQL: <code>Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)</code>. In this topic, PhyTotalSize = DataSize + IndexSize + DataFree. Thus, the fragmentation rate can be calculated based on the following formula: <code>Fragmentation rate = DataFree/PhyTotalSize</code>.</li>
+             * <li>ApsaraDB for MongoDB: <code>Fragmentation rate = FragmentSize/PhyTotalSize</code>.</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>TABLE_ENGINE</strong>: tables whose storage engines are not InnoDB or XEngine. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+             * </li>
+             * <li><p><strong>AUTO_INCREMENT_ID_BE_TO_RUN_OUT</strong>: tables whose usages of auto-increment IDs exceed 80%. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+             * </li>
+             * <li><p><strong>DUPLICATE_INDEX</strong>: tables whose indexes are redundant or duplicate. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+             * </li>
+             * <li><p><strong>TABLE_SIZE</strong>: single tables whose sizes are larger than 50 GB. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+             * </li>
+             * <li><p><strong>TABLE_ROWS_AND_AVG_ROW_LENGTH</strong>: single tables that contain more than 5 million rows and whose average row lengths exceed 10 KB. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+             * </li>
+             * <li><p><strong>TOTAL_DATA_FREE</strong>: instances whose reclaimable space is larger than 60 GB and whose total fragmentation rate is larger than 5%.</p>
+             * </li>
+             * <li><p><strong>STORAGE_USED_PERCENT</strong>: instances whose space usage is larger than 90%.</p>
+             * </li>
+             * </ul>
              * 
-             * *   **NEED_ANALYZE_TABLE**: tables whose storage statistics obtained from `information_schema.tables` are 50 GB larger or smaller than the physical file sizes. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * 
-             * *   **NEED_OPTIMIZE_TABLE**: tables whose space fragments are larger than 6 GB and whose fragmentation rates are greater than 30%. The fragmentation rate of a table is generally calculated based on the following formulas:
-             * 
-             *     *   ApsaraDB RDS for MySQL and PolarDB for MySQL: `Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)`. In this topic, PhyTotalSize = DataSize + IndexSize + DataFree. Thus, the fragmentation rate can be calculated based on the following formula: `Fragmentation rate = DataFree/PhyTotalSize`.
-             *     *   ApsaraDB for MongoDB: `Fragmentation rate = FragmentSize/PhyTotalSize`.
-             * 
-             * *   **TABLE_ENGINE**: tables whose storage engines are not InnoDB or XEngine. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * 
-             * *   **AUTO_INCREMENT_ID_BE_TO_RUN_OUT**: tables whose usages of auto-increment IDs exceed 80%. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * 
-             * *   **DUPLICATE_INDEX**: tables whose indexes are redundant or duplicate. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * 
-             * *   **TABLE_SIZE**: single tables whose sizes are larger than 50 GB. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * 
-             * *   **TABLE_ROWS_AND_AVG_ROW_LENGTH**: single tables that contain more than 5 million rows and whose average row lengths exceed 10 KB. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-             * 
-             * *   **TOTAL_DATA_FREE**: instances whose reclaimable space is larger than 60 GB and whose total fragmentation rate is larger than 5%.
-             * 
-             * *   **STORAGE_USED_PERCENT**: instances whose space usage is larger than 90%.
+             * <strong>example:</strong>
+             * <p>NEED_OPTIMIZE_TABLE</p>
              */
             public Builder optimizeItemName(String optimizeItemName) {
                 this.optimizeItemName = optimizeItemName;
@@ -276,7 +316,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -290,6 +333,12 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStorageAnalysisResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStorageAnalysisResultResponseBody</p>
+     */
     public static class TableStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgRowLength")
         private Long avgRowLength;
@@ -461,7 +510,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * The average length of rows. Unit: bytes.
+             * <p>The average length of rows. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>154</p>
              */
             public Builder avgRowLength(Long avgRowLength) {
                 this.avgRowLength = avgRowLength;
@@ -469,10 +521,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The size of space fragments. Unit: bytes.
-             * <p>
+             * <p>The size of space fragments. Unit: bytes.</p>
+             * <blockquote>
+             * <p> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. The fragmentation rate of a table is generally calculated based on the following formula: <code>Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)</code>. In this topic, <code>Fragmentation rate = DataFree/PhyTotalSize</code>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. The fragmentation rate of a table is generally calculated based on the following formula: `Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)`. In this topic, `Fragmentation rate = DataFree/PhyTotalSize`.
+             * <strong>example:</strong>
+             * <p>7340032</p>
              */
             public Builder dataFree(Long dataFree) {
                 this.dataFree = dataFree;
@@ -480,9 +535,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * *   For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by data. Unit: bytes.
-             * <p>
-             * *   For ApsaraDB for MongoDB instances, this parameter indicates the size of uncompressed data, that is, the amount of data. Unit: bytes.
+             * <ul>
+             * <li>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by data. Unit: bytes.</li>
+             * <li>For ApsaraDB for MongoDB instances, this parameter indicates the size of uncompressed data, that is, the amount of data. Unit: bytes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1982857216</p>
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -490,7 +549,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb01</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -498,10 +560,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the storage engine used by the table.
-             * <p>
+             * <p>The type of the storage engine used by the table.</p>
+             * <blockquote>
+             * <p> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+             * </blockquote>
              * 
-             * >  This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+             * <strong>example:</strong>
+             * <p>InnoDB</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -509,10 +574,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The size of space that can be reclaimed. Unit: bytes.
-             * <p>
+             * <p>The size of space that can be reclaimed. Unit: bytes.</p>
+             * <blockquote>
+             * <p> This parameter is applicable only to ApsaraDB for MongoDB instances. <code>Fragmentation rate = FragmentSize/PhyTotalSize</code>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is applicable only to ApsaraDB for MongoDB instances. `Fragmentation rate = FragmentSize/PhyTotalSize`.
+             * <strong>example:</strong>
+             * <p>362221568</p>
              */
             public Builder fragmentSize(Long fragmentSize) {
                 this.fragmentSize = fragmentSize;
@@ -520,7 +588,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The storage space occupied by indexes. Unit: bytes.
+             * <p>The storage space occupied by indexes. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1022296064</p>
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -528,10 +599,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The storage space of the table. Unit: bytes.
-             * <p>
+             * <p>The storage space of the table. Unit: bytes.</p>
+             * <blockquote>
+             * <p> For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, the value of the parameter is the sum of <strong>DataSize</strong>, <strong>IndexSize</strong>, and <strong>DataFree</strong>. For ApsaraDB for MongoDB instances, the value of this parameter is the sum of <strong>DataSize</strong> and <strong>IndexSize</strong>.</p>
+             * </blockquote>
              * 
-             * >  For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, the value of the parameter is the sum of **DataSize**, **IndexSize**, and **DataFree**. For ApsaraDB for MongoDB instances, the value of this parameter is the sum of **DataSize** and **IndexSize**.
+             * <strong>example:</strong>
+             * <p>3012493312</p>
              */
             public Builder phyTotalSize(Long phyTotalSize) {
                 this.phyTotalSize = phyTotalSize;
@@ -539,10 +613,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The physical file size of the table. Unit: bytes.
-             * <p>
+             * <p>The physical file size of the table. Unit: bytes.</p>
+             * <blockquote>
+             * <p> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. Data of specific database instances cannot be obtained due to deployment mode.</p>
+             * </blockquote>
              * 
-             * >  This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. Data of specific database instances cannot be obtained due to deployment mode.
+             * <strong>example:</strong>
+             * <p>3057655808</p>
              */
             public Builder physicalFileSize(Long physicalFileSize) {
                 this.physicalFileSize = physicalFileSize;
@@ -550,7 +627,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -558,7 +638,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows in the table.
+             * <p>The number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12794732</p>
              */
             public Builder tableRows(Long tableRows) {
                 this.tableRows = tableRows;
@@ -566,10 +649,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the table.
-             * <p>
+             * <p>The type of the table.</p>
+             * <blockquote>
+             * <p> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+             * </blockquote>
              * 
-             * >  This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+             * <strong>example:</strong>
+             * <p>BASE TABLE</p>
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;
@@ -577,9 +663,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * *   For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by table data and indexes. Unit: bytes. The value is the sum of **DataSize** and **IndexSize**.
-             * <p>
-             * *   For ApsaraDB for MongoDB instances, this parameter indicates the actual size of space allocated by Block Manager. Unit: Bytes. The compression ratio of an ApsaraDB for MongoDB instance is calculated based on the following formula: `Compression ratio = TotalSize/DataSize`.
+             * <ul>
+             * <li>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by table data and indexes. Unit: bytes. The value is the sum of <strong>DataSize</strong> and <strong>IndexSize</strong>.</li>
+             * <li>For ApsaraDB for MongoDB instances, this parameter indicates the actual size of space allocated by Block Manager. Unit: Bytes. The compression ratio of an ApsaraDB for MongoDB instance is calculated based on the following formula: <code>Compression ratio = TotalSize/DataSize</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3005153280</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -593,6 +683,12 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStorageAnalysisResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStorageAnalysisResultResponseBody</p>
+     */
     public static class StorageAnalysisResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnalysisErrorType")
         private String analysisErrorType;
@@ -716,11 +812,14 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private Long totalUsedStorageSize; 
 
             /**
-             * The reason why the analysis on the database and table fails.
-             * <p>
+             * <p>The reason why the analysis on the database and table fails.</p>
+             * <ul>
+             * <li><strong>DB_OR_TABLE_NOT_EXIST</strong>: The specified database or table does not exist.</li>
+             * <li><strong>DB_NOT_EXIST</strong>: The specified database does not exist.</li>
+             * </ul>
              * 
-             * *   **DB_OR_TABLE_NOT_EXIST**: The specified database or table does not exist.
-             * *   **DB_NOT_EXIST**: The specified database does not exist.
+             * <strong>example:</strong>
+             * <p>DB_NOT_EXIST</p>
              */
             public Builder analysisErrorType(String analysisErrorType) {
                 this.analysisErrorType = analysisErrorType;
@@ -728,7 +827,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the analysis on the database and table is successful.
+             * <p>Indicates whether the analysis on the database and table is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder analysisSuccess(Boolean analysisSuccess) {
                 this.analysisSuccess = analysisSuccess;
@@ -736,7 +838,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated average daily growth of the used storage space in the previous seven days. Unit: bytes.
+             * <p>The estimated average daily growth of the used storage space in the previous seven days. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dailyIncrement(Long dailyIncrement) {
                 this.dailyIncrement = dailyIncrement;
@@ -744,7 +849,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated number of days for which the remaining storage space is available.
+             * <p>The estimated number of days for which the remaining storage space is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder estimateAvailableDays(Long estimateAvailableDays) {
                 this.estimateAvailableDays = estimateAvailableDays;
@@ -752,7 +860,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The items to be optimized, which are generated based on DAS default rules. You can ignore these items based on your business requirements, and create custom rules to generate items to be optimized based on other basic data that is returned.
+             * <p>The items to be optimized, which are generated based on DAS default rules. You can ignore these items based on your business requirements, and create custom rules to generate items to be optimized based on other basic data that is returned.</p>
              */
             public Builder needOptimizeItemList(java.util.List < NeedOptimizeItemList> needOptimizeItemList) {
                 this.needOptimizeItemList = needOptimizeItemList;
@@ -760,7 +868,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the table.
+             * <p>The information about the table.</p>
              */
             public Builder tableStats(java.util.List < TableStats> tableStats) {
                 this.tableStats = tableStats;
@@ -768,10 +876,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The size of remaining storage.
-             * <p>
+             * <p>The size of remaining storage.</p>
+             * <blockquote>
+             * <p> Unit: bytes.</p>
+             * </blockquote>
              * 
-             * >  Unit: bytes.
+             * <strong>example:</strong>
+             * <p>146403229696</p>
              */
             public Builder totalFreeStorageSize(Long totalFreeStorageSize) {
                 this.totalFreeStorageSize = totalFreeStorageSize;
@@ -779,10 +890,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The total size of instance storage.
-             * <p>
+             * <p>The total size of instance storage.</p>
+             * <blockquote>
+             * <p> Unit: bytes.</p>
+             * </blockquote>
              * 
-             * >  Unit: bytes.
+             * <strong>example:</strong>
+             * <p>214748364800</p>
              */
             public Builder totalStorageSize(Long totalStorageSize) {
                 this.totalStorageSize = totalStorageSize;
@@ -790,10 +904,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used storage.
-             * <p>
+             * <p>The size of used storage.</p>
+             * <blockquote>
+             * <p> Unit: bytes.</p>
+             * </blockquote>
              * 
-             * >  Unit: bytes.
+             * <strong>example:</strong>
+             * <p>68345135104</p>
              */
             public Builder totalUsedStorageSize(Long totalUsedStorageSize) {
                 this.totalUsedStorageSize = totalUsedStorageSize;
@@ -807,6 +924,12 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStorageAnalysisResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStorageAnalysisResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnalyzedDbCount")
         private Long analyzedDbCount;
@@ -918,7 +1041,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private Long totalDbCount; 
 
             /**
-             * The number of databases that have been analyzed.
+             * <p>The number of databases that have been analyzed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder analyzedDbCount(Long analyzedDbCount) {
                 this.analyzedDbCount = analyzedDbCount;
@@ -926,7 +1052,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The details of storage analysis.
+             * <p>The details of storage analysis.</p>
              */
             public Builder storageAnalysisResult(StorageAnalysisResult storageAnalysisResult) {
                 this.storageAnalysisResult = storageAnalysisResult;
@@ -934,7 +1060,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task is complete.
+             * <p>Indicates whether the task is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder taskFinish(Boolean taskFinish) {
                 this.taskFinish = taskFinish;
@@ -942,7 +1071,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>910f83f4b96df0524ddc5749f615****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -950,10 +1082,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The task progress.
-             * <p>
+             * <p>The task progress.</p>
+             * <blockquote>
+             * <p> Valid values are integers that range from 0 to 100.</p>
+             * </blockquote>
              * 
-             * >  Valid values are integers that range from 0 to 100.
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder taskProgress(Long taskProgress) {
                 this.taskProgress = taskProgress;
@@ -961,16 +1096,19 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the storage analysis task. Valid values:
-             * <p>
+             * <p>The status of the storage analysis task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is being initialized.</li>
+             * <li><strong>PENDING</strong>: The task is being queued for execution.</li>
+             * <li><strong>RECEIVED</strong>: The task is received for execution.</li>
+             * <li><strong>RUNNING</strong>: The task is being executed.</li>
+             * <li><strong>RETRY</strong>: The task is being retried.</li>
+             * <li><strong>SUCCESS</strong>: The task succeeds.</li>
+             * <li><strong>FAILURE</strong>: The task fails.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is being initialized.
-             * *   **PENDING**: The task is being queued for execution.
-             * *   **RECEIVED**: The task is received for execution.
-             * *   **RUNNING**: The task is being executed.
-             * *   **RETRY**: The task is being retried.
-             * *   **SUCCESS**: The task succeeds.
-             * *   **FAILURE**: The task fails.
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -978,7 +1116,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task is successful.
+             * <p>Indicates whether the task is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder taskSuccess(Boolean taskSuccess) {
                 this.taskSuccess = taskSuccess;
@@ -986,7 +1127,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of databases that need to be analyzed in the storage analysis task.
+             * <p>The number of databases that need to be analyzed in the storage analysis task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder totalDbCount(Long totalDbCount) {
                 this.totalDbCount = totalDbCount;

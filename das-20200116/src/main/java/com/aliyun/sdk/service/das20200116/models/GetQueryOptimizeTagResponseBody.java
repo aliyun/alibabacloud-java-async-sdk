@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryOptimizeTagResponseBody} extends {@link TeaModel}
  *
  * <p>GetQueryOptimizeTagResponseBody</p>
@@ -85,7 +86,10 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
         }
 
         /**
-         * The returned SQL tag data.
+         * <p>The returned SQL tag data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQueryOptimizeTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeTagResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
@@ -188,7 +207,10 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
             private String tags; 
 
             /**
-             * The remarks.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Slow SQL queries of offline synchronization. No optimization is required.</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -196,7 +218,10 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL template ID.
+             * <p>The SQL template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>651b56fe9418d48edb8fdf0980ec****</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -204,7 +229,10 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL tags. Multiple tags are separated by commas (,).
+             * <p>The SQL tags. Multiple tags are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAS_IN_PLAN,DAS_NOT_IMPORTANT</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDasProServiceUsageResponseBody} extends {@link TeaModel}
  *
  * <p>GetDasProServiceUsageResponseBody</p>
@@ -85,7 +86,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{         &quot;storageFreeQuotaInMB&quot;: 5120,         &quot;ip&quot;: &quot;rm-2ze8g2am97624****.mysql.<strong><strong>.com&quot;,         &quot;custinsId&quot;: 12448331,         &quot;userId&quot;: &quot;196278346919</strong></strong>&quot;,         &quot;uuid&quot;: &quot;hdm_b0ae36343407609bf3e8df8709d8****&quot;,         &quot;expireTime&quot;: 1924963200000,         &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,         &quot;storageUsed&quot;: 10773752667393,         &quot;engine&quot;: &quot;MySQL&quot;,         &quot;instanceAlias&quot;: &quot;TESTDB01_PROD&quot;,         &quot;port&quot;: 3310,         &quot;vpcId&quot;: &quot;hdm_****&quot;,         &quot;commodityInstanceId&quot;: &quot;daspro-****&quot;,         &quot;startTime&quot;: 1606381940000,         &quot;isSpare&quot;: false,         &quot;region&quot;: &quot;cn-shanghai&quot;,         &quot;serviceUnitId&quot;: &quot;5&quot;,         &quot;sqlRetention&quot;: 30     }</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +108,13 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +122,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7172BECE-588A-5961-8126-C216E16B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +133,14 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +153,12 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDasProServiceUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDasProServiceUsageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("commodityInstanceId")
         private String commodityInstanceId;
@@ -356,7 +378,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of the DAS Enterprise Edition instance.
+             * <p>The ID of the DAS Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daspro-cn-v0h1l6i****</p>
              */
             public Builder commodityInstanceId(String commodityInstanceId) {
                 this.commodityInstanceId = commodityInstanceId;
@@ -364,7 +389,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -372,7 +400,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The point of time when DAS Enterprise Edition for the database instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The point of time when DAS Enterprise Edition for the database instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648742400000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -380,7 +411,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database instance.
+             * <p>The name of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TESTDB01</p>
              */
             public Builder instanceAlias(String instanceAlias) {
                 this.instanceAlias = instanceAlias;
@@ -388,7 +422,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The database instance ID.
+             * <p>The database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze8g2am97624****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -396,7 +433,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the database instance.
+             * <p>The endpoint of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze8g2am97624****.mysql.****.com</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -404,11 +444,14 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DAS Enterprise Edition for the database instance has expired. Valid values:
-             * <p>
+             * <p>Indicates whether DAS Enterprise Edition for the database instance has expired. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isSpare(Boolean isSpare) {
                 this.isSpare = isSpare;
@@ -416,10 +459,13 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated remaining time for migrating the data generated by the SQL Explorer and Audit feature from the previous version to the new version. Unit: milliseconds.
-             * <p>
+             * <p>The estimated remaining time for migrating the data generated by the SQL Explorer and Audit feature from the previous version to the new version. Unit: milliseconds.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the SQL Explorer and Audit feature is migrated from the previous version to the new version.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the SQL Explorer and Audit feature is migrated from the previous version to the new version.
+             * <strong>example:</strong>
+             * <p>60000</p>
              */
             public Builder migrationPredictRemainingTime(Long migrationPredictRemainingTime) {
                 this.migrationPredictRemainingTime = migrationPredictRemainingTime;
@@ -427,7 +473,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is used to connect to the database instance.
+             * <p>The port number that is used to connect to the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -435,7 +484,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the database instance resides.
+             * <p>The region in which the database instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -443,7 +495,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The service unit ID.
+             * <p>The service unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder serviceUnitId(String serviceUnitId) {
                 this.serviceUnitId = serviceUnitId;
@@ -451,7 +506,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The storage duration of SQL Explorer data. Unit: days.
+             * <p>The storage duration of SQL Explorer data. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder sqlRetention(String sqlRetention) {
                 this.sqlRetention = sqlRetention;
@@ -459,7 +517,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when DAS Enterprise Edition was enabled for the database instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when DAS Enterprise Edition was enabled for the database instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646100892000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -467,7 +528,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL Explorer storage space that is offered free-of-charge. Unit: MB.
+             * <p>The SQL Explorer storage space that is offered free-of-charge. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5120</p>
              */
             public Builder storageFreeQuotaInMB(Double storageFreeQuotaInMB) {
                 this.storageFreeQuotaInMB = storageFreeQuotaInMB;
@@ -475,7 +539,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The storage usage of SQL Explorer of the database instance. Unit: bytes.
+             * <p>The storage usage of SQL Explorer of the database instance. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35903498</p>
              */
             public Builder storageUsed(Long storageUsed) {
                 this.storageUsed = storageUsed;
@@ -483,7 +550,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the database instance.
+             * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196278346919****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -491,7 +561,10 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) ID.
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zentqj1sk4qmolci****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

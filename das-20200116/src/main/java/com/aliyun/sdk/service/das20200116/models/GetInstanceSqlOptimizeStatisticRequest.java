@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceSqlOptimizeStatisticRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceSqlOptimizeStatisticRequest</p>
@@ -140,7 +141,11 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1662518540764</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -149,13 +154,17 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         }
 
         /**
-         * Specifies whether to filter instances for which DAS Enterprise Edition is enabled. Valid values:
-         * <p>
+         * <p>Specifies whether to filter instances for which DAS Enterprise Edition is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set this parameter to <strong>true</strong>, only database instances for which DAS Enterprise Edition is disabled are queried. If you set this parameter to <strong>false</strong>, all database instances are queried.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * >  If you set this parameter to **true**, only database instances for which DAS Enterprise Edition is disabled are queried. If you set this parameter to **false**, all database instances are queried.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder filterEnable(String filterEnable) {
             this.putQueryParameter("FilterEnable", filterEnable);
@@ -164,10 +173,14 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         }
 
         /**
-         * The database instance ID.
-         * <p>
+         * <p>The database instance ID.</p>
+         * <blockquote>
+         * <p> The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>pc-wz90h9560rvdz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -176,10 +189,13 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</p>
+         * </blockquote>
          * 
-         * >  For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.
+         * <strong>example:</strong>
+         * <p>pi-bp12v7243x012****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -188,7 +204,11 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661308902060</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -197,10 +217,13 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         }
 
         /**
-         * The duration threshold for automatic SQL optimization events. After this parameter is specified, the system collects statistics on automatic SQL optimization events whose duration does not exceed the specified threshold.
-         * <p>
+         * <p>The duration threshold for automatic SQL optimization events. After this parameter is specified, the system collects statistics on automatic SQL optimization events whose duration does not exceed the specified threshold.</p>
+         * <blockquote>
+         * <p> This parameter is a reserved parameter and does not take effect.</p>
+         * </blockquote>
          * 
-         * >  This parameter is a reserved parameter and does not take effect.
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder threshold(String threshold) {
             this.putQueryParameter("Threshold", threshold);
@@ -209,13 +232,17 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         }
 
         /**
-         * Specifies whether to merge automatic SQL optimization events. Valid values:
-         * <p>
+         * <p>Specifies whether to merge automatic SQL optimization events. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: merges automatic SQL optimization events.</li>
+         * <li><strong>false</strong>: does not merge automatic SQL optimization events.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is a reserved parameter and does not take effect.</p>
+         * </blockquote>
          * 
-         * *   **true**: merges automatic SQL optimization events.
-         * *   **false**: does not merge automatic SQL optimization events.
-         * 
-         * >  This parameter is a reserved parameter and does not take effect.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useMerging(String useMerging) {
             this.putQueryParameter("UseMerging", useMerging);

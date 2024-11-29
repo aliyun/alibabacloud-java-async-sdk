@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSqlLogTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateSqlLogTaskRequest</p>
@@ -151,7 +152,10 @@ public class CreateSqlLogTaskRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+         * <p>The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608888296000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -160,7 +164,7 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -169,7 +173,10 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * The ID of the database instance.
+         * <p>The ID of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -178,7 +185,10 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * The name of the task.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -187,10 +197,13 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.</p>
+         * </blockquote>
          * 
-         * >  This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.
+         * <strong>example:</strong>
+         * <p>pi-uf6k5f6g3912i0dqz</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -199,11 +212,14 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * The role of the node of the PolarDB-X 2.0 database instance. Valid values:
-         * <p>
+         * <p>The role of the node of the PolarDB-X 2.0 database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>polarx_cn</strong>: compute node</li>
+         * <li><strong>polarx_dn</strong>: data node</li>
+         * </ul>
          * 
-         * *   **polarx_cn**: compute node
-         * *   **polarx_dn**: data node
+         * <strong>example:</strong>
+         * <p>polarx_cn</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -212,7 +228,10 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+         * <p>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596177993000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -221,12 +240,15 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
-         * <p>
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>Export</strong></li>
+         * <li><strong>Query</strong></li>
+         * <li><strong>Insight</strong></li>
+         * </ul>
          * 
-         * *   **Export**
-         * *   **Query**
-         * *   **Insight**
+         * <strong>example:</strong>
+         * <p>Export</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -241,6 +263,12 @@ public class CreateSqlLogTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSqlLogTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSqlLogTaskRequest</p>
+     */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -280,10 +308,13 @@ public class CreateSqlLogTaskRequest extends Request {
             private String value; 
 
             /**
-             * The name of the filter parameter.
-             * <p>
+             * <p>The name of the filter parameter.</p>
+             * <blockquote>
+             * <p> For more information about the supported filter parameters and their valid values, see the following <strong>supplement about the Key parameter</strong>.</p>
+             * </blockquote>
              * 
-             * >  For more information about the supported filter parameters and their valid values, see the following **supplement about the Key parameter**.
+             * <strong>example:</strong>
+             * <p>KeyWords</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -291,7 +322,10 @@ public class CreateSqlLogTaskRequest extends Request {
             }
 
             /**
-             * The value of the filter parameter.
+             * <p>The value of the filter parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder value(String value) {
                 this.value = value;

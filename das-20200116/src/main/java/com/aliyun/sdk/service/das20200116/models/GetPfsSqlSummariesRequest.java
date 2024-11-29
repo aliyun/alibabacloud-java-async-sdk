@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPfsSqlSummariesRequest} extends {@link RequestModel}
  *
  * <p>GetPfsSqlSummariesRequest</p>
@@ -179,11 +180,14 @@ public class GetPfsSqlSummariesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to sort the returned entries in ascending order. Default value: **false**. Valid values:
-         * <p>
+         * <p>Specifies whether to sort the returned entries in ascending order. Default value: <strong>false</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder asc(Boolean asc) {
             this.putBodyParameter("Asc", asc);
@@ -192,10 +196,13 @@ public class GetPfsSqlSummariesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. You can view the data of up to seven days within the last month.</p>
+         * </blockquote>
          * 
-         * >  The end time must be later than the start time. You can view the data of up to seven days within the last month.
+         * <strong>example:</strong>
+         * <p>1679297005999</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -204,7 +211,10 @@ public class GetPfsSqlSummariesRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf61swc4cru0b****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -213,7 +223,10 @@ public class GetPfsSqlSummariesRequest extends Request {
         }
 
         /**
-         * The keywords of the SQL template. Separate multiple keywords with spaces.
+         * <p>The keywords of the SQL template. Separate multiple keywords with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select update</p>
          */
         public Builder keywords(String keywords) {
             this.putBodyParameter("Keywords", keywords);
@@ -222,10 +235,13 @@ public class GetPfsSqlSummariesRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> This parameter is required if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>r-****-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -234,15 +250,18 @@ public class GetPfsSqlSummariesRequest extends Request {
         }
 
         /**
-         * The field by which to sort the returned entries. Default value: **count**.
-         * <p>
+         * <p>The field by which to sort the returned entries. Default value: <strong>count</strong>.</p>
+         * <ul>
+         * <li><strong>count</strong>: the number of executions.</li>
+         * <li><strong>avgRt</strong>: the average execution duration.</li>
+         * <li><strong>rtRate</strong>: the execution duration percentage.</li>
+         * <li><strong>rowsExamined</strong>: the total number of scanned rows.</li>
+         * <li><strong>avgRowsExamined</strong>: the average number of scanned rows.</li>
+         * <li><strong>avgRowsReturned</strong>: the average number of returned rows.</li>
+         * </ul>
          * 
-         * *   **count**: the number of executions.
-         * *   **avgRt**: the average execution duration.
-         * *   **rtRate**: the execution duration percentage.
-         * *   **rowsExamined**: the total number of scanned rows.
-         * *   **avgRowsExamined**: the average number of scanned rows.
-         * *   **avgRowsReturned**: the average number of returned rows.
+         * <strong>example:</strong>
+         * <p>count</p>
          */
         public Builder orderBy(String orderBy) {
             this.putBodyParameter("OrderBy", orderBy);
@@ -251,7 +270,10 @@ public class GetPfsSqlSummariesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -260,7 +282,10 @@ public class GetPfsSqlSummariesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Valid values: 1 to 100.
+         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -269,10 +294,13 @@ public class GetPfsSqlSummariesRequest extends Request {
         }
 
         /**
-         * The SQL ID.
-         * <p>
+         * <p>The SQL ID.</p>
+         * <blockquote>
+         * <p> If this parameter is specified, the full request statistics of the specified SQL query are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.</p>
+         * </blockquote>
          * 
-         * >  If this parameter is specified, the full request statistics of the specified SQL query are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.
+         * <strong>example:</strong>
+         * <p>651b56fe9418d48edb8fdf0980ec****</p>
          */
         public Builder sqlId(String sqlId) {
             this.putBodyParameter("SqlId", sqlId);
@@ -281,7 +309,10 @@ public class GetPfsSqlSummariesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1675833788056</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

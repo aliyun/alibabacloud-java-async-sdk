@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAutoSqlOptimizeStatusResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAutoSqlOptimizeStatusResponseBody</p>
@@ -85,7 +86,10 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A52AD37C-35ED-581A-AC23-2232BE54****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateAutoSqlOptimizeStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateAutoSqlOptimizeStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -188,11 +207,14 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * The error code. Valid values:
-             * <p>
+             * <p>The error code. Valid values:</p>
+             * <ul>
+             * <li><strong>-1001</strong>: indicates that the specified parameter is invalid.</li>
+             * <li><strong>-91029</strong>: indicates that a system error occurred.</li>
+             * </ul>
              * 
-             * *   **-1001**: indicates that the specified parameter is invalid.
-             * *   **-91029**: indicates that a system error occurred.
+             * <strong>example:</strong>
+             * <p>-1001</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -200,7 +222,10 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>invalid param</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -208,11 +233,14 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request initiated to configure the automatic SQL optimization feature was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request initiated to configure the automatic SQL optimization feature was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder success(String success) {
                 this.success = success;

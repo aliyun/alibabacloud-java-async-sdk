@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBlockingDetailListResponseBody} extends {@link TeaModel}
  *
  * <p>GetBlockingDetailListResponseBody</p>
@@ -85,7 +86,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBlockingDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBlockingDetailListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BatchId")
         private Long batchId;
@@ -296,7 +315,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             private String waitType; 
 
             /**
-             * The batch ID.
+             * <p>The batch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683530096156</p>
              */
             public Builder batchId(Long batchId) {
                 this.batchId = batchId;
@@ -304,7 +326,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The client name.
+             * <p>The client name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.Net SqlClient Data Provider</p>
              */
             public Builder clientAppName(String clientAppName) {
                 this.clientAppName = clientAppName;
@@ -312,7 +337,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the blocking data was collected.
+             * <p>The time when the blocking data was collected. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700065800000</p>
              */
             public Builder currentCollectionTime(Long currentCollectionTime) {
                 this.currentCollectionTime = currentCollectionTime;
@@ -320,7 +348,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>school</p>
              */
             public Builder dataBase(String dataBase) {
                 this.dataBase = dataBase;
@@ -328,7 +359,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The client hostname.
+             * <p>The client hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALLBNMGTAPPRD01</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -336,7 +370,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The username that is used for the logon.
+             * <p>The username that is used for the logon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cheney603</p>
              */
             public Builder loginId(String loginId) {
                 this.loginId = loginId;
@@ -344,7 +381,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The hash value of the SQL statement.
+             * <p>The hash value of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6977DD06CD9CAFF2</p>
              */
             public Builder queryHash(String queryHash) {
                 this.queryHash = queryHash;
@@ -352,7 +392,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The session ID.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717</p>
              */
             public Builder spid(String spid) {
                 this.spid = spid;
@@ -360,7 +403,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from test1</p>
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -368,7 +414,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution started.
+             * <p>The time when the execution started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1608888296000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -376,7 +425,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The blocking duration. Unit: milliseconds.
+             * <p>The duration of the blocking. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000</p>
              */
             public Builder waitTimeMs(Long waitTimeMs) {
                 this.waitTimeMs = waitTimeMs;
@@ -384,7 +436,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The wait type.
+             * <p>The wait type. For more information about wait types, see <a href="https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql?view=sql-server-ver15">sys.dm_os_wait_stats (Transact-SQL)</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MISCELLANEOUS</p>
              */
             public Builder waitType(String waitType) {
                 this.waitType = waitType;
@@ -398,6 +453,12 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetBlockingDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBlockingDetailListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
@@ -461,7 +522,7 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The details of the data returned.
+             * <p>The details of the data returned.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -469,7 +530,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the page returned.
+             * <p>The page number of the page returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -477,7 +541,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * <p>The number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -485,7 +552,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder total(Long total) {
                 this.total = total;

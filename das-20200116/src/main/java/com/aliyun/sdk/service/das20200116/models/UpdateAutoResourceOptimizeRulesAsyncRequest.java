@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAutoResourceOptimizeRulesAsyncRequest} extends {@link RequestModel}
  *
  * <p>UpdateAutoResourceOptimizeRulesAsyncRequest</p>
@@ -112,7 +113,10 @@ public class UpdateAutoResourceOptimizeRulesAsyncRequest extends Request {
         } 
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -121,10 +125,14 @@ public class UpdateAutoResourceOptimizeRulesAsyncRequest extends Request {
         }
 
         /**
-         * The database instance IDs.
-         * <p>
+         * <p>The database instance IDs.</p>
+         * <blockquote>
+         * <p> Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <code>[\&quot;Instance ID1\&quot;, \&quot;Instance ID2\&quot;]</code>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\"Instance ID1\", \"Instance ID2\"]`.
+         * <strong>example:</strong>
+         * <p>[&quot;rm-2ze8g2am97624****&quot;,&quot;rm-2ze9xrhze0709****&quot;]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -133,10 +141,13 @@ public class UpdateAutoResourceOptimizeRulesAsyncRequest extends Request {
         }
 
         /**
-         * The ID of the asynchronous request.
-         * <p>
+         * <p>The ID of the asynchronous request.</p>
+         * <blockquote>
+         * <p> Asynchronous calls do not immediately return the complete results. To obtain the complete results, you must use the value of <strong>ResultId</strong> returned in the response to re-initiate the call until the value of <strong>isFinish</strong> is <strong>true</strong>.**** In this case, you must call this operation at least twice.</p>
+         * </blockquote>
          * 
-         * >  Asynchronous calls do not immediately return the complete results. To obtain the complete results, you must use the value of **ResultId** returned in the response to re-initiate the call until the value of **isFinish** is **true**.**** In this case, you must call this operation at least twice.
+         * <strong>example:</strong>
+         * <p>async__507044db6c4eadfa2dab9b084e80****</p>
          */
         public Builder resultId(String resultId) {
             this.putQueryParameter("ResultId", resultId);
@@ -145,7 +156,11 @@ public class UpdateAutoResourceOptimizeRulesAsyncRequest extends Request {
         }
 
         /**
-         * The fragmentation rate that triggers automatic fragment recycling of a single physical table. Valid values: **0.10** to **0.99**.
+         * <p>The fragmentation rate that triggers automatic fragment recycling of a single physical table. Valid values: <strong>0.10</strong> to <strong>0.99</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         public Builder tableFragmentationRatio(Double tableFragmentationRatio) {
             this.putQueryParameter("TableFragmentationRatio", tableFragmentationRatio);
@@ -154,7 +169,11 @@ public class UpdateAutoResourceOptimizeRulesAsyncRequest extends Request {
         }
 
         /**
-         * The minimum storage usage that triggers automatic fragment recycling of a single physical table. Valid values: **5** to **100**. Unit: GB.
+         * <p>The minimum storage usage that triggers automatic fragment recycling of a single physical table. Valid values: <strong>5</strong> to <strong>100</strong>. Unit: GB.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder tableSpaceSize(Double tableSpaceSize) {
             this.putQueryParameter("TableSpaceSize", tableSpaceSize);

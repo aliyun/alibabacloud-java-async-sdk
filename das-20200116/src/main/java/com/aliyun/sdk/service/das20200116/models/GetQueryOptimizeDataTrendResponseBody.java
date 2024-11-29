@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryOptimizeDataTrendResponseBody} extends {@link TeaModel}
  *
  * <p>GetQueryOptimizeDataTrendResponseBody</p>
@@ -85,7 +86,10 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information.
+         * <p>The detailed information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQueryOptimizeDataTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeDataTrendResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Kpi")
         private String kpi;
@@ -185,17 +204,20 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             private Double value; 
 
             /**
-             * The name of the metric. Valid values:
-             * <p>
+             * <p>The name of the metric. Valid values:</p>
+             * <ul>
+             * <li><strong>sqlExecuteCount</strong>: the number of executions of slow SQL queries.</li>
+             * <li><strong>sqlExecuteCountDiff</strong>: the difference in the number of executions of slow SQL queries compared to the previous day.</li>
+             * <li><strong>sqlCount</strong>: the number of slow SQL templates.</li>
+             * <li><strong>sqlCountDiff</strong>: the difference in the number of slow SQL templates compared to the previous day.</li>
+             * <li><strong>optimizedSqlExecuteCount</strong>: the number of optimizable executions of slow SQL queries.</li>
+             * <li><strong>optimizedSqlExecuteCountDiff</strong>: the difference in the number of optimizable executions of slow SQL queries compared to the previous day.</li>
+             * <li><strong>optimizedSqlCount</strong>: the number of optimizable slow SQL templates.</li>
+             * <li><strong>optimizedSqlCountDiff</strong>: the difference in the number of optimizable slow SQL templates compared to the previous day.</li>
+             * </ul>
              * 
-             * * **sqlExecuteCount**: the number of executions of slow SQL queries.
-             * * **sqlExecuteCountDiff**: the difference in the number of executions of slow SQL queries compared to the previous day.
-             * * **sqlCount**: the number of slow SQL templates.
-             * * **sqlCountDiff**: the difference in the number of slow SQL templates compared to the previous day.
-             * * **optimizedSqlExecuteCount**: the number of optimizable executions of slow SQL queries.
-             * * **optimizedSqlExecuteCountDiff**: the difference in the number of optimizable executions of slow SQL queries compared to the previous day.
-             * * **optimizedSqlCount**: the number of optimizable slow SQL templates.
-             * * **optimizedSqlCountDiff**: the difference in the number of optimizable slow SQL templates compared to the previous day.
+             * <strong>example:</strong>
+             * <p>sqlExecuteCount</p>
              */
             public Builder kpi(String kpi) {
                 this.kpi = kpi;
@@ -203,7 +225,10 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The data timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1643040000000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -211,7 +236,10 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -225,6 +253,12 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQueryOptimizeDataTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeDataTrendResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
@@ -300,7 +334,10 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -308,7 +345,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the trend data.
+             * <p>The details of the trend data.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -316,7 +353,10 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -324,7 +364,10 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -332,7 +375,10 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder total(Long total) {
                 this.total = total;

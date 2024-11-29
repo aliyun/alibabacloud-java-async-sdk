@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySqlLogConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifySqlLogConfigRequest</p>
@@ -124,13 +125,17 @@ public class ModifySqlLogConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable DAS Enterprise Edition. Valid values:
-         * <p>
+         * <p>Specifies whether to enable DAS Enterprise Edition. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required if you want to enable DAS Enterprise Edition. By default, the latest version of DAS Enterprise Edition that supports the database instance is enabled.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * >  This parameter is required if you want to enable DAS Enterprise Edition. By default, the latest version of DAS Enterprise Edition that supports the database instance is enabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("Enable", enable);
@@ -139,7 +144,7 @@ public class ModifySqlLogConfigRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -148,10 +153,13 @@ public class ModifySqlLogConfigRequest extends Request {
         }
 
         /**
-         * The number of days for which the SQL Explorer and Audit data is stored in hot storage. Valid values: 1 to 7.
-         * <p>
+         * <p>The number of days for which the SQL Explorer and Audit data is stored in hot storage. Valid values: 1 to 7.</p>
+         * <blockquote>
+         * <p> This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hotRetention(Integer hotRetention) {
             this.putBodyParameter("HotRetention", hotRetention);
@@ -160,7 +168,11 @@ public class ModifySqlLogConfigRequest extends Request {
         }
 
         /**
-         * The ID of the database instance.
+         * <p>The ID of the database instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rr-2ze770smbq3tpr2o9</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -169,13 +181,17 @@ public class ModifySqlLogConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the SQL Explorer feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the SQL Explorer feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * >  This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requestEnable(Boolean requestEnable) {
             this.putBodyParameter("RequestEnable", requestEnable);
@@ -184,15 +200,19 @@ public class ModifySqlLogConfigRequest extends Request {
         }
 
         /**
-         * The total storage duration of the SQL Explorer and Audit data. Unit: day. Valid values:
-         * <p>
+         * <p>The total storage duration of the SQL Explorer and Audit data. Unit: day. Valid values:</p>
+         * <ul>
+         * <li>7</li>
+         * <li>30</li>
+         * <li>180</li>
+         * <li>365</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you want to enable DAS Enterprise Edition V3, the value of this parameter must be greater than or equal to 30.</p>
+         * </blockquote>
          * 
-         * *   7
-         * *   30
-         * *   180
-         * *   365
-         * 
-         * >  If you want to enable DAS Enterprise Edition V3, the value of this parameter must be greater than or equal to 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder retention(Integer retention) {
             this.putBodyParameter("Retention", retention);
@@ -207,6 +227,12 @@ public class ModifySqlLogConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifySqlLogConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifySqlLogConfigRequest</p>
+     */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -246,7 +272,10 @@ public class ModifySqlLogConfigRequest extends Request {
             private String value; 
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,7 +283,10 @@ public class ModifySqlLogConfigRequest extends Request {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder value(String value) {
                 this.value = value;

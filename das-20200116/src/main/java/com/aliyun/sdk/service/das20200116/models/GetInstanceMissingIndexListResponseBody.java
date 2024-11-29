@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceMissingIndexListResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceMissingIndexListResponseBody</p>
@@ -85,7 +86,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information.
+         * <p>The detailed information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A74B755-98B7-59DB-8724-1321B394****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceMissingIndexListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceMissingIndexListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgTotalUserCost")
         private Double avgTotalUserCost;
@@ -377,7 +396,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             private Long userSeeks; 
 
             /**
-             * The average cost savings.
+             * <p>The average cost savings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.67</p>
              */
             public Builder avgTotalUserCost(Double avgTotalUserCost) {
                 this.avgTotalUserCost = avgTotalUserCost;
@@ -385,7 +407,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The performance improvement, in percentage.
+             * <p>The performance improvement, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98.3</p>
              */
             public Builder avgUserImpact(Double avgUserImpact) {
                 this.avgUserImpact = avgUserImpact;
@@ -393,7 +418,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The statement used to create the missing indexes.
+             * <p>The statement used to create the missing indexes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE INDEX [IX_CLOUDDBA_school_dbo_stu@col1_@col2] ON [school].[dbo].<a href="%5Bcol1%5D,%5Bcol2%5D,%5Bcol3%5D">stu</a> INCLUDE ([col4],[col5]) WITH (FILLFACTOR = 90, ONLINE = OFF);</p>
              */
             public Builder createIndex(String createIndex) {
                 this.createIndex = createIndex;
@@ -401,7 +429,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>school</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -409,7 +440,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The index columns included in the equal operation.
+             * <p>The index columns included in the equal operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col1,col2,col3</p>
              */
             public Builder equalityColumns(String equalityColumns) {
                 this.equalityColumns = equalityColumns;
@@ -417,7 +451,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The columns on which indexes are missing.
+             * <p>The columns on which indexes are missing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col3,col4</p>
              */
             public Builder includedColumns(String includedColumns) {
                 this.includedColumns = includedColumns;
@@ -425,7 +462,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of indexes.
+             * <p>The number of indexes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder indexCount(Long indexCount) {
                 this.indexCount = indexCount;
@@ -433,7 +473,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The index columns included in the not equal operation.
+             * <p>The index columns included in the not equal operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2392</p>
              */
             public Builder inequalityColumns(String inequalityColumns) {
                 this.inequalityColumns = inequalityColumns;
@@ -441,7 +484,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The last seek time of a user.
+             * <p>The last seek time of a user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1702023327000</p>
              */
             public Builder lastUserSeek(Long lastUserSeek) {
                 this.lastUserSeek = lastUserSeek;
@@ -449,7 +495,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The object name.
+             * <p>The object name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stu</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -457,7 +506,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned pages.
+             * <p>The total number of returned pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5025</p>
              */
             public Builder reservedPages(Long reservedPages) {
                 this.reservedPages = reservedPages;
@@ -465,7 +517,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The table size.
+             * <p>The table size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.26</p>
              */
             public Builder reservedSize(Double reservedSize) {
                 this.reservedSize = reservedSize;
@@ -473,7 +528,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of table rows.
+             * <p>The number of table rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>226945</p>
              */
             public Builder rowCount(Long rowCount) {
                 this.rowCount = rowCount;
@@ -481,7 +539,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The schema name.
+             * <p>The schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbo</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -489,7 +550,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scans.
+             * <p>The number of scans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder systemScans(Long systemScans) {
                 this.systemScans = systemScans;
@@ -497,7 +561,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of seeks.
+             * <p>The number of seeks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder systemSeeks(Long systemSeeks) {
                 this.systemSeeks = systemSeeks;
@@ -505,7 +572,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of compilations.
+             * <p>The number of compilations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2392</p>
              */
             public Builder uniqueCompiles(Long uniqueCompiles) {
                 this.uniqueCompiles = uniqueCompiles;
@@ -513,7 +583,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scans performed by users.
+             * <p>The number of scans performed by users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder userScans(Long userScans) {
                 this.userScans = userScans;
@@ -521,7 +594,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of seeks performed by users.
+             * <p>The number of seeks performed by users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1081</p>
              */
             public Builder userSeeks(Long userSeeks) {
                 this.userSeeks = userSeeks;
@@ -535,6 +611,12 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceMissingIndexListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceMissingIndexListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
@@ -598,7 +680,7 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The returned data.
+             * <p>The returned data.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -606,7 +688,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the page returned.
+             * <p>The page number of the page returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -614,7 +699,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -622,7 +710,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder total(Long total) {
                 this.total = total;

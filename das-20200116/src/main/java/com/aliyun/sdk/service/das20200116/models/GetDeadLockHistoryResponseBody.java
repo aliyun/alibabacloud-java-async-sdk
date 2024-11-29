@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SyncHDMAliyunResourceResponseBody} extends {@link TeaModel}
+ * 
+ * {@link GetDeadLockHistoryResponseBody} extends {@link TeaModel}
  *
- * <p>SyncHDMAliyunResourceResponseBody</p>
+ * <p>GetDeadLockHistoryResponseBody</p>
  */
-public class SyncHDMAliyunResourceResponseBody extends TeaModel {
+public class GetDeadLockHistoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -29,7 +30,7 @@ public class SyncHDMAliyunResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Synchro")
     private String synchro;
 
-    private SyncHDMAliyunResourceResponseBody(Builder builder) {
+    private GetDeadLockHistoryResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -42,7 +43,7 @@ public class SyncHDMAliyunResourceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SyncHDMAliyunResourceResponseBody create() {
+    public static GetDeadLockHistoryResponseBody create() {
         return builder().build();
     }
 
@@ -144,8 +145,8 @@ public class SyncHDMAliyunResourceResponseBody extends TeaModel {
             return this;
         }
 
-        public SyncHDMAliyunResourceResponseBody build() {
-            return new SyncHDMAliyunResourceResponseBody(this);
+        public GetDeadLockHistoryResponseBody build() {
+            return new GetDeadLockHistoryResponseBody(this);
         } 
 
     } 

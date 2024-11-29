@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableSqlConcurrencyControlRequest} extends {@link RequestModel}
  *
  * <p>EnableSqlConcurrencyControlRequest</p>
@@ -128,10 +129,14 @@ public class EnableSqlConcurrencyControlRequest extends Request {
         } 
 
         /**
-         * The duration within which the SQL throttling rule takes effect. Unit: seconds.
-         * <p>
+         * <p>The duration within which the SQL throttling rule takes effect. Unit: seconds.</p>
+         * <blockquote>
+         * <p> The throttling rule takes effect only within this duration.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The throttling rule takes effect only within this duration.
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder concurrencyControlTime(Long concurrencyControlTime) {
             this.putQueryParameter("ConcurrencyControlTime", concurrencyControlTime);
@@ -140,7 +145,10 @@ public class EnableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -149,10 +157,14 @@ public class EnableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -161,10 +173,14 @@ public class EnableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * The maximum number of concurrent SQL statements. Set this parameter to a positive integer.
-         * <p>
+         * <p>The maximum number of concurrent SQL statements. Set this parameter to a positive integer.</p>
+         * <blockquote>
+         * <p> When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxConcurrency(Long maxConcurrency) {
             this.putQueryParameter("MaxConcurrency", maxConcurrency);
@@ -173,10 +189,14 @@ public class EnableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * The keywords that are used to identify the SQL statements that need to be throttled.
-         * <p>
+         * <p>The keywords that are used to identify the SQL statements that need to be throttled.</p>
+         * <blockquote>
+         * <p> If you specify multiple SQL keywords, separate them with tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you specify multiple SQL keywords, separate them with tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.
+         * <strong>example:</strong>
+         * <p>call<del>open</del>api<del>test</del>4<del>from</del>POP</p>
          */
         public Builder sqlKeywords(String sqlKeywords) {
             this.putQueryParameter("SqlKeywords", sqlKeywords);
@@ -185,12 +205,16 @@ public class EnableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * The type of the SQL statements. Valid values:
-         * <p>
+         * <p>The type of the SQL statements. Valid values:</p>
+         * <ul>
+         * <li><strong>SELECT</strong></li>
+         * <li><strong>UPDATE</strong></li>
+         * <li><strong>DELETE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **SELECT**
-         * *   **UPDATE**
-         * *   **DELETE**
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder sqlType(String sqlType) {
             this.putQueryParameter("SqlType", sqlType);

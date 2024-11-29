@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableDasProRequest} extends {@link RequestModel}
  *
  * <p>EnableDasProRequest</p>
@@ -82,7 +83,11 @@ public class EnableDasProRequest extends Request {
         } 
 
         /**
-         * The database instance ID.
+         * <p>The database instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -91,14 +96,17 @@ public class EnableDasProRequest extends Request {
         }
 
         /**
-         * The storage duration of SQL Explorer data. Unit: day. Default value: **30**. Valid values:
-         * <p>
+         * <p>The storage duration of SQL Explorer data. Unit: day. Default value: <strong>30</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>180</strong></li>
+         * <li><strong>365</strong></li>
+         * <li><strong>1095</strong></li>
+         * <li><strong>1825</strong></li>
+         * </ul>
          * 
-         * *   **30**
-         * *   **180**
-         * *   **365**
-         * *   **1095**
-         * *   **1825**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder sqlRetention(Integer sqlRetention) {
             this.putQueryParameter("SqlRetention", sqlRetention);
@@ -107,10 +115,13 @@ public class EnableDasProRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used to create the database instance.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+         * <blockquote>
+         * <p> This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+         * </blockquote>
          * 
-         * >  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.
+         * <strong>example:</strong>
+         * <p>196278346919****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

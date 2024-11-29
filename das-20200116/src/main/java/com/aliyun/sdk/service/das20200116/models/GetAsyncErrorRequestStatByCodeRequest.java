@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsyncErrorRequestStatByCodeRequest} extends {@link RequestModel}
  *
  * <p>GetAsyncErrorRequestStatByCodeRequest</p>
@@ -110,7 +111,10 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
         } 
 
         /**
-         * The name of a database.
+         * <p>The name of a database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb01</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -119,10 +123,13 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
+         * </blockquote>
          * 
-         * >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
+         * <strong>example:</strong>
+         * <p>1642566830000</p>
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -131,7 +138,11 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -140,10 +151,13 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> This parameter must be specified for PolarDB for MySQL clusters.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified for PolarDB for MySQL clusters.
+         * <strong>example:</strong>
+         * <p>pi-wz9s658475e58****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -152,10 +166,13 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The start time must be within the storage duration of the SQL Explorer feature of the database instance and can be up to 90 days earlier than the current time.</p>
+         * </blockquote>
          * 
-         * >  The start time must be within the storage duration of the SQL Explorer feature of the database instance and can be up to 90 days earlier than the current time.
+         * <strong>example:</strong>
+         * <p>1642556990714</p>
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);

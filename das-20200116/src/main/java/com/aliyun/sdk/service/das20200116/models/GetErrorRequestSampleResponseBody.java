@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetErrorRequestSampleResponseBody} extends {@link TeaModel}
  *
  * <p>GetErrorRequestSampleResponseBody</p>
@@ -85,7 +86,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[         {             &quot;sqlId&quot;: &quot;2cd4432556c3dab9d825ba363637****&quot;,             &quot;database&quot;: &quot;dbgateway&quot;,             &quot;originHost&quot;: &quot;172.16.1****&quot;,             &quot;tables&quot;: [                 &quot;meter_****&quot;             ],             &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,             &quot;errorCode&quot;: &quot;1062&quot;,             &quot;user&quot;: &quot;dbgat****&quot;,             &quot;sql&quot;: &quot;insert into meter_****\n        ( \n        <strong><strong>\n     )\n        values (now(), now(), &quot;bbbc8624-5e19-455a-9714-8466f688</strong></strong>&quot;, &quot;2022-02-10 14:00:00&quot;, &quot;{&quot;endTime&quot;:&quot;2022-02-10 14:00:00&quot;,&quot;endTimestamp&quot;:1644472800,&quot;startTime&quot;:&quot;2022-02-10 13:00:00&quot;,&quot;startTimestamp&quot;:1644469200}&quot;, null, null)&quot;,             &quot;timestamp&quot;: 1644476100435         }]</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -101,10 +108,13 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +122,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7172BECE-588A-5961-8126-C216E16B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +133,14 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +153,12 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetErrorRequestSampleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetErrorRequestSampleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("database")
         private String database;
@@ -260,7 +282,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbgateway</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -268,7 +293,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The error code that is returned.
+             * <p>The error code that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1062</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -276,7 +304,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze8g2am97624****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -284,7 +315,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client that executes the SQL statement.
+             * <p>The IP address of the client that executes the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.1****</p>
              */
             public Builder originHost(String originHost) {
                 this.originHost = originHost;
@@ -292,7 +326,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>insert into meter_****</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -300,7 +337,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL query ID.
+             * <p>The SQL query ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2cd4432556c3dab9d825ba363637****</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -308,7 +348,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The table information.
+             * <p>The table information.</p>
              */
             public Builder tables(java.util.List < String > tables) {
                 this.tables = tables;
@@ -316,7 +356,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL query was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the SQL query was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1644476100435</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -324,7 +367,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account that is used to log on to the database.
+             * <p>The username of the account that is used to log on to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbgat****</p>
              */
             public Builder user(String user) {
                 this.user = user;

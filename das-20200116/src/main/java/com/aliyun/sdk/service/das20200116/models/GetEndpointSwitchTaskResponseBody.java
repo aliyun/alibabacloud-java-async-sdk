@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEndpointSwitchTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetEndpointSwitchTaskResponseBody</p>
@@ -150,6 +151,12 @@ public class GetEndpointSwitchTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEndpointSwitchTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEndpointSwitchTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;

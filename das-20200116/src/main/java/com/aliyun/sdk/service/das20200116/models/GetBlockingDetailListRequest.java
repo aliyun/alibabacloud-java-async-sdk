@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBlockingDetailListRequest} extends {@link RequestModel}
  *
  * <p>GetBlockingDetailListRequest</p>
@@ -140,10 +141,10 @@ public class GetBlockingDetailListRequest extends Request {
         } 
 
         /**
-         * The database name list.
-         * <p>
+         * <p>The name of the database. Separate multiple database names with commas (,).</p>
          * 
-         * *   Separate multiple database names with commas (,).
+         * <strong>example:</strong>
+         * <p>school1,school2</p>
          */
         public Builder dbNameList(String dbNameList) {
             this.putQueryParameter("DbNameList", dbNameList);
@@ -152,7 +153,11 @@ public class GetBlockingDetailListRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1682490480548</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -161,7 +166,11 @@ public class GetBlockingDetailListRequest extends Request {
         }
 
         /**
-         * The database instance ID.
+         * <p>The ID of the database instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4nfalp2ap421312z</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +179,10 @@ public class GetBlockingDetailListRequest extends Request {
         }
 
         /**
-         * The page number. The value must be an integer that is greater than 0. Default value: 1.
+         * <p>The page number. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -179,7 +191,10 @@ public class GetBlockingDetailListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. The value must be an integer that is greater than 0. Default value: 10.
+         * <p>The number of entries per page. The value must be an integer that is greater than 0. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +203,10 @@ public class GetBlockingDetailListRequest extends Request {
         }
 
         /**
-         * The hash value of the SQL statement.
+         * <p>The hash value of the SQL statement. The hash values of SQL statements of the same type are the same.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC08B955CAD25E7B</p>
          */
         public Builder queryHash(String queryHash) {
             this.putQueryParameter("QueryHash", queryHash);
@@ -197,7 +215,11 @@ public class GetBlockingDetailListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679429913757</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

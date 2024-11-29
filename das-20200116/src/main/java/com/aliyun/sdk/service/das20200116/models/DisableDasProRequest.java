@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableDasProRequest} extends {@link RequestModel}
  *
  * <p>DisableDasProRequest</p>
@@ -68,7 +69,11 @@ public class DisableDasProRequest extends Request {
         } 
 
         /**
-         * The database instance ID.
+         * <p>The database instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -77,10 +82,13 @@ public class DisableDasProRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used to create the database instance.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+         * <blockquote>
+         * <p> This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId that you set when you call this operation.</p>
+         * </blockquote>
          * 
-         * >  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId that you set when you call this operation.
+         * <strong>example:</strong>
+         * <p>196278346919****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

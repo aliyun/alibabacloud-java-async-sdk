@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSqlLogTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeSqlLogTaskRequest</p>
@@ -95,7 +96,10 @@ public class DescribeSqlLogTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the database instance.
+         * <p>The ID of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1nti25tc7bq5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -104,7 +108,10 @@ public class DescribeSqlLogTaskRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -113,7 +120,10 @@ public class DescribeSqlLogTaskRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -122,7 +132,10 @@ public class DescribeSqlLogTaskRequest extends Request {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a4f5c4494dbd6713185d87a97aa53e8</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

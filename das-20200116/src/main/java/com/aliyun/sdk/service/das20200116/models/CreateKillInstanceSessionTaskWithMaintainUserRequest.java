@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateKillInstanceSessionTaskWithMaintainUserRequest} extends {@link RequestModel}
  *
  * <p>CreateKillInstanceSessionTaskWithMaintainUserRequest</p>
@@ -120,7 +121,7 @@ public class CreateKillInstanceSessionTaskWithMaintainUserRequest extends Reques
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -129,7 +130,7 @@ public class CreateKillInstanceSessionTaskWithMaintainUserRequest extends Reques
         }
 
         /**
-         * KillAllSessions.
+         * <p>This parameter is required.</p>
          */
         public Builder killAllSessions(Boolean killAllSessions) {
             this.putQueryParameter("KillAllSessions", killAllSessions);

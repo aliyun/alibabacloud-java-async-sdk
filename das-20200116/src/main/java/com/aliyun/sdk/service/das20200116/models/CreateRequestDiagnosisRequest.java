@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRequestDiagnosisRequest} extends {@link RequestModel}
  *
  * <p>CreateRequestDiagnosisRequest</p>
@@ -98,7 +99,11 @@ public class CreateRequestDiagnosisRequest extends Request {
         } 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>das</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -107,7 +112,11 @@ public class CreateRequestDiagnosisRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-0iwhhl8gx0ld6****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,10 +125,13 @@ public class CreateRequestDiagnosisRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> This parameter must be specified for PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), and ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified for PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), and ApsaraDB for MongoDB instances.
+         * <strong>example:</strong>
+         * <p>202****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -128,7 +140,11 @@ public class CreateRequestDiagnosisRequest extends Request {
         }
 
         /**
-         * The SQL statement that you want to diagnose.
+         * <p>The SQL statement that you want to diagnose.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from test where name = &quot;mockUser&quot;</p>
          */
         public Builder sql(String sql) {
             this.putQueryParameter("Sql", sql);

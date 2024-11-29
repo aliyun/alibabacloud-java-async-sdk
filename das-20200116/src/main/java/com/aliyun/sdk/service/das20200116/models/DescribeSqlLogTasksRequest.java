@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSqlLogTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeSqlLogTasksRequest</p>
@@ -137,7 +138,10 @@ public class DescribeSqlLogTasksRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608888296000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -146,7 +150,7 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * The filter parameters.
+         * <p>The filter parameters.</p>
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putBodyParameter("Filters", filters);
@@ -155,7 +159,10 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * The ID of the database instance.
+         * <p>The ID of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1nti25tc7bq5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -164,10 +171,13 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> This parameter is available only for instances that are deployed in the cluster architecture. You can specify this parameter to query the tasks of a specific node. If this parameter is not specified, the tasks of the primary node are returned by default.</p>
+         * </blockquote>
          * 
-         * >  This parameter is available only for instances that are deployed in the cluster architecture. You can specify this parameter to query the tasks of a specific node. If this parameter is not specified, the tasks of the primary node are returned by default.
+         * <strong>example:</strong>
+         * <p>pi-bp1o58x3ib7e6z496</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -176,7 +186,10 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -185,7 +198,10 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -194,7 +210,10 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596177993000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -209,6 +228,12 @@ public class DescribeSqlLogTasksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSqlLogTasksRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSqlLogTasksRequest</p>
+     */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -248,10 +273,13 @@ public class DescribeSqlLogTasksRequest extends Request {
             private String value; 
 
             /**
-             * The name of the filter parameter.
-             * <p>
+             * <p>The name of the filter parameter.</p>
+             * <blockquote>
+             * <p> For more information about the filter parameters, see the <strong>Valid values of Key</strong> section of this topic.</p>
+             * </blockquote>
              * 
-             * >  For more information about the filter parameters, see the **Valid values of Key** section of this topic.
+             * <strong>example:</strong>
+             * <p>delimiter</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -259,7 +287,10 @@ public class DescribeSqlLogTasksRequest extends Request {
             }
 
             /**
-             * The value of the filter parameter.
+             * <p>The value of the filter parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>,</p>
              */
             public Builder value(String value) {
                 this.value = value;

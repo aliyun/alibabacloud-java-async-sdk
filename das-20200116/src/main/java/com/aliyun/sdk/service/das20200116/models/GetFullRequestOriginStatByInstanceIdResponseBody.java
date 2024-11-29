@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFullRequestOriginStatByInstanceIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetFullRequestOriginStatByInstanceIdResponseBody</p>
@@ -85,7 +86,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7172BECE-588A-5961-8126-C216E16B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFullRequestOriginStatByInstanceIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFullRequestOriginStatByInstanceIdResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgExaminedRows")
         private Double avgExaminedRows;
@@ -536,10 +555,13 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The average number of scanned rows.
-             * <p>
+             * <p>The average number of scanned rows.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder avgExaminedRows(Double avgExaminedRows) {
                 this.avgExaminedRows = avgExaminedRows;
@@ -547,7 +569,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of rows that are fetched from data nodes by compute nodes on the PolarDB-X 2.0 instance.
+             * <p>The average number of rows that are fetched from data nodes by compute nodes on the PolarDB-X 2.0 instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder avgFetchRows(Long avgFetchRows) {
                 this.avgFetchRows = avgFetchRows;
@@ -555,7 +580,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average lock wait duration. Unit: seconds.
+             * <p>The average lock wait duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00009589874265269765</p>
              */
             public Builder avgLockWaitTime(Double avgLockWaitTime) {
                 this.avgLockWaitTime = avgLockWaitTime;
@@ -563,7 +591,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of logical reads.
+             * <p>The average number of logical reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>654.4470327860251</p>
              */
             public Builder avgLogicalRead(Double avgLogicalRead) {
                 this.avgLogicalRead = avgLogicalRead;
@@ -571,7 +602,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of physical asynchronous reads.
+             * <p>The average number of physical asynchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder avgPhysicalAsyncRead(Long avgPhysicalAsyncRead) {
                 this.avgPhysicalAsyncRead = avgPhysicalAsyncRead;
@@ -579,7 +613,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of physical synchronous reads.
+             * <p>The average number of physical synchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder avgPhysicalSyncRead(Double avgPhysicalSyncRead) {
                 this.avgPhysicalSyncRead = avgPhysicalSyncRead;
@@ -587,7 +624,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of returned rows.
+             * <p>The average number of returned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder avgReturnedRows(Double avgReturnedRows) {
                 this.avgReturnedRows = avgReturnedRows;
@@ -595,7 +635,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of rows.
+             * <p>The average number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder avgRows(Long avgRows) {
                 this.avgRows = avgRows;
@@ -603,7 +646,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average execution duration.
+             * <p>The average execution duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.499</p>
              */
             public Builder avgRt(Double avgRt) {
                 this.avgRt = avgRt;
@@ -611,7 +657,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of SQL statements.
+             * <p>The average number of SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder avgSqlCount(Long avgSqlCount) {
                 this.avgSqlCount = avgSqlCount;
@@ -619,10 +668,13 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of updated rows.
-             * <p>
+             * <p>The average number of updated rows.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for ApsaraDB RDS for MySQL and PolarDB-X 2.0 databases.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for ApsaraDB RDS for MySQL and PolarDB-X 2.0 databases.
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder avgUpdatedRows(Double avgUpdatedRows) {
                 this.avgUpdatedRows = avgUpdatedRows;
@@ -630,7 +682,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of executions.
+             * <p>The total number of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -638,7 +693,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the total number of executions.
+             * <p>The percentage of the total number of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0586</p>
              */
             public Builder countRate(Double countRate) {
                 this.countRate = countRate;
@@ -646,7 +704,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbtest01</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -654,7 +715,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of failed executions.
+             * <p>The number of failed executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -662,10 +726,13 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of scanned rows.
-             * <p>
+             * <p>The total number of scanned rows.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder examinedRows(Long examinedRows) {
                 this.examinedRows = examinedRows;
@@ -673,7 +740,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are fetched from data nodes by compute nodes on the PolarDB-X 2.0 instance.
+             * <p>The number of rows that are fetched from data nodes by compute nodes on the PolarDB-X 2.0 instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder fetchRows(Long fetchRows) {
                 this.fetchRows = fetchRows;
@@ -681,7 +751,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The network address of the database instance.
+             * <p>The network address of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6dyi58dm6****.mysql.rds.aliy****.com</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -689,7 +762,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client that executes the SQL statement.
+             * <p>The IP address of the client that executes the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.26.6****</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -697,7 +773,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The lock wait duration. Unit: seconds.
+             * <p>The lock wait duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1089.4177720290281</p>
              */
             public Builder lockWaitTime(Double lockWaitTime) {
                 this.lockWaitTime = lockWaitTime;
@@ -705,7 +784,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logical reads.
+             * <p>The number of logical reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.434573266E9</p>
              */
             public Builder logicalRead(Long logicalRead) {
                 this.logicalRead = logicalRead;
@@ -713,7 +795,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client that executes the SQL statement.
+             * <p>The IP address of the client that executes the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.26.6****</p>
              */
             public Builder originHost(String originHost) {
                 this.originHost = originHost;
@@ -721,7 +806,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical asynchronous reads.
+             * <p>The number of physical asynchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicalAsyncRead(Long physicalAsyncRead) {
                 this.physicalAsyncRead = physicalAsyncRead;
@@ -729,7 +817,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical synchronous reads.
+             * <p>The number of physical synchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicalSyncRead(Long physicalSyncRead) {
                 this.physicalSyncRead = physicalSyncRead;
@@ -737,7 +828,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is used to connect to the database instance.
+             * <p>The port number that is used to connect to the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -745,7 +839,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of rows updated or returned by the compute nodes of the PolarDB-X 2.0 instance.
+             * <p>The total number of rows updated or returned by the compute nodes of the PolarDB-X 2.0 instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rows(Long rows) {
                 this.rows = rows;
@@ -753,7 +850,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that take longer than 1 second to execute.
+             * <p>The number of SQL statements that take longer than 1 second to execute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder rtGreaterThanOneSecondCount(Long rtGreaterThanOneSecondCount) {
                 this.rtGreaterThanOneSecondCount = rtGreaterThanOneSecondCount;
@@ -761,7 +861,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration percentage.
+             * <p>The execution duration percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1384</p>
              */
             public Builder rtRate(Double rtRate) {
                 this.rtRate = rtRate;
@@ -769,7 +872,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements.
+             * <p>The number of SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder sqlCount(Long sqlCount) {
                 this.sqlCount = sqlCount;
@@ -777,7 +883,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of updated rows.
+             * <p>The total number of updated rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder sumUpdatedRows(Long sumUpdatedRows) {
                 this.sumUpdatedRows = sumUpdatedRows;
@@ -785,7 +894,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -793,7 +905,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) ID.
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zentqj1sk4qmolci****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -807,6 +922,12 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFullRequestOriginStatByInstanceIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFullRequestOriginStatByInstanceIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
@@ -846,7 +967,7 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The details of the full request data.
+             * <p>The details of the full request data.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -854,7 +975,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSqlLogStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSqlLogStatisticResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSqlLogStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSqlLogStatisticResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColdSqlSize")
         private Long coldSqlSize;
@@ -224,7 +243,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The size of the SQL Explorer and Audit data that is stored in cold storage. Unit: bytes.
+             * <p>The size of the SQL Explorer and Audit data that is stored in cold storage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8585901</p>
              */
             public Builder coldSqlSize(Long coldSqlSize) {
                 this.coldSqlSize = coldSqlSize;
@@ -232,7 +254,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The free quota for cold data storage. Unit: bytes.
+             * <p>The free quota for cold data storage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5041450</p>
              */
             public Builder freeColdSqlSize(Long freeColdSqlSize) {
                 this.freeColdSqlSize = freeColdSqlSize;
@@ -240,7 +265,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The free quota for hot data storage. Unit: bytes.
+             * <p>The free quota for hot data storage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>297245</p>
              */
             public Builder freeHotSqlSize(Long freeHotSqlSize) {
                 this.freeHotSqlSize = freeHotSqlSize;
@@ -248,7 +276,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the SQL Explorer and Audit data that is stored in hot storage. Unit: bytes.
+             * <p>The size of the SQL Explorer and Audit data that is stored in hot storage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1118042</p>
              */
             public Builder hotSqlSize(Long hotSqlSize) {
                 this.hotSqlSize = hotSqlSize;
@@ -256,7 +287,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the SQL Explorer and Audit data that was generated in the most recent day. Unit: bytes.
+             * <p>The size of the SQL Explorer and Audit data that was generated in the most recent day. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder importSqlSize(Long importSqlSize) {
                 this.importSqlSize = importSqlSize;
@@ -264,7 +298,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1712568564928</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

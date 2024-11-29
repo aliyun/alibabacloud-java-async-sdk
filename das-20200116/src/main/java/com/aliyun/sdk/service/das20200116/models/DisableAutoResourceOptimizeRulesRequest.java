@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableAutoResourceOptimizeRulesRequest} extends {@link RequestModel}
  *
  * <p>DisableAutoResourceOptimizeRulesRequest</p>
@@ -68,7 +69,10 @@ public class DisableAutoResourceOptimizeRulesRequest extends Request {
         } 
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -77,10 +81,14 @@ public class DisableAutoResourceOptimizeRulesRequest extends Request {
         }
 
         /**
-         * The database instance ID.
-         * <p>
+         * <p>The database instance ID.</p>
+         * <blockquote>
+         * <p> Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <code>[\&quot;Instance ID1\&quot;, \&quot;Instance ID2\&quot;]</code>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\"Instance ID1\", \"Instance ID2\"]`.
+         * <strong>example:</strong>
+         * <p>[&quot;rm-2ze8g2am97624****&quot;,&quot;rm-2ze9xrhze0709****&quot;]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

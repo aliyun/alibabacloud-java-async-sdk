@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableAutoThrottleRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DisableAutoThrottleRulesResponseBody</p>
@@ -85,7 +86,10 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DisableAutoThrottleRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DisableAutoThrottleRulesResponseBody</p>
+     */
     public static class ConfigFailInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigSuccess")
         private Boolean configSuccess;
@@ -188,12 +207,16 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * Indicates whether the automatic SQL throttling feature is disabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic SQL throttling feature is disabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
+             * </ul>
              * 
-             * * **true**
-             * 
-             * * **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder configSuccess(Boolean configSuccess) {
                 this.configSuccess = configSuccess;
@@ -201,7 +224,10 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cannot found instance by rm-2ze9xrhze0709****</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -209,7 +235,10 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instance ID.
+             * <p>The database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze9xrhze0709****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -223,6 +252,12 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DisableAutoThrottleRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DisableAutoThrottleRulesResponseBody</p>
+     */
     public static class ConfigSuccessInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigSuccess")
         private Boolean configSuccess;
@@ -262,12 +297,16 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * Indicates whether the automatic SQL throttling feature is disabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic SQL throttling feature is disabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
+             * </ul>
              * 
-             * * **true**
-             * 
-             * * **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder configSuccess(Boolean configSuccess) {
                 this.configSuccess = configSuccess;
@@ -275,7 +314,10 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instance ID.
+             * <p>The database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze8g2am97624****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -289,6 +331,12 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DisableAutoThrottleRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DisableAutoThrottleRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigFailInstanceCount")
         private Long configFailInstanceCount;
@@ -364,7 +412,10 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             private Long totalInstanceCount; 
 
             /**
-             * The number of database instances for which the automatic SQL throttling feature failed to be disabled.
+             * <p>The number of database instances for which the automatic SQL throttling feature failed to be disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configFailInstanceCount(Long configFailInstanceCount) {
                 this.configFailInstanceCount = configFailInstanceCount;
@@ -372,7 +423,7 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instances for which the automatic SQL throttling feature failed to be disabled.
+             * <p>The database instances for which the automatic SQL throttling feature failed to be disabled.</p>
              */
             public Builder configFailInstanceList(java.util.List < ConfigFailInstanceList> configFailInstanceList) {
                 this.configFailInstanceList = configFailInstanceList;
@@ -380,7 +431,10 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of database instances for which the automatic SQL throttling feature is disabled.
+             * <p>The number of database instances for which the automatic SQL throttling feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configSuccessInstanceCount(Long configSuccessInstanceCount) {
                 this.configSuccessInstanceCount = configSuccessInstanceCount;
@@ -388,7 +442,7 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instances for which the automatic SQL throttling feature is disabled.
+             * <p>The database instances for which the automatic SQL throttling feature is disabled.</p>
              */
             public Builder configSuccessInstanceList(java.util.List < ConfigSuccessInstanceList> configSuccessInstanceList) {
                 this.configSuccessInstanceList = configSuccessInstanceList;
@@ -396,7 +450,10 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of database instances.
+             * <p>The total number of database instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalInstanceCount(Long totalInstanceCount) {
                 this.totalInstanceCount = totalInstanceCount;

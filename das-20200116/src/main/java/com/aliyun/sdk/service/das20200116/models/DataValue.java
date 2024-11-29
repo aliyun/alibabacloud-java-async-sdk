@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataValue} extends {@link TeaModel}
  *
  * <p>DataValue</p>
@@ -49,7 +50,10 @@ public class DataValue extends TeaModel {
         private Object value; 
 
         /**
-         * The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681975870000</p>
          */
         public Builder timestamp(String timestamp) {
             this.timestamp = timestamp;
@@ -57,7 +61,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * The value of the metric.
+         * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478.28</p>
          */
         public Builder value(Object value) {
             this.value = value;

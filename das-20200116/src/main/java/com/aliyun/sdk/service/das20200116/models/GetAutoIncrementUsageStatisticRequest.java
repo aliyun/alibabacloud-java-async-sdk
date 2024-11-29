@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutoIncrementUsageStatisticRequest} extends {@link RequestModel}
  *
  * <p>GetAutoIncrementUsageStatisticRequest</p>
@@ -98,10 +99,13 @@ public class GetAutoIncrementUsageStatisticRequest extends Request {
         } 
 
         /**
-         * The database name. If you specify a database, the operation queries the usage of auto-increment table IDs in the specified database. Otherwise, the operation queries the usage of auto-increment table IDs in all databases on the instance.
-         * <p>
+         * <p>The database name. If you specify a database, the operation queries the usage of auto-increment table IDs in the specified database. Otherwise, the operation queries the usage of auto-increment table IDs in all databases on the instance.</p>
+         * <blockquote>
+         * <p> Specify the parameter value as a JSON array, such as [&quot;db1&quot;,&quot;db2&quot;]. Separate multiple database names with commas (,).</p>
+         * </blockquote>
          * 
-         * >  Specify the parameter value as a JSON array, such as \[\"db1\",\"db2\"]. Separate multiple database names with commas (,).
+         * <strong>example:</strong>
+         * <p>[&quot;db1&quot;,&quot;db2&quot;]</p>
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -110,7 +114,11 @@ public class GetAutoIncrementUsageStatisticRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -119,7 +127,11 @@ public class GetAutoIncrementUsageStatisticRequest extends Request {
         }
 
         /**
-         * The usage threshold of auto-increment IDs. Only usage that exceeds the threshold can be returned. Valid values are decimals that range from 0 to 1.
+         * <p>The usage threshold of auto-increment IDs. Only usage that exceeds the threshold can be returned. Valid values are decimals that range from 0 to 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9</p>
          */
         public Builder ratioFilter(Double ratioFilter) {
             this.putQueryParameter("RatioFilter", ratioFilter);
@@ -128,11 +140,15 @@ public class GetAutoIncrementUsageStatisticRequest extends Request {
         }
 
         /**
-         * Specifies whether to query real-time data. Valid values:
-         * <p>
+         * <p>Specifies whether to query real-time data. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: queries data in real time except for data generated in the last 10 minutes.****</li>
+         * <li><strong>false</strong>: queries data generated in the last 2 hours. If no such data exists, queries the latest data.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: queries data in real time except for data generated in the last 10 minutes.****
-         * *   **false**: queries data generated in the last 2 hours. If no such data exists, queries the latest data.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder realTime(Boolean realTime) {
             this.putQueryParameter("RealTime", realTime);

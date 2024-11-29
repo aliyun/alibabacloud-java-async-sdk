@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSqlLogRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSqlLogRecordsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * <p>The data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
-         * <p>
+         * <p>The message that is returned.</p>
+         * <blockquote>
+         * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F43E7FB3-CE67-5FFD-A59C-EFD278BCD7BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSqlLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSqlLogRecordsResponseBody</p>
+     */
     public static class SQLLogRecord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
@@ -548,7 +567,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             private Long writes; 
 
             /**
-             * The account of the database.
+             * <p>The account of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testname</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -556,7 +578,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder collection(String collection) {
                 this.collection = collection;
@@ -564,7 +589,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time that is consumed to execute the SQL statement. Unit: millisecond.
+             * <p>The amount of time that is consumed to execute the SQL statement. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58</p>
              */
             public Builder consume(Long consume) {
                 this.consume = consume;
@@ -572,7 +600,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU execution duration. Unit: microsecond.
+             * <p>The CPU execution duration. Unit: microsecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder cpuTime(Long cpuTime) {
                 this.cpuTime = cpuTime;
@@ -580,7 +611,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -588,7 +622,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL statement was executed. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the SQL statement was executed. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-07T02:15:32Z</p>
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -596,7 +633,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information. This parameter is a reserved parameter.
+             * <p>The extended information. This parameter is a reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder ext(String ext) {
                 this.ext = ext;
@@ -604,7 +644,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are pulled by the compute nodes of the PolarDB-X 2.0 instance.
+             * <p>The number of rows that are pulled by the compute nodes of the PolarDB-X 2.0 instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder frows(Long frows) {
                 this.frows = frows;
@@ -612,7 +655,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.197.XX.XX</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -620,7 +666,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The lock wait duration. Unit: millisecond.
+             * <p>The lock wait duration. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lockTime(Long lockTime) {
                 this.lockTime = lockTime;
@@ -628,7 +677,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logical reads.
+             * <p>The number of logical reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder logicRead(Long logicRead) {
                 this.logicRead = logicRead;
@@ -636,7 +688,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-uf6k5f6g3912i****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -644,7 +699,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the SQL statement was executed. The value of this parameter is a UNIX timestamp. Unit: millisecond.
+             * <p>The timestamp generated when the SQL statement was executed. The value of this parameter is a UNIX timestamp. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1701886532000</p>
              */
             public Builder originTime(Long originTime) {
                 this.originTime = originTime;
@@ -652,7 +710,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The parallel queue time of the PolarDB for MySQL instance. Unit: millisecond.
+             * <p>The parallel queue time of the PolarDB for MySQL instance. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder parallelDegree(String parallelDegree) {
                 this.parallelDegree = parallelDegree;
@@ -660,7 +721,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The parallelism of the PolarDB for MySQL cluster.
+             * <p>The parallelism of the PolarDB for MySQL cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder parallelQueueTime(String parallelQueueTime) {
                 this.parallelQueueTime = parallelQueueTime;
@@ -668,7 +732,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical asynchronous reads.
+             * <p>The number of physical asynchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicAsyncRead(Long physicAsyncRead) {
                 this.physicAsyncRead = physicAsyncRead;
@@ -676,7 +743,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of physical reads.
+             * <p>The total number of physical reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicRead(Long physicRead) {
                 this.physicRead = physicRead;
@@ -684,7 +754,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical synchronous reads.
+             * <p>The number of physical synchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicSyncRead(Long physicSyncRead) {
                 this.physicSyncRead = physicSyncRead;
@@ -692,7 +765,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows returned by the SQL statement.
+             * <p>The number of rows returned by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder returnRows(Long returnRows) {
                 this.returnRows = returnRows;
@@ -700,7 +776,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of rows that are updated or returned by the compute nodes of the PolarDB-X 2.0 instance.
+             * <p>The total number of rows that are updated or returned by the compute nodes of the PolarDB-X 2.0 instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rows(Long rows) {
                 this.rows = rows;
@@ -708,7 +787,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scanned rows.
+             * <p>The number of scanned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanRows(Long scanRows) {
                 this.scanRows = scanRows;
@@ -716,7 +798,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests that are sent from the compute nodes to the data nodes of the PolarDB-X 2.0 instance.
+             * <p>The number of requests that are sent from the compute nodes to the data nodes of the PolarDB-X 2.0 instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder scnt(Long scnt) {
                 this.scnt = scnt;
@@ -724,7 +809,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement ID.
+             * <p>The SQL statement ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c67649d4a7fb62c4f8c7a447c52b5b17</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -732,7 +820,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select resource_id as cluster_id, tpl_name \n\tfrom dbfree_alert_resource_tpl_ref\n\twhere user_id=? and type=&quot;cluster&quot; group by resource_id, tpl_name</p>
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -740,7 +831,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement.
+             * <p>The type of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -748,11 +842,14 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution status of the SQL statement.
-             * <p>
+             * <p>The execution status of the SQL statement.</p>
+             * <ul>
+             * <li><strong>0</strong>: The execution was successful.</li>
+             * <li><strong>1</strong>: The execution failed.</li>
+             * </ul>
              * 
-             * *   **0**: The execution was successful.
-             * *   **1**: The execution failed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -760,7 +857,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The thread ID.
+             * <p>The thread ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder threadId(Long threadId) {
                 this.threadId = threadId;
@@ -768,7 +868,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The trace ID of the PolarDB-X 2.0 instance. The value is the execution ID of the SQL statement on the data node.
+             * <p>The trace ID of the PolarDB-X 2.0 instance. The value is the execution ID of the SQL statement on the data node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14c93b7c7bf00000</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -776,7 +879,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction ID.
+             * <p>The transaction ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000</p>
              */
             public Builder trxId(String trxId) {
                 this.trxId = trxId;
@@ -784,7 +890,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are updated.
+             * <p>The number of rows that are updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder updateRows(Long updateRows) {
                 this.updateRows = updateRows;
@@ -792,11 +901,14 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the In-Memory Column Index (IMCI) feature is enabled for the PolarDB for MySQL cluster. Valid values:
-             * <p>
+             * <p>Indicates whether the In-Memory Column Index (IMCI) feature is enabled for the PolarDB for MySQL cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useImciEngine(String useImciEngine) {
                 this.useImciEngine = useImciEngine;
@@ -804,7 +916,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address that is resolved from the endpoint of the query link.
+             * <p>The IP address that is resolved from the endpoint of the query link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.115.XX.XX</p>
              */
             public Builder vip(String vip) {
                 this.vip = vip;
@@ -812,7 +927,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of writes to the ApsaraDB RDS for SQL Server instance.
+             * <p>The number of writes to the ApsaraDB RDS for SQL Server instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder writes(Long writes) {
                 this.writes = writes;
@@ -826,6 +944,12 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSqlLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSqlLogRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SQLLogRecord")
         private java.util.List < SQLLogRecord> SQLLogRecord;
@@ -853,7 +977,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             private java.util.List < SQLLogRecord> SQLLogRecord; 
 
             /**
-             * The SQL log data.
+             * <p>The SQL log data.</p>
              */
             public Builder SQLLogRecord(java.util.List < SQLLogRecord> SQLLogRecord) {
                 this.SQLLogRecord = SQLLogRecord;
@@ -867,6 +991,12 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSqlLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSqlLogRecordsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -954,7 +1084,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             private Long totalRecords; 
 
             /**
-             * The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
+             * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1608888296000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -962,13 +1095,17 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task was complete. Valid values:
-             * <p>
+             * <p>Indicates whether the task was complete. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
+             * <blockquote>
+             * <p> If the value of <strong>Finish</strong> is 0 and the value of <strong>JobId</strong> is returned, the request is an asynchronous request and the return result cannot be directly obtained. You must query the return result based on the value of <strong>JobId</strong>. Specify JobId as the key of <strong>Filters</strong> and the value of <strong>JobId</strong> as the value of Filters. Example: <code>Filters=[{&quot;Key&quot;: &quot;JobId&quot;, &quot;Value&quot;: &quot;******&quot;}]</code>.</p>
+             * </blockquote>
              * 
-             * *   **0**: no
-             * *   **1**: yes
-             * 
-             * >  If the value of **Finish** is 0 and the value of **JobId** is returned, the request is an asynchronous request and the return result cannot be directly obtained. You must query the return result based on the value of **JobId**. Specify JobId as the key of **Filters** and the value of **JobId** as the value of Filters. Example: `Filters=[{"Key": "JobId", "Value": "******"}]`.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder finish(String finish) {
                 this.finish = finish;
@@ -976,7 +1113,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The data.
+             * <p>The data.</p>
              */
             public Builder items(Items items) {
                 this.items = items;
@@ -984,7 +1121,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asynchronous task.
+             * <p>The ID of the asynchronous task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MzI4NTZfUUlOR0RBT19DTTlfTlUyMF9NWVNRTF9PREJTX0xWU18zMjg1Nl9teXNxbF9XZWQgTWFyIDA2IDE0OjUwOjQ3IENTVCAyMDI0XzBfMzBfRXhlY3V0ZVRpbWVfREVTQ19XZWQgTWFyIDA2IDE0OjM1OjQ3IENTVCAyMDI0Xw==_1709708406465</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -992,7 +1132,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
+             * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1596177993000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -1000,7 +1143,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalRecords(Long totalRecords) {
                 this.totalRecords = totalRecords;

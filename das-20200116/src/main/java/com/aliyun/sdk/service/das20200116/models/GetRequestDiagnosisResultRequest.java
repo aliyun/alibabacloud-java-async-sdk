@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRequestDiagnosisResultRequest} extends {@link RequestModel}
  *
  * <p>GetRequestDiagnosisResultRequest</p>
@@ -111,7 +112,11 @@ public class GetRequestDiagnosisResultRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-0iwhhl8gx0ld6****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,7 +125,14 @@ public class GetRequestDiagnosisResultRequest extends Request {
         }
 
         /**
-         * The unique ID of the diagnostics task. You can call the [CreateRequestDiagnosis](~~341609~~) operation to query the diagnostics task ID.
+         * <p>The unique ID of the diagnostic task.<a href="~~341609~~"></a></p>
+         * <blockquote>
+         * <p> If you set MessageId to the task ID of the automatic SQL optimization feature, no result is returned.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61820b594664275c4429****</p>
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);
@@ -129,10 +141,13 @@ public class GetRequestDiagnosisResultRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> You must specify the node ID if your database instance is a PolarDB for MySQL cluster, a PolarDB for PostgreSQL (compatible with Oracle) instance, or an ApsaraDB for MongoDB database.</p>
+         * </blockquote>
          * 
-         * >  You must specify the node ID if your database instance is a PolarDB for MySQL cluster, a PolarDB for PostgreSQL (compatible with Oracle) instance, or an ApsaraDB for MongoDB database.
+         * <strong>example:</strong>
+         * <p>202****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -141,10 +156,13 @@ public class GetRequestDiagnosisResultRequest extends Request {
         }
 
         /**
-         * The source of the task.
-         * <p>
+         * <p>The source of the task.</p>
+         * <blockquote>
+         * <p> This parameter is required if you call this operation in the DAS console. You do not need to specify this parameter when you call this operation.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if you call this operation in the DAS console. You do not need to specify this parameter when you call this operation.
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -153,10 +171,13 @@ public class GetRequestDiagnosisResultRequest extends Request {
         }
 
         /**
-         * The SQL template ID.
-         * <p>
+         * <p>The SQL template ID.</p>
+         * <blockquote>
+         * <p> This parameter is required if you call this operation in the DAS console. You do not need to specify this parameter when you call this operation.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if you call this operation in the DAS console. You do not need to specify this parameter when you call this operation.
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder sqlId(String sqlId) {
             this.putQueryParameter("SqlId", sqlId);

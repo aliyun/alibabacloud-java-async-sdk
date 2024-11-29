@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoScalingConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeAutoScalingConfigRequest</p>
@@ -54,7 +55,11 @@ public class DescribeAutoScalingConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze1prap1k46r****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

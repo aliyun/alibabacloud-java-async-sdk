@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoScalingConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoScalingConfigResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the auto scaling feature.
+         * <p>The configurations of the auto scaling feature for instances.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoScalingConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoScalingConfigResponseBody</p>
+     */
     public static class Bandwidth extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthUsageLowerThreshold")
         private Integer bandwidthUsageLowerThreshold;
@@ -212,7 +231,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private Boolean upgrade; 
 
             /**
-             * The average bandwidth usage threshold that triggers automatic bandwidth downgrade. Unit: %.
+             * <p>The average bandwidth usage threshold that triggers automatic bandwidth downgrade. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder bandwidthUsageLowerThreshold(Integer bandwidthUsageLowerThreshold) {
                 this.bandwidthUsageLowerThreshold = bandwidthUsageLowerThreshold;
@@ -220,7 +242,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The average bandwidth usage threshold that triggers automatic bandwidth adjustment. Unit: %.
+             * <p>The average bandwidth usage threshold that triggers automatic bandwidth adjustment. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder bandwidthUsageUpperThreshold(Integer bandwidthUsageUpperThreshold) {
                 this.bandwidthUsageUpperThreshold = bandwidthUsageUpperThreshold;
@@ -228,11 +253,14 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic bandwidth downgrade feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic bandwidth downgrade feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder downgrade(Boolean downgrade) {
                 this.downgrade = downgrade;
@@ -240,15 +268,19 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The observation window of the automatic bandwidth adjustment feature. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:
-             * <p>
+             * <p>The observation window of the automatic bandwidth adjustment feature. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+             * <ul>
+             * <li><strong>s</strong>: seconds.</li>
+             * <li><strong>m</strong>: minutes.</li>
+             * <li><strong>h</strong>: hours.</li>
+             * <li><strong>d</strong>: days.</li>
+             * </ul>
+             * <blockquote>
+             * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+             * </blockquote>
              * 
-             * *   **s**: seconds.
-             * *   **m**: minutes.
-             * *   **h**: hours.
-             * *   **d**: days.
-             * 
-             * >  A value of **5m** indicates 5 minutes.
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder observationWindowSize(String observationWindowSize) {
                 this.observationWindowSize = observationWindowSize;
@@ -256,11 +288,14 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic bandwidth adjustment feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic bandwidth adjustment feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder upgrade(Boolean upgrade) {
                 this.upgrade = upgrade;
@@ -274,6 +309,12 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoScalingConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoScalingConfigResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuStep")
         private Integer cpuStep;
@@ -349,7 +390,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private String upgradeObservationWindowSize; 
 
             /**
-             * The scale-out step size of CPU.
+             * <p>The scale-out step size of CPU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpuStep(Integer cpuStep) {
                 this.cpuStep = cpuStep;
@@ -357,7 +401,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The average CPU utilization threshold that triggers automatic scale-out of local resources. Unit: %.
+             * <p>The average CPU utilization threshold that triggers automatic scale-out of local resources. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder cpuUsageUpperThreshold(Integer cpuUsageUpperThreshold) {
                 this.cpuUsageUpperThreshold = cpuUsageUpperThreshold;
@@ -365,15 +412,19 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The observation window of the automatic scale-in feature for local resources. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:
-             * <p>
+             * <p>The observation window of the automatic scale-in feature for local resources. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+             * <ul>
+             * <li><strong>s</strong>: seconds.</li>
+             * <li><strong>m</strong>: minutes.</li>
+             * <li><strong>h</strong>: hours.</li>
+             * <li><strong>d</strong>: days.</li>
+             * </ul>
+             * <blockquote>
+             * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+             * </blockquote>
              * 
-             * *   **s**: seconds.
-             * *   **m**: minutes.
-             * *   **h**: hours.
-             * *   **d**: days.
-             * 
-             * >  A value of **5m** indicates 5 minutes.
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder downgradeObservationWindowSize(String downgradeObservationWindowSize) {
                 this.downgradeObservationWindowSize = downgradeObservationWindowSize;
@@ -381,11 +432,14 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the auto scaling feature is enabled for local resources. Valid values:
-             * <p>
+             * <p>Indicates whether the auto scaling feature is enabled for local resources. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -393,15 +447,19 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The observation window of the automatic scale-out feature for local resources. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:
-             * <p>
+             * <p>The observation window of the automatic scale-out feature for local resources. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+             * <ul>
+             * <li><strong>s</strong>: seconds.</li>
+             * <li><strong>m</strong>: minutes.</li>
+             * <li><strong>h</strong>: hours.</li>
+             * <li><strong>d</strong>: days.</li>
+             * </ul>
+             * <blockquote>
+             * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+             * </blockquote>
              * 
-             * *   **s**: seconds.
-             * *   **m**: minutes.
-             * *   **h**: hours.
-             * *   **d**: days.
-             * 
-             * >  A value of **5m** indicates 5 minutes.
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder upgradeObservationWindowSize(String upgradeObservationWindowSize) {
                 this.upgradeObservationWindowSize = upgradeObservationWindowSize;
@@ -415,6 +473,12 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoScalingConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoScalingConfigResponseBody</p>
+     */
     public static class Shard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Downgrade")
         private Boolean downgrade;
@@ -526,11 +590,14 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private String upgradeObservationWindowSize; 
 
             /**
-             * Indicates whether the feature of automatically removing shards is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the feature of automatically removing shards is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder downgrade(Boolean downgrade) {
                 this.downgrade = downgrade;
@@ -538,15 +605,19 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The observation window of the feature of automatically removing shards. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:
-             * <p>
+             * <p>The observation window of the feature of automatically removing shards. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+             * <ul>
+             * <li><strong>s</strong>: seconds.</li>
+             * <li><strong>m</strong>: minutes.</li>
+             * <li><strong>h</strong>: hours.</li>
+             * <li><strong>d</strong>: days.</li>
+             * </ul>
+             * <blockquote>
+             * <p> A value of <strong>1d</strong> indicates one day.</p>
+             * </blockquote>
              * 
-             * *   **s**: seconds.
-             * *   **m**: minutes.
-             * *   **h**: hours.
-             * *   **d**: days.
-             * 
-             * >  A value of **1d** indicates one day.
+             * <strong>example:</strong>
+             * <p>1d</p>
              */
             public Builder downgradeObservationWindowSize(String downgradeObservationWindowSize) {
                 this.downgradeObservationWindowSize = downgradeObservationWindowSize;
@@ -554,7 +625,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of shards in the instance.
+             * <p>The maximum number of shards in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder maxShards(Integer maxShards) {
                 this.maxShards = maxShards;
@@ -562,7 +636,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The average memory usage threshold that triggers automatic removal of shards. Unit: %.
+             * <p>The average memory usage threshold that triggers automatic removal of shards. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder memUsageLowerThreshold(Integer memUsageLowerThreshold) {
                 this.memUsageLowerThreshold = memUsageLowerThreshold;
@@ -570,7 +647,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The average memory usage threshold that triggers automatic adding of shards. Unit: %.
+             * <p>The average memory usage threshold that triggers automatic adding of shards. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder memUsageUpperThreshold(Integer memUsageUpperThreshold) {
                 this.memUsageUpperThreshold = memUsageUpperThreshold;
@@ -578,7 +658,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of shards in the instance.
+             * <p>The minimum number of shards in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder minShards(Integer minShards) {
                 this.minShards = minShards;
@@ -586,11 +669,14 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the feature of automatically adding shards is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the feature of automatically adding shards is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder upgrade(Boolean upgrade) {
                 this.upgrade = upgrade;
@@ -598,15 +684,19 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The observation window of the feature of automatically adding shards. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:
-             * <p>
+             * <p>The observation window of the feature of automatically adding shards. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+             * <ul>
+             * <li><strong>s</strong>: seconds.</li>
+             * <li><strong>m</strong>: minutes.</li>
+             * <li><strong>h</strong>: hours.</li>
+             * <li><strong>d</strong>: days.</li>
+             * </ul>
+             * <blockquote>
+             * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+             * </blockquote>
              * 
-             * *   **s**: seconds.
-             * *   **m**: minutes.
-             * *   **h**: hours.
-             * *   **d**: days.
-             * 
-             * >  A value of **5m** indicates 5 minutes.
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder upgradeObservationWindowSize(String upgradeObservationWindowSize) {
                 this.upgradeObservationWindowSize = upgradeObservationWindowSize;
@@ -620,6 +710,12 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoScalingConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoScalingConfigResponseBody</p>
+     */
     public static class Spec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoolDownTime")
         private String coolDownTime;
@@ -731,15 +827,19 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private Boolean upgrade; 
 
             /**
-             * The quiescent period. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:
-             * <p>
+             * <p>The quiescent period. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+             * <ul>
+             * <li><strong>s</strong>: seconds.</li>
+             * <li><strong>m</strong>: minutes.</li>
+             * <li><strong>h</strong>: hours.</li>
+             * <li><strong>d</strong>: days.</li>
+             * </ul>
+             * <blockquote>
+             * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+             * </blockquote>
              * 
-             * *   **s**: seconds.
-             * *   **m**: minutes.
-             * *   **h**: hours.
-             * *   **d**: days.
-             * 
-             * >  A value of **5m** indicates 5 minutes.
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder coolDownTime(String coolDownTime) {
                 this.coolDownTime = coolDownTime;
@@ -747,7 +847,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The average CPU utilization threshold that triggers automatic specification scale-up. Unit: %.
+             * <p>The average CPU utilization threshold that triggers automatic specification scale-up. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder cpuUsageUpperThreshold(Integer cpuUsageUpperThreshold) {
                 this.cpuUsageUpperThreshold = cpuUsageUpperThreshold;
@@ -755,11 +858,14 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic specification scale-down feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic specification scale-down feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder downgrade(Boolean downgrade) {
                 this.downgrade = downgrade;
@@ -767,7 +873,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of read-only nodes of the instance.
+             * <p>The maximum number of read-only nodes of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxReadOnlyNodes(Integer maxReadOnlyNodes) {
                 this.maxReadOnlyNodes = maxReadOnlyNodes;
@@ -775,11 +884,14 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum specifications to which the database instance can be upgraded. For more information about the specifications of each type of supported database instances, see the following topics:
-             * <p>
+             * <p>The maximum specifications to which the cluster can be scaled up. For more information about the specifications of each type of supported database instances, see the following topics:</p>
+             * <ul>
+             * <li>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications of PolarDB for MySQL Enterprise Edition</a></li>
+             * <li>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></li>
+             * </ul>
              * 
-             * *   PolarDB for MySQL Cluster Edition instances: [Specifications of compute nodes](~~102542~~).
-             * *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or enhanced SSDs (ESSDs): [Specifications](~~276974~~).
+             * <strong>example:</strong>
+             * <p>polar.mysql.x8.12xlarge</p>
              */
             public Builder maxSpec(String maxSpec) {
                 this.maxSpec = maxSpec;
@@ -787,7 +899,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The average memory usage threshold that triggers automatic specification scale-up. Unit: %.
+             * <p>The average memory usage threshold that triggers automatic specification scale-up. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder memUsageUpperThreshold(Integer memUsageUpperThreshold) {
                 this.memUsageUpperThreshold = memUsageUpperThreshold;
@@ -795,15 +910,19 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The observation window. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:
-             * <p>
+             * <p>The observation window. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+             * <ul>
+             * <li><strong>s</strong>: seconds.</li>
+             * <li><strong>m</strong>: minutes.</li>
+             * <li><strong>h</strong>: hours.</li>
+             * <li><strong>d</strong>: days.</li>
+             * </ul>
+             * <blockquote>
+             * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+             * </blockquote>
              * 
-             * *   **s**: seconds.
-             * *   **m**: minutes.
-             * *   **h**: hours.
-             * *   **d**: days.
-             * 
-             * >  A value of **5m** indicates 5 minutes.
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder observationWindowSize(String observationWindowSize) {
                 this.observationWindowSize = observationWindowSize;
@@ -811,11 +930,14 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic specification scale-up feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic specification scale-up feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder upgrade(Boolean upgrade) {
                 this.upgrade = upgrade;
@@ -829,6 +951,12 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoScalingConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoScalingConfigResponseBody</p>
+     */
     public static class Storage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskUsageUpperThreshold")
         private Integer diskUsageUpperThreshold;
@@ -880,7 +1008,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private Boolean upgrade; 
 
             /**
-             * The average storage usage threshold that triggers automatic storage expansion. Unit: %.
+             * <p>The average storage usage threshold that triggers automatic storage expansion. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder diskUsageUpperThreshold(Integer diskUsageUpperThreshold) {
                 this.diskUsageUpperThreshold = diskUsageUpperThreshold;
@@ -888,7 +1019,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum storage size. Unit: GB.
+             * <p>The maximum storage size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32000</p>
              */
             public Builder maxStorage(Integer maxStorage) {
                 this.maxStorage = maxStorage;
@@ -896,11 +1030,14 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic storage expansion feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic storage expansion feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder upgrade(Boolean upgrade) {
                 this.upgrade = upgrade;
@@ -914,6 +1051,12 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoScalingConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoScalingConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Bandwidth bandwidth;
@@ -989,7 +1132,7 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             private Storage storage; 
 
             /**
-             * The configurations of the automatic bandwidth adjustment feature.
+             * <p>The configurations of the automatic bandwidth adjustment feature.</p>
              */
             public Builder bandwidth(Bandwidth bandwidth) {
                 this.bandwidth = bandwidth;
@@ -997,7 +1140,7 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the auto scaling feature for local resources.
+             * <p>The configurations of the auto scaling feature for local resources.</p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -1005,7 +1148,7 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the auto scaling feature for shards.
+             * <p>The configurations of the auto scaling feature for shards.</p>
              */
             public Builder shard(Shard shard) {
                 this.shard = shard;
@@ -1013,7 +1156,7 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the auto scaling feature for specifications.
+             * <p>The configurations of the auto scaling feature for specifications.</p>
              */
             public Builder spec(Spec spec) {
                 this.spec = spec;
@@ -1021,7 +1164,7 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the automatic storage expansion feature.
+             * <p>The configurations of the automatic storage expansion feature.</p>
              */
             public Builder storage(Storage storage) {
                 this.storage = storage;

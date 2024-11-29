@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetErrorRequestSampleRequest} extends {@link RequestModel}
  *
  * <p>GetErrorRequestSampleRequest</p>
@@ -124,7 +125,10 @@ public class GetErrorRequestSampleRequest extends Request {
         } 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb01</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -133,10 +137,13 @@ public class GetErrorRequestSampleRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. The interval cannot exceed 24 hours.</p>
+         * </blockquote>
          * 
-         * >  The end time must be later than the start time. The interval cannot exceed 24 hours.
+         * <strong>example:</strong>
+         * <p>1642566830000</p>
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -145,7 +152,11 @@ public class GetErrorRequestSampleRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -154,10 +165,13 @@ public class GetErrorRequestSampleRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</p>
+         * </blockquote>
          * 
-         * >  You must specify the node ID if your database instance is a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>pi-bp179lg03445l****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -166,7 +180,10 @@ public class GetErrorRequestSampleRequest extends Request {
         }
 
         /**
-         * The SQL query ID. You can call the [GetAsyncErrorRequestListByCode](~~410746~~) operation to query the ID of the SQL query for which MySQL error code is returned.
+         * <p>The SQL query ID. You can call the <a href="https://help.aliyun.com/document_detail/410746.html">GetAsyncErrorRequestListByCode</a> operation to query the ID of the SQL query for which MySQL error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2cd4432556c3dab9d825ba363637****</p>
          */
         public Builder sqlId(String sqlId) {
             this.putQueryParameter("SqlId", sqlId);
@@ -175,10 +192,13 @@ public class GetErrorRequestSampleRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</p>
+         * </blockquote>
          * 
-         * >  The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.
+         * <strong>example:</strong>
+         * <p>1642556990714</p>
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);

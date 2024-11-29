@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHDMLastAliyunResourceSyncResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetHDMLastAliyunResourceSyncResultResponseBody</p>
@@ -150,6 +151,12 @@ public class GetHDMLastAliyunResourceSyncResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHDMLastAliyunResourceSyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHDMLastAliyunResourceSyncResultResponseBody</p>
+     */
     public static class ResourceSyncSubResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
@@ -251,6 +258,12 @@ public class GetHDMLastAliyunResourceSyncResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHDMLastAliyunResourceSyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHDMLastAliyunResourceSyncResultResponseBody</p>
+     */
     public static class SubResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceSyncSubResult")
         private java.util.List < ResourceSyncSubResult> resourceSyncSubResult;
@@ -292,6 +305,12 @@ public class GetHDMLastAliyunResourceSyncResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHDMLastAliyunResourceSyncResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHDMLastAliyunResourceSyncResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;

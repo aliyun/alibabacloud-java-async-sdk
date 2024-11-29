@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPartitionsHeatmapRequest} extends {@link RequestModel}
  *
  * <p>GetPartitionsHeatmapRequest</p>
@@ -95,7 +96,10 @@ public class GetPartitionsHeatmapRequest extends Request {
         } 
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -104,7 +108,10 @@ public class GetPartitionsHeatmapRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzrciqy62c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -113,14 +120,17 @@ public class GetPartitionsHeatmapRequest extends Request {
         }
 
         /**
-         * The time range to be queried. Valid values:
-         * <p>
+         * <p>The time range to be queried. Valid values:</p>
+         * <ul>
+         * <li><strong>LAST_ONE_HOURS</strong>: the last hour.</li>
+         * <li><strong>LAST_SIX_HOURS</strong>: the last six hours.</li>
+         * <li><strong>LAST_ONE_DAYS</strong>: the last day.</li>
+         * <li><strong>LAST_THREE_DAYS</strong>: the last three days.</li>
+         * <li><strong>LAST_SEVEN_DAYS</strong>: the last seven days.</li>
+         * </ul>
          * 
-         * *   **LAST_ONE_HOURS**: the last hour.
-         * *   **LAST_SIX_HOURS**: the last six hours.
-         * *   **LAST_ONE_DAYS**: the last day.
-         * *   **LAST_THREE_DAYS**: the last three days.
-         * *   **LAST_SEVEN_DAYS**: the last seven days.
+         * <strong>example:</strong>
+         * <p>LAST_SIX_HOURS</p>
          */
         public Builder timeRange(String timeRange) {
             this.putQueryParameter("TimeRange", timeRange);
@@ -129,18 +139,21 @@ public class GetPartitionsHeatmapRequest extends Request {
         }
 
         /**
-         * The type of the data to be queried. Valid values:
-         * <p>
+         * <p>The type of the data to be queried. Valid values:</p>
+         * <ul>
+         * <li><strong>READ_ROWS</strong>: the read rows.</li>
+         * <li><strong>WRITTEN_ROWS</strong>: the written rows.</li>
+         * <li><strong>READ_WRITTEN_ROWS</strong>: the read and written rows.</li>
+         * <li><strong>UPDATE_ROWS</strong>: the updated rows.</li>
+         * <li><strong>INSERTED_ROWS</strong>: the inserted rows.</li>
+         * <li><strong>DELETED_ROWS</strong>: the deleted rows.</li>
+         * <li><strong>READ_ROWS_WITH_DN</strong>: the read rows returned from a data node.</li>
+         * <li><strong>WRITTEN_ROWS_WITH_DN</strong>: the written rows returned from a data node.</li>
+         * <li><strong>READ_WRITTEN_ROWS_WITH_DN</strong>: the read and written rows returned from a data node.</li>
+         * </ul>
          * 
-         * *   **READ_ROWS**: the read rows.
-         * *   **WRITTEN_ROWS**: the written rows.
-         * *   **READ_WRITTEN_ROWS**: the read and written rows.
-         * *   **UPDATE_ROWS**: the updated rows.
-         * *   **INSERTED_ROWS**: the inserted rows.
-         * *   **DELETED_ROWS**: the deleted rows.
-         * *   **READ_ROWS_WITH_DN**: the read rows returned from a data node.
-         * *   **WRITTEN_ROWS_WITH_DN**: the written rows returned from a data node.
-         * *   **READ_WRITTEN_ROWS_WITH_DN**: the read and written rows returned from a data node.
+         * <strong>example:</strong>
+         * <p>WRITTEN_ROWS_WITH_DN</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutoIncrementUsageStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>GetAutoIncrementUsageStatisticResponseBody</p>
@@ -85,7 +86,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A74B755-98B7-59DB-8724-1321B394****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAutoIncrementUsageStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoIncrementUsageStatisticResponseBody</p>
+     */
     public static class AutoIncrementUsageList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoIncrementCurrentValue")
         private Long autoIncrementCurrentValue;
@@ -224,7 +243,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The latest auto-increment ID.
+             * <p>The latest auto-increment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2147483647</p>
              */
             public Builder autoIncrementCurrentValue(Long autoIncrementCurrentValue) {
                 this.autoIncrementCurrentValue = autoIncrementCurrentValue;
@@ -232,7 +254,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The usage ratio of auto-increment IDs.
+             * <p>The usage ratio of auto-increment IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoIncrementRatio(Double autoIncrementRatio) {
                 this.autoIncrementRatio = autoIncrementRatio;
@@ -240,7 +265,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The column name.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -248,7 +276,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db01</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -256,7 +287,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum auto-increment ID that is supported by the current data type.
+             * <p>The maximum auto-increment ID that is supported by the current data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2147483647</p>
              */
             public Builder maximumValue(Long maximumValue) {
                 this.maximumValue = maximumValue;
@@ -264,7 +298,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The table name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -278,6 +315,12 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoIncrementUsageStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoIncrementUsageStatisticResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoIncrementUsageList")
         private java.util.List < AutoIncrementUsageList> autoIncrementUsageList;
@@ -353,7 +396,7 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The usage details of auto-increment IDs.
+             * <p>The usage details of auto-increment IDs.</p>
              */
             public Builder autoIncrementUsageList(java.util.List < AutoIncrementUsageList> autoIncrementUsageList) {
                 this.autoIncrementUsageList = autoIncrementUsageList;
@@ -361,7 +404,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the task fails.
+             * <p>The error message returned if the task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>the given database name list invalid, none of the database names in the list exist on the instance</p>
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
@@ -369,11 +415,14 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task is complete. Valid values:
-             * <p>
+             * <p>Indicates whether the task is complete. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder finish(Boolean finish) {
                 this.finish = finish;
@@ -381,13 +430,16 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The task status. Valid values:
-             * <p>
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is being initialized.</li>
+             * <li><strong>RUNNING</strong>: The task is being executed.</li>
+             * <li><strong>SUCCESS</strong>: The task succeeds.</li>
+             * <li><strong>FAIL</strong>: The task fails.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is being initialized.
-             * *   **RUNNING**: The task is being executed.
-             * *   **SUCCESS**: The task succeeds.
-             * *   **FAIL**: The task fails.
+             * <strong>example:</strong>
+             * <p>INIT</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -395,7 +447,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1697183353000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

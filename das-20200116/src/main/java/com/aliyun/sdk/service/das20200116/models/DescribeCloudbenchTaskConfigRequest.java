@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudbenchTaskConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudbenchTaskConfigRequest</p>
@@ -54,7 +55,11 @@ public class DescribeCloudbenchTaskConfigRequest extends Request {
         } 
 
         /**
-         * The task ID. You can call the [DescribeCloudBenchTasks](~~230670~~) operation to query the task ID.
+         * <p>The task ID. You can call the <a href="https://help.aliyun.com/document_detail/230670.html">DescribeCloudBenchTasks</a> operation to query the task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e5cec704-0518-430f-8263-76f4dcds****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

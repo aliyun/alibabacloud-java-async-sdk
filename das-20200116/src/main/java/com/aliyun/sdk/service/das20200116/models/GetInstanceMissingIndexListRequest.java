@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceMissingIndexListRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceMissingIndexListRequest</p>
@@ -250,7 +251,10 @@ public class GetInstanceMissingIndexListRequest extends Request {
         } 
 
         /**
-         * The query condition based on the average cost savings.
+         * <p>The query condition based on the average cost savings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&lt;=|8</p>
          */
         public Builder avgTotalUserCost(String avgTotalUserCost) {
             this.putQueryParameter("AvgTotalUserCost", avgTotalUserCost);
@@ -259,7 +263,12 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The query condition based on the performance improvement.
+         * <p>The query condition based on the performance improvement.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>|10000</p>
+         * </blockquote>
          */
         public Builder avgUserImpact(String avgUserImpact) {
             this.putQueryParameter("AvgUserImpact", avgUserImpact);
@@ -268,7 +277,10 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The end time of the last seek.
+         * <p>The end time of the last seek.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681869544000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -277,7 +289,12 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The query condition based on the number of indexes.
+         * <p>The query condition based on the number of indexes.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>=|8</p>
+         * </blockquote>
          */
         public Builder indexCount(String indexCount) {
             this.putQueryParameter("IndexCount", indexCount);
@@ -286,10 +303,14 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The database instance ID.
-         * <p>
+         * <p>The database instance ID.</p>
+         * <blockquote>
+         * <p> Only ApsaraDB RDS for SQL Server instances are supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Only ApsaraDB RDS for SQL Server instances are supported.
+         * <strong>example:</strong>
+         * <p>rm-************</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -298,7 +319,10 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The object name.
+         * <p>The object name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bas_customer</p>
          */
         public Builder objectName(String objectName) {
             this.putQueryParameter("ObjectName", objectName);
@@ -307,7 +331,10 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -316,7 +343,10 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -325,7 +355,12 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The query condition based on the total number of pages.
+         * <p>The query condition based on the total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>=|100</p>
+         * </blockquote>
          */
         public Builder reservedPages(String reservedPages) {
             this.putQueryParameter("ReservedPages", reservedPages);
@@ -334,7 +369,12 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The query condition based on the table size.
+         * <p>The query condition based on the table size.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>=|100</p>
+         * </blockquote>
          */
         public Builder reservedSize(String reservedSize) {
             this.putQueryParameter("ReservedSize", reservedSize);
@@ -343,7 +383,12 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The query condition based on the number of table rows.
+         * <p>The query condition based on the number of table rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>=|100000</p>
+         * </blockquote>
          */
         public Builder rowCount(String rowCount) {
             this.putQueryParameter("RowCount", rowCount);
@@ -352,7 +397,10 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The start time of the last seek.
+         * <p>The start time of the last seek.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679414400000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -361,7 +409,12 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The query condition based on the number of compilations.
+         * <p>The query condition based on the number of compilations.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>=|10000</p>
+         * </blockquote>
          */
         public Builder uniqueCompiles(String uniqueCompiles) {
             this.putQueryParameter("UniqueCompiles", uniqueCompiles);
@@ -370,7 +423,12 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The query condition based on the number of scans.
+         * <p>The query condition based on the number of scans.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>=|10000</p>
+         * </blockquote>
          */
         public Builder userScans(String userScans) {
             this.putQueryParameter("UserScans", userScans);
@@ -379,7 +437,12 @@ public class GetInstanceMissingIndexListRequest extends Request {
         }
 
         /**
-         * The query condition based on the number of seeks.
+         * <p>The query condition based on the number of seeks.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>=|1000</p>
+         * </blockquote>
          */
         public Builder userSeeks(String userSeeks) {
             this.putQueryParameter("UserSeeks", userSeeks);

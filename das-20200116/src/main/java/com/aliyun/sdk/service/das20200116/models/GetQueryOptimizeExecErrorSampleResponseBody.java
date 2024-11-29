@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryOptimizeExecErrorSampleResponseBody} extends {@link TeaModel}
  *
  * <p>GetQueryOptimizeExecErrorSampleResponseBody</p>
@@ -85,7 +86,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information.
+         * <p>The detailed information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQueryOptimizeExecErrorSampleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeExecErrorSampleResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dbname")
         private String dbname;
@@ -233,7 +252,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb01</p>
              */
             public Builder dbname(String dbname) {
                 this.dbname = dbname;
@@ -241,7 +263,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1146</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -249,7 +274,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client that executes the SQL statement.
+             * <p>The IP address of the client that executes the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.XX.XX</p>
              */
             public Builder origHost(String origHost) {
                 this.origHost = origHost;
@@ -257,7 +285,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL template ID.
+             * <p>The SQL template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2e8147b5ca2dfc640dfd5e43d96a****</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -265,7 +296,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the SQL statement that failed to be executed.
+             * <p>The content of the SQL statement that failed to be executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from test1</p>
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -273,7 +307,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the failed SQL statement was executed. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The point in time when the failed SQL statement was executed. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1643020306739</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -281,7 +318,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the client that executes the SQL statement.
+             * <p>The username of the client that executes the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -295,6 +335,12 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQueryOptimizeExecErrorSampleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeExecErrorSampleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
@@ -370,7 +416,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -378,7 +427,7 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The queried data.
+             * <p>The queried data.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -386,7 +435,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -394,7 +446,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -402,7 +457,10 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Long total) {
                 this.total = total;

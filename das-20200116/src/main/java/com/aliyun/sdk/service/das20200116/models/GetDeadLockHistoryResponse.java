@@ -6,11 +6,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SyncHDMAliyunResourceResponse} extends {@link TeaModel}
+ * 
+ * {@link GetDeadLockHistoryResponse} extends {@link TeaModel}
  *
- * <p>SyncHDMAliyunResourceResponse</p>
+ * <p>GetDeadLockHistoryResponse</p>
  */
-public class SyncHDMAliyunResourceResponse extends Response {
+public class GetDeadLockHistoryResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +19,16 @@ public class SyncHDMAliyunResourceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private SyncHDMAliyunResourceResponseBody body;
+    private GetDeadLockHistoryResponseBody body;
 
-    private SyncHDMAliyunResourceResponse(BuilderImpl builder) {
+    private GetDeadLockHistoryResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SyncHDMAliyunResourceResponse create() {
+    public static GetDeadLockHistoryResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +54,35 @@ public class SyncHDMAliyunResourceResponse extends Response {
     /**
      * @return body
      */
-    public SyncHDMAliyunResourceResponseBody getBody() {
+    public GetDeadLockHistoryResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SyncHDMAliyunResourceResponse, Builder> {
+    public interface Builder extends Response.Builder<GetDeadLockHistoryResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SyncHDMAliyunResourceResponseBody body);
+        Builder body(GetDeadLockHistoryResponseBody body);
 
         @Override
-        SyncHDMAliyunResourceResponse build();
+        GetDeadLockHistoryResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SyncHDMAliyunResourceResponse, Builder>
+            extends Response.BuilderImpl<GetDeadLockHistoryResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private SyncHDMAliyunResourceResponseBody body; 
+        private GetDeadLockHistoryResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SyncHDMAliyunResourceResponse response) {
+        private BuilderImpl(GetDeadLockHistoryResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +111,14 @@ public class SyncHDMAliyunResourceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SyncHDMAliyunResourceResponseBody body) {
+        public Builder body(GetDeadLockHistoryResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SyncHDMAliyunResourceResponse build() {
-            return new SyncHDMAliyunResourceResponse(this);
+        public GetDeadLockHistoryResponse build() {
+            return new GetDeadLockHistoryResponse(this);
         } 
 
     } 

@@ -6,16 +6,17 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateAdamBenchTaskResponseBody} extends {@link TeaModel}
+ * 
+ * {@link CreateLatestDeadLockAnalysisResponseBody} extends {@link TeaModel}
  *
- * <p>CreateAdamBenchTaskResponseBody</p>
+ * <p>CreateLatestDeadLockAnalysisResponseBody</p>
  */
-public class CreateAdamBenchTaskResponseBody extends TeaModel {
+public class CreateLatestDeadLockAnalysisResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
-    private String code;
+    private Long code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
+    private Boolean data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -24,9 +25,9 @@ public class CreateAdamBenchTaskResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Success")
-    private String success;
+    private Boolean success;
 
-    private CreateAdamBenchTaskResponseBody(Builder builder) {
+    private CreateLatestDeadLockAnalysisResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -38,21 +39,21 @@ public class CreateAdamBenchTaskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateAdamBenchTaskResponseBody create() {
+    public static CreateLatestDeadLockAnalysisResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return code
      */
-    public String getCode() {
+    public Long getCode() {
         return this.code;
     }
 
     /**
      * @return data
      */
-    public String getData() {
+    public Boolean getData() {
         return this.data;
     }
 
@@ -73,38 +74,35 @@ public class CreateAdamBenchTaskResponseBody extends TeaModel {
     /**
      * @return success
      */
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
     public static final class Builder {
-        private String code; 
-        private String data; 
+        private Long code; 
+        private Boolean data; 
         private String message; 
         private String requestId; 
-        private String success; 
+        private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * Code.
          */
-        public Builder code(String code) {
+        public Builder code(Long code) {
             this.code = code;
             return this;
         }
 
         /**
-         * The detailed information, including the error codes and the number of entries that are returned.
+         * Data.
          */
-        public Builder data(String data) {
+        public Builder data(Boolean data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
-         * <p>
-         * 
-         * > If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +110,7 @@ public class CreateAdamBenchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,19 +118,15 @@ public class CreateAdamBenchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
-        public Builder success(String success) {
+        public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public CreateAdamBenchTaskResponseBody build() {
-            return new CreateAdamBenchTaskResponseBody(this);
+        public CreateLatestDeadLockAnalysisResponseBody build() {
+            return new CreateLatestDeadLockAnalysisResponseBody(this);
         } 
 
     } 

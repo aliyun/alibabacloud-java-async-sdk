@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFullRequestSampleByInstanceIdRequest} extends {@link RequestModel}
  *
  * <p>GetFullRequestSampleByInstanceIdRequest</p>
@@ -127,10 +128,14 @@ public class GetFullRequestSampleByInstanceIdRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. The interval between the start time and the end time must be equal to or greater than 1 hour.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time. The interval between the start time and the end time must be equal to or greater than 1 hour.
+         * <strong>example:</strong>
+         * <p>1660104621000</p>
          */
         public Builder end(Long end) {
             this.putBodyParameter("End", end);
@@ -139,7 +144,11 @@ public class GetFullRequestSampleByInstanceIdRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -148,11 +157,14 @@ public class GetFullRequestSampleByInstanceIdRequest extends Request {
         }
 
         /**
-         * The role of the PolarDB-X 2.0 node. Valid values:
-         * <p>
+         * <p>The role of the PolarDB-X 2.0 node. Valid values:</p>
+         * <ul>
+         * <li><strong>polarx_cn</strong>: compute node.</li>
+         * <li><strong>polarx_en</strong>: data node.</li>
+         * </ul>
          * 
-         * *   **polarx_cn**: compute node.
-         * *   **polarx_en**: data node.
+         * <strong>example:</strong>
+         * <p>polarx_cn</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -161,7 +173,11 @@ public class GetFullRequestSampleByInstanceIdRequest extends Request {
         }
 
         /**
-         * The SQL statement ID.
+         * <p>The SQL statement ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>651b56fe9418d48edb8fdf0980ec****</p>
          */
         public Builder sqlId(String sqlId) {
             this.putBodyParameter("SqlId", sqlId);
@@ -170,10 +186,14 @@ public class GetFullRequestSampleByInstanceIdRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.
+         * <strong>example:</strong>
+         * <p>1660097421000</p>
          */
         public Builder start(Long start) {
             this.putBodyParameter("Start", start);
@@ -182,10 +202,13 @@ public class GetFullRequestSampleByInstanceIdRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used to create the database instance.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+         * <blockquote>
+         * <p> This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+         * </blockquote>
          * 
-         * >  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.
+         * <strong>example:</strong>
+         * <p>196278346919****</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);

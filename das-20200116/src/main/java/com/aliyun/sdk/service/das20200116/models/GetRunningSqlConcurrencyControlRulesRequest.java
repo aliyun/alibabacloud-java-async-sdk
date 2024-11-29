@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRunningSqlConcurrencyControlRulesRequest} extends {@link RequestModel}
  *
  * <p>GetRunningSqlConcurrencyControlRulesRequest</p>
@@ -96,7 +97,10 @@ public class GetRunningSqlConcurrencyControlRulesRequest extends Request {
         } 
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -105,10 +109,14 @@ public class GetRunningSqlConcurrencyControlRulesRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You must specify this parameter only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +125,10 @@ public class GetRunningSqlConcurrencyControlRulesRequest extends Request {
         }
 
         /**
-         * The page number. The value must be a positive integer. Default value: 1.
+         * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -126,7 +137,10 @@ public class GetRunningSqlConcurrencyControlRulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. The value must be a positive integer. Default value: 10.
+         * <p>The number of entries per page. The value must be a positive integer. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

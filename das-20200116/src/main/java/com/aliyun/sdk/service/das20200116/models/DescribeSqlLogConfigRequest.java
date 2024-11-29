@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSqlLogConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeSqlLogConfigRequest</p>
@@ -54,7 +55,11 @@ public class DescribeSqlLogConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the database instance.
+         * <p>The ID of the database instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

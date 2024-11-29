@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeadLockDetailListRequest} extends {@link RequestModel}
  *
  * <p>GetDeadLockDetailListRequest</p>
@@ -126,7 +127,10 @@ public class GetDeadLockDetailListRequest extends Request {
         } 
 
         /**
-         * The database name list.
+         * <p>The name of the database. When you specify multiple databases, you must separate the database names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>school1,school2</p>
          */
         public Builder dbNameList(String dbNameList) {
             this.putQueryParameter("DbNameList", dbNameList);
@@ -135,7 +139,11 @@ public class GetDeadLockDetailListRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1702360530292</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -144,7 +152,11 @@ public class GetDeadLockDetailListRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The ID of the database instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze2016723b328gs2</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +165,10 @@ public class GetDeadLockDetailListRequest extends Request {
         }
 
         /**
-         * The page number. The value must be an integer that is greater than 0. Default value: 1.
+         * <p>The page number. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -162,7 +177,10 @@ public class GetDeadLockDetailListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,7 +189,11 @@ public class GetDeadLockDetailListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1701755730292</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

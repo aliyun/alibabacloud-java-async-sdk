@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCacheAnalysisJobRequest} extends {@link RequestModel}
  *
  * <p>DescribeCacheAnalysisJobRequest</p>
@@ -69,7 +70,11 @@ public class DescribeCacheAnalysisJobRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp18ff4a195d****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +83,11 @@ public class DescribeCacheAnalysisJobRequest extends Request {
         }
 
         /**
-         * The ID of the cache analysis task. You can obtain the task ID from the response parameters of the [CreateCacheAnalysisJob](~~180982~~) operation.
+         * <p>The ID of the cache analysis task. You can obtain the task ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/180982.html">CreateCacheAnalysisJob</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sf79-sd99-sa37-****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

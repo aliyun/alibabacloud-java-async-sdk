@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMySQLAllSessionAsyncRequest} extends {@link RequestModel}
  *
  * <p>GetMySQLAllSessionAsyncRequest</p>
@@ -82,10 +83,14 @@ public class GetMySQLAllSessionAsyncRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> Only ApsaraDB RDS for MySQL, PolarDB for MySQL, and PolarDB-X 2.0 instances are supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Only ApsaraDB RDS for MySQL, PolarDB for MySQL, and PolarDB-X 2.0 instances are supported.
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,10 +99,13 @@ public class GetMySQLAllSessionAsyncRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> You must specify this parameter for PolarDB for MySQL clusters. If you do not specify a node ID, the session data of the primary node is returned by default.</p>
+         * </blockquote>
          * 
-         * >  You must specify this parameter for PolarDB for MySQL clusters. If you do not specify a node ID, the session data of the primary node is returned by default.
+         * <strong>example:</strong>
+         * <p>pi-wz954ryd8f893****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -106,10 +114,13 @@ public class GetMySQLAllSessionAsyncRequest extends Request {
         }
 
         /**
-         * The asynchronous request ID.
-         * <p>
+         * <p>The asynchronous request ID.</p>
+         * <blockquote>
+         * <p> GetMySQLAllSessionAsync is an asynchronous operation. After a request is sent, the system does not return complete results but returns a <strong>request ID</strong>. You need to use the <strong>request ID</strong> to initiate requests until the value of the <strong>isFinish</strong> field in the returned results is <strong>true</strong>, the complete results are returned. This indicates that to obtain complete data, you must call this operation at least twice.</p>
+         * </blockquote>
          * 
-         * >  GetMySQLAllSessionAsync is an asynchronous operation. After a request is sent, the system does not return complete results but returns a **request ID**. You need to use the **request ID** to initiate requests until the value of the **isFinish** field in the returned results is **true**, the complete results are returned. This indicates that to obtain complete data, you must call this operation at least twice.
+         * <strong>example:</strong>
+         * <p>async__507044db6c4eadfa2dab9b084e80****</p>
          */
         public Builder resultId(String resultId) {
             this.putQueryParameter("ResultId", resultId);

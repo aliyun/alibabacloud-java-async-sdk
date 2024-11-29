@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudBenchTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudBenchTasksRequest</p>
@@ -123,10 +124,13 @@ public class DescribeCloudBenchTasksRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * >  The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>1596177993001</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -135,7 +139,10 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The page number. The value must be a positive integer. Default value: 1.
+         * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -144,7 +151,10 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The number of entries per page. The value must be a positive integer. Default value: 10.
+         * <p>The number of entries per page. The value must be a positive integer. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -153,7 +163,10 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596177993000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -162,13 +175,16 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The status of the stress testing task. Valid values:
-         * <p>
+         * <p>The status of the stress testing task. Valid values:</p>
+         * <ul>
+         * <li><strong>SUCCESS</strong>: The task is successful.</li>
+         * <li><strong>IGNORED</strong>: The task is ignored.</li>
+         * <li><strong>RUNNING</strong>: The task is running.</li>
+         * <li><strong>EXCEPTION</strong>: The task is abnormal.</li>
+         * </ul>
          * 
-         * *   **SUCCESS**: The task is successful.
-         * *   **IGNORED**: The task is ignored.
-         * *   **RUNNING**: The task is running.
-         * *   **EXCEPTION**: The task is abnormal.
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -177,11 +193,14 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The type of the stress testing task. Valid values:
-         * <p>
+         * <p>The type of the stress testing task. Valid values:</p>
+         * <ul>
+         * <li><strong>pressure test</strong> (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.</li>
+         * <li><strong>smart pressure test</strong>: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.</li>
+         * </ul>
          * 
-         * *   **pressure test** (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.
-         * *   **smart pressure test**: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.
+         * <strong>example:</strong>
+         * <p>pressure test</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

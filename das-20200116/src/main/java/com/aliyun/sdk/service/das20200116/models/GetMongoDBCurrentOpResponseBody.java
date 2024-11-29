@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMongoDBCurrentOpResponseBody} extends {@link TeaModel}
  *
  * <p>GetMongoDBCurrentOpResponseBody</p>
@@ -85,7 +86,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the sessions.
+         * <p>The details of the sessions.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +105,13 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,7 +119,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC6C0929-29E1-59FD-8DFE-70D9D41E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +130,14 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,6 +150,12 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMongoDBCurrentOpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMongoDBCurrentOpResponseBody</p>
+     */
     public static class SessionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
@@ -368,11 +387,14 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             private String shard; 
 
             /**
-             * Indicates whether the operation is active. Valid values:
-             * <p>
+             * <p>Indicates whether the operation is active. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -380,7 +402,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>219.143.177.4:52324</p>
              */
             public Builder client(String client) {
                 this.client = client;
@@ -388,7 +413,17 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The document that contains the complete command object associated with the operation.
+             * <p>The document that contains the complete command object associated with the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;command&quot; : {
+             *   &quot;find&quot; : &quot;items&quot;,
+             *   &quot;filter&quot; : {
+             *     &quot;sku&quot; : 1403978
+             *   },
+             *   ...
+             *   &quot;$db&quot; : &quot;test&quot;
+             * }</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -396,7 +431,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The connection ID.
+             * <p>The connection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66378736</p>
              */
             public Builder connectionId(Long connectionId) {
                 this.connectionId = connectionId;
@@ -404,7 +442,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the connection.
+             * <p>The description of the connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>conn1013858</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -412,7 +453,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The driver for MongoDB.
+             * <p>The driver for MongoDB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mongo-java-driver|<a href="mailto:legacy@3.11.2">legacy@3.11.2</a></p>
              */
             public Builder driver(String driver) {
                 this.driver = driver;
@@ -420,7 +464,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The host.
+             * <p>The host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a79******.cloud.et15:3328</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -428,11 +475,14 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operation is marked as terminated.
-             * <p>
+             * <p>Indicates whether the operation is marked as terminated.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder killPending(Boolean killPending) {
                 this.killPending = killPending;
@@ -440,7 +490,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin.cmd</p>
              */
             public Builder ns(String ns) {
                 this.ns = ns;
@@ -448,7 +501,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operation.
+             * <p>The type of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>update</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -456,7 +512,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The operation ID.
+             * <p>The operation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14508</p>
              */
             public Builder opId(String opId) {
                 this.opId = opId;
@@ -464,7 +523,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The architecture of the operating system.
+             * <p>The architecture of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amd64</p>
              */
             public Builder osArch(String osArch) {
                 this.osArch = osArch;
@@ -472,7 +534,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operating system.
+             * <p>The name of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -480,7 +545,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system.
+             * <p>The type of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -488,7 +556,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the execution plan.
+             * <p>The description of the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder planSummary(String planSummary) {
                 this.planSummary = planSummary;
@@ -496,7 +567,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The platform.
+             * <p>The platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Java/Alibaba/1.8.0_152-b5</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -504,7 +578,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the operation. Unit: seconds.
+             * <p>The duration of the operation. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder secsRunning(Long secsRunning) {
                 this.secsRunning = secsRunning;
@@ -512,10 +589,13 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data shard.
-             * <p>
+             * <p>The ID of the data shard.</p>
+             * <blockquote>
+             * <p> This parameter is returned for sharded cluster instances.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned for sharded cluster instances.
+             * <strong>example:</strong>
+             * <p>d-bp1689995b78****</p>
              */
             public Builder shard(String shard) {
                 this.shard = shard;
@@ -529,6 +609,12 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMongoDBCurrentOpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMongoDBCurrentOpResponseBody</p>
+     */
     public static class SessionStat extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
@@ -604,7 +690,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The number of active sessions.
+             * <p>The number of active sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -612,7 +701,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics on the IP addresses of the clients.
+             * <p>The statistics on the IP addresses of the clients.</p>
              */
             public Builder clientStats(java.util.Map < String, DataSessionStatClientStatsValue > clientStats) {
                 this.clientStats = clientStats;
@@ -620,7 +709,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics on the namespaces.
+             * <p>The statistics on the namespaces.</p>
              */
             public Builder dbStats(java.util.Map < String, DataSessionStatDbStatsValue > dbStats) {
                 this.dbStats = dbStats;
@@ -628,7 +717,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The longest duration of a session. Unit: seconds.
+             * <p>The longest duration of a session. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder longestSecsRunning(Long longestSecsRunning) {
                 this.longestSecsRunning = longestSecsRunning;
@@ -636,7 +728,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of sessions.
+             * <p>The total number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -650,6 +745,12 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMongoDBCurrentOpResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMongoDBCurrentOpResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SessionList")
         private java.util.List < SessionList> sessionList;
@@ -701,7 +802,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The sessions.
+             * <p>The sessions.</p>
              */
             public Builder sessionList(java.util.List < SessionList> sessionList) {
                 this.sessionList = sessionList;
@@ -709,7 +810,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics on the sessions.
+             * <p>The statistics on the sessions.</p>
              */
             public Builder sessionStat(SessionStat sessionStat) {
                 this.sessionStat = sessionStat;
@@ -717,7 +818,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the database sessions were returned. The value is in the UNIX timestamp format. Unit: milliseconds.
+             * <p>The time when the database sessions were returned. The value is in the UNIX timestamp format. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1692029584428</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

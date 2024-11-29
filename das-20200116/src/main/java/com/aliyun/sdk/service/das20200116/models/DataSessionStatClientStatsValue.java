@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSessionStatClientStatsValue} extends {@link TeaModel}
  *
  * <p>DataSessionStatClientStatsValue</p>
@@ -49,7 +50,10 @@ public class DataSessionStatClientStatsValue extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The number of clients whose IP addresses are active.
+         * <p>The number of clients whose IP addresses are active.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder activeCount(Long activeCount) {
             this.activeCount = activeCount;
@@ -57,7 +61,10 @@ public class DataSessionStatClientStatsValue extends TeaModel {
         }
 
         /**
-         * The total number of IP addresses of clients.
+         * <p>The total number of IP addresses of clients.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSqlLogRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSqlLogRecordsRequest</p>
@@ -152,7 +153,10 @@ public class DescribeSqlLogRecordsRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608888296000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -161,7 +165,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -170,7 +174,11 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * The database instance ID.
+         * <p>The database instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -179,11 +187,14 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <ul>
+         * <li>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter is valid only for instances of the Cluster Edition. If you do not specify this parameter, the log details of the primary node is queried by default.</li>
+         * <li>For PolarDB-X 2.0 instances, set this parameter to <strong>polarx_cn</strong> if the node is a compute node, or <strong>polarx_dn</strong> if the node is a data node.</li>
+         * </ul>
          * 
-         * *   For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter is valid only for instances of the Cluster Edition. If you do not specify this parameter, the log details of the primary node is queried by default.
-         * *   For PolarDB-X 2.0 instances, set this parameter to **polarx_cn** if the node is a compute node, or **polarx_dn** if the node is a data node.
+         * <strong>example:</strong>
+         * <p>pi-uf6k5f6g3912i****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -192,7 +203,10 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -201,7 +215,10 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -210,11 +227,14 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * The role of the node of the PolarDB-X 2.0 instance. Valid values:
-         * <p>
+         * <p>The role of the node of the PolarDB-X 2.0 instance. Valid values:</p>
+         * <ul>
+         * <li>**polarx_cn**: compute node</li>
+         * <li>**polarx_dn**: data node</li>
+         * </ul>
          * 
-         * *   \*\*polarx_cn\*\*: compute node
-         * *   \*\*polarx_dn\*\*: data node
+         * <strong>example:</strong>
+         * <p>polarx_cn</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -223,7 +243,10 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596177993000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -238,6 +261,12 @@ public class DescribeSqlLogRecordsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSqlLogRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSqlLogRecordsRequest</p>
+     */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -277,10 +306,13 @@ public class DescribeSqlLogRecordsRequest extends Request {
             private String value; 
 
             /**
-             * The filter parameter.
-             * <p>
+             * <p>The filter parameter.</p>
+             * <blockquote>
+             * <p> For more information about the supported filter parameters and their valid values, see the <strong>Supported parameters and values for Key</strong> section of this topic.</p>
+             * </blockquote>
              * 
-             * >  For more information about the supported filter parameters and their valid values, see the **Supported parameters and values for Key** section of this topic.
+             * <strong>example:</strong>
+             * <p>keyWords</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -288,7 +320,10 @@ public class DescribeSqlLogRecordsRequest extends Request {
             }
 
             /**
-             * The value of the filter parameter.
+             * <p>The value of the filter parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder value(String value) {
                 this.value = value;
