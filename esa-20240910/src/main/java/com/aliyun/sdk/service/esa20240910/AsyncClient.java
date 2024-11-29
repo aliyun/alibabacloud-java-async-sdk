@@ -102,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CommitRoutineStagingCodeResponse> commitRoutineStagingCode(CommitRoutineStagingCodeRequest request);
 
     /**
+     * @param request the request parameters of CreateClientCertificate  CreateClientCertificateRequest
+     * @return CreateClientCertificateResponse
+     */
+    CompletableFuture<CreateClientCertificateResponse> createClientCertificate(CreateClientCertificateRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomScenePolicy  CreateCustomScenePolicyRequest
      * @return CreateCustomScenePolicyResponse
      */
@@ -217,6 +223,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSiteDeliveryTaskResponse> createSiteDeliveryTask(CreateSiteDeliveryTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is used the first time you configure feature settings for your website. To modify existing feature settings, call the UpdateSiteFunction operation.</p>
+     * 
      * @param request the request parameters of CreateSiteFunction  CreateSiteFunctionRequest
      * @return CreateSiteFunctionResponse
      */
@@ -266,6 +275,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateWaitingRoomRuleResponse
      */
     CompletableFuture<CreateWaitingRoomRuleResponse> createWaitingRoomRule(CreateWaitingRoomRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCertificate  DeleteCertificateRequest
+     * @return DeleteCertificateResponse
+     */
+    CompletableFuture<DeleteCertificateResponse> deleteCertificate(DeleteCertificateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteClientCaCertificate  DeleteClientCaCertificateRequest
+     * @return DeleteClientCaCertificateResponse
+     */
+    CompletableFuture<DeleteClientCaCertificateResponse> deleteClientCaCertificate(DeleteClientCaCertificateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteClientCertificate  DeleteClientCertificateRequest
+     * @return DeleteClientCertificateResponse
+     */
+    CompletableFuture<DeleteClientCertificateResponse> deleteClientCertificate(DeleteClientCertificateRequest request);
 
     /**
      * @param request the request parameters of DeleteCustomScenePolicy  DeleteCustomScenePolicyRequest
@@ -496,6 +523,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCacheReserveSpecificationResponse
      */
     CompletableFuture<GetCacheReserveSpecificationResponse> getCacheReserveSpecification(GetCacheReserveSpecificationRequest request);
+
+    /**
+     * @param request the request parameters of GetCertificateQuota  GetCertificateQuotaRequest
+     * @return GetCertificateQuotaResponse
+     */
+    CompletableFuture<GetCertificateQuotaResponse> getCertificateQuota(GetCertificateQuotaRequest request);
+
+    /**
+     * @param request the request parameters of GetClientCaCertificate  GetClientCaCertificateRequest
+     * @return GetClientCaCertificateResponse
+     */
+    CompletableFuture<GetClientCaCertificateResponse> getClientCaCertificate(GetClientCaCertificateRequest request);
+
+    /**
+     * @param request the request parameters of GetClientCertificate  GetClientCertificateRequest
+     * @return GetClientCertificateResponse
+     */
+    CompletableFuture<GetClientCertificateResponse> getClientCertificate(GetClientCertificateRequest request);
 
     /**
      * @param request the request parameters of GetEdgeContainerApp  GetEdgeContainerAppRequest
@@ -752,6 +797,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCacheReserveInstancesResponse
      */
     CompletableFuture<ListCacheReserveInstancesResponse> listCacheReserveInstances(ListCacheReserveInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListCiphers  ListCiphersRequest
+     * @return ListCiphersResponse
+     */
+    CompletableFuture<ListCiphersResponse> listCiphers(ListCiphersRequest request);
+
+    /**
+     * @param request the request parameters of ListClientCaCertificates  ListClientCaCertificatesRequest
+     * @return ListClientCaCertificatesResponse
+     */
+    CompletableFuture<ListClientCaCertificatesResponse> listClientCaCertificates(ListClientCaCertificatesRequest request);
 
     /**
      * @param request the request parameters of ListClientCertificates  ListClientCertificatesRequest
@@ -1029,6 +1086,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetScheduledPreloadJobResponse> resetScheduledPreloadJob(ResetScheduledPreloadJobRequest request);
 
     /**
+     * @param request the request parameters of RevokeClientCertificate  RevokeClientCertificateRequest
+     * @return RevokeClientCertificateResponse
+     */
+    CompletableFuture<RevokeClientCertificateResponse> revokeClientCertificate(RevokeClientCertificateRequest request);
+
+    /**
      * @param request the request parameters of RollbackEdgeContainerAppVersion  RollbackEdgeContainerAppVersionRequest
      * @return RollbackEdgeContainerAppVersionResponse
      */
@@ -1226,6 +1289,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateWaitingRoomRuleResponse
      */
     CompletableFuture<UpdateWaitingRoomRuleResponse> updateWaitingRoomRule(UpdateWaitingRoomRuleRequest request);
+
+    /**
+     * @param request the request parameters of UploadClientCaCertificate  UploadClientCaCertificateRequest
+     * @return UploadClientCaCertificateResponse
+     */
+    CompletableFuture<UploadClientCaCertificateResponse> uploadClientCaCertificate(UploadClientCaCertificateRequest request);
 
     /**
      * <b>description</b> :

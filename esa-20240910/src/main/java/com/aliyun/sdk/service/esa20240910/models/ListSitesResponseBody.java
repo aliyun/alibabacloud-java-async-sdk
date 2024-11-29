@@ -195,6 +195,9 @@ public class ListSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VerifyCode")
         private String verifyCode;
 
+        @com.aliyun.core.annotation.NameInMap("VisitTime")
+        private String visitTime;
+
         private Sites(Builder builder) {
             this.accessType = builder.accessType;
             this.cnameZone = builder.cnameZone;
@@ -211,6 +214,7 @@ public class ListSitesResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.updateTime = builder.updateTime;
             this.verifyCode = builder.verifyCode;
+            this.visitTime = builder.visitTime;
         }
 
         public static Builder builder() {
@@ -326,6 +330,13 @@ public class ListSitesResponseBody extends TeaModel {
             return this.verifyCode;
         }
 
+        /**
+         * @return visitTime
+         */
+        public String getVisitTime() {
+            return this.visitTime;
+        }
+
         public static final class Builder {
             private String accessType; 
             private String cnameZone; 
@@ -342,6 +353,7 @@ public class ListSitesResponseBody extends TeaModel {
             private java.util.Map < String, ? > tags; 
             private String updateTime; 
             private String verifyCode; 
+            private String visitTime; 
 
             /**
              * <p>The DNS setup for the website. Valid values:</p>
@@ -520,6 +532,14 @@ public class ListSitesResponseBody extends TeaModel {
              */
             public Builder verifyCode(String verifyCode) {
                 this.verifyCode = verifyCode;
+                return this;
+            }
+
+            /**
+             * VisitTime.
+             */
+            public Builder visitTime(String visitTime) {
+                this.visitTime = visitTime;
                 return this;
             }
 

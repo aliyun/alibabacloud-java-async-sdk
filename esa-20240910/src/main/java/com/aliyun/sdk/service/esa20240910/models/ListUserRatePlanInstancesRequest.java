@@ -29,6 +29,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemainingExpireDays")
+    private Integer remainingExpireDays;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -46,6 +50,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.remainingExpireDays = builder.remainingExpireDays;
         this.sortBy = builder.sortBy;
         this.sortOrder = builder.sortOrder;
         this.status = builder.status;
@@ -93,6 +98,13 @@ public class ListUserRatePlanInstancesRequest extends Request {
     }
 
     /**
+     * @return remainingExpireDays
+     */
+    public Integer getRemainingExpireDays() {
+        return this.remainingExpireDays;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -118,6 +130,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Integer remainingExpireDays; 
         private String sortBy; 
         private String sortOrder; 
         private String status; 
@@ -132,6 +145,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.remainingExpireDays = request.remainingExpireDays;
             this.sortBy = request.sortBy;
             this.sortOrder = request.sortOrder;
             this.status = request.status;
@@ -186,6 +200,15 @@ public class ListUserRatePlanInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RemainingExpireDays.
+         */
+        public Builder remainingExpireDays(Integer remainingExpireDays) {
+            this.putQueryParameter("RemainingExpireDays", remainingExpireDays);
+            this.remainingExpireDays = remainingExpireDays;
             return this;
         }
 

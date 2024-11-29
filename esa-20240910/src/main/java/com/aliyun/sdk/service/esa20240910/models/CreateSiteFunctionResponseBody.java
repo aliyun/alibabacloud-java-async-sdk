@@ -50,7 +50,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Configs.
+         * <p>The returned configurations.</p>
          */
         public Builder configs(Configs configs) {
             this.configs = configs;
@@ -59,6 +59,9 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -487,7 +490,15 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * BrowserCacheMode.
+             * <p>The browser cache configuration. Valid values:</p>
+             * <ul>
+             * <li>no_cache: does not cache resources.</li>
+             * <li>follow_origin: follows the origin&quot;s cache rule.</li>
+             * <li>override_origin: uses a custom cache rule instead of the origin&quot;s.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>follow_origin</p>
              */
             public Builder browserCacheMode(String browserCacheMode) {
                 this.browserCacheMode = browserCacheMode;
@@ -495,7 +506,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * BrowserCacheTtl.
+             * <p>The browser cache TTL. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder browserCacheTtl(String browserCacheTtl) {
                 this.browserCacheTtl = browserCacheTtl;
@@ -503,7 +517,15 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * BypassCache.
+             * <p>The configuration of bypass cache. Valid values:</p>
+             * <ul>
+             * <li>cache_all: Responses of all requests are cached.</li>
+             * <li>default_cache (default): Resources are cached only based on supported file extensions.</li>
+             * <li>bypass_all: All requests bypass the cache component.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default_cache</p>
              */
             public Builder bypassCache(String bypassCache) {
                 this.bypassCache = bypassCache;
@@ -543,7 +565,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -551,7 +576,16 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * EdgeCacheMode.
+             * <p>The edge cache configuration. Valid values:</p>
+             * <ul>
+             * <li>follow_origin: follows the origin&quot;s cache rule. If the origin does not have a cache rule, the default cache rule is used.</li>
+             * <li>no-cache: does not cache resources.</li>
+             * <li>override_origin: uses a custom cache rule instead of the origin&quot;s.</li>
+             * <li>follow_origin_bypass: follows the origin&quot;s cache rule. If the origin does not have a cache rule, no resources are cached.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>follow_origin</p>
              */
             public Builder edgeCacheMode(String edgeCacheMode) {
                 this.edgeCacheMode = edgeCacheMode;
@@ -559,7 +593,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * EdgeCacheTtl.
+             * <p>The edge cache TTL. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder edgeCacheTtl(String edgeCacheTtl) {
                 this.edgeCacheTtl = edgeCacheTtl;
@@ -567,7 +604,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * EdgeStatusCodeCacheTtl.
+             * <p>The status code TTL. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder edgeStatusCodeCacheTtl(String edgeStatusCodeCacheTtl) {
                 this.edgeStatusCodeCacheTtl = edgeStatusCodeCacheTtl;
@@ -575,7 +615,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * IncludeCookie.
+             * <p>The cookie names and values included in the cache key. Multiple combinations are separated by spaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cookie_exapmle</p>
              */
             public Builder includeCookie(String includeCookie) {
                 this.includeCookie = includeCookie;
@@ -583,7 +626,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * IncludeHeader.
+             * <p>The header names and values included in the cache key. Multiple combinations are separated by spaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder includeHeader(String includeHeader) {
                 this.includeHeader = includeHeader;
@@ -591,7 +637,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * QueryString.
+             * <p>The parameters to be retained or ignored in the query string. Multiple values are separated by spaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder queryString(String queryString) {
                 this.queryString = queryString;
@@ -599,7 +648,16 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * QueryStringMode.
+             * <p>The method to process the query string when cache keys are generated. Valid values:</p>
+             * <ul>
+             * <li>ignore_all: ignores the entire query string.</li>
+             * <li>exclude_query_string: ignores specified parameters in the query string.</li>
+             * <li>reserve_all (default): retains the entire query string.</li>
+             * <li>include_query_string: retains specified parameters in the query string.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>reserve_all</p>
              */
             public Builder queryStringMode(String queryStringMode) {
                 this.queryStringMode = queryStringMode;
@@ -607,7 +665,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -615,7 +676,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -623,7 +691,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -631,7 +702,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -647,7 +721,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * SortQueryStringForCache.
+             * <p>Indicates whether query string sorting is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder sortQueryStringForCache(String sortQueryStringForCache) {
                 this.sortQueryStringForCache = sortQueryStringForCache;
@@ -754,7 +835,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String tagName; 
 
             /**
-             * CaseInsensitive.
+             * <p>Specifies whether the matching is not case-sensitive. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder caseInsensitive(String caseInsensitive) {
                 this.caseInsensitive = caseInsensitive;
@@ -762,7 +850,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -770,7 +861,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -778,7 +872,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The name of the custom cache tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -849,7 +946,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -865,7 +965,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -984,7 +1087,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * Brotli.
+             * <p>Indicates whether Brotli compression is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder brotli(String brotli) {
                 this.brotli = brotli;
@@ -992,7 +1102,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -1000,7 +1113,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Gzip.
+             * <p>Indicates whether Gzip compression is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder gzip(String gzip) {
                 this.gzip = gzip;
@@ -1008,7 +1128,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -1016,7 +1139,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -1024,7 +1154,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1032,7 +1165,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -1091,7 +1227,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String enable; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -1170,7 +1309,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -1178,7 +1320,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the development mode is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -1186,7 +1335,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -1380,7 +1532,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -1388,7 +1543,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RequestHeaderModification.
+             * <p>Modifies a request header. You can add, delete, or modify a request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;operation&quot;:&quot;add&quot;,&quot;name&quot;:&quot;header_example_add&quot;,&quot;value&quot;:&quot;value_exapme_add&quot;},{&quot;operation&quot;:&quot;del&quot;,&quot;name&quot;:&quot;header_example_delete&quot;,&quot;value&quot;:&quot;value_exapme_delete&quot;},{&quot;operation&quot;:&quot;modify&quot;,&quot;name&quot;:&quot;header_example_update&quot;,&quot;value&quot;:&quot;value_exapme_example&quot;}]</p>
              */
             public Builder requestHeaderModification(java.util.List < RequestHeaderModification> requestHeaderModification) {
                 this.requestHeaderModification = requestHeaderModification;
@@ -1396,7 +1554,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -1404,7 +1565,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -1412,7 +1580,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1420,7 +1591,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -1614,7 +1788,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -1622,7 +1799,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseHeaderModification.
+             * <p>Modifies a response header. You can add, delete, or modify a request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;operation&quot;:&quot;add&quot;,&quot;name&quot;:&quot;header_example_add&quot;,&quot;value&quot;:&quot;value_exapme_add&quot;},{&quot;operation&quot;:&quot;del&quot;,&quot;name&quot;:&quot;header_example_delete&quot;,&quot;value&quot;:&quot;value_exapme_delete&quot;},{&quot;operation&quot;:&quot;modify&quot;,&quot;name&quot;:&quot;header_example_update&quot;,&quot;value&quot;:&quot;value_exapme_example&quot;}]</p>
              */
             public Builder responseHeaderModification(java.util.List < ResponseHeaderModification> responseHeaderModification) {
                 this.responseHeaderModification = responseHeaderModification;
@@ -1630,7 +1810,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -1638,7 +1821,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -1646,7 +1836,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1654,7 +1847,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -1901,7 +2097,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -1957,7 +2156,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -1965,7 +2167,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -1973,7 +2182,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1981,7 +2193,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -2212,7 +2427,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -2252,7 +2470,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -2260,7 +2481,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -2268,7 +2496,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -2276,7 +2507,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -2379,7 +2613,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -2387,7 +2624,12 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the image transformations feature is enabled. Valid values:</p>
+             * <p>on</p>
+             * <p>off (default)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -2395,7 +2637,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -2466,7 +2711,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -2474,7 +2722,12 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+             * <p>on (default)</p>
+             * <p>off</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -2482,7 +2735,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -2565,7 +2821,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * AddClientGeolocationHeaders.
+             * <p>Indicates whether the header that indicates the geographical location of a client is included in an origin request. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder addClientGeolocationHeaders(String addClientGeolocationHeaders) {
                 this.addClientGeolocationHeaders = addClientGeolocationHeaders;
@@ -2573,7 +2836,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * AddRealClientIpHeader.
+             * <p>Indicates whether the &quot;ali-real-client-ip&quot; header that contains the client&quot;s real IP address is included in an origin request. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder addRealClientIpHeader(String addRealClientIpHeader) {
                 this.addRealClientIpHeader = addRealClientIpHeader;
@@ -2581,7 +2851,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -2589,7 +2862,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -2744,7 +3020,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String websocket; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -2768,7 +3047,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -2776,7 +3058,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -2784,7 +3073,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -2792,7 +3084,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -2995,7 +3290,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -3003,7 +3301,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * DnsRecord.
+             * <p>The hostname that overrides the resolved hostname of an incoming request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.example.com</p>
              */
             public Builder dnsRecord(String dnsRecord) {
                 this.dnsRecord = dnsRecord;
@@ -3011,7 +3312,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * OriginHost.
+             * <p>The Host header in origin requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>origin.example.com</p>
              */
             public Builder originHost(String originHost) {
                 this.originHost = originHost;
@@ -3035,7 +3339,15 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * OriginScheme.
+             * <p>The protocol used for origin requests. Valid values:</p>
+             * <ul>
+             * <li>http: HTTP.</li>
+             * <li>https: HTTPS.</li>
+             * <li>follow: follows the protocol used by the client.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder originScheme(String originScheme) {
                 this.originScheme = originScheme;
@@ -3043,7 +3355,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * OriginSni.
+             * <p>The SNI in origin requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>origin.example.com</p>
              */
             public Builder originSni(String originSni) {
                 this.originSni = originSni;
@@ -3059,7 +3374,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -3067,7 +3385,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -3075,7 +3400,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -3083,7 +3411,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -3226,7 +3557,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -3234,7 +3568,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ReserveQueryString.
+             * <p>Indicates whether the feature of retaining the query string is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder reserveQueryString(String reserveQueryString) {
                 this.reserveQueryString = reserveQueryString;
@@ -3242,7 +3583,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -3250,7 +3594,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -3258,7 +3609,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -3266,7 +3620,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -3274,7 +3631,17 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * <p>The response code that you want to use to indicate URL redirection. Valid values:</p>
+             * <ul>
+             * <li>301</li>
+             * <li>302</li>
+             * <li>303</li>
+             * <li>307</li>
+             * <li>308</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>301</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -3282,7 +3649,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * TargetUrl.
+             * <p>The destination URL to which requests are redirected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.exapmle.com/index.html">http://www.exapmle.com/index.html</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -3290,7 +3660,13 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The redirect type. Valid value:</p>
+             * <ul>
+             * <li>static</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -3433,7 +3809,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String uri; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -3441,7 +3820,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * QueryString.
+             * <p>The desired query string to which you want to rewrite the query string in the original request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>?example=123</p>
              */
             public Builder queryString(String queryString) {
                 this.queryString = queryString;
@@ -3449,7 +3831,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RewriteQueryStringType.
+             * <p>The query string rewrite method. Valid values:</p>
+             * <ul>
+             * <li>static</li>
+             * <li>dynamic</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder rewriteQueryStringType(String rewriteQueryStringType) {
                 this.rewriteQueryStringType = rewriteQueryStringType;
@@ -3457,7 +3846,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RewriteUriType.
+             * <p>The path rewrite method. Valid values:</p>
+             * <ul>
+             * <li>static</li>
+             * <li>dynamic</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder rewriteUriType(String rewriteUriType) {
                 this.rewriteUriType = rewriteUriType;
@@ -3465,7 +3861,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -3473,7 +3872,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -3481,7 +3887,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -3489,7 +3898,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -3497,7 +3909,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * <p>The desired URI to which you want to rewrite the path in the original request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/image.example.com/index.html</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -3568,7 +3983,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -3576,7 +3994,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether SEO crawler bypassing is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -3584,7 +4009,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -3655,7 +4083,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>352816096987136</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -3663,7 +4094,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether SEO crawler bypassing is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -3671,7 +4109,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -3742,7 +4183,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             private String sequence; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>344147756398592</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -3750,7 +4194,14 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Paused.
+             * <p>Indicates whether ESA is paused on the website. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder paused(String paused) {
                 this.paused = paused;
@@ -3758,7 +4209,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -3837,7 +4291,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>344147756398592</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -3845,7 +4302,10 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(String sequence) {
                 this.sequence = sequence;
@@ -4152,7 +4612,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * CacheRules.
+             * <p>The cache rules.</p>
              */
             public Builder cacheRules(java.util.List < CacheRules> cacheRules) {
                 this.cacheRules = cacheRules;
@@ -4160,7 +4620,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * CacheTags.
+             * <p>The cache tags.</p>
              */
             public Builder cacheTags(java.util.List < CacheTags> cacheTags) {
                 this.cacheTags = cacheTags;
@@ -4176,7 +4636,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * CompressionRules.
+             * <p>The configuration of a compression rule.</p>
              */
             public Builder compressionRules(java.util.List < CompressionRules> compressionRules) {
                 this.compressionRules = compressionRules;
@@ -4192,7 +4652,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * DevelopmentMode.
+             * <p>The configuration of development mode.</p>
              */
             public Builder developmentMode(java.util.List < DevelopmentMode> developmentMode) {
                 this.developmentMode = developmentMode;
@@ -4200,7 +4660,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * HttpRequestHeaderModificationRules.
+             * <p>The configuration of a request header modification rule.</p>
              */
             public Builder httpRequestHeaderModificationRules(java.util.List < HttpRequestHeaderModificationRules> httpRequestHeaderModificationRules) {
                 this.httpRequestHeaderModificationRules = httpRequestHeaderModificationRules;
@@ -4208,7 +4668,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * HttpResponseHeaderModificationRules.
+             * <p>The configuration of a response header modification rule.</p>
              */
             public Builder httpResponseHeaderModificationRules(java.util.List < HttpResponseHeaderModificationRules> httpResponseHeaderModificationRules) {
                 this.httpResponseHeaderModificationRules = httpResponseHeaderModificationRules;
@@ -4232,7 +4692,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ImageTransform.
+             * <p>The configuration of image transformations.</p>
              */
             public Builder imageTransform(java.util.List < ImageTransform> imageTransform) {
                 this.imageTransform = imageTransform;
@@ -4240,7 +4700,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6.
+             * <p>The IPv6 configuration.</p>
              */
             public Builder ipv6(java.util.List < Ipv6> ipv6) {
                 this.ipv6 = ipv6;
@@ -4248,7 +4708,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * ManagedTransforms.
+             * <p>The configuration of managed transforms.</p>
              */
             public Builder managedTransforms(java.util.List < ManagedTransforms> managedTransforms) {
                 this.managedTransforms = managedTransforms;
@@ -4264,7 +4724,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * OriginRules.
+             * <p>The configuration of an origin rule.</p>
              */
             public Builder originRules(java.util.List < OriginRules> originRules) {
                 this.originRules = originRules;
@@ -4272,7 +4732,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RedirectRules.
+             * <p>The configuration of a redirect rule.</p>
              */
             public Builder redirectRules(java.util.List < RedirectRules> redirectRules) {
                 this.redirectRules = redirectRules;
@@ -4280,7 +4740,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * RewriteUrlRules.
+             * <p>The configuration of a URL rewrite rule.</p>
              */
             public Builder rewriteUrlRules(java.util.List < RewriteUrlRules> rewriteUrlRules) {
                 this.rewriteUrlRules = rewriteUrlRules;
@@ -4288,7 +4748,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * SeoBypass.
+             * <p>The configuration of SEO crawler bypassing.</p>
              */
             public Builder seoBypass(java.util.List < SeoBypass> seoBypass) {
                 this.seoBypass = seoBypass;
@@ -4304,7 +4764,7 @@ public class CreateSiteFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * SitePause.
+             * <p>The configuration of temporarily pausing ESA proxy on the website. If you pause ESA proxy, all requests to the domains in your DNS records go directly to your origin server.</p>
              */
             public Builder sitePause(java.util.List < SitePause> sitePause) {
                 this.sitePause = sitePause;

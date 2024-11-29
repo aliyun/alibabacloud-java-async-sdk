@@ -55,6 +55,7 @@ public class GetRecordRequest extends Request {
         } 
 
         /**
+         * <p>The record ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

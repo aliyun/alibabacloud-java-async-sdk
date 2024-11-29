@@ -25,6 +25,10 @@ public class ListSitesRequest extends Request {
     private Boolean onlyEnterprise;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
+    private String orderBy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -61,6 +65,7 @@ public class ListSitesRequest extends Request {
         this.accessType = builder.accessType;
         this.coverage = builder.coverage;
         this.onlyEnterprise = builder.onlyEnterprise;
+        this.orderBy = builder.orderBy;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.planSubscribeType = builder.planSubscribeType;
@@ -103,6 +108,13 @@ public class ListSitesRequest extends Request {
      */
     public Boolean getOnlyEnterprise() {
         return this.onlyEnterprise;
+    }
+
+    /**
+     * @return orderBy
+     */
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     /**
@@ -165,6 +177,7 @@ public class ListSitesRequest extends Request {
         private String accessType; 
         private String coverage; 
         private Boolean onlyEnterprise; 
+        private String orderBy; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String planSubscribeType; 
@@ -183,6 +196,7 @@ public class ListSitesRequest extends Request {
             this.accessType = request.accessType;
             this.coverage = request.coverage;
             this.onlyEnterprise = request.onlyEnterprise;
+            this.orderBy = request.orderBy;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.planSubscribeType = request.planSubscribeType;
@@ -235,6 +249,15 @@ public class ListSitesRequest extends Request {
         public Builder onlyEnterprise(Boolean onlyEnterprise) {
             this.putQueryParameter("OnlyEnterprise", onlyEnterprise);
             this.onlyEnterprise = onlyEnterprise;
+            return this;
+        }
+
+        /**
+         * OrderBy.
+         */
+        public Builder orderBy(String orderBy) {
+            this.putQueryParameter("OrderBy", orderBy);
+            this.orderBy = orderBy;
             return this;
         }
 

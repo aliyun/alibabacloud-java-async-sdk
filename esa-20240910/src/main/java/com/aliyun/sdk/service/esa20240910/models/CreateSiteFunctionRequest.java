@@ -401,7 +401,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * CacheRules.
+         * <p>The cache rules.</p>
          */
         public Builder cacheRules(java.util.List < CacheRules> cacheRules) {
             String cacheRulesShrink = shrink(cacheRules, "CacheRules", "json");
@@ -411,7 +411,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * CacheTags.
+         * <p>The cache tags.</p>
          */
         public Builder cacheTags(java.util.List < CacheTags> cacheTags) {
             String cacheTagsShrink = shrink(cacheTags, "CacheTags", "json");
@@ -421,7 +421,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * CnameFlattening.
+         * <p>The configuration of CNAME flattening.</p>
          */
         public Builder cnameFlattening(java.util.List < CnameFlattening> cnameFlattening) {
             String cnameFlatteningShrink = shrink(cnameFlattening, "CnameFlattening", "json");
@@ -431,7 +431,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * CompressionRules.
+         * <p>The configuration of a compression rule.</p>
          */
         public Builder compressionRules(java.util.List < CompressionRules> compressionRules) {
             String compressionRulesShrink = shrink(compressionRules, "CompressionRules", "json");
@@ -451,7 +451,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * DevelopmentMode.
+         * <p>The configuration of development mode.</p>
          */
         public Builder developmentMode(java.util.List < DevelopmentMode> developmentMode) {
             String developmentModeShrink = shrink(developmentMode, "DevelopmentMode", "json");
@@ -461,7 +461,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * HttpRequestHeaderModificationRules.
+         * <p>The configuration of a request header modification rule.</p>
          */
         public Builder httpRequestHeaderModificationRules(java.util.List < HttpRequestHeaderModificationRules> httpRequestHeaderModificationRules) {
             String httpRequestHeaderModificationRulesShrink = shrink(httpRequestHeaderModificationRules, "HttpRequestHeaderModificationRules", "json");
@@ -471,7 +471,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * HttpResponseHeaderModificationRules.
+         * <p>The configuration of a response header modification rule.</p>
          */
         public Builder httpResponseHeaderModificationRules(java.util.List < HttpResponseHeaderModificationRules> httpResponseHeaderModificationRules) {
             String httpResponseHeaderModificationRulesShrink = shrink(httpResponseHeaderModificationRules, "HttpResponseHeaderModificationRules", "json");
@@ -501,7 +501,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * ImageTransform.
+         * <p>The configuration of image transformations.</p>
          */
         public Builder imageTransform(java.util.List < ImageTransform> imageTransform) {
             String imageTransformShrink = shrink(imageTransform, "ImageTransform", "json");
@@ -511,7 +511,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * Ipv6.
+         * <p>The IPv6 configuration.</p>
          */
         public Builder ipv6(java.util.List < Ipv6> ipv6) {
             String ipv6Shrink = shrink(ipv6, "Ipv6", "json");
@@ -521,7 +521,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * ManagedTransforms.
+         * <p>The configuration of managed transforms.</p>
          */
         public Builder managedTransforms(java.util.List < ManagedTransforms> managedTransforms) {
             String managedTransformsShrink = shrink(managedTransforms, "ManagedTransforms", "json");
@@ -541,7 +541,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * OriginProtection.
+         * <p>The configuration of origin protection.</p>
          */
         public Builder originProtection(java.util.List < OriginProtection> originProtection) {
             String originProtectionShrink = shrink(originProtection, "OriginProtection", "json");
@@ -551,7 +551,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * OriginRules.
+         * <p>The configuration of an origin rule.</p>
          */
         public Builder originRules(java.util.List < OriginRules> originRules) {
             String originRulesShrink = shrink(originRules, "OriginRules", "json");
@@ -561,7 +561,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * RedirectRules.
+         * <p>The configuration of a redirect rule.</p>
          */
         public Builder redirectRules(java.util.List < RedirectRules> redirectRules) {
             String redirectRulesShrink = shrink(redirectRules, "RedirectRules", "json");
@@ -571,7 +571,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * RewriteUrlRules.
+         * <p>The configuration of a URL rewrite rule.</p>
          */
         public Builder rewriteUrlRules(java.util.List < RewriteUrlRules> rewriteUrlRules) {
             String rewriteUrlRulesShrink = shrink(rewriteUrlRules, "RewriteUrlRules", "json");
@@ -581,7 +581,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * SeoBypass.
+         * <p>The configuration of SEO crawler bypassing.</p>
          */
         public Builder seoBypass(java.util.List < SeoBypass> seoBypass) {
             String seoBypassShrink = shrink(seoBypass, "SeoBypass", "json");
@@ -591,6 +591,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
+         * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -603,7 +604,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * SiteNameExclusive.
+         * <p>The configuration of site hold. After this feature is enabled, other accounts cannot add your website domain or its subdomains to ESA.</p>
          */
         public Builder siteNameExclusive(java.util.List < SiteNameExclusive> siteNameExclusive) {
             String siteNameExclusiveShrink = shrink(siteNameExclusive, "SiteNameExclusive", "json");
@@ -613,7 +614,7 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * SitePause.
+         * <p>The configuration of temporarily pausing ESA proxy on the website. If you pause ESA proxy, all requests to the domains in your DNS records go directly to your origin server.</p>
          */
         public Builder sitePause(java.util.List < SitePause> sitePause) {
             String sitePauseShrink = shrink(sitePause, "SitePause", "json");
@@ -623,7 +624,10 @@ public class CreateSiteFunctionRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the website. You can use this parameter to specify a version of your website to apply the new feature settings. By default, version 0 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);
@@ -1020,7 +1024,15 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * BrowserCacheMode.
+             * <p>The browser cache configuration. Valid values:</p>
+             * <ul>
+             * <li>no_cache: does not cache resources.</li>
+             * <li>follow_origin: follows the origin&quot;s cache rule.</li>
+             * <li>override_origin: uses a custom cache rule instead of the origin&quot;s.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>follow_origin</p>
              */
             public Builder browserCacheMode(String browserCacheMode) {
                 this.browserCacheMode = browserCacheMode;
@@ -1028,7 +1040,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * BrowserCacheTtl.
+             * <p>The browser cache TTL. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder browserCacheTtl(String browserCacheTtl) {
                 this.browserCacheTtl = browserCacheTtl;
@@ -1036,7 +1051,15 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * BypassCache.
+             * <p>The configuration of bypass cache. Valid values:</p>
+             * <ul>
+             * <li>cache_all: Responses of all requests are cached.</li>
+             * <li>default_cache (default): Resources are cached only based on supported file extensions.</li>
+             * <li>bypass_all: All requests bypass the cache component.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default_cache</p>
              */
             public Builder bypassCache(String bypassCache) {
                 this.bypassCache = bypassCache;
@@ -1076,7 +1099,16 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * EdgeCacheMode.
+             * <p>The edge cache configuration. Valid values:</p>
+             * <ul>
+             * <li>follow_origin: follows the origin&quot;s cache rule. If the origin does not have a cache rule, the default cache rule is used.</li>
+             * <li>no-cache: does not cache resources.</li>
+             * <li>override_origin: uses a custom cache rule instead of the origin&quot;s.</li>
+             * <li>follow_origin_bypass: follows the origin&quot;s cache rule. If the origin does not have a cache rule, no resources are cached.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>follow_origin</p>
              */
             public Builder edgeCacheMode(String edgeCacheMode) {
                 this.edgeCacheMode = edgeCacheMode;
@@ -1084,7 +1116,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * EdgeCacheTtl.
+             * <p>The edge cache TTL. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder edgeCacheTtl(String edgeCacheTtl) {
                 this.edgeCacheTtl = edgeCacheTtl;
@@ -1092,7 +1127,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * EdgeStatusCodeCacheTtl.
+             * <p>The status code TTL. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder edgeStatusCodeCacheTtl(String edgeStatusCodeCacheTtl) {
                 this.edgeStatusCodeCacheTtl = edgeStatusCodeCacheTtl;
@@ -1100,7 +1138,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * IncludeCookie.
+             * <p>The cookie names and values included in the cache key. Separate multiple combinations with spaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cookie_exapmle</p>
              */
             public Builder includeCookie(String includeCookie) {
                 this.includeCookie = includeCookie;
@@ -1108,7 +1149,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * IncludeHeader.
+             * <p>The header names and values included in the cache key. Separate multiple combinations with spaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder includeHeader(String includeHeader) {
                 this.includeHeader = includeHeader;
@@ -1116,7 +1160,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * QueryString.
+             * <p>The parameters to be retained or ignored in the query string. Separate multiple values with spaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder queryString(String queryString) {
                 this.queryString = queryString;
@@ -1124,7 +1171,16 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * QueryStringMode.
+             * <p>Specifies how to process the query string when cache keys are generated. Valid values:</p>
+             * <ul>
+             * <li>ignore_all: ignores the entire query string.</li>
+             * <li>exclude_query_string: ignores specified parameters in the query string.</li>
+             * <li>reserve_all (default): retains the entire query string.</li>
+             * <li>include_query_string: retains specified parameters in the query string.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>reserve_all</p>
              */
             public Builder queryStringMode(String queryStringMode) {
                 this.queryStringMode = queryStringMode;
@@ -1132,7 +1188,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -1140,7 +1199,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleEnable.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -1148,7 +1214,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1164,7 +1233,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * SortQueryStringForCache.
+             * <p>Specifies whether to sort query strings. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder sortQueryStringForCache(String sortQueryStringForCache) {
                 this.sortQueryStringForCache = sortQueryStringForCache;
@@ -1247,7 +1323,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String tagName; 
 
             /**
-             * CaseInsensitive.
+             * <p>Specifies whether the matching is not case-sensitive. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder caseInsensitive(String caseInsensitive) {
                 this.caseInsensitive = caseInsensitive;
@@ -1255,7 +1338,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * TagName.
+             * <p>The name of the custom cache tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -1302,7 +1388,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String flattenMode; 
 
             /**
-             * FlattenMode.
+             * <p>The CNAME flattening mode. Valid values:</p>
+             * <ul>
+             * <li>flatten_all: flattens all CNAMEs.</li>
+             * <li>flatten_all (default): flattens only the root domain.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder flattenMode(String flattenMode) {
                 this.flattenMode = flattenMode;
@@ -1397,7 +1490,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String ruleName; 
 
             /**
-             * Brotli.
+             * <p>Specifies whether to enable Brotli compression. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder brotli(String brotli) {
                 this.brotli = brotli;
@@ -1405,7 +1505,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Gzip.
+             * <p>Specifies whether to enable Gzip compression. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder gzip(String gzip) {
                 this.gzip = gzip;
@@ -1413,7 +1520,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -1421,7 +1531,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleEnable.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -1429,7 +1546,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1523,7 +1643,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String enable; 
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable the development mode. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -1693,7 +1820,10 @@ public class CreateSiteFunctionRequest extends Request {
             private String ruleName; 
 
             /**
-             * RequestHeaderModification.
+             * <p>Modifies a request header. You can add, delete, or modify a response header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;operation&quot;:&quot;add&quot;,&quot;name&quot;:&quot;header_example_add&quot;,&quot;value&quot;:&quot;value_exapme_add&quot;},{&quot;operation&quot;:&quot;del&quot;,&quot;name&quot;:&quot;header_example_delete&quot;,&quot;value&quot;:&quot;value_exapme_delete&quot;},{&quot;operation&quot;:&quot;modify&quot;,&quot;name&quot;:&quot;header_example_update&quot;,&quot;value&quot;:&quot;value_exapme_example&quot;}]</p>
              */
             public Builder requestHeaderModification(java.util.List < RequestHeaderModification> requestHeaderModification) {
                 this.requestHeaderModification = requestHeaderModification;
@@ -1701,7 +1831,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -1709,7 +1842,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleEnable.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -1717,7 +1857,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1887,7 +2030,10 @@ public class CreateSiteFunctionRequest extends Request {
             private String ruleName; 
 
             /**
-             * ResponseHeaderModification.
+             * <p>Modifies a response header. You can add, delete, or modify a request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;operation&quot;:&quot;add&quot;,&quot;name&quot;:&quot;header_example_add&quot;,&quot;value&quot;:&quot;value_exapme_add&quot;},{&quot;operation&quot;:&quot;del&quot;,&quot;name&quot;:&quot;header_example_delete&quot;,&quot;value&quot;:&quot;value_exapme_delete&quot;},{&quot;operation&quot;:&quot;modify&quot;,&quot;name&quot;:&quot;header_example_update&quot;,&quot;value&quot;:&quot;value_exapme_example&quot;}]</p>
              */
             public Builder responseHeaderModification(java.util.List < ResponseHeaderModification> responseHeaderModification) {
                 this.responseHeaderModification = responseHeaderModification;
@@ -1895,7 +2041,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -1903,7 +2052,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleEnable.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -1911,7 +2067,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -2182,7 +2341,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -2190,7 +2352,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleEnable.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -2198,7 +2367,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -2437,7 +2609,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -2445,7 +2620,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleEnable.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -2453,7 +2635,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -2532,7 +2717,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String enable; 
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable image transformations. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off (default)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -2579,7 +2771,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String enable; 
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable IPv6. Valid values:</p>
+             * <ul>
+             * <li>on (default)</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -2638,7 +2837,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String addRealClientIpHeader; 
 
             /**
-             * AddClientGeolocationHeaders.
+             * <p>Specifies whether to include the header that indicates the geographical location of a client in an origin request. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder addClientGeolocationHeaders(String addClientGeolocationHeaders) {
                 this.addClientGeolocationHeaders = addClientGeolocationHeaders;
@@ -2646,7 +2852,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * AddRealClientIpHeader.
+             * <p>Specifies whether to include the &quot;ali-real-client-ip&quot; header that contains the client&quot;s real IP address in an origin request. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder addRealClientIpHeader(String addRealClientIpHeader) {
                 this.addRealClientIpHeader = addRealClientIpHeader;
@@ -2793,7 +3006,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -2801,7 +3017,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleEnable.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -2809,7 +3032,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -2880,7 +3106,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String enable; 
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable origin protection. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -3035,7 +3268,10 @@ public class CreateSiteFunctionRequest extends Request {
             private String ruleName; 
 
             /**
-             * DnsRecord.
+             * <p>The hostname that overrides the resolved hostname of an incoming request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.example.com</p>
              */
             public Builder dnsRecord(String dnsRecord) {
                 this.dnsRecord = dnsRecord;
@@ -3043,7 +3279,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * OriginHost.
+             * <p>The Host header in origin requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>origin.example.com</p>
              */
             public Builder originHost(String originHost) {
                 this.originHost = originHost;
@@ -3067,7 +3306,15 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * OriginScheme.
+             * <p>The protocol used for origin requests. Valid values:</p>
+             * <ul>
+             * <li>http: HTTP.</li>
+             * <li>https: HTTPS.</li>
+             * <li>follow: follows the protocol used by the client.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder originScheme(String originScheme) {
                 this.originScheme = originScheme;
@@ -3075,7 +3322,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * OriginSni.
+             * <p>The SNI in origin requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>origin.example.com</p>
              */
             public Builder originSni(String originSni) {
                 this.originSni = originSni;
@@ -3091,7 +3341,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -3099,7 +3352,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleEnable.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -3107,7 +3367,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -3226,7 +3489,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String type; 
 
             /**
-             * ReserveQueryString.
+             * <p>Specifies whether to retain the query string. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder reserveQueryString(String reserveQueryString) {
                 this.reserveQueryString = reserveQueryString;
@@ -3234,7 +3504,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -3242,7 +3515,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleEnable.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -3250,7 +3530,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -3258,7 +3541,17 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * StatusCode.
+             * <p>The response code that you want to use to indicate URL redirection. Valid value:</p>
+             * <ul>
+             * <li>301</li>
+             * <li>302</li>
+             * <li>303</li>
+             * <li>307</li>
+             * <li>308</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>301</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -3266,7 +3559,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * TargetUrl.
+             * <p>The destination URL to which requests are redirected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.exapmle.com/index.html">http://www.exapmle.com/index.html</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -3274,7 +3570,13 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The redirect type. Valid value:</p>
+             * <ul>
+             * <li>static</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -3393,7 +3695,10 @@ public class CreateSiteFunctionRequest extends Request {
             private String uri; 
 
             /**
-             * QueryString.
+             * <p>The desired query string to which you want to rewrite the query string in the original request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>?example=123</p>
              */
             public Builder queryString(String queryString) {
                 this.queryString = queryString;
@@ -3401,7 +3706,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RewriteQueryStringType.
+             * <p>The query string rewrite method. Valid values:</p>
+             * <ul>
+             * <li>static</li>
+             * <li>dynamic</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder rewriteQueryStringType(String rewriteQueryStringType) {
                 this.rewriteQueryStringType = rewriteQueryStringType;
@@ -3409,7 +3721,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RewriteUriType.
+             * <p>The path rewrite method. Valid values:</p>
+             * <ul>
+             * <li>static</li>
+             * <li>dynamic</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder rewriteUriType(String rewriteUriType) {
                 this.rewriteUriType = rewriteUriType;
@@ -3417,7 +3736,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;MatchType&quot;:&quot;http.request.method&quot;,&quot;MatchOperator&quot;:&quot;eq&quot;,&quot;MatchValue&quot;:&quot;GET&quot;,&quot;Negate&quot;:false}]</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -3425,7 +3747,14 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleEnable.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -3433,7 +3762,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -3441,7 +3773,10 @@ public class CreateSiteFunctionRequest extends Request {
             }
 
             /**
-             * Uri.
+             * <p>The desired URI to which you want to rewrite the path in the original request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/image.example.com/index.html</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -3488,7 +3823,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String enable; 
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable SEO crawler bypassing. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -3535,7 +3877,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String enable; 
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable site hold. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -3582,7 +3931,14 @@ public class CreateSiteFunctionRequest extends Request {
             private String paused; 
 
             /**
-             * Paused.
+             * <p>Specifies whether ESA is paused on the website. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder paused(String paused) {
                 this.paused = paused;

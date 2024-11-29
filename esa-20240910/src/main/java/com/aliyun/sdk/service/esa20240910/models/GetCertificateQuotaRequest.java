@@ -7,30 +7,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetUploadTaskRequest} extends {@link RequestModel}
+ * {@link GetCertificateQuotaRequest} extends {@link RequestModel}
  *
- * <p>GetUploadTaskRequest</p>
+ * <p>GetCertificateQuotaRequest</p>
  */
-public class GetUploadTaskRequest extends Request {
+public class GetCertificateQuotaRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("UploadId")
-    private Long uploadId;
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String type;
 
-    private GetUploadTaskRequest(Builder builder) {
+    private GetCertificateQuotaRequest(Builder builder) {
         super(builder);
         this.siteId = builder.siteId;
-        this.uploadId = builder.uploadId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetUploadTaskRequest create() {
+    public static GetCertificateQuotaRequest create() {
         return builder().build();
     }
 
@@ -47,31 +49,31 @@ public class GetUploadTaskRequest extends Request {
     }
 
     /**
-     * @return uploadId
+     * @return type
      */
-    public Long getUploadId() {
-        return this.uploadId;
+    public String getType() {
+        return this.type;
     }
 
-    public static final class Builder extends Request.Builder<GetUploadTaskRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetCertificateQuotaRequest, Builder> {
         private Long siteId; 
-        private Long uploadId; 
+        private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetUploadTaskRequest request) {
+        private Builder(GetCertificateQuotaRequest request) {
             super(request);
             this.siteId = request.siteId;
-            this.uploadId = request.uploadId;
+            this.type = request.type;
         } 
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456****</p>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -80,20 +82,20 @@ public class GetUploadTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file upload task. This field is assigned after you call the <a href="https://help.aliyun.com/document_detail/2850466.html">UploadFile</a> operation.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>159253299357****</p>
+         * <p>free</p>
          */
-        public Builder uploadId(Long uploadId) {
-            this.putQueryParameter("UploadId", uploadId);
-            this.uploadId = uploadId;
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
         @Override
-        public GetUploadTaskRequest build() {
-            return new GetUploadTaskRequest(this);
+        public GetCertificateQuotaRequest build() {
+            return new GetCertificateQuotaRequest(this);
         } 
 
     } 
