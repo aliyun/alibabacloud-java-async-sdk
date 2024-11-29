@@ -152,7 +152,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>This parameter is returned if the specified queues in the request failed to be created or modified in MNS.</p>
+         * <p>This parameter is returned if the specified queues in the request failed to be created or modified in SMQ.</p>
          */
         public Builder failedMnsParameters(FailedMnsParameters failedMnsParameters) {
             this.failedMnsParameters = failedMnsParameters;
@@ -285,8 +285,8 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert level and the corresponding notification methods. Valid values:</p>
-             * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+             * <p>The alert notification methods. Valid values:</p>
+             * <p>4: Alert notifications are sent by using DingTalk and emails.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

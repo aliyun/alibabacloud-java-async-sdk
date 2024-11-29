@@ -1707,6 +1707,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("header")
         private String header;
 
+        @com.aliyun.core.annotation.NameInMap("host_binding")
+        private String hostBinding;
+
+        @com.aliyun.core.annotation.NameInMap("host_binding_type")
+        private Integer hostBindingType;
+
         @com.aliyun.core.annotation.NameInMap("http_method")
         private String httpMethod;
 
@@ -1811,6 +1817,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.expectValue = builder.expectValue;
             this.failureRate = builder.failureRate;
             this.header = builder.header;
+            this.hostBinding = builder.hostBinding;
+            this.hostBindingType = builder.hostBindingType;
             this.httpMethod = builder.httpMethod;
             this.ipNetwork = builder.ipNetwork;
             this.isBase64Encode = builder.isBase64Encode;
@@ -2000,6 +2008,20 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public String getHeader() {
             return this.header;
+        }
+
+        /**
+         * @return hostBinding
+         */
+        public String getHostBinding() {
+            return this.hostBinding;
+        }
+
+        /**
+         * @return hostBindingType
+         */
+        public Integer getHostBindingType() {
+            return this.hostBindingType;
         }
 
         /**
@@ -2214,6 +2236,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String expectValue; 
             private Float failureRate; 
             private String header; 
+            private String hostBinding; 
+            private Integer hostBindingType; 
             private String httpMethod; 
             private String ipNetwork; 
             private String isBase64Encode; 
@@ -2468,6 +2492,22 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder header(String header) {
                 this.header = header;
+                return this;
+            }
+
+            /**
+             * host_binding.
+             */
+            public Builder hostBinding(String hostBinding) {
+                this.hostBinding = hostBinding;
+                return this;
+            }
+
+            /**
+             * host_binding_type.
+             */
+            public Builder hostBindingType(Integer hostBindingType) {
+                this.hostBindingType = hostBindingType;
                 return this;
             }
 

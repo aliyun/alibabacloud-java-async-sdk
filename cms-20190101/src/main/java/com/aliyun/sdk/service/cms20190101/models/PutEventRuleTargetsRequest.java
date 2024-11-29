@@ -157,7 +157,7 @@ public class PutEventRuleTargetsRequest extends Request {
         }
 
         /**
-         * <p>The information about the recipients in Message Service (MNS).</p>
+         * <p>The notifications of Simple Message Queue (formerly MNS) (SMQ).</p>
          */
         public Builder mnsParameters(java.util.List < MnsParameters> mnsParameters) {
             this.putQueryParameter("MnsParameters", mnsParameters);
@@ -288,8 +288,8 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * <p>The alert level and the corresponding notification methods. Valid values of N: 1 to 5. Valid values:</p>
-             * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+             * <p>The alert notification methods. Valid values of N: 1 to 5. Valid values:</p>
+             * <p>4: Alert notifications are sent by using DingTalk and emails.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -505,7 +505,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * <p>The name of the MNS queue. Valid values of N: 1 to 5.</p>
+             * <p>The name of the SMQ queue. Valid values of N: 1 to 5.</p>
              * 
              * <strong>example:</strong>
              * <p>queue1</p>
@@ -516,7 +516,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * <p>The region where Message Service (MNS) is deployed. Valid values of N: 1 to 5.</p>
+             * <p>The region for SMQ. Valid values of N: 1 to 5.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -527,7 +527,7 @@ public class PutEventRuleTargetsRequest extends Request {
             }
 
             /**
-             * <p>The MNS topic.</p>
+             * <p>The SMQ topic.</p>
              * 
              * <strong>example:</strong>
              * <p>topic_sample</p>
