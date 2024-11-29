@@ -323,6 +323,9 @@ public class ListServiceSourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IngressOptions")
         private IngressOptions ingressOptions;
 
+        @com.aliyun.core.annotation.NameInMap("Invalid")
+        private Boolean invalid;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -348,6 +351,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             this.groupList = builder.groupList;
             this.id = builder.id;
             this.ingressOptions = builder.ingressOptions;
+            this.invalid = builder.invalid;
             this.name = builder.name;
             this.pathList = builder.pathList;
             this.source = builder.source;
@@ -427,6 +431,13 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return invalid
+         */
+        public Boolean getInvalid() {
+            return this.invalid;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -471,6 +482,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private java.util.List < String > groupList; 
             private Long id; 
             private IngressOptions ingressOptions; 
+            private Boolean invalid; 
             private String name; 
             private java.util.List < String > pathList; 
             private String source; 
@@ -567,6 +579,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
              */
             public Builder ingressOptions(IngressOptions ingressOptions) {
                 this.ingressOptions = ingressOptions;
+                return this;
+            }
+
+            /**
+             * Invalid.
+             */
+            public Builder invalid(Boolean invalid) {
+                this.invalid = invalid;
                 return this;
             }
 
