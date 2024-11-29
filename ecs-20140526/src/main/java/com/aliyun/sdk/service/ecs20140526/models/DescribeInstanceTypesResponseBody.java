@@ -151,11 +151,27 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      * <p>DescribeInstanceTypesResponseBody</p>
      */
     public static class CpuOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Core")
+        private Integer core;
+
+        @com.aliyun.core.annotation.NameInMap("CoreFactor")
+        private Integer coreFactor;
+
+        @com.aliyun.core.annotation.NameInMap("HyperThreadingAdjustable")
+        private Boolean hyperThreadingAdjustable;
+
         @com.aliyun.core.annotation.NameInMap("SupportedTopologyTypes")
         private SupportedTopologyTypes supportedTopologyTypes;
 
+        @com.aliyun.core.annotation.NameInMap("ThreadsPerCore")
+        private Integer threadsPerCore;
+
         private CpuOptions(Builder builder) {
+            this.core = builder.core;
+            this.coreFactor = builder.coreFactor;
+            this.hyperThreadingAdjustable = builder.hyperThreadingAdjustable;
             this.supportedTopologyTypes = builder.supportedTopologyTypes;
+            this.threadsPerCore = builder.threadsPerCore;
         }
 
         public static Builder builder() {
@@ -167,20 +183,84 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return core
+         */
+        public Integer getCore() {
+            return this.core;
+        }
+
+        /**
+         * @return coreFactor
+         */
+        public Integer getCoreFactor() {
+            return this.coreFactor;
+        }
+
+        /**
+         * @return hyperThreadingAdjustable
+         */
+        public Boolean getHyperThreadingAdjustable() {
+            return this.hyperThreadingAdjustable;
+        }
+
+        /**
          * @return supportedTopologyTypes
          */
         public SupportedTopologyTypes getSupportedTopologyTypes() {
             return this.supportedTopologyTypes;
         }
 
+        /**
+         * @return threadsPerCore
+         */
+        public Integer getThreadsPerCore() {
+            return this.threadsPerCore;
+        }
+
         public static final class Builder {
+            private Integer core; 
+            private Integer coreFactor; 
+            private Boolean hyperThreadingAdjustable; 
             private SupportedTopologyTypes supportedTopologyTypes; 
+            private Integer threadsPerCore; 
 
             /**
-             * SupportedTopologyTypes.
+             * Core.
+             */
+            public Builder core(Integer core) {
+                this.core = core;
+                return this;
+            }
+
+            /**
+             * CoreFactor.
+             */
+            public Builder coreFactor(Integer coreFactor) {
+                this.coreFactor = coreFactor;
+                return this;
+            }
+
+            /**
+             * HyperThreadingAdjustable.
+             */
+            public Builder hyperThreadingAdjustable(Boolean hyperThreadingAdjustable) {
+                this.hyperThreadingAdjustable = hyperThreadingAdjustable;
+                return this;
+            }
+
+            /**
+             * <p>The CPU topology types of the instance type.</p>
              */
             public Builder supportedTopologyTypes(SupportedTopologyTypes supportedTopologyTypes) {
                 this.supportedTopologyTypes = supportedTopologyTypes;
+                return this;
+            }
+
+            /**
+             * ThreadsPerCore.
+             */
+            public Builder threadsPerCore(Integer threadsPerCore) {
+                this.threadsPerCore = threadsPerCore;
                 return this;
             }
 
@@ -497,6 +577,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceTypeId")
         private String instanceTypeId;
 
+        @com.aliyun.core.annotation.NameInMap("JumboFrameSupport")
+        private Boolean jumboFrameSupport;
+
         @com.aliyun.core.annotation.NameInMap("LocalStorageAmount")
         private Integer localStorageAmount;
 
@@ -569,6 +652,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             this.instancePpsTx = builder.instancePpsTx;
             this.instanceTypeFamily = builder.instanceTypeFamily;
             this.instanceTypeId = builder.instanceTypeId;
+            this.jumboFrameSupport = builder.jumboFrameSupport;
             this.localStorageAmount = builder.localStorageAmount;
             this.localStorageCapacity = builder.localStorageCapacity;
             this.localStorageCategory = builder.localStorageCategory;
@@ -777,6 +861,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return jumboFrameSupport
+         */
+        public Boolean getJumboFrameSupport() {
+            return this.jumboFrameSupport;
+        }
+
+        /**
          * @return localStorageAmount
          */
         public Integer getLocalStorageAmount() {
@@ -908,6 +999,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Long instancePpsTx; 
             private String instanceTypeFamily; 
             private String instanceTypeId; 
+            private Boolean jumboFrameSupport; 
             private Integer localStorageAmount; 
             private Long localStorageCapacity; 
             private String localStorageCategory; 
@@ -962,7 +1054,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * CpuOptions.
+             * <p>The CPU options.</p>
              */
             public Builder cpuOptions(CpuOptions cpuOptions) {
                 this.cpuOptions = cpuOptions;
@@ -1239,6 +1331,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
+                return this;
+            }
+
+            /**
+             * JumboFrameSupport.
+             */
+            public Builder jumboFrameSupport(Boolean jumboFrameSupport) {
+                this.jumboFrameSupport = jumboFrameSupport;
                 return this;
             }
 

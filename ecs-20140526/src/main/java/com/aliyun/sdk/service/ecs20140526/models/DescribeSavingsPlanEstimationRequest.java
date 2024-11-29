@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSavingsPlanEstimationRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EstimationResource")
+    private String estimationResource;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeScope")
+    private String instanceTypeScope;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OfferingType")
     private String offeringType;
 
@@ -38,6 +46,8 @@ public class DescribeSavingsPlanEstimationRequest extends Request {
 
     private DescribeSavingsPlanEstimationRequest(Builder builder) {
         super(builder);
+        this.estimationResource = builder.estimationResource;
+        this.instanceTypeScope = builder.instanceTypeScope;
         this.offeringType = builder.offeringType;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -57,6 +67,20 @@ public class DescribeSavingsPlanEstimationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return estimationResource
+     */
+    public String getEstimationResource() {
+        return this.estimationResource;
+    }
+
+    /**
+     * @return instanceTypeScope
+     */
+    public String getInstanceTypeScope() {
+        return this.instanceTypeScope;
     }
 
     /**
@@ -102,6 +126,8 @@ public class DescribeSavingsPlanEstimationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSavingsPlanEstimationRequest, Builder> {
+        private String estimationResource; 
+        private String instanceTypeScope; 
         private String offeringType; 
         private String period; 
         private String periodUnit; 
@@ -115,6 +141,8 @@ public class DescribeSavingsPlanEstimationRequest extends Request {
 
         private Builder(DescribeSavingsPlanEstimationRequest request) {
             super(request);
+            this.estimationResource = request.estimationResource;
+            this.instanceTypeScope = request.instanceTypeScope;
             this.offeringType = request.offeringType;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -122,6 +150,24 @@ public class DescribeSavingsPlanEstimationRequest extends Request {
             this.regionId = request.regionId;
             this.resourceId = request.resourceId;
         } 
+
+        /**
+         * EstimationResource.
+         */
+        public Builder estimationResource(String estimationResource) {
+            this.putQueryParameter("EstimationResource", estimationResource);
+            this.estimationResource = estimationResource;
+            return this;
+        }
+
+        /**
+         * InstanceTypeScope.
+         */
+        public Builder instanceTypeScope(String instanceTypeScope) {
+            this.putQueryParameter("InstanceTypeScope", instanceTypeScope);
+            this.instanceTypeScope = instanceTypeScope;
+            return this;
+        }
 
         /**
          * OfferingType.

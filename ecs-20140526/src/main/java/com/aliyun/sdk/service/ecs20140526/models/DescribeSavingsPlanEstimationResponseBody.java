@@ -21,6 +21,9 @@ public class DescribeSavingsPlanEstimationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilyGroup")
+    private String instanceTypeFamilyGroup;
+
     @com.aliyun.core.annotation.NameInMap("OfferingType")
     private String offeringType;
 
@@ -43,6 +46,7 @@ public class DescribeSavingsPlanEstimationResponseBody extends TeaModel {
         this.committedAmount = builder.committedAmount;
         this.currency = builder.currency;
         this.instanceTypeFamily = builder.instanceTypeFamily;
+        this.instanceTypeFamilyGroup = builder.instanceTypeFamilyGroup;
         this.offeringType = builder.offeringType;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -78,6 +82,13 @@ public class DescribeSavingsPlanEstimationResponseBody extends TeaModel {
      */
     public String getInstanceTypeFamily() {
         return this.instanceTypeFamily;
+    }
+
+    /**
+     * @return instanceTypeFamilyGroup
+     */
+    public String getInstanceTypeFamilyGroup() {
+        return this.instanceTypeFamilyGroup;
     }
 
     /**
@@ -126,6 +137,7 @@ public class DescribeSavingsPlanEstimationResponseBody extends TeaModel {
         private String committedAmount; 
         private String currency; 
         private String instanceTypeFamily; 
+        private String instanceTypeFamilyGroup; 
         private String offeringType; 
         private Integer period; 
         private String periodUnit; 
@@ -154,6 +166,14 @@ public class DescribeSavingsPlanEstimationResponseBody extends TeaModel {
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+
+        /**
+         * InstanceTypeFamilyGroup.
+         */
+        public Builder instanceTypeFamilyGroup(String instanceTypeFamilyGroup) {
+            this.instanceTypeFamilyGroup = instanceTypeFamilyGroup;
             return this;
         }
 

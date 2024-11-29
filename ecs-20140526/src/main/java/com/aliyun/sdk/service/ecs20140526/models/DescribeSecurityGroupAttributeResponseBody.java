@@ -201,7 +201,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the destination security group.</p>
+         * <p>The ID of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1gxw6bznjjvhu3****</p>
@@ -212,7 +212,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the destination security group.</p>
+         * <p>The name of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>SecurityGroupName Sample</p>

@@ -210,14 +210,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>The instance to which you want to assign a public IP address must be in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
-     * <li>If <code>OperationLocks</code> in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for an instance, the instance is <a href="https://help.aliyun.com/document_detail/25695.html">locked for security reasons</a> and cannot be assigned a public IP address.</li>
-     * <li>You can assign only one public IP address to an instance. If the instance already has a public IP address, the <code>AllocatedAlready</code> error code is returned.</li>
-     * <li>After you assign a public IP address to an instance, you must restart the instance (<a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a>) or start the instance (<a href="https://help.aliyun.com/document_detail/25500.html">StartInstance</a>) for the public IP address to take effect.
-     * If an instance resides in a virtual private cloud (VPC), you can assign a public IP address to the instance or associate an elastic IP address (EIP) with the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2518064.html">AssociateEipAddress</a>.<blockquote>
-     * <p> After you associate an EIP with an instance that resides in a VPC, you cannot assign a public IP address to the instance.</p>
-     * </blockquote>
-     * </li>
+     * <li>The instance to which you want to assign a static public IP address must be in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>If <code>OperationLocks</code> in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for an instance, the instance is <a href="https://help.aliyun.com/document_detail/25695.html">locked for security reasons</a> and cannot be assigned a static public IP address.</li>
+     * <li>You can assign only one static public IP address to an ECS instance. If the instance already has a static public IP address, the static public IP address is returned for the <code>IpAddress</code> response parameter.</li>
+     * <li>After you assign a static public IP address to an ECS instance, you must restart the instance (<a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a>) or start the instance (<a href="https://help.aliyun.com/document_detail/25500.html">StartInstance</a>) for the public IP address to take effect.
+     * If an ECS instance resides in a virtual private cloud (VPC), you can assign a static public IP address to the instance or associate an elastic IP address (EIP) with the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2518064.html">AssociateEipAddress</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of AllocatePublicIpAddress  AllocatePublicIpAddressRequest
@@ -581,30 +578,33 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Precautions</strong>
-     *     *   <strong>Quantity limit:</strong> The total number of outbound security group rules in each security group cannot exceed 200. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.
-     *     *   <strong>Rule type:</strong> For outbound security group rules, you can set Policy to accept or drop to specify whether to allow or deny access.
-     *     *   <strong>Rule priority:</strong>: For outbound security group rules, the valid values of Priority range from 1 to 100. A smaller value indicates a higher priority. When multiple security group rules have the same priority, drop rules take precedence.</p>
+     * <h3><a href="#"></a>Limits</h3>
      * <ul>
-     * <li><strong>Considerations</strong><ul>
+     * <li><strong>Quantity limit</strong>: The total number of outbound security group rules in each security group cannot exceed 200. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
+     * <li><strong>Rule types</strong>: For outbound security group rules, you can set Policy to accept or drop to specify whether to allow or deny access.</li>
+     * <li><strong>Rule priorities</strong>: For outbound security group rules, the valid values of Priority range from 1 to 100. A smaller value indicates a higher priority. When multiple security group rules have the same priority, drop rules take precedence.</li>
+     * </ul>
+     * <h3><a href="#"></a>Considerations</h3>
+     * <ul>
      * <li>If the security group rule that you call the AuthorizeSecurityGroupEgress operation to create exists in the security group, the call is successful but no security group rule is created.</li>
      * <li>Parameters and their <code>Permissions.N</code>-prefixed counterparts cannot be specified in the same request. We recommend that you use the <code>Permissions.N</code>-prefixed parameters.</li>
      * </ul>
-     * </li>
-     * <li><strong>Parameters that define a security group rule</strong>
-     * Define a security group rule by configuring the following parameters together:<ul>
+     * <h3><a href="#"></a>Parameters that define a security group rule</h3>
+     * <p>Define a security group rule by configuring the following parameters together:</p>
+     * <ul>
      * <li>One of the following parameters: DestCidrIp, Ipv6DestCidrIp, DestPrefixListId, and DestGroupId. DestCidrIp specifies the destination IPv4 CIDR block. Ipv6DestCidrIp specifies the destination IPv6 CIDR block. DestPrefixListId specifies the ID of the destination prefix list. DestGroupId specifies the destination security group.</li>
      * <li>PortRange: specifies the range of destination port numbers.</li>
      * <li>IpProtocol: specifies the protocol.</li>
-     * <li>Policy: specifies the action.
-     * **
-     * <strong>Note</strong> Advanced security groups do not support security group rules that reference security groups as authorization objects. Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
-     * </ul>
+     * <li>Policy: specifies the action.<blockquote>
+     * <p> Advanced security groups do not support security group rules that reference security groups as authorization objects. Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</p>
+     * </blockquote>
      * </li>
-     * <li><strong>Sample requests</strong>
-     * Sample requests to create outbound security group rules that control access to different destinations in a security group in the China (Hangzhou) region:<ul>
-     * <li>Sample request to create an outbound security group rule that controls access to a specified CIDR block:
-     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,  //The region ID.
+     * </ul>
+     * <h3><a href="#"></a>Sample requests</h3>
+     * <p>Sample requests to create outbound security group rules that control access to different destinations in a security group in the China (Hangzhou) region:</p>
+     * <ul>
+     * <li>Sample request to create an outbound security group rule that controls access to a specific CIDR block:
+     * &quot;RegionId&quot;:&quot;cn-hangzhou&quot;,  //The region ID of the source security group.
      * &quot;SecurityGroupId&quot;:&quot;sg-bp17vs63txqxbds9***&quot;, //The ID of the source security group.
      * &quot;Permissions&quot;:[
      *      {
@@ -630,8 +630,6 @@ public final class DefaultAsyncClient implements AsyncClient {
      *        &quot;Policy&quot;: &quot;Drop&quot;
      *      }
      * ]</li>
-     * </ul>
-     * </li>
      * </ul>
      * 
      * @param request the request parameters of AuthorizeSecurityGroupEgress  AuthorizeSecurityGroupEgressRequest
@@ -1703,18 +1701,28 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>The local snapshot feature is replaced by the instant access feature. Take note of the following items:</p>
      * <ul>
-     * <li>If you have used the local snapshot feature before December 14, 2020, you can use the Category parameter.</li>
-     * <li>If you have not used the local snapshot feature before December 14, 2020, new snapshots of your Enterprise SSD (ESSD) series disks are instantly available after creation without the need for additional configurations, regardless of whether the snapshots are manually or automatically created. ESSD-series disks include ESSDs, ESSD AutoPL disks, ESSD Entry disks, and Regional ESSDs. The InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess parameters that are related to the instant access feature no longer take effect in API operations. The Available parameter is added to the DescribeSnapshots and DescribeSnapshotGroups operations to indicate whether snapshots are available.
+     * <li>If you have used the local snapshot feature before December 14, 2020, you can use <code>Category</code>.</li>
+     * <li>If you have not used the local snapshot feature before December 14, 2020, new snapshots of your Enterprise SSD (ESSD) series disks are instantly available after creation without the need for additional configurations, regardless of whether the snapshots are manually or automatically created. ESSD-series disks include ESSDs, ESSD AutoPL disks, ESSD Entry disks, and Regional ESSDs. InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess that are related to the instant access feature no longer take effect in API operations. Available is added to the DescribeSnapshots and DescribeSnapshotGroups operations to indicate whether snapshots are available.
+     * Prerequisites:</li>
+     * <li>Elastic Compute Service (ECS) Snapshot is activated. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate ECS Snapshot</a>.</li>
+     * <li>The disk for which you want to create a snapshot is in the <strong>In_use</strong> or <strong>Available</strong> state. Take note of the following items:<ul>
+     * <li>If the disk is in the <strong>In_use</strong> state, make sure that the ECS instance to which the disk is attached is in the <strong>Running</strong> or <strong>Stopped</strong> state.</li>
+     * <li>If the disk is in the <strong>Available</strong> state, make sure that the disk was attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</li>
+     * <li>When you use a disk to create a dynamic extended volume or a RAID array, we recommend that you create a snapshot-consistent group and enable the application-consistent snapshot feature to back up data. When a business system involves multiple disks, you can create a snapshot-consistent group to ensure a consistent write order and the crash consistency of business system data. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create application-consistent snapshots</a>.
      * In the following scenarios, you cannot create snapshots for a disk:</li>
+     * </ul>
+     * </li>
      * <li>The number of manual snapshots of the disk has reached 256.</li>
      * <li>A snapshot is being created for the disk.</li>
-     * <li>The Elastic Compute Service (ECS) instance to which the disk is attached has never been started.</li>
-     * <li>The ECS instance to which the disk is attached is not in the <strong>Stopped</strong> (<code>Stopped</code>) or <strong>Running</strong> (<code>Running</code>) state.</li>
      * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query information about an ECS instance, the instance is locked for security reasons and no operations are allowed on the instance.
      * When you create a snapshot, take note of the following items:</li>
+     * <li>We recommend that you create snapshots during off-peak hours because snapshot creation degrades disk I/O performance by up to 10% and slows down data reads and writes.</li>
      * <li>If a snapshot is being created, you cannot use this snapshot to create a custom image by calling the <a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a> operation.</li>
-     * <li>When a snapshot is being created for a disk that is attached to an ECS instance, do not change the instance state.</li>
-     * <li>You can create snapshots for a disk that is in the <strong>Expired</strong> (<code>Expired</code>) state. If the release time scheduled for a disk arrives while a snapshot is being created for the disk, the snapshot is in the <strong>Creating</strong> (<code>Creating</code>) state and is deleted when the disk is released.</li>
+     * <li>If operations are performed on the disk and incremental data is generated when a snapshot is being created, the incremental data is not included in the snapshot.</li>
+     * <li>When a snapshot is being created for a disk that is attached to an ECS instance, do not perform operations that change the status of the instance, such as stopping or restarting the instance. Otherwise, the snapshot may fail to be created.</li>
+     * <li>You cannot resize a disk for which a snapshot is being created. Wait until the snapshot is created before you resize the disk.</li>
+     * <li>After you create snapshots, you are charged snapshot storage fees per region based on the total size of the snapshots that are stored in the region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshots</a>.</li>
+     * <li>You can create snapshots for a disk that is in the <strong>Expired</strong> (<code>Expired</code>) state. If the release time scheduled for a disk arrives while a snapshot is being created for the disk, the snapshot is in the <strong>Creating</strong> (<code>Creating</code> state and is deleted when the disk is released.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
@@ -2214,16 +2222,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
-     * <li>After an ECS instance is released, all the physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</li>
-     * <li>When you release an ECS instance, take note of the following items for the disks attached to the instance:<ul>
-     * <li>The disks for which <code>DeleteWithInstance</code> is set to false are retained as pay-as-you-go disks after the instance is released.</li>
-     * <li>The disks for which <code>DeleteWithInstance</code> is set to true are released along with the instance.</li>
-     * <li>For disks for which <code>DeleteAutoSnapshot</code> is set to false, the automatic snapshots of the disks are retained after the instance is released.</li>
-     * <li>For disks for which <code>DeleteAutoSnapshot</code> is set to true, the automatic snapshots of the disks are released along with the instance.</li>
-     * <li>Manual snapshots of the disks are retained.</li>
-     * <li>If <code>OperationLocks</code> in the response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> when you query the information of the instance, the instance is locked for security reasons. In this case, even if <code>DeleteWithInstance</code> is set to <code>false</code> for the disks that are attached to the instance, the system ignores the DeleteWithInstance value and releases the disks along with the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
+     * <li><strong>Warning</strong> After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</li>
+     * <li><strong>Precautions</strong>
+     * When you release an instance, manual snapshots of the cloud disks are retained. The settings configured during the creation of the instance determine whether the cloud disks attached to the instance and automatic snapshots are released. Before you release the instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> operation to query the parameter settings for the cloud disks attached to the instance and the automatic snapshots.<ul>
+     * <li>The cloud disks for which <code>DeleteWithInstance</code> is set to false are retained as pay-as-you-go disks after the instance is released. The cloud disks for which DeleteWithInstance is set to true are released along with the instance.</li>
+     * <li>If <code>DeleteAutoSnapshot</code> is set to false for a cloud disk attached to the instance, the automatic snapshots of the cloud disk are retained when the instance is released. If DeleteAutoSnapshot is set to true for the cloud disk, the cloud disk is released along with the instance.<blockquote>
+     * <p> When you release an instance that is locked for security reasons, the cloud disks attached to the instance are released even if DeleteWithInstance is set to false.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -2247,17 +2254,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
-     * <li>After an ECS instance is released, all the physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</li>
-     * <li>When you release an ECS instance, take note of the following items for the disks attached to the instance:<ul>
-     * <li>The disks for which <code>DeleteWithInstance</code> is set to false are retained as pay-as-you-go disks after the instance is released.</li>
-     * <li>The disks for which <code>DeleteWithInstance</code> is set to true are released along with the instance.</li>
-     * <li>If <code>DeleteAutoSnapshot</code> is set to false for a disk attached to the instance, the automatic snapshots of the disk are retained when the instance is released.</li>
-     * <li>If <code>DeleteAutoSnapshot</code> is set to true for a disk attached to the instance, the automatic snapshots of the disk are released along with the instance.</li>
-     * <li>Manual snapshots of the disks are retained.</li>
-     * <li>If <code>OperationLocks</code> in the response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> when you query the information of the instance, the instance is locked for security reasons. In this case, even if <code>DeleteWithInstance</code> is set to <code>false</code> for the disks that are attached to the instance, the system ignores the DeleteWithInstance value and releases the disks along with the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
-     * </ul>
+     * <li><strong>Warning</strong> After an ECS instance is released, all physical resources used by the instance are reclaimed. Relevant data is erased and cannot be restored.
+     * After an ECS instance is released, the manual snapshots of the disks attached to the instance are retained. Whether the disks and the automatic snapshots of the disks are released is determined by the options that you configured when you created the instance and disks. Before you release an ECS instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> operation to query the parameters of the disks attached to the instance and the automatic snapshots.</li>
+     * <li>If <code>DeleteWithInstance</code> is set to false, the disks are changed to pay-as-you-go disks and retained. If DeleteWithInstance is set to true, the disks are released along with the instance.</li>
+     * <li>If <code>DeleteAutoSnapshot</code> is set to false, the automatic snapshots are retained. If DeleteAutoSnapshot is set to true, the automatic snapshots are released along with the instance.<blockquote>
+     * <p> If an ECS instance is locked for security reasons, the disks attached to the instance are released along with the instance even if DeleteWithInstance is set to false for the disks.</p>
+     * </blockquote>
      * </li>
      * </ul>
      * 
@@ -2510,11 +2513,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>Before you delete a security group, make sure that the security group does not contain instances and is not referenced by other security groups. Otherwise, the DeleteSecurityGroup request fails. You can call the <a href="https://help.aliyun.com/document_detail/57320.html">DescribeSecurityGroupReferences</a> operation to query the reference details of the security group.</li>
-     * <li>If the InvalidOperation.DeletionProtection error code is returned when you call the DeleteSecurityGroup operation to delete a security group or if a deletion protection-related message appears when you delete a security group in the Elastic Compute Service (ECS) console, the deletion protection feature is enabled for the security group. When you create a Container Service for Kubernetes (ACK) cluster, the deletion protection feature is enabled for an associated security group to prevent accidental deletion. You cannot manually disable the deletion protection feature for the security group. The deletion protection feature can be automatically disabled only after the ACK cluster is deleted. For more information, see <a href="https://help.aliyun.com/document_detail/353191.html">Disable deletion protection for a security group</a>.</li>
+     * <li>Before you delete a security group, make sure that the security group does not contain Elastic Compute Service (ECS) instances or elastic network interfaces (ENIs) (because operations of releasing ECS instances and ENIs are asynchronous) and the security group is not referenced by other security groups. Otherwise, the DeleteSecurityGroup request fails. You can call the <a href="https://help.aliyun.com/document_detail/57320.html">DescribeSecurityGroupReferences</a> operation to query the reference details of the security group.</li>
+     * <li>If the <code>InvalidOperation.DeletionProtection</code> error code is returned when you call the DeleteSecurityGroup operation to delete a security group or if a deletion protection-related message appears when you delete a security group in the ECS console, the deletion protection feature is enabled for the security group. When you create a Container Service for Kubernetes (ACK) cluster, the deletion protection feature is enabled for an associated security group to prevent accidental deletion. You cannot manually disable the deletion protection feature for the security group. The deletion protection feature can be automatically disabled only after the ACK cluster is deleted. For more information, see <a href="https://help.aliyun.com/document_detail/353191.html">Disable deletion protection for a security group</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteSecurityGroup  DeleteSecurityGroupRequest
@@ -3592,10 +3594,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The image template that is specified by the <code>ImagePipelineId</code> parameter cannot be a deleted image template. When an image template is deleted, the corresponding image creation task is deleted.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
+     * <li>The image template that is specified by the <code>ImagePipelineId</code> parameter cannot be a deleted image template. When an image template is deleted, the corresponding image creation task is deleted.</li>
      * <li>You must specify <code>ImagePipelineId</code> or <code>ExecutionId</code>.</li>
-     * <li>You can configure the query token by using the <code>NextToken</code> parameter. Set the value of NextToken to the value of <code>NextToken</code> that was returned the last time you called the <code>DescribeImagePipelineExecutions</code> operation. Then, use the <code>MaxResults</code> parameter to specify the maximum number of entries to return on each page to query the details of the image creation task.</li>
+     * <li>You can configure the query token by using the <code>NextToken</code> parameter. Set NextToken to the value of <code>NextToken</code> that was returned the previous call to the <code>DescribeImagePipelineExecutions</code> operation. Then, use the <code>MaxResults</code> parameter to specify the maximum number of entries to return on each page.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeImagePipelineExecutions  DescribeImagePipelineExecutionsRequest
@@ -3890,22 +3893,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>For information about the lifecycle states of an ECS instance, see <a href="https://help.aliyun.com/document_detail/25687.html">Instance lifecycle</a>.</p>
-     * <h2><a href="#"></a>Instructions</h2>
+     * <h2><a href="#"></a>Sample requests</h2>
      * <ul>
-     * <li>Query the ECS instances and the status of the instances in a <strong>region</strong>. Sample request:<!---->
-     * {
-     *   &quot;RegionID&quot;: [&quot;cn-hangzhou&quot;]
-     * }</li>
-     * <li>Query the ECS instances and the status of the instances in a <strong>zone</strong> of a <strong>region</strong>. Sample request:<!---->
-     * {
-     *   &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
-     *   &quot;ZoneID&quot;: [&quot;cn-hangzhou-a&quot;]
-     * }</li>
-     * <li>Query the status of an ECS instance based on the <strong>instance ID</strong>. Sample request:<!---->
-     * {
-     *   &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
-     *   &quot;InstancesID&quot;: [&quot;i-bp1f7c1zqp999zvp****&quot;, &quot;i-bp1dqjv36biueg61****&quot;]
-     * }</li>
+     * <li>Query the ECS instances and the status of the instances in a <strong>specific region</strong>. Sample request:<!---->
+     * &quot;RegionID&quot;: &quot;cn-hangzhou&quot;</li>
+     * <li>Query the ECS instances and the status of the instances in a <strong>zone</strong> of a <strong>specific region</strong>. Sample request:<!---->
+     * <pre><code>  &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;ZoneID&quot;: &quot;cn-hangzhou-a&quot;
+     * </code></pre>
+     * </li>
+     * <li>Query the status of an ECS instance based on the <strong>instance ID</strong> in a <strong>specific region</strong>. Sample request:<!---->
+     * &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
+     * &quot;InstancesID&quot;: [&quot;i-bp1f7c1zqp999zvp****&quot;, &quot;i-bp1dqjv36biueg61****&quot;]</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceStatus  DescribeInstanceStatusRequest
@@ -4025,15 +4024,20 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>  <strong>Instructions</strong>
+     *     *   When you call the API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.
+     *     *   If you use a Resource Access Management (RAM) user or RAM role that does not have the permissions to call this operation, an empty list is returned.</p>
      * <ul>
-     * <li>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</li>
-     * <li>If you are using a Resource Access Management (RAM) user or RAM role that does not have the permissions to call this operation, an empty list is returned. You can include <code>DryRun</code> in your request to check whether the empty list is caused by lack of permissions.</li>
-     * <li>When you call the API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.</li>
+     * <li><strong>Suggestions</strong><ul>
+     * <li>Specify DryRun in the request to perform a dry run. In the dry run, the system checks the validity and authorization status of the parameters.</li>
      * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: During a paged query, when you call the DescribeInstances operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page and then use <code>PageNumber</code> to specify the number of the page to return.
-     * You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use Method 1. When <code>MaxResults</code> or <code>NextToken</code> is specified, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
+     * <li>Method 1: During a paged query, when you call the DescribeInstances operation to retrieve the first page of results, use <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
+     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries per page, and then use <code>PageNumber</code> to specify the page number.
+     * You can use only one of the preceding methods. If a large number of entries are returned, we recommend that you use Method 1.
+     * **
+     * <strong>Note</strong> If you specify <code>MaxResults</code> or <code>NextToken</code>, the <code>PageSize</code> and <code>PageNumber</code> request parameters do not take effect and the <code>TotalCount</code> response parameter is invalid.</li>
+     * </ul>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -4749,10 +4753,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <p>  <strong>Paged query</strong>: We recommend that you specify <code>MaxResults</code> and <code>NextToken</code>.
+     *     *   If the response does not include <code>NextToken</code>, the current page of results is the last page and no more results are to be returned.
+     *     *   During a paged query, when you call the DescribeSecurityGroups operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results.
+     *     *   When you call the DescribeSecurityGroups operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</p>
      * <ul>
-     * <li>The basic information of security groups includes their IDs and descriptions. The response returns security groups in descending order of their IDs.</li>
-     * <li>We recommend that you use <code>MaxResults</code> and <code>NextToken</code> for a paged query. We recommend that you use <code>MaxResults</code> to specify the maximum number of entries to return for each request. The return value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeSecurityGroups operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value that is returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call. If the return value of <code>NextToken</code> is empty, the current page of results is the last page and no more results are to be returned.</li>
      * <li>When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.</li>
      * </ul>
      * 
@@ -5521,11 +5526,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Before you export images, take note of the following items:</p>
+     * <p>Take note of the following items:</p>
      * <ul>
      * <li>Make sure that you are familiar with the prerequisites and considerations. For more information, see <a href="https://help.aliyun.com/document_detail/58181.html">Export a custom image</a>.</li>
-     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: Japan (Tokyo), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
+     * <li>The <code>ImageFormat</code> parameter is available only for the following regions: Japan (Tokyo), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.</li>
      * <li>Use Resource Access Management (RAM) to authorize Elastic Compute Service (ECS) to write data to OSS. To complete the authorization, perform the following operations:<ul>
      * <li>Create a role named <code>AliyunECSImageExportDefaultRole</code> and attach the following policy to the role:
      *    {
@@ -5566,7 +5570,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </li>
      * </ul>
      * <p>After you export the images, take note of the following items:
-     * Each exported custom image is stored in the specified OSS bucket. You can download the custom image. For more information, see <a href="https://help.aliyun.com/document_detail/31912.html">Download objects</a>.</p>
+     * Each exported custom image is stored in the specified OSS bucket. You can download the custom image. For more information, see <a href="https://help.aliyun.com/document_detail/31912.html">Download OSS objects by using simple download</a>.</p>
      * 
      * @param request the request parameters of ExportImage  ExportImageRequest
      * @return ExportImageResponse
@@ -6917,19 +6921,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>For information about how to use ECS SDK for Python to change resource configurations, see <a href="https://help.aliyun.com/document_detail/109517.html">Query available resources for configuration changes</a>.
-     * Take note of the following items:</p>
+     * <p><em>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</em>*
+     * Before you <a href="https://help.aliyun.com/document_detail/60051.html">change the instance type of a pay-as-you-go instance</a>, call the <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> operation to query compatible instance types.
+     * <strong>Considerations</strong></p>
      * <ul>
      * <li>Make sure that you have no overdue payments in your account.</li>
-     * <li>You can adjust the public bandwidth of an instance only when the instance is in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
-     * <li>Before you change the instance type of a pay-as-you-go instance, call the <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> operation to query compatible instance types.</li>
-     * <li>You can change the instance type of an instance only when the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
-     * <li>The instance type and the public bandwidth of an instance cannot be changed together.</li>
-     * <li>Starting November 27, 2020, the maximum bandwidth value that is available for you to create ECS instances or change ECS instance configurations is subject to the throttling policy of your account. To increase the maximum bandwidth value, submit a ticket. The following throttling policies apply:<ul>
-     * <li>In each region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s.</li>
-     * <li>In each region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</li>
-     * </ul>
+     * <li>You can change only the instance type or only the public bandwidth of an ECS instance at a time. The instance type and the public bandwidth of an ECS instance cannot be changed together.</li>
+     * <li>You can change the public bandwidth of an ECS instance only when the instance is in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state. The change immediately takes effect.</li>
+     * <li>You can change the instance type of an ECS instance only when the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state. You must <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> for the change to take effect.<blockquote>
+     * <p> A limit is imposed on the sum of public bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage per region in an Alibaba Cloud account. For more information, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a> section of the &quot;Limits and quotas&quot; topic.</p>
+     * </blockquote>
      * </li>
      * </ul>
      * 
@@ -7192,20 +7193,20 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Before you call this operation, we recommend that you familiarize yourself with the billing methods, pricing schedule, and refund rules of <a href="https://www.alibabacloud.com/product/ecs#pricing">ECS</a>. For information about the refund rules, see <a href="https://help.aliyun.com/document_detail/476339.html">Rules for unsubscribing from resources</a>.
-     * Before you change the instance type of a subscription instance, call the <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> operation to query the instance types to which you can change the instance. You can use ECS SDK for Python. For more information, see <a href="https://help.aliyun.com/document_detail/109517.html">Query available resources for configuration changes</a>.
-     * Take note of the following items:</p>
+     * <p><em>Before you call this operation, make sure that you are familiar with the billing methods, <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">prices</a>, and <a href="https://help.aliyun.com/document_detail/476339.html">rules for unsubscribing from resources</a> of ECS.</em>*
+     * ModifyPrepayInstanceSpec is an asynchronous operation. After a request is sent, wait for 5 to 10 seconds for the instance type change to complete. Before you change the instance type of a subscription ECS instance, call the <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> operation to query the instance types to which you can change the instance.
+     * <strong>Considerations</strong></p>
      * <ul>
-     * <li>To change the instance type of an expired instance, you must first renew the instance.</li>
-     * <li>When you downgrade the instance type of an instance, take note of the following items:<ul>
+     * <li>Before you change the instance type of an expired instance, you must renew the instance.</li>
+     * <li>When you downgrade the instance type of a subscription ECS instance, take note of the following items:<ul>
      * <li>The instance must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
-     * <li>The price difference is refunded to the payment account you used. Vouchers that have been redeemed are not refundable.</li>
+     * <li>The price difference is refunded to the payment account that you used. Redeemed vouchers are not refundable.</li>
+     * <li>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a>.</li>
      * </ul>
      * </li>
-     * <li>The operation is asynchronous. Wait 5 to 10 seconds for the instance type change to complete. Then, restart the instance by calling the RebootInstance operation or by using the ECS console for the instance type change to take effect. If you restart only the operating system of the instance, the instance type change does not take effect.<ul>
-     * <li>If the instance is in the <strong>Stopped</strong> state, you only need to start the instance. You do not need to restart the instance after it enters the Running state.</li>
-     * <li>If <code>RebootWhenFinished</code> is set to true for the instance, you do not need to restart the instance.</li>
+     * <li>When you upgrade the instance type of a subscription ECS instance, take note of the following items:<ul>
+     * <li>The instance must be in the <strong>Stopped</strong> (<code>Stopped</code>) or <strong>Running</strong> (<code>Running</code>) state.</li>
+     * <li>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> or <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -8225,16 +8226,24 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <blockquote>
-     * <p> Before you call this operation to resize a disk, you must check the partition format of the disk. A master boot record (MBR) disk cannot be resized to a size that is larger than 2 TiB. If you resize an MBR disk to a size that is larger than 2 TiB, data may be lost. If you want to resize an MBR disk to a size that is larger than 2 TiB, we recommend that you perform the following steps: Create another data disk that is larger than 2 TiB in size, partition and format the new data disk to GUID partition table (GPT), and then copy data from the MBR disk to the new GPT data disk. For more information, see <a href="https://help.aliyun.com/document_detail/44986.html">Step 1: Resize a disk to extend its capacity</a>.</p>
+     * <p> Before you call this operation to resize a disk, you must check the partition format of the disk. You cannot resize a master boot record (MBR) disk to a size that is larger than 2 TiB. If you resize an MBR disk to a size that is larger than 2 TiB, data may be lost. If you want to resize an MBR disk to a size that is larger than 2 TiB, we recommend that you perform the following steps: Create a new data disk that is larger than 2 TiB in size, partition and format the new data disk by using the GUID Partition Table (GPT) format, and then copy data from the MBR disk to the GPT data disk. For more information, see <a href="https://help.aliyun.com/document_detail/44986.html">Step 1: Resize a disk to extend the capacity of the disk</a>.</p>
      * </blockquote>
      * <ul>
      * <li>You can resize disks of the following disk categories: basic disks (<code>cloud</code>), ultra disks (<code>cloud_efficiency</code>), standard SSDs (<code>cloud_ssd</code>), Enterprise SSDs (ESSDs) (<code>cloud_essd</code>), ESSD AutoPL disks (cloud_auto), standard elastic ephemeral disks (elastic_ephemeral_disk_standard), and premium elastic ephemeral disks (elastic_ephemeral_disk_premium).</li>
-     * <li>You cannot resize a disk when a snapshot is being created for the disk.</li>
-     * <li>The Elastic Compute Service (ECS) instance to which the disk is attached must be in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
-     * <li>After you resize a disk, the partitions and file systems of the disk are not changed. You must allocate the increased storage space on the disk after the disk is resized.</li>
-     * <li>Disks for which the multi-attach feature is enabled support online and offline resizing. Before you resize the disks offline, make sure that the instances to which the disks are attached are in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>You cannot resize a disk for which a snapshot is being created. Wait until the snapshot is created before you resize the disk.</li>
+     * <li>You cannot call this operation to resize partitions or file systems on a disk. You must manually resize the partitions and file systems after the disk is resized. For more information, see <a href="https://help.aliyun.com/document_detail/470068.html">Step 2: Resize partitions and file systems</a>.</li>
+     * <li>If the multi-attach feature is enabled for a disk, you can resize the disk online or offline. Make sure that the Elastic Compute Service (ECS) instances to which the disk is attached meet the following requirements:<ul>
+     * <li>If you want to resize the disk online, the ECS instances must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
+     * <li>If you want to resize the disk offline, the ECS instances must be in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * </ul>
+     * </li>
+     * <li>The disk that you want to resize must meet the following requirements:<ul>
+     * <li>The disk is in the In_use (In Use) or Available (Unattached) state.</li>
+     * <li>(Recommended) Snapshots are created for the disk to back up disk data. For information about how to create snapshots for a disk, see <a href="https://help.aliyun.com/document_detail/25455.html">Create a snapshot</a>.</li>
+     * <li>If the disk is a new data disk, initialize the disk before you resize the disk. For more information, see <a href="https://help.aliyun.com/document_detail/466323.html">Overview</a>.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of ResizeDisk  ResizeDiskRequest

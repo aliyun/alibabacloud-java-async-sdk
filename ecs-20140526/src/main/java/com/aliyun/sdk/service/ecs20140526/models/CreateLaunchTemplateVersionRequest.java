@@ -948,7 +948,18 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * HttpEndpoint.
+         * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>Default value: enabled.</p>
+         * <blockquote>
+         * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes inside ECS instances from instance metadata service</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder httpEndpoint(String httpEndpoint) {
             this.putQueryParameter("HttpEndpoint", httpEndpoint);
@@ -957,7 +968,12 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * HttpPutResponseHopLimit.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
@@ -966,7 +982,18 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * HttpTokens.
+         * <p>Specifies whether to forcefully use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</p>
+         * <ul>
+         * <li>optional: does not forcefully use the security hardening mode (IMDSv2).</li>
+         * <li>required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+         * </ul>
+         * <p>Default value: optional.</p>
+         * <blockquote>
+         * <p> For information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes inside ECS instances from instance metadata service</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>optional</p>
          */
         public Builder httpTokens(String httpTokens) {
             this.putQueryParameter("HttpTokens", httpTokens);

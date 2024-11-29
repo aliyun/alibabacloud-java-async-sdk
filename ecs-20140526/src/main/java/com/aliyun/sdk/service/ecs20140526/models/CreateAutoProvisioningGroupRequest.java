@@ -2593,6 +2593,9 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ExcludedInstanceTypes")
         private java.util.List < String > excludedInstanceTypes;
 
+        @com.aliyun.core.annotation.NameInMap("ImageId")
+        private String imageId;
+
         @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
 
@@ -2622,6 +2625,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.burstablePerformance = builder.burstablePerformance;
             this.cores = builder.cores;
             this.excludedInstanceTypes = builder.excludedInstanceTypes;
+            this.imageId = builder.imageId;
             this.instanceFamilyLevel = builder.instanceFamilyLevel;
             this.instanceType = builder.instanceType;
             this.maxPrice = builder.maxPrice;
@@ -2666,6 +2670,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
          */
         public java.util.List < String > getExcludedInstanceTypes() {
             return this.excludedInstanceTypes;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
         }
 
         /**
@@ -2729,6 +2740,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String burstablePerformance; 
             private java.util.List < Integer > cores; 
             private java.util.List < String > excludedInstanceTypes; 
+            private String imageId; 
             private String instanceFamilyLevel; 
             private String instanceType; 
             private Double maxPrice; 
@@ -2776,6 +2788,17 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              */
             public Builder excludedInstanceTypes(java.util.List < String > excludedInstanceTypes) {
                 this.excludedInstanceTypes = excludedInstanceTypes;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the image to be used to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available image resources. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp1g7004ksh0oeuc****</p>
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
                 return this;
             }
 

@@ -25,6 +25,10 @@ public class CreateSavingsPlanRequest extends Request {
     private String instanceTypeFamily;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilyGroup")
+    private String instanceTypeFamilyGroup;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OfferingType")
     private String offeringType;
 
@@ -53,6 +57,7 @@ public class CreateSavingsPlanRequest extends Request {
         this.chargeType = builder.chargeType;
         this.committedAmount = builder.committedAmount;
         this.instanceTypeFamily = builder.instanceTypeFamily;
+        this.instanceTypeFamilyGroup = builder.instanceTypeFamilyGroup;
         this.offeringType = builder.offeringType;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -93,6 +98,13 @@ public class CreateSavingsPlanRequest extends Request {
      */
     public String getInstanceTypeFamily() {
         return this.instanceTypeFamily;
+    }
+
+    /**
+     * @return instanceTypeFamilyGroup
+     */
+    public String getInstanceTypeFamilyGroup() {
+        return this.instanceTypeFamilyGroup;
     }
 
     /**
@@ -141,6 +153,7 @@ public class CreateSavingsPlanRequest extends Request {
         private String chargeType; 
         private String committedAmount; 
         private String instanceTypeFamily; 
+        private String instanceTypeFamilyGroup; 
         private String offeringType; 
         private String period; 
         private String periodUnit; 
@@ -157,6 +170,7 @@ public class CreateSavingsPlanRequest extends Request {
             this.chargeType = request.chargeType;
             this.committedAmount = request.committedAmount;
             this.instanceTypeFamily = request.instanceTypeFamily;
+            this.instanceTypeFamilyGroup = request.instanceTypeFamilyGroup;
             this.offeringType = request.offeringType;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -189,6 +203,15 @@ public class CreateSavingsPlanRequest extends Request {
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
             this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+
+        /**
+         * InstanceTypeFamilyGroup.
+         */
+        public Builder instanceTypeFamilyGroup(String instanceTypeFamilyGroup) {
+            this.putQueryParameter("InstanceTypeFamilyGroup", instanceTypeFamilyGroup);
+            this.instanceTypeFamilyGroup = instanceTypeFamilyGroup;
             return this;
         }
 

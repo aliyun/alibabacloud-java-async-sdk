@@ -18,6 +18,10 @@ public class RedeployDedicatedHostRequest extends Request {
     private String dedicatedHostId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MigrationType")
+    private String migrationType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -41,6 +45,7 @@ public class RedeployDedicatedHostRequest extends Request {
     private RedeployDedicatedHostRequest(Builder builder) {
         super(builder);
         this.dedicatedHostId = builder.dedicatedHostId;
+        this.migrationType = builder.migrationType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -66,6 +71,13 @@ public class RedeployDedicatedHostRequest extends Request {
      */
     public String getDedicatedHostId() {
         return this.dedicatedHostId;
+    }
+
+    /**
+     * @return migrationType
+     */
+    public String getMigrationType() {
+        return this.migrationType;
     }
 
     /**
@@ -105,6 +117,7 @@ public class RedeployDedicatedHostRequest extends Request {
 
     public static final class Builder extends Request.Builder<RedeployDedicatedHostRequest, Builder> {
         private String dedicatedHostId; 
+        private String migrationType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -118,6 +131,7 @@ public class RedeployDedicatedHostRequest extends Request {
         private Builder(RedeployDedicatedHostRequest request) {
             super(request);
             this.dedicatedHostId = request.dedicatedHostId;
+            this.migrationType = request.migrationType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -135,6 +149,15 @@ public class RedeployDedicatedHostRequest extends Request {
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
             this.dedicatedHostId = dedicatedHostId;
+            return this;
+        }
+
+        /**
+         * MigrationType.
+         */
+        public Builder migrationType(String migrationType) {
+            this.putQueryParameter("MigrationType", migrationType);
+            this.migrationType = migrationType;
             return this;
         }
 

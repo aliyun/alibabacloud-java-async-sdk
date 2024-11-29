@@ -787,7 +787,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean loginAsNonRoot; 
 
             /**
-             * CurrentOSNVMeSupported.
+             * <p>Indicates whether the operating system supports access to disks over the NVMe protocol. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only if you specify CURRENT_OS_NVME_SUPPORTED in AdditionalAttributes in the request.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder currentOSNVMeSupported(Boolean currentOSNVMeSupported) {
                 this.currentOSNVMeSupported = currentOSNVMeSupported;
