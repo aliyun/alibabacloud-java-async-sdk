@@ -98,7 +98,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * <p>The details of backup sets.</p>
+         * <p>The queried backup sets.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -488,10 +488,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expected expiration time of the backup set.</p>
-             * <blockquote>
-             * <p>This parameter is supported only for instances that are enabled with sparse backup.</p>
-             * </blockquote>
+             * <p>The expected expiration time of the backup set (This parameter is supported only for clusters for which sparse backup is enabled).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-10-24T08:13:23Z</p>

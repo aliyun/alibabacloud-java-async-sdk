@@ -195,7 +195,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The Query Type</p>
+         * <p>The query type.</p>
          * 
          * <strong>example:</strong>
          * <p>orca</p>

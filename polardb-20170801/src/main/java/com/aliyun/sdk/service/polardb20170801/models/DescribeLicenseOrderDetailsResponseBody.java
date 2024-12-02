@@ -194,7 +194,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         private String virtualOrderId; 
 
         /**
-         * ActivatedCodeCount.
+         * <p>The number of generated activation codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder activatedCodeCount(Integer activatedCodeCount) {
             this.activatedCodeCount = activatedCodeCount;
@@ -202,7 +205,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ActivationCodeQuota.
+         * <p>The maximum number of activation codes that you can apply for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder activationCodeQuota(Integer activationCodeQuota) {
             this.activationCodeQuota = activationCodeQuota;
@@ -210,7 +216,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * AliyunOrderId.
+         * <p>The Alibaba Cloud order ID (including the virtual order ID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>239618016570503</p>
          */
         public Builder aliyunOrderId(String aliyunOrderId) {
             this.aliyunOrderId = aliyunOrderId;
@@ -218,7 +227,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowEmptySystemIdentifier.
+         * <p>Indicates whether activation codes can be generated without the system identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder allowEmptySystemIdentifier(Boolean allowEmptySystemIdentifier) {
             this.allowEmptySystemIdentifier = allowEmptySystemIdentifier;
@@ -226,7 +238,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * <p>The type of the engine. Valid values: PG, Oracle, and MySQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PG</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -234,7 +249,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreated.
+         * <p>The time when the order was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-19 01:13:45</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -242,7 +260,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The time when the order was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-16 16:46:20</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -250,7 +271,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * IsVirtualOrder.
+         * <p>Indicates whether the order is a virtual order (virtual orders allow pre-generation of activation codes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isVirtualOrder(Boolean isVirtualOrder) {
             this.isVirtualOrder = isVirtualOrder;
@@ -258,7 +282,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * IsVirtualOrderFrozen.
+         * <p>Indicates whether the virtual order is frozen (activation codes cannot be generated for a frozen virtual order).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isVirtualOrderFrozen(Boolean isVirtualOrderFrozen) {
             this.isVirtualOrderFrozen = isVirtualOrderFrozen;
@@ -266,7 +293,17 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * PackageType.
+         * <p>The plan type. Valid values:</p>
+         * <ul>
+         * <li>single_node_subscribe</li>
+         * <li>single_node_long_term</li>
+         * <li>primary_backup_subscribe</li>
+         * <li>primary_backup_long_term</li>
+         * <li>pre_generation_long_term</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pre_generation_long_term</p>
          */
         public Builder packageType(String packageType) {
             this.packageType = packageType;
@@ -274,7 +311,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * PackageValidity.
+         * <p>The validity period of the plan, which is one year (common) or thirty years (long-term).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 year</p>
          */
         public Builder packageValidity(String packageValidity) {
             this.packageValidity = packageValidity;
@@ -282,7 +322,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * PurchaseChannel.
+         * <p>The plan validity period, one year (common) or thirty years (long-term).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_market</p>
          */
         public Builder purchaseChannel(String purchaseChannel) {
             this.purchaseChannel = purchaseChannel;
@@ -290,7 +333,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C0ACF0-DD29-4B67-9190-B7A48C******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,7 +344,10 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * VirtualOrderId.
+         * <p>The virtual order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>239618016570503</p>
          */
         public Builder virtualOrderId(String virtualOrderId) {
             this.virtualOrderId = virtualOrderId;

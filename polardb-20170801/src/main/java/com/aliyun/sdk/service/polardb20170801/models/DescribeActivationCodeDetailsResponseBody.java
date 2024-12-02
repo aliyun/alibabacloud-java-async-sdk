@@ -158,7 +158,10 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         private String systemIdentifier; 
 
         /**
-         * ActivateAt.
+         * <p>The time when the activation code takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-16 16:46:20</p>
          */
         public Builder activateAt(String activateAt) {
             this.activateAt = activateAt;
@@ -166,7 +169,10 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * CertContentB64.
+         * <p>The activation code in the base64 format. The activation code is decoded and stored into a file named license.lic. PolarDB can access and read the license.lic file upon startup to validate the license or perform related operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAEAA******AAA=</p>
          */
         public Builder certContentB64(String certContentB64) {
             this.certContentB64 = certContentB64;
@@ -174,7 +180,10 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testCode</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -182,7 +191,10 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireAt.
+         * <p>The time when the activation code expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2054-10-09 16:46:20</p>
          */
         public Builder expireAt(String expireAt) {
             this.expireAt = expireAt;
@@ -190,7 +202,10 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreated.
+         * <p>The time when the activation code was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-16 16:46:20</p>
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -198,7 +213,10 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The time when the activation code was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-16 16:46:20</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -206,7 +224,10 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -214,7 +235,10 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * MacAddress.
+         * <p>The MAC address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12:34:56:78:98:00</p>
          */
         public Builder macAddress(String macAddress) {
             this.macAddress = macAddress;
@@ -222,7 +246,10 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -230,7 +257,7 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F2A9EFA7-915F-4572-8299-85A307******</p>
@@ -241,7 +268,10 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * SystemIdentifier.
+         * <p>The system identifier of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
          */
         public Builder systemIdentifier(String systemIdentifier) {
             this.systemIdentifier = systemIdentifier;

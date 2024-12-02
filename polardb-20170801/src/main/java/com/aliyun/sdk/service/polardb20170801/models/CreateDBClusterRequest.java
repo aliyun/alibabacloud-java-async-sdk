@@ -224,6 +224,10 @@ public class CreateDBClusterRequest extends Request {
     private java.util.List < Tag> tag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetMinorVersion")
+    private String targetMinorVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsedTime")
     private String usedTime;
 
@@ -292,6 +296,7 @@ public class CreateDBClusterRequest extends Request {
         this.strictConsistency = builder.strictConsistency;
         this.TDEStatus = builder.TDEStatus;
         this.tag = builder.tag;
+        this.targetMinorVersion = builder.targetMinorVersion;
         this.usedTime = builder.usedTime;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
@@ -669,6 +674,13 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return targetMinorVersion
+     */
+    public String getTargetMinorVersion() {
+        return this.targetMinorVersion;
+    }
+
+    /**
      * @return usedTime
      */
     public String getUsedTime() {
@@ -748,6 +760,7 @@ public class CreateDBClusterRequest extends Request {
         private String strictConsistency; 
         private Boolean TDEStatus; 
         private java.util.List < Tag> tag; 
+        private String targetMinorVersion; 
         private String usedTime; 
         private String VPCId; 
         private String vSwitchId; 
@@ -810,6 +823,7 @@ public class CreateDBClusterRequest extends Request {
             this.strictConsistency = request.strictConsistency;
             this.TDEStatus = request.TDEStatus;
             this.tag = request.tag;
+            this.targetMinorVersion = request.targetMinorVersion;
             this.usedTime = request.usedTime;
             this.VPCId = request.VPCId;
             this.vSwitchId = request.vSwitchId;
@@ -1083,15 +1097,17 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Number of standard edition nodes. Values are as follows:</p>
+         * <p>The number of nodes. This parameter is supported for Standard Edition clusters. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong> (default): Indicates there is only one read-write node.</li>
-         * <li><strong>2</strong>: Indicates there is one read-only node and one read-write node.<blockquote>
-         * <ul>
-         * <li>Enterprise edition defaults to 2 nodes, while the standard edition defaults to 1 node.</li>
-         * <li>Only supported by PolarDB MySQL edition.</li>
+         * <li><strong>1</strong> (default): only one primary node.</li>
+         * <li><strong>2</strong>: one read-only node and one primary node.</li>
          * </ul>
+         * <blockquote>
          * </blockquote>
+         * <ul>
+         * <li><p>By default, an Enterprise Edition cluster has two nodes and a Standard Edition cluster has one node.</p>
+         * </li>
+         * <li><p>This parameter is supported only for PolarDB for MySQL clusters.</p>
          * </li>
          * </ul>
          * 
@@ -1714,6 +1730,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * TargetMinorVersion.
+         */
+        public Builder targetMinorVersion(String targetMinorVersion) {
+            this.putQueryParameter("TargetMinorVersion", targetMinorVersion);
+            this.targetMinorVersion = targetMinorVersion;
             return this;
         }
 

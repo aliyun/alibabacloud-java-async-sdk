@@ -125,7 +125,10 @@ public class DescribeActivationCodeDetailsRequest extends Request {
         } 
 
         /**
-         * ActivationCodeId.
+         * <p>The ID of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder activationCodeId(Integer activationCodeId) {
             this.putQueryParameter("ActivationCodeId", activationCodeId);
@@ -134,6 +137,7 @@ public class DescribeActivationCodeDetailsRequest extends Request {
         }
 
         /**
+         * <p>The Alibaba Cloud order ID (including the virtual order ID).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

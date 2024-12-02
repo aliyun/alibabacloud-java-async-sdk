@@ -62,7 +62,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The specifications of the cluster.</p>
+         * <p>The cluster specifications.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;

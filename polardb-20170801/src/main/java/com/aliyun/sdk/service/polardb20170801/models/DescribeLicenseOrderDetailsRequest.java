@@ -111,6 +111,7 @@ public class DescribeLicenseOrderDetailsRequest extends Request {
         } 
 
         /**
+         * <p>The Alibaba Cloud order ID (or virtual order ID).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
