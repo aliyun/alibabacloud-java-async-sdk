@@ -480,6 +480,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The end time of the instance maintenance window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1970-01-01T05:00Z</p>
          */
         public Builder maintainEndtime(String maintainEndtime) {
             this.maintainEndtime = maintainEndtime;
@@ -488,6 +491,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The start time of the instance maintenance window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1970-01-01T02:00Z</p>
          */
         public Builder maintainStarttime(String maintainStarttime) {
             this.maintainStarttime = maintainStarttime;
@@ -506,7 +512,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>地域ID。</p>
+         * <p>The Region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -580,7 +586,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The subdomain zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-h-aliyun</p>
@@ -591,7 +597,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The tags that are added to the instances. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. Format: <code>{&quot;key1&quot;:&quot;value1&quot;}</code>.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -599,7 +605,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp175iuvg8nxqraf2****</p>
@@ -610,7 +616,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>实例可用区ID</p>
+         * <p>The Zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-h</p>
@@ -669,6 +675,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
+        @com.aliyun.core.annotation.NameInMap("ScalingRulesEnable")
+        private Boolean scalingRulesEnable;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -688,6 +697,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.memory = builder.memory;
             this.modifiedTime = builder.modifiedTime;
             this.performanceLevel = builder.performanceLevel;
+            this.scalingRulesEnable = builder.scalingRulesEnable;
             this.startTime = builder.startTime;
             this.status = builder.status;
         }
@@ -785,6 +795,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return scalingRulesEnable
+         */
+        public Boolean getScalingRulesEnable() {
+            return this.scalingRulesEnable;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -811,6 +828,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Long memory; 
             private String modifiedTime; 
             private String performanceLevel; 
+            private Boolean scalingRulesEnable; 
             private String startTime; 
             private String status; 
 
@@ -917,6 +935,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
             /**
              * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test instance</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -935,7 +956,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间。</p>
+             * <p>The modified time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-02T16:35:44+08:00</p>
@@ -953,6 +974,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * ScalingRulesEnable.
+             */
+            public Builder scalingRulesEnable(Boolean scalingRulesEnable) {
+                this.scalingRulesEnable = scalingRulesEnable;
                 return this;
             }
 
@@ -1038,7 +1067,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1046,7 +1078,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
