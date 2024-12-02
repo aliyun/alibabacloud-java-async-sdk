@@ -27,9 +27,6 @@ public class GetServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Commodity")
     private Commodity commodity;
 
-    @com.aliyun.core.annotation.NameInMap("CommodityCode")
-    private String commodityCode;
-
     @com.aliyun.core.annotation.NameInMap("ComplianceMetadata")
     private ComplianceMetadata complianceMetadata;
 
@@ -38,9 +35,6 @@ public class GetServiceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("CrossRegionConnectionStatus")
     private String crossRegionConnectionStatus;
-
-    @com.aliyun.core.annotation.NameInMap("DefaultLicenseDays")
-    private Long defaultLicenseDays;
 
     @com.aliyun.core.annotation.NameInMap("DeployMetadata")
     private String deployMetadata;
@@ -68,9 +62,6 @@ public class GetServiceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("PayFromType")
     private String payFromType;
-
-    @com.aliyun.core.annotation.NameInMap("PayType")
-    private String payType;
 
     @com.aliyun.core.annotation.NameInMap("Permission")
     private String permission;
@@ -101,9 +92,6 @@ public class GetServiceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ServiceDiscoverable")
     private String serviceDiscoverable;
-
-    @com.aliyun.core.annotation.NameInMap("ServiceDocUrl")
-    private String serviceDocUrl;
 
     @com.aliyun.core.annotation.NameInMap("ServiceDocumentInfos")
     private java.util.List < ServiceDocumentInfos> serviceDocumentInfos;
@@ -189,11 +177,9 @@ public class GetServiceResponseBody extends TeaModel {
         this.buildInfo = builder.buildInfo;
         this.categories = builder.categories;
         this.commodity = builder.commodity;
-        this.commodityCode = builder.commodityCode;
         this.complianceMetadata = builder.complianceMetadata;
         this.createTime = builder.createTime;
         this.crossRegionConnectionStatus = builder.crossRegionConnectionStatus;
-        this.defaultLicenseDays = builder.defaultLicenseDays;
         this.deployMetadata = builder.deployMetadata;
         this.deployType = builder.deployType;
         this.duration = builder.duration;
@@ -203,7 +189,6 @@ public class GetServiceResponseBody extends TeaModel {
         this.logMetadata = builder.logMetadata;
         this.operationMetadata = builder.operationMetadata;
         this.payFromType = builder.payFromType;
-        this.payType = builder.payType;
         this.permission = builder.permission;
         this.policyNames = builder.policyNames;
         this.progress = builder.progress;
@@ -214,7 +199,6 @@ public class GetServiceResponseBody extends TeaModel {
         this.resourceGroupId = builder.resourceGroupId;
         this.serviceAuditDocumentUrl = builder.serviceAuditDocumentUrl;
         this.serviceDiscoverable = builder.serviceDiscoverable;
-        this.serviceDocUrl = builder.serviceDocUrl;
         this.serviceDocumentInfos = builder.serviceDocumentInfos;
         this.serviceId = builder.serviceId;
         this.serviceInfos = builder.serviceInfos;
@@ -287,13 +271,6 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     /**
-     * @return commodityCode
-     */
-    public String getCommodityCode() {
-        return this.commodityCode;
-    }
-
-    /**
      * @return complianceMetadata
      */
     public ComplianceMetadata getComplianceMetadata() {
@@ -312,13 +289,6 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public String getCrossRegionConnectionStatus() {
         return this.crossRegionConnectionStatus;
-    }
-
-    /**
-     * @return defaultLicenseDays
-     */
-    public Long getDefaultLicenseDays() {
-        return this.defaultLicenseDays;
     }
 
     /**
@@ -382,13 +352,6 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public String getPayFromType() {
         return this.payFromType;
-    }
-
-    /**
-     * @return payType
-     */
-    public String getPayType() {
-        return this.payType;
     }
 
     /**
@@ -459,13 +422,6 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public String getServiceDiscoverable() {
         return this.serviceDiscoverable;
-    }
-
-    /**
-     * @return serviceDocUrl
-     */
-    public String getServiceDocUrl() {
-        return this.serviceDocUrl;
     }
 
     /**
@@ -656,11 +612,9 @@ public class GetServiceResponseBody extends TeaModel {
         private String buildInfo; 
         private String categories; 
         private Commodity commodity; 
-        private String commodityCode; 
         private ComplianceMetadata complianceMetadata; 
         private String createTime; 
         private String crossRegionConnectionStatus; 
-        private Long defaultLicenseDays; 
         private String deployMetadata; 
         private String deployType; 
         private Long duration; 
@@ -670,7 +624,6 @@ public class GetServiceResponseBody extends TeaModel {
         private String logMetadata; 
         private String operationMetadata; 
         private String payFromType; 
-        private String payType; 
         private String permission; 
         private String policyNames; 
         private Long progress; 
@@ -681,7 +634,6 @@ public class GetServiceResponseBody extends TeaModel {
         private String resourceGroupId; 
         private String serviceAuditDocumentUrl; 
         private String serviceDiscoverable; 
-        private String serviceDocUrl; 
         private java.util.List < ServiceDocumentInfos> serviceDocumentInfos; 
         private String serviceId; 
         private java.util.List < ServiceInfos> serviceInfos; 
@@ -782,17 +734,6 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The commodity code of the service in Alibaba Cloud Marketplace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cmjj00xxxx</p>
-         */
-        public Builder commodityCode(String commodityCode) {
-            this.commodityCode = commodityCode;
-            return this;
-        }
-
-        /**
          * ComplianceMetadata.
          */
         public Builder complianceMetadata(ComplianceMetadata complianceMetadata) {
@@ -819,17 +760,6 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder crossRegionConnectionStatus(String crossRegionConnectionStatus) {
             this.crossRegionConnectionStatus = crossRegionConnectionStatus;
-            return this;
-        }
-
-        /**
-         * <p>The validity period of the default license. Unit: day. Valid values: 1 to 1000.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        public Builder defaultLicenseDays(Long defaultLicenseDays) {
-            this.defaultLicenseDays = defaultLicenseDays;
             return this;
         }
 
@@ -953,23 +883,6 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The billing method of the service. Valid values:</p>
-         * <ul>
-         * <li>Permanent: Once you purchase the service, you can use it permanently.</li>
-         * <li>Subscription: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a subscription basis.</li>
-         * <li>PayAsYouGo: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a pay-as-you-go basis.</li>
-         * <li>CustomFixTime: You are charged for the service based on a custom duration fixed by the service provider.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Permanent</p>
-         */
-        public Builder payType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-
-        /**
          * <p>The permissions on the service. Valid values:</p>
          * <ul>
          * <li>Deployable: Permissions to deploy the service.</li>
@@ -1088,17 +1001,6 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder serviceDiscoverable(String serviceDiscoverable) {
             this.serviceDiscoverable = serviceDiscoverable;
-            return this;
-        }
-
-        /**
-         * <p>The URL of the service documentation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://example1.com">http://example1.com</a></p>
-         */
-        public Builder serviceDocUrl(String serviceDocUrl) {
-            this.serviceDocUrl = serviceDocUrl;
             return this;
         }
 

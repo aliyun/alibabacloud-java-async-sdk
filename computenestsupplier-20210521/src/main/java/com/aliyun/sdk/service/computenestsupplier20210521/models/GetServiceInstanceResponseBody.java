@@ -1508,6 +1508,73 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      *
      * <p>GetServiceInstanceResponseBody</p>
      */
+    public static class UpgradableServiceInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
+        @com.aliyun.core.annotation.NameInMap("VersionName")
+        private String versionName;
+
+        private UpgradableServiceInfos(Builder builder) {
+            this.version = builder.version;
+            this.versionName = builder.versionName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UpgradableServiceInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        /**
+         * @return versionName
+         */
+        public String getVersionName() {
+            return this.versionName;
+        }
+
+        public static final class Builder {
+            private String version; 
+            private String versionName; 
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            /**
+             * VersionName.
+             */
+            public Builder versionName(String versionName) {
+                this.versionName = versionName;
+                return this;
+            }
+
+            public UpgradableServiceInfos build() {
+                return new UpgradableServiceInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceInstanceResponseBody</p>
+     */
     public static class Service extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeployMetadata")
         private String deployMetadata;
@@ -1542,6 +1609,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupplierUrl")
         private String supplierUrl;
 
+        @com.aliyun.core.annotation.NameInMap("UpgradableServiceInfos")
+        private java.util.List < UpgradableServiceInfos> upgradableServiceInfos;
+
         @com.aliyun.core.annotation.NameInMap("UpgradableServiceVersions")
         private java.util.List < String > upgradableServiceVersions;
 
@@ -1563,6 +1633,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             this.status = builder.status;
             this.supplierName = builder.supplierName;
             this.supplierUrl = builder.supplierUrl;
+            this.upgradableServiceInfos = builder.upgradableServiceInfos;
             this.upgradableServiceVersions = builder.upgradableServiceVersions;
             this.version = builder.version;
             this.versionName = builder.versionName;
@@ -1654,6 +1725,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return upgradableServiceInfos
+         */
+        public java.util.List < UpgradableServiceInfos> getUpgradableServiceInfos() {
+            return this.upgradableServiceInfos;
+        }
+
+        /**
          * @return upgradableServiceVersions
          */
         public java.util.List < String > getUpgradableServiceVersions() {
@@ -1686,6 +1764,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String status; 
             private String supplierName; 
             private String supplierUrl; 
+            private java.util.List < UpgradableServiceInfos> upgradableServiceInfos; 
             private java.util.List < String > upgradableServiceVersions; 
             private String version; 
             private String versionName; 
@@ -1821,6 +1900,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
              */
             public Builder supplierUrl(String supplierUrl) {
                 this.supplierUrl = supplierUrl;
+                return this;
+            }
+
+            /**
+             * UpgradableServiceInfos.
+             */
+            public Builder upgradableServiceInfos(java.util.List < UpgradableServiceInfos> upgradableServiceInfos) {
+                this.upgradableServiceInfos = upgradableServiceInfos;
                 return this;
             }
 
