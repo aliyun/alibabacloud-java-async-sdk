@@ -120,6 +120,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SerialNumber")
     private String serialNumber;
 
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
+    private String spotStrategy;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -172,6 +175,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupIds = builder.securityGroupIds;
         this.serialNumber = builder.serialNumber;
+        this.spotStrategy = builder.spotStrategy;
         this.status = builder.status;
         this.stoppedMode = builder.stoppedMode;
         this.vlanId = builder.vlanId;
@@ -440,6 +444,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return spotStrategy
+     */
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -511,6 +522,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private String resourceGroupId; 
         private SecurityGroupIds securityGroupIds; 
         private String serialNumber; 
+        private String spotStrategy; 
         private String status; 
         private String stoppedMode; 
         private String vlanId; 
@@ -906,6 +918,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = serialNumber;
+            return this;
+        }
+
+        /**
+         * SpotStrategy.
+         */
+        public Builder spotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
             return this;
         }
 

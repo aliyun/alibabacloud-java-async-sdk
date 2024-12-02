@@ -214,7 +214,7 @@ public class CreateRCSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The zone ID.</p>
+         * <p>This parameter has been deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>

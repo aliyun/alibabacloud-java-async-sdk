@@ -99,7 +99,10 @@ public class AttachRCDiskRequest extends Request {
         } 
 
         /**
-         * DeleteWithInstance.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);

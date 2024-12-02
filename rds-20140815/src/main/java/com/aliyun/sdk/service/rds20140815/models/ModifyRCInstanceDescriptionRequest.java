@@ -82,7 +82,13 @@ public class ModifyRCInstanceDescriptionRequest extends Request {
         } 
 
         /**
-         * InstanceDescription.
+         * <p>The instance name.</p>
+         * <blockquote>
+         * <p> The name must be 2 to 255 characters in length and can contain letters, digits, <code>underscores (_)</code>, and <code>hyphens (-)</code>. It must start with a letter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testInstance</p>
          */
         public Builder instanceDescription(String instanceDescription) {
             this.putQueryParameter("InstanceDescription", instanceDescription);
@@ -91,7 +97,10 @@ public class ModifyRCInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rc-m5ei7b1w38w2l91x****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -100,7 +109,10 @@ public class ModifyRCInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

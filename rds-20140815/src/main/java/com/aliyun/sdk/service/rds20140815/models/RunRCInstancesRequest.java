@@ -116,6 +116,10 @@ public class RunRCInstancesRequest extends Request {
     private String securityGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
+    private String spotStrategy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
@@ -159,6 +163,7 @@ public class RunRCInstancesRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
         this.securityGroupId = builder.securityGroupId;
+        this.spotStrategy = builder.spotStrategy;
         this.systemDisk = builder.systemDisk;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
@@ -354,6 +359,13 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
+     * @return spotStrategy
+     */
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
+    /**
      * @return systemDisk
      */
     public SystemDisk getSystemDisk() {
@@ -407,6 +419,7 @@ public class RunRCInstancesRequest extends Request {
         private String resourceGroupId; 
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
+        private String spotStrategy; 
         private SystemDisk systemDisk; 
         private java.util.List < Tag> tag; 
         private String vSwitchId; 
@@ -443,6 +456,7 @@ public class RunRCInstancesRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
             this.securityGroupId = request.securityGroupId;
+            this.spotStrategy = request.spotStrategy;
             this.systemDisk = request.systemDisk;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
@@ -761,6 +775,15 @@ public class RunRCInstancesRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SpotStrategy.
+         */
+        public Builder spotStrategy(String spotStrategy) {
+            this.putQueryParameter("SpotStrategy", spotStrategy);
+            this.spotStrategy = spotStrategy;
             return this;
         }
 

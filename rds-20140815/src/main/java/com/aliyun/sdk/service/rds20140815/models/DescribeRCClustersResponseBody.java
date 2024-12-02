@@ -81,6 +81,9 @@ public class DescribeRCClustersResponseBody extends TeaModel {
      * <p>DescribeRCClustersResponseBody</p>
      */
     public static class Clusters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
@@ -90,10 +93,15 @@ public class DescribeRCClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         private Clusters(Builder builder) {
+            this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
             this.createTime = builder.createTime;
             this.status = builder.status;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -102,6 +110,13 @@ public class DescribeRCClustersResponseBody extends TeaModel {
 
         public static Clusters create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         /**
@@ -125,10 +140,27 @@ public class DescribeRCClustersResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
+            private String clusterId; 
             private String clusterName; 
             private String createTime; 
             private String status; 
+            private String vpcId; 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
 
             /**
              * <p>The cluster name.</p>
@@ -167,6 +199,14 @@ public class DescribeRCClustersResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

@@ -287,6 +287,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
+        private String spotStrategy;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -310,6 +313,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             this.instanceChargeType = builder.instanceChargeType;
             this.instanceId = builder.instanceId;
             this.regionId = builder.regionId;
+            this.spotStrategy = builder.spotStrategy;
             this.status = builder.status;
             this.tagResources = builder.tagResources;
             this.vpcId = builder.vpcId;
@@ -395,6 +399,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return spotStrategy
+         */
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -433,6 +444,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String instanceChargeType; 
             private String instanceId; 
             private String regionId; 
+            private String spotStrategy; 
             private String status; 
             private java.util.List < TagResources> tagResources; 
             private String vpcId; 
@@ -539,6 +551,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SpotStrategy.
+             */
+            public Builder spotStrategy(String spotStrategy) {
+                this.spotStrategy = spotStrategy;
                 return this;
             }
 

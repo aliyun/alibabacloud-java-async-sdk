@@ -24,6 +24,9 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBProxyEndpointId")
     private String DBProxyEndpointId;
 
+    @com.aliyun.core.annotation.NameInMap("DBProxyEndpointMinSlaveCount")
+    private String DBProxyEndpointMinSlaveCount;
+
     @com.aliyun.core.annotation.NameInMap("DBProxyEngineType")
     private String DBProxyEngineType;
 
@@ -65,6 +68,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         this.DBProxyConnectStringNetType = builder.DBProxyConnectStringNetType;
         this.DBProxyConnectStringPort = builder.DBProxyConnectStringPort;
         this.DBProxyEndpointId = builder.DBProxyEndpointId;
+        this.DBProxyEndpointMinSlaveCount = builder.DBProxyEndpointMinSlaveCount;
         this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyFeatures = builder.DBProxyFeatures;
         this.DBProxyNodes = builder.DBProxyNodes;
@@ -113,6 +117,13 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
      */
     public String getDBProxyEndpointId() {
         return this.DBProxyEndpointId;
+    }
+
+    /**
+     * @return DBProxyEndpointMinSlaveCount
+     */
+    public String getDBProxyEndpointMinSlaveCount() {
+        return this.DBProxyEndpointMinSlaveCount;
     }
 
     /**
@@ -204,6 +215,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         private String DBProxyConnectStringNetType; 
         private String DBProxyConnectStringPort; 
         private String DBProxyEndpointId; 
+        private String DBProxyEndpointMinSlaveCount; 
         private String DBProxyEngineType; 
         private String DBProxyFeatures; 
         private DBProxyNodes DBProxyNodes; 
@@ -262,6 +274,17 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
          */
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.DBProxyEndpointId = DBProxyEndpointId;
+            return this;
+        }
+
+        /**
+         * <p>The minimum number of reserved instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder DBProxyEndpointMinSlaveCount(String DBProxyEndpointMinSlaveCount) {
+            this.DBProxyEndpointMinSlaveCount = DBProxyEndpointMinSlaveCount;
             return this;
         }
 
