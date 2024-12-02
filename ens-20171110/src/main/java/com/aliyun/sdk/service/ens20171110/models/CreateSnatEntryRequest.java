@@ -18,6 +18,10 @@ public class CreateSnatEntryRequest extends Request {
     private Integer idleTimeout;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspAffinity")
+    private Boolean ispAffinity;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
@@ -50,6 +54,7 @@ public class CreateSnatEntryRequest extends Request {
     private CreateSnatEntryRequest(Builder builder) {
         super(builder);
         this.idleTimeout = builder.idleTimeout;
+        this.ispAffinity = builder.ispAffinity;
         this.natGatewayId = builder.natGatewayId;
         this.snatEntryName = builder.snatEntryName;
         this.snatIp = builder.snatIp;
@@ -77,6 +82,13 @@ public class CreateSnatEntryRequest extends Request {
      */
     public Integer getIdleTimeout() {
         return this.idleTimeout;
+    }
+
+    /**
+     * @return ispAffinity
+     */
+    public Boolean getIspAffinity() {
+        return this.ispAffinity;
     }
 
     /**
@@ -130,6 +142,7 @@ public class CreateSnatEntryRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSnatEntryRequest, Builder> {
         private Integer idleTimeout; 
+        private Boolean ispAffinity; 
         private String natGatewayId; 
         private String snatEntryName; 
         private String snatIp; 
@@ -145,6 +158,7 @@ public class CreateSnatEntryRequest extends Request {
         private Builder(CreateSnatEntryRequest request) {
             super(request);
             this.idleTimeout = request.idleTimeout;
+            this.ispAffinity = request.ispAffinity;
             this.natGatewayId = request.natGatewayId;
             this.snatEntryName = request.snatEntryName;
             this.snatIp = request.snatIp;
@@ -163,6 +177,15 @@ public class CreateSnatEntryRequest extends Request {
         public Builder idleTimeout(Integer idleTimeout) {
             this.putQueryParameter("IdleTimeout", idleTimeout);
             this.idleTimeout = idleTimeout;
+            return this;
+        }
+
+        /**
+         * IspAffinity.
+         */
+        public Builder ispAffinity(Boolean ispAffinity) {
+            this.putQueryParameter("IspAffinity", ispAffinity);
+            this.ispAffinity = ispAffinity;
             return this;
         }
 

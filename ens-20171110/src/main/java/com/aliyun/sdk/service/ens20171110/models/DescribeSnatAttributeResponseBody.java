@@ -21,6 +21,9 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
+    @com.aliyun.core.annotation.NameInMap("IspAffinity")
+    private Boolean ispAffinity;
+
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
@@ -58,6 +61,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         this.creationTime = builder.creationTime;
         this.destCIDR = builder.destCIDR;
         this.idleTimeout = builder.idleTimeout;
+        this.ispAffinity = builder.ispAffinity;
         this.natGatewayId = builder.natGatewayId;
         this.requestId = builder.requestId;
         this.snatEntryId = builder.snatEntryId;
@@ -98,6 +102,13 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
      */
     public Integer getIdleTimeout() {
         return this.idleTimeout;
+    }
+
+    /**
+     * @return ispAffinity
+     */
+    public Boolean getIspAffinity() {
+        return this.ispAffinity;
     }
 
     /**
@@ -181,6 +192,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         private String creationTime; 
         private String destCIDR; 
         private Integer idleTimeout; 
+        private Boolean ispAffinity; 
         private String natGatewayId; 
         private String requestId; 
         private String snatEntryId; 
@@ -223,6 +235,14 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.idleTimeout = idleTimeout;
+            return this;
+        }
+
+        /**
+         * IspAffinity.
+         */
+        public Builder ispAffinity(Boolean ispAffinity) {
+            this.ispAffinity = ispAffinity;
             return this;
         }
 

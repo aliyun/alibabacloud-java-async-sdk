@@ -1940,6 +1940,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private SecurityGroupIds securityGroupIds;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceStatus")
+        private String serviceStatus;
+
         @com.aliyun.core.annotation.NameInMap("SpecName")
         private String specName;
 
@@ -1981,6 +1984,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.publicIpAddress = builder.publicIpAddress;
             this.publicIpAddresses = builder.publicIpAddresses;
             this.securityGroupIds = builder.securityGroupIds;
+            this.serviceStatus = builder.serviceStatus;
             this.specName = builder.specName;
             this.spotStrategy = builder.spotStrategy;
             this.status = builder.status;
@@ -2172,6 +2176,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceStatus
+         */
+        public String getServiceStatus() {
+            return this.serviceStatus;
+        }
+
+        /**
          * @return specName
          */
         public String getSpecName() {
@@ -2232,6 +2243,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private PublicIpAddress publicIpAddress; 
             private PublicIpAddresses publicIpAddresses; 
             private SecurityGroupIds securityGroupIds; 
+            private String serviceStatus; 
             private String specName; 
             private String spotStrategy; 
             private String status; 
@@ -2503,6 +2515,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * ServiceStatus.
+             */
+            public Builder serviceStatus(String serviceStatus) {
+                this.serviceStatus = serviceStatus;
                 return this;
             }
 

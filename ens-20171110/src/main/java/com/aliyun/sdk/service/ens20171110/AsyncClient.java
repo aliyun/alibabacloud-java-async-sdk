@@ -1635,6 +1635,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySnapshotAttributeResponse> modifySnapshotAttribute(ModifySnapshotAttributeRequest request);
 
     /**
+     * @param request the request parameters of ModifySnatEntry  ModifySnatEntryRequest
+     * @return ModifySnatEntryResponse
+     */
+    CompletableFuture<ModifySnatEntryResponse> modifySnatEntry(ModifySnatEntryRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>

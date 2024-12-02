@@ -77,6 +77,10 @@ public class DescribeInstancesRequest extends Request {
     private String securityGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceStatus")
+    private java.util.List < String > serviceStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -106,6 +110,7 @@ public class DescribeInstancesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.searchKey = builder.searchKey;
         this.securityGroupId = builder.securityGroupId;
+        this.serviceStatus = builder.serviceStatus;
         this.status = builder.status;
         this.tags = builder.tags;
         this.vSwitchId = builder.vSwitchId;
@@ -237,6 +242,13 @@ public class DescribeInstancesRequest extends Request {
     }
 
     /**
+     * @return serviceStatus
+     */
+    public java.util.List < String > getServiceStatus() {
+        return this.serviceStatus;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -274,6 +286,7 @@ public class DescribeInstancesRequest extends Request {
         private String pageSize; 
         private String searchKey; 
         private String securityGroupId; 
+        private java.util.List < String > serviceStatus; 
         private String status; 
         private java.util.List < Tags> tags; 
         private String vSwitchId; 
@@ -300,6 +313,7 @@ public class DescribeInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.searchKey = request.searchKey;
             this.securityGroupId = request.securityGroupId;
+            this.serviceStatus = request.serviceStatus;
             this.status = request.status;
             this.tags = request.tags;
             this.vSwitchId = request.vSwitchId;
@@ -503,6 +517,16 @@ public class DescribeInstancesRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * ServiceStatus.
+         */
+        public Builder serviceStatus(java.util.List < String > serviceStatus) {
+            String serviceStatusShrink = shrink(serviceStatus, "ServiceStatus", "json");
+            this.putQueryParameter("ServiceStatus", serviceStatusShrink);
+            this.serviceStatus = serviceStatus;
             return this;
         }
 
