@@ -38,7 +38,10 @@ public class UpdateOriginProtectionIpWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

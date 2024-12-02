@@ -7,18 +7,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateOriginProtectionIpWhiteListRequest} extends {@link RequestModel}
+ * {@link GetClientCertificateHostnamesRequest} extends {@link RequestModel}
  *
- * <p>UpdateOriginProtectionIpWhiteListRequest</p>
+ * <p>GetClientCertificateHostnamesRequest</p>
  */
-public class UpdateOriginProtectionIpWhiteListRequest extends Request {
+public class GetClientCertificateHostnamesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private String id;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
-    private UpdateOriginProtectionIpWhiteListRequest(Builder builder) {
+    private GetClientCertificateHostnamesRequest(Builder builder) {
         super(builder);
+        this.id = builder.id;
         this.siteId = builder.siteId;
     }
 
@@ -26,7 +31,7 @@ public class UpdateOriginProtectionIpWhiteListRequest extends Request {
         return new Builder();
     }
 
-    public static UpdateOriginProtectionIpWhiteListRequest create() {
+    public static GetClientCertificateHostnamesRequest create() {
         return builder().build();
     }
 
@@ -36,30 +41,47 @@ public class UpdateOriginProtectionIpWhiteListRequest extends Request {
     }
 
     /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
         return this.siteId;
     }
 
-    public static final class Builder extends Request.Builder<UpdateOriginProtectionIpWhiteListRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetClientCertificateHostnamesRequest, Builder> {
+        private String id; 
         private Long siteId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateOriginProtectionIpWhiteListRequest request) {
+        private Builder(GetClientCertificateHostnamesRequest request) {
             super(request);
+            this.id = request.id;
             this.siteId = request.siteId;
         } 
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * Id.
+         */
+        public Builder id(String id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456****</p>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -68,8 +90,8 @@ public class UpdateOriginProtectionIpWhiteListRequest extends Request {
         }
 
         @Override
-        public UpdateOriginProtectionIpWhiteListRequest build() {
-            return new UpdateOriginProtectionIpWhiteListRequest(this);
+        public GetClientCertificateHostnamesRequest build() {
+            return new GetClientCertificateHostnamesRequest(this);
         } 
 
     } 

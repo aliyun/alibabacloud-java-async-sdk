@@ -122,7 +122,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         private Long siteId; 
 
         /**
-         * CurrentIPWhitelist.
+         * <p>The IP whitelist for origin protection used by the website.</p>
          */
         public Builder currentIPWhitelist(CurrentIPWhitelist currentIPWhitelist) {
             this.currentIPWhitelist = currentIPWhitelist;
@@ -130,7 +130,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * DiffIPWhitelist.
+         * <p>The IP whitelist for origin protection that has been updated.</p>
          */
         public Builder diffIPWhitelist(DiffIPWhitelist diffIPWhitelist) {
             this.diffIPWhitelist = diffIPWhitelist;
@@ -138,7 +138,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * LatestIPWhitelist.
+         * <p>The latest IP whitelist for origin protection.</p>
          */
         public Builder latestIPWhitelist(LatestIPWhitelist latestIPWhitelist) {
             this.latestIPWhitelist = latestIPWhitelist;
@@ -146,7 +146,14 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * NeedUpdate.
+         * <p>Indicates whether the IP whitelist for origin protection needs to be updated. If the currently used IP whitelist is different from the latest IP whitelist, it needs to be updated, and the value is true.</p>
+         * <ul>
+         * <li>true: The update is required.</li>
+         * <li>false: No update is required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needUpdate(Boolean needUpdate) {
             this.needUpdate = needUpdate;
@@ -154,7 +161,14 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * OriginConverge.
+         * <p>Indicates whether IP convergence is enabled.</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder originConverge(String originConverge) {
             this.originConverge = originConverge;
@@ -162,7 +176,14 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * OriginProtection.
+         * <p>Indicates whether origin protection is enabled.</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder originProtection(String originProtection) {
             this.originProtection = originProtection;
@@ -170,7 +191,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +202,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -236,7 +263,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             private java.util.List < String > iPv6; 
 
             /**
-             * IPv4.
+             * <p>The IP whitelist for origin protection used by the website, specified as IPv4 addresses or CIDR blocks.</p>
              */
             public Builder iPv4(java.util.List < String > iPv4) {
                 this.iPv4 = iPv4;
@@ -244,7 +271,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * IPv6.
+             * <p>The IP whitelist for origin protection used by the website, specified as IPv6 addresses or CIDR blocks.</p>
              */
             public Builder iPv6(java.util.List < String > iPv6) {
                 this.iPv6 = iPv6;
@@ -303,7 +330,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             private java.util.List < String > iPv6; 
 
             /**
-             * IPv4.
+             * <p>The IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
              */
             public Builder iPv4(java.util.List < String > iPv4) {
                 this.iPv4 = iPv4;
@@ -311,7 +338,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * IPv6.
+             * <p>The IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
              */
             public Builder iPv6(java.util.List < String > iPv6) {
                 this.iPv6 = iPv6;
@@ -370,7 +397,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             private java.util.List < String > iPv6; 
 
             /**
-             * IPv4.
+             * <p>The IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
              */
             public Builder iPv4(java.util.List < String > iPv4) {
                 this.iPv4 = iPv4;
@@ -378,7 +405,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * IPv6.
+             * <p>The IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
              */
             public Builder iPv6(java.util.List < String > iPv6) {
                 this.iPv6 = iPv6;
@@ -437,7 +464,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             private java.util.List < String > iPv6; 
 
             /**
-             * IPv4.
+             * <p>The IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
              */
             public Builder iPv4(java.util.List < String > iPv4) {
                 this.iPv4 = iPv4;
@@ -445,7 +472,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * IPv6.
+             * <p>The IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
              */
             public Builder iPv6(java.util.List < String > iPv6) {
                 this.iPv6 = iPv6;
@@ -516,7 +543,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             private RemovedIPWhitelist removedIPWhitelist; 
 
             /**
-             * AddedIPWhitelist.
+             * <p>The new IP whitelist for origin protection.</p>
              */
             public Builder addedIPWhitelist(AddedIPWhitelist addedIPWhitelist) {
                 this.addedIPWhitelist = addedIPWhitelist;
@@ -524,7 +551,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * NoChangeIpWhitelist.
+             * <p>The IP whitelist for origin protection that remains unchanged.</p>
              */
             public Builder noChangeIpWhitelist(NoChangeIpWhitelist noChangeIpWhitelist) {
                 this.noChangeIpWhitelist = noChangeIpWhitelist;
@@ -532,7 +559,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * RemovedIPWhitelist.
+             * <p>The IP whitelist for origin protection that has been deleted.</p>
              */
             public Builder removedIPWhitelist(RemovedIPWhitelist removedIPWhitelist) {
                 this.removedIPWhitelist = removedIPWhitelist;
@@ -591,7 +618,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             private java.util.List < String > iPv6; 
 
             /**
-             * IPv4.
+             * <p>The latest IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
              */
             public Builder iPv4(java.util.List < String > iPv4) {
                 this.iPv4 = iPv4;
@@ -599,7 +626,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * IPv6.
+             * <p>The latest IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
              */
             public Builder iPv6(java.util.List < String > iPv6) {
                 this.iPv6 = iPv6;

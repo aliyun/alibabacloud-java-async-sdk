@@ -38,7 +38,10 @@ public class UpdateOriginProtectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C6B5E5A-42FC-5DF2-986C-4DAAE3C55086</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

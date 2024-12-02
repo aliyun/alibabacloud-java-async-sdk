@@ -543,6 +543,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetClientCertificateResponse> getClientCertificate(GetClientCertificateRequest request);
 
     /**
+     * @param request the request parameters of GetClientCertificateHostnames  GetClientCertificateHostnamesRequest
+     * @return GetClientCertificateHostnamesResponse
+     */
+    CompletableFuture<GetClientCertificateHostnamesResponse> getClientCertificateHostnames(GetClientCertificateHostnamesRequest request);
+
+    /**
      * @param request the request parameters of GetEdgeContainerApp  GetEdgeContainerAppRequest
      * @return GetEdgeContainerAppResponse
      */
@@ -1102,6 +1108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetCertificateResponse
      */
     CompletableFuture<SetCertificateResponse> setCertificate(SetCertificateRequest request);
+
+    /**
+     * @param request the request parameters of SetClientCertificateHostnames  SetClientCertificateHostnamesRequest
+     * @return SetClientCertificateHostnamesResponse
+     */
+    CompletableFuture<SetClientCertificateHostnamesResponse> setClientCertificateHostnames(SetClientCertificateHostnamesRequest request);
 
     /**
      * @param request the request parameters of SetHttpDDoSAttackIntelligentProtection  SetHttpDDoSAttackIntelligentProtectionRequest
