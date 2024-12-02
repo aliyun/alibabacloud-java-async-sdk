@@ -53,7 +53,7 @@ public class ModifyDesktopSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserDiskSizeGib")
-    @com.aliyun.core.annotation.Validation(maximum = 32768)
+    @com.aliyun.core.annotation.Validation(maximum = 65536)
     private Integer userDiskSizeGib;
 
     private ModifyDesktopSpecRequest(Builder builder) {

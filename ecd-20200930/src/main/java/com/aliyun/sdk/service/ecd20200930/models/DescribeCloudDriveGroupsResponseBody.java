@@ -341,6 +341,9 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
 
+        @com.aliyun.core.annotation.NameInMap("RecycleBinSize")
+        private String recycleBinSize;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -359,6 +362,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
             this.orgId = builder.orgId;
+            this.recycleBinSize = builder.recycleBinSize;
             this.status = builder.status;
             this.totalSize = builder.totalSize;
             this.usedSize = builder.usedSize;
@@ -429,6 +433,13 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return recycleBinSize
+         */
+        public String getRecycleBinSize() {
+            return this.recycleBinSize;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -458,6 +469,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             private String groupId; 
             private String groupName; 
             private String orgId; 
+            private String recycleBinSize; 
             private String status; 
             private Long totalSize; 
             private String usedSize; 
@@ -538,6 +550,14 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
+                return this;
+            }
+
+            /**
+             * RecycleBinSize.
+             */
+            public Builder recycleBinSize(String recycleBinSize) {
+                this.recycleBinSize = recycleBinSize;
                 return this;
             }
 
