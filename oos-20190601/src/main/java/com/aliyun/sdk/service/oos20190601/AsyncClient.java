@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AnalyzeGitRepository  AnalyzeGitRepositoryRequest
+     * @return AnalyzeGitRepositoryResponse
+     */
+    CompletableFuture<AnalyzeGitRepositoryResponse> analyzeGitRepository(AnalyzeGitRepositoryRequest request);
+
+    /**
      * @param request the request parameters of CancelExecution  CancelExecutionRequest
      * @return CancelExecutionResponse
      */
@@ -291,6 +297,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListGitRepositoriesResponse
      */
     CompletableFuture<ListGitRepositoriesResponse> listGitRepositories(ListGitRepositoriesRequest request);
+
+    /**
+     * @param request the request parameters of ListGitRepositoryContents  ListGitRepositoryContentsRequest
+     * @return ListGitRepositoryContentsResponse
+     */
+    CompletableFuture<ListGitRepositoryContentsResponse> listGitRepositoryContents(ListGitRepositoryContentsRequest request);
 
     /**
      * @param request the request parameters of ListInstancePackageStates  ListInstancePackageStatesRequest

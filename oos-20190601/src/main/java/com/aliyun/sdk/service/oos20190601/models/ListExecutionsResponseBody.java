@@ -268,6 +268,9 @@ public class ListExecutionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
+        @com.aliyun.core.annotation.NameInMap("NextScheduleTime")
+        private String nextScheduleTime;
+
         @com.aliyun.core.annotation.NameInMap("Outputs")
         private String outputs;
 
@@ -338,6 +341,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             this.lastTriggerStatusMessage = builder.lastTriggerStatusMessage;
             this.lastTriggerTime = builder.lastTriggerTime;
             this.mode = builder.mode;
+            this.nextScheduleTime = builder.nextScheduleTime;
             this.outputs = builder.outputs;
             this.parameters = builder.parameters;
             this.parentExecutionId = builder.parentExecutionId;
@@ -469,6 +473,13 @@ public class ListExecutionsResponseBody extends TeaModel {
          */
         public String getMode() {
             return this.mode;
+        }
+
+        /**
+         * @return nextScheduleTime
+         */
+        public String getNextScheduleTime() {
+            return this.nextScheduleTime;
         }
 
         /**
@@ -613,6 +624,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             private String lastTriggerStatusMessage; 
             private String lastTriggerTime; 
             private String mode; 
+            private String nextScheduleTime; 
             private String outputs; 
             private java.util.Map < String, ? > parameters; 
             private String parentExecutionId; 
@@ -793,6 +805,14 @@ public class ListExecutionsResponseBody extends TeaModel {
              */
             public Builder mode(String mode) {
                 this.mode = mode;
+                return this;
+            }
+
+            /**
+             * NextScheduleTime.
+             */
+            public Builder nextScheduleTime(String nextScheduleTime) {
+                this.nextScheduleTime = nextScheduleTime;
                 return this;
             }
 

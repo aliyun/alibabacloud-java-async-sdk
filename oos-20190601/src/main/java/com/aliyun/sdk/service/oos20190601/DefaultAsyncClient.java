@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AnalyzeGitRepository  AnalyzeGitRepositoryRequest
+     * @return AnalyzeGitRepositoryResponse
+     */
+    @Override
+    public CompletableFuture<AnalyzeGitRepositoryResponse> analyzeGitRepository(AnalyzeGitRepositoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AnalyzeGitRepository").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AnalyzeGitRepositoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AnalyzeGitRepositoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CancelExecution  CancelExecutionRequest
      * @return CancelExecutionResponse
      */
@@ -847,6 +865,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListGitRepositoriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListGitRepositoryContents  ListGitRepositoryContentsRequest
+     * @return ListGitRepositoryContentsResponse
+     */
+    @Override
+    public CompletableFuture<ListGitRepositoryContentsResponse> listGitRepositoryContents(ListGitRepositoryContentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListGitRepositoryContents").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListGitRepositoryContentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListGitRepositoryContentsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
