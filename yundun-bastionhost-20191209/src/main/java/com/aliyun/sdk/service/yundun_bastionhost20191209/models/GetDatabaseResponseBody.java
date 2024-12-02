@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDatabaseResponseBody} extends {@link TeaModel}
  *
  * <p>GetDatabaseResponseBody</p>
  */
 public class GetDatabaseResponseBody extends TeaModel {
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.NameInMap("Database")
     private Database database;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDatabaseResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Database.
+         * <p>The returned detailed information about the database.</p>
          */
         public Builder database(Database database) {
             this.database = database;
@@ -58,7 +58,10 @@ public class GetDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D72B883-9D15-5B05-B987-DFD10EB1FFB4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,44 +74,50 @@ public class GetDatabaseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatabaseResponseBody</p>
+     */
     public static class Database extends TeaModel {
-        @NameInMap("ActiveAddressType")
+        @com.aliyun.core.annotation.NameInMap("ActiveAddressType")
         private String activeAddressType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("DatabasePort")
+        @com.aliyun.core.annotation.NameInMap("DatabasePort")
         private Long databasePort;
 
-        @NameInMap("DatabasePrivateAddress")
+        @com.aliyun.core.annotation.NameInMap("DatabasePrivateAddress")
         private String databasePrivateAddress;
 
-        @NameInMap("DatabasePublicAddress")
+        @com.aliyun.core.annotation.NameInMap("DatabasePublicAddress")
         private String databasePublicAddress;
 
-        @NameInMap("DatabaseType")
+        @com.aliyun.core.annotation.NameInMap("DatabaseType")
         private String databaseType;
 
-        @NameInMap("NetworkDomainId")
+        @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
         private String networkDomainId;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
         private String sourceInstanceId;
 
-        @NameInMap("SourceInstanceRegionId")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceRegionId")
         private String sourceInstanceRegionId;
 
-        @NameInMap("SourceInstanceState")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceState")
         private String sourceInstanceState;
 
         private Database(Builder builder) {
@@ -242,7 +251,14 @@ public class GetDatabaseResponseBody extends TeaModel {
             private String sourceInstanceState; 
 
             /**
-             * ActiveAddressType.
+             * <p>The address type of the database. Valid values:</p>
+             * <ul>
+             * <li>Public</li>
+             * <li>Private</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -250,7 +266,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The remarks of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -258,7 +277,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -266,7 +288,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -274,7 +299,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabasePort.
+             * <p>The port of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder databasePort(Long databasePort) {
                 this.databasePort = databasePort;
@@ -282,7 +310,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabasePrivateAddress.
+             * <p>The internal endpoint of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1zq******</p>
              */
             public Builder databasePrivateAddress(String databasePrivateAddress) {
                 this.databasePrivateAddress = databasePrivateAddress;
@@ -290,7 +321,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabasePublicAddress.
+             * <p>The public endpoint of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf65******</p>
              */
             public Builder databasePublicAddress(String databasePublicAddress) {
                 this.databasePublicAddress = databasePublicAddress;
@@ -298,7 +332,16 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseType.
+             * <p>The database engine. Valid values:</p>
+             * <ul>
+             * <li><strong>mysql</strong></li>
+             * <li><strong>sqlserver</strong></li>
+             * <li><strong>postgresql</strong></li>
+             * <li><strong>oracle</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder databaseType(String databaseType) {
                 this.databaseType = databaseType;
@@ -306,7 +349,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkDomainId.
+             * <p>The ID of the network domain to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder networkDomainId(String networkDomainId) {
                 this.networkDomainId = networkDomainId;
@@ -314,7 +360,15 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The database type. Valid values:</p>
+             * <ul>
+             * <li><strong>Local</strong>: on-premises database.</li>
+             * <li><strong>Rds</strong>: ApsaraDB RDS instance.</li>
+             * <li><strong>PolarDB</strong>: PolarDB cluster.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Local</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -322,7 +376,13 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceId.
+             * <p>The ID of the ApsaraDB RDS instance or PolarDB cluster.</p>
+             * <blockquote>
+             * <p>If <strong>Source</strong> is set to <strong>Local</strong>, this parameter is empty.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9527ob0e0nftcsffke</p>
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -330,7 +390,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceRegionId.
+             * <p>The region ID of the ApsaraDB RDS instance or PolarDB cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder sourceInstanceRegionId(String sourceInstanceRegionId) {
                 this.sourceInstanceRegionId = sourceInstanceRegionId;
@@ -338,7 +401,14 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceState.
+             * <p>The status of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>Release</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder sourceInstanceState(String sourceInstanceState) {
                 this.sourceInstanceState = sourceInstanceState;

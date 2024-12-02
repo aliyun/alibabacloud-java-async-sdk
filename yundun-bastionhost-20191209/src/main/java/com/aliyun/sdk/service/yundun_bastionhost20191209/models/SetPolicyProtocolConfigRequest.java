@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPolicyProtocolConfigRequest} extends {@link RequestModel}
  *
  * <p>SetPolicyProtocolConfigRequest</p>
  */
 public class SetPolicyProtocolConfigRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("ProtocolConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ProtocolConfig protocolConfig;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private SetPolicyProtocolConfigRequest(Builder builder) {
@@ -99,7 +99,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The bastion host ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,7 +115,14 @@ public class SetPolicyProtocolConfigRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The ID of the control policy that you want to modify.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -117,7 +131,8 @@ public class SetPolicyProtocolConfigRequest extends Request {
         }
 
         /**
-         * ProtocolConfig.
+         * <p>The protocol control settings.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder protocolConfig(ProtocolConfig protocolConfig) {
             String protocolConfigShrink = shrink(protocolConfig, "ProtocolConfig", "json");
@@ -127,7 +142,13 @@ public class SetPolicyProtocolConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,17 +163,23 @@ public class SetPolicyProtocolConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetPolicyProtocolConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetPolicyProtocolConfigRequest</p>
+     */
     public static class RDP extends TeaModel {
-        @NameInMap("ClipboardDownload")
+        @com.aliyun.core.annotation.NameInMap("ClipboardDownload")
         private String clipboardDownload;
 
-        @NameInMap("ClipboardUpload")
+        @com.aliyun.core.annotation.NameInMap("ClipboardUpload")
         private String clipboardUpload;
 
-        @NameInMap("DiskRedirection")
+        @com.aliyun.core.annotation.NameInMap("DiskRedirection")
         private String diskRedirection;
 
-        @NameInMap("RecordKeyboard")
+        @com.aliyun.core.annotation.NameInMap("RecordKeyboard")
         private String recordKeyboard;
 
         private RDP(Builder builder) {
@@ -205,7 +232,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             private String recordKeyboard; 
 
             /**
-             * ClipboardDownload.
+             * <p>Specifies whether to enable downloading from the clipboard. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder clipboardDownload(String clipboardDownload) {
                 this.clipboardDownload = clipboardDownload;
@@ -213,7 +250,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * ClipboardUpload.
+             * <p>Specifies whether to enable uploading from the clipboard. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder clipboardUpload(String clipboardUpload) {
                 this.clipboardUpload = clipboardUpload;
@@ -221,7 +268,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * DiskRedirection.
+             * <p>Specifies whether to enable driver mapping. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder diskRedirection(String diskRedirection) {
                 this.diskRedirection = diskRedirection;
@@ -229,7 +286,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * RecordKeyboard.
+             * <p>Specifies whether to enable keyboard operation recording. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder recordKeyboard(String recordKeyboard) {
                 this.recordKeyboard = recordKeyboard;
@@ -243,35 +310,41 @@ public class SetPolicyProtocolConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetPolicyProtocolConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetPolicyProtocolConfigRequest</p>
+     */
     public static class SSH extends TeaModel {
-        @NameInMap("ExecCommand")
+        @com.aliyun.core.annotation.NameInMap("ExecCommand")
         private String execCommand;
 
-        @NameInMap("SFTPChannel")
+        @com.aliyun.core.annotation.NameInMap("SFTPChannel")
         private String SFTPChannel;
 
-        @NameInMap("SFTPDownloadFile")
+        @com.aliyun.core.annotation.NameInMap("SFTPDownloadFile")
         private String SFTPDownloadFile;
 
-        @NameInMap("SFTPMkdir")
+        @com.aliyun.core.annotation.NameInMap("SFTPMkdir")
         private String SFTPMkdir;
 
-        @NameInMap("SFTPRemoveFile")
+        @com.aliyun.core.annotation.NameInMap("SFTPRemoveFile")
         private String SFTPRemoveFile;
 
-        @NameInMap("SFTPRenameFile")
+        @com.aliyun.core.annotation.NameInMap("SFTPRenameFile")
         private String SFTPRenameFile;
 
-        @NameInMap("SFTPRmdir")
+        @com.aliyun.core.annotation.NameInMap("SFTPRmdir")
         private String SFTPRmdir;
 
-        @NameInMap("SFTPUploadFile")
+        @com.aliyun.core.annotation.NameInMap("SFTPUploadFile")
         private String SFTPUploadFile;
 
-        @NameInMap("SSHChannel")
+        @com.aliyun.core.annotation.NameInMap("SSHChannel")
         private String SSHChannel;
 
-        @NameInMap("X11Forwarding")
+        @com.aliyun.core.annotation.NameInMap("X11Forwarding")
         private String x11Forwarding;
 
         private SSH(Builder builder) {
@@ -378,7 +451,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             private String x11Forwarding; 
 
             /**
-             * ExecCommand.
+             * <p>Specifies whether to enable remote command execution. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder execCommand(String execCommand) {
                 this.execCommand = execCommand;
@@ -386,7 +469,24 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * SFTPChannel.
+             * <p>Specifies whether to enable SFTP channels. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </li>
+             * <li><p>You must set at least one of the following parameters to Enable: SSHChannel and SFTPChannel.</p>
+             * </li>
+             * <li><p>If you select Enable Only SFTP Permission for a host account, do not set SSHChannel and SFTPChannel to Disable for the account. Otherwise, users of the bastion host cannot use the account to access the host.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPChannel(String SFTPChannel) {
                 this.SFTPChannel = SFTPChannel;
@@ -394,7 +494,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * SFTPDownloadFile.
+             * <p>Specifies whether to enable file downloading during SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPDownloadFile(String SFTPDownloadFile) {
                 this.SFTPDownloadFile = SFTPDownloadFile;
@@ -402,7 +512,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * SFTPMkdir.
+             * <p>Specifies whether to enable folder creation during SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPMkdir(String SFTPMkdir) {
                 this.SFTPMkdir = SFTPMkdir;
@@ -410,7 +530,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * SFTPRemoveFile.
+             * <p>Specifies whether to enable file deletion during SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPRemoveFile(String SFTPRemoveFile) {
                 this.SFTPRemoveFile = SFTPRemoveFile;
@@ -418,7 +548,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * SFTPRenameFile.
+             * <p>Specifies whether to enable file renaming during SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPRenameFile(String SFTPRenameFile) {
                 this.SFTPRenameFile = SFTPRenameFile;
@@ -426,7 +566,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * SFTPRmdir.
+             * <p>Specifies whether to enable folder deletion during SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPRmdir(String SFTPRmdir) {
                 this.SFTPRmdir = SFTPRmdir;
@@ -434,7 +584,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * SFTPUploadFile.
+             * <p>Specifies whether to enable file uploading during SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPUploadFile(String SFTPUploadFile) {
                 this.SFTPUploadFile = SFTPUploadFile;
@@ -442,7 +602,24 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * SSHChannel.
+             * <p>Specifies whether to enable SSH channels. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </li>
+             * <li><p>You must set at least one of the following parameters to Enable: SSHChannel and SFTPChannel. If you set SSHChannel to Disable, SSH-based logon is disabled for the asset account. Proceed with caution.</p>
+             * </li>
+             * <li><p>If you select Enable Only SFTP Permission for a host account, do not set SSHChannel and SFTPChannel to Disable for the account. Otherwise, users of the bastion host cannot use the account to access the host.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SSHChannel(String SSHChannel) {
                 this.SSHChannel = SSHChannel;
@@ -450,7 +627,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * X11Forwarding.
+             * <p>Specifies whether to enable X11 forwarding. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you do not specify this parameter, the default value Disable is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder x11Forwarding(String x11Forwarding) {
                 this.x11Forwarding = x11Forwarding;
@@ -464,11 +651,17 @@ public class SetPolicyProtocolConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetPolicyProtocolConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetPolicyProtocolConfigRequest</p>
+     */
     public static class ProtocolConfig extends TeaModel {
-        @NameInMap("RDP")
+        @com.aliyun.core.annotation.NameInMap("RDP")
         private RDP RDP;
 
-        @NameInMap("SSH")
+        @com.aliyun.core.annotation.NameInMap("SSH")
         private SSH SSH;
 
         private ProtocolConfig(Builder builder) {
@@ -503,7 +696,7 @@ public class SetPolicyProtocolConfigRequest extends Request {
             private SSH SSH; 
 
             /**
-             * RDP.
+             * <p>The settings of the Remote Desktop Protocol (RDP) options.</p>
              */
             public Builder RDP(RDP RDP) {
                 this.RDP = RDP;
@@ -511,7 +704,7 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
-             * SSH.
+             * <p>The settings of the SSH and SSH Fine Transfer Protocol (SFTP) options.</p>
              */
             public Builder SSH(SSH SSH) {
                 this.SSH = SSH;

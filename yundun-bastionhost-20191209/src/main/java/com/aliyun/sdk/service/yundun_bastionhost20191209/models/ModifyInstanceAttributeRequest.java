@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceAttributeRequest</p>
  */
 public class ModifyInstanceAttributeRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ModifyInstanceAttributeRequest(Builder builder) {
@@ -83,10 +83,13 @@ public class ModifyInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the bastion host.
-         * <p>
+         * <p>The description of the bastion host.</p>
+         * <blockquote>
+         * <p>The description must be up to 30 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</p>
+         * </blockquote>
          * 
-         * > The description can contain only letters, digits, underscores (\_), and hyphens (-). The description can be up to 30 characters in length.
+         * <strong>example:</strong>
+         * <p>Bastionhost demo</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -95,10 +98,14 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host.
-         * <p>
+         * <p>The ID of the bastion host.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-78v1gh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -107,10 +114,13 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host.
-         * <p>
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

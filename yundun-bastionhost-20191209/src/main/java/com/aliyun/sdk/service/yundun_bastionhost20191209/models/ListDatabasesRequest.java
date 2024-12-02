@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatabasesRequest} extends {@link RequestModel}
  *
  * <p>ListDatabasesRequest</p>
  */
 public class ListDatabasesRequest extends Request {
-    @Query
-    @NameInMap("DatabaseType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseType")
     private String databaseType;
 
-    @Query
-    @NameInMap("HostGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostGroupId")
     private String hostGroupId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NetworkDomainId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
     private String networkDomainId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
     private ListDatabasesRequest(Builder builder) {
@@ -153,7 +153,16 @@ public class ListDatabasesRequest extends Request {
         } 
 
         /**
-         * DatabaseType.
+         * <p>The engine of the database to query. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder databaseType(String databaseType) {
             this.putQueryParameter("DatabaseType", databaseType);
@@ -162,7 +171,13 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * HostGroupId.
+         * <p>The ID of the asset group to query. This operation returns the databases in the asset group.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the asset group.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder hostGroupId(String hostGroupId) {
             this.putQueryParameter("HostGroupId", hostGroupId);
@@ -171,7 +186,14 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the bastion host to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-7mz28f5tk0o</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -180,7 +202,10 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * NetworkDomainId.
+         * <p>The ID of the network domain where the database to query resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder networkDomainId(String networkDomainId) {
             this.putQueryParameter("NetworkDomainId", networkDomainId);
@@ -189,7 +214,10 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -198,7 +226,14 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.
+         * Valid values: 1 to100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,7 +242,13 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host to query.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +257,15 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The type of the database to query. Valid values:</p>
+         * <ul>
+         * <li><strong>Local</strong>: on-premises database.</li>
+         * <li><strong>Rds</strong>: ApsaraDB for RDS instance.</li>
+         * <li><strong>PolarDB</strong>: PolarDB cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Local</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

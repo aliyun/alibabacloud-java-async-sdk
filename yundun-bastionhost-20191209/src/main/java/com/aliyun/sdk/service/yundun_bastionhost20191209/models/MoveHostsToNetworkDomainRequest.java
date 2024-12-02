@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveHostsToNetworkDomainRequest} extends {@link RequestModel}
  *
  * <p>MoveHostsToNetworkDomainRequest</p>
  */
 public class MoveHostsToNetworkDomainRequest extends Request {
-    @Query
-    @NameInMap("HostIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > hostIds;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NetworkDomainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkDomainId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private MoveHostsToNetworkDomainRequest(Builder builder) {
@@ -99,7 +99,8 @@ public class MoveHostsToNetworkDomainRequest extends Request {
         } 
 
         /**
-         * HostIds.
+         * <p>The IDs of the hosts that you want to add to the network domain.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder hostIds(java.util.List < String > hostIds) {
             this.putQueryParameter("HostIds", hostIds);
@@ -108,7 +109,14 @@ public class MoveHostsToNetworkDomainRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The bastion host ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-uax2zmx8005</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +125,14 @@ public class MoveHostsToNetworkDomainRequest extends Request {
         }
 
         /**
-         * NetworkDomainId.
+         * <p>The ID of the network domain to which you want to add hosts.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder networkDomainId(String networkDomainId) {
             this.putQueryParameter("NetworkDomainId", networkDomainId);
@@ -126,7 +141,13 @@ public class MoveHostsToNetworkDomainRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

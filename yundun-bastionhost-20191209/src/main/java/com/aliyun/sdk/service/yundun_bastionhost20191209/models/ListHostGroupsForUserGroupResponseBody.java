@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostGroupsForUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListHostGroupsForUserGroupResponseBody</p>
  */
 public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
-    @NameInMap("HostGroups")
+    @com.aliyun.core.annotation.NameInMap("HostGroups")
     private java.util.List < HostGroups> hostGroups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListHostGroupsForUserGroupResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The host groups returned.
+         * <p>The host groups returned.</p>
          */
         public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
             this.hostGroups = hostGroups;
@@ -70,7 +70,10 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of host groups returned.
+         * <p>The total number of host groups returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,14 +97,20 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHostGroupsForUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHostGroupsForUserGroupResponseBody</p>
+     */
     public static class HostGroups extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("HostGroupId")
+        @com.aliyun.core.annotation.NameInMap("HostGroupId")
         private String hostGroupId;
 
-        @NameInMap("HostGroupName")
+        @com.aliyun.core.annotation.NameInMap("HostGroupName")
         private String hostGroupName;
 
         private HostGroups(Builder builder) {
@@ -142,7 +154,10 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
             private String hostGroupName; 
 
             /**
-             * The description of the host group.
+             * <p>The description of the host group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -150,7 +165,10 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host group.
+             * <p>The ID of the host group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -158,7 +176,10 @@ public class ListHostGroupsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host group.
+             * <p>The name of the host group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group</p>
              */
             public Builder hostGroupName(String hostGroupName) {
                 this.hostGroupName = hostGroupName;

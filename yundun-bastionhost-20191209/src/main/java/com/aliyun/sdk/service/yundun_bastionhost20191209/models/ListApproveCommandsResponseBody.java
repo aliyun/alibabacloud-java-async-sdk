@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApproveCommandsResponseBody} extends {@link TeaModel}
  *
  * <p>ListApproveCommandsResponseBody</p>
  */
 public class ListApproveCommandsResponseBody extends TeaModel {
-    @NameInMap("ApproveCommands")
+    @com.aliyun.core.annotation.NameInMap("ApproveCommands")
     private java.util.List < ApproveCommands> approveCommands;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListApproveCommandsResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ApproveCommands.
+         * <p>The commands to be reviewed.</p>
          */
         public Builder approveCommands(java.util.List < ApproveCommands> approveCommands) {
             this.approveCommands = approveCommands;
@@ -70,7 +70,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3EF7711-766D-5888-997B-EFBA76809229</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of commands to be reviewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,38 +97,44 @@ public class ListApproveCommandsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApproveCommandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApproveCommandsResponseBody</p>
+     */
     public static class ApproveCommands extends TeaModel {
-        @NameInMap("ApproveCommandId")
+        @com.aliyun.core.annotation.NameInMap("ApproveCommandId")
         private String approveCommandId;
 
-        @NameInMap("AssetAccountName")
+        @com.aliyun.core.annotation.NameInMap("AssetAccountName")
         private String assetAccountName;
 
-        @NameInMap("AssetIp")
+        @com.aliyun.core.annotation.NameInMap("AssetIp")
         private String assetIp;
 
-        @NameInMap("AssetName")
+        @com.aliyun.core.annotation.NameInMap("AssetName")
         private String assetName;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("ClientUser")
+        @com.aliyun.core.annotation.NameInMap("ClientUser")
         private String clientUser;
 
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ProtocolName")
+        @com.aliyun.core.annotation.NameInMap("ProtocolName")
         private String protocolName;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private ApproveCommands(Builder builder) {
@@ -238,7 +250,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * ApproveCommandId.
+             * <p>The ID of the command to be reviewed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder approveCommandId(String approveCommandId) {
                 this.approveCommandId = approveCommandId;
@@ -246,7 +261,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetAccountName.
+             * <p>The username of the asset account that is used for O&amp;M.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder assetAccountName(String assetAccountName) {
                 this.assetAccountName = assetAccountName;
@@ -254,7 +272,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetIp.
+             * <p>The IP address of the asset for O&amp;M.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.167.XX.XX</p>
              */
             public Builder assetIp(String assetIp) {
                 this.assetIp = assetIp;
@@ -262,7 +283,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetName.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>poros-test</p>
              */
             public Builder assetName(String assetName) {
                 this.assetName = assetName;
@@ -270,7 +294,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * <p>The source IP address from which the application is submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.18.XX.XX</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -278,7 +305,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientUser.
+             * <p>The Bastionhost user who submitted the O&amp;M application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder clientUser(String clientUser) {
                 this.clientUser = clientUser;
@@ -286,7 +316,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Command.
+             * <p>The command to be reviewed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/bin/bash</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -294,7 +327,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the O&amp;M application was submitted. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679393152</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -302,7 +338,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolName.
+             * <p>The O&amp;M protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SSH</p>
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;
@@ -310,7 +349,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The ID of the O&amp;M session that triggered the review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95f873ab64a76d5b0000000000004d5e</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -318,7 +360,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status of the review. Valid values: <strong>Wait</strong>: The command is pending review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Wait</p>
              */
             public Builder state(String state) {
                 this.state = state;

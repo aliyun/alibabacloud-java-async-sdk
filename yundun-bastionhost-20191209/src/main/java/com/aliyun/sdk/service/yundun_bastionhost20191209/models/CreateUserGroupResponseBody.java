@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUserGroupResponseBody</p>
  */
 public class CreateUserGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
     private String userGroupId;
 
     private CreateUserGroupResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateUserGroupResponseBody extends TeaModel {
         private String userGroupId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class CreateUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the user group.
+         * <p>The ID of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.userGroupId = userGroupId;

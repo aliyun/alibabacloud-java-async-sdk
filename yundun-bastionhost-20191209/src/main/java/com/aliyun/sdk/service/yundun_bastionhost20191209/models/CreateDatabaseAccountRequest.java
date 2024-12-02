@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatabaseAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateDatabaseAccountRequest</p>
  */
 public class CreateDatabaseAccountRequest extends Request {
-    @Query
-    @NameInMap("DatabaseAccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseAccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseAccountName;
 
-    @Query
-    @NameInMap("DatabaseId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseId;
 
-    @Query
-    @NameInMap("DatabaseSchema")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseSchema")
     private String databaseSchema;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("LoginAttribute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginAttribute")
     private String loginAttribute;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private CreateDatabaseAccountRequest(Builder builder) {
@@ -141,7 +141,11 @@ public class CreateDatabaseAccountRequest extends Request {
         } 
 
         /**
-         * DatabaseAccountName.
+         * <p>The username of the database account to be created. The username can be up to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder databaseAccountName(String databaseAccountName) {
             this.putQueryParameter("DatabaseAccountName", databaseAccountName);
@@ -150,7 +154,14 @@ public class CreateDatabaseAccountRequest extends Request {
         }
 
         /**
-         * DatabaseId.
+         * <p>The ID of the database for which you want to create a database account.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder databaseId(String databaseId) {
             this.putQueryParameter("DatabaseId", databaseId);
@@ -159,7 +170,10 @@ public class CreateDatabaseAccountRequest extends Request {
         }
 
         /**
-         * DatabaseSchema.
+         * <p>The name of the database. This parameter is required for PostgreSQL and Oracle databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>orcl</p>
          */
         public Builder databaseSchema(String databaseSchema) {
             this.putQueryParameter("DatabaseSchema", databaseSchema);
@@ -168,7 +182,14 @@ public class CreateDatabaseAccountRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the bastion host for which you want to create a database account.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-5yd34ol020a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -177,7 +198,14 @@ public class CreateDatabaseAccountRequest extends Request {
         }
 
         /**
-         * LoginAttribute.
+         * <p>The logon attribute. This parameter is required for Oracle databases. Valid values:</p>
+         * <ul>
+         * <li>SERVICENAME</li>
+         * <li>SID</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SID</p>
          */
         public Builder loginAttribute(String loginAttribute) {
             this.putQueryParameter("LoginAttribute", loginAttribute);
@@ -186,7 +214,10 @@ public class CreateDatabaseAccountRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password of the database account to be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MCQ******</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -195,7 +226,13 @@ public class CreateDatabaseAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host for which you want to create a database account.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

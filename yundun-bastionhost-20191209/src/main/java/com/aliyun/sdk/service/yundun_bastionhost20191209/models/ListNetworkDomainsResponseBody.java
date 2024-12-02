@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNetworkDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>ListNetworkDomainsResponseBody</p>
  */
 public class ListNetworkDomainsResponseBody extends TeaModel {
-    @NameInMap("NetworkDomains")
+    @com.aliyun.core.annotation.NameInMap("NetworkDomains")
     private java.util.List < NetworkDomains> networkDomains;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListNetworkDomainsResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * NetworkDomains.
+         * <p>The network domains that are returned.</p>
          */
         public Builder networkDomains(java.util.List < NetworkDomains> networkDomains) {
             this.networkDomains = networkDomains;
@@ -70,7 +70,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of network domains that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,11 +97,17 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNetworkDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNetworkDomainsResponseBody</p>
+     */
     public static class ProxiesState extends TeaModel {
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("ProxyState")
+        @com.aliyun.core.annotation.NameInMap("ProxyState")
         private String proxyState;
 
         private ProxiesState(Builder builder) {
@@ -130,7 +142,14 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             private String proxyState; 
 
             /**
-             * NodeType.
+             * <p>The node type of the proxy server. Valid values:</p>
+             * <ul>
+             * <li><strong>Master</strong>: primary proxy server.</li>
+             * <li><strong>Slave</strong>: secondary proxy server.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Master</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -138,7 +157,14 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyState.
+             * <p>The status of the proxy server.</p>
+             * <ul>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Unavailable</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder proxyState(String proxyState) {
                 this.proxyState = proxyState;
@@ -152,23 +178,29 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNetworkDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNetworkDomainsResponseBody</p>
+     */
     public static class NetworkDomains extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Default")
+        @com.aliyun.core.annotation.NameInMap("Default")
         private Boolean _default;
 
-        @NameInMap("NetworkDomainId")
+        @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
         private String networkDomainId;
 
-        @NameInMap("NetworkDomainName")
+        @com.aliyun.core.annotation.NameInMap("NetworkDomainName")
         private String networkDomainName;
 
-        @NameInMap("NetworkDomainType")
+        @com.aliyun.core.annotation.NameInMap("NetworkDomainType")
         private String networkDomainType;
 
-        @NameInMap("ProxiesState")
+        @com.aliyun.core.annotation.NameInMap("ProxiesState")
         private java.util.List < ProxiesState> proxiesState;
 
         private NetworkDomains(Builder builder) {
@@ -239,7 +271,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             private java.util.List < ProxiesState> proxiesState; 
 
             /**
-             * Comment.
+             * <p>The remarks of the network domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -247,7 +282,14 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Default.
+             * <p>Indicates whether the network domain is built-in.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder _default(Boolean _default) {
                 this._default = _default;
@@ -255,7 +297,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkDomainId.
+             * <p>The network domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder networkDomainId(String networkDomainId) {
                 this.networkDomainId = networkDomainId;
@@ -263,7 +308,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkDomainName.
+             * <p>The name of the network domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder networkDomainName(String networkDomainName) {
                 this.networkDomainName = networkDomainName;
@@ -271,7 +319,14 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkDomainType.
+             * <p>The connection mode of the network domain. Valid values:</p>
+             * <ul>
+             * <li><strong>Direct</strong></li>
+             * <li><strong>Proxy</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Proxy</p>
              */
             public Builder networkDomainType(String networkDomainType) {
                 this.networkDomainType = networkDomainType;

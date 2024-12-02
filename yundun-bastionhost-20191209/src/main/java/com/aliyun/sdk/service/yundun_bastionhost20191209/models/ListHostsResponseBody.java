@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHostsResponseBody</p>
  */
 public class ListHostsResponseBody extends TeaModel {
-    @NameInMap("Hosts")
+    @com.aliyun.core.annotation.NameInMap("Hosts")
     private java.util.List < Hosts> hosts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListHostsResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListHostsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the hosts returned.
+         * <p>An array that consists of the hosts returned.</p>
          */
         public Builder hosts(java.util.List < Hosts> hosts) {
             this.hosts = hosts;
@@ -70,7 +70,10 @@ public class ListHostsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListHostsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of hosts returned.
+         * <p>The total number of hosts returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,38 +97,44 @@ public class ListHostsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHostsResponseBody</p>
+     */
     public static class Hosts extends TeaModel {
-        @NameInMap("ActiveAddressType")
+        @com.aliyun.core.annotation.NameInMap("ActiveAddressType")
         private String activeAddressType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("HostAccountCount")
+        @com.aliyun.core.annotation.NameInMap("HostAccountCount")
         private Integer hostAccountCount;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("HostPrivateAddress")
+        @com.aliyun.core.annotation.NameInMap("HostPrivateAddress")
         private String hostPrivateAddress;
 
-        @NameInMap("HostPublicAddress")
+        @com.aliyun.core.annotation.NameInMap("HostPublicAddress")
         private String hostPublicAddress;
 
-        @NameInMap("OSType")
+        @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
         private String sourceInstanceId;
 
-        @NameInMap("SourceInstanceState")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceState")
         private String sourceInstanceState;
 
         private Hosts(Builder builder) {
@@ -238,11 +250,14 @@ public class ListHostsResponseBody extends TeaModel {
             private String sourceInstanceState; 
 
             /**
-             * The address type of the host. Valid values:
-             * <p>
+             * <p>The address type of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong>: a public address</li>
+             * <li><strong>Private</strong>: a private address</li>
+             * </ul>
              * 
-             * *   **Public**: a public address
-             * *   **Private**: a private address
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -250,7 +265,10 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the host.
+             * <p>The description of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -258,7 +276,10 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of host accounts.
+             * <p>The number of host accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostAccountCount(Integer hostAccountCount) {
                 this.hostAccountCount = hostAccountCount;
@@ -266,7 +287,10 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -274,7 +298,10 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host.
+             * <p>The name of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -282,7 +309,10 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The private address of the host. The value is a domain name or an IP address.
+             * <p>The private address of the host. The value is a domain name or an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder hostPrivateAddress(String hostPrivateAddress) {
                 this.hostPrivateAddress = hostPrivateAddress;
@@ -290,7 +320,10 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The public address of the host. The value is a domain name or an IP address.
+             * <p>The public address of the host. The value is a domain name or an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
              */
             public Builder hostPublicAddress(String hostPublicAddress) {
                 this.hostPublicAddress = hostPublicAddress;
@@ -298,11 +331,14 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system of the host. Valid values:
-             * <p>
+             * <p>The operating system of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>Linux</strong></li>
+             * <li><strong>Windows</strong></li>
+             * </ul>
              * 
-             * *   **Linux**
-             * *   **Windows**
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -310,12 +346,15 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the host. Valid values:
-             * <p>
+             * <p>The source of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>Local</strong>: a host in a data center</li>
+             * <li><strong>Ecs</strong>: an ECS instance</li>
+             * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+             * </ul>
              * 
-             * *   **Local**: a host in a data center
-             * *   **Ecs**: an ECS instance
-             * *   **Rds**: a host in an ApsaraDB MyBase dedicated cluster
+             * <strong>example:</strong>
+             * <p>Local</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -323,10 +362,13 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.
-             * <p>
+             * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</p>
+             * <blockquote>
+             * <p>No value is returned for this parameter if the <strong>Source</strong> parameter is set to <strong>Local</strong>.</p>
+             * </blockquote>
              * 
-             * > No value is returned for this parameter if the **Source** parameter is set to **Local**.
+             * <strong>example:</strong>
+             * <p>i-bp19ienyt0yax748****</p>
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -334,11 +376,14 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the host. Valid values:
-             * <p>
+             * <p>The status of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: normal</li>
+             * <li><strong>Release</strong>: released</li>
+             * </ul>
              * 
-             * *   **Normal**: normal
-             * *   **Release**: released
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder sourceInstanceState(String sourceInstanceState) {
                 this.sourceInstanceState = sourceInstanceState;

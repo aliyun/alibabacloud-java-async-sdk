@@ -1,60 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyInstanceLDAPAuthServerRequest} extends {@link RequestModel}
  *
  * <p>VerifyInstanceLDAPAuthServerRequest</p>
  */
 public class VerifyInstanceLDAPAuthServerRequest extends Request {
-    @Query
-    @NameInMap("Account")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Account")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String account;
 
-    @Query
-    @NameInMap("BaseDN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseDN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String baseDN;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IsSSL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSSL")
     private String isSSL;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String port;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Server")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Server")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String server;
 
-    @Query
-    @NameInMap("StandbyServer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyServer")
     private String standbyServer;
 
     private VerifyInstanceLDAPAuthServerRequest(Builder builder) {
@@ -185,7 +185,10 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         } 
 
         /**
-         * Account.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn=Manager,dc=test,dc=com</p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -194,7 +197,10 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * BaseDN.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc=test,dc=com</p>
          */
         public Builder baseDN(String baseDN) {
             this.putQueryParameter("BaseDN", baseDN);
@@ -212,7 +218,10 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -239,7 +248,10 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>389</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -257,7 +269,10 @@ public class VerifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * Server.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder server(String server) {
             this.putQueryParameter("Server", server);

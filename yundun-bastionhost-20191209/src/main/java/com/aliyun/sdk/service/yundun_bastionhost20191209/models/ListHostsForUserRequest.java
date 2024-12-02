@@ -1,53 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostsForUserRequest} extends {@link RequestModel}
  *
  * <p>ListHostsForUserRequest</p>
  */
 public class ListHostsForUserRequest extends Request {
-    @Query
-    @NameInMap("HostAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostAddress")
     private String hostAddress;
 
-    @Query
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("OSType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSType")
     private String OSType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private ListHostsForUserRequest(Builder builder) {
@@ -168,7 +168,10 @@ public class ListHostsForUserRequest extends Request {
         } 
 
         /**
-         * The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.
+         * <p>The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder hostAddress(String hostAddress) {
             this.putQueryParameter("HostAddress", hostAddress);
@@ -177,7 +180,10 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The name of the host that you want to query. Only exact match is supported.
+         * <p>The name of the host that you want to query. Only exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -186,10 +192,14 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.
-         * <p>
+         * <p>The ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -198,11 +208,14 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * Specifies the category of the hosts that you want to query. Valid values:
-         * <p>
+         * <p>Specifies the category of the hosts that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>Authorized</strong>: queries the hosts that the user is authorized to manage. This is the default value.</li>
+         * <li><strong>Unauthorized</strong>: queries the hosts that the user is not authorized to manage.</li>
+         * </ul>
          * 
-         * *   **Authorized**: queries the hosts that the user is authorized to manage. This is the default value.
-         * *   **Unauthorized**: queries the hosts that the user is not authorized to manage.
+         * <strong>example:</strong>
+         * <p>Authorized</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -211,11 +224,14 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The operating system of the host that you want to query. Valid values:
-         * <p>
+         * <p>The operating system of the host that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>Linux</strong></li>
+         * <li><strong>Windows</strong></li>
+         * </ul>
          * 
-         * *   **Linux**
-         * *   **Windows**
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -224,7 +240,10 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The number of the page. Default value: 1.
+         * <p>The number of the page. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -233,11 +252,13 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The number of entries per page.\
-         * <p>
-         * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.
+         * <p>The number of entries per page.<br>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -246,10 +267,13 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.
-         * <p>
+         * <p>The region ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -258,10 +282,14 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The ID of the user.
-         * <p>
+         * <p>The ID of the user.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPolicyCommandConfigRequest} extends {@link RequestModel}
  *
  * <p>SetPolicyCommandConfigRequest</p>
  */
 public class SetPolicyCommandConfigRequest extends Request {
-    @Query
-    @NameInMap("CommandConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private CommandConfig commandConfig;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private SetPolicyCommandConfigRequest(Builder builder) {
@@ -99,7 +99,11 @@ public class SetPolicyCommandConfigRequest extends Request {
         } 
 
         /**
-         * CommandConfig.
+         * <p>The command control settings.</p>
+         * <blockquote>
+         * <p>This parameter applies only to Linux hosts.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
         public Builder commandConfig(CommandConfig commandConfig) {
             String commandConfigShrink = shrink(commandConfig, "CommandConfig", "json");
@@ -109,7 +113,14 @@ public class SetPolicyCommandConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The bastion host ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-78v1ghxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -118,7 +129,14 @@ public class SetPolicyCommandConfigRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The ID of the control policy that you want to modify.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -127,7 +145,13 @@ public class SetPolicyCommandConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,8 +166,14 @@ public class SetPolicyCommandConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetPolicyCommandConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetPolicyCommandConfigRequest</p>
+     */
     public static class Approval extends TeaModel {
-        @NameInMap("Commands")
+        @com.aliyun.core.annotation.NameInMap("Commands")
         private java.util.List < String > commands;
 
         private Approval(Builder builder) {
@@ -169,7 +199,7 @@ public class SetPolicyCommandConfigRequest extends Request {
             private java.util.List < String > commands; 
 
             /**
-             * Commands.
+             * <p>The commands that can be run only after approval.</p>
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -183,12 +213,18 @@ public class SetPolicyCommandConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetPolicyCommandConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetPolicyCommandConfigRequest</p>
+     */
     public static class Deny extends TeaModel {
-        @NameInMap("AclType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AclType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String aclType;
 
-        @NameInMap("Commands")
+        @com.aliyun.core.annotation.NameInMap("Commands")
         private java.util.List < String > commands;
 
         private Deny(Builder builder) {
@@ -223,7 +259,15 @@ public class SetPolicyCommandConfigRequest extends Request {
             private java.util.List < String > commands; 
 
             /**
-             * AclType.
+             * <p>The type of command control. Valid values:</p>
+             * <ul>
+             * <li><strong>black</strong>: blacklist mode.</li>
+             * <li><strong>white</strong>: whitelist mode.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -231,7 +275,10 @@ public class SetPolicyCommandConfigRequest extends Request {
             }
 
             /**
-             * Commands.
+             * <p>The commands to be controlled.</p>
+             * <blockquote>
+             * <p>This parameter is required if AclType is set to white.</p>
+             * </blockquote>
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -245,12 +292,18 @@ public class SetPolicyCommandConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetPolicyCommandConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetPolicyCommandConfigRequest</p>
+     */
     public static class CommandConfig extends TeaModel {
-        @NameInMap("Approval")
+        @com.aliyun.core.annotation.NameInMap("Approval")
         private Approval approval;
 
-        @NameInMap("Deny")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Deny")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Deny deny;
 
         private CommandConfig(Builder builder) {
@@ -285,7 +338,10 @@ public class SetPolicyCommandConfigRequest extends Request {
             private Deny deny; 
 
             /**
-             * Approval.
+             * <p>The command approval settings.</p>
+             * <blockquote>
+             * <p>A command approval policy is used to approve the commands that are excluded from a whitelist or blacklist specified in a command control policy. The command control policy takes precedence over the command approval policy in validation.</p>
+             * </blockquote>
              */
             public Builder approval(Approval approval) {
                 this.approval = approval;
@@ -293,7 +349,8 @@ public class SetPolicyCommandConfigRequest extends Request {
             }
 
             /**
-             * Deny.
+             * <p>The command control settings.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder deny(Deny deny) {
                 this.deny = deny;

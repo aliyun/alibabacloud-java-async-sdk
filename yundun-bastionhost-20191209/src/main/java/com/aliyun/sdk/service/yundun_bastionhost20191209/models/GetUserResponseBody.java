@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserResponseBody</p>
  */
 public class GetUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private User user;
 
     private GetUserResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the user that was queried.
+         * <p>The detailed information about the queried user.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -71,56 +74,62 @@ public class GetUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("EffectiveEndTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveEndTime")
         private Long effectiveEndTime;
 
-        @NameInMap("EffectiveStartTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveStartTime")
         private Long effectiveStartTime;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("LanguageStatus")
+        @com.aliyun.core.annotation.NameInMap("LanguageStatus")
         private String languageStatus;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("MobileCountryCode")
+        @com.aliyun.core.annotation.NameInMap("MobileCountryCode")
         private String mobileCountryCode;
 
-        @NameInMap("NeedResetPassword")
+        @com.aliyun.core.annotation.NameInMap("NeedResetPassword")
         private Boolean needResetPassword;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceUserId")
+        @com.aliyun.core.annotation.NameInMap("SourceUserId")
         private String sourceUserId;
 
-        @NameInMap("TwoFactorMethods")
+        @com.aliyun.core.annotation.NameInMap("TwoFactorMethods")
         private java.util.List < String > twoFactorMethods;
 
-        @NameInMap("TwoFactorStatus")
+        @com.aliyun.core.annotation.NameInMap("TwoFactorStatus")
         private String twoFactorStatus;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("UserState")
+        @com.aliyun.core.annotation.NameInMap("UserState")
         private java.util.List < String > userState;
 
         private User(Builder builder) {
@@ -290,7 +299,10 @@ public class GetUserResponseBody extends TeaModel {
             private java.util.List < String > userState; 
 
             /**
-             * The description of the user.
+             * <p>The description of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -298,7 +310,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the user.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bob</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -306,7 +321,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672502400</p>
              */
             public Builder effectiveEndTime(Long effectiveEndTime) {
                 this.effectiveEndTime = effectiveEndTime;
@@ -314,7 +332,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669630029</p>
              */
             public Builder effectiveStartTime(Long effectiveStartTime) {
                 this.effectiveStartTime = effectiveStartTime;
@@ -322,7 +343,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1099**@qq.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -330,7 +354,14 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>This parameter is required if LanguageStatus is set to Custom.</p>
+             * <ul>
+             * <li><strong>zh-cn</strong>: simplified Chinese.</li>
+             * <li><strong>en</strong>: English.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -338,7 +369,14 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * LanguageStatus.
+             * <p>Indicates whether notifications are sent in the language specified in the global settings or a custom language.</p>
+             * <ul>
+             * <li><strong>Global</strong>: Global</li>
+             * <li><strong>Custom</strong>: Custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder languageStatus(String languageStatus) {
                 this.languageStatus = languageStatus;
@@ -346,7 +384,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile phone number of the user.
+             * <p>The mobile phone number of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1359999****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -354,28 +395,31 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The location in which the mobile number of the user is registered. Valid values:
-             * <p>
+             * <p>The location in which the mobile number of the user is registered. Valid values:</p>
+             * <ul>
+             * <li><strong>CN</strong>: the Chinese mainland, whose country calling code is +86</li>
+             * <li><strong>HK</strong>: Hong Kong (China), whose country calling code is +852</li>
+             * <li><strong>MO</strong>: Macao (China), whose country calling code is +853</li>
+             * <li><strong>TW</strong>: Taiwan (China), whose country calling code is +886</li>
+             * <li><strong>RU</strong>: Russia, whose country calling code is +7</li>
+             * <li><strong>SG</strong>: Singapore, whose country calling code is +65</li>
+             * <li><strong>MY</strong>: Malaysia, whose country calling code is +60</li>
+             * <li><strong>ID</strong>: Indonesia, whose country calling code is +62</li>
+             * <li><strong>DE</strong>: Germany, whose country calling code is +49</li>
+             * <li><strong>AU</strong>: Australia, whose country calling code is +61</li>
+             * <li><strong>US</strong>: US, whose country calling code is +1</li>
+             * <li><strong>AE</strong>: United Arab Emirates, whose country calling code is +971</li>
+             * <li><strong>JP:</strong> Japan, whose country calling code is +81</li>
+             * <li><strong>GB</strong>: UK, whose country calling code is +44</li>
+             * <li><strong>IN</strong>: India, whose country calling code is +91</li>
+             * <li><strong>KR</strong>: Republic of Korea, whose country calling code is +82</li>
+             * <li><strong>PH</strong>: Philippines, whose country calling code is +63</li>
+             * <li><strong>CH</strong>: Switzerland, whose country calling code is +41</li>
+             * <li><strong>SE</strong>: Sweden, whose country calling code is +46</li>
+             * </ul>
              * 
-             * *   **CN**: the Chinese mainland, whose country calling code is +86
-             * *   **HK**: Hong Kong (China), whose country calling code is +852
-             * *   **MO**: Macao (China), whose country calling code is +853
-             * *   **TW**: Taiwan (China), whose country calling code is +886
-             * *   **RU**: Russia, whose country calling code is +7
-             * *   **SG**: Singapore, whose country calling code is +65
-             * *   **MY**: Malaysia, whose country calling code is +60
-             * *   **ID**: Indonesia, whose country calling code is +62
-             * *   **DE**: Germany, whose country calling code is +49
-             * *   **AU**: Australia, whose country calling code is +61
-             * *   **US**: US, whose country calling code is +1
-             * *   **AE**: United Arab Emirates, whose country calling code is +971
-             * *   **JP:** Japan, whose country calling code is +81
-             * *   **GB**: UK, whose country calling code is +44
-             * *   **IN**: India, whose country calling code is +91
-             * *   **KR**: Republic of Korea, whose country calling code is +82
-             * *   **PH**: Philippines, whose country calling code is +63
-             * *   **CH**: Switzerland, whose country calling code is +41
-             * *   **SE**: Sweden, whose country calling code is +46
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -383,11 +427,14 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether password reset is required upon the next logon. Valid values:
-             * <p>
+             * <p>Specifies whether password reset is required upon the next logon. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needResetPassword(Boolean needResetPassword) {
                 this.needResetPassword = needResetPassword;
@@ -395,11 +442,14 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the user. Valid values:
-             * <p>
+             * <p>The source of the user. Valid values:</p>
+             * <ul>
+             * <li><strong>Local</strong>: a local user</li>
+             * <li><strong>Ram</strong>: a RAM user</li>
+             * </ul>
              * 
-             * *   **Local**: a local user
-             * *   **Ram**: a RAM user
+             * <strong>example:</strong>
+             * <p>Local</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -407,10 +457,13 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the user.
-             * <p>
+             * <p>The unique ID of the user.</p>
+             * <blockquote>
+             * <p>This parameter uniquely identifies a RAM user of the bastion host. A value is returned for this parameter if the <strong>Source</strong> parameter is set to <strong>Ram</strong>. No value is returned for this parameter if the <strong>Source</strong> parameter is set to <strong>Local</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter uniquely identifies a RAM user of the bastion host. A value is returned for this parameter if the **Source** parameter is set to **Ram**. No value is returned for this parameter if the **Source** parameter is set to **Local**.
+             * <strong>example:</strong>
+             * <p>122748924538****</p>
              */
             public Builder sourceUserId(String sourceUserId) {
                 this.sourceUserId = sourceUserId;
@@ -418,7 +471,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the details of the two-factor authentication method.
+             * <p>An array that consists of the details of the two-factor authentication method.</p>
              */
             public Builder twoFactorMethods(java.util.List < String > twoFactorMethods) {
                 this.twoFactorMethods = twoFactorMethods;
@@ -426,12 +479,15 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The two-factor authentication status of the user. Valid values:
-             * <p>
+             * <p>The two-factor authentication status of the user. Valid values:</p>
+             * <ul>
+             * <li><strong>Global</strong>: The global settings are used.</li>
+             * <li><strong>Disable</strong>: The two-factor authentication is disabled.</li>
+             * <li><strong>Enable</strong>: The two-factor authentication is enabled and the user-specific setting is used.</li>
+             * </ul>
              * 
-             * *   **Global**: The global settings are used.
-             * *   **Disable**: The two-factor authentication is disabled.
-             * *   **Enable**: The two-factor authentication is enabled and the user-specific setting is used.
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder twoFactorStatus(String twoFactorStatus) {
                 this.twoFactorStatus = twoFactorStatus;
@@ -439,7 +495,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -447,7 +506,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The logon name of the user.
+             * <p>The logon name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcabc_def</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -455,7 +517,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the details of the user status.
+             * <p>An array that consists of the details of the user status.</p>
              */
             public Builder userState(java.util.List < String > userState) {
                 this.userState = userState;

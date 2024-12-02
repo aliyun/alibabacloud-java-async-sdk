@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserGroupResponseBody</p>
  */
 public class GetUserGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserGroup")
+    @com.aliyun.core.annotation.NameInMap("UserGroup")
     private UserGroup userGroup;
 
     private GetUserGroupResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetUserGroupResponseBody extends TeaModel {
         private UserGroup userGroup; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the user group returned.
+         * <p>The details of the user group returned.</p>
          */
         public Builder userGroup(UserGroup userGroup) {
             this.userGroup = userGroup;
@@ -71,14 +74,20 @@ public class GetUserGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserGroupResponseBody</p>
+     */
     public static class UserGroup extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
-        @NameInMap("UserGroupName")
+        @com.aliyun.core.annotation.NameInMap("UserGroupName")
         private String userGroupName;
 
         private UserGroup(Builder builder) {
@@ -122,7 +131,10 @@ public class GetUserGroupResponseBody extends TeaModel {
             private String userGroupName; 
 
             /**
-             * The description of the user group.
+             * <p>The description of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -130,7 +142,10 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -138,7 +153,10 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user group.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserGroup01</p>
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;

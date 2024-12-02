@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableInstancePublicAccessResponseBody} extends {@link TeaModel}
  *
  * <p>DisableInstancePublicAccessResponseBody</p>
  */
 public class DisableInstancePublicAccessResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DisableInstancePublicAccessResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DisableInstancePublicAccessResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the bastion host whose Internet access is disabled.
+         * <p>The ID of the bastion host whose Internet access is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-78v1gh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -58,7 +61,10 @@ public class DisableInstancePublicAccessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76FAAF15-D3A3-4099-9941-FC408D9FDB4C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

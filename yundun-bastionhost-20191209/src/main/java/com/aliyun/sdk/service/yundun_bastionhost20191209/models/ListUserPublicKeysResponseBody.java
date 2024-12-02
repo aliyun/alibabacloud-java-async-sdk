@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserPublicKeysResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserPublicKeysResponseBody</p>
  */
 public class ListUserPublicKeysResponseBody extends TeaModel {
-    @NameInMap("PublicKeys")
+    @com.aliyun.core.annotation.NameInMap("PublicKeys")
     private java.util.List < PublicKeys> publicKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListUserPublicKeysResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * An array that consists of the public keys of the user.
+         * <p>An array that consists of the public keys of the user.</p>
          */
         public Builder publicKeys(java.util.List < PublicKeys> publicKeys) {
             this.publicKeys = publicKeys;
@@ -70,7 +70,10 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of public keys.
+         * <p>The total number of public keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,20 +97,26 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserPublicKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserPublicKeysResponseBody</p>
+     */
     public static class PublicKeys extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("FingerPrint")
+        @com.aliyun.core.annotation.NameInMap("FingerPrint")
         private String fingerPrint;
 
-        @NameInMap("PublicKeyId")
+        @com.aliyun.core.annotation.NameInMap("PublicKeyId")
         private String publicKeyId;
 
-        @NameInMap("PublicKeyName")
+        @com.aliyun.core.annotation.NameInMap("PublicKeyName")
         private String publicKeyName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private PublicKeys(Builder builder) {
@@ -166,7 +178,10 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The description of the public key.
+             * <p>The description of the public key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -174,7 +189,10 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The fingerprint of the public key.
+             * <p>The fingerprint of the public key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d8:7d:b6:27:70:2d:07:fb:c6:b6:66:0a:86:7b:0f:9a</p>
              */
             public Builder fingerPrint(String fingerPrint) {
                 this.fingerPrint = fingerPrint;
@@ -182,7 +200,10 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the public key.
+             * <p>The ID of the public key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder publicKeyId(String publicKeyId) {
                 this.publicKeyId = publicKeyId;
@@ -190,7 +211,10 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the public key.
+             * <p>The name of the public key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Keyname</p>
              */
             public Builder publicKeyName(String publicKeyName) {
                 this.publicKeyName = publicKeyName;
@@ -198,7 +222,10 @@ public class ListUserPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user to which the public key belongs.
+             * <p>The ID of the user to which the public key belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

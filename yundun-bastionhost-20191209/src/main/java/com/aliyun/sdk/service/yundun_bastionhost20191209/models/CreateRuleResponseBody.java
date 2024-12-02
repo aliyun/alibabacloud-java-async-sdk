@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRuleResponseBody</p>
  */
 public class CreateRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
     private CreateRuleResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateRuleResponseBody extends TeaModel {
         private String ruleId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFA818E3-0A53-51F4-8DB5-AF2A62A6D042</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class CreateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleId.
+         * <p>The authorization rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;

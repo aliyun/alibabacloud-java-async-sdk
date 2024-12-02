@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostAccountsForUserRequest} extends {@link RequestModel}
  *
  * <p>ListHostAccountsForUserRequest</p>
  */
 public class ListHostAccountsForUserRequest extends Request {
-    @Query
-    @NameInMap("HostAccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostAccountName")
     private String hostAccountName;
 
-    @Query
-    @NameInMap("HostId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private ListHostAccountsForUserRequest(Builder builder) {
@@ -141,7 +141,10 @@ public class ListHostAccountsForUserRequest extends Request {
         } 
 
         /**
-         * The name of the host account that you want to query. Exact match is supported.
+         * <p>The name of the host account that you want to query. Exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder hostAccountName(String hostAccountName) {
             this.putQueryParameter("HostAccountName", hostAccountName);
@@ -150,10 +153,14 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The ID of the host to query.
-         * <p>
+         * <p>The ID of the host to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hostId(String hostId) {
             this.putQueryParameter("HostId", hostId);
@@ -162,10 +169,14 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.
-         * <p>
+         * <p>The ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,7 +185,10 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -183,11 +197,13 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.\
-         * <p>
-         * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>The number of entries to return on each page.<br>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,10 +212,13 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.
-         * <p>
+         * <p>The region ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,10 +227,14 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The ID of the user for which you want to query authorized host accounts.
-         * <p>
+         * <p>The ID of the user for which you want to query authorized host accounts.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

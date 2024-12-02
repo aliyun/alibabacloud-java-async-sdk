@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPolicyAssetScopeResponseBody} extends {@link TeaModel}
  *
  * <p>GetPolicyAssetScopeResponseBody</p>
  */
 public class GetPolicyAssetScopeResponseBody extends TeaModel {
-    @NameInMap("AssetScope")
+    @com.aliyun.core.annotation.NameInMap("AssetScope")
     private AssetScope assetScope;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPolicyAssetScopeResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AssetScope.
+         * <p>The assets to which the control policy applies.</p>
          */
         public Builder assetScope(AssetScope assetScope) {
             this.assetScope = assetScope;
@@ -58,7 +58,10 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPolicyAssetScopeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyAssetScopeResponseBody</p>
+     */
     public static class Databases extends TeaModel {
-        @NameInMap("AccountScopeType")
+        @com.aliyun.core.annotation.NameInMap("AccountScopeType")
         private String accountScopeType;
 
-        @NameInMap("DatabaseAccountIds")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountIds")
         private java.util.List < String > databaseAccountIds;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
         private Databases(Builder builder) {
@@ -122,7 +131,14 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             private String databaseId; 
 
             /**
-             * AccountScopeType.
+             * <p>The scope of database accounts to which the control policy applies. Valid values:</p>
+             * <ul>
+             * <li><strong>All</strong>: The control policy applies to all database accounts of the database.</li>
+             * <li><strong>AccountId</strong>: The control policy applies to specified database accounts of the database.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AccountId</p>
              */
             public Builder accountScopeType(String accountScopeType) {
                 this.accountScopeType = accountScopeType;
@@ -130,7 +146,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseAccountIds.
+             * <p>The IDs of database accounts to which the control policy applies.</p>
              */
             public Builder databaseAccountIds(java.util.List < String > databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
@@ -138,7 +154,10 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -152,14 +171,20 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyAssetScopeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyAssetScopeResponseBody</p>
+     */
     public static class HostGroups extends TeaModel {
-        @NameInMap("AccountNames")
+        @com.aliyun.core.annotation.NameInMap("AccountNames")
         private java.util.List < String > accountNames;
 
-        @NameInMap("AccountScopeType")
+        @com.aliyun.core.annotation.NameInMap("AccountScopeType")
         private String accountScopeType;
 
-        @NameInMap("HostGroupId")
+        @com.aliyun.core.annotation.NameInMap("HostGroupId")
         private String hostGroupId;
 
         private HostGroups(Builder builder) {
@@ -203,7 +228,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             private String hostGroupId; 
 
             /**
-             * AccountNames.
+             * <p>The asset accounts to which the control policy applies.</p>
              */
             public Builder accountNames(java.util.List < String > accountNames) {
                 this.accountNames = accountNames;
@@ -211,7 +236,14 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             }
 
             /**
-             * AccountScopeType.
+             * <p>The scope of asset accounts to which the control policy applies. Valid values:</p>
+             * <ul>
+             * <li><strong>All</strong>: The control policy applies to all accounts in the asset group.</li>
+             * <li><strong>AccountName</strong>: The control policy applies to specified accounts in the asset group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder accountScopeType(String accountScopeType) {
                 this.accountScopeType = accountScopeType;
@@ -219,7 +251,10 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             }
 
             /**
-             * HostGroupId.
+             * <p>The asset group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -233,14 +268,20 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyAssetScopeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyAssetScopeResponseBody</p>
+     */
     public static class Hosts extends TeaModel {
-        @NameInMap("AccountScopeType")
+        @com.aliyun.core.annotation.NameInMap("AccountScopeType")
         private String accountScopeType;
 
-        @NameInMap("HostAccountIds")
+        @com.aliyun.core.annotation.NameInMap("HostAccountIds")
         private java.util.List < String > hostAccountIds;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
         private Hosts(Builder builder) {
@@ -284,7 +325,14 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             private String hostId; 
 
             /**
-             * AccountScopeType.
+             * <p>The scope of host accounts to which the control policy applies. Valid values:</p>
+             * <ul>
+             * <li><strong>All</strong>: The control policy applies to all accounts of the host.</li>
+             * <li><strong>AccountId</strong>: The control policy applies to specified accounts of the host.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder accountScopeType(String accountScopeType) {
                 this.accountScopeType = accountScopeType;
@@ -292,7 +340,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             }
 
             /**
-             * HostAccountIds.
+             * <p>The host accounts to which the control policy applies.</p>
              */
             public Builder hostAccountIds(java.util.List < String > hostAccountIds) {
                 this.hostAccountIds = hostAccountIds;
@@ -300,7 +348,10 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * <p>The host ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -314,17 +365,23 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyAssetScopeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyAssetScopeResponseBody</p>
+     */
     public static class AssetScope extends TeaModel {
-        @NameInMap("Databases")
+        @com.aliyun.core.annotation.NameInMap("Databases")
         private java.util.List < Databases> databases;
 
-        @NameInMap("HostGroups")
+        @com.aliyun.core.annotation.NameInMap("HostGroups")
         private java.util.List < HostGroups> hostGroups;
 
-        @NameInMap("Hosts")
+        @com.aliyun.core.annotation.NameInMap("Hosts")
         private java.util.List < Hosts> hosts;
 
-        @NameInMap("ScopeType")
+        @com.aliyun.core.annotation.NameInMap("ScopeType")
         private String scopeType;
 
         private AssetScope(Builder builder) {
@@ -377,7 +434,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             private String scopeType; 
 
             /**
-             * Databases.
+             * <p>The databases and database accounts to which the control policy applies.</p>
              */
             public Builder databases(java.util.List < Databases> databases) {
                 this.databases = databases;
@@ -385,7 +442,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             }
 
             /**
-             * HostGroups.
+             * <p>The asset groups and asset accounts to which the control policy applies.</p>
              */
             public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
                 this.hostGroups = hostGroups;
@@ -393,7 +450,7 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             }
 
             /**
-             * Hosts.
+             * <p>The hosts and host accounts to which the control policy applies.</p>
              */
             public Builder hosts(java.util.List < Hosts> hosts) {
                 this.hosts = hosts;
@@ -401,7 +458,16 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
             }
 
             /**
-             * ScopeType.
+             * <p>The scope of assets to which the control policy applies.</p>
+             * <ul>
+             * <li><p>If <strong>All</strong> is returned for this parameter, the control policy applies to all assets.</p>
+             * </li>
+             * <li><p>If no value is returned for this parameter, the control policy applies to the assets specified in the return values of Databases, HostGroups, and Hosts.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder scopeType(String scopeType) {
                 this.scopeType = scopeType;

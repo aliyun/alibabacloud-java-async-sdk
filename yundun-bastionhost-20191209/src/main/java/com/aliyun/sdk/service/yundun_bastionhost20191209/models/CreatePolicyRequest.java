@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePolicyRequest} extends {@link RequestModel}
  *
  * <p>CreatePolicyRequest</p>
  */
 public class CreatePolicyRequest extends Request {
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PolicyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyName;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private String priority;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private CreatePolicyRequest(Builder builder) {
@@ -112,7 +112,10 @@ public class CreatePolicyRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>The remarks of the control policy. The remarks can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -121,7 +124,14 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the bastion host for which you want to create a control policy.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-20p364c1w0g</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +140,11 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * <p>The name of the control policy. The name can be up to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policytest</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -139,7 +153,14 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the control policy.</p>
+         * <ul>
+         * <li>Valid values: 1 to 100. The default value is 1, which indicates the highest priority.</li>
+         * <li>You can configure the same priority for different control policies. If multiple control policies have the same priority, the control policy that is created at the latest point in time has the highest priority. If a command control policy and a command approval policy contain the same commands, the commands are prioritized in descending order: reject, allow, and approve. In access control policies, a blacklist has a higher priority than a whitelist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -148,7 +169,13 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host for which you want to create a control policy.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

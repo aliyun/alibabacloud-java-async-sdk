@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPolicyAccessTimeRangeConfigRequest} extends {@link RequestModel}
  *
  * <p>SetPolicyAccessTimeRangeConfigRequest</p>
  */
 public class SetPolicyAccessTimeRangeConfigRequest extends Request {
-    @Query
-    @NameInMap("AccessTimeRangeConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessTimeRangeConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private AccessTimeRangeConfig accessTimeRangeConfig;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private SetPolicyAccessTimeRangeConfigRequest(Builder builder) {
@@ -99,7 +99,8 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
         } 
 
         /**
-         * AccessTimeRangeConfig.
+         * <p>The logon period limits.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder accessTimeRangeConfig(AccessTimeRangeConfig accessTimeRangeConfig) {
             String accessTimeRangeConfigShrink = shrink(accessTimeRangeConfig, "AccessTimeRangeConfig", "json");
@@ -109,7 +110,14 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The bastion host ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -118,7 +126,14 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The control policy ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -127,7 +142,13 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,11 +163,17 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetPolicyAccessTimeRangeConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetPolicyAccessTimeRangeConfigRequest</p>
+     */
     public static class EffectiveTime extends TeaModel {
-        @NameInMap("Days")
+        @com.aliyun.core.annotation.NameInMap("Days")
         private java.util.List < Integer > days;
 
-        @NameInMap("Hours")
+        @com.aliyun.core.annotation.NameInMap("Hours")
         private java.util.List < Integer > hours;
 
         private EffectiveTime(Builder builder) {
@@ -181,7 +208,7 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
             private java.util.List < Integer > hours; 
 
             /**
-             * Days.
+             * <p>The days of the week during which users can log on to the assets.</p>
              */
             public Builder days(java.util.List < Integer > days) {
                 this.days = days;
@@ -189,7 +216,7 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
             }
 
             /**
-             * Hours.
+             * <p>The time periods of the day during which users can log on to the assets.</p>
              */
             public Builder hours(java.util.List < Integer > hours) {
                 this.hours = hours;
@@ -203,8 +230,14 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetPolicyAccessTimeRangeConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetPolicyAccessTimeRangeConfigRequest</p>
+     */
     public static class AccessTimeRangeConfig extends TeaModel {
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private java.util.List < EffectiveTime> effectiveTime;
 
         private AccessTimeRangeConfig(Builder builder) {
@@ -230,7 +263,7 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
             private java.util.List < EffectiveTime> effectiveTime; 
 
             /**
-             * EffectiveTime.
+             * <p>The details about the periods during which users can log on to the assets.</p>
              */
             public Builder effectiveTime(java.util.List < EffectiveTime> effectiveTime) {
                 this.effectiveTime = effectiveTime;

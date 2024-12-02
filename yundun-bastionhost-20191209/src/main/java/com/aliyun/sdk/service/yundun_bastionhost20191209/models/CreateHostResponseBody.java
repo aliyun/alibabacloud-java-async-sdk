@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHostResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHostResponseBody</p>
  */
 public class CreateHostResponseBody extends TeaModel {
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateHostResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateHostResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the host.
+         * <p>The ID of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hostId(String hostId) {
             this.hostId = hostId;
@@ -58,7 +61,10 @@ public class CreateHostResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

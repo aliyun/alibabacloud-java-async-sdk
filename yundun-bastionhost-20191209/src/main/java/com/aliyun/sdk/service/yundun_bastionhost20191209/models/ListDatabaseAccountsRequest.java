@@ -1,40 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatabaseAccountsRequest} extends {@link RequestModel}
  *
  * <p>ListDatabaseAccountsRequest</p>
  */
 public class ListDatabaseAccountsRequest extends Request {
-    @Query
-    @NameInMap("DatabaseAccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseAccountName")
     private String databaseAccountName;
 
-    @Query
-    @NameInMap("DatabaseId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseId")
     private String databaseId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ListDatabaseAccountsRequest(Builder builder) {
@@ -125,7 +125,10 @@ public class ListDatabaseAccountsRequest extends Request {
         } 
 
         /**
-         * DatabaseAccountName.
+         * <p>The name of the database account to query. The name can be up to 128 characters in length. Only exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder databaseAccountName(String databaseAccountName) {
             this.putQueryParameter("DatabaseAccountName", databaseAccountName);
@@ -134,7 +137,13 @@ public class ListDatabaseAccountsRequest extends Request {
         }
 
         /**
-         * DatabaseId.
+         * <p>The ID of the database whose database accounts you want to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758822.html">ListDatabases</a> operation to query the database ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder databaseId(String databaseId) {
             this.putQueryParameter("DatabaseId", databaseId);
@@ -143,7 +152,14 @@ public class ListDatabaseAccountsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The bastion host ID.</p>
+         * <blockquote>
+         * <p>You can call the DescribeInstances operation to query the bastion host ID.<a href="~~153281~~"></a></p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-7mz2za0ro06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -152,7 +168,10 @@ public class ListDatabaseAccountsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,7 +180,13 @@ public class ListDatabaseAccountsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.<br>Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,7 +195,13 @@ public class ListDatabaseAccountsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

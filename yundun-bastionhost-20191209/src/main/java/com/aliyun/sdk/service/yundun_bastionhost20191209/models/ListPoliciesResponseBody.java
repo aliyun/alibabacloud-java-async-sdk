@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPoliciesResponseBody</p>
  */
 public class ListPoliciesResponseBody extends TeaModel {
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private java.util.List < Policies> policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListPoliciesResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Policies.
+         * <p>The control policies.</p>
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -70,7 +70,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of control policies that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,17 +97,23 @@ public class ListPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPoliciesResponseBody</p>
+     */
     public static class Policies extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Long priority;
 
         private Policies(Builder builder) {
@@ -154,7 +166,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             private Long priority; 
 
             /**
-             * Comment.
+             * <p>The remarks of the control policy.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -162,7 +174,10 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The control policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -170,7 +185,10 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * <p>The name of the control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -178,7 +196,10 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the control policy. A smaller value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;

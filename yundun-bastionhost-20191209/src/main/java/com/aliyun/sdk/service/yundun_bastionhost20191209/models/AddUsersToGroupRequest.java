@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUsersToGroupRequest} extends {@link RequestModel}
  *
  * <p>AddUsersToGroupRequest</p>
  */
 public class AddUsersToGroupRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
-    @Query
-    @NameInMap("UserIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userIds;
 
     private AddUsersToGroupRequest(Builder builder) {
@@ -99,10 +99,14 @@ public class AddUsersToGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the bastion host for which you want to add users to the user group.
-         * <p>
+         * <p>The ID of the bastion host for which you want to add users to the user group.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -111,10 +115,13 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host for which you want to add users to the user group.
-         * <p>
+         * <p>The region ID of the bastion host for which you want to add users to the user group.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -123,10 +130,14 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * The ID of the user group to which you want to add users.
-         * <p>
+         * <p>The ID of the user group to which you want to add users.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
+         * <strong>example:</strong>
+         * <p>１</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -135,10 +146,14 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * The ID of the user that you want to add to the user group. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).
-         * <p>
+         * <p>The ID of the user that you want to add to the user group. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
+         * <strong>example:</strong>
+         * <p>[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]</p>
          */
         public Builder userIds(String userIds) {
             this.putQueryParameter("UserIds", userIds);

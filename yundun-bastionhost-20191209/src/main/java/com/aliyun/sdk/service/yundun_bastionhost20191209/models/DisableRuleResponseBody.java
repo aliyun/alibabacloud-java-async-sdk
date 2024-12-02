@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DisableRuleResponseBody</p>
  */
 public class DisableRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DisableRuleResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class DisableRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98DBE5C2-7D7A-5393-9E5A-71074336D33B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

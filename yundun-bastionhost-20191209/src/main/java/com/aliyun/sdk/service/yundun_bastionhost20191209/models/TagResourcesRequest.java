@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private TagResourcesRequest(Builder builder) {
@@ -99,10 +99,14 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The region ID of the bastion hosts to which you want to create and add tags.
-         * <p>
+         * <p>The region ID of the bastion hosts to which you want to create and add tags.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -111,12 +115,15 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * An array that consists of IDs of bastion hosts.
-         * <p>
+         * <p>An array that consists of IDs of bastion hosts.</p>
+         * <p>Valid values: 1 to 20.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query IDs of bastion hosts.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: 1 to 20.
-         * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query IDs of bastion hosts.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-78v1gc****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -125,10 +132,12 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>Set the value to <strong>INSTANCE</strong>, which indicates that the resource is a bastion host.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the value to **INSTANCE**, which indicates that the resource is a bastion host.
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -137,7 +146,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * An array that consists of tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -152,11 +161,17 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -191,14 +206,16 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The tag key of the bastion host. You can specify up to 20 tags for the bastion host.</p>
+             * <blockquote>
+             * <ul>
+             * <li>Thekey cannot be an empty string. The key can be up to 128 characters in length. </li>
+             * <li>It cannot start with <strong>aliyun</strong> or <strong>acs:</strong>, and cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * > 
-             * 
-             * *   The value can be up to 128 characters in length but cannot be an empty string.
-             * 
-             * *   The value cannot start with **aliyun** or **acs:**. The value cannot contain **http://** or **https://**.
+             * <strong>example:</strong>
+             * <p>operation</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -206,15 +223,16 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N.\
-             * <p>
-             * Valid values of N: 1 to 20.
+             * <p>The tag value of the bastion host.<br>You can specify up to 20 tags for the bastion host.</p>
+             * <blockquote>
+             * <ul>
+             * <li>The value can be a string of up to 128 characters or an empty string.</li>
+             * <li>It cannot start with <strong>aliyun</strong> or <strong>acs:</strong>, and cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * > 
-             * 
-             * *   The value can be up to 128 characters in length or an empty string.
-             * 
-             * *   The value cannot start with **aliyun** or **acs:**. The value cannot contain **http://** or **https://**.
+             * <strong>example:</strong>
+             * <p>operation_test</p>
              */
             public Builder value(String value) {
                 this.value = value;

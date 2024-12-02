@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOperationHostsResponseBody} extends {@link TeaModel}
  *
  * <p>ListOperationHostsResponseBody</p>
  */
 public class ListOperationHostsResponseBody extends TeaModel {
-    @NameInMap("Hosts")
+    @com.aliyun.core.annotation.NameInMap("Hosts")
     private java.util.List < Hosts> hosts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListOperationHostsResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListOperationHostsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Hosts.
+         * <p>The hosts returned.</p>
          */
         public Builder hosts(java.util.List < Hosts> hosts) {
             this.hosts = hosts;
@@ -70,7 +70,10 @@ public class ListOperationHostsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F6C075F-FC86-476E-943B-097BD4E12948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListOperationHostsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of hosts returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,35 +97,41 @@ public class ListOperationHostsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOperationHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOperationHostsResponseBody</p>
+     */
     public static class Hosts extends TeaModel {
-        @NameInMap("ActiveAddressType")
+        @com.aliyun.core.annotation.NameInMap("ActiveAddressType")
         private String activeAddressType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("HostPrivateAddress")
+        @com.aliyun.core.annotation.NameInMap("HostPrivateAddress")
         private String hostPrivateAddress;
 
-        @NameInMap("HostPublicAddress")
+        @com.aliyun.core.annotation.NameInMap("HostPublicAddress")
         private String hostPublicAddress;
 
-        @NameInMap("OSType")
+        @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
         private String sourceInstanceId;
 
-        @NameInMap("SourceInstanceState")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceState")
         private String sourceInstanceState;
 
         private Hosts(Builder builder) {
@@ -226,7 +238,14 @@ public class ListOperationHostsResponseBody extends TeaModel {
             private String sourceInstanceState; 
 
             /**
-             * ActiveAddressType.
+             * <p>The address type of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong></li>
+             * <li><strong>Private</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -234,7 +253,10 @@ public class ListOperationHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The remarks of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -242,7 +264,10 @@ public class ListOperationHostsResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * <p>The host ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -250,7 +275,10 @@ public class ListOperationHostsResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * <p>The host name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host1</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -258,7 +286,10 @@ public class ListOperationHostsResponseBody extends TeaModel {
             }
 
             /**
-             * HostPrivateAddress.
+             * <p>The private IP address of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder hostPrivateAddress(String hostPrivateAddress) {
                 this.hostPrivateAddress = hostPrivateAddress;
@@ -266,7 +297,10 @@ public class ListOperationHostsResponseBody extends TeaModel {
             }
 
             /**
-             * HostPublicAddress.
+             * <p>The public IP address of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.158.XX.XX</p>
              */
             public Builder hostPublicAddress(String hostPublicAddress) {
                 this.hostPublicAddress = hostPublicAddress;
@@ -274,7 +308,14 @@ public class ListOperationHostsResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * <p>The host OS.</p>
+             * <ul>
+             * <li><strong>Linux</strong></li>
+             * <li><strong>Windows</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -282,7 +323,14 @@ public class ListOperationHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The host type. Valid values:</p>
+             * <ul>
+             * <li><strong>Local</strong>: on-premises host.</li>
+             * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Local</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -290,7 +338,10 @@ public class ListOperationHostsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceId.
+             * <p>The ECS instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp19ienyt0yax748****</p>
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -298,7 +349,14 @@ public class ListOperationHostsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceState.
+             * <p>The host status. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>Release</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder sourceInstanceState(String sourceInstanceState) {
                 this.sourceInstanceState = sourceInstanceState;

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveHostsToNetworkDomainResponseBody} extends {@link TeaModel}
  *
  * <p>MoveHostsToNetworkDomainResponseBody</p>
  */
 public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private java.util.List < Results> results;
 
     private MoveHostsToNetworkDomainResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F9B9E190-9C8E-5FEE-B963-7E9F1FD7FB4E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The result of the call.</p>
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -71,14 +74,20 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MoveHostsToNetworkDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>MoveHostsToNetworkDomainResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Results(Builder builder) {
@@ -122,7 +131,13 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * <p>The return code that indicates whether the host is added to the network domain.</p>
+             * <blockquote>
+             * <p>The code LICENSE_OUT_OF_LIMIT indicates that the network domain feature is not supported by the current Bastionhost edition.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -130,7 +145,10 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * <p>The host ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -138,7 +156,7 @@ public class MoveHostsToNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message that is returned.</p>
              */
             public Builder message(String message) {
                 this.message = message;

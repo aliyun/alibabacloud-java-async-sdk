@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkDomainRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkDomainRequest</p>
  */
 public class CreateNetworkDomainRequest extends Request {
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NetworkDomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkDomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkDomainName;
 
-    @Query
-    @NameInMap("NetworkDomainType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkDomainType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkDomainType;
 
-    @Query
-    @NameInMap("Proxies")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Proxies")
     private java.util.List < Proxies> proxies;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private CreateNetworkDomainRequest(Builder builder) {
@@ -127,7 +127,10 @@ public class CreateNetworkDomainRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>The remarks of the network domain. The remarks can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -136,7 +139,14 @@ public class CreateNetworkDomainRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the bastion host for which you want to create a network domain.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-lbj3bw4ma02</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +155,8 @@ public class CreateNetworkDomainRequest extends Request {
         }
 
         /**
-         * NetworkDomainName.
+         * <p>The name of the network domain that you want to create. The name can be up to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder networkDomainName(String networkDomainName) {
             this.putQueryParameter("NetworkDomainName", networkDomainName);
@@ -154,7 +165,15 @@ public class CreateNetworkDomainRequest extends Request {
         }
 
         /**
-         * NetworkDomainType.
+         * <p>The connection mode of the network domain to be created. Valid values:</p>
+         * <ul>
+         * <li>Direct</li>
+         * <li>Proxy</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Proxy</p>
          */
         public Builder networkDomainType(String networkDomainType) {
             this.putQueryParameter("NetworkDomainType", networkDomainType);
@@ -163,7 +182,7 @@ public class CreateNetworkDomainRequest extends Request {
         }
 
         /**
-         * Proxies.
+         * <p>The information about the proxy servers.</p>
          */
         public Builder proxies(java.util.List < Proxies> proxies) {
             this.putQueryParameter("Proxies", proxies);
@@ -172,7 +191,13 @@ public class CreateNetworkDomainRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host for which you want to create a network domain.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -187,23 +212,29 @@ public class CreateNetworkDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNetworkDomainRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNetworkDomainRequest</p>
+     */
     public static class Proxies extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ProxyType")
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Proxies(Builder builder) {
@@ -274,7 +305,10 @@ public class CreateNetworkDomainRequest extends Request {
             private String user; 
 
             /**
-             * Address.
+             * <p>The IP address of the proxy server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>47.104.**.**</code></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -282,7 +316,14 @@ public class CreateNetworkDomainRequest extends Request {
             }
 
             /**
-             * NodeType.
+             * <p>The node type of the proxy server. Valid values:</p>
+             * <ul>
+             * <li><strong>Master</strong>: primary proxy server.</li>
+             * <li><strong>Slave</strong>: secondary proxy server.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Master</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -290,7 +331,10 @@ public class CreateNetworkDomainRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The Base64-encoded password of the proxy server.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -298,7 +342,10 @@ public class CreateNetworkDomainRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port of the proxy server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -306,7 +353,15 @@ public class CreateNetworkDomainRequest extends Request {
             }
 
             /**
-             * ProxyType.
+             * <p>The proxy type. Valid values:</p>
+             * <ul>
+             * <li><strong>SSHProxy</strong></li>
+             * <li><strong>HTTPProxy</strong></li>
+             * <li><strong>Socks5Proxy</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SSHProxy</p>
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;
@@ -314,7 +369,10 @@ public class CreateNetworkDomainRequest extends Request {
             }
 
             /**
-             * User.
+             * <p>The username of the proxy server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder user(String user) {
                 this.user = user;

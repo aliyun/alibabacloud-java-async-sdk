@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDatabaseAccountResponseBody} extends {@link TeaModel}
  *
  * <p>GetDatabaseAccountResponseBody</p>
  */
 public class GetDatabaseAccountResponseBody extends TeaModel {
-    @NameInMap("DatabaseAccount")
+    @com.aliyun.core.annotation.NameInMap("DatabaseAccount")
     private DatabaseAccount databaseAccount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDatabaseAccountResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetDatabaseAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DatabaseAccount.
+         * <p>The returned information about the database account.</p>
          */
         public Builder databaseAccount(DatabaseAccount databaseAccount) {
             this.databaseAccount = databaseAccount;
@@ -58,7 +58,10 @@ public class GetDatabaseAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA06D274-8D0A-59FB-8B7E-584C0EEBBFFF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +74,26 @@ public class GetDatabaseAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDatabaseAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatabaseAccountResponseBody</p>
+     */
     public static class DatabaseAccount extends TeaModel {
-        @NameInMap("DatabaseAccountId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountId")
         private String databaseAccountId;
 
-        @NameInMap("DatabaseAccountName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountName")
         private String databaseAccountName;
 
-        @NameInMap("DatabaseSchema")
+        @com.aliyun.core.annotation.NameInMap("DatabaseSchema")
         private String databaseSchema;
 
-        @NameInMap("HasPassword")
+        @com.aliyun.core.annotation.NameInMap("HasPassword")
         private Boolean hasPassword;
 
-        @NameInMap("LoginAttribute")
+        @com.aliyun.core.annotation.NameInMap("LoginAttribute")
         private String loginAttribute;
 
         private DatabaseAccount(Builder builder) {
@@ -146,7 +155,10 @@ public class GetDatabaseAccountResponseBody extends TeaModel {
             private String loginAttribute; 
 
             /**
-             * DatabaseAccountId.
+             * <p>The database account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder databaseAccountId(String databaseAccountId) {
                 this.databaseAccountId = databaseAccountId;
@@ -154,7 +166,10 @@ public class GetDatabaseAccountResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseAccountName.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uac</p>
              */
             public Builder databaseAccountName(String databaseAccountName) {
                 this.databaseAccountName = databaseAccountName;
@@ -162,7 +177,10 @@ public class GetDatabaseAccountResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseSchema.
+             * <p>The database name. A value is returned for this parameter if the database engine is PostgreSQL or Oracle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>orcl</p>
              */
             public Builder databaseSchema(String databaseSchema) {
                 this.databaseSchema = databaseSchema;
@@ -170,7 +188,15 @@ public class GetDatabaseAccountResponseBody extends TeaModel {
             }
 
             /**
-             * HasPassword.
+             * <p>Indicates whether the database account has a password.
+             * Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPassword(Boolean hasPassword) {
                 this.hasPassword = hasPassword;
@@ -178,7 +204,14 @@ public class GetDatabaseAccountResponseBody extends TeaModel {
             }
 
             /**
-             * LoginAttribute.
+             * <p>The logon attribute. A value is returned for this parameter if the database engine is Oracle. Valid values:</p>
+             * <ul>
+             * <li>SERVICENAME</li>
+             * <li>SID</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SID</p>
              */
             public Builder loginAttribute(String loginAttribute) {
                 this.loginAttribute = loginAttribute;

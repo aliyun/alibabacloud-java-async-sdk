@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHostGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateHostGroupRequest</p>
  */
 public class CreateHostGroupRequest extends Request {
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("HostGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostGroupName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private CreateHostGroupRequest(Builder builder) {
@@ -98,7 +98,10 @@ public class CreateHostGroupRequest extends Request {
         } 
 
         /**
-         * The description of the host group. The description can be up to 500 characters in length.
+         * <p>The remarks of the asset group. The remarks can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Local host group.</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -107,7 +110,11 @@ public class CreateHostGroupRequest extends Request {
         }
 
         /**
-         * The name of the host group. The name can be up to 128 characters in length.
+         * <p>The name of the asset group. The name can be up to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HostGroup01</p>
          */
         public Builder hostGroupName(String hostGroupName) {
             this.putQueryParameter("HostGroupName", hostGroupName);
@@ -116,10 +123,14 @@ public class CreateHostGroupRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host on which you want to create a host group.
-         * <p>
+         * <p>The ID of the bastion host on which you want to create an asset group.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,10 +139,13 @@ public class CreateHostGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host on which you want to create a host group.
-         * <p>
+         * <p>The region ID of the bastion host on which you want to create an asset group.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

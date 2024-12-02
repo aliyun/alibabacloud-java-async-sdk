@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetRuleResponseBody</p>
  */
 public class GetRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rule")
+    @com.aliyun.core.annotation.NameInMap("Rule")
     private Rule rule;
 
     private GetRuleResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetRuleResponseBody extends TeaModel {
         private Rule rule; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Rule.
+         * <p>The returned information about the authorization rule.</p>
          */
         public Builder rule(Rule rule) {
             this.rule = rule;
@@ -71,8 +74,14 @@ public class GetRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class DatabaseAccounts extends TeaModel {
-        @NameInMap("DatabaseAccountId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountId")
         private String databaseAccountId;
 
         private DatabaseAccounts(Builder builder) {
@@ -98,7 +107,10 @@ public class GetRuleResponseBody extends TeaModel {
             private String databaseAccountId; 
 
             /**
-             * DatabaseAccountId.
+             * <p>The ID of the database account that the policy authorizes users to manage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder databaseAccountId(String databaseAccountId) {
                 this.databaseAccountId = databaseAccountId;
@@ -112,11 +124,17 @@ public class GetRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class Databases extends TeaModel {
-        @NameInMap("DatabaseAccounts")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccounts")
         private java.util.List < DatabaseAccounts> databaseAccounts;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
         private Databases(Builder builder) {
@@ -151,7 +169,7 @@ public class GetRuleResponseBody extends TeaModel {
             private String databaseId; 
 
             /**
-             * DatabaseAccounts.
+             * <p>The database accounts on which permissions are granted by using the authorization rule.</p>
              */
             public Builder databaseAccounts(java.util.List < DatabaseAccounts> databaseAccounts) {
                 this.databaseAccounts = databaseAccounts;
@@ -159,7 +177,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * <p>The ID of the database that the policy authorizes users to manage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -173,11 +194,17 @@ public class GetRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class HostGroups extends TeaModel {
-        @NameInMap("HostAccountNames")
+        @com.aliyun.core.annotation.NameInMap("HostAccountNames")
         private java.util.List < String > hostAccountNames;
 
-        @NameInMap("HostGroupId")
+        @com.aliyun.core.annotation.NameInMap("HostGroupId")
         private String hostGroupId;
 
         private HostGroups(Builder builder) {
@@ -212,7 +239,7 @@ public class GetRuleResponseBody extends TeaModel {
             private String hostGroupId; 
 
             /**
-             * HostAccountNames.
+             * <p>The asset accounts on which permissions are granted by using the authorization rule.</p>
              */
             public Builder hostAccountNames(java.util.List < String > hostAccountNames) {
                 this.hostAccountNames = hostAccountNames;
@@ -220,7 +247,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * HostGroupId.
+             * <p>The ID of the asset group that the policy authorizes users to manage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -234,8 +264,14 @@ public class GetRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class HostAccounts extends TeaModel {
-        @NameInMap("HostAccountId")
+        @com.aliyun.core.annotation.NameInMap("HostAccountId")
         private String hostAccountId;
 
         private HostAccounts(Builder builder) {
@@ -261,7 +297,10 @@ public class GetRuleResponseBody extends TeaModel {
             private String hostAccountId; 
 
             /**
-             * HostAccountId.
+             * <p>The ID of the host account that the policy authorizes users to manage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -275,11 +314,17 @@ public class GetRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class Hosts extends TeaModel {
-        @NameInMap("HostAccounts")
+        @com.aliyun.core.annotation.NameInMap("HostAccounts")
         private java.util.List < HostAccounts> hostAccounts;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
         private Hosts(Builder builder) {
@@ -314,7 +359,7 @@ public class GetRuleResponseBody extends TeaModel {
             private String hostId; 
 
             /**
-             * HostAccounts.
+             * <p>The host accounts that the policy authorizes users to manage.</p>
              */
             public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
                 this.hostAccounts = hostAccounts;
@@ -322,7 +367,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * <p>The ID of the host that the policy authorizes users to manage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -336,8 +384,14 @@ public class GetRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class UserGroups extends TeaModel {
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
         private UserGroups(Builder builder) {
@@ -363,7 +417,10 @@ public class GetRuleResponseBody extends TeaModel {
             private String userGroupId; 
 
             /**
-             * UserGroupId.
+             * <p>The ID of the authorized user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -377,8 +434,14 @@ public class GetRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class Users extends TeaModel {
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Users(Builder builder) {
@@ -404,7 +467,10 @@ public class GetRuleResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * UserId.
+             * <p>The ID of the authorized user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -418,35 +484,41 @@ public class GetRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleResponseBody</p>
+     */
     public static class Rule extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Databases")
+        @com.aliyun.core.annotation.NameInMap("Databases")
         private java.util.List < Databases> databases;
 
-        @NameInMap("EffectiveEndTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveEndTime")
         private String effectiveEndTime;
 
-        @NameInMap("EffectiveStartTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveStartTime")
         private String effectiveStartTime;
 
-        @NameInMap("HostGroups")
+        @com.aliyun.core.annotation.NameInMap("HostGroups")
         private java.util.List < HostGroups> hostGroups;
 
-        @NameInMap("Hosts")
+        @com.aliyun.core.annotation.NameInMap("Hosts")
         private java.util.List < Hosts> hosts;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("UserGroups")
+        @com.aliyun.core.annotation.NameInMap("UserGroups")
         private java.util.List < UserGroups> userGroups;
 
-        @NameInMap("Users")
+        @com.aliyun.core.annotation.NameInMap("Users")
         private java.util.List < Users> users;
 
         private Rule(Builder builder) {
@@ -553,7 +625,10 @@ public class GetRuleResponseBody extends TeaModel {
             private java.util.List < Users> users; 
 
             /**
-             * Comment.
+             * <p>The remarks of the authorization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -561,7 +636,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Databases.
+             * <p>The databases on which permissions are granted by using the authorization rule.</p>
              */
             public Builder databases(java.util.List < Databases> databases) {
                 this.databases = databases;
@@ -569,7 +644,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveEndTime.
+             * <p>The end time of the validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698720972</p>
              */
             public Builder effectiveEndTime(String effectiveEndTime) {
                 this.effectiveEndTime = effectiveEndTime;
@@ -577,7 +655,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveStartTime.
+             * <p>The start time of the validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687140883</p>
              */
             public Builder effectiveStartTime(String effectiveStartTime) {
                 this.effectiveStartTime = effectiveStartTime;
@@ -585,7 +666,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * HostGroups.
+             * <p>The asset groups on which permissions are granted by using the authorization rule.</p>
              */
             public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
                 this.hostGroups = hostGroups;
@@ -593,7 +674,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Hosts.
+             * <p>The information about the hosts that the policy authorizes users to manage.</p>
              */
             public Builder hosts(java.util.List < Hosts> hosts) {
                 this.hosts = hosts;
@@ -601,7 +682,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the authorization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -609,7 +693,10 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the authorization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -617,7 +704,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroups.
+             * <p>The authorized user groups.</p>
              */
             public Builder userGroups(java.util.List < UserGroups> userGroups) {
                 this.userGroups = userGroups;
@@ -625,7 +712,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Users.
+             * <p>The authorized users.</p>
              */
             public Builder users(java.util.List < Users> users) {
                 this.users = users;

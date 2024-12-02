@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNetworkDomainRequest} extends {@link RequestModel}
  *
  * <p>ModifyNetworkDomainRequest</p>
  */
 public class ModifyNetworkDomainRequest extends Request {
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NetworkDomainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkDomainId;
 
-    @Query
-    @NameInMap("NetworkDomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkDomainName")
     private String networkDomainName;
 
-    @Query
-    @NameInMap("NetworkDomainType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkDomainType")
     private String networkDomainType;
 
-    @Query
-    @NameInMap("Proxies")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Proxies")
     private java.util.List < Proxies> proxies;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ModifyNetworkDomainRequest(Builder builder) {
@@ -140,7 +140,10 @@ public class ModifyNetworkDomainRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>The new remarks of the network domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -149,7 +152,14 @@ public class ModifyNetworkDomainRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the bastion host to which the network domain to modify belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-x0r3hyr3f09</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -158,7 +168,11 @@ public class ModifyNetworkDomainRequest extends Request {
         }
 
         /**
-         * NetworkDomainId.
+         * <p>The ID of the network domain to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder networkDomainId(String networkDomainId) {
             this.putQueryParameter("NetworkDomainId", networkDomainId);
@@ -167,7 +181,10 @@ public class ModifyNetworkDomainRequest extends Request {
         }
 
         /**
-         * NetworkDomainName.
+         * <p>The new name of the network domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder networkDomainName(String networkDomainName) {
             this.putQueryParameter("NetworkDomainName", networkDomainName);
@@ -176,7 +193,14 @@ public class ModifyNetworkDomainRequest extends Request {
         }
 
         /**
-         * NetworkDomainType.
+         * <p>The new connection mode of the network domain. Valid values:</p>
+         * <ul>
+         * <li><strong>Direct</strong></li>
+         * <li><strong>Proxy</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Proxy</p>
          */
         public Builder networkDomainType(String networkDomainType) {
             this.putQueryParameter("NetworkDomainType", networkDomainType);
@@ -185,7 +209,7 @@ public class ModifyNetworkDomainRequest extends Request {
         }
 
         /**
-         * Proxies.
+         * <p>The information about the proxy servers in the network domain.</p>
          */
         public Builder proxies(java.util.List < Proxies> proxies) {
             this.putQueryParameter("Proxies", proxies);
@@ -194,7 +218,13 @@ public class ModifyNetworkDomainRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host to which the network domain to modify belongs.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -209,23 +239,29 @@ public class ModifyNetworkDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyNetworkDomainRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyNetworkDomainRequest</p>
+     */
     public static class Proxies extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ProxyType")
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Proxies(Builder builder) {
@@ -296,7 +332,10 @@ public class ModifyNetworkDomainRequest extends Request {
             private String user; 
 
             /**
-             * Address.
+             * <p>The new IP address of the proxy server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114.21**.**</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -304,7 +343,14 @@ public class ModifyNetworkDomainRequest extends Request {
             }
 
             /**
-             * NodeType.
+             * <p>The node type of the proxy server to modify. Valid values:</p>
+             * <ul>
+             * <li><strong>Master</strong>: primary proxy server.</li>
+             * <li><strong>Slave</strong>: secondary proxy server.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Slave</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -312,7 +358,10 @@ public class ModifyNetworkDomainRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The new password of the proxy server account.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -320,7 +369,10 @@ public class ModifyNetworkDomainRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The new port of the proxy server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -328,7 +380,15 @@ public class ModifyNetworkDomainRequest extends Request {
             }
 
             /**
-             * ProxyType.
+             * <p>The new proxy mode. Valid values:</p>
+             * <ul>
+             * <li><strong>SSHProxy</strong></li>
+             * <li><strong>HTTPProxy</strong></li>
+             * <li><strong>Socks5Proxy</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTPProxy</p>
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;
@@ -336,7 +396,10 @@ public class ModifyNetworkDomainRequest extends Request {
             }
 
             /**
-             * User.
+             * <p>The new username of the proxy server account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder user(String user) {
                 this.user = user;

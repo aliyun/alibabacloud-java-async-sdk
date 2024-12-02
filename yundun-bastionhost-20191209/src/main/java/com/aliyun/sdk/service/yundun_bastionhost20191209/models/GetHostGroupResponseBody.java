@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHostGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetHostGroupResponseBody</p>
  */
 public class GetHostGroupResponseBody extends TeaModel {
-    @NameInMap("HostGroup")
+    @com.aliyun.core.annotation.NameInMap("HostGroup")
     private HostGroup hostGroup;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetHostGroupResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetHostGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the host group returned.
+         * <p>The returned detailed information about the asset group.</p>
          */
         public Builder hostGroup(HostGroup hostGroup) {
             this.hostGroup = hostGroup;
@@ -58,7 +58,10 @@ public class GetHostGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class GetHostGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHostGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHostGroupResponseBody</p>
+     */
     public static class HostGroup extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("HostGroupId")
+        @com.aliyun.core.annotation.NameInMap("HostGroupId")
         private String hostGroupId;
 
-        @NameInMap("HostGroupName")
+        @com.aliyun.core.annotation.NameInMap("HostGroupName")
         private String hostGroupName;
 
         private HostGroup(Builder builder) {
@@ -122,7 +131,10 @@ public class GetHostGroupResponseBody extends TeaModel {
             private String hostGroupName; 
 
             /**
-             * The description of the host group.
+             * <p>The remarks of the asset group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -130,7 +142,10 @@ public class GetHostGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host group.
+             * <p>The asset group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -138,7 +153,10 @@ public class GetHostGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host group.
+             * <p>The name of the asset group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Host group 1</p>
              */
             public Builder hostGroupName(String hostGroupName) {
                 this.hostGroupName = hostGroupName;

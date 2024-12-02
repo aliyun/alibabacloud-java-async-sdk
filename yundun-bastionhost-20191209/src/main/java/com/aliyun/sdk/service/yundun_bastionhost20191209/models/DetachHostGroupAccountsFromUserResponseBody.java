@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachHostGroupAccountsFromUserResponseBody} extends {@link TeaModel}
  *
  * <p>DetachHostGroupAccountsFromUserResponseBody</p>
  */
 public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private java.util.List < Results> results;
 
     private DetachHostGroupAccountsFromUserResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the call.
+         * <p>The result of the call.</p>
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -71,14 +74,20 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetachHostGroupAccountsFromUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachHostGroupAccountsFromUserResponseBody</p>
+     */
     public static class HostAccountNames extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("HostAccountName")
+        @com.aliyun.core.annotation.NameInMap("HostAccountName")
         private String hostAccountName;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private HostAccountNames(Builder builder) {
@@ -122,14 +131,17 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The return code that indicates whether permissions on the specified host account were revoked from the user. Valid values:
-             * <p>
+             * <p>The return code that indicates whether permissions on the specified host account were revoked from the user. Valid values:</p>
+             * <ul>
+             * <li><strong>OK</strong>: The call was successful.</li>
+             * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
+             * <li><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</li>
+             * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</li>
+             * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</li>
+             * </ul>
              * 
-             * *   **OK**: The call was successful.
-             * *   **UNEXPECTED**: An unknown error occurred.
-             * *   **INVALID_ARGUMENT**: A request parameter is invalid.
-             * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
-             * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -137,7 +149,10 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host account.
+             * <p>The name of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -145,7 +160,10 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -159,20 +177,26 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetachHostGroupAccountsFromUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachHostGroupAccountsFromUserResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("HostAccountNames")
+        @com.aliyun.core.annotation.NameInMap("HostAccountNames")
         private java.util.List < HostAccountNames> hostAccountNames;
 
-        @NameInMap("HostGroupId")
+        @com.aliyun.core.annotation.NameInMap("HostGroupId")
         private String hostGroupId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Results(Builder builder) {
@@ -234,14 +258,17 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The return code that indicates whether the call was successful. Valid values:
-             * <p>
+             * <p>The return code that indicates whether the call was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>OK</strong>: The call was successful.</li>
+             * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
+             * <li><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</li>
+             * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</li>
+             * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</li>
+             * </ul>
              * 
-             * *   **OK**: The call was successful.
-             * *   **UNEXPECTED**: An unknown error occurred.
-             * *   **INVALID_ARGUMENT**: A request parameter is invalid.
-             * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
-             * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -249,7 +276,7 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
             }
 
             /**
-             * The result of revoking permissions on the specified host accounts from the user.
+             * <p>The result of revoking permissions on the specified host accounts from the user.</p>
              */
             public Builder hostAccountNames(java.util.List < HostAccountNames> hostAccountNames) {
                 this.hostAccountNames = hostAccountNames;
@@ -257,7 +284,10 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host group.
+             * <p>The ID of the host group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -265,7 +295,10 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -273,7 +306,10 @@ public class DetachHostGroupAccountsFromUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

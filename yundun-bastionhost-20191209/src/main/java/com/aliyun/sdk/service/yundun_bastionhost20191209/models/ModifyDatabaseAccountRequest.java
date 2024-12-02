@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDatabaseAccountRequest} extends {@link RequestModel}
  *
  * <p>ModifyDatabaseAccountRequest</p>
  */
 public class ModifyDatabaseAccountRequest extends Request {
-    @Query
-    @NameInMap("DatabaseAccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseAccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseAccountId;
 
-    @Query
-    @NameInMap("DatabaseAccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseAccountName")
     private String databaseAccountName;
 
-    @Query
-    @NameInMap("DatabaseSchema")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseSchema")
     private String databaseSchema;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ModifyDatabaseAccountRequest(Builder builder) {
@@ -126,7 +126,14 @@ public class ModifyDatabaseAccountRequest extends Request {
         } 
 
         /**
-         * DatabaseAccountId.
+         * <p>The ID of the database account to modify.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder databaseAccountId(String databaseAccountId) {
             this.putQueryParameter("DatabaseAccountId", databaseAccountId);
@@ -135,7 +142,10 @@ public class ModifyDatabaseAccountRequest extends Request {
         }
 
         /**
-         * DatabaseAccountName.
+         * <p>The new username of the database account. The username can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa</p>
          */
         public Builder databaseAccountName(String databaseAccountName) {
             this.putQueryParameter("DatabaseAccountName", databaseAccountName);
@@ -144,7 +154,10 @@ public class ModifyDatabaseAccountRequest extends Request {
         }
 
         /**
-         * DatabaseSchema.
+         * <p>The new name of the database. This parameter is required if the database engine is PostgreSQL or Oracle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>orcl</p>
          */
         public Builder databaseSchema(String databaseSchema) {
             this.putQueryParameter("DatabaseSchema", databaseSchema);
@@ -153,7 +166,14 @@ public class ModifyDatabaseAccountRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the bastion host that manages the database account to modify.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-zpr2zyqx603</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -162,7 +182,10 @@ public class ModifyDatabaseAccountRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The new password of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14SZ!******</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -171,7 +194,13 @@ public class ModifyDatabaseAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host that manages the database account to modify.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

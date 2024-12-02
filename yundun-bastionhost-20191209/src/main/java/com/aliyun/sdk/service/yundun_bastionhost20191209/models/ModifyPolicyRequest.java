@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyPolicyRequest</p>
  */
 public class ModifyPolicyRequest extends Request {
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private String priority;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ModifyPolicyRequest(Builder builder) {
@@ -126,7 +126,7 @@ public class ModifyPolicyRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>The new remarks of the control policy.</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -135,7 +135,14 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the bastion host to which the control policy to modify belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-09k1u8mv501</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -144,7 +151,11 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The ID of the control policy that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -153,7 +164,10 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * <p>The new name of the control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -162,7 +176,10 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the modified control policy. Valid values: 1 to 100. The smaller the value, the higher the priority. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -171,7 +188,13 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host to which the control policy to modify belongs.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

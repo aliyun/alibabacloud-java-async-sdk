@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetPolicyResponseBody</p>
  */
 public class GetPolicyResponseBody extends TeaModel {
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private Policy policy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPolicyResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Policy.
+         * <p>The details of the control policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -58,7 +58,10 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0D29F2C0-8B4B-5861-9474-F3F23D25594B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class GetPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class EffectiveTime extends TeaModel {
-        @NameInMap("Days")
+        @com.aliyun.core.annotation.NameInMap("Days")
         private java.util.List < String > days;
 
-        @NameInMap("Hours")
+        @com.aliyun.core.annotation.NameInMap("Hours")
         private java.util.List < String > hours;
 
         private EffectiveTime(Builder builder) {
@@ -110,7 +119,7 @@ public class GetPolicyResponseBody extends TeaModel {
             private java.util.List < String > hours; 
 
             /**
-             * Days.
+             * <p>The days of a week on which logons are allowed.</p>
              */
             public Builder days(java.util.List < String > days) {
                 this.days = days;
@@ -118,7 +127,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Hours.
+             * <p>The time periods during which logons are allowed.</p>
              */
             public Builder hours(java.util.List < String > hours) {
                 this.hours = hours;
@@ -132,8 +141,14 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class AccessTimeRangeConfig extends TeaModel {
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private java.util.List < EffectiveTime> effectiveTime;
 
         private AccessTimeRangeConfig(Builder builder) {
@@ -159,7 +174,7 @@ public class GetPolicyResponseBody extends TeaModel {
             private java.util.List < EffectiveTime> effectiveTime; 
 
             /**
-             * EffectiveTime.
+             * <p>The details of the periods during which logons are allowed.</p>
              */
             public Builder effectiveTime(java.util.List < EffectiveTime> effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -173,8 +188,14 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class ApprovalConfig extends TeaModel {
-        @NameInMap("SwitchStatus")
+        @com.aliyun.core.annotation.NameInMap("SwitchStatus")
         private String switchStatus;
 
         private ApprovalConfig(Builder builder) {
@@ -200,7 +221,14 @@ public class GetPolicyResponseBody extends TeaModel {
             private String switchStatus; 
 
             /**
-             * SwitchStatus.
+             * <p>Indicates whether O&amp;M approval is enabled in the control policy. Valid values:</p>
+             * <ul>
+             * <li><strong>On</strong>: O&amp;M approval is enabled.</li>
+             * <li><strong>Off</strong>: O&amp;M approval is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Off</p>
              */
             public Builder switchStatus(String switchStatus) {
                 this.switchStatus = switchStatus;
@@ -214,8 +242,14 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class Approval extends TeaModel {
-        @NameInMap("Commands")
+        @com.aliyun.core.annotation.NameInMap("Commands")
         private java.util.List < String > commands;
 
         private Approval(Builder builder) {
@@ -241,7 +275,7 @@ public class GetPolicyResponseBody extends TeaModel {
             private java.util.List < String > commands; 
 
             /**
-             * Commands.
+             * <p>An array of commands that can be run only after approval.</p>
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -255,11 +289,17 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class Deny extends TeaModel {
-        @NameInMap("AclType")
+        @com.aliyun.core.annotation.NameInMap("AclType")
         private String aclType;
 
-        @NameInMap("Commands")
+        @com.aliyun.core.annotation.NameInMap("Commands")
         private java.util.List < String > commands;
 
         private Deny(Builder builder) {
@@ -294,7 +334,14 @@ public class GetPolicyResponseBody extends TeaModel {
             private java.util.List < String > commands; 
 
             /**
-             * AclType.
+             * <p>The type of command control. Valid values:</p>
+             * <ul>
+             * <li>white: whitelist mode.</li>
+             * <li>black: blacklist mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>black</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -302,7 +349,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Commands.
+             * <p>An array of controlled commands.</p>
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -316,11 +363,17 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class CommandConfig extends TeaModel {
-        @NameInMap("Approval")
+        @com.aliyun.core.annotation.NameInMap("Approval")
         private Approval approval;
 
-        @NameInMap("Deny")
+        @com.aliyun.core.annotation.NameInMap("Deny")
         private Deny deny;
 
         private CommandConfig(Builder builder) {
@@ -355,7 +408,7 @@ public class GetPolicyResponseBody extends TeaModel {
             private Deny deny; 
 
             /**
-             * Approval.
+             * <p>The details of the command approval settings.</p>
              */
             public Builder approval(Approval approval) {
                 this.approval = approval;
@@ -363,7 +416,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Deny.
+             * <p>The details of the command control setting.</p>
              */
             public Builder deny(Deny deny) {
                 this.deny = deny;
@@ -377,11 +430,17 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class IPAclConfig extends TeaModel {
-        @NameInMap("AclType")
+        @com.aliyun.core.annotation.NameInMap("AclType")
         private String aclType;
 
-        @NameInMap("IPs")
+        @com.aliyun.core.annotation.NameInMap("IPs")
         private java.util.List < String > iPs;
 
         private IPAclConfig(Builder builder) {
@@ -416,7 +475,14 @@ public class GetPolicyResponseBody extends TeaModel {
             private java.util.List < String > iPs; 
 
             /**
-             * AclType.
+             * <p>The mode of access control on source IP addresses. Valid values:</p>
+             * <ul>
+             * <li>white: whitelist mode.</li>
+             * <li>black: blacklist mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>black</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -424,7 +490,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * IPs.
+             * <p>The IP addresses from which logons are not allowed.</p>
              */
             public Builder iPs(java.util.List < String > iPs) {
                 this.iPs = iPs;
@@ -438,17 +504,23 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class RDP extends TeaModel {
-        @NameInMap("ClipboardDownload")
+        @com.aliyun.core.annotation.NameInMap("ClipboardDownload")
         private String clipboardDownload;
 
-        @NameInMap("ClipboardUpload")
+        @com.aliyun.core.annotation.NameInMap("ClipboardUpload")
         private String clipboardUpload;
 
-        @NameInMap("DiskRedirection")
+        @com.aliyun.core.annotation.NameInMap("DiskRedirection")
         private String diskRedirection;
 
-        @NameInMap("RecordKeyboard")
+        @com.aliyun.core.annotation.NameInMap("RecordKeyboard")
         private String recordKeyboard;
 
         private RDP(Builder builder) {
@@ -501,7 +573,14 @@ public class GetPolicyResponseBody extends TeaModel {
             private String recordKeyboard; 
 
             /**
-             * ClipboardDownload.
+             * <p>Indicates whether downloading from the clipboard is enabled. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder clipboardDownload(String clipboardDownload) {
                 this.clipboardDownload = clipboardDownload;
@@ -509,7 +588,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ClipboardUpload.
+             * <p>Indicates whether file uploading from the clipboard is enabled. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder clipboardUpload(String clipboardUpload) {
                 this.clipboardUpload = clipboardUpload;
@@ -517,7 +603,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DiskRedirection.
+             * <p>Indicates whether driver mapping is enabled. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder diskRedirection(String diskRedirection) {
                 this.diskRedirection = diskRedirection;
@@ -525,7 +618,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RecordKeyboard.
+             * <p>Indicates whether keyboard recording is enabled. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder recordKeyboard(String recordKeyboard) {
                 this.recordKeyboard = recordKeyboard;
@@ -539,35 +639,41 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class SSH extends TeaModel {
-        @NameInMap("ExecCommand")
+        @com.aliyun.core.annotation.NameInMap("ExecCommand")
         private String execCommand;
 
-        @NameInMap("SFTPChannel")
+        @com.aliyun.core.annotation.NameInMap("SFTPChannel")
         private String SFTPChannel;
 
-        @NameInMap("SFTPDownloadFile")
+        @com.aliyun.core.annotation.NameInMap("SFTPDownloadFile")
         private String SFTPDownloadFile;
 
-        @NameInMap("SFTPMkdir")
+        @com.aliyun.core.annotation.NameInMap("SFTPMkdir")
         private String SFTPMkdir;
 
-        @NameInMap("SFTPRemoveFile")
+        @com.aliyun.core.annotation.NameInMap("SFTPRemoveFile")
         private String SFTPRemoveFile;
 
-        @NameInMap("SFTPRenameFile")
+        @com.aliyun.core.annotation.NameInMap("SFTPRenameFile")
         private String SFTPRenameFile;
 
-        @NameInMap("SFTPRmdir")
+        @com.aliyun.core.annotation.NameInMap("SFTPRmdir")
         private String SFTPRmdir;
 
-        @NameInMap("SFTPUploadFile")
+        @com.aliyun.core.annotation.NameInMap("SFTPUploadFile")
         private String SFTPUploadFile;
 
-        @NameInMap("SSHChannel")
+        @com.aliyun.core.annotation.NameInMap("SSHChannel")
         private String SSHChannel;
 
-        @NameInMap("X11Forwarding")
+        @com.aliyun.core.annotation.NameInMap("X11Forwarding")
         private String x11Forwarding;
 
         private SSH(Builder builder) {
@@ -674,7 +780,14 @@ public class GetPolicyResponseBody extends TeaModel {
             private String x11Forwarding; 
 
             /**
-             * ExecCommand.
+             * <p>Indicates whether remote command execution is enabled. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder execCommand(String execCommand) {
                 this.execCommand = execCommand;
@@ -682,7 +795,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SFTPChannel.
+             * <p>Indicates whether the SFTP channel option is enabled. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPChannel(String SFTPChannel) {
                 this.SFTPChannel = SFTPChannel;
@@ -690,7 +810,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SFTPDownloadFile.
+             * <p>Indicates whether file downloading is enabled in SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPDownloadFile(String SFTPDownloadFile) {
                 this.SFTPDownloadFile = SFTPDownloadFile;
@@ -698,7 +825,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SFTPMkdir.
+             * <p>Indicates whether folder creation is enabled in SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPMkdir(String SFTPMkdir) {
                 this.SFTPMkdir = SFTPMkdir;
@@ -706,7 +840,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SFTPRemoveFile.
+             * <p>Indicates whether file deletion is enabled in SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPRemoveFile(String SFTPRemoveFile) {
                 this.SFTPRemoveFile = SFTPRemoveFile;
@@ -714,7 +855,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SFTPRenameFile.
+             * <p>Indicates whether file renaming is enabled in SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPRenameFile(String SFTPRenameFile) {
                 this.SFTPRenameFile = SFTPRenameFile;
@@ -722,7 +870,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SFTPRmdir.
+             * <p>Indicates whether folder deletion is enabled in SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPRmdir(String SFTPRmdir) {
                 this.SFTPRmdir = SFTPRmdir;
@@ -730,7 +885,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SFTPUploadFile.
+             * <p>Indicates whether file uploading is enabled in SFTP-based O&amp;M. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SFTPUploadFile(String SFTPUploadFile) {
                 this.SFTPUploadFile = SFTPUploadFile;
@@ -738,7 +900,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SSHChannel.
+             * <p>Indicates whether the SSH channel option is enabled. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder SSHChannel(String SSHChannel) {
                 this.SSHChannel = SSHChannel;
@@ -746,7 +915,14 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * X11Forwarding.
+             * <p>Indicates whether X11 forwarding is enabled. Valid values:</p>
+             * <ul>
+             * <li>Enable</li>
+             * <li>Disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder x11Forwarding(String x11Forwarding) {
                 this.x11Forwarding = x11Forwarding;
@@ -760,11 +936,17 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class ProtocolConfig extends TeaModel {
-        @NameInMap("RDP")
+        @com.aliyun.core.annotation.NameInMap("RDP")
         private RDP RDP;
 
-        @NameInMap("SSH")
+        @com.aliyun.core.annotation.NameInMap("SSH")
         private SSH SSH;
 
         private ProtocolConfig(Builder builder) {
@@ -799,7 +981,7 @@ public class GetPolicyResponseBody extends TeaModel {
             private SSH SSH; 
 
             /**
-             * RDP.
+             * <p>The configuration details of Remote Desktop Protocol (RDP) options.</p>
              */
             public Builder RDP(RDP RDP) {
                 this.RDP = RDP;
@@ -807,7 +989,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SSH.
+             * <p>The configuration details of SSH and SSH File Transfer Protocol (SFTP) options.</p>
              */
             public Builder SSH(SSH SSH) {
                 this.SSH = SSH;
@@ -821,32 +1003,38 @@ public class GetPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class Policy extends TeaModel {
-        @NameInMap("AccessTimeRangeConfig")
+        @com.aliyun.core.annotation.NameInMap("AccessTimeRangeConfig")
         private AccessTimeRangeConfig accessTimeRangeConfig;
 
-        @NameInMap("ApprovalConfig")
+        @com.aliyun.core.annotation.NameInMap("ApprovalConfig")
         private ApprovalConfig approvalConfig;
 
-        @NameInMap("CommandConfig")
+        @com.aliyun.core.annotation.NameInMap("CommandConfig")
         private CommandConfig commandConfig;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("IPAclConfig")
+        @com.aliyun.core.annotation.NameInMap("IPAclConfig")
         private IPAclConfig IPAclConfig;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Long priority;
 
-        @NameInMap("ProtocolConfig")
+        @com.aliyun.core.annotation.NameInMap("ProtocolConfig")
         private ProtocolConfig protocolConfig;
 
         private Policy(Builder builder) {
@@ -944,7 +1132,7 @@ public class GetPolicyResponseBody extends TeaModel {
             private ProtocolConfig protocolConfig; 
 
             /**
-             * AccessTimeRangeConfig.
+             * <p>The details of the logon period restrictions.</p>
              */
             public Builder accessTimeRangeConfig(AccessTimeRangeConfig accessTimeRangeConfig) {
                 this.accessTimeRangeConfig = accessTimeRangeConfig;
@@ -952,7 +1140,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalConfig.
+             * <p>The O&amp;M approval setting.</p>
              */
             public Builder approvalConfig(ApprovalConfig approvalConfig) {
                 this.approvalConfig = approvalConfig;
@@ -960,7 +1148,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CommandConfig.
+             * <p>The details of the command policy.</p>
              */
             public Builder commandConfig(CommandConfig commandConfig) {
                 this.commandConfig = commandConfig;
@@ -968,7 +1156,10 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The description of the control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -976,7 +1167,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * IPAclConfig.
+             * <p>The access control settings on source IP addresses.</p>
              */
             public Builder IPAclConfig(IPAclConfig IPAclConfig) {
                 this.IPAclConfig = IPAclConfig;
@@ -984,7 +1175,10 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The ID of the control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -992,7 +1186,10 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * <p>The name of the control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -1000,7 +1197,10 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the control policy. A smaller value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -1008,7 +1208,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolConfig.
+             * <p>The details of protocol control.</p>
              */
             public Builder protocolConfig(ProtocolConfig protocolConfig) {
                 this.protocolConfig = protocolConfig;

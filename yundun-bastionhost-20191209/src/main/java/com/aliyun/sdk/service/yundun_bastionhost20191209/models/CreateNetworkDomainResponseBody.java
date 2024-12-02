@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkDomainResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNetworkDomainResponseBody</p>
  */
 public class CreateNetworkDomainResponseBody extends TeaModel {
-    @NameInMap("NetworkDomainId")
+    @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
     private String networkDomainId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNetworkDomainResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateNetworkDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NetworkDomainId.
+         * <p>The ID of the network domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         public Builder networkDomainId(String networkDomainId) {
             this.networkDomainId = networkDomainId;
@@ -58,7 +61,10 @@ public class CreateNetworkDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2873E9C-A7EA-5735-845C-65D3792623D2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

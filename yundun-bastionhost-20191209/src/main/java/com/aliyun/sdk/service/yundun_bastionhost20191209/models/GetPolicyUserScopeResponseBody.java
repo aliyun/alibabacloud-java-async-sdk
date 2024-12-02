@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPolicyUserScopeResponseBody} extends {@link TeaModel}
  *
  * <p>GetPolicyUserScopeResponseBody</p>
  */
 public class GetPolicyUserScopeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserScope")
+    @com.aliyun.core.annotation.NameInMap("UserScope")
     private UserScope userScope;
 
     private GetPolicyUserScopeResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
         private UserScope userScope; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
         }
 
         /**
-         * UserScope.
+         * <p>The users to whom the control policy applies.</p>
          */
         public Builder userScope(UserScope userScope) {
             this.userScope = userScope;
@@ -71,14 +74,20 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPolicyUserScopeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyUserScopeResponseBody</p>
+     */
     public static class UserScope extends TeaModel {
-        @NameInMap("ScopeType")
+        @com.aliyun.core.annotation.NameInMap("ScopeType")
         private String scopeType;
 
-        @NameInMap("UserGroupIds")
+        @com.aliyun.core.annotation.NameInMap("UserGroupIds")
         private java.util.List < String > userGroupIds;
 
-        @NameInMap("UserIds")
+        @com.aliyun.core.annotation.NameInMap("UserIds")
         private java.util.List < String > userIds;
 
         private UserScope(Builder builder) {
@@ -122,7 +131,16 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
             private java.util.List < String > userIds; 
 
             /**
-             * ScopeType.
+             * <p>The scope of users to whom the control policy applies.</p>
+             * <ul>
+             * <li><p>If <strong>All</strong> is returned for this parameter, the control policy applies to all users.</p>
+             * </li>
+             * <li><p>If no value is returned for this parameter, the control policy applies to the assets specified in the return values of UserGroupIds and UserIds.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder scopeType(String scopeType) {
                 this.scopeType = scopeType;
@@ -130,7 +148,7 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupIds.
+             * <p>The user groups to which the control policy applies.</p>
              */
             public Builder userGroupIds(java.util.List < String > userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -138,7 +156,7 @@ public class GetPolicyUserScopeResponseBody extends TeaModel {
             }
 
             /**
-             * UserIds.
+             * <p>The users to whom the control policy applies.</p>
              */
             public Builder userIds(java.util.List < String > userIds) {
                 this.userIds = userIds;

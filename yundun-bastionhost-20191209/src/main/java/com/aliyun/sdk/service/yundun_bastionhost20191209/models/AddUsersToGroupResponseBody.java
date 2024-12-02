@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUsersToGroupResponseBody} extends {@link TeaModel}
  *
  * <p>AddUsersToGroupResponseBody</p>
  */
 public class AddUsersToGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private java.util.List < Results> results;
 
     private AddUsersToGroupResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class AddUsersToGroupResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class AddUsersToGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the call.
+         * <p>The result of the call.</p>
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -71,17 +74,23 @@ public class AddUsersToGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddUsersToGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddUsersToGroupResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Results(Builder builder) {
@@ -134,26 +143,30 @@ public class AddUsersToGroupResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The return code that indicates whether the call was successful. Valid values:
-             * <p>
+             * <p>The return code that indicates whether the call was successful. Valid values:</p>
+             * <ul>
+             * <li><p><strong>OK</strong>: The call was successful.</p>
+             * </li>
+             * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
+             * </li>
+             * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>Make sure that the request parameters are valid and call the operation again.</p>
+             * </blockquote>
+             * <ul>
+             * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</li>
+             * </ul>
+             * <blockquote>
+             * <p>Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
+             * </blockquote>
+             * <ul>
+             * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</li>
+             * </ul>
              * 
-             * *   **OK**: The call was successful.
-             * 
-             * *   **UNEXPECTED**: An unknown error occurred.
-             * 
-             * *   **INVALID_ARGUMENT**: A request parameter is invalid.
-             * 
-             *     **
-             * 
-             *     **Note**Make sure that the request parameters are valid and call the operation again.
-             * 
-             * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
-             * 
-             *     **
-             * 
-             *     **Note**Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.
-             * 
-             * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -161,7 +174,7 @@ public class AddUsersToGroupResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -169,7 +182,10 @@ public class AddUsersToGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -177,7 +193,10 @@ public class AddUsersToGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

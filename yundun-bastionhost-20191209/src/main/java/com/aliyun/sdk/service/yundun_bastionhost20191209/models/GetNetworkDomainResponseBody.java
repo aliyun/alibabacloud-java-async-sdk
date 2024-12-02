@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNetworkDomainResponseBody} extends {@link TeaModel}
  *
  * <p>GetNetworkDomainResponseBody</p>
  */
 public class GetNetworkDomainResponseBody extends TeaModel {
-    @NameInMap("NetworkDomain")
+    @com.aliyun.core.annotation.NameInMap("NetworkDomain")
     private NetworkDomain networkDomain;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetNetworkDomainResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NetworkDomain.
+         * <p>The detailed information about the network domain.</p>
          */
         public Builder networkDomain(NetworkDomain networkDomain) {
             this.networkDomain = networkDomain;
@@ -58,7 +58,10 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05F59944-2E24-595C-B21A-8C9955E60FAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +74,35 @@ public class GetNetworkDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNetworkDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNetworkDomainResponseBody</p>
+     */
     public static class Proxies extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("HasPassword")
+        @com.aliyun.core.annotation.NameInMap("HasPassword")
         private Boolean hasPassword;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ProxyState")
+        @com.aliyun.core.annotation.NameInMap("ProxyState")
         private String proxyState;
 
-        @NameInMap("ProxyStateErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ProxyStateErrorCode")
         private String proxyStateErrorCode;
 
-        @NameInMap("ProxyType")
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Proxies(Builder builder) {
@@ -182,7 +191,10 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * Address.
+             * <p>The IP address of the proxy server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>47.102.**.**</code></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -190,7 +202,14 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * HasPassword.
+             * <p>Indicates whether the proxy server has a password. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPassword(Boolean hasPassword) {
                 this.hasPassword = hasPassword;
@@ -198,7 +217,14 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type of the proxy server. Valid values:</p>
+             * <ul>
+             * <li><strong>Master</strong>: primary proxy server.</li>
+             * <li><strong>Slave</strong>: secondary proxy server.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Master</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -206,7 +232,10 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port of the proxy server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -214,7 +243,14 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyState.
+             * <p>The status of the proxy server.</p>
+             * <ul>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Unavailable</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Unavailable</p>
              */
             public Builder proxyState(String proxyState) {
                 this.proxyState = proxyState;
@@ -222,7 +258,16 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyStateErrorCode.
+             * <p>The error code that indicates the status of the proxy server.</p>
+             * <ul>
+             * <li><strong>CHECK_PWD_FAILED</strong>: The password is invalid.</li>
+             * <li><strong>CHECK_PWD_TIMEOUT</strong>: The password verification session timed out.</li>
+             * <li><strong>CHECK_PWD_NETWORK_ERR</strong>: A network error occurred.</li>
+             * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_PWD_TIMEOUT</p>
              */
             public Builder proxyStateErrorCode(String proxyStateErrorCode) {
                 this.proxyStateErrorCode = proxyStateErrorCode;
@@ -230,7 +275,15 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyType.
+             * <p>The proxy type. Valid values:</p>
+             * <ul>
+             * <li><strong>SSHProxy</strong></li>
+             * <li><strong>HTTPProxy</strong></li>
+             * <li><strong>Socks5Proxy</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTPProxy</p>
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;
@@ -238,7 +291,10 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * <p>The username of the proxy server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -252,23 +308,29 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNetworkDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNetworkDomainResponseBody</p>
+     */
     public static class NetworkDomain extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Default")
+        @com.aliyun.core.annotation.NameInMap("Default")
         private Boolean _default;
 
-        @NameInMap("NetworkDomainId")
+        @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
         private String networkDomainId;
 
-        @NameInMap("NetworkDomainName")
+        @com.aliyun.core.annotation.NameInMap("NetworkDomainName")
         private String networkDomainName;
 
-        @NameInMap("NetworkDomainType")
+        @com.aliyun.core.annotation.NameInMap("NetworkDomainType")
         private String networkDomainType;
 
-        @NameInMap("Proxies")
+        @com.aliyun.core.annotation.NameInMap("Proxies")
         private java.util.List < Proxies> proxies;
 
         private NetworkDomain(Builder builder) {
@@ -339,7 +401,10 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             private java.util.List < Proxies> proxies; 
 
             /**
-             * Comment.
+             * <p>The remarks of the network domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -347,7 +412,14 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Default.
+             * <p>Indicates whether the network domain is a built-in network domain.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder _default(Boolean _default) {
                 this._default = _default;
@@ -355,7 +427,10 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkDomainId.
+             * <p>The network domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder networkDomainId(String networkDomainId) {
                 this.networkDomainId = networkDomainId;
@@ -363,7 +438,10 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkDomainName.
+             * <p>The name of the network domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SSH Proxy</p>
              */
             public Builder networkDomainName(String networkDomainName) {
                 this.networkDomainName = networkDomainName;
@@ -371,7 +449,14 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkDomainType.
+             * <p>The connection mode of the network domain. Valid values:</p>
+             * <ul>
+             * <li>Direct</li>
+             * <li>Proxy</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Proxy</p>
              */
             public Builder networkDomainType(String networkDomainType) {
                 this.networkDomainType = networkDomainType;
@@ -379,7 +464,7 @@ public class GetNetworkDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Proxies.
+             * <p>The information about the proxy servers.</p>
              */
             public Builder proxies(java.util.List < Proxies> proxies) {
                 this.proxies = proxies;

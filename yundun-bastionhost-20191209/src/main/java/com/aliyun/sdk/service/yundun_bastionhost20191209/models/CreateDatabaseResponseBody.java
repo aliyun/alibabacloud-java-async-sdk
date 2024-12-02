@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatabaseResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDatabaseResponseBody</p>
  */
 public class CreateDatabaseResponseBody extends TeaModel {
-    @NameInMap("DatabaseId")
+    @com.aliyun.core.annotation.NameInMap("DatabaseId")
     private String databaseId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDatabaseResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateDatabaseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DatabaseId.
+         * <p>The database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>334</p>
          */
         public Builder databaseId(String databaseId) {
             this.databaseId = databaseId;
@@ -58,7 +61,10 @@ public class CreateDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98EDD923-236C-5A88-88E7-4979A91B9325</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

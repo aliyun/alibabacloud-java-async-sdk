@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachHostGroupAccountsToUserRequest} extends {@link RequestModel}
  *
  * <p>AttachHostGroupAccountsToUserRequest</p>
  */
 public class AttachHostGroupAccountsToUserRequest extends Request {
-    @Query
-    @NameInMap("HostGroups")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostGroups;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private AttachHostGroupAccountsToUserRequest(Builder builder) {
@@ -99,10 +99,14 @@ public class AttachHostGroupAccountsToUserRequest extends Request {
         } 
 
         /**
-         * The ID of the host group and the name of the host account that you want to authorize the user to manage. You can specify up to 10 host group IDs and up to 10 host account names for each host group. You can specify only host group IDs. In this case, the user is authorized to manage only the specified host groups. For more information about this parameter, see the "Description of the HostGroups parameter" section of this topic.
-         * <p>
+         * <p>The ID of the host group and the name of the host account that you want to authorize the user to manage. You can specify up to 10 host group IDs and up to 10 host account names for each host group. You can specify only host group IDs. In this case, the user is authorized to manage only the specified host groups. For more information about this parameter, see the &quot;Description of the HostGroups parameter&quot; section of this topic.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the host group and the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the name of the host account.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group and the [ListHostAccounts](~~204372~~) operation to query the name of the host account.
+         * <strong>example:</strong>
+         * <p>[ {&quot;HostGroupId&quot;:&quot;1&quot;}, {&quot;HostGroupId&quot;:&quot;2&quot;,&quot;HostAccountNames&quot;:[&quot;root&quot;,&quot;111&quot;,&quot;abc&quot;]}, {&quot;HostGroupId&quot;:&quot;3&quot;,&quot;HostAccountNames&quot;:[&quot;root&quot;,&quot;111&quot;,&quot;abc&quot;]}, {&quot;HostGroupId&quot;:&quot;4&quot;,&quot;HostAccountNames&quot;:[&quot;root&quot;,&quot;111&quot;,&quot;abc&quot;]} ]</p>
          */
         public Builder hostGroups(String hostGroups) {
             this.putQueryParameter("HostGroups", hostGroups);
@@ -111,10 +115,14 @@ public class AttachHostGroupAccountsToUserRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host for which you want to authorize the user to manage the specified host groups and host accounts.
-         * <p>
+         * <p>The ID of the bastion host for which you want to authorize the user to manage the host groups and host accounts.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,10 +131,13 @@ public class AttachHostGroupAccountsToUserRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host for which you want to authorize the user to manage the specified host groups and host accounts.
-         * <p>
+         * <p>The region ID of the bastion host for which you want to authorize the user to manage the host groups and host accounts.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -135,10 +146,14 @@ public class AttachHostGroupAccountsToUserRequest extends Request {
         }
 
         /**
-         * The ID of the user that you want to authorize to manage the specified host groups and host accounts.
-         * <p>
+         * <p>The ID of the user that you want to authorize to manage the host groups and host accounts.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

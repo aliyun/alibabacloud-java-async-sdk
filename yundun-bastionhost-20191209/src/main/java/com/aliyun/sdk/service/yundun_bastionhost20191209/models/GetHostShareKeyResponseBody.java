@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHostShareKeyResponseBody} extends {@link TeaModel}
  *
  * <p>GetHostShareKeyResponseBody</p>
  */
 public class GetHostShareKeyResponseBody extends TeaModel {
-    @NameInMap("HostShareKey")
+    @com.aliyun.core.annotation.NameInMap("HostShareKey")
     private HostShareKey hostShareKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetHostShareKeyResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The operation that you want to perform. Set the value to **GetHostShareKey**.
+         * <p>The returned information about the shared key.</p>
          */
         public Builder hostShareKey(HostShareKey hostShareKey) {
             this.hostShareKey = hostShareKey;
@@ -58,7 +58,10 @@ public class GetHostShareKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +74,23 @@ public class GetHostShareKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHostShareKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHostShareKeyResponseBody</p>
+     */
     public static class HostShareKey extends TeaModel {
-        @NameInMap("HostShareKeyId")
+        @com.aliyun.core.annotation.NameInMap("HostShareKeyId")
         private String hostShareKeyId;
 
-        @NameInMap("HostShareKeyName")
+        @com.aliyun.core.annotation.NameInMap("HostShareKeyName")
         private String hostShareKeyName;
 
-        @NameInMap("LastModifyKeyAt")
+        @com.aliyun.core.annotation.NameInMap("LastModifyKeyAt")
         private Long lastModifyKeyAt;
 
-        @NameInMap("PrivateKeyFingerPrint")
+        @com.aliyun.core.annotation.NameInMap("PrivateKeyFingerPrint")
         private String privateKeyFingerPrint;
 
         private HostShareKey(Builder builder) {
@@ -134,7 +143,10 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             private String privateKeyFingerPrint; 
 
             /**
-             * The fingerprint of the private key.
+             * <p>The ID of the shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10427</p>
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -142,7 +154,10 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyName.
+             * <p>The name of the shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder hostShareKeyName(String hostShareKeyName) {
                 this.hostShareKeyName = hostShareKeyName;
@@ -150,7 +165,10 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyKeyAt.
+             * <p>The time when the information about the shared key was last modified. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1644287246</p>
              */
             public Builder lastModifyKeyAt(Long lastModifyKeyAt) {
                 this.lastModifyKeyAt = lastModifyKeyAt;
@@ -158,7 +176,10 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateKeyFingerPrint.
+             * <p>The fingerprint of the private key.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder privateKeyFingerPrint(String privateKeyFingerPrint) {
                 this.privateKeyFingerPrint = privateKeyFingerPrint;

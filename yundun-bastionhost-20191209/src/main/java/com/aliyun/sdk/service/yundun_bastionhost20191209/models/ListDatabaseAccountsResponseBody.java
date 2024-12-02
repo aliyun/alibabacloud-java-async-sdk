@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatabaseAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDatabaseAccountsResponseBody</p>
  */
 public class ListDatabaseAccountsResponseBody extends TeaModel {
-    @NameInMap("DatabaseAccounts")
+    @com.aliyun.core.annotation.NameInMap("DatabaseAccounts")
     private java.util.List < DatabaseAccounts> databaseAccounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDatabaseAccountsResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DatabaseAccounts.
+         * <p>The returned database accounts.</p>
          */
         public Builder databaseAccounts(java.util.List < DatabaseAccounts> databaseAccounts) {
             this.databaseAccounts = databaseAccounts;
@@ -70,7 +70,10 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F6C075F-FC86-476E-943B-097BD4E12948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of database accounts returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,20 +97,26 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDatabaseAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabaseAccountsResponseBody</p>
+     */
     public static class DatabaseAccounts extends TeaModel {
-        @NameInMap("DatabaseAccountId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountId")
         private String databaseAccountId;
 
-        @NameInMap("DatabaseAccountName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountName")
         private String databaseAccountName;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("DatabaseSchema")
+        @com.aliyun.core.annotation.NameInMap("DatabaseSchema")
         private String databaseSchema;
 
-        @NameInMap("HasPassword")
+        @com.aliyun.core.annotation.NameInMap("HasPassword")
         private String hasPassword;
 
         private DatabaseAccounts(Builder builder) {
@@ -166,7 +178,10 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
             private String hasPassword; 
 
             /**
-             * DatabaseAccountId.
+             * <p>The database account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59</p>
              */
             public Builder databaseAccountId(String databaseAccountId) {
                 this.databaseAccountId = databaseAccountId;
@@ -174,7 +189,10 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseAccountName.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder databaseAccountName(String databaseAccountName) {
                 this.databaseAccountName = databaseAccountName;
@@ -182,7 +200,10 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -190,7 +211,10 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseSchema.
+             * <p>The name of the database. A value is returned for this parameter if the engine of the database with the specified database ID is PostgreSQL or Oracle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>orcl</p>
              */
             public Builder databaseSchema(String databaseSchema) {
                 this.databaseSchema = databaseSchema;
@@ -198,7 +222,14 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HasPassword.
+             * <p>Indicates whether the database account has a password. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPassword(String hasPassword) {
                 this.hasPassword = hasPassword;

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstancesResponseBody</p>
  */
 public class DescribeInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeInstancesResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * An array that consists of the queried bastion hosts.
+         * <p>An array that consists of the bastion hosts returned.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -70,7 +70,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61D36C55-AAFC-4678-8FAD-34FEF9E7182E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of bastion hosts that are queried.
+         * <p>The total number of bastion hosts that are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,56 +97,69 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("BandWidth")
+        private Long bandWidth;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("ImageVersion")
+        @com.aliyun.core.annotation.NameInMap("ImageVersion")
         private String imageVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("InternetEndpoint")
+        @com.aliyun.core.annotation.NameInMap("InternetEndpoint")
         private String internetEndpoint;
 
-        @NameInMap("IntranetEndpoint")
+        @com.aliyun.core.annotation.NameInMap("IntranetEndpoint")
         private String intranetEndpoint;
 
-        @NameInMap("Legacy")
+        @com.aliyun.core.annotation.NameInMap("Legacy")
         private Boolean legacy;
 
-        @NameInMap("LicenseCode")
+        @com.aliyun.core.annotation.NameInMap("LicenseCode")
         private String licenseCode;
 
-        @NameInMap("PlanCode")
+        @com.aliyun.core.annotation.NameInMap("PlanCode")
         private String planCode;
 
-        @NameInMap("PublicNetworkAccess")
+        @com.aliyun.core.annotation.NameInMap("PublicNetworkAccess")
         private Boolean publicNetworkAccess;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("SlaveVswitchId")
+        private String slaveVswitchId;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private Instances(Builder builder) {
+            this.bandWidth = builder.bandWidth;
             this.description = builder.description;
             this.expireTime = builder.expireTime;
             this.imageVersion = builder.imageVersion;
@@ -154,6 +173,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.publicNetworkAccess = builder.publicNetworkAccess;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.slaveVswitchId = builder.slaveVswitchId;
             this.startTime = builder.startTime;
             this.vpcId = builder.vpcId;
             this.vswitchId = builder.vswitchId;
@@ -165,6 +185,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static Instances create() {
             return builder().build();
+        }
+
+        /**
+         * @return bandWidth
+         */
+        public Long getBandWidth() {
+            return this.bandWidth;
         }
 
         /**
@@ -259,6 +286,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return slaveVswitchId
+         */
+        public String getSlaveVswitchId() {
+            return this.slaveVswitchId;
+        }
+
+        /**
          * @return startTime
          */
         public Long getStartTime() {
@@ -280,6 +314,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long bandWidth; 
             private String description; 
             private Long expireTime; 
             private String imageVersion; 
@@ -293,12 +328,24 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean publicNetworkAccess; 
             private String regionId; 
             private String resourceGroupId; 
+            private String slaveVswitchId; 
             private Long startTime; 
             private String vpcId; 
             private String vswitchId; 
 
             /**
-             * The description of the bastion host.
+             * BandWidth.
+             */
+            public Builder bandWidth(Long bandWidth) {
+                this.bandWidth = bandWidth;
+                return this;
+            }
+
+            /**
+             * <p>The remarks of the bastion host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test API</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +353,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the bastion host expires. Unit: milliseconds.
+             * <p>The timestamp when the bastion host expires. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578326400000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -314,7 +364,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The image version of the bastion host.
+             * <p>The image version of the bastion host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.0.0</p>
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -322,7 +375,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the bastion host.
+             * <p>The bastion host ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bastionhost-cn-78v1gh****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -330,16 +386,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the bastion host. Valid values:
-             * <p>
+             * <p>The status of the bastion host. Valid values:</p>
+             * <ul>
+             * <li><strong>PENDING</strong>: The bastion host is not initialized.</li>
+             * <li><strong>CREATING</strong>: The bastion host is being created.</li>
+             * <li><strong>RUNNING</strong>: The bastion host is running.</li>
+             * <li><strong>EXPIRED</strong>: The bastion host expired.</li>
+             * <li><strong>CREATE_FAILED</strong>: The bastion host fails to be created.</li>
+             * <li><strong>UPGRADING</strong>: The configurations of the bastion host are being changed.</li>
+             * <li><strong>UPGRADE_FAILED</strong>: The configurations of the bastion host fail to be changed.</li>
+             * </ul>
              * 
-             * *   **PENDING**: The bastion host is not initialized.
-             * *   **CREATING**: The bastion host is being created.
-             * *   **RUNNING**: The bastion host is running.
-             * *   **EXPIRED**: The bastion host expired.
-             * *   **CREATE_FAILED**: The bastion host fails to be created.
-             * *   **UPGRADING**: The configurations of the bastion host are being changed.
-             * *   **UPGRADE_FAILED**: The configurations of the bastion host fail to be changed.
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -347,7 +406,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public O\&M address of the bastion host.
+             * <p>The public O&amp;M address of the bastion host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drawvxalwb-public.bastionhost.aliyuncs.com</p>
              */
             public Builder internetEndpoint(String internetEndpoint) {
                 this.internetEndpoint = internetEndpoint;
@@ -355,7 +417,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The private O\&M address of the bastion host.
+             * <p>The private O&amp;M address of the bastion host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drawvxalwb.bastionhost.aliyuncs.com</p>
              */
             public Builder intranetEndpoint(String intranetEndpoint) {
                 this.intranetEndpoint = intranetEndpoint;
@@ -363,11 +428,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the bastion host runs an earlier version. Valid values:
-             * <p>
+             * <p>Indicates whether the bastion host runs an earlier version. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The bastion host runs V2 or V3.1.</li>
+             * <li><strong>false</strong>: The bastion host runs V3.2.</li>
+             * </ul>
              * 
-             * *   **true**: indicates that the bastion host runs V2 or V3.1.
-             * *   **false**:indicates that the bastion host runs V3.2.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder legacy(Boolean legacy) {
                 this.legacy = legacy;
@@ -375,7 +443,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The license code of the bastion host.
+             * <p>The license code of the bastion host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bhah_ent_50_asset</p>
              */
             public Builder licenseCode(String licenseCode) {
                 this.licenseCode = licenseCode;
@@ -383,11 +454,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the bastion host. Valid values:
-             * <p>
+             * <p>The edition of the bastion host. Valid values:</p>
+             * <ul>
+             * <li><strong>cloudbastion</strong>: Basic Edition.</li>
+             * <li><strong>cloudbastion_ha</strong>: Enterprise Edition.</li>
+             * </ul>
              * 
-             * *   **cloudbastion**: Basic
-             * *   **cloudbastion_ha**: Enterprise
+             * <strong>example:</strong>
+             * <p>cloudbastion_ha</p>
              */
             public Builder planCode(String planCode) {
                 this.planCode = planCode;
@@ -395,11 +469,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the bastion host can be accessed from the Internet. Valid values:
-             * <p>
+             * <p>Indicates whether the bastion host can be accessed from the Internet. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**: The bastion host can be accessed from the Internet.
-             * *   **false**: The bastion host cannot be accessed from the Internet.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder publicNetworkAccess(Boolean publicNetworkAccess) {
                 this.publicNetworkAccess = publicNetworkAccess;
@@ -407,7 +484,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the bastion host.
+             * <p>The region ID of the bastion host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -415,7 +495,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the bastion host belongs.
+             * <p>The ID of the resource group to which the bastion host belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-acfm26ougi****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -423,7 +506,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the bastion host is purchased or renewed. Unit: milliseconds.
+             * SlaveVswitchId.
+             */
+            public Builder slaveVswitchId(String slaveVswitchId) {
+                this.slaveVswitchId = slaveVswitchId;
+                return this;
+            }
+
+            /**
+             * <p>The timestamp when the bastion host is purchased or renewed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1577681345000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -431,7 +525,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) to which the bastion host belongs.
+             * <p>The ID of the virtual private cloud (VPC) to which the bastion host belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1c85tzgqu1bf5b****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -439,7 +536,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which the bastion host belongs.
+             * <p>The ID of the vSwitch to which the bastion host belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1xfwzzfti0kjbf****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;

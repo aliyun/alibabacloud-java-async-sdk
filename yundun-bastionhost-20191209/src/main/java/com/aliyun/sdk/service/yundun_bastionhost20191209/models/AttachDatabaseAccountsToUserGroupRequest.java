@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachDatabaseAccountsToUserGroupRequest} extends {@link RequestModel}
  *
  * <p>AttachDatabaseAccountsToUserGroupRequest</p>
  */
 public class AttachDatabaseAccountsToUserGroupRequest extends Request {
-    @Query
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private java.util.List < Databases> databases;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
     private AttachDatabaseAccountsToUserGroupRequest(Builder builder) {
@@ -98,7 +98,10 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         } 
 
         /**
-         * Databases.
+         * <p>An array that consists of the database objects.</p>
+         * <blockquote>
+         * <p> You can specify up to 10 databases and 10 database accounts. The database accounts are not required. If you do not specify a database account, the user group is authorized to manage only the databases.</p>
+         * </blockquote>
          */
         public Builder databases(java.util.List < Databases> databases) {
             this.putQueryParameter("Databases", databases);
@@ -107,7 +110,14 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The bastion host ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-zvp282aly06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +126,13 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +141,10 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -140,11 +159,17 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AttachDatabaseAccountsToUserGroupRequest} extends {@link TeaModel}
+     *
+     * <p>AttachDatabaseAccountsToUserGroupRequest</p>
+     */
     public static class Databases extends TeaModel {
-        @NameInMap("DatabaseAccountIds")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountIds")
         private java.util.List < String > databaseAccountIds;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
         private Databases(Builder builder) {
@@ -179,7 +204,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
             private String databaseId; 
 
             /**
-             * DatabaseAccountIds.
+             * <p>An array that consists of database account IDs.</p>
              */
             public Builder databaseAccountIds(java.util.List < String > databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
@@ -187,7 +212,10 @@ public class AttachDatabaseAccountsToUserGroupRequest extends Request {
             }
 
             /**
-             * DatabaseId.
+             * <p>The ID of the database that you want to authorize the user group to manage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;

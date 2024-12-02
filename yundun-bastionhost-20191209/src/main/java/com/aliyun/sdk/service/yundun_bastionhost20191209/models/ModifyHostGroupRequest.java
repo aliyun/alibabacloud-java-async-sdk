@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHostGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyHostGroupRequest</p>
  */
 public class ModifyHostGroupRequest extends Request {
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("HostGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostGroupId;
 
-    @Query
-    @NameInMap("HostGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostGroupName")
     private String hostGroupName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ModifyHostGroupRequest(Builder builder) {
@@ -112,7 +112,10 @@ public class ModifyHostGroupRequest extends Request {
         } 
 
         /**
-         * The new description of the host group. The value can be up to 500 characters in length.
+         * <p>The new remarks of the asset group. The remarks can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -121,10 +124,14 @@ public class ModifyHostGroupRequest extends Request {
         }
 
         /**
-         * The ID of the host group that you want to modify.
-         * <p>
+         * <p>The ID of the asset group that you want to modify.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the host group.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hostGroupId(String hostGroupId) {
             this.putQueryParameter("HostGroupId", hostGroupId);
@@ -133,7 +140,10 @@ public class ModifyHostGroupRequest extends Request {
         }
 
         /**
-         * The new name of the host group. The name can be up to 128 characters in length.
+         * <p>The new name of the asset group. The name can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group01</p>
          */
         public Builder hostGroupName(String hostGroupName) {
             this.putQueryParameter("HostGroupName", hostGroupName);
@@ -142,10 +152,14 @@ public class ModifyHostGroupRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host on which you want to modify the information about the host group.
-         * <p>
+         * <p>The ID of the bastion host whose asset group you want to modify.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -154,10 +168,13 @@ public class ModifyHostGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host on which you want to modify the information about the host group.
-         * <p>
+         * <p>The region ID of the bastion host whose asset group you want to modify.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

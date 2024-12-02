@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPolicyIPAclConfigRequest} extends {@link RequestModel}
  *
  * <p>SetPolicyIPAclConfigRequest</p>
  */
 public class SetPolicyIPAclConfigRequest extends Request {
-    @Query
-    @NameInMap("IPAclConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IPAclConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private IPAclConfig IPAclConfig;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private SetPolicyIPAclConfigRequest(Builder builder) {
@@ -99,7 +99,8 @@ public class SetPolicyIPAclConfigRequest extends Request {
         } 
 
         /**
-         * IPAclConfig.
+         * <p>The access control settings for source IP addresses.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder IPAclConfig(IPAclConfig IPAclConfig) {
             String IPAclConfigShrink = shrink(IPAclConfig, "IPAclConfig", "json");
@@ -109,7 +110,14 @@ public class SetPolicyIPAclConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The bastion host ID.</p>
+         * <blockquote>
+         * <p>You can call the DescribeInstances operation to query the bastion host ID.<a href="~~153281~~"></a></p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -118,7 +126,14 @@ public class SetPolicyIPAclConfigRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The ID of the control policy that you want to modify.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -127,7 +142,13 @@ public class SetPolicyIPAclConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,13 +163,19 @@ public class SetPolicyIPAclConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetPolicyIPAclConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetPolicyIPAclConfigRequest</p>
+     */
     public static class IPAclConfig extends TeaModel {
-        @NameInMap("AclType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AclType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String aclType;
 
-        @NameInMap("IPs")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IPs")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > iPs;
 
         private IPAclConfig(Builder builder) {
@@ -183,7 +210,15 @@ public class SetPolicyIPAclConfigRequest extends Request {
             private java.util.List < String > iPs; 
 
             /**
-             * AclType.
+             * <p>The mode of access control on source IP addresses. Valid values:</p>
+             * <ul>
+             * <li><strong>black</strong>: blacklist mode.</li>
+             * <li><strong>white</strong>: whitelist mode.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -191,7 +226,16 @@ public class SetPolicyIPAclConfigRequest extends Request {
             }
 
             /**
-             * IPs.
+             * <p>The source IP addresses in the blacklist or whitelist.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>This parameter is required if AclType is set to white.</p>
+             * </li>
+             * <li><p>If AclType is set to black but you do not want to add IP addresses to the blacklist, you can leave IPs empty.</p>
+             * </li>
+             * </ul>
+             * <p>This parameter is required.</p>
              */
             public Builder iPs(java.util.List < String > iPs) {
                 this.iPs = iPs;

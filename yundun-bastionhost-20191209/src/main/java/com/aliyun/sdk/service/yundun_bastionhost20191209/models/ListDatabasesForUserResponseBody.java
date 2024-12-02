@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatabasesForUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListDatabasesForUserResponseBody</p>
  */
 public class ListDatabasesForUserResponseBody extends TeaModel {
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private java.util.List < Databases> databases;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDatabasesForUserResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Databases.
+         * <p>The databases returned.</p>
          */
         public Builder databases(java.util.List < Databases> databases) {
             this.databases = databases;
@@ -70,7 +70,10 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8A665B9-8550-4942-9DEE-73198051856B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of databases returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,38 +97,44 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDatabasesForUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabasesForUserResponseBody</p>
+     */
     public static class Databases extends TeaModel {
-        @NameInMap("ActiveAddressType")
+        @com.aliyun.core.annotation.NameInMap("ActiveAddressType")
         private String activeAddressType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("DatabasePort")
+        @com.aliyun.core.annotation.NameInMap("DatabasePort")
         private Long databasePort;
 
-        @NameInMap("DatabasePrivateAddress")
+        @com.aliyun.core.annotation.NameInMap("DatabasePrivateAddress")
         private String databasePrivateAddress;
 
-        @NameInMap("DatabasePublicAddress")
+        @com.aliyun.core.annotation.NameInMap("DatabasePublicAddress")
         private String databasePublicAddress;
 
-        @NameInMap("DatabaseType")
+        @com.aliyun.core.annotation.NameInMap("DatabaseType")
         private String databaseType;
 
-        @NameInMap("NetworkDomainId")
+        @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
         private String networkDomainId;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
         private String sourceInstanceId;
 
         private Databases(Builder builder) {
@@ -238,7 +250,14 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             private String sourceInstanceId; 
 
             /**
-             * ActiveAddressType.
+             * <p>The address type of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong></li>
+             * <li><strong>Private</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -246,7 +265,10 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The remarks of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -254,7 +276,10 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -262,7 +287,10 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL56</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -270,7 +298,10 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * DatabasePort.
+             * <p>The database port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder databasePort(Long databasePort) {
                 this.databasePort = databasePort;
@@ -278,7 +309,10 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * DatabasePrivateAddress.
+             * <p>The internal endpoint of the database. The value is a domain name or an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-wz97******</p>
              */
             public Builder databasePrivateAddress(String databasePrivateAddress) {
                 this.databasePrivateAddress = databasePrivateAddress;
@@ -286,7 +320,10 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * DatabasePublicAddress.
+             * <p>The public endpoint of the database. The value is a domain name or an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf65******</p>
              */
             public Builder databasePublicAddress(String databasePublicAddress) {
                 this.databasePublicAddress = databasePublicAddress;
@@ -294,7 +331,16 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseType.
+             * <p>The database engine. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>Oracle</strong></li>
+             * <li><strong>PostgreSQL</strong></li>
+             * <li><strong>SQLServer</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder databaseType(String databaseType) {
                 this.databaseType = databaseType;
@@ -302,7 +348,10 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkDomainId.
+             * <p>The ID of the network domain where the database resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder networkDomainId(String networkDomainId) {
                 this.networkDomainId = networkDomainId;
@@ -310,7 +359,15 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The database type. Valid values:</p>
+             * <ul>
+             * <li><strong>Local</strong>: on-premises database.</li>
+             * <li><strong>Rds</strong>: ApsaraDB RDS instance.</li>
+             * <li><strong>PolarDB</strong>: PolarDB cluster.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Local</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -318,7 +375,13 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceId.
+             * <p>The ID of the ApsaraDB RDS instance or PolarDB cluster.</p>
+             * <blockquote>
+             * <p> No value is returned for this parameter if <strong>Source</strong> is set to <strong>Local</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9fv2hwux78x9h1pmje</p>
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;

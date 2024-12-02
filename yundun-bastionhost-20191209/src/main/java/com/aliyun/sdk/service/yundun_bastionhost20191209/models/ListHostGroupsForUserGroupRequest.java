@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostGroupsForUserGroupRequest} extends {@link RequestModel}
  *
  * <p>ListHostGroupsForUserGroupRequest</p>
  */
 public class ListHostGroupsForUserGroupRequest extends Request {
-    @Query
-    @NameInMap("HostGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostGroupName")
     private String hostGroupName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
     private ListHostGroupsForUserGroupRequest(Builder builder) {
@@ -140,7 +140,10 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         } 
 
         /**
-         * The name of the host group that you want to query. Only exact match is supported.
+         * <p>The name of the host group that you want to query. Only exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group</p>
          */
         public Builder hostGroupName(String hostGroupName) {
             this.putQueryParameter("HostGroupName", hostGroupName);
@@ -149,10 +152,14 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host to which the user group belongs.
-         * <p>
+         * <p>The ID of the bastion host to which the user group belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -161,11 +168,14 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * Specifies the category of the host group that you want to query. Valid values:
-         * <p>
+         * <p>Specifies the category of the host group that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>Authorized</strong>: queries the host groups that the user group is authorized to manage. This is the default value.</li>
+         * <li><strong>Unauthorized</strong>: queries the host groups that the user group is not authorized to manage.</li>
+         * </ul>
          * 
-         * *   **Authorized**: queries the host groups that the user group is authorized to manage. This is the default value.
-         * *   **Unauthorized**: queries the host groups that the user group is not authorized to manage.
+         * <strong>example:</strong>
+         * <p>Authorized</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -174,7 +184,10 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -183,11 +196,13 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.\
-         * <p>
-         * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>The number of entries to return on each page.<br>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,10 +211,13 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host to which the user group belongs.
-         * <p>
+         * <p>The region ID of the bastion host to which the user group belongs.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,10 +226,14 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         }
 
         /**
-         * The ID of the user group.
-         * <p>
+         * <p>The ID of the user group.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

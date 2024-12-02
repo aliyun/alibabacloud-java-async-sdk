@@ -1,76 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceLDAPAuthServerRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceLDAPAuthServerRequest</p>
  */
 public class ModifyInstanceLDAPAuthServerRequest extends Request {
-    @Query
-    @NameInMap("Account")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Account")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String account;
 
-    @Query
-    @NameInMap("BaseDN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseDN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String baseDN;
 
-    @Query
-    @NameInMap("EmailMapping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmailMapping")
     private String emailMapping;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IsSSL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSSL")
     private String isSSL;
 
-    @Query
-    @NameInMap("LoginNameMapping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginNameMapping")
     private String loginNameMapping;
 
-    @Query
-    @NameInMap("MobileMapping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobileMapping")
     private String mobileMapping;
 
-    @Query
-    @NameInMap("NameMapping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NameMapping")
     private String nameMapping;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String port;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Server")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Server")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String server;
 
-    @Query
-    @NameInMap("StandbyServer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyServer")
     private String standbyServer;
 
     private ModifyInstanceLDAPAuthServerRequest(Builder builder) {
@@ -241,7 +241,11 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         } 
 
         /**
-         * The username of the account that is used for the LDAP server.
+         * <p>The username of the account that is used for the LDAP server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn=Manager,dc=test,dc=com</p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -250,7 +254,11 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The Base distinguished name (DN).
+         * <p>The Base distinguished name (DN).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc=test,dc=com</p>
          */
         public Builder baseDN(String baseDN) {
             this.putQueryParameter("BaseDN", baseDN);
@@ -259,7 +267,10 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The field that is used to indicate the email address of a user on the LDAP server.
+         * <p>The field that is used to indicate the email address of a user on the LDAP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emailAttr</p>
          */
         public Builder emailMapping(String emailMapping) {
             this.putQueryParameter("EmailMapping", emailMapping);
@@ -268,7 +279,10 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The condition that is used to filter users.
+         * <p>The condition that is used to filter users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(objectClass=top)</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -277,7 +291,14 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <p>The bastion host ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -286,11 +307,14 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * Specifies whether to support SSL. Valid values:
-         * <p>
+         * <p>Specifies whether to support SSL. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSSL(String isSSL) {
             this.putQueryParameter("IsSSL", isSSL);
@@ -299,7 +323,10 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The field that is used to indicate the logon name of a user on the LDAP server.
+         * <p>The field that is used to indicate the logon name of a user on the LDAP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userNameAttr</p>
          */
         public Builder loginNameMapping(String loginNameMapping) {
             this.putQueryParameter("LoginNameMapping", loginNameMapping);
@@ -308,7 +335,10 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The field that is used to indicate the mobile phone number of a user on the LDAP server.
+         * <p>The field that is used to indicate the mobile phone number of a user on the LDAP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mobileAttr</p>
          */
         public Builder mobileMapping(String mobileMapping) {
             this.putQueryParameter("MobileMapping", mobileMapping);
@@ -317,7 +347,10 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The field that is used to indicate the name of a user on the LDAP server.
+         * <p>The field that is used to indicate the name of a user on the LDAP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nameAttr</p>
          */
         public Builder nameMapping(String nameMapping) {
             this.putQueryParameter("NameMapping", nameMapping);
@@ -326,7 +359,10 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The password of the account that is used for the LDAP server. You must configure a password when you configure LDAP authentication. If you leave this parameter empty when you modify the settings of LDAP authentication, the current password is used.
+         * <p>The password of the account that is used for the LDAP server. You must configure a password when you configure LDAP authentication. If you leave this parameter empty when you modify the settings of LDAP authentication, the current password is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -335,7 +371,11 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The port that is used to access the LDAP server.
+         * <p>The port that is used to access the LDAP server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>389</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -344,7 +384,13 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -353,7 +399,11 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The address of the LDAP server.
+         * <p>The address of the LDAP server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder server(String server) {
             this.putQueryParameter("Server", server);
@@ -362,7 +412,10 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * The address of the secondary LDAP server.
+         * <p>The address of the secondary LDAP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder standbyServer(String standbyServer) {
             this.putQueryParameter("StandbyServer", standbyServer);

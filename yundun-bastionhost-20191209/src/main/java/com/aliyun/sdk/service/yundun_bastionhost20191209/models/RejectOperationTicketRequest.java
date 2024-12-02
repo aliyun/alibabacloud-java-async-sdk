@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RejectOperationTicketRequest} extends {@link RequestModel}
  *
  * <p>RejectOperationTicketRequest</p>
  */
 public class RejectOperationTicketRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    private String comment;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OperationTicketId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationTicketId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operationTicketId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private RejectOperationTicketRequest(Builder builder) {
         super(builder);
+        this.comment = builder.comment;
         this.instanceId = builder.instanceId;
         this.operationTicketId = builder.operationTicketId;
         this.regionId = builder.regionId;
@@ -44,6 +49,13 @@ public class RejectOperationTicketRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return comment
+     */
+    public String getComment() {
+        return this.comment;
     }
 
     /**
@@ -68,6 +80,7 @@ public class RejectOperationTicketRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RejectOperationTicketRequest, Builder> {
+        private String comment; 
         private String instanceId; 
         private String operationTicketId; 
         private String regionId; 
@@ -78,16 +91,30 @@ public class RejectOperationTicketRequest extends Request {
 
         private Builder(RejectOperationTicketRequest request) {
             super(request);
+            this.comment = request.comment;
             this.instanceId = request.instanceId;
             this.operationTicketId = request.operationTicketId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The ID of the bastion host.
-         * <p>
+         * Comment.
+         */
+        public Builder comment(String comment) {
+            this.putQueryParameter("Comment", comment);
+            this.comment = comment;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the bastion host.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -96,7 +123,14 @@ public class RejectOperationTicketRequest extends Request {
         }
 
         /**
-         * The ID of the O\&M application that you want to reject. You can call the ListOperationTickets operation to query the IDs of all O\&M applications that require review.
+         * <p>The ID of the O&amp;M application that you want to reject.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2584313.html">ListOperationTickets</a> operation to query the IDs of all O&amp;M applications that require review.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder operationTicketId(String operationTicketId) {
             this.putQueryParameter("OperationTicketId", operationTicketId);
@@ -105,10 +139,13 @@ public class RejectOperationTicketRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host.
-         * <p>
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatabaseAccountsForUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListDatabaseAccountsForUserGroupResponseBody</p>
  */
 public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
-    @NameInMap("DatabaseAccounts")
+    @com.aliyun.core.annotation.NameInMap("DatabaseAccounts")
     private java.util.List < DatabaseAccounts> databaseAccounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDatabaseAccountsForUserGroupResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DatabaseAccounts.
+         * <p>The database accounts returned.</p>
          */
         public Builder databaseAccounts(java.util.List < DatabaseAccounts> databaseAccounts) {
             this.databaseAccounts = databaseAccounts;
@@ -70,7 +70,10 @@ public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of database accounts returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,20 +97,26 @@ public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDatabaseAccountsForUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabaseAccountsForUserGroupResponseBody</p>
+     */
     public static class DatabaseAccounts extends TeaModel {
-        @NameInMap("DatabaseAccountId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountId")
         private String databaseAccountId;
 
-        @NameInMap("DatabaseAccountName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountName")
         private String databaseAccountName;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("IsAuthorized")
+        @com.aliyun.core.annotation.NameInMap("IsAuthorized")
         private Boolean isAuthorized;
 
-        @NameInMap("ProtocolName")
+        @com.aliyun.core.annotation.NameInMap("ProtocolName")
         private String protocolName;
 
         private DatabaseAccounts(Builder builder) {
@@ -166,7 +178,10 @@ public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * DatabaseAccountId.
+             * <p>The ID of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder databaseAccountId(String databaseAccountId) {
                 this.databaseAccountId = databaseAccountId;
@@ -174,7 +189,10 @@ public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseAccountName.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder databaseAccountName(String databaseAccountName) {
                 this.databaseAccountName = databaseAccountName;
@@ -182,7 +200,10 @@ public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * <p>The ID of the database to which the database account belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -190,7 +211,14 @@ public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * IsAuthorized.
+             * <p>Indicates whether the user group is authorized to manage the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAuthorized(Boolean isAuthorized) {
                 this.isAuthorized = isAuthorized;
@@ -198,7 +226,16 @@ public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolName.
+             * <p>The protocol used by the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>Oracle</strong></li>
+             * <li><strong>PostgreSQL</strong></li>
+             * <li><strong>SQLServer</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;

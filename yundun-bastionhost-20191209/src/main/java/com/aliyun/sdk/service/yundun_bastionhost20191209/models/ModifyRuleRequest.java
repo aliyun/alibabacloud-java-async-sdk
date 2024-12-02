@@ -1,65 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyRuleRequest</p>
  */
 public class ModifyRuleRequest extends Request {
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private java.util.List < Databases> databases;
 
-    @Query
-    @NameInMap("EffectiveEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveEndTime")
     private Long effectiveEndTime;
 
-    @Query
-    @NameInMap("EffectiveStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveStartTime")
     private Long effectiveStartTime;
 
-    @Query
-    @NameInMap("HostGroups")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostGroups")
     private java.util.List < HostGroups> hostGroups;
 
-    @Query
-    @NameInMap("Hosts")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Hosts")
     private java.util.List < Hosts> hosts;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("UserGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
     private java.util.List < String > userGroupIds;
 
-    @Query
-    @NameInMap("UserIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIds")
     private java.util.List < String > userIds;
 
     private ModifyRuleRequest(Builder builder) {
@@ -210,7 +210,7 @@ public class ModifyRuleRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>The new remarks of the authorization rule. It can be up to 500 characters in length.</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -219,7 +219,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * Databases.
+         * <p>The databases and database accounts that a user associated with the modified rule can manage.</p>
          */
         public Builder databases(java.util.List < Databases> databases) {
             this.putQueryParameter("Databases", databases);
@@ -228,7 +228,10 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * EffectiveEndTime.
+         * <p>The end time of the new validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672502400</p>
          */
         public Builder effectiveEndTime(Long effectiveEndTime) {
             this.putQueryParameter("EffectiveEndTime", effectiveEndTime);
@@ -237,7 +240,10 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * EffectiveStartTime.
+         * <p>The start time of the new validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669630029</p>
          */
         public Builder effectiveStartTime(Long effectiveStartTime) {
             this.putQueryParameter("EffectiveStartTime", effectiveStartTime);
@@ -246,7 +252,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * HostGroups.
+         * <p>The asset groups and asset accounts that a user associated with the modified rule can manage.</p>
          */
         public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
             this.putQueryParameter("HostGroups", hostGroups);
@@ -255,7 +261,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * Hosts.
+         * <p>An array that consists of the host IDs and host account IDs with which the modified authorization rule is associated.</p>
          */
         public Builder hosts(java.util.List < Hosts> hosts) {
             this.putQueryParameter("Hosts", hosts);
@@ -264,7 +270,14 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the bastion host whose authorization rule you want to modify.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-zmb2y9ydw08</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -273,7 +286,13 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host to which the authorization rule to modify belongs.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -282,7 +301,11 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the authorization rule to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -291,7 +314,10 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The new name of the authorization rule. The name must be 1 to 128 characters in length and can contain periods (.), underscores (_), hyphens (-), single quotation marks (&quot;), and spaces. It cannot start with a special character.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -300,7 +326,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>The IDs of the user groups with which the modified authorization rule is associated.</p>
          */
         public Builder userGroupIds(java.util.List < String > userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
@@ -309,7 +335,7 @@ public class ModifyRuleRequest extends Request {
         }
 
         /**
-         * UserIds.
+         * <p>The IDs of the users with whom the modified authorization rule is associated.</p>
          */
         public Builder userIds(java.util.List < String > userIds) {
             this.putQueryParameter("UserIds", userIds);
@@ -324,11 +350,17 @@ public class ModifyRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyRuleRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyRuleRequest</p>
+     */
     public static class Databases extends TeaModel {
-        @NameInMap("DatabaseAccountIds")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountIds")
         private java.util.List < String > databaseAccountIds;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
         private Databases(Builder builder) {
@@ -363,7 +395,7 @@ public class ModifyRuleRequest extends Request {
             private String databaseId; 
 
             /**
-             * DatabaseAccountIds.
+             * <p>The database account IDs.</p>
              */
             public Builder databaseAccountIds(java.util.List < String > databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
@@ -371,7 +403,14 @@ public class ModifyRuleRequest extends Request {
             }
 
             /**
-             * DatabaseId.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;DatabaseId&quot;: &quot;1&quot;
+             *     }
+             * ]</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -385,11 +424,17 @@ public class ModifyRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyRuleRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyRuleRequest</p>
+     */
     public static class HostGroups extends TeaModel {
-        @NameInMap("HostAccountNames")
+        @com.aliyun.core.annotation.NameInMap("HostAccountNames")
         private java.util.List < String > hostAccountNames;
 
-        @NameInMap("HostGroupId")
+        @com.aliyun.core.annotation.NameInMap("HostGroupId")
         private String hostGroupId;
 
         private HostGroups(Builder builder) {
@@ -424,7 +469,7 @@ public class ModifyRuleRequest extends Request {
             private String hostGroupId; 
 
             /**
-             * HostAccountNames.
+             * <p>The names of the asset accounts.</p>
              */
             public Builder hostAccountNames(java.util.List < String > hostAccountNames) {
                 this.hostAccountNames = hostAccountNames;
@@ -432,7 +477,10 @@ public class ModifyRuleRequest extends Request {
             }
 
             /**
-             * HostGroupId.
+             * <p>The asset group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;HostGroupId&quot;:&quot;1&quot;}]</p>
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -446,11 +494,17 @@ public class ModifyRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyRuleRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyRuleRequest</p>
+     */
     public static class Hosts extends TeaModel {
-        @NameInMap("HostAccountIds")
+        @com.aliyun.core.annotation.NameInMap("HostAccountIds")
         private java.util.List < String > hostAccountIds;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
         private Hosts(Builder builder) {
@@ -485,7 +539,7 @@ public class ModifyRuleRequest extends Request {
             private String hostId; 
 
             /**
-             * HostAccountIds.
+             * <p>The host account IDs.</p>
              */
             public Builder hostAccountIds(java.util.List < String > hostAccountIds) {
                 this.hostAccountIds = hostAccountIds;
@@ -493,7 +547,10 @@ public class ModifyRuleRequest extends Request {
             }
 
             /**
-             * HostId.
+             * <p>The host ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;HostId&quot;:&quot;1&quot;}]</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;

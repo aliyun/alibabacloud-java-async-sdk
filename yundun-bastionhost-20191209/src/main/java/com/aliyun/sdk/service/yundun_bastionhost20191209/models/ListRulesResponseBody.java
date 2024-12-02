@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRulesResponseBody</p>
  */
 public class ListRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private java.util.List < Rules> rules;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListRulesResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ListRulesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,7 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The authorization rules that are returned.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -78,7 +81,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of authorization rules that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,23 +97,29 @@ public class ListRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("EffectiveEndTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveEndTime")
         private Long effectiveEndTime;
 
-        @NameInMap("EffectiveStartTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveStartTime")
         private Long effectiveStartTime;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleState")
+        @com.aliyun.core.annotation.NameInMap("RuleState")
         private String ruleState;
 
         private Rules(Builder builder) {
@@ -178,7 +190,10 @@ public class ListRulesResponseBody extends TeaModel {
             private String ruleState; 
 
             /**
-             * Comment.
+             * <p>The remarks of the authorization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -186,7 +201,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveEndTime.
+             * <p>The end time of the validity period of the authorization rule. The value is a timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709258400</p>
              */
             public Builder effectiveEndTime(Long effectiveEndTime) {
                 this.effectiveEndTime = effectiveEndTime;
@@ -194,7 +212,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveStartTime.
+             * <p>The start time of the validity period of the authorization rule. The value is a timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1685499134</p>
              */
             public Builder effectiveStartTime(Long effectiveStartTime) {
                 this.effectiveStartTime = effectiveStartTime;
@@ -202,7 +223,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The authorization rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -210,7 +234,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the authorization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -218,7 +245,14 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleState.
+             * <p>The state of the authorization rule.</p>
+             * <ul>
+             * <li><strong>Enabled</strong></li>
+             * <li><strong>Disabled</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder ruleState(String ruleState) {
                 this.ruleState = ruleState;

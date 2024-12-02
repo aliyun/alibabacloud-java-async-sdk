@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyUserPublicKeyRequest} extends {@link RequestModel}
  *
  * <p>ModifyUserPublicKeyRequest</p>
  */
 public class ModifyUserPublicKeyRequest extends Request {
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PublicKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicKey")
     private String publicKey;
 
-    @Query
-    @NameInMap("PublicKeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicKeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String publicKeyId;
 
-    @Query
-    @NameInMap("PublicKeyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicKeyName")
     private String publicKeyName;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ModifyUserPublicKeyRequest(Builder builder) {
@@ -126,7 +126,10 @@ public class ModifyUserPublicKeyRequest extends Request {
         } 
 
         /**
-         * The new description of the user group. The description can be up to 500 characters in length.
+         * <p>The new description of the user group. The description can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -135,10 +138,14 @@ public class ModifyUserPublicKeyRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host that is used to modify the public key of the user.
-         * <p>
+         * <p>The ID of the bastion host on which you want to modify the public key of a user.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [describeinstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-nif236pmc1u</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,10 +154,13 @@ public class ModifyUserPublicKeyRequest extends Request {
         }
 
         /**
-         * The new public key.
-         * <p>
+         * <p>The new public key.</p>
+         * <blockquote>
+         * <p> Specify a Base64-encoded string.</p>
+         * </blockquote>
          * 
-         * > The public key must be encoded in Base64.
+         * <strong>example:</strong>
+         * <p>c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUhVcjY4UENFYWFzZjFYRVpNYTVsMlNBQytHV3FpeXVsRVpndkV4dmlPM28gcm9vdEA5NjBkMmNhOTcwYjU=</p>
          */
         public Builder publicKey(String publicKey) {
             this.putQueryParameter("PublicKey", publicKey);
@@ -159,7 +169,14 @@ public class ModifyUserPublicKeyRequest extends Request {
         }
 
         /**
-         * The ID of the public key that you want to modify.
+         * <p>The ID of the public key that you want to modify.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/477555.html">ListUserPublicKeys</a> operation to query the public key ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder publicKeyId(String publicKeyId) {
             this.putQueryParameter("PublicKeyId", publicKeyId);
@@ -168,7 +185,10 @@ public class ModifyUserPublicKeyRequest extends Request {
         }
 
         /**
-         * The name of the public key that you want to modify. This name can be up to 128 characters in length.
+         * <p>The name of the public key that you want to modify. This name can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder publicKeyName(String publicKeyName) {
             this.putQueryParameter("PublicKeyName", publicKeyName);
@@ -177,10 +197,13 @@ public class ModifyUserPublicKeyRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host that is used to modify the public key of the user.
-         * <p>
+         * <p>The region ID of the bastion host that is used to modify the public key of the user.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

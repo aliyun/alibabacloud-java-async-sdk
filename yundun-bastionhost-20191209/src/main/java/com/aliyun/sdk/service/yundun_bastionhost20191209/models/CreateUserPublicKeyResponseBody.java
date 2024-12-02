@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserPublicKeyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUserPublicKeyResponseBody</p>
  */
 public class CreateUserPublicKeyResponseBody extends TeaModel {
-    @NameInMap("PublicKeyId")
+    @com.aliyun.core.annotation.NameInMap("PublicKeyId")
     private String publicKeyId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateUserPublicKeyResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateUserPublicKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the public key.
+         * <p>The ID of the public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder publicKeyId(String publicKeyId) {
             this.publicKeyId = publicKeyId;
@@ -58,7 +61,10 @@ public class CreateUserPublicKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5EAB922E-F476-5DFA-9290-313C608E724B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

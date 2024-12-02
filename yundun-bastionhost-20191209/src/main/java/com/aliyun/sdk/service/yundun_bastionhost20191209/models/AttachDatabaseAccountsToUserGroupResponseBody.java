@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachDatabaseAccountsToUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>AttachDatabaseAccountsToUserGroupResponseBody</p>
  */
 public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private java.util.List < Results> results;
 
     private AttachDatabaseAccountsToUserGroupResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D0EB759-CB0A-537D-A2CC-13A9854FA08D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The result of the call.</p>
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -71,14 +74,20 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AttachDatabaseAccountsToUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachDatabaseAccountsToUserGroupResponseBody</p>
+     */
     public static class DatabaseAccounts extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DatabaseAccountId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountId")
         private String databaseAccountId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private DatabaseAccounts(Builder builder) {
@@ -122,7 +131,10 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * <p>The error code returned. If OK is returned, the authorization was successful. If another error code is returned, the authorization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -130,7 +142,10 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseAccountId.
+             * <p>The database account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder databaseAccountId(String databaseAccountId) {
                 this.databaseAccountId = databaseAccountId;
@@ -138,7 +153,7 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message returned.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -152,20 +167,26 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AttachDatabaseAccountsToUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachDatabaseAccountsToUserGroupResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DatabaseAccounts")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccounts")
         private java.util.List < DatabaseAccounts> databaseAccounts;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
         private Results(Builder builder) {
@@ -227,7 +248,10 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
             private String userGroupId; 
 
             /**
-             * Code.
+             * <p>The error code returned. If OK is returned, the authorization was successful. If another error code is returned, the authorization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -235,7 +259,7 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseAccounts.
+             * <p>A list that shows the authorization results of the database accounts.</p>
              */
             public Builder databaseAccounts(java.util.List < DatabaseAccounts> databaseAccounts) {
                 this.databaseAccounts = databaseAccounts;
@@ -243,7 +267,10 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -251,7 +278,7 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message returned.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -259,7 +286,10 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;

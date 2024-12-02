@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDatabaseAccountRequest} extends {@link RequestModel}
  *
  * <p>DeleteDatabaseAccountRequest</p>
  */
 public class DeleteDatabaseAccountRequest extends Request {
-    @Query
-    @NameInMap("DatabaseAccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseAccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseAccountId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DeleteDatabaseAccountRequest(Builder builder) {
@@ -84,7 +84,14 @@ public class DeleteDatabaseAccountRequest extends Request {
         } 
 
         /**
-         * DatabaseAccountId.
+         * <p>The ID of the database account that you want to delete.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder databaseAccountId(String databaseAccountId) {
             this.putQueryParameter("DatabaseAccountId", databaseAccountId);
@@ -93,7 +100,14 @@ public class DeleteDatabaseAccountRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the bastion host from which you want to delete the database account.</p>
+         * <blockquote>
+         * <p>You can call the DescribeInstances operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +116,13 @@ public class DeleteDatabaseAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host from which you want to delete the database account.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, <a href="https://help.aliyun.com/document_detail/40654.html">see Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

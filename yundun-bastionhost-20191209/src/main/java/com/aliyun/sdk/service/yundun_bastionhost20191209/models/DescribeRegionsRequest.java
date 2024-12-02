@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRegionsRequest</p>
  */
 public class DescribeRegionsRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DescribeRegionsRequest(Builder builder) {
@@ -68,12 +68,15 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The natural language in which responses are returned. Valid values:
-         * <p>
+         * <p>The natural language in which responses are returned. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-CN</strong>: Chinese. This is the default value.</li>
+         * <li><strong>en-US</strong>: English.</li>
+         * <li><strong>ja</strong>: Japanese.</li>
+         * </ul>
          * 
-         * *   **zh-CN**: Chinese. This is the default value.
-         * *   **en-US**: English.
-         * *   **ja**: Japanese.
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -82,7 +85,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

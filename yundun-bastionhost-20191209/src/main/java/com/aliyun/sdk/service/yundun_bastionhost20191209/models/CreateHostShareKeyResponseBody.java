@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHostShareKeyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHostShareKeyResponseBody</p>
  */
 public class CreateHostShareKeyResponseBody extends TeaModel {
-    @NameInMap("HostShareKeyId")
+    @com.aliyun.core.annotation.NameInMap("HostShareKeyId")
     private Long hostShareKeyId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateHostShareKeyResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateHostShareKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the shared key.
+         * <p>The ID of the shared key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10235</p>
          */
         public Builder hostShareKeyId(Long hostShareKeyId) {
             this.hostShareKeyId = hostShareKeyId;
@@ -58,7 +61,10 @@ public class CreateHostShareKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

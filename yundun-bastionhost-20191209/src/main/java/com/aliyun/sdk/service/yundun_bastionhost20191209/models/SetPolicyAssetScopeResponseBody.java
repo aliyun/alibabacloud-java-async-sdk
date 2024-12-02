@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPolicyAssetScopeResponseBody} extends {@link TeaModel}
  *
  * <p>SetPolicyAssetScopeResponseBody</p>
  */
 public class SetPolicyAssetScopeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetPolicyAssetScopeResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class SetPolicyAssetScopeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5EAB922E-F476-5DFA-9290-313C608E724B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

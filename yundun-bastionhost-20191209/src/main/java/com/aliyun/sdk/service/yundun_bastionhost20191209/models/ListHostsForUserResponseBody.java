@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostsForUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListHostsForUserResponseBody</p>
  */
 public class ListHostsForUserResponseBody extends TeaModel {
-    @NameInMap("Hosts")
+    @com.aliyun.core.annotation.NameInMap("Hosts")
     private java.util.List < Hosts> hosts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListHostsForUserResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListHostsForUserResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The hosts returned.
+         * <p>The hosts returned.</p>
          */
         public Builder hosts(java.util.List < Hosts> hosts) {
             this.hosts = hosts;
@@ -70,7 +70,10 @@ public class ListHostsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListHostsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of hosts returned.
+         * <p>The total number of hosts returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,26 +97,32 @@ public class ListHostsForUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHostsForUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHostsForUserResponseBody</p>
+     */
     public static class Hosts extends TeaModel {
-        @NameInMap("ActiveAddressType")
+        @com.aliyun.core.annotation.NameInMap("ActiveAddressType")
         private String activeAddressType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("HostPrivateAddress")
+        @com.aliyun.core.annotation.NameInMap("HostPrivateAddress")
         private String hostPrivateAddress;
 
-        @NameInMap("HostPublicAddress")
+        @com.aliyun.core.annotation.NameInMap("HostPublicAddress")
         private String hostPublicAddress;
 
-        @NameInMap("OSType")
+        @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
         private Hosts(Builder builder) {
@@ -190,11 +202,14 @@ public class ListHostsForUserResponseBody extends TeaModel {
             private String OSType; 
 
             /**
-             * The endpoint type of the host. Valid values:
-             * <p>
+             * <p>The endpoint type of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong>: public endpoint</li>
+             * <li><strong>Private</strong>: internal endpoint</li>
+             * </ul>
              * 
-             * *   **Public**: public endpoint
-             * *   **Private**: internal endpoint
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -202,7 +217,10 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the host.
+             * <p>The description of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -210,7 +228,10 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -218,7 +239,10 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host.
+             * <p>The name of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host01</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -226,7 +250,10 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The internal endpoint of the host. The value is a domain name or an IP address.
+             * <p>The internal endpoint of the host. The value is a domain name or an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder hostPrivateAddress(String hostPrivateAddress) {
                 this.hostPrivateAddress = hostPrivateAddress;
@@ -234,7 +261,10 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of the host. The value is a domain name or an IP address.
+             * <p>The public endpoint of the host. The value is a domain name or an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.158.XX.XX</p>
              */
             public Builder hostPublicAddress(String hostPublicAddress) {
                 this.hostPublicAddress = hostPublicAddress;
@@ -242,11 +272,14 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system of the host. Valid values:
-             * <p>
+             * <p>The operating system of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>Linux</strong></li>
+             * <li><strong>Windows</strong></li>
+             * </ul>
              * 
-             * *   **Linux**
-             * *   **Windows**
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;

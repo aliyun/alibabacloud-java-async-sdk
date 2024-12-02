@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachDatabaseAccountsFromUserGroupRequest} extends {@link RequestModel}
  *
  * <p>DetachDatabaseAccountsFromUserGroupRequest</p>
  */
 public class DetachDatabaseAccountsFromUserGroupRequest extends Request {
-    @Query
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private java.util.List < Databases> databases;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
     private DetachDatabaseAccountsFromUserGroupRequest(Builder builder) {
@@ -98,7 +98,7 @@ public class DetachDatabaseAccountsFromUserGroupRequest extends Request {
         } 
 
         /**
-         * Databases.
+         * <p>The information about the database.</p>
          */
         public Builder databases(java.util.List < Databases> databases) {
             this.putQueryParameter("Databases", databases);
@@ -107,7 +107,14 @@ public class DetachDatabaseAccountsFromUserGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The bastion host ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-7mz2v120f0y</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +123,13 @@ public class DetachDatabaseAccountsFromUserGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +138,14 @@ public class DetachDatabaseAccountsFromUserGroupRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>The ID of the user group from which you want to revoke permissions on databases and database accounts.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -140,11 +160,17 @@ public class DetachDatabaseAccountsFromUserGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DetachDatabaseAccountsFromUserGroupRequest} extends {@link TeaModel}
+     *
+     * <p>DetachDatabaseAccountsFromUserGroupRequest</p>
+     */
     public static class Databases extends TeaModel {
-        @NameInMap("DatabaseAccountIds")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountIds")
         private java.util.List < String > databaseAccountIds;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
         private Databases(Builder builder) {
@@ -179,7 +205,7 @@ public class DetachDatabaseAccountsFromUserGroupRequest extends Request {
             private String databaseId; 
 
             /**
-             * DatabaseAccountIds.
+             * <p>An array that consists of database account IDs.</p>
              */
             public Builder databaseAccountIds(java.util.List < String > databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
@@ -187,7 +213,10 @@ public class DetachDatabaseAccountsFromUserGroupRequest extends Request {
             }
 
             /**
-             * DatabaseId.
+             * <p>The ID of the database on which the permissions are to be revoked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;

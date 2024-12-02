@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOperationHostAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>ListOperationHostAccountsResponseBody</p>
  */
 public class ListOperationHostAccountsResponseBody extends TeaModel {
-    @NameInMap("HostAccounts")
+    @com.aliyun.core.annotation.NameInMap("HostAccounts")
     private java.util.List < HostAccounts> hostAccounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListOperationHostAccountsResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * HostAccounts.
+         * <p>The host accounts returned.</p>
          */
         public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -70,7 +70,10 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of host accounts returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,11 +97,17 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOperationHostAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOperationHostAccountsResponseBody</p>
+     */
     public static class SSHConfig extends TeaModel {
-        @NameInMap("EnableSFTPChannel")
+        @com.aliyun.core.annotation.NameInMap("EnableSFTPChannel")
         private Boolean enableSFTPChannel;
 
-        @NameInMap("EnableSSHChannel")
+        @com.aliyun.core.annotation.NameInMap("EnableSSHChannel")
         private Boolean enableSSHChannel;
 
         private SSHConfig(Builder builder) {
@@ -130,7 +142,7 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
             private Boolean enableSSHChannel; 
 
             /**
-             * EnableSFTPChannel.
+             * <p>Indicates whether SFTP channels are enabled for the account.</p>
              */
             public Builder enableSFTPChannel(Boolean enableSFTPChannel) {
                 this.enableSFTPChannel = enableSFTPChannel;
@@ -138,7 +150,7 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSSHChannel.
+             * <p>Indicates whether SSH channels are enabled for the account.</p>
              */
             public Builder enableSSHChannel(Boolean enableSSHChannel) {
                 this.enableSSHChannel = enableSSHChannel;
@@ -152,29 +164,35 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOperationHostAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOperationHostAccountsResponseBody</p>
+     */
     public static class HostAccounts extends TeaModel {
-        @NameInMap("HasPassword")
+        @com.aliyun.core.annotation.NameInMap("HasPassword")
         private Boolean hasPassword;
 
-        @NameInMap("HostAccountId")
+        @com.aliyun.core.annotation.NameInMap("HostAccountId")
         private String hostAccountId;
 
-        @NameInMap("HostAccountName")
+        @com.aliyun.core.annotation.NameInMap("HostAccountName")
         private String hostAccountName;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("HostShareKeyId")
+        @com.aliyun.core.annotation.NameInMap("HostShareKeyId")
         private String hostShareKeyId;
 
-        @NameInMap("PrivateKeyFingerprint")
+        @com.aliyun.core.annotation.NameInMap("PrivateKeyFingerprint")
         private String privateKeyFingerprint;
 
-        @NameInMap("ProtocolName")
+        @com.aliyun.core.annotation.NameInMap("ProtocolName")
         private String protocolName;
 
-        @NameInMap("SSHConfig")
+        @com.aliyun.core.annotation.NameInMap("SSHConfig")
         private SSHConfig SSHConfig;
 
         private HostAccounts(Builder builder) {
@@ -263,7 +281,14 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
             private SSHConfig SSHConfig; 
 
             /**
-             * HasPassword.
+             * <p>Indicates whether a password is configured for the host account.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPassword(Boolean hasPassword) {
                 this.hasPassword = hasPassword;
@@ -271,7 +296,10 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAccountId.
+             * <p>The host account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -279,7 +307,10 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAccountName.
+             * <p>The host account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -287,7 +318,10 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * <p>The host ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>１</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -295,7 +329,10 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyId.
+             * <p>The ID of the shared key that is associated with the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -303,7 +340,10 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateKeyFingerprint.
+             * <p>The fingerprint of the private key for the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe:ca:37:42:30:00:9d:95:e6:73:e5:b0:32:0a:<strong>:</strong></p>
              */
             public Builder privateKeyFingerprint(String privateKeyFingerprint) {
                 this.privateKeyFingerprint = privateKeyFingerprint;
@@ -311,7 +351,14 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolName.
+             * <p>The protocol that is used by the host account.</p>
+             * <ul>
+             * <li><strong>SSH</strong></li>
+             * <li><strong>RDP</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SSH</p>
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;
@@ -319,7 +366,7 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * SSHConfig.
+             * <p>Indicates whether the Secure File Transfer Protocol (SFTP) channels or the SSH channels are enabled for the host account that uses the SSH protocol.</p>
              */
             public Builder SSHConfig(SSHConfig SSHConfig) {
                 this.SSHConfig = SSHConfig;

@@ -1,75 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatabaseRequest} extends {@link RequestModel}
  *
  * <p>CreateDatabaseRequest</p>
  */
 public class CreateDatabaseRequest extends Request {
-    @Query
-    @NameInMap("ActiveAddressType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActiveAddressType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String activeAddressType;
 
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @Query
-    @NameInMap("DatabasePort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabasePort")
     private Integer databasePort;
 
-    @Query
-    @NameInMap("DatabasePrivateAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabasePrivateAddress")
     private String databasePrivateAddress;
 
-    @Query
-    @NameInMap("DatabasePublicAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabasePublicAddress")
     private String databasePublicAddress;
 
-    @Query
-    @NameInMap("DatabaseType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NetworkDomainId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
     private String networkDomainId;
 
-    @Query
-    @NameInMap("PolarDBEndpointType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolarDBEndpointType")
     private String polarDBEndpointType;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Source")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String source;
 
-    @Query
-    @NameInMap("SourceInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
     private String sourceInstanceId;
 
-    @Query
-    @NameInMap("SourceInstanceRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceInstanceRegionId")
     private String sourceInstanceRegionId;
 
     private CreateDatabaseRequest(Builder builder) {
@@ -240,7 +240,15 @@ public class CreateDatabaseRequest extends Request {
         } 
 
         /**
-         * ActiveAddressType.
+         * <p>The address type of the database to add. Valid values:</p>
+         * <ul>
+         * <li>Public</li>
+         * <li>Private</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder activeAddressType(String activeAddressType) {
             this.putQueryParameter("ActiveAddressType", activeAddressType);
@@ -249,7 +257,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The remarks of the database to add. The remarks can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpp</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -258,7 +269,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * <p>The name of the database to add. This parameter is required if Source is set to <strong>Local</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Oracle</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -267,7 +281,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * DatabasePort.
+         * <p>The port of the database. This parameter is required if Source is set to <strong>Local</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5433</p>
          */
         public Builder databasePort(Integer databasePort) {
             this.putQueryParameter("DatabasePort", databasePort);
@@ -276,7 +293,13 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * DatabasePrivateAddress.
+         * <p>The internal IP address of the database. Specify an IPv4 address or a domain name.</p>
+         * <blockquote>
+         * <p> This parameter is required if ActiveAddressType is set to Private.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-uf6o******</p>
          */
         public Builder databasePrivateAddress(String databasePrivateAddress) {
             this.putQueryParameter("DatabasePrivateAddress", databasePrivateAddress);
@@ -285,7 +308,13 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * DatabasePublicAddress.
+         * <p>The public IP address of the database. Specify an IPv4 address or a domain name.</p>
+         * <blockquote>
+         * <p> This parameter is required if ActiveAddressType is set to Public.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf65251k51******</p>
          */
         public Builder databasePublicAddress(String databasePublicAddress) {
             this.putQueryParameter("DatabasePublicAddress", databasePublicAddress);
@@ -294,7 +323,17 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * DatabaseType.
+         * <p>The type of the database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder databaseType(String databaseType) {
             this.putQueryParameter("DatabaseType", databaseType);
@@ -303,7 +342,14 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The bastion host ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-7mz2g5hu20e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -312,7 +358,13 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * NetworkDomainId.
+         * <p>The ID of the network domain to which the database to add belongs.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder networkDomainId(String networkDomainId) {
             this.putQueryParameter("NetworkDomainId", networkDomainId);
@@ -321,7 +373,14 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * PolarDBEndpointType.
+         * <p>The endpoint type of the PolarDB database. This parameter is required if Source is set to PolarDB. Valid values:</p>
+         * <ul>
+         * <li>Cluster</li>
+         * <li>Primary</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster</p>
          */
         public Builder polarDBEndpointType(String polarDBEndpointType) {
             this.putQueryParameter("PolarDBEndpointType", polarDBEndpointType);
@@ -330,7 +389,13 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -339,7 +404,16 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The type of the database to add. Valid values:</p>
+         * <ul>
+         * <li>Local: on-premises database.</li>
+         * <li>Rds: ApsaraDB RDS instance.</li>
+         * <li>PolarDB: PolarDB cluster.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Local</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -348,7 +422,13 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * SourceInstanceId.
+         * <p>The instance ID of the database to add.</p>
+         * <blockquote>
+         * <p>This parameter is required if <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp19ienyt0yax748****</p>
          */
         public Builder sourceInstanceId(String sourceInstanceId) {
             this.putQueryParameter("SourceInstanceId", sourceInstanceId);
@@ -357,7 +437,13 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * SourceInstanceRegionId.
+         * <p>The region ID of the database to add.</p>
+         * <blockquote>
+         * <p> This parameter is required if <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder sourceInstanceRegionId(String sourceInstanceRegionId) {
             this.putQueryParameter("SourceInstanceRegionId", sourceInstanceRegionId);

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachDatabaseAccountsFromUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DetachDatabaseAccountsFromUserGroupResponseBody</p>
  */
 public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private java.util.List < Results> results;
 
     private DetachDatabaseAccountsFromUserGroupResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC528ED1-C302-56E5-9CB5-ADA625D64FF9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The result of the call.</p>
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -71,14 +74,20 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetachDatabaseAccountsFromUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachDatabaseAccountsFromUserGroupResponseBody</p>
+     */
     public static class DatabaseAccounts extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DatabaseAccountId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountId")
         private String databaseAccountId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private DatabaseAccounts(Builder builder) {
@@ -122,7 +131,10 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * <p>The error code that is returned. If OK is returned, the operation was successful. If other error codes are returned, the operation failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -130,7 +142,10 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseAccountId.
+             * <p>The ID of the database account on which the permissions are revoked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder databaseAccountId(String databaseAccountId) {
                 this.databaseAccountId = databaseAccountId;
@@ -138,7 +153,10 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -152,20 +170,26 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetachDatabaseAccountsFromUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachDatabaseAccountsFromUserGroupResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DatabaseAccounts")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccounts")
         private java.util.List < DatabaseAccounts> databaseAccounts;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
         private Results(Builder builder) {
@@ -227,7 +251,10 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
             private String userGroupId; 
 
             /**
-             * Code.
+             * <p>The error code that is returned. If OK is returned, the operation was successful. If other error codes are returned, the operation failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -235,7 +262,7 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseAccounts.
+             * <p>A list that shows the authorization results of the database accounts.</p>
              */
             public Builder databaseAccounts(java.util.List < DatabaseAccounts> databaseAccounts) {
                 this.databaseAccounts = databaseAccounts;
@@ -243,7 +270,10 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * <p>The ID of the database on which the permissions are revoked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -251,7 +281,10 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -259,7 +292,10 @@ public class DetachDatabaseAccountsFromUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;

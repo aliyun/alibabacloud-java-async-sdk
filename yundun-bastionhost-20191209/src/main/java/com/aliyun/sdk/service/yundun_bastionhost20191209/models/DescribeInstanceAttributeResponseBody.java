@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceAttributeResponseBody</p>
  */
 public class DescribeInstanceAttributeResponseBody extends TeaModel {
-    @NameInMap("InstanceAttribute")
+    @com.aliyun.core.annotation.NameInMap("InstanceAttribute")
     private InstanceAttribute instanceAttribute;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceAttributeResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The attribute information about the bastion host.
+         * <p>The attribute information about the bastion host.</p>
          */
         public Builder instanceAttribute(InstanceAttribute instanceAttribute) {
             this.instanceAttribute = instanceAttribute;
@@ -58,7 +58,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>082FAB35-6AB9-4FD5-8750-D36673548E76</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAttributeResponseBody</p>
+     */
     public static class Ports extends TeaModel {
-        @NameInMap("CustomPort")
+        @com.aliyun.core.annotation.NameInMap("CustomPort")
         private Integer customPort;
 
-        @NameInMap("StandardPort")
+        @com.aliyun.core.annotation.NameInMap("StandardPort")
         private Integer standardPort;
 
         private Ports(Builder builder) {
@@ -110,10 +119,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private Integer standardPort; 
 
             /**
-             * The custom port.
-             * <p>
+             * <p>The custom port.</p>
+             * <blockquote>
+             * <p>Only the SSH and RDP ports can be changed. If no custom O&amp;M port is specified for the bastion host, the value of StandardPort is returned.</p>
+             * </blockquote>
              * 
-             * >  You can change only the SSH and RDP ports. If O\&M ports are not specified, the value of the StandardPort parameter is returned.
+             * <strong>example:</strong>
+             * <p>600xx</p>
              */
             public Builder customPort(Integer customPort) {
                 this.customPort = customPort;
@@ -121,12 +133,15 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The standard port of the bastion host. Valid values:
-             * <p>
+             * <p>The standard port of the bastion host. Valid values:</p>
+             * <ul>
+             * <li><strong>SSH</strong>: 60022.</li>
+             * <li><strong>RDP</strong>: 63389.</li>
+             * <li><strong>HTTPS</strong>: 443.</li>
+             * </ul>
              * 
-             * *   **SSH**: 60022
-             * *   **RDP**: 63389
-             * *   **HTTPS**: 443
+             * <strong>example:</strong>
+             * <p>60022</p>
              */
             public Builder standardPort(Integer standardPort) {
                 this.standardPort = standardPort;
@@ -140,95 +155,196 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
-    public static class InstanceAttribute extends TeaModel {
-        @NameInMap("AuthorizedSecurityGroups")
-        private java.util.List < String > authorizedSecurityGroups;
-
-        @NameInMap("Bandwidth")
-        private String bandwidth;
-
-        @NameInMap("BandwidthPackage")
-        private String bandwidthPackage;
-
-        @NameInMap("DbOperationModule")
-        private String dbOperationModule;
-
-        @NameInMap("Description")
+    /**
+     * 
+     * {@link DescribeInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAttributeResponseBody</p>
+     */
+    public static class WhiteListPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EniInstanceId")
+        @com.aliyun.core.annotation.NameInMap("Entry")
+        private String entry;
+
+        private WhiteListPolicies(Builder builder) {
+            this.description = builder.description;
+            this.entry = builder.entry;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WhiteListPolicies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return entry
+         */
+        public String getEntry() {
+            return this.entry;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String entry; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Entry.
+             */
+            public Builder entry(String entry) {
+                this.entry = entry;
+                return this;
+            }
+
+            public WhiteListPolicies build() {
+                return new WhiteListPolicies(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAttributeResponseBody</p>
+     */
+    public static class InstanceAttribute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppOperationModule")
+        private String appOperationModule;
+
+        @com.aliyun.core.annotation.NameInMap("AuthorizedSecurityGroups")
+        private java.util.List < String > authorizedSecurityGroups;
+
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
+        private String bandwidth;
+
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackage")
+        private String bandwidthPackage;
+
+        @com.aliyun.core.annotation.NameInMap("DbOperationModule")
+        private String dbOperationModule;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("EniInstanceId")
         private String eniInstanceId;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("HSMModule")
+        private String HSMModule;
+
+        @com.aliyun.core.annotation.NameInMap("IDaaSModule")
+        private String iDaaSModule;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("InternetEndpoint")
+        @com.aliyun.core.annotation.NameInMap("InternetEndpoint")
         private String internetEndpoint;
 
-        @NameInMap("IntranetEndpoint")
+        @com.aliyun.core.annotation.NameInMap("IntranetEndpoint")
         private String intranetEndpoint;
 
-        @NameInMap("LicenseCode")
+        @com.aliyun.core.annotation.NameInMap("KmsSecretModule")
+        private String kmsSecretModule;
+
+        @com.aliyun.core.annotation.NameInMap("LicenseCode")
         private String licenseCode;
 
-        @NameInMap("ModifyPasswordModule")
+        @com.aliyun.core.annotation.NameInMap("ModifyPasswordModule")
         private String modifyPasswordModule;
 
-        @NameInMap("NetworkProxyModule")
+        @com.aliyun.core.annotation.NameInMap("NetworkProxyModule")
         private String networkProxyModule;
 
-        @NameInMap("Ports")
+        @com.aliyun.core.annotation.NameInMap("Ports")
         private java.util.List < Ports> ports;
 
-        @NameInMap("PrivateExportIps")
+        @com.aliyun.core.annotation.NameInMap("PrivateExportIps")
         private java.util.List < String > privateExportIps;
 
-        @NameInMap("PrivateWhiteList")
+        @com.aliyun.core.annotation.NameInMap("PrivateWhiteList")
         private java.util.List < String > privateWhiteList;
 
-        @NameInMap("PublicExportIps")
+        @com.aliyun.core.annotation.NameInMap("PublicExportIps")
         private java.util.List < String > publicExportIps;
 
-        @NameInMap("PublicIps")
+        @com.aliyun.core.annotation.NameInMap("PublicIps")
         private java.util.List < String > publicIps;
 
-        @NameInMap("PublicNetworkAccess")
+        @com.aliyun.core.annotation.NameInMap("PublicNetworkAccess")
         private Boolean publicNetworkAccess;
 
-        @NameInMap("PublicWhiteList")
+        @com.aliyun.core.annotation.NameInMap("PublicWhiteList")
         private java.util.List < String > publicWhiteList;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RDModule")
+        private String RDModule;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("RouterRules")
+        private java.util.List < String > routerRules;
+
+        @com.aliyun.core.annotation.NameInMap("ScriptDeliverModule")
+        private String scriptDeliverModule;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List < String > securityGroupIds;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("SlaveVswitchId")
+        private String slaveVswitchId;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Storage")
+        @com.aliyun.core.annotation.NameInMap("Storage")
         private Long storage;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
-        @NameInMap("WebTerminalModule")
+        @com.aliyun.core.annotation.NameInMap("WebTerminalModule")
         private String webTerminalModule;
 
+        @com.aliyun.core.annotation.NameInMap("WhiteListPolicies")
+        private java.util.List < WhiteListPolicies> whiteListPolicies;
+
         private InstanceAttribute(Builder builder) {
+            this.appOperationModule = builder.appOperationModule;
             this.authorizedSecurityGroups = builder.authorizedSecurityGroups;
             this.bandwidth = builder.bandwidth;
             this.bandwidthPackage = builder.bandwidthPackage;
@@ -236,10 +352,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             this.description = builder.description;
             this.eniInstanceId = builder.eniInstanceId;
             this.expireTime = builder.expireTime;
+            this.HSMModule = builder.HSMModule;
+            this.iDaaSModule = builder.iDaaSModule;
             this.instanceId = builder.instanceId;
             this.instanceStatus = builder.instanceStatus;
             this.internetEndpoint = builder.internetEndpoint;
             this.intranetEndpoint = builder.intranetEndpoint;
+            this.kmsSecretModule = builder.kmsSecretModule;
             this.licenseCode = builder.licenseCode;
             this.modifyPasswordModule = builder.modifyPasswordModule;
             this.networkProxyModule = builder.networkProxyModule;
@@ -250,14 +369,19 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             this.publicIps = builder.publicIps;
             this.publicNetworkAccess = builder.publicNetworkAccess;
             this.publicWhiteList = builder.publicWhiteList;
+            this.RDModule = builder.RDModule;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.routerRules = builder.routerRules;
+            this.scriptDeliverModule = builder.scriptDeliverModule;
             this.securityGroupIds = builder.securityGroupIds;
+            this.slaveVswitchId = builder.slaveVswitchId;
             this.startTime = builder.startTime;
             this.storage = builder.storage;
             this.vpcId = builder.vpcId;
             this.vswitchId = builder.vswitchId;
             this.webTerminalModule = builder.webTerminalModule;
+            this.whiteListPolicies = builder.whiteListPolicies;
         }
 
         public static Builder builder() {
@@ -266,6 +390,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
         public static InstanceAttribute create() {
             return builder().build();
+        }
+
+        /**
+         * @return appOperationModule
+         */
+        public String getAppOperationModule() {
+            return this.appOperationModule;
         }
 
         /**
@@ -318,6 +449,20 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return HSMModule
+         */
+        public String getHSMModule() {
+            return this.HSMModule;
+        }
+
+        /**
+         * @return iDaaSModule
+         */
+        public String getIDaaSModule() {
+            return this.iDaaSModule;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -343,6 +488,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          */
         public String getIntranetEndpoint() {
             return this.intranetEndpoint;
+        }
+
+        /**
+         * @return kmsSecretModule
+         */
+        public String getKmsSecretModule() {
+            return this.kmsSecretModule;
         }
 
         /**
@@ -416,6 +568,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return RDModule
+         */
+        public String getRDModule() {
+            return this.RDModule;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -430,10 +589,31 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return routerRules
+         */
+        public java.util.List < String > getRouterRules() {
+            return this.routerRules;
+        }
+
+        /**
+         * @return scriptDeliverModule
+         */
+        public String getScriptDeliverModule() {
+            return this.scriptDeliverModule;
+        }
+
+        /**
          * @return securityGroupIds
          */
         public java.util.List < String > getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        /**
+         * @return slaveVswitchId
+         */
+        public String getSlaveVswitchId() {
+            return this.slaveVswitchId;
         }
 
         /**
@@ -471,7 +651,15 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.webTerminalModule;
         }
 
+        /**
+         * @return whiteListPolicies
+         */
+        public java.util.List < WhiteListPolicies> getWhiteListPolicies() {
+            return this.whiteListPolicies;
+        }
+
         public static final class Builder {
+            private String appOperationModule; 
             private java.util.List < String > authorizedSecurityGroups; 
             private String bandwidth; 
             private String bandwidthPackage; 
@@ -479,10 +667,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String description; 
             private String eniInstanceId; 
             private Long expireTime; 
+            private String HSMModule; 
+            private String iDaaSModule; 
             private String instanceId; 
             private String instanceStatus; 
             private String internetEndpoint; 
             private String intranetEndpoint; 
+            private String kmsSecretModule; 
             private String licenseCode; 
             private String modifyPasswordModule; 
             private String networkProxyModule; 
@@ -493,17 +684,30 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private java.util.List < String > publicIps; 
             private Boolean publicNetworkAccess; 
             private java.util.List < String > publicWhiteList; 
+            private String RDModule; 
             private String regionId; 
             private String resourceGroupId; 
+            private java.util.List < String > routerRules; 
+            private String scriptDeliverModule; 
             private java.util.List < String > securityGroupIds; 
+            private String slaveVswitchId; 
             private Long startTime; 
             private Long storage; 
             private String vpcId; 
             private String vswitchId; 
             private String webTerminalModule; 
+            private java.util.List < WhiteListPolicies> whiteListPolicies; 
 
             /**
-             * AuthorizedSecurityGroups.
+             * AppOperationModule.
+             */
+            public Builder appOperationModule(String appOperationModule) {
+                this.appOperationModule = appOperationModule;
+                return this;
+            }
+
+            /**
+             * <p>The IDs of authorized security groups.</p>
              */
             public Builder authorizedSecurityGroups(java.util.List < String > authorizedSecurityGroups) {
                 this.authorizedSecurityGroups = authorizedSecurityGroups;
@@ -511,7 +715,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The total bandwidth of the bastion host.
+             * <p>The total bandwidth of the bastion host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -519,7 +726,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The extra bandwidth plan of the bastion host.
+             * <p>The bandwidth plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder bandwidthPackage(String bandwidthPackage) {
                 this.bandwidthPackage = bandwidthPackage;
@@ -527,7 +737,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DbOperationModule.
+             * <p>The status of the database O&amp;M feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disable</p>
              */
             public Builder dbOperationModule(String dbOperationModule) {
                 this.dbOperationModule = dbOperationModule;
@@ -535,7 +748,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the instance.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -543,7 +756,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * EniInstanceId.
+             * <p>The ID of the Elastic Network Interface (ENI).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp1455jrzwm7moaxxxxx</p>
              */
             public Builder eniInstanceId(String eniInstanceId) {
                 this.eniInstanceId = eniInstanceId;
@@ -551,7 +767,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The time when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578326400000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -559,7 +778,26 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * HSMModule.
+             */
+            public Builder HSMModule(String HSMModule) {
+                this.HSMModule = HSMModule;
+                return this;
+            }
+
+            /**
+             * IDaaSModule.
+             */
+            public Builder iDaaSModule(String iDaaSModule) {
+                this.iDaaSModule = iDaaSModule;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bastionhost-cn-78v1ghxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -567,7 +805,19 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>PENDING: The instance is not initialized.</li>
+             * <li>CREATING: The instance is being created.</li>
+             * <li>RUNNING: The instance is running.</li>
+             * <li>EXPIRED: The instance expired.</li>
+             * <li>CREATE_FAILED: The instance fails to be created.</li>
+             * <li>UPGRADING: The configurations of the instance are being changed.</li>
+             * <li>UPGRADE_FAILED: The configurations of the instance fail to be changed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -575,7 +825,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InternetEndpoint.
+             * <p>The public endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drawvxalwb-public.bastionhost.aliyuncs.com</p>
              */
             public Builder internetEndpoint(String internetEndpoint) {
                 this.internetEndpoint = internetEndpoint;
@@ -583,7 +836,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetEndpoint.
+             * <p>The private endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drawvxalwb.bastionhost.aliyuncs.com</p>
              */
             public Builder intranetEndpoint(String intranetEndpoint) {
                 this.intranetEndpoint = intranetEndpoint;
@@ -591,7 +847,18 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LicenseCode.
+             * KmsSecretModule.
+             */
+            public Builder kmsSecretModule(String kmsSecretModule) {
+                this.kmsSecretModule = kmsSecretModule;
+                return this;
+            }
+
+            /**
+             * <p>The license code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bhah_ent_50_asset</p>
              */
             public Builder licenseCode(String licenseCode) {
                 this.licenseCode = licenseCode;
@@ -599,7 +866,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyPasswordModule.
+             * <p>The status of the automatic password change feature.</p>
+             * <ul>
+             * <li><strong>Enable</strong></li>
+             * <li><strong>Disable</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder modifyPasswordModule(String modifyPasswordModule) {
                 this.modifyPasswordModule = modifyPasswordModule;
@@ -607,7 +881,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkProxyModule.
+             * <p>The status of the network domain feature.</p>
+             * <ul>
+             * <li><strong>Enable</strong></li>
+             * <li><strong>Disable</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder networkProxyModule(String networkProxyModule) {
                 this.networkProxyModule = networkProxyModule;
@@ -615,7 +896,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * <p>An array that consists of the O&amp;M ports of the bastion host.</p>
              */
             public Builder ports(java.util.List < Ports> ports) {
                 this.ports = ports;
@@ -623,7 +904,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateExportIps.
+             * <p>An array that consists of the egress private IP addresses of the bastion host.</p>
              */
             public Builder privateExportIps(java.util.List < String > privateExportIps) {
                 this.privateExportIps = privateExportIps;
@@ -631,7 +912,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateWhiteList.
+             * <p>The private IP addresses that are allowed to access the instance.</p>
              */
             public Builder privateWhiteList(java.util.List < String > privateWhiteList) {
                 this.privateWhiteList = privateWhiteList;
@@ -639,7 +920,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PublicExportIps.
+             * <p>An array that consists of the egress public IP addresses of the bastion host.</p>
              */
             public Builder publicExportIps(java.util.List < String > publicExportIps) {
                 this.publicExportIps = publicExportIps;
@@ -647,7 +928,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIps.
+             * <p>The public IP address.</p>
              */
             public Builder publicIps(java.util.List < String > publicIps) {
                 this.publicIps = publicIps;
@@ -655,7 +936,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PublicNetworkAccess.
+             * <p>Indicates whether the Bastionhost instance can be accessed over the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder publicNetworkAccess(Boolean publicNetworkAccess) {
                 this.publicNetworkAccess = publicNetworkAccess;
@@ -663,7 +947,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PublicWhiteList.
+             * <p>The public IP addresses that are allowed to access the instance.</p>
              */
             public Builder publicWhiteList(java.util.List < String > publicWhiteList) {
                 this.publicWhiteList = publicWhiteList;
@@ -671,7 +955,18 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * RDModule.
+             */
+            public Builder RDModule(String RDModule) {
+                this.RDModule = RDModule;
+                return this;
+            }
+
+            /**
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -679,7 +974,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzc427dbl2shy</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -687,7 +985,23 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIds.
+             * RouterRules.
+             */
+            public Builder routerRules(java.util.List < String > routerRules) {
+                this.routerRules = routerRules;
+                return this;
+            }
+
+            /**
+             * ScriptDeliverModule.
+             */
+            public Builder scriptDeliverModule(String scriptDeliverModule) {
+                this.scriptDeliverModule = scriptDeliverModule;
+                return this;
+            }
+
+            /**
+             * <p>The IDs of the security groups to which the instance belongs.</p>
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -695,7 +1009,18 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * SlaveVswitchId.
+             */
+            public Builder slaveVswitchId(String slaveVswitchId) {
+                this.slaveVswitchId = slaveVswitchId;
+                return this;
+            }
+
+            /**
+             * <p>The time when the instance started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1577681345000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -703,7 +1028,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Storage.
+             * <p>The storage capacity of the bastion host. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2199023255552</p>
              */
             public Builder storage(Long storage) {
                 this.storage = storage;
@@ -711,7 +1039,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1c85tzgqu1bf5bxxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -719,7 +1050,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * <p>The ID of the vSwitch to which the instance connects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1xfwzzfti0kjbfxxxxx</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -727,10 +1061,25 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * WebTerminalModule.
+             * <p>The status of the web terminal.</p>
+             * <ul>
+             * <li><strong>Enable</strong></li>
+             * <li><strong>Disable</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder webTerminalModule(String webTerminalModule) {
                 this.webTerminalModule = webTerminalModule;
+                return this;
+            }
+
+            /**
+             * WhiteListPolicies.
+             */
+            public Builder whiteListPolicies(java.util.List < WhiteListPolicies> whiteListPolicies) {
+                this.whiteListPolicies = whiteListPolicies;
                 return this;
             }
 

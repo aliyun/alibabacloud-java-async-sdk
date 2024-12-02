@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDatabaseAccountResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDatabaseAccountResponseBody</p>
  */
 public class DeleteDatabaseAccountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteDatabaseAccountResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class DeleteDatabaseAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81500666-d7f5-4143-8329-0223cc738105</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

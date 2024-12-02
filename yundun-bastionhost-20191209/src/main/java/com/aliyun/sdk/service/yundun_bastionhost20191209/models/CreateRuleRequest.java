@@ -1,61 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateRuleRequest</p>
  */
 public class CreateRuleRequest extends Request {
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private java.util.List < Databases> databases;
 
-    @Query
-    @NameInMap("EffectiveEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveEndTime")
     private Long effectiveEndTime;
 
-    @Query
-    @NameInMap("EffectiveStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveStartTime")
     private Long effectiveStartTime;
 
-    @Query
-    @NameInMap("HostGroups")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostGroups")
     private java.util.List < HostGroups> hostGroups;
 
-    @Query
-    @NameInMap("Hosts")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Hosts")
     private java.util.List < Hosts> hosts;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @Query
-    @NameInMap("UserGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
     private java.util.List < String > userGroupIds;
 
-    @Query
-    @NameInMap("UserIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIds")
     private java.util.List < String > userIds;
 
     private CreateRuleRequest(Builder builder) {
@@ -196,7 +196,10 @@ public class CreateRuleRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>The remarks of the authorization rule. The remarks can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -205,7 +208,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * Databases.
+         * <p>The information about the database that runs on your server.</p>
          */
         public Builder databases(java.util.List < Databases> databases) {
             this.putQueryParameter("Databases", databases);
@@ -214,7 +217,10 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * EffectiveEndTime.
+         * <p>The end time of the validity period of the authorization rule. Specify a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672502400</p>
          */
         public Builder effectiveEndTime(Long effectiveEndTime) {
             this.putQueryParameter("EffectiveEndTime", effectiveEndTime);
@@ -223,7 +229,10 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * EffectiveStartTime.
+         * <p>The start time of the validity period of the authorization rule. Specify a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669630029</p>
          */
         public Builder effectiveStartTime(Long effectiveStartTime) {
             this.putQueryParameter("EffectiveStartTime", effectiveStartTime);
@@ -232,7 +241,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * HostGroups.
+         * <p>The information about the asset group that you want to authorize to manage.</p>
          */
         public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
             this.putQueryParameter("HostGroups", hostGroups);
@@ -241,7 +250,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * Hosts.
+         * <p>The host information.</p>
          */
         public Builder hosts(java.util.List < Hosts> hosts) {
             this.putQueryParameter("Hosts", hosts);
@@ -250,7 +259,14 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The bastion host ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-5yd2ymfsa0e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -259,7 +275,13 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,7 +290,11 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The name of the authorization rule. The name can be up to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -277,7 +303,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>An array that consists of user group IDs.</p>
          */
         public Builder userGroupIds(java.util.List < String > userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
@@ -286,7 +312,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * UserIds.
+         * <p>An array that consists of user IDs.</p>
          */
         public Builder userIds(java.util.List < String > userIds) {
             this.putQueryParameter("UserIds", userIds);
@@ -301,11 +327,17 @@ public class CreateRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class Databases extends TeaModel {
-        @NameInMap("DatabaseAccountIds")
+        @com.aliyun.core.annotation.NameInMap("DatabaseAccountIds")
         private java.util.List < String > databaseAccountIds;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
         private Databases(Builder builder) {
@@ -340,7 +372,7 @@ public class CreateRuleRequest extends Request {
             private String databaseId; 
 
             /**
-             * DatabaseAccountIds.
+             * <p>An array that consists of database account IDs.</p>
              */
             public Builder databaseAccountIds(java.util.List < String > databaseAccountIds) {
                 this.databaseAccountIds = databaseAccountIds;
@@ -348,7 +380,14 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * DatabaseId.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;DatabaseId&quot;: &quot;1&quot;
+             *     }
+             * ]</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -362,11 +401,17 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class HostGroups extends TeaModel {
-        @NameInMap("HostAccountNames")
+        @com.aliyun.core.annotation.NameInMap("HostAccountNames")
         private java.util.List < String > hostAccountNames;
 
-        @NameInMap("HostGroupId")
+        @com.aliyun.core.annotation.NameInMap("HostGroupId")
         private String hostGroupId;
 
         private HostGroups(Builder builder) {
@@ -401,7 +446,7 @@ public class CreateRuleRequest extends Request {
             private String hostGroupId; 
 
             /**
-             * HostAccountNames.
+             * <p>An array that consists of asset account names.</p>
              */
             public Builder hostAccountNames(java.util.List < String > hostAccountNames) {
                 this.hostAccountNames = hostAccountNames;
@@ -409,7 +454,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * HostGroupId.
+             * <p>The asset group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;HostGroupId&quot;:&quot;1&quot;}]</p>
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -423,11 +471,17 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class Hosts extends TeaModel {
-        @NameInMap("HostAccountIds")
+        @com.aliyun.core.annotation.NameInMap("HostAccountIds")
         private java.util.List < String > hostAccountIds;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
         private Hosts(Builder builder) {
@@ -462,7 +516,7 @@ public class CreateRuleRequest extends Request {
             private String hostId; 
 
             /**
-             * HostAccountIds.
+             * <p>An array that consists of host account IDs.</p>
              */
             public Builder hostAccountIds(java.util.List < String > hostAccountIds) {
                 this.hostAccountIds = hostAccountIds;
@@ -470,7 +524,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * HostId.
+             * <p>The host ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;HostId&quot;:&quot;1&quot;}]</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
