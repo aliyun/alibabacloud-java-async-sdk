@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePublicNetworkStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdatePublicNetworkStatusRequest</p>
@@ -130,7 +131,10 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * ComponentType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Proxy</p>
          */
         public Builder componentType(String componentType) {
             this.putQueryParameter("ComponentType", componentType);
@@ -139,7 +143,10 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-123xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -148,7 +155,10 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * PublicNetworkEnabled.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publicNetworkEnabled(Boolean publicNetworkEnabled) {
             this.putQueryParameter("PublicNetworkEnabled", publicNetworkEnabled);

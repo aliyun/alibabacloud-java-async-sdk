@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessControlListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessControlListResponseBody</p>
@@ -170,6 +171,12 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccessControlListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessControlListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;

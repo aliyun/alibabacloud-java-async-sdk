@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceDetailResponseBody</p>
@@ -170,6 +171,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceDetailResponseBody</p>
+     */
     public static class MilvusResourceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentType")
         private String componentType;
@@ -291,6 +298,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceDetailResponseBody</p>
+     */
     public static class ClusterInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttuPort")
         private Integer attuPort;
@@ -492,6 +505,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceDetailResponseBody</p>
+     */
     public static class MeasureConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataNodeCuNum")
         private Integer dataNodeCuNum;
@@ -713,6 +732,12 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
@@ -731,6 +756,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
+
+        @com.aliyun.core.annotation.NameInMap("EnableHa")
+        private Boolean enableHa;
 
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
@@ -793,6 +821,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.bucketPath = builder.bucketPath;
             this.clusterInfo = builder.clusterInfo;
             this.clusterName = builder.clusterName;
+            this.enableHa = builder.enableHa;
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
             this.instanceStatus = builder.instanceStatus;
@@ -861,6 +890,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          */
         public String getClusterName() {
             return this.clusterName;
+        }
+
+        /**
+         * @return enableHa
+         */
+        public Boolean getEnableHa() {
+            return this.enableHa;
         }
 
         /**
@@ -996,6 +1032,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private String bucketPath; 
             private ClusterInfo clusterInfo; 
             private String clusterName; 
+            private Boolean enableHa; 
             private Long expireTime; 
             private String instanceId; 
             private String instanceStatus; 
@@ -1060,6 +1097,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * EnableHa.
+             */
+            public Builder enableHa(Boolean enableHa) {
+                this.enableHa = enableHa;
                 return this;
             }
 
