@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstancesResponseBody</p>
@@ -170,6 +171,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class TotalStageWithWeight extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StepIndex")
         private Integer stepIndex;
@@ -251,6 +258,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class ClusterStage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -372,6 +385,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class UserSlbListeners extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ListenersStatus")
         private String listenersStatus;
@@ -433,6 +452,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class UserSlbDto extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExistSlb")
         private Boolean existSlb;
@@ -554,6 +579,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class ClusterState extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -735,6 +766,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class ClusterUsedResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -916,6 +953,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class ClusterUsedStorage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -977,6 +1020,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class HaResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -1038,6 +1087,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class HaVSwitchInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableIpAddressCount")
         private Long availableIpAddressCount;
@@ -1219,6 +1274,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class HostAliases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostNames")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1260,7 +1321,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * HostNames.
+             * <p>This parameter is required.</p>
              */
             public Builder hostNames(java.util.List < String > hostNames) {
                 this.hostNames = hostNames;
@@ -1268,7 +1329,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>This parameter is required.</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1282,6 +1343,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class OssInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessId")
         private String accessId;
@@ -1403,6 +1470,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class ResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -1464,6 +1537,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Oss extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -1505,6 +1584,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Storage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FullyManaged")
         private Boolean fullyManaged;
@@ -1586,6 +1671,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1647,6 +1738,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class VSwitchInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableIpAddressCount")
         private String availableIpAddressCount;
@@ -1828,6 +1925,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class VpcInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
@@ -1969,6 +2072,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArchitectureType")
         private String architectureType;
@@ -2465,7 +2574,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HostAliases.
+             * <p>This parameter is required.</p>
              */
             public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
                 this.hostAliases = hostAliases;

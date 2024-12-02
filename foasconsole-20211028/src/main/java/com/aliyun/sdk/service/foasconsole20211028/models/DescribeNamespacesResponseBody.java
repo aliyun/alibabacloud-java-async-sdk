@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNamespacesResponseBody</p>
@@ -170,6 +171,12 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesResponseBody</p>
+     */
     public static class ResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -231,6 +238,12 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesResponseBody</p>
+     */
     public static class ResourceUsed extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
@@ -312,6 +325,12 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -373,6 +392,12 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesResponseBody</p>
+     */
     public static class Namespaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;

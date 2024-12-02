@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryModifyInstancePriceRequest} extends {@link RequestModel}
  *
  * <p>QueryModifyInstancePriceRequest</p>
@@ -33,6 +34,10 @@ public class QueryModifyInstancePriceRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Region")
     @com.aliyun.core.annotation.Validation(required = true)
     private String region;
@@ -42,6 +47,10 @@ public class QueryModifyInstancePriceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private ResourceSpec resourceSpec;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UsePromotionCode")
+    private Boolean usePromotionCode;
+
     private QueryModifyInstancePriceRequest(Builder builder) {
         super(builder);
         this.ha = builder.ha;
@@ -49,8 +58,10 @@ public class QueryModifyInstancePriceRequest extends Request {
         this.haVSwitchIds = builder.haVSwitchIds;
         this.haZoneId = builder.haZoneId;
         this.instanceId = builder.instanceId;
+        this.promotionCode = builder.promotionCode;
         this.region = builder.region;
         this.resourceSpec = builder.resourceSpec;
+        this.usePromotionCode = builder.usePromotionCode;
     }
 
     public static Builder builder() {
@@ -102,6 +113,13 @@ public class QueryModifyInstancePriceRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -115,14 +133,23 @@ public class QueryModifyInstancePriceRequest extends Request {
         return this.resourceSpec;
     }
 
+    /**
+     * @return usePromotionCode
+     */
+    public Boolean getUsePromotionCode() {
+        return this.usePromotionCode;
+    }
+
     public static final class Builder extends Request.Builder<QueryModifyInstancePriceRequest, Builder> {
         private Boolean ha; 
         private HaResourceSpec haResourceSpec; 
         private java.util.List < String > haVSwitchIds; 
         private String haZoneId; 
         private String instanceId; 
+        private String promotionCode; 
         private String region; 
         private ResourceSpec resourceSpec; 
+        private Boolean usePromotionCode; 
 
         private Builder() {
             super();
@@ -135,8 +162,10 @@ public class QueryModifyInstancePriceRequest extends Request {
             this.haVSwitchIds = request.haVSwitchIds;
             this.haZoneId = request.haZoneId;
             this.instanceId = request.instanceId;
+            this.promotionCode = request.promotionCode;
             this.region = request.region;
             this.resourceSpec = request.resourceSpec;
+            this.usePromotionCode = request.usePromotionCode;
         } 
 
         /**
@@ -178,7 +207,10 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-cn-wwo36qj4g06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -187,7 +219,19 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
-         * Region.
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putBodyParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
@@ -196,12 +240,21 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
-         * ResourceSpec.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
             String resourceSpecShrink = shrink(resourceSpec, "ResourceSpec", "json");
             this.putBodyParameter("ResourceSpec", resourceSpecShrink);
             this.resourceSpec = resourceSpec;
+            return this;
+        }
+
+        /**
+         * UsePromotionCode.
+         */
+        public Builder usePromotionCode(Boolean usePromotionCode) {
+            this.putBodyParameter("UsePromotionCode", usePromotionCode);
+            this.usePromotionCode = usePromotionCode;
             return this;
         }
 
@@ -212,6 +265,12 @@ public class QueryModifyInstancePriceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryModifyInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryModifyInstancePriceRequest</p>
+     */
     public static class HaResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -273,6 +332,12 @@ public class QueryModifyInstancePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryModifyInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryModifyInstancePriceRequest</p>
+     */
     public static class ResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -314,7 +379,10 @@ public class QueryModifyInstancePriceRequest extends Request {
             private Integer memoryGB; 
 
             /**
-             * Cpu.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -322,7 +390,10 @@ public class QueryModifyInstancePriceRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;

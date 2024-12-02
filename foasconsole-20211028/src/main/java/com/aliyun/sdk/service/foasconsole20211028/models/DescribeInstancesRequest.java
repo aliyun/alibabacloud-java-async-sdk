@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstancesRequest</p>
@@ -197,7 +198,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -231,6 +235,12 @@ public class DescribeInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

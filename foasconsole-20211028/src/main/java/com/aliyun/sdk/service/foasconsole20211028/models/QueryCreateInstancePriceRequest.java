@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCreateInstancePriceRequest} extends {@link RequestModel}
  *
  * <p>QueryCreateInstancePriceRequest</p>
@@ -297,7 +298,10 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -370,7 +374,10 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
@@ -442,6 +449,12 @@ public class QueryCreateInstancePriceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCreateInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryCreateInstancePriceRequest</p>
+     */
     public static class HaResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -503,6 +516,12 @@ public class QueryCreateInstancePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCreateInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryCreateInstancePriceRequest</p>
+     */
     public static class ResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -564,6 +583,12 @@ public class QueryCreateInstancePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCreateInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryCreateInstancePriceRequest</p>
+     */
     public static class Oss extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -605,6 +630,12 @@ public class QueryCreateInstancePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCreateInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryCreateInstancePriceRequest</p>
+     */
     public static class Storage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Oss")
         private Oss oss;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespacesRequest} extends {@link RequestModel}
  *
  * <p>DescribeNamespacesRequest</p>
@@ -148,7 +149,10 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-cn-wwo36qj4g06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -184,7 +188,10 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -209,6 +216,12 @@ public class DescribeNamespacesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNamespacesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

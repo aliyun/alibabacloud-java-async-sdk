@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPrepayInstanceSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyPrepayInstanceSpecRequest</p>
@@ -178,7 +179,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-cn-wwo36qj4g06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -187,7 +191,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
@@ -196,7 +203,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * ResourceSpec.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
             String resourceSpecShrink = shrink(resourceSpec, "ResourceSpec", "json");
@@ -212,6 +219,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyPrepayInstanceSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPrepayInstanceSpecRequest</p>
+     */
     public static class HaResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -273,6 +286,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPrepayInstanceSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPrepayInstanceSpecRequest</p>
+     */
     public static class ResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -314,7 +333,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             private Integer memoryGB; 
 
             /**
-             * Cpu.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -322,7 +344,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;

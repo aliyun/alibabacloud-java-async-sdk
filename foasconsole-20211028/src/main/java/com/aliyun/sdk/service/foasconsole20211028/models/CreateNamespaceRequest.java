@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNamespaceRequest} extends {@link RequestModel}
  *
  * <p>CreateNamespaceRequest</p>
@@ -121,7 +122,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-cn-wwo36qj4g06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -130,7 +134,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>di-593440390152545</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -139,7 +146,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
@@ -164,6 +174,12 @@ public class CreateNamespaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNamespaceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNamespaceRequest</p>
+     */
     public static class ResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;

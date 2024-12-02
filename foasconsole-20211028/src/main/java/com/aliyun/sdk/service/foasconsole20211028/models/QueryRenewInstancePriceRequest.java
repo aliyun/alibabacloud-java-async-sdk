@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRenewInstancePriceRequest} extends {@link RequestModel}
  *
  * <p>QueryRenewInstancePriceRequest</p>
@@ -99,7 +100,10 @@ public class QueryRenewInstancePriceRequest extends Request {
         } 
 
         /**
-         * Duration.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
@@ -108,7 +112,10 @@ public class QueryRenewInstancePriceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc_flinkserverless_public_cn-7e22ae5sess</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -117,7 +124,10 @@ public class QueryRenewInstancePriceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putBodyParameter("PricingCycle", pricingCycle);
@@ -126,7 +136,10 @@ public class QueryRenewInstancePriceRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);

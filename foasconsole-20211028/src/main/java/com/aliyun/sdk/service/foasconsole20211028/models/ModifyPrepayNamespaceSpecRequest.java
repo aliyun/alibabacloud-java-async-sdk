@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPrepayNamespaceSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyPrepayNamespaceSpecRequest</p>
@@ -99,7 +100,10 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-cn-wwo36qj4g06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -108,7 +112,10 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>di-593440219799842</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -117,7 +124,10 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
@@ -126,7 +136,7 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
         }
 
         /**
-         * ResourceSpec.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
             String resourceSpecShrink = shrink(resourceSpec, "ResourceSpec", "json");
@@ -142,6 +152,12 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyPrepayNamespaceSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPrepayNamespaceSpecRequest</p>
+     */
     public static class ResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -183,7 +199,10 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
             private Integer memoryGB; 
 
             /**
-             * Cpu.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -191,7 +210,10 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;

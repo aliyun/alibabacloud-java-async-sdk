@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
@@ -372,7 +373,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -437,7 +441,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtc-e2e-test-pre</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -473,7 +480,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
@@ -501,7 +511,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Storage.
+         * <p>This parameter is required.</p>
          */
         public Builder storage(Storage storage) {
             String storageShrink = shrink(storage, "Storage", "json");
@@ -530,7 +540,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * <p>This parameter is required.</p>
          */
         public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
             String vSwitchIdsShrink = shrink(vSwitchIds, "VSwitchIds", "json");
@@ -540,7 +550,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze9xoh8qyt1rnxfmfcdi</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
@@ -549,7 +562,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("ZoneId", zoneId);
@@ -564,6 +580,12 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class HaResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -625,6 +647,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class ResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -686,6 +714,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Oss extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -727,6 +761,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Storage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FullyManaged")
         private Boolean fullyManaged;
@@ -788,6 +828,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

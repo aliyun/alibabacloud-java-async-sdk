@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConvertInstanceRequest} extends {@link RequestModel}
  *
  * <p>ConvertInstanceRequest</p>
@@ -129,7 +130,10 @@ public class ConvertInstanceRequest extends Request {
         } 
 
         /**
-         * Duration.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
@@ -138,7 +142,10 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-cn-wwo36qj4g06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -147,7 +154,10 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * IsAutoRenew.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAutoRenew(Boolean isAutoRenew) {
             this.putBodyParameter("IsAutoRenew", isAutoRenew);
@@ -156,7 +166,7 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * NamespaceResourceSpecs.
+         * <p>This parameter is required.</p>
          */
         public Builder namespaceResourceSpecs(java.util.List < NamespaceResourceSpecs> namespaceResourceSpecs) {
             String namespaceResourceSpecsShrink = shrink(namespaceResourceSpecs, "NamespaceResourceSpecs", "json");
@@ -166,7 +176,10 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putBodyParameter("PricingCycle", pricingCycle);
@@ -175,7 +188,10 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
@@ -190,6 +206,12 @@ public class ConvertInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ConvertInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>ConvertInstanceRequest</p>
+     */
     public static class ResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -231,7 +253,10 @@ public class ConvertInstanceRequest extends Request {
             private Integer memoryGB; 
 
             /**
-             * Cpu.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -239,7 +264,10 @@ public class ConvertInstanceRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -253,6 +281,12 @@ public class ConvertInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ConvertInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>ConvertInstanceRequest</p>
+     */
     public static class NamespaceResourceSpecs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Namespace")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -294,7 +328,10 @@ public class ConvertInstanceRequest extends Request {
             private ResourceSpec resourceSpec; 
 
             /**
-             * Namespace.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns-1</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -302,7 +339,7 @@ public class ConvertInstanceRequest extends Request {
             }
 
             /**
-             * ResourceSpec.
+             * <p>This parameter is required.</p>
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {
                 this.resourceSpec = resourceSpec;

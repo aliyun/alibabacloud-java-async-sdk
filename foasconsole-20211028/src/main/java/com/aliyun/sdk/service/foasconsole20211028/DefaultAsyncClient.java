@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of ConvertInstance  ConvertInstanceRequest
+     * @return ConvertInstanceResponse
+     */
     @Override
     public CompletableFuture<ConvertInstanceResponse> convertInstance(ConvertInstanceRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNamespace  CreateNamespaceRequest
+     * @return CreateNamespaceResponse
+     */
     @Override
     public CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNamespace  DeleteNamespaceRequest
+     * @return DeleteNamespaceResponse
+     */
     @Override
     public CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNamespaces  DescribeNamespacesRequest
+     * @return DescribeNamespacesResponse
+     */
     @Override
     public CompletableFuture<DescribeNamespacesResponse> describeNamespaces(DescribeNamespacesRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSupportedRegions  DescribeSupportedRegionsRequest
+     * @return DescribeSupportedRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeSupportedRegionsResponse> describeSupportedRegions(DescribeSupportedRegionsRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSupportedZones  DescribeSupportedZonesRequest
+     * @return DescribeSupportedZonesResponse
+     */
     @Override
     public CompletableFuture<DescribeSupportedZonesResponse> describeSupportedZones(DescribeSupportedZonesRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -180,9 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI ModifyPrepayInstanceSpec is deprecated, please use foasconsole::2021-10-28::ModifyInstanceSpec instead.  * @param request  the request parameters of ModifyPrepayInstanceSpec  ModifyPrepayInstanceSpecRequest
+     * @return ModifyPrepayInstanceSpecResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ModifyPrepayInstanceSpecResponse> modifyPrepayInstanceSpec(ModifyPrepayInstanceSpecRequest request) {
         try {
@@ -198,9 +239,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI ModifyPrepayNamespaceSpec is deprecated, please use foasconsole::2021-10-28::ModifyNamespaceSpec instead.  * @param request  the request parameters of ModifyPrepayNamespaceSpec  ModifyPrepayNamespaceSpecRequest
+     * @return ModifyPrepayNamespaceSpecResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ModifyPrepayNamespaceSpecResponse> modifyPrepayNamespaceSpec(ModifyPrepayNamespaceSpecRequest request) {
         try {
@@ -215,6 +257,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryConvertInstancePrice  QueryConvertInstancePriceRequest
+     * @return QueryConvertInstancePriceResponse
+     */
     @Override
     public CompletableFuture<QueryConvertInstancePriceResponse> queryConvertInstancePrice(QueryConvertInstancePriceRequest request) {
         try {
@@ -229,6 +275,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCreateInstancePrice  QueryCreateInstancePriceRequest
+     * @return QueryCreateInstancePriceResponse
+     */
     @Override
     public CompletableFuture<QueryCreateInstancePriceResponse> queryCreateInstancePrice(QueryCreateInstancePriceRequest request) {
         try {
@@ -243,6 +293,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryModifyInstancePrice  QueryModifyInstancePriceRequest
+     * @return QueryModifyInstancePriceResponse
+     */
     @Override
     public CompletableFuture<QueryModifyInstancePriceResponse> queryModifyInstancePrice(QueryModifyInstancePriceRequest request) {
         try {
@@ -257,6 +311,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRenewInstancePrice  QueryRenewInstancePriceRequest
+     * @return QueryRenewInstancePriceResponse
+     */
     @Override
     public CompletableFuture<QueryRenewInstancePriceResponse> queryRenewInstancePrice(QueryRenewInstancePriceRequest request) {
         try {
@@ -271,6 +329,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewInstance  RenewInstanceRequest
+     * @return RenewInstanceResponse
+     */
     @Override
     public CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request) {
         try {
@@ -285,6 +347,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -299,6 +365,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {

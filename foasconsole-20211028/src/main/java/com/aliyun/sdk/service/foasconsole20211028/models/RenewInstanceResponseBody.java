@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RenewInstanceResponseBody</p>
@@ -61,7 +62,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * orderId
+         * <p>orderId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210406354690749</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;

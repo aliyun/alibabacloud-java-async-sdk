@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSupportedRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSupportedRegionsResponseBody</p>
@@ -170,6 +171,12 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSupportedRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSupportedRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
