@@ -13,8 +13,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeElasticStrengthRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskCategories")
+    private java.util.List < String > dataDiskCategories;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageFamily")
+    private String imageFamily;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
+    private String imageName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypes")
     private java.util.List < String > instanceTypes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
+    private Integer ipv6AddressCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PriorityStrategy")
@@ -34,17 +54,32 @@ public class DescribeElasticStrengthRequest extends Request {
     private java.util.List < String > scalingGroupIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
+    private String spotStrategy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDiskCategories")
     private java.util.List < String > systemDiskCategories;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    private java.util.List < String > vSwitchIds;
+
     private DescribeElasticStrengthRequest(Builder builder) {
         super(builder);
+        this.dataDiskCategories = builder.dataDiskCategories;
+        this.imageFamily = builder.imageFamily;
+        this.imageId = builder.imageId;
+        this.imageName = builder.imageName;
         this.instanceTypes = builder.instanceTypes;
+        this.ipv6AddressCount = builder.ipv6AddressCount;
         this.priorityStrategy = builder.priorityStrategy;
         this.regionId = builder.regionId;
         this.scalingGroupId = builder.scalingGroupId;
         this.scalingGroupIds = builder.scalingGroupIds;
+        this.spotStrategy = builder.spotStrategy;
         this.systemDiskCategories = builder.systemDiskCategories;
+        this.vSwitchIds = builder.vSwitchIds;
     }
 
     public static Builder builder() {
@@ -61,10 +96,45 @@ public class DescribeElasticStrengthRequest extends Request {
     }
 
     /**
+     * @return dataDiskCategories
+     */
+    public java.util.List < String > getDataDiskCategories() {
+        return this.dataDiskCategories;
+    }
+
+    /**
+     * @return imageFamily
+     */
+    public String getImageFamily() {
+        return this.imageFamily;
+    }
+
+    /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
+     * @return imageName
+     */
+    public String getImageName() {
+        return this.imageName;
+    }
+
+    /**
      * @return instanceTypes
      */
     public java.util.List < String > getInstanceTypes() {
         return this.instanceTypes;
+    }
+
+    /**
+     * @return ipv6AddressCount
+     */
+    public Integer getIpv6AddressCount() {
+        return this.ipv6AddressCount;
     }
 
     /**
@@ -96,19 +166,40 @@ public class DescribeElasticStrengthRequest extends Request {
     }
 
     /**
+     * @return spotStrategy
+     */
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
+    /**
      * @return systemDiskCategories
      */
     public java.util.List < String > getSystemDiskCategories() {
         return this.systemDiskCategories;
     }
 
+    /**
+     * @return vSwitchIds
+     */
+    public java.util.List < String > getVSwitchIds() {
+        return this.vSwitchIds;
+    }
+
     public static final class Builder extends Request.Builder<DescribeElasticStrengthRequest, Builder> {
+        private java.util.List < String > dataDiskCategories; 
+        private String imageFamily; 
+        private String imageId; 
+        private String imageName; 
         private java.util.List < String > instanceTypes; 
+        private Integer ipv6AddressCount; 
         private String priorityStrategy; 
         private String regionId; 
         private String scalingGroupId; 
         private java.util.List < String > scalingGroupIds; 
+        private String spotStrategy; 
         private java.util.List < String > systemDiskCategories; 
+        private java.util.List < String > vSwitchIds; 
 
         private Builder() {
             super();
@@ -116,13 +207,56 @@ public class DescribeElasticStrengthRequest extends Request {
 
         private Builder(DescribeElasticStrengthRequest request) {
             super(request);
+            this.dataDiskCategories = request.dataDiskCategories;
+            this.imageFamily = request.imageFamily;
+            this.imageId = request.imageId;
+            this.imageName = request.imageName;
             this.instanceTypes = request.instanceTypes;
+            this.ipv6AddressCount = request.ipv6AddressCount;
             this.priorityStrategy = request.priorityStrategy;
             this.regionId = request.regionId;
             this.scalingGroupId = request.scalingGroupId;
             this.scalingGroupIds = request.scalingGroupIds;
+            this.spotStrategy = request.spotStrategy;
             this.systemDiskCategories = request.systemDiskCategories;
+            this.vSwitchIds = request.vSwitchIds;
         } 
+
+        /**
+         * DataDiskCategories.
+         */
+        public Builder dataDiskCategories(java.util.List < String > dataDiskCategories) {
+            this.putQueryParameter("DataDiskCategories", dataDiskCategories);
+            this.dataDiskCategories = dataDiskCategories;
+            return this;
+        }
+
+        /**
+         * ImageFamily.
+         */
+        public Builder imageFamily(String imageFamily) {
+            this.putQueryParameter("ImageFamily", imageFamily);
+            this.imageFamily = imageFamily;
+            return this;
+        }
+
+        /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * ImageName.
+         */
+        public Builder imageName(String imageName) {
+            this.putQueryParameter("ImageName", imageName);
+            this.imageName = imageName;
+            return this;
+        }
 
         /**
          * <p>The instance types. The instance types specified by this parameter overwrite the instance types specified in the scaling configuration.</p>
@@ -130,6 +264,15 @@ public class DescribeElasticStrengthRequest extends Request {
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
             this.instanceTypes = instanceTypes;
+            return this;
+        }
+
+        /**
+         * Ipv6AddressCount.
+         */
+        public Builder ipv6AddressCount(Integer ipv6AddressCount) {
+            this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
+            this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
@@ -186,6 +329,15 @@ public class DescribeElasticStrengthRequest extends Request {
         }
 
         /**
+         * SpotStrategy.
+         */
+        public Builder spotStrategy(String spotStrategy) {
+            this.putQueryParameter("SpotStrategy", spotStrategy);
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+
+        /**
          * <p>The categories of the system disks. The categories of the system disks specified by this parameter overwrite the categories of the system disks specified in the scaling configuration. Valid values:</p>
          * <ul>
          * <li>cloud: basic disk.</li>
@@ -197,6 +349,15 @@ public class DescribeElasticStrengthRequest extends Request {
         public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
             this.putQueryParameter("SystemDiskCategories", systemDiskCategories);
             this.systemDiskCategories = systemDiskCategories;
+            return this;
+        }
+
+        /**
+         * VSwitchIds.
+         */
+        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            this.putQueryParameter("VSwitchIds", vSwitchIds);
+            this.vSwitchIds = vSwitchIds;
             return this;
         }
 
