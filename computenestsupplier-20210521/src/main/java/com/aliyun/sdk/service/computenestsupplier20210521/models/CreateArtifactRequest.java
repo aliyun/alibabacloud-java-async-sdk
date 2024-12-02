@@ -17,6 +17,10 @@ public class CreateArtifactRequest extends Request {
     private ArtifactBuildProperty artifactBuildProperty;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactBuildType")
+    private String artifactBuildType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ArtifactId")
     private String artifactId;
 
@@ -58,6 +62,7 @@ public class CreateArtifactRequest extends Request {
     private CreateArtifactRequest(Builder builder) {
         super(builder);
         this.artifactBuildProperty = builder.artifactBuildProperty;
+        this.artifactBuildType = builder.artifactBuildType;
         this.artifactId = builder.artifactId;
         this.artifactProperty = builder.artifactProperty;
         this.artifactType = builder.artifactType;
@@ -87,6 +92,13 @@ public class CreateArtifactRequest extends Request {
      */
     public ArtifactBuildProperty getArtifactBuildProperty() {
         return this.artifactBuildProperty;
+    }
+
+    /**
+     * @return artifactBuildType
+     */
+    public String getArtifactBuildType() {
+        return this.artifactBuildType;
     }
 
     /**
@@ -154,6 +166,7 @@ public class CreateArtifactRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateArtifactRequest, Builder> {
         private ArtifactBuildProperty artifactBuildProperty; 
+        private String artifactBuildType; 
         private String artifactId; 
         private ArtifactProperty artifactProperty; 
         private String artifactType; 
@@ -171,6 +184,7 @@ public class CreateArtifactRequest extends Request {
         private Builder(CreateArtifactRequest request) {
             super(request);
             this.artifactBuildProperty = request.artifactBuildProperty;
+            this.artifactBuildType = request.artifactBuildType;
             this.artifactId = request.artifactId;
             this.artifactProperty = request.artifactProperty;
             this.artifactType = request.artifactType;
@@ -189,6 +203,15 @@ public class CreateArtifactRequest extends Request {
             String artifactBuildPropertyShrink = shrink(artifactBuildProperty, "ArtifactBuildProperty", "json");
             this.putQueryParameter("ArtifactBuildProperty", artifactBuildPropertyShrink);
             this.artifactBuildProperty = artifactBuildProperty;
+            return this;
+        }
+
+        /**
+         * ArtifactBuildType.
+         */
+        public Builder artifactBuildType(String artifactBuildType) {
+            this.putQueryParameter("ArtifactBuildType", artifactBuildType);
+            this.artifactBuildType = artifactBuildType;
             return this;
         }
 
@@ -314,23 +337,213 @@ public class CreateArtifactRequest extends Request {
      *
      * <p>CreateArtifactRequest</p>
      */
+    public static class BuildArgs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArgumentName")
+        private String argumentName;
+
+        @com.aliyun.core.annotation.NameInMap("ArgumentValue")
+        private String argumentValue;
+
+        private BuildArgs(Builder builder) {
+            this.argumentName = builder.argumentName;
+            this.argumentValue = builder.argumentValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BuildArgs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return argumentName
+         */
+        public String getArgumentName() {
+            return this.argumentName;
+        }
+
+        /**
+         * @return argumentValue
+         */
+        public String getArgumentValue() {
+            return this.argumentValue;
+        }
+
+        public static final class Builder {
+            private String argumentName; 
+            private String argumentValue; 
+
+            /**
+             * ArgumentName.
+             */
+            public Builder argumentName(String argumentName) {
+                this.argumentName = argumentName;
+                return this;
+            }
+
+            /**
+             * ArgumentValue.
+             */
+            public Builder argumentValue(String argumentValue) {
+                this.argumentValue = argumentValue;
+                return this;
+            }
+
+            public BuildArgs build() {
+                return new BuildArgs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateArtifactRequest} extends {@link TeaModel}
+     *
+     * <p>CreateArtifactRequest</p>
+     */
+    public static class CodeRepo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Branch")
+        private String branch;
+
+        @com.aliyun.core.annotation.NameInMap("Owner")
+        private String owner;
+
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
+        @com.aliyun.core.annotation.NameInMap("RepoName")
+        private String repoName;
+
+        private CodeRepo(Builder builder) {
+            this.branch = builder.branch;
+            this.owner = builder.owner;
+            this.platform = builder.platform;
+            this.repoName = builder.repoName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CodeRepo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return branch
+         */
+        public String getBranch() {
+            return this.branch;
+        }
+
+        /**
+         * @return owner
+         */
+        public String getOwner() {
+            return this.owner;
+        }
+
+        /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
+         * @return repoName
+         */
+        public String getRepoName() {
+            return this.repoName;
+        }
+
+        public static final class Builder {
+            private String branch; 
+            private String owner; 
+            private String platform; 
+            private String repoName; 
+
+            /**
+             * Branch.
+             */
+            public Builder branch(String branch) {
+                this.branch = branch;
+                return this;
+            }
+
+            /**
+             * Owner.
+             */
+            public Builder owner(String owner) {
+                this.owner = owner;
+                return this;
+            }
+
+            /**
+             * Platform.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
+             * RepoName.
+             */
+            public Builder repoName(String repoName) {
+                this.repoName = repoName;
+                return this;
+            }
+
+            public CodeRepo build() {
+                return new CodeRepo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateArtifactRequest} extends {@link TeaModel}
+     *
+     * <p>CreateArtifactRequest</p>
+     */
     public static class ArtifactBuildProperty extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BuildArgs")
+        private java.util.List < BuildArgs> buildArgs;
+
+        @com.aliyun.core.annotation.NameInMap("CodeRepo")
+        private CodeRepo codeRepo;
+
         @com.aliyun.core.annotation.NameInMap("CommandContent")
         private String commandContent;
 
         @com.aliyun.core.annotation.NameInMap("CommandType")
         private String commandType;
 
+        @com.aliyun.core.annotation.NameInMap("DockerfilePath")
+        private String dockerfilePath;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("SourceContainerImage")
+        private String sourceContainerImage;
 
         @com.aliyun.core.annotation.NameInMap("SourceImageId")
         private String sourceImageId;
 
         private ArtifactBuildProperty(Builder builder) {
+            this.buildArgs = builder.buildArgs;
+            this.codeRepo = builder.codeRepo;
             this.commandContent = builder.commandContent;
             this.commandType = builder.commandType;
+            this.dockerfilePath = builder.dockerfilePath;
             this.regionId = builder.regionId;
+            this.sourceContainerImage = builder.sourceContainerImage;
             this.sourceImageId = builder.sourceImageId;
         }
 
@@ -340,6 +553,20 @@ public class CreateArtifactRequest extends Request {
 
         public static ArtifactBuildProperty create() {
             return builder().build();
+        }
+
+        /**
+         * @return buildArgs
+         */
+        public java.util.List < BuildArgs> getBuildArgs() {
+            return this.buildArgs;
+        }
+
+        /**
+         * @return codeRepo
+         */
+        public CodeRepo getCodeRepo() {
+            return this.codeRepo;
         }
 
         /**
@@ -357,10 +584,24 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
+         * @return dockerfilePath
+         */
+        public String getDockerfilePath() {
+            return this.dockerfilePath;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return sourceContainerImage
+         */
+        public String getSourceContainerImage() {
+            return this.sourceContainerImage;
         }
 
         /**
@@ -371,10 +612,30 @@ public class CreateArtifactRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < BuildArgs> buildArgs; 
+            private CodeRepo codeRepo; 
             private String commandContent; 
             private String commandType; 
+            private String dockerfilePath; 
             private String regionId; 
+            private String sourceContainerImage; 
             private String sourceImageId; 
+
+            /**
+             * BuildArgs.
+             */
+            public Builder buildArgs(java.util.List < BuildArgs> buildArgs) {
+                this.buildArgs = buildArgs;
+                return this;
+            }
+
+            /**
+             * CodeRepo.
+             */
+            public Builder codeRepo(CodeRepo codeRepo) {
+                this.codeRepo = codeRepo;
+                return this;
+            }
 
             /**
              * <p>The command content.</p>
@@ -410,6 +671,14 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
+             * DockerfilePath.
+             */
+            public Builder dockerfilePath(String dockerfilePath) {
+                this.dockerfilePath = dockerfilePath;
+                return this;
+            }
+
+            /**
              * <p>The region ID where the source mirror image is located.</p>
              * <blockquote>
              * <p> This parameter is available only if the deployment package is a ecs image type.</p>
@@ -420,6 +689,14 @@ public class CreateArtifactRequest extends Request {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SourceContainerImage.
+             */
+            public Builder sourceContainerImage(String sourceContainerImage) {
+                this.sourceContainerImage = sourceContainerImage;
                 return this;
             }
 

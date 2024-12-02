@@ -153,6 +153,9 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArtifactBuildProperty")
         private String artifactBuildProperty;
 
+        @com.aliyun.core.annotation.NameInMap("ArtifactBuildType")
+        private String artifactBuildType;
+
         @com.aliyun.core.annotation.NameInMap("ArtifactId")
         private String artifactId;
 
@@ -197,6 +200,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
 
         private Artifacts(Builder builder) {
             this.artifactBuildProperty = builder.artifactBuildProperty;
+            this.artifactBuildType = builder.artifactBuildType;
             this.artifactId = builder.artifactId;
             this.artifactProperty = builder.artifactProperty;
             this.artifactType = builder.artifactType;
@@ -226,6 +230,13 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
          */
         public String getArtifactBuildProperty() {
             return this.artifactBuildProperty;
+        }
+
+        /**
+         * @return artifactBuildType
+         */
+        public String getArtifactBuildType() {
+            return this.artifactBuildType;
         }
 
         /**
@@ -328,6 +339,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String artifactBuildProperty; 
+            private String artifactBuildType; 
             private String artifactId; 
             private String artifactProperty; 
             private String artifactType; 
@@ -351,6 +363,14 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
              */
             public Builder artifactBuildProperty(String artifactBuildProperty) {
                 this.artifactBuildProperty = artifactBuildProperty;
+                return this;
+            }
+
+            /**
+             * ArtifactBuildType.
+             */
+            public Builder artifactBuildType(String artifactBuildType) {
+                this.artifactBuildType = artifactBuildType;
                 return this;
             }
 

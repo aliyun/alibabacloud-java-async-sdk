@@ -15,6 +15,9 @@ public class UpdateArtifactResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ArtifactBuildProperty")
     private String artifactBuildProperty;
 
+    @com.aliyun.core.annotation.NameInMap("ArtifactBuildType")
+    private String artifactBuildType;
+
     @com.aliyun.core.annotation.NameInMap("ArtifactId")
     private String artifactId;
 
@@ -39,6 +42,9 @@ public class UpdateArtifactResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.NameInMap("StatusDetail")
+    private String statusDetail;
+
     @com.aliyun.core.annotation.NameInMap("SupportRegionIds")
     private String supportRegionIds;
 
@@ -47,6 +53,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
 
     private UpdateArtifactResponseBody(Builder builder) {
         this.artifactBuildProperty = builder.artifactBuildProperty;
+        this.artifactBuildType = builder.artifactBuildType;
         this.artifactId = builder.artifactId;
         this.artifactProperty = builder.artifactProperty;
         this.artifactType = builder.artifactType;
@@ -55,6 +62,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
         this.gmtModified = builder.gmtModified;
         this.requestId = builder.requestId;
         this.status = builder.status;
+        this.statusDetail = builder.statusDetail;
         this.supportRegionIds = builder.supportRegionIds;
         this.versionName = builder.versionName;
     }
@@ -72,6 +80,13 @@ public class UpdateArtifactResponseBody extends TeaModel {
      */
     public String getArtifactBuildProperty() {
         return this.artifactBuildProperty;
+    }
+
+    /**
+     * @return artifactBuildType
+     */
+    public String getArtifactBuildType() {
+        return this.artifactBuildType;
     }
 
     /**
@@ -131,6 +146,13 @@ public class UpdateArtifactResponseBody extends TeaModel {
     }
 
     /**
+     * @return statusDetail
+     */
+    public String getStatusDetail() {
+        return this.statusDetail;
+    }
+
+    /**
      * @return supportRegionIds
      */
     public String getSupportRegionIds() {
@@ -146,6 +168,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
 
     public static final class Builder {
         private String artifactBuildProperty; 
+        private String artifactBuildType; 
         private String artifactId; 
         private String artifactProperty; 
         private String artifactType; 
@@ -154,6 +177,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
         private String gmtModified; 
         private String requestId; 
         private String status; 
+        private String statusDetail; 
         private String supportRegionIds; 
         private String versionName; 
 
@@ -165,6 +189,14 @@ public class UpdateArtifactResponseBody extends TeaModel {
          */
         public Builder artifactBuildProperty(String artifactBuildProperty) {
             this.artifactBuildProperty = artifactBuildProperty;
+            return this;
+        }
+
+        /**
+         * ArtifactBuildType.
+         */
+        public Builder artifactBuildType(String artifactBuildType) {
+            this.artifactBuildType = artifactBuildType;
             return this;
         }
 
@@ -261,6 +293,14 @@ public class UpdateArtifactResponseBody extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * StatusDetail.
+         */
+        public Builder statusDetail(String statusDetail) {
+            this.statusDetail = statusDetail;
             return this;
         }
 
