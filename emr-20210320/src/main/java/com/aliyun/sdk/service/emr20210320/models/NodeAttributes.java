@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NodeAttributes</p>
  */
 public class NodeAttributes extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("DataDiskEncrypted")
+    private Boolean dataDiskEncrypted;
+
+    @com.aliyun.core.annotation.NameInMap("DataDiskKMSKeyId")
+    private String dataDiskKMSKeyId;
+
     @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
@@ -25,6 +31,12 @@ public class NodeAttributes extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String securityGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("SystemDiskEncrypted")
+    private Boolean systemDiskEncrypted;
+
+    @com.aliyun.core.annotation.NameInMap("SystemDiskKMSKeyId")
+    private String systemDiskKMSKeyId;
+
     @com.aliyun.core.annotation.NameInMap("VpcId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
@@ -34,10 +46,14 @@ public class NodeAttributes extends TeaModel {
     private String zoneId;
 
     private NodeAttributes(Builder builder) {
+        this.dataDiskEncrypted = builder.dataDiskEncrypted;
+        this.dataDiskKMSKeyId = builder.dataDiskKMSKeyId;
         this.keyPairName = builder.keyPairName;
         this.masterRootPassword = builder.masterRootPassword;
         this.ramRole = builder.ramRole;
         this.securityGroupId = builder.securityGroupId;
+        this.systemDiskEncrypted = builder.systemDiskEncrypted;
+        this.systemDiskKMSKeyId = builder.systemDiskKMSKeyId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
     }
@@ -48,6 +64,20 @@ public class NodeAttributes extends TeaModel {
 
     public static NodeAttributes create() {
         return builder().build();
+    }
+
+    /**
+     * @return dataDiskEncrypted
+     */
+    public Boolean getDataDiskEncrypted() {
+        return this.dataDiskEncrypted;
+    }
+
+    /**
+     * @return dataDiskKMSKeyId
+     */
+    public String getDataDiskKMSKeyId() {
+        return this.dataDiskKMSKeyId;
     }
 
     /**
@@ -79,6 +109,20 @@ public class NodeAttributes extends TeaModel {
     }
 
     /**
+     * @return systemDiskEncrypted
+     */
+    public Boolean getSystemDiskEncrypted() {
+        return this.systemDiskEncrypted;
+    }
+
+    /**
+     * @return systemDiskKMSKeyId
+     */
+    public String getSystemDiskKMSKeyId() {
+        return this.systemDiskKMSKeyId;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -93,12 +137,43 @@ public class NodeAttributes extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean dataDiskEncrypted; 
+        private String dataDiskKMSKeyId; 
         private String keyPairName; 
         private String masterRootPassword; 
         private String ramRole; 
         private String securityGroupId; 
+        private Boolean systemDiskEncrypted; 
+        private String systemDiskKMSKeyId; 
         private String vpcId; 
         private String zoneId; 
+
+        /**
+         * <p>是否启用云盘加密。取值范围：</p>
+         * <ul>
+         * <li>true：启用加密。</li>
+         * <li>false：不加密。</li>
+         * </ul>
+         * <p>默认值：false，不加密</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dataDiskEncrypted(Boolean dataDiskEncrypted) {
+            this.dataDiskEncrypted = dataDiskEncrypted;
+            return this;
+        }
+
+        /**
+         * <p>KMS加密秘钥ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
+         */
+        public Builder dataDiskKMSKeyId(String dataDiskKMSKeyId) {
+            this.dataDiskKMSKeyId = dataDiskKMSKeyId;
+            return this;
+        }
 
         /**
          * <p>ECS ssh登录秘钥。</p>
@@ -142,6 +217,33 @@ public class NodeAttributes extends TeaModel {
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * <p>是否启用云盘加密。取值范围：</p>
+         * <ul>
+         * <li>true：启用加密。</li>
+         * <li>false：不加密。</li>
+         * </ul>
+         * <p>默认值：false，不加密</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder systemDiskEncrypted(Boolean systemDiskEncrypted) {
+            this.systemDiskEncrypted = systemDiskEncrypted;
+            return this;
+        }
+
+        /**
+         * <p>KMS加密秘钥ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
+         */
+        public Builder systemDiskKMSKeyId(String systemDiskKMSKeyId) {
+            this.systemDiskKMSKeyId = systemDiskKMSKeyId;
             return this;
         }
 

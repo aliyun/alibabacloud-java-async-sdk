@@ -40,6 +40,10 @@ public class CreateClusterRequest extends Request {
     private String clusterType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeployMode")
     private String deployMode;
 
@@ -95,6 +99,7 @@ public class CreateClusterRequest extends Request {
         this.clientToken = builder.clientToken;
         this.clusterName = builder.clusterName;
         this.clusterType = builder.clusterType;
+        this.deletionProtection = builder.deletionProtection;
         this.deployMode = builder.deployMode;
         this.description = builder.description;
         this.nodeAttributes = builder.nodeAttributes;
@@ -161,6 +166,13 @@ public class CreateClusterRequest extends Request {
      */
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
@@ -247,6 +259,7 @@ public class CreateClusterRequest extends Request {
         private String clientToken; 
         private String clusterName; 
         private String clusterType; 
+        private Boolean deletionProtection; 
         private String deployMode; 
         private String description; 
         private NodeAttributes nodeAttributes; 
@@ -271,6 +284,7 @@ public class CreateClusterRequest extends Request {
             this.clientToken = request.clientToken;
             this.clusterName = request.clusterName;
             this.clusterType = request.clusterType;
+            this.deletionProtection = request.deletionProtection;
             this.deployMode = request.deployMode;
             this.description = request.description;
             this.nodeAttributes = request.nodeAttributes;
@@ -356,6 +370,15 @@ public class CreateClusterRequest extends Request {
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
             this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
             return this;
         }
 

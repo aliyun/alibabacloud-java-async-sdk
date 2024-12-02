@@ -40,6 +40,10 @@ public class RunClusterRequest extends Request {
     private String clusterType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DeployMode")
     private String deployMode;
 
@@ -94,6 +98,7 @@ public class RunClusterRequest extends Request {
         this.clientToken = builder.clientToken;
         this.clusterName = builder.clusterName;
         this.clusterType = builder.clusterType;
+        this.deletionProtection = builder.deletionProtection;
         this.deployMode = builder.deployMode;
         this.description = builder.description;
         this.nodeAttributes = builder.nodeAttributes;
@@ -160,6 +165,13 @@ public class RunClusterRequest extends Request {
      */
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
@@ -246,6 +258,7 @@ public class RunClusterRequest extends Request {
         private String clientToken; 
         private String clusterName; 
         private String clusterType; 
+        private Boolean deletionProtection; 
         private String deployMode; 
         private String description; 
         private NodeAttributes nodeAttributes; 
@@ -270,6 +283,7 @@ public class RunClusterRequest extends Request {
             this.clientToken = request.clientToken;
             this.clusterName = request.clusterName;
             this.clusterType = request.clusterType;
+            this.deletionProtection = request.deletionProtection;
             this.deployMode = request.deployMode;
             this.description = request.description;
             this.nodeAttributes = request.nodeAttributes;
@@ -284,7 +298,7 @@ public class RunClusterRequest extends Request {
         } 
 
         /**
-         * <p>应用配置。数组元素个数N的取值范围：1~1000。</p>
+         * <p>The service configurations. Number of elements in the array: 1 to 1,000.</p>
          */
         public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
             String applicationConfigsShrink = shrink(applicationConfigs, "ApplicationConfigs", "json");
@@ -294,7 +308,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>应用列表。数组元素个数N的取值范围：1~100。</p>
+         * <p>The list of services. Number of elements in the array: 1 to 100.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applications(java.util.List < Application > applications) {
@@ -305,7 +319,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>引导脚本。数组元素个数N的取值范围：1~10。</p>
+         * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
          */
         public Builder bootstrapScripts(java.util.List < Script > bootstrapScripts) {
             String bootstrapScriptsShrink = shrink(bootstrapScripts, "BootstrapScripts", "json");
@@ -315,7 +329,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>幂等客户端TOKEN。同一个ClientToken多次调用的返回结果一致，同一个ClientToken最多只创建一个集群。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. The same ClientToken value for multiple calls to the RunCluster operation results in identical responses. Only one cluster can be created by using the same ClientToken value.</p>
          * 
          * <strong>example:</strong>
          * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
@@ -327,7 +341,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>集群名称。长度为1~128个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、半角句号（.）或者短划线（-）</p>
+         * <p>The cluster name. The name must be 1 to 128 characters in length. The name must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,15 +354,16 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>创建的EMR集群类型。取值范围：</p>
+         * <p>The type of the cluster. Valid values:</p>
          * <ul>
-         * <li>DATALAKE：新版数据湖。</li>
-         * <li>OLAP：数据分析。</li>
-         * <li>DATAFLOW：实时数据流。</li>
-         * <li>DATASERVING：数据服务。</li>
-         * <li>CUSTOM：自定义集群。</li>
-         * <li>HADOOP：旧版数据湖（不推荐使用，建议使用新版数据湖）。</li>
+         * <li>DATALAKE</li>
+         * <li>OLAP</li>
+         * <li>DATAFLOW</li>
+         * <li>DATASERVING</li>
+         * <li>CUSTOM</li>
+         * <li>HADOOP: We recommend that you set this parameter to DATALAKE rather than HADOOP.</li>
          * </ul>
+         * <p>If the first time you create an EMR cluster is after 17:00 (UTC+8) on December 19, 2022, you cannot create a Hadoop, Data Science, Presto, or ZooKeeper cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -361,12 +376,20 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>集群中的应用部署模式。取值范围：</p>
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putBodyParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
+         * <p>The deployment mode of master nodes in the cluster. Valid values:</p>
          * <ul>
-         * <li>NORMAL：非高可用部署。集群1个MASTER节点。</li>
-         * <li>HA：高可用部署。高可用部署要求至少3个MASTER节点。</li>
+         * <li>NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</li>
+         * <li>HA: high availability mode. A cluster that contains at least three master nodes is created.</li>
          * </ul>
-         * <p>默认值：NORMAL。</p>
          * 
          * <strong>example:</strong>
          * <p>HA</p>
@@ -378,7 +401,10 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The cluster description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Emr cluster for ETL</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -387,7 +413,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * NodeAttributes.
+         * <p>The basic attributes of all ECS instances in the cluster.</p>
          */
         public Builder nodeAttributes(NodeAttributes nodeAttributes) {
             String nodeAttributesShrink = shrink(nodeAttributes, "NodeAttributes", "json");
@@ -397,9 +423,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>节点组。数组元素个数N的取值范围：1~100。</p>
-         * <p>
-         * 
+         * <p>The node groups. Number of elements in the array: 1 to 100.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodeGroups(java.util.List < NodeGroupConfig > nodeGroups) {
@@ -410,12 +434,12 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>集群的付费类型。取值范围：</p>
+         * <p>The billing method of the cluster. Valid values:</p>
          * <ul>
-         * <li>PayAsYouGo：后付费。</li>
-         * <li>Subscription：预付费。</li>
+         * <li>PayAsYouGo</li>
+         * <li>Subscription</li>
          * </ul>
-         * <p>默认值：PayAsYouGo。</p>
+         * <p>Default value: PayAsYouGo.</p>
          * 
          * <strong>example:</strong>
          * <p>PayAsYouGo</p>
@@ -427,7 +451,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>区域ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -440,7 +464,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>EMR发行版。</p>
+         * <p>The EMR version. You can query available EMR versions in the EMR console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -453,7 +477,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>集群所在的企业资源组ID。</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzabjyop****</p>
@@ -465,12 +489,11 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>Kerberos安全模式。取值范围：</p>
+         * <p>The security mode of the cluster. Valid values:</p>
          * <ul>
-         * <li>NORMAL：普通模式，不开启Kerberos模式。</li>
-         * <li>KERBEROS：开启Kerberos模式。</li>
+         * <li>NORMAL: regular mode. Kerberos authentication is disabled. This is the default value.</li>
+         * <li>KERBEROS: Kerberos mode. Kerberos authentication is enabled.</li>
          * </ul>
-         * <p>默认值：NORMAL</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -482,7 +505,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * SubscriptionConfig.
+         * <p>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</p>
          */
         public Builder subscriptionConfig(SubscriptionConfig subscriptionConfig) {
             String subscriptionConfigShrink = shrink(subscriptionConfig, "SubscriptionConfig", "json");
@@ -492,7 +515,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>标签。数组元数个数N的取值范围：0~20。</p>
+         * <p>The list of tags. Number of elements in the array: 0 to 20.</p>
          */
         public Builder tags(java.util.List < Tag > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

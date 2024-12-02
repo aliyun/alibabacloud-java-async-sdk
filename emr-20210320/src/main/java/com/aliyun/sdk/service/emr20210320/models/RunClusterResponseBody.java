@@ -62,7 +62,7 @@ public class RunClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-b933c5aac7f7***</p>
@@ -73,7 +73,7 @@ public class RunClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>操作ID。</p>
+         * <p>The operation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>op-13c37a77c505****</p>
@@ -84,7 +84,7 @@ public class RunClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>

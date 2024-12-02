@@ -27,6 +27,9 @@ public class Cluster extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
     @com.aliyun.core.annotation.NameInMap("DeployMode")
     private String deployMode;
 
@@ -78,6 +81,7 @@ public class Cluster extends TeaModel {
         this.clusterState = builder.clusterState;
         this.clusterType = builder.clusterType;
         this.createTime = builder.createTime;
+        this.deletionProtection = builder.deletionProtection;
         this.deployMode = builder.deployMode;
         this.description = builder.description;
         this.emrDefaultRole = builder.emrDefaultRole;
@@ -136,6 +140,13 @@ public class Cluster extends TeaModel {
      */
     public Long getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
@@ -249,6 +260,7 @@ public class Cluster extends TeaModel {
         private String clusterState; 
         private String clusterType; 
         private Long createTime; 
+        private Boolean deletionProtection; 
         private String deployMode; 
         private String description; 
         private String emrDefaultRole; 
@@ -317,6 +329,14 @@ public class Cluster extends TeaModel {
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
             return this;
         }
 

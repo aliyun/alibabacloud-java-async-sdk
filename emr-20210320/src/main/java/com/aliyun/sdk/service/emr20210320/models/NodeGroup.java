@@ -48,6 +48,9 @@ public class NodeGroup extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
+    private PrivatePoolOptions privatePoolOptions;
+
     @com.aliyun.core.annotation.NameInMap("RunningNodeCount")
     private Integer runningNodeCount;
 
@@ -91,6 +94,7 @@ public class NodeGroup extends TeaModel {
         this.nodeGroupType = builder.nodeGroupType;
         this.nodeResizeStrategy = builder.nodeResizeStrategy;
         this.paymentType = builder.paymentType;
+        this.privatePoolOptions = builder.privatePoolOptions;
         this.runningNodeCount = builder.runningNodeCount;
         this.spotBidPrices = builder.spotBidPrices;
         this.spotInstanceRemedy = builder.spotInstanceRemedy;
@@ -196,6 +200,13 @@ public class NodeGroup extends TeaModel {
     }
 
     /**
+     * @return privatePoolOptions
+     */
+    public PrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
+    }
+
+    /**
      * @return runningNodeCount
      */
     public Integer getRunningNodeCount() {
@@ -278,6 +289,7 @@ public class NodeGroup extends TeaModel {
         private String nodeGroupType; 
         private String nodeResizeStrategy; 
         private String paymentType; 
+        private PrivatePoolOptions privatePoolOptions; 
         private Integer runningNodeCount; 
         private java.util.List < SpotBidPrice > spotBidPrices; 
         private Boolean spotInstanceRemedy; 
@@ -438,6 +450,14 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
+         * PrivatePoolOptions.
+         */
+        public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+            this.privatePoolOptions = privatePoolOptions;
+            return this;
+        }
+
+        /**
          * <p>存活节点数量。</p>
          * 
          * <strong>example:</strong>
@@ -492,10 +512,7 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * <p>节点组状态，NodeGroupState别名。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CREATED</p>
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;

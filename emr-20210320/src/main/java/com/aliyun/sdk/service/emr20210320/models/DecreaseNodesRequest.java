@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DecreaseNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchInterval")
+    private Integer batchInterval;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchSize")
+    private Integer batchSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
@@ -37,6 +45,8 @@ public class DecreaseNodesRequest extends Request {
 
     private DecreaseNodesRequest(Builder builder) {
         super(builder);
+        this.batchInterval = builder.batchInterval;
+        this.batchSize = builder.batchSize;
         this.clusterId = builder.clusterId;
         this.decreaseNodeCount = builder.decreaseNodeCount;
         this.nodeGroupId = builder.nodeGroupId;
@@ -55,6 +65,20 @@ public class DecreaseNodesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return batchInterval
+     */
+    public Integer getBatchInterval() {
+        return this.batchInterval;
+    }
+
+    /**
+     * @return batchSize
+     */
+    public Integer getBatchSize() {
+        return this.batchSize;
     }
 
     /**
@@ -93,6 +117,8 @@ public class DecreaseNodesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DecreaseNodesRequest, Builder> {
+        private Integer batchInterval; 
+        private Integer batchSize; 
         private String clusterId; 
         private Integer decreaseNodeCount; 
         private String nodeGroupId; 
@@ -105,12 +131,32 @@ public class DecreaseNodesRequest extends Request {
 
         private Builder(DecreaseNodesRequest request) {
             super(request);
+            this.batchInterval = request.batchInterval;
+            this.batchSize = request.batchSize;
             this.clusterId = request.clusterId;
             this.decreaseNodeCount = request.decreaseNodeCount;
             this.nodeGroupId = request.nodeGroupId;
             this.nodeIds = request.nodeIds;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BatchInterval.
+         */
+        public Builder batchInterval(Integer batchInterval) {
+            this.putQueryParameter("BatchInterval", batchInterval);
+            this.batchInterval = batchInterval;
+            return this;
+        }
+
+        /**
+         * BatchSize.
+         */
+        public Builder batchSize(Integer batchSize) {
+            this.putQueryParameter("BatchSize", batchSize);
+            this.batchSize = batchSize;
+            return this;
+        }
 
         /**
          * <p>The cluster ID.</p>

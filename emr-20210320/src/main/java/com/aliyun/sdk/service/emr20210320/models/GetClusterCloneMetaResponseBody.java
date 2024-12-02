@@ -84,11 +84,15 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCapacity")
         private Integer maxCapacity;
 
+        @com.aliyun.core.annotation.NameInMap("MaxOnDemandCapacity")
+        private Integer maxOnDemandCapacity;
+
         @com.aliyun.core.annotation.NameInMap("MinCapacity")
         private Integer minCapacity;
 
         private Constraints(Builder builder) {
             this.maxCapacity = builder.maxCapacity;
+            this.maxOnDemandCapacity = builder.maxOnDemandCapacity;
             this.minCapacity = builder.minCapacity;
         }
 
@@ -108,6 +112,13 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxOnDemandCapacity
+         */
+        public Integer getMaxOnDemandCapacity() {
+            return this.maxOnDemandCapacity;
+        }
+
+        /**
          * @return minCapacity
          */
         public Integer getMinCapacity() {
@@ -116,6 +127,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer maxCapacity; 
+            private Integer maxOnDemandCapacity; 
             private Integer minCapacity; 
 
             /**
@@ -126,6 +138,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
              */
             public Builder maxCapacity(Integer maxCapacity) {
                 this.maxCapacity = maxCapacity;
+                return this;
+            }
+
+            /**
+             * MaxOnDemandCapacity.
+             */
+            public Builder maxOnDemandCapacity(Integer maxOnDemandCapacity) {
+                this.maxOnDemandCapacity = maxOnDemandCapacity;
                 return this;
             }
 
@@ -333,6 +353,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScalingPolicyId")
         private String scalingPolicyId;
 
+        @com.aliyun.core.annotation.NameInMap("ScalingPolicyType")
+        private String scalingPolicyType;
+
         @com.aliyun.core.annotation.NameInMap("ScalingRules")
         private java.util.List < ScalingRules> scalingRules;
 
@@ -341,6 +364,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             this.constraints = builder.constraints;
             this.nodeGroupId = builder.nodeGroupId;
             this.scalingPolicyId = builder.scalingPolicyId;
+            this.scalingPolicyType = builder.scalingPolicyType;
             this.scalingRules = builder.scalingRules;
         }
 
@@ -381,6 +405,13 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         }
 
         /**
+         * @return scalingPolicyType
+         */
+        public String getScalingPolicyType() {
+            return this.scalingPolicyType;
+        }
+
+        /**
          * @return scalingRules
          */
         public java.util.List < ScalingRules> getScalingRules() {
@@ -392,6 +423,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private Constraints constraints; 
             private String nodeGroupId; 
             private String scalingPolicyId; 
+            private String scalingPolicyType; 
             private java.util.List < ScalingRules> scalingRules; 
 
             /**
@@ -432,6 +464,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
              */
             public Builder scalingPolicyId(String scalingPolicyId) {
                 this.scalingPolicyId = scalingPolicyId;
+                return this;
+            }
+
+            /**
+             * ScalingPolicyType.
+             */
+            public Builder scalingPolicyType(String scalingPolicyType) {
+                this.scalingPolicyType = scalingPolicyType;
                 return this;
             }
 
@@ -477,6 +517,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
+
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+        private Boolean deletionProtection;
 
         @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
@@ -525,6 +568,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             this.clusterName = builder.clusterName;
             this.clusterState = builder.clusterState;
             this.clusterType = builder.clusterType;
+            this.deletionProtection = builder.deletionProtection;
             this.deployMode = builder.deployMode;
             this.emrDefaultRole = builder.emrDefaultRole;
             this.existCloneConfig = builder.existCloneConfig;
@@ -595,6 +639,13 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
          */
         public String getClusterType() {
             return this.clusterType;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         /**
@@ -696,6 +747,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private String clusterName; 
             private String clusterState; 
             private String clusterType; 
+            private Boolean deletionProtection; 
             private String deployMode; 
             private String emrDefaultRole; 
             private Boolean existCloneConfig; 
@@ -793,6 +845,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
+                return this;
+            }
+
+            /**
+             * DeletionProtection.
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
                 return this;
             }
 

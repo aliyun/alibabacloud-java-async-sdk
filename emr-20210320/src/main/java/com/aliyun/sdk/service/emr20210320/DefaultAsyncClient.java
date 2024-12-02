@@ -1262,6 +1262,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</p>
+     * 
      * @param request the request parameters of RunCluster  RunClusterRequest
      * @return RunClusterResponse
      */

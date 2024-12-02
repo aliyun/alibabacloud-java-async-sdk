@@ -52,6 +52,9 @@ public class NodeGroupConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
+    private PrivatePoolOptions privatePoolOptions;
+
     @com.aliyun.core.annotation.NameInMap("SpotBidPrices")
     private java.util.List < SpotBidPrice > spotBidPrices;
 
@@ -87,6 +90,7 @@ public class NodeGroupConfig extends TeaModel {
         this.nodeGroupType = builder.nodeGroupType;
         this.nodeResizeStrategy = builder.nodeResizeStrategy;
         this.paymentType = builder.paymentType;
+        this.privatePoolOptions = builder.privatePoolOptions;
         this.spotBidPrices = builder.spotBidPrices;
         this.spotInstanceRemedy = builder.spotInstanceRemedy;
         this.spotStrategy = builder.spotStrategy;
@@ -196,6 +200,13 @@ public class NodeGroupConfig extends TeaModel {
     }
 
     /**
+     * @return privatePoolOptions
+     */
+    public PrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
+    }
+
+    /**
      * @return spotBidPrices
      */
     public java.util.List < SpotBidPrice > getSpotBidPrices() {
@@ -258,6 +269,7 @@ public class NodeGroupConfig extends TeaModel {
         private String nodeGroupType; 
         private String nodeResizeStrategy; 
         private String paymentType; 
+        private PrivatePoolOptions privatePoolOptions; 
         private java.util.List < SpotBidPrice > spotBidPrices; 
         private Boolean spotInstanceRemedy; 
         private String spotStrategy; 
@@ -421,6 +433,14 @@ public class NodeGroupConfig extends TeaModel {
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
+            return this;
+        }
+
+        /**
+         * PrivatePoolOptions.
+         */
+        public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+            this.privatePoolOptions = privatePoolOptions;
             return this;
         }
 

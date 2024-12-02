@@ -314,7 +314,7 @@ public class ListInstanceTypesRequest extends Request {
          * <p>EMR distribution.</p>
          * 
          * <strong>example:</strong>
-         * <p>线上已发布版本EMR-5.8.0</p>
+         * <p>EMR-5.8.0</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putQueryParameter("ReleaseVersion", releaseVersion);
