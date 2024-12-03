@@ -53,6 +53,10 @@ public class ListHttpApiOperationsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("withConsumerInfoById")
     private String withConsumerInfoById;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("withPluginAttachmentByPluginId")
+    private String withPluginAttachmentByPluginId;
+
     private ListHttpApiOperationsRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
@@ -65,6 +69,7 @@ public class ListHttpApiOperationsRequest extends Request {
         this.pathLike = builder.pathLike;
         this.withConsumerInEnvironmentId = builder.withConsumerInEnvironmentId;
         this.withConsumerInfoById = builder.withConsumerInfoById;
+        this.withPluginAttachmentByPluginId = builder.withPluginAttachmentByPluginId;
     }
 
     public static Builder builder() {
@@ -150,6 +155,13 @@ public class ListHttpApiOperationsRequest extends Request {
         return this.withConsumerInfoById;
     }
 
+    /**
+     * @return withPluginAttachmentByPluginId
+     */
+    public String getWithPluginAttachmentByPluginId() {
+        return this.withPluginAttachmentByPluginId;
+    }
+
     public static final class Builder extends Request.Builder<ListHttpApiOperationsRequest, Builder> {
         private String httpApiId; 
         private String consumerAuthorizationRuleId; 
@@ -161,6 +173,7 @@ public class ListHttpApiOperationsRequest extends Request {
         private String pathLike; 
         private String withConsumerInEnvironmentId; 
         private String withConsumerInfoById; 
+        private String withPluginAttachmentByPluginId; 
 
         private Builder() {
             super();
@@ -178,6 +191,7 @@ public class ListHttpApiOperationsRequest extends Request {
             this.pathLike = request.pathLike;
             this.withConsumerInEnvironmentId = request.withConsumerInEnvironmentId;
             this.withConsumerInfoById = request.withConsumerInfoById;
+            this.withPluginAttachmentByPluginId = request.withPluginAttachmentByPluginId;
         } 
 
         /**
@@ -298,6 +312,15 @@ public class ListHttpApiOperationsRequest extends Request {
         public Builder withConsumerInfoById(String withConsumerInfoById) {
             this.putQueryParameter("withConsumerInfoById", withConsumerInfoById);
             this.withConsumerInfoById = withConsumerInfoById;
+            return this;
+        }
+
+        /**
+         * withPluginAttachmentByPluginId.
+         */
+        public Builder withPluginAttachmentByPluginId(String withPluginAttachmentByPluginId) {
+            this.putQueryParameter("withPluginAttachmentByPluginId", withPluginAttachmentByPluginId);
+            this.withPluginAttachmentByPluginId = withPluginAttachmentByPluginId;
             return this;
         }
 

@@ -45,12 +45,24 @@ public class ListHttpApisRequest extends Request {
     private String withAuthPolicyInEnvironmentId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("withAuthPolicyList")
+    private Boolean withAuthPolicyList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("withConsumerInfoById")
     private String withConsumerInfoById;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("withEnvironmentInfo")
     private Boolean withEnvironmentInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("withEnvironmentInfoById")
+    private String withEnvironmentInfoById;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("withPluginAttachmentByPluginId")
+    private String withPluginAttachmentByPluginId;
 
     private ListHttpApisRequest(Builder builder) {
         super(builder);
@@ -62,8 +74,11 @@ public class ListHttpApisRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.types = builder.types;
         this.withAuthPolicyInEnvironmentId = builder.withAuthPolicyInEnvironmentId;
+        this.withAuthPolicyList = builder.withAuthPolicyList;
         this.withConsumerInfoById = builder.withConsumerInfoById;
         this.withEnvironmentInfo = builder.withEnvironmentInfo;
+        this.withEnvironmentInfoById = builder.withEnvironmentInfoById;
+        this.withPluginAttachmentByPluginId = builder.withPluginAttachmentByPluginId;
     }
 
     public static Builder builder() {
@@ -136,6 +151,13 @@ public class ListHttpApisRequest extends Request {
     }
 
     /**
+     * @return withAuthPolicyList
+     */
+    public Boolean getWithAuthPolicyList() {
+        return this.withAuthPolicyList;
+    }
+
+    /**
      * @return withConsumerInfoById
      */
     public String getWithConsumerInfoById() {
@@ -149,6 +171,20 @@ public class ListHttpApisRequest extends Request {
         return this.withEnvironmentInfo;
     }
 
+    /**
+     * @return withEnvironmentInfoById
+     */
+    public String getWithEnvironmentInfoById() {
+        return this.withEnvironmentInfoById;
+    }
+
+    /**
+     * @return withPluginAttachmentByPluginId
+     */
+    public String getWithPluginAttachmentByPluginId() {
+        return this.withPluginAttachmentByPluginId;
+    }
+
     public static final class Builder extends Request.Builder<ListHttpApisRequest, Builder> {
         private String gatewayId; 
         private String keyword; 
@@ -158,8 +194,11 @@ public class ListHttpApisRequest extends Request {
         private String resourceGroupId; 
         private String types; 
         private String withAuthPolicyInEnvironmentId; 
+        private Boolean withAuthPolicyList; 
         private String withConsumerInfoById; 
         private Boolean withEnvironmentInfo; 
+        private String withEnvironmentInfoById; 
+        private String withPluginAttachmentByPluginId; 
 
         private Builder() {
             super();
@@ -175,8 +214,11 @@ public class ListHttpApisRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.types = request.types;
             this.withAuthPolicyInEnvironmentId = request.withAuthPolicyInEnvironmentId;
+            this.withAuthPolicyList = request.withAuthPolicyList;
             this.withConsumerInfoById = request.withConsumerInfoById;
             this.withEnvironmentInfo = request.withEnvironmentInfo;
+            this.withEnvironmentInfoById = request.withEnvironmentInfoById;
+            this.withPluginAttachmentByPluginId = request.withPluginAttachmentByPluginId;
         } 
 
         /**
@@ -279,6 +321,15 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
+         * withAuthPolicyList.
+         */
+        public Builder withAuthPolicyList(Boolean withAuthPolicyList) {
+            this.putQueryParameter("withAuthPolicyList", withAuthPolicyList);
+            this.withAuthPolicyList = withAuthPolicyList;
+            return this;
+        }
+
+        /**
          * <p>Each API information in the response carries a list of authorization rules for the specified consumer ID.</p>
          * 
          * <strong>example:</strong>
@@ -296,6 +347,24 @@ public class ListHttpApisRequest extends Request {
         public Builder withEnvironmentInfo(Boolean withEnvironmentInfo) {
             this.putQueryParameter("withEnvironmentInfo", withEnvironmentInfo);
             this.withEnvironmentInfo = withEnvironmentInfo;
+            return this;
+        }
+
+        /**
+         * withEnvironmentInfoById.
+         */
+        public Builder withEnvironmentInfoById(String withEnvironmentInfoById) {
+            this.putQueryParameter("withEnvironmentInfoById", withEnvironmentInfoById);
+            this.withEnvironmentInfoById = withEnvironmentInfoById;
+            return this;
+        }
+
+        /**
+         * withPluginAttachmentByPluginId.
+         */
+        public Builder withPluginAttachmentByPluginId(String withPluginAttachmentByPluginId) {
+            this.putQueryParameter("withPluginAttachmentByPluginId", withPluginAttachmentByPluginId);
+            this.withPluginAttachmentByPluginId = withPluginAttachmentByPluginId;
             return this;
         }
 

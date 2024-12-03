@@ -248,6 +248,9 @@ public class GetDomainResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("statisticsInfo")
         private StatisticsInfo statisticsInfo;
 
+        @com.aliyun.core.annotation.NameInMap("tlsCipherSuitesConfig")
+        private TlsCipherSuitesConfig tlsCipherSuitesConfig;
+
         @com.aliyun.core.annotation.NameInMap("tlsMax")
         private String tlsMax;
 
@@ -276,6 +279,7 @@ public class GetDomainResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.sans = builder.sans;
             this.statisticsInfo = builder.statisticsInfo;
+            this.tlsCipherSuitesConfig = builder.tlsCipherSuitesConfig;
             this.tlsMax = builder.tlsMax;
             this.tlsMin = builder.tlsMin;
             this.updatetimestamp = builder.updatetimestamp;
@@ -416,6 +420,13 @@ public class GetDomainResponseBody extends TeaModel {
         }
 
         /**
+         * @return tlsCipherSuitesConfig
+         */
+        public TlsCipherSuitesConfig getTlsCipherSuitesConfig() {
+            return this.tlsCipherSuitesConfig;
+        }
+
+        /**
          * @return tlsMax
          */
         public String getTlsMax() {
@@ -455,6 +466,7 @@ public class GetDomainResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String sans; 
             private StatisticsInfo statisticsInfo; 
+            private TlsCipherSuitesConfig tlsCipherSuitesConfig; 
             private String tlsMax; 
             private String tlsMin; 
             private Long updatetimestamp; 
@@ -652,6 +664,14 @@ public class GetDomainResponseBody extends TeaModel {
              */
             public Builder statisticsInfo(StatisticsInfo statisticsInfo) {
                 this.statisticsInfo = statisticsInfo;
+                return this;
+            }
+
+            /**
+             * tlsCipherSuitesConfig.
+             */
+            public Builder tlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
+                this.tlsCipherSuitesConfig = tlsCipherSuitesConfig;
                 return this;
             }
 

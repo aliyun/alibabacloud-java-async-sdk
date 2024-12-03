@@ -39,6 +39,10 @@ public class UpdateDomainRequest extends Request {
     private String protocol;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tlsCipherSuitesConfig")
+    private TlsCipherSuitesConfig tlsCipherSuitesConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tlsMax")
     private String tlsMax;
 
@@ -54,6 +58,7 @@ public class UpdateDomainRequest extends Request {
         this.forceHttps = builder.forceHttps;
         this.http2Option = builder.http2Option;
         this.protocol = builder.protocol;
+        this.tlsCipherSuitesConfig = builder.tlsCipherSuitesConfig;
         this.tlsMax = builder.tlsMax;
         this.tlsMin = builder.tlsMin;
     }
@@ -114,6 +119,13 @@ public class UpdateDomainRequest extends Request {
     }
 
     /**
+     * @return tlsCipherSuitesConfig
+     */
+    public TlsCipherSuitesConfig getTlsCipherSuitesConfig() {
+        return this.tlsCipherSuitesConfig;
+    }
+
+    /**
      * @return tlsMax
      */
     public String getTlsMax() {
@@ -134,6 +146,7 @@ public class UpdateDomainRequest extends Request {
         private Boolean forceHttps; 
         private String http2Option; 
         private String protocol; 
+        private TlsCipherSuitesConfig tlsCipherSuitesConfig; 
         private String tlsMax; 
         private String tlsMin; 
 
@@ -149,6 +162,7 @@ public class UpdateDomainRequest extends Request {
             this.forceHttps = request.forceHttps;
             this.http2Option = request.http2Option;
             this.protocol = request.protocol;
+            this.tlsCipherSuitesConfig = request.tlsCipherSuitesConfig;
             this.tlsMax = request.tlsMax;
             this.tlsMin = request.tlsMin;
         } 
@@ -228,6 +242,15 @@ public class UpdateDomainRequest extends Request {
         public Builder protocol(String protocol) {
             this.putBodyParameter("protocol", protocol);
             this.protocol = protocol;
+            return this;
+        }
+
+        /**
+         * tlsCipherSuitesConfig.
+         */
+        public Builder tlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
+            this.putBodyParameter("tlsCipherSuitesConfig", tlsCipherSuitesConfig);
+            this.tlsCipherSuitesConfig = tlsCipherSuitesConfig;
             return this;
         }
 
