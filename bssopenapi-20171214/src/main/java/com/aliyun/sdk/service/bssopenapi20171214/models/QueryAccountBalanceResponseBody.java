@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAccountBalanceResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAccountBalanceResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16176743-6DC7-4CB3-BB25-A13982D8DFAD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAccountBalanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAccountBalanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableAmount")
         private String availableAmount;
@@ -217,7 +236,10 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             private String quotaLimit; 
 
             /**
-             * The available balance of the account.
+             * <p>The available balance of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000.00</p>
              */
             public Builder availableAmount(String availableAmount) {
                 this.availableAmount = availableAmount;
@@ -225,7 +247,10 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * The available balance in cash.
+             * <p>The available balance in cash.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000.00</p>
              */
             public Builder availableCashAmount(String availableCashAmount) {
                 this.availableCashAmount = availableCashAmount;
@@ -233,7 +258,10 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * The credit balance of the account.
+             * <p>The credit balance of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00</p>
              */
             public Builder creditAmount(String creditAmount) {
                 this.creditAmount = creditAmount;
@@ -241,12 +269,15 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the currency. Valid values:
-             * <p>
+             * <p>The type of the currency. Valid values:</p>
+             * <ul>
+             * <li>CNY: Chinese Yuan</li>
+             * <li>USD: US dollar</li>
+             * <li>JPY: Japanese Yen</li>
+             * </ul>
              * 
-             * *   CNY: Chinese Yuan
-             * *   USD: US dollar
-             * *   JPY: Japanese Yen
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -254,7 +285,10 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * The credit line controlled by MYbank.
+             * <p>The credit line controlled by MYbank.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00</p>
              */
             public Builder mybankCreditAmount(String mybankCreditAmount) {
                 this.mybankCreditAmount = mybankCreditAmount;
@@ -262,7 +296,10 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * The quota limit for eco customers.
+             * <p>The quota limit for eco customers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000.00</p>
              */
             public Builder quotaLimit(String quotaLimit) {
                 this.quotaLimit = quotaLimit;

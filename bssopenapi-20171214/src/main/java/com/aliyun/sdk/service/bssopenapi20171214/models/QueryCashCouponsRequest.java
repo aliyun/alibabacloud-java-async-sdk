@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCashCouponsRequest} extends {@link RequestModel}
  *
  * <p>QueryCashCouponsRequest</p>
@@ -81,11 +82,14 @@ public class QueryCashCouponsRequest extends Request {
         } 
 
         /**
-         * Specifies whether the voucher takes effect. Valid values:
-         * <p>
+         * <p>Specifies whether the voucher takes effect. Valid values:</p>
+         * <ul>
+         * <li>true: The voucher takes effect.</li>
+         * <li>false: The voucher does not take effect.</li>
+         * </ul>
          * 
-         * *   true: The voucher takes effect.
-         * *   false: The voucher does not take effect.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder effectiveOrNot(Boolean effectiveOrNot) {
             this.putQueryParameter("EffectiveOrNot", effectiveOrNot);
@@ -94,7 +98,10 @@ public class QueryCashCouponsRequest extends Request {
         }
 
         /**
-         * The end time of the validity period of the voucher. Specify the parameter in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-08-01T00:00:00Z.
+         * <p>The end time of the validity period of the voucher. Specify the parameter in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-08-01T00:00:00Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-01T00:00:00Z</p>
          */
         public Builder expiryTimeEnd(String expiryTimeEnd) {
             this.putQueryParameter("ExpiryTimeEnd", expiryTimeEnd);
@@ -103,7 +110,10 @@ public class QueryCashCouponsRequest extends Request {
         }
 
         /**
-         * The start time of the validity period of the voucher. Specify the parameter in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-08-01T00:00:00Z.
+         * <p>The start time of the validity period of the voucher. Specify the parameter in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-08-01T00:00:00Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-01T00:00:00Z</p>
          */
         public Builder expiryTimeStart(String expiryTimeStart) {
             this.putQueryParameter("ExpiryTimeStart", expiryTimeStart);

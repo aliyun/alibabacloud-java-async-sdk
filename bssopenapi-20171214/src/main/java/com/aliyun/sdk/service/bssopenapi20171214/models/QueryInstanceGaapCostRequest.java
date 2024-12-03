@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInstanceGaapCostRequest} extends {@link RequestModel}
  *
  * <p>QueryInstanceGaapCostRequest</p>
@@ -124,7 +125,10 @@ public class QueryInstanceGaapCostRequest extends Request {
         } 
 
         /**
-         * BillingCycle.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03</p>
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePricingModuleRequest} extends {@link RequestModel}
  *
  * <p>DescribePricingModuleRequest</p>
@@ -106,7 +107,11 @@ public class DescribePricingModuleRequest extends Request {
         }
 
         /**
-         * The service code. You can query the service code by calling the **QueryProductList** operation.
+         * <p>The service code. You can query the service code by calling the <strong>QueryProductList</strong> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -115,7 +120,10 @@ public class DescribePricingModuleRequest extends Request {
         }
 
         /**
-         * The type of the service. You can query the service type by calling the **QueryProductList** operation.
+         * <p>The type of the service. You can query the service type by calling the <strong>QueryProductList</strong> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -124,11 +132,15 @@ public class DescribePricingModuleRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Subscription: subscription
-         * *   PayAsYouGo: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

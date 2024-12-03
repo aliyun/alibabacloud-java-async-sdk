@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubscribeBillToOSSResponseBody} extends {@link TeaModel}
  *
  * <p>SubscribeBillToOSSResponseBody</p>
@@ -73,7 +74,10 @@ public class SubscribeBillToOSSResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class SubscribeBillToOSSResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class SubscribeBillToOSSResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F61FCE4B-9B56-4FD9-A17E-******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class SubscribeBillToOSSResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeResourcePackageRequest} extends {@link RequestModel}
  *
  * <p>UpgradeResourcePackageRequest</p>
@@ -96,10 +97,11 @@ public class UpgradeResourcePackageRequest extends Request {
         } 
 
         /**
-         * The time when the resource plan takes effect. If you leave this parameter empty, the resource plan immediately takes effect by default.
-         * <p>
+         * <p>The time when the resource plan takes effect. If you leave this parameter empty, the resource plan immediately takes effect by default.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2020-02-02T12:00:00Z</p>
          */
         public Builder effectiveDate(String effectiveDate) {
             this.putQueryParameter("EffectiveDate", effectiveDate);
@@ -108,7 +110,11 @@ public class UpgradeResourcePackageRequest extends Request {
         }
 
         /**
-         * The ID of the resource plan.
+         * <p>The ID of the resource plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSSBAG-cn-0xl*****x002</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +132,10 @@ public class UpgradeResourcePackageRequest extends Request {
         }
 
         /**
-         * The specifications to which you want to upgrade the resource plan.
+         * <p>The specifications to which you want to upgrade the resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51200</p>
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAmortizedCostByAmortizationPeriodRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceAmortizedCostByAmortizationPeriodRequest</p>
@@ -199,7 +200,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         } 
 
         /**
-         * The ID of the member to which the bill belongs. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account and all members of the current account are queried. You can specify a maximum of 10 IDs.
+         * <p>The ID of the member to which the bill belongs. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account and all members of the current account are queried. You can specify a maximum of 10 IDs.</p>
          */
         public Builder billOwnerIdList(java.util.List < String > billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
@@ -208,7 +209,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * The ID of the member that needs to settle the bill. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member account. If you leave this parameter empty, the bills of the current account and all members of the current account are queried by default. You can specify a maximum of 10 IDs.
+         * <p>The ID of the member that needs to settle the bill. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member account. If you leave this parameter empty, the bills of the current account and all members of the current account are queried by default. You can specify a maximum of 10 IDs.</p>
          */
         public Builder billUserIdList(java.util.List < String > billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
@@ -217,7 +218,11 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * The allocation month. Format: YYYY-MM.
+         * <p>The allocation month. Format: YYYY-MM.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10</p>
          */
         public Builder billingCycle(String billingCycle) {
             this.putBodyParameter("BillingCycle", billingCycle);
@@ -226,7 +231,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * The billing cycle that is used to filter bills. You can specify a maximum of 10 billing cycles.
+         * <p>The billing cycle that is used to filter bills. You can specify a maximum of 10 billing cycles.</p>
          */
         public Builder consumePeriodFilter(java.util.List < String > consumePeriodFilter) {
             this.putBodyParameter("ConsumePeriodFilter", consumePeriodFilter);
@@ -235,7 +240,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * The code of the cost center.
+         * <p>The code of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123#</p>
          */
         public Builder costUnitCode(String costUnitCode) {
             this.putBodyParameter("CostUnitCode", costUnitCode);
@@ -244,7 +252,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * The instance ID that is used to filter bills. You can specify multiple instance IDs to query bills of multiple instances. If you leave this parameter empty, the bills of all instances are queried by default. You can specify a maximum of 10 instance IDs.
+         * <p>The instance ID that is used to filter bills. You can specify multiple instance IDs to query bills of multiple instances. If you leave this parameter empty, the bills of all instances are queried by default. You can specify a maximum of 10 instance IDs.</p>
          */
         public Builder instanceIdList(java.util.List < String > instanceIdList) {
             this.putBodyParameter("InstanceIdList", instanceIdList);
@@ -253,7 +261,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * The maximum number of entries to return. Default value: 20. Maximum value: 300.
+         * <p>The maximum number of entries to return. Default value: 20. Maximum value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -262,7 +273,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * The position from which the query starts. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.
+         * <p>The position from which the query starts. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -271,7 +285,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * The code of the service. You can obtain the value of this parameter by calling the QueryProductList operation or the DescribeResourcePackageProduct operation.
+         * <p>The code of the service. You can obtain the value of this parameter by calling the QueryProductList operation or the DescribeResourcePackageProduct operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -280,7 +297,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * The specific service resource.
+         * <p>The specific service resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productDetail(String productDetail) {
             this.putBodyParameter("ProductDetail", productDetail);
@@ -289,11 +309,14 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodRequest extends Re
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription: the subscription billing method</li>
+         * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+         * </ul>
          * 
-         * *   Subscription: the subscription billing method
-         * *   PayAsYouGo: the pay-as-you-go billing method
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putBodyParameter("SubscriptionType", subscriptionType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPayAsYouGoPriceRequest} extends {@link RequestModel}
  *
  * <p>GetPayAsYouGoPriceRequest</p>
@@ -126,7 +127,8 @@ public class GetPayAsYouGoPriceRequest extends Request {
         } 
 
         /**
-         * The details of pricing modules.
+         * <p>The details of pricing modules.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder moduleList(java.util.List < ModuleList> moduleList) {
             this.putQueryParameter("ModuleList", moduleList);
@@ -144,7 +146,11 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -153,7 +159,10 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * The type of the service.
+         * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -162,7 +171,10 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -171,7 +183,11 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * The billing method. Set the value to PayAsYouGo.
+         * <p>The billing method. Set the value to PayAsYouGo.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -186,6 +202,12 @@ public class GetPayAsYouGoPriceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetPayAsYouGoPriceRequest} extends {@link TeaModel}
+     *
+     * <p>GetPayAsYouGoPriceRequest</p>
+     */
     public static class ModuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -240,10 +262,14 @@ public class GetPayAsYouGoPriceRequest extends Request {
             private String priceType; 
 
             /**
-             * The configuration of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.
-             * <p>
+             * <p>The configuration of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the configuration parameters of the pricing module.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  You can call the [DescribePricingModule](~~96469~~) operation to obtain the configuration parameters of the pricing module.
+             * <strong>example:</strong>
+             * <p>InstanceType:ecs.g5.xlarge,IoOptimized:IoOptimized,ImageOs:linux</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -251,10 +277,14 @@ public class GetPayAsYouGoPriceRequest extends Request {
             }
 
             /**
-             * The code of the Nth pricing module.
-             * <p>
+             * <p>The code of the Nth pricing module.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the module code.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  You can call the [DescribePricingModule](~~96469~~) operation to obtain the module code.
+             * <strong>example:</strong>
+             * <p>InstanceType</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -262,15 +292,20 @@ public class GetPayAsYouGoPriceRequest extends Request {
             }
 
             /**
-             * The price type of the Nth pricing module. Valid values:
-             * <p>
+             * <p>The price type of the Nth pricing module. Valid values:</p>
+             * <ul>
+             * <li>Hour: hourly price</li>
+             * <li>Usage: usage price</li>
+             * <li>Month: monthly price</li>
+             * <li>Year: annual price</li>
+             * </ul>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the configuration parameters of the pricing module.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * *   Hour: hourly price
-             * *   Usage: usage price
-             * *   Month: monthly price
-             * *   Year: annual price
-             * 
-             * >  You can call the [DescribePricingModule](~~96469~~) operation to obtain the configuration parameters of the pricing module.
+             * <strong>example:</strong>
+             * <p>Hour</p>
              */
             public Builder priceType(String priceType) {
                 this.priceType = priceType;

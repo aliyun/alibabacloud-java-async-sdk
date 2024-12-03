@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPermissionListRequest} extends {@link RequestModel}
  *
  * <p>QueryPermissionListRequest</p>
@@ -54,7 +55,11 @@ public class QueryPermissionListRequest extends Request {
         } 
 
         /**
-         * The ID of the relationship. Set this parameter to the value of the RelationId response parameter returned by calling the QueryRelationList operation.
+         * <p>The ID of the relationship. Set this parameter to the value of the RelationId response parameter returned by calling the QueryRelationList operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51463</p>
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);

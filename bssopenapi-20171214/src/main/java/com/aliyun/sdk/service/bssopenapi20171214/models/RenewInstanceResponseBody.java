@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RenewInstanceResponseBody</p>
@@ -85,7 +86,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class RenewInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RenewInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenewInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
@@ -157,7 +176,10 @@ public class RenewInstanceResponseBody extends TeaModel {
             private String orderId; 
 
             /**
-             * The ID of the order.
+             * <p>The ID of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202657601410661</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInstanceByTagResponseBody} extends {@link TeaModel}
  *
  * <p>QueryInstanceByTagResponseBody</p>
@@ -97,7 +98,10 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         private java.util.List < TagResource> tagResource; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PARAM_ERROR</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,10 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param is null</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +120,10 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the QueryInstanceByTag operation was called.
+         * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the QueryInstanceByTag operation was called.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESEgoQCg4KCm</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -121,7 +131,10 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9EC6C0B7-3397-5FAE-9915-8972CDDB1211</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,10 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +153,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         }
 
         /**
-         * The instances returned.
+         * <p>The instances returned.</p>
          */
         public Builder tagResource(java.util.List < TagResource> tagResource) {
             this.tagResource = tagResource;
@@ -150,6 +166,12 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryInstanceByTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInstanceByTagResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -189,7 +211,10 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -197,7 +222,10 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -211,6 +239,12 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryInstanceByTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInstanceByTagResponseBody</p>
+     */
     public static class TagResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -262,7 +296,10 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             private java.util.List < Tag> tag; 
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spn-xxxxx</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -270,7 +307,10 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. The returned resource type indicates a savings plan instance.
+             * <p>The type of the resource. The returned resource type indicates a savings plan instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -278,7 +318,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tag(java.util.List < Tag> tag) {
                 this.tag = tag;

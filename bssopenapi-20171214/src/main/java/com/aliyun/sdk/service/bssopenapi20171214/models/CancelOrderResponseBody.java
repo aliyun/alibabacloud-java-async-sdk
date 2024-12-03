@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CancelOrderResponseBody</p>
@@ -85,7 +86,10 @@ public class CancelOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class CancelOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class CancelOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class CancelOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30D2285E-A848-4ECB-AA74-4954C60858A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class CancelOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class CancelOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CancelOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CancelOrderResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
@@ -157,7 +176,10 @@ public class CancelOrderResponseBody extends TeaModel {
             private String hostId; 
 
             /**
-             * The ID of the host.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;

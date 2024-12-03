@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySettleBillRequest} extends {@link RequestModel}
  *
  * <p>QuerySettleBillRequest</p>
@@ -218,7 +219,10 @@ public class QuerySettleBillRequest extends Request {
         }
 
         /**
-         * BillingCycle.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07</p>
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);

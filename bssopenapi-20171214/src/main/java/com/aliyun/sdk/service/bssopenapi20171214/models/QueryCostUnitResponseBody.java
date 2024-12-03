@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCostUnitResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCostUnitResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryCostUnitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCostUnitResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCostUnitResponseBody</p>
+     */
     public static class CostUnitDtoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerUid")
         private Long ownerUid;
@@ -193,7 +212,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
             private String unitName; 
 
             /**
-             * The user ID of the cost center owner.
+             * <p>The user ID of the cost center owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2343464</p>
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -201,7 +223,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent cost center. A value of -1 indicates the root cost center.
+             * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentUnitId(Long parentUnitId) {
                 this.parentUnitId = parentUnitId;
@@ -209,7 +234,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cost center.
+             * <p>The ID of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23534</p>
              */
             public Builder unitId(Long unitId) {
                 this.unitId = unitId;
@@ -217,7 +245,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cost center.
+             * <p>The name of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder unitName(String unitName) {
                 this.unitName = unitName;
@@ -231,6 +262,12 @@ public class QueryCostUnitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCostUnitResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCostUnitResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CostUnitDtoList")
         private java.util.List < CostUnitDtoList> costUnitDtoList;
@@ -294,7 +331,7 @@ public class QueryCostUnitResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The cost centers.
+             * <p>The cost centers.</p>
              */
             public Builder costUnitDtoList(java.util.List < CostUnitDtoList> costUnitDtoList) {
                 this.costUnitDtoList = costUnitDtoList;
@@ -302,7 +339,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -310,7 +350,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * <p>The number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -318,7 +361,10 @@ public class QueryCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

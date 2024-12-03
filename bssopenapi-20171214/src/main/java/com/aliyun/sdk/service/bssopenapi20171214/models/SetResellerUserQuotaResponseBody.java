@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetResellerUserQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>SetResellerUserQuotaResponseBody</p>
@@ -85,7 +86,10 @@ public class SetResellerUserQuotaResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the call failed. For more information, see the "Error codes" section of this topic.
+         * <p>The error code returned if the call failed. For more information, see the &quot;Error codes&quot; section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class SetResellerUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -101,7 +108,10 @@ public class SetResellerUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class SetResellerUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class SetResellerUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.
+         * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

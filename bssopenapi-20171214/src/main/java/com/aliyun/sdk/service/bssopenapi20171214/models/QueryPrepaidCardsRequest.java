@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPrepaidCardsRequest} extends {@link RequestModel}
  *
  * <p>QueryPrepaidCardsRequest</p>
@@ -81,11 +82,14 @@ public class QueryPrepaidCardsRequest extends Request {
         } 
 
         /**
-         * Specifies whether the prepaid card takes effect. Valid values:
-         * <p>
+         * <p>Specifies whether the prepaid card takes effect. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder effectiveOrNot(Boolean effectiveOrNot) {
             this.putQueryParameter("EffectiveOrNot", effectiveOrNot);
@@ -94,7 +98,10 @@ public class QueryPrepaidCardsRequest extends Request {
         }
 
         /**
-         * The end of the expiration time of prepaid cards to query. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.
+         * <p>The end of the expiration time of prepaid cards to query. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-01T00:00:00Z</p>
          */
         public Builder expiryTimeEnd(String expiryTimeEnd) {
             this.putQueryParameter("ExpiryTimeEnd", expiryTimeEnd);
@@ -103,7 +110,10 @@ public class QueryPrepaidCardsRequest extends Request {
         }
 
         /**
-         * The start of the expiration time of prepaid cards to query. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.
+         * <p>The start of the expiration time of prepaid cards to query. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-01T00:00:00Z</p>
          */
         public Builder expiryTimeStart(String expiryTimeStart) {
             this.putQueryParameter("ExpiryTimeStart", expiryTimeStart);

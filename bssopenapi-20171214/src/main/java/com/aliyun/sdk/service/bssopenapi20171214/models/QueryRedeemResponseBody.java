@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRedeemResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRedeemResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryRedeemResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryRedeemResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryRedeemResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryRedeemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E503DC7B-E4F0-4B3C-BC89-BCECF1338F0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryRedeemResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryRedeemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRedeemResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRedeemResponseBody</p>
+     */
     public static class Redeem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicableProducts")
         private String applicableProducts;
@@ -265,7 +284,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The services to which the redemption coupon is applicable.
+             * <p>The services to which the redemption coupon is applicable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic Compute Service (ECS)</p>
              */
             public Builder applicableProducts(String applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -273,7 +295,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The balance of the redemption coupon.
+             * <p>The balance of the redemption coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -281,7 +306,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the redemption coupon took effect.
+             * <p>The time when the redemption coupon took effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-14 20:25:00</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -289,7 +317,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the redemption coupon expired.
+             * <p>The time when the redemption coupon expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-06-13 20:25:00</p>
              */
             public Builder expiryTime(String expiryTime) {
                 this.expiryTime = expiryTime;
@@ -297,7 +328,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the redemption coupon was issued.
+             * <p>The time when the redemption coupon was issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-14 20:25:00</p>
              */
             public Builder grantedTime(String grantedTime) {
                 this.grantedTime = grantedTime;
@@ -305,7 +339,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The nominal value of the redemption coupon.
+             * <p>The nominal value of the redemption coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nominalValue(String nominalValue) {
                 this.nominalValue = nominalValue;
@@ -313,7 +350,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the redemption coupon.
+             * <p>The ID of the redemption coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1342</p>
              */
             public Builder redeemId(String redeemId) {
                 this.redeemId = redeemId;
@@ -321,7 +361,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the redemption coupon.
+             * <p>The number of the redemption coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4889*****1610</p>
              */
             public Builder redeemNo(String redeemNo) {
                 this.redeemNo = redeemNo;
@@ -329,7 +372,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the redemption coupon.
+             * <p>The specifications of the redemption coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -337,19 +383,22 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the redemption coupon. Valid values:
-             * <p>
+             * <p>The status of the redemption coupon. Valid values:</p>
+             * <ul>
+             * <li>Generated</li>
+             * <li>CallBack</li>
+             * <li>RefundPending</li>
+             * <li>Canceled</li>
+             * <li>Order_Canceled</li>
+             * <li>ActivePending</li>
+             * <li>ActiveSuccess</li>
+             * <li>ExchangePending</li>
+             * <li>ExchangeSuccess</li>
+             * <li>Expired</li>
+             * </ul>
              * 
-             * *   Generated
-             * *   CallBack
-             * *   RefundPending
-             * *   Canceled
-             * *   Order_Canceled
-             * *   ActivePending
-             * *   ActiveSuccess
-             * *   ExchangePending
-             * *   ExchangeSuccess
-             * *   Expired
+             * <strong>example:</strong>
+             * <p>Generated</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -363,6 +412,12 @@ public class QueryRedeemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRedeemResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRedeemResponseBody</p>
+     */
     public static class DataRedeem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Redeem")
         private java.util.List < Redeem> redeem;
@@ -404,6 +459,12 @@ public class QueryRedeemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRedeemResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRedeemResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNum")
         private Long pageNum;
@@ -467,7 +528,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -475,7 +539,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -483,7 +550,7 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the redemption coupon.
+             * <p>The details of the redemption coupon.</p>
              */
             public Builder redeem(DataRedeem redeem) {
                 this.redeem = redeem;
@@ -491,7 +558,10 @@ public class QueryRedeemResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

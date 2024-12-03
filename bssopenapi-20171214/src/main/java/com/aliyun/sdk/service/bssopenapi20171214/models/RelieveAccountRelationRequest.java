@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RelieveAccountRelationRequest} extends {@link RequestModel}
  *
  * <p>RelieveAccountRelationRequest</p>
@@ -112,7 +113,10 @@ public class RelieveAccountRelationRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.
+         * <p>The ID of the Alibaba Cloud account that is used as the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1512996702208737</p>
          */
         public Builder childUserId(Long childUserId) {
             this.putQueryParameter("ChildUserId", childUserId);
@@ -121,7 +125,10 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the management account. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.
+         * <p>The ID of the Alibaba Cloud account that is used as the management account. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1738376485192612</p>
          */
         public Builder parentUserId(Long parentUserId) {
             this.putQueryParameter("ParentUserId", parentUserId);
@@ -130,7 +137,10 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the financial relationship between the management account and the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.
+         * <p>The ID of the financial relationship between the management account and the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RelationId</p>
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);
@@ -139,7 +149,10 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * The type of the financial relationship. Set the value to enterprise_group.
+         * <p>The type of the financial relationship. Set the value to enterprise_group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise_group</p>
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -148,7 +161,11 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
+         * <p>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request_id</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);

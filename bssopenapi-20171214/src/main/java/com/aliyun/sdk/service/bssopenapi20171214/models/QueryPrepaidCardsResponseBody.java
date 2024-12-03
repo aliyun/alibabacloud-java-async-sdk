@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPrepaidCardsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPrepaidCardsResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7EA6C02D-06D0-4213-9C3B-E67910F7D1EB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPrepaidCardsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPrepaidCardsResponseBody</p>
+     */
     public static class PrepaidCard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicableProducts")
         private String applicableProducts;
@@ -265,7 +284,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The services to which the prepaid card is applicable.
+             * <p>The services to which the prepaid card is applicable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>All Alibaba Cloud services</p>
              */
             public Builder applicableProducts(String applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -273,7 +295,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The scenario to which the prepaid card is applicable.
+             * <p>The scenario to which the prepaid card is applicable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder applicableScenarios(String applicableScenarios) {
                 this.applicableScenarios = applicableScenarios;
@@ -281,7 +306,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The balance of the prepaid card.
+             * <p>The balance of the prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -289,7 +317,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the prepaid card took effect.
+             * <p>The time when the prepaid card took effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-03T01:39:11Z</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -297,7 +328,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the prepaid card expired.
+             * <p>The time when the prepaid card expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-04T01:39:11Z</p>
              */
             public Builder expiryTime(String expiryTime) {
                 this.expiryTime = expiryTime;
@@ -305,7 +339,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the prepaid card was issued.
+             * <p>The time when the prepaid card was issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-03T01:39:11Z</p>
              */
             public Builder grantedTime(String grantedTime) {
                 this.grantedTime = grantedTime;
@@ -313,7 +350,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The nominal value of the prepaid card.
+             * <p>The nominal value of the prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder nominalValue(String nominalValue) {
                 this.nominalValue = nominalValue;
@@ -321,7 +361,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the prepaid card.
+             * <p>The ID of the prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>213432432</p>
              */
             public Builder prepaidCardId(Long prepaidCardId) {
                 this.prepaidCardId = prepaidCardId;
@@ -329,7 +372,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the prepaid card.
+             * <p>The number of the prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Q-7edaab979fc9</p>
              */
             public Builder prepaidCardNo(String prepaidCardNo) {
                 this.prepaidCardNo = prepaidCardNo;
@@ -337,12 +383,15 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the prepaid card. Valid values:
-             * <p>
+             * <p>The status of the prepaid card. Valid values:</p>
+             * <ul>
+             * <li>Available: The prepaid card is valid.</li>
+             * <li>Expired: The prepaid card expired.</li>
+             * <li>Cancelled: The prepaid card is invalid.</li>
+             * </ul>
              * 
-             * *   Available: The prepaid card is valid.
-             * *   Expired: The prepaid card expired.
-             * *   Cancelled: The prepaid card is invalid.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -356,6 +405,12 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPrepaidCardsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPrepaidCardsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrepaidCard")
         private java.util.List < PrepaidCard> prepaidCard;

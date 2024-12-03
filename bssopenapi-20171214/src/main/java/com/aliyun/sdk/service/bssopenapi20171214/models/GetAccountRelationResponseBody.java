@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountRelationResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountRelationResponseBody</p>
@@ -85,7 +86,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Message returned</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetAccountRelationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccountRelationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountRelationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChildUserId")
         private Long childUserId;
@@ -241,7 +260,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the Alibaba Cloud account that is used as a member.
+             * <p>The ID of the Alibaba Cloud account that is used as a member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID of the Alibaba Cloud account that is used as a member</p>
              */
             public Builder childUserId(Long childUserId) {
                 this.childUserId = childUserId;
@@ -249,7 +271,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the financial relationship between the management account and the member was terminated.
+             * <p>The time when the financial relationship between the management account and the member was terminated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-01</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -257,7 +282,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the financial relationship between the management account and the member was modified.
+             * <p>The time when the financial relationship between the management account and the member was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-01</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -265,7 +293,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the financial relationship.
+             * <p>The ID of the financial relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID of the financial relationship</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -273,7 +304,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used as the management account.
+             * <p>The ID of the Alibaba Cloud account that is used as the management account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID of the Alibaba Cloud account that is used as the management account</p>
              */
             public Builder parentUserId(Long parentUserId) {
                 this.parentUserId = parentUserId;
@@ -281,7 +315,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the financial relationship between the management account and the member was established.
+             * <p>The time when the financial relationship between the management account and the member was established.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-01</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -289,16 +326,19 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the financial relationship between the management account and the member.
-             * <p>
+             * <p>The status of the financial relationship between the management account and the member.</p>
+             * <ul>
+             * <li>RELATED 【Association established】</li>
+             * <li>CONFIRMING 【To be confirmed by the other party】</li>
+             * <li>REJECTED 【Refused by the other party】</li>
+             * <li>CONNECTION_CANCELED 【Financial sub-account cancel request】</li>
+             * <li>CONNECTION_MASTER_CANCEL 【Financial master account cancel invitation】</li>
+             * <li>CHANGE_CONFIRMING 【Relationship change to be confirmed】</li>
+             * <li>INITIAL 【Initial new relationship status】</li>
+             * </ul>
              * 
-             * - RELATED 【Association established】
-             * - CONFIRMING 【To be confirmed by the other party】
-             * - REJECTED 【Refused by the other party】
-             * - CONNECTION_CANCELED 【Financial sub-account cancel request】
-             * - CONNECTION_MASTER_CANCEL 【Financial master account cancel invitation】
-             * - CHANGE_CONFIRMING 【Relationship change to be confirmed】
-             * - INITIAL 【Initial new relationship status】
+             * <strong>example:</strong>
+             * <p>RELATED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -306,7 +346,10 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the financial relationship.
+             * <p>The type of the financial relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enterprise_group</p>
              */
             public Builder type(String type) {
                 this.type = type;

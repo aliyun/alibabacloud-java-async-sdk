@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSubscriptionPriceResponseBody} extends {@link TeaModel}
  *
  * <p>GetSubscriptionPriceResponseBody</p>
@@ -85,7 +86,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidConfigCod</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the service price.
+         * <p>The information about the service price.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30E7066E-AE6F-4E59-AFE6-11386CE3AFA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSubscriptionPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSubscriptionPriceResponseBody</p>
+     */
     public static class ModuleDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CostAfterDiscount")
         private Float costAfterDiscount;
@@ -205,7 +224,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             private Float unitPrice; 
 
             /**
-             * The discount price.
+             * <p>The discount price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder costAfterDiscount(Float costAfterDiscount) {
                 this.costAfterDiscount = costAfterDiscount;
@@ -213,7 +235,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discount that was applied.
+             * <p>The discount that was applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder invoiceDiscount(Float invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -221,7 +246,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the pricing module.
+             * <p>The identifier of the pricing module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PackageCode</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -229,7 +257,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price of the service.
+             * <p>The original price of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder originalCost(Float originalCost) {
                 this.originalCost = originalCost;
@@ -237,7 +268,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The unit price.
+             * <p>The unit price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder unitPrice(Float unitPrice) {
                 this.unitPrice = unitPrice;
@@ -251,6 +285,12 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSubscriptionPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSubscriptionPriceResponseBody</p>
+     */
     public static class ModuleDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleDetail")
         private java.util.List < ModuleDetail> moduleDetail;
@@ -292,6 +332,12 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSubscriptionPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSubscriptionPriceResponseBody</p>
+     */
     public static class PromotionDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PromotionDesc")
         private String promotionDesc;
@@ -343,7 +389,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             private String promotionName; 
 
             /**
-             * The description of the discount.
+             * <p>The description of the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -351,7 +400,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the discount.
+             * <p>The ID of the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1021199213</p>
              */
             public Builder promotionId(Long promotionId) {
                 this.promotionId = promotionId;
@@ -359,7 +411,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the discount.
+             * <p>The name of the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -373,6 +428,12 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSubscriptionPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSubscriptionPriceResponseBody</p>
+     */
     public static class PromotionDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PromotionDetail")
         private java.util.List < PromotionDetail> promotionDetail;
@@ -414,6 +475,12 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSubscriptionPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSubscriptionPriceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -513,12 +580,15 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The type of currency. Valid values:
-             * <p>
+             * <p>The type of currency. Valid values:</p>
+             * <ul>
+             * <li>CNY: Chinese Yuan</li>
+             * <li>USD: US dollar</li>
+             * <li>JPY: Japanese Yen</li>
+             * </ul>
              * 
-             * *   CNY: Chinese Yuan
-             * *   USD: US dollar
-             * *   JPY: Japanese Yen
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -526,7 +596,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discount that was applied.
+             * <p>The discount that was applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -534,7 +607,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The price details of the pricing module.
+             * <p>The price details of the pricing module.</p>
              */
             public Builder moduleDetails(ModuleDetails moduleDetails) {
                 this.moduleDetails = moduleDetails;
@@ -542,7 +615,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price of the service.
+             * <p>The original price of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>900</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -550,7 +626,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the discount.
+             * <p>The details of the discount.</p>
              */
             public Builder promotionDetails(PromotionDetails promotionDetails) {
                 this.promotionDetails = promotionDetails;
@@ -558,7 +634,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The quantity.
+             * <p>The quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quantity(Integer quantity) {
                 this.quantity = quantity;
@@ -566,7 +645,10 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discount price.
+             * <p>The discount price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;

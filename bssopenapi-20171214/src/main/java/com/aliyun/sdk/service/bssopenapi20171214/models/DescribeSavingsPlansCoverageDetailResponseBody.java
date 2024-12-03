@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSavingsPlansCoverageDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSavingsPlansCoverageDetailResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * <p>The return data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSavingsPlansCoverageDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSavingsPlansCoverageDetailResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoveragePercentage")
         private Float coveragePercentage;
@@ -301,7 +320,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The coverage.
+             * <p>The coverage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -309,7 +331,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -317,7 +342,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The deducted amount.
+             * <p>The deducted amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder deductAmount(Float deductAmount) {
                 this.deductAmount = deductAmount;
@@ -325,7 +353,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end time.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-05 15:00:00</p>
              */
             public Builder endPeriod(String endPeriod) {
                 this.endPeriod = endPeriod;
@@ -333,7 +364,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spn-a1fhs54c243hP22</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -341,7 +375,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications.
+             * <p>The specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7th_generation_X86_group</p>
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -357,7 +394,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The pay-as-you-go cost.
+             * <p>The pay-as-you-go cost.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder postpaidCost(Float postpaidCost) {
                 this.postpaidCost = postpaidCost;
@@ -365,7 +405,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region.
+             * <p>The region.</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -373,7 +413,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The start time.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-05 14:00:00</p>
              */
             public Builder startPeriod(String startPeriod) {
                 this.startPeriod = startPeriod;
@@ -381,7 +424,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total expenditure.
+             * <p>The total expenditure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalAmount(Float totalAmount) {
                 this.totalAmount = totalAmount;
@@ -389,7 +435,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2831685687844416</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -397,7 +446,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:tester1@test.aliyun.com">tester1@test.aliyun.com</a></p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -411,6 +463,12 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSavingsPlansCoverageDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSavingsPlansCoverageDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < Items> items;
@@ -462,7 +520,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The data entries.
+             * <p>The data entries.</p>
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -470,7 +528,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The token of the next page.
+             * <p>The token of the next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -478,7 +539,10 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

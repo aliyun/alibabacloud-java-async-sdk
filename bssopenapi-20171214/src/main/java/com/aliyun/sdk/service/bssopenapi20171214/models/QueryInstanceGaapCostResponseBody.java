@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInstanceGaapCostResponseBody} extends {@link TeaModel}
  *
  * <p>QueryInstanceGaapCostResponseBody</p>
@@ -130,6 +131,12 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryInstanceGaapCostResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInstanceGaapCostResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountingUnit")
         private String accountingUnit;
@@ -1191,6 +1198,12 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryInstanceGaapCostResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInstanceGaapCostResponseBody</p>
+     */
     public static class Modules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Module")
         private java.util.List < Module> module;
@@ -1232,6 +1245,12 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryInstanceGaapCostResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInstanceGaapCostResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;

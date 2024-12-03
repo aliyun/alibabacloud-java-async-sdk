@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSplitItemBillResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSplitItemBillResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSplitItemBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSplitItemBillResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdjustAmount")
         private Float adjustAmount;
@@ -793,7 +812,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * The amount deducted with credit refund.
+             * <p>The amount deducted with credit refund.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder adjustAmount(Float adjustAmount) {
                 this.adjustAmount = adjustAmount;
@@ -801,7 +823,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account to which the bill belongs.
+             * <p>The ID of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185xxxx3489</p>
              */
             public Builder billAccountID(String billAccountID) {
                 this.billAccountID = billAccountID;
@@ -809,7 +834,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account to which the bill belongs.
+             * <p>The name of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder billAccountName(String billAccountName) {
                 this.billAccountName = billAccountName;
@@ -817,7 +845,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing date. Format: YYYY-MM-DD. This parameter is not supported.
+             * <p>The billing date. Format: YYYY-MM-DD. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-20</p>
              */
             public Builder billingDate(String billingDate) {
                 this.billingDate = billingDate;
@@ -825,7 +856,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billable item.
+             * <p>The billable item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bandwidth</p>
              */
             public Builder billingItem(String billingItem) {
                 this.billingItem = billingItem;
@@ -833,7 +867,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the billable item.
+             * <p>The code of the billable item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disk</p>
              */
             public Builder billingItemCode(String billingItemCode) {
                 this.billingItemCode = billingItemCode;
@@ -841,7 +878,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Other</p>
              */
             public Builder billingType(String billingType) {
                 this.billingType = billingType;
@@ -849,7 +889,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the business.
+             * <p>The type of the business.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trusteeship</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -857,7 +900,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount paid in cash. The amount deducted with credit refund is not included.
+             * <p>The amount paid in cash. The amount deducted with credit refund is not included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cashAmount(Float cashAmount) {
                 this.cashAmount = cashAmount;
@@ -865,7 +911,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the commodity. The code is the same as that displayed in the Split Bill module of the User Center console.
+             * <p>The code of the commodity. The code is the same as that displayed in the Split Bill module of the User Center console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -873,7 +922,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The cost center.
+             * <p>The cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not allocated</p>
              */
             public Builder costUnit(String costUnit) {
                 this.costUnit = costUnit;
@@ -881,7 +933,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of currency. Valid values: CNY, USD, and JPY.
+             * <p>The type of currency. Valid values: CNY, USD, and JPY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -889,7 +944,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted with vouchers.
+             * <p>The amount deducted with vouchers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCashCoupons(Float deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -897,7 +955,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted with coupons.
+             * <p>The amount deducted with coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCoupons(Float deductedByCoupons) {
                 this.deductedByCoupons = deductedByCoupons;
@@ -905,7 +966,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted with prepaid cards.
+             * <p>The amount deducted with prepaid cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByPrepaidCard(Float deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -913,7 +977,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted with resource plans.
+             * <p>The amount deducted with resource plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByResourcePackage(String deductedByResourcePackage) {
                 this.deductedByResourcePackage = deductedByResourcePackage;
@@ -921,7 +988,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the instance.
+             * <p>The configurations of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU:12</p>
              */
             public Builder instanceConfig(String instanceConfig) {
                 this.instanceConfig = instanceConfig;
@@ -929,7 +999,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-kjhdskjgshfdlkjfdh</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -937,7 +1010,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
+             * <p>The type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.sn1ne.3xlarge</p>
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -945,7 +1021,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34.xx.x.x</p>
              */
             public Builder internetIP(String internetIP) {
                 this.internetIP = internetIP;
@@ -953,7 +1032,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.xx.xx.xx</p>
              */
             public Builder intranetIP(String intranetIP) {
                 this.intranetIP = intranetIP;
@@ -961,7 +1043,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The discount amount.
+             * <p>The discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder invoiceDiscount(Float invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -969,7 +1054,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the bill. Valid values: SubscriptionOrder: the subscription bill. PayAsYouGoBill: the pay-as-you-go bill. Refund: the refund. Adjustment: the adjustment bill.
+             * <p>The type of the bill. Valid values: SubscriptionOrder: the subscription bill. PayAsYouGoBill: the pay-as-you-go bill. Refund: the refund. Adjustment: the adjustment bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PayAsYouGoBill</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -977,7 +1065,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the split item.
+             * <p>The name of the split item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iZ28bycvyb4Z</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -985,7 +1076,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The unit price.
+             * <p>The unit price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.12</p>
              */
             public Builder listPrice(String listPrice) {
                 this.listPrice = listPrice;
@@ -993,7 +1087,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the unit price.
+             * <p>The unit of the unit price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY/GB</p>
              */
             public Builder listPriceUnit(String listPriceUnit) {
                 this.listPriceUnit = listPriceUnit;
@@ -1001,7 +1098,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nick</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -1009,7 +1109,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount that is unsettled.
+             * <p>The amount that is unsettled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder outstandingAmount(Float outstandingAmount) {
                 this.outstandingAmount = outstandingAmount;
@@ -1017,7 +1120,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account that owns the resource. This parameter is returned in multi-account scenario.
+             * <p>The ID of the account that owns the resource. This parameter is returned in multi-account scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>169***013</p>
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -1025,7 +1131,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount paid in cash. The amount deducted with credit refund is included.
+             * <p>The amount paid in cash. The amount deducted with credit refund is included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder paymentAmount(Float paymentAmount) {
                 this.paymentAmount = paymentAmount;
@@ -1033,7 +1142,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service. The code is the same as that displayed in the Split Bill module of the User Center console.
+             * <p>The code of the service. The code is the same as that displayed in the Split Bill module of the User Center console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder pipCode(String pipCode) {
                 this.pipCode = pipCode;
@@ -1041,7 +1153,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax amount.
+             * <p>The pretax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxAmount(Float pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -1049,7 +1164,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax gross amount.
+             * <p>The pretax gross amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxGrossAmount(Float pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -1057,7 +1175,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -1065,7 +1186,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the service.
+             * <p>The details of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -1073,7 +1197,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -1081,7 +1208,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * <p>The type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -1089,7 +1219,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1097,7 +1230,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default resource group</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -1105,7 +1241,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the service.
+             * <p>The duration of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder servicePeriod(String servicePeriod) {
                 this.servicePeriod = servicePeriod;
@@ -1113,7 +1252,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the service duration.
+             * <p>The unit of the service duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hour</p>
              */
             public Builder servicePeriodUnit(String servicePeriodUnit) {
                 this.servicePeriodUnit = servicePeriodUnit;
@@ -1121,7 +1263,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account to which the split bill belongs.
+             * <p>The ID of the account to which the split bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**122</p>
              */
             public Builder splitAccountID(String splitAccountID) {
                 this.splitAccountID = splitAccountID;
@@ -1129,7 +1274,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account to which the split item belongs.
+             * <p>The name of the account to which the split item belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test**1122</p>
              */
             public Builder splitAccountName(String splitAccountName) {
                 this.splitAccountName = splitAccountName;
@@ -1137,7 +1285,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing cycle in which the bill is split.
+             * <p>The billing cycle in which the bill is split.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06</p>
              */
             public Builder splitBillingCycle(String splitBillingCycle) {
                 this.splitBillingCycle = splitBillingCycle;
@@ -1145,7 +1296,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The day on which the bill is split.
+             * <p>The day on which the bill is split.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-01</p>
              */
             public Builder splitBillingDate(String splitBillingDate) {
                 this.splitBillingDate = splitBillingDate;
@@ -1153,7 +1307,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the split item.
+             * <p>The code of the split item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder splitCommodityCode(String splitCommodityCode) {
                 this.splitCommodityCode = splitCommodityCode;
@@ -1161,7 +1318,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the split item.
+             * <p>The ID of the split item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-28bycvyb4</p>
              */
             public Builder splitItemID(String splitItemID) {
                 this.splitItemID = splitItemID;
@@ -1169,7 +1329,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the split item.
+             * <p>The name of the split item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iZ28bycvyb4Z</p>
              */
             public Builder splitItemName(String splitItemName) {
                 this.splitItemName = splitItemName;
@@ -1177,7 +1340,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the service.
+             * <p>The details of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder splitProductDetail(String splitProductDetail) {
                 this.splitProductDetail = splitProductDetail;
@@ -1185,7 +1351,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values: Subscription: the subscription billing method. PayAsYouGo: the pay-as-you-go billing method.
+             * <p>The billing method. Valid values: Subscription: the subscription billing method. PayAsYouGo: the pay-as-you-go billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -1193,7 +1362,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the resource. If tags added to resources change, the bills generated during the period in which resources and tags are associated are returned.
+             * <p>The tag of the resource. If tags added to resources change, the bills generated during the period in which resources and tags are associated are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key:testKey value:testValue; key:testKey1 value:testValues1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1201,7 +1373,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of resource usage.
+             * <p>The amount of resource usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -1209,7 +1384,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of usage.
+             * <p>The unit of usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder usageUnit(String usageUnit) {
                 this.usageUnit = usageUnit;
@@ -1217,7 +1395,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The zone.
+             * <p>The zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qingdao Zone B</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -1231,6 +1412,12 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSplitItemBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSplitItemBillResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;
@@ -1330,7 +1517,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185xxxx3489</p>
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -1338,7 +1528,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1346,7 +1539,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing cycle. Format: YYYY-MM.
+             * <p>The billing cycle. Format: YYYY-MM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03</p>
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -1354,7 +1550,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the bill.
+             * <p>The details of the bill.</p>
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -1362,7 +1558,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of entries returned.
+             * <p>The maximum number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -1370,7 +1569,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The token used for the next query. If this parameter is empty, all the results are returned. When you perform the next query, you must set the NextToken parameter to this value.
+             * <p>The token used for the next query. If this parameter is empty, all the results are returned. When you perform the next query, you must set the NextToken parameter to this value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAESEgoQCg4K</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1378,7 +1580,10 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

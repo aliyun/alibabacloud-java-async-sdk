@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateCostUnitResourceRequest} extends {@link RequestModel}
  *
  * <p>AllocateCostUnitResourceRequest</p>
@@ -114,11 +115,15 @@ public class AllocateCostUnitResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the source cost center.
-         * <p>
+         * <p>The ID of the source cost center.</p>
+         * <ul>
+         * <li>A value of 0 indicates that the resources to be transferred have not been allocated to a cost center.</li>
+         * <li>A value greater than 0 indicates the ID of an existing cost center.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   A value of 0 indicates that the resources to be transferred have not been allocated to a cost center.
-         * *   A value greater than 0 indicates the ID of an existing cost center.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder fromUnitId(Long fromUnitId) {
             this.putQueryParameter("FromUnitId", fromUnitId);
@@ -127,7 +132,11 @@ public class AllocateCostUnitResourceRequest extends Request {
         }
 
         /**
-         * The user ID of the owner of the source cost center.
+         * <p>The user ID of the owner of the source cost center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>273394581313325532</p>
          */
         public Builder fromUnitUserId(Long fromUnitUserId) {
             this.putQueryParameter("FromUnitUserId", fromUnitUserId);
@@ -136,7 +145,8 @@ public class AllocateCostUnitResourceRequest extends Request {
         }
 
         /**
-         * The resource instances to be transferred.
+         * <p>The resource instances to be transferred.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceInstanceList(java.util.List < ResourceInstanceList> resourceInstanceList) {
             this.putQueryParameter("ResourceInstanceList", resourceInstanceList);
@@ -145,11 +155,15 @@ public class AllocateCostUnitResourceRequest extends Request {
         }
 
         /**
-         * The ID of the destination cost center.
-         * <p>
+         * <p>The ID of the destination cost center.</p>
+         * <ul>
+         * <li>A value of -1 indicates that the allocated resources are changed to unallocated.</li>
+         * <li>A value greater than 0 indicates the ID of an existing cost center.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   A value of -1 indicates that the allocated resources are changed to unallocated.
-         * *   A value greater than 0 indicates the ID of an existing cost center.
+         * <strong>example:</strong>
+         * <p>186419</p>
          */
         public Builder toUnitId(Long toUnitId) {
             this.putQueryParameter("ToUnitId", toUnitId);
@@ -158,7 +172,11 @@ public class AllocateCostUnitResourceRequest extends Request {
         }
 
         /**
-         * The user ID of the owner of the destination cost center.
+         * <p>The user ID of the owner of the destination cost center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>241021678450941490</p>
          */
         public Builder toUnitUserId(Long toUnitUserId) {
             this.putQueryParameter("ToUnitUserId", toUnitUserId);
@@ -173,6 +191,12 @@ public class AllocateCostUnitResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AllocateCostUnitResourceRequest} extends {@link TeaModel}
+     *
+     * <p>AllocateCostUnitResourceRequest</p>
+     */
     public static class ResourceInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApportionCode")
         private String apportionCode;
@@ -239,11 +263,14 @@ public class AllocateCostUnitResourceRequest extends Request {
             private Long resourceUserId; 
 
             /**
-             * The split item of the shared instance. This parameter is required only for shared instances.
-             * <p>
+             * <p>The split item of the shared instance. This parameter is required only for shared instances.</p>
+             * <ul>
+             * <li>Eight cloud services support bill splitting. The commodity codes of the eight services are oss, dcdn, snapshot, vod, cdn, live, and cbwp.</li>
+             * <li>You can obtain the split item of a shared instance by calling QueryCostUnitResource operation to obtain all resource instances within a cost center.</li>
+             * </ul>
              * 
-             * *   Eight cloud services support bill splitting. The commodity codes of the eight services are oss, dcdn, snapshot, vod, cdn, live, cbwp, and pcdn.
-             * *   You can obtain the split item of a shared instance by calling QueryCostUnitResource operation to obtain all resource instances within a cost center.
+             * <strong>example:</strong>
+             * <p>qwer1-cn-beijing</p>
              */
             public Builder apportionCode(String apportionCode) {
                 this.apportionCode = apportionCode;
@@ -251,7 +278,11 @@ public class AllocateCostUnitResourceRequest extends Request {
             }
 
             /**
-             * The commodity code of the resource instance.
+             * <p>The commodity code of the resource instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -259,7 +290,11 @@ public class AllocateCostUnitResourceRequest extends Request {
             }
 
             /**
-             * The ID of the resource instance.
+             * <p>The ID of the resource instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou;standard</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -267,7 +302,11 @@ public class AllocateCostUnitResourceRequest extends Request {
             }
 
             /**
-             * The user ID of the resource instance owner.
+             * <p>The user ID of the resource instance owner.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>273394581313325532</p>
              */
             public Builder resourceUserId(Long resourceUserId) {
                 this.resourceUserId = resourceUserId;

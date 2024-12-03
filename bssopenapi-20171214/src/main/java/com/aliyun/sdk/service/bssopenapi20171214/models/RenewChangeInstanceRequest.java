@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewChangeInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewChangeInstanceRequest</p>
@@ -149,7 +150,10 @@ public class RenewChangeInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-skjdhaskjdh</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -176,7 +180,10 @@ public class RenewChangeInstanceRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -194,7 +201,10 @@ public class RenewChangeInstanceRequest extends Request {
         }
 
         /**
-         * RenewPeriod.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder renewPeriod(Long renewPeriod) {
             this.putQueryParameter("RenewPeriod", renewPeriod);
@@ -209,6 +219,12 @@ public class RenewChangeInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RenewChangeInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>RenewChangeInstanceRequest</p>
+     */
     public static class Parameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -250,7 +266,10 @@ public class RenewChangeInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bandwidth</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -258,7 +277,10 @@ public class RenewChangeInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disk</p>
              */
             public Builder value(String value) {
                 this.value = value;

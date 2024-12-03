@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceCoverageTotalResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceCoverageTotalResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourceCoverageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceCoverageTotalResponseBody</p>
+     */
     public static class PeriodCoverage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoveragePercentage")
         private Float coveragePercentage;
@@ -169,7 +188,10 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             private String period; 
 
             /**
-             * The coverage rate of deduction plans within the specified period.
+             * <p>The coverage rate of deduction plans within the specified period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -177,10 +199,11 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The period.
-             * <p>
+             * <p>The period.</p>
+             * <p>The value is in the format of yyyyMMddHH.</p>
              * 
-             * The value is in the format of yyyyMMddHH.
+             * <strong>example:</strong>
+             * <p>2020110100</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -194,6 +217,12 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceCoverageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceCoverageTotalResponseBody</p>
+     */
     public static class TotalCoverage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private String capacityUnit;
@@ -257,7 +286,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             private Float totalQuantity; 
 
             /**
-             * The unit that is used to measure the resources deducted from deduction plans.
+             * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -265,7 +294,10 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total coverage rate of deduction plans.
+             * <p>The total coverage rate of deduction plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -273,7 +305,10 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of the resources deducted from deduction plans.
+             * <p>The total amount of the resources deducted from deduction plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder deductQuantity(Float deductQuantity) {
                 this.deductQuantity = deductQuantity;
@@ -281,7 +316,10 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of resources consumed.
+             * <p>The total amount of resources consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalQuantity(Float totalQuantity) {
                 this.totalQuantity = totalQuantity;
@@ -295,6 +333,12 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceCoverageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceCoverageTotalResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeriodCoverage")
         private java.util.List < PeriodCoverage> periodCoverage;
@@ -334,7 +378,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             private TotalCoverage totalCoverage; 
 
             /**
-             * The information about the coverage rate of deduction plans within a period.
+             * <p>The information about the coverage rate of deduction plans within a period.</p>
              */
             public Builder periodCoverage(java.util.List < PeriodCoverage> periodCoverage) {
                 this.periodCoverage = periodCoverage;
@@ -342,7 +386,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the total coverage data of deduction plans.
+             * <p>The information about the total coverage data of deduction plans.</p>
              */
             public Builder totalCoverage(TotalCoverage totalCoverage) {
                 this.totalCoverage = totalCoverage;

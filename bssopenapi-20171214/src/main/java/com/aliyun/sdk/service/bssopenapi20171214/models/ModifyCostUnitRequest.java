@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCostUnitRequest} extends {@link RequestModel}
  *
  * <p>ModifyCostUnitRequest</p>
@@ -53,7 +54,7 @@ public class ModifyCostUnitRequest extends Request {
         } 
 
         /**
-         * The cost centers to be modified.
+         * <p>The cost centers to be modified.</p>
          */
         public Builder unitEntityList(java.util.List < UnitEntityList> unitEntityList) {
             this.putQueryParameter("UnitEntityList", unitEntityList);
@@ -68,6 +69,12 @@ public class ModifyCostUnitRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCostUnitRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCostUnitRequest</p>
+     */
     public static class UnitEntityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NewUnitName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -122,7 +129,11 @@ public class ModifyCostUnitRequest extends Request {
             private Long unitId; 
 
             /**
-             * The new name of the cost center.
+             * <p>The new name of the cost center.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>newTest</p>
              */
             public Builder newUnitName(String newUnitName) {
                 this.newUnitName = newUnitName;
@@ -130,7 +141,11 @@ public class ModifyCostUnitRequest extends Request {
             }
 
             /**
-             * The user ID of the cost center owner.
+             * <p>The user ID of the cost center owner.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1321312312</p>
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -138,7 +153,11 @@ public class ModifyCostUnitRequest extends Request {
             }
 
             /**
-             * The ID of the cost center.
+             * <p>The ID of the cost center.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2524352</p>
              */
             public Builder unitId(Long unitId) {
                 this.unitId = unitId;

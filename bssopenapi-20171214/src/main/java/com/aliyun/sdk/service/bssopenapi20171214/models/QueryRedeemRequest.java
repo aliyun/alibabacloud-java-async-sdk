@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRedeemRequest} extends {@link RequestModel}
  *
  * <p>QueryRedeemRequest</p>
@@ -109,13 +110,15 @@ public class QueryRedeemRequest extends Request {
         } 
 
         /**
-         * Specifies whether the redemption coupon takes effect. Valid values:
-         * <p>
+         * <p>Specifies whether the redemption coupon takes effect. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder effectiveOrNot(Boolean effectiveOrNot) {
             this.putQueryParameter("EffectiveOrNot", effectiveOrNot);
@@ -124,7 +127,10 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * The end time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.
+         * <p>The end time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-01T00:00:00Z</p>
          */
         public Builder expiryTimeEnd(String expiryTimeEnd) {
             this.putQueryParameter("ExpiryTimeEnd", expiryTimeEnd);
@@ -133,7 +139,10 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * The start time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.
+         * <p>The start time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-01T00:00:00Z</p>
          */
         public Builder expiryTimeStart(String expiryTimeStart) {
             this.putQueryParameter("ExpiryTimeStart", expiryTimeStart);
@@ -142,7 +151,10 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -151,7 +163,10 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

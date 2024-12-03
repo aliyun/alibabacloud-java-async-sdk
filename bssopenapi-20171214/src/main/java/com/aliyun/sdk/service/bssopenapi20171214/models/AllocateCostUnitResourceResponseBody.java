@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateCostUnitResourceResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateCostUnitResourceResponseBody</p>
@@ -85,7 +86,10 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>845C629F-47A7-4F46-A470-ED5047C4C250</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AllocateCostUnitResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>AllocateCostUnitResourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsSuccess")
         private Boolean isSuccess;
@@ -181,11 +200,14 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
             private Long toUnitUserId; 
 
             /**
-             * Indicates whether resources are allocated to the specified cost center. Valid values:
-             * <p>
+             * <p>Indicates whether resources are allocated to the specified cost center. Valid values:</p>
+             * <ul>
+             * <li>true: The resources are allocated to the specified cost center.</li>
+             * <li>false: The resources fail to be allocated to the specified cost center.</li>
+             * </ul>
              * 
-             * *   true: The resources are allocated to the specified cost center.
-             * *   false: The resources fail to be allocated to the specified cost center.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSuccess(Boolean isSuccess) {
                 this.isSuccess = isSuccess;
@@ -193,7 +215,10 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination cost center.
+             * <p>The ID of the destination cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32857346527</p>
              */
             public Builder toUnitId(Long toUnitId) {
                 this.toUnitId = toUnitId;
@@ -201,7 +226,10 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the owner of the destination cost center.
+             * <p>The user ID of the owner of the destination cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34857693874</p>
              */
             public Builder toUnitUserId(Long toUnitUserId) {
                 this.toUnitUserId = toUnitUserId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeResourcePackageResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeResourcePackageResponseBody</p>
@@ -97,7 +98,10 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,10 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73387246238746</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -129,7 +139,10 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +166,12 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpgradeResourcePackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpgradeResourcePackageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -189,7 +211,10 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
             private Long orderId; 
 
             /**
-             * The ID of the resource plan.
+             * <p>The ID of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSSBAG-cn-0xl*****002</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -197,7 +222,10 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order.
+             * <p>The ID of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73387246238746</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

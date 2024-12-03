@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseInstanceRequest} extends {@link RequestModel}
  *
  * <p>ReleaseInstanceRequest</p>
@@ -141,7 +142,11 @@ public class ReleaseInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. Separate multiple IDs with commas (,). A maximum of 100 IDs can be specified.
+         * <p>The ID of the instance. Separate multiple IDs with commas (,). A maximum of 100 IDs can be specified.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xxxxxxxxxxxx</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -150,7 +155,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>This parameter is required.</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -159,7 +164,11 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -168,7 +177,10 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The type of the service.
+         * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -177,7 +189,10 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The region in which the instance resides.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -186,14 +201,13 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The method that is used to renew the instance. Valid values:
-         * <p>
+         * <p>The method that is used to renew the instance. Valid values:</p>
+         * <p>AutoRenewal: automatically renews the instance.</p>
+         * <p>ManualRenewal: manually renews the instance.</p>
+         * <p>NotRenewal: does not renew the instance.</p>
          * 
-         * AutoRenewal: automatically renews the instance.
-         * 
-         * ManualRenewal: manually renews the instance.
-         * 
-         * NotRenewal: does not renew the instance.
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         public Builder renewStatus(String renewStatus) {
             this.putQueryParameter("RenewStatus", renewStatus);
@@ -202,12 +216,13 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <p>Subscription: the subscription billing method.</p>
+         * <p>PayAsYouGo: the pay-as-you-go billing method.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Subscription: the subscription billing method.
-         * 
-         * PayAsYouGo: the pay-as-you-go billing method.
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

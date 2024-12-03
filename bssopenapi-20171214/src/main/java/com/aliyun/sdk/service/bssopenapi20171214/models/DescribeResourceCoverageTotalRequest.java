@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceCoverageTotalRequest} extends {@link RequestModel}
  *
  * <p>DescribeResourceCoverageTotalRequest</p>
@@ -113,7 +114,10 @@ public class DescribeResourceCoverageTotalRequest extends Request {
         } 
 
         /**
-         * The ID of the account for which you want to query total coverage data. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.
+         * <p>The ID of the account for which you want to query total coverage data. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123745698925000</p>
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -122,7 +126,10 @@ public class DescribeResourceCoverageTotalRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * <p>The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-02 00:00:00</p>
          */
         public Builder endPeriod(String endPeriod) {
             this.putQueryParameter("EndPeriod", endPeriod);
@@ -131,7 +138,11 @@ public class DescribeResourceCoverageTotalRequest extends Request {
         }
 
         /**
-         * The time granularity at which total coverage data is queried. Valid values: MONTH, DAY, and HOUR.
+         * <p>The time granularity at which total coverage data is queried. Valid values: MONTH, DAY, and HOUR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOUR</p>
          */
         public Builder periodType(String periodType) {
             this.putQueryParameter("PeriodType", periodType);
@@ -140,7 +151,11 @@ public class DescribeResourceCoverageTotalRequest extends Request {
         }
 
         /**
-         * The type of deduction plans whose total coverage data is queried. Valid values: RI and SCU.
+         * <p>The type of deduction plans whose total coverage data is queried. Valid values: RI and SCU.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RI</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,7 +164,11 @@ public class DescribeResourceCoverageTotalRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * <p>The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-01 00:00:00</p>
          */
         public Builder startPeriod(String startPeriod) {
             this.putQueryParameter("StartPeriod", startPeriod);

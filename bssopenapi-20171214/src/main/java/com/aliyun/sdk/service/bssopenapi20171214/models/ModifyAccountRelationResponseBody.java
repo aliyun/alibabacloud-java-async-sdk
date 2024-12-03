@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountRelationResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyAccountRelationResponseBody</p>
@@ -85,7 +86,10 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Message returned</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the request.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request_id</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAccountRelationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyAccountRelationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
@@ -157,7 +176,10 @@ public class ModifyAccountRelationResponseBody extends TeaModel {
             private String hostId; 
 
             /**
-             * HostId
+             * <p>HostId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HostId</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;

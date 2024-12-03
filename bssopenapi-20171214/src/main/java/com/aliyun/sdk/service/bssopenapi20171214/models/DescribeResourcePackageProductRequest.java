@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourcePackageProductRequest} extends {@link RequestModel}
  *
  * <p>DescribeResourcePackageProductRequest</p>
@@ -54,7 +55,11 @@ public class DescribeResourcePackageProductRequest extends Request {
         } 
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ossbag</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

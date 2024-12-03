@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryResellerAvailableQuotaRequest} extends {@link RequestModel}
  *
  * <p>QueryResellerAvailableQuotaRequest</p>
@@ -77,7 +78,7 @@ public class QueryResellerAvailableQuotaRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>This parameter is required.</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);

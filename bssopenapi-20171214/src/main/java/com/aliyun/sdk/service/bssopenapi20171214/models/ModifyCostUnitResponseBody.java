@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCostUnitResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCostUnitResponseBody</p>
@@ -85,7 +86,10 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class ModifyCostUnitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCostUnitResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyCostUnitResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsSuccess")
         private Boolean isSuccess;
@@ -181,7 +200,10 @@ public class ModifyCostUnitResponseBody extends TeaModel {
             private Long unitId; 
 
             /**
-             * Indicates whether the cost center was modified.
+             * <p>Indicates whether the cost center was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSuccess(Boolean isSuccess) {
                 this.isSuccess = isSuccess;
@@ -189,7 +211,10 @@ public class ModifyCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the cost center owner.
+             * <p>The user ID of the cost center owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>823756287</p>
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -197,7 +222,10 @@ public class ModifyCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cost center.
+             * <p>The ID of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>356349875</p>
              */
             public Builder unitId(Long unitId) {
                 this.unitId = unitId;

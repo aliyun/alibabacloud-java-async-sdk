@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAvailableInstancesRequest} extends {@link RequestModel}
  *
  * <p>QueryAvailableInstancesRequest</p>
@@ -221,7 +222,10 @@ public class QueryAvailableInstancesRequest extends Request {
         } 
 
         /**
-         * The end time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-05-23T12:00:00Z</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -230,7 +234,10 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * The start time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The start time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-05-23T12:00:00Z</p>
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -239,7 +246,10 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-05-23T12:00:00Z</p>
          */
         public Builder endTimeEnd(String endTimeEnd) {
             this.putQueryParameter("EndTimeEnd", endTimeEnd);
@@ -248,7 +258,10 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-05-23T12:00:00Z</p>
          */
         public Builder endTimeStart(String endTimeStart) {
             this.putQueryParameter("EndTimeStart", endTimeStart);
@@ -257,7 +270,10 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance. Separate multiple IDs with commas (,). You can specify a maximum of 100 IDs.
+         * <p>The ID of the instance. Separate multiple IDs with commas (,). You can specify a maximum of 100 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xxxxxxxxxxxx</p>
          */
         public Builder instanceIDs(String instanceIDs) {
             this.putQueryParameter("InstanceIDs", instanceIDs);
@@ -275,7 +291,10 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -284,7 +303,10 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -293,10 +315,13 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * The code of the service. You can query the service code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud services**.
-         * <p>
+         * <p>The code of the service. You can query the service code by calling the <strong>QueryProductList</strong> operation or viewing <strong>Codes of Alibaba Cloud services</strong>.</p>
+         * <blockquote>
+         * <p>This parameter cannot be left empty if the region is specified.</p>
+         * </blockquote>
          * 
-         * >This parameter cannot be left empty if the region is specified.
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -305,7 +330,10 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * The type of the service.
+         * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -314,7 +342,10 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -323,12 +354,15 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * The renewal status of the specified instance. Valid values:
-         * <p>
+         * <p>The renewal status of the specified instance. Valid values:</p>
+         * <ul>
+         * <li>AutoRenewal: The instance is automatically renewed.</li>
+         * <li>ManualRenewal: The instance is manually renewed.</li>
+         * <li>NotRenewal: The instance is not renewed.</li>
+         * </ul>
          * 
-         * *   AutoRenewal: The instance is automatically renewed.
-         * *   ManualRenewal: The instance is manually renewed.
-         * *   NotRenewal: The instance is not renewed.
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         public Builder renewStatus(String renewStatus) {
             this.putQueryParameter("RenewStatus", renewStatus);
@@ -337,11 +371,14 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   Subscription: subscription
-         * *   PayAsYouGo: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

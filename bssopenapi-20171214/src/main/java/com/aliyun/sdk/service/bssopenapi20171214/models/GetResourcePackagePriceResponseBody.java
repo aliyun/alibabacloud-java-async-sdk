@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourcePackagePriceResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourcePackagePriceResponseBody</p>
@@ -85,7 +86,10 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBEF51A3-E933-4F40-A534-C673CBDB9C80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourcePackagePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcePackagePriceResponseBody</p>
+     */
     public static class Promotion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -169,7 +188,10 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the promotion.
+             * <p>The ID of the promotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000680914</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -177,7 +199,10 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the discount.
+             * <p>The description of the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A discount of 17% is offered if you purchase a resource plan for six months.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,6 +216,12 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourcePackagePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcePackagePriceResponseBody</p>
+     */
     public static class Promotions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Promotion")
         private java.util.List < Promotion> promotion;
@@ -232,6 +263,12 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourcePackagePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcePackagePriceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -307,7 +344,10 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The type of the currency.
+             * <p>The type of the currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -315,7 +355,10 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discounted amount. Unit: CNY.
+             * <p>The discounted amount. Unit: CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>215040</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -323,7 +366,10 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price. Unit: CNY.
+             * <p>The original price. Unit: CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1290240</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -331,7 +377,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the discount.
+             * <p>The details of the discount.</p>
              */
             public Builder promotions(Promotions promotions) {
                 this.promotions = promotions;
@@ -339,7 +385,10 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The price at which the transaction is made. Unit: CNY.
+             * <p>The price at which the transaction is made. Unit: CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1075200</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;

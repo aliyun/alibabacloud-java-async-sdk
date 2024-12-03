@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAmortizedCostByConsumePeriodResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceAmortizedCostByConsumePeriodResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceAmortizedCostByConsumePeriodResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAmortizedCostByConsumePeriodResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AmortizationPeriod")
         private String amortizationPeriod;
@@ -1311,6 +1318,12 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceAmortizedCostByConsumePeriodResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAmortizedCostByConsumePeriodResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;

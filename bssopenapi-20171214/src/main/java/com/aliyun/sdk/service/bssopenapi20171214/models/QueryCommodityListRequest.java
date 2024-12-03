@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCommodityListRequest} extends {@link RequestModel}
  *
  * <p>QueryCommodityListRequest</p>
@@ -77,7 +78,11 @@ public class QueryCommodityListRequest extends Request {
         }
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

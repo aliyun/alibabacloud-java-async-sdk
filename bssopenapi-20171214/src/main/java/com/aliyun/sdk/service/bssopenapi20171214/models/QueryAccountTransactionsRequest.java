@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAccountTransactionsRequest} extends {@link RequestModel}
  *
  * <p>QueryAccountTransactionsRequest</p>
@@ -179,7 +180,10 @@ public class QueryAccountTransactionsRequest extends Request {
         } 
 
         /**
-         * The end of the creation time range to query. By default, the transactions in the last month are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-01-01T00:00:00Z.
+         * <p>The end of the creation time range to query. By default, the transactions in the last month are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-01-01T00:00:00Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-06T01:55:00Z</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -188,7 +192,10 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * The beginning of the creation time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-01-01T00:00:00Z.
+         * <p>The beginning of the creation time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-01-01T00:00:00Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-05T01:46:09Z</p>
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -197,7 +204,10 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value is 1.
+         * <p>The number of the page to return. Default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -206,7 +216,10 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value is 20.
+         * <p>The number of entries to return on each page. Default value is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +228,10 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * The ID of the order or bill.
+         * <p>The ID of the order or bill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20200302</p>
          */
         public Builder recordID(String recordID) {
             this.putQueryParameter("RecordID", recordID);
@@ -224,19 +240,22 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * The transaction channel. If you specify one of the following transaction channels for this parameter, the results for the specified transaction channel are returned. If the transaction channel that you specify does not belong to the following transaction channels, no result is returned. If you leave this parameter empty, the results for all the following transaction channels are returned by default. Valid values:
-         * <p>
+         * <p>The transaction channel. If you specify one of the following transaction channels for this parameter, the results for the specified transaction channel are returned. If the transaction channel that you specify does not belong to the following transaction channels, no result is returned. If you leave this parameter empty, the results for all the following transaction channels are returned by default. Valid values:</p>
+         * <ul>
+         * <li>AccountBalance</li>
+         * <li>BankTransfer</li>
+         * <li>Alipay</li>
+         * <li>AntCreditPay</li>
+         * <li>OfflineRemittance</li>
+         * <li>RegularBankCreditRefund</li>
+         * <li>CreditCard</li>
+         * <li>MyBankCredit</li>
+         * <li>HuaxiaBankCInstallment</li>
+         * <li>ApplePay</li>
+         * </ul>
          * 
-         * *   AccountBalance
-         * *   BankTransfer
-         * *   Alipay
-         * *   AntCreditPay
-         * *   OfflineRemittance
-         * *   RegularBankCreditRefund
-         * *   CreditCard
-         * *   MyBankCredit
-         * *   HuaxiaBankCInstallment
-         * *   ApplePay
+         * <strong>example:</strong>
+         * <p>AccountBalance</p>
          */
         public Builder transactionChannel(String transactionChannel) {
             this.putQueryParameter("TransactionChannel", transactionChannel);
@@ -245,7 +264,10 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * The serial number of the transaction channel.
+         * <p>The serial number of the transaction channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12342134</p>
          */
         public Builder transactionChannelSN(String transactionChannelSN) {
             this.putQueryParameter("TransactionChannelSN", transactionChannelSN);
@@ -254,11 +276,14 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * The type of the transaction flow. If you specify one of the following types for this parameter, the results for the specified type are returned. If the type that you specify does not belong to the following types, no result is returned. If you leave this parameter empty, the results for the following two types are returned by default. Valid values:
-         * <p>
+         * <p>The type of the transaction flow. If you specify one of the following types for this parameter, the results for the specified type are returned. If the type that you specify does not belong to the following types, no result is returned. If you leave this parameter empty, the results for the following two types are returned by default. Valid values:</p>
+         * <ul>
+         * <li>Income</li>
+         * <li>Expense</li>
+         * </ul>
          * 
-         * *   Income
-         * *   Expense
+         * <strong>example:</strong>
+         * <p>Income</p>
          */
         public Builder transactionFlow(String transactionFlow) {
             this.putQueryParameter("TransactionFlow", transactionFlow);
@@ -267,7 +292,10 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * The number of the transaction.
+         * <p>The number of the transaction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133314076</p>
          */
         public Builder transactionNumber(String transactionNumber) {
             this.putQueryParameter("TransactionNumber", transactionNumber);
@@ -276,15 +304,18 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * The type of the transaction. If you specify one of the following transaction types for this parameter, the results for the specified transaction type are returned. If the transaction type that you specify does not belong to the following types, no result is returned. If you leave this parameter empty, the results for all the following transaction types are returned by default. Valid values:
-         * <p>
+         * <p>The type of the transaction. If you specify one of the following transaction types for this parameter, the results for the specified transaction type are returned. If the transaction type that you specify does not belong to the following types, no result is returned. If you leave this parameter empty, the results for all the following transaction types are returned by default. Valid values:</p>
+         * <ul>
+         * <li>Payment</li>
+         * <li>Withdraw</li>
+         * <li>Refund</li>
+         * <li>Consumption</li>
+         * <li>Transfer</li>
+         * <li>Adjust</li>
+         * </ul>
          * 
-         * *   Payment
-         * *   Withdraw
-         * *   Refund
-         * *   Consumption
-         * *   Transfer
-         * *   Adjust
+         * <strong>example:</strong>
+         * <p>Payment</p>
          */
         public Builder transactionType(String transactionType) {
             this.putQueryParameter("TransactionType", transactionType);

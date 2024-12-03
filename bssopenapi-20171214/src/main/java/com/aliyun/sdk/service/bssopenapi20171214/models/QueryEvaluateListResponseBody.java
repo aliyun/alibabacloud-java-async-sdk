@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEvaluateListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEvaluateListResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D35FF10E-1B2E-4ABA-8401-0AE17725F50B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryEvaluateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryEvaluateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEvaluateListResponseBody</p>
+     */
     public static class Evaluate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BillCycle")
         private String billCycle;
@@ -397,7 +416,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             private String userNick; 
 
             /**
-             * The billing cycle.
+             * <p>The billing cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202002</p>
              */
             public Builder billCycle(String billCycle) {
                 this.billCycle = billCycle;
@@ -405,7 +427,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the bill.
+             * <p>The ID of the bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234543254325</p>
              */
             public Builder billId(Long billId) {
                 this.billId = billId;
@@ -413,7 +438,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The time.
+             * <p>The time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-10 18:05:44</p>
              */
             public Builder bizTime(String bizTime) {
                 this.bizTime = bizTime;
@@ -421,11 +449,14 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The market type in the invoice. Valid values:
-             * <p>
+             * <p>The market type in the invoice. Valid values:</p>
+             * <ul>
+             * <li>ALIYUN: Alibaba Cloud</li>
+             * <li>MARKETPLACE: Alibaba Cloud Marketplace</li>
+             * </ul>
              * 
-             * *   ALIYUN: Alibaba Cloud
-             * *   MARKETPLACE: Alibaba Cloud Marketplace
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -433,7 +464,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The invoiceable amount.
+             * <p>The invoiceable amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123213</p>
              */
             public Builder canInvoiceAmount(Long canInvoiceAmount) {
                 this.canInvoiceAmount = canInvoiceAmount;
@@ -441,7 +475,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-10 18:05:44</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -449,7 +486,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-10 18:05:44</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -457,7 +497,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the invoice.
+             * <p>The ID of the invoice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1325321532</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -465,7 +508,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The invoiced amount.
+             * <p>The invoiced amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder invoicedAmount(Long invoicedAmount) {
                 this.invoicedAmount = invoicedAmount;
@@ -473,7 +519,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the item.
+             * <p>The ID of the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23453245</p>
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -481,7 +530,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the object to be invoiced.
+             * <p>The name of the object to be invoiced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Refund of a voucher with denomination marked</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -489,7 +541,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * If a refund is issued due to an order such as an unsubscription order or a configuration downgrade order, the refund amount is used to offset the amount of the invoice. The value is consistent with the value of the **OffsetCostAmount** parameter.
+             * <p>If a refund is issued due to an order such as an unsubscription order or a configuration downgrade order, the refund amount is used to offset the amount of the invoice. The value is consistent with the value of the <strong>OffsetCostAmount</strong> parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder offsetAcceptAmount(Long offsetAcceptAmount) {
                 this.offsetAcceptAmount = offsetAcceptAmount;
@@ -497,7 +552,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The refund amount used to offset the amount of the invoice. If a refund is issued due to an order such as an unsubscription order or a configuration downgrade order, the refund amount is used to offset the amount of the invoice. The value is consistent with the value of the **OffsetAcceptAmount** parameter.
+             * <p>The refund amount used to offset the amount of the invoice. If a refund is issued due to an order such as an unsubscription order or a configuration downgrade order, the refund amount is used to offset the amount of the invoice. The value is consistent with the value of the <strong>OffsetAcceptAmount</strong> parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder offsetCostAmount(Long offsetCostAmount) {
                 this.offsetCostAmount = offsetCostAmount;
@@ -505,7 +563,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the external object.
+             * <p>The ID of the external object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12341</p>
              */
             public Builder opId(String opId) {
                 this.opId = opId;
@@ -513,7 +574,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The original amount.
+             * <p>The original amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-10000</p>
              */
             public Builder originalAmount(Long originalAmount) {
                 this.originalAmount = originalAmount;
@@ -521,7 +585,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the external order.
+             * <p>The ID of the external order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>124324213421</p>
              */
             public Builder outBizId(String outBizId) {
                 this.outBizId = outBizId;
@@ -529,7 +596,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The balance.
+             * <p>The balance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-10000</p>
              */
             public Builder presentAmount(Long presentAmount) {
                 this.presentAmount = presentAmount;
@@ -537,7 +607,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the invoiceable amount.
+             * <p>The status of the invoiceable amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -545,15 +618,19 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of orders that are queried. Valid values:
-             * <p>
+             * <p>The type of orders that are queried. Valid values:</p>
+             * <ul>
+             * <li>1: the orders in which the invoiceable amount is negative.</li>
+             * <li>2: the orders in which the invoiceable amount is positive.</li>
+             * <li>3: the orders in which the invoiceable amount is not 0.</li>
+             * <li>4: the orders in which the amount that has been invoiced is greater than 0.</li>
+             * </ul>
+             * <blockquote>
+             * <p> By default, this parameter is left empty. If this parameter is left empty, all orders are queried.</p>
+             * </blockquote>
              * 
-             * *   1: the orders in which the invoiceable amount is negative.
-             * *   2: the orders in which the invoiceable amount is positive.
-             * *   3: the orders in which the invoiceable amount is not 0.
-             * *   4: the orders in which the amount that has been invoiced is greater than 0.
-             * 
-             * >  By default, this parameter is left empty. If this parameter is left empty, all orders are queried.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -561,7 +638,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2738543</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -569,7 +649,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the user.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder userNick(String userNick) {
                 this.userNick = userNick;
@@ -583,6 +666,12 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEvaluateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEvaluateListResponseBody</p>
+     */
     public static class EvaluateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Evaluate")
         private java.util.List < Evaluate> evaluate;
@@ -624,6 +713,12 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEvaluateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEvaluateListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EvaluateList")
         private EvaluateList evaluateList;
@@ -723,7 +818,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             private Long totalUnAppliedInvoiceAmount; 
 
             /**
-             * The data returned.
+             * <p>The data returned.</p>
              */
             public Builder evaluateList(EvaluateList evaluateList) {
                 this.evaluateList = evaluateList;
@@ -731,7 +826,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -739,7 +837,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page returned.
+             * <p>The number of the page returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -747,7 +848,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -755,7 +859,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -763,7 +870,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The invoiced amount that meets the query conditions. Unit: Cent.
+             * <p>The invoiced amount that meets the query conditions. Unit: Cent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12344</p>
              */
             public Builder totalInvoiceAmount(Long totalInvoiceAmount) {
                 this.totalInvoiceAmount = totalInvoiceAmount;
@@ -771,7 +881,10 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             }
 
             /**
-             * The invoiceable amount that meets the query conditions. Unit: Cent.
+             * <p>The invoiceable amount that meets the query conditions. Unit: Cent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12344</p>
              */
             public Builder totalUnAppliedInvoiceAmount(Long totalUnAppliedInvoiceAmount) {
                 this.totalUnAppliedInvoiceAmount = totalUnAppliedInvoiceAmount;

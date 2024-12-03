@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPriceEntityListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPriceEntityListResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * <p>The data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPriceEntityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPriceEntityListResponseBody</p>
+     */
     public static class PriceFactorList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PriceFactorCode")
         private String priceFactorCode;
@@ -181,7 +200,10 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             private java.util.List < String > priceFactorValueList; 
 
             /**
-             * The code of the factor.
+             * <p>The code of the factor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vm_region_no</p>
              */
             public Builder priceFactorCode(String priceFactorCode) {
                 this.priceFactorCode = priceFactorCode;
@@ -189,7 +211,10 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the factor.
+             * <p>The name of the factor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Region</p>
              */
             public Builder priceFactorName(String priceFactorName) {
                 this.priceFactorName = priceFactorName;
@@ -197,7 +222,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the factor.
+             * <p>The values of the factor.</p>
              */
             public Builder priceFactorValueList(java.util.List < String > priceFactorValueList) {
                 this.priceFactorValueList = priceFactorValueList;
@@ -211,6 +236,12 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPriceEntityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPriceEntityListResponseBody</p>
+     */
     public static class PriceEntityInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PriceEntityCode")
         private String priceEntityCode;
@@ -262,7 +293,10 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             private java.util.List < PriceFactorList> priceFactorList; 
 
             /**
-             * The code of the billable item.
+             * <p>The code of the billable item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_type</p>
              */
             public Builder priceEntityCode(String priceEntityCode) {
                 this.priceEntityCode = priceEntityCode;
@@ -270,7 +304,10 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the billable item.
+             * <p>The name of the billable item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic Compute Service (ECS) instance</p>
              */
             public Builder priceEntityName(String priceEntityName) {
                 this.priceEntityName = priceEntityName;
@@ -278,7 +315,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * The factors of the billable item.
+             * <p>The factors of the billable item.</p>
              */
             public Builder priceFactorList(java.util.List < PriceFactorList> priceFactorList) {
                 this.priceFactorList = priceFactorList;
@@ -292,6 +329,12 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPriceEntityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPriceEntityListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PriceEntityInfoList")
         private java.util.List < PriceEntityInfoList> priceEntityInfoList;
@@ -319,7 +362,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             private java.util.List < PriceEntityInfoList> priceEntityInfoList; 
 
             /**
-             * The information about the billable items.
+             * <p>The information about the billable items.</p>
              */
             public Builder priceEntityInfoList(java.util.List < PriceEntityInfoList> priceEntityInfoList) {
                 this.priceEntityInfoList = priceEntityInfoList;

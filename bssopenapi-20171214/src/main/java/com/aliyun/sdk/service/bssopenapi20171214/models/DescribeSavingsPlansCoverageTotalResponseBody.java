@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSavingsPlansCoverageTotalResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSavingsPlansCoverageTotalResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * <p>The return data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSavingsPlansCoverageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSavingsPlansCoverageTotalResponseBody</p>
+     */
     public static class PeriodCoverage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Percentage")
         private Float percentage;
@@ -169,7 +188,10 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             private String period; 
 
             /**
-             * The coverage.
+             * <p>The coverage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder percentage(Float percentage) {
                 this.percentage = percentage;
@@ -177,10 +199,11 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The period.
-             * <p>
+             * <p>The period.</p>
+             * <p>The value is in the format of yyyyMMddHH.</p>
              * 
-             * The value is in the format of yyyyMMddHH.
+             * <strong>example:</strong>
+             * <p>2021071500</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -194,6 +217,12 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSavingsPlansCoverageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSavingsPlansCoverageTotalResponseBody</p>
+     */
     public static class TotalCoverage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoveragePercentage")
         private Float coveragePercentage;
@@ -233,7 +262,10 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             private Float deductAmount; 
 
             /**
-             * The total coverage.
+             * <p>The total coverage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -241,7 +273,10 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total deducted amount.
+             * <p>The total deducted amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder deductAmount(Float deductAmount) {
                 this.deductAmount = deductAmount;
@@ -255,6 +290,12 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSavingsPlansCoverageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSavingsPlansCoverageTotalResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeriodCoverage")
         private java.util.List < PeriodCoverage> periodCoverage;
@@ -294,7 +335,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             private TotalCoverage totalCoverage; 
 
             /**
-             * The coverage in different periods.
+             * <p>The coverage in different periods.</p>
              */
             public Builder periodCoverage(java.util.List < PeriodCoverage> periodCoverage) {
                 this.periodCoverage = periodCoverage;
@@ -302,7 +343,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The coverage summary.
+             * <p>The coverage summary.</p>
              */
             public Builder totalCoverage(TotalCoverage totalCoverage) {
                 this.totalCoverage = totalCoverage;

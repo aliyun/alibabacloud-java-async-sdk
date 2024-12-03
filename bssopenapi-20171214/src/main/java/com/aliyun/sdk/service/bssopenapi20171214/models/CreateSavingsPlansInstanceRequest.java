@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSavingsPlansInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateSavingsPlansInstanceRequest</p>
@@ -199,7 +200,11 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         } 
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>savingplan_common_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -208,7 +213,11 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The service duration. This parameter is used together with the PricingCycle parameter.
+         * <p>The service duration. This parameter is used together with the PricingCycle parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -217,7 +226,10 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The time when the savings plan takes effect. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The time when the savings plan takes effect. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-31T00:00:00Z</p>
          */
         public Builder effectiveDate(String effectiveDate) {
             this.putQueryParameter("EffectiveDate", effectiveDate);
@@ -226,7 +238,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The extended parameters.
+         * <p>The extended parameters.</p>
          */
         public Builder extendMap(java.util.Map < String, String > extendMap) {
             String extendMapShrink = shrink(extendMap, "ExtendMap", "json");
@@ -236,12 +248,16 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The payment mode. Valid values:
-         * <p>
+         * <p>The payment mode. Valid values:</p>
+         * <ul>
+         * <li>total: all upfront</li>
+         * <li>half: partial upfront</li>
+         * <li>zero: no upfront</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   total: all upfront
-         * *   half: partial upfront
-         * *   zero: no upfront
+         * <strong>example:</strong>
+         * <p>total</p>
          */
         public Builder payMode(String payMode) {
             this.putQueryParameter("PayMode", payMode);
@@ -250,7 +266,11 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The contracted amount. unit: CNY
+         * <p>The contracted amount. unit: CNY</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         public Builder poolValue(String poolValue) {
             this.putQueryParameter("PoolValue", poolValue);
@@ -259,11 +279,15 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration. This parameter is used together with Duration. Valid values:
-         * <p>
+         * <p>The unit of the subscription duration. This parameter is used together with Duration. Valid values:</p>
+         * <ul>
+         * <li>Year</li>
+         * <li>Month</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Year
-         * *   Month
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -272,7 +296,10 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you create the savings plan. You must specify this parameter if the Type parameter is not set to universal.
+         * <p>The ID of the region in which you create the savings plan. You must specify this parameter if the Type parameter is not set to universal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -281,11 +308,14 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The specification type. This parameter is used together with the Specification parameter. You must specify this parameter if the Type parameter is not set to universal. Valid values:
-         * <p>
+         * <p>The specification type. This parameter is used together with the Specification parameter. You must specify this parameter if the Type parameter is not set to universal. Valid values:</p>
+         * <ul>
+         * <li>group: specification group</li>
+         * <li>family: specification family</li>
+         * </ul>
          * 
-         * *   group: specification group
-         * *   family: specification family
+         * <strong>example:</strong>
+         * <p>family</p>
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -294,7 +324,10 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The specifications of the savings plan. This parameter is used together with the SpecType parameter.
+         * <p>The specifications of the savings plan. This parameter is used together with the SpecType parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6</p>
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);
@@ -303,12 +336,16 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The type of the savings plan. Valid values:
-         * <p>
+         * <p>The type of the savings plan. Valid values:</p>
+         * <ul>
+         * <li>universal: general-purpose type</li>
+         * <li>ecs: Elastic Compute Service (ECS) compute type</li>
+         * <li>elasticy: elastic type</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   universal: general-purpose type
-         * *   ecs: Elastic Compute Service (ECS) compute type
-         * *   elasticy: elastic type
+         * <strong>example:</strong>
+         * <p>universal</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

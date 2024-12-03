@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDPUtilizationDetailRequest} extends {@link RequestModel}
  *
  * <p>QueryDPUtilizationDetailRequest</p>
@@ -182,7 +183,10 @@ public class QueryDPUtilizationDetailRequest extends Request {
         } 
 
         /**
-         * The code of the resource, such as ecsRi and scu_bag. If this parameter is specified, the ProdCode parameter does not take effect for the request.
+         * <p>The code of the resource, such as ecsRi and scu_bag. If this parameter is specified, the ProdCode parameter does not take effect for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecsRi</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -191,7 +195,10 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * The ID of the deducted instance. If this parameter is not specified, the details of all instances are returned.
+         * <p>The ID of the deducted instance. If this parameter is not specified, the details of all instances are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-123123</p>
          */
         public Builder deductedInstanceId(String deductedInstanceId) {
             this.putQueryParameter("DeductedInstanceId", deductedInstanceId);
@@ -200,7 +207,11 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.
+         * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-23 12:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -209,11 +220,15 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the resource plan usage of linked accounts. Valid values:
-         * <p>
+         * <p>Specifies whether to query the resource plan usage of linked accounts. Valid values:</p>
+         * <ul>
+         * <li>true: queries the resource plan usage of linked accounts.</li>
+         * <li>false: does not query the resource plan usage of linked accounts.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: queries the resource plan usage of linked accounts.
-         * *   false: does not query the resource plan usage of linked accounts.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeShare(Boolean includeShare) {
             this.putQueryParameter("IncludeShare", includeShare);
@@ -222,7 +237,10 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * The ID of the instance to query. If this parameter is not specified, the details of all used instances are returned.
+         * <p>The ID of the instance to query. If this parameter is not specified, the details of all used instances are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-123123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -231,7 +249,10 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * The instance type of the instance.
+         * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instancetyp</p>
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -240,7 +261,10 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results. For the first query, set the value to null. For subsequent queries, set the value to the token that is obtained from the NextToken parameter.
+         * <p>The token that is used to retrieve the next page of results. For the first query, set the value to null. For subsequent queries, set the value to the token that is obtained from the NextToken parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESF***zNTAw</p>
          */
         public Builder lastToken(String lastToken) {
             this.putQueryParameter("LastToken", lastToken);
@@ -249,7 +273,10 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. Maximum value: 300.
+         * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -258,7 +285,10 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * The code of the service. Example: ecs.
+         * <p>The code of the service. Example: ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);
@@ -267,7 +297,11 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.
+         * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-23 12:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

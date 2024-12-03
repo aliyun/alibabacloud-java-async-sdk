@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInstanceByTagRequest} extends {@link RequestModel}
  *
  * <p>QueryInstanceByTagRequest</p>
@@ -82,7 +83,7 @@ public class QueryInstanceByTagRequest extends Request {
         } 
 
         /**
-         * The IDs of resources.
+         * <p>The IDs of resources.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -91,7 +92,11 @@ public class QueryInstanceByTagRequest extends Request {
         }
 
         /**
-         * The type of the resource. Specify the savings plan instance as the type of the resource.
+         * <p>The type of the resource. Specify the savings plan instance as the type of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -100,7 +105,7 @@ public class QueryInstanceByTagRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -115,6 +120,12 @@ public class QueryInstanceByTagRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryInstanceByTagRequest} extends {@link TeaModel}
+     *
+     * <p>QueryInstanceByTagRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -154,7 +165,10 @@ public class QueryInstanceByTagRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -162,7 +176,10 @@ public class QueryInstanceByTagRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>001</p>
              */
             public Builder value(String value) {
                 this.value = value;

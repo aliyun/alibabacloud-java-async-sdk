@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetAllExpirationDayRequest} extends {@link RequestModel}
  *
  * <p>SetAllExpirationDayRequest</p>
@@ -77,10 +78,12 @@ public class SetAllExpirationDayRequest extends Request {
         }
 
         /**
-         * The expiration date. You can set an expiration date only for ECS instances that have not expired. The expiration date that you specify do not take effect on expired ECS instances. After the expiration date is set, the expiration date is used when you renew ECS instances.
-         * <p>
+         * <p>The expiration date. You can set an expiration date only for ECS instances that have not expired. The expiration date that you specify do not take effect on expired ECS instances. After the expiration date is set, the expiration date is used when you renew ECS instances.</p>
+         * <p>You can set the expiration date to a day from the 1st to the 28th of each month.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can set the expiration date to a day from the 1st to the 28th of each month.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder unifyExpireDay(String unifyExpireDay) {
             this.putQueryParameter("UnifyExpireDay", unifyExpireDay);

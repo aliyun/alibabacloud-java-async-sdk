@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCashCouponsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCashCouponsResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>147B566E-DB4C-4E43-BDBB-5DB1D9D268DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryCashCouponsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCashCouponsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCashCouponsResponseBody</p>
+     */
     public static class CashCoupon extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicableProducts")
         private String applicableProducts;
@@ -277,7 +296,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The service to which the voucher is applicable.
+             * <p>The service to which the voucher is applicable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>All Alibaba Cloud services</p>
              */
             public Builder applicableProducts(String applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -285,7 +307,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * The scenario to which the voucher is applicable.
+             * <p>The scenario to which the voucher is applicable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pay for the pay-as-you-go bills of Alibaba Cloud services or purchase an instance of an Alibaba Cloud service</p>
              */
             public Builder applicableScenarios(String applicableScenarios) {
                 this.applicableScenarios = applicableScenarios;
@@ -293,7 +318,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining quota of the voucher.
+             * <p>The remaining quota of the voucher.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -301,7 +329,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the voucher.
+             * <p>The ID of the voucher.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34534253254325</p>
              */
             public Builder cashCouponId(Long cashCouponId) {
                 this.cashCouponId = cashCouponId;
@@ -309,7 +340,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the voucher.
+             * <p>The code of the voucher.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Q-b1485def8f04a</p>
              */
             public Builder cashCouponNo(String cashCouponNo) {
                 this.cashCouponNo = cashCouponNo;
@@ -317,7 +351,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the voucher.
+             * <p>The description of the voucher.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This voucher is used for testing product function</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -325,7 +362,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the voucher took effect.
+             * <p>The time when the voucher took effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:15:50Z</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -333,7 +373,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the voucher expired.
+             * <p>The time when the voucher expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-29T15:15:50Z</p>
              */
             public Builder expiryTime(String expiryTime) {
                 this.expiryTime = expiryTime;
@@ -341,7 +384,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the voucher was released.
+             * <p>The time when the voucher was released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:15:50Z</p>
              */
             public Builder grantedTime(String grantedTime) {
                 this.grantedTime = grantedTime;
@@ -349,7 +395,10 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * The denomination of the voucher.
+             * <p>The denomination of the voucher.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder nominalValue(String nominalValue) {
                 this.nominalValue = nominalValue;
@@ -357,12 +406,15 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the voucher. Valid values:
-             * <p>
+             * <p>The state of the voucher. Valid values:</p>
+             * <ul>
+             * <li>Available: The voucher is valid.</li>
+             * <li>Expired: The voucher has expired.</li>
+             * <li>Cancelled: The voucher is canceled.</li>
+             * </ul>
              * 
-             * *   Available: The voucher is valid.
-             * *   Expired: The voucher has expired.
-             * *   Cancelled: The voucher is canceled.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -376,6 +428,12 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCashCouponsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCashCouponsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CashCoupon")
         private java.util.List < CashCoupon> cashCoupon;

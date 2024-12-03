@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAmortizedCostByConsumePeriodRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceAmortizedCostByConsumePeriodRequest</p>
@@ -226,7 +227,10 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * BillingCycle.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10</p>
          */
         public Builder billingCycle(String billingCycle) {
             this.putBodyParameter("BillingCycle", billingCycle);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceUsageTotalResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceUsageTotalResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The queried data.
+         * <p>The queried data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.
+         * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>364C7C81-5E5E-51A0-B738-1969D2671B05</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourceUsageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceUsageTotalResponseBody</p>
+     */
     public static class PeriodCoverage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
@@ -169,7 +188,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             private Float usagePercentage; 
 
             /**
-             * The period.
+             * <p>The period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021071500</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -177,7 +199,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The usage of resource plans.
+             * <p>The usage of resource plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder usagePercentage(Float usagePercentage) {
                 this.usagePercentage = usagePercentage;
@@ -191,6 +216,12 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceUsageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceUsageTotalResponseBody</p>
+     */
     public static class TotalUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PostpaidCost")
         private Float postpaidCost;
@@ -266,7 +297,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             private Float usagePercentage; 
 
             /**
-             * The total costs of pay-as-you-go instances.
+             * <p>The total costs of pay-as-you-go instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder postpaidCost(Float postpaidCost) {
                 this.postpaidCost = postpaidCost;
@@ -274,7 +308,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total potential savings.
+             * <p>The total potential savings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder potentialSavedCost(Float potentialSavedCost) {
                 this.potentialSavedCost = potentialSavedCost;
@@ -282,7 +319,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The fee of purchased resource plans.
+             * <p>The fee of purchased resource plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder reservationCost(Float reservationCost) {
                 this.reservationCost = reservationCost;
@@ -290,7 +330,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total savings.
+             * <p>The total savings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder savedCost(Float savedCost) {
                 this.savedCost = savedCost;
@@ -298,7 +341,10 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total usage of resource plans.
+             * <p>The total usage of resource plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usagePercentage(Float usagePercentage) {
                 this.usagePercentage = usagePercentage;
@@ -312,6 +358,12 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceUsageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceUsageTotalResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeriodCoverage")
         private java.util.List < PeriodCoverage> periodCoverage;
@@ -351,7 +403,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             private TotalUsage totalUsage; 
 
             /**
-             * The usage of resource plans in the specified period.
+             * <p>The usage of resource plans in the specified period.</p>
              */
             public Builder periodCoverage(java.util.List < PeriodCoverage> periodCoverage) {
                 this.periodCoverage = periodCoverage;
@@ -359,7 +411,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total usage of resource plans.
+             * <p>The total usage of resource plans.</p>
              */
             public Builder totalUsage(TotalUsage totalUsage) {
                 this.totalUsage = totalUsage;

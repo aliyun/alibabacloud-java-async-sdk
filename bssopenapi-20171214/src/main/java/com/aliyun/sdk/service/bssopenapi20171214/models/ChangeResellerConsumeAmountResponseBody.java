@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResellerConsumeAmountResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeResellerConsumeAmountResponseBody</p>
@@ -85,7 +86,10 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the call failed. For more information, see the "Error codes" section of the topic.
+         * <p>The error code returned if the call failed. For more information, see the &quot;Error codes&quot; section of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * The consumption quota for the quota ledger after adjustment.
+         * <p>The consumption quota for the quota ledger after adjustment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300.00</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +108,10 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.
+         * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

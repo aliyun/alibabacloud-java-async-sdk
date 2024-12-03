@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAgAccountResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAgAccountResponseBody</p>
@@ -85,7 +86,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The relationship between the account that is used to call the CreateAgAccount operation and the account that is created.
+         * <p>The relationship between the account that is used to call the CreateAgAccount operation and the account that is created.</p>
          */
         public Builder agRelationDto(AgRelationDto agRelationDto) {
             this.agRelationDto = agRelationDto;
@@ -93,7 +94,10 @@ public class CreateAgAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOGIN_EMAIL_HAS_BEEN_USED</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +105,10 @@ public class CreateAgAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>loginEmail=<a href="mailto:685741089H@chinaunicom.cn">685741089H@chinaunicom.cn</a>,has used</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class CreateAgAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EAE08A27-386C-579E-966D-8853EC3C5D0E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class CreateAgAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class CreateAgAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAgAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAgAccountResponseBody</p>
+     */
     public static class AgRelationDto extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mpk")
         private String mpk;
@@ -193,7 +212,10 @@ public class CreateAgAccountResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the account that is used to call the CreateAgAccount operation.
+             * <p>The ID of the account that is used to call the CreateAgAccount operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1785287436011964</p>
              */
             public Builder mpk(String mpk) {
                 this.mpk = mpk;
@@ -201,7 +223,10 @@ public class CreateAgAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account that is created.
+             * <p>The ID of the account that is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1728240534507590</p>
              */
             public Builder pk(String pk) {
                 this.pk = pk;
@@ -209,7 +234,10 @@ public class CreateAgAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the account that is created.
+             * <p>The role of the account that is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin-role</p>
              */
             public Builder ramAdminRoleName(String ramAdminRoleName) {
                 this.ramAdminRoleName = ramAdminRoleName;
@@ -217,7 +245,10 @@ public class CreateAgAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the relationship.
+             * <p>The type of the relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINACE_CLOUD</p>
              */
             public Builder type(String type) {
                 this.type = type;

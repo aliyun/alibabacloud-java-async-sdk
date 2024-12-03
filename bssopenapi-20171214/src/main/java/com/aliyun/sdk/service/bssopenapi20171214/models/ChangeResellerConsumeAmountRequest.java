@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResellerConsumeAmountRequest} extends {@link RequestModel}
  *
  * <p>ChangeResellerConsumeAmountRequest</p>
@@ -158,7 +159,11 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         } 
 
         /**
-         * The type of the consumption amount adjustment. Valid values: increase: The consumption amount increases because new consumption occurs. decrease: The consumption amount decreases because funds are added to the account. This parameter is required.
+         * <p>The type of the consumption amount adjustment. Valid values: increase: The consumption amount increases because new consumption occurs. decrease: The consumption amount decreases because funds are added to the account. This parameter is required.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>increase/decrease</p>
          */
         public Builder adjustType(String adjustType) {
             this.putQueryParameter("AdjustType", adjustType);
@@ -167,7 +172,11 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * The amount to be adjusted. Unit: CNY
+         * <p>The amount to be adjusted. Unit: CNY</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.00</p>
          */
         public Builder amount(String amount) {
             this.putQueryParameter("Amount", amount);
@@ -176,7 +185,11 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * The type of the business.
+         * <p>The type of the business.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_amount_adjust</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -185,7 +198,11 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * The type of the currency.
+         * <p>The type of the currency.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         public Builder currency(String currency) {
             this.putQueryParameter("Currency", currency);
@@ -194,7 +211,10 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * The extended field of a message.
+         * <p>The extended field of a message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extendMap(String extendMap) {
             this.putQueryParameter("ExtendMap", extendMap);
@@ -203,7 +223,11 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * The ID of the primary key for external business. The ID is used for idempotence verification.
+         * <p>The ID of the primary key for external business. The ID is used for idempotence verification.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647396865</p>
          */
         public Builder outBizId(String outBizId) {
             this.putQueryParameter("OutBizId", outBizId);
@@ -212,7 +236,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>This parameter is required.</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -221,7 +245,11 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * The source of the request. Specify the system name for the parameter.
+         * <p>The source of the request. Specify the system name for the parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySettleBillResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySettleBillResponseBody</p>
@@ -130,6 +131,12 @@ public class QuerySettleBillResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySettleBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySettleBillResponseBody</p>
+     */
     public static class Item extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdjustAmount")
         private Float adjustAmount;
@@ -851,6 +858,12 @@ public class QuerySettleBillResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySettleBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySettleBillResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
@@ -892,6 +905,12 @@ public class QuerySettleBillResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySettleBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySettleBillResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;

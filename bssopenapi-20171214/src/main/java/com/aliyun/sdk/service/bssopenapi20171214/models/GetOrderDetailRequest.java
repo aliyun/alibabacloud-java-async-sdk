@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOrderDetailRequest} extends {@link RequestModel}
  *
  * <p>GetOrderDetailRequest</p>
@@ -68,7 +69,11 @@ public class GetOrderDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the order.
+         * <p>The order ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32453453</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);

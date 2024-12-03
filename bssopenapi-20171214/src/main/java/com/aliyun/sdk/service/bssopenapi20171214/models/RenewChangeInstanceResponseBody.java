@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewChangeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RenewChangeInstanceResponseBody</p>
@@ -109,7 +110,10 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +134,12 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RenewChangeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenewChangeInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBillResponseBody} extends {@link TeaModel}
  *
  * <p>QueryBillResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryBillResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryBillResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryBillResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryBillResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE3F4057-DFC9-4B81-8858-F620651010C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryBillResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryBillResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBillResponseBody</p>
+     */
     public static class Item extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdjustAmount")
         private Float adjustAmount;
@@ -529,7 +548,10 @@ public class QueryBillResponseBody extends TeaModel {
             private String usageStartTime; 
 
             /**
-             * The amount deducted by using credit refunds.
+             * <p>The amount deducted by using credit refunds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder adjustAmount(Float adjustAmount) {
                 this.adjustAmount = adjustAmount;
@@ -537,7 +559,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount paid after tax is deducted.
+             * <p>The amount paid after tax is deducted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder afterTaxAmount(Float afterTaxAmount) {
                 this.afterTaxAmount = afterTaxAmount;
@@ -545,7 +570,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount paid in cash. The amount that was deducted by using credit refunds is not included.
+             * <p>The amount paid in cash. The amount that was deducted by using credit refunds is not included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cashAmount(Float cashAmount) {
                 this.cashAmount = cashAmount;
@@ -553,7 +581,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the commodity.
+             * <p>The code of the commodity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -561,12 +592,15 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the currency.
-             * <p>
+             * <p>The type of the currency.</p>
+             * <ul>
+             * <li>CNY</li>
+             * <li>USD</li>
+             * <li>JPY</li>
+             * </ul>
              * 
-             * *   CNY
-             * *   USD
-             * *   JPY
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -574,7 +608,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted by using vouchers.
+             * <p>The amount deducted by using vouchers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCashCoupons(Float deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -582,7 +619,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted by using coupons.
+             * <p>The amount deducted by using coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCoupons(Float deductedByCoupons) {
                 this.deductedByCoupons = deductedByCoupons;
@@ -590,7 +630,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted by using prepaid cards.
+             * <p>The amount deducted by using prepaid cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByPrepaidCard(Float deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -598,7 +641,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The discount amount.
+             * <p>The discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder invoiceDiscount(Float invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -606,13 +652,16 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the bill.
-             * <p>
+             * <p>The type of the bill.</p>
+             * <ul>
+             * <li>SubscriptionOrder</li>
+             * <li>PayAsYouGoBill</li>
+             * <li>Refund</li>
+             * <li>Adjustment</li>
+             * </ul>
              * 
-             * *   SubscriptionOrder
-             * *   PayAsYouGoBill
-             * *   Refund
-             * *   Adjustment
+             * <strong>example:</strong>
+             * <p>SubscriptionOrder</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -620,7 +669,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The unsettled amount of the bill.
+             * <p>The unsettled amount of the bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outstandingAmount(Float outstandingAmount) {
                 this.outstandingAmount = outstandingAmount;
@@ -628,7 +680,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the member. This parameter is returned in a multi-account payment scenario.
+             * <p>The ID of the member. This parameter is returned in a multi-account payment scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3532535235</p>
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -636,7 +691,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount paid with cash.
+             * <p>The amount paid with cash.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder paymentAmount(Float paymentAmount) {
                 this.paymentAmount = paymentAmount;
@@ -644,7 +702,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The currency used for payment.
+             * <p>The currency used for payment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder paymentCurrency(String paymentCurrency) {
                 this.paymentCurrency = paymentCurrency;
@@ -652,7 +713,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the order was paid.
+             * <p>The time when the order was paid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03-11 08:00:00</p>
              */
             public Builder paymentTime(String paymentTime) {
                 this.paymentTime = paymentTime;
@@ -660,7 +724,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transaction.
+             * <p>The ID of the transaction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2O3AADJFEAF2PDKSFAMFCB11918</p>
              */
             public Builder paymentTransactionID(String paymentTransactionID) {
                 this.paymentTransactionID = paymentTransactionID;
@@ -668,7 +735,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder pipCode(String pipCode) {
                 this.pipCode = pipCode;
@@ -676,7 +746,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax amount
+             * <p>The pretax amount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pretaxAmount(Float pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -684,7 +757,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax amount paid in local currency.
+             * <p>The pretax amount paid in local currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxAmountLocal(Float pretaxAmountLocal) {
                 this.pretaxAmountLocal = pretaxAmountLocal;
@@ -692,7 +768,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax gross amount.
+             * <p>The pretax gross amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxGrossAmount(Float pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -700,7 +779,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -708,7 +790,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the service.
+             * <p>The details of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApsaraDB RDS (subscription)</p>
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -716,7 +801,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -724,7 +812,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * <p>The type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -732,7 +823,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order or bill.
+             * <p>The ID of the order or bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020xxxx5912</p>
              */
             public Builder recordID(String recordID) {
                 this.recordID = recordID;
@@ -740,7 +834,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The round down discount.
+             * <p>The round down discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder roundDownDiscount(String roundDownDiscount) {
                 this.roundDownDiscount = roundDownDiscount;
@@ -748,13 +845,16 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The payment status of the bill. Valid values:
-             * <p>
+             * <p>The payment status of the bill. Valid values:</p>
+             * <ul>
+             * <li>PayFinish: The bill is paid.</li>
+             * <li>PayUnclear: The bill is not cleared.</li>
+             * <li>PayUnsettle: The bill is not settled.</li>
+             * <li>NoSettle: The bill is free of settlement.</li>
+             * </ul>
              * 
-             * *   PayFinish: The bill is paid.
-             * *   PayUnclear: The bill is not cleared.
-             * *   PayUnsettle: The bill is not settled.
-             * *   NoSettle: The bill is free of settlement.
+             * <strong>example:</strong>
+             * <p>PayFinish</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -762,7 +862,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order corresponding to the bill.
+             * <p>The ID of the order corresponding to the bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>325345254353</p>
              */
             public Builder subOrderId(String subOrderId) {
                 this.subOrderId = subOrderId;
@@ -770,11 +873,14 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>Subscription</li>
+             * <li>PayAsYouGo</li>
+             * </ul>
              * 
-             * *   Subscription
-             * *   PayAsYouGo
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -782,7 +888,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The tax.
+             * <p>The tax.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tax(Float tax) {
                 this.tax = tax;
@@ -790,7 +899,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the bill ends.
+             * <p>The time when the bill ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03-11 08:00:00</p>
              */
             public Builder usageEndTime(String usageEndTime) {
                 this.usageEndTime = usageEndTime;
@@ -798,7 +910,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the bill starts.
+             * <p>The time when the bill starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03-11 07:00:00</p>
              */
             public Builder usageStartTime(String usageStartTime) {
                 this.usageStartTime = usageStartTime;
@@ -812,6 +927,12 @@ public class QueryBillResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBillResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
@@ -839,13 +960,16 @@ public class QueryBillResponseBody extends TeaModel {
             private java.util.List < Item> item; 
 
             /**
-             * The type of the bill.
-             * <p>
+             * <p>The type of the bill.</p>
+             * <ul>
+             * <li>SubscriptionOrder</li>
+             * <li>PayAsYouGoBill</li>
+             * <li>Refund</li>
+             * <li>Adjustment</li>
+             * </ul>
              * 
-             * *   SubscriptionOrder
-             * *   PayAsYouGoBill
-             * *   Refund
-             * *   Adjustment
+             * <strong>example:</strong>
+             * <p>SubscriptionOrder</p>
              */
             public Builder item(java.util.List < Item> item) {
                 this.item = item;
@@ -859,6 +983,12 @@ public class QueryBillResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBillResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;
@@ -958,7 +1088,10 @@ public class QueryBillResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185xxxxx489</p>
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -966,7 +1099,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -974,7 +1110,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing cycle, in the YYYY-MM format.
+             * <p>The billing cycle, in the YYYY-MM format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02</p>
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -982,7 +1121,7 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the bills.
+             * <p>The details of the bills.</p>
              */
             public Builder items(Items items) {
                 this.items = items;
@@ -990,7 +1129,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -998,7 +1140,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1006,7 +1151,10 @@ public class QueryBillResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

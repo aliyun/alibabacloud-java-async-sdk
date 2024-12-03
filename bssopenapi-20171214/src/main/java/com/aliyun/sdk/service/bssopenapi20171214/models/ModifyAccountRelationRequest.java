@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountRelationRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountRelationRequest</p>
@@ -169,7 +170,10 @@ public class ModifyAccountRelationRequest extends Request {
         } 
 
         /**
-         * The display name of the member. This helps clarify the scenario in which the account is used.
+         * <p>The display name of the member. This helps clarify the scenario in which the account is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Display name of the member</p>
          */
         public Builder childNick(String childNick) {
             this.putQueryParameter("ChildNick", childNick);
@@ -178,7 +182,10 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the member.
+         * <p>The ID of the Alibaba Cloud account that is used as the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1512996702208737</p>
          */
         public Builder childUserId(Long childUserId) {
             this.putQueryParameter("ChildUserId", childUserId);
@@ -187,7 +194,10 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the management account.
+         * <p>The ID of the Alibaba Cloud account that is used as the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1738376485192612</p>
          */
         public Builder parentUserId(Long parentUserId) {
             this.putQueryParameter("ParentUserId", parentUserId);
@@ -196,16 +206,19 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The permissions that can be modified. Valid values:
-         * <p>
+         * <p>The permissions that can be modified. Valid values:</p>
+         * <ul>
+         * <li>SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.</li>
+         * <li>SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.</li>
+         * <li>FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.</li>
+         * <li>FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.</li>
+         * <li>CHECK_FINANCE_INFO: requests to view information about the financial relationship.</li>
+         * <li>MANAGE_TARGET_INVOICE: allows the member to manage invoices.</li>
+         * <li>CHECK_TARGET_CONSUMPTION: allows the member to view the bills.</li>
+         * </ul>
          * 
-         * *   SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.
-         * *   SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.
-         * *   FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.
-         * *   FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.
-         * *   CHECK_FINANCE_INFO: requests to view information about the financial relationship.
-         * *   MANAGE_TARGET_INVOICE: allows the member to manage invoices.
-         * *   CHECK_TARGET_CONSUMPTION: allows the member to view the bills.
+         * <strong>example:</strong>
+         * <p>SYNCHRONIZE_FINANCE_IDENTITY</p>
          */
         public Builder permissionCodes(java.util.List < String > permissionCodes) {
             this.putQueryParameter("PermissionCodes", permissionCodes);
@@ -214,7 +227,10 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the financial relationship. Set this parameter to the value of the relationId response parameter returned by calling the QueryRelationList operation.
+         * <p>The ID of the financial relationship. Set this parameter to the value of the relationId response parameter returned by calling the QueryRelationList operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51463</p>
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);
@@ -223,11 +239,15 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The operation to be performed. Valid values:
-         * <p>
+         * <p>The operation to be performed. Valid values:</p>
+         * <ul>
+         * <li>ADD</li>
+         * <li>DELETE</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ADD
-         * *   DELETE
+         * <strong>example:</strong>
+         * <p>ADD</p>
          */
         public Builder relationOperation(String relationOperation) {
             this.putQueryParameter("RelationOperation", relationOperation);
@@ -236,7 +256,10 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The type of the financial relationship. Set the value to enterprise_group.
+         * <p>The type of the financial relationship. Set the value to enterprise_group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise_group</p>
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -245,7 +268,11 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
+         * <p>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request_id</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -254,7 +281,10 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The roles that can be assigned to the member. You cannot modify the roles.
+         * <p>The roles that can be assigned to the member. You cannot modify the roles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trusteeship</p>
          */
         public Builder roleCodes(java.util.List < String > roleCodes) {
             this.putQueryParameter("RoleCodes", roleCodes);

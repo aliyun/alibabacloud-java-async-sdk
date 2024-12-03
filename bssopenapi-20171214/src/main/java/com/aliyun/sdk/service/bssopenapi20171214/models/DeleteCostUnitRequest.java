@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCostUnitRequest} extends {@link RequestModel}
  *
  * <p>DeleteCostUnitRequest</p>
@@ -69,7 +70,11 @@ public class DeleteCostUnitRequest extends Request {
         } 
 
         /**
-         * The user ID of the cost center owner.
+         * <p>The user ID of the cost center owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2135342</p>
          */
         public Builder ownerUid(Long ownerUid) {
             this.putQueryParameter("OwnerUid", ownerUid);
@@ -78,7 +83,11 @@ public class DeleteCostUnitRequest extends Request {
         }
 
         /**
-         * The ID of the cost center. A value of -1 indicates the root cost center.
+         * <p>The ID of the cost center. A value of -1 indicates the root cost center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>376348</p>
          */
         public Builder unitId(Long unitId) {
             this.putQueryParameter("UnitId", unitId);

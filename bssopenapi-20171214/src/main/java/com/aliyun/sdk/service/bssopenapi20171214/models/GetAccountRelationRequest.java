@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountRelationRequest} extends {@link RequestModel}
  *
  * <p>GetAccountRelationRequest</p>
@@ -67,7 +68,10 @@ public class GetAccountRelationRequest extends Request {
         } 
 
         /**
-         * The ID of the financial relationship. Value returned by calling the AddAccountRelation operation.
+         * <p>The ID of the financial relationship. Value returned by calling the AddAccountRelation operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);
@@ -76,7 +80,10 @@ public class GetAccountRelationRequest extends Request {
         }
 
         /**
-         * The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
+         * <p>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>requestId</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);

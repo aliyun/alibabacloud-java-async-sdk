@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -84,7 +85,8 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The IDs of resources.
+         * <p>The IDs of resources.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -93,7 +95,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Specify savings plan instance as the type of the resource.
+         * <p>The type of the resource. Specify savings plan instance as the type of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -102,7 +108,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -117,6 +124,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -158,7 +171,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can create N tag keys at a time. Valid values of N: 1 to 20. The value of this parameter can be an empty string.
+             * <p>The key of the tag. You can create N tag keys at a time. Valid values of N: 1 to 20. The value of this parameter can be an empty string.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -166,7 +183,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag N. Valid values of N: 1 to 20.
+             * <p>The value of the tag N. Valid values of N: 1 to 20.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>001</p>
              */
             public Builder value(String value) {
                 this.value = value;

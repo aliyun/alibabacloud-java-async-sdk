@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyInvoiceRequest} extends {@link RequestModel}
  *
  * <p>ApplyInvoiceRequest</p>
@@ -184,7 +185,11 @@ public class ApplyInvoiceRequest extends Request {
         } 
 
         /**
-         * The ID of the address to which the invoice is delivered. This parameter is required if the invoice is a paper invoice. Set the ID to the value of the AddressId parameter returned by calling the QueryCustomerAddressList operation.
+         * <p>The ID of the address to which the invoice is delivered. This parameter is required if the invoice is a paper invoice. Set the ID to the value of the AddressId parameter returned by calling the QueryCustomerAddressList operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>237958367</p>
          */
         public Builder addressId(Long addressId) {
             this.putQueryParameter("AddressId", addressId);
@@ -193,7 +198,11 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * The nickname of the applicant. The system does not verify the nickname.
+         * <p>The nickname of the applicant. The system does not verify the nickname.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder applyUserNick(String applyUserNick) {
             this.putQueryParameter("ApplyUserNick", applyUserNick);
@@ -202,7 +211,11 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * The ID of the customer. Set the ID to the value of the CustomerId parameter returned by calling the QueryInvoicingCustomerList operation.
+         * <p>The ID of the customer. Set the ID to the value of the CustomerId parameter returned by calling the QueryInvoicingCustomerList operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>124132423</p>
          */
         public Builder customerId(Long customerId) {
             this.putQueryParameter("CustomerId", customerId);
@@ -211,7 +224,11 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * The amount of the invoice. Unit: Cent.
+         * <p>The amount of the invoice. Unit: Cent.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>124132</p>
          */
         public Builder invoiceAmount(Long invoiceAmount) {
             this.putQueryParameter("InvoiceAmount", invoiceAmount);
@@ -220,7 +237,10 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * Specifies whether to invoice by amount. A value of true indicates that the user applies for the invoice based on the InvoiceAmount parameter. A value of false indicates that the user applies for the invoice based on the total amount of the invoicing items.
+         * <p>Specifies whether to invoice by amount. A value of true indicates that the user applies for the invoice based on the InvoiceAmount parameter. A value of false indicates that the user applies for the invoice based on the total amount of the invoicing items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder invoiceByAmount(Boolean invoiceByAmount) {
             this.putQueryParameter("InvoiceByAmount", invoiceByAmount);
@@ -229,11 +249,14 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * The type of the invoice. Valid values:
-         * <p>
+         * <p>The type of the invoice. Valid values:</p>
+         * <ul>
+         * <li>0: paper invoice</li>
+         * <li>1: electronic invoice</li>
+         * </ul>
          * 
-         * *   0: paper invoice
-         * *   1: electronic invoice
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder invoicingType(Integer invoicingType) {
             this.putQueryParameter("InvoicingType", invoicingType);
@@ -251,7 +274,10 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * The channel that is used to process the invoice. A value of 0 indicates that the invoice is processed by Alibaba Cloud. A value of 1 indicates that the invoice is processed by the tax platform. Set the value to 1.
+         * <p>The channel that is used to process the invoice. A value of 0 indicates that the invoice is processed by Alibaba Cloud. A value of 1 indicates that the invoice is processed by the tax platform. Set the value to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder processWay(Integer processWay) {
             this.putQueryParameter("ProcessWay", processWay);
@@ -260,7 +286,11 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * The IDs of the selected invoicing items. Set the IDs to the IDs returned by calling the QueryEvaluateList operation.
+         * <p>The IDs of the selected invoicing items. Set the IDs to the IDs returned by calling the QueryEvaluateList operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>384752367</p>
          */
         public Builder selectedIds(java.util.List < Long > selectedIds) {
             this.putQueryParameter("SelectedIds", selectedIds);
@@ -269,7 +299,10 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * The remarks made by the user.
+         * <p>The remarks made by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userRemark(String userRemark) {
             this.putQueryParameter("UserRemark", userRemark);

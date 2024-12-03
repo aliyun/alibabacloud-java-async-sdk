@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomerAccountInfoRequest} extends {@link RequestModel}
  *
  * <p>GetCustomerAccountInfoRequest</p>
@@ -54,7 +55,7 @@ public class GetCustomerAccountInfoRequest extends Request {
         } 
 
         /**
-         * OwnerId.
+         * <p>This parameter is required.</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);

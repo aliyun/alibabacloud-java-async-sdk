@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAccountRelationRequest} extends {@link RequestModel}
  *
  * <p>AddAccountRelationRequest</p>
@@ -141,7 +142,10 @@ public class AddAccountRelationRequest extends Request {
         } 
 
         /**
-         * The display name of the member. This helps clarify the scenario in which the account is used.
+         * <p>The display name of the member. This helps clarify the scenario in which the account is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx project</p>
          */
         public Builder childNick(String childNick) {
             this.putQueryParameter("ChildNick", childNick);
@@ -150,7 +154,11 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the member.
+         * <p>The ID of the Alibaba Cloud account that is used as the member.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1512996702208737</p>
          */
         public Builder childUserId(Long childUserId) {
             this.putQueryParameter("ChildUserId", childUserId);
@@ -159,7 +167,11 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the management account.
+         * <p>The ID of the Alibaba Cloud account that is used as the management account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1738376485192612</p>
          */
         public Builder parentUserId(Long parentUserId) {
             this.putQueryParameter("ParentUserId", parentUserId);
@@ -168,18 +180,20 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * The permissions that can be granted to the member. Valid values:
-         * <p>
+         * <p>The permissions that can be granted to the member. Valid values:</p>
+         * <ul>
+         * <li>SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.</li>
+         * <li>SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.</li>
+         * <li>FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.</li>
+         * <li>FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.</li>
+         * <li>CHECK_FINANCE_INFO: requests to view information about the financial relationship.</li>
+         * <li>MANAGE_TARGET_INVOICE: allows the member to manage invoices.</li>
+         * <li>CHECK_TARGET_CONSUMPTION: allows the member to view the bills.</li>
+         * </ul>
+         * <p>The params[PermissionCodes, RoleCodes] can not be null at the same time.</p>
          * 
-         * *   SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.
-         * *   SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.
-         * *   FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.
-         * *   FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.
-         * *   CHECK_FINANCE_INFO: requests to view information about the financial relationship.
-         * *   MANAGE_TARGET_INVOICE: allows the member to manage invoices.
-         * *   CHECK_TARGET_CONSUMPTION: allows the member to view the bills.
-         * 
-         * The params[PermissionCodes, RoleCodes] can not be null at the same time.
+         * <strong>example:</strong>
+         * <p>CHECK_TARGET_CONSUMPTION</p>
          */
         public Builder permissionCodes(java.util.List < String > permissionCodes) {
             this.putQueryParameter("PermissionCodes", permissionCodes);
@@ -188,7 +202,11 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * The type of the financial relationship. Set the value to enterprise_group.
+         * <p>The type of the financial relationship. Set the value to enterprise_group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise_group</p>
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -197,7 +215,11 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
+         * <p>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32324242444</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -206,7 +228,10 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * The roles that can be assigned to the member. Set the value to trusteeship.
+         * <p>The roles that can be assigned to the member. Set the value to trusteeship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trusteeship</p>
          */
         public Builder roleCodes(java.util.List < String > roleCodes) {
             this.putQueryParameter("RoleCodes", roleCodes);

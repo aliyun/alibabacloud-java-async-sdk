@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCostUnitRequest} extends {@link RequestModel}
  *
  * <p>QueryCostUnitRequest</p>
@@ -97,7 +98,11 @@ public class QueryCostUnitRequest extends Request {
         } 
 
         /**
-         * The user ID of the cost center owner.
+         * <p>The user ID of the cost center owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28394563429587</p>
          */
         public Builder ownerUid(Long ownerUid) {
             this.putQueryParameter("OwnerUid", ownerUid);
@@ -106,7 +111,10 @@ public class QueryCostUnitRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -115,7 +123,10 @@ public class QueryCostUnitRequest extends Request {
         }
 
         /**
-         * The number of entries per page. A maximum of 300 entries can be returned per page.
+         * <p>The number of entries per page. A maximum of 300 entries can be returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +135,11 @@ public class QueryCostUnitRequest extends Request {
         }
 
         /**
-         * The ID of the parent cost center. A value of -1 indicates the root cost center.
+         * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder parentUnitId(Long parentUnitId) {
             this.putQueryParameter("ParentUnitId", parentUnitId);

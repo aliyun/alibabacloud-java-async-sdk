@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCostUnitResourceResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCostUnitResourceResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04332CB7-9A57-4461-97E0-02821D044414</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCostUnitResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCostUnitResourceResponseBody</p>
+     */
     public static class CostUnit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerUid")
         private Long ownerUid;
@@ -193,7 +212,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private String unitName; 
 
             /**
-             * The user ID of the cost center owner.
+             * <p>The user ID of the cost center owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>321432</p>
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -201,7 +223,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent cost center. A value of -1 indicates the root cost center.
+             * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23421</p>
              */
             public Builder parentUnitId(Long parentUnitId) {
                 this.parentUnitId = parentUnitId;
@@ -209,7 +234,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cost center.
+             * <p>The ID of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123412</p>
              */
             public Builder unitId(Long unitId) {
                 this.unitId = unitId;
@@ -217,7 +245,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cost center.
+             * <p>The name of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder unitName(String unitName) {
                 this.unitName = unitName;
@@ -231,6 +262,12 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCostUnitResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCostUnitResourceResponseBody</p>
+     */
     public static class CostUnitStatisInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private Long resourceCount;
@@ -330,7 +367,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private Long userCount; 
 
             /**
-             * The number of resource instances in the cost center.
+             * <p>The number of resource instances in the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceCount(Long resourceCount) {
                 this.resourceCount = resourceCount;
@@ -338,7 +378,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resource groups in the cost center.
+             * <p>The number of resource groups in the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceGroupCount(Long resourceGroupCount) {
                 this.resourceGroupCount = resourceGroupCount;
@@ -346,7 +389,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sub-cost centers in the cost center.
+             * <p>The number of sub-cost centers in the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder subUnitCount(Long subUnitCount) {
                 this.subUnitCount = subUnitCount;
@@ -354,7 +400,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of resource instances, including resource instances of sub-cost centers, in the cost center.
+             * <p>The total number of resource instances, including resource instances of sub-cost centers, in the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalResourceCount(Long totalResourceCount) {
                 this.totalResourceCount = totalResourceCount;
@@ -362,7 +411,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of resource groups, including resource groups of sub-cost centers, in the cost center.
+             * <p>The total number of resource groups, including resource groups of sub-cost centers, in the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalResourceGroupCount(Long totalResourceGroupCount) {
                 this.totalResourceGroupCount = totalResourceGroupCount;
@@ -370,7 +422,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of the associated accounts, including associated accounts of sub-cost centers, in the cost center.
+             * <p>The total number of the associated accounts, including associated accounts of sub-cost centers, in the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalUserCount(Long totalUserCount) {
                 this.totalUserCount = totalUserCount;
@@ -378,7 +433,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sub-cost centers in the cost center.
+             * <p>The number of sub-cost centers in the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder userCount(Long userCount) {
                 this.userCount = userCount;
@@ -392,6 +450,12 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCostUnitResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCostUnitResourceResponseBody</p>
+     */
     public static class ResourceInstanceDtoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApportionCode")
         private String apportionCode;
@@ -587,7 +651,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private String resourceUserName; 
 
             /**
-             * The split code of the resource.
+             * <p>The split code of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder apportionCode(String apportionCode) {
                 this.apportionCode = apportionCode;
@@ -595,7 +662,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The split name of the resource.
+             * <p>The split name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder apportionName(String apportionName) {
                 this.apportionName = apportionName;
@@ -603,7 +673,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The product code of the resource.
+             * <p>The product code of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -611,7 +684,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The commodity name of the resource.
+             * <p>The commodity name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApsaraDB</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -619,7 +695,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * PipCode.
+             * <p>The code of the service. The code is the same as that in Cost Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder pipCode(String pipCode) {
                 this.pipCode = pipCode;
@@ -627,7 +706,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The resources related to the resource instance.
+             * <p>The resources related to the resource instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder relatedResources(String relatedResources) {
                 this.relatedResources = relatedResources;
@@ -635,7 +717,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group to which the resource belongs.
+             * <p>The resource group to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default Resource Group</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -643,7 +728,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the resource.
+             * <p>The instance ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSSBAG-cn-v0h1s4hma018</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -651,7 +739,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The custom name of the resource.
+             * <p>The custom name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testResource</p>
              */
             public Builder resourceNick(String resourceNick) {
                 this.resourceNick = resourceNick;
@@ -659,7 +750,14 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceSource.
+             * <p>The source of the resource. Value:</p>
+             * <ul>
+             * <li>AUTO_ALLOCATE</li>
+             * <li>MANUAL_ALLOCATE</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MANUAL_ALLOCATE</p>
              */
             public Builder resourceSource(String resourceSource) {
                 this.resourceSource = resourceSource;
@@ -667,7 +765,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource.
+             * <p>The status of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -675,7 +776,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the resource.
+             * <p>The tags of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testResource</p>
              */
             public Builder resourceTag(String resourceTag) {
                 this.resourceTag = resourceTag;
@@ -683,7 +787,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FPT_ossbag_absolute_Storage_bj</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -691,7 +798,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the resource owner.
+             * <p>The user ID of the resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2424242134</p>
              */
             public Builder resourceUserId(Long resourceUserId) {
                 this.resourceUserId = resourceUserId;
@@ -699,7 +809,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the resource owner.
+             * <p>The username of the resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyun.com">test@test.aliyun.com</a></p>
              */
             public Builder resourceUserName(String resourceUserName) {
                 this.resourceUserName = resourceUserName;
@@ -713,6 +826,12 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCostUnitResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCostUnitResourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CostUnit")
         private CostUnit costUnit;
@@ -800,7 +919,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The information about the cost center.
+             * <p>The information about the cost center.</p>
              */
             public Builder costUnit(CostUnit costUnit) {
                 this.costUnit = costUnit;
@@ -808,7 +927,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical information about the cost center.
+             * <p>The statistical information about the cost center.</p>
              */
             public Builder costUnitStatisInfo(CostUnitStatisInfo costUnitStatisInfo) {
                 this.costUnitStatisInfo = costUnitStatisInfo;
@@ -816,7 +935,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -824,7 +946,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -832,7 +957,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The resource instances.
+             * <p>The resource instances.</p>
              */
             public Builder resourceInstanceDtoList(java.util.List < ResourceInstanceDtoList> resourceInstanceDtoList) {
                 this.resourceInstanceDtoList = resourceInstanceDtoList;
@@ -840,7 +965,10 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

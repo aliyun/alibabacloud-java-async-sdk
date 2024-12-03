@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserOmsDataResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserOmsDataResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserOmsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserOmsDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
@@ -181,7 +200,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             private java.util.List < java.util.Map<String, ?>> omsData; 
 
             /**
-             * The ID of the host.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -189,7 +211,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates that the returned usage data starts from the next page. If no value is returned for this parameter or this parameter is not returned, no data can be queried.
+             * <p>Indicates that the returned usage data starts from the next page. If no value is returned for this parameter or this parameter is not returned, no data can be queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NextToken</p>
              */
             public Builder marker(String marker) {
                 this.marker = marker;

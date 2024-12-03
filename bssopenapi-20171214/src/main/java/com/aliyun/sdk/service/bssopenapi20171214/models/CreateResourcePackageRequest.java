@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourcePackageRequest} extends {@link RequestModel}
  *
  * <p>CreateResourcePackageRequest</p>
@@ -141,7 +142,11 @@ public class CreateResourcePackageRequest extends Request {
         } 
 
         /**
-         * The validity period of the resource plan.
+         * <p>The validity period of the resource plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -150,10 +155,11 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * The time when the resource plan takes effect. If you leave this parameter empty, the resource plan immediately takes effect by default.
-         * <p>
+         * <p>The time when the resource plan takes effect. If you leave this parameter empty, the resource plan immediately takes effect by default.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2020-03-03T12:00:00Z</p>
          */
         public Builder effectiveDate(String effectiveDate) {
             this.putQueryParameter("EffectiveDate", effectiveDate);
@@ -171,7 +177,11 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * The type of the resource plan. Set this parameter to the code of the **resource plan** returned by calling the **DescribeResourcePackageProduct** operation.
+         * <p>The type of the resource plan. Set this parameter to the code of the <strong>resource plan</strong> returned by calling the <strong>DescribeResourcePackageProduct</strong> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FPT_ossbag_absolute_Storage_sh</p>
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -180,13 +190,15 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * The unit of the validity period of the resource plan. Valid values:
-         * <p>
+         * <p>The unit of the validity period of the resource plan. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>Default value: Month.</p>
          * 
-         * *   Month
-         * *   Year
-         * 
-         * Default value: Month.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -195,7 +207,11 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * The code of the service. You can query the code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud services**.
+         * <p>The code of the service. You can query the code by calling the <strong>QueryProductList</strong> operation or viewing <strong>Codes of Alibaba Cloud services</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ossbag</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -204,7 +220,11 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * The specifications of the resource plan. Set this parameter to the value of the **specifications** returned by calling the **DescribeResourcePackageProduct** operation.
+         * <p>The specifications of the resource plan. Set this parameter to the value of the <strong>specifications</strong> returned by calling the <strong>DescribeResourcePackageProduct</strong> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);

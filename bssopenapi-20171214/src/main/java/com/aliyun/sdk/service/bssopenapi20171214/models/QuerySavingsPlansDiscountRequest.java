@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySavingsPlansDiscountRequest} extends {@link RequestModel}
  *
  * <p>QuerySavingsPlansDiscountRequest</p>
@@ -197,7 +198,11 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         } 
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -206,7 +211,11 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The cycle based on which queries are performed.
+         * <p>The cycle based on which queries are performed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1:Year</p>
          */
         public Builder cycle(String cycle) {
             this.putQueryParameter("Cycle", cycle);
@@ -215,13 +224,15 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The identifier of the language.
-         * <p>
+         * <p>The identifier of the language.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>EN: English.</li>
+         * <li>ZH: Chinese.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   EN: English.
-         * *   ZH: Chinese.
+         * <strong>example:</strong>
+         * <p>ZH</p>
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -230,7 +241,10 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The code of the pricing module.
+         * <p>The code of the pricing module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_type</p>
          */
         public Builder moduleCode(String moduleCode) {
             this.putQueryParameter("ModuleCode", moduleCode);
@@ -239,7 +253,10 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -248,7 +265,10 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -257,7 +277,11 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The payment mode. Valid values: total: all upfront. half: half upfront. zero: no upfront.
+         * <p>The payment mode. Valid values: total: all upfront. half: half upfront. zero: no upfront.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>total</p>
          */
         public Builder payMode(String payMode) {
             this.putQueryParameter("PayMode", payMode);
@@ -266,7 +290,10 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -275,7 +302,10 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -293,7 +323,11 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The type of the savings plan. Valid values: ecs: Elastic Compute Service (ECS) compute type. universal: general-purpose type.
+         * <p>The type of the savings plan. Valid values: ecs: Elastic Compute Service (ECS) compute type. universal: general-purpose type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>universal</p>
          */
         public Builder spnType(String spnType) {
             this.putQueryParameter("SpnType", spnType);

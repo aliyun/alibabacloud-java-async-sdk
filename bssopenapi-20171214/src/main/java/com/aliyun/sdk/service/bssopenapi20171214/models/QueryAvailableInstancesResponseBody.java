@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAvailableInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAvailableInstancesResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7C15585-8349-4C62-BEE4-5A391841B9BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAvailableInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAvailableInstancesResponseBody</p>
+     */
     public static class InstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -361,7 +380,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             private String subscriptionType; 
 
             /**
-             * The time when the specified instance was created.
+             * <p>The time when the specified instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T16:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -369,7 +391,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was expired.
+             * <p>The time when the instance was expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T16:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -377,7 +402,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the specified instance was expected to be released.
+             * <p>The time when the specified instance was expected to be released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T16:00:00Z</p>
              */
             public Builder expectedReleaseTime(String expectedReleaseTime) {
                 this.expectedReleaseTime = expectedReleaseTime;
@@ -385,7 +413,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1049056</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -393,7 +424,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance owner.
+             * <p>The ID of the instance owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>325352345</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -401,7 +435,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -409,7 +446,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * <p>The type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -417,7 +457,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * <p>The ID of the region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -425,7 +468,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was released.
+             * <p>The time when the instance was released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T16:00:00Z</p>
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -433,12 +479,15 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The renewal status of the specified instance. Valid values:
-             * <p>
+             * <p>The renewal status of the specified instance. Valid values:</p>
+             * <ul>
+             * <li>AutoRenewal: The instance is automatically renewed.</li>
+             * <li>ManualRenewal: The instance is manually renewed.</li>
+             * <li>NotRenewal: The instance is not renewed.</li>
+             * </ul>
              * 
-             * *   AutoRenewal: The instance is automatically renewed.
-             * *   ManualRenewal: The instance is manually renewed.
-             * *   NotRenewal: The instance is not renewed.
+             * <strong>example:</strong>
+             * <p>ManualRenewal</p>
              */
             public Builder renewStatus(String renewStatus) {
                 this.renewStatus = renewStatus;
@@ -446,7 +495,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of auto-renewal cycles.
+             * <p>The number of auto-renewal cycles.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder renewalDuration(Integer renewalDuration) {
                 this.renewalDuration = renewalDuration;
@@ -454,11 +506,14 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the auto-renewal cycle. Valid values:
-             * <p>
+             * <p>The unit of the auto-renewal cycle. Valid values:</p>
+             * <ul>
+             * <li>M: month</li>
+             * <li>Y: year</li>
+             * </ul>
              * 
-             * *   M: month
-             * *   Y: year
+             * <strong>example:</strong>
+             * <p>M</p>
              */
             public Builder renewalDurationUnit(String renewalDurationUnit) {
                 this.renewalDurationUnit = renewalDurationUnit;
@@ -466,7 +521,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The seller.
+             * <p>The seller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123123</p>
              */
             public Builder seller(String seller) {
                 this.seller = seller;
@@ -474,7 +532,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the seller.
+             * <p>The ID of the seller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123123</p>
              */
             public Builder sellerId(Long sellerId) {
                 this.sellerId = sellerId;
@@ -482,7 +543,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance.
+             * <p>The status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creating: The instance is being created. WaitForExpire: The instance is about to expire. Normal: The instance can properly run. Expired: The instance is expired.</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -490,7 +554,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the specified instance was suspended.
+             * <p>The time when the specified instance was suspended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T16:00:00Z</p>
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;
@@ -498,7 +565,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The sub-status of the specified instance.
+             * <p>The sub-status of the specified instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal: The pay-as-you-go module can properly run. WaitForLimit: The pay-as-you-go module is about to be limited due to overdue payments. BandwidthLimited: The pay-as-you-go module is limited due to overdue payments.</p>
              */
             public Builder subStatus(String subStatus) {
                 this.subStatus = subStatus;
@@ -506,11 +576,14 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>Subscription: subscription</li>
+             * <li>PayAsYouGo: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   Subscription: subscription
-             * *   PayAsYouGo: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>Subscription</p>
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -524,6 +597,12 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAvailableInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAvailableInstancesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceList")
         private java.util.List < InstanceList> instanceList;
@@ -587,7 +666,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The instances returned.
+             * <p>The instances returned.</p>
              */
             public Builder instanceList(java.util.List < InstanceList> instanceList) {
                 this.instanceList = instanceList;
@@ -595,7 +674,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -603,7 +685,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -611,7 +696,10 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

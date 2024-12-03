@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetResellerUserAlarmThresholdRequest} extends {@link RequestModel}
  *
  * <p>SetResellerUserAlarmThresholdRequest</p>
@@ -92,7 +93,10 @@ public class SetResellerUserAlarmThresholdRequest extends Request {
         }
 
         /**
-         * AlarmType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_low_balance</p>
          */
         public Builder alarmType(String alarmType) {
             this.putQueryParameter("AlarmType", alarmType);
@@ -101,7 +105,7 @@ public class SetResellerUserAlarmThresholdRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>This parameter is required.</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);

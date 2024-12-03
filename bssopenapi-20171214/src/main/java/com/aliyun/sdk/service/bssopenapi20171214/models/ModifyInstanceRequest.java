@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceRequest</p>
@@ -154,7 +155,10 @@ public class ModifyInstanceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JAKSJFHFAKJSF</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +167,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance for which you want to modify the configurations.
+         * <p>The ID of the instance for which you want to modify the configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-akjhkdsjhfskjfhd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -172,11 +179,15 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * The type of configuration modifications. Valid values:
-         * <p>
+         * <p>The type of configuration modifications. Valid values:</p>
+         * <ul>
+         * <li>Upgrade: upgrades the configurations of the instance.</li>
+         * <li>Downgrade: downgrades the configurations of the instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Upgrade: upgrades the configurations of the instance.
-         * *   Downgrade: downgrades the configurations of the instance.
+         * <strong>example:</strong>
+         * <p>Upgrade</p>
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
@@ -194,7 +205,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * The details about the parameters.
+         * <p>The details about the parameters.</p>
          */
         public Builder parameter(java.util.List < Parameter> parameter) {
             this.putQueryParameter("Parameter", parameter);
@@ -203,7 +214,11 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * The code of the service to which the instance belongs.
+         * <p>The code of the service to which the instance belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -212,7 +227,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * The type of the service to which the instance belongs.
+         * <p>The type of the service to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -221,11 +239,15 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Subscription: subscription
-         * *   PayAsYouGo: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -240,6 +262,12 @@ public class ModifyInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceRequest</p>
+     */
     public static class Parameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -281,10 +309,14 @@ public class ModifyInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The code of the parameter n. Valid values of n: 1 to 100. Multiple parameters are concatenated in the order of n.
-             * <p>
+             * <p>The code of the parameter n. Valid values of n: 1 to 100. Multiple parameters are concatenated in the order of n.</p>
+             * <blockquote>
+             * <p> Only the parameters of the attributes that you want to modify for the instance must be configured. For example, if the instance has Attribute A and Attribute B and only Attribute A must be modified, configure only the parameter of Attribute A.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  Only the parameters of the attributes that you want to modify for the instance must be configured. For example, if the instance has Attribute A and Attribute B and only Attribute A must be modified, configure only the parameter of Attribute A.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -292,7 +324,11 @@ public class ModifyInstanceRequest extends Request {
             }
 
             /**
-             * The value of the parameter n. Valid values of n: 1 to 100.
+             * <p>The value of the parameter n. Valid values of n: 1 to 100.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

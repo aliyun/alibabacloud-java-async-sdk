@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetResellerUserQuotaRequest} extends {@link RequestModel}
  *
  * <p>SetResellerUserQuotaRequest</p>
@@ -97,7 +98,11 @@ public class SetResellerUserQuotaRequest extends Request {
         } 
 
         /**
-         * The quota of a quota ledger. Unit: CNY.
+         * <p>The quota of a quota ledger. Unit: CNY.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>750</p>
          */
         public Builder amount(String amount) {
             this.putQueryParameter("Amount", amount);
@@ -106,7 +111,10 @@ public class SetResellerUserQuotaRequest extends Request {
         }
 
         /**
-         * You do not need to set the parameter.
+         * <p>You do not need to set the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         public Builder currency(String currency) {
             this.putQueryParameter("Currency", currency);
@@ -115,7 +123,10 @@ public class SetResellerUserQuotaRequest extends Request {
         }
 
         /**
-         * The ID of the business.
+         * <p>The ID of the business.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OD2022040818295234777795624764689</p>
          */
         public Builder outBizId(String outBizId) {
             this.putQueryParameter("OutBizId", outBizId);
@@ -124,7 +135,7 @@ public class SetResellerUserQuotaRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>This parameter is required.</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);

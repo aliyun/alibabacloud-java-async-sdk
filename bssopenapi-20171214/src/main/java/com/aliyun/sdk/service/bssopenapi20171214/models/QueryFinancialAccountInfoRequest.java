@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFinancialAccountInfoRequest} extends {@link RequestModel}
  *
  * <p>QueryFinancialAccountInfoRequest</p>
@@ -54,7 +55,11 @@ public class QueryFinancialAccountInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1990699401005016</p>
          */
         public Builder userId(Long userId) {
             this.putQueryParameter("UserId", userId);

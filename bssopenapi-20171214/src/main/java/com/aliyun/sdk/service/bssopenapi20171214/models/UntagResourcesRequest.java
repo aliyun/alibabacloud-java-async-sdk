@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -97,7 +98,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags. This parameter is valid only if the TagKey.n parameter is not set. Valid values: true and false.
+         * <p>Specifies whether to remove all tags. This parameter is valid only if the TagKey.n parameter is not set. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -106,7 +110,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of resources.
+         * <p>The IDs of resources.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -115,7 +120,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Specify the savings plan instance as the type of the resource.
+         * <p>The type of the resource. Specify the savings plan instance as the type of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -124,7 +133,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys.
+         * <p>The tag keys.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBillToOSSSubscriptionResponseBody} extends {@link TeaModel}
  *
  * <p>QueryBillToOSSSubscriptionResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9EEAE43F-1E4D-4734-AE93-5049878AC103</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryBillToOSSSubscriptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBillToOSSSubscriptionResponseBody</p>
+     */
     public static class Item extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BucketOwnerId")
         private Long bucketOwnerId;
@@ -229,7 +248,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             private String subscribeType; 
 
             /**
-             * The owner ID of the Object Storage Service (OSS) bucket.
+             * <p>The owner ID of the Object Storage Service (OSS) bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1369168081849304</p>
              */
             public Builder bucketOwnerId(Long bucketOwnerId) {
                 this.bucketOwnerId = bucketOwnerId;
@@ -237,7 +259,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The path in the OSS bucket.
+             * <p>The path in the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Billing/BillingItemDetailMonthly/</p>
              */
             public Builder bucketPath(String bucketPath) {
                 this.bucketPath = bucketPath;
@@ -245,7 +270,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of data rows in a single file. If the number of data rows in a bill exceeds the upper limit, the bill is split into multiple files. Then, multiple files are merged and compressed into a package.
+             * <p>The maximum number of data rows in a single file. If the number of data rows in a bill exceeds the upper limit, the bill is split into multiple files. Then, multiple files are merged and compressed into a package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000</p>
              */
             public Builder rowLimitPerFile(Integer rowLimitPerFile) {
                 this.rowLimitPerFile = rowLimitPerFile;
@@ -253,7 +281,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OSS bucket that stores the subscribed bill.
+             * <p>The ID of the OSS bucket that stores the subscribed bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>billingtestbucket</p>
              */
             public Builder subscribeBucket(String subscribeBucket) {
                 this.subscribeBucket = subscribeBucket;
@@ -261,13 +292,15 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the language.
-             * <p>
+             * <p>The code of the language.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>en: English</li>
+             * <li>zh: Chinese</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   en: English
-             * *   zh: Chinese
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder subscribeLanguage(String subscribeLanguage) {
                 this.subscribeLanguage = subscribeLanguage;
@@ -275,7 +308,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the subscribed bill was stored in the OSS bucket. The time is displayed in the YYYY-MM-DD hh:mm:ss format.
+             * <p>The time when the subscribed bill was stored in the OSS bucket. The time is displayed in the YYYY-MM-DD hh:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-30 15:40:11</p>
              */
             public Builder subscribeTime(String subscribeTime) {
                 this.subscribeTime = subscribeTime;
@@ -283,11 +319,14 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the subscribed bill. Valid values:
-             * <p>
+             * <p>The type of the subscribed bill. Valid values:</p>
+             * <ul>
+             * <li>BillingItemDetailForBillingPeriod: the bill of a billable item.</li>
+             * <li>InstanceDetailForBillingPeriod: the bill of an instance.</li>
+             * </ul>
              * 
-             * *   BillingItemDetailForBillingPeriod: the bill of a billable item.
-             * *   InstanceDetailForBillingPeriod: the bill of an instance.
+             * <strong>example:</strong>
+             * <p>BillingItemDetailForBillingPeriod</p>
              */
             public Builder subscribeType(String subscribeType) {
                 this.subscribeType = subscribeType;
@@ -301,6 +340,12 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryBillToOSSSubscriptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBillToOSSSubscriptionResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
@@ -342,6 +387,12 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryBillToOSSSubscriptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBillToOSSSubscriptionResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;
@@ -393,7 +444,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             private Items items; 
 
             /**
-             * The ID of the account used to perform the query.
+             * <p>The ID of the account used to perform the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185xxxxx03489</p>
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -401,7 +455,10 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account used to perform the query.
+             * <p>The name of the account used to perform the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -409,7 +466,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the subscribed bill.
+             * <p>The details of the subscribed bill.</p>
              */
             public Builder items(Items items) {
                 this.items = items;

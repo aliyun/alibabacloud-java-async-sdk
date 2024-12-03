@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCostUnitRequest} extends {@link RequestModel}
  *
  * <p>CreateCostUnitRequest</p>
@@ -53,7 +54,7 @@ public class CreateCostUnitRequest extends Request {
         } 
 
         /**
-         * The list of cost centers.
+         * <p>The list of cost centers.</p>
          */
         public Builder unitEntityList(java.util.List < UnitEntityList> unitEntityList) {
             this.putQueryParameter("UnitEntityList", unitEntityList);
@@ -68,6 +69,12 @@ public class CreateCostUnitRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCostUnitRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCostUnitRequest</p>
+     */
     public static class UnitEntityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerUid")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -122,7 +129,11 @@ public class CreateCostUnitRequest extends Request {
             private String unitName; 
 
             /**
-             * The user ID of the owner of the cost center.
+             * <p>The user ID of the owner of the cost center.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>982375623</p>
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -130,7 +141,11 @@ public class CreateCostUnitRequest extends Request {
             }
 
             /**
-             * The ID of the parent cost center. A value of -1 indicates the root cost center.
+             * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentUnitId(Long parentUnitId) {
                 this.parentUnitId = parentUnitId;
@@ -138,7 +153,11 @@ public class CreateCostUnitRequest extends Request {
             }
 
             /**
-             * The name of the cost center.
+             * <p>The name of the cost center.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder unitName(String unitName) {
                 this.unitName = unitName;

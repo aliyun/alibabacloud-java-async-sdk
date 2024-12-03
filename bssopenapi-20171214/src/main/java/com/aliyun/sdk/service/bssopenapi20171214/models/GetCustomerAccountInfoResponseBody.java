@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomerAccountInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetCustomerAccountInfoResponseBody</p>
@@ -85,7 +86,10 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94017C56-1725-5DD9-AB41-B3BAE791D600</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.
+         * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCustomerAccountInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomerAccountInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
@@ -217,7 +236,10 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             private Long mpk; 
 
             /**
-             * The type of the account. A value of 1 indicates an enterprise account. A value of 0 indicates an individual account.
+             * <p>The type of the account. A value of 1 indicates an enterprise account. A value of 0 indicates an individual account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -225,16 +247,14 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The business status of the customer. Valid values:
-             * <p>
+             * <p>The business status of the customer. Valid values:</p>
+             * <p>Freeze: The business is frozen.</p>
+             * <p>Thaw: The business is unfrozen.</p>
+             * <p>Trusteeship: The business is hosted.</p>
+             * <p>TrusteeshipCancel: The business is not hosted.</p>
              * 
-             * Freeze: The business is frozen.
-             * 
-             * Thaw: The business is unfrozen.
-             * 
-             * Trusteeship: The business is hosted.
-             * 
-             * TrusteeshipCancel: The business is not hosted.
+             * <strong>example:</strong>
+             * <p>Freeze</p>
              */
             public Builder creditLimitStatus(String creditLimitStatus) {
                 this.creditLimitStatus = creditLimitStatus;
@@ -242,12 +262,12 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The hosting status of the credit information and instances of the customer. If the credit information and instances of the customer are managed on Alibaba Cloud, Alibaba Cloud suspends a customer service upon overdue payment. Valid values:
-             * <p>
+             * <p>The hosting status of the credit information and instances of the customer. If the credit information and instances of the customer are managed on Alibaba Cloud, Alibaba Cloud suspends a customer service upon overdue payment. Valid values:</p>
+             * <p>FREEZE: The business of the customer is frozen.</p>
+             * <p>TRUSTEESHIP: The business of the customer is hosted.</p>
              * 
-             * FREEZE: The business of the customer is frozen.
-             * 
-             * TRUSTEESHIP: The business of the customer is hosted.
+             * <strong>example:</strong>
+             * <p>FREEZE</p>
              */
             public Builder hostingStatus(String hostingStatus) {
                 this.hostingStatus = hostingStatus;
@@ -255,7 +275,10 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account passes the real-name verification.
+             * <p>Indicates whether the account passes the real-name verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCertified(Boolean isCertified) {
                 this.isCertified = isCertified;
@@ -263,7 +286,10 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the customer.
+             * <p>The email address of the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xxxx@aliyun.com">xxxx@aliyun.com</a></p>
              */
             public Builder loginEmail(String loginEmail) {
                 this.loginEmail = loginEmail;
@@ -271,7 +297,10 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management account.
+             * <p>The ID of the management account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1051360339779133</p>
              */
             public Builder mpk(Long mpk) {
                 this.mpk = mpk;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewInstanceRequest</p>
@@ -126,7 +127,10 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASKJHKLASJHAFSLKJH</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -135,7 +139,11 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance
+         * <p>The ID of the instance</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-skjdhaskjdh</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +161,11 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The code of the service to which the instance belongs.
+         * <p>The code of the service to which the instance belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -162,7 +174,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The type of the service.
+         * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -171,13 +186,17 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The duration of the subscription renewal. Unit: months. Valid values:
-         * <p>
+         * <p>The duration of the subscription renewal. Unit: months. Valid values:</p>
+         * <ul>
+         * <li>1 to 9</li>
+         * <li>12</li>
+         * <li>24</li>
+         * <li>36</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1 to 9
-         * *   12
-         * *   24
-         * *   36
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder renewPeriod(Integer renewPeriod) {
             this.putQueryParameter("RenewPeriod", renewPeriod);

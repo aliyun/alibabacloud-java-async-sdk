@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetResellerUserStatusRequest} extends {@link RequestModel}
  *
  * <p>SetResellerUserStatusRequest</p>
@@ -98,7 +99,11 @@ public class SetResellerUserStatusRequest extends Request {
         } 
 
         /**
-         * The type of the business. Valid values: FREEZE: the frozen business of the account. TRUSTEESHIP: the hosted business of the account.
+         * <p>The type of the business. Valid values: FREEZE: the frozen business of the account. TRUSTEESHIP: the hosted business of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FREEZE</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -107,7 +112,7 @@ public class SetResellerUserStatusRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>This parameter is required.</p>
          */
         public Builder ownerId(String ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -116,7 +121,11 @@ public class SetResellerUserStatusRequest extends Request {
         }
 
         /**
-         * The account status that you want to set. Valid values: Freeze: The account is frozen. Thaw: The account is unfrozen. Trusteeship: The account is hosted. TrusteeshipCancel: The account is not hosted.
+         * <p>The account status that you want to set. Valid values: Freeze: The account is frozen. Thaw: The account is unfrozen. Trusteeship: The account is hosted. TrusteeshipCancel: The account is not hosted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Freeze</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -125,11 +134,13 @@ public class SetResellerUserStatusRequest extends Request {
         }
 
         /**
-         * 停机模式
-         * <p>
+         * <p>停机模式
          * 取值：
          *     0：普通停机
-         *     1：立即停机
+         *     1：立即停机</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder stopMode(String stopMode) {
             this.putQueryParameter("StopMode", stopMode);

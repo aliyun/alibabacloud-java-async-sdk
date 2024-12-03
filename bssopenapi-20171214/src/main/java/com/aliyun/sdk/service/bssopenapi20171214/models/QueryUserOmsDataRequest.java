@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserOmsDataRequest} extends {@link RequestModel}
  *
  * <p>QueryUserOmsDataRequest</p>
@@ -141,13 +142,17 @@ public class QueryUserOmsDataRequest extends Request {
         } 
 
         /**
-         * The time type of the usage data. Set the parameter based on the description in the documentation of the specified service. Valid values:
-         * <p>
+         * <p>The time type of the usage data. Set the parameter based on the description in the documentation of the specified service. Valid values:</p>
+         * <ul>
+         * <li>Raw</li>
+         * <li>Hour</li>
+         * <li>Day</li>
+         * <li>Month</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Raw
-         * *   Hour
-         * *   Day
-         * *   Month
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -156,10 +161,12 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2020-02-21T12:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -168,7 +175,10 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * The name of the record from which the usage data starts to return. The usage data records whose names are alphabetically after the value of the Marker parameter are returned. By default, the usage data starts to return from the earliest record.
+         * <p>The name of the record from which the usage data starts to return. The usage data records whose names are alphabetically after the value of the Marker parameter are returned. By default, the usage data starts to return from the earliest record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NextToken</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -186,7 +196,10 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 200. Default value: 100.
+         * <p>The number of entries to return on each page. Valid values: 1 to 200. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -195,10 +208,12 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2020-02-20T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -207,7 +222,11 @@ public class QueryUserOmsDataRequest extends Request {
         }
 
         /**
-         * The service whose usage data you want to query and the details of the usage data. The parameter value is usually set to the code of a service. Various usage models are provided for different services.
+         * <p>The service whose usage data you want to query and the details of the usage data. The parameter value is usually set to the code of a service. Various usage models are provided for different services.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder table(String table) {
             this.putQueryParameter("Table", table);

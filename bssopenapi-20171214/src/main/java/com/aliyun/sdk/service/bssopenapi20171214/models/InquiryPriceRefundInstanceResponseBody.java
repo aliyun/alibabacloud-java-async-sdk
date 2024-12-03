@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InquiryPriceRefundInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>InquiryPriceRefundInstanceResponseBody</p>
@@ -85,7 +86,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the execution result.
+         * <p>The description of the execution result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UUID</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InquiryPriceRefundInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>InquiryPriceRefundInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -193,7 +212,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             private Double refundAmount; 
 
             /**
-             * The currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY. CNY: Chinese Yuan. USD: United States dollar. JPY: Japanese Yen.</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -201,7 +223,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The site of the execution host.
+             * <p>The site of the execution host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -209,7 +234,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1etb69sqxgl4*******</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -217,7 +245,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The refundable amount.
+             * <p>The refundable amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.34</p>
              */
             public Builder refundAmount(Double refundAmount) {
                 this.refundAmount = refundAmount;

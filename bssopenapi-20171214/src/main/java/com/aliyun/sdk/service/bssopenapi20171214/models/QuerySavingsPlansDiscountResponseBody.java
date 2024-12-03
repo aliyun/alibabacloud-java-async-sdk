@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySavingsPlansDiscountResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySavingsPlansDiscountResponseBody</p>
@@ -85,7 +86,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PARAM_ERROR</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This API is not applicable for caller.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySavingsPlansDiscountResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySavingsPlansDiscountResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityName")
         private String commodityName;
@@ -265,7 +284,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             private String spnType; 
 
             /**
-             * The details of the service.
+             * <p>The details of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pay-as-you-go Elastic Compute Service (ECS) instance</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -273,7 +295,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The contracted discount.
+             * <p>The contracted discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.85</p>
              */
             public Builder contractDiscountRate(String contractDiscountRate) {
                 this.contractDiscountRate = contractDiscountRate;
@@ -281,7 +306,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The cycle based on which queries were performed.
+             * <p>The cycle based on which queries were performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1:Year</p>
              */
             public Builder cycle(String cycle) {
                 this.cycle = cycle;
@@ -289,7 +317,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The discount provided by the official website.
+             * <p>The discount provided by the official website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.85</p>
              */
             public Builder discountRate(String discountRate) {
                 this.discountRate = discountRate;
@@ -297,7 +328,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the pricing module.
+             * <p>The name of the pricing module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -305,12 +339,15 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The payment mode. Valid values:
-             * <p>
+             * <p>The payment mode. Valid values:</p>
+             * <ul>
+             * <li>total: all upfront</li>
+             * <li>half: half upfront</li>
+             * <li>zero: no upfront</li>
+             * </ul>
              * 
-             * *   total: all upfront
-             * *   half: half upfront
-             * *   zero: no upfront
+             * <strong>example:</strong>
+             * <p>total</p>
              */
             public Builder payMode(String payMode) {
                 this.payMode = payMode;
@@ -318,7 +355,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou-na62-a01</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -326,7 +366,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
+             * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26231.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;
@@ -334,7 +377,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g6</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -342,7 +388,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the savings plan.
+             * <p>The type of the savings plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>universal</p>
              */
             public Builder spnType(String spnType) {
                 this.spnType = spnType;
@@ -356,6 +405,12 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySavingsPlansDiscountResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySavingsPlansDiscountResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
@@ -395,7 +450,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             private java.util.List < Items> items; 
 
             /**
-             * The IP address of the request.
+             * <p>The IP address of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.180.109</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -403,7 +461,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the discounts on saving plans.
+             * <p>The information about the discounts on saving plans.</p>
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
