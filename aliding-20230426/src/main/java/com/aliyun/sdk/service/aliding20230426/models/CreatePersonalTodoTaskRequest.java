@@ -38,6 +38,10 @@ public class CreatePersonalTodoTaskRequest extends Request {
     private java.util.List < String > participantIds;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReminderTimeStamp")
+    private Long reminderTimeStamp;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Subject")
     @com.aliyun.core.annotation.Validation(required = true)
     private String subject;
@@ -54,6 +58,7 @@ public class CreatePersonalTodoTaskRequest extends Request {
         this.executorIds = builder.executorIds;
         this.notifyConfigs = builder.notifyConfigs;
         this.participantIds = builder.participantIds;
+        this.reminderTimeStamp = builder.reminderTimeStamp;
         this.subject = builder.subject;
         this.tenantContext = builder.tenantContext;
     }
@@ -114,6 +119,13 @@ public class CreatePersonalTodoTaskRequest extends Request {
     }
 
     /**
+     * @return reminderTimeStamp
+     */
+    public Long getReminderTimeStamp() {
+        return this.reminderTimeStamp;
+    }
+
+    /**
      * @return subject
      */
     public String getSubject() {
@@ -134,6 +146,7 @@ public class CreatePersonalTodoTaskRequest extends Request {
         private java.util.List < String > executorIds; 
         private NotifyConfigs notifyConfigs; 
         private java.util.List < String > participantIds; 
+        private Long reminderTimeStamp; 
         private String subject; 
         private TenantContext tenantContext; 
 
@@ -149,6 +162,7 @@ public class CreatePersonalTodoTaskRequest extends Request {
             this.executorIds = request.executorIds;
             this.notifyConfigs = request.notifyConfigs;
             this.participantIds = request.participantIds;
+            this.reminderTimeStamp = request.reminderTimeStamp;
             this.subject = request.subject;
             this.tenantContext = request.tenantContext;
         } 
@@ -211,6 +225,15 @@ public class CreatePersonalTodoTaskRequest extends Request {
             String participantIdsShrink = shrink(participantIds, "ParticipantIds", "json");
             this.putBodyParameter("ParticipantIds", participantIdsShrink);
             this.participantIds = participantIds;
+            return this;
+        }
+
+        /**
+         * ReminderTimeStamp.
+         */
+        public Builder reminderTimeStamp(Long reminderTimeStamp) {
+            this.putBodyParameter("ReminderTimeStamp", reminderTimeStamp);
+            this.reminderTimeStamp = reminderTimeStamp;
             return this;
         }
 
