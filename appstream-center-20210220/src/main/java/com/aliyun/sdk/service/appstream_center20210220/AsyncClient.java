@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLoginTokenResponse> getLoginToken(GetLoginTokenRequest request);
 
     /**
+     * @param request the request parameters of GetStsToken  GetStsTokenRequest
+     * @return GetStsTokenResponse
+     */
+    CompletableFuture<GetStsTokenResponse> getStsToken(GetStsTokenRequest request);
+
+    /**
      * @param request the request parameters of RefreshLoginToken  RefreshLoginTokenRequest
      * @return RefreshLoginTokenResponse
      */

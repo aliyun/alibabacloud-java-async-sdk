@@ -1,3 +1,6 @@
+2024-12-04 Version: 1.0.3
+- Generated java-async 2021-02-20 for appstream-center.
+
 2024-11-02 Version: 1.0.2
 - Generated java-async 2021-02-20 for appstream-center.
 
