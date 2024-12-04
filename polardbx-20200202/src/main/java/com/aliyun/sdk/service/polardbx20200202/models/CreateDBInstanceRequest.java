@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstanceRequest</p>
@@ -51,6 +52,10 @@ public class CreateDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("EngineVersion")
     @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtraParams")
+    private java.util.Map < String, String > extraParams;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsColumnarReadDBInstance")
@@ -135,6 +140,7 @@ public class CreateDBInstanceRequest extends Request {
         this.dnClass = builder.dnClass;
         this.dnStorageSpace = builder.dnStorageSpace;
         this.engineVersion = builder.engineVersion;
+        this.extraParams = builder.extraParams;
         this.isColumnarReadDBInstance = builder.isColumnarReadDBInstance;
         this.isReadDBInstance = builder.isReadDBInstance;
         this.networkType = builder.networkType;
@@ -235,6 +241,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    /**
+     * @return extraParams
+     */
+    public java.util.Map < String, String > getExtraParams() {
+        return this.extraParams;
     }
 
     /**
@@ -367,6 +380,7 @@ public class CreateDBInstanceRequest extends Request {
         private String dnClass; 
         private String dnStorageSpace; 
         private String engineVersion; 
+        private java.util.Map < String, String > extraParams; 
         private Boolean isColumnarReadDBInstance; 
         private Boolean isReadDBInstance; 
         private String networkType; 
@@ -401,6 +415,7 @@ public class CreateDBInstanceRequest extends Request {
             this.dnClass = request.dnClass;
             this.dnStorageSpace = request.dnStorageSpace;
             this.engineVersion = request.engineVersion;
+            this.extraParams = request.extraParams;
             this.isColumnarReadDBInstance = request.isColumnarReadDBInstance;
             this.isReadDBInstance = request.isReadDBInstance;
             this.networkType = request.networkType;
@@ -502,11 +517,24 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * ExtraParams.
+         */
+        public Builder extraParams(java.util.Map < String, String > extraParams) {
+            String extraParamsShrink = shrink(extraParams, "ExtraParams", "json");
+            this.putQueryParameter("ExtraParams", extraParamsShrink);
+            this.extraParams = extraParams;
             return this;
         }
 
@@ -538,7 +566,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -574,7 +605,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -619,7 +653,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * TopologyType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3azones</p>
          */
         public Builder topologyType(String topologyType) {
             this.putQueryParameter("TopologyType", topologyType);
@@ -637,7 +674,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VPC ID。
+         * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-*****</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);

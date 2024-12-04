@@ -7,19 +7,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdatePolarDBXInstanceNodeResponseBody} extends {@link TeaModel}
+ * {@link DescribeOpenBackupSetResponseBody} extends {@link TeaModel}
  *
- * <p>UpdatePolarDBXInstanceNodeResponseBody</p>
+ * <p>DescribeOpenBackupSetResponseBody</p>
  */
-public class UpdatePolarDBXInstanceNodeResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("OrderId")
-    private String orderId;
+public class DescribeOpenBackupSetResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Object data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdatePolarDBXInstanceNodeResponseBody(Builder builder) {
-        this.orderId = builder.orderId;
+    private DescribeOpenBackupSetResponseBody(Builder builder) {
+        this.data = builder.data;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +27,15 @@ public class UpdatePolarDBXInstanceNodeResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdatePolarDBXInstanceNodeResponseBody create() {
+    public static DescribeOpenBackupSetResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return orderId
+     * @return data
      */
-    public String getOrderId() {
-        return this.orderId;
+    public Object getData() {
+        return this.data;
     }
 
     /**
@@ -46,14 +46,14 @@ public class UpdatePolarDBXInstanceNodeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String orderId; 
+        private Object data; 
         private String requestId; 
 
         /**
-         * OrderId.
+         * Data.
          */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
+        public Builder data(Object data) {
+            this.data = data;
             return this;
         }
 
@@ -65,8 +65,8 @@ public class UpdatePolarDBXInstanceNodeResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdatePolarDBXInstanceNodeResponseBody build() {
-            return new UpdatePolarDBXInstanceNodeResponseBody(this);
+        public DescribeOpenBackupSetResponseBody build() {
+            return new DescribeOpenBackupSetResponseBody(this);
         } 
 
     } 

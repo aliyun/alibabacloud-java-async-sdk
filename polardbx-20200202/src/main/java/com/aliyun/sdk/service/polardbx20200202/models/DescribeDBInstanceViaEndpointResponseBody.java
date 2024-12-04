@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceViaEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceViaEndpointResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceViaEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceViaEndpointResponseBody</p>
+     */
     public static class ConnAddrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
@@ -181,7 +188,10 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxxx</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -211,6 +221,12 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceViaEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceViaEndpointResponseBody</p>
+     */
     public static class DBNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComputeNodeId")
         private String computeNodeId;
@@ -352,6 +368,12 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceViaEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceViaEndpointResponseBody</p>
+     */
     public static class TagSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -413,6 +435,12 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceViaEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceViaEndpointResponseBody</p>
+     */
     public static class DBInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CnNodeClassCode")
         private String cnNodeClassCode;
@@ -1093,7 +1121,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * LTSVersions.
+             * <p>This parameter is required.</p>
              */
             public Builder LTSVersions(java.util.List < String > LTSVersions) {
                 this.LTSVersions = LTSVersions;
@@ -1245,7 +1273,10 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxx</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;

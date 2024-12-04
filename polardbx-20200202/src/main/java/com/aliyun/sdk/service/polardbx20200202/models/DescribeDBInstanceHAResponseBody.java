@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceHAResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceHAResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceHAResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceHAResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrimaryAzoneId")
         private String primaryAzoneId;

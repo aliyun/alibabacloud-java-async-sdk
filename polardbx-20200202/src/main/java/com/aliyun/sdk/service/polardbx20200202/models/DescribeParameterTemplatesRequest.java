@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DescribeParameterTemplatesRequest</p>
@@ -13,8 +14,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeParameterTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    private String engineVersion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ParamLevel")
@@ -28,6 +32,7 @@ public class DescribeParameterTemplatesRequest extends Request {
     private DescribeParameterTemplatesRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.engineVersion = builder.engineVersion;
         this.paramLevel = builder.paramLevel;
         this.regionId = builder.regionId;
     }
@@ -53,6 +58,13 @@ public class DescribeParameterTemplatesRequest extends Request {
     }
 
     /**
+     * @return engineVersion
+     */
+    public String getEngineVersion() {
+        return this.engineVersion;
+    }
+
+    /**
      * @return paramLevel
      */
     public String getParamLevel() {
@@ -68,6 +80,7 @@ public class DescribeParameterTemplatesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeParameterTemplatesRequest, Builder> {
         private String DBInstanceId; 
+        private String engineVersion; 
         private String paramLevel; 
         private String regionId; 
 
@@ -78,6 +91,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         private Builder(DescribeParameterTemplatesRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.engineVersion = request.engineVersion;
             this.paramLevel = request.paramLevel;
             this.regionId = request.regionId;
         } 
@@ -92,6 +106,15 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
+         * EngineVersion.
+         */
+        public Builder engineVersion(String engineVersion) {
+            this.putQueryParameter("EngineVersion", engineVersion);
+            this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
          * ParamLevel.
          */
         public Builder paramLevel(String paramLevel) {
@@ -101,7 +124,10 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

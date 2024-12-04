@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceClassRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceClassRequest</p>
@@ -199,7 +200,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzjasd****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -217,7 +221,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

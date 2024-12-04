@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBNodePerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBNodePerformanceRequest</p>
@@ -158,7 +159,10 @@ public class DescribeDBNodePerformanceRequest extends Request {
         } 
 
         /**
-         * CharacterType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarx_cn</p>
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -167,7 +171,10 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-*******</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -176,7 +183,10 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
-         * DBNodeIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-i-<strong><strong><strong>,pxc-i-</strong></strong></strong>*</p>
          */
         public Builder DBNodeIds(String DBNodeIds) {
             this.putQueryParameter("DBNodeIds", DBNodeIds);
@@ -194,7 +204,10 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2012-06-18T15:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -203,7 +216,10 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
-         * Key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cpu_Usage,Mem_Usage</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -212,7 +228,10 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -221,7 +240,10 @@ public class DescribeDBNodePerformanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2012-06-08T15:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeArchiveTableListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeArchiveTableListResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeArchiveTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeArchiveTableListResponseBody</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArchiveStatus")
         private String archiveStatus;
@@ -231,6 +238,12 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeArchiveTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeArchiveTableListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Long pageIndex;

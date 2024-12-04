@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableRightsSeparationRequest} extends {@link RequestModel}
  *
  * <p>EnableRightsSeparationRequest</p>
@@ -166,7 +167,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * AuditAccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_audit</p>
          */
         public Builder auditAccountName(String auditAccountName) {
             this.putQueryParameter("AuditAccountName", auditAccountName);
@@ -175,7 +179,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * AuditAccountPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder auditAccountPassword(String auditAccountPassword) {
             this.putQueryParameter("AuditAccountPassword", auditAccountPassword);
@@ -184,7 +191,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-htri0ori2r4k9p</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -193,7 +203,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +224,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * SecurityAccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_sec</p>
          */
         public Builder securityAccountName(String securityAccountName) {
             this.putQueryParameter("SecurityAccountName", securityAccountName);
@@ -220,7 +236,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * SecurityAccountPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder securityAccountPassword(String securityAccountPassword) {
             this.putQueryParameter("SecurityAccountPassword", securityAccountPassword);

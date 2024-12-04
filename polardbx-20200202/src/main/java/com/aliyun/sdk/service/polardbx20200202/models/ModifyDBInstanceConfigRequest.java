@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceConfigRequest</p>
@@ -99,7 +100,10 @@ public class ModifyDBInstanceConfigRequest extends Request {
         } 
 
         /**
-         * ConfigName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE_CONSISTENT_REPLICA_READ</p>
          */
         public Builder configName(String configName) {
             this.putQueryParameter("ConfigName", configName);
@@ -108,7 +112,10 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * ConfigValue.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder configValue(String configValue) {
             this.putQueryParameter("ConfigValue", configValue);
@@ -117,7 +124,10 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzjasd****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -126,7 +136,10 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

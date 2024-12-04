@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConnectionStringResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceConnectionStringResponseBody</p>
@@ -110,6 +111,12 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBInstanceConnectionStringResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDBInstanceConnectionStringResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;

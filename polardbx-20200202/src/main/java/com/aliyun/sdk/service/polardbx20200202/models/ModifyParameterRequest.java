@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyParameterRequest} extends {@link RequestModel}
  *
  * <p>ModifyParameterRequest</p>
@@ -25,8 +26,11 @@ public class ModifyParameterRequest extends Request {
     private String paramLevel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParameterGroupId")
+    private String parameterGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String parameters;
 
     @com.aliyun.core.annotation.Query
@@ -39,6 +43,7 @@ public class ModifyParameterRequest extends Request {
         this.clientToken = builder.clientToken;
         this.DBInstanceId = builder.DBInstanceId;
         this.paramLevel = builder.paramLevel;
+        this.parameterGroupId = builder.parameterGroupId;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
     }
@@ -78,6 +83,13 @@ public class ModifyParameterRequest extends Request {
     }
 
     /**
+     * @return parameterGroupId
+     */
+    public String getParameterGroupId() {
+        return this.parameterGroupId;
+    }
+
+    /**
      * @return parameters
      */
     public String getParameters() {
@@ -95,6 +107,7 @@ public class ModifyParameterRequest extends Request {
         private String clientToken; 
         private String DBInstanceId; 
         private String paramLevel; 
+        private String parameterGroupId; 
         private String parameters; 
         private String regionId; 
 
@@ -107,6 +120,7 @@ public class ModifyParameterRequest extends Request {
             this.clientToken = request.clientToken;
             this.DBInstanceId = request.DBInstanceId;
             this.paramLevel = request.paramLevel;
+            this.parameterGroupId = request.parameterGroupId;
             this.parameters = request.parameters;
             this.regionId = request.regionId;
         } 
@@ -121,7 +135,10 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzjasdyuoo</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -139,6 +156,15 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
+         * ParameterGroupId.
+         */
+        public Builder parameterGroupId(String parameterGroupId) {
+            this.putQueryParameter("ParameterGroupId", parameterGroupId);
+            this.parameterGroupId = parameterGroupId;
+            return this;
+        }
+
+        /**
          * Parameters.
          */
         public Builder parameters(String parameters) {
@@ -148,7 +174,10 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

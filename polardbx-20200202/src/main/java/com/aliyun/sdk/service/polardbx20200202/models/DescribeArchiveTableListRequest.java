@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeArchiveTableListRequest} extends {@link RequestModel}
  *
  * <p>DescribeArchiveTableListRequest</p>
@@ -141,7 +142,7 @@ public class DescribeArchiveTableListRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -150,7 +151,7 @@ public class DescribeArchiveTableListRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>This parameter is required.</p>
          */
         public Builder pageIndex(Long pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -159,7 +160,7 @@ public class DescribeArchiveTableListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -168,7 +169,7 @@ public class DescribeArchiveTableListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

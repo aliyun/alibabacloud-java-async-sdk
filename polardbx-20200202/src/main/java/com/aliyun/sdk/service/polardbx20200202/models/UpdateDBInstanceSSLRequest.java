@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDBInstanceSSLRequest} extends {@link RequestModel}
  *
  * <p>UpdateDBInstanceSSLRequest</p>
@@ -106,7 +107,10 @@ public class UpdateDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzjasd****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -115,7 +119,10 @@ public class UpdateDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * EnableSSL.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSSL(Boolean enableSSL) {
             this.putQueryParameter("EnableSSL", enableSSL);

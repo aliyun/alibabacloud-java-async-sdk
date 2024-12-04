@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventsResponseBody</p>
+     */
     public static class EventItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventId")
         private Long eventId;

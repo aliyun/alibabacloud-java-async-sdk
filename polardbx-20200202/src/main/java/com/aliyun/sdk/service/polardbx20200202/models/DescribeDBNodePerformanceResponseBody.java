@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBNodePerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBNodePerformanceResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBNodePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodePerformanceResponseBody</p>
+     */
     public static class PerformanceItemValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
@@ -191,6 +198,12 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBNodePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodePerformanceResponseBody</p>
+     */
     public static class Points extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PerformanceItemValue")
         private java.util.List < PerformanceItemValue> performanceItemValue;
@@ -232,6 +245,12 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBNodePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodePerformanceResponseBody</p>
+     */
     public static class PerformanceItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
@@ -333,6 +352,12 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBNodePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodePerformanceResponseBody</p>
+     */
     public static class PerformanceKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PerformanceItem")
         private java.util.List < PerformanceItem> performanceItem;

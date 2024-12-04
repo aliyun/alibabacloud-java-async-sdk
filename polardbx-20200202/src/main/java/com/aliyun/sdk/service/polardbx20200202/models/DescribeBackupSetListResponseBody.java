@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupSetListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupSetListResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupSetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupSetListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupModel")
         private Integer backupModel;

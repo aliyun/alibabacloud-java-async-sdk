@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParameterTemplatesResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParameterTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterTemplatesResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
@@ -211,6 +218,12 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParameterTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterTemplatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationMaintainConfResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeActiveOperationMaintainConfResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeActiveOperationMaintainConfResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeActiveOperationMaintainConfResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;

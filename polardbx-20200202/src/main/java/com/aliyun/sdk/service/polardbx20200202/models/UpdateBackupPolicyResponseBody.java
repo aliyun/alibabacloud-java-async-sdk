@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateBackupPolicyResponseBody</p>
@@ -110,6 +111,12 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateBackupPolicyResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupPeriod")
         private String backupPeriod;

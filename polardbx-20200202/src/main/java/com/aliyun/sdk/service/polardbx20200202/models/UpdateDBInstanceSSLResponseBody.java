@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDBInstanceSSLResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateDBInstanceSSLResponseBody</p>
@@ -70,6 +71,12 @@ public class UpdateDBInstanceSSLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDBInstanceSSLResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateDBInstanceSSLResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;

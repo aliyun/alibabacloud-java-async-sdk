@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityIpsResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIpsResponseBody</p>
+     */
     public static class GroupItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -171,6 +178,12 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIpsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;

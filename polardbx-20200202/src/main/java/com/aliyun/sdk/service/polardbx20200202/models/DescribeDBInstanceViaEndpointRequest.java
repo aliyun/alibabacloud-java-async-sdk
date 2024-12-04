@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceViaEndpointRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceViaEndpointRequest</p>
@@ -69,7 +70,10 @@ public class DescribeDBInstanceViaEndpointRequest extends Request {
         } 
 
         /**
-         * Endpoint.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hz*******.polarx.rds.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("Endpoint", endpoint);
@@ -78,7 +82,7 @@ public class DescribeDBInstanceViaEndpointRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

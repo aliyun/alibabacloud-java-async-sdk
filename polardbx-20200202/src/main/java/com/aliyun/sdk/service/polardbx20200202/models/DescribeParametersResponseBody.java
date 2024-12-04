@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParametersResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class ConfigParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
@@ -151,6 +158,12 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class RunningParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
@@ -232,9 +245,18 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigParameters")
         private java.util.List < ConfigParameters> configParameters;
+
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+        private String DBInstanceId;
 
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
@@ -247,6 +269,7 @@ public class DescribeParametersResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.configParameters = builder.configParameters;
+            this.DBInstanceId = builder.DBInstanceId;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.runningParameters = builder.runningParameters;
@@ -265,6 +288,13 @@ public class DescribeParametersResponseBody extends TeaModel {
          */
         public java.util.List < ConfigParameters> getConfigParameters() {
             return this.configParameters;
+        }
+
+        /**
+         * @return DBInstanceId
+         */
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
         }
 
         /**
@@ -290,6 +320,7 @@ public class DescribeParametersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < ConfigParameters> configParameters; 
+            private String DBInstanceId; 
             private String engine; 
             private String engineVersion; 
             private java.util.List < RunningParameters> runningParameters; 
@@ -299,6 +330,14 @@ public class DescribeParametersResponseBody extends TeaModel {
              */
             public Builder configParameters(java.util.List < ConfigParameters> configParameters) {
                 this.configParameters = configParameters;
+                return this;
+            }
+
+            /**
+             * DBInstanceId.
+             */
+            public Builder DBInstanceId(String DBInstanceId) {
+                this.DBInstanceId = DBInstanceId;
                 return this;
             }
 

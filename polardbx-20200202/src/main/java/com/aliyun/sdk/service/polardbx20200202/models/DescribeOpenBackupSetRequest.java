@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeColdDataBasicInfoRequest} extends {@link RequestModel}
+ * {@link DescribeOpenBackupSetRequest} extends {@link RequestModel}
  *
- * <p>DescribeColdDataBasicInfoRequest</p>
+ * <p>DescribeOpenBackupSetRequest</p>
  */
-public class DescribeColdDataBasicInfoRequest extends Request {
+public class DescribeOpenBackupSetRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -19,20 +19,24 @@ public class DescribeColdDataBasicInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private DescribeColdDataBasicInfoRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
+    private String restoreTime;
+
+    private DescribeOpenBackupSetRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
         this.regionId = builder.regionId;
+        this.restoreTime = builder.restoreTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeColdDataBasicInfoRequest create() {
+    public static DescribeOpenBackupSetRequest create() {
         return builder().build();
     }
 
@@ -55,22 +59,34 @@ public class DescribeColdDataBasicInfoRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeColdDataBasicInfoRequest, Builder> {
+    /**
+     * @return restoreTime
+     */
+    public String getRestoreTime() {
+        return this.restoreTime;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeOpenBackupSetRequest, Builder> {
         private String DBInstanceName; 
         private String regionId; 
+        private String restoreTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeColdDataBasicInfoRequest request) {
+        private Builder(DescribeOpenBackupSetRequest request) {
             super(request);
             this.DBInstanceName = request.DBInstanceName;
             this.regionId = request.regionId;
+            this.restoreTime = request.restoreTime;
         } 
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-********</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -79,7 +95,7 @@ public class DescribeColdDataBasicInfoRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -87,9 +103,18 @@ public class DescribeColdDataBasicInfoRequest extends Request {
             return this;
         }
 
+        /**
+         * RestoreTime.
+         */
+        public Builder restoreTime(String restoreTime) {
+            this.putQueryParameter("RestoreTime", restoreTime);
+            this.restoreTime = restoreTime;
+            return this;
+        }
+
         @Override
-        public DescribeColdDataBasicInfoRequest build() {
-            return new DescribeColdDataBasicInfoRequest(this);
+        public DescribeOpenBackupSetRequest build() {
+            return new DescribeOpenBackupSetRequest(this);
         } 
 
     } 

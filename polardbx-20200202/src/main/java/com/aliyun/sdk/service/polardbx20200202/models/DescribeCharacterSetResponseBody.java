@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCharacterSetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCharacterSetResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCharacterSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCharacterSetResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CharacterSet")
         private java.util.List < String > characterSet;

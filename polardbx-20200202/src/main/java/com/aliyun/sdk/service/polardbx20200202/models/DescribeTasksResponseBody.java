@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTasksResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTasksResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;

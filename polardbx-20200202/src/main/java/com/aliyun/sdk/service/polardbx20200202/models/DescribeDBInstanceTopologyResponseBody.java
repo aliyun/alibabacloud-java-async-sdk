@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceTopologyResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class HistoryItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Activated")
         private Boolean activated;
@@ -251,6 +258,12 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class AzoneRoleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Azone")
         private String azone;
@@ -312,6 +325,12 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class ConnectionIp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
@@ -393,6 +412,12 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Activated")
         private Boolean activated;
@@ -974,6 +999,12 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class LogicInstanceTopology extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceConnType")
         private String DBInstanceConnType;
@@ -1315,6 +1346,12 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogicInstanceTopology")
         private LogicInstanceTopology logicInstanceTopology;

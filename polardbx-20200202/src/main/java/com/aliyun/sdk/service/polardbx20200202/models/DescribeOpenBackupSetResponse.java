@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeBackupSetResponse} extends {@link TeaModel}
+ * {@link DescribeOpenBackupSetResponse} extends {@link TeaModel}
  *
- * <p>DescribeBackupSetResponse</p>
+ * <p>DescribeOpenBackupSetResponse</p>
  */
-public class DescribeBackupSetResponse extends Response {
+public class DescribeOpenBackupSetResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DescribeBackupSetResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeBackupSetResponseBody body;
+    private DescribeOpenBackupSetResponseBody body;
 
-    private DescribeBackupSetResponse(BuilderImpl builder) {
+    private DescribeOpenBackupSetResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeBackupSetResponse create() {
+    public static DescribeOpenBackupSetResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DescribeBackupSetResponse extends Response {
     /**
      * @return body
      */
-    public DescribeBackupSetResponseBody getBody() {
+    public DescribeOpenBackupSetResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeBackupSetResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeOpenBackupSetResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeBackupSetResponseBody body);
+        Builder body(DescribeOpenBackupSetResponseBody body);
 
         @Override
-        DescribeBackupSetResponse build();
+        DescribeOpenBackupSetResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeBackupSetResponse, Builder>
+            extends Response.BuilderImpl<DescribeOpenBackupSetResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeBackupSetResponseBody body; 
+        private DescribeOpenBackupSetResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeBackupSetResponse response) {
+        private BuilderImpl(DescribeOpenBackupSetResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DescribeBackupSetResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeBackupSetResponseBody body) {
+        public Builder body(DescribeOpenBackupSetResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeBackupSetResponse build() {
-            return new DescribeBackupSetResponse(this);
+        public DescribeOpenBackupSetResponse build() {
+            return new DescribeOpenBackupSetResponse(this);
         } 
 
     } 

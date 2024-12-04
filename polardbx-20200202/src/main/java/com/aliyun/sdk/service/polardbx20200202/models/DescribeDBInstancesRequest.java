@@ -6,11 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancesRequest</p>
  */
 public class DescribeDBInstancesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbVersion")
+    private String dbVersion;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
@@ -47,6 +52,7 @@ public class DescribeDBInstancesRequest extends Request {
 
     private DescribeDBInstancesRequest(Builder builder) {
         super(builder);
+        this.dbVersion = builder.dbVersion;
         this.instanceId = builder.instanceId;
         this.mustHasCdc = builder.mustHasCdc;
         this.pageNumber = builder.pageNumber;
@@ -68,6 +74,13 @@ public class DescribeDBInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dbVersion
+     */
+    public String getDbVersion() {
+        return this.dbVersion;
     }
 
     /**
@@ -127,6 +140,7 @@ public class DescribeDBInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDBInstancesRequest, Builder> {
+        private String dbVersion; 
         private String instanceId; 
         private Boolean mustHasCdc; 
         private Integer pageNumber; 
@@ -142,6 +156,7 @@ public class DescribeDBInstancesRequest extends Request {
 
         private Builder(DescribeDBInstancesRequest request) {
             super(request);
+            this.dbVersion = request.dbVersion;
             this.instanceId = request.instanceId;
             this.mustHasCdc = request.mustHasCdc;
             this.pageNumber = request.pageNumber;
@@ -151,6 +166,15 @@ public class DescribeDBInstancesRequest extends Request {
             this.series = request.series;
             this.tags = request.tags;
         } 
+
+        /**
+         * DbVersion.
+         */
+        public Builder dbVersion(String dbVersion) {
+            this.putQueryParameter("DbVersion", dbVersion);
+            this.dbVersion = dbVersion;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -189,7 +213,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

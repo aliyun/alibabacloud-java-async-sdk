@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSSLResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceSSLResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceSSLResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceSSLResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertCommonName")
         private String certCommonName;

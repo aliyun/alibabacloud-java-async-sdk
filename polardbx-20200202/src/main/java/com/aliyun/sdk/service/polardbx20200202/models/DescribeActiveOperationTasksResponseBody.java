@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeActiveOperationTasksResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeActiveOperationTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeActiveOperationTasksResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowCancel")
         private String allowCancel;

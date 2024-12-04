@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceAttributeResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class ConnAddrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
@@ -181,7 +188,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxxx</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -211,6 +221,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class DBNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComputeNodeId")
         private String computeNodeId;
@@ -352,6 +368,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class GdnMemberList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemberName")
         private String memberName;
@@ -433,6 +455,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class TagSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -494,6 +522,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class DBInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanNotCreateColumnar")
         private Boolean canNotCreateColumnar;
@@ -1376,7 +1410,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LTSVersions.
+             * <p>This parameter is required.</p>
              */
             public Builder LTSVersions(java.util.List < String > LTSVersions) {
                 this.LTSVersions = LTSVersions;
@@ -1448,7 +1482,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 主可用区。
+             * <p>主可用区。</p>
+             * <p>This parameter is required.</p>
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
@@ -1496,7 +1531,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 次可用区。
+             * <p>次可用区。</p>
              */
             public Builder secondaryZone(String secondaryZone) {
                 this.secondaryZone = secondaryZone;
@@ -1544,7 +1579,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 第三可用区。
+             * <p>第三可用区。</p>
              */
             public Builder tertiaryZone(String tertiaryZone) {
                 this.tertiaryZone = tertiaryZone;
@@ -1552,11 +1587,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 拓扑类型：
-             * <p>
-             * 
-             * - **3azones**：三可用区；
-             * - **1azone**：单可用区。
+             * <p>拓扑类型：</p>
+             * <ul>
+             * <li><strong>3azones</strong>：三可用区；</li>
+             * <li><strong>1azone</strong>：单可用区。</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              */
             public Builder topologyType(String topologyType) {
                 this.topologyType = topologyType;
@@ -1572,7 +1608,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxx</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;

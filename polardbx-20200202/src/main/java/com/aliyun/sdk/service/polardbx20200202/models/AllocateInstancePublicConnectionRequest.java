@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateInstancePublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>AllocateInstancePublicConnectionRequest</p>
@@ -154,7 +155,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         } 
 
         /**
-         * ConnectionStringPrefix.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-**************</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -163,7 +167,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-**************</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -190,7 +197,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

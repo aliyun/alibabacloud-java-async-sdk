@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceConfigResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigName")
         private String configName;

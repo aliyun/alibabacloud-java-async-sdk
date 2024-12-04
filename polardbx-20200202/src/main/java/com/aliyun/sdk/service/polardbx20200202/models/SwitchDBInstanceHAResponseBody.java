@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchDBInstanceHAResponseBody} extends {@link TeaModel}
  *
  * <p>SwitchDBInstanceHAResponseBody</p>

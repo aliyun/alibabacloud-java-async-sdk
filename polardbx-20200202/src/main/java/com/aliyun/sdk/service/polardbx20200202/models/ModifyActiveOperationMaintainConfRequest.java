@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyActiveOperationMaintainConfRequest} extends {@link RequestModel}
  *
  * <p>ModifyActiveOperationMaintainConfRequest</p>
@@ -129,7 +130,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         } 
 
         /**
-         * CycleTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,4,5,6,7</p>
          */
         public Builder cycleTime(String cycleTime) {
             this.putQueryParameter("CycleTime", cycleTime);
@@ -138,7 +142,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * CycleType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Week</p>
          */
         public Builder cycleType(String cycleType) {
             this.putQueryParameter("CycleType", cycleType);
@@ -147,7 +154,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * MaintainEndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00:00Z</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.putQueryParameter("MaintainEndTime", maintainEndTime);
@@ -156,7 +166,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * MaintainStartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00:00Z</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.putQueryParameter("MaintainStartTime", maintainStartTime);
@@ -165,7 +178,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +190,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
