@@ -180,7 +180,10 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABFUOEUOTRTRJKE</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -189,7 +192,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * <p>任务ID，是告警规则关联的任务ID。</p>
+         * <p>The ID of the synchronization task with which the alert rule is associated.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +205,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * <p>描述。</p>
+         * <p>The description of the alert rule.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -211,7 +214,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * <p>告警规则是否启用，默认不开启。</p>
+         * <p>Specifies whether to enable the alert rule. By default, the alert rule is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -223,11 +226,13 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * <p>告警指标类型，可选的枚举值：</p>
+         * <p>The metric type in the alert rule. Valid values:</p>
          * <ul>
-         * <li>Heartbeat（任务状态报警）</li>
-         * <li>FailoverCount（failover次数报警）</li>
-         * <li>Delay（任务延迟报警）</li>
+         * <li>Heartbeat</li>
+         * <li>FailoverCount</li>
+         * <li>Delay</li>
+         * <li>DdlReport</li>
+         * <li>ResourceUtilization</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -241,6 +246,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the alert rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,6 +259,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
+         * <p>The alert notification settings.</p>
          * <p>This parameter is required.</p>
          */
         public Builder notificationSettings(NotificationSettings notificationSettings) {
@@ -263,6 +270,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
+         * <p>The conditions that can trigger the alert rule.</p>
          * <p>This parameter is required.</p>
          */
         public Builder triggerConditions(java.util.List < TriggerConditions> triggerConditions) {
@@ -324,7 +332,13 @@ public class CreateDIAlarmRuleRequest extends Request {
             private String severity; 
 
             /**
-             * Channels.
+             * <p>The alert notification methods. Valid values:</p>
+             * <ul>
+             * <li>Mail</li>
+             * <li>Phone</li>
+             * <li>Sms</li>
+             * <li>Ding</li>
+             * </ul>
              */
             public Builder channels(java.util.List < String > channels) {
                 this.channels = channels;
@@ -332,7 +346,14 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * Severity.
+             * <p>The severity level. Valid values:</p>
+             * <ul>
+             * <li>Warning</li>
+             * <li>Critical</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Warning</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -391,7 +412,10 @@ public class CreateDIAlarmRuleRequest extends Request {
             private java.util.List < String > receiverValues; 
 
             /**
-             * ReceiverType.
+             * <p>The recipient type. Valid values: AliyunUid, DingToken, FeishuToken, and WebHookUrl.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingToken</p>
              */
             public Builder receiverType(String receiverType) {
                 this.receiverType = receiverType;
@@ -399,7 +423,11 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * ReceiverValues.
+             * <p>The recipient.</p>
+             * <ul>
+             * <li>If the ReceiverType parameter is set to AliyunUid, set this parameter to the Alibaba Cloud account ID of a user.</li>
+             * <li>If the ReceiverType parameter is set to DingToken, set this parameter to the token of a DingTalk chatbot.</li>
+             * </ul>
              */
             public Builder receiverValues(java.util.List < String > receiverValues) {
                 this.receiverValues = receiverValues;
@@ -470,7 +498,10 @@ public class CreateDIAlarmRuleRequest extends Request {
             private java.util.List < NotificationReceivers> notificationReceivers; 
 
             /**
-             * InhibitionInterval.
+             * <p>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder inhibitionInterval(Integer inhibitionInterval) {
                 this.inhibitionInterval = inhibitionInterval;
@@ -478,7 +509,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * NotificationChannels.
+             * <p>The alert notification methods.</p>
              */
             public Builder notificationChannels(java.util.List < NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -486,7 +517,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * NotificationReceivers.
+             * <p>The settings of alert notification recipients.</p>
              */
             public Builder notificationReceivers(java.util.List < NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
@@ -569,7 +600,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             private Long threshold; 
 
             /**
-             * DdlReportTags.
+             * <p>The types of DDL operations for which the alert rule takes effect.</p>
              */
             public Builder ddlReportTags(java.util.List < String > ddlReportTags) {
                 this.ddlReportTags = ddlReportTags;
@@ -577,7 +608,10 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * Duration.
+             * <p>The time interval for alert calculation. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -585,7 +619,14 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * Severity.
+             * <p>The severity level. Valid values:</p>
+             * <ul>
+             * <li>Warning</li>
+             * <li>Critical</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Warning</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -593,7 +634,15 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * Threshold.
+             * <p>The alert threshold.</p>
+             * <ul>
+             * <li>If the alert rule is for task status, you do not need to specify a threshold.</li>
+             * <li>If the alert rule is for failovers, you must specify the number of failovers.</li>
+             * <li>If the alert rule is for latency, you must specify the latency duration, in seconds.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder threshold(Long threshold) {
                 this.threshold = threshold;

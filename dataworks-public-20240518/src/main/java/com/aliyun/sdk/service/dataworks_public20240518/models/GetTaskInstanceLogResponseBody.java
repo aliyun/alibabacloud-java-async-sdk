@@ -50,7 +50,10 @@ public class GetTaskInstanceLogResponseBody extends TeaModel {
         private String taskInstanceLog; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class GetTaskInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * TaskInstanceLog.
+         * <p>The run log of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is running log</p>
          */
         public Builder taskInstanceLog(String taskInstanceLog) {
             this.taskInstanceLog = taskInstanceLog;

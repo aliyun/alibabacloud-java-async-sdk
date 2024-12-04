@@ -91,7 +91,10 @@ public class CloneDataSourceRequest extends Request {
         }
 
         /**
-         * CloneDataSourceName.
+         * <p>The name of the destination data source The name can contain letters, digits, and underscores (_), and must start with a letter. It cannot exceed 60 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_holo_datasource</p>
          */
         public Builder cloneDataSourceName(String cloneDataSourceName) {
             this.putQueryParameter("CloneDataSourceName", cloneDataSourceName);
@@ -100,7 +103,10 @@ public class CloneDataSourceRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16036</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

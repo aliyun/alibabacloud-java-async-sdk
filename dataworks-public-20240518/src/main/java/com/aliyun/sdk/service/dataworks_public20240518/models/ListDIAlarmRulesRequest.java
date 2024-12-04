@@ -119,7 +119,10 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * DIAlarmRuleId.
+         * <p>The ID of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34988</p>
          */
         public Builder DIAlarmRuleId(Long DIAlarmRuleId) {
             this.putQueryParameter("DIAlarmRuleId", DIAlarmRuleId);
@@ -128,7 +131,10 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the synchronization task for which alert rules are configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -137,7 +143,10 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +155,10 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

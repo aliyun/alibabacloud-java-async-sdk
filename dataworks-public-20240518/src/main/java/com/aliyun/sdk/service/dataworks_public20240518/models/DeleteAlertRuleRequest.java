@@ -77,7 +77,10 @@ public class DeleteAlertRuleRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105412</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

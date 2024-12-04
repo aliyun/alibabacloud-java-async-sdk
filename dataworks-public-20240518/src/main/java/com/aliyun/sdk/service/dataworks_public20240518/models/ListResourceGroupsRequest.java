@@ -133,7 +133,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of a resource group, which is used for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -142,7 +145,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>The billing method of resource groups. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -151,7 +157,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the DataWorks workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -160,7 +169,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupTypes.
+         * <p>The types of resource groups to query. If you do not configure this parameter, only serverless resource groups are returned by default.</p>
          */
         public Builder resourceGroupTypes(java.util.List < String > resourceGroupTypes) {
             String resourceGroupTypesShrink = shrink(resourceGroupTypes, "ResourceGroupTypes", "json");
@@ -170,7 +179,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>The statuses of resource groups.</p>
          */
         public Builder statuses(java.util.List < String > statuses) {
             String statusesShrink = shrink(statuses, "Statuses", "json");

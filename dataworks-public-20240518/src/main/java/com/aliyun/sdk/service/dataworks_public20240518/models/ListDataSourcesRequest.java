@@ -190,7 +190,14 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The environment in which the data sources are used. Valid values:</p>
+         * <ul>
+         * <li>Dev: development environment</li>
+         * <li>Prod: production environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -199,7 +206,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the data source. Fuzzy match by data source name is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -208,7 +218,15 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which you want to sort the data sources. Valid values:</p>
+         * <ul>
+         * <li>Desc: descending order</li>
+         * <li>Asc: ascending order</li>
+         * </ul>
+         * <p>Default value: Asc</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -217,7 +235,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +247,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,6 +259,8 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +273,16 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field that you want to use to sort the data sources. Valid values:</p>
+         * <ul>
+         * <li>CreateTime</li>
+         * <li>Id</li>
+         * <li>Name</li>
+         * </ul>
+         * <p>Default value: Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Id</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -265,7 +300,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * Types.
+         * <p>The data source types. This parameter specifies a filter condition. You can specify multiple data source types.</p>
          */
         public Builder types(java.util.List < String > types) {
             String typesShrink = shrink(types, "Types", "simple");

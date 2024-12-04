@@ -62,7 +62,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupList.
+         * <p>The resource groups returned.</p>
          */
         public Builder resourceGroupList(java.util.List < ResourceGroupList> resourceGroupList) {
             this.resourceGroupList = resourceGroupList;
@@ -78,7 +81,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -136,7 +142,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String standard; 
 
             /**
-             * Amount.
+             * <p>The number of resources in the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -144,7 +153,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Standard.
+             * <p>The details about the specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2CU</p>
              */
             public Builder standard(String standard) {
                 this.standard = standard;
@@ -323,7 +335,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * <p>The time when the resource group was created. The value is a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -331,7 +346,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the account that is used to create the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11075500042XXXXX</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -339,7 +357,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVpcId.
+             * <p>The ID of the virtual private cloud (VPC) with which the resource group is associated by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
              */
             public Builder defaultVpcId(String defaultVpcId) {
                 this.defaultVpcId = defaultVpcId;
@@ -347,7 +368,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVswicthId.
+             * <p>The ID of the vSwitch with which the resource group is associated by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
              */
             public Builder defaultVswicthId(String defaultVswicthId) {
                 this.defaultVswicthId = defaultVswicthId;
@@ -355,7 +379,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -363,7 +390,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>common_resource_group</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -371,7 +401,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * OrderInstanceId.
+             * <p>The instance ID of the order that is used to create the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>
              */
             public Builder orderInstanceId(String orderInstanceId) {
                 this.orderInstanceId = orderInstanceId;
@@ -379,7 +412,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentType.
+             * <p>The billing method of the resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -387,7 +423,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The description of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>创建用于普通任务的通用资源组</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -395,7 +434,16 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupType.
+             * <p>The type the resource group. Valid values:</p>
+             * <ul>
+             * <li>CommonV2: serverless resource group</li>
+             * <li>ExclusiveDataIntegration: exclusive resource group for Data Integration</li>
+             * <li>ExclusiveScheduler: exclusive resource group for scheduling</li>
+             * <li>ExclusiveDataService: exclusive resource group for DataService Studio</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CommonV2</p>
              */
             public Builder resourceGroupType(String resourceGroupType) {
                 this.resourceGroupType = resourceGroupType;
@@ -403,7 +451,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The specifications of the resource group.</p>
              */
             public Builder spec(Spec spec) {
                 this.spec = spec;
@@ -411,7 +459,22 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li>Normal: The resource group is running or in use.</li>
+             * <li>Stop: The resource group is expired.</li>
+             * <li>Deleted: The resource group is released or destroyed.</li>
+             * <li>Creating: The resource group is being started.</li>
+             * <li>CreateFailed: The resource group fails to be started.</li>
+             * <li>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</li>
+             * <li>UpdateFailed: The resource group fails to be scaled out or upgraded.</li>
+             * <li>Deleting: The resource group is being released or destroyed.</li>
+             * <li>DeleteFailed: The resource group fails to be released or destroyed.</li>
+             * <li>Timeout: The operations that are performed on the resource group time out.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;

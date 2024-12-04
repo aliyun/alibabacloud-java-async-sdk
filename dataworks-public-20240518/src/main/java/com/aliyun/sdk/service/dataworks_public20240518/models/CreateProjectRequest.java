@@ -177,7 +177,11 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * AliyunResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group to which the workspace belongs. You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> and go to the Resource Group page to query the ID.</p>
+         * <p>You can configure this parameter to specify an Alibaba Cloud resource group that you want to use to manage the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzbn7pti3zff</p>
          */
         public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
             this.putBodyParameter("AliyunResourceGroupId", aliyunResourceGroupId);
@@ -186,7 +190,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * AliyunResourceTags.
+         * <p>The tags.</p>
          */
         public Builder aliyunResourceTags(java.util.List < AliyunResourceTags> aliyunResourceTags) {
             String aliyunResourceTagsShrink = shrink(aliyunResourceTags, "AliyunResourceTags", "json");
@@ -196,7 +200,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the workspace.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -205,7 +209,14 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * DevEnvironmentEnabled.
+         * <p>Specifies whether to enable the development environment. Valid values:</p>
+         * <ul>
+         * <li>true : enables the development environment. In this case, the development environment is isolated from the production environment in the workspace.</li>
+         * <li>false: disables the development environment. In this case, only the production environment is used in the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder devEnvironmentEnabled(Boolean devEnvironmentEnabled) {
             this.putBodyParameter("DevEnvironmentEnabled", devEnvironmentEnabled);
@@ -214,7 +225,14 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * DevRoleDisabled.
+         * <p>Specifies whether to disable the Develop role. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder devRoleDisabled(Boolean devRoleDisabled) {
             this.putBodyParameter("DevRoleDisabled", devRoleDisabled);
@@ -223,6 +241,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
+         * <p>The display name of the workspace.</p>
          * <p>This parameter is required.</p>
          */
         public Builder displayName(String displayName) {
@@ -232,6 +251,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +264,14 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * PaiTaskEnabled.
+         * <p>Specifies whether to enable scheduling of Platform for AI (PAI) tasks. Valid values:</p>
+         * <ul>
+         * <li>true: enables scheduling of PAI tasks. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
+         * <li>false: disables scheduling of PAI tasks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder paiTaskEnabled(Boolean paiTaskEnabled) {
             this.putBodyParameter("PaiTaskEnabled", paiTaskEnabled);
@@ -304,7 +331,10 @@ public class CreateProjectRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>batch</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -312,7 +342,10 @@ public class CreateProjectRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>blue</p>
              */
             public Builder value(String value) {
                 this.value = value;

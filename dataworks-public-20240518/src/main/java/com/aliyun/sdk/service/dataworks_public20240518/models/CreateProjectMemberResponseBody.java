@@ -38,7 +38,10 @@ public class CreateProjectMemberResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2B2F0B26-9253-5780-B6DB-F1A886D44D6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

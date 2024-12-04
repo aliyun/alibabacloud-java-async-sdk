@@ -137,6 +137,7 @@ public class CreateAlertRuleRequest extends Request {
         }
 
         /**
+         * <p>Indicates whether the rule is enabled.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,6 +150,7 @@ public class CreateAlertRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +163,7 @@ public class CreateAlertRuleRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The configuration for the alert notification.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -171,6 +173,7 @@ public class CreateAlertRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Alibaba Cloud account used by the creator of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +186,7 @@ public class CreateAlertRuleRequest extends Request {
         }
 
         /**
+         * <p>The conditions for triggering the alert.</p>
          * <p>This parameter is required.</p>
          */
         public Builder triggerCondition(TriggerCondition triggerCondition) {
@@ -256,7 +260,10 @@ public class CreateAlertRuleRequest extends Request {
             private java.util.List < String > receiverValues; 
 
             /**
-             * Extension.
+             * <p>The additional configuration of the alert recipient. If the ReceiverType parameter is set to DingdingUrl, you can set this parameter to {&quot;atAll&quot;:true} to remind all members in a DingTalk group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;atAll&quot;:true}</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -264,7 +271,20 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * ReceiverType.
+             * <p>The type of the alert recipient. Valid valves:</p>
+             * <ul>
+             * <li>AliUid: Alibaba Cloud account ID.</li>
+             * <li>Shift Schedules: The personnel in a shift schedule.</li>
+             * <li>TaskOwner: The node owner. This parameter is available for custom alerts and event alerts.</li>
+             * <li>Owner: The baseline owner. This parameter is available for baseline alerts.</li>
+             * <li>WebhookUrl: URL of a custom webhook.</li>
+             * <li>DingdingUrl: DingTalk chatbot URL.</li>
+             * <li>FeishuUrl: Lark chatbot URL.</li>
+             * <li>WeixinUrl: WeCom chatbot URL.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TaskOwner</p>
              */
             public Builder receiverType(String receiverType) {
                 this.receiverType = receiverType;
@@ -272,7 +292,7 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * ReceiverValues.
+             * <p>The IDs of the alert recipients.</p>
              */
             public Builder receiverValues(java.util.List < String > receiverValues) {
                 this.receiverValues = receiverValues;
@@ -381,6 +401,7 @@ public class CreateAlertRuleRequest extends Request {
             private String silenceStartTime; 
 
             /**
+             * <p>The alert channels.</p>
              * <p>This parameter is required.</p>
              */
             public Builder channels(java.util.List < String > channels) {
@@ -389,7 +410,10 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * IntervalInMinutes.
+             * <p>The interval at which an alert notification is sent. Unit: minutes. Valid values: 5 to 10,000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder intervalInMinutes(Integer intervalInMinutes) {
                 this.intervalInMinutes = intervalInMinutes;
@@ -397,7 +421,10 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * Maximum.
+             * <p>The maximum number of times an alert notification is sent within one calendar day. Valid values: 1 to 10,000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maximum(Integer maximum) {
                 this.maximum = maximum;
@@ -405,6 +432,7 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
+             * <p>The alert recipient.</p>
              * <p>This parameter is required.</p>
              */
             public Builder receivers(java.util.List < Receivers> receivers) {
@@ -413,7 +441,10 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * SilenceEndTime.
+             * <p>The end of the time range for silence. The time is in the HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:00</p>
              */
             public Builder silenceEndTime(String silenceEndTime) {
                 this.silenceEndTime = silenceEndTime;
@@ -421,7 +452,10 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * SilenceStartTime.
+             * <p>The beginning of the time range for silence. The time is in the HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:00</p>
              */
             public Builder silenceStartTime(String silenceStartTime) {
                 this.silenceStartTime = silenceStartTime;
@@ -480,7 +514,10 @@ public class CreateAlertRuleRequest extends Request {
             private String time; 
 
             /**
-             * CycleId.
+             * <p>The ID of the scheduling cycle of the instance. Valid values: 1 to 288.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cycleId(Integer cycleId) {
                 this.cycleId = cycleId;
@@ -488,7 +525,10 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * Time.
+             * <p>The timeout period of instance running. The time is in the hh:mm format. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12:00</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -535,7 +575,7 @@ public class CreateAlertRuleRequest extends Request {
             private java.util.List < CycleAndTime> cycleAndTime; 
 
             /**
-             * CycleAndTime.
+             * <p>The configurations of the scheduling cycle and timeout period of the instance.</p>
              */
             public Builder cycleAndTime(java.util.List < CycleAndTime> cycleAndTime) {
                 this.cycleAndTime = cycleAndTime;
@@ -594,7 +634,10 @@ public class CreateAlertRuleRequest extends Request {
             private java.util.List < Long > streamTaskIds; 
 
             /**
-             * AutoRerunAlert.
+             * <p>Indicates whether an alert is triggered if a batch synchronization task is rerun after it fails to run as expected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoRerunAlert(Boolean autoRerunAlert) {
                 this.autoRerunAlert = autoRerunAlert;
@@ -602,7 +645,7 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * StreamTaskIds.
+             * <p>The IDs of the real-time computing tasks. This parameter is required when you monitor real-time computing tasks.</p>
              */
             public Builder streamTaskIds(java.util.List < Long > streamTaskIds) {
                 this.streamTaskIds = streamTaskIds;
@@ -649,7 +692,10 @@ public class CreateAlertRuleRequest extends Request {
             private Integer count; 
 
             /**
-             * Count.
+             * <p>The number of instances on which an error occurs. Valid values: 1 to 10,000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -696,7 +742,10 @@ public class CreateAlertRuleRequest extends Request {
             private Integer percentage; 
 
             /**
-             * Percentage.
+             * <p>The percentage of the number of instances on which an error occurs in the workspace to the total number of instances on the current day. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -755,7 +804,10 @@ public class CreateAlertRuleRequest extends Request {
             private String trend; 
 
             /**
-             * Percentage.
+             * <p>The percentage of fluctuation in the number of auto triggered node instances that are generated in your workspace. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -763,7 +815,15 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * Trend.
+             * <p>The way in which the number of auto triggered node instances that are generated in your workspace significantly fluctuates. Valid values:</p>
+             * <ul>
+             * <li>abs: The number of instances increases or decreases.</li>
+             * <li>increase: The number of instances increases.</li>
+             * <li>decrease: The number of instances decreases.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>abs</p>
              */
             public Builder trend(String trend) {
                 this.trend = trend;
@@ -810,7 +870,10 @@ public class CreateAlertRuleRequest extends Request {
             private Integer timeoutInMinutes; 
 
             /**
-             * TimeoutInMinutes.
+             * <p>The timeout period. Unit: minutes. Valid values: 1 to 21,600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timeoutInMinutes(Integer timeoutInMinutes) {
                 this.timeoutInMinutes = timeoutInMinutes;
@@ -857,7 +920,10 @@ public class CreateAlertRuleRequest extends Request {
             private String unFinishedTime; 
 
             /**
-             * UnFinishedTime.
+             * <p>The timeout period of the instance that is still running at a specified point in time. The time is in the hh:mm format. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30:00</p>
              */
             public Builder unFinishedTime(String unFinishedTime) {
                 this.unFinishedTime = unFinishedTime;
@@ -976,7 +1042,7 @@ public class CreateAlertRuleRequest extends Request {
             private UnFinished unFinished; 
 
             /**
-             * CycleUnfinished.
+             * <p>The alert configuration. This parameter takes effect only if the Type parameter is set to CycleUnfinished.</p>
              */
             public Builder cycleUnfinished(CycleUnfinished cycleUnfinished) {
                 this.cycleUnfinished = cycleUnfinished;
@@ -984,7 +1050,7 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * Error.
+             * <p>The alert configuration. This parameter takes effect only if the Type parameter is set to Error.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -992,7 +1058,7 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * InstanceErrorCount.
+             * <p>The alert configuration. This parameter takes effect only if the Type parameter is set to InstanceErrorCount.</p>
              */
             public Builder instanceErrorCount(InstanceErrorCount instanceErrorCount) {
                 this.instanceErrorCount = instanceErrorCount;
@@ -1000,7 +1066,7 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * InstanceErrorPercentage.
+             * <p>The alert configuration. This parameter takes effect only if the Type parameter is set to InstanceErrorPercentage.</p>
              */
             public Builder instanceErrorPercentage(InstanceErrorPercentage instanceErrorPercentage) {
                 this.instanceErrorPercentage = instanceErrorPercentage;
@@ -1008,7 +1074,7 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * InstanceTransferFluctuate.
+             * <p>The alert configuration. This parameter takes effect only if the Type parameter is set to InstanceTransferFluctuate.</p>
              */
             public Builder instanceTransferFluctuate(InstanceTransferFluctuate instanceTransferFluctuate) {
                 this.instanceTransferFluctuate = instanceTransferFluctuate;
@@ -1016,7 +1082,7 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * Timeout.
+             * <p>The alert configuration. This parameter takes effect only if the Type parameter is set to Timeout.</p>
              */
             public Builder timeout(Timeout timeout) {
                 this.timeout = timeout;
@@ -1024,7 +1090,7 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * UnFinished.
+             * <p>The alert configuration. This parameter takes effect only if the Type parameter is set to UnFinished.</p>
              */
             public Builder unFinished(UnFinished unFinished) {
                 this.unFinished = unFinished;
@@ -1095,7 +1161,7 @@ public class CreateAlertRuleRequest extends Request {
             private String type; 
 
             /**
-             * AllowTasks.
+             * <p>The whitelists of the monitoring tasks.</p>
              */
             public Builder allowTasks(java.util.List < Long > allowTasks) {
                 this.allowTasks = allowTasks;
@@ -1103,7 +1169,7 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * Ids.
+             * <p>The IDs of monitored objects.</p>
              */
             public Builder ids(java.util.List < Long > ids) {
                 this.ids = ids;
@@ -1111,7 +1177,16 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the monitored object. Valid values:</p>
+             * <ul>
+             * <li>Task: node</li>
+             * <li>Baseline: baseline</li>
+             * <li>Project: workspace</li>
+             * <li>BizProcess: workflow</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Task</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1182,7 +1257,7 @@ public class CreateAlertRuleRequest extends Request {
             private String type; 
 
             /**
-             * Extension.
+             * <p>The extended information about the rule. This parameter is required for some trigger conditions.</p>
              */
             public Builder extension(Extension extension) {
                 this.extension = extension;
@@ -1190,7 +1265,7 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * Target.
+             * <p>The monitored object.</p>
              */
             public Builder target(Target target) {
                 this.target = target;
@@ -1198,7 +1273,25 @@ public class CreateAlertRuleRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The condition for triggering the alert. Valid values:</p>
+             * <ul>
+             * <li>Finished: The system sends an alert notification when the instance is successfully run.</li>
+             * <li>UnFinished: The system sends an alert notification if the instance is still running at a specified point in time.</li>
+             * <li>Error: The system sends an alert notification if an error occurs when the instance is running.</li>
+             * <li>CycleUnfinished: The system sends an alert notification if the instance is still running at the end of a specified cycle.</li>
+             * <li>Timeout: The system sends an alert notification if the instance is still running after a specified period of time ends.</li>
+             * <li>InstanceTransferComplete: The system sends an alert notification if DataWorks generates auto triggered node instances that need to run the next day before 24:00.</li>
+             * <li>InstanceTransferFluctuate: The system sends an alert notification when the number of auto triggered node instances that are generated in your workspace significantly fluctuates, in comparison with the average number of auto triggered node instances that are historically generated in the workspace.</li>
+             * <li>ExhaustedError: The system sends an alert notification if an error persists after the instance is automatically rerun.</li>
+             * <li>InstanceKeyword: The system sends an alert notification if the instance with errors contain specified keywords.</li>
+             * <li>InstanceErrorCount: The system sends an alert notification if the number of instances on which an error occurs on the current day reaches a specified threshold.</li>
+             * <li>InstanceErrorPercentage: The system sends an alert notification if the proportion of the number of instances on which an error occurs in the workspace to the total number of instances on the current day reaches a specified threshold.</li>
+             * <li>ResourceGroupPercentage: The system sends an alert notification if the value of the ResourceGroupPercentage parameter is greater than a specific percentage for a specific period of time.</li>
+             * <li>ResourceGroupWaitCount: The system sends an alert notification if the value of the ResourceGroupWaitCount parameter is greater than a specific number for a specific period of time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Error</p>
              */
             public Builder type(String type) {
                 this.type = type;

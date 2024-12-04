@@ -26,12 +26,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AbolishDeploymentResponse> abolishDeployment(AbolishDeploymentRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>Your account must be assigned one of the following roles of the desired workspace:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * @param request the request parameters of AssociateProjectToResourceGroup  AssociateProjectToResourceGroupRequest
      * @return AssociateProjectToResourceGroupResponse
      */
     CompletableFuture<AssociateProjectToResourceGroupResponse> associateProjectToResourceGroup(AssociateProjectToResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of AttachDataQualityRulesToEvaluationTask  AttachDataQualityRulesToEvaluationTaskRequest
+     * @return AttachDataQualityRulesToEvaluationTaskResponse
+     */
+    CompletableFuture<AttachDataQualityRulesToEvaluationTaskResponse> attachDataQualityRulesToEvaluationTask(AttachDataQualityRulesToEvaluationTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * @param request the request parameters of CloneDataSource  CloneDataSourceRequest
      * @return CloneDataSourceResponse
      */
@@ -56,12 +80,54 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDIJobResponse> createDIJob(CreateDIJobRequest request);
 
     /**
+     * @param request the request parameters of CreateDataQualityEvaluationTask  CreateDataQualityEvaluationTaskRequest
+     * @return CreateDataQualityEvaluationTaskResponse
+     */
+    CompletableFuture<CreateDataQualityEvaluationTaskResponse> createDataQualityEvaluationTask(CreateDataQualityEvaluationTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataQualityEvaluationTaskInstance  CreateDataQualityEvaluationTaskInstanceRequest
+     * @return CreateDataQualityEvaluationTaskInstanceResponse
+     */
+    CompletableFuture<CreateDataQualityEvaluationTaskInstanceResponse> createDataQualityEvaluationTaskInstance(CreateDataQualityEvaluationTaskInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataQualityRule  CreateDataQualityRuleRequest
+     * @return CreateDataQualityRuleResponse
+     */
+    CompletableFuture<CreateDataQualityRuleResponse> createDataQualityRule(CreateDataQualityRuleRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataQualityRuleTemplate  CreateDataQualityRuleTemplateRequest
+     * @return CreateDataQualityRuleTemplateResponse
+     */
+    CompletableFuture<CreateDataQualityRuleTemplateResponse> createDataQualityRuleTemplate(CreateDataQualityRuleTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateDataSource  CreateDataSourceRequest
      * @return CreateDataSourceResponse
      */
     CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>If you want to share a data source from Workspace A to Workspace B, you must have the permissions to share the data source in both workspaces. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateDataSourceSharedRule  CreateDataSourceSharedRuleRequest
      * @return CreateDataSourceSharedRuleResponse
      */
@@ -90,6 +156,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFunctionResponse> createFunction(CreateFunctionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateNetwork  CreateNetworkRequest
      * @return CreateNetworkResponse
      */
@@ -130,12 +199,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateResourceResponse> createResource(CreateResourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * </ol>
+     * 
      * @param request the request parameters of CreateResourceGroup  CreateResourceGroupRequest
      * @return CreateResourceGroupResponse
      */
     CompletableFuture<CreateResourceGroupResponse> createResourceGroup(CreateResourceGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateRoute  CreateRouteRequest
      * @return CreateRouteResponse
      */
@@ -171,12 +249,48 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDIJobResponse> deleteDIJob(DeleteDIJobRequest request);
 
     /**
+     * @param request the request parameters of DeleteDataQualityEvaluationTask  DeleteDataQualityEvaluationTaskRequest
+     * @return DeleteDataQualityEvaluationTaskResponse
+     */
+    CompletableFuture<DeleteDataQualityEvaluationTaskResponse> deleteDataQualityEvaluationTask(DeleteDataQualityEvaluationTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataQualityRule  DeleteDataQualityRuleRequest
+     * @return DeleteDataQualityRuleResponse
+     */
+    CompletableFuture<DeleteDataQualityRuleResponse> deleteDataQualityRule(DeleteDataQualityRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataQualityRuleTemplate  DeleteDataQualityRuleTemplateRequest
+     * @return DeleteDataQualityRuleTemplateResponse
+     */
+    CompletableFuture<DeleteDataQualityRuleTemplateResponse> deleteDataQualityRuleTemplate(DeleteDataQualityRuleTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all Dataworks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteDataSource  DeleteDataSourceRequest
      * @return DeleteDataSourceResponse
      */
     CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>If you want to delete a sharing rule of a data source from Workspace A to Workspace B, you must have the permissions to share the data source in Workspace A or Workspace B. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteDataSourceSharedRule  DeleteDataSourceSharedRuleRequest
      * @return DeleteDataSourceSharedRuleResponse
      */
@@ -194,6 +308,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFunctionResponse> deleteFunction(DeleteFunctionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of DeleteNetwork  DeleteNetworkRequest
      * @return DeleteNetworkResponse
      */
@@ -234,18 +351,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteResourceResponse> deleteResource(DeleteResourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * </ol>
+     * 
      * @param request the request parameters of DeleteResourceGroup  DeleteResourceGroupRequest
      * @return DeleteResourceGroupResponse
      */
     CompletableFuture<DeleteResourceGroupResponse> deleteResourceGroup(DeleteResourceGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of DeleteRoute  DeleteRouteRequest
      * @return DeleteRouteResponse
      */
     CompletableFuture<DeleteRouteResponse> deleteRoute(DeleteRouteRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of DeleteTask  DeleteTaskRequest
      * @return DeleteTaskResponse
      */
@@ -263,6 +392,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWorkflowDefinitionResponse> deleteWorkflowDefinition(DeleteWorkflowDefinitionRequest request);
 
     /**
+     * @param request the request parameters of DetachDataQualityRulesFromEvaluationTask  DetachDataQualityRulesFromEvaluationTaskRequest
+     * @return DetachDataQualityRulesFromEvaluationTaskResponse
+     */
+    CompletableFuture<DetachDataQualityRulesFromEvaluationTaskResponse> detachDataQualityRulesFromEvaluationTask(DetachDataQualityRulesFromEvaluationTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
+     * <li>Your account must be assigned one of the following roles of the desired workspace:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * @param request the request parameters of DissociateProjectFromResourceGroup  DissociateProjectFromResourceGroupRequest
      * @return DissociateProjectFromResourceGroupResponse
      */
@@ -299,8 +443,41 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDIJobLogResponse> getDIJobLog(GetDIJobLogRequest request);
 
     /**
+     * @param request the request parameters of GetDataQualityEvaluationTask  GetDataQualityEvaluationTaskRequest
+     * @return GetDataQualityEvaluationTaskResponse
+     */
+    CompletableFuture<GetDataQualityEvaluationTaskResponse> getDataQualityEvaluationTask(GetDataQualityEvaluationTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetDataQualityEvaluationTaskInstance  GetDataQualityEvaluationTaskInstanceRequest
+     * @return GetDataQualityEvaluationTaskInstanceResponse
+     */
+    CompletableFuture<GetDataQualityEvaluationTaskInstanceResponse> getDataQualityEvaluationTaskInstance(GetDataQualityEvaluationTaskInstanceRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * @param request the request parameters of GetDataQualityRule  GetDataQualityRuleRequest
+     * @return GetDataQualityRuleResponse
+     */
+    CompletableFuture<GetDataQualityRuleResponse> getDataQualityRule(GetDataQualityRuleRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * @param request the request parameters of GetDataQualityRuleTemplate  GetDataQualityRuleTemplateRequest
+     * @return GetDataQualityRuleTemplateResponse
+     */
+    CompletableFuture<GetDataQualityRuleTemplateResponse> getDataQualityRuleTemplate(GetDataQualityRuleTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</li>
      * </ul>
@@ -329,6 +506,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobStatusResponse> getJobStatus(GetJobStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetNetwork  GetNetworkRequest
      * @return GetNetworkResponse
      */
@@ -365,12 +545,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceResponse> getResource(GetResourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</p>
+     * 
      * @param request the request parameters of GetResourceGroup  GetResourceGroupRequest
      * @return GetResourceGroupResponse
      */
     CompletableFuture<GetResourceGroupResponse> getResourceGroup(GetResourceGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetRoute  GetRouteRequest
      * @return GetRouteResponse
      */
@@ -389,6 +575,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTaskInstanceResponse> getTaskInstance(GetTaskInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetTaskInstanceLog  GetTaskInstanceLogRequest
      * @return GetTaskInstanceLogResponse
      */
@@ -407,6 +596,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GrantMemberProjectRolesResponse> grantMemberProjectRoles(GrantMemberProjectRolesRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You cannot use this API operation to import multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system imports only the first specified workflow.
+     *  ImportWorkflowDefinition is an asynchronous operation. After you send a request, an asynchronous task is generated, and the system returns the ID of the asynchronous task. You can call the GetJobStatus operation to query the status of the asynchronous task.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ImportWorkflowDefinition  ImportWorkflowDefinitionRequest
      * @return ImportWorkflowDefinitionResponse
      */
@@ -449,36 +644,69 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDIJobsResponse> listDIJobs(ListDIJobsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityEvaluationTaskInstances  ListDataQualityEvaluationTaskInstancesRequest
      * @return ListDataQualityEvaluationTaskInstancesResponse
      */
     CompletableFuture<ListDataQualityEvaluationTaskInstancesResponse> listDataQualityEvaluationTaskInstances(ListDataQualityEvaluationTaskInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityEvaluationTasks  ListDataQualityEvaluationTasksRequest
      * @return ListDataQualityEvaluationTasksResponse
      */
     CompletableFuture<ListDataQualityEvaluationTasksResponse> listDataQualityEvaluationTasks(ListDataQualityEvaluationTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityResults  ListDataQualityResultsRequest
      * @return ListDataQualityResultsResponse
      */
     CompletableFuture<ListDataQualityResultsResponse> listDataQualityResults(ListDataQualityResultsRequest request);
 
     /**
+     * @param request the request parameters of ListDataQualityRuleTemplate  ListDataQualityRuleTemplateRequest
+     * @return ListDataQualityRuleTemplateResponse
+     */
+    CompletableFuture<ListDataQualityRuleTemplateResponse> listDataQualityRuleTemplate(ListDataQualityRuleTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDataQualityRules  ListDataQualityRulesRequest
      * @return ListDataQualityRulesResponse
      */
     CompletableFuture<ListDataQualityRulesResponse> listDataQualityRules(ListDataQualityRulesRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>If you want to query the sharing rules of a data source that is associated with Workspace A, you must have the permissions to share the data source in Workspace A. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListDataSourceSharedRules  ListDataSourceSharedRulesRequest
      * @return ListDataSourceSharedRulesResponse
      */
     CompletableFuture<ListDataSourceSharedRulesResponse> listDataSourceSharedRules(ListDataSourceSharedRulesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListDataSources  ListDataSourcesRequest
      * @return ListDataSourcesResponse
      */
@@ -509,6 +737,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListNetworks  ListNetworksRequest
      * @return ListNetworksResponse
      */
@@ -557,12 +788,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListResourcesResponse> listResources(ListResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListRoutes  ListRoutesRequest
      * @return ListRoutesResponse
      */
     CompletableFuture<ListRoutesResponse> listRoutes(ListRoutesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.
+     * You can call this operation to query only the operation logs generated within the previous 31 days.</p>
+     * 
      * @param request the request parameters of ListTaskInstanceOperationLogs  ListTaskInstanceOperationLogsRequest
      * @return ListTaskInstanceOperationLogsResponse
      */
@@ -575,6 +813,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTaskInstancesResponse> listTaskInstances(ListTaskInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.
+     * You can call this operation to query only the operation logs generated within the previous 31 days.</p>
+     * 
      * @param request the request parameters of ListTaskOperationLogs  ListTaskOperationLogsRequest
      * @return ListTaskOperationLogsResponse
      */
@@ -629,6 +871,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MoveWorkflowDefinitionResponse> moveWorkflowDefinition(MoveWorkflowDefinitionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of RemoveTaskInstanceDependencies  RemoveTaskInstanceDependenciesRequest
      * @return RemoveTaskInstanceDependenciesResponse
      */
@@ -659,12 +904,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenameWorkflowDefinitionResponse> renameWorkflowDefinition(RenameWorkflowDefinitionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of RerunTaskInstances  RerunTaskInstancesRequest
      * @return RerunTaskInstancesResponse
      */
     CompletableFuture<RerunTaskInstancesResponse> rerunTaskInstances(RerunTaskInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ResumeTaskInstances  ResumeTaskInstancesRequest
      * @return ResumeTaskInstancesResponse
      */
@@ -677,6 +928,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeMemberProjectRolesResponse> revokeMemberProjectRoles(RevokeMemberProjectRolesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of SetSuccessTaskInstances  SetSuccessTaskInstancesRequest
      * @return SetSuccessTaskInstancesResponse
      */
@@ -695,18 +949,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopDIJobResponse> stopDIJob(StopDIJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of StopTaskInstances  StopTaskInstancesRequest
      * @return StopTaskInstancesResponse
      */
     CompletableFuture<StopTaskInstancesResponse> stopTaskInstances(StopTaskInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of SuspendTaskInstances  SuspendTaskInstancesRequest
      * @return SuspendTaskInstancesResponse
      */
     CompletableFuture<SuspendTaskInstancesResponse> suspendTaskInstances(SuspendTaskInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of TriggerSchedulerTaskInstance  TriggerSchedulerTaskInstanceRequest
      * @return TriggerSchedulerTaskInstanceResponse
      */
@@ -731,6 +994,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDIJobResponse> updateDIJob(UpdateDIJobRequest request);
 
     /**
+     * @param request the request parameters of UpdateDataQualityEvaluationTask  UpdateDataQualityEvaluationTaskRequest
+     * @return UpdateDataQualityEvaluationTaskResponse
+     */
+    CompletableFuture<UpdateDataQualityEvaluationTaskResponse> updateDataQualityEvaluationTask(UpdateDataQualityEvaluationTaskRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataQualityRule  UpdateDataQualityRuleRequest
+     * @return UpdateDataQualityRuleResponse
+     */
+    CompletableFuture<UpdateDataQualityRuleResponse> updateDataQualityRule(UpdateDataQualityRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataQualityRuleTemplate  UpdateDataQualityRuleTemplateRequest
+     * @return UpdateDataQualityRuleTemplateResponse
+     */
+    CompletableFuture<UpdateDataQualityRuleTemplateResponse> updateDataQualityRuleTemplate(UpdateDataQualityRuleTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateDataSource  UpdateDataSourceRequest
      * @return UpdateDataSourceResponse
      */
@@ -761,18 +1051,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateResourceResponse> updateResource(UpdateResourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</p>
+     * 
      * @param request the request parameters of UpdateResourceGroup  UpdateResourceGroupRequest
      * @return UpdateResourceGroupResponse
      */
     CompletableFuture<UpdateResourceGroupResponse> updateResourceGroup(UpdateResourceGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of UpdateRoute  UpdateRouteRequest
      * @return UpdateRouteResponse
      */
     CompletableFuture<UpdateRouteResponse> updateRoute(UpdateRouteRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of UpdateTaskInstances  UpdateTaskInstancesRequest
      * @return UpdateTaskInstancesResponse
      */

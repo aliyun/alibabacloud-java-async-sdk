@@ -50,7 +50,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BE1433F-6D55-5D86-9344-CA6F7DD19B13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -200,7 +203,18 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private String qualifiedName; 
 
             /**
-             * ConnectionProperties.
+             * <p>The connection properties of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;envType&quot;: &quot;Prod&quot;,
+             *     &quot;regionId&quot;: &quot;cn-beijing&quot;,
+             *     &quot;instanceId&quot;: &quot;hgprecn-cn-x0r3oun4k001&quot;,
+             *     &quot;database&quot;: &quot;testdb&quot;,
+             *     &quot;securityProtocol&quot;: &quot;authTypeNone&quot;,
+             *     &quot;authType&quot;: &quot;Executor&quot;,
+             *     &quot;authIdentity&quot;: &quot;1107550004253538&quot;
+             * }</p>
              */
             public Builder connectionProperties(Object connectionProperties) {
                 this.connectionProperties = connectionProperties;
@@ -208,7 +222,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionPropertiesMode.
+             * <p>The mode in which the data source is added. The mode varies based on the data source type. Valid values: InstanceMode, UrlMode, and CdhMode. The value InstanceMode indicates the instance mode. The value UrlMode indicates the connection string mode. The value CdhMode indicates the CDH cluster mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UrlMode</p>
              */
             public Builder connectionPropertiesMode(String connectionPropertiesMode) {
                 this.connectionPropertiesMode = connectionPropertiesMode;
@@ -216,7 +233,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the data source was added. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648711113000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -224,7 +244,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the user who adds the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624387842781448</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -232,7 +255,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -240,7 +266,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16035</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -248,7 +277,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the data source was last modified. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648711113000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -256,7 +288,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The ID of the user who modifies the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624387842781448</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -264,7 +299,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * QualifiedName.
+             * <p>The unique business key of the data source. For example, the unique business key of a Hologres data source is in the ${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database} format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648711121000:cn-beijing:odps:yongxunQA_beijing_standard</p>
              */
             public Builder qualifiedName(String qualifiedName) {
                 this.qualifiedName = qualifiedName;
@@ -343,7 +381,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -351,7 +392,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -442,7 +486,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -450,7 +497,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -458,7 +508,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

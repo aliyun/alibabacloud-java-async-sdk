@@ -106,7 +106,10 @@ public class RemoveTaskInstanceDependenciesRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -115,6 +118,7 @@ public class RemoveTaskInstanceDependenciesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +131,7 @@ public class RemoveTaskInstanceDependenciesRequest extends Request {
         }
 
         /**
-         * UpstreamTaskInstanceIds.
+         * <p>The IDs of ancestor instances of the instance</p>
          */
         public Builder upstreamTaskInstanceIds(java.util.List < Long > upstreamTaskInstanceIds) {
             String upstreamTaskInstanceIdsShrink = shrink(upstreamTaskInstanceIds, "UpstreamTaskInstanceIds", "json");

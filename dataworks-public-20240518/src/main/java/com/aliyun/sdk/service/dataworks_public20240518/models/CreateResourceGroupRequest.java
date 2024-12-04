@@ -280,7 +280,10 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * Spec.
+         * <p>The specifications of the resource group. Unit: compute unit (CU). This parameter is required only when you set the PaymentType parameter to PrePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder spec(Integer spec) {
             this.putBodyParameter("Spec", spec);

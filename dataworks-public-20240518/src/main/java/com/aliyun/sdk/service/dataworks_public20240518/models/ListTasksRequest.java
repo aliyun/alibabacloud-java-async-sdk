@@ -232,7 +232,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the task. Fuzzy match is supported.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -241,7 +241,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The account ID of the task owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -250,7 +253,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -259,7 +265,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -268,7 +277,15 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * <p>The environment of the workspace.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -277,6 +294,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +307,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * RuntimeResource.
+         * <p>The information about the resource group. Set this parameter to the ID of a resource group for scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
          */
         public Builder runtimeResource(String runtimeResource) {
             this.putBodyParameter("RuntimeResource", runtimeResource);
@@ -298,7 +319,19 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field that is used to sort tasks. This parameter is configured in the format of &quot;Sorting field Sorting order&quot;. You can set the sorting order to Desc or Asc. If you do not specify the sorting order, Asc is used by default. Valid values:</p>
+         * <ul>
+         * <li><p><code>ModifyTime (Desc/Asc)</code></p>
+         * </li>
+         * <li><p><code>CreateTime (Desc/Asc)</code></p>
+         * </li>
+         * <li><p><code>Id (Desc/Asc)</code></p>
+         * <p>Default value: <code>Id Desc</code>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Id Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);
@@ -307,7 +340,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         public Builder taskType(String taskType) {
             this.putBodyParameter("TaskType", taskType);
@@ -316,7 +352,16 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * TriggerRecurrence.
+         * <p>The running mode of the task after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Pause</li>
+         * <li>Skip</li>
+         * <li>Normal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder triggerRecurrence(String triggerRecurrence) {
             this.putBodyParameter("TriggerRecurrence", triggerRecurrence);
@@ -325,7 +370,15 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * TriggerType.
+         * <p>The trigger type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Scheduler: scheduling cycle-based trigger</li>
+         * <li>Manual: manual trigger</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduler</p>
          */
         public Builder triggerType(String triggerType) {
             this.putBodyParameter("TriggerType", triggerType);
@@ -334,7 +387,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>The ID of the workflow to which the task belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workflowId(Long workflowId) {
             this.putBodyParameter("WorkflowId", workflowId);

@@ -162,6 +162,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the synchronization task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +175,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the synchronization task.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -183,7 +184,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * JobSettings.
+         * <p>The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</p>
          */
         public Builder jobSettings(JobSettings jobSettings) {
             String jobSettingsShrink = shrink(jobSettings, "JobSettings", "json");
@@ -193,7 +194,10 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>DataWorks工作空间ID。您可以通过<a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a>接口获取工作空间ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -202,7 +206,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * ResourceSettings.
+         * <p>The resource settings.</p>
          */
         public Builder resourceSettings(ResourceSettings resourceSettings) {
             String resourceSettingsShrink = shrink(resourceSettings, "ResourceSettings", "json");
@@ -212,7 +216,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * TableMappings.
+         * <p>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</p>
          */
         public Builder tableMappings(java.util.List < TableMappings> tableMappings) {
             String tableMappingsShrink = shrink(tableMappings, "TableMappings", "json");
@@ -222,7 +226,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * TransformationRules.
+         * <p>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</p>
          */
         public Builder transformationRules(java.util.List < TransformationRules> transformationRules) {
             String transformationRulesShrink = shrink(transformationRules, "TransformationRules", "json");
@@ -283,7 +287,10 @@ public class UpdateDIJobRequest extends Request {
             private String sourceDataType; 
 
             /**
-             * DestinationDataType.
+             * <p>The data type of the destination field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder destinationDataType(String destinationDataType) {
                 this.destinationDataType = destinationDataType;
@@ -291,7 +298,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * SourceDataType.
+             * <p>The data type of the source field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder sourceDataType(String sourceDataType) {
                 this.sourceDataType = sourceDataType;
@@ -338,7 +348,10 @@ public class UpdateDIJobRequest extends Request {
             private String scheduleParameters; 
 
             /**
-             * ScheduleParameters.
+             * <p>The scheduling parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bizdate=$bizdate</p>
              */
             public Builder scheduleParameters(String scheduleParameters) {
                 this.scheduleParameters = scheduleParameters;
@@ -397,7 +410,15 @@ public class UpdateDIJobRequest extends Request {
             private String type; 
 
             /**
-             * Action.
+             * <p>The processing policy. Valid values:</p>
+             * <ul>
+             * <li>Ignore: ignores a DDL message.</li>
+             * <li>Critical: reports an error for a DDL message.</li>
+             * <li>Normal: normally processes a DDL message.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Critical</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -405,7 +426,19 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the DDL operation. Valid values:</p>
+             * <ul>
+             * <li>RenameColumn</li>
+             * <li>ModifyColumn</li>
+             * <li>CreateTable</li>
+             * <li>TruncateTable</li>
+             * <li>DropTable</li>
+             * <li>DropColumn</li>
+             * <li>AddColumn</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AddColumn</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -464,7 +497,20 @@ public class UpdateDIJobRequest extends Request {
             private String value; 
 
             /**
-             * Name.
+             * <p>The name of the configuration item. Valid values:</p>
+             * <ul>
+             * <li>runtime.offline.speed.limit.mb: indicates the maximum transmission rate that is allowed for a batch synchronization task. This configuration item takes effect only when runtime.offline.speed.limit.enable is set to true.</li>
+             * <li>runtime.offline.speed.limit.enable: indicates whether throttling is enabled for a batch synchronization task.</li>
+             * <li>dst.offline.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a batch synchronization task.</li>
+             * <li>runtime.offline.concurrent: indicates the maximum number of parallel threads that are allowed for a batch synchronization task.</li>
+             * <li>dst.realtime.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a real-time synchronization task.</li>
+             * <li>runtime.enable.auto.create.schema: indicates whether schemas are automatically created in the destination of a synchronization task.</li>
+             * <li>src.offline.datasource.max.connection: indicates the maximum number of connections that are allowed for reading data from the source of a batch synchronization task.</li>
+             * <li>runtime.realtime.concurrent: indicates the maximum number of parallel threads that are allowed for a real-time synchronization task.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>runtime.offline.concurrent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -472,7 +518,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -567,7 +616,10 @@ public class UpdateDIJobRequest extends Request {
             private java.util.List < RuntimeSettings> runtimeSettings; 
 
             /**
-             * ChannelSettings.
+             * <p>The channel control settings for the synchronization task. The value of this parameter must be a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;structInfo&quot;:&quot;MANAGED&quot;,&quot;storageType&quot;:&quot;TEXTFILE&quot;,&quot;writeMode&quot;:&quot;APPEND&quot;,&quot;partitionColumns&quot;:[{&quot;columnName&quot;:&quot;pt&quot;,&quot;columnType&quot;:&quot;STRING&quot;,&quot;comment&quot;:&quot;&quot;}],&quot;fieldDelimiter&quot;:&quot;&quot;}</p>
              */
             public Builder channelSettings(String channelSettings) {
                 this.channelSettings = channelSettings;
@@ -575,7 +627,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ColumnDataTypeSettings.
+             * <p>The data type mappings between source fields and destination fields.</p>
              */
             public Builder columnDataTypeSettings(java.util.List < ColumnDataTypeSettings> columnDataTypeSettings) {
                 this.columnDataTypeSettings = columnDataTypeSettings;
@@ -583,7 +635,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * CycleScheduleSettings.
+             * <p>The settings for periodic scheduling.</p>
              */
             public Builder cycleScheduleSettings(CycleScheduleSettings cycleScheduleSettings) {
                 this.cycleScheduleSettings = cycleScheduleSettings;
@@ -591,7 +643,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * DdlHandlingSettings.
+             * <p>The processing settings for DDL messages.</p>
              */
             public Builder ddlHandlingSettings(java.util.List < DdlHandlingSettings> ddlHandlingSettings) {
                 this.ddlHandlingSettings = ddlHandlingSettings;
@@ -599,7 +651,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuntimeSettings.
+             * <p>The runtime settings.</p>
              */
             public Builder runtimeSettings(java.util.List < RuntimeSettings> runtimeSettings) {
                 this.runtimeSettings = runtimeSettings;
@@ -658,7 +710,10 @@ public class UpdateDIJobRequest extends Request {
             private String resourceGroupIdentifier; 
 
             /**
-             * RequestedCu.
+             * <p>The number of compute units (CUs) in the resource group for Data Integration that are used for batch synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder requestedCu(Long requestedCu) {
                 this.requestedCu = requestedCu;
@@ -666,7 +721,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ResourceGroupIdentifier.
+             * <p>The identifier of the resource group for Data Integration used for batch synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_111_222</p>
              */
             public Builder resourceGroupIdentifier(String resourceGroupIdentifier) {
                 this.resourceGroupIdentifier = resourceGroupIdentifier;
@@ -725,7 +783,10 @@ public class UpdateDIJobRequest extends Request {
             private String resourceGroupIdentifier; 
 
             /**
-             * RequestedCu.
+             * <p>The number of CUs in the resource group for Data Integration that are used for real-time synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder requestedCu(Long requestedCu) {
                 this.requestedCu = requestedCu;
@@ -733,7 +794,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ResourceGroupIdentifier.
+             * <p>The identifier of the resource group for Data Integration used for real-time synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_111_222</p>
              */
             public Builder resourceGroupIdentifier(String resourceGroupIdentifier) {
                 this.resourceGroupIdentifier = resourceGroupIdentifier;
@@ -792,7 +856,10 @@ public class UpdateDIJobRequest extends Request {
             private String resourceGroupIdentifier; 
 
             /**
-             * RequestedCu.
+             * <p>The number of CUs in the resource group for scheduling that are used for batch synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder requestedCu(Long requestedCu) {
                 this.requestedCu = requestedCu;
@@ -800,7 +867,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ResourceGroupIdentifier.
+             * <p>The identifier of the resource group for scheduling used for batch synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_235454102432001_1721021993437</p>
              */
             public Builder resourceGroupIdentifier(String resourceGroupIdentifier) {
                 this.resourceGroupIdentifier = resourceGroupIdentifier;
@@ -871,7 +941,7 @@ public class UpdateDIJobRequest extends Request {
             private ScheduleResourceSettings scheduleResourceSettings; 
 
             /**
-             * OfflineResourceSettings.
+             * <p>The resource used for batch synchronization.</p>
              */
             public Builder offlineResourceSettings(OfflineResourceSettings offlineResourceSettings) {
                 this.offlineResourceSettings = offlineResourceSettings;
@@ -879,7 +949,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RealtimeResourceSettings.
+             * <p>The resource used for real-time synchronization.</p>
              */
             public Builder realtimeResourceSettings(RealtimeResourceSettings realtimeResourceSettings) {
                 this.realtimeResourceSettings = realtimeResourceSettings;
@@ -887,7 +957,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ScheduleResourceSettings.
+             * <p>The resource used for scheduling.</p>
              */
             public Builder scheduleResourceSettings(ScheduleResourceSettings scheduleResourceSettings) {
                 this.scheduleResourceSettings = scheduleResourceSettings;
@@ -970,7 +1040,10 @@ public class UpdateDIJobRequest extends Request {
             private String objectType; 
 
             /**
-             * Action.
+             * <p>The operation that is performed to select objects. Valid values: Include and Exclude.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Include</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -978,7 +1051,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * Expression.
+             * <p>The expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_table_1</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -986,7 +1062,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ExpressionType.
+             * <p>The expression type. Valid values: Exact and Regex.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exact</p>
              */
             public Builder expressionType(String expressionType) {
                 this.expressionType = expressionType;
@@ -994,7 +1073,14 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * ObjectType.
+             * <p>The object type. Valid values:</p>
+             * <ul>
+             * <li>Table</li>
+             * <li>Database</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -1065,7 +1151,16 @@ public class UpdateDIJobRequest extends Request {
             private String ruleTargetType; 
 
             /**
-             * RuleActionType.
+             * <p>The action type. Valid values:</p>
+             * <ul>
+             * <li>DefinePrimaryKey</li>
+             * <li>Rename</li>
+             * <li>AddColumn</li>
+             * <li>HandleDml</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Rename</p>
              */
             public Builder ruleActionType(String ruleActionType) {
                 this.ruleActionType = ruleActionType;
@@ -1073,7 +1168,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the rule. If the values of the RuleActionType parameter and the RuleTargetType parameter are the same for multiple transformation rules, you must make sure that the transformation rule names are unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rename_rule_1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1081,7 +1179,14 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuleTargetType.
+             * <p>The type of the object on which you want to perform the action. Valid values:</p>
+             * <ul>
+             * <li>Table</li>
+             * <li>Schema</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder ruleTargetType(String ruleTargetType) {
                 this.ruleTargetType = ruleTargetType;
@@ -1140,7 +1245,7 @@ public class UpdateDIJobRequest extends Request {
             private java.util.List < TableMappingsTransformationRules> transformationRules; 
 
             /**
-             * SourceObjectSelectionRules.
+             * <p>The list of rules used to select synchronization objects in the source. The objects can be databases or tables.</p>
              */
             public Builder sourceObjectSelectionRules(java.util.List < SourceObjectSelectionRules> sourceObjectSelectionRules) {
                 this.sourceObjectSelectionRules = sourceObjectSelectionRules;
@@ -1148,7 +1253,7 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * TransformationRules.
+             * <p>The list of transformation rules that you want to apply to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</p>
              */
             public Builder transformationRules(java.util.List < TableMappingsTransformationRules> transformationRules) {
                 this.transformationRules = transformationRules;
@@ -1231,7 +1336,16 @@ public class UpdateDIJobRequest extends Request {
             private String ruleTargetType; 
 
             /**
-             * RuleActionType.
+             * <p>The action type. Valid values:</p>
+             * <ul>
+             * <li>DefinePrimaryKey</li>
+             * <li>Rename</li>
+             * <li>AddColumn</li>
+             * <li>HandleDml</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Rename</p>
              */
             public Builder ruleActionType(String ruleActionType) {
                 this.ruleActionType = ruleActionType;
@@ -1239,7 +1353,15 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuleExpression.
+             * <p>The expression of the rule. The expression must be a JSON string.</p>
+             * <p>Example of a renaming rule: {&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;,&quot;variables&quot;:[{&quot;variableName&quot;:&quot;srcDatabaseName&quot;,&quot;variableRules&quot;:[{&quot;from&quot;:&quot;fromdb&quot;,&quot;to&quot;:&quot;todb&quot;}]}]}.</p>
+             * <p>expression: the expression of the renaming rule. The expression may contain the following variables: ${srcDatasourceName}, ${srcDatabaseName}, and ${srcTableName}. ${srcDatasourceName} indicates the name of the source. ${srcDatabaseName} indicates the name of a source database. ${srcTableName} indicates the name of a source table. variables: the generation rule for a variable used in the expression of the renaming rule. The default value of the specified variable is the original value of the object indicated by the variable. You can define a group of string replacement rules to change the original values based on your business requirements. variableName: the name of the variable. The variable name cannot be enclosed in ${}. variableRules: the string replacement rules for variables. The system runs the string replacement rules in sequence. from specifies the original string. to specifies the new string. Example of a rule used to add a specific field to the destination and assign a value to the field: {&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}.</p>
+             * <p>If you do not configure such a rule, no fields are added to the destination and no values are assigned by default. columnName: the name of the field that you want to add. columnValueType: the value type of the field. Valid values: Constant and Variable. columnValue: the value of the field. If you set the valueType parameter to Constant, set the columnValue parameter to a custom constant of the STRING type. If you set the valueType parameter to Variable, set the columnValue to a built-in variable. The following built-in variables are supported: EXECUTE_TIME (LONG data type), DB_NAME_SRC (STRING data type), DATASOURCE_NAME_SRC (STRING data type), TABLE_NAME_SRC (STRING data type), DB_NAME_DEST (STRING data type), DATASOURCE_NAME_DEST (STRING data type), TABLE_NAME_DEST (STRING data type), and DB_NAME_SRC_TRANSED (STRING data type). EXECUTE_TIME specifies the execution time. DB_NAME_SRC indicates the name of a source database. DATASOURCE_NAME_SRC specifies the name of the source. TABLE_NAME_SRC specifies the name of a source table. DB_NAME_DEST specifies the name of a destination database. DATASOURCE_NAME_DEST specifies the name of the destination. TABLE_NAME_DEST specifies the name of a destination table. DB_NAME_SRC_TRANSED specifies the database name obtained after a transformation. Example of a rule used to specify primary key fields for a destination table: {&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}.</p>
+             * <p>If you do not configure such a rule, the primary key fields in the mapped source table are used for the destination table by default. If the destination table is an existing table, Data Integration does not modify the schema of the destination table. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. If the destination table is automatically created by the system, Data Integration automatically creates the schema of the destination table. The schema contains the primary key fields that you specify. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. Example of a rule used to process DML messages: {&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}.</p>
+             * <p>If you do not configure such a rule, the default processing policy for messages generated for insert, update, and delete operations is Normal. dmlType: the DML operation. Valid values: Insert, Update, and Delete. dmlAction: the processing policy for DML messages. Valid values: Normal, Ignore, Filter, and LogicalDelete. Filter indicates conditional processing. You can set the dmlAction parameter to Filter only when the dmlType parameter is set to Update or Delete. filterCondition: the condition used to filter DML messages. This parameter is required only when the dmlAction parameter is set to Filter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}</p>
              */
             public Builder ruleExpression(String ruleExpression) {
                 this.ruleExpression = ruleExpression;
@@ -1247,7 +1369,10 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the rule. If the values of the RuleActionType parameter and the RuleTargetType parameter are the same for multiple transformation rules, you must make sure that the transformation rule names are unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rename_rule_1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1255,7 +1380,14 @@ public class UpdateDIJobRequest extends Request {
             }
 
             /**
-             * RuleTargetType.
+             * <p>The type of the object on which you want to perform the action. Valid values:</p>
+             * <ul>
+             * <li>Table</li>
+             * <li>Schema</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder ruleTargetType(String ruleTargetType) {
                 this.ruleTargetType = ruleTargetType;

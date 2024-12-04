@@ -50,7 +50,7 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>645F6D68-9C29-5961-80B1-BDD4B794C22D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +251,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Action.
+             * <p>The processing result of the DDL event. Valid values: Critical, Ignore, Normal, and Warning.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ignore</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -256,7 +262,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * <p>The alert notification method. Valid values: Phone, Mail, Sms, Ding, and Webhook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Phone</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -264,7 +273,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the event was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663573162</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -272,7 +284,7 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The alert details.</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -280,7 +292,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DstSql.
+             * <p>The DDL statement of the destination table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alter table table2 ***</p>
              */
             public Builder dstSql(String dstSql) {
                 this.dstSql = dstSql;
@@ -288,7 +303,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DstTable.
+             * <p>The name of the destination table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table2</p>
              */
             public Builder dstTable(String dstTable) {
                 this.dstTable = dstTable;
@@ -296,7 +314,12 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FailoverMessage.
+             * <p>The error logs for failovers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-29 15:11:31,377 [main] INFO com.<em>.<strong>.di.core.metrics.:21 []  {</strong></em><em>} 
+             * 2024-05-29 15:11:31,384 [main] INFO <em>.aliyun.</em>.di.</em>.<em>.metrics.</em>:27 [] - Open MarioDiReporter 
+             * 2024-05-29 15:11:33,248 [flink-akka.<em>.</em>-dispatcher-17] INFO</p>
              */
             public Builder failoverMessage(String failoverMessage) {
                 this.failoverMessage = failoverMessage;
@@ -304,7 +327,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -312,7 +338,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * <p>The severity level of the alert. Valid values: Warning and Critical.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Warning</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -320,7 +349,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SrcSql.
+             * <p>The DDL statement of the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alter table table1 ***</p>
              */
             public Builder srcSql(String srcSql) {
                 this.srcSql = srcSql;
@@ -328,7 +360,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SrcTable.
+             * <p>The name of the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table1</p>
              */
             public Builder srcTable(String srcTable) {
                 this.srcTable = srcTable;
@@ -336,7 +371,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The sending status of an alert notification. Valid values: Success, Fail, and Silence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -344,7 +382,17 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the alert event.</p>
+             * <ul>
+             * <li>Heartbeat</li>
+             * <li>Delay</li>
+             * <li>FailoverCount</li>
+             * <li>DdlReport</li>
+             * <li>ResourceUtilization</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Delay</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -427,7 +475,7 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * DIJobEvent.
+             * <p>The events returned. The value of this parameter is an array.</p>
              */
             public Builder DIJobEvent(java.util.List < DIJobEvent> DIJobEvent) {
                 this.DIJobEvent = DIJobEvent;
@@ -435,7 +483,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -443,7 +494,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -451,7 +505,10 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2524</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

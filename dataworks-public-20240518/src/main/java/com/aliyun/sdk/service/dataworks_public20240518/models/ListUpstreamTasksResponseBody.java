@@ -50,7 +50,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -104,7 +107,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -175,7 +181,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * Cu.
+             * <p>The default number of compute units (CUs) configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -183,7 +192,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The ID of the image configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -191,7 +203,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group for scheduling configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -298,7 +313,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Cron.
+             * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -306,7 +324,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999-01-01 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -314,7 +335,16 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Recurrence.
+             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Pause</li>
+             * <li>Skip</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder recurrence(String recurrence) {
                 this.recurrence = recurrence;
@@ -322,7 +352,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -330,7 +363,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Timezone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -338,7 +374,15 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The trigger type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Scheduler: scheduling cycle-based trigger</li>
+             * <li>Manual: manual trigger</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -661,7 +705,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * BaselineId.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -669,7 +716,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -677,7 +727,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The account ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -685,7 +738,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DataSource.
+             * <p>The information about the associated data source.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -693,7 +746,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -701,7 +757,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -717,7 +776,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -725,7 +787,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The account ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -733,7 +798,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the task.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -741,7 +806,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the task owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -749,7 +817,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -757,7 +828,15 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectEnv.
+             * <p>The environment of the workspace.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment</li>
+             * <li>Dev: development environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder projectEnv(String projectEnv) {
                 this.projectEnv = projectEnv;
@@ -765,7 +844,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -773,7 +855,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RerunInterval.
+             * <p>The rerun interval. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder rerunInterval(Integer rerunInterval) {
                 this.rerunInterval = rerunInterval;
@@ -781,7 +866,16 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RerunMode.
+             * <p>The rerun mode.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AllDenied: The task cannot be rerun regardless of whether it is successfully run or fails to run.</li>
+             * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+             * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AllAllowed</p>
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -789,7 +883,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RerunTimes.
+             * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder rerunTimes(Integer rerunTimes) {
                 this.rerunTimes = rerunTimes;
@@ -797,7 +894,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RuntimeResource.
+             * <p>The configurations of the runtime environment, such as the resource group information.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -813,7 +910,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -821,7 +921,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period of task running. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -829,7 +932,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Trigger.
+             * <p>The method to trigger task scheduling.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;
@@ -837,7 +940,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -845,7 +951,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The ID of the workflow to which the task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -928,7 +1037,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -936,7 +1048,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -944,7 +1059,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Tasks.
+             * <p>The tasks.</p>
              */
             public Builder tasks(java.util.List < Tasks> tasks) {
                 this.tasks = tasks;
@@ -952,7 +1067,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

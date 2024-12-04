@@ -50,7 +50,7 @@ public class GetJobStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobStatus.
+         * <p>The real-time status information of the asynchronous task.</p>
          */
         public Builder jobStatus(JobStatus jobStatus) {
             this.jobStatus = jobStatus;
@@ -58,7 +58,10 @@ public class GetJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E2BFE96-C0E0-5A98-85C8-633EC803198D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +167,10 @@ public class GetJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Completed.
+             * <p>Indicates whether the asynchronous task is complete. Valid values: True False</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder completed(String completed) {
                 this.completed = completed;
@@ -172,7 +178,10 @@ public class GetJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the asynchronous task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1729063449802</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -180,7 +189,10 @@ public class GetJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message returned if the asynchronous task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not Found</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -188,7 +200,10 @@ public class GetJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the asynchronous task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C664CDE3-9C0B-5792-B17F-6C543783BBBC</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -196,7 +211,15 @@ public class GetJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The type of the asynchronous task. Valid values:</p>
+             * <ul>
+             * <li><strong>Create</strong>: The asynchronous task is used to create an object.</li>
+             * <li><strong>Update</strong>: The asynchronous task is used to update an object.</li>
+             * <li><strong>Cancel</strong>: The asynchronous task is used to cancel an operation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Create</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -204,7 +227,16 @@ public class GetJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the asynchronous task. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong></li>
+             * <li><strong>Fail</strong></li>
+             * <li><strong>Cancel</strong></li>
+             * <li><strong>Running</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

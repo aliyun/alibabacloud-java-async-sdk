@@ -105,7 +105,10 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * DIJobId.
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11588</p>
          */
         public Builder DIJobId(Long DIJobId) {
             this.putQueryParameter("DIJobId", DIJobId);
@@ -114,7 +117,10 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>DataWorks工作空间ID。您可以通过ListProjects接口获取工作空间ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -123,7 +129,10 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * WithDetails.
+         * <p>Specifies whether to return detailed configuration information, including TransformationRules, TableMappings, and JobSettings. Valid values: true and false. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withDetails(Boolean withDetails) {
             this.putQueryParameter("WithDetails", withDetails);

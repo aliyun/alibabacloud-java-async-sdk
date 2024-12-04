@@ -92,6 +92,7 @@ public class GetTaskInstanceLogRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -104,7 +105,10 @@ public class GetTaskInstanceLogRequest extends Request {
         }
 
         /**
-         * RunNumber.
+         * <p>The sequence number of an instance run. Minimum value: 1. By default, the latest run is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder runNumber(Integer runNumber) {
             this.putQueryParameter("RunNumber", runNumber);

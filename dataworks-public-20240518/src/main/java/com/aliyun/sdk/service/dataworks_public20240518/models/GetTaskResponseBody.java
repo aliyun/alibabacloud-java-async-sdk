@@ -50,7 +50,10 @@ public class GetTaskResponseBody extends TeaModel {
         private Task task; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Task.
+         * <p>The details of the task.</p>
          */
         public Builder task(Task task) {
             this.task = task;
@@ -104,7 +107,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -175,7 +181,17 @@ public class GetTaskResponseBody extends TeaModel {
             private String upstreamTaskId; 
 
             /**
-             * Type.
+             * <p>The dependency type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on the level-1 descendant nodes of a node</li>
+             * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</li>
+             * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
+             * <li>Normal: same-cycle dependency</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -183,7 +199,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamOutput.
+             * <p>上游任务的输出标识符。（<code>同周期依赖</code>返回此字段）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre.odps_sql_demo_0</p>
              */
             public Builder upstreamOutput(String upstreamOutput) {
                 this.upstreamOutput = upstreamOutput;
@@ -191,7 +210,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamTaskId.
+             * <p>上游任务的Id。（<code>跨周期依赖其他节点</code>依赖返回此字段，其他跨周期依赖类型不返回）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder upstreamTaskId(String upstreamTaskId) {
                 this.upstreamTaskId = upstreamTaskId;
@@ -262,7 +284,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * <p>The name of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +295,17 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Constant: constant</li>
+             * <li>PassThrough: parameter pass-through</li>
+             * <li>System: variable</li>
+             * <li>NodeOutput: script output</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Constant</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -278,7 +313,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -325,7 +363,7 @@ public class GetTaskResponseBody extends TeaModel {
             private java.util.List < Variables> variables; 
 
             /**
-             * Variables.
+             * <p>The variables.</p>
              */
             public Builder variables(java.util.List < Variables> variables) {
                 this.variables = variables;
@@ -372,7 +410,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String output; 
 
             /**
-             * Output.
+             * <p>The identifier of the output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre.odps_sql_demo_0</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -443,7 +484,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * <p>The name of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -451,7 +495,17 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Constant: constant</li>
+             * <li>PassThrough: parameter pass-through</li>
+             * <li>System: system variable</li>
+             * <li>NodeOutput: script output</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Constant</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -459,7 +513,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -518,7 +575,7 @@ public class GetTaskResponseBody extends TeaModel {
             private java.util.List < OutputsVariables> variables; 
 
             /**
-             * TaskOutputs.
+             * <p>The task outputs.</p>
              */
             public Builder taskOutputs(java.util.List < TaskOutputs> taskOutputs) {
                 this.taskOutputs = taskOutputs;
@@ -526,7 +583,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Variables.
+             * <p>The variables.</p>
              */
             public Builder variables(java.util.List < OutputsVariables> variables) {
                 this.variables = variables;
@@ -597,7 +654,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * Cu.
+             * <p>The default number of compute units (CUs) configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -605,7 +665,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The ID of the image configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -613,7 +676,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group for scheduling configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -672,7 +738,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String parameters; 
 
             /**
-             * Content.
+             * <p>The script content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>echo &quot;helloWorld&quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -680,7 +749,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The script parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>para1=$bizdate</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -727,7 +799,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -798,7 +873,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * Cu.
+             * <p>The default number of CUs configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -806,7 +884,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The ID of the image configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -814,7 +895,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group for scheduling configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -909,7 +993,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Cron.
+             * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -917,7 +1004,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999-01-01 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -925,7 +1015,16 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Recurrence.
+             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Pause</li>
+             * <li>Skip</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder recurrence(String recurrence) {
                 this.recurrence = recurrence;
@@ -933,7 +1032,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -941,7 +1043,15 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The trigger type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Scheduler: scheduling cycle-based trigger</li>
+             * <li>Manual: manual trigger</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1240,7 +1350,7 @@ public class GetTaskResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * BaselineId.
+             * <p>The baseline ID.</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -1248,7 +1358,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1256,7 +1369,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The account ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -1264,7 +1380,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DataSource.
+             * <p>The information about the associated data source.</p>
              */
             public Builder dataSource(SubTasksDataSource dataSource) {
                 this.dataSource = dataSource;
@@ -1272,7 +1388,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1280,7 +1399,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1288,7 +1410,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -1296,7 +1421,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The account ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -1304,7 +1432,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the task.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1312,7 +1440,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the task owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -1320,7 +1451,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1328,7 +1462,15 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectEnv.
+             * <p>The environment of the workspace.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment</li>
+             * <li>Dev: development environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder projectEnv(String projectEnv) {
                 this.projectEnv = projectEnv;
@@ -1336,7 +1478,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1344,7 +1489,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RerunInterval.
+             * <p>The rerun interval. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder rerunInterval(Integer rerunInterval) {
                 this.rerunInterval = rerunInterval;
@@ -1352,7 +1500,16 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RerunMode.
+             * <p>The rerun mode.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AllDenied: The task cannot be rerun regardless of whether it is successfully run or fails to run.</li>
+             * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+             * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AllAllowed</p>
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -1360,7 +1517,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RerunTimes.
+             * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder rerunTimes(Integer rerunTimes) {
                 this.rerunTimes = rerunTimes;
@@ -1368,7 +1528,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RuntimeResource.
+             * <p>The runtime environment configuration of the task, such as the resource group.</p>
              */
             public Builder runtimeResource(SubTasksRuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -1376,7 +1536,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -1384,7 +1547,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period of task running. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -1392,7 +1558,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Trigger.
+             * <p>The method to trigger task scheduling.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;
@@ -1400,7 +1566,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1408,7 +1577,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The ID of the workflow to which the task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -1467,7 +1639,7 @@ public class GetTaskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * SubTasks.
+             * <p>The subtasks.</p>
              */
             public Builder subTasks(java.util.List < SubTasks> subTasks) {
                 this.subTasks = subTasks;
@@ -1475,7 +1647,16 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the subtask.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DoWhile: do-while node</li>
+             * <li>Combined: node group</li>
+             * <li>ForEach: for-each node</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Combined</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1534,7 +1715,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1542,7 +1726,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1637,7 +1824,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Cron.
+             * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -1645,7 +1835,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999-01-01 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1653,7 +1846,16 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Recurrence.
+             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Pause</li>
+             * <li>Skip</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder recurrence(String recurrence) {
                 this.recurrence = recurrence;
@@ -1661,7 +1863,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1669,7 +1874,15 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The trigger type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Scheduler: scheduling cycle-based trigger</li>
+             * <li>Manual: manual trigger</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2052,7 +2265,10 @@ public class GetTaskResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * BaselineId.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -2060,7 +2276,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -2068,7 +2287,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The account ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -2076,7 +2298,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DataSource.
+             * <p>The information about the associated data source.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -2084,7 +2306,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Dependencies.
+             * <p>The dependency information.</p>
              */
             public Builder dependencies(java.util.List < Dependencies> dependencies) {
                 this.dependencies = dependencies;
@@ -2092,7 +2314,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2100,7 +2325,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2108,7 +2336,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Inputs.
+             * <p>The input information.</p>
              */
             public Builder inputs(Inputs inputs) {
                 this.inputs = inputs;
@@ -2116,7 +2344,12 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceMode.
+             * <p>实例生成模式。</p>
+             * <p>T+1（第二天生成）</p>
+             * <p>Immediately（立即生成）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T+1</p>
              */
             public Builder instanceMode(String instanceMode) {
                 this.instanceMode = instanceMode;
@@ -2124,7 +2357,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -2132,7 +2368,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The account ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -2140,7 +2379,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the task.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2148,7 +2387,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Outputs.
+             * <p>The output information.</p>
              */
             public Builder outputs(Outputs outputs) {
                 this.outputs = outputs;
@@ -2156,7 +2395,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the task owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -2164,7 +2406,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -2172,7 +2417,15 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectEnv.
+             * <p>The environment of the workspace.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment</li>
+             * <li>Dev: development environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder projectEnv(String projectEnv) {
                 this.projectEnv = projectEnv;
@@ -2180,7 +2433,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -2188,7 +2444,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RerunInterval.
+             * <p>The rerun interval. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder rerunInterval(Integer rerunInterval) {
                 this.rerunInterval = rerunInterval;
@@ -2196,7 +2455,16 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RerunMode.
+             * <p>The rerun mode.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
+             * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+             * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AllAllowed</p>
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -2204,7 +2472,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RerunTimes.
+             * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder rerunTimes(Integer rerunTimes) {
                 this.rerunTimes = rerunTimes;
@@ -2212,7 +2483,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RuntimeResource.
+             * <p>The configurations of the runtime environment, such as the resource group information.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -2220,7 +2491,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Script.
+             * <p>The script information.</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -2228,7 +2499,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SubTasks.
+             * <p>The configurations of the subtasks, such as a do-while node.</p>
              */
             public Builder subTasks(TaskSubTasks subTasks) {
                 this.subTasks = subTasks;
@@ -2236,7 +2507,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -2244,7 +2515,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -2252,7 +2526,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period of task running. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -2260,7 +2537,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Trigger.
+             * <p>The method to trigger task scheduling.</p>
              */
             public Builder trigger(TaskTrigger trigger) {
                 this.trigger = trigger;
@@ -2268,7 +2545,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2276,7 +2556,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;

@@ -331,6 +331,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
+         * <p>The data timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +344,10 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the instance. The instance may be rerun. If the instance is rerun and you configure this parameter, the system returns the historical information of the instance, including the rerun information. You can use the RunNumber parameter to distinguish each entry in the historical information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -352,7 +356,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>The IDs of the instances. You can query multiple instances at a time by instance ID.</p>
          */
         public Builder ids(java.util.List < Long > ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -362,7 +366,10 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The account ID of the task owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -371,7 +378,10 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -380,7 +390,10 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -389,7 +402,15 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * <p>The environment of the workspace.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -398,6 +419,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -410,7 +432,10 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * RuntimeResource.
+         * <p>The information about the resource group. Set this parameter to the identifier of a resource group for scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
          */
         public Builder runtimeResource(String runtimeResource) {
             this.putBodyParameter("RuntimeResource", runtimeResource);
@@ -419,7 +444,23 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+         * <ul>
+         * <li><p><code>TriggerTime (Desc/Asc)</code></p>
+         * </li>
+         * <li><p><code>StartedTime (Desc/Asc)</code></p>
+         * </li>
+         * <li><p><code>FinishedTime (Desc/Asc)</code></p>
+         * </li>
+         * <li><p><code>CreateTime (Desc/Asc)</code></p>
+         * </li>
+         * <li><p><code>Id (Desc/Asc)</code></p>
+         * <p>Default value: <code>Id Desc</code>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Id Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);
@@ -428,7 +469,10 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the task for which the instance is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder taskId(Long taskId) {
             this.putBodyParameter("TaskId", taskId);
@@ -437,7 +481,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * <p>The IDs of the tasks. You can query multiple instances at a time by task ID.</p>
          */
         public Builder taskIds(java.util.List < Long > taskIds) {
             String taskIdsShrink = shrink(taskIds, "TaskIds", "json");
@@ -447,7 +491,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The name of the task. Fuzzy match is supported.</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("TaskName", taskName);
@@ -456,7 +500,10 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task for which the instance is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         public Builder taskType(String taskType) {
             this.putBodyParameter("TaskType", taskType);
@@ -483,7 +530,10 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>The ID of the workflow to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workflowId(Long workflowId) {
             this.putBodyParameter("WorkflowId", workflowId);
@@ -492,7 +542,10 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * WorkflowInstanceId.
+         * <p>The workflow instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workflowInstanceId(Long workflowInstanceId) {
             this.putBodyParameter("WorkflowInstanceId", workflowInstanceId);
@@ -501,7 +554,18 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * WorkflowInstanceType.
+         * <p>The type of the workflow instance.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SmokeTest</li>
+         * <li>Manual</li>
+         * <li>SupplementData</li>
+         * <li>ManualWorkflow</li>
+         * <li>Normal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder workflowInstanceType(String workflowInstanceType) {
             this.putBodyParameter("WorkflowInstanceType", workflowInstanceType);

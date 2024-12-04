@@ -70,7 +70,7 @@ public class GetRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Route.
+         * <p>The information about the route.</p>
          */
         public Builder route(Route route) {
             this.route = route;
@@ -208,7 +208,10 @@ public class GetRouteResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * <p>The network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder networkId(Long networkId) {
                 this.networkId = networkId;

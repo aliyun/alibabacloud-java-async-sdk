@@ -203,7 +203,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * AliyunResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group to which the workspaces belong. You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> and go to the Resource Group page to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzbn7pti3zff</p>
          */
         public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
             this.putBodyParameter("AliyunResourceGroupId", aliyunResourceGroupId);
@@ -212,7 +215,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * AliyunResourceTags.
+         * <p>The tags.</p>
          */
         public Builder aliyunResourceTags(java.util.List < AliyunResourceTags> aliyunResourceTags) {
             String aliyunResourceTagsShrink = shrink(aliyunResourceTags, "AliyunResourceTags", "json");
@@ -222,7 +225,14 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * DevEnvironmentEnabled.
+         * <p>Specifies whether the development environment is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in a workspace.</li>
+         * <li>false: The development environment is disabled. In this case, only the production environment is used in a workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder devEnvironmentEnabled(Boolean devEnvironmentEnabled) {
             this.putBodyParameter("DevEnvironmentEnabled", devEnvironmentEnabled);
@@ -231,7 +241,14 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * DevRoleDisabled.
+         * <p>Specifies whether the Develop role is disabled. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder devRoleDisabled(Boolean devRoleDisabled) {
             this.putBodyParameter("DevRoleDisabled", devRoleDisabled);
@@ -240,7 +257,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>The IDs of the DataWorks workspaces.</p>
          */
         public Builder ids(java.util.List < Long > ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -250,7 +267,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * Names.
+         * <p>The names of the DataWorks workspaces.</p>
          */
         public Builder names(java.util.List < String > names) {
             String namesShrink = shrink(names, "Names", "json");
@@ -260,7 +277,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -269,7 +289,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -278,7 +301,14 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * PaiTaskEnabled.
+         * <p>Specifies whether scheduling of Platform for AI (PAI) tasks is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
+         * <li>false: Scheduling of PAI tasks is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder paiTaskEnabled(Boolean paiTaskEnabled) {
             this.putBodyParameter("PaiTaskEnabled", paiTaskEnabled);
@@ -287,7 +317,34 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the workspaces. Valid values:</p>
+         * <ul>
+         * <li>Available</li>
+         * <li>Initializing</li>
+         * <li>InitFailed</li>
+         * <li>Forbidden</li>
+         * <li>Deleting</li>
+         * <li>DeleteFailed</li>
+         * <li>Frozen</li>
+         * <li>Updating</li>
+         * <li>UpdateFailed</li>
+         * </ul>
+         * <!---->
+         * 
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -347,7 +404,10 @@ public class ListProjectsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>batch</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -355,7 +415,10 @@ public class ListProjectsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>blue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -50,7 +50,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61649187-0BCF-5E75-8D4B-64FDBEBBB447</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +143,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Code.
+             * <p>The code of the role in the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role_project_guest</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -148,7 +154,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the role in the DataWorks workspace.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -156,7 +162,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21229</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -164,7 +173,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the role in the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -247,7 +259,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
             private String totalCount; 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -255,7 +270,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -263,7 +281,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectRoles.
+             * <p>The roles in the DataWorks workspace.</p>
              */
             public Builder projectRoles(java.util.List < ProjectRoles> projectRoles) {
                 this.projectRoles = projectRoles;
@@ -271,7 +289,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;

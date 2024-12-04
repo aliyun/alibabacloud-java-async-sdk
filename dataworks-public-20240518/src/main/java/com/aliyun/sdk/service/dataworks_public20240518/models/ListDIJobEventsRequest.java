@@ -150,7 +150,10 @@ public class ListDIJobEventsRequest extends Request {
         }
 
         /**
-         * DIJobId.
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11588</p>
          */
         public Builder DIJobId(Long DIJobId) {
             this.putQueryParameter("DIJobId", DIJobId);
@@ -159,6 +162,7 @@ public class ListDIJobEventsRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +175,7 @@ public class ListDIJobEventsRequest extends Request {
         }
 
         /**
+         * <p>The type of event that you want to query. Valid values: Failover, Alarm, and DDL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +188,10 @@ public class ListDIJobEventsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -192,7 +200,10 @@ public class ListDIJobEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -201,6 +212,7 @@ public class ListDIJobEventsRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

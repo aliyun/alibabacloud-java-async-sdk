@@ -50,7 +50,7 @@ public class GetProjectRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ProjectRole.
+         * <p>The role in the DataWorks workspace.</p>
          */
         public Builder projectRole(ProjectRole projectRole) {
             this.projectRole = projectRole;
@@ -58,7 +58,10 @@ public class GetProjectRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82F28E60-CF48-5EDF-AB25-D806847B97D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +143,23 @@ public class GetProjectRoleResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Code.
+             * <p>The code of the role in the DataWorks workspace.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>role_project_admin: workspace administrator</li>
+             * <li>role_project_dev: developer</li>
+             * <li>role_project_dg_admin: data governance administrator</li>
+             * <li>role_project_guest: visitor</li>
+             * <li>role_project_security: security administrator</li>
+             * <li>role_project_deploy: deployer</li>
+             * <li>role_project_owner: workspace owner</li>
+             * <li>role_project_data_analyst: data analyst</li>
+             * <li>role_project_pe: O&amp;M engineer</li>
+             * <li>role_project_erd: model designer</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>role_project_guest</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -148,7 +167,7 @@ public class GetProjectRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the role in the DataWorks workspace.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -156,7 +175,10 @@ public class GetProjectRoleResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10002</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -164,7 +186,15 @@ public class GetProjectRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the role in the DataWorks workspace.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>UserCustom: user-defined role</li>
+             * <li>System: system role</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder type(String type) {
                 this.type = type;

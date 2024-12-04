@@ -122,7 +122,10 @@ public class ListDIJobMetricsRequest extends Request {
         }
 
         /**
-         * DIJobId.
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11265</p>
          */
         public Builder DIJobId(Long DIJobId) {
             this.putQueryParameter("DIJobId", DIJobId);
@@ -131,6 +134,7 @@ public class ListDIJobMetricsRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +147,7 @@ public class ListDIJobMetricsRequest extends Request {
         }
 
         /**
+         * <p>The metrics that you want to query.</p>
          * <p>This parameter is required.</p>
          */
         public Builder metricName(java.util.List < String > metricName) {
@@ -153,6 +158,7 @@ public class ListDIJobMetricsRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

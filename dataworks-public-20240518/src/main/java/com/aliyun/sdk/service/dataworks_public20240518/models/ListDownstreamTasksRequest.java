@@ -120,6 +120,7 @@ public class ListDownstreamTasksRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +133,10 @@ public class ListDownstreamTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -141,7 +145,10 @@ public class ListDownstreamTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -150,7 +157,15 @@ public class ListDownstreamTasksRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * <p>The environment of the workspace.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putQueryParameter("ProjectEnv", projectEnv);

@@ -58,7 +58,7 @@ public class StopTaskInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessInfo.
+         * <p>The result of the batch operation, which is in the MAP structure. The instance ID serves as a key, and the result serves as a value.</p>
          */
         public Builder successInfo(java.util.Map < String, SuccessInfoValue > successInfo) {
             this.successInfo = successInfo;

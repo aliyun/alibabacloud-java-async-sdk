@@ -91,7 +91,10 @@ public class UpdateTaskInstancesRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -100,7 +103,7 @@ public class UpdateTaskInstancesRequest extends Request {
         }
 
         /**
-         * TaskInstances.
+         * <p>The instances.</p>
          */
         public Builder taskInstances(java.util.List < TaskInstances> taskInstances) {
             String taskInstancesShrink = shrink(taskInstances, "TaskInstances", "json");
@@ -149,7 +152,10 @@ public class UpdateTaskInstancesRequest extends Request {
             private String name; 
 
             /**
-             * Name.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +239,7 @@ public class UpdateTaskInstancesRequest extends Request {
             private String runtimeResource; 
 
             /**
-             * DataSource.
+             * <p>The information about the associated data source.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -241,6 +247,7 @@ public class UpdateTaskInstancesRequest extends Request {
             }
 
             /**
+             * <p>The instance ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -252,7 +259,11 @@ public class UpdateTaskInstancesRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the instance. Valid values: 1, 3, 5, 7, and 8.</p>
+             * <p>A larger value indicates a higher priority. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -260,7 +271,10 @@ public class UpdateTaskInstancesRequest extends Request {
             }
 
             /**
-             * RuntimeResource.
+             * <p>The resource group information. Set this parameter to the ID of a resource group for scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
              */
             public Builder runtimeResource(String runtimeResource) {
                 this.runtimeResource = runtimeResource;

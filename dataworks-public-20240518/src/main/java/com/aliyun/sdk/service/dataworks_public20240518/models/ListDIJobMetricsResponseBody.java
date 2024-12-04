@@ -50,7 +50,7 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>691CA452-D37A-4ED0-9441</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +119,10 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
             private Double value; 
 
             /**
-             * Time.
+             * <p>The point in time at which data is sampled based on the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1716881141</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -124,7 +130,10 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -183,7 +192,10 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
             private java.util.List < SeriesList> seriesList; 
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JobDelay</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,7 +203,7 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * SeriesList.
+             * <p>The metric data.</p>
              */
             public Builder seriesList(java.util.List < SeriesList> seriesList) {
                 this.seriesList = seriesList;
@@ -238,7 +250,7 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
             private java.util.List < JobMetrics> jobMetrics; 
 
             /**
-             * JobMetrics.
+             * <p>The metrics returned.</p>
              */
             public Builder jobMetrics(java.util.List < JobMetrics> jobMetrics) {
                 this.jobMetrics = jobMetrics;

@@ -50,7 +50,10 @@ public class CloneDataSourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The ID of the cloned data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19715</p>
          */
         public Builder id(Long id) {
             this.id = id;

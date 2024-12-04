@@ -162,7 +162,7 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the workspace.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -171,7 +171,14 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * DevEnvironmentEnabled.
+         * <p>Specifies whether to enable the development environment. Valid values:</p>
+         * <ul>
+         * <li>true: enables the development environment. In this case, the development environment is isolated from the production environment in the workspace.</li>
+         * <li>false: disables the development environment. In this case, only the production environment is used in the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder devEnvironmentEnabled(Boolean devEnvironmentEnabled) {
             this.putBodyParameter("DevEnvironmentEnabled", devEnvironmentEnabled);
@@ -180,7 +187,15 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * DevRoleDisabled.
+         * <p>Specifies whether to disable the Develop role. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
+         * <p>Note: If you disable the Develop role, you cannot assume the Develop role to develop nodes in workflows and edit node code. The Develop role cannot be enabled again after it is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder devRoleDisabled(Boolean devRoleDisabled) {
             this.putBodyParameter("DevRoleDisabled", devRoleDisabled);
@@ -189,7 +204,7 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the workspace.</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -210,7 +225,14 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * PaiTaskEnabled.
+         * <p>Specifies whether to enable scheduling of Platform for AI (PAI) tasks. Valid values:</p>
+         * <ul>
+         * <li>true: enables scheduling of PAI tasks. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
+         * <li>false: disables scheduling of PAI tasks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder paiTaskEnabled(Boolean paiTaskEnabled) {
             this.putBodyParameter("PaiTaskEnabled", paiTaskEnabled);

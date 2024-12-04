@@ -92,6 +92,7 @@ public class DeleteTaskRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -104,7 +105,15 @@ public class DeleteTaskRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * <p>The environment of the workspace.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putQueryParameter("ProjectEnv", projectEnv);

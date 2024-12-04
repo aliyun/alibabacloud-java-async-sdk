@@ -50,7 +50,7 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>691CA452-D37A-4ED0-9441</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -296,7 +299,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             private String structureMigrationStatus; 
 
             /**
-             * DestinationDatabaseName.
+             * <p>The name of the database in the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dst_db</p>
              */
             public Builder destinationDatabaseName(String destinationDatabaseName) {
                 this.destinationDatabaseName = destinationDatabaseName;
@@ -304,7 +310,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationDatasourceName.
+             * <p>The name of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dst_name</p>
              */
             public Builder destinationDatasourceName(String destinationDatasourceName) {
                 this.destinationDatasourceName = destinationDatasourceName;
@@ -312,7 +321,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationSchemaName.
+             * <p>The name of the schema of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dst_schema</p>
              */
             public Builder destinationSchemaName(String destinationSchemaName) {
                 this.destinationSchemaName = destinationSchemaName;
@@ -320,7 +332,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationTableName.
+             * <p>The name of the table in the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dst_name</p>
              */
             public Builder destinationTableName(String destinationTableName) {
                 this.destinationTableName = destinationTableName;
@@ -328,7 +343,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FullMigrationErrorMessage.
+             * <p>The error message that is returned if an error occurs during full batch synchronization. If no error occurs, no value is returned for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sync table t1 fail.</p>
              */
             public Builder fullMigrationErrorMessage(String fullMigrationErrorMessage) {
                 this.fullMigrationErrorMessage = fullMigrationErrorMessage;
@@ -336,7 +354,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FullMigrationStatus.
+             * <p>The status of full batch synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder fullMigrationStatus(String fullMigrationStatus) {
                 this.fullMigrationStatus = fullMigrationStatus;
@@ -344,7 +365,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * OfflineErrorRecords.
+             * <p>The total number of errors that occur during full synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder offlineErrorRecords(Long offlineErrorRecords) {
                 this.offlineErrorRecords = offlineErrorRecords;
@@ -352,7 +376,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * OfflineTotalBytes.
+             * <p>The total number of bytes that are synchronized during full synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder offlineTotalBytes(Long offlineTotalBytes) {
                 this.offlineTotalBytes = offlineTotalBytes;
@@ -360,7 +387,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * OfflineTotalRecords.
+             * <p>The total number of data records that are synchronized during full synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder offlineTotalRecords(Long offlineTotalRecords) {
                 this.offlineTotalRecords = offlineTotalRecords;
@@ -368,7 +398,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * RealtimeMigrationErrorMessage.
+             * <p>The error message that is returned if an error occurs during real-time synchronization. If no error occurs, no value is returned for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sync table t1 fail.</p>
              */
             public Builder realtimeMigrationErrorMessage(String realtimeMigrationErrorMessage) {
                 this.realtimeMigrationErrorMessage = realtimeMigrationErrorMessage;
@@ -376,7 +409,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * RealtimeMigrationStatus.
+             * <p>The status of real-time synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder realtimeMigrationStatus(String realtimeMigrationStatus) {
                 this.realtimeMigrationStatus = realtimeMigrationStatus;
@@ -384,7 +420,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDatabaseName.
+             * <p>The name of the database in the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db_name</p>
              */
             public Builder sourceDatabaseName(String sourceDatabaseName) {
                 this.sourceDatabaseName = sourceDatabaseName;
@@ -392,7 +431,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDatasourceName.
+             * <p>The name of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds_name</p>
              */
             public Builder sourceDatasourceName(String sourceDatasourceName) {
                 this.sourceDatasourceName = sourceDatasourceName;
@@ -400,7 +442,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceSchemaName.
+             * <p>The name of the schema of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>schema_name</p>
              */
             public Builder sourceSchemaName(String sourceSchemaName) {
                 this.sourceSchemaName = sourceSchemaName;
@@ -408,7 +453,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableName.
+             * <p>The name of the table in the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_name</p>
              */
             public Builder sourceTableName(String sourceTableName) {
                 this.sourceTableName = sourceTableName;
@@ -416,7 +464,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * StructureMigrationErrorMessage.
+             * <p>The error message that is returned if an error occurs during schema synchronization. If no error occurs, no value is returned for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create table t1 fail.</p>
              */
             public Builder structureMigrationErrorMessage(String structureMigrationErrorMessage) {
                 this.structureMigrationErrorMessage = structureMigrationErrorMessage;
@@ -424,7 +475,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * StructureMigrationStatus.
+             * <p>The synchronization status of the schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder structureMigrationStatus(String structureMigrationStatus) {
                 this.structureMigrationStatus = structureMigrationStatus;
@@ -507,7 +561,7 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             private String totalCount; 
 
             /**
-             * JobRunInfos.
+             * <p>The running information about the synchronization task.</p>
              */
             public Builder jobRunInfos(java.util.List < JobRunInfos> jobRunInfos) {
                 this.jobRunInfos = jobRunInfos;
@@ -515,7 +569,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -523,7 +580,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -531,7 +591,10 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;

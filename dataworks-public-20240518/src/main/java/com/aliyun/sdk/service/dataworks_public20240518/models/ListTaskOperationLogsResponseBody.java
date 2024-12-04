@@ -50,7 +50,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -152,7 +155,10 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * CreateTime.
+             * <p>The time when the operation log was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -160,7 +166,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationContent.
+             * <p>The operation content.</p>
              */
             public Builder operationContent(String operationContent) {
                 this.operationContent = operationContent;
@@ -168,7 +174,10 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationSeq.
+             * <p>The serial number of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111</p>
              */
             public Builder operationSeq(Long operationSeq) {
                 this.operationSeq = operationSeq;
@@ -176,7 +185,10 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the task on which the operation was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -184,7 +196,10 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * <p>The account ID of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -267,7 +282,7 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * OperationLogs.
+             * <p>The operation logs.</p>
              */
             public Builder operationLogs(java.util.List < OperationLogs> operationLogs) {
                 this.operationLogs = operationLogs;
@@ -275,7 +290,10 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -283,7 +301,10 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -291,7 +312,10 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

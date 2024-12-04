@@ -148,7 +148,7 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * Codes.
+         * <p>The codes of roles in the DataWorks workspace.</p>
          */
         public Builder codes(java.util.List < String > codes) {
             String codesShrink = shrink(codes, "Codes", "json");
@@ -158,7 +158,7 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * Names.
+         * <p>The names of roles in the DataWorks workspace.</p>
          */
         public Builder names(java.util.List < String > names) {
             String namesShrink = shrink(names, "Names", "json");
@@ -168,7 +168,10 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -177,7 +180,10 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -186,6 +192,8 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +206,15 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the role in the DataWorks workspace.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>UserCustom: user-defined role</li>
+         * <li>System: system role</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

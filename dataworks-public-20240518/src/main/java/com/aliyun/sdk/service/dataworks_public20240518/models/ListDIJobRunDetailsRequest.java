@@ -176,6 +176,7 @@ public class ListDIJobRunDetailsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the synchronization task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +189,10 @@ public class ListDIJobRunDetailsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -197,7 +201,10 @@ public class ListDIJobRunDetailsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -206,7 +213,10 @@ public class ListDIJobRunDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +225,10 @@ public class ListDIJobRunDetailsRequest extends Request {
         }
 
         /**
-         * SourceDataSourceName.
+         * <p>The name of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds_name</p>
          */
         public Builder sourceDataSourceName(String sourceDataSourceName) {
             this.putQueryParameter("SourceDataSourceName", sourceDataSourceName);
@@ -224,7 +237,10 @@ public class ListDIJobRunDetailsRequest extends Request {
         }
 
         /**
-         * SourceDatabaseName.
+         * <p>The name of the database in the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_name</p>
          */
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.putQueryParameter("SourceDatabaseName", sourceDatabaseName);
@@ -233,7 +249,10 @@ public class ListDIJobRunDetailsRequest extends Request {
         }
 
         /**
-         * SourceSchemaName.
+         * <p>The name of the schema of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schema_name</p>
          */
         public Builder sourceSchemaName(String sourceSchemaName) {
             this.putQueryParameter("SourceSchemaName", sourceSchemaName);
@@ -242,7 +261,10 @@ public class ListDIJobRunDetailsRequest extends Request {
         }
 
         /**
-         * SourceTableName.
+         * <p>The name of the table in the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder sourceTableName(String sourceTableName) {
             this.putQueryParameter("SourceTableName", sourceTableName);

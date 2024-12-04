@@ -93,6 +93,7 @@ public class TriggerSchedulerTaskInstanceRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +106,7 @@ public class TriggerSchedulerTaskInstanceRequest extends Request {
         }
 
         /**
+         * <p>The time defined by the HTTP Trigger node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -50,7 +50,7 @@ public class ListProjectsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6D24AD9A-652F-59E2-AC1F-05029300F8A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +119,10 @@ public class ListProjectsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>batch</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -124,7 +130,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>blue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -291,7 +300,10 @@ public class ListProjectsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AliyunResourceGroupId.
+             * <p>The ID of the Alibaba Cloud resource group to which the workspace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzbn7pti3zfa</p>
              */
             public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
                 this.aliyunResourceGroupId = aliyunResourceGroupId;
@@ -299,7 +311,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunResourceTags.
+             * <p>The tags.</p>
              */
             public Builder aliyunResourceTags(java.util.List < AliyunResourceTags> aliyunResourceTags) {
                 this.aliyunResourceTags = aliyunResourceTags;
@@ -307,7 +319,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the workspace.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -315,7 +327,14 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * DevEnvironmentEnabled.
+             * <p>Indicates whether the development environment is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in the workspace.</li>
+             * <li>false: The development environment is disabled. In this case, only the production environment is used in the workspace.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder devEnvironmentEnabled(Boolean devEnvironmentEnabled) {
                 this.devEnvironmentEnabled = devEnvironmentEnabled;
@@ -323,7 +342,14 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * DevRoleDisabled.
+             * <p>Indicates whether the Develop role is disabled. Valid values:</p>
+             * <ul>
+             * <li>false (default)</li>
+             * <li>true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder devRoleDisabled(Boolean devRoleDisabled) {
                 this.devRoleDisabled = devRoleDisabled;
@@ -331,7 +357,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the workspace.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -339,7 +365,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -347,7 +376,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sora_finance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -355,7 +387,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the Alibaba Cloud account to which the workspace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123532153125</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -363,7 +398,14 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * PaiTaskEnabled.
+             * <p>Indicates whether scheduling of PAI tasks is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
+             * <li>false: Scheduling of PAI tasks is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder paiTaskEnabled(Boolean paiTaskEnabled) {
                 this.paiTaskEnabled = paiTaskEnabled;
@@ -371,7 +413,21 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Available</li>
+             * <li>Initializing</li>
+             * <li>InitFailed</li>
+             * <li>Forbidden</li>
+             * <li>Deleting</li>
+             * <li>DeleteFailed</li>
+             * <li>Frozen</li>
+             * <li>Updating</li>
+             * <li>UpdateFailed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -454,7 +510,10 @@ public class ListProjectsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -462,7 +521,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -470,7 +532,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Projects.
+             * <p>The workspaces.</p>
              */
             public Builder projects(java.util.List < Projects> projects) {
                 this.projects = projects;
@@ -478,7 +540,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

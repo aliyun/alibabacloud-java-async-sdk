@@ -77,7 +77,10 @@ public class GetAlertRuleRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28547072</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

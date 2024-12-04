@@ -70,7 +70,7 @@ public class ListRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * RouteList.
+         * <p>The routes.</p>
          */
         public Builder routeList(java.util.List < RouteList> routeList) {
             this.routeList = routeList;
@@ -208,7 +208,10 @@ public class ListRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * <p>The network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder networkId(Long networkId) {
                 this.networkId = networkId;

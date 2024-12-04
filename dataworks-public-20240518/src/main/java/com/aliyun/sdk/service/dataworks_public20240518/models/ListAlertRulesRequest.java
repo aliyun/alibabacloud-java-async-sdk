@@ -163,7 +163,10 @@ public class ListAlertRulesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error_rule</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -172,7 +175,10 @@ public class ListAlertRulesRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The ID of the Alibaba Cloud account used by the owner of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1933790683****</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -181,6 +187,7 @@ public class ListAlertRulesRequest extends Request {
         }
 
         /**
+         * <p>The page number. Pages start from page 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +200,7 @@ public class ListAlertRulesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +213,10 @@ public class ListAlertRulesRequest extends Request {
         }
 
         /**
-         * Receiver.
+         * <p>The ID of the Alibaba Cloud account used by the alert recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1933790683****</p>
          */
         public Builder receiver(String receiver) {
             this.putQueryParameter("Receiver", receiver);
@@ -214,7 +225,7 @@ public class ListAlertRulesRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * <p>The IDs of the scheduling tasks.</p>
          */
         public Builder taskIds(java.util.List < Long > taskIds) {
             String taskIdsShrink = shrink(taskIds, "TaskIds", "json");
@@ -224,7 +235,7 @@ public class ListAlertRulesRequest extends Request {
         }
 
         /**
-         * Types.
+         * <p>The alert triggering condition.</p>
          */
         public Builder types(java.util.List < String > types) {
             String typesShrink = shrink(types, "Types", "json");

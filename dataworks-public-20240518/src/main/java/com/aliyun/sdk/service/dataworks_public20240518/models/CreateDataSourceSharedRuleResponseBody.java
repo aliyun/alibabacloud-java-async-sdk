@@ -50,7 +50,10 @@ public class CreateDataSourceSharedRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The sharing rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105412</p>
          */
         public Builder id(Long id) {
             this.id = id;

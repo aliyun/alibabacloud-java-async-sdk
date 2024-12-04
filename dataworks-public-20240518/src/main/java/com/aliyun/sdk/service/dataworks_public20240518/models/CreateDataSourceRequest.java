@@ -152,6 +152,12 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
+         * <p>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</p>
+         * <ul>
+         * <li>Dev: development environment</li>
+         * <li>Prod: production environment</li>
+         * </ul>
+         * <p>The parameters that you need to configure to the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/zh/dataworks/developer-reference/data-source-connection-information-connectionproperties/?spm=a2c4g.11186623.0.0.3fbb6fe7fo5AMK">Data source connection information (ConnectionProperties)</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +178,11 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
+         * <p>The mode in which you want to add the data source. The mode varies based on the data source type. Valid values for MySQL data sources:</p>
+         * <ul>
+         * <li>InstanceMode: instance mode</li>
+         * <li>UrlMode: connection string mode</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +195,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the data source. The description cannot exceed 3,000 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a holo datasource</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -193,6 +207,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
+         * <p>The name of the data source. The name can be up to 255 characters in length and can contain letters, digits, and underscores (_). The name must start with a letter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +232,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
+         * <p>The type of the data source. More than 70 types of data sources are supported in DataWorks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

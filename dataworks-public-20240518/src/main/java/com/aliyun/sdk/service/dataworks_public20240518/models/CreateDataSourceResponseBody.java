@@ -50,7 +50,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22130</p>
          */
         public Builder id(Long id) {
             this.id = id;

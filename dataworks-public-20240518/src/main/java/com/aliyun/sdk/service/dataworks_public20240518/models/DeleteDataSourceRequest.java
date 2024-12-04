@@ -77,7 +77,10 @@ public class DeleteDataSourceRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

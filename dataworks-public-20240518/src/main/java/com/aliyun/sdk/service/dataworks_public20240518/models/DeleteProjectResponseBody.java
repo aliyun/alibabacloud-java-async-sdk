@@ -38,7 +38,10 @@ public class DeleteProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

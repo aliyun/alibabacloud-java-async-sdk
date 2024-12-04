@@ -50,7 +50,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A6C6B486-E3A2-5D52-9E76-D9380485D946</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +119,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * CycleId.
+             * <p>The ID of the scheduling cycle of the instance. Valid values: [1,288].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cycleId(Integer cycleId) {
                 this.cycleId = cycleId;
@@ -124,7 +130,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The latest completion time of the instance within the scheduling cycle. The time is in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01:00</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -171,7 +180,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private java.util.List < CycleAndTime> cycleAndTime; 
 
             /**
-             * CycleAndTime.
+             * <p>The configurations of the scheduling cycle and timeout period of the instance.</p>
              */
             public Builder cycleAndTime(java.util.List < CycleAndTime> cycleAndTime) {
                 this.cycleAndTime = cycleAndTime;
@@ -230,7 +239,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private java.util.List < Long > streamTaskIds; 
 
             /**
-             * AutoRerunAlert.
+             * <p>Indicates whether an alert is triggered if a batch synchronization task is automatically rerun upon a failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoRerunAlert(Boolean autoRerunAlert) {
                 this.autoRerunAlert = autoRerunAlert;
@@ -238,7 +250,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * StreamTaskIds.
+             * <p>The IDs of the real-time computing tasks. This parameter is required when you monitor real-time computing tasks.</p>
              */
             public Builder streamTaskIds(java.util.List < Long > streamTaskIds) {
                 this.streamTaskIds = streamTaskIds;
@@ -285,7 +297,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * Count.
+             * <p>The maximum number of instances on which an error occurs. Valid values: [1,10000].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -332,7 +347,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private Integer percentage; 
 
             /**
-             * Percentage.
+             * <p>The maximum percentage of instances on which an error occurs in the workspace to the total number of instances. Valid values: [1-100].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -391,7 +409,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private String trend; 
 
             /**
-             * Percentage.
+             * <p>The maximum percentage of fluctuation in the number of auto triggered node instances that are generated in your workspace. Valid values: [1-100].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -399,7 +420,15 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Trend.
+             * <p>The way in which the number of auto triggered node instances that are generated in your workspace fluctuates. Valid values:</p>
+             * <ul>
+             * <li>abs: the absolute value. The number of instances increases or decreases.</li>
+             * <li>increase: The number of instances increases.</li>
+             * <li>decrease: The number of instances decreases.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>abs</p>
              */
             public Builder trend(String trend) {
                 this.trend = trend;
@@ -446,7 +475,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private Integer timeoutInMinutes; 
 
             /**
-             * TimeoutInMinutes.
+             * <p>The timeout period. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timeoutInMinutes(Integer timeoutInMinutes) {
                 this.timeoutInMinutes = timeoutInMinutes;
@@ -493,7 +525,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private String unFinishedTime; 
 
             /**
-             * UnFinishedTime.
+             * <p>The latest completion time of the instance. The period is in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12:00</p>
              */
             public Builder unFinishedTime(String unFinishedTime) {
                 this.unFinishedTime = unFinishedTime;
@@ -612,7 +647,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private UnFinished unFinished; 
 
             /**
-             * CycleUnfinished.
+             * <p>The configuration for an alert of the CycleUnfinished type.</p>
              */
             public Builder cycleUnfinished(CycleUnfinished cycleUnfinished) {
                 this.cycleUnfinished = cycleUnfinished;
@@ -620,7 +655,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The configuration for an alert of the Error type.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -628,7 +663,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceErrorCount.
+             * <p>The configuration for an alert of the InstanceErrorCount type.</p>
              */
             public Builder instanceErrorCount(InstanceErrorCount instanceErrorCount) {
                 this.instanceErrorCount = instanceErrorCount;
@@ -636,7 +671,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceErrorPercentage.
+             * <p>The configuration for an alert of the InstanceErrorPercentage type.</p>
              */
             public Builder instanceErrorPercentage(InstanceErrorPercentage instanceErrorPercentage) {
                 this.instanceErrorPercentage = instanceErrorPercentage;
@@ -644,7 +679,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTransferFluctuate.
+             * <p>The configuration for an alert of the InstanceTransferFluctuate type.</p>
              */
             public Builder instanceTransferFluctuate(InstanceTransferFluctuate instanceTransferFluctuate) {
                 this.instanceTransferFluctuate = instanceTransferFluctuate;
@@ -652,7 +687,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The configuration for an alert of the Timeout type.</p>
              */
             public Builder timeout(Timeout timeout) {
                 this.timeout = timeout;
@@ -660,7 +695,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UnFinished.
+             * <p>The configuration for an alert of the UnFinished type.</p>
              */
             public Builder unFinished(UnFinished unFinished) {
                 this.unFinished = unFinished;
@@ -731,7 +766,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AllowTasks.
+             * <p>The nodes that are not to be monitored.</p>
              */
             public Builder allowTasks(java.util.List < Long > allowTasks) {
                 this.allowTasks = allowTasks;
@@ -739,7 +774,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Ids.
+             * <p>The IDs of monitored objects.</p>
              */
             public Builder ids(java.util.List < Long > ids) {
                 this.ids = ids;
@@ -747,7 +782,16 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the monitored objects. Valid values:</p>
+             * <ul>
+             * <li>Task: node</li>
+             * <li>Baseline: baseline</li>
+             * <li>Projec: workspace</li>
+             * <li>BizProcess: workflow</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Task</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -818,7 +862,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Extension.
+             * <p>The extended information about the rule. This parameter is required for specific types of alerts.</p>
              */
             public Builder extension(Extension extension) {
                 this.extension = extension;
@@ -826,7 +870,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The monitored objects.</p>
              */
             public Builder target(Target target) {
                 this.target = target;
@@ -834,7 +878,25 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The alert type. Valid values:</p>
+             * <ul>
+             * <li>Finished: An instance is successfully run.</li>
+             * <li>UnFinished: An instance does not finish running before a specified point in time.</li>
+             * <li>Error: An error occurs on an instance.</li>
+             * <li>CycleUnfinished: An instance does not finish running as expected within a specific cycle.</li>
+             * <li>Timeout: An instance times out.</li>
+             * <li>InstanceTransferComplete: An instance is generated by the auto triggered node.</li>
+             * <li>InstanceTransferFluctuate: The number of generated instances fluctuates.</li>
+             * <li>ExhaustedError: An error persists after an instance is automatically rerun.</li>
+             * <li>InstanceKeyword: An instance with errors contains specified keywords.</li>
+             * <li>InstanceErrorCount: The number of instances on which an error occurs reaches a specified threshold.</li>
+             * <li>InstanceErrorPercentage: The proportion of instances on which an error occurs in the workspace to the total number of instances reaches a specified threshold.</li>
+             * <li>ResourceGroupPercentage: The usage rate of the resource group reaches a specified threshold.</li>
+             * <li>ResourceGroupWaitCount: The number of instances that are waiting for resources in the resource group reaches a specified threshold.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Error</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -929,7 +991,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private TriggerCondition triggerCondition; 
 
             /**
-             * Enabled.
+             * <p>Indicates whether the rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -937,7 +1002,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22125</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -945,7 +1013,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -953,7 +1024,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the Alibaba Cloud account used by the owner of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1933790683****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -961,7 +1035,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerCondition.
+             * <p>The alert triggering condition.</p>
              */
             public Builder triggerCondition(TriggerCondition triggerCondition) {
                 this.triggerCondition = triggerCondition;
@@ -1044,7 +1118,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * AlertRules.
+             * <p>The rules.</p>
              */
             public Builder alertRules(java.util.List < AlertRules> alertRules) {
                 this.alertRules = alertRules;
@@ -1052,7 +1126,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1060,7 +1137,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1068,7 +1148,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

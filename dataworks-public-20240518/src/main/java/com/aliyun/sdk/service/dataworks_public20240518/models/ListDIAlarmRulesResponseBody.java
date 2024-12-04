@@ -50,7 +50,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +58,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74C2FECD-5B3A-554A-BCF5-351A36DE9815</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +119,13 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private String severity; 
 
             /**
-             * Channels.
+             * <p>The alert notification method. Valid values:</p>
+             * <ul>
+             * <li>Mail</li>
+             * <li>Phone</li>
+             * <li>Sms</li>
+             * <li>Ding</li>
+             * </ul>
              */
             public Builder channels(java.util.List < String > channels) {
                 this.channels = channels;
@@ -124,7 +133,14 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * <p>The severity level. Valid values:</p>
+             * <ul>
+             * <li>Warning</li>
+             * <li>Critical</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Critical</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -183,7 +199,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private java.util.List < String > receiverValues; 
 
             /**
-             * ReceiverType.
+             * <p>The recipient type. Valid values: AliyunUid, DingToken, FeishuToken, and WebHookUrl.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingToken</p>
              */
             public Builder receiverType(String receiverType) {
                 this.receiverType = receiverType;
@@ -191,7 +210,11 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiverValues.
+             * <p>The recipient.</p>
+             * <ul>
+             * <li>If the value of the ReceiverType parameter is AliyunUid, the value of this parameter is the Alibaba Cloud account ID of a user.</li>
+             * <li>If the value of the ReceiverType parameter is DingToken, the value of this parameter is the token of a DingTalk chatbot.</li>
+             * </ul>
              */
             public Builder receiverValues(java.util.List < String > receiverValues) {
                 this.receiverValues = receiverValues;
@@ -262,7 +285,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private java.util.List < NotificationReceivers> notificationReceivers; 
 
             /**
-             * InhibitionInterval.
+             * <p>The duration of the alert suppression interval. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder inhibitionInterval(Long inhibitionInterval) {
                 this.inhibitionInterval = inhibitionInterval;
@@ -270,7 +296,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationChannels.
+             * <p>The alert notification methods.</p>
              */
             public Builder notificationChannels(java.util.List < NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -278,7 +304,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationReceivers.
+             * <p>The settings of alert notification recipients.</p>
              */
             public Builder notificationReceivers(java.util.List < NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
@@ -361,7 +387,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private Long threshold; 
 
             /**
-             * DdlReportTags.
+             * <p>The types of DDL operations for which the alert rule takes effect.</p>
              */
             public Builder ddlReportTags(java.util.List < String > ddlReportTags) {
                 this.ddlReportTags = ddlReportTags;
@@ -369,7 +395,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The time interval for alert calculation. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -377,7 +406,14 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * <p>The severity level. Valid values:</p>
+             * <ul>
+             * <li>Warning</li>
+             * <li>Critical</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Critical</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -385,7 +421,15 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The alert threshold.</p>
+             * <ul>
+             * <li>If the alert rule is for task status, no threshold is used.</li>
+             * <li>If the alert rule is for failovers, the threshold is the number of failovers.</li>
+             * <li>If the alert rule is for latency, the threshold is the latency duration, in seconds.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder threshold(Long threshold) {
                 this.threshold = threshold;
@@ -516,7 +560,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private java.util.List < TriggerConditions> triggerConditions; 
 
             /**
-             * DIAlarmRuleId.
+             * <p>The ID of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72402</p>
              */
             public Builder DIAlarmRuleId(Long DIAlarmRuleId) {
                 this.DIAlarmRuleId = DIAlarmRuleId;
@@ -524,7 +571,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DIJobId.
+             * <p>The ID of the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32594</p>
              */
             public Builder DIJobId(Long DIJobId) {
                 this.DIJobId = DIJobId;
@@ -532,7 +582,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule descrition</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -540,7 +593,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the alert rule is enabled. Valid values: True and False.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -548,7 +604,17 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MetricType.
+             * <p>The metric type in the alert rule. Valid values:</p>
+             * <ul>
+             * <li>Heartbeat</li>
+             * <li>FailoverCount</li>
+             * <li>Delay</li>
+             * <li>DdlReport</li>
+             * <li>ResourceUtilization</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Heartbeat</p>
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
@@ -556,7 +622,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -564,7 +633,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationSettings.
+             * <p>The alert notification settings.</p>
              */
             public Builder notificationSettings(NotificationSettings notificationSettings) {
                 this.notificationSettings = notificationSettings;
@@ -572,7 +641,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerConditions.
+             * <p>The conditions that are used to trigger the alert rule.</p>
              */
             public Builder triggerConditions(java.util.List < TriggerConditions> triggerConditions) {
                 this.triggerConditions = triggerConditions;
@@ -655,7 +724,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * DIJobAlarmRules.
+             * <p>The alert rules returned.</p>
              */
             public Builder DIJobAlarmRules(java.util.List < DIJobAlarmRules> DIJobAlarmRules) {
                 this.DIJobAlarmRules = DIJobAlarmRules;
@@ -663,7 +732,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number. Pages start from page 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -671,7 +743,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -679,7 +754,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

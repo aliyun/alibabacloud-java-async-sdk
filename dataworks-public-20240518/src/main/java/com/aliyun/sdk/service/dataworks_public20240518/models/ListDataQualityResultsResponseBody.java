@@ -1166,7 +1166,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * <p>The code of the template that is referenced when you create a rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system::user_defined</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
