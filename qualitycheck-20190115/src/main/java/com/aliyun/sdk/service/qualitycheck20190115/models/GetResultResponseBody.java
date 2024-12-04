@@ -2747,6 +2747,9 @@ public class GetResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemeVersion")
         private Long schemeVersion;
 
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Integer score;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -2758,6 +2761,7 @@ public class GetResultResponseBody extends TeaModel {
             this.rid = builder.rid;
             this.schemeId = builder.schemeId;
             this.schemeVersion = builder.schemeVersion;
+            this.score = builder.score;
             this.type = builder.type;
         }
 
@@ -2819,6 +2823,13 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return score
+         */
+        public Integer getScore() {
+            return this.score;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -2833,6 +2844,7 @@ public class GetResultResponseBody extends TeaModel {
             private String rid; 
             private Long schemeId; 
             private Long schemeVersion; 
+            private Integer score; 
             private String type; 
 
             /**
@@ -2888,6 +2900,14 @@ public class GetResultResponseBody extends TeaModel {
              */
             public Builder schemeVersion(Long schemeVersion) {
                 this.schemeVersion = schemeVersion;
+                return this;
+            }
+
+            /**
+             * Score.
+             */
+            public Builder score(Integer score) {
+                this.score = score;
                 return this;
             }
 
@@ -4482,6 +4502,9 @@ public class GetResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
+        @com.aliyun.core.annotation.NameInMap("Vid")
+        private String vid;
+
         private ResultInfo(Builder builder) {
             this.agent = builder.agent;
             this.asrResult = builder.asrResult;
@@ -4509,6 +4532,7 @@ public class GetResultResponseBody extends TeaModel {
             this.status = builder.status;
             this.taskId = builder.taskId;
             this.taskName = builder.taskName;
+            this.vid = builder.vid;
         }
 
         public static Builder builder() {
@@ -4701,6 +4725,13 @@ public class GetResultResponseBody extends TeaModel {
             return this.taskName;
         }
 
+        /**
+         * @return vid
+         */
+        public String getVid() {
+            return this.vid;
+        }
+
         public static final class Builder {
             private Agent agent; 
             private ResultInfoAsrResult asrResult; 
@@ -4728,6 +4759,7 @@ public class GetResultResponseBody extends TeaModel {
             private Integer status; 
             private String taskId; 
             private String taskName; 
+            private String vid; 
 
             /**
              * Agent.
@@ -4934,6 +4966,14 @@ public class GetResultResponseBody extends TeaModel {
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
+                return this;
+            }
+
+            /**
+             * Vid.
+             */
+            public Builder vid(String vid) {
+                this.vid = vid;
                 return this;
             }
 

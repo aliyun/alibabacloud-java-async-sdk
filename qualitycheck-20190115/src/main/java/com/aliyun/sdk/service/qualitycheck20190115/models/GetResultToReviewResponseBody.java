@@ -144,6 +144,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
+        @com.aliyun.core.annotation.NameInMap("BeginTimeMs")
+        private Long beginTimeMs;
+
         @com.aliyun.core.annotation.NameInMap("EmotionValue")
         private Integer emotionValue;
 
@@ -171,6 +174,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         private Dialogue(Builder builder) {
             this.begin = builder.begin;
             this.beginTime = builder.beginTime;
+            this.beginTimeMs = builder.beginTimeMs;
             this.emotionValue = builder.emotionValue;
             this.end = builder.end;
             this.hourMinSec = builder.hourMinSec;
@@ -201,6 +205,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
          */
         public String getBeginTime() {
             return this.beginTime;
+        }
+
+        /**
+         * @return beginTimeMs
+         */
+        public Long getBeginTimeMs() {
+            return this.beginTimeMs;
         }
 
         /**
@@ -262,6 +273,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public static final class Builder {
             private Long begin; 
             private String beginTime; 
+            private Long beginTimeMs; 
             private Integer emotionValue; 
             private Long end; 
             private String hourMinSec; 
@@ -284,6 +296,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
+                return this;
+            }
+
+            /**
+             * BeginTimeMs.
+             */
+            public Builder beginTimeMs(Long beginTimeMs) {
+                this.beginTimeMs = beginTimeMs;
                 return this;
             }
 
