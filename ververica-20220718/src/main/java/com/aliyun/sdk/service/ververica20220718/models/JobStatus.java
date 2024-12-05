@@ -18,12 +18,20 @@ public class JobStatus extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("failure")
     private JobFailure failure;
 
+    @com.aliyun.core.annotation.NameInMap("healthScore")
+    private Integer healthScore;
+
+    @com.aliyun.core.annotation.NameInMap("riskLevel")
+    private String riskLevel;
+
     @com.aliyun.core.annotation.NameInMap("running")
     private JobStatusRunning running;
 
     private JobStatus(Builder builder) {
         this.currentJobStatus = builder.currentJobStatus;
         this.failure = builder.failure;
+        this.healthScore = builder.healthScore;
+        this.riskLevel = builder.riskLevel;
         this.running = builder.running;
     }
 
@@ -50,6 +58,20 @@ public class JobStatus extends TeaModel {
     }
 
     /**
+     * @return healthScore
+     */
+    public Integer getHealthScore() {
+        return this.healthScore;
+    }
+
+    /**
+     * @return riskLevel
+     */
+    public String getRiskLevel() {
+        return this.riskLevel;
+    }
+
+    /**
      * @return running
      */
     public JobStatusRunning getRunning() {
@@ -59,6 +81,8 @@ public class JobStatus extends TeaModel {
     public static final class Builder {
         private String currentJobStatus; 
         private JobFailure failure; 
+        private Integer healthScore; 
+        private String riskLevel; 
         private JobStatusRunning running; 
 
         /**
@@ -74,6 +98,22 @@ public class JobStatus extends TeaModel {
          */
         public Builder failure(JobFailure failure) {
             this.failure = failure;
+            return this;
+        }
+
+        /**
+         * healthScore.
+         */
+        public Builder healthScore(Integer healthScore) {
+            this.healthScore = healthScore;
+            return this;
+        }
+
+        /**
+         * riskLevel.
+         */
+        public Builder riskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
             return this;
         }
 
