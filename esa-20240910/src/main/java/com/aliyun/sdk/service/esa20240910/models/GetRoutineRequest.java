@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetRoutineRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private GetRoutineRequest(Builder builder) {
@@ -55,6 +56,7 @@ public class GetRoutineRequest extends Request {
 
         /**
          * <p>The routine name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>GetRoutine</p>

@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteRoutineCodeVersionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CodeVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String codeVersion;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private DeleteRoutineCodeVersionRequest(Builder builder) {
@@ -69,6 +71,7 @@ public class DeleteRoutineCodeVersionRequest extends Request {
 
         /**
          * <p>The code version.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1710120201067203242</p>
@@ -81,6 +84,7 @@ public class DeleteRoutineCodeVersionRequest extends Request {
 
         /**
          * <p>The routine name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test-routine1</p>

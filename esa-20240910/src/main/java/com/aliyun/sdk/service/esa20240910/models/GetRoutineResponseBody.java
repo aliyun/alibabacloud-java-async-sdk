@@ -564,6 +564,9 @@ public class GetRoutineResponseBody extends TeaModel {
      * <p>GetRoutineResponseBody</p>
      */
     public static class RelatedRoutes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ByPass")
+        private String byPass;
+
         @com.aliyun.core.annotation.NameInMap("Route")
         private String route;
 
@@ -577,6 +580,7 @@ public class GetRoutineResponseBody extends TeaModel {
         private String siteName;
 
         private RelatedRoutes(Builder builder) {
+            this.byPass = builder.byPass;
             this.route = builder.route;
             this.routeId = builder.routeId;
             this.siteId = builder.siteId;
@@ -589,6 +593,13 @@ public class GetRoutineResponseBody extends TeaModel {
 
         public static RelatedRoutes create() {
             return builder().build();
+        }
+
+        /**
+         * @return byPass
+         */
+        public String getByPass() {
+            return this.byPass;
         }
 
         /**
@@ -620,10 +631,19 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String byPass; 
             private String route; 
             private String routeId; 
             private Long siteId; 
             private String siteName; 
+
+            /**
+             * ByPass.
+             */
+            public Builder byPass(String byPass) {
+                this.byPass = byPass;
+                return this;
+            }
 
             /**
              * <p>The route.</p>

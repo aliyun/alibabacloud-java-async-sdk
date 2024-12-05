@@ -224,15 +224,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is used the first time you configure feature settings for your website. To modify existing feature settings, call the UpdateSiteFunction operation.</p>
-     * 
-     * @param request the request parameters of CreateSiteFunction  CreateSiteFunctionRequest
-     * @return CreateSiteFunctionResponse
-     */
-    CompletableFuture<CreateSiteFunctionResponse> createSiteFunction(CreateSiteFunctionRequest request);
-
-    /**
-     * <b>description</b> :
      * <p>This API operation allows you to deliver logs to destinations such as Simple Log Service (SLS), HTTP servers, Object Storage Service (OSS), Amazon Simple Storage Service (S3), and Kafka. You can specify the task name, log fields to deliver, data center, discard rate, delivery type, and delivery details.</p>
      * <ul>
      * <li><strong>Field filtering</strong>: Use the <code>FieldName</code> parameter to specify log fields to deliver.</li>
@@ -401,12 +392,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSiteDeliveryTaskResponse
      */
     CompletableFuture<DeleteSiteDeliveryTaskResponse> deleteSiteDeliveryTask(DeleteSiteDeliveryTaskRequest request);
-
-    /**
-     * @param request the request parameters of DeleteSiteFunction  DeleteSiteFunctionRequest
-     * @return DeleteSiteFunctionResponse
-     */
-    CompletableFuture<DeleteSiteFunctionResponse> deleteSiteFunction(DeleteSiteFunctionRequest request);
 
     /**
      * <b>description</b> :
@@ -951,12 +936,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSiteDeliveryTasksResponse> listSiteDeliveryTasks(ListSiteDeliveryTasksRequest request);
 
     /**
-     * @param request the request parameters of ListSiteFunctions  ListSiteFunctionsRequest
-     * @return ListSiteFunctionsResponse
-     */
-    CompletableFuture<ListSiteFunctionsResponse> listSiteFunctions(ListSiteFunctionsRequest request);
-
-    /**
      * @param request the request parameters of ListSites  ListSitesRequest
      * @return ListSitesResponse
      */
@@ -1240,12 +1219,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSiteDeliveryTaskStatusResponse
      */
     CompletableFuture<UpdateSiteDeliveryTaskStatusResponse> updateSiteDeliveryTaskStatus(UpdateSiteDeliveryTaskStatusRequest request);
-
-    /**
-     * @param request the request parameters of UpdateSiteFunction  UpdateSiteFunctionRequest
-     * @return UpdateSiteFunctionResponse
-     */
-    CompletableFuture<UpdateSiteFunctionResponse> updateSiteFunction(UpdateSiteFunctionRequest request);
 
     /**
      * @param request the request parameters of UpdateSiteVanityNS  UpdateSiteVanityNSRequest

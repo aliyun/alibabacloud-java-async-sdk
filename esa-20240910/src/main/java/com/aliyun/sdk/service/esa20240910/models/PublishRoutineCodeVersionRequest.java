@@ -26,10 +26,12 @@ public class PublishRoutineCodeVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Env")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String env;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private PublishRoutineCodeVersionRequest(Builder builder) {
@@ -145,6 +147,7 @@ public class PublishRoutineCodeVersionRequest extends Request {
 
         /**
          * <p>The environment name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>production</p>
@@ -157,6 +160,7 @@ public class PublishRoutineCodeVersionRequest extends Request {
 
         /**
          * <p>The routine name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>PublishRoutineCodeVersion</p>

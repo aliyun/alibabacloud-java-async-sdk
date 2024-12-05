@@ -18,6 +18,7 @@ public class CommitRoutineStagingCodeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private CommitRoutineStagingCodeRequest(Builder builder) {
@@ -81,6 +82,7 @@ public class CommitRoutineStagingCodeRequest extends Request {
 
         /**
          * <p>The routine name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>CommitRoutineStagingCode</p>

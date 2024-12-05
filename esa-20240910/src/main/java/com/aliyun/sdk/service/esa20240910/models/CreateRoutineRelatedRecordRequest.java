@@ -14,14 +14,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateRoutineRelatedRecordRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RecordName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
     private CreateRoutineRelatedRecordRequest(Builder builder) {
@@ -83,6 +86,7 @@ public class CreateRoutineRelatedRecordRequest extends Request {
 
         /**
          * <p>The routine name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateRoutineRelatedRecord</p>
@@ -95,6 +99,7 @@ public class CreateRoutineRelatedRecordRequest extends Request {
 
         /**
          * <p>The record name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test-record-1.example.com</p>
@@ -107,6 +112,7 @@ public class CreateRoutineRelatedRecordRequest extends Request {
 
         /**
          * <p>The website ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>54362329990032</p>

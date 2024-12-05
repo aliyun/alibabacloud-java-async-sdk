@@ -18,10 +18,12 @@ public class CreateRoutineRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SpecName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String specName;
 
     private CreateRoutineRequest(Builder builder) {
@@ -95,6 +97,7 @@ public class CreateRoutineRequest extends Request {
 
         /**
          * <p>The routine name, which must be unique in the same account.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test-routine1</p>
@@ -107,6 +110,7 @@ public class CreateRoutineRequest extends Request {
 
         /**
          * <p>The specification of the routine.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>5ms</p>

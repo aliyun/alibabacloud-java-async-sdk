@@ -13,19 +13,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateRoutineRelatedRouteRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ByPass")
+    private String byPass;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Route")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String route;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
     private CreateRoutineRelatedRouteRequest(Builder builder) {
         super(builder);
+        this.byPass = builder.byPass;
         this.name = builder.name;
         this.route = builder.route;
         this.siteId = builder.siteId;
@@ -42,6 +50,13 @@ public class CreateRoutineRelatedRouteRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return byPass
+     */
+    public String getByPass() {
+        return this.byPass;
     }
 
     /**
@@ -66,6 +81,7 @@ public class CreateRoutineRelatedRouteRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRoutineRelatedRouteRequest, Builder> {
+        private String byPass; 
         private String name; 
         private String route; 
         private Long siteId; 
@@ -76,13 +92,24 @@ public class CreateRoutineRelatedRouteRequest extends Request {
 
         private Builder(CreateRoutineRelatedRouteRequest request) {
             super(request);
+            this.byPass = request.byPass;
             this.name = request.name;
             this.route = request.route;
             this.siteId = request.siteId;
         } 
 
         /**
+         * ByPass.
+         */
+        public Builder byPass(String byPass) {
+            this.putBodyParameter("ByPass", byPass);
+            this.byPass = byPass;
+            return this;
+        }
+
+        /**
          * <p>The routine name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateRoutineRelatedRoute</p>
@@ -95,6 +122,7 @@ public class CreateRoutineRelatedRouteRequest extends Request {
 
         /**
          * <p>The route.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p><em>.example.com/path1</em></p>
@@ -107,6 +135,7 @@ public class CreateRoutineRelatedRouteRequest extends Request {
 
         /**
          * <p>The website ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>54362329990032</p>

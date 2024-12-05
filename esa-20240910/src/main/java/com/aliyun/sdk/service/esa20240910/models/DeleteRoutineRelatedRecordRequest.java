@@ -14,18 +14,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteRoutineRelatedRecordRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long recordId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RecordName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
     private DeleteRoutineRelatedRecordRequest(Builder builder) {
@@ -97,6 +101,7 @@ public class DeleteRoutineRelatedRecordRequest extends Request {
 
         /**
          * <p>The routine name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>DeleteRoutineRelatedRecord</p>
@@ -109,6 +114,7 @@ public class DeleteRoutineRelatedRecordRequest extends Request {
 
         /**
          * <p>The record ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -121,6 +127,7 @@ public class DeleteRoutineRelatedRecordRequest extends Request {
 
         /**
          * <p>The record name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test-xxx.example.com</p>
@@ -133,6 +140,7 @@ public class DeleteRoutineRelatedRecordRequest extends Request {
 
         /**
          * <p>The website ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
