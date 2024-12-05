@@ -18,10 +18,14 @@ public class CreateAutoscalingConfigResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
+    @com.aliyun.core.annotation.NameInMap("body")
+    private CreateAutoscalingConfigResponseBody body;
+
     private CreateAutoscalingConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
+        this.body = builder.body;
     }
 
     public static CreateAutoscalingConfigResponse create() {
@@ -47,11 +51,20 @@ public class CreateAutoscalingConfigResponse extends Response {
         return this.statusCode;
     }
 
+    /**
+     * @return body
+     */
+    public CreateAutoscalingConfigResponseBody getBody() {
+        return this.body;
+    }
+
     public interface Builder extends Response.Builder<CreateAutoscalingConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
+
+        Builder body(CreateAutoscalingConfigResponseBody body);
 
         @Override
         CreateAutoscalingConfigResponse build();
@@ -63,6 +76,7 @@ public class CreateAutoscalingConfigResponse extends Response {
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
+        private CreateAutoscalingConfigResponseBody body; 
 
         private BuilderImpl() {
             super();
@@ -72,6 +86,7 @@ public class CreateAutoscalingConfigResponse extends Response {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
+            this.body = response.body;
         } 
 
         /**
@@ -89,6 +104,15 @@ public class CreateAutoscalingConfigResponse extends Response {
         @Override
         public Builder statusCode(Integer statusCode) {
             this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(CreateAutoscalingConfigResponseBody body) {
+            this.body = body;
             return this;
         }
 

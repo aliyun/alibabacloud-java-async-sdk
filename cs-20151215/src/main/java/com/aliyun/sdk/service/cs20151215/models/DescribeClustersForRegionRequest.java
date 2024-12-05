@@ -153,6 +153,7 @@ public class DescribeClustersForRegionRequest extends Request {
         } 
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +166,10 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8155823d057948c69a****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -174,7 +178,10 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * cluster_spec.
+         * <p>The specification of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack.standard</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -183,7 +190,10 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * cluster_type.
+         * <p>The type of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Kubernetes</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -192,7 +202,10 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Perform a fuzzy search by using the cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-cluster</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -201,7 +214,10 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * page_number.
+         * <p>The number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -210,7 +226,10 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * page_size.
+         * <p>The number of records on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -219,7 +238,10 @@ public class DescribeClustersForRegionRequest extends Request {
         }
 
         /**
-         * profile.
+         * <p>The identifier of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Serverless</p>
          */
         public Builder profile(String profile) {
             this.putQueryParameter("profile", profile);

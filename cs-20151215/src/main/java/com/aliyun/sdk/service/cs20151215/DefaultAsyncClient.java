@@ -278,7 +278,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreateAutoscalingConfigResponse> createAutoscalingConfig(CreateAutoscalingConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAutoscalingConfig").setMethod(HttpMethod.POST).setPathRegex("/cluster/{ClusterId}/autoscale/config/").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAutoscalingConfig").setMethod(HttpMethod.POST).setPathRegex("/cluster/{ClusterId}/autoscale/config/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAutoscalingConfigResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -2086,11 +2086,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li></li>
-     * </ul>
-     * <hr>
-     * <ul>
-     * <li>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.</li>
+     * <li>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </li>
+     * <li>The operation may have unexpected risks. Back up the data before you perform this operation. </li>
+     * <li>When the system removes a node, it sets the status of the node to Unschedulable. </li>
+     * <li>The system removes only worker nodes. It does not remove master nodes.</li>
      * </ul>
      * 
      * @param request the request parameters of RemoveNodePoolNodes  RemoveNodePoolNodesRequest

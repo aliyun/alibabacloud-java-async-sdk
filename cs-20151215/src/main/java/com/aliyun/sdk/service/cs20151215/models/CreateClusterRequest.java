@@ -26,14 +26,17 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("auto_renew")
+    @Deprecated
     private Boolean autoRenew;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("auto_renew_period")
+    @Deprecated
     private Long autoRenewPeriod;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("charge_type")
+    @Deprecated
     private String chargeType;
 
     @com.aliyun.core.annotation.Body
@@ -275,10 +278,12 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("period")
+    @Deprecated
     private Long period;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("period_unit")
+    @Deprecated
     private String periodUnit;
 
     @com.aliyun.core.annotation.Body

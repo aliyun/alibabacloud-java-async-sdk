@@ -50,7 +50,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         private PageInfo pageInfo; 
 
         /**
-         * clusters.
+         * <p>The details of the clusters.</p>
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -58,7 +58,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         }
 
         /**
-         * page_info.
+         * <p>The pagination details.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -393,7 +393,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             private java.util.List < String > vswitchIds; 
 
             /**
-             * cluster_domain.
+             * <p>The domain name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster.local</p>
              */
             public Builder clusterDomain(String clusterDomain) {
                 this.clusterDomain = clusterDomain;
@@ -401,7 +404,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * cluster_id.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c905d1364c2dd4b6284a3f41790c4****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -409,7 +415,14 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * cluster_spec.
+             * <p>The types of ACK managed clusters:</p>
+             * <ul>
+             * <li>ack.pro.small: ACK Pro cluster</li>
+             * <li>ack.standard: ACK Basic cluster</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ack.standard</p>
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -417,7 +430,15 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * cluster_type.
+             * <p>The type of the cluster. Valid values:</p>
+             * <ul>
+             * <li>Kubernetes: ACK dedicated cluster</li>
+             * <li>ManagedKubernetes: ACK managed clusters. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
+             * <li>ExternalKubernetes: registered cluster</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ManagedKubernetes</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -425,7 +446,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * container_cidr.
+             * <p>The CIDR block of pods in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.20.0.0/16</p>
              */
             public Builder containerCidr(String containerCidr) {
                 this.containerCidr = containerCidr;
@@ -433,7 +457,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * <p>The time at which the instance is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-01T20:40:40+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -441,7 +468,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * current_version.
+             * <p>The current Kubernetes version of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.16.6-aliyun.1</p>
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -449,7 +479,14 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * deletion_protection.
+             * <p>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. You can obtain the terminal ID by calling one of the following operations:</p>
+             * <ul>
+             * <li>true: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.</li>
+             * <li>false: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -457,7 +494,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * init_version.
+             * <p>The initial Kubernetes version of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.16.6-aliyun.1</p>
              */
             public Builder initVersion(String initVersion) {
                 this.initVersion = initVersion;
@@ -465,7 +505,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * ip_stack.
+             * <p>The IP protocol stack of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder ipStack(String ipStack) {
                 this.ipStack = ipStack;
@@ -473,7 +516,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-cluster</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -481,7 +527,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * next_version.
+             * <p>The Kubernetes version to which the cluster can be updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.18.8-aliyun.1</p>
              */
             public Builder nextVersion(String nextVersion) {
                 this.nextVersion = nextVersion;
@@ -489,7 +538,16 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * profile.
+             * <p>The subtype of the cluster. Valid values:</p>
+             * <ul>
+             * <li>Default: ACK managed clusters. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+             * <li>Edge: ACK Edge clusters. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+             * <li>Serverless: ACK Serverless clusters. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+             * <li>Lingjun: ACK Lingjun Pro clusters.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -497,7 +555,15 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * proxy_mode.
+             * <p>The kube-proxy mode of the cluster.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>iptables: iptables.</li>
+             * <li>ipvs: ipvs.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ipvs</p>
              */
             public Builder proxyMode(String proxyMode) {
                 this.proxyMode = proxyMode;
@@ -505,7 +571,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * region_id.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-a</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -513,7 +582,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * resource_group_id.
+             * <p>The ID of the cluster resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmyvw3wjm****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -521,7 +593,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * security_group_id.
+             * <p>The ID of the security group of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2zeihch86ooz9io4****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -529,6 +604,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The CIDR block of the service network.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -540,7 +616,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>The number of nodes in the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -548,7 +627,24 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>initial: The cluster is being created.</li>
+             * <li>failed: The cluster failed to be created.</li>
+             * <li>running: The cluster is running.</li>
+             * <li>Upgrading: The cluster is being updated.</li>
+             * <li>scaling: The cluster is being scaled.</li>
+             * <li>waiting: The cluster is waiting for connection requests.</li>
+             * <li>disconnected: The cluster is disconnected.</li>
+             * <li>inactive: The cluster is inactive.</li>
+             * <li>unavailable: The cluster is unavailable.</li>
+             * <li>deleting: The cluster is being deleted.</li>
+             * <li>deleted: The ACK cluster is deleted.</li>
+             * <li>delete_failed: The cluster failed to be deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -556,7 +652,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;
@@ -564,7 +660,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * timezone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -572,7 +671,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * <p>The time when the cluster was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-08T15:37:00+08:00</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;
@@ -580,7 +682,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * vpc_id.
+             * <p>The ID of the virtual private cloud (VPC) to which the cluster belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zeg8nf1ukc0fcmvq****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -588,7 +693,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * vswitch_ids.
+             * <p>The vSwitches for the control plane of the cluster.</p>
              */
             public Builder vswitchIds(java.util.List < String > vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -659,7 +764,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * page_number.
+             * <p>The number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -667,7 +775,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * page_size.
+             * <p>The number of records on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -675,7 +786,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             }
 
             /**
-             * total_count.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

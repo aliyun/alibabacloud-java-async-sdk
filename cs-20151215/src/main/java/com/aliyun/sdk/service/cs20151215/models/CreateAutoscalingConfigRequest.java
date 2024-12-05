@@ -54,6 +54,10 @@ public class CreateAutoscalingConfigRequest extends Request {
     private Boolean scaleUpFromZero;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scaler_type")
+    private String scalerType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("scan_interval")
     private String scanInterval;
 
@@ -85,6 +89,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         this.recycleNodeDeletionEnabled = builder.recycleNodeDeletionEnabled;
         this.scaleDownEnabled = builder.scaleDownEnabled;
         this.scaleUpFromZero = builder.scaleUpFromZero;
+        this.scalerType = builder.scalerType;
         this.scanInterval = builder.scanInterval;
         this.skipNodesWithLocalStorage = builder.skipNodesWithLocalStorage;
         this.skipNodesWithSystemPods = builder.skipNodesWithSystemPods;
@@ -176,6 +181,13 @@ public class CreateAutoscalingConfigRequest extends Request {
     }
 
     /**
+     * @return scalerType
+     */
+    public String getScalerType() {
+        return this.scalerType;
+    }
+
+    /**
      * @return scanInterval
      */
     public String getScanInterval() {
@@ -221,6 +233,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         private Boolean recycleNodeDeletionEnabled; 
         private Boolean scaleDownEnabled; 
         private Boolean scaleUpFromZero; 
+        private String scalerType; 
         private String scanInterval; 
         private Boolean skipNodesWithLocalStorage; 
         private Boolean skipNodesWithSystemPods; 
@@ -243,6 +256,7 @@ public class CreateAutoscalingConfigRequest extends Request {
             this.recycleNodeDeletionEnabled = request.recycleNodeDeletionEnabled;
             this.scaleDownEnabled = request.scaleDownEnabled;
             this.scaleUpFromZero = request.scaleUpFromZero;
+            this.scalerType = request.scalerType;
             this.scanInterval = request.scanInterval;
             this.skipNodesWithLocalStorage = request.skipNodesWithLocalStorage;
             this.skipNodesWithSystemPods = request.skipNodesWithSystemPods;
@@ -390,6 +404,15 @@ public class CreateAutoscalingConfigRequest extends Request {
         public Builder scaleUpFromZero(Boolean scaleUpFromZero) {
             this.putBodyParameter("scale_up_from_zero", scaleUpFromZero);
             this.scaleUpFromZero = scaleUpFromZero;
+            return this;
+        }
+
+        /**
+         * scaler_type.
+         */
+        public Builder scalerType(String scalerType) {
+            this.putBodyParameter("scaler_type", scalerType);
+            this.scalerType = scalerType;
             return this;
         }
 
