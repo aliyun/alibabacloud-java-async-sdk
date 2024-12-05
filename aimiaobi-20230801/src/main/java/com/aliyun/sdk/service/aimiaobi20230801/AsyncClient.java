@@ -230,6 +230,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPropertiesResponse> getProperties(GetPropertiesRequest request);
 
     /**
+     * @param request the request parameters of GetSmartClipTask  GetSmartClipTaskRequest
+     * @return GetSmartClipTaskResponse
+     */
+    CompletableFuture<GetSmartClipTaskResponse> getSmartClipTask(GetSmartClipTaskRequest request);
+
+    /**
      * @param request the request parameters of GetTopicById  GetTopicByIdRequest
      * @return GetTopicByIdResponse
      */
@@ -574,6 +580,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitEnterpriseVocAnalysisTaskResponse
      */
     CompletableFuture<SubmitEnterpriseVocAnalysisTaskResponse> submitEnterpriseVocAnalysisTask(SubmitEnterpriseVocAnalysisTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitSmartClipTask  SubmitSmartClipTaskRequest
+     * @return SubmitSmartClipTaskResponse
+     */
+    CompletableFuture<SubmitSmartClipTaskResponse> submitSmartClipTask(SubmitSmartClipTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitTopicSelectionPerspectiveAnalysisTask  SubmitTopicSelectionPerspectiveAnalysisTaskRequest
