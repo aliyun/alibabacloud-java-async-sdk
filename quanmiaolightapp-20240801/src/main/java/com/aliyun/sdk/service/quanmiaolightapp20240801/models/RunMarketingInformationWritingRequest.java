@@ -21,12 +21,24 @@ public class RunMarketingInformationWritingRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("customLimitation")
+    private String customLimitation;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("customPrompt")
     private String customPrompt;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("inputExample")
+    private String inputExample;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("modelId")
     private String modelId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("outputExample")
+    private String outputExample;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceMaterial")
@@ -40,8 +52,11 @@ public class RunMarketingInformationWritingRequest extends Request {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.regionId = builder.regionId;
+        this.customLimitation = builder.customLimitation;
         this.customPrompt = builder.customPrompt;
+        this.inputExample = builder.inputExample;
         this.modelId = builder.modelId;
+        this.outputExample = builder.outputExample;
         this.sourceMaterial = builder.sourceMaterial;
         this.writingType = builder.writingType;
     }
@@ -74,6 +89,13 @@ public class RunMarketingInformationWritingRequest extends Request {
     }
 
     /**
+     * @return customLimitation
+     */
+    public String getCustomLimitation() {
+        return this.customLimitation;
+    }
+
+    /**
      * @return customPrompt
      */
     public String getCustomPrompt() {
@@ -81,10 +103,24 @@ public class RunMarketingInformationWritingRequest extends Request {
     }
 
     /**
+     * @return inputExample
+     */
+    public String getInputExample() {
+        return this.inputExample;
+    }
+
+    /**
      * @return modelId
      */
     public String getModelId() {
         return this.modelId;
+    }
+
+    /**
+     * @return outputExample
+     */
+    public String getOutputExample() {
+        return this.outputExample;
     }
 
     /**
@@ -104,8 +140,11 @@ public class RunMarketingInformationWritingRequest extends Request {
     public static final class Builder extends Request.Builder<RunMarketingInformationWritingRequest, Builder> {
         private String workspaceId; 
         private String regionId; 
+        private String customLimitation; 
         private String customPrompt; 
+        private String inputExample; 
         private String modelId; 
+        private String outputExample; 
         private String sourceMaterial; 
         private String writingType; 
 
@@ -117,8 +156,11 @@ public class RunMarketingInformationWritingRequest extends Request {
             super(request);
             this.workspaceId = request.workspaceId;
             this.regionId = request.regionId;
+            this.customLimitation = request.customLimitation;
             this.customPrompt = request.customPrompt;
+            this.inputExample = request.inputExample;
             this.modelId = request.modelId;
+            this.outputExample = request.outputExample;
             this.sourceMaterial = request.sourceMaterial;
             this.writingType = request.writingType;
         } 
@@ -142,6 +184,15 @@ public class RunMarketingInformationWritingRequest extends Request {
         }
 
         /**
+         * customLimitation.
+         */
+        public Builder customLimitation(String customLimitation) {
+            this.putBodyParameter("customLimitation", customLimitation);
+            this.customLimitation = customLimitation;
+            return this;
+        }
+
+        /**
          * customPrompt.
          */
         public Builder customPrompt(String customPrompt) {
@@ -151,11 +202,29 @@ public class RunMarketingInformationWritingRequest extends Request {
         }
 
         /**
+         * inputExample.
+         */
+        public Builder inputExample(String inputExample) {
+            this.putBodyParameter("inputExample", inputExample);
+            this.inputExample = inputExample;
+            return this;
+        }
+
+        /**
          * modelId.
          */
         public Builder modelId(String modelId) {
             this.putBodyParameter("modelId", modelId);
             this.modelId = modelId;
+            return this;
+        }
+
+        /**
+         * outputExample.
+         */
+        public Builder outputExample(String outputExample) {
+            this.putBodyParameter("outputExample", outputExample);
+            this.outputExample = outputExample;
             return this;
         }
 

@@ -32,16 +32,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHotTopicSummariesResponse> listHotTopicSummaries(ListHotTopicSummariesRequest request);
 
     /**
-     * @param request the request parameters of RunCommentGeneration  RunCommentGenerationRequest
-     * @return RunCommentGenerationResponse
-     */
-    CompletableFuture<RunCommentGenerationResponse> runCommentGeneration(RunCommentGenerationRequest request);
-
-<ReturnT> CompletableFuture<ReturnT> runCommentGenerationWithAsyncResponseHandler(RunCommentGenerationRequest request, AsyncResponseHandler<RunCommentGenerationResponse, ReturnT> responseHandler);
-
-    ResponseIterable<RunCommentGenerationResponseBody> runCommentGenerationWithResponseIterable(RunCommentGenerationRequest request);
-
-    /**
      * @param request the request parameters of RunHotTopicChat  RunHotTopicChatRequest
      * @return RunHotTopicChatResponse
      */

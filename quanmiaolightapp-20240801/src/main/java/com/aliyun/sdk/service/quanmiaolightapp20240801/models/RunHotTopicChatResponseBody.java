@@ -451,9 +451,126 @@ public class RunHotTopicChatResponseBody extends TeaModel {
      *
      * <p>RunHotTopicChatResponseBody</p>
      */
+    public static class Images extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private Images(Builder builder) {
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Images create() {
+            return builder().build();
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String url; 
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public Images build() {
+                return new Images(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunHotTopicChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunHotTopicChatResponseBody</p>
+     */
+    public static class News extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("title")
+        private String title;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private News(Builder builder) {
+            this.title = builder.title;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static News create() {
+            return builder().build();
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String title; 
+            private String url; 
+
+            /**
+             * title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public News build() {
+                return new News(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunHotTopicChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunHotTopicChatResponseBody</p>
+     */
     public static class HotTopicSummaries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("customHotValue")
         private Double customHotValue;
+
+        @com.aliyun.core.annotation.NameInMap("customTextSummary")
+        private String customTextSummary;
 
         @com.aliyun.core.annotation.NameInMap("hotTopic")
         private String hotTopic;
@@ -464,11 +581,24 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotValue")
         private Double hotValue;
 
+        @com.aliyun.core.annotation.NameInMap("images")
+        private java.util.List < Images> images;
+
+        @com.aliyun.core.annotation.NameInMap("news")
+        private java.util.List < News> news;
+
+        @com.aliyun.core.annotation.NameInMap("textSummary")
+        private String textSummary;
+
         private HotTopicSummaries(Builder builder) {
             this.customHotValue = builder.customHotValue;
+            this.customTextSummary = builder.customTextSummary;
             this.hotTopic = builder.hotTopic;
             this.hotTopicVersion = builder.hotTopicVersion;
             this.hotValue = builder.hotValue;
+            this.images = builder.images;
+            this.news = builder.news;
+            this.textSummary = builder.textSummary;
         }
 
         public static Builder builder() {
@@ -484,6 +614,13 @@ public class RunHotTopicChatResponseBody extends TeaModel {
          */
         public Double getCustomHotValue() {
             return this.customHotValue;
+        }
+
+        /**
+         * @return customTextSummary
+         */
+        public String getCustomTextSummary() {
+            return this.customTextSummary;
         }
 
         /**
@@ -507,17 +644,50 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             return this.hotValue;
         }
 
+        /**
+         * @return images
+         */
+        public java.util.List < Images> getImages() {
+            return this.images;
+        }
+
+        /**
+         * @return news
+         */
+        public java.util.List < News> getNews() {
+            return this.news;
+        }
+
+        /**
+         * @return textSummary
+         */
+        public String getTextSummary() {
+            return this.textSummary;
+        }
+
         public static final class Builder {
             private Double customHotValue; 
+            private String customTextSummary; 
             private String hotTopic; 
             private String hotTopicVersion; 
             private Double hotValue; 
+            private java.util.List < Images> images; 
+            private java.util.List < News> news; 
+            private String textSummary; 
 
             /**
              * customHotValue.
              */
             public Builder customHotValue(Double customHotValue) {
                 this.customHotValue = customHotValue;
+                return this;
+            }
+
+            /**
+             * customTextSummary.
+             */
+            public Builder customTextSummary(String customTextSummary) {
+                this.customTextSummary = customTextSummary;
                 return this;
             }
 
@@ -542,6 +712,30 @@ public class RunHotTopicChatResponseBody extends TeaModel {
              */
             public Builder hotValue(Double hotValue) {
                 this.hotValue = hotValue;
+                return this;
+            }
+
+            /**
+             * images.
+             */
+            public Builder images(java.util.List < Images> images) {
+                this.images = images;
+                return this;
+            }
+
+            /**
+             * news.
+             */
+            public Builder news(java.util.List < News> news) {
+                this.news = news;
+                return this;
+            }
+
+            /**
+             * textSummary.
+             */
+            public Builder textSummary(String textSummary) {
+                this.textSummary = textSummary;
                 return this;
             }
 
