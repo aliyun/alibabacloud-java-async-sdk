@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVectorQueryResultResponseBody} extends {@link TeaModel}
  *
  * <p>ListVectorQueryResultResponseBody</p>
@@ -49,7 +50,10 @@ public class ListVectorQueryResultResponseBody extends TeaModel {
         private Object result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ListVectorQueryResultResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * <p>The result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(Object result) {
             this.result = result;

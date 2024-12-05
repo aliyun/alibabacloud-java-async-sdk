@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAdvanceConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyAdvanceConfigRequest</p>
@@ -167,7 +168,11 @@ public class ModifyAdvanceConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32m2c4u01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -176,7 +181,11 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The name of the advanced configuration.
+         * <p>The name of the advanced configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-18qug6zlc1r_offline_adv_edit</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -185,7 +194,10 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The content of the advanced configuration that is returned.
+         * <p>The content of the advanced configuration that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -194,7 +206,10 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The type of the configuration content. Valid values: FILE, GIT, HTTP, and ODPS.
+         * <p>The type of the configuration content. Valid values: FILE, GIT, HTTP, and ODPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE</p>
          */
         public Builder contentType(String contentType) {
             this.putBodyParameter("contentType", contentType);
@@ -203,7 +218,10 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The description of the advanced configuration.
+         * <p>The description of the advanced configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder desc(String desc) {
             this.putBodyParameter("desc", desc);
@@ -212,7 +230,7 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The files.
+         * <p>The files.</p>
          */
         public Builder files(java.util.List < Files> files) {
             this.putBodyParameter("files", files);
@@ -221,7 +239,10 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The name of the advanced configuration.
+         * <p>The name of the advanced configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-zvp2qr1sk01_qrs</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -230,7 +251,10 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.
+         * <p>The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>used</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -239,7 +263,10 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The time when the advanced configuration was updated.
+         * <p>The time when the advanced configuration was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-02-27T07:50:55Z</p>
          */
         public Builder updateTime(Long updateTime) {
             this.putBodyParameter("updateTime", updateTime);
@@ -254,6 +281,12 @@ public class ModifyAdvanceConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAdvanceConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAdvanceConfigRequest</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fullPathName")
         private String fullPathName;
@@ -317,7 +350,10 @@ public class ModifyAdvanceConfigRequest extends Request {
             private String name; 
 
             /**
-             * The full path of the file.
+             * <p>The full path of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/cluster.json</p>
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -325,7 +361,10 @@ public class ModifyAdvanceConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether the file is a directory.
+             * <p>Specifies whether the file is a directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -333,7 +372,10 @@ public class ModifyAdvanceConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether the file is a template.
+             * <p>Specifies whether the file is a template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -341,7 +383,10 @@ public class ModifyAdvanceConfigRequest extends Request {
             }
 
             /**
-             * The node name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder name(String name) {
                 this.name = name;

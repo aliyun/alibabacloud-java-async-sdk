@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopTaskRequest} extends {@link RequestModel}
  *
  * <p>StopTaskRequest</p>
@@ -69,7 +70,11 @@ public class StopTaskRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2nx41h01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +83,11 @@ public class StopTaskRequest extends Request {
         }
 
         /**
-         * The ID of the finite state machine (FSM).
+         * <p>The ID of the finite state machine (FSM).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tisplus_opensearch@datasource_flow_fsm@1865410598556969-ha-cn-0ju2rrogr01_test_api_2@sz_vpc_domain_1@null@MANUAL-ha-cn-0ju2rrogr01_test_api_2@1657511220772@165343</p>
          */
         public Builder fsmId(String fsmId) {
             this.putPathParameter("fsmId", fsmId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterRunTimeInfoRequest} extends {@link RequestModel}
  *
  * <p>GetClusterRunTimeInfoRequest</p>
@@ -54,7 +55,11 @@ public class GetClusterRunTimeInfoRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ncw4102</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

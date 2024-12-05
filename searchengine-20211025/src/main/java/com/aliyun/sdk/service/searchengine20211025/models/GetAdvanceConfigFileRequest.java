@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAdvanceConfigFileRequest} extends {@link RequestModel}
  *
  * <p>GetAdvanceConfigFileRequest</p>
@@ -84,7 +85,11 @@ public class GetAdvanceConfigFileRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +98,11 @@ public class GetAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The name of the advanced configuration.
+         * <p>The name of the advanced configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7pp2pcna701_online_config_v5</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -102,7 +111,11 @@ public class GetAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The name of the file
+         * <p>The name of the file</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/intervene_dict/chn_ecommerce_general.dict</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);

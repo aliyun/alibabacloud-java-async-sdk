@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAdvanceConfigFileResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyAdvanceConfigFileResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyAdvanceConfigFileResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93A9E542-8CF8-5BA6-99AB-94C0FE520429</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ModifyAdvanceConfigFileResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * <p>The result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

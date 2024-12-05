@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIndexVersionRequest} extends {@link RequestModel}
  *
  * <p>ModifyIndexVersionRequest</p>
@@ -82,7 +83,11 @@ public class ModifyIndexVersionRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2j2off06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -91,7 +96,10 @@ public class ModifyIndexVersionRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_2</p>
          */
         public Builder clusterName(String clusterName) {
             this.putPathParameter("clusterName", clusterName);
@@ -100,7 +108,10 @@ public class ModifyIndexVersionRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder body(java.util.List < ModifyIndexVersionRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -115,6 +126,12 @@ public class ModifyIndexVersionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyIndexVersionRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyIndexVersionRequest</p>
+     */
     public static class ModifyIndexVersionRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("buildDeployId")
         private String buildDeployId;
@@ -166,7 +183,10 @@ public class ModifyIndexVersionRequest extends Request {
             private String version; 
 
             /**
-             * The deployment ID of the data source.
+             * <p>The deployment ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>277</p>
              */
             public Builder buildDeployId(String buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -174,7 +194,10 @@ public class ModifyIndexVersionRequest extends Request {
             }
 
             /**
-             * The index name.
+             * <p>The index name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main_index</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -182,7 +205,10 @@ public class ModifyIndexVersionRequest extends Request {
             }
 
             /**
-             * The index version.
+             * <p>The index version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;

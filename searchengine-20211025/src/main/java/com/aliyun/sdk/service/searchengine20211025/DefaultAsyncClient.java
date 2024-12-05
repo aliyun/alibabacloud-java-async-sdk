@@ -40,11 +40,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     POST
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/actions/build-index
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>POST
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/actions/build-index
+     * </code></pre>
+     * 
+     * @param request the request parameters of BuildIndex  BuildIndexRequest
+     * @return BuildIndexResponse
      */
     @Override
     public CompletableFuture<BuildIndexResponse> buildIndex(BuildIndexRequest request) {
@@ -60,6 +65,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
         try {
@@ -74,6 +83,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloneSqlInstance  CloneSqlInstanceRequest
+     * @return CloneSqlInstanceResponse
+     */
     @Override
     public CompletableFuture<CloneSqlInstanceResponse> cloneSqlInstance(CloneSqlInstanceRequest request) {
         try {
@@ -88,6 +101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAlias  CreateAliasRequest
+     * @return CreateAliasResponse
+     */
     @Override
     public CompletableFuture<CreateAliasResponse> createAlias(CreateAliasRequest request) {
         try {
@@ -103,11 +120,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#method)Method
-      * `POST`
-      * ### [](#uri)URI
-      * `/openapi/ha3/instances/{instanceId}/clusters`
-      *
+     * <b>description</b> :
+     * <h3><a href="#method"></a>Method</h3>
+     * <p><code>POST</code></p>
+     * <h3><a href="#uri"></a>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/clusters</code></p>
+     * 
+     * @param request the request parameters of CreateCluster  CreateClusterRequest
+     * @return CreateClusterResponse
      */
     @Override
     public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
@@ -123,6 +143,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateConfigDir  CreateConfigDirRequest
+     * @return CreateConfigDirResponse
+     */
     @Override
     public CompletableFuture<CreateConfigDirResponse> createConfigDir(CreateConfigDirRequest request) {
         try {
@@ -137,6 +161,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateConfigFile  CreateConfigFileRequest
+     * @return CreateConfigFileResponse
+     */
     @Override
     public CompletableFuture<CreateConfigFileResponse> createConfigFile(CreateConfigFileRequest request) {
         try {
@@ -151,6 +179,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDataSource  CreateDataSourceRequest
+     * @return CreateDataSourceResponse
+     */
     @Override
     public CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request) {
         try {
@@ -165,6 +197,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFolder  CreateFolderRequest
+     * @return CreateFolderResponse
+     */
     @Override
     public CompletableFuture<CreateFolderResponse> createFolder(CreateFolderRequest request) {
         try {
@@ -180,15 +216,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * ```java
-      * POST
-      * ```
-      * ### URI
-      * ```java
-      * /openapi/ha3/instances/{instanceId}/indexes
-      * ```
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes
+     * </code></pre>
+     * 
+     * @param request the request parameters of CreateIndex  CreateIndexRequest
+     * @return CreateIndexResponse
      */
     @Override
     public CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request) {
@@ -205,11 +242,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Method
-      * `POST`
-      * ### [](#uri)URI
-      * `/api/instances?dryRun=false`
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Method</h3>
+     * <p><code>POST</code></p>
+     * <h3><a href="#uri"></a>URI</h3>
+     * <p><code>/api/instances?dryRun=false</code></p>
+     * 
+     * @param request the request parameters of CreateInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
      */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
@@ -225,6 +265,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePublicUrl  CreatePublicUrlRequest
+     * @return CreatePublicUrlResponse
+     */
     @Override
     public CompletableFuture<CreatePublicUrlResponse> createPublicUrl(CreatePublicUrlRequest request) {
         try {
@@ -239,6 +283,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSqlInstance  CreateSqlInstanceRequest
+     * @return CreateSqlInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateSqlInstanceResponse> createSqlInstance(CreateSqlInstanceRequest request) {
         try {
@@ -253,6 +301,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTable  CreateTableRequest
+     * @return CreateTableResponse
+     */
     @Override
     public CompletableFuture<CreateTableResponse> createTable(CreateTableRequest request) {
         try {
@@ -268,11 +320,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     DELETE
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>DELETE
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+     * </code></pre>
+     * 
+     * @param request the request parameters of DeleteAdvanceConfig  DeleteAdvanceConfigRequest
+     * @return DeleteAdvanceConfigResponse
      */
     @Override
     public CompletableFuture<DeleteAdvanceConfigResponse> deleteAdvanceConfig(DeleteAdvanceConfigRequest request) {
@@ -288,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAlias  DeleteAliasRequest
+     * @return DeleteAliasResponse
+     */
     @Override
     public CompletableFuture<DeleteAliasResponse> deleteAlias(DeleteAliasRequest request) {
         try {
@@ -302,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteConfigDir  DeleteConfigDirRequest
+     * @return DeleteConfigDirResponse
+     */
     @Override
     public CompletableFuture<DeleteConfigDirResponse> deleteConfigDir(DeleteConfigDirRequest request) {
         try {
@@ -316,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteConfigFile  DeleteConfigFileRequest
+     * @return DeleteConfigFileResponse
+     */
     @Override
     public CompletableFuture<DeleteConfigFileResponse> deleteConfigFile(DeleteConfigFileRequest request) {
         try {
@@ -331,11 +400,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      * `DELETE`
-      * ## URI
-      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>DELETE</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</code></p>
+     * 
+     * @param request the request parameters of DeleteDataSource  DeleteDataSourceRequest
+     * @return DeleteDataSourceResponse
      */
     @Override
     public CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request) {
@@ -351,6 +423,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFolder  DeleteFolderRequest
+     * @return DeleteFolderResponse
+     */
     @Override
     public CompletableFuture<DeleteFolderResponse> deleteFolder(DeleteFolderRequest request) {
         try {
@@ -366,11 +442,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     DELETE
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>DELETE
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
+     * </code></pre>
+     * 
+     * @param request the request parameters of DeleteIndex  DeleteIndexRequest
+     * @return DeleteIndexResponse
      */
     @Override
     public CompletableFuture<DeleteIndexResponse> deleteIndex(DeleteIndexRequest request) {
@@ -387,11 +468,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     DELETE
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>DELETE
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
+     * </code></pre>
+     * 
+     * @param request the request parameters of DeleteIndexVersion  DeleteIndexVersionRequest
+     * @return DeleteIndexVersionResponse
      */
     @Override
     public CompletableFuture<DeleteIndexVersionResponse> deleteIndexVersion(DeleteIndexVersionRequest request) {
@@ -408,11 +494,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * `DELETE`
-      * ### URI
-      * `/openapi/ha3/instances/{instanceId}`
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>DELETE</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}</code></p>
+     * 
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
      */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
@@ -428,6 +517,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePublicUrl  DeletePublicUrlRequest
+     * @return DeletePublicUrlResponse
+     */
     @Override
     public CompletableFuture<DeletePublicUrlResponse> deletePublicUrl(DeletePublicUrlRequest request) {
         try {
@@ -442,6 +535,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSqlInstance  DeleteSqlInstanceRequest
+     * @return DeleteSqlInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteSqlInstanceResponse> deleteSqlInstance(DeleteSqlInstanceRequest request) {
         try {
@@ -456,6 +553,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTable  DeleteTableRequest
+     * @return DeleteTableResponse
+     */
     @Override
     public CompletableFuture<DeleteTableResponse> deleteTable(DeleteTableRequest request) {
         try {
@@ -470,6 +571,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -484,6 +589,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteSqlInstance  ExecuteSqlInstanceRequest
+     * @return ExecuteSqlInstanceResponse
+     */
     @Override
     public CompletableFuture<ExecuteSqlInstanceResponse> executeSqlInstance(ExecuteSqlInstanceRequest request) {
         try {
@@ -499,15 +608,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Method
-      * ```java
-      * PUT
-      * ```
-      * ### [](#uri)URI
-      * ```java
-      * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
-      * ```
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3><a href="#uri"></a>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
+     * </code></pre>
+     * 
+     * @param request the request parameters of ForceSwitch  ForceSwitchRequest
+     * @return ForceSwitchResponse
      */
     @Override
     public CompletableFuture<ForceSwitchResponse> forceSwitch(ForceSwitchRequest request) {
@@ -524,11 +634,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     GET
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+     * </code></pre>
+     * 
+     * @param request the request parameters of GetAdvanceConfig  GetAdvanceConfigRequest
+     * @return GetAdvanceConfigResponse
      */
     @Override
     public CompletableFuture<GetAdvanceConfigResponse> getAdvanceConfig(GetAdvanceConfigRequest request) {
@@ -545,11 +660,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     GET
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+     * </code></pre>
+     * 
+     * @param request the request parameters of GetAdvanceConfigFile  GetAdvanceConfigFileRequest
+     * @return GetAdvanceConfigFileResponse
      */
     @Override
     public CompletableFuture<GetAdvanceConfigFileResponse> getAdvanceConfigFile(GetAdvanceConfigFileRequest request) {
@@ -566,11 +686,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * `GET`
-      * ### URI
-      * `/openapi/ha3/instance/{instanceId}/clusters/{clusterName}`
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instance/{instanceId}/clusters/{clusterName}</code></p>
+     * 
+     * @param request the request parameters of GetCluster  GetClusterRequest
+     * @return GetClusterResponse
      */
     @Override
     public CompletableFuture<GetClusterResponse> getCluster(GetClusterRequest request) {
@@ -587,11 +710,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * GET
-      * ### URI
-      * /openapi/ha3/instances/{instanceId}/cluster-run-time-info
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p>GET</p>
+     * <h3>URI</h3>
+     * <p>/openapi/ha3/instances/{instanceId}/cluster-run-time-info</p>
+     * 
+     * @param request the request parameters of GetClusterRunTimeInfo  GetClusterRunTimeInfoRequest
+     * @return GetClusterRunTimeInfoResponse
      */
     @Override
     public CompletableFuture<GetClusterRunTimeInfoResponse> getClusterRunTimeInfo(GetClusterRunTimeInfoRequest request) {
@@ -608,11 +734,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * `GET`
-      * ### URI
-      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</code></p>
+     * 
+     * @param request the request parameters of GetDataSource  GetDataSourceRequest
+     * @return GetDataSourceResponse
      */
     @Override
     public CompletableFuture<GetDataSourceResponse> getDataSource(GetDataSourceRequest request) {
@@ -628,6 +757,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataSourceDeploy  GetDataSourceDeployRequest
+     * @return GetDataSourceDeployResponse
+     */
     @Override
     public CompletableFuture<GetDataSourceDeployResponse> getDataSourceDeploy(GetDataSourceDeployRequest request) {
         try {
@@ -642,6 +775,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDatabaseSchema  GetDatabaseSchemaRequest
+     * @return GetDatabaseSchemaResponse
+     */
     @Override
     public CompletableFuture<GetDatabaseSchemaResponse> getDatabaseSchema(GetDatabaseSchemaRequest request) {
         try {
@@ -657,13 +794,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      * GET
-      * ## URI
-      * ```java
-      * /openapi/ha3/instances/{instanceId}/deploy-graph
-      * ```
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p>GET</p>
+     * <h2>URI</h2>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/deploy-graph
+     * </code></pre>
+     * 
+     * @param request the request parameters of GetDeployGraph  GetDeployGraphRequest
+     * @return GetDeployGraphResponse
      */
     @Override
     public CompletableFuture<GetDeployGraphResponse> getDeployGraph(GetDeployGraphRequest request) {
@@ -680,11 +819,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     GET
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2><a href="#uri"></a>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
+     * </code></pre>
+     * 
+     * @param request the request parameters of GetFile  GetFileRequest
+     * @return GetFileResponse
      */
     @Override
     public CompletableFuture<GetFileResponse> getFile(GetFileRequest request) {
@@ -700,6 +844,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2><a href="#uri"></a>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+     * </code></pre>
+     * 
+     * @param request the request parameters of GetIndex  GetIndexRequest
+     * @return GetIndexResponse
+     */
     @Override
     public CompletableFuture<GetIndexResponse> getIndex(GetIndexRequest request) {
         try {
@@ -714,6 +870,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetIndexOnlineStrategy  GetIndexOnlineStrategyRequest
+     * @return GetIndexOnlineStrategyResponse
+     */
     @Override
     public CompletableFuture<GetIndexOnlineStrategyResponse> getIndexOnlineStrategy(GetIndexOnlineStrategyRequest request) {
         try {
@@ -729,11 +889,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     GET
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+     * </code></pre>
+     * 
+     * @param request the request parameters of GetIndexVersion  GetIndexVersionRequest
+     * @return GetIndexVersionResponse
      */
     @Override
     public CompletableFuture<GetIndexVersionResponse> getIndexVersion(GetIndexVersionRequest request) {
@@ -750,11 +915,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * `GET`
-      * ### URI
-      * `/openapi/ha3/instances/{instanceId}`
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3><a href="#uri"></a>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
+     * </code></pre>
+     * 
+     * @param request the request parameters of GetInstance  GetInstanceRequest
+     * @return GetInstanceResponse
      */
     @Override
     public CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request) {
@@ -770,6 +940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetNodeConfig  GetNodeConfigRequest
+     * @return GetNodeConfigResponse
+     */
     @Override
     public CompletableFuture<GetNodeConfigResponse> getNodeConfig(GetNodeConfigRequest request) {
         try {
@@ -784,6 +958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSqlInstance  GetSqlInstanceRequest
+     * @return GetSqlInstanceResponse
+     */
     @Override
     public CompletableFuture<GetSqlInstanceResponse> getSqlInstance(GetSqlInstanceRequest request) {
         try {
@@ -798,6 +976,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTable  GetTableRequest
+     * @return GetTableResponse
+     */
     @Override
     public CompletableFuture<GetTableResponse> getTable(GetTableRequest request) {
         try {
@@ -812,6 +994,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTableGeneration  GetTableGenerationRequest
+     * @return GetTableGenerationResponse
+     */
     @Override
     public CompletableFuture<GetTableGenerationResponse> getTableGeneration(GetTableGenerationRequest request) {
         try {
@@ -827,11 +1013,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      * `GET`
-      * ## URI
-      * `/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}`
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>GET</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</code></p>
+     * 
+     * @param request the request parameters of ListAdvanceConfigDir  ListAdvanceConfigDirRequest
+     * @return ListAdvanceConfigDirResponse
      */
     @Override
     public CompletableFuture<ListAdvanceConfigDirResponse> listAdvanceConfigDir(ListAdvanceConfigDirRequest request) {
@@ -848,9 +1037,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Sample requests
-      * `GET /openapi/ha3/instances/ose-test1/advanced-configs`
-      *
+     * <b>description</b> :
+     * <h2>Sample requests</h2>
+     * <p><code>GET /openapi/ha3/instances/ose-test1/advanced-configs</code></p>
+     * 
+     * @param request the request parameters of ListAdvanceConfigs  ListAdvanceConfigsRequest
+     * @return ListAdvanceConfigsResponse
      */
     @Override
     public CompletableFuture<ListAdvanceConfigsResponse> listAdvanceConfigs(ListAdvanceConfigsRequest request) {
@@ -866,6 +1058,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAliases  ListAliasesRequest
+     * @return ListAliasesResponse
+     */
     @Override
     public CompletableFuture<ListAliasesResponse> listAliases(ListAliasesRequest request) {
         try {
@@ -881,11 +1077,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * GET
-      * ### URI
-      * /openapi/ha3/instances/{instanceId}/cluster-names
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p>GET</p>
+     * <h3>URI</h3>
+     * <p>/openapi/ha3/instances/{instanceId}/cluster-names</p>
+     * 
+     * @param request the request parameters of ListClusterNames  ListClusterNamesRequest
+     * @return ListClusterNamesResponse
      */
     @Override
     public CompletableFuture<ListClusterNamesResponse> listClusterNames(ListClusterNamesRequest request) {
@@ -902,15 +1101,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * ```java
-      * GET
-      * ```
-      * ### URI
-      * ```java
-      * /openapi/ha3/instances/{instanceId}/cluster-tasks
-      * ```
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/cluster-tasks
+     * </code></pre>
+     * 
+     * @param request the request parameters of ListClusterTasks  ListClusterTasksRequest
+     * @return ListClusterTasksResponse
      */
     @Override
     public CompletableFuture<ListClusterTasksResponse> listClusterTasks(ListClusterTasksRequest request) {
@@ -927,15 +1127,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * ```java
-      * GET
-      * ```
-      * ### URI
-      * ```java
-      * /openapi/ha3/instances/{instanceId}/clusters
-      * ```
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+     * </code></pre>
+     * 
+     * @param request the request parameters of ListClusters  ListClustersRequest
+     * @return ListClustersResponse
      */
     @Override
     public CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request) {
@@ -952,11 +1153,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      * `GET`
-      * ## URI
-      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas`
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>GET</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas</code></p>
+     * 
+     * @param request the request parameters of ListDataSourceSchemas  ListDataSourceSchemasRequest
+     * @return ListDataSourceSchemasResponse
      */
     @Override
     public CompletableFuture<ListDataSourceSchemasResponse> listDataSourceSchemas(ListDataSourceSchemasRequest request) {
@@ -973,15 +1177,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Method
-      * ```java
-      * GET
-      * ```
-      * ### [](#uri)URI
-      * ```java
-      * /openapi/ha3/instances/{instanceId}/data-source-tasks
-      * ```
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3><a href="#uri"></a>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-source-tasks
+     * </code></pre>
+     * 
+     * @param request the request parameters of ListDataSourceTasks  ListDataSourceTasksRequest
+     * @return ListDataSourceTasksResponse
      */
     @Override
     public CompletableFuture<ListDataSourceTasksResponse> listDataSourceTasks(ListDataSourceTasksRequest request) {
@@ -998,11 +1203,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      * `GET`
-      * ## URI
-      * `/openapi/ha3/instances/{instanceId}/data-sources`
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>GET</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources</code></p>
+     * 
+     * @param request the request parameters of ListDataSources  ListDataSourcesRequest
+     * @return ListDataSourcesResponse
      */
     @Override
     public CompletableFuture<ListDataSourcesResponse> listDataSources(ListDataSourcesRequest request) {
@@ -1018,6 +1226,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDatabases  ListDatabasesRequest
+     * @return ListDatabasesResponse
+     */
     @Override
     public CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request) {
         try {
@@ -1033,11 +1245,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * `GET`
-      * ### URI
-      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</code></p>
+     * 
+     * @param request the request parameters of ListDateSourceGenerations  ListDateSourceGenerationsRequest
+     * @return ListDateSourceGenerationsResponse
      */
     @Override
     public CompletableFuture<ListDateSourceGenerationsResponse> listDateSourceGenerations(ListDateSourceGenerationsRequest request) {
@@ -1053,6 +1268,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIndexRecoverRecords  ListIndexRecoverRecordsRequest
+     * @return ListIndexRecoverRecordsResponse
+     */
     @Override
     public CompletableFuture<ListIndexRecoverRecordsResponse> listIndexRecoverRecords(ListIndexRecoverRecordsRequest request) {
         try {
@@ -1068,11 +1287,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     GET
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/indexes
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes
+     * </code></pre>
+     * 
+     * @param request the request parameters of ListIndexes  ListIndexesRequest
+     * @return ListIndexesResponse
      */
     @Override
     public CompletableFuture<ListIndexesResponse> listIndexes(ListIndexesRequest request) {
@@ -1089,11 +1313,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * `GET`
-      * ### URI
-      * `/openapi/ha3/instances/{instanceId}/specs?type=qrs`
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/specs?type=qrs</code></p>
+     * 
+     * @param request the request parameters of ListInstanceSpecs  ListInstanceSpecsRequest
+     * @return ListInstanceSpecsResponse
      */
     @Override
     public CompletableFuture<ListInstanceSpecsResponse> listInstanceSpecs(ListInstanceSpecsRequest request) {
@@ -1110,11 +1337,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Method
-      * `GET`
-      * ### [](#uri)URI
-      * `/openapi/ha3/instances`
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3><a href="#uri"></a>URI</h3>
+     * <p><code>/openapi/ha3/instances</code></p>
+     * 
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
      */
     @Override
     public CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request) {
@@ -1130,6 +1360,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLogs  ListLogsRequest
+     * @return ListLogsResponse
+     */
     @Override
     public CompletableFuture<ListLogsResponse> listLogs(ListLogsRequest request) {
         try {
@@ -1145,15 +1379,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * ```java
-      * GET
-      * ```
-      * ### URI
-      * ```java
-      * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
-      * ```
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
+     * </code></pre>
+     * 
+     * @param request the request parameters of ListOnlineConfigs  ListOnlineConfigsRequest
+     * @return ListOnlineConfigsResponse
      */
     @Override
     public CompletableFuture<ListOnlineConfigsResponse> listOnlineConfigs(ListOnlineConfigsRequest request) {
@@ -1169,6 +1404,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPausePolicys  ListPausePolicysRequest
+     * @return ListPausePolicysResponse
+     */
     @Override
     public CompletableFuture<ListPausePolicysResponse> listPausePolicys(ListPausePolicysRequest request) {
         try {
@@ -1183,6 +1422,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPostQueryResult  ListPostQueryResultRequest
+     * @return ListPostQueryResultResponse
+     */
     @Override
     public CompletableFuture<ListPostQueryResultResponse> listPostQueryResult(ListPostQueryResultRequest request) {
         try {
@@ -1198,11 +1441,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Method
-      * `GET`
-      * ### [](#uri)URI
-      * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3><a href="#uri"></a>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/query?query=xxxx</code></p>
+     * 
+     * @param request the request parameters of ListQueryResult  ListQueryResultRequest
+     * @return ListQueryResultResponse
      */
     @Override
     public CompletableFuture<ListQueryResultResponse> listQueryResult(ListQueryResultRequest request) {
@@ -1218,6 +1464,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRestQueryResult  ListRestQueryResultRequest
+     * @return ListRestQueryResultResponse
+     */
     @Override
     public CompletableFuture<ListRestQueryResultResponse> listRestQueryResult(ListRestQueryResultRequest request) {
         try {
@@ -1232,6 +1482,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSchemas  ListSchemasRequest
+     * @return ListSchemasResponse
+     */
     @Override
     public CompletableFuture<ListSchemasResponse> listSchemas(ListSchemasRequest request) {
         try {
@@ -1246,6 +1500,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTableGenerations  ListTableGenerationsRequest
+     * @return ListTableGenerationsResponse
+     */
     @Override
     public CompletableFuture<ListTableGenerationsResponse> listTableGenerations(ListTableGenerationsRequest request) {
         try {
@@ -1260,6 +1518,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTables  ListTablesRequest
+     * @return ListTablesResponse
+     */
     @Override
     public CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request) {
         try {
@@ -1274,6 +1536,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -1288,6 +1554,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTasks  ListTasksRequest
+     * @return ListTasksResponse
+     */
     @Override
     public CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request) {
         try {
@@ -1302,6 +1572,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVectorQueryResult  ListVectorQueryResultRequest
+     * @return ListVectorQueryResultResponse
+     */
     @Override
     public CompletableFuture<ListVectorQueryResultResponse> listVectorQueryResult(ListVectorQueryResultRequest request) {
         try {
@@ -1316,6 +1590,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAdvanceConfig  ModifyAdvanceConfigRequest
+     * @return ModifyAdvanceConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyAdvanceConfigResponse> modifyAdvanceConfig(ModifyAdvanceConfigRequest request) {
         try {
@@ -1331,11 +1609,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     put
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>put
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+     * </code></pre>
+     * 
+     * @param request the request parameters of ModifyAdvanceConfigFile  ModifyAdvanceConfigFileRequest
+     * @return ModifyAdvanceConfigFileResponse
      */
     @Override
     public CompletableFuture<ModifyAdvanceConfigFileResponse> modifyAdvanceConfigFile(ModifyAdvanceConfigFileRequest request) {
@@ -1351,6 +1634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAlias  ModifyAliasRequest
+     * @return ModifyAliasResponse
+     */
     @Override
     public CompletableFuture<ModifyAliasResponse> modifyAlias(ModifyAliasRequest request) {
         try {
@@ -1366,11 +1653,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Method
-      * `PUT`
-      * ### [](#uri)URI
-      * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3><a href="#uri"></a>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc</code></p>
+     * 
+     * @param request the request parameters of ModifyClusterDesc  ModifyClusterDescRequest
+     * @return ModifyClusterDescResponse
      */
     @Override
     public CompletableFuture<ModifyClusterDescResponse> modifyClusterDesc(ModifyClusterDescRequest request) {
@@ -1387,9 +1677,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Request syntax
-      *     PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
-      *
+     * <b>description</b> :
+     * <h2>Request syntax</h2>
+     * <pre><code>PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
+     * </code></pre>
+     * 
+     * @param request the request parameters of ModifyClusterOfflineConfig  ModifyClusterOfflineConfigRequest
+     * @return ModifyClusterOfflineConfigResponse
      */
     @Override
     public CompletableFuture<ModifyClusterOfflineConfigResponse> modifyClusterOfflineConfig(ModifyClusterOfflineConfigRequest request) {
@@ -1406,11 +1700,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * `PUT`
-      * ### URI
-      * `/openapi/ha3/instances/{instanceId}/cluster-online-config`
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/cluster-online-config</code></p>
+     * 
+     * @param request the request parameters of ModifyClusterOnlineConfig  ModifyClusterOnlineConfigRequest
+     * @return ModifyClusterOnlineConfigResponse
      */
     @Override
     public CompletableFuture<ModifyClusterOnlineConfigResponse> modifyClusterOnlineConfig(ModifyClusterOnlineConfigRequest request) {
@@ -1426,6 +1723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDataSourceDeploy  ModifyDataSourceDeployRequest
+     * @return ModifyDataSourceDeployResponse
+     */
     @Override
     public CompletableFuture<ModifyDataSourceDeployResponse> modifyDataSourceDeploy(ModifyDataSourceDeployRequest request) {
         try {
@@ -1441,11 +1742,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     PUT
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>PUT
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+     * </code></pre>
+     * 
+     * @param request the request parameters of ModifyFile  ModifyFileRequest
+     * @return ModifyFileResponse
      */
     @Override
     public CompletableFuture<ModifyFileResponse> modifyFile(ModifyFileRequest request) {
@@ -1461,6 +1767,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyIndex  ModifyIndexRequest
+     * @return ModifyIndexResponse
+     */
     @Override
     public CompletableFuture<ModifyIndexResponse> modifyIndex(ModifyIndexRequest request) {
         try {
@@ -1475,6 +1785,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyIndexOnlineStrategy  ModifyIndexOnlineStrategyRequest
+     * @return ModifyIndexOnlineStrategyResponse
+     */
     @Override
     public CompletableFuture<ModifyIndexOnlineStrategyResponse> modifyIndexOnlineStrategy(ModifyIndexOnlineStrategyRequest request) {
         try {
@@ -1490,11 +1804,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * `PUT`
-      * ### URI
-      * `/openapi/ha3/instances/{instanceId}/index-partition`
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/index-partition</code></p>
+     * 
+     * @param request the request parameters of ModifyIndexPartition  ModifyIndexPartitionRequest
+     * @return ModifyIndexPartitionResponse
      */
     @Override
     public CompletableFuture<ModifyIndexPartitionResponse> modifyIndexPartition(ModifyIndexPartitionRequest request) {
@@ -1511,11 +1828,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Method
-      *     PUT
-      * ## [](#uri)URI
-      *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Method</h2>
+     * <pre><code>PUT
+     * </code></pre>
+     * <h2><a href="#uri"></a>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+     * </code></pre>
+     * 
+     * @param request the request parameters of ModifyIndexVersion  ModifyIndexVersionRequest
+     * @return ModifyIndexVersionResponse
      */
     @Override
     public CompletableFuture<ModifyIndexVersionResponse> modifyIndexVersion(ModifyIndexVersionRequest request) {
@@ -1532,15 +1854,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * ```java
-      * PUT
-      * ```
-      * ### URI
-      * ```java
-      * /openapi/ha3/instances/{instanceId}/node-config?type=qrs&name=test
-      * ```
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config?type=qrs&amp;name=test
+     * </code></pre>
+     * 
+     * @param request the request parameters of ModifyNodeConfig  ModifyNodeConfigRequest
+     * @return ModifyNodeConfigResponse
      */
     @Override
     public CompletableFuture<ModifyNodeConfigResponse> modifyNodeConfig(ModifyNodeConfigRequest request) {
@@ -1557,15 +1880,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * ```java
-      * put
-      * ```
-      * ### URI
-      * ```java
-      * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
-      * ```
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">put
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
+     * </code></pre>
+     * 
+     * @param request the request parameters of ModifyOnlineConfig  ModifyOnlineConfigRequest
+     * @return ModifyOnlineConfigResponse
      */
     @Override
     public CompletableFuture<ModifyOnlineConfigResponse> modifyOnlineConfig(ModifyOnlineConfigRequest request) {
@@ -1582,11 +1906,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * `PUT`
-      * ### URI
-      * `/openapi/ha3/instances/{instanceId}/password`
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/password</code></p>
+     * 
+     * @param request the request parameters of ModifyPassword  ModifyPasswordRequest
+     * @return ModifyPasswordResponse
      */
     @Override
     public CompletableFuture<ModifyPasswordResponse> modifyPassword(ModifyPasswordRequest request) {
@@ -1602,6 +1929,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPausePolicy  ModifyPausePolicyRequest
+     * @return ModifyPausePolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyPausePolicyResponse> modifyPausePolicy(ModifyPausePolicyRequest request) {
         try {
@@ -1616,6 +1947,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPublicUrlIpList  ModifyPublicUrlIpListRequest
+     * @return ModifyPublicUrlIpListResponse
+     */
     @Override
     public CompletableFuture<ModifyPublicUrlIpListResponse> modifyPublicUrlIpList(ModifyPublicUrlIpListRequest request) {
         try {
@@ -1630,6 +1965,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyTable  ModifyTableRequest
+     * @return ModifyTableResponse
+     */
     @Override
     public CompletableFuture<ModifyTableResponse> modifyTable(ModifyTableRequest request) {
         try {
@@ -1645,15 +1984,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      * ~~~
-      * POST
-      * ~~~
-      * ## URI
-      * ~~~
-      * /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
-      * ~~~
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>POST
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+     * </code></pre>
+     * 
+     * @param request the request parameters of PublishAdvanceConfig  PublishAdvanceConfigRequest
+     * @return PublishAdvanceConfigResponse
      */
     @Override
     public CompletableFuture<PublishAdvanceConfigResponse> publishAdvanceConfig(PublishAdvanceConfigRequest request) {
@@ -1670,11 +2010,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
-      *     POST
-      * ## URI
-      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
-      *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>POST
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
+     * </code></pre>
+     * 
+     * @param request the request parameters of PublishIndexVersion  PublishIndexVersionRequest
+     * @return PublishIndexVersionResponse
      */
     @Override
     public CompletableFuture<PublishIndexVersionResponse> publishIndexVersion(PublishIndexVersionRequest request) {
@@ -1690,6 +2035,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushDocuments  PushDocumentsRequest
+     * @return PushDocumentsResponse
+     */
     @Override
     public CompletableFuture<PushDocumentsResponse> pushDocuments(PushDocumentsRequest request) {
         try {
@@ -1705,11 +2054,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * `POST`
-      * ### URI
-      * `/openapi/ha3/instances/{instanceId}/recover-index`
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>POST</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/recover-index</code></p>
+     * 
+     * @param request the request parameters of RecoverIndex  RecoverIndexRequest
+     * @return RecoverIndexResponse
      */
     @Override
     public CompletableFuture<RecoverIndexResponse> recoverIndex(RecoverIndexRequest request) {
@@ -1725,6 +2077,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Reindex  ReindexRequest
+     * @return ReindexResponse
+     */
     @Override
     public CompletableFuture<ReindexResponse> reindex(ReindexRequest request) {
         try {
@@ -1740,15 +2096,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * ```java
-      * DELETE
-      * ```
-      * ### URI
-      * ```java
-      * /openapi/ha3/instances/{instanceId}/clusters/{clusterName}
-      * ```
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters/{clusterName}
+     * </code></pre>
+     * 
+     * @param request the request parameters of RemoveCluster  RemoveClusterRequest
+     * @return RemoveClusterResponse
      */
     @Override
     public CompletableFuture<RemoveClusterResponse> removeCluster(RemoveClusterRequest request) {
@@ -1764,6 +2121,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenameFolder  RenameFolderRequest
+     * @return RenameFolderResponse
+     */
     @Override
     public CompletableFuture<RenameFolderResponse> renameFolder(RenameFolderRequest request) {
         try {
@@ -1778,6 +2139,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartIndex  StartIndexRequest
+     * @return StartIndexResponse
+     */
     @Override
     public CompletableFuture<StartIndexResponse> startIndex(StartIndexRequest request) {
         try {
@@ -1792,6 +2157,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopIndex  StopIndexRequest
+     * @return StopIndexResponse
+     */
     @Override
     public CompletableFuture<StopIndexResponse> stopIndex(StopIndexRequest request) {
         try {
@@ -1807,15 +2176,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Method
-      * ```java
-      * PUT
-      * ```
-      * ### [](#uri)URI
-      * ```java
-      * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
-      * ```
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3><a href="#uri"></a>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
+     * </code></pre>
+     * 
+     * @param request the request parameters of StopTask  StopTaskRequest
+     * @return StopTaskResponse
      */
     @Override
     public CompletableFuture<StopTaskResponse> stopTask(StopTaskRequest request) {
@@ -1831,6 +2201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1845,6 +2219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -1860,11 +2238,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * `PUT`
-      * ### URI
-      * `/openapi/ha3/instances/{instanceId}`
-      *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}</code></p>
+     * 
+     * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
+     * @return UpdateInstanceResponse
      */
     @Override
     public CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request) {
@@ -1880,6 +2261,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSqlInstanceContent  UpdateSqlInstanceContentRequest
+     * @return UpdateSqlInstanceContentResponse
+     */
     @Override
     public CompletableFuture<UpdateSqlInstanceContentResponse> updateSqlInstanceContent(UpdateSqlInstanceContentRequest request) {
         try {
@@ -1894,6 +2279,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSqlInstanceName  UpdateSqlInstanceNameRequest
+     * @return UpdateSqlInstanceNameResponse
+     */
     @Override
     public CompletableFuture<UpdateSqlInstanceNameResponse> updateSqlInstanceName(UpdateSqlInstanceNameRequest request) {
         try {
@@ -1908,6 +2297,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSqlInstanceParams  UpdateSqlInstanceParamsRequest
+     * @return UpdateSqlInstanceParamsResponse
+     */
     @Override
     public CompletableFuture<UpdateSqlInstanceParamsResponse> updateSqlInstanceParams(UpdateSqlInstanceParamsRequest request) {
         try {

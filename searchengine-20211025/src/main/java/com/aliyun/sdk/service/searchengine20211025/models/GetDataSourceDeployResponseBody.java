@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataSourceDeployResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataSourceDeployResponseBody</p>
@@ -49,7 +50,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * <p>The result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataSourceDeployResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceDeployResponseBody</p>
+     */
     public static class Hdfs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("path")
         private String path;
@@ -111,6 +121,12 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataSourceDeployResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceDeployResponseBody</p>
+     */
     public static class Odps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("partitions")
         private java.util.Map < String, String > partitions;
@@ -152,6 +168,12 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataSourceDeployResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceDeployResponseBody</p>
+     */
     public static class Oss extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("path")
         private String path;
@@ -193,6 +215,12 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataSourceDeployResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceDeployResponseBody</p>
+     */
     public static class Saro extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("path")
         private String path;
@@ -254,6 +282,12 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataSourceDeployResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceDeployResponseBody</p>
+     */
     public static class Extend extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hdfs")
         private Hdfs hdfs;
@@ -355,6 +389,12 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataSourceDeployResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceDeployResponseBody</p>
+     */
     public static class Processor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("args")
         private String args;
@@ -394,7 +434,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private String resource; 
 
             /**
-             * The startup parameters of the process.
+             * <p>The startup parameters of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder args(String args) {
                 this.args = args;
@@ -402,7 +445,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * The resource information.
+             * <p>The resource information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -416,6 +462,12 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataSourceDeployResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceDeployResponseBody</p>
+     */
     public static class Storage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessKey")
         private String accessKey;
@@ -587,7 +639,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * The AccessKey ID of the MaxCompute data source.
+             * <p>The AccessKey ID of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -595,7 +650,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret of the MaxCompute data source.
+             * <p>The AccessKey secret of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>as</p>
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -603,7 +661,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>antsys-miniapp-chongwen-static</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -627,7 +688,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the MaxCompute data source.
+             * <p>The endpoint of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -643,7 +707,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) path.
+             * <p>The Object Storage Service (OSS) path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://opensearch</p>
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -651,7 +718,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * The partition in the MaxCompute table. Example: ds=20180102.
+             * <p>The partition in the MaxCompute table. Example: ds=20180102.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20220926</p>
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -697,6 +767,12 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataSourceDeployResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceDeployResponseBody</p>
+     */
     public static class Swift extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("topic")
         private String topic;
@@ -736,7 +812,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private String zk; 
 
             /**
-             * The topic.
+             * <p>The topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -744,7 +823,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * zk
+             * <p>zk</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zk</p>
              */
             public Builder zk(String zk) {
                 this.zk = zk;
@@ -758,6 +840,12 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataSourceDeployResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceDeployResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoBuildIndex")
         private Boolean autoBuildIndex;
@@ -849,7 +937,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the process.
+             * <p>The parameters of the process.</p>
              */
             public Builder processor(Processor processor) {
                 this.processor = processor;
@@ -857,7 +945,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the data source.
+             * <p>The information about the data source.</p>
              */
             public Builder storage(Storage storage) {
                 this.storage = storage;
@@ -865,7 +953,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the incremental data source Swift.
+             * <p>The information about the incremental data source Swift.</p>
              */
             public Builder swift(Swift swift) {
                 this.swift = swift;

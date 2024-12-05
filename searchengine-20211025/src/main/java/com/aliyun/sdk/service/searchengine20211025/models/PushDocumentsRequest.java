@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushDocumentsRequest} extends {@link RequestModel}
  *
  * <p>PushDocumentsRequest</p>
@@ -97,7 +98,11 @@ public class PushDocumentsRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2iv7sq01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -106,7 +111,11 @@ public class PushDocumentsRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01_ecom_table_test</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);
@@ -115,7 +124,7 @@ public class PushDocumentsRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
         public Builder body(java.util.List < ? > body) {
             this.putBodyParameter("body", body);
@@ -124,7 +133,10 @@ public class PushDocumentsRequest extends Request {
         }
 
         /**
-         * The primary key field.
+         * <p>The primary key field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder pkField(String pkField) {
             this.putQueryParameter("pkField", pkField);

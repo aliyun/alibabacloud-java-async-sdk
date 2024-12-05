@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterRequest</p>
@@ -124,7 +125,11 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2k3qer02</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -133,7 +138,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic connection.
+         * <p>Specifies whether to enable automatic connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoLoad(Boolean autoLoad) {
             this.putBodyParameter("autoLoad", autoLoad);
@@ -142,7 +150,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The details of the Searcher workers.
+         * <p>The details of the Searcher workers.</p>
          */
         public Builder dataNode(DataNode dataNode) {
             this.putBodyParameter("dataNode", dataNode);
@@ -151,7 +159,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The description of the cluster.
+         * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ha-tets&quot;</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -160,7 +171,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The cluster name.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-zvp2qr1sk01_qrs</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -169,7 +183,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The details of the Query Result Searcher (QRS) workers.
+         * <p>The details of the Query Result Searcher (QRS) workers.</p>
          */
         public Builder queryNode(QueryNode queryNode) {
             this.putBodyParameter("queryNode", queryNode);
@@ -184,6 +198,12 @@ public class CreateClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class DataNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("number")
         private Integer number;
@@ -223,7 +243,10 @@ public class CreateClusterRequest extends Request {
             private String partition; 
 
             /**
-             * The number of Searcher workers.
+             * <p>The number of Searcher workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -231,7 +254,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The number of shards.
+             * <p>The number of shards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -245,6 +271,12 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class QueryNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("number")
         private Integer number;
@@ -272,7 +304,10 @@ public class CreateClusterRequest extends Request {
             private Integer number; 
 
             /**
-             * The number of QRS workers.
+             * <p>The number of QRS workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder number(Integer number) {
                 this.number = number;

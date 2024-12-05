@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterOnlineConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyClusterOnlineConfigResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyClusterOnlineConfigResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * The ID of the request
+         * <p>The ID of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ModifyClusterOnlineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Map
+         * <p>Map</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

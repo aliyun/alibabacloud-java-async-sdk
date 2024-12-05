@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableGenerationResponseBody} extends {@link TeaModel}
  *
  * <p>GetTableGenerationResponseBody</p>
@@ -49,7 +50,10 @@ public class GetTableGenerationResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetTableGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned.
+         * <p>The result returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetTableGenerationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTableGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableGenerationResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generationId")
         private Long generationId;
@@ -109,7 +119,10 @@ public class GetTableGenerationResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * generationId
+             * <p>generationId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708674867</p>
              */
             public Builder generationId(Long generationId) {
                 this.generationId = generationId;
@@ -117,7 +130,10 @@ public class GetTableGenerationResponseBody extends TeaModel {
             }
 
             /**
-             * starting, building, ready, stopped, failed
+             * <p>starting, building, ready, stopped, failed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ready</p>
              */
             public Builder status(String status) {
                 this.status = status;

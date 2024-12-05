@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceSpecsResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceSpecsResponseBody</p>
@@ -49,7 +50,10 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * The instance types.
+         * <p>The instance types.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceSpecsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private Integer cpu;
@@ -133,7 +143,10 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             private Integer minDisk; 
 
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -141,7 +154,10 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum storage of a single data node. Unit: GB.
+             * <p>The maximum storage of a single data node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder maxDisk(Integer maxDisk) {
                 this.maxDisk = maxDisk;
@@ -149,7 +165,10 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory of the instance. Unit: GB.
+             * <p>The memory of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -157,7 +176,10 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum storage of a single data node. Unit: GB.
+             * <p>The minimum storage of a single data node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder minDisk(Integer minDisk) {
                 this.minDisk = minDisk;

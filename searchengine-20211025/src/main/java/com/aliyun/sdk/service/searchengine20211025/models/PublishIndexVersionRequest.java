@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishIndexVersionRequest} extends {@link RequestModel}
  *
  * <p>PublishIndexVersionRequest</p>
@@ -83,7 +84,11 @@ public class PublishIndexVersionRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32m2c4u01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -92,7 +97,11 @@ public class PublishIndexVersionRequest extends Request {
         }
 
         /**
-         * The index name.
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>automobile_2d</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -101,7 +110,10 @@ public class PublishIndexVersionRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder body(java.util.Map < String, ? > body) {
             this.putBodyParameter("body", body);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPasswordRequest} extends {@link RequestModel}
  *
  * <p>ModifyPasswordRequest</p>
@@ -82,7 +83,11 @@ public class ModifyPasswordRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7pp2pcna701</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -91,7 +96,10 @@ public class ModifyPasswordRequest extends Request {
         }
 
         /**
-         * The password.
+         * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -100,7 +108,10 @@ public class ModifyPasswordRequest extends Request {
         }
 
         /**
-         * The username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;username&quot;</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);

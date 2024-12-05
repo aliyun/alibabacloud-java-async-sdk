@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataSourceTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataSourceTasksResponseBody</p>
@@ -49,7 +50,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC5EC8FA-5C0D-56AF-BEF4-6FCCEABD0511</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The index information.
+         * <p>The index information.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataSourceTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourceTasksResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("msg")
         private String msg;
@@ -109,7 +119,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             private String tagLevel; 
 
             /**
-             * The tag content.
+             * <p>The tag content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>succeed in handling request</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -117,7 +130,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The tag level.
+             * <p>The tag level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder tagLevel(String tagLevel) {
                 this.tagLevel = tagLevel;
@@ -131,6 +147,12 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataSourceTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourceTasksResponseBody</p>
+     */
     public static class TaskNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("finishDate")
         private String finishDate;
@@ -194,7 +216,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the task was complete.
+             * <p>The time when the task was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder finishDate(String finishDate) {
                 this.finishDate = finishDate;
@@ -202,7 +227,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ordinal number of the task.
+             * <p>The ordinal number of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -210,7 +238,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task name.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-7pp2ngv4s02_qrs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +249,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>onlyPublished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -232,6 +266,12 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataSourceTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourceTasksResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extraAttribute")
         private String extraAttribute;
@@ -379,7 +419,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The additional attributes of the card.
+             * <p>The additional attributes of the card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder extraAttribute(String extraAttribute) {
                 this.extraAttribute = extraAttribute;
@@ -387,7 +430,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The field3 field that was passed when the FSM was created.
+             * <p>The field3 field that was passed when the FSM was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder field3(String field3) {
                 this.field3 = field3;
@@ -395,7 +441,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the finite state machine (FSM).
+             * <p>The ID of the finite state machine (FSM).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tisplus_opensearch@datasource_flow_fsm@1062017779051424-ha-cn-2r42ostoc01_ecom_table@vpc_hz_domain_1@null@MANUAL-ha-cn-2r42ostoc01_ecom_table@1655974525756@006754</p>
              */
             public Builder fsmId(String fsmId) {
                 this.fsmId = fsmId;
@@ -403,7 +452,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The change group type.
+             * <p>The change group type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -411,7 +463,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The card name.
+             * <p>The card name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -419,7 +474,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The FSM status.
+             * <p>The FSM status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -427,7 +485,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the progress bar.
+             * <p>The tags of the progress bar.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -435,7 +493,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task information.
+             * <p>The task information.</p>
              */
             public Builder taskNodes(java.util.List < TaskNodes> taskNodes) {
                 this.taskNodes = taskNodes;
@@ -443,7 +501,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the card.
+             * <p>The timestamp of the card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646279473</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -451,7 +512,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The card type.
+             * <p>The card type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>search</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -459,7 +523,10 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The user who triggered the generation of the FSM process.
+             * <p>The user who triggered the generation of the FSM process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder user(String user) {
                 this.user = user;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIndexRequest} extends {@link RequestModel}
  *
  * <p>DeleteIndexRequest</p>
@@ -98,7 +99,11 @@ public class DeleteIndexRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42p5oi202</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -107,7 +112,11 @@ public class DeleteIndexRequest extends Request {
         }
 
         /**
-         * The index name.
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>generation</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -116,7 +125,11 @@ public class DeleteIndexRequest extends Request {
         }
 
         /**
-         * The data source.
+         * <p>The data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0js04_test</p>
          */
         public Builder dataSource(String dataSource) {
             this.putQueryParameter("dataSource", dataSource);
@@ -125,7 +138,10 @@ public class DeleteIndexRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the data source.
+         * <p>Specifies whether to delete the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteDataSource(Boolean deleteDataSource) {
             this.putQueryParameter("deleteDataSource", deleteDataSource);

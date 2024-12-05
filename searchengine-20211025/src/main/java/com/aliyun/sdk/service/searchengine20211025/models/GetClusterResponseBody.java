@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterResponseBody</p>
@@ -49,7 +50,10 @@ public class GetClusterResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The clusters.
+         * <p>The clusters.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
     public static class DataNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -121,7 +131,10 @@ public class GetClusterResponseBody extends TeaModel {
             private Integer partition; 
 
             /**
-             * The name of the Searcher worker.
+             * <p>The name of the Searcher worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -129,7 +142,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of replicas.
+             * <p>The number of replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -137,7 +153,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of partitions.
+             * <p>The number of partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -151,6 +170,12 @@ public class GetClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
     public static class QueryNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -202,7 +227,10 @@ public class GetClusterResponseBody extends TeaModel {
             private Integer partition; 
 
             /**
-             * The name of the QRS worker.
+             * <p>The name of the QRS worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +238,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -218,7 +249,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of replicas.
+             * <p>The number of replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -232,6 +266,12 @@ public class GetClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("config")
         private java.util.Map < String, java.util.Map<String, ?>> config;
@@ -391,7 +431,7 @@ public class GetClusterResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The configuration information.
+             * <p>The configuration information.</p>
              */
             public Builder config(java.util.Map < String, java.util.Map<String, ?>> config) {
                 this.config = config;
@@ -399,7 +439,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was updated.
+             * <p>The time when the cluster was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-09 00:01:02</p>
              */
             public Builder configUpdateTime(String configUpdateTime) {
                 this.configUpdateTime = configUpdateTime;
@@ -407,7 +450,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was created.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-21 16:05:26</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -415,7 +461,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The effective advanced configuration version.
+             * <p>The effective advanced configuration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_yyds_data1</p>
              */
             public Builder currentAdvanceConfigVersion(String currentAdvanceConfigVersion) {
                 this.currentAdvanceConfigVersion = currentAdvanceConfigVersion;
@@ -423,7 +472,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The effective online configuration version.
+             * <p>The effective online configuration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_yyds_data1</p>
              */
             public Builder currentOnlineConfigVersion(String currentOnlineConfigVersion) {
                 this.currentOnlineConfigVersion = currentOnlineConfigVersion;
@@ -431,7 +483,7 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of Searcher workers.
+             * <p>The specifications of Searcher workers.</p>
              */
             public Builder dataNode(DataNode dataNode) {
                 this.dataNode = dataNode;
@@ -439,7 +491,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the cluster.
+             * <p>The description of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fzz_test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -447,7 +502,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The latest advanced configuration version.
+             * <p>The latest advanced configuration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_yyds_data1</p>
              */
             public Builder latestAdvanceConfigVersion(String latestAdvanceConfigVersion) {
                 this.latestAdvanceConfigVersion = latestAdvanceConfigVersion;
@@ -455,7 +513,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The latest online configuration version.
+             * <p>The latest online configuration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_yyds_data1</p>
              */
             public Builder latestOnlineConfigVersion(String latestOnlineConfigVersion) {
                 this.latestOnlineConfigVersion = latestOnlineConfigVersion;
@@ -463,7 +524,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -471,7 +535,7 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of Query Result Searcher (QRS) workers.
+             * <p>The specifications of Query Result Searcher (QRS) workers.</p>
              */
             public Builder queryNode(QueryNode queryNode) {
                 this.queryNode = queryNode;
@@ -479,7 +543,10 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The creation status of the cluster. Valid values: NEW and PUBLISH. NEW indicates that the cluster is being created. PUBLISH indicates that the cluster is created.
+             * <p>The creation status of the cluster. Valid values: NEW and PUBLISH. NEW indicates that the cluster is being created. PUBLISH indicates that the cluster is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NEW</p>
              */
             public Builder status(String status) {
                 this.status = status;

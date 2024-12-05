@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTableGenerationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTableGenerationsResponseBody</p>
@@ -49,7 +50,10 @@ public class ListTableGenerationsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6E3D968-529C-5C40-AFDD-133A8B8FD930</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListTableGenerationsResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * <p>The result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListTableGenerationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTableGenerationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTableGenerationsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generationId")
         private Long generationId;
@@ -97,7 +107,10 @@ public class ListTableGenerationsResponseBody extends TeaModel {
             private Long generationId; 
 
             /**
-             * The ID of the full index version.
+             * <p>The ID of the full index version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708674867</p>
              */
             public Builder generationId(Long generationId) {
                 this.generationId = generationId;

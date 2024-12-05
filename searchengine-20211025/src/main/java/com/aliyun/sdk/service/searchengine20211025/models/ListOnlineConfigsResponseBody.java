@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOnlineConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListOnlineConfigsResponseBody</p>
@@ -49,7 +50,10 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E45380E8-994A-5402-9806-F114B3295FCF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * List
+         * <p>List</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOnlineConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOnlineConfigsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("config")
         private String config;
@@ -109,7 +119,10 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
             private String indexName; 
 
             /**
-             * The configuration information
+             * <p>The configuration information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;specItems&quot;:[{&quot;specKey&quot;:&quot;YQ_KEYWORD_NUMBER_PLUS&quot;,&quot;value&quot;:&quot;1&quot;}]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -117,7 +130,10 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the index
+             * <p>The name of the index</p>
+             * 
+             * <strong>example:</strong>
+             * <p>generation</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;

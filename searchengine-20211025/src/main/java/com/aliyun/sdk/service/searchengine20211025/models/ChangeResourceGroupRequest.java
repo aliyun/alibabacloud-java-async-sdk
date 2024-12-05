@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
@@ -81,7 +82,10 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -90,7 +94,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * new resource group id
+         * <p>new resource group id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxr3gs*****</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putBodyParameter("newResourceGroupId", newResourceGroupId);
@@ -99,7 +106,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource type.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);

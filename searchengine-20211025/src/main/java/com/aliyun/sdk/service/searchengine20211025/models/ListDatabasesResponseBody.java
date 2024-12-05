@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatabasesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDatabasesResponseBody</p>
@@ -49,7 +50,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E45380E8-994A-5402-9806-F114B3295FCF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * NodeTreeVO
+         * <p>NodeTreeVO</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListDatabasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabasesResponseBody</p>
+     */
     public static class SqlInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("children")
         private java.util.List < ? > children;
@@ -237,7 +247,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * table, instance, template, function
+             * <p>table, instance, template, function</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -251,6 +264,12 @@ public class ListDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabasesResponseBody</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("children")
         private java.util.List < ? > children;
@@ -418,7 +437,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * table, instance, template, function
+             * <p>table, instance, template, function</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -432,6 +454,12 @@ public class ListDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabasesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("children")
         private java.util.List < ? > children;
@@ -599,7 +627,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * table, instance, template, function
+             * <p>table, instance, template, function</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -613,6 +644,12 @@ public class ListDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabasesResponseBody</p>
+     */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("database")
         private String database;
@@ -734,6 +771,12 @@ public class ListDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabasesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("databases")
         private java.util.List < Databases> databases;

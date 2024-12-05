@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataSourceRequest} extends {@link RequestModel}
  *
  * <p>CreateDataSourceRequest</p>
@@ -152,7 +153,11 @@ public class CreateDataSourceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7e22rgfyb01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -161,7 +166,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically rebuild the index.
+         * <p>Specifies whether to automatically rebuild the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoBuildIndex(Boolean autoBuildIndex) {
             this.putBodyParameter("autoBuildIndex", autoBuildIndex);
@@ -170,7 +178,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * The configuration information.
+         * <p>The configuration information.</p>
          */
         public Builder config(Config config) {
             this.putBodyParameter("config", config);
@@ -179,7 +187,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * The data center in which the data source is deployed.
+         * <p>The data center in which the data source is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_1</p>
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -188,7 +199,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_test_api</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -197,7 +211,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * The configurations of the SARO data source.
+         * <p>The configurations of the SARO data source.</p>
          */
         public Builder saroConfig(SaroConfig saroConfig) {
             this.putBodyParameter("saroConfig", saroConfig);
@@ -206,7 +220,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps, oss, and swift.
+         * <p>The type of the data source. Valid values: odps, oss, and swift.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -215,7 +232,10 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.
+         * <p>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -230,6 +250,12 @@ public class CreateDataSourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataSourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataSourceRequest</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessKey")
         private String accessKey;
@@ -401,7 +427,10 @@ public class CreateDataSourceRequest extends Request {
             private String tag; 
 
             /**
-             * The AccessKey ID of the MaxCompute data source.
+             * <p>The AccessKey ID of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L***p</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -409,7 +438,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * The AccessKey secret of the MaxCompute data source.
+             * <p>The AccessKey secret of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5**9a6</p>
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -417,7 +449,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>opensearch</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -441,7 +476,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * The endpoint of the MaxCompute or Object Storage Service (OSS) data source.
+             * <p>The endpoint of the MaxCompute or Object Storage Service (OSS) data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -449,7 +487,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aegis-ops</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -457,7 +498,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * The path of the OSS object.
+             * <p>The path of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/opensearch/search</p>
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -465,7 +509,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * The partition in the MaxCompute table.
+             * <p>The partition in the MaxCompute table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20220713</p>
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -473,7 +520,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * The file path in the Apsara File Storage for HDFS file system.
+             * <p>The file path in the Apsara File Storage for HDFS file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-hdfs-path</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -481,7 +531,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * The name of the MaxCompute project that is used as the data source.
+             * <p>The name of the MaxCompute project that is used as the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kubenest</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -489,7 +542,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * The name of the MaxCompute table that is used as the data source.
+             * <p>The name of the MaxCompute table that is used as the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item</p>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -511,6 +567,12 @@ public class CreateDataSourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDataSourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataSourceRequest</p>
+     */
     public static class SaroConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
@@ -550,7 +612,10 @@ public class CreateDataSourceRequest extends Request {
             private String tableName; 
 
             /**
-             * The namespace of the SARO data source.
+             * <p>The namespace of the SARO data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>igraph-cn-x0r3e3abe02</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -558,7 +623,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * The name of the SARO table.
+             * <p>The name of the SARO table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>index_hdfs</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

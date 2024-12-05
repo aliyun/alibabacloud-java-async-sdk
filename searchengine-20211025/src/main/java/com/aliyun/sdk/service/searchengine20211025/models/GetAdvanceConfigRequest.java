@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAdvanceConfigRequest} extends {@link RequestModel}
  *
  * <p>GetAdvanceConfigRequest</p>
@@ -83,7 +84,11 @@ public class GetAdvanceConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-18qug6zlc1r</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -92,7 +97,11 @@ public class GetAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The name of the advanced configuration.
+         * <p>The name of the advanced configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-18qug6zlc1r_offline_adv_edit</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -101,16 +110,20 @@ public class GetAdvanceConfigRequest extends Request {
         }
 
         /**
-         * *   The type of the advanced configuration. Valid values: -ONLINE: online configuration
-         * <p>
-         * *   \-ONLINE_CAVA: online Cava configuration
-         * *   \-ONLINE_PLUGIN: online plug-in configuration
-         * *   \-ONLINE_QUERY: query configuration
-         * *   \-OFFLINE_DICT: offline dictionary configuration
-         * *   \-OFFLINE_TABLE: offline table configuration
-         * *   \-OFFLINE_COMMON: offline configuration
-         * *   \-OFFLINE_PLUGIN: offline plug-in configuration
-         * *   \-OFFLINE_INDEX: index configuration
+         * <ul>
+         * <li>The type of the advanced configuration. Valid values: -ONLINE: online configuration</li>
+         * <li>-ONLINE_CAVA: online Cava configuration</li>
+         * <li>-ONLINE_PLUGIN: online plug-in configuration</li>
+         * <li>-ONLINE_QUERY: query configuration</li>
+         * <li>-OFFLINE_DICT: offline dictionary configuration</li>
+         * <li>-OFFLINE_TABLE: offline table configuration</li>
+         * <li>-OFFLINE_COMMON: offline configuration</li>
+         * <li>-OFFLINE_PLUGIN: offline plug-in configuration</li>
+         * <li>-OFFLINE_INDEX: index configuration</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request
+         * <p>The ID of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90D6B8F5-FE97-4509-9AAB-367836C51818</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The results returned.
+         * <p>The results returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
@@ -217,7 +227,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The billing method.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -225,7 +238,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The commodity code of the instance.
+             * <p>The commodity code of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha3-code</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -233,7 +249,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created
+             * <p>The time when the instance was created</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-06T11:17:49.0</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -241,7 +260,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance
+             * <p>The description of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test instance</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -249,7 +271,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires
+             * <p>The time when the instance expires</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-06T16:00:00.0</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -257,7 +282,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an overdue payment is involved
+             * <p>Indicates whether an overdue payment is involved</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder inDebt(Boolean inDebt) {
                 this.inDebt = inDebt;
@@ -265,7 +293,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-0ju2s170b03</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -273,7 +304,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The lock status
+             * <p>The lock status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -281,7 +315,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aeky6hthboewpuy</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -289,7 +326,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -297,7 +337,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last updated
+             * <p>The time when the instance was last updated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-06T11:17:49.0</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

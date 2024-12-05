@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListInstancesRequest</p>
@@ -220,7 +221,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The description of the instance. You can use this description to filter instances. Fuzzy match is supported.
+         * <p>The description of the instance. You can use this description to filter instances. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Havenask instance</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -229,7 +233,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The instance type. Valid values: vector: OpenSearch Vector Search Edition instance. engine: OpenSearch Retrieval Engine Edition instance.
+         * <p>The instance type. Valid values: vector: OpenSearch Vector Search Edition instance. engine: OpenSearch Retrieval Engine Edition instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vector</p>
          */
         public Builder edition(String edition) {
             this.putQueryParameter("edition", edition);
@@ -238,7 +245,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-83570439y0n</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -247,7 +257,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -256,7 +269,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.
+         * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -265,7 +281,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzgpiswzbksdi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -283,7 +302,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The tags of the instance.
+         * <p>The tags of the instance.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -299,6 +318,12 @@ public class ListInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>ListInstancesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -338,7 +363,10 @@ public class ListInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -346,7 +374,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oboms-disk</p>
              */
             public Builder value(String value) {
                 this.value = value;

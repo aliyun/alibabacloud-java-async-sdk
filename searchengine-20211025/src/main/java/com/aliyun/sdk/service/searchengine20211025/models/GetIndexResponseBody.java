@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIndexResponseBody} extends {@link TeaModel}
  *
  * <p>GetIndexResponseBody</p>
@@ -49,7 +50,10 @@ public class GetIndexResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FB0325E-8C37-5525-96AC-0333523170A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The index information.
+         * <p>The index information.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetIndexResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessKey")
         private String accessKey;
@@ -88,6 +98,9 @@ public class GetIndexResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("format")
+        private String format;
 
         @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
@@ -117,6 +130,7 @@ public class GetIndexResponseBody extends TeaModel {
             this.catalog = builder.catalog;
             this.database = builder.database;
             this.endpoint = builder.endpoint;
+            this.format = builder.format;
             this.namespace = builder.namespace;
             this.ossPath = builder.ossPath;
             this.partition = builder.partition;
@@ -177,6 +191,13 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
          * @return namespace
          */
         public String getNamespace() {
@@ -232,6 +253,7 @@ public class GetIndexResponseBody extends TeaModel {
             private String catalog; 
             private String database; 
             private String endpoint; 
+            private String format; 
             private String namespace; 
             private String ossPath; 
             private String partition; 
@@ -241,7 +263,10 @@ public class GetIndexResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * The AccessKey ID of the MaxCompute data source.
+             * <p>The AccessKey ID of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L***p</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -249,7 +274,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret of the MaxCompute data source.
+             * <p>The AccessKey secret of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5**9a6</p>
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -257,7 +285,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha3test-oss</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -281,7 +312,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the MaxCompute data source.
+             * <p>The endpoint of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -289,7 +323,18 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.
+             * format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * <p>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEST_dump_demo_sj_na61hunbu2_share_holo</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -297,7 +342,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) path.
+             * <p>The Object Storage Service (OSS) path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test_opensearch/sift_oss_test.data</p>
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -305,7 +353,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The partition in the MaxCompute table. Example: ds=20180102.
+             * <p>The partition in the MaxCompute table. Example: ds=20180102.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20220713</p>
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -313,7 +364,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The file path in the Apsara File Storage for HDFS file system.
+             * <p>The file path in the Apsara File Storage for HDFS file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://test_opensearch/sift_oss_test.data">http://test_opensearch/sift_oss_test.data</a></p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -321,7 +375,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MaxCompute project that is used as the data source.
+             * <p>The name of the MaxCompute project that is used as the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tisplus_dev</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -329,7 +386,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MaxCompute table that is used as the data source.
+             * <p>The name of the MaxCompute table that is used as the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dump_odps_demo</p>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -351,6 +411,12 @@ public class GetIndexResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexResponseBody</p>
+     */
     public static class SaroConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
@@ -390,7 +456,10 @@ public class GetIndexResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The namespace of the SARO data source.
+             * <p>The namespace of the SARO data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEST_dump_demo_sj_na61hunbu2_share_holo</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -398,7 +467,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SARO table.
+             * <p>The name of the SARO table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>llm</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -412,6 +484,12 @@ public class GetIndexResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexResponseBody</p>
+     */
     public static class DataSourceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoBuildIndex")
         private Boolean autoBuildIndex;
@@ -523,7 +601,10 @@ public class GetIndexResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether the automatic full indexing feature is enabled.
+             * <p>Indicates whether the automatic full indexing feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoBuildIndex(Boolean autoBuildIndex) {
                 this.autoBuildIndex = autoBuildIndex;
@@ -531,7 +612,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of MaxCompute data sources.
+             * <p>The configuration of MaxCompute data sources.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -539,7 +620,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The data center in which the data source is deployed.
+             * <p>The data center in which the data source is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc_hz_domain_1</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -547,7 +631,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-pl32rf0****_test_api</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -555,7 +642,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of full indexes that can be concurrently processed.
+             * <p>The maximum number of full indexes that can be concurrently processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder processParallelNum(Integer processParallelNum) {
                 this.processParallelNum = processParallelNum;
@@ -563,7 +653,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resources used for data update.
+             * <p>The number of resources used for data update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder processPartitionCount(Integer processPartitionCount) {
                 this.processPartitionCount = processPartitionCount;
@@ -571,7 +664,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the SARO data source.
+             * <p>The configurations of the SARO data source.</p>
              */
             public Builder saroConfig(SaroConfig saroConfig) {
                 this.saroConfig = saroConfig;
@@ -579,7 +672,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.
+             * <p>The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -593,6 +689,12 @@ public class GetIndexResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexResponseBody</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fullPathName")
         private String fullPathName;
@@ -656,7 +758,10 @@ public class GetIndexResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The full path of the file.
+             * <p>The full path of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -664,7 +769,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the file is a directory.
+             * <p>Indicates whether the file is a directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -672,7 +780,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the file is a template.
+             * <p>Indicates whether the file is a template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -680,7 +791,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The file name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qrs.json</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -694,6 +808,12 @@ public class GetIndexResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexResponseBody</p>
+     */
     public static class Versions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -781,7 +901,10 @@ public class GetIndexResponseBody extends TeaModel {
             private Integer versionId; 
 
             /**
-             * The description of the version.
+             * <p>The description of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>close alarm, by 3.9.2 hotfix workflow</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -789,7 +912,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the files.
+             * <p>The information about the files.</p>
              */
             public Builder files(java.util.List < Files> files) {
                 this.files = files;
@@ -797,7 +920,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The version name.
+             * <p>The version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-7pp2ngv4s02_qrs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -805,16 +931,19 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the index version. Valid values:
-             * <p>
+             * <p>The status of the index version. Valid values:</p>
+             * <ul>
+             * <li>NEW: The index version is created.</li>
+             * <li>PUBLISH: The index version is normal.</li>
+             * <li>IN_USE: The index version is in use.</li>
+             * <li>NOT_USE: The index version is not used.</li>
+             * <li>STOP_USE: The index version is being stopped.</li>
+             * <li>RESTORE_USE: The index version is being restored.</li>
+             * <li>FAIL: The index version failed to be created.</li>
+             * </ul>
              * 
-             * *   NEW: The index version is created.
-             * *   PUBLISH: The index version is normal.
-             * *   IN_USE: The index version is in use.
-             * *   NOT_USE: The index version is not used.
-             * *   STOP_USE: The index version is being stopped.
-             * *   RESTORE_USE: The index version is being restored.
-             * *   FAIL: The index version failed to be created.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -822,7 +951,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the index version was updated.
+             * <p>The time when the index version was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -830,7 +962,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The version ID.
+             * <p>The version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder versionId(Integer versionId) {
                 this.versionId = versionId;
@@ -844,6 +979,12 @@ public class GetIndexResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cluster")
         private java.util.Map < String, ResultClusterValue > cluster;
@@ -856,6 +997,9 @@ public class GetIndexResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
+
+        @com.aliyun.core.annotation.NameInMap("createTime")
+        private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("dataSource")
         private String dataSource;
@@ -893,6 +1037,9 @@ public class GetIndexResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("partition")
         private Integer partition;
 
+        @com.aliyun.core.annotation.NameInMap("updateTime")
+        private String updateTime;
+
         @com.aliyun.core.annotation.NameInMap("versions")
         private java.util.List < Versions> versions;
 
@@ -901,6 +1048,7 @@ public class GetIndexResponseBody extends TeaModel {
             this.config = builder.config;
             this.configWhenBuild = builder.configWhenBuild;
             this.content = builder.content;
+            this.createTime = builder.createTime;
             this.dataSource = builder.dataSource;
             this.dataSourceInfo = builder.dataSourceInfo;
             this.description = builder.description;
@@ -913,6 +1061,7 @@ public class GetIndexResponseBody extends TeaModel {
             this.indexStatus = builder.indexStatus;
             this.name = builder.name;
             this.partition = builder.partition;
+            this.updateTime = builder.updateTime;
             this.versions = builder.versions;
         }
 
@@ -950,6 +1099,13 @@ public class GetIndexResponseBody extends TeaModel {
          */
         public String getContent() {
             return this.content;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -1037,6 +1193,13 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
+         * @return updateTime
+         */
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        /**
          * @return versions
          */
         public java.util.List < Versions> getVersions() {
@@ -1048,6 +1211,7 @@ public class GetIndexResponseBody extends TeaModel {
             private java.util.Map < String, java.util.Map<String, ?>> config; 
             private java.util.Map < String, java.util.Map<String, ?>> configWhenBuild; 
             private String content; 
+            private String createTime; 
             private String dataSource; 
             private DataSourceInfo dataSourceInfo; 
             private String description; 
@@ -1060,10 +1224,11 @@ public class GetIndexResponseBody extends TeaModel {
             private String indexStatus; 
             private String name; 
             private Integer partition; 
+            private String updateTime; 
             private java.util.List < Versions> versions; 
 
             /**
-             * The cluster information.
+             * <p>The cluster information.</p>
              */
             public Builder cluster(java.util.Map < String, ResultClusterValue > cluster) {
                 this.cluster = cluster;
@@ -1071,7 +1236,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration information.
+             * <p>The configuration information.</p>
              */
             public Builder config(java.util.Map < String, java.util.Map<String, ?>> config) {
                 this.config = config;
@@ -1079,7 +1244,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration that takes effect next time.
+             * <p>The configuration that takes effect next time.</p>
              */
             public Builder configWhenBuild(java.util.Map < String, java.util.Map<String, ?>> configWhenBuild) {
                 this.configWhenBuild = configWhenBuild;
@@ -1087,7 +1252,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The file content.
+             * <p>The file content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;summarys&quot;:{&quot;parameter&quot;:{&quot;file_compressor&quot;:&quot;zstd&quot;},&quot;summary_fields&quot;:[&quot;id&quot;]},&quot;file_compress&quot;:[{&quot;name&quot;:&quot;file_compressor&quot;,&quot;type&quot;:&quot;zstd&quot;},{&quot;name&quot;:&quot;no_compressor&quot;,&quot;type&quot;:&quot;&quot;}],&quot;indexs&quot;:[{&quot;index_fields&quot;:&quot;name&quot;,&quot;index_name&quot;:&quot;ids&quot;,&quot;index_type&quot;:&quot;STRING&quot;},{&quot;has_primary_key_attribute&quot;:true,&quot;index_fields&quot;:&quot;id&quot;,&quot;is_primary_key_sorted&quot;:false,&quot;index_name&quot;:&quot;id&quot;,&quot;index_type&quot;:&quot;PRIMARYKEY64&quot;}],&quot;attributes&quot;:[{&quot;file_compress&quot;:&quot;no_compressor&quot;,&quot;field_name&quot;:&quot;id&quot;}],&quot;fields&quot;:[{&quot;user_defined_param&quot;:{},&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;id&quot;},{&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;name&quot;}],&quot;table_name&quot;:&quot;api&quot;}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1095,7 +1263,18 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * createTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-tl32nd2nq01_00</p>
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -1103,7 +1282,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the data source.
+             * <p>The information about the data source.</p>
              */
             public Builder dataSourceInfo(DataSourceInfo dataSourceInfo) {
                 this.dataSourceInfo = dataSourceInfo;
@@ -1111,7 +1290,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the index version.
+             * <p>The description of the index version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test index</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1119,7 +1301,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment name of the index.
+             * <p>The deployment name of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sz_vpc_domain_1</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -1127,7 +1312,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * extend.
+             * <p>Extended information</p>
              */
             public Builder extend(java.util.Map < String, java.util.List<String>> extend) {
                 this.extend = extend;
@@ -1135,7 +1320,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The time when full data in the index was last updated.
+             * <p>The time when full data in the index was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-20 08:52:54</p>
              */
             public Builder fullUpdateTime(String fullUpdateTime) {
                 this.fullUpdateTime = fullUpdateTime;
@@ -1143,7 +1331,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The data version.
+             * <p>The data version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1688523414</p>
              */
             public Builder fullVersion(Long fullVersion) {
                 this.fullVersion = fullVersion;
@@ -1151,7 +1342,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The time when incremental data in the index was last updated.
+             * <p>The time when incremental data in the index was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-20 08:52:54</p>
              */
             public Builder incUpdateTime(String incUpdateTime) {
                 this.incUpdateTime = incUpdateTime;
@@ -1159,7 +1353,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The index size.
+             * <p>The index size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4689</p>
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -1167,16 +1364,19 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the index version. Valid values:
-             * <p>
+             * <p>The status of the index version. Valid values:</p>
+             * <ul>
+             * <li>NEW: The index version is created.</li>
+             * <li>PUBLISH: The index version is normal.</li>
+             * <li>IN_USE: The index version is in use.</li>
+             * <li>NOT_USE: The index version is not used.</li>
+             * <li>STOP_USE: The index version is being stopped.</li>
+             * <li>RESTORE_USE: The index version is being restored.</li>
+             * <li>FAIL: The index version failed to be created.</li>
+             * </ul>
              * 
-             * *   NEW: The index version is created.
-             * *   PUBLISH: The index version is normal.
-             * *   IN_USE: The index version is in use.
-             * *   NOT_USE: The index version is not used.
-             * *   STOP_USE: The index version is being stopped.
-             * *   RESTORE_USE: The index version is being restored.
-             * *   FAIL: The index version failed to be created.
+             * <strong>example:</strong>
+             * <p>IN_USE</p>
              */
             public Builder indexStatus(String indexStatus) {
                 this.indexStatus = indexStatus;
@@ -1184,7 +1384,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The index name.
+             * <p>The index name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1192,7 +1395,10 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The number of shards.
+             * <p>The number of shards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -1200,7 +1406,18 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the versions.
+             * <p>The time when the index version was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
+             */
+            public Builder updateTime(String updateTime) {
+                this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
+             * <p>The information about the versions.</p>
              */
             public Builder versions(java.util.List < Versions> versions) {
                 this.versions = versions;

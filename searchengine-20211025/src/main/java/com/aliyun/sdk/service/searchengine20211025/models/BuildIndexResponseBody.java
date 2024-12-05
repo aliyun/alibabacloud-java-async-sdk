@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BuildIndexResponseBody} extends {@link TeaModel}
  *
  * <p>BuildIndexResponseBody</p>
@@ -49,7 +50,10 @@ public class BuildIndexResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>407BFD91-DE7D-50BA-8F88-CDE52A3B5E46</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class BuildIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The list of clusters
+         * <p>The list of clusters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

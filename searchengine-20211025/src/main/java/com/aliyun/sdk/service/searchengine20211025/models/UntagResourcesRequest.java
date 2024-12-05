@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -106,7 +107,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             String resourceIdShrink = shrink(resourceId, "resourceId", "json");
@@ -116,7 +117,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);

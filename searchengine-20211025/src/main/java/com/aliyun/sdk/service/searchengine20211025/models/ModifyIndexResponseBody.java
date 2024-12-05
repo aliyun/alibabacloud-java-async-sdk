@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIndexResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyIndexResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyIndexResponseBody extends TeaModel {
         private Object result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93A9E542-8CF8-5BA6-99AB-94C0FE520429</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ModifyIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * <p>The result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(Object result) {
             this.result = result;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIndexVersionResponseBody} extends {@link TeaModel}
  *
  * <p>GetIndexVersionResponseBody</p>
@@ -49,7 +50,10 @@ public class GetIndexVersionResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The clusters.
+         * <p>The clusters.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetIndexVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetIndexVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexVersionResponseBody</p>
+     */
     public static class IndexVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("buildDeployId")
         private String buildDeployId;
@@ -133,7 +143,10 @@ public class GetIndexVersionResponseBody extends TeaModel {
             private java.util.List < Long > versions; 
 
             /**
-             * The ID of the offline deployment.
+             * <p>The ID of the offline deployment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder buildDeployId(String buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -141,7 +154,10 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The current online version number.
+             * <p>The current online version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentVersion(Long currentVersion) {
                 this.currentVersion = currentVersion;
@@ -149,7 +165,10 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the index table.
+             * <p>The name of the index table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table4</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -157,7 +176,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The index versions.
+             * <p>The index versions.</p>
              */
             public Builder versions(java.util.List < Long > versions) {
                 this.versions = versions;
@@ -171,6 +190,12 @@ public class GetIndexVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIndexVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexVersionResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cluster")
         private String cluster;
@@ -210,7 +235,10 @@ public class GetIndexVersionResponseBody extends TeaModel {
             private java.util.List < IndexVersions> indexVersions; 
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ayoss-cn-zhangjiakou-b</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -218,7 +246,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The index versions.
+             * <p>The index versions.</p>
              */
             public Builder indexVersions(java.util.List < IndexVersions> indexVersions) {
                 this.indexVersions = indexVersions;

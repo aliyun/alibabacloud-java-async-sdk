@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataSourceSchemasResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataSourceSchemasResponseBody</p>
@@ -49,7 +50,10 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * The results returned.
+         * <p>The results returned.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataSourceSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourceSchemasResponseBody</p>
+     */
     public static class PrimaryKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hasPrimaryKeyAttribute")
         private Boolean hasPrimaryKeyAttribute;
@@ -121,7 +131,10 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             private Boolean isPrimaryKeySorted; 
 
             /**
-             * Indicates whether the field has the primary key attribute. Valid values: **true** and **false**.
+             * <p>Indicates whether the field has the primary key attribute. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasPrimaryKeyAttribute(Boolean hasPrimaryKeyAttribute) {
                 this.hasPrimaryKeyAttribute = hasPrimaryKeyAttribute;
@@ -129,7 +142,10 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the field is the primary key. Valid values: **true** and **false**.
+             * <p>Indicates whether the field is the primary key. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPrimaryKey(Boolean isPrimaryKey) {
                 this.isPrimaryKey = isPrimaryKey;
@@ -137,7 +153,10 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the field can be sorted. Valid values: **true** and **false**.
+             * <p>Indicates whether the field can be sorted. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPrimaryKeySorted(Boolean isPrimaryKeySorted) {
                 this.isPrimaryKeySorted = isPrimaryKeySorted;
@@ -151,6 +170,12 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataSourceSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourceSchemasResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("addIndex")
         private Boolean addIndex;
@@ -250,7 +275,10 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether the field has the index attribute. Valid values: **true** and **false**.
+             * <p>Indicates whether the field has the index attribute. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder addIndex(Boolean addIndex) {
                 this.addIndex = addIndex;
@@ -258,7 +286,10 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the field is an attribute field. Valid values: **true** and **false**.
+             * <p>Indicates whether the field is an attribute field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder attribute(Boolean attribute) {
                 this.attribute = attribute;
@@ -266,7 +297,10 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the field is a custom field. Valid values: **true** and **false**.
+             * <p>Indicates whether the field is a custom field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder custom(Boolean custom) {
                 this.custom = custom;
@@ -274,7 +308,10 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * The field name.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -282,7 +319,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key field.
+             * <p>The primary key field.</p>
              */
             public Builder primaryKey(PrimaryKey primaryKey) {
                 this.primaryKey = primaryKey;
@@ -290,7 +327,10 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the field can be displayed. Valid values: **true** and **false**.
+             * <p>Indicates whether the field can be displayed. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder summary(Boolean summary) {
                 this.summary = summary;
@@ -298,7 +338,10 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * The field type.
+             * <p>The field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder type(String type) {
                 this.type = type;

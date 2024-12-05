@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteSqlInstanceRequest} extends {@link RequestModel}
  *
  * <p>ExecuteSqlInstanceRequest</p>
@@ -183,7 +184,10 @@ public class ExecuteSqlInstanceRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -192,7 +196,10 @@ public class ExecuteSqlInstanceRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -201,7 +208,10 @@ public class ExecuteSqlInstanceRequest extends Request {
         }
 
         /**
-         * sqlInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sqlInstanceId(Long sqlInstanceId) {
             this.putPathParameter("sqlInstanceId", sqlInstanceId);
@@ -219,7 +229,10 @@ public class ExecuteSqlInstanceRequest extends Request {
         }
 
         /**
-         * content.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from test</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyOnlineConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyOnlineConfigRequest</p>
@@ -98,7 +99,11 @@ public class ModifyOnlineConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2ougaw02</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -107,7 +112,11 @@ public class ModifyOnlineConfigRequest extends Request {
         }
 
         /**
-         * The node name.
+         * <p>The node name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder nodeName(String nodeName) {
             this.putPathParameter("nodeName", nodeName);
@@ -116,7 +125,11 @@ public class ModifyOnlineConfigRequest extends Request {
         }
 
         /**
-         * The index name.
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adsfasd</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -125,7 +138,7 @@ public class ModifyOnlineConfigRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
         public Builder body(java.util.Map < String, String > body) {
             this.putBodyParameter("body", body);

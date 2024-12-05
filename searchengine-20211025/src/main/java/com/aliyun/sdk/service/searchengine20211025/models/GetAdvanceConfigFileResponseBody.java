@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAdvanceConfigFileResponseBody} extends {@link TeaModel}
  *
  * <p>GetAdvanceConfigFileResponseBody</p>
@@ -49,7 +50,10 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * <p>The result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAdvanceConfigFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAdvanceConfigFileResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -97,7 +107,10 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
             private String content; 
 
             /**
-             * The file content.
+             * <p>The file content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;summarys&quot;:{&quot;parameter&quot;:{&quot;file_compressor&quot;:&quot;zstd&quot;},&quot;summary_fields&quot;:[&quot;id&quot;]},&quot;file_compress&quot;:[{&quot;name&quot;:&quot;file_compressor&quot;,&quot;type&quot;:&quot;zstd&quot;},{&quot;name&quot;:&quot;no_compressor&quot;,&quot;type&quot;:&quot;&quot;}],&quot;indexs&quot;:[{&quot;index_fields&quot;:&quot;name&quot;,&quot;index_name&quot;:&quot;ids&quot;,&quot;index_type&quot;:&quot;STRING&quot;},{&quot;has_primary_key_attribute&quot;:true,&quot;index_fields&quot;:&quot;id&quot;,&quot;is_primary_key_sorted&quot;:false,&quot;index_name&quot;:&quot;id&quot;,&quot;index_type&quot;:&quot;PRIMARYKEY64&quot;}],&quot;attributes&quot;:[{&quot;file_compress&quot;:&quot;no_compressor&quot;,&quot;field_name&quot;:&quot;id&quot;}],&quot;fields&quot;:[{&quot;user_defined_param&quot;:{},&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;id&quot;},{&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;name&quot;}],&quot;table_name&quot;:&quot;api&quot;}</p>
              */
             public Builder content(String content) {
                 this.content = content;

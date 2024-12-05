@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDatabaseSchemaRequest} extends {@link RequestModel}
  *
  * <p>GetDatabaseSchemaRequest</p>
@@ -84,7 +85,10 @@ public class GetDatabaseSchemaRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +97,10 @@ public class GetDatabaseSchemaRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -102,7 +109,10 @@ public class GetDatabaseSchemaRequest extends Request {
         }
 
         /**
-         * tableName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>graph_index_summary_</p>
          */
         public Builder tableName(String tableName) {
             this.putPathParameter("tableName", tableName);

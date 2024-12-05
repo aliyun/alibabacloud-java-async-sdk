@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReindexRequest} extends {@link RequestModel}
  *
  * <p>ReindexRequest</p>
@@ -111,7 +112,11 @@ public class ReindexRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ppr7901</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -120,7 +125,11 @@ public class ReindexRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_summary</p>
          */
         public Builder tableName(String tableName) {
             this.putPathParameter("tableName", tableName);
@@ -129,7 +138,10 @@ public class ReindexRequest extends Request {
         }
 
         /**
-         * The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.
+         * <p>The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640867288</p>
          */
         public Builder dataTimeSec(Integer dataTimeSec) {
             this.putBodyParameter("dataTimeSec", dataTimeSec);
@@ -138,7 +150,10 @@ public class ReindexRequest extends Request {
         }
 
         /**
-         * oss data path
+         * <p>oss data path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://opensearch</p>
          */
         public Builder ossDataPath(String ossDataPath) {
             this.putBodyParameter("ossDataPath", ossDataPath);
@@ -147,7 +162,10 @@ public class ReindexRequest extends Request {
         }
 
         /**
-         * The partition in the MaxCompute table. This parameter is required if type is set to odps.
+         * <p>The partition in the MaxCompute table. This parameter is required if type is set to odps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds=20220713</p>
          */
         public Builder partition(String partition) {
             this.putBodyParameter("partition", partition);

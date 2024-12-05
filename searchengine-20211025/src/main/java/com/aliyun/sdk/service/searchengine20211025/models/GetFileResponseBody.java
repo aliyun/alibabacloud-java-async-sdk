@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileResponseBody</p>
@@ -49,7 +50,10 @@ public class GetFileResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetFileResponseBody extends TeaModel {
         }
 
         /**
-         * The index information.
+         * <p>The index information.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -169,7 +179,10 @@ public class GetFileResponseBody extends TeaModel {
             private Long partition; 
 
             /**
-             * The file content.
+             * <p>The file content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -177,7 +190,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * The data source.
+             * <p>The data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-2r42p5oi202_xijie_test</p>
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -185,7 +201,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * extend.
+             * <p>Extended information</p>
              */
             public Builder extend(java.util.Map < String, java.util.List<String>> extend) {
                 this.extend = extend;
@@ -193,7 +209,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * The full path of the file.
+             * <p>The full path of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -201,7 +220,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the file is a directory.
+             * <p>Indicates whether the file is a directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -209,7 +231,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * The file name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-2r42ostoc01_qrs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -217,7 +242,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * The number of shards.
+             * <p>The number of shards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20210828</p>
              */
             public Builder partition(Long partition) {
                 this.partition = partition;

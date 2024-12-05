@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAliasesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAliasesResponseBody</p>
@@ -49,7 +50,10 @@ public class ListAliasesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
-         * List
+         * <p>List</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListAliasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAliasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAliasesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alias")
         private String alias;
@@ -109,7 +119,10 @@ public class ListAliasesResponseBody extends TeaModel {
             private String index; 
 
             /**
-             * alias name
+             * <p>alias name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -117,7 +130,10 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * index name
+             * <p>index name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>index</p>
              */
             public Builder index(String index) {
                 this.index = index;

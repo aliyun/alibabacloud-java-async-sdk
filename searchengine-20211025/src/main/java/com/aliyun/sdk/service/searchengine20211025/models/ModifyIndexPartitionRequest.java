@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIndexPartitionRequest} extends {@link RequestModel}
  *
  * <p>ModifyIndexPartitionRequest</p>
@@ -110,7 +111,11 @@ public class ModifyIndexPartitionRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2ttxta01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -119,7 +124,10 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("dataSourceName", dataSourceName);
@@ -128,7 +136,10 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The data center.
+         * <p>The data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pre_domain_1</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("domainName", domainName);
@@ -137,7 +148,10 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The primary key.
+         * <p>The primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1633293829</p>
          */
         public Builder generation(Long generation) {
             this.putBodyParameter("generation", generation);
@@ -146,7 +160,7 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The index information.
+         * <p>The index information.</p>
          */
         public Builder indexInfos(java.util.List < IndexInfos> indexInfos) {
             this.putBodyParameter("indexInfos", indexInfos);
@@ -161,6 +175,12 @@ public class ModifyIndexPartitionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyIndexPartitionRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyIndexPartitionRequest</p>
+     */
     public static class IndexInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("indexName")
         private String indexName;
@@ -212,7 +232,10 @@ public class ModifyIndexPartitionRequest extends Request {
             private Integer partitionCount; 
 
             /**
-             * The index name.
+             * <p>The index name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>atest2</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -220,7 +243,10 @@ public class ModifyIndexPartitionRequest extends Request {
             }
 
             /**
-             * The concurrency. Default value: 1.
+             * <p>The concurrency. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parallelNum(Integer parallelNum) {
                 this.parallelNum = parallelNum;
@@ -228,7 +254,10 @@ public class ModifyIndexPartitionRequest extends Request {
             }
 
             /**
-             * The number of shards.
+             * <p>The number of shards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder partitionCount(Integer partitionCount) {
                 this.partitionCount = partitionCount;

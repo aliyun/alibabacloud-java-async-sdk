@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTableRequest} extends {@link RequestModel}
  *
  * <p>CreateTableRequest</p>
@@ -194,7 +195,11 @@ public class CreateTableRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32n3iu801</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -203,7 +208,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The configurations about field processing.
+         * <p>The configurations about field processing.</p>
          */
         public Builder dataProcessConfig(java.util.List < DataProcessConfig> dataProcessConfig) {
             this.putBodyParameter("dataProcessConfig", dataProcessConfig);
@@ -212,7 +217,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The number of resources used for data update.
+         * <p>The number of resources used for data update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataProcessorCount(Integer dataProcessorCount) {
             this.putBodyParameter("dataProcessorCount", dataProcessorCount);
@@ -221,7 +229,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The configurations of the data source.
+         * <p>The configurations of the data source.</p>
          */
         public Builder dataSource(DataSource dataSource) {
             this.putBodyParameter("dataSource", dataSource);
@@ -230,7 +238,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The fields.
+         * <p>The fields.</p>
          */
         public Builder fieldSchema(java.util.Map < String, String > fieldSchema) {
             this.putBodyParameter("fieldSchema", fieldSchema);
@@ -239,7 +247,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The index name.
+         * <p>The index name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index_1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -248,7 +259,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The number of data shards.
+         * <p>The number of data shards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder partitionCount(Integer partitionCount) {
             this.putBodyParameter("partitionCount", partitionCount);
@@ -257,7 +271,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The primary key field.
+         * <p>The primary key field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder primaryKey(String primaryKey) {
             this.putBodyParameter("primaryKey", primaryKey);
@@ -266,7 +283,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The instance schema. If this parameter is specified, the parameters about the index are not required.
+         * <p>The instance schema. If this parameter is specified, the parameters about the index are not required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder rawSchema(String rawSchema) {
             this.putBodyParameter("rawSchema", rawSchema);
@@ -275,7 +295,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The index schema.
+         * <p>The index schema.</p>
          */
         public Builder vectorIndex(java.util.List < VectorIndex> vectorIndex) {
             this.putBodyParameter("vectorIndex", vectorIndex);
@@ -284,11 +304,14 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -303,6 +326,12 @@ public class CreateTableRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTableRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTableRequest</p>
+     */
     public static class SrcFieldConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ossBucket")
         private String ossBucket;
@@ -354,7 +383,10 @@ public class CreateTableRequest extends Request {
             private String uid; 
 
             /**
-             * The OSS bucket.
+             * <p>The OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -362,7 +394,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The OSS endpoint.
+             * <p>The OSS endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
              */
             public Builder ossEndpoint(String ossEndpoint) {
                 this.ossEndpoint = ossEndpoint;
@@ -370,7 +405,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uid</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -384,6 +422,12 @@ public class CreateTableRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTableRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTableRequest</p>
+     */
     public static class Params extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("srcFieldConfig")
         private SrcFieldConfig srcFieldConfig;
@@ -435,7 +479,7 @@ public class CreateTableRequest extends Request {
             private String vectorModel; 
 
             /**
-             * The source of the data to be vectorized.
+             * <p>The source of the data to be vectorized.</p>
              */
             public Builder srcFieldConfig(SrcFieldConfig srcFieldConfig) {
                 this.srcFieldConfig = srcFieldConfig;
@@ -443,7 +487,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The data type.
+             * <p>The data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image</p>
              */
             public Builder vectorModal(String vectorModal) {
                 this.vectorModal = vectorModal;
@@ -451,7 +498,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The vectorization model.
+             * <p>The vectorization model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>clip</p>
              */
             public Builder vectorModel(String vectorModel) {
                 this.vectorModel = vectorModel;
@@ -465,6 +515,12 @@ public class CreateTableRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTableRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTableRequest</p>
+     */
     public static class DataProcessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dstField")
         private String dstField;
@@ -528,7 +584,10 @@ public class CreateTableRequest extends Request {
             private String srcField; 
 
             /**
-             * The destination field.
+             * <p>The destination field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_image_vector</p>
              */
             public Builder dstField(String dstField) {
                 this.dstField = dstField;
@@ -536,7 +595,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The method used to process the field. Valid values: copy and vectorize. A value of copy specifies that the value of the source field is copied to the destination field. A value of vectorize specifies that the value of the source field is vectorized by a vectorization model and the output vector is stored in the destination field.
+             * <p>The method used to process the field. Valid values: copy and vectorize. A value of copy specifies that the value of the source field is copied to the destination field. A value of vectorize specifies that the value of the source field is vectorized by a vectorization model and the output vector is stored in the destination field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vectorize</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -544,7 +606,7 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The information about the model.
+             * <p>The information about the model.</p>
              */
             public Builder params(Params params) {
                 this.params = params;
@@ -552,7 +614,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The source field.
+             * <p>The source field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_image</p>
              */
             public Builder srcField(String srcField) {
                 this.srcField = srcField;
@@ -566,6 +631,12 @@ public class CreateTableRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTableRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTableRequest</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessKey")
         private String accessKey;
@@ -713,7 +784,10 @@ public class CreateTableRequest extends Request {
             private String tag; 
 
             /**
-             * The AccessKey ID of the MaxCompute data source.
+             * <p>The AccessKey ID of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -721,7 +795,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The AccessKey secret of the MaxCompute data source.
+             * <p>The AccessKey secret of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>as</p>
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -729,7 +806,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The OSS bucket.
+             * <p>The OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>antsys-flytest-ci</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -753,7 +833,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The endpoint of the MaxCompute data source.
+             * <p>The endpoint of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -761,7 +844,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The Object Storage Service (OSS) path.
+             * <p>The Object Storage Service (OSS) path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://opensearch</p>
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -769,7 +855,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The partition in the MaxCompute table. This parameter is required if type is set to odps.
+             * <p>The partition in the MaxCompute table. This parameter is required if type is set to odps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20220713</p>
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -777,7 +866,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The name of the MaxCompute project that is used as the data source.
+             * <p>The name of the MaxCompute project that is used as the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project_20210220122847_3218</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -785,7 +877,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The name of the MaxCompute table that is used as the data source.
+             * <p>The name of the MaxCompute table that is used as the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test56</p>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -807,6 +902,12 @@ public class CreateTableRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTableRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTableRequest</p>
+     */
     public static class DataSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoBuildIndex")
         private Boolean autoBuildIndex;
@@ -870,7 +971,10 @@ public class CreateTableRequest extends Request {
             private String type; 
 
             /**
-             * Specifies whether to automatically rebuild the index.
+             * <p>Specifies whether to automatically rebuild the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoBuildIndex(Boolean autoBuildIndex) {
                 this.autoBuildIndex = autoBuildIndex;
@@ -878,7 +982,7 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The configurations of the data source.
+             * <p>The configurations of the data source.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -886,7 +990,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The start timestamp from which incremental data is retrieved.
+             * <p>The start timestamp from which incremental data is retrieved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715160176</p>
              */
             public Builder dataTimeSec(Integer dataTimeSec) {
                 this.dataTimeSec = dataTimeSec;
@@ -894,7 +1001,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The data source type. Valid values: odps, swift, and oss.
+             * <p>The data source type. Valid values: odps, swift, and oss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -908,6 +1018,12 @@ public class CreateTableRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTableRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTableRequest</p>
+     */
     public static class AdvanceParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("buildIndexParams")
         private String buildIndexParams;
@@ -971,7 +1087,10 @@ public class CreateTableRequest extends Request {
             private String searchIndexParams; 
 
             /**
-             * The index building parameters.
+             * <p>The index building parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder buildIndexParams(String buildIndexParams) {
                 this.buildIndexParams = buildIndexParams;
@@ -979,7 +1098,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The threshold for linear building.
+             * <p>The threshold for linear building.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder linearBuildThreshold(String linearBuildThreshold) {
                 this.linearBuildThreshold = linearBuildThreshold;
@@ -987,7 +1109,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The minimum number of retrieved candidate sets.
+             * <p>The minimum number of retrieved candidate sets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder minScanDocCnt(String minScanDocCnt) {
                 this.minScanDocCnt = minScanDocCnt;
@@ -995,7 +1120,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The index retrieval parameters.
+             * <p>The index retrieval parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder searchIndexParams(String searchIndexParams) {
                 this.searchIndexParams = searchIndexParams;
@@ -1009,6 +1137,12 @@ public class CreateTableRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTableRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTableRequest</p>
+     */
     public static class VectorIndex extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("advanceParams")
         private AdvanceParams advanceParams;
@@ -1132,7 +1266,7 @@ public class CreateTableRequest extends Request {
             private String vectorIndexType; 
 
             /**
-             * The configurations of the index schema.
+             * <p>The configurations of the index schema.</p>
              */
             public Builder advanceParams(AdvanceParams advanceParams) {
                 this.advanceParams = advanceParams;
@@ -1140,7 +1274,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The dimension of the vector.
+             * <p>The dimension of the vector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -1148,7 +1285,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The distance type.
+             * <p>The distance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SquaredEuclidean</p>
              */
             public Builder distanceType(String distanceType) {
                 this.distanceType = distanceType;
@@ -1156,7 +1296,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The name of the index schema.
+             * <p>The name of the index schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>case_index</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -1164,7 +1307,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The namespace field.
+             * <p>The namespace field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespace</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1172,7 +1318,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The field that stores the indexes of the elements in sparse vectors.
+             * <p>The field that stores the indexes of the elements in sparse vectors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sparse_indices</p>
              */
             public Builder sparseIndexField(String sparseIndexField) {
                 this.sparseIndexField = sparseIndexField;
@@ -1180,7 +1329,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The field that stores the elements in sparse vectors.
+             * <p>The field that stores the elements in sparse vectors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sparse_values</p>
              */
             public Builder sparseValueField(String sparseValueField) {
                 this.sparseValueField = sparseValueField;
@@ -1188,7 +1340,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The vector field.
+             * <p>The vector field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_image_vector</p>
              */
             public Builder vectorField(String vectorField) {
                 this.vectorField = vectorField;
@@ -1196,7 +1351,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The vector retrieval algorithm.
+             * <p>The vector retrieval algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qc</p>
              */
             public Builder vectorIndexType(String vectorIndexType) {
                 this.vectorIndexType = vectorIndexType;

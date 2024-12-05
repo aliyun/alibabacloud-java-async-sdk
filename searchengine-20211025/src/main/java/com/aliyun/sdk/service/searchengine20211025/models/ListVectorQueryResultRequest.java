@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVectorQueryResultRequest} extends {@link RequestModel}
  *
  * <p>ListVectorQueryResultRequest</p>
@@ -110,7 +111,11 @@ public class ListVectorQueryResultRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rps6c08</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -119,7 +124,10 @@ public class ListVectorQueryResultRequest extends Request {
         }
 
         /**
-         * The instance endpoint.
+         * <p>The instance endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("address", address);
@@ -128,7 +136,10 @@ public class ListVectorQueryResultRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder body(java.util.Map < String, ? > body) {
             this.putBodyParameter("body", body);
@@ -137,7 +148,10 @@ public class ListVectorQueryResultRequest extends Request {
         }
 
         /**
-         * The query type. Valid values: vector, primary_key, and vector_text.
+         * <p>The query type. Valid values: vector, primary_key, and vector_text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primary_key</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("queryType", queryType);
@@ -146,7 +160,10 @@ public class ListVectorQueryResultRequest extends Request {
         }
 
         /**
-         * The vector query type. Valid values: vector, image, and text.
+         * <p>The vector query type. Valid values: vector, image, and text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder vectorQueryType(String vectorQueryType) {
             this.putQueryParameter("vectorQueryType", vectorQueryType);

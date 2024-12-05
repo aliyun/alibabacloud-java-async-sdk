@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTablesResponseBody</p>
@@ -49,7 +50,10 @@ public class ListTablesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * <p>The result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTablesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("indexStatus")
         private String indexStatus;
@@ -121,7 +131,10 @@ public class ListTablesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The state of the index table. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, RESTORE_USE, and FAIL. After an index is created in an OpenSearch Retrieval Engine Edition instance, the index enters the IN_USE state. If the first full index fails to be created in an OpenSearch Vector Search Edition instance of the new version, the index is in the FAIL state.
+             * <p>The state of the index table. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, RESTORE_USE, and FAIL. After an index is created in an OpenSearch Retrieval Engine Edition instance, the index enters the IN_USE state. If the first full index fails to be created in an OpenSearch Vector Search Edition instance of the new version, the index is in the FAIL state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN_USE</p>
              */
             public Builder indexStatus(String indexStatus) {
                 this.indexStatus = indexStatus;
@@ -129,7 +142,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The index name.
+             * <p>The index name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es_test_1b</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -137,7 +153,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the index table. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, RESTORE_USE, and FAIL. After an index is created in an OpenSearch Retrieval Engine Edition instance, the index enters the IN_USE state. If the first full index fails to be created in an OpenSearch Vector Search Edition instance of the new version, the index is in the FAIL state.
+             * <p>The state of the index table. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, RESTORE_USE, and FAIL. After an index is created in an OpenSearch Retrieval Engine Edition instance, the index enters the IN_USE state. If the first full index fails to be created in an OpenSearch Vector Search Edition instance of the new version, the index is in the FAIL state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN_USE</p>
              */
             public Builder status(String status) {
                 this.status = status;

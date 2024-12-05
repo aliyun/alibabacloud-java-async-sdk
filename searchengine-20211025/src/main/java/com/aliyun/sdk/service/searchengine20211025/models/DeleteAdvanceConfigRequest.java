@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAdvanceConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteAdvanceConfigRequest</p>
@@ -68,7 +69,11 @@ public class DeleteAdvanceConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rps6c08</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -77,7 +82,10 @@ public class DeleteAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The configuration name.
+         * <p>The configuration name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rps6c08_offline_adv_v1</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);

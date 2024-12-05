@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLogsResponseBody</p>
@@ -49,7 +50,10 @@ public class ListLogsResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListLogsResponseBody extends TeaModel {
         }
 
         /**
-         * ListResult
+         * <p>ListResult</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("result")
         private java.util.List < ? > result;
@@ -109,7 +119,7 @@ public class ListLogsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The result.
+             * <p>The result.</p>
              */
             public Builder result(java.util.List < ? > result) {
                 this.result = result;
@@ -117,7 +127,10 @@ public class ListLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned
+             * <p>The total number of entries returned</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

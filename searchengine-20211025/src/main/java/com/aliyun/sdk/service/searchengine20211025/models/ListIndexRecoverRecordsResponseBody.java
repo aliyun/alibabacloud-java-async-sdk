@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIndexRecoverRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>ListIndexRecoverRecordsResponseBody</p>
@@ -61,7 +62,10 @@ public class ListIndexRecoverRecordsResponseBody extends TeaModel {
         private String generationId; 
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder desc(String desc) {
             this.desc = desc;
@@ -69,7 +73,10 @@ public class ListIndexRecoverRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the index version was published.
+         * <p>The time when the index version was published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-07 16:43:00</p>
          */
         public Builder finishedTime(String finishedTime) {
             this.finishedTime = finishedTime;
@@ -77,7 +84,10 @@ public class ListIndexRecoverRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the full index version.
+         * <p>The ID of the full index version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1708674867</p>
          */
         public Builder generationId(String generationId) {
             this.generationId = generationId;

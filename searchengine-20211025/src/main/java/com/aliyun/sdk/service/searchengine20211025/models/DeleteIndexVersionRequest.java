@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIndexVersionRequest} extends {@link RequestModel}
  *
  * <p>DeleteIndexVersionRequest</p>
@@ -84,7 +85,11 @@ public class DeleteIndexVersionRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rrogr01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +98,11 @@ public class DeleteIndexVersionRequest extends Request {
         }
 
         /**
-         * The index name.
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>generation</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -102,7 +111,11 @@ public class DeleteIndexVersionRequest extends Request {
         }
 
         /**
-         * The name of the version.
+         * <p>The name of the version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0js04@ha-cn-pl32rf0js04_shenzhen_test_01@sz_vpc_domain_1@api_test@index_config_v1</p>
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("versionName", versionName);

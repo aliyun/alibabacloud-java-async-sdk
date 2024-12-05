@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class GetInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The results returned.
+         * <p>Response parameters</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allow")
         private String allow;
@@ -145,7 +155,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * allow.
+             * <p>The public domain name whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder allow(String allow) {
                 this.allow = allow;
@@ -153,7 +166,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * endpoint.
+             * <p>The instance endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-35t3r****.ha.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -161,7 +177,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * publicEndpoint.
+             * <p>The public endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-35t3ni****.public.ha.aliyuncs.com</p>
              */
             public Builder publicEndpoint(String publicEndpoint) {
                 this.publicEndpoint = publicEndpoint;
@@ -169,7 +188,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp11ldcf59q2n****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -177,7 +199,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9axk41d9vff****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -191,6 +216,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class QrsResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;
@@ -266,7 +297,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private Integer nodeCount; 
 
             /**
-             * category.
+             * <p>The category. Valid values: local_ssd, SSD, and cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -274,7 +308,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -282,7 +319,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -290,7 +330,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * mem.
+             * <p>The memory of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -298,7 +341,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * nodeCount.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeCount(Integer nodeCount) {
                 this.nodeCount = nodeCount;
@@ -312,6 +358,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class SearchResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;
@@ -387,7 +439,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private Integer nodeCount; 
 
             /**
-             * category.
+             * <p>The category. Valid values: local_ssd, SSD, and cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -395,7 +450,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -403,7 +461,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -411,7 +472,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * mem.
+             * <p>The memory of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -419,7 +483,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * nodeCount.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeCount(Integer nodeCount) {
                 this.nodeCount = nodeCount;
@@ -433,6 +500,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Spec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("qrsResource")
         private QrsResource qrsResource;
@@ -472,7 +545,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private SearchResource searchResource; 
 
             /**
-             * qrsResource.
+             * <p>The QRS worker specifications.</p>
              */
             public Builder qrsResource(QrsResource qrsResource) {
                 this.qrsResource = qrsResource;
@@ -480,7 +553,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * searchResource.
+             * <p>The searcher worker specifications.</p>
              */
             public Builder searchResource(SearchResource searchResource) {
                 this.searchResource = searchResource;
@@ -494,6 +567,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -533,7 +612,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -541,7 +623,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -555,6 +640,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
@@ -798,7 +889,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The billing method.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POSYPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -806,7 +900,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The commodity code of the instance.
+             * <p>The commodity code of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>commodityCode</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -814,7 +911,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-17T02:01:26Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -822,7 +922,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha3_test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -830,7 +933,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * edition.
+             * <p>The edition of the instance. Valid values: vector and engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vector</p>
              */
             public Builder edition(String edition) {
                 this.edition = edition;
@@ -838,7 +944,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires.
+             * <p>The time when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634609702</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -846,7 +955,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an overdue payment is involved.
+             * <p>Indicates whether an overdue payment is involved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder inDebt(Boolean inDebt) {
                 this.inDebt = inDebt;
@@ -854,7 +966,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-7mz2qsgq301</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -862,7 +977,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The lock status.
+             * <p>The lock status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -870,7 +988,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * network.
+             * <p>The network information of the instance.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -878,7 +996,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * newMode.
+             * <p>Specifies whether the instance is of the new version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder newMode(Boolean newMode) {
                 this.newMode = newMode;
@@ -886,7 +1007,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * noQrs.
+             * <p>Specifies whether the instance has only one node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder noQrs(Boolean noQrs) {
                 this.noQrs = noQrs;
@@ -894,7 +1018,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzjvw24el5lma</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -902,7 +1029,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * <p>The node specifications.</p>
              */
             public Builder spec(Spec spec) {
                 this.spec = spec;
@@ -910,13 +1037,16 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>INIT: being initialized</li>
+             * <li>WAIT_CONFIG: to be configured</li>
+             * <li>CONFIG_UPDATING: configuration taking effect</li>
+             * <li>READY: normal</li>
+             * </ul>
              * 
-             * *   INIT: being initialized
-             * *   WAIT_CONFIG: to be configured
-             * *   CONFIG_UPDATING: configuration taking effect
-             * *   READY: normal
+             * <strong>example:</strong>
+             * <p>INIT</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -924,7 +1054,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the instance.
+             * <p>The tags of the instance.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -932,7 +1062,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was updated.
+             * <p>The time when the instance was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634609702</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -940,7 +1073,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -948,7 +1084,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version of the engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha3_3.10.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

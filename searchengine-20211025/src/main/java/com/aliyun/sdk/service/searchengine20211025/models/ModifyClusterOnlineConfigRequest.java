@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterOnlineConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterOnlineConfigRequest</p>
@@ -82,7 +83,11 @@ public class ModifyClusterOnlineConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2ougaw02</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -91,7 +96,7 @@ public class ModifyClusterOnlineConfigRequest extends Request {
         }
 
         /**
-         * The cluster information.
+         * <p>The cluster information.</p>
          */
         public Builder clusters(java.util.List < String > clusters) {
             this.putBodyParameter("clusters", clusters);
@@ -100,7 +105,7 @@ public class ModifyClusterOnlineConfigRequest extends Request {
         }
 
         /**
-         * The configuration information.
+         * <p>The configuration information.</p>
          */
         public Builder config(java.util.Map < String, Integer > config) {
             this.putBodyParameter("config", config);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAdvanceConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListAdvanceConfigsRequest</p>
@@ -110,7 +111,11 @@ public class ListAdvanceConfigsRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0js04</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -119,7 +124,10 @@ public class ListAdvanceConfigsRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_test_api</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("dataSourceName", dataSourceName);
@@ -128,7 +136,10 @@ public class ListAdvanceConfigsRequest extends Request {
         }
 
         /**
-         * The index name.
+         * <p>The index name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_api</p>
          */
         public Builder indexName(String indexName) {
             this.putQueryParameter("indexName", indexName);
@@ -137,7 +148,10 @@ public class ListAdvanceConfigsRequest extends Request {
         }
 
         /**
-         * Specifies whether the OpenSearch Vector Search Edition instance is of the new version.
+         * <p>Specifies whether the OpenSearch Vector Search Edition instance is of the new version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder newMode(Boolean newMode) {
             this.putQueryParameter("newMode", newMode);
@@ -146,7 +160,10 @@ public class ListAdvanceConfigsRequest extends Request {
         }
 
         /**
-         * The type of advanced configurations that you want to query. Valid values: - online -offline (default)
+         * <p>The type of advanced configurations that you want to query. Valid values: - online -offline (default)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

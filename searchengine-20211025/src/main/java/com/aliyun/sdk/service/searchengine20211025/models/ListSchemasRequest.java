@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSchemasRequest} extends {@link RequestModel}
  *
  * <p>ListSchemasRequest</p>
@@ -167,7 +168,11 @@ public class ListSchemasRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rq6610a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -176,7 +181,10 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * The AccessKey ID of the MaxCompute data source.
+         * <p>The AccessKey ID of the MaxCompute data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak</p>
          */
         public Builder accessKey(String accessKey) {
             this.putQueryParameter("accessKey", accessKey);
@@ -185,7 +193,10 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * The AccessKey secret of the MaxCompute data source.
+         * <p>The AccessKey secret of the MaxCompute data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>as</p>
          */
         public Builder accessSecret(String accessSecret) {
             this.putQueryParameter("accessSecret", accessSecret);
@@ -194,7 +205,10 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * The endpoint of the MaxCompute data source.
+         * <p>The endpoint of the MaxCompute data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
          */
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("endpoint", endpoint);
@@ -203,7 +217,10 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * The namespace of the SARO data source.
+         * <p>The namespace of the SARO data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>igraph-cn-tl32wnrhi04</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -212,7 +229,10 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * The shard name.
+         * <p>The shard name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt=20230520</p>
          */
         public Builder partition(String partition) {
             this.putQueryParameter("partition", partition);
@@ -221,7 +241,10 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute project that is used as the data source.
+         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start-flask-v3-obcc</p>
          */
         public Builder project(String project) {
             this.putQueryParameter("project", project);
@@ -230,7 +253,10 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute table that is used as the data source.
+         * <p>The name of the MaxCompute table that is used as the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item</p>
          */
         public Builder table(String table) {
             this.putQueryParameter("table", table);
@@ -239,7 +265,11 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.
+         * <p>The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

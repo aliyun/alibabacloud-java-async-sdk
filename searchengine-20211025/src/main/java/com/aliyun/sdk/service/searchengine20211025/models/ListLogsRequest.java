@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogsRequest} extends {@link RequestModel}
  *
  * <p>ListLogsRequest</p>
@@ -138,7 +139,11 @@ public class ListLogsRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-i7m2roiy504</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -147,7 +152,10 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * The end tim. The value is a timestamp in seconds.
+         * <p>The end tim. The value is a timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710432000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -156,7 +164,10 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * The number of entries per num. Default value: 1.
+         * <p>The number of entries per num. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(String pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -165,7 +176,10 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -174,7 +188,10 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * The query statement
+         * <p>The query statement</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status: 200 AND totalTime &gt; 0.01</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -183,7 +200,10 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * The start time. The value is a timestamp in seconds.
+         * <p>The start time. The value is a timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1706340600</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -192,7 +212,10 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * -push   -select
+         * <p>-push   -select</p>
+         * 
+         * <strong>example:</strong>
+         * <p>push</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

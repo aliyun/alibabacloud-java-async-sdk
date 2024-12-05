@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIndexOnlineStrategyRequest} extends {@link RequestModel}
  *
  * <p>ModifyIndexOnlineStrategyRequest</p>
@@ -113,7 +114,11 @@ public class ModifyIndexOnlineStrategyRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rps6c08</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -122,7 +127,11 @@ public class ModifyIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rps6c08_api_test</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);
@@ -131,7 +140,11 @@ public class ModifyIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * The name of the data center in which the data source is deployed.
+         * <p>The name of the data center in which the data source is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_1</p>
          */
         public Builder deployName(String deployName) {
             this.putPathParameter("deployName", deployName);
@@ -140,7 +153,11 @@ public class ModifyIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * The index name.
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tusou_v2</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -149,7 +166,10 @@ public class ModifyIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * The index change rate.
+         * <p>The index change rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder changeRate(Integer changeRate) {
             this.putBodyParameter("changeRate", changeRate);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOnlineConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListOnlineConfigsRequest</p>
@@ -84,7 +85,11 @@ public class ListOnlineConfigsRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2s170b03</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +98,11 @@ public class ListOnlineConfigsRequest extends Request {
         }
 
         /**
-         * The name of the Query Result Searcher (QRS) worker.
+         * <p>The name of the Query Result Searcher (QRS) worker.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01_qrs</p>
          */
         public Builder nodeName(String nodeName) {
             this.putPathParameter("nodeName", nodeName);
@@ -102,7 +111,11 @@ public class ListOnlineConfigsRequest extends Request {
         }
 
         /**
-         * The name of the domain
+         * <p>The name of the domain</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sz_vpc_domain_1</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("domain", domain);

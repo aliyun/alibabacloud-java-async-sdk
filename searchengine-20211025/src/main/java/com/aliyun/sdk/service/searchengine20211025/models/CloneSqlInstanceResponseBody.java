@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloneSqlInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CloneSqlInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * NodeVO
+         * <p>NodeVO</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CloneSqlInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CloneSqlInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
@@ -257,7 +267,10 @@ public class CloneSqlInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * table, instance, template, function
+             * <p>table, instance, template, function</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder type(String type) {
                 this.type = type;

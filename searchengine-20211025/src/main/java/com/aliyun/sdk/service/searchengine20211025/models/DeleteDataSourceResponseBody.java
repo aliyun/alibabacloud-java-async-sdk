@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDataSourceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDataSourceResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteDataSourceResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * The ID of the request
+         * <p>The ID of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DeleteDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned
+         * <p>The result returned</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPublicUrlIpListRequest} extends {@link RequestModel}
  *
  * <p>ModifyPublicUrlIpListRequest</p>
@@ -68,7 +69,11 @@ public class ModifyPublicUrlIpListRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rq6610a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -77,7 +82,7 @@ public class ModifyPublicUrlIpListRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
         public Builder body(java.util.Map < String, String > body) {
             this.putBodyParameter("body", body);

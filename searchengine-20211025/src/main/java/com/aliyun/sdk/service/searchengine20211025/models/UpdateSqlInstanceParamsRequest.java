@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSqlInstanceParamsRequest} extends {@link RequestModel}
  *
  * <p>UpdateSqlInstanceParamsRequest</p>
@@ -154,7 +155,10 @@ public class UpdateSqlInstanceParamsRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -163,7 +167,10 @@ public class UpdateSqlInstanceParamsRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -172,7 +179,10 @@ public class UpdateSqlInstanceParamsRequest extends Request {
         }
 
         /**
-         * sqlInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sqlInstanceId(Long sqlInstanceId) {
             this.putPathParameter("sqlInstanceId", sqlInstanceId);

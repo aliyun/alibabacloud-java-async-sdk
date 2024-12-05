@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTablesRequest} extends {@link RequestModel}
  *
  * <p>ListTablesRequest</p>
@@ -68,7 +69,11 @@ public class ListTablesRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rewdi02</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -77,7 +82,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * Specifies whether the OpenSearch Vector Search Edition instance is of the new version.
+         * <p>Specifies whether the OpenSearch Vector Search Edition instance is of the new version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder newMode(Boolean newMode) {
             this.putQueryParameter("newMode", newMode);

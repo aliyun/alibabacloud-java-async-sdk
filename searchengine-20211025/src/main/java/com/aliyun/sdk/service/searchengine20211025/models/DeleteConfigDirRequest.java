@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConfigDirRequest} extends {@link RequestModel}
  *
  * <p>DeleteConfigDirRequest</p>
@@ -99,7 +100,11 @@ public class DeleteConfigDirRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-18qug6zlc1r</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +113,11 @@ public class DeleteConfigDirRequest extends Request {
         }
 
         /**
-         * The configuration name.
+         * <p>The configuration name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-wuz014xlq5o_table_ha-cn-wuz014xlq5o_test_api_edit</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -117,7 +126,11 @@ public class DeleteConfigDirRequest extends Request {
         }
 
         /**
-         * The directory name.
+         * <p>The directory name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/clusters</p>
          */
         public Builder dirName(String dirName) {
             this.putQueryParameter("dirName", dirName);
@@ -126,7 +139,11 @@ public class DeleteConfigDirRequest extends Request {
         }
 
         /**
-         * The path of the parent directory.
+         * <p>The path of the parent directory.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder parentFullPath(String parentFullPath) {
             this.putQueryParameter("parentFullPath", parentFullPath);

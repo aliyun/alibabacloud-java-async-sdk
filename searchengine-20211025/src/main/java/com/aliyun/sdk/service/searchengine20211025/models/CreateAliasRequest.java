@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAliasRequest} extends {@link RequestModel}
  *
  * <p>CreateAliasRequest</p>
@@ -96,7 +97,11 @@ public class CreateAliasRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -105,7 +110,10 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * alias name
+         * <p>alias name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder alias(String alias) {
             this.putBodyParameter("alias", alias);
@@ -114,7 +122,10 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * index name
+         * <p>index name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index</p>
          */
         public Builder index(String index) {
             this.putBodyParameter("index", index);
@@ -123,7 +134,10 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * Specifies whether the OpenSearch Vector Search Edition instance is of the new version.
+         * <p>Specifies whether the OpenSearch Vector Search Edition instance is of the new version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder newMode(Boolean newMode) {
             this.putQueryParameter("newMode", newMode);

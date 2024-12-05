@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIndexRequest} extends {@link RequestModel}
  *
  * <p>GetIndexRequest</p>
@@ -69,7 +70,11 @@ public class GetIndexRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-8ed2j834u03</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +83,11 @@ public class GetIndexRequest extends Request {
         }
 
         /**
-         * The index name.
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index_jiayi_text</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);

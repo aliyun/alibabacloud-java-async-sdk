@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAliasRequest} extends {@link RequestModel}
  *
  * <p>DeleteAliasRequest</p>
@@ -69,7 +70,11 @@ public class DeleteAliasRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +83,11 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * alias
+         * <p>alias</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder alias(String alias) {
             this.putPathParameter("alias", alias);

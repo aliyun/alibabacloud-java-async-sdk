@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FilesConfigVariablesValue} extends {@link TeaModel}
  *
  * <p>FilesConfigVariablesValue</p>
@@ -85,7 +86,10 @@ public class FilesConfigVariablesValue extends TeaModel {
         private String value; 
 
         /**
-         * The description of the variable.
+         * <p>The description of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom variable</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -93,7 +97,10 @@ public class FilesConfigVariablesValue extends TeaModel {
         }
 
         /**
-         * Specifies whether the variable is not allowed to be modified.
+         * <p>Specifies whether the variable is not allowed to be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableModify(Boolean disableModify) {
             this.disableModify = disableModify;
@@ -101,7 +108,10 @@ public class FilesConfigVariablesValue extends TeaModel {
         }
 
         /**
-         * Specifies whether the variable is modified.
+         * <p>Specifies whether the variable is modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isModify(Boolean isModify) {
             this.isModify = isModify;
@@ -109,7 +119,10 @@ public class FilesConfigVariablesValue extends TeaModel {
         }
 
         /**
-         * The variable type. Valid values: NORMAL: common variable. FUNCTION: function variable.
+         * <p>The variable type. Valid values: NORMAL: common variable. FUNCTION: function variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -117,7 +130,10 @@ public class FilesConfigVariablesValue extends TeaModel {
         }
 
         /**
-         * The variable value.
+         * <p>The variable value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder value(String value) {
             this.value = value;

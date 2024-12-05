@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishAdvanceConfigRequest} extends {@link RequestModel}
  *
  * <p>PublishAdvanceConfigRequest</p>
@@ -97,7 +98,11 @@ public class PublishAdvanceConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7e22rof5304</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -106,7 +111,11 @@ public class PublishAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The configuration name.
+         * <p>The configuration name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rrogr01_online_config_v3</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -115,7 +124,10 @@ public class PublishAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The description of the advanced configuration.
+         * <p>The description of the advanced configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom configuration</p>
          */
         public Builder desc(String desc) {
             this.putBodyParameter("desc", desc);
@@ -124,7 +136,7 @@ public class PublishAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The files.
+         * <p>The files.</p>
          */
         public Builder files(java.util.List < Files> files) {
             this.putBodyParameter("files", files);
@@ -139,6 +151,12 @@ public class PublishAdvanceConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PublishAdvanceConfigRequest} extends {@link TeaModel}
+     *
+     * <p>PublishAdvanceConfigRequest</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -178,7 +196,10 @@ public class PublishAdvanceConfigRequest extends Request {
             private java.util.Map < String, FilesConfigVariablesValue > variables; 
 
             /**
-             * The file content.
+             * <p>The file content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;url&quot;:&quot;<a href="http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar%5C%22%7D">http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar\&quot;}</a></p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -186,7 +207,7 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * The variables.
+             * <p>The variables.</p>
              */
             public Builder variables(java.util.Map < String, FilesConfigVariablesValue > variables) {
                 this.variables = variables;
@@ -200,6 +221,12 @@ public class PublishAdvanceConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PublishAdvanceConfigRequest} extends {@link TeaModel}
+     *
+     * <p>PublishAdvanceConfigRequest</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("config")
         private Config config;
@@ -287,7 +314,7 @@ public class PublishAdvanceConfigRequest extends Request {
             private String parentFullPath; 
 
             /**
-             * The information about the advanced configuration.
+             * <p>The information about the advanced configuration.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -295,7 +322,10 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * The directory name.
+             * <p>The directory name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/clusters</p>
              */
             public Builder dirName(String dirName) {
                 this.dirName = dirName;
@@ -303,7 +333,10 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * The file name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vector_question_schema.json</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -311,7 +344,10 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.
+             * <p>The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPDATE</p>
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -319,7 +355,10 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * The path of the Object Storage Service (OSS) object.
+             * <p>The path of the Object Storage Service (OSS) object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://opensearch/test.json</p>
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -327,7 +366,10 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * The path of the parent directory.
+             * <p>The path of the parent directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder parentFullPath(String parentFullPath) {
                 this.parentFullPath = parentFullPath;

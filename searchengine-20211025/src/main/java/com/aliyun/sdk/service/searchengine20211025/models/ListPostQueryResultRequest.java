@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPostQueryResultRequest} extends {@link RequestModel}
  *
  * <p>ListPostQueryResultRequest</p>
@@ -96,7 +97,11 @@ public class ListPostQueryResultRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ppr7901</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -105,7 +110,10 @@ public class ListPostQueryResultRequest extends Request {
         }
 
         /**
-         * The instance endpoint.
+         * <p>The instance endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("address", address);
@@ -114,7 +122,10 @@ public class ListPostQueryResultRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder body(java.util.Map < String, ? > body) {
             this.putBodyParameter("body", body);
@@ -123,7 +134,10 @@ public class ListPostQueryResultRequest extends Request {
         }
 
         /**
-         * The query type. Valid values: sql: SQL query. ha3: Havenask query.
+         * <p>The query type. Valid values: sql: SQL query. ha3: Havenask query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeployGraphResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeployGraphResponseBody</p>
@@ -49,7 +50,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
         }
 
         /**
-         * The results returned.
+         * <p>The results returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +77,12 @@ public class GetDeployGraphResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeployGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeployGraphResponseBody</p>
+     */
     public static class IndexMetas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domainName")
         private String domainName;
@@ -157,7 +170,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * The name of the data center.
+             * <p>The name of the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hz_pre_vpc_domain_1</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -165,7 +181,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The index name.
+             * <p>The index name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_api</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -173,7 +192,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment ID of the table.
+             * <p>The deployment ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2409</p>
              */
             public Builder tableDeployId(Long tableDeployId) {
                 this.tableDeployId = tableDeployId;
@@ -181,7 +203,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-pl32rf0****_test_api</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -189,7 +214,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_api_hz_pre_vpc_domain_1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -197,7 +225,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the QRS worker.
+             * <p>The name of the QRS worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-pl32rf0****_qrs</p>
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -211,6 +242,12 @@ public class GetDeployGraphResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeployGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeployGraphResponseBody</p>
+     */
     public static class OnlineMaster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domainName")
         private String domainName;
@@ -274,7 +311,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the data center.
+             * <p>The name of the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hz_pre_vpc_domain_1</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -282,7 +322,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5377</p>
              */
             public Builder hippoId(String hippoId) {
                 this.hippoId = hippoId;
@@ -290,7 +333,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data center.
+             * <p>The ID of the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -298,7 +344,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the online cluster.
+             * <p>The name of the online cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-pl32rf0****_hz_pre_vpc_domain_1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,6 +361,12 @@ public class GetDeployGraphResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeployGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeployGraphResponseBody</p>
+     */
     public static class TableMetas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("buildDeployId")
         private Long buildDeployId;
@@ -399,7 +454,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the offline deployment.
+             * <p>The ID of the offline deployment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder buildDeployId(Long buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -407,7 +465,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data center.
+             * <p>The name of the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hz_pre_vpc_domain_1</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -415,7 +476,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-pl32rf0****_test_api</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -423,7 +487,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment ID of the table.
+             * <p>The deployment ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2177</p>
              */
             public Builder tableDeployId(Long tableDeployId) {
                 this.tableDeployId = tableDeployId;
@@ -431,7 +498,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-pl32rf0****_test_api_hz_pre_vpc_domain_1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -439,7 +509,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source.
+             * <p>The type of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -453,6 +526,12 @@ public class GetDeployGraphResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeployGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeployGraphResponseBody</p>
+     */
     public static class ZoneMetas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domainInfo")
         private String domainInfo;
@@ -528,7 +607,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the data center.
+             * <p>The name of the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hz_pre_vpc_domain_1</p>
              */
             public Builder domainInfo(String domainInfo) {
                 this.domainInfo = domainInfo;
@@ -536,7 +618,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Query Result Searcher (QRS) worker.
+             * <p>The name of the Query Result Searcher (QRS) worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-pl32rf0****_qrs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -544,7 +629,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service that is used to manage the relationships between online clusters and indexes.
+             * <p>The name of the service that is used to manage the relationships between online clusters and indexes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-pl32rf0****_hz_pre_vpc_domain_1</p>
              */
             public Builder suezAdminName(String suezAdminName) {
                 this.suezAdminName = suezAdminName;
@@ -552,7 +640,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-pl32rf0****_qrs_hz_pre_vpc_domain_1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -560,7 +651,10 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The node type.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qrs</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -574,6 +668,12 @@ public class GetDeployGraphResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeployGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeployGraphResponseBody</p>
+     */
     public static class Graph extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("indexMetas")
         private java.util.List < IndexMetas> indexMetas;
@@ -661,7 +761,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private java.util.List < ZoneMetas> zoneMetas; 
 
             /**
-             * The index metadata.
+             * <p>The index metadata.</p>
              */
             public Builder indexMetas(java.util.List < IndexMetas> indexMetas) {
                 this.indexMetas = indexMetas;
@@ -669,7 +769,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata of online clusters.
+             * <p>The metadata of online clusters.</p>
              */
             public Builder onlineMaster(java.util.List < OnlineMaster> onlineMaster) {
                 this.onlineMaster = onlineMaster;
@@ -677,7 +777,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The association relationships between data sources and indexes.
+             * <p>The association relationships between data sources and indexes.</p>
              */
             public Builder tableIndexRelation(java.util.Map < String, java.util.List<String>> tableIndexRelation) {
                 this.tableIndexRelation = tableIndexRelation;
@@ -685,7 +785,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata of data sources.
+             * <p>The metadata of data sources.</p>
              */
             public Builder tableMetas(java.util.List < TableMetas> tableMetas) {
                 this.tableMetas = tableMetas;
@@ -693,7 +793,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The association relationships between zones and indexes.
+             * <p>The association relationships between zones and indexes.</p>
              */
             public Builder zoneIndexRelation(java.util.Map < String, java.util.List<String>> zoneIndexRelation) {
                 this.zoneIndexRelation = zoneIndexRelation;
@@ -701,7 +801,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * The zone metadata.
+             * <p>The zone metadata.</p>
              */
             public Builder zoneMetas(java.util.List < ZoneMetas> zoneMetas) {
                 this.zoneMetas = zoneMetas;
@@ -715,6 +815,12 @@ public class GetDeployGraphResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeployGraphResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeployGraphResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("graph")
         private Graph graph;
@@ -742,7 +848,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private Graph graph; 
 
             /**
-             * The deployment information.
+             * <p>The deployment information.</p>
              */
             public Builder graph(Graph graph) {
                 this.graph = graph;

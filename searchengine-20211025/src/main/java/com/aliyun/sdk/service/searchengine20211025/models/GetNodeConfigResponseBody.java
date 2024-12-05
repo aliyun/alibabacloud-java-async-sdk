@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetNodeConfigResponseBody</p>
@@ -49,7 +50,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The result set.
+         * <p>The result set.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetNodeConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNodeConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNodeConfigResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
@@ -157,7 +167,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
             private Boolean published; 
 
             /**
-             * Indicates whether the index is effective online.
+             * <p>Indicates whether the index is effective online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -165,7 +178,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of data replicas.
+             * <p>The number of data replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder dataDuplicateNumber(Integer dataDuplicateNumber) {
                 this.dataDuplicateNumber = dataDuplicateNumber;
@@ -173,7 +189,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of data shards.
+             * <p>The number of data shards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder dataFragmentNumber(Integer dataFragmentNumber) {
                 this.dataFragmentNumber = dataFragmentNumber;
@@ -181,7 +200,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic percentage.
+             * <p>The traffic percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder flowRatio(Integer flowRatio) {
                 this.flowRatio = flowRatio;
@@ -189,7 +211,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum service ratio.
+             * <p>The minimum service ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder minServicePercent(Integer minServicePercent) {
                 this.minServicePercent = minServicePercent;
@@ -197,7 +222,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster is mounted.
+             * <p>Indicates whether the cluster is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder published(Boolean published) {
                 this.published = published;

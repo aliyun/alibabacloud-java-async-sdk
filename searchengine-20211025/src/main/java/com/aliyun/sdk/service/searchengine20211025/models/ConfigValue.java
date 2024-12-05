@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigValue} extends {@link TeaModel}
  *
  * <p>ConfigValue</p>
@@ -49,7 +50,10 @@ public class ConfigValue extends TeaModel {
         private java.util.List < Files> files; 
 
         /**
-         * The description of the offline configuration.
+         * <p>The description of the offline configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder desc(String desc) {
             this.desc = desc;
@@ -57,7 +61,7 @@ public class ConfigValue extends TeaModel {
         }
 
         /**
-         * The files to be modified.
+         * <p>The files to be modified.</p>
          */
         public Builder files(java.util.List < Files> files) {
             this.files = files;
@@ -70,6 +74,12 @@ public class ConfigValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ConfigValue} extends {@link TeaModel}
+     *
+     * <p>ConfigValue</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -109,7 +119,10 @@ public class ConfigValue extends TeaModel {
             private java.util.Map < String, ConfigValueFilesConfigVariablesValue > variables; 
 
             /**
-             * The file content.
+             * <p>The file content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$dictContent</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -117,7 +130,7 @@ public class ConfigValue extends TeaModel {
             }
 
             /**
-             * The variables.
+             * <p>The variables.</p>
              */
             public Builder variables(java.util.Map < String, ConfigValueFilesConfigVariablesValue > variables) {
                 this.variables = variables;
@@ -131,6 +144,12 @@ public class ConfigValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ConfigValue} extends {@link TeaModel}
+     *
+     * <p>ConfigValue</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operateType")
         private String operateType;
@@ -206,7 +225,10 @@ public class ConfigValue extends TeaModel {
             private String dirName; 
 
             /**
-             * The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.
+             * <p>The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPDATE</p>
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -214,7 +236,10 @@ public class ConfigValue extends TeaModel {
             }
 
             /**
-             * The path of the parent directory.
+             * <p>The path of the parent directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder parentFullPath(String parentFullPath) {
                 this.parentFullPath = parentFullPath;
@@ -222,7 +247,10 @@ public class ConfigValue extends TeaModel {
             }
 
             /**
-             * The file name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/intervene_dict/中文-通用分析器.dict</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -230,7 +258,7 @@ public class ConfigValue extends TeaModel {
             }
 
             /**
-             * The configuration to be modified.
+             * <p>The configuration to be modified.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -238,7 +266,10 @@ public class ConfigValue extends TeaModel {
             }
 
             /**
-             * The directory name.
+             * <p>The directory name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder dirName(String dirName) {
                 this.dirName = dirName;

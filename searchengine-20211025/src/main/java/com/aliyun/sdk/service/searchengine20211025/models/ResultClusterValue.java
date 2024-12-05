@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResultClusterValue} extends {@link TeaModel}
  *
  * <p>ResultClusterValue</p>
@@ -49,7 +50,10 @@ public class ResultClusterValue extends TeaModel {
         private Integer mergeParallelNum; 
 
         /**
-         * The maximum number of full indexes that can be concurrently built.
+         * <p>The maximum number of full indexes that can be concurrently built.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder buildParallelNum(Integer buildParallelNum) {
             this.buildParallelNum = buildParallelNum;
@@ -57,7 +61,10 @@ public class ResultClusterValue extends TeaModel {
         }
 
         /**
-         * The maximum number of full indexes that can be concurrently merged.
+         * <p>The maximum number of full indexes that can be concurrently merged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder mergeParallelNum(Integer mergeParallelNum) {
             this.mergeParallelNum = mergeParallelNum;

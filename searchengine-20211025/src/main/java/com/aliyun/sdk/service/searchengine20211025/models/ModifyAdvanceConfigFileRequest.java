@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAdvanceConfigFileRequest} extends {@link RequestModel}
  *
  * <p>ModifyAdvanceConfigFileRequest</p>
@@ -112,7 +113,11 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -121,7 +126,11 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The configuration name.
+         * <p>The configuration name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-zvp2ou1h801_online_config_edit</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -130,7 +139,10 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The file content.
+         * <p>The file content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ha3&quot;</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -139,7 +151,7 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The variables.
+         * <p>The variables.</p>
          */
         public Builder variables(java.util.Map < String, VariablesValue > variables) {
             this.putBodyParameter("variables", variables);
@@ -148,7 +160,11 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The name of the file.
+         * <p>The name of the file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/qrs.json</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);

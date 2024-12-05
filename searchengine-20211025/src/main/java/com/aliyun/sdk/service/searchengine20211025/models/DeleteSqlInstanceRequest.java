@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSqlInstanceRequest} extends {@link RequestModel}
  *
  * <p>DeleteSqlInstanceRequest</p>
@@ -84,7 +85,11 @@ public class DeleteSqlInstanceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +98,11 @@ public class DeleteSqlInstanceRequest extends Request {
         }
 
         /**
-         * database name
+         * <p>database name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -102,7 +111,11 @@ public class DeleteSqlInstanceRequest extends Request {
         }
 
         /**
-         * sqlInstanceId
+         * <p>sqlInstanceId</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sqlInstanceId(Long sqlInstanceId) {
             this.putPathParameter("sqlInstanceId", sqlInstanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataSourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataSourcesResponseBody</p>
@@ -49,7 +50,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93A9E542-8CF8-5BA6-99AB-94C0FE520429</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The results returned.
+         * <p>The results returned.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourcesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
@@ -157,7 +167,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The data center in which the data source is deployed.
+             * <p>The data center in which the data source is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -165,7 +178,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The indexes.
+             * <p>The indexes.</p>
              */
             public Builder indexes(java.util.List < String > indexes) {
                 this.indexes = indexes;
@@ -173,7 +186,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the full data of the data source was last queried.
+             * <p>The time when the full data of the data source was last queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1718787785</p>
              */
             public Builder lastFulTime(Long lastFulTime) {
                 this.lastFulTime = lastFulTime;
@@ -181,7 +197,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_source_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -189,7 +208,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data source. Valid values: new: The data source is being created. publish: The data source is in the normal state. trash: The data source is being deleted.
+             * <p>The status of the data source. Valid values: new: The data source is being created. publish: The data source is in the normal state. trash: The data source is being deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -197,7 +219,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source.
+             * <p>The type of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder type(String type) {
                 this.type = type;

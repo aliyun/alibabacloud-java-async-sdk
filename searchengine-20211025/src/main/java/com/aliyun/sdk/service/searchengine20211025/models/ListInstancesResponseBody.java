@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesResponseBody</p>
@@ -61,7 +62,10 @@ public class ListInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request
+         * <p>The ID of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89B968E6-1E41-58DF-BB25-5F98ECC759CE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The results returned.
+         * <p>The results returned.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -77,7 +81,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned
+         * <p>The total number of entries returned</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessKey")
         private String accessKey;
@@ -351,6 +364,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class DataSourceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("config")
         private Config config;
@@ -432,6 +451,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allow")
         private String allow;
@@ -515,7 +540,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance endpoint.
+             * <p>The instance endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -531,7 +559,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp11ldcf59q2nbwkqgj6z</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -539,7 +570,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) in which the instance is deployed.
+             * <p>The ID of the virtual private cloud (VPC) in which the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9axk41d9vffoc79x0oe</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -553,6 +587,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class QrsResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;
@@ -674,6 +714,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class SearchResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;
@@ -795,6 +841,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Spec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("qrsResource")
         private QrsResource qrsResource;
@@ -856,6 +908,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -895,7 +953,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -903,7 +964,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oboms-disk</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -917,6 +981,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
@@ -1160,7 +1230,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The billing method.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1168,7 +1241,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The commodity code of the instance.
+             * <p>The commodity code of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -1176,7 +1252,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-04T02:03:21Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1192,7 +1271,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Emergency test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1208,7 +1290,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires.
+             * <p>The time when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634885083</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1216,7 +1301,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an overdue payment is involved.
+             * <p>Indicates whether an overdue payment is involved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder inDebt(Boolean inDebt) {
                 this.inDebt = inDebt;
@@ -1224,7 +1312,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-2r42n8oh001</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1232,7 +1323,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The lock state of the instance.
+             * <p>The lock state of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -1240,7 +1334,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The network information of the instance.
+             * <p>The network information of the instance.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -1256,7 +1350,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzgpiswzbksdi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1272,7 +1369,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1280,7 +1380,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the instance.
+             * <p>The tags of the instance.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1288,7 +1388,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was updated.
+             * <p>The time when the instance was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-06T11:17:49.0</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeployGraphRequest} extends {@link RequestModel}
  *
  * <p>GetDeployGraphRequest</p>
@@ -53,7 +54,10 @@ public class GetDeployGraphRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7pp2pcna701</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFolderRequest} extends {@link RequestModel}
  *
  * <p>CreateFolderRequest</p>
@@ -114,7 +115,10 @@ public class CreateFolderRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -123,7 +127,10 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -132,7 +139,10 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gist_qc</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -141,7 +151,10 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * parent.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder parent(Long parent) {
             this.putBodyParameter("parent", parent);
@@ -150,7 +163,11 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * table, instance, template, function
+         * <p>table, instance, template, function</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIndexVersionRequest} extends {@link RequestModel}
  *
  * <p>GetIndexVersionRequest</p>
@@ -69,7 +70,11 @@ public class GetIndexVersionRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +83,11 @@ public class GetIndexVersionRequest extends Request {
         }
 
         /**
-         * The name of the cluster
+         * <p>The name of the cluster</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_1</p>
          */
         public Builder clusterName(String clusterName) {
             this.putPathParameter("clusterName", clusterName);

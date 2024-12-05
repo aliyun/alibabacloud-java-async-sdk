@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BuildIndexRequest} extends {@link RequestModel}
  *
  * <p>BuildIndexRequest</p>
@@ -166,7 +167,11 @@ public class BuildIndexRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2iv7sq01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -175,7 +180,10 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.
+         * <p>The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>indexRecover</p>
          */
         public Builder buildMode(String buildMode) {
             this.putBodyParameter("buildMode", buildMode);
@@ -184,7 +192,10 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_data_source</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("dataSourceName", dataSourceName);
@@ -193,7 +204,10 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The type of the data source.
+         * <p>The type of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>swift</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("dataSourceType", dataSourceType);
@@ -202,7 +216,10 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.
+         * <p>The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640867288</p>
          */
         public Builder dataTimeSec(Integer dataTimeSec) {
             this.putBodyParameter("dataTimeSec", dataTimeSec);
@@ -211,7 +228,10 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The data center in which the data source is deployed.
+         * <p>The data center in which the data source is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -220,7 +240,10 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The data restoration version.
+         * <p>The data restoration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160131146</p>
          */
         public Builder generation(Long generation) {
             this.putBodyParameter("generation", generation);
@@ -229,7 +252,10 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The partition in the MaxCompute table. This parameter is required if type is set to odps.
+         * <p>The partition in the MaxCompute table. This parameter is required if type is set to odps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20201010</p>
          */
         public Builder partition(String partition) {
             this.putBodyParameter("partition", partition);

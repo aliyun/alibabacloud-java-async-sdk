@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAdvanceConfigDirRequest} extends {@link RequestModel}
  *
  * <p>ListAdvanceConfigDirRequest</p>
@@ -84,7 +85,11 @@ public class ListAdvanceConfigDirRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32n3iu801</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +98,11 @@ public class ListAdvanceConfigDirRequest extends Request {
         }
 
         /**
-         * The configuration name.
+         * <p>The configuration name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01_online_config_v3</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -102,7 +111,11 @@ public class ListAdvanceConfigDirRequest extends Request {
         }
 
         /**
-         * The name of the directory
+         * <p>The name of the directory</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/zones/general</p>
          */
         public Builder dirName(String dirName) {
             this.putQueryParameter("dirName", dirName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
@@ -109,7 +110,10 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * The billing method of the instance. Valid values: PREPAY: subscription. If you set this parameter to PREPAY, make sure that your Alibaba Cloud account supports balance payment or credit card payment. Otherwise, the system returns the InvalidPayMethod error message. If you set this parameter to PREPAY, you must also specify paymentInfo. POSTPAY: pay-as-you-go. This billing method is not supported.
+         * <p>The billing method of the instance. Valid values: PREPAY: subscription. If you set this parameter to PREPAY, make sure that your Alibaba Cloud account supports balance payment or credit card payment. Otherwise, the system returns the InvalidPayMethod error message. If you set this parameter to PREPAY, you must also specify paymentInfo. POSTPAY: pay-as-you-go. This billing method is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("chargeType", chargeType);
@@ -118,7 +122,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The information about the instance specification.
+         * <p>The information about the instance specification.</p>
          */
         public Builder components(java.util.List < Components> components) {
             this.putBodyParameter("components", components);
@@ -127,7 +131,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The billing information.
+         * <p>The billing information.</p>
          */
         public Builder order(Order order) {
             this.putBodyParameter("order", order);
@@ -160,6 +164,12 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Components extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -199,7 +209,10 @@ public class CreateInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The code of the specification, which must be consistent with the value that you specify on the buy page.
+             * <p>The code of the specification, which must be consistent with the value that you specify on the buy page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -207,7 +220,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The value of the specification.
+             * <p>The value of the specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -221,6 +237,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Order extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoRenew")
         private Boolean autoRenew;
@@ -272,7 +294,10 @@ public class CreateInstanceRequest extends Request {
             private String pricingCycle; 
 
             /**
-             * Specifies whether to enable auto-renewal. Valid values: true and false.
+             * <p>Specifies whether to enable auto-renewal. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -280,7 +305,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The billing duration. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 12.
+             * <p>The billing duration. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 12.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -288,7 +316,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The unit of the billing duration. Valid values: Month and Year.
+             * <p>The unit of the billing duration. Valid values: Month and Year.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder pricingCycle(String pricingCycle) {
                 this.pricingCycle = pricingCycle;
@@ -302,6 +333,12 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -349,7 +386,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The value of the specification.
+             * <p>The value of the specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

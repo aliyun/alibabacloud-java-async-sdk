@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceRequest</p>
@@ -95,7 +96,10 @@ public class UpdateInstanceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42mu9xi01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -104,7 +108,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The information about the instance specification.
+         * <p>The information about the instance specification.</p>
          */
         public Builder components(java.util.List < Components> components) {
             this.putBodyParameter("components", components);
@@ -113,7 +117,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The description of the instance.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -122,7 +129,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE upgrades the instance specifications. DOWNGRADE: downgrades the instance specifications.
+         * <p>The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE upgrades the instance specifications. DOWNGRADE: downgrades the instance specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder orderType(String orderType) {
             this.putBodyParameter("orderType", orderType);
@@ -137,6 +147,12 @@ public class UpdateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
     public static class Components extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -176,7 +192,10 @@ public class UpdateInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The code of the specification, which must be consistent with the value that you specify on the buy page.
+             * <p>The code of the specification, which must be consistent with the value that you specify on the buy page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -184,7 +203,10 @@ public class UpdateInstanceRequest extends Request {
             }
 
             /**
-             * The value of the specification.
+             * <p>The value of the specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

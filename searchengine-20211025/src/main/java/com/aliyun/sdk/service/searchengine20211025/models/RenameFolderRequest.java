@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenameFolderRequest} extends {@link RequestModel}
  *
  * <p>RenameFolderRequest</p>
@@ -99,7 +100,10 @@ public class RenameFolderRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +112,10 @@ public class RenameFolderRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -117,7 +124,10 @@ public class RenameFolderRequest extends Request {
         }
 
         /**
-         * folderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder folderId(Long folderId) {
             this.putPathParameter("folderId", folderId);
@@ -126,7 +136,10 @@ public class RenameFolderRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAliasResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyAliasResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyAliasResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6E3D968-529C-5C40-AFDD-133A8B8FD930</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ModifyAliasResponseBody extends TeaModel {
         }
 
         /**
-         * Map
+         * <p>Map</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

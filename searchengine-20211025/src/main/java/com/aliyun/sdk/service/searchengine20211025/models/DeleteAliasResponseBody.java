@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAliasResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAliasResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteAliasResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE03180A-0E29-5474-8A86-33F0683294A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DeleteAliasResponseBody extends TeaModel {
         }
 
         /**
-         * Map
+         * <p>Map</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

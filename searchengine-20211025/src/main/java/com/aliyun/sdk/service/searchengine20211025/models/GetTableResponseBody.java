@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableResponseBody} extends {@link TeaModel}
  *
  * <p>GetTableResponseBody</p>
@@ -49,7 +50,10 @@ public class GetTableResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
-         * The results returned.
+         * <p>The results returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableResponseBody</p>
+     */
     public static class SrcFieldConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ossBucket")
         private String ossBucket;
@@ -121,7 +131,10 @@ public class GetTableResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * OSS Bucket
+             * <p>OSS Bucket</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -129,7 +142,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) endpoint.
+             * <p>The Object Storage Service (OSS) endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
              */
             public Builder ossEndpoint(String ossEndpoint) {
                 this.ossEndpoint = ossEndpoint;
@@ -137,7 +153,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uid</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -151,6 +170,12 @@ public class GetTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableResponseBody</p>
+     */
     public static class Params extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("srcFieldConfig")
         private SrcFieldConfig srcFieldConfig;
@@ -202,7 +227,7 @@ public class GetTableResponseBody extends TeaModel {
             private String vectorModel; 
 
             /**
-             * The source of the data to be vectorized.
+             * <p>The source of the data to be vectorized.</p>
              */
             public Builder srcFieldConfig(SrcFieldConfig srcFieldConfig) {
                 this.srcFieldConfig = srcFieldConfig;
@@ -210,7 +235,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The data type.
+             * <p>The data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image</p>
              */
             public Builder vectorModal(String vectorModal) {
                 this.vectorModal = vectorModal;
@@ -218,7 +246,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The vectorization model.
+             * <p>The vectorization model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>clip</p>
              */
             public Builder vectorModel(String vectorModel) {
                 this.vectorModel = vectorModel;
@@ -232,6 +263,12 @@ public class GetTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableResponseBody</p>
+     */
     public static class DataProcessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dstField")
         private String dstField;
@@ -295,7 +332,10 @@ public class GetTableResponseBody extends TeaModel {
             private String srcField; 
 
             /**
-             * The destination field.
+             * <p>The destination field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_image_vector</p>
              */
             public Builder dstField(String dstField) {
                 this.dstField = dstField;
@@ -303,7 +343,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The method used to process the field. Valid values: copy and vectorize. A value of copy indicates that the value of the source field is copied to the destination field. A value of vectorize indicates that the value of the source field is vectorized by a vectorization model and the output vector is stored in the destination field.
+             * <p>The method used to process the field. Valid values: copy and vectorize. A value of copy indicates that the value of the source field is copied to the destination field. A value of vectorize indicates that the value of the source field is vectorized by a vectorization model and the output vector is stored in the destination field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vectorize</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -311,7 +354,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the model.
+             * <p>The information about the model.</p>
              */
             public Builder params(Params params) {
                 this.params = params;
@@ -319,7 +362,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The source field.
+             * <p>The source field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_image</p>
              */
             public Builder srcField(String srcField) {
                 this.srcField = srcField;
@@ -333,6 +379,12 @@ public class GetTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessKey")
         private String accessKey;
@@ -468,7 +520,10 @@ public class GetTableResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * AK
+             * <p>AK</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -476,7 +531,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * AS
+             * <p>AS</p>
+             * 
+             * <strong>example:</strong>
+             * <p>as</p>
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -554,6 +612,12 @@ public class GetTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableResponseBody</p>
+     */
     public static class DataSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoBuildIndex")
         private Boolean autoBuildIndex;
@@ -655,6 +719,12 @@ public class GetTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableResponseBody</p>
+     */
     public static class AdvanceParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("buildIndexParams")
         private String buildIndexParams;
@@ -718,7 +788,10 @@ public class GetTableResponseBody extends TeaModel {
             private String searchIndexParams; 
 
             /**
-             * The index building parameters.
+             * <p>The index building parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder buildIndexParams(String buildIndexParams) {
                 this.buildIndexParams = buildIndexParams;
@@ -726,7 +799,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for linear building.
+             * <p>The threshold for linear building.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder linearBuildThreshold(String linearBuildThreshold) {
                 this.linearBuildThreshold = linearBuildThreshold;
@@ -734,7 +810,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of retrieved candidate sets.
+             * <p>The minimum number of retrieved candidate sets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder minScanDocCnt(String minScanDocCnt) {
                 this.minScanDocCnt = minScanDocCnt;
@@ -742,7 +821,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The index retrieval parameters.
+             * <p>The index retrieval parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder searchIndexParams(String searchIndexParams) {
                 this.searchIndexParams = searchIndexParams;
@@ -756,6 +838,12 @@ public class GetTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableResponseBody</p>
+     */
     public static class VectorIndex extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("advanceParams")
         private AdvanceParams advanceParams;
@@ -879,7 +967,7 @@ public class GetTableResponseBody extends TeaModel {
             private String vectorIndexType; 
 
             /**
-             * The configurations of the index schema.
+             * <p>The configurations of the index schema.</p>
              */
             public Builder advanceParams(AdvanceParams advanceParams) {
                 this.advanceParams = advanceParams;
@@ -887,7 +975,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension of the vector.
+             * <p>The dimension of the vector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -895,7 +986,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The distance type.
+             * <p>The distance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SquaredEuclidean</p>
              */
             public Builder distanceType(String distanceType) {
                 this.distanceType = distanceType;
@@ -903,7 +997,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the index schema.
+             * <p>The name of the index schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_odps</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -911,7 +1008,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace field.
+             * <p>The namespace field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespace</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -919,7 +1019,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The field that stores the indexes of the elements in sparse vectors.
+             * <p>The field that stores the indexes of the elements in sparse vectors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sparse_indices</p>
              */
             public Builder sparseIndexField(String sparseIndexField) {
                 this.sparseIndexField = sparseIndexField;
@@ -927,7 +1030,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The field that stores the elements in sparse vectors.
+             * <p>The field that stores the elements in sparse vectors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sparse_values</p>
              */
             public Builder sparseValueField(String sparseValueField) {
                 this.sparseValueField = sparseValueField;
@@ -935,7 +1041,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The vector field.
+             * <p>The vector field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_image_vector</p>
              */
             public Builder vectorField(String vectorField) {
                 this.vectorField = vectorField;
@@ -943,7 +1052,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The vector retrieval algorithm.
+             * <p>The vector retrieval algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qc</p>
              */
             public Builder vectorIndexType(String vectorIndexType) {
                 this.vectorIndexType = vectorIndexType;
@@ -957,6 +1069,12 @@ public class GetTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dataProcessConfig")
         private java.util.List < DataProcessConfig> dataProcessConfig;
@@ -1092,7 +1210,7 @@ public class GetTableResponseBody extends TeaModel {
             private java.util.List < VectorIndex> vectorIndex; 
 
             /**
-             * The configurations about field processing.
+             * <p>The configurations about field processing.</p>
              */
             public Builder dataProcessConfig(java.util.List < DataProcessConfig> dataProcessConfig) {
                 this.dataProcessConfig = dataProcessConfig;
@@ -1116,7 +1234,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The field. The value is a key-value pair in which the key indicates the field name and value indicates the field type.
+             * <p>The field. The value is a key-value pair in which the key indicates the field name and value indicates the field type.</p>
              */
             public Builder fieldSchema(java.util.Map < String, String > fieldSchema) {
                 this.fieldSchema = fieldSchema;
@@ -1156,7 +1274,10 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the index table. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, RESTORE_USE, and FAIL. After an index is created in an OpenSearch Retrieval Engine Edition instance, the index enters the IN_USE state. If the first full index fails to be created in an OpenSearch Vector Search Edition instance of the new version, the index is in the FAIL state.
+             * <p>The state of the index table. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, RESTORE_USE, and FAIL. After an index is created in an OpenSearch Retrieval Engine Edition instance, the index enters the IN_USE state. If the first full index fails to be created in an OpenSearch Vector Search Edition instance of the new version, the index is in the FAIL state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN_USE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1164,7 +1285,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * The index schema.
+             * <p>The index schema.</p>
              */
             public Builder vectorIndex(java.util.List < VectorIndex> vectorIndex) {
                 this.vectorIndex = vectorIndex;

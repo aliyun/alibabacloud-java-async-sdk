@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTasksRequest} extends {@link RequestModel}
  *
  * <p>ListTasksRequest</p>
@@ -82,7 +83,11 @@ public class ListTasksRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32n3iu801</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -91,7 +96,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * The timestamp that indicates the end of the time range to query.
+         * <p>The timestamp that indicates the end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1690423741577</p>
          */
         public Builder end(Long end) {
             this.putQueryParameter("end", end);
@@ -100,7 +108,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * The timestamp that indicates the beginning of the time range to query.
+         * <p>The timestamp that indicates the beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687238865434</p>
          */
         public Builder start(Long start) {
             this.putQueryParameter("start", start);

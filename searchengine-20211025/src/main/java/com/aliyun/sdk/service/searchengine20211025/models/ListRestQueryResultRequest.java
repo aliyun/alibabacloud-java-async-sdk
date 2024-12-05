@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRestQueryResultRequest} extends {@link RequestModel}
  *
  * <p>ListRestQueryResultRequest</p>
@@ -96,7 +97,11 @@ public class ListRestQueryResultRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32n3iu801</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -105,7 +110,10 @@ public class ListRestQueryResultRequest extends Request {
         }
 
         /**
-         * The instance endpoint.
+         * <p>The instance endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("address", address);
@@ -114,7 +122,10 @@ public class ListRestQueryResultRequest extends Request {
         }
 
         /**
-         * The name of the index table.
+         * <p>The name of the index table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main_index</p>
          */
         public Builder indexName(String indexName) {
             this.putBodyParameter("indexName", indexName);
@@ -123,7 +134,10 @@ public class ListRestQueryResultRequest extends Request {
         }
 
         /**
-         * The rest query statement.
+         * <p>The rest query statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query%3Drelation_id%3A%221151274675_2%22%26%26cluster%3Dgeneral%26%26config%3Dstart%3A0%2Chit%3A10%2Cformat%3Ajson</p>
          */
         public Builder query(java.util.Map < String, ? > query) {
             this.putBodyParameter("query", query);

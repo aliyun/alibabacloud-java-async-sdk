@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterDescRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterDescRequest</p>
@@ -83,7 +84,11 @@ public class ModifyClusterDescRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-c4d2rq7nt04</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -92,7 +97,11 @@ public class ModifyClusterDescRequest extends Request {
         }
 
         /**
-         * The name of the cluster
+         * <p>The name of the cluster</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sz_vpc_domain_1</p>
          */
         public Builder clusterName(String clusterName) {
             this.putPathParameter("clusterName", clusterName);
@@ -101,7 +110,10 @@ public class ModifyClusterDescRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder body(java.util.Map < String, ? > body) {
             this.putBodyParameter("body", body);

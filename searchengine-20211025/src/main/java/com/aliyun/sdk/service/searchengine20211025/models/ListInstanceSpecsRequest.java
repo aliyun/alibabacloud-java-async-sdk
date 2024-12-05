@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceSpecsRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceSpecsRequest</p>
@@ -69,7 +70,11 @@ public class ListInstanceSpecsRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,13 +83,17 @@ public class ListInstanceSpecsRequest extends Request {
         }
 
         /**
-         * The node type. Valid values:
-         * <p>
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>qrs: Query Result Searcher (QRS) Worker</li>
+         * <li>search: Searcher Worker</li>
+         * <li>index: index node</li>
+         * <li>cluster: cluster</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   qrs: Query Result Searcher (QRS) Worker
-         * *   search: Searcher Worker
-         * *   index: index node
-         * *   cluster: cluster
+         * <strong>example:</strong>
+         * <p>search</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

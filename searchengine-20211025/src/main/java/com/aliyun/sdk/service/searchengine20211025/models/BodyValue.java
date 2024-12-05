@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BodyValue} extends {@link TeaModel}
  *
  * <p>BodyValue</p>
@@ -85,7 +86,10 @@ public class BodyValue extends TeaModel {
         private Boolean pauseRuntime; 
 
         /**
-         * Specifies whether to suspend all pushes.
+         * <p>Specifies whether to suspend all pushes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder pauseAll(Boolean pauseAll) {
             this.pauseAll = pauseAll;
@@ -93,7 +97,10 @@ public class BodyValue extends TeaModel {
         }
 
         /**
-         * Specifies whether to suspend the push for the new full index version.
+         * <p>Specifies whether to suspend the push for the new full index version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder pauseIndex(Boolean pauseIndex) {
             this.pauseIndex = pauseIndex;
@@ -101,7 +108,10 @@ public class BodyValue extends TeaModel {
         }
 
         /**
-         * Specifies whether to suspend the push for the incremental indexes.
+         * <p>Specifies whether to suspend the push for the incremental indexes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder pauseIndexBatch(Boolean pauseIndexBatch) {
             this.pauseIndexBatch = pauseIndexBatch;
@@ -109,7 +119,10 @@ public class BodyValue extends TeaModel {
         }
 
         /**
-         * Specifies whether to suspend the push for the configuration.
+         * <p>Specifies whether to suspend the push for the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder pauseBiz(Boolean pauseBiz) {
             this.pauseBiz = pauseBiz;
@@ -117,7 +130,10 @@ public class BodyValue extends TeaModel {
         }
 
         /**
-         * Specifies whether to suspend the push for the real-time incremental indexes.
+         * <p>Specifies whether to suspend the push for the real-time incremental indexes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder pauseRuntime(Boolean pauseRuntime) {
             this.pauseRuntime = pauseRuntime;

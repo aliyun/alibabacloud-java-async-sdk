@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueryResultRequest} extends {@link RequestModel}
  *
  * <p>ListQueryResultRequest</p>
@@ -82,7 +83,11 @@ public class ListQueryResultRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-i7m2olkw201</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -91,7 +96,10 @@ public class ListQueryResultRequest extends Request {
         }
 
         /**
-         * The query statement
+         * <p>The query statement</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query%3D1%26%26config%3Dstart%3A0%2Chit%3A10%2Cformat%3Ajson%26%26cluster%3Dgeneral</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -100,7 +108,10 @@ public class ListQueryResultRequest extends Request {
         }
 
         /**
-         * The SQL statement that is executed in the query
+         * <p>The SQL statement that is executed in the query</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query%3Dselect%20max(content_id)%20from%20generation</p>
          */
         public Builder sql(String sql) {
             this.putQueryParameter("sql", sql);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPausePolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyPausePolicyRequest</p>
@@ -68,7 +69,11 @@ public class ModifyPausePolicyRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-zvp2jlr2g03</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -77,7 +82,7 @@ public class ModifyPausePolicyRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
         public Builder body(java.util.Map < String, BodyValue > body) {
             this.putBodyParameter("body", body);

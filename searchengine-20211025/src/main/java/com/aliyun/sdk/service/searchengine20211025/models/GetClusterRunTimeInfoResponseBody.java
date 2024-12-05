@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterRunTimeInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterRunTimeInfoResponseBody</p>
@@ -49,7 +50,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E45380E8-994A-5402-9806-F114B3295FCF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * <p>The result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterRunTimeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterRunTimeInfoResponseBody</p>
+     */
     public static class ConfigStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configUpdateTime")
         private String configUpdateTime;
@@ -145,7 +155,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The time when the configuration was last updated.
+             * <p>The time when the configuration was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder configUpdateTime(String configUpdateTime) {
                 this.configUpdateTime = configUpdateTime;
@@ -153,7 +166,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration progress. Unit: percentage.
+             * <p>The configuration progress. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder donePercent(Integer donePercent) {
                 this.donePercent = donePercent;
@@ -161,7 +177,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of processed Searcher workers in the cluster.
+             * <p>The number of processed Searcher workers in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder doneSize(Integer doneSize) {
                 this.doneSize = doneSize;
@@ -169,7 +188,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_0704</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -177,7 +199,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of Searcher workers in the cluster.
+             * <p>The total number of Searcher workers in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;
@@ -191,6 +216,12 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterRunTimeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterRunTimeInfoResponseBody</p>
+     */
     public static class AdvanceConfigInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configMetaName")
         private String configMetaName;
@@ -230,7 +261,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Long version; 
 
             /**
-             * The name of the index configuration.
+             * <p>The name of the index configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>index_meta_name</p>
              */
             public Builder configMetaName(String configMetaName) {
                 this.configMetaName = configMetaName;
@@ -238,7 +272,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -252,6 +289,12 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterRunTimeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterRunTimeInfoResponseBody</p>
+     */
     public static class IndexConfigInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configMetaName")
         private String configMetaName;
@@ -291,7 +334,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Long version; 
 
             /**
-             * The name of the index configuration.
+             * <p>The name of the index configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>index_meta_name</p>
              */
             public Builder configMetaName(String configMetaName) {
                 this.configMetaName = configMetaName;
@@ -299,7 +345,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the index template.
+             * <p>The version of the index template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -313,6 +362,12 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterRunTimeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterRunTimeInfoResponseBody</p>
+     */
     public static class DataStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("advanceConfigInfo")
         private AdvanceConfigInfo advanceConfigInfo;
@@ -520,7 +575,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The information about the advanced configuration.
+             * <p>The information about the advanced configuration.</p>
              */
             public Builder advanceConfigInfo(AdvanceConfigInfo advanceConfigInfo) {
                 this.advanceConfigInfo = advanceConfigInfo;
@@ -528,7 +583,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the worker that failed due to a deployment failure.
+             * <p>The name of the worker that failed due to a deployment failure.</p>
              */
             public Builder deployFailedWorker(java.util.List < String > deployFailedWorker) {
                 this.deployFailedWorker = deployFailedWorker;
@@ -536,7 +591,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity. Unit: GB.
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder docSize(Integer docSize) {
                 this.docSize = docSize;
@@ -544,7 +602,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration progress. Unit: percentage.
+             * <p>The configuration progress. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder donePercent(Integer donePercent) {
                 this.donePercent = donePercent;
@@ -552,7 +613,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of processed QRS workers in the cluster.
+             * <p>The number of processed QRS workers in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder doneSize(Integer doneSize) {
                 this.doneSize = doneSize;
@@ -560,7 +624,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0A3B1C48006A6C0905F6375F4821EB50</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -568,7 +635,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when full data in the index was last updated.
+             * <p>The time when full data in the index was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder fullUpdateTime(String fullUpdateTime) {
                 this.fullUpdateTime = fullUpdateTime;
@@ -576,7 +646,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the full index version was generated.
+             * <p>The time when the full index version was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123423</p>
              */
             public Builder fullVersion(Long fullVersion) {
                 this.fullVersion = fullVersion;
@@ -584,7 +657,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when incremental data in the index was last updated.
+             * <p>The time when incremental data in the index was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder incUpdateTime(String incUpdateTime) {
                 this.incUpdateTime = incUpdateTime;
@@ -592,7 +668,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the incremental index version was generated.
+             * <p>The time when the incremental index version was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123423</p>
              */
             public Builder incVersion(Long incVersion) {
                 this.incVersion = incVersion;
@@ -600,7 +679,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the index configuration.
+             * <p>The information about the index configuration.</p>
              */
             public Builder indexConfigInfo(IndexConfigInfo indexConfigInfo) {
                 this.indexConfigInfo = indexConfigInfo;
@@ -608,7 +687,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The index size.
+             * <p>The index size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -616,7 +698,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the worker that failed due to insufficient disks.
+             * <p>The name of the worker that failed due to insufficient disks.</p>
              */
             public Builder lackDiskWorker(java.util.List < String > lackDiskWorker) {
                 this.lackDiskWorker = lackDiskWorker;
@@ -624,7 +706,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the worker that failed due to insufficient memory.
+             * <p>The name of the worker that failed due to insufficient memory.</p>
              */
             public Builder lackMemWorker(java.util.List < String > lackMemWorker) {
                 this.lackMemWorker = lackMemWorker;
@@ -632,7 +714,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the QRS worker.
+             * <p>The name of the QRS worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-c4d2rq7nt04_qrs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -640,7 +725,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of QRS workers in the cluster.
+             * <p>The total number of QRS workers in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;
@@ -654,6 +742,12 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterRunTimeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterRunTimeInfoResponseBody</p>
+     */
     public static class ServiceStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("donePercent")
         private Integer donePercent;
@@ -717,7 +811,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The process progress of QRS workers in the cluster. Unit: percentage.
+             * <p>The process progress of QRS workers in the cluster. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder donePercent(Integer donePercent) {
                 this.donePercent = donePercent;
@@ -725,7 +822,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of processed QRS workers in the cluster.
+             * <p>The number of processed QRS workers in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder doneSize(Integer doneSize) {
                 this.doneSize = doneSize;
@@ -733,7 +833,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the QRS worker.
+             * <p>The name of the QRS worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-0ju2s170b03_qrs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -741,7 +844,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of QRS workers in the cluster.
+             * <p>The total number of QRS workers in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;
@@ -755,6 +861,12 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterRunTimeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterRunTimeInfoResponseBody</p>
+     */
     public static class DataNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configStatusList")
         private java.util.List < ConfigStatusList> configStatusList;
@@ -806,7 +918,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private ServiceStatus serviceStatus; 
 
             /**
-             * The configuration status.
+             * <p>The configuration status.</p>
              */
             public Builder configStatusList(java.util.List < ConfigStatusList> configStatusList) {
                 this.configStatusList = configStatusList;
@@ -814,7 +926,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The data of the Searcher worker.
+             * <p>The data of the Searcher worker.</p>
              */
             public Builder dataStatusList(java.util.List < DataStatusList> dataStatusList) {
                 this.dataStatusList = dataStatusList;
@@ -822,7 +934,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The service status of the QRS worker.
+             * <p>The service status of the QRS worker.</p>
              */
             public Builder serviceStatus(ServiceStatus serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -836,6 +948,12 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterRunTimeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterRunTimeInfoResponseBody</p>
+     */
     public static class QueryNodeConfigStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configUpdateTime")
         private String configUpdateTime;
@@ -911,7 +1029,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The time when the configuration was last updated.
+             * <p>The time when the configuration was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder configUpdateTime(String configUpdateTime) {
                 this.configUpdateTime = configUpdateTime;
@@ -919,7 +1040,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The process progress of QRS workers in the cluster. Unit: percentage.
+             * <p>The process progress of QRS workers in the cluster. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder donePercent(Integer donePercent) {
                 this.donePercent = donePercent;
@@ -927,7 +1051,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of processed QRS workers in the cluster.
+             * <p>The number of processed QRS workers in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder doneSize(Integer doneSize) {
                 this.doneSize = doneSize;
@@ -935,7 +1062,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-zvp2qr1sk01_qrs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -943,7 +1073,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of QRS workers in the cluster.
+             * <p>The total number of QRS workers in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;
@@ -957,6 +1090,12 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterRunTimeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterRunTimeInfoResponseBody</p>
+     */
     public static class QueryNodeServiceStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("donePercent")
         private Integer donePercent;
@@ -1020,7 +1159,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The process progress of QRS workers in the cluster. Unit: percentage.
+             * <p>The process progress of QRS workers in the cluster. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder donePercent(Integer donePercent) {
                 this.donePercent = donePercent;
@@ -1028,7 +1170,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of processed QRS workers in the cluster.
+             * <p>The number of processed QRS workers in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder doneSize(Integer doneSize) {
                 this.doneSize = doneSize;
@@ -1036,7 +1181,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-c4d2rq7nt04_qrs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1044,7 +1192,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of QRS workers in the cluster.
+             * <p>The total number of QRS workers in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;
@@ -1058,6 +1209,12 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterRunTimeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterRunTimeInfoResponseBody</p>
+     */
     public static class QueryNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configStatusList")
         private java.util.List < QueryNodeConfigStatusList> configStatusList;
@@ -1097,7 +1254,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private QueryNodeServiceStatus serviceStatus; 
 
             /**
-             * The configuration status.
+             * <p>The configuration status.</p>
              */
             public Builder configStatusList(java.util.List < QueryNodeConfigStatusList> configStatusList) {
                 this.configStatusList = configStatusList;
@@ -1105,7 +1262,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The service status of the QRS worker.
+             * <p>The service status of the QRS worker.</p>
              */
             public Builder serviceStatus(QueryNodeServiceStatus serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -1119,6 +1276,12 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterRunTimeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterRunTimeInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("clusterName")
         private String clusterName;
@@ -1170,7 +1333,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private QueryNode queryNode; 
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc_hz_domain_1</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -1178,7 +1344,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Searcher workers.
+             * <p>The information about the Searcher workers.</p>
              */
             public Builder dataNodes(java.util.List < DataNodes> dataNodes) {
                 this.dataNodes = dataNodes;
@@ -1186,7 +1352,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Query Result Searcher (QRS) workers.
+             * <p>The information about the Query Result Searcher (QRS) workers.</p>
              */
             public Builder queryNode(QueryNode queryNode) {
                 this.queryNode = queryNode;

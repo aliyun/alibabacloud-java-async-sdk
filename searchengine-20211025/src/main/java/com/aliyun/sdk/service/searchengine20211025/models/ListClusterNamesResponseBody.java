@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterNamesResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterNamesResponseBody</p>
@@ -49,7 +50,10 @@ public class ListClusterNamesResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6E3D968-529C-5C40-AFDD-133A8B8FD930</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
         }
 
         /**
-         * The result set.
+         * <p>The result set.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListClusterNamesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterNamesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterNamesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -121,7 +131,10 @@ public class ListClusterNamesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The description of the cluster.
+             * <p>The description of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha3_test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -129,7 +142,10 @@ public class ListClusterNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25030</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -137,7 +153,10 @@ public class ListClusterNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_index</p>
              */
             public Builder name(String name) {
                 this.name = name;

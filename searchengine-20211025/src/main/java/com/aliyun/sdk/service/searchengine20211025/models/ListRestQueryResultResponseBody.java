@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRestQueryResultResponseBody} extends {@link TeaModel}
  *
  * <p>ListRestQueryResultResponseBody</p>
@@ -49,7 +50,10 @@ public class ListRestQueryResultResponseBody extends TeaModel {
         private Object result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F43E8AB4-419C-5F4C-90D6-615590DFAA3C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ListRestQueryResultResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * <p>The result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(Object result) {
             this.result = result;

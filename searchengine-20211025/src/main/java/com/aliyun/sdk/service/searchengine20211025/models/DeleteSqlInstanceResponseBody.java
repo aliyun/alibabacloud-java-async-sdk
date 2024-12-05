@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSqlInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSqlInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Response<Map<String, String>>
+         * <p>Response&lt;Map&lt;String, String&gt;&gt;</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteSqlInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteSqlInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("requestId")
         private String requestId;
@@ -109,7 +119,10 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
             private java.util.Map < String, String > result; 
 
             /**
-             * id of request
+             * <p>id of request</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -117,7 +130,7 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The result.
+             * <p>The result.</p>
              */
             public Builder result(java.util.Map < String, String > result) {
                 this.result = result;

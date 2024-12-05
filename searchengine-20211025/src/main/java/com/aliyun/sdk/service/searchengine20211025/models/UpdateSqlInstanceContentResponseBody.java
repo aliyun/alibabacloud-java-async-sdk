@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSqlInstanceContentResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateSqlInstanceContentResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateSqlInstanceContentResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E45380E8-994A-5402-9806-F114B3295FCF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdateSqlInstanceContentResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceVersionVO
+         * <p>InstanceVersionVO</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class UpdateSqlInstanceContentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSqlInstanceContentResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateSqlInstanceContentResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("combineParams")
         private String combineParams;

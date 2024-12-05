@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileRequest} extends {@link RequestModel}
  *
  * <p>GetFileRequest</p>
@@ -99,7 +100,11 @@ public class GetFileRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-i7m2rpzm605</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +113,11 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * The index name.
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecmon_table_index_test</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -117,7 +126,11 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * The version name.
+         * <p>The version name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32nd2nq01@ha-cn-tl32nd2nq01_00@bj_vpc_domain_1@point_cloud_3d@index_config_edit</p>
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("versionName", versionName);
@@ -126,7 +139,11 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * The name of the file in full path
+         * <p>The name of the file in full path</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/schemas/automobile_vector_schema.json</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);

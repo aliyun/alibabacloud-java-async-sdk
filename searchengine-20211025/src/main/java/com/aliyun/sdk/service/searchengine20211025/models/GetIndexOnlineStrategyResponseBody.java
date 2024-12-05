@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIndexOnlineStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>GetIndexOnlineStrategyResponseBody</p>
@@ -49,7 +50,10 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE03180A-0E29-5474-8A86-33F0683294A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * <p>The result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetIndexOnlineStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexOnlineStrategyResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("changeRate")
         private Integer changeRate;
@@ -97,7 +107,10 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
             private Integer changeRate; 
 
             /**
-             * The index change rate.
+             * <p>The index change rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder changeRate(Integer changeRate) {
                 this.changeRate = changeRate;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConfigFileRequest} extends {@link RequestModel}
  *
  * <p>DeleteConfigFileRequest</p>
@@ -99,7 +100,11 @@ public class DeleteConfigFileRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +113,11 @@ public class DeleteConfigFileRequest extends Request {
         }
 
         /**
-         * The configuration name.
+         * <p>The configuration name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-lbj39bhay03@ha-cn-lbj39bhay03_api_data@vpc_sh_domain_1@api_index@index_config_edit</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -117,7 +126,11 @@ public class DeleteConfigFileRequest extends Request {
         }
 
         /**
-         * The file name.
+         * <p>The file name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/schemas/automobile_vector_schema.json</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);
@@ -126,7 +139,11 @@ public class DeleteConfigFileRequest extends Request {
         }
 
         /**
-         * The path of the parent directory.
+         * <p>The path of the parent directory.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder parentFullPath(String parentFullPath) {
             this.putQueryParameter("parentFullPath", parentFullPath);

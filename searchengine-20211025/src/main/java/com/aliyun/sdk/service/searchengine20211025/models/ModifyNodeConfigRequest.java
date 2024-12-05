@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNodeConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyNodeConfigRequest</p>
@@ -196,7 +197,11 @@ public class ModifyNodeConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42p5oi202</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -205,7 +210,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the index.
+         * <p>Specifies whether to enable the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder active(Boolean active) {
             this.putBodyParameter("active", active);
@@ -214,7 +222,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The number of data replicas.
+         * <p>The number of data replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataDuplicateNumber(Integer dataDuplicateNumber) {
             this.putBodyParameter("dataDuplicateNumber", dataDuplicateNumber);
@@ -223,7 +234,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The number of data shards.
+         * <p>The number of data shards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataFragmentNumber(Integer dataFragmentNumber) {
             this.putBodyParameter("dataFragmentNumber", dataFragmentNumber);
@@ -232,7 +246,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The traffic percentage.
+         * <p>The traffic percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-100</p>
          */
         public Builder flowRatio(Integer flowRatio) {
             this.putBodyParameter("flowRatio", flowRatio);
@@ -241,7 +258,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The minimum service ratio.
+         * <p>The minimum service ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minServicePercent(Integer minServicePercent) {
             this.putBodyParameter("minServicePercent", minServicePercent);
@@ -250,7 +270,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to mount the cluster.
+         * <p>Specifies whether to mount the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder published(Boolean published) {
             this.putBodyParameter("published", published);
@@ -259,7 +282,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_sh_domain_2</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("clusterName", clusterName);
@@ -268,7 +294,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The name of the data source. Valid values: -search: search for data. -not_search: do not search for data.
+         * <p>The name of the data source. Valid values: -search: search for data. -not_search: do not search for data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01_0704</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("dataSourceName", dataSourceName);
@@ -277,7 +306,11 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The name of the configuration before the modification.
+         * <p>The name of the configuration before the modification.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-zvp2iv9a401_qrs</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -286,14 +319,18 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The type of the algorithm. Valid values:
-         * <p>
+         * <p>The type of the algorithm. Valid values:</p>
+         * <ul>
+         * <li>pop: a popularity model.</li>
+         * <li>cp: a category prediction model.</li>
+         * <li>hot: a top search model.</li>
+         * <li>hint: a hint model.</li>
+         * <li>suggest: a drop-down suggestions model.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   pop: a popularity model.
-         * *   cp: a category prediction model.
-         * *   hot: a top search model.
-         * *   hint: a hint model.
-         * *   suggest: a drop-down suggestions model.
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

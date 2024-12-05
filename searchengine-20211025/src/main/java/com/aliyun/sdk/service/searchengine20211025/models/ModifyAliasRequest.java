@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAliasRequest} extends {@link RequestModel}
  *
  * <p>ModifyAliasRequest</p>
@@ -84,7 +85,11 @@ public class ModifyAliasRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2re****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +98,11 @@ public class ModifyAliasRequest extends Request {
         }
 
         /**
-         * alias name
+         * <p>alias name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder alias(String alias) {
             this.putPathParameter("alias", alias);
@@ -103,7 +112,10 @@ public class ModifyAliasRequest extends Request {
         }
 
         /**
-         * index name
+         * <p>index name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index</p>
          */
         public Builder index(String index) {
             this.putBodyParameter("index", index);

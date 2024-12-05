@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIndexRequest} extends {@link RequestModel}
  *
  * <p>CreateIndexRequest</p>
@@ -194,7 +195,11 @@ public class CreateIndexRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ppr7901</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -203,7 +208,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The maximum number of full indexes that can be concurrently built.
+         * <p>The maximum number of full indexes that can be concurrently built.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder buildParallelNum(Integer buildParallelNum) {
             this.putBodyParameter("buildParallelNum", buildParallelNum);
@@ -212,7 +220,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The index schema.
+         * <p>The index schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;summarys&quot;:{&quot;summary_fields&quot;:[&quot;id&quot;]},&quot;indexs&quot;:[{&quot;index_name&quot;:&quot;index_id&quot;,&quot;index_type&quot;:&quot;PRIMARYKEY64&quot;,&quot;index_fields&quot;:&quot;id&quot;,&quot;has_primary_key_attribute&quot;:true,&quot;is_primary_key_sorted&quot;:false}],&quot;attributes&quot;:[&quot;id&quot;],&quot;fields&quot;:[{&quot;field_name&quot;:&quot;id&quot;,&quot;field_type&quot;:&quot;UINT16&quot;}],&quot;table_name&quot;:&quot;index_2&quot;}</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -221,7 +232,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder dataSource(String dataSource) {
             this.putBodyParameter("dataSource", dataSource);
@@ -230,7 +244,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The information about the data source. This parameter is required for an OpenSearch Vector Search Edition instance of the new version.
+         * <p>The information about the data source. This parameter is required for an OpenSearch Vector Search Edition instance of the new version.</p>
          */
         public Builder dataSourceInfo(DataSourceInfo dataSourceInfo) {
             this.putBodyParameter("dataSourceInfo", dataSourceInfo);
@@ -239,7 +253,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The data center in which the data source is deployed.
+         * <p>The data center in which the data source is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_1</p>
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -248,7 +265,21 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The extended content of the field configuration. key specifies the vector field and the field that requires embedding.
+         * <p>The extended content of the field configuration. key specifies the vector field and the field that requires embedding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;vector&quot;:
+         *         [
+         *             &quot;source_image_vector&quot;
+         *         ],
+         *         &quot;embeding&quot;:
+         *         [
+         *             &quot;source_image&quot;
+         *         ],
+         *         &quot;description&quot;:
+         *         []
+         *     }</p>
          */
         public Builder extend(java.util.Map < String, ? > extend) {
             this.putBodyParameter("extend", extend);
@@ -257,7 +288,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The maximum number of full indexes that can be concurrently merged.
+         * <p>The maximum number of full indexes that can be concurrently merged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder mergeParallelNum(Integer mergeParallelNum) {
             this.putBodyParameter("mergeParallelNum", mergeParallelNum);
@@ -266,7 +300,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The index name.
+         * <p>The index name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-zvp2qr1sk01_qrs</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -275,7 +312,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The number of data shards.
+         * <p>The number of data shards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20211202</p>
          */
         public Builder partition(Integer partition) {
             this.putBodyParameter("partition", partition);
@@ -284,11 +324,14 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -303,6 +346,12 @@ public class CreateIndexRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateIndexRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIndexRequest</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessKey")
         private String accessKey;
@@ -321,6 +370,9 @@ public class CreateIndexRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("format")
+        private String format;
 
         @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
@@ -350,6 +402,7 @@ public class CreateIndexRequest extends Request {
             this.catalog = builder.catalog;
             this.database = builder.database;
             this.endpoint = builder.endpoint;
+            this.format = builder.format;
             this.namespace = builder.namespace;
             this.ossPath = builder.ossPath;
             this.partition = builder.partition;
@@ -410,6 +463,13 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
          * @return namespace
          */
         public String getNamespace() {
@@ -465,6 +525,7 @@ public class CreateIndexRequest extends Request {
             private String catalog; 
             private String database; 
             private String endpoint; 
+            private String format; 
             private String namespace; 
             private String ossPath; 
             private String partition; 
@@ -474,7 +535,10 @@ public class CreateIndexRequest extends Request {
             private String tag; 
 
             /**
-             * The AccessKey ID of the MaxCompute data source.
+             * <p>The AccessKey ID of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L***p</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -482,7 +546,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The AccessKey secret of the MaxCompute data source.
+             * <p>The AccessKey secret of the MaxCompute data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5**9a6</p>
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -490,7 +557,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -514,7 +584,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The endpoint of the MaxCompute or Object Storage Service (OSS) data source.
+             * <p>The endpoint of the MaxCompute or Object Storage Service (OSS) data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -522,7 +595,18 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The namespace name.
+             * format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * <p>The namespace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-namespace</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -530,7 +614,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The path of the OSS object.
+             * <p>The path of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/opensearch/oss.json</p>
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -538,7 +625,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The partition in the MaxCompute table. This parameter is required if type is set to odps.
+             * <p>The partition in the MaxCompute table. This parameter is required if type is set to odps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20230114</p>
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -546,7 +636,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The path of the Apsara File Storage for HDFS data source.
+             * <p>The path of the Apsara File Storage for HDFS data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-hdfs-path</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -554,7 +647,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The name of the MaxCompute project that is used as the data source.
+             * <p>The name of the MaxCompute project that is used as the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbt_algo_pai</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -562,7 +658,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The table name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbt_rec_swing_u2i2i_score_be_v1</p>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -584,6 +683,12 @@ public class CreateIndexRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateIndexRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIndexRequest</p>
+     */
     public static class SaroConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
@@ -623,7 +728,10 @@ public class CreateIndexRequest extends Request {
             private String tableName; 
 
             /**
-             * The namespace of the SARO data source.
+             * <p>The namespace of the SARO data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flink-test-fjx-default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -631,7 +739,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The name of the SARO table.
+             * <p>The name of the SARO table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device_event_shy_summary_</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -645,6 +756,12 @@ public class CreateIndexRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateIndexRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIndexRequest</p>
+     */
     public static class DataSourceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoBuildIndex")
         private Boolean autoBuildIndex;
@@ -768,7 +885,10 @@ public class CreateIndexRequest extends Request {
             private String type; 
 
             /**
-             * Specifies whether to enable automatic full indexing.
+             * <p>Specifies whether to enable automatic full indexing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoBuildIndex(Boolean autoBuildIndex) {
                 this.autoBuildIndex = autoBuildIndex;
@@ -776,7 +896,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The information about the MaxCompute data source.
+             * <p>The information about the MaxCompute data source.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -784,7 +904,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The start timestamp from which incremental data is retrieved.
+             * <p>The start timestamp from which incremental data is retrieved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709715164</p>
              */
             public Builder dataTimeSec(Integer dataTimeSec) {
                 this.dataTimeSec = dataTimeSec;
@@ -792,7 +915,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The data center in which the data source is deployed.
+             * <p>The data center in which the data source is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc_hz_domain_1</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -800,7 +926,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-35t3n1yuj0d_index_1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -808,7 +937,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The maximum number of full indexes that can be concurrently processed.
+             * <p>The maximum number of full indexes that can be concurrently processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder processParallelNum(Integer processParallelNum) {
                 this.processParallelNum = processParallelNum;
@@ -816,7 +948,10 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The number of resources used for data update.
+             * <p>The number of resources used for data update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder processPartitionCount(Integer processPartitionCount) {
                 this.processPartitionCount = processPartitionCount;
@@ -824,7 +959,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The configurations of the SARO data source.
+             * <p>The configurations of the SARO data source.</p>
              */
             public Builder saroConfig(SaroConfig saroConfig) {
                 this.saroConfig = saroConfig;
@@ -832,13 +967,16 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>odps</li>
+             * <li>swift</li>
+             * <li>saro</li>
+             * <li>oss</li>
+             * </ul>
              * 
-             * *   odps
-             * *   swift
-             * *   saro
-             * *   oss
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder type(String type) {
                 this.type = type;

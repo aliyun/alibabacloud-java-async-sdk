@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeConfigRequest} extends {@link RequestModel}
  *
  * <p>GetNodeConfigRequest</p>
@@ -96,7 +97,11 @@ public class GetNodeConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rewdi02</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -105,7 +110,10 @@ public class GetNodeConfigRequest extends Request {
         }
 
         /**
-         * The name of the cluster
+         * <p>The name of the cluster</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_sh_domain_2</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("clusterName", clusterName);
@@ -114,7 +122,10 @@ public class GetNodeConfigRequest extends Request {
         }
 
         /**
-         * The node name.
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-30174dhoz53_qrs</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -123,13 +134,16 @@ public class GetNodeConfigRequest extends Request {
         }
 
         /**
-         * The node type. Valid values:
-         * <p>
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>qrs: Query Result Searcher (QRS) worker</li>
+         * <li>search: Search worker</li>
+         * <li>index: index</li>
+         * <li>cluster: cluster</li>
+         * </ul>
          * 
-         * *   qrs: Query Result Searcher (QRS) worker
-         * *   search: Search worker
-         * *   index: index
-         * *   cluster: cluster
+         * <strong>example:</strong>
+         * <p>index</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

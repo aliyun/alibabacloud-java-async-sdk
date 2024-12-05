@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFolderRequest} extends {@link RequestModel}
  *
  * <p>DeleteFolderRequest</p>
@@ -84,7 +85,11 @@ public class DeleteFolderRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +98,11 @@ public class DeleteFolderRequest extends Request {
         }
 
         /**
-         * database name
+         * <p>database name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -102,7 +111,11 @@ public class DeleteFolderRequest extends Request {
         }
 
         /**
-         * folder id
+         * <p>folder id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder folderId(Long folderId) {
             this.putPathParameter("folderId", folderId);

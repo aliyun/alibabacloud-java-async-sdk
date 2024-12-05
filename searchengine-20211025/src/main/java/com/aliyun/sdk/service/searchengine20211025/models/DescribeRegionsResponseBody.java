@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * <p>The result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
@@ -121,7 +131,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The endpoint of the region.
+             * <p>The endpoint of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>endpoint</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -129,7 +142,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -137,36 +153,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region. Valid values:
-             * <p>
+             * <p>The ID of the region. Valid values:</p>
+             * <p>cn-hangzhou: China (Hangzhou)</p>
+             * <p>cn-shanghai: China (Shanghai)</p>
+             * <p>cn-qingdao: China (Qingdao)</p>
+             * <p>cn-beijing: China (Beijing)</p>
+             * <p>cn-zhangjiakou: China (Zhangjiakou)</p>
+             * <p>cn-shenzhen: China (Shenzhen)</p>
+             * <p>ap-southeast-1: Singapore (Singapore)</p>
+             * <p>cn-internal: Internal Center</p>
+             * <p>cn-zhangbei-in: Internal Center (Zhangjiakou)</p>
+             * <p>us-west-1-in: Internal Center (US)</p>
+             * <p>rus-west-1-in: Internal Center (Russia)</p>
+             * <p>cn-daily: Daily Environment</p>
+             * <p>cn-test: Joint Debugging</p>
+             * <p>pre-hangzhou: China (Hangzhou)-Staging</p>
              * 
-             * cn-hangzhou: China (Hangzhou)
-             * 
-             * cn-shanghai: China (Shanghai)
-             * 
-             * cn-qingdao: China (Qingdao)
-             * 
-             * cn-beijing: China (Beijing)
-             * 
-             * cn-zhangjiakou: China (Zhangjiakou)
-             * 
-             * cn-shenzhen: China (Shenzhen)
-             * 
-             * ap-southeast-1: Singapore (Singapore)
-             * 
-             * cn-internal: Internal Center
-             * 
-             * cn-zhangbei-in: Internal Center (Zhangjiakou)
-             * 
-             * us-west-1-in: Internal Center (US)
-             * 
-             * rus-west-1-in: Internal Center (Russia)
-             * 
-             * cn-daily: Daily Environment
-             * 
-             * cn-test: Joint Debugging
-             * 
-             * pre-hangzhou: China (Hangzhou)-Staging
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConfigDirRequest} extends {@link RequestModel}
  *
  * <p>CreateConfigDirRequest</p>
@@ -97,7 +98,11 @@ public class CreateConfigDirRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2iv7sq01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -106,7 +111,11 @@ public class CreateConfigDirRequest extends Request {
         }
 
         /**
-         * The configuration name.
+         * <p>The configuration name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-w6lr44sf3kx@ha-cn-w6lr44sf3kx_kevintest@kevintest@index_config_edit</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -115,7 +124,10 @@ public class CreateConfigDirRequest extends Request {
         }
 
         /**
-         * The directory name.
+         * <p>The directory name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/clusters</p>
          */
         public Builder dirName(String dirName) {
             this.putBodyParameter("dirName", dirName);
@@ -124,7 +136,10 @@ public class CreateConfigDirRequest extends Request {
         }
 
         /**
-         * The path of the parent directory.
+         * <p>The path of the parent directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder parentFullPath(String parentFullPath) {
             this.putBodyParameter("parentFullPath", parentFullPath);

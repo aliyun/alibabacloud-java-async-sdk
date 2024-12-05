@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableGenerationRequest} extends {@link RequestModel}
  *
  * <p>GetTableGenerationRequest</p>
@@ -84,7 +85,11 @@ public class GetTableGenerationRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0js04</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +98,11 @@ public class GetTableGenerationRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_summary</p>
          */
         public Builder tableName(String tableName) {
             this.putPathParameter("tableName", tableName);
@@ -102,7 +111,11 @@ public class GetTableGenerationRequest extends Request {
         }
 
         /**
-         * The ID of the full index version.
+         * <p>The ID of the full index version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1708674867</p>
          */
         public Builder generationId(Long generationId) {
             this.putPathParameter("generationId", generationId);

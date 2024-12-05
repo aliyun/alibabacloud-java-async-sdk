@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ForceSwitchRequest} extends {@link RequestModel}
  *
  * <p>ForceSwitchRequest</p>
@@ -69,7 +70,11 @@ public class ForceSwitchRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32m2c4u01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +83,11 @@ public class ForceSwitchRequest extends Request {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tisplus_opensearch@roll_index_fsm@ha-cn-0ju2je4zj01@bj_vpc_domain_2@null@bj_vpc_domain_2_general_odps_false@1644312508597@934743</p>
          */
         public Builder fsmId(String fsmId) {
             this.putPathParameter("fsmId", fsmId);

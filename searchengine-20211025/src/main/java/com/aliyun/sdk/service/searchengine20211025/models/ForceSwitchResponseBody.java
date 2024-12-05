@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ForceSwitchResponseBody} extends {@link TeaModel}
  *
  * <p>ForceSwitchResponseBody</p>
@@ -49,7 +50,10 @@ public class ForceSwitchResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B1FF998-BB8D-5182-BFC0-E471AA77095A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ForceSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * The index information.
+         * <p>The index information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;
