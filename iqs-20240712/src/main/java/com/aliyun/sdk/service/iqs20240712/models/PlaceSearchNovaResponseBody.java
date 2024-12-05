@@ -220,6 +220,9 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
+        @com.aliyun.core.annotation.NameInMap("score")
+        private String score;
+
         @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
@@ -232,6 +235,7 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
             this.dailyOpeningHours = builder.dailyOpeningHours;
             this.mainTag = builder.mainTag;
             this.phone = builder.phone;
+            this.score = builder.score;
             this.tag = builder.tag;
             this.weeklyOpeningDays = builder.weeklyOpeningDays;
         }
@@ -280,6 +284,13 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
         }
 
         /**
+         * @return score
+         */
+        public String getScore() {
+            return this.score;
+        }
+
+        /**
          * @return tag
          */
         public String getTag() {
@@ -299,6 +310,7 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
             private String dailyOpeningHours; 
             private String mainTag; 
             private String phone; 
+            private String score; 
             private String tag; 
             private String weeklyOpeningDays; 
 
@@ -339,6 +351,14 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * score.
+             */
+            public Builder score(String score) {
+                this.score = score;
                 return this;
             }
 
