@@ -17,12 +17,17 @@ public class GetTaskResultRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("requiredFieldList")
+    private java.util.List < String > requiredFieldList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("taskId")
     private String taskId;
 
     private GetTaskResultRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.requiredFieldList = builder.requiredFieldList;
         this.taskId = builder.taskId;
     }
 
@@ -47,6 +52,13 @@ public class GetTaskResultRequest extends Request {
     }
 
     /**
+     * @return requiredFieldList
+     */
+    public java.util.List < String > getRequiredFieldList() {
+        return this.requiredFieldList;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -55,6 +67,7 @@ public class GetTaskResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetTaskResultRequest, Builder> {
         private String regionId; 
+        private java.util.List < String > requiredFieldList; 
         private String taskId; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class GetTaskResultRequest extends Request {
         private Builder(GetTaskResultRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.requiredFieldList = request.requiredFieldList;
             this.taskId = request.taskId;
         } 
 
@@ -73,6 +87,16 @@ public class GetTaskResultRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * requiredFieldList.
+         */
+        public Builder requiredFieldList(java.util.List < String > requiredFieldList) {
+            String requiredFieldListShrink = shrink(requiredFieldList, "requiredFieldList", "simple");
+            this.putQueryParameter("requiredFieldList", requiredFieldListShrink);
+            this.requiredFieldList = requiredFieldList;
             return this;
         }
 

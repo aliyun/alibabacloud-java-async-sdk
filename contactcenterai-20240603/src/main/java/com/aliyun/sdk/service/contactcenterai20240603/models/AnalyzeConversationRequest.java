@@ -61,6 +61,10 @@ public class AnalyzeConversationRequest extends Request {
     private ServiceInspection serviceInspection;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceCallerUid")
+    private String sourceCallerUid;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("stream")
     @com.aliyun.core.annotation.Validation(required = true)
     private Boolean stream;
@@ -86,6 +90,7 @@ public class AnalyzeConversationRequest extends Request {
         this.resultTypes = builder.resultTypes;
         this.sceneName = builder.sceneName;
         this.serviceInspection = builder.serviceInspection;
+        this.sourceCallerUid = builder.sourceCallerUid;
         this.stream = builder.stream;
         this.timeConstraintList = builder.timeConstraintList;
         this.userProfiles = builder.userProfiles;
@@ -182,6 +187,13 @@ public class AnalyzeConversationRequest extends Request {
     }
 
     /**
+     * @return sourceCallerUid
+     */
+    public String getSourceCallerUid() {
+        return this.sourceCallerUid;
+    }
+
+    /**
      * @return stream
      */
     public Boolean getStream() {
@@ -214,6 +226,7 @@ public class AnalyzeConversationRequest extends Request {
         private java.util.List < String > resultTypes; 
         private String sceneName; 
         private ServiceInspection serviceInspection; 
+        private String sourceCallerUid; 
         private Boolean stream; 
         private java.util.List < String > timeConstraintList; 
         private java.util.List < UserProfiles> userProfiles; 
@@ -235,6 +248,7 @@ public class AnalyzeConversationRequest extends Request {
             this.resultTypes = request.resultTypes;
             this.sceneName = request.sceneName;
             this.serviceInspection = request.serviceInspection;
+            this.sourceCallerUid = request.sourceCallerUid;
             this.stream = request.stream;
             this.timeConstraintList = request.timeConstraintList;
             this.userProfiles = request.userProfiles;
@@ -342,6 +356,15 @@ public class AnalyzeConversationRequest extends Request {
         public Builder serviceInspection(ServiceInspection serviceInspection) {
             this.putBodyParameter("serviceInspection", serviceInspection);
             this.serviceInspection = serviceInspection;
+            return this;
+        }
+
+        /**
+         * sourceCallerUid.
+         */
+        public Builder sourceCallerUid(String sourceCallerUid) {
+            this.putBodyParameter("sourceCallerUid", sourceCallerUid);
+            this.sourceCallerUid = sourceCallerUid;
             return this;
         }
 
