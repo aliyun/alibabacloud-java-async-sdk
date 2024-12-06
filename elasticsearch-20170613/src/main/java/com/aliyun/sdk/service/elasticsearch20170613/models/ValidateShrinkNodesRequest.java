@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateShrinkNodesRequest} extends {@link RequestModel}
  *
  * <p>ValidateShrinkNodesRequest</p>
@@ -111,7 +112,11 @@ public class ValidateShrinkNodesRequest extends Request {
         } 
 
         /**
-         * 2
+         * <p>2</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q9o8r0008****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -138,7 +143,10 @@ public class ValidateShrinkNodesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ignoreStatus(Boolean ignoreStatus) {
             this.putQueryParameter("ignoreStatus", ignoreStatus);
@@ -147,11 +155,15 @@ public class ValidateShrinkNodesRequest extends Request {
         }
 
         /**
-         * Returned results:
-         * <p>
+         * <p>Returned results:</p>
+         * <ul>
+         * <li>true: can be scaled in</li>
+         * <li>false: cannot be scaled in.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: can be scaled in
-         * *   false: cannot be scaled in.
+         * <strong>example:</strong>
+         * <p>WORKER</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("nodeType", nodeType);
@@ -166,6 +178,12 @@ public class ValidateShrinkNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ValidateShrinkNodesRequest} extends {@link TeaModel}
+     *
+     * <p>ValidateShrinkNodesRequest</p>
+     */
     public static class ValidateShrinkNodesRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("host")
         private String host;
@@ -257,11 +275,15 @@ public class ValidateShrinkNodesRequest extends Request {
             }
 
             /**
-             * Returned results:
-             * <p>
+             * <p>Returned results:</p>
+             * <ul>
+             * <li>true: can be scaled in</li>
+             * <li>false: cannot be scaled in.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   true: can be scaled in
-             * *   false: cannot be scaled in.
+             * <strong>example:</strong>
+             * <p>WORKER</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;

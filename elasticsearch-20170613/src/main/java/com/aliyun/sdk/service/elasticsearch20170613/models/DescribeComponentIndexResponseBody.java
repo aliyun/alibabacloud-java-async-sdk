@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeComponentIndexResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeComponentIndexResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeComponentIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeComponentIndexResponseBody</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliases")
         private java.util.Map < String, ? > aliases;
@@ -151,6 +158,12 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeComponentIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeComponentIndexResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("_meta")
         private java.util.Map < String, ? > meta;

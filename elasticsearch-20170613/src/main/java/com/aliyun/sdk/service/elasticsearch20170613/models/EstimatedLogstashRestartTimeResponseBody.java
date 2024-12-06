@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EstimatedLogstashRestartTimeResponseBody} extends {@link TeaModel}
  *
  * <p>EstimatedLogstashRestartTimeResponseBody</p>
@@ -49,7 +50,10 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EstimatedLogstashRestartTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>EstimatedLogstashRestartTimeResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("unit")
         private String unit;
@@ -109,7 +119,10 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>second</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -117,7 +130,10 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated restart time.
+             * <p>The estimated restart time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder value(Long value) {
                 this.value = value;

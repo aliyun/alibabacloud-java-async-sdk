@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UninstallPluginResponseBody} extends {@link TeaModel}
  *
  * <p>UninstallPluginResponseBody</p>
@@ -49,7 +50,10 @@ public class UninstallPluginResponseBody extends TeaModel {
         private java.util.List < String > result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UninstallPluginResponseBody extends TeaModel {
         }
 
         /**
-         * The list of plug-ins to be unloaded. If the unloading fails, an exception is returned.
+         * <p>The list of plug-ins to be unloaded. If the unloading fails, an exception is returned.</p>
          */
         public Builder result(java.util.List < String > result) {
             this.result = result;

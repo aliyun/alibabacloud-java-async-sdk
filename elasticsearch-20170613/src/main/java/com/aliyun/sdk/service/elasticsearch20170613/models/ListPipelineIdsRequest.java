@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelineIdsRequest} extends {@link RequestModel}
  *
  * <p>ListPipelineIdsRequest</p>
@@ -68,7 +69,10 @@ public class ListPipelineIdsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-7g1umu96oit2e****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLogstashRequest} extends {@link RequestModel}
  *
  * <p>CreateLogstashRequest</p>
@@ -178,7 +179,7 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
-         * networkConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
             this.putBodyParameter("networkConfig", networkConfig);
@@ -187,7 +188,10 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
-         * nodeAmount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeAmount(Integer nodeAmount) {
             this.putBodyParameter("nodeAmount", nodeAmount);
@@ -196,7 +200,7 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
-         * nodeSpec.
+         * <p>This parameter is required.</p>
          */
         public Builder nodeSpec(NodeSpec nodeSpec) {
             this.putBodyParameter("nodeSpec", nodeSpec);
@@ -232,7 +236,10 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.7_with_X-Pack</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -256,6 +263,12 @@ public class CreateLogstashRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLogstashRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLogstashRequest</p>
+     */
     public static class NetworkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -330,7 +343,10 @@ public class CreateLogstashRequest extends Request {
             }
 
             /**
-             * vpcId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16k1dvzxtmagcva****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -338,7 +354,10 @@ public class CreateLogstashRequest extends Request {
             }
 
             /**
-             * vsArea.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -346,7 +365,10 @@ public class CreateLogstashRequest extends Request {
             }
 
             /**
-             * vswitchId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1k4ec6s7sjdbudw****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -360,6 +382,12 @@ public class CreateLogstashRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLogstashRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLogstashRequest</p>
+     */
     public static class NodeSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("disk")
         private Long disk;
@@ -428,7 +456,10 @@ public class CreateLogstashRequest extends Request {
             }
 
             /**
-             * spec.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logstash.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -442,6 +473,12 @@ public class CreateLogstashRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLogstashRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLogstashRequest</p>
+     */
     public static class PaymentInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoRenewDuration")
         private Long autoRenewDuration;

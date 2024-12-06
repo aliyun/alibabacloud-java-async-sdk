@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link KibanaNodeConfiguration} extends {@link TeaModel}
  *
  * <p>KibanaNodeConfiguration</p>
@@ -79,7 +80,7 @@ public class KibanaNodeConfiguration extends TeaModel {
         }
 
         /**
-         * spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

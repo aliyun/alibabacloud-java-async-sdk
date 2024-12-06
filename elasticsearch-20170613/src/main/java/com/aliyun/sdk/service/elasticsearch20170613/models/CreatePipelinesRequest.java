@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePipelinesRequest} extends {@link RequestModel}
  *
  * <p>CreatePipelinesRequest</p>
@@ -96,7 +97,10 @@ public class CreatePipelinesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-oew1qbgl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -138,6 +142,12 @@ public class CreatePipelinesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePipelinesRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePipelinesRequest</p>
+     */
     public static class CreatePipelinesRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("batchDelay")
         private Integer batchDelay;
@@ -279,7 +289,10 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * config.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>input { } filter { } output { }</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -295,7 +308,10 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * pipelineId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pipeline-test</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;

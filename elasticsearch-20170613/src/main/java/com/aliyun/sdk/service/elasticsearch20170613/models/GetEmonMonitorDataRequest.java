@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEmonMonitorDataRequest} extends {@link RequestModel}
  *
  * <p>GetEmonMonitorDataRequest</p>
@@ -68,7 +69,10 @@ public class GetEmonMonitorDataRequest extends Request {
         } 
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-185320276651****</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("ProjectId", projectId);

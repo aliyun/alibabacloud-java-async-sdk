@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Elasticsearch} extends {@link TeaModel}
  *
  * <p>Elasticsearch</p>
@@ -1130,6 +1131,12 @@ public class Elasticsearch extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Elasticsearch} extends {@link TeaModel}
+     *
+     * <p>Elasticsearch</p>
+     */
     public static class AdvancedSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gcName")
         private String gcName;

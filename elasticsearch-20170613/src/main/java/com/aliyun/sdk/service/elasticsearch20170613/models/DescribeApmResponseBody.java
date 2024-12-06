@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApmResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApmResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeApmResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97597D87-8066-5493-B692-5C50DA236D68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeApmResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Request result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class DescribeApmResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApmResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApmResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apmServerDomain")
         private String apmServerDomain;
@@ -313,7 +323,10 @@ public class DescribeApmResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * apmServerDomain.
+             * <p>Instance domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apm-cn-i7m2fuae****.apm.elasticsearch.aliyuncs.com:8200</p>
              */
             public Builder apmServerDomain(String apmServerDomain) {
                 this.apmServerDomain = apmServerDomain;
@@ -321,7 +334,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-16T07:15:51.967Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -329,7 +345,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * deployedReplica.
+             * <p>Deployed replica count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder deployedReplica(Long deployedReplica) {
                 this.deployedReplica = deployedReplica;
@@ -337,7 +356,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APMtest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -345,7 +367,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>Instance expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4792752000000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -353,7 +378,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apm-cn-i7m2fuae****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -361,7 +389,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * nodeAmount.
+             * <p>Number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeAmount(Long nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -369,7 +400,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * outputES.
+             * <p>Associated Elasticsearch instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-i7m2fsfhc001x****</p>
              */
             public Builder outputES(String outputES) {
                 this.outputES = outputES;
@@ -377,7 +411,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * outputESUserName.
+             * <p>Username of the associated Elasticsearch instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elastic</p>
              */
             public Builder outputESUserName(String outputESUserName) {
                 this.outputESUserName = outputESUserName;
@@ -385,7 +422,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * ownerId.
+             * <p>User account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>133071096032****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -393,7 +433,16 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * paymentType.
+             * <p>Payment method, with the following values:</p>
+             * <ul>
+             * <li><p>postpaid: Pay-as-you-go.</p>
+             * </li>
+             * <li><p>prepaid: Subscription.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>postpaid</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -401,7 +450,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>Region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -409,7 +461,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * replica.
+             * <p>Replica count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -417,7 +472,16 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * resourceSpec.
+             * <p>Specification, with the following values:</p>
+             * <ul>
+             * <li><p>C1M2 (1 core, 2 GB)</p>
+             * </li>
+             * <li><p>C2M4 (2 cores, 4 GB)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>C1M2</p>
              */
             public Builder resourceSpec(String resourceSpec) {
                 this.resourceSpec = resourceSpec;
@@ -425,7 +489,22 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Lifecycle status, with the following values:</p>
+             * <ul>
+             * <li><p>CREATING: Creating.</p>
+             * </li>
+             * <li><p>ACTIVATING: Activating.</p>
+             * </li>
+             * <li><p>ACTIVE: Active.</p>
+             * </li>
+             * <li><p>INACTIVE: Frozen.</p>
+             * </li>
+             * <li><p>INVALID: Invalid.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -433,7 +512,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>Version information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.10.2</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -441,7 +523,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1530vdhqkamm9s0****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -449,7 +534,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * vsArea.
+             * <p>Availability zone where the switch is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -457,7 +545,10 @@ public class DescribeApmResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchId.
+             * <p>Switch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1j1mql6r9g5vfb4****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;

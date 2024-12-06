@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCollectorRequest} extends {@link RequestModel}
  *
  * <p>CreateCollectorRequest</p>
@@ -181,7 +182,7 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * configs.
+         * <p>This parameter is required.</p>
          */
         public Builder configs(java.util.List < Configs> configs) {
             this.putBodyParameter("configs", configs);
@@ -190,7 +191,10 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("dryRun", dryRun);
@@ -199,7 +203,7 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * extendConfigs.
+         * <p>This parameter is required.</p>
          */
         public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
             this.putBodyParameter("extendConfigs", extendConfigs);
@@ -208,7 +212,10 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ct-test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -217,7 +224,10 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * resType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileBeat</p>
          */
         public Builder resType(String resType) {
             this.putBodyParameter("resType", resType);
@@ -226,7 +236,10 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * resVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.8.5_with_community</p>
          */
         public Builder resVersion(String resVersion) {
             this.putBodyParameter("resVersion", resVersion);
@@ -235,7 +248,10 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp12nu14urf0upaf*****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
@@ -244,7 +260,10 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * The ID of the created crawer.
+         * <p>The ID of the created crawer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -259,6 +278,12 @@ public class CreateCollectorRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCollectorRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCollectorRequest</p>
+     */
     public static class Configs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -300,7 +325,10 @@ public class CreateCollectorRequest extends Request {
             private String fileName; 
 
             /**
-             * content.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;filebeat.inputs:xxx&quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -308,7 +336,10 @@ public class CreateCollectorRequest extends Request {
             }
 
             /**
-             * fileName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>filebeat.yml</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;

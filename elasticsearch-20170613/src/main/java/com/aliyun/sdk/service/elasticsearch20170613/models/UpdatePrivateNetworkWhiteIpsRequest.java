@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrivateNetworkWhiteIpsRequest} extends {@link RequestModel}
  *
  * <p>UpdatePrivateNetworkWhiteIpsRequest</p>
@@ -96,7 +97,11 @@ public class UpdatePrivateNetworkWhiteIpsRequest extends Request {
         } 
 
         /**
-         * Cover
+         * <p>Cover</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-tl329rbpc0001****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -114,7 +119,10 @@ public class UpdatePrivateNetworkWhiteIpsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -123,7 +131,10 @@ public class UpdatePrivateNetworkWhiteIpsRequest extends Request {
         }
 
         /**
-         * The results that are returned.
+         * <p>The results that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("modifyMode", modifyMode);

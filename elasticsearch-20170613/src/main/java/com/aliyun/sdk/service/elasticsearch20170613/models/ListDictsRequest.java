@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDictsRequest} extends {@link RequestModel}
  *
  * <p>ListDictsRequest</p>
@@ -83,7 +84,11 @@ public class ListDictsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-0ju29ifnc0005****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,13 +97,17 @@ public class ListDictsRequest extends Request {
         }
 
         /**
-         * The type of the dictionary. Valid values:
-         * <p>
+         * <p>The type of the dictionary. Valid values:</p>
+         * <ul>
+         * <li>IK: IK dictionary after a standard update</li>
+         * <li>IK_HOT: IK dictionary after a rolling update</li>
+         * <li>SYNONYMS: synonym dictionary</li>
+         * <li>ALIWS: Alibaba Cloud dictionary</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   IK: IK dictionary after a standard update
-         * *   IK_HOT: IK dictionary after a rolling update
-         * *   SYNONYMS: synonym dictionary
-         * *   ALIWS: Alibaba Cloud dictionary
+         * <strong>example:</strong>
+         * <p>IK</p>
          */
         public Builder analyzerType(String analyzerType) {
             this.putQueryParameter("analyzerType", analyzerType);
@@ -107,7 +116,10 @@ public class ListDictsRequest extends Request {
         }
 
         /**
-         * The name of the dictionary file.
+         * <p>The name of the dictionary file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_MAIN.dic</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);

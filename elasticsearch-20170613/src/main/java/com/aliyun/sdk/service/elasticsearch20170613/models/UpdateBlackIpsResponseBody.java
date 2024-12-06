@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateBlackIpsResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateBlackIpsResponseBody</p>
@@ -70,6 +71,12 @@ public class UpdateBlackIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateBlackIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateBlackIpsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("esIPBlacklist")
         private java.util.List < String > esIPBlacklist;

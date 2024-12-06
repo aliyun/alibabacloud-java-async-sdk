@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReinstallCollectorRequest} extends {@link RequestModel}
  *
  * <p>ReinstallCollectorRequest</p>
@@ -82,7 +83,11 @@ public class ReinstallCollectorRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ct-cn-l871nd0u73c45****</p>
          */
         public Builder resId(String resId) {
             this.putPathParameter("ResId", resId);
@@ -91,7 +96,10 @@ public class ReinstallCollectorRequest extends Request {
         }
 
         /**
-         * The request body parameters. For more information, see the Request body section in this topic.
+         * <p>The request body parameters. For more information, see the Request body section in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -100,11 +108,17 @@ public class ReinstallCollectorRequest extends Request {
         }
 
         /**
-         * Indicates whether the shipper is installed. Valid values:
-         * <p>
+         * <p>Indicates whether the shipper is installed. Valid values:</p>
+         * <ul>
+         * <li>true: The shipper is installed.</li>
+         * <li>false: The shipper fails to be installed.</li>
+         * </ul>
          * 
-         * *   true: The shipper is installed.
-         * *   false: The shipper fails to be installed.
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;restartType&quot;: &quot;nodeEcsId&quot;,
+         *   &quot;nodes&quot;:[&quot;i-bp1gyhphjaj73jsr****&quot;,&quot;i-bp10piq1mkfnyw9t****&quot;]
+         * }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

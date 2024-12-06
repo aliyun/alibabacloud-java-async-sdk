@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLogstashResponse} extends {@link TeaModel}
  *
  * <p>UpdateLogstashResponse</p>

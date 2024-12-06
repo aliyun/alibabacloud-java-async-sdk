@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecommendTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>RecommendTemplatesResponseBody</p>
@@ -70,6 +71,12 @@ public class RecommendTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RecommendTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecommendTemplatesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -117,15 +124,17 @@ public class RecommendTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * *
-             * <p>
-             * *
-             * *
-             * *
+             * <ul>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * </ul>
+             * <p>**</p>
+             * <hr>
              * 
-             * **
-             * 
-             * ****
+             * <strong>example:</strong>
+             * <p>dynamicSettings</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

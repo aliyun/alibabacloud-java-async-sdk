@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenDiagnosisRequest} extends {@link RequestModel}
  *
  * <p>OpenDiagnosisRequest</p>
@@ -82,11 +83,15 @@ public class OpenDiagnosisRequest extends Request {
         } 
 
         /**
-         * Indicates whether the intelligent O\&M feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the intelligent O&amp;M feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -95,7 +100,10 @@ public class OpenDiagnosisRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

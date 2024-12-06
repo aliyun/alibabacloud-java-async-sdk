@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceChargeTypeResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateInstanceChargeTypeResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateInstanceChargeTypeResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class UpdateInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Return results:
-         * <p>
+         * <p>Return results:</p>
+         * <ul>
+         * <li>true: conversion successful</li>
+         * <li>false: conversion failed</li>
+         * </ul>
          * 
-         * *   true: conversion successful
-         * *   false: conversion failed
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

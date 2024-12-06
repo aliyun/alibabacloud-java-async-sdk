@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHotIkDictsResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateHotIkDictsResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateHotIkDictsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdateHotIkDictsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class UpdateHotIkDictsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateHotIkDictsResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateHotIkDictsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
@@ -133,7 +143,10 @@ public class UpdateHotIkDictsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The size of the dictionary file. Unit: bytes.
+             * <p>The size of the dictionary file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -141,7 +154,10 @@ public class UpdateHotIkDictsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dictionary file.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deploy_0.dic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,11 +165,14 @@ public class UpdateHotIkDictsResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the dictionary file. Valid values:
-             * <p>
+             * <p>The source type of the dictionary file. Valid values:</p>
+             * <ul>
+             * <li>OSS</li>
+             * <li>ORIGIN</li>
+             * </ul>
              * 
-             * *   OSS
-             * *   ORIGIN
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -161,11 +180,14 @@ public class UpdateHotIkDictsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dictionaries. Valid values:
-             * <p>
+             * <p>The type of the dictionaries. Valid values:</p>
+             * <ul>
+             * <li>MAIN: IK main dictionary</li>
+             * <li>STOP: IK stopword list</li>
+             * </ul>
              * 
-             * *   MAIN: IK main dictionary
-             * *   STOP: IK stopword list
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListKibanaPluginsResponseBody} extends {@link TeaModel}
  *
  * <p>ListKibanaPluginsResponseBody</p>
@@ -61,7 +62,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The request header.
+         * <p>The request header.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -69,7 +70,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11234B4A-34CE-473B-8E61-AD95702E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the plug-ins.
+         * <p>The information about the plug-ins.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -90,6 +94,12 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListKibanaPluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKibanaPluginsResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
@@ -117,7 +127,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -131,6 +144,12 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListKibanaPluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKibanaPluginsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -206,7 +225,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The description of the plug-in.
+             * <p>The description of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Customize DSL statements to query data.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +236,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * <p>The name of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bsearch_querybuilder</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,7 +247,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the plug-in.
+             * <p>The source of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -230,7 +258,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the introduction to the plug-in. The value null is supported.
+             * <p>The URL of the introduction to the plug-in. The value null is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxx">https://xxxx</a></p>
              */
             public Builder specificationUrl(String specificationUrl) {
                 this.specificationUrl = specificationUrl;
@@ -238,7 +269,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The installation status of the plug-in.
+             * <p>The installation status of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTALLED</p>
              */
             public Builder state(String state) {
                 this.state = state;

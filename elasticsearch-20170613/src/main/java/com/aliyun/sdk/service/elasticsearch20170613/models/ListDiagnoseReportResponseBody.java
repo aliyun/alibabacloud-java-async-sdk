@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDiagnoseReportResponseBody} extends {@link TeaModel}
  *
  * <p>ListDiagnoseReportResponseBody</p>
@@ -61,7 +62,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -69,7 +70,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * The header of the response.
+         * <p>The header of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,12 +81,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * The trigger mode of health diagnostics. Valid values:
-         * <p>
-         * 
-         * *   SYSTEM: The system is automatically triggered.
-         * *   INNER: internal trigger
-         * *   USER: manually triggered by the user
+         * <p>The trigger mode of health diagnostics. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: The system is automatically triggered.</li>
+         * <li>INNER: internal trigger</li>
+         * <li>USER: manually triggered by the user</li>
+         * </ul>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -95,6 +99,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDiagnoseReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDiagnoseReportResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
@@ -122,7 +132,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The returned results.
+             * <p>The returned results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -136,6 +149,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDiagnoseReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDiagnoseReportResponseBody</p>
+     */
     public static class Detail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -211,7 +230,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The diagnosis.
+             * <p>The diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check whether the number of replica shards is optimal and easy to maintain</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -219,7 +241,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the diagnostic item.
+             * <p>The description of the diagnostic item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of Replica Shards</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -227,7 +252,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestion for the diagnosis.
+             * <p>The suggestion for the diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You may need to adjust the numbers of replica shards of some indices as follows:  [geoname08 : 0 -&gt; 1][geoname09 : 0 -&gt; 1][geonametest01 : 0 -&gt; 1]</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -243,7 +271,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the diagnostic item.
+             * <p>The full name of the diagnostic item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ES_API</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -257,6 +288,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDiagnoseReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDiagnoseReportResponseBody</p>
+     */
     public static class DiagnoseItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("detail")
         private Detail detail;
@@ -308,12 +345,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private String item; 
 
             /**
-             * The type of the diagnostic result. Valid values:
-             * <p>
-             * 
-             * *   TEXT: text description
-             * *   CONSOLE_API: console-triggered
-             * *   ES_API: API triggered
+             * <p>The type of the diagnostic result. Valid values:</p>
+             * <ul>
+             * <li>TEXT: text description</li>
+             * <li>CONSOLE_API: console-triggered</li>
+             * <li>ES_API: API triggered</li>
+             * </ul>
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -321,7 +358,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the diagnostic item.
+             * <p>The details of the diagnostic item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YELLOW</p>
              */
             public Builder health(String health) {
                 this.health = health;
@@ -329,7 +369,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The health of the diagnostic item. Supported: GREEN, YELLOW, RED, and UNKNOWN.
+             * <p>The health of the diagnostic item. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IndexAliasUseDiagnostic</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -343,6 +386,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDiagnoseReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDiagnoseReportResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
@@ -442,7 +491,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private String trigger; 
 
             /**
-             * The ID of the report.
+             * <p>The ID of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1535745731000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -450,7 +502,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the item.
+             * <p>The name of the item.</p>
              */
             public Builder diagnoseItems(java.util.List < DiagnoseItems> diagnoseItems) {
                 this.diagnoseItems = diagnoseItems;
@@ -458,7 +510,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * Reports the list of diagnostic item information.
+             * <p>Reports the list of diagnostic item information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YELLOW</p>
              */
             public Builder health(String health) {
                 this.health = health;
@@ -466,7 +521,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The overall health of the cluster in the report. Supported: GREEN, YELLOW, RED, and UNKNOWN.
+             * <p>The overall health of the cluster in the report. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-abc</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -474,7 +532,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.
+             * <p>The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trigger__2020-08-17T17:09:02f</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -482,7 +543,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance for diagnosis.
+             * <p>The ID of the instance for diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -490,7 +554,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the report was created.
+             * <p>The timestamp when the report was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder trigger(String trigger) {
                 this.trigger = trigger;

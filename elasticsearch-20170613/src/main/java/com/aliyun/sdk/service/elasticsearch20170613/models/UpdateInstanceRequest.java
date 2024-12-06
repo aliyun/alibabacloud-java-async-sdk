@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceRequest</p>
@@ -208,7 +209,11 @@ public class UpdateInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1ptcb30009****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -289,7 +294,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -307,7 +315,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The number of data nodes.
+         * <p>The number of data nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upgrade</p>
          */
         public Builder orderActionType(String orderActionType) {
             this.putQueryParameter("orderActionType", orderActionType);

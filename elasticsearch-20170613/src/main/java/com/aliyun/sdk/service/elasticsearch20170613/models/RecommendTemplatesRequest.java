@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecommendTemplatesRequest} extends {@link RequestModel}
  *
  * <p>RecommendTemplatesRequest</p>
@@ -69,7 +70,10 @@ public class RecommendTemplatesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-oew20apwz0007****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,16 +82,19 @@ public class RecommendTemplatesRequest extends Request {
         }
 
         /**
-         * *
-         * <p>
-         * *
-         * *
-         * *
-         * *
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * </ul>
+         * <p>**</p>
+         * <hr>
+         * <p>This parameter is required.</p>
          * 
-         * **
-         * 
-         * ****
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder usageScenario(String usageScenario) {
             this.putQueryParameter("usageScenario", usageScenario);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCollectorResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCollectorResponseBody</p>
@@ -70,6 +71,12 @@ public class CreateCollectorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCollectorResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCollectorResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resId")
         private String resId;

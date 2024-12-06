@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InterruptElasticsearchTaskResponseBody} extends {@link TeaModel}
  *
  * <p>InterruptElasticsearchTaskResponseBody</p>
@@ -73,7 +74,10 @@ public class InterruptElasticsearchTaskResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The error code. Only displayed if an exception is returned.
+         * <p>The error code. Only displayed if an exception is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceStatusNotSupportCurrentAction</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class InterruptElasticsearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message. Only displayed if an exception is returned.
+         * <p>The error message. Only displayed if an exception is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The cluster is running tasks or in an error status. Try again later.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class InterruptElasticsearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +107,14 @@ public class InterruptElasticsearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Return results:
-         * <p>
+         * <p>Return results:</p>
+         * <ul>
+         * <li>true: interrupted change successfully</li>
+         * <li>false: interrupted change failed</li>
+         * </ul>
          * 
-         * *   true: interrupted change successfully
-         * *   false: interrupted change failed
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

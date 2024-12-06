@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableKibanaPvlNetworkRequest} extends {@link RequestModel}
  *
  * <p>EnableKibanaPvlNetworkRequest</p>
@@ -114,7 +115,10 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1oxxx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -123,7 +127,10 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * endpointName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-27a3mul6l000xxx-kibana-endpoint</p>
          */
         public Builder endpointName(String endpointName) {
             this.putBodyParameter("endpointName", endpointName);
@@ -132,7 +139,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * securityGroups.
+         * <p>This parameter is required.</p>
          */
         public Builder securityGroups(java.util.List < String > securityGroups) {
             this.putBodyParameter("securityGroups", securityGroups);
@@ -141,7 +148,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * vSwitchIdsZone.
+         * <p>This parameter is required.</p>
          */
         public Builder vSwitchIdsZone(java.util.List < VSwitchIdsZone> vSwitchIdsZone) {
             this.putBodyParameter("vSwitchIdsZone", vSwitchIdsZone);
@@ -150,7 +157,10 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
@@ -165,6 +175,12 @@ public class EnableKibanaPvlNetworkRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link EnableKibanaPvlNetworkRequest} extends {@link TeaModel}
+     *
+     * <p>EnableKibanaPvlNetworkRequest</p>
+     */
     public static class VSwitchIdsZone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("vswitchId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -206,7 +222,10 @@ public class EnableKibanaPvlNetworkRequest extends Request {
             private String zoneId; 
 
             /**
-             * vswitchId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxx</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -214,7 +233,10 @@ public class EnableKibanaPvlNetworkRequest extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

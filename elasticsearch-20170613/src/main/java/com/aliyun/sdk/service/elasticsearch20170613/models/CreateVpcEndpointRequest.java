@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcEndpointRequest} extends {@link RequestModel}
  *
  * <p>CreateVpcEndpointRequest</p>
@@ -110,7 +111,11 @@ public class CreateVpcEndpointRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-2r429tctl000d****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -119,7 +124,10 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The returned result details.
+         * <p>The returned result details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -146,7 +154,10 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the user endpoint service associated with the endpoint.
+         * <p>The ID of the user endpoint service associated with the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

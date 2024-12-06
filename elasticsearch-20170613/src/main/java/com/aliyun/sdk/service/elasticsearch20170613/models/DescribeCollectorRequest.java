@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCollectorRequest} extends {@link RequestModel}
  *
  * <p>DescribeCollectorRequest</p>
@@ -54,7 +55,11 @@ public class DescribeCollectorRequest extends Request {
         } 
 
         /**
-         * The ID of the shipper.
+         * <p>The ID of the shipper.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ct-cn-rg31ahn82m0qd****</p>
          */
         public Builder resId(String resId) {
             this.putPathParameter("ResId", resId);

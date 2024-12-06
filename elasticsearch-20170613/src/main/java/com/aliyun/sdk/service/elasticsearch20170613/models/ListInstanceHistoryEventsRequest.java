@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceHistoryEventsRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceHistoryEventsRequest</p>
@@ -370,6 +371,12 @@ public class ListInstanceHistoryEventsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceHistoryEventsRequest} extends {@link TeaModel}
+     *
+     * <p>ListInstanceHistoryEventsRequest</p>
+     */
     public static class ListInstanceHistoryEventsRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private Boolean desc;

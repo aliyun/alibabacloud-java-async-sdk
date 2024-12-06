@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class AdvancedSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gcName")
         private String gcName;
@@ -111,6 +118,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class AliwsDicts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
@@ -212,6 +225,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ClientNodeConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -333,6 +352,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class DictList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
@@ -434,6 +459,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ElasticDataNodeConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -575,6 +606,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class IkHotDicts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Integer fileSize;
@@ -676,6 +713,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class KibanaConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -777,6 +820,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class MasterConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -898,6 +947,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class WhiteIpGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
@@ -979,6 +1034,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class NetworkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -1100,6 +1161,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class NodeSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
@@ -1241,6 +1308,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class SynonymsDicts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
@@ -1342,6 +1415,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;
@@ -1403,6 +1482,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class WarmNodeConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -1544,6 +1629,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ZoneInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -1605,6 +1696,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("advancedDedicateMaster")
         private Boolean advancedDedicateMaster;

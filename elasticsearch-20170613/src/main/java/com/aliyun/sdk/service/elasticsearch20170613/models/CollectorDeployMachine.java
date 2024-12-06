@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CollectorDeployMachine} extends {@link TeaModel}
  *
  * <p>CollectorDeployMachine</p>
@@ -111,7 +112,10 @@ public class CollectorDeployMachine extends TeaModel {
         private String type; 
 
         /**
-         * configType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>collectorDeployMachine</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -159,7 +163,10 @@ public class CollectorDeployMachine extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKCluster</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -172,6 +179,12 @@ public class CollectorDeployMachine extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CollectorDeployMachine} extends {@link TeaModel}
+     *
+     * <p>CollectorDeployMachine</p>
+     */
     public static class Machines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agentStatus")
         private String agentStatus;

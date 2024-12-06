@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpcEndpointRequest} extends {@link RequestModel}
  *
  * <p>DeleteVpcEndpointRequest</p>
@@ -83,7 +84,10 @@ public class DeleteVpcEndpointRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-2r429tctl000d****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +96,10 @@ public class DeleteVpcEndpointRequest extends Request {
         }
 
         /**
-         * EndpointId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp18s6wy9420wdi4****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putPathParameter("EndpointId", endpointId);

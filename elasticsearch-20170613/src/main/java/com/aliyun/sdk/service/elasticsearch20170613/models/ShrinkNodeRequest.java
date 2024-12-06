@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ShrinkNodeRequest} extends {@link RequestModel}
  *
  * <p>ShrinkNodeRequest</p>
@@ -125,7 +126,10 @@ public class ShrinkNodeRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q9o8r0008****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -170,7 +174,10 @@ public class ShrinkNodeRequest extends Request {
         }
 
         /**
-         * nodeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WORKER</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("nodeType", nodeType);
@@ -185,6 +192,12 @@ public class ShrinkNodeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ShrinkNodeRequest} extends {@link TeaModel}
+     *
+     * <p>ShrinkNodeRequest</p>
+     */
     public static class ShrinkNodeRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("host")
         private String host;
@@ -276,7 +289,10 @@ public class ShrinkNodeRequest extends Request {
             }
 
             /**
-             * nodeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WORKER</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;

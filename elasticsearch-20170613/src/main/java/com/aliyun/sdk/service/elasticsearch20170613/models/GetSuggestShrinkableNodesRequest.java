@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSuggestShrinkableNodesRequest} extends {@link RequestModel}
  *
  * <p>GetSuggestShrinkableNodesRequest</p>
@@ -98,7 +99,11 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q9o8r0008****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -107,7 +112,11 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         }
 
         /**
-         * The number of nodes that you want to remove.
+         * <p>The number of nodes that you want to remove.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.putQueryParameter("count", count);
@@ -116,7 +125,10 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         }
 
         /**
-         * Specifies whether to ignore the instance status. Default value: false.
+         * <p>Specifies whether to ignore the instance status. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ignoreStatus(Boolean ignoreStatus) {
             this.putQueryParameter("ignoreStatus", ignoreStatus);
@@ -125,7 +137,11 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         }
 
         /**
-         * The type of removing nodes. WORKER indicates hot node and WORKER_WARM indicates warm node.
+         * <p>The type of removing nodes. WORKER indicates hot node and WORKER_WARM indicates warm node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WORKER</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("nodeType", nodeType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateToOtherZoneResponseBody} extends {@link TeaModel}
  *
  * <p>MigrateToOtherZoneResponseBody</p>
@@ -49,7 +50,10 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
         }
 
         /**
-         * Return results:
-         * <p>
+         * <p>Return results:</p>
+         * <ul>
+         * <li>true: migration succeeded</li>
+         * <li>false: The migration fails</li>
+         * </ul>
          * 
-         * *   true: migration succeeded
-         * *   false: The migration fails
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

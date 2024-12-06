@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeSpec} extends {@link TeaModel}
  *
  * <p>NodeSpec</p>
@@ -119,7 +120,7 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

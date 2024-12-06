@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateSlrPermissionRequest} extends {@link RequestModel}
  *
  * <p>ValidateSlrPermissionRequest</p>
@@ -77,7 +78,10 @@ public class ValidateSlrPermissionRequest extends Request {
         }
 
         /**
-         * rolename.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForElasticsearchCollector</p>
          */
         public Builder rolename(String rolename) {
             this.putQueryParameter("rolename", rolename);

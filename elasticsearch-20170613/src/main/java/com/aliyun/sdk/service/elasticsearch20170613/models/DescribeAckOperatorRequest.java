@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAckOperatorRequest} extends {@link RequestModel}
  *
  * <p>DescribeAckOperatorRequest</p>
@@ -54,7 +55,11 @@ public class DescribeAckOperatorRequest extends Request {
         } 
 
         /**
-         * The ID of the ACK cluster.
+         * <p>The ID of the ACK cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c79acd3fbf462423fb6450e513bb6****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

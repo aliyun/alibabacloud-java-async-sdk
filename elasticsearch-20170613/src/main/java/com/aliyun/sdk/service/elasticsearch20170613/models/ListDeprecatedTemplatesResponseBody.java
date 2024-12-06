@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeprecatedTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDeprecatedTemplatesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDeprecatedTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeprecatedTemplatesResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Long xTotalCount;
@@ -131,6 +138,12 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDeprecatedTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeprecatedTemplatesResponseBody</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliases")
         private String aliases;
@@ -212,6 +225,12 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDeprecatedTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeprecatedTemplatesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dataStream")
         private Boolean dataStream;

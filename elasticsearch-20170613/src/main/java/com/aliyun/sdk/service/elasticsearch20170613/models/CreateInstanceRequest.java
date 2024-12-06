@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
@@ -322,7 +323,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * esAdminPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es_password</p>
          */
         public Builder esAdminPassword(String esAdminPassword) {
             this.putBodyParameter("esAdminPassword", esAdminPassword);
@@ -331,7 +335,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * esVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.5.3_with_X-Pack</p>
          */
         public Builder esVersion(String esVersion) {
             this.putBodyParameter("esVersion", esVersion);
@@ -367,7 +374,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * networkConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
             this.putBodyParameter("networkConfig", networkConfig);
@@ -376,7 +383,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * nodeAmount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder nodeAmount(Integer nodeAmount) {
             this.putBodyParameter("nodeAmount", nodeAmount);
@@ -463,6 +473,12 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;

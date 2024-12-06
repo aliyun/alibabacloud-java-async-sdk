@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceResponseBody</p>
@@ -61,13 +62,13 @@ public class ListInstanceResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The status of the instance. Valid values:
-         * <p>
-         * 
-         * *   active: normal
-         * *   activating: taking effect
-         * *   inactive: frozen
-         * *   invalid: invalid
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li>active: normal</li>
+         * <li>activating: taking effect</li>
+         * <li>inactive: frozen</li>
+         * <li>invalid: invalid</li>
+         * </ul>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -75,7 +76,10 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the node is created.
+         * <p>The time when the node is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +87,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether it is a service VPC.
+         * <p>Indicates whether it is a service VPC.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -96,6 +100,12 @@ public class ListInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
@@ -123,11 +133,14 @@ public class ListInstanceResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * Specifies whether to include dedicated master nodes (obsolete). Valid values:
-             * <p>
+             * <p>Specifies whether to include dedicated master nodes (obsolete). Valid values:</p>
+             * <ul>
+             * <li>true: The files contain data that is dumped to the IA storage medium.</li>
+             * <li>false: The files do not contain data that is dumped to the IA storage medium.</li>
+             * </ul>
              * 
-             * *   true: The files contain data that is dumped to the IA storage medium.
-             * *   false: The files do not contain data that is dumped to the IA storage medium.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -141,6 +154,12 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class ClientNodeConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -216,7 +235,10 @@ public class ListInstanceResponseBody extends TeaModel {
             private String specInfo; 
 
             /**
-             * The size of the node storage space. Unit: GB.
+             * <p>The size of the node storage space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -224,11 +246,14 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable disk encryption for the node. Valid values:
-             * <p>
+             * <p>Specifies whether to enable disk encryption for the node. Valid values:</p>
+             * <ul>
+             * <li>true: enables instant image cache.</li>
+             * <li>false: disables reuse of image cache layers.</li>
+             * </ul>
              * 
-             * *   true: enables instant image cache.
-             * *   false: disables reuse of image cache layers.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -236,12 +261,15 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. Valid values:
-             * <p>
+             * <p>The storage type of the node. Valid values:</p>
+             * <ul>
+             * <li>cloud_ssd: SSD.</li>
+             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud_efficiency: ultra disk</li>
+             * </ul>
              * 
-             * *   cloud_ssd: SSD.
-             * *   cloud_essd: ESSD.
-             * *   cloud_efficiency: ultra disk
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -249,7 +277,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.sn2ne.large</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -271,6 +302,12 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class ElasticDataNodeConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -358,7 +395,10 @@ public class ListInstanceResponseBody extends TeaModel {
             private String specInfo; 
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -366,7 +406,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the node storage space. Unit: GB.
+             * <p>The size of the node storage space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -374,7 +417,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node.
+             * <p>The storage type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -382,7 +428,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of dedicated master nodes.
+             * <p>The configuration of dedicated master nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -390,7 +439,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             * <p>The instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.sn2ne.large</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -412,6 +464,12 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class KibanaConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -487,7 +545,10 @@ public class ListInstanceResponseBody extends TeaModel {
             private String specInfo; 
 
             /**
-             * The size of the node storage space. Unit: GB.
+             * <p>The size of the node storage space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -495,7 +556,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.
+             * <p>The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -503,7 +567,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The network configurations.
+             * <p>The network configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -511,7 +578,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -533,6 +603,12 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class MasterConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -608,7 +684,10 @@ public class ListInstanceResponseBody extends TeaModel {
             private String specInfo; 
 
             /**
-             * The network type. Only Virtual Private Cloud (VPC) is supported.
+             * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -616,7 +695,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID of the cluster.
+             * <p>The vSwitch ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -624,7 +706,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of data nodes.
+             * <p>The configuration of data nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -632,7 +717,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The zone where the cluster resides.
+             * <p>The zone where the cluster resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.sn2ne.large</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -654,6 +742,12 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class WhiteIpGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
@@ -735,6 +829,12 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class NetworkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -810,11 +910,14 @@ public class ListInstanceResponseBody extends TeaModel {
             private java.util.List < WhiteIpGroupList> whiteIpGroupList; 
 
             /**
-             * The storage type of the node. Valid values:
-             * <p>
+             * <p>The storage type of the node. Valid values:</p>
+             * <ul>
+             * <li>cloud_ssd: standard SSD</li>
+             * <li>cloud_efficiency: ultra disk</li>
+             * </ul>
              * 
-             * *   cloud_ssd: standard SSD
-             * *   cloud_efficiency: ultra disk
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -822,7 +925,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage space of the node. Unit: GB.
+             * <p>The storage space of the node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-abc</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -830,11 +936,14 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to use disk encryption. Valid values:
-             * <p>
+             * <p>Specifies whether to use disk encryption. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -842,7 +951,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The performance level of the ESSD. This parameter is required when the diskType parameter is set to cloud_essd. Valid values: PL1, PL2, and PL3.
+             * <p>The performance level of the ESSD. This parameter is required when the diskType parameter is set to cloud_essd. Valid values: PL1, PL2, and PL3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-def</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -864,6 +976,12 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class NodeSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
@@ -951,7 +1069,10 @@ public class ListInstanceResponseBody extends TeaModel {
             private String specInfo; 
 
             /**
-             * The vSwitch ID of the cluster.
+             * <p>The vSwitch ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -959,7 +1080,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node.
+             * <p>The storage type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -967,7 +1091,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of data nodes.
+             * <p>The configuration of data nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -983,7 +1110,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The zone where the cluster resides.
+             * <p>The zone where the cluster resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.sn2ne.large</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -1005,6 +1135,12 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;
@@ -1044,7 +1180,10 @@ public class ListInstanceResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The size of the node storage space. Unit: GB.
+             * <p>The size of the node storage space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1052,7 +1191,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. Only ultra disks (cloud_efficiency) are supported.
+             * <p>The storage type of the node. Only ultra disks (cloud_efficiency) are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1066,6 +1208,12 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("advancedDedicateMaster")
         private Boolean advancedDedicateMaster;
@@ -1429,11 +1577,14 @@ public class ListInstanceResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * The billing method of the instance. Valid values:
-             * <p>
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>prepaid</strong>: subscription</li>
+             * <li><strong>postpaid</strong>: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   **prepaid**: subscription
-             * *   **postpaid**: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder advancedDedicateMaster(Boolean advancedDedicateMaster) {
                 this.advancedDedicateMaster = advancedDedicateMaster;
@@ -1449,7 +1600,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             * <p>The instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
              */
             public Builder clientNodeConfiguration(ClientNodeConfiguration clientNodeConfiguration) {
                 this.clientNodeConfiguration = clientNodeConfiguration;
@@ -1457,12 +1608,15 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the pay-as-you-go service that is overlaid on a subscription instance. Valid values:
-             * <p>
+             * <p>The status of the pay-as-you-go service that is overlaid on a subscription instance. Valid values:</p>
+             * <ul>
+             * <li><strong>active</strong>: normal</li>
+             * <li><strong>closed</strong>: Close</li>
+             * <li><strong>indebt</strong>: Overdue payments are frozen</li>
+             * </ul>
              * 
-             * *   **active**: normal
-             * *   **closed**: Close
-             * *   **indebt**: Overdue payments are frozen
+             * <strong>example:</strong>
+             * <p>2018-07-13T03:58:07.253Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -1470,7 +1624,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the dedicated KMS instance.
+             * <p>The edition of the dedicated KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dedicateMaster(Boolean dedicateMaster) {
                 this.dedicateMaster = dedicateMaster;
@@ -1478,7 +1635,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-abc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1486,7 +1646,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of Kibana nodes.
+             * <p>The configuration of Kibana nodes.</p>
              */
             public Builder elasticDataNodeConfiguration(ElasticDataNodeConfiguration elasticDataNodeConfiguration) {
                 this.elasticDataNodeConfiguration = elasticDataNodeConfiguration;
@@ -1502,7 +1662,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.7_with_X-Pack</p>
              */
             public Builder esVersion(String esVersion) {
                 this.esVersion = esVersion;
@@ -1510,7 +1673,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of elastic data nodes.
+             * <p>The configurations of elastic data nodes.</p>
              */
             public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -1518,7 +1681,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             * <p>The instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-v641a0ta3000g****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1526,7 +1692,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of cluster extension parameters.
+             * <p>The configuration of cluster extension parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isNewDeployment(String isNewDeployment) {
                 this.isNewDeployment = isNewDeployment;
@@ -1534,7 +1703,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             * <p>The instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -1558,7 +1727,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID of the cluster.
+             * <p>The VPC ID of the cluster.</p>
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
@@ -1566,7 +1735,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             * <p>The instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -1574,7 +1743,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -1582,7 +1754,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID of the cluster.
+             * <p>The VPC ID of the cluster.</p>
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -1590,7 +1762,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last updated.
+             * <p>The time when the instance was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>postpaid</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -1598,7 +1773,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the instance. Each tag is a key-value pair.
+             * <p>The tags of the instance. Each tag is a key-value pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder postpaidServiceStatus(String postpaidServiceStatus) {
                 this.postpaidServiceStatus = postpaidServiceStatus;
@@ -1622,7 +1800,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzvowej3i****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1630,7 +1811,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to deploy the new architecture.
+             * <p>Specifies whether to deploy the new architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder serviceVpc(Boolean serviceVpc) {
                 this.serviceVpc = serviceVpc;
@@ -1638,7 +1822,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1646,7 +1833,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1654,7 +1841,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Coordination node configuration.
+             * <p>Coordination node configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-18T10:10:04.484Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

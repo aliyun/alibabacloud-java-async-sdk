@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnoseReportResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnoseReportResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnoseReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnoseReportResponseBody</p>
+     */
     public static class Detail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -191,6 +198,12 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDiagnoseReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnoseReportResponseBody</p>
+     */
     public static class DiagnoseItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("detail")
         private Detail detail;
@@ -272,6 +285,12 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDiagnoseReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnoseReportResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSnapshotSettingResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateSnapshotSettingResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSnapshotSettingResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateSnapshotSettingResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
@@ -109,7 +119,10 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
             private String quartzRegex; 
 
             /**
-             * Specifies whether to enable automatic backup.
+             * <p>Specifies whether to enable automatic backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -117,7 +130,10 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of automatic backup.
+             * <p>The start time of automatic backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 01 ? * * *</p>
              */
             public Builder quartzRegex(String quartzRegex) {
                 this.quartzRegex = quartzRegex;

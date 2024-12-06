@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>GetRegionConfigurationResponseBody</p>
@@ -70,6 +71,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class ClientNodeAmountRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxAmount")
         private Integer maxAmount;
@@ -131,6 +138,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class ClientNodeDiskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
@@ -232,6 +245,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class DataDiskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
@@ -353,6 +372,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class AmountRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxAmount")
         private Integer maxAmount;
@@ -414,6 +439,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class DiskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("diskEncryption")
         private Boolean diskEncryption;
@@ -555,6 +586,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class ElasticNodeProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amountRange")
         private AmountRange amountRange;
@@ -636,6 +673,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class EsVersionsLatestList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -697,6 +740,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class JvmConfine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("memory")
         private Integer memory;
@@ -778,6 +827,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class KibanaNodePropertiesAmountRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxAmount")
         private Integer maxAmount;
@@ -839,6 +894,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class KibanaNodeProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amountRange")
         private KibanaNodePropertiesAmountRange amountRange;
@@ -900,6 +961,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class MasterDiskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
@@ -1001,6 +1068,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class Node extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxAmount")
         private Integer maxAmount;
@@ -1062,6 +1135,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class NodeSpecList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpuCount")
         private Integer cpuCount;
@@ -1223,6 +1302,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class SupportVersionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -1284,6 +1369,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class SupportVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instanceCategory")
         private String instanceCategory;
@@ -1345,6 +1436,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class WarmNodePropertiesAmountRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxAmount")
         private Integer maxAmount;
@@ -1406,6 +1503,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class WarmNodePropertiesDiskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("diskEncryption")
         private Boolean diskEncryption;
@@ -1547,6 +1650,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class WarmNodeProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amountRange")
         private WarmNodePropertiesAmountRange amountRange;
@@ -1628,6 +1737,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionConfigurationResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("clientNodeAmountRange")
         private ClientNodeAmountRange clientNodeAmountRange;
@@ -1664,6 +1779,9 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("kibanaNodeProperties")
         private KibanaNodeProperties kibanaNodeProperties;
+
+        @com.aliyun.core.annotation.NameInMap("logstashZones")
+        private java.util.List < String > logstashZones;
 
         @com.aliyun.core.annotation.NameInMap("masterDiskList")
         private java.util.List < MasterDiskList> masterDiskList;
@@ -1702,6 +1820,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             this.instanceSupportNodes = builder.instanceSupportNodes;
             this.jvmConfine = builder.jvmConfine;
             this.kibanaNodeProperties = builder.kibanaNodeProperties;
+            this.logstashZones = builder.logstashZones;
             this.masterDiskList = builder.masterDiskList;
             this.masterSpec = builder.masterSpec;
             this.node = builder.node;
@@ -1805,6 +1924,13 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         }
 
         /**
+         * @return logstashZones
+         */
+        public java.util.List < String > getLogstashZones() {
+            return this.logstashZones;
+        }
+
+        /**
          * @return masterDiskList
          */
         public java.util.List < MasterDiskList> getMasterDiskList() {
@@ -1873,6 +1999,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private java.util.List < String > instanceSupportNodes; 
             private JvmConfine jvmConfine; 
             private KibanaNodeProperties kibanaNodeProperties; 
+            private java.util.List < String > logstashZones; 
             private java.util.List < MasterDiskList> masterDiskList; 
             private java.util.List < String > masterSpec; 
             private Node node; 
@@ -1975,6 +2102,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
              */
             public Builder kibanaNodeProperties(KibanaNodeProperties kibanaNodeProperties) {
                 this.kibanaNodeProperties = kibanaNodeProperties;
+                return this;
+            }
+
+            /**
+             * logstashZones.
+             */
+            public Builder logstashZones(java.util.List < String > logstashZones) {
+                this.logstashZones = logstashZones;
                 return this;
             }
 

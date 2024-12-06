@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelineResponseBody} extends {@link TeaModel}
  *
  * <p>ListPipelineResponseBody</p>
@@ -61,7 +62,7 @@ public class ListPipelineResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.
+         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -69,7 +70,10 @@ public class ListPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * The response.
+         * <p>The response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class ListPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the pipeline was created.
+         * <p>The time when the pipeline was created.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -90,6 +94,12 @@ public class ListPipelineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelineResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
@@ -117,7 +127,10 @@ public class ListPipelineResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The time when the pipeline was updated.
+             * <p>The time when the pipeline was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -131,6 +144,12 @@ public class ListPipelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelineResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gmtCreatedTime")
         private String gmtCreatedTime;
@@ -210,12 +229,15 @@ public class ListPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the pipeline. Supported:
-             * <p>
+             * <p>The status of the pipeline. Supported:</p>
+             * <ul>
+             * <li>NOT_DEPLOYED: The node is not deployed.</li>
+             * <li>RUNNING</li>
+             * <li>DELETED: Deleted. The console does not display this status.</li>
+             * </ul>
              * 
-             * *   NOT_DEPLOYED: The node is not deployed.
-             * *   RUNNING
-             * *   DELETED: Deleted. The console does not display this status.
+             * <strong>example:</strong>
+             * <p>pipeline_test</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;

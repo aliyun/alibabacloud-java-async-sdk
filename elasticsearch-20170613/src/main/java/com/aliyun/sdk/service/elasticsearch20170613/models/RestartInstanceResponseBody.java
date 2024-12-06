@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RestartInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class RestartInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class RestartInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class RestartInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RestartInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RestartInstanceResponseBody</p>
+     */
     public static class DictList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
@@ -133,7 +143,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The size of the Dictionary File. Unit: bytes.
+             * <p>The size of the Dictionary File. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2782602</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -141,7 +154,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dictionary file.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_MAIN.dic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,12 +165,15 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The source type. Valid values:
-             * <p>
+             * <p>The source type. Valid values:</p>
+             * <ul>
+             * <li>OSS: OSS open storage (need to ensure that OSS storage space is public readable.)</li>
+             * <li>ORIGIN: Open source Elasticsearch</li>
+             * <li>UPLOAD: Uploaded files</li>
+             * </ul>
              * 
-             * *   OSS: OSS open storage (need to ensure that OSS storage space is public readable.)
-             * *   ORIGIN: Open source Elasticsearch
-             * *   UPLOAD: Uploaded files
+             * <strong>example:</strong>
+             * <p>ORIGIN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -162,13 +181,16 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dictionary. Valid values:
-             * <p>
+             * <p>The type of the dictionary. Valid values:</p>
+             * <ul>
+             * <li>STOP: The STOP word.</li>
+             * <li>MAIN: MAIN Dictionary</li>
+             * <li>SYNONYMS: SYNONYMS</li>
+             * <li>ALI_WS: an Alibaba Dictionary.</li>
+             * </ul>
              * 
-             * *   STOP: The STOP word.
-             * *   MAIN: MAIN Dictionary
-             * *   SYNONYMS: SYNONYMS
-             * *   ALI_WS: an Alibaba Dictionary.
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -182,6 +204,12 @@ public class RestartInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RestartInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RestartInstanceResponseBody</p>
+     */
     public static class KibanaConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -245,7 +273,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The number of performance metrics.
+             * <p>The number of performance metrics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -253,7 +284,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the node storage space. Unit: GB.
+             * <p>The size of the node storage space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -261,7 +295,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node.
+             * <p>The storage type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -269,7 +306,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of data nodes.
+             * <p>The specification of data nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -283,6 +323,12 @@ public class RestartInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RestartInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RestartInstanceResponseBody</p>
+     */
     public static class MasterConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -346,7 +392,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The number of nodes in the cluster.
+             * <p>The number of nodes in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -354,7 +403,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the node storage space. Unit: GB.
+             * <p>The size of the node storage space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -362,7 +414,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. This tool only supports cloud_ssd (cloud SSD) disks.
+             * <p>The storage type of the node. This tool only supports cloud_ssd (cloud SSD) disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -370,7 +425,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The node specifications of the cluster.
+             * <p>The node specifications of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.sn2ne.large</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -384,6 +442,12 @@ public class RestartInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RestartInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RestartInstanceResponseBody</p>
+     */
     public static class NetworkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -447,7 +511,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * The network type. Only Virtual Private Cloud (VPC) is supported.
+             * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -455,7 +522,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16k1dvzxtmagcva****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -463,7 +533,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The zone where the instance is deployed.
+             * <p>The zone where the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -471,7 +544,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch associated with the specified VPC.
+             * <p>The ID of the vSwitch associated with the specified VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1k4ec6s7sjdbudw****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -485,6 +561,12 @@ public class RestartInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RestartInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RestartInstanceResponseBody</p>
+     */
     public static class NodeSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
@@ -536,7 +618,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The storage space size per data node. Unit: GB.
+             * <p>The storage space size per data node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -544,7 +629,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. Valid values: cloud_ssd and cloud_efficiency.
+             * <p>The storage type of the node. Valid values: cloud_ssd and cloud_efficiency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -552,7 +640,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of data nodes.
+             * <p>The specification of data nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -566,6 +657,12 @@ public class RestartInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RestartInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RestartInstanceResponseBody</p>
+     */
     public static class SynonymsDicts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
@@ -629,7 +726,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The size of the Dictionary File. Unit: bytes.
+             * <p>The size of the Dictionary File. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2782602</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -637,7 +737,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dictionary file.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_MAIN.dic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -645,12 +748,15 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The source type. Valid values:
-             * <p>
+             * <p>The source type. Valid values:</p>
+             * <ul>
+             * <li>OSS:OSS open storage (the OSS storage space must be publicly readable.)</li>
+             * <li>ORIGIN: open-source Elasticsearch</li>
+             * <li>UPLOAD</li>
+             * </ul>
              * 
-             * *   OSS:OSS open storage (the OSS storage space must be publicly readable.)
-             * *   ORIGIN: open-source Elasticsearch
-             * *   UPLOAD
+             * <strong>example:</strong>
+             * <p>ORIGIN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -658,13 +764,16 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dictionary. Valid values:
-             * <p>
+             * <p>The type of the dictionary. Valid values:</p>
+             * <ul>
+             * <li>STOP: The STOP word.</li>
+             * <li>MAIN: MAIN Dictionary</li>
+             * <li>SYNONYMS: SYNONYMS</li>
+             * <li>ALI_WS: an Alibaba Dictionary.</li>
+             * </ul>
              * 
-             * *   STOP: The STOP word.
-             * *   MAIN: MAIN Dictionary
-             * *   SYNONYMS: SYNONYMS
-             * *   ALI_WS: an Alibaba Dictionary.
+             * <strong>example:</strong>
+             * <p>STOP</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -678,6 +787,12 @@ public class RestartInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RestartInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RestartInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
@@ -921,7 +1036,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String updatedAt; 
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-06T10:18:48.662Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -929,7 +1047,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-abc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -937,7 +1058,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the IK dictionaries.
+             * <p>The configuration of the IK dictionaries.</p>
              */
             public Builder dictList(java.util.List < DictList> dictList) {
                 this.dictList = dictList;
@@ -945,7 +1066,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The intranet access address of the instance.
+             * <p>The intranet access address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-nif1q8auz0003****.elasticsearch.aliyuncs.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -953,7 +1077,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the instance.
+             * <p>The version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.7.0_with_X-Pack</p>
              */
             public Builder esVersion(String esVersion) {
                 this.esVersion = esVersion;
@@ -961,7 +1088,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-n6w1o1x0w001c****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -969,7 +1099,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of Kibana nodes.
+             * <p>The configuration of Kibana nodes.</p>
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -977,7 +1107,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The public network access address of Kibana.
+             * <p>The public network access address of Kibana.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-nif1q8auz0003****.kibana.elasticsearch.aliyuncs.com</p>
              */
             public Builder kibanaDomain(String kibanaDomain) {
                 this.kibanaDomain = kibanaDomain;
@@ -985,7 +1118,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The public port of the Kibana network.
+             * <p>The public port of the Kibana network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5601</p>
              */
             public Builder kibanaPort(Integer kibanaPort) {
                 this.kibanaPort = kibanaPort;
@@ -993,7 +1129,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of dedicated master nodes.
+             * <p>The configuration of dedicated master nodes.</p>
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
@@ -1001,7 +1137,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The network configuration.
+             * <p>The network configuration.</p>
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -1009,7 +1145,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of data nodes.
+             * <p>The number of data nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -1017,7 +1156,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of data nodes.
+             * <p>The configuration of data nodes.</p>
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -1025,10 +1164,11 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the created ECS instance.
-             * <p>
+             * <p>The billing method of the created ECS instance.</p>
+             * <p>Valid values: prepaid and postpaid.</p>
              * 
-             * Valid values: prepaid and postpaid.
+             * <strong>example:</strong>
+             * <p>postpaid</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -1036,7 +1176,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The public network access address.
+             * <p>The public network access address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-n6w1o1x0w001c****.public.elasticsearch.aliyuncs.com</p>
              */
             public Builder publicDomain(String publicDomain) {
                 this.publicDomain = publicDomain;
@@ -1044,7 +1187,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The public network port.
+             * <p>The public network port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9200</p>
              */
             public Builder publicPort(Integer publicPort) {
                 this.publicPort = publicPort;
@@ -1052,10 +1198,11 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cluster.
-             * <p>
+             * <p>The state of the cluster.</p>
+             * <p>Supported: active (normal), activating (initializing), inactive (blocked), and invalid (expired).</p>
              * 
-             * Supported: active (normal), activating (initializing), inactive (blocked), and invalid (expired).
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1063,7 +1210,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the synonym dictionaries.
+             * <p>The configuration of the synonym dictionaries.</p>
              */
             public Builder synonymsDicts(java.util.List < SynonymsDicts> synonymsDicts) {
                 this.synonymsDicts = synonymsDicts;
@@ -1071,7 +1218,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last updated.
+             * <p>The time when the instance was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-18T10:10:04.484Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

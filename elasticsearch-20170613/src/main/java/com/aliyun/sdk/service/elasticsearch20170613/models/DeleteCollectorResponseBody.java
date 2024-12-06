@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCollectorResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCollectorResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteCollectorResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class DeleteCollectorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the shipper is deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the shipper is deleted. Valid values:</p>
+         * <ul>
+         * <li>true: The shipper is deleted.</li>
+         * <li>false: The shipper fails to be deleted.</li>
+         * </ul>
          * 
-         * *   true: The shipper is deleted.
-         * *   false: The shipper fails to be deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

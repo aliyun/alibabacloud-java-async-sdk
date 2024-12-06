@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiagnoseInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DiagnoseInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the report.
+         * <p>The ID of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.
+         * <p>The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DiagnoseInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DiagnoseInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
@@ -133,7 +143,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The ID of the diagnostic instance.
+             * <p>The ID of the diagnostic instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1535745731000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;

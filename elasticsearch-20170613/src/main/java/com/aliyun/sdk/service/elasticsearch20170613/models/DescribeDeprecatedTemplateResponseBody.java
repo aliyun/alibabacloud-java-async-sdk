@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeprecatedTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeprecatedTemplateResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeDeprecatedTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeprecatedTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeprecatedTemplateResponseBody</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliases")
         private String aliases;
@@ -151,6 +158,12 @@ public class DescribeDeprecatedTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeprecatedTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeprecatedTemplateResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dataStream")
         private Boolean dataStream;

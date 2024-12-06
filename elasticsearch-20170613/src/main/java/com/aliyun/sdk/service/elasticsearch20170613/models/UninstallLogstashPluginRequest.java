@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UninstallLogstashPluginRequest} extends {@link RequestModel}
  *
  * <p>UninstallLogstashPluginRequest</p>
@@ -82,7 +83,11 @@ public class UninstallLogstashPluginRequest extends Request {
         } 
 
         /**
-         * The list of plug-ins that have been uninstalled.
+         * <p>The list of plug-ins that have been uninstalled.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-oew1qbgl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

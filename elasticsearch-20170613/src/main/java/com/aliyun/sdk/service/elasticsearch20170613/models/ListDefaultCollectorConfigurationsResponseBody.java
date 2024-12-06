@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDefaultCollectorConfigurationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDefaultCollectorConfigurationsResponseBody</p>
@@ -49,7 +50,10 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8BAE3C32-8E4A-47D6-B4B0-95B5DE643BF5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDefaultCollectorConfigurationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDefaultCollectorConfigurationsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -109,7 +119,12 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
             private String fileName; 
 
             /**
-             * The content of the configuration file.
+             * <p>The content of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>key: log\n  title: Log file content\n  description: &gt;\n    Contains log file lines.\n  fields:\n ......</li>
+             * </ul>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -117,7 +132,10 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration file.
+             * <p>The name of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fields.yml</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;

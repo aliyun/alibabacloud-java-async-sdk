@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAlternativeSnapshotReposResponseBody} extends {@link TeaModel}
  *
  * <p>ListAlternativeSnapshotReposResponseBody</p>
@@ -49,7 +50,10 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAlternativeSnapshotReposResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlternativeSnapshotReposResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
@@ -109,7 +119,10 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
             private String repoPath; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-6ja1ro4jt000c****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -117,7 +130,10 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the repository.
+             * <p>The address of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RepoPath</p>
              */
             public Builder repoPath(String repoPath) {
                 this.repoPath = repoPath;

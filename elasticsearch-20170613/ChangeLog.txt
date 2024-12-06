@@ -1,3 +1,6 @@
+2024-12-06 Version: 2.0.7
+- Add logstashZones output to GetRegionConfiguration.
+
 2024-09-10 Version: 2.0.6
 - Add kibanaPrivateDomain, kibanaPrivatePort to instance.
 

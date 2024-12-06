@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableKibanaPvlNetworkResponseBody} extends {@link TeaModel}
  *
  * <p>DisableKibanaPvlNetworkResponseBody</p>
@@ -49,7 +50,10 @@ public class DisableKibanaPvlNetworkResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * request id
+         * <p>request id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1DERFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

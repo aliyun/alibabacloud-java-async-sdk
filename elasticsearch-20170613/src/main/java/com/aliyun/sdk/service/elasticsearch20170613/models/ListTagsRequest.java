@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagsRequest} extends {@link RequestModel}
  *
  * <p>ListTagsRequest</p>
@@ -68,7 +69,10 @@ public class ListTagsRequest extends Request {
         } 
 
         /**
-         * The return results.
+         * <p>The return results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -77,7 +81,10 @@ public class ListTagsRequest extends Request {
         }
 
         /**
-         * The tag value of the ENI.
+         * <p>The tag value of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);

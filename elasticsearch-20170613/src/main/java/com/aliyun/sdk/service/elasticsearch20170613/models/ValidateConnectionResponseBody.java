@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>ValidateConnectionResponseBody</p>
@@ -49,7 +50,10 @@ public class ValidateConnectionResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class ValidateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the connectivity is normal. Valid values:
-         * <p>
+         * <p>Indicates whether the connectivity is normal. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

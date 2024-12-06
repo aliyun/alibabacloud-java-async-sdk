@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallLogstashSystemPluginRequest} extends {@link RequestModel}
  *
  * <p>InstallLogstashSystemPluginRequest</p>
@@ -82,7 +83,10 @@ public class InstallLogstashSystemPluginRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-oew1qbgl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

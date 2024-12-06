@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateKibanaPvlNetworkRequest} extends {@link RequestModel}
  *
  * <p>UpdateKibanaPvlNetworkRequest</p>
@@ -97,7 +98,10 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -124,7 +128,10 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * pvlId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-27a3mul6l0***-kibana-internal</p>
          */
         public Builder pvlId(String pvlId) {
             this.putQueryParameter("pvlId", pvlId);

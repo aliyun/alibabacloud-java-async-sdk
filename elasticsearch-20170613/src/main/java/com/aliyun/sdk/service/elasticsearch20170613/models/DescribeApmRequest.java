@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApmRequest} extends {@link RequestModel}
  *
  * <p>DescribeApmRequest</p>
@@ -54,7 +55,11 @@ public class DescribeApmRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>Instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apm-cn-2r42fhp5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

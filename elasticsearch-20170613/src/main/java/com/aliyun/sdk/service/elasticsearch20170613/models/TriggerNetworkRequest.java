@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerNetworkRequest} extends {@link RequestModel}
  *
  * <p>TriggerNetworkRequest</p>
@@ -113,7 +114,11 @@ public class TriggerNetworkRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -122,7 +127,10 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * actionType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         public Builder actionType(String actionType) {
             this.putBodyParameter("actionType", actionType);
@@ -131,7 +139,10 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * networkType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder networkType(String networkType) {
             this.putBodyParameter("networkType", networkType);
@@ -140,7 +151,10 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * nodeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KIBANA</p>
          */
         public Builder nodeType(String nodeType) {
             this.putBodyParameter("nodeType", nodeType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConnectableClustersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConnectableClustersResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeConnectableClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConnectableClustersResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instances")
         private String instances;

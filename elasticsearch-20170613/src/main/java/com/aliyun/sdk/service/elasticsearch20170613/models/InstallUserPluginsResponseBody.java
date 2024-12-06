@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallUserPluginsResponseBody} extends {@link TeaModel}
  *
  * <p>InstallUserPluginsResponseBody</p>
@@ -49,7 +50,10 @@ public class InstallUserPluginsResponseBody extends TeaModel {
         private java.util.List < String > result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6F*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

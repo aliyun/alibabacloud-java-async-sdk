@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDiagnoseReportRequest} extends {@link RequestModel}
  *
  * <p>ListDiagnoseReportRequest</p>
@@ -156,7 +157,11 @@ public class ListDiagnoseReportRequest extends Request {
         } 
 
         /**
-         * spanish
+         * <p>spanish</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1qu7ei000p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -165,7 +170,10 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * SYSTEM
+         * <p>SYSTEM</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder detail(Boolean detail) {
             this.putQueryParameter("detail", detail);
@@ -174,7 +182,11 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595174399999</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -183,7 +195,10 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * 1594569600000
+         * <p>1594569600000</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spanish</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);
@@ -192,7 +207,10 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * 20
+         * <p>20</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -201,7 +219,10 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * true
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -210,7 +231,11 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * 1595174399999
+         * <p>1595174399999</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594569600000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -219,7 +244,10 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder trigger(String trigger) {
             this.putQueryParameter("trigger", trigger);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListKibanaPluginsResponse} extends {@link TeaModel}
  *
  * <p>ListKibanaPluginsResponse</p>

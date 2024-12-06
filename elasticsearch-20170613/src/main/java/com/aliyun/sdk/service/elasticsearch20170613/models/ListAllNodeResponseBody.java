@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAllNodeResponseBody} extends {@link TeaModel}
  *
  * <p>ListAllNodeResponseBody</p>
@@ -49,7 +50,10 @@ public class ListAllNodeResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The zone ID of the node.
+         * <p>The zone ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0D71B597-F3FF-5B56-88D7-74F9D3F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,10 +61,10 @@ public class ListAllNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The CPU utilization.
-         * <p>
-         * 
-         * >  If the **extended** request parameter is set to **true** and the monitoring information of the nodes in the cluster is being synchronized, the value of the cpuPercent parameter is null. In this case, you need to send a request again after 10 seconds to obtain the value of the cpuPercent parameter.
+         * <p>The CPU utilization.</p>
+         * <blockquote>
+         * <p> If the <strong>extended</strong> request parameter is set to <strong>true</strong> and the monitoring information of the nodes in the cluster is being synchronized, the value of the cpuPercent parameter is null. In this case, you need to send a request again after 10 seconds to obtain the value of the cpuPercent parameter.</p>
+         * </blockquote>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -73,6 +77,12 @@ public class ListAllNodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAllNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAllNodeResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpuPercent")
         private String cpuPercent;
@@ -196,7 +206,10 @@ public class ListAllNodeResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The disk usage.
+             * <p>The disk usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.2%</p>
              */
             public Builder cpuPercent(String cpuPercent) {
                 this.cpuPercent = cpuPercent;
@@ -204,7 +217,10 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The health status of the node. Valid values: GREEN, YELLOW, RED, and GRAY.
+             * <p>The health status of the node. Valid values: GREEN, YELLOW, RED, and GRAY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0%</p>
              */
             public Builder diskUsedPercent(String diskUsedPercent) {
                 this.diskUsedPercent = diskUsedPercent;
@@ -220,7 +236,10 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the node.
+             * <p>The IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21.6%</p>
              */
             public Builder heapPercent(String heapPercent) {
                 this.heapPercent = heapPercent;
@@ -228,7 +247,10 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the node.
+             * <p>The port that is used to connect to the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.15.XX.XX</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -244,7 +266,10 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The 1-minute load of the node.
+             * <p>The 1-minute load of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WORKER</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -260,14 +285,17 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the nodes. Valid values:
-             * <p>
+             * <p>The type of the nodes. Valid values:</p>
+             * <ul>
+             * <li>MASTER: dedicated master node</li>
+             * <li>WORKER: hot node</li>
+             * <li>WORKER_WARM: warm node</li>
+             * <li>COORDINATING: client node</li>
+             * <li>KIBANA: Kibana node</li>
+             * </ul>
              * 
-             * *   MASTER: dedicated master node
-             * *   WORKER: hot node
-             * *   WORKER_WARM: warm node
-             * *   COORDINATING: client node
-             * *   KIBANA: Kibana node
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

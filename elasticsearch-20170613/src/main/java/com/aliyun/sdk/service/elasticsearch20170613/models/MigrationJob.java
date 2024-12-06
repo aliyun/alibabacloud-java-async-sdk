@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrationJob} extends {@link TeaModel}
  *
  * <p>MigrationJob</p>
@@ -250,6 +251,12 @@ public class MigrationJob extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class SourceCluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
@@ -311,6 +318,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class StatusResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -372,6 +385,12 @@ public class MigrationJob extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MigrationJob} extends {@link TeaModel}
+     *
+     * <p>MigrationJob</p>
+     */
     public static class TargetCluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;

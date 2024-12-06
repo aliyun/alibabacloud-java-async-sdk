@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListComponentIndicesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Long xTotalCount;
@@ -131,6 +138,12 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Lifecycle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -172,6 +185,12 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Index extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("codec")
         private String codec;
@@ -233,6 +252,12 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Settings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("index")
         private Index index;
@@ -274,6 +299,12 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("settings")
         private Settings settings;
@@ -315,6 +346,12 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("_meta")
         private java.util.Map < String, ? > meta;
@@ -396,6 +433,12 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("composed")
         private java.util.List < String > composed;

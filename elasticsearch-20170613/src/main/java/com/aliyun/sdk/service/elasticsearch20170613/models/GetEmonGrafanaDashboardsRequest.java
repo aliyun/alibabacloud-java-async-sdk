@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEmonGrafanaDashboardsRequest} extends {@link RequestModel}
  *
  * <p>GetEmonGrafanaDashboardsRequest</p>
@@ -68,7 +69,10 @@ public class GetEmonGrafanaDashboardsRequest extends Request {
         } 
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-133071096032****</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("ProjectId", projectId);

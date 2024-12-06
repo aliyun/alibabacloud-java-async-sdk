@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeXpackMonitorConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeXpackMonitorConfigResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeXpackMonitorConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeXpackMonitorConfigResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
@@ -145,11 +155,14 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * Indicates whether the X-Pack Monitoring feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the X-Pack Monitoring feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: enabled</li>
+             * <li>false: disabled</li>
+             * </ul>
              * 
-             * *   true: enabled
-             * *   false: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -165,7 +178,10 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the associated Elasticsearch cluster.
+             * <p>The ID of the associated Elasticsearch cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-n6w1o1x0w001c****</p>
              */
             public Builder esInstanceId(String esInstanceId) {
                 this.esInstanceId = esInstanceId;
@@ -181,7 +197,10 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The username that is used to access the associated Elasticsearch cluster.
+             * <p>The username that is used to access the associated Elasticsearch cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elastic</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

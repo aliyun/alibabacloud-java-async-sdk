@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CollectorKibanaInstance} extends {@link TeaModel}
  *
  * <p>CollectorKibanaInstance</p>
@@ -116,7 +117,10 @@ public class CollectorKibanaInstance extends TeaModel {
         private String userName; 
 
         /**
-         * configType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>collectorElasticsearchForKibana</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -124,7 +128,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * host.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-*****-kibana.internal.elasticsearch.aliyuncs.com:5601</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -132,7 +139,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-45dfy****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -140,7 +150,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * kibanaHost.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://es-cn-****.kibana.elasticsearch.aliyuncs.com:5601">https://es-cn-****.kibana.elasticsearch.aliyuncs.com:5601</a></p>
          */
         public Builder kibanaHost(String kibanaHost) {
             this.kibanaHost = kibanaHost;
@@ -148,7 +161,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * password.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -156,7 +172,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -164,7 +183,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * userName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MasterNodeConfiguration} extends {@link TeaModel}
  *
  * <p>MasterNodeConfiguration</p>
@@ -77,7 +78,7 @@ public class MasterNodeConfiguration extends TeaModel {
         private String spec; 
 
         /**
-         * amount.
+         * <p>This parameter is required.</p>
          */
         public Builder amount(Long amount) {
             this.amount = amount;
@@ -85,7 +86,7 @@ public class MasterNodeConfiguration extends TeaModel {
         }
 
         /**
-         * disk.
+         * <p>This parameter is required.</p>
          */
         public Builder disk(Long disk) {
             this.disk = disk;
@@ -93,7 +94,7 @@ public class MasterNodeConfiguration extends TeaModel {
         }
 
         /**
-         * diskType.
+         * <p>This parameter is required.</p>
          */
         public Builder diskType(String diskType) {
             this.diskType = diskType;
@@ -101,7 +102,7 @@ public class MasterNodeConfiguration extends TeaModel {
         }
 
         /**
-         * spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

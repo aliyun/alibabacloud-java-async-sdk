@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiagnoseInstanceRequest} extends {@link RequestModel}
  *
  * <p>DiagnoseInstanceRequest</p>
@@ -124,7 +125,11 @@ public class DiagnoseInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -133,7 +138,10 @@ public class DiagnoseInstanceRequest extends Request {
         }
 
         /**
-         * The timestamp when the diagnostic report was generated.
+         * <p>The timestamp when the diagnostic report was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -169,7 +177,10 @@ public class DiagnoseInstanceRequest extends Request {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);

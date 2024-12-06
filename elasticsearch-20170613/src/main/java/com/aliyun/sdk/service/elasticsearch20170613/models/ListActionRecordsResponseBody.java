@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListActionRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>ListActionRecordsResponseBody</p>
@@ -70,6 +71,12 @@ public class ListActionRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListActionRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActionRecordsResponseBody</p>
+     */
     public static class SubStatusInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("completeNodeCount")
         private Integer completeNodeCount;
@@ -271,6 +278,12 @@ public class ListActionRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListActionRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActionRecordsResponseBody</p>
+     */
     public static class StatusInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("completeNodeCount")
         private Integer completeNodeCount;
@@ -492,6 +505,12 @@ public class ListActionRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListActionRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActionRecordsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionName")
         private String actionName;

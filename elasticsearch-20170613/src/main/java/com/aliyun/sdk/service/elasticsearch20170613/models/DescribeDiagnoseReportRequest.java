@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnoseReportRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiagnoseReportRequest</p>
@@ -83,7 +84,10 @@ public class DescribeDiagnoseReportRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-mp91kzb8m0009****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +96,10 @@ public class DescribeDiagnoseReportRequest extends Request {
         }
 
         /**
-         * ReportId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scheduled__2020-09-15T00:40:00</p>
          */
         public Builder reportId(String reportId) {
             this.putPathParameter("ReportId", reportId);

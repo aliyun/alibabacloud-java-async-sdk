@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateKibanaWhiteIpsRequest} extends {@link RequestModel}
  *
  * <p>UpdateKibanaWhiteIpsRequest</p>
@@ -110,7 +111,11 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-tl329rbpc0001****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -119,10 +124,8 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         }
 
         /**
-         * The IP address whitelists. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.
-         * <p>
-         * 
-         * You cannot configure both the kibanaIPWhitelist and whiteIpGroup parameters.
+         * <p>The IP address whitelists. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</p>
+         * <p>You cannot configure both the kibanaIPWhitelist and whiteIpGroup parameters.</p>
          */
         public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
             this.putBodyParameter("kibanaIPWhitelist", kibanaIPWhitelist);
@@ -131,7 +134,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         }
 
         /**
-         * The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.
+         * <p>The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</p>
          */
         public Builder whiteIpGroup(WhiteIpGroup whiteIpGroup) {
             this.putBodyParameter("whiteIpGroup", whiteIpGroup);
@@ -140,12 +143,15 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         }
 
         /**
-         * The update mode. Valid values:
-         * <p>
+         * <p>The update mode. Valid values:</p>
+         * <ul>
+         * <li>Cover: overwrites the IP addresses in the specified IP address whitelist with the IP addresses specified by using the ips parameter. This is the default value.</li>
+         * <li>Append: adds the IP addresses specified by using the ips parameter to the specified IP address whitelist.</li>
+         * <li>Delete: deletes the IP addresses specified by using the ips parameter from the specified IP address whitelist. At least one IP address must be retained for the whitelist.</li>
+         * </ul>
          * 
-         * *   Cover: overwrites the IP addresses in the specified IP address whitelist with the IP addresses specified by using the ips parameter. This is the default value.
-         * *   Append: adds the IP addresses specified by using the ips parameter to the specified IP address whitelist.
-         * *   Delete: deletes the IP addresses specified by using the ips parameter from the specified IP address whitelist. At least one IP address must be retained for the whitelist.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -154,7 +160,10 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         }
 
         /**
-         * The body of the request.
+         * <p>The body of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("modifyMode", modifyMode);
@@ -169,6 +178,12 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateKibanaWhiteIpsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateKibanaWhiteIpsRequest</p>
+     */
     public static class WhiteIpGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
@@ -220,7 +235,10 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
             private String whiteIpType; 
 
             /**
-             * The type of the whitelist. Set the value to PUBLIC_KIBANA. This value indicates a public IP address whitelist.
+             * <p>The type of the whitelist. Set the value to PUBLIC_KIBANA. This value indicates a public IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_group_name</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -228,7 +246,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
             }
 
             /**
-             * The IP addresses in the whitelist. This parameter is required if you configure the whiteIpGroup parameter.
+             * <p>The IP addresses in the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</p>
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -236,7 +254,10 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
             }
 
             /**
-             * The IP addresses in the whitelist.
+             * <p>The IP addresses in the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC_KIBANA</p>
              */
             public Builder whiteIpType(String whiteIpType) {
                 this.whiteIpType = whiteIpType;

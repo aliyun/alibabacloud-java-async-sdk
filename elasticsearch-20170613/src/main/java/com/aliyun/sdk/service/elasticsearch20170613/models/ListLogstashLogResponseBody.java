@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogstashLogResponseBody} extends {@link TeaModel}
  *
  * <p>ListLogstashLogResponseBody</p>
@@ -49,7 +50,10 @@ public class ListLogstashLogResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The details of the log.
+         * <p>The details of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F40EAA1-6F1D-4DD9-8DB8-C5F00C4E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp of log generation. Unit: ms.
+         * <p>The timestamp of log generation. Unit: ms.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListLogstashLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLogstashLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogstashLogResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -145,7 +155,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The IP address of the node that generates the log.
+             * <p>The IP address of the node that generates the log.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -169,7 +179,10 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder level(String level) {
                 this.level = level;

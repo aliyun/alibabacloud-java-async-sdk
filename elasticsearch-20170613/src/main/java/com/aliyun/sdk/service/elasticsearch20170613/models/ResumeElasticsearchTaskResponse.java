@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResumeElasticsearchTaskResponse} extends {@link TeaModel}
  *
  * <p>ResumeElasticsearchTaskResponse</p>

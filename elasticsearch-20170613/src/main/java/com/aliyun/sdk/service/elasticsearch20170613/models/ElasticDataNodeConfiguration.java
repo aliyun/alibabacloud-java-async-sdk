@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ElasticDataNodeConfiguration} extends {@link TeaModel}
  *
  * <p>ElasticDataNodeConfiguration</p>
@@ -140,7 +141,7 @@ public class ElasticDataNodeConfiguration extends TeaModel {
         }
 
         /**
-         * spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

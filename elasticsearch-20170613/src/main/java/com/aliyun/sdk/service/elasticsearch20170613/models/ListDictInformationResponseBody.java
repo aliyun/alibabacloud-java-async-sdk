@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDictInformationResponseBody} extends {@link TeaModel}
  *
  * <p>ListDictInformationResponseBody</p>
@@ -70,6 +71,12 @@ public class ListDictInformationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDictInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDictInformationResponseBody</p>
+     */
     public static class OssObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bucketName")
         private String bucketName;
@@ -151,6 +158,12 @@ public class ListDictInformationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDictInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDictInformationResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;

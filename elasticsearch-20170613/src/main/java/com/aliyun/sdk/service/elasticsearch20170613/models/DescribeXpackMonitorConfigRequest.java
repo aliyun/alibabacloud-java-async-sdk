@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeXpackMonitorConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeXpackMonitorConfigRequest</p>
@@ -54,7 +55,11 @@ public class DescribeXpackMonitorConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the Logstash cluster.
+         * <p>The ID of the Logstash cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-oew1qbgl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSearchLogRequest} extends {@link RequestModel}
  *
  * <p>ListSearchLogRequest</p>
@@ -141,7 +142,11 @@ public class ListSearchLogRequest extends Request {
         } 
 
         /**
-         * 1531910852074
+         * <p>1531910852074</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -150,7 +155,10 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * 20
+         * <p>20</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1531910852074</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("beginTime", beginTime);
@@ -159,7 +167,10 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1531910852074</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -168,7 +179,10 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * The header of the response.
+         * <p>The header of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -177,7 +191,11 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host:<code>172.16.**.**</code> AND content:netty</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -186,7 +204,10 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -195,7 +216,11 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * 1531910852074
+         * <p>1531910852074</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCELOG</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

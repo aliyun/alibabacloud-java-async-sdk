@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApmResponseBody} extends {@link TeaModel}
  *
  * <p>ListApmResponseBody</p>
@@ -90,6 +91,12 @@ public class ListApmResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApmResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApmResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Long xTotalCount;
@@ -131,6 +138,12 @@ public class ListApmResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApmResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApmResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;

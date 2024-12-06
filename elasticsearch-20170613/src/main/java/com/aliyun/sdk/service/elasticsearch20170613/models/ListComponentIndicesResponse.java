@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListComponentIndicesResponse} extends {@link TeaModel}
  *
  * <p>ListComponentIndicesResponse</p>

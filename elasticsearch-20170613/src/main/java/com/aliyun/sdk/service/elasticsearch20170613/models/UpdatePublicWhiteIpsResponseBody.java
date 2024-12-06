@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePublicWhiteIpsResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePublicWhiteIpsResponseBody</p>
@@ -70,6 +71,12 @@ public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePublicWhiteIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePublicWhiteIpsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("publicIpWhitelist")
         private java.util.List < String > publicIpWhitelist;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePipelinesResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePipelinesResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdatePipelinesResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class UpdatePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the pipeline is updated. Valid values:
-         * <p>
+         * <p>Indicates whether the pipeline is updated. Valid values:</p>
+         * <ul>
+         * <li>true: The pipeline is updated.</li>
+         * <li>false: The pipeline fails to be updated.</li>
+         * </ul>
          * 
-         * *   true: The pipeline is updated.
-         * *   false: The pipeline fails to be updated.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

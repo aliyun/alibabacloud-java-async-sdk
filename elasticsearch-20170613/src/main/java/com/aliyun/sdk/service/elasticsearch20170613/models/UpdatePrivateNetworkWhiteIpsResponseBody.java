@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrivateNetworkWhiteIpsResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePrivateNetworkWhiteIpsResponseBody</p>
@@ -70,6 +71,12 @@ public class UpdatePrivateNetworkWhiteIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePrivateNetworkWhiteIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePrivateNetworkWhiteIpsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("privateNetworkIpWhiteList")
         private java.util.List < String > privateNetworkIpWhiteList;

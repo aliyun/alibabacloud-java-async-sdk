@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallAckOperatorResponseBody} extends {@link TeaModel}
  *
  * <p>InstallAckOperatorResponseBody</p>
@@ -49,7 +50,10 @@ public class InstallAckOperatorResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFA88951-7A6F-4A8E-AB8F-2BB7132BA751</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class InstallAckOperatorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether ES-operator is installed. Valid values:
-         * <p>
+         * <p>Indicates whether ES-operator is installed. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

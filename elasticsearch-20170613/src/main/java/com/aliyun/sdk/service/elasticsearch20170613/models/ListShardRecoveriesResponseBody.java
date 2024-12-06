@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListShardRecoveriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListShardRecoveriesResponseBody</p>
@@ -49,7 +50,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListShardRecoveriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListShardRecoveriesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bytesPercent")
         private String bytesPercent;
@@ -229,7 +239,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             private String translogOpsPercent; 
 
             /**
-             * The data restoration progress.
+             * <p>The data restoration progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80%</p>
              */
             public Builder bytesPercent(String bytesPercent) {
                 this.bytesPercent = bytesPercent;
@@ -237,7 +250,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of data that is restored.
+             * <p>The total amount of data that is restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12086</p>
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
@@ -245,7 +261,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The file execution progress.
+             * <p>The file execution progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80.0%</p>
              */
             public Builder filesPercent(String filesPercent) {
                 this.filesPercent = filesPercent;
@@ -253,7 +272,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of files.
+             * <p>The total number of files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79</p>
              */
             public Builder filesTotal(Long filesTotal) {
                 this.filesTotal = filesTotal;
@@ -261,7 +283,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the index.
+             * <p>The name of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-index-000001</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -269,7 +294,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the source node.
+             * <p>The IP address of the source node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder sourceHost(String sourceHost) {
                 this.sourceHost = sourceHost;
@@ -277,7 +305,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source node.
+             * <p>The name of the source node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2Kni3dJ</p>
              */
             public Builder sourceNode(String sourceNode) {
                 this.sourceNode = sourceNode;
@@ -285,15 +316,18 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The data restoration status. Valid values:
-             * <p>
+             * <p>The data restoration status. Valid values:</p>
+             * <ul>
+             * <li>done: Data restoration is complete.</li>
+             * <li>finalize: Data is being cleared.</li>
+             * <li>index: Index metadata is being read, and bytes are being copied from source to destination.</li>
+             * <li>init: Data restoration is not started.</li>
+             * <li>start: Data restoration is started.</li>
+             * <li>translog: Translogs are being redone.</li>
+             * </ul>
              * 
-             * *   done: Data restoration is complete.
-             * *   finalize: Data is being cleared.
-             * *   index: Index metadata is being read, and bytes are being copied from source to destination.
-             * *   init: Data restoration is not started.
-             * *   start: Data restoration is started.
-             * *   translog: Translogs are being redone.
+             * <strong>example:</strong>
+             * <p>done</p>
              */
             public Builder stage(String stage) {
                 this.stage = stage;
@@ -301,7 +335,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the destination node.
+             * <p>The IP address of the destination node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder targetHost(String targetHost) {
                 this.targetHost = targetHost;
@@ -309,7 +346,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination node.
+             * <p>The name of the destination node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YVVKLmW</p>
              */
             public Builder targetNode(String targetNode) {
                 this.targetNode = targetNode;
@@ -317,7 +357,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of translog operations to be restored.
+             * <p>The number of translog operations to be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12086</p>
              */
             public Builder translogOps(Long translogOps) {
                 this.translogOps = translogOps;
@@ -325,7 +368,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * The restoration progress of translog operations.
+             * <p>The restoration progress of translog operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80%</p>
              */
             public Builder translogOpsPercent(String translogOpsPercent) {
                 this.translogOpsPercent = translogOpsPercent;

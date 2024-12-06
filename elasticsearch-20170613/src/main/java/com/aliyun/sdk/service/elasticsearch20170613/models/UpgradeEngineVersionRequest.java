@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeEngineVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeEngineVersionRequest</p>
@@ -124,7 +125,11 @@ public class UpgradeEngineVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -160,7 +165,10 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * The moderation results.
+         * <p>The moderation results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -169,13 +177,16 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * The monitoring type. Valid values:
-         * <p>
+         * <p>The monitoring type. Valid values:</p>
+         * <ul>
+         * <li>checkClusterHealth: Cluster Health Status</li>
+         * <li>checkConfigCompatible: Configuration Compatibility Status</li>
+         * <li>checkClusterResource: resource space status</li>
+         * <li>checkClusterSnapshot: Whether a snapshot exists</li>
+         * </ul>
          * 
-         * *   checkClusterHealth: Cluster Health Status
-         * *   checkConfigCompatible: Configuration Compatibility Status
-         * *   checkClusterResource: resource space status
-         * *   checkClusterSnapshot: Whether a snapshot exists
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -190,7 +201,16 @@ public class UpgradeEngineVersionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpgradeEngineVersionRequest} extends {@link TeaModel}
+     *
+     * <p>UpgradeEngineVersionRequest</p>
+     */
     public static class Plugins extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enable")
+        private String enable;
+
         @com.aliyun.core.annotation.NameInMap("fileVersion")
         private String fileVersion;
 
@@ -201,6 +221,7 @@ public class UpgradeEngineVersionRequest extends Request {
         private String version;
 
         private Plugins(Builder builder) {
+            this.enable = builder.enable;
             this.fileVersion = builder.fileVersion;
             this.name = builder.name;
             this.version = builder.version;
@@ -212,6 +233,13 @@ public class UpgradeEngineVersionRequest extends Request {
 
         public static Plugins create() {
             return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public String getEnable() {
+            return this.enable;
         }
 
         /**
@@ -236,9 +264,18 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         public static final class Builder {
+            private String enable; 
             private String fileVersion; 
             private String name; 
             private String version; 
+
+            /**
+             * enable.
+             */
+            public Builder enable(String enable) {
+                this.enable = enable;
+                return this;
+            }
 
             /**
              * fileVersion.

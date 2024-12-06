@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpenStoreUsageRequest} extends {@link RequestModel}
  *
  * <p>GetOpenStoreUsageRequest</p>
@@ -54,7 +55,11 @@ public class GetOpenStoreUsageRequest extends Request {
         } 
 
         /**
-         * es-cn-zvp2cqw1f0020\*\*\*\*
+         * <p>es-cn-zvp2cqw1f0020****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-zvp2cqw1f0020****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

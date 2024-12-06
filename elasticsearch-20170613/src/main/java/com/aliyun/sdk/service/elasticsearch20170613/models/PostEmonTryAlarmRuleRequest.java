@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PostEmonTryAlarmRuleRequest} extends {@link RequestModel}
  *
  * <p>PostEmonTryAlarmRuleRequest</p>
@@ -83,7 +84,10 @@ public class PostEmonTryAlarmRuleRequest extends Request {
         } 
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-133071096032****</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("ProjectId", projectId);
@@ -92,7 +96,10 @@ public class PostEmonTryAlarmRuleRequest extends Request {
         }
 
         /**
-         * AlarmGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder alarmGroupId(String alarmGroupId) {
             this.putPathParameter("AlarmGroupId", alarmGroupId);

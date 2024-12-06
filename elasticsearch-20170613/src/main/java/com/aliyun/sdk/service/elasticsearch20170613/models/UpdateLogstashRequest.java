@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLogstashRequest} extends {@link RequestModel}
  *
  * <p>UpdateLogstashRequest</p>
@@ -97,7 +98,10 @@ public class UpdateLogstashRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-n6w1o5jq****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -139,6 +143,12 @@ public class UpdateLogstashRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLogstashRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLogstashRequest</p>
+     */
     public static class NodeSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("disk")
         @com.aliyun.core.annotation.Validation(maximum = 2048, minimum = 20)

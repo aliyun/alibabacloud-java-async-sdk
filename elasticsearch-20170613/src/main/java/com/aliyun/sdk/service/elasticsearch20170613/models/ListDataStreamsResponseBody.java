@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataStreamsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataStreamsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListDataStreamsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataStreamsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataStreamsResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Managed-Count")
         private Integer xManagedCount;
@@ -151,6 +158,12 @@ public class ListDataStreamsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataStreamsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataStreamsResponseBody</p>
+     */
     public static class Indices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -292,6 +305,12 @@ public class ListDataStreamsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataStreamsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataStreamsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("health")
         private String health;

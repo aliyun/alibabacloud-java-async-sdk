@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAckNamespacesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAckNamespacesResponseBody</p>
@@ -49,7 +50,10 @@ public class ListAckNamespacesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95789100-A329-473B-9D14-9E0B7DB4BD5A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListAckNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListAckNamespacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAckNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAckNamespacesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
@@ -109,7 +119,10 @@ public class ListAckNamespacesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The namespace of the cluster.
+             * <p>The namespace of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logging</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -117,7 +130,10 @@ public class ListAckNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the namespace.
+             * <p>The status of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;

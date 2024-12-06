@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSnapshotReposByInstanceIdResponseBody} extends {@link TeaModel}
  *
  * <p>ListSnapshotReposByInstanceIdResponseBody</p>
@@ -49,7 +50,10 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSnapshotReposByInstanceIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotReposByInstanceIdResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
@@ -133,7 +143,10 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Reference instance ID.
+             * <p>Reference instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-6ja1ro4jt000c****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -141,7 +154,10 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the repository.
+             * <p>The address of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-6ja1ro4jt000c****</p>
              */
             public Builder repoPath(String repoPath) {
                 this.repoPath = repoPath;
@@ -149,7 +165,10 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Reference warehouse name.
+             * <p>Reference warehouse name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_snapshot_from_es-cn-6ja1ro4jt000c****</p>
              */
             public Builder snapWarehouse(String snapWarehouse) {
                 this.snapWarehouse = snapWarehouse;
@@ -157,7 +176,10 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Reference warehouse status. available indicates that it is valid. unavailable indicates that it is invalid.
+             * <p>Reference warehouse status. available indicates that it is valid. unavailable indicates that it is invalid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateReadWritePolicyRequest} extends {@link RequestModel}
  *
  * <p>UpdateReadWritePolicyRequest</p>
@@ -82,7 +83,10 @@ public class UpdateReadWritePolicyRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-oew1oxiro000f****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWhiteIpsResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateWhiteIpsResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The updated whitelist.
+         * <p>The updated whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D58B014-BBD7-4D80-B219-00B9D5C6860C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The network configurations.
+         * <p>The network configurations.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateWhiteIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateWhiteIpsResponseBody</p>
+     */
     public static class WhiteIpGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
@@ -121,7 +131,10 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             private String whiteIpType; 
 
             /**
-             * The type of the whitelist. The value of this parameter is fixed as PRIVATE_ES, which indicates a private IP address whitelist.
+             * <p>The type of the whitelist. The value of this parameter is fixed as PRIVATE_ES, which indicates a private IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_group</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -151,6 +164,12 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateWhiteIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateWhiteIpsResponseBody</p>
+     */
     public static class NetworkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("whiteIpGroupList")
         private java.util.List < WhiteIpGroupList> whiteIpGroupList;
@@ -178,7 +197,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             private java.util.List < WhiteIpGroupList> whiteIpGroupList; 
 
             /**
-             * The IP addresses in the whitelist.
+             * <p>The IP addresses in the whitelist.</p>
              */
             public Builder whiteIpGroupList(java.util.List < WhiteIpGroupList> whiteIpGroupList) {
                 this.whiteIpGroupList = whiteIpGroupList;
@@ -192,6 +211,12 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateWhiteIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateWhiteIpsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("esIPWhitelist")
         private java.util.List < String > esIPWhitelist;
@@ -231,7 +256,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             private NetworkConfig networkConfig; 
 
             /**
-             * The list of whitelists.
+             * <p>The list of whitelists.</p>
              */
             public Builder esIPWhitelist(java.util.List < String > esIPWhitelist) {
                 this.esIPWhitelist = esIPWhitelist;
@@ -239,7 +264,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the whitelist. By default, the default whitelist is included.
+             * <p>The name of the whitelist. By default, the default whitelist is included.</p>
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;

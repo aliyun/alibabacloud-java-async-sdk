@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateComponentIndexRequest} extends {@link RequestModel}
  *
  * <p>CreateComponentIndexRequest</p>
@@ -97,7 +98,10 @@ public class CreateComponentIndexRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-tl329rbpc0001****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -106,7 +110,10 @@ public class CreateComponentIndexRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -139,6 +146,12 @@ public class CreateComponentIndexRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateComponentIndexRequest} extends {@link TeaModel}
+     *
+     * <p>CreateComponentIndexRequest</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliases")
         private java.util.Map < String, ? > aliases;

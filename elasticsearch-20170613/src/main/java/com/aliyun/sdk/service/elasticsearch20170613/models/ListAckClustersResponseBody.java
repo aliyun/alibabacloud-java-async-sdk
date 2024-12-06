@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAckClustersResponseBody} extends {@link TeaModel}
  *
  * <p>ListAckClustersResponseBody</p>
@@ -49,7 +50,10 @@ public class ListAckClustersResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F93EAA49-284F-4FCE-9E67-FA23FB4BB512</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListAckClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListAckClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAckClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAckClustersResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("clusterId")
         private String clusterId;
@@ -133,7 +143,10 @@ public class ListAckClustersResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of cluster.
+             * <p>The ID of cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c5ea2c2d9a3cf499481292f60425d****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -141,7 +154,10 @@ public class ListAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. The value is fixed as ManagedKubernetes.
+             * <p>The type of the cluster. The value is fixed as ManagedKubernetes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ManagedKubernetes</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -149,7 +165,10 @@ public class ListAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -157,7 +176,10 @@ public class ListAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the cluster belongs.
+             * <p>The ID of the VPC to which the cluster belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp12nu14urf0upaf4****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

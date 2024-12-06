@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateILMPolicyRequest} extends {@link RequestModel}
  *
  * <p>UpdateILMPolicyRequest</p>
@@ -97,7 +98,10 @@ public class UpdateILMPolicyRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif24adwc0082w2ka****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -106,7 +110,10 @@ public class UpdateILMPolicyRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-policy</p>
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("PolicyName", policyName);

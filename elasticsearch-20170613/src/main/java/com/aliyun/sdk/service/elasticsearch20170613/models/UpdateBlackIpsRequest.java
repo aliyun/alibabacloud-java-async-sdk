@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateBlackIpsRequest} extends {@link RequestModel}
  *
  * <p>UpdateBlackIpsRequest</p>
@@ -68,7 +69,7 @@ public class UpdateBlackIpsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

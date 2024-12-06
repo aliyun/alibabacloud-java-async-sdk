@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelDeletionResponseBody} extends {@link TeaModel}
  *
  * <p>CancelDeletionResponseBody</p>
@@ -49,7 +50,10 @@ public class CancelDeletionResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D682B6B3-B425-46DA-A5FC-5F5C60553622</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class CancelDeletionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the cluster is restored. Valid values:
-         * <p>
+         * <p>Indicates whether the cluster is restored. Valid values:</p>
+         * <ul>
+         * <li>true: The cluster is restored.</li>
+         * <li>false: The cluster fails to be restored.</li>
+         * </ul>
          * 
-         * *   true: The cluster is restored.
-         * *   false: The cluster fails to be restored.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

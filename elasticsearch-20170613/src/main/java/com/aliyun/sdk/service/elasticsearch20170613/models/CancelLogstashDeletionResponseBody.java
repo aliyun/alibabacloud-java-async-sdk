@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelLogstashDeletionResponseBody} extends {@link TeaModel}
  *
  * <p>CancelLogstashDeletionResponseBody</p>
@@ -49,7 +50,10 @@ public class CancelLogstashDeletionResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23EBF56B-2DC0-4507-8BE5-B87395DB0FEB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class CancelLogstashDeletionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the cluster is restored. Valid values:
-         * <p>
+         * <p>Indicates whether the cluster is restored. Valid values:</p>
+         * <ul>
+         * <li>true: The cluster is restored.</li>
+         * <li>false: The cluster is not restored.</li>
+         * </ul>
          * 
-         * *   true: The cluster is restored.
-         * *   false: The cluster is not restored.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

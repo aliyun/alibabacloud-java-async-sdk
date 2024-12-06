@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Logstash} extends {@link TeaModel}
  *
  * <p>Logstash</p>
@@ -410,6 +411,12 @@ public class Logstash extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Logstash} extends {@link TeaModel}
+     *
+     * <p>Logstash</p>
+     */
     public static class EndpointList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("host")
         private String host;
@@ -491,6 +498,12 @@ public class Logstash extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Logstash} extends {@link TeaModel}
+     *
+     * <p>Logstash</p>
+     */
     public static class NetworkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -592,6 +605,12 @@ public class Logstash extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Logstash} extends {@link TeaModel}
+     *
+     * <p>Logstash</p>
+     */
     public static class NodeSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("disk")
         private Long disk;
@@ -673,6 +692,12 @@ public class Logstash extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Logstash} extends {@link TeaModel}
+     *
+     * <p>Logstash</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;
@@ -734,6 +759,12 @@ public class Logstash extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Logstash} extends {@link TeaModel}
+     *
+     * <p>Logstash</p>
+     */
     public static class ZoneInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;

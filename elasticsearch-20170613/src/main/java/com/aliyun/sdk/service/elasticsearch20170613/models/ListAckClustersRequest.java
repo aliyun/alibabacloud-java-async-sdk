@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAckClustersRequest} extends {@link RequestModel}
  *
  * <p>ListAckClustersRequest</p>
@@ -83,7 +84,10 @@ public class ListAckClustersRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -92,7 +96,10 @@ public class ListAckClustersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -101,7 +108,10 @@ public class ListAckClustersRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the ACK clusters belong.
+         * <p>The ID of the virtual private cloud (VPC) to which the ACK clusters belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp12nu14urf0upaf4****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("vpcId", vpcId);

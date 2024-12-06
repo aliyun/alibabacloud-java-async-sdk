@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDeployMachineResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDeployMachineResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyDeployMachineResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C37CE536-6C0F-4778-9B59-6D94C7F7EB63</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class ModifyDeployMachineResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the ECS instances are changed. Valid values:
-         * <p>
+         * <p>Indicates whether the ECS instances are changed. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

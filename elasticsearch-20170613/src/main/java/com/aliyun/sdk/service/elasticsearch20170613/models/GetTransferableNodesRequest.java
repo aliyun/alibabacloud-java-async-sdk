@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTransferableNodesRequest} extends {@link RequestModel}
  *
  * <p>GetTransferableNodesRequest</p>
@@ -84,7 +85,11 @@ public class GetTransferableNodesRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q9o8r0008****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -93,7 +98,11 @@ public class GetTransferableNodesRequest extends Request {
         }
 
         /**
-         * The number of nodes to be migrated.
+         * <p>The number of nodes to be migrated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.putQueryParameter("count", count);
@@ -102,7 +111,11 @@ public class GetTransferableNodesRequest extends Request {
         }
 
         /**
-         * The type of nodes.**WORKER**represents a hot node,**WORKER_WARM** represents a warm node.
+         * <p>The type of nodes.<strong>WORKER</strong>represents a hot node,<strong>WORKER_WARM</strong> represents a warm node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WORKER</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("nodeType", nodeType);

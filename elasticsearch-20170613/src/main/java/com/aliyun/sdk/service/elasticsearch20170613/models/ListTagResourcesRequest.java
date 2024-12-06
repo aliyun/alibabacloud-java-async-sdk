@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -126,7 +127,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d2db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -135,7 +139,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 1d2db86sca4384811e0b5e8707e\*\*\*\*\*\*
+         * <p>1d2db86sca4384811e0b5e8707e******</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -144,7 +151,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;es-cn-aaa&quot;,&quot;es-cn-bbb&quot;]</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -153,7 +163,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * \[{"key":"env","value","dev"},{"key":"dev", "value":"IT"}]
+         * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;,&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;, &quot;value&quot;:&quot;IT&quot;}]</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -162,7 +176,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * \["es-cn-aaa","es-cn-bbb"]
+         * <p>[&quot;es-cn-aaa&quot;,&quot;es-cn-bbb&quot;]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -171,10 +188,13 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The header of the response. This parameter is empty and is for reference only. You cannot force this parameter to be relied on in the program.
-         * <p>
+         * <p>The header of the response. This parameter is empty and is for reference only. You cannot force this parameter to be relied on in the program.</p>
+         * <blockquote>
+         * <p> The return examples does not contain this parameter.</p>
+         * </blockquote>
          * 
-         * >  The return examples does not contain this parameter.
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;,&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;,  &quot;value&quot;:&quot;IT&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

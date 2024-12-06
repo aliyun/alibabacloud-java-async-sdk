@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateKibanaWhiteIpsResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateKibanaWhiteIpsResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The details of the Elasticsearch cluster.
+         * <p>The details of the Elasticsearch cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5EF11F1-DBAE-4020-AC24-DFA6C4345CAE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The private IP address whitelists for access to the Kibana console of the cluster.
+         * <p>The private IP address whitelists for access to the Kibana console of the cluster.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateKibanaWhiteIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateKibanaWhiteIpsResponseBody</p>
+     */
     public static class WhiteIpGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
@@ -121,7 +131,10 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             private String whiteIpType; 
 
             /**
-             * The IP addresses in the whitelist.
+             * <p>The IP addresses in the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_group_name</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -129,7 +142,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the whitelist.
+             * <p>The IP addresses in the whitelist.</p>
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -151,6 +164,12 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateKibanaWhiteIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateKibanaWhiteIpsResponseBody</p>
+     */
     public static class NetworkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -226,7 +245,10 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             private java.util.List < WhiteIpGroupList> whiteIpGroupList; 
 
             /**
-             * The IP address whitelists.
+             * <p>The IP address whitelists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -234,7 +256,10 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1jy348ibzulk6hn****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -242,7 +267,10 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The network type.
+             * <p>The network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -250,7 +278,10 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1a0mifpletdd1da****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -258,7 +289,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address whitelists.
+             * <p>The IP address whitelists.</p>
              */
             public Builder whiteIpGroupList(java.util.List < WhiteIpGroupList> whiteIpGroupList) {
                 this.whiteIpGroupList = whiteIpGroupList;
@@ -272,6 +303,12 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateKibanaWhiteIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateKibanaWhiteIpsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("kibanaIPWhitelist")
         private java.util.List < String > kibanaIPWhitelist;
@@ -323,7 +360,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             private NetworkConfig networkConfig; 
 
             /**
-             * The public IP address whitelists for access to the Kibana console of the cluster.
+             * <p>The public IP address whitelists for access to the Kibana console of the cluster.</p>
              */
             public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
                 this.kibanaIPWhitelist = kibanaIPWhitelist;
@@ -331,7 +368,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address whitelists for access to the Kibana console of the cluster.
+             * <p>The private IP address whitelists for access to the Kibana console of the cluster.</p>
              */
             public Builder kibanaPrivateIPWhitelist(java.util.List < String > kibanaPrivateIPWhitelist) {
                 this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
@@ -339,7 +376,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RenewInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Return results:
-         * <p>
+         * <p>Return results:</p>
+         * <ul>
+         * <li>true: renewal successfully</li>
+         * <li>false: renewal failed</li>
+         * </ul>
          * 
-         * *   true: renewal successfully
-         * *   false: renewal failed
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

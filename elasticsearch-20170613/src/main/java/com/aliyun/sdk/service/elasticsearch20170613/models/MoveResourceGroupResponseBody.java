@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>MoveResourceGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MoveResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>MoveResourceGroupResponseBody</p>
+     */
     public static class DictList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
@@ -133,7 +143,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The size of the dictionary file. Unit: bytes.
+             * <p>The size of the dictionary file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2782602</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -141,7 +154,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dictionary file.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_MAIN.dic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,11 +165,14 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source of the dictionary file. Valid values:
-             * <p>
+             * <p>The type of the source of the dictionary file. Valid values:</p>
+             * <ul>
+             * <li>OSS: Object Storage Service (OSS). You must make sure that the access control list (ACL) of the related OSS bucket is public read.</li>
+             * <li>ORIGIN: previously uploaded dictionary.</li>
+             * </ul>
              * 
-             * *   OSS: Object Storage Service (OSS). You must make sure that the access control list (ACL) of the related OSS bucket is public read.
-             * *   ORIGIN: previously uploaded dictionary.
+             * <strong>example:</strong>
+             * <p>ORIGIN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -161,13 +180,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dictionary. Valid values:
-             * <p>
+             * <p>The type of the dictionary. Valid values:</p>
+             * <ul>
+             * <li>STOP: stopword list</li>
+             * <li>MAIN: main dictionary</li>
+             * <li>SYNONYMS: synonym dictionary</li>
+             * <li>ALI_WS: Alibaba Cloud dictionary</li>
+             * </ul>
              * 
-             * *   STOP: stopword list
-             * *   MAIN: main dictionary
-             * *   SYNONYMS: synonym dictionary
-             * *   ALI_WS: Alibaba Cloud dictionary
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -181,6 +203,12 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MoveResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>MoveResourceGroupResponseBody</p>
+     */
     public static class KibanaConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -244,7 +272,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -252,7 +283,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity. Unit: GB.
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -260,7 +294,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -268,7 +305,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The specification category.
+             * <p>The specification category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -282,6 +322,12 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MoveResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>MoveResourceGroupResponseBody</p>
+     */
     public static class MasterConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
@@ -345,7 +391,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -353,7 +402,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity. Unit: GB.
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -361,7 +413,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -369,7 +424,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The specification category.
+             * <p>The specification category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.sn2ne.large</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -383,6 +441,12 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MoveResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>MoveResourceGroupResponseBody</p>
+     */
     public static class NetworkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -446,7 +510,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * The network type. Only the VPC is supported.
+             * <p>The network type. Only the VPC is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -454,7 +521,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16k1dvzxtmagcva****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -462,7 +532,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The zone where the cluster resides.
+             * <p>The zone where the cluster resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -470,7 +543,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1k4ec6s7sjdbudw****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -484,6 +560,12 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MoveResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>MoveResourceGroupResponseBody</p>
+     */
     public static class NodeSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
@@ -535,7 +617,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The storage capacity. Unit: GB.
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -543,7 +628,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -551,7 +639,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The specification category.
+             * <p>The specification category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -565,6 +656,12 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MoveResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>MoveResourceGroupResponseBody</p>
+     */
     public static class SynonymsDicts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
@@ -628,7 +725,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The size of the dictionary file. Unit: bytes.
+             * <p>The size of the dictionary file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2782602</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -636,7 +736,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dictionary file.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_MAIN.dic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -644,11 +747,14 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source of the dictionary file. Valid values:
-             * <p>
+             * <p>The type of the source of the dictionary file. Valid values:</p>
+             * <ul>
+             * <li>OSS: Object Storage Service (OSS). You must make sure that the ACL of the related OSS bucket is public read.</li>
+             * <li>ORIGIN: previously uploaded dictionary.</li>
+             * </ul>
              * 
-             * *   OSS: Object Storage Service (OSS). You must make sure that the ACL of the related OSS bucket is public read.
-             * *   ORIGIN: previously uploaded dictionary.
+             * <strong>example:</strong>
+             * <p>ORIGIN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -656,13 +762,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dictionary. Valid values:
-             * <p>
+             * <p>The type of the dictionary. Valid values:</p>
+             * <ul>
+             * <li>STOP: stopword list</li>
+             * <li>MAIN: main dictionary</li>
+             * <li>SYNONYMS: synonym dictionary</li>
+             * <li>ALI_WS: Alibaba Cloud dictionary</li>
+             * </ul>
              * 
-             * *   STOP: stopword list
-             * *   MAIN: main dictionary
-             * *   SYNONYMS: synonym dictionary
-             * *   ALI_WS: Alibaba Cloud dictionary
+             * <strong>example:</strong>
+             * <p>STOP</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -676,6 +785,12 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MoveResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>MoveResourceGroupResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
@@ -919,7 +1034,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String updatedAt; 
 
             /**
-             * The time when the cluster was created.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-06T10:18:48.662Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -927,7 +1045,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-abc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -935,7 +1056,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of IK dictionaries.
+             * <p>The configurations of IK dictionaries.</p>
              */
             public Builder dictList(java.util.List < DictList> dictList) {
                 this.dictList = dictList;
@@ -943,7 +1064,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The internal endpoint of the cluster.
+             * <p>The internal endpoint of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-nif1q8auz0003****.elasticsearch.aliyuncs.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -951,7 +1075,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the cluster.
+             * <p>The version of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.7.0_with_X-Pack</p>
              */
             public Builder esVersion(String esVersion) {
                 this.esVersion = esVersion;
@@ -959,7 +1086,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-n6w1o1x0w001c****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -967,7 +1097,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of Kibana nodes.
+             * <p>The configurations of Kibana nodes.</p>
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -975,7 +1105,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of the Kibana console of the cluster.
+             * <p>The public endpoint of the Kibana console of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-nif1q8auz0003****.kibana.elasticsearch.aliyuncs.com</p>
              */
             public Builder kibanaDomain(String kibanaDomain) {
                 this.kibanaDomain = kibanaDomain;
@@ -983,7 +1116,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is used to access the Kibana console of the cluster over the Internet.
+             * <p>The port number that is used to access the Kibana console of the cluster over the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5601</p>
              */
             public Builder kibanaPort(Integer kibanaPort) {
                 this.kibanaPort = kibanaPort;
@@ -991,7 +1127,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of dedicated master nodes.
+             * <p>The configurations of dedicated master nodes.</p>
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
@@ -999,7 +1135,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The network configurations.
+             * <p>The network configurations.</p>
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -1007,7 +1143,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The number of data nodes in the cluster.
+             * <p>The number of data nodes in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -1015,7 +1154,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of data nodes.
+             * <p>The configurations of data nodes.</p>
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -1023,11 +1162,14 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the cluster. Valid values:
-             * <p>
+             * <p>The billing method of the cluster. Valid values:</p>
+             * <ul>
+             * <li>prepaid: subscription</li>
+             * <li>postpaid: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   prepaid: subscription
-             * *   postpaid: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>postpaid</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -1035,7 +1177,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of the cluster.
+             * <p>The public endpoint of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-n6w1o1x0w001c****.public.elasticsearch.aliyuncs.com</p>
              */
             public Builder publicDomain(String publicDomain) {
                 this.publicDomain = publicDomain;
@@ -1043,7 +1188,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is used to access the cluster over the Internet.
+             * <p>The port number that is used to access the cluster over the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9200</p>
              */
             public Builder publicPort(Integer publicPort) {
                 this.publicPort = publicPort;
@@ -1051,13 +1199,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>active: The cluster is normal.</li>
+             * <li>activating: The cluster is being activated.</li>
+             * <li>Inactive: The cluster is frozen.</li>
+             * <li>invalid: The cluster is valid.</li>
+             * </ul>
              * 
-             * *   active: The cluster is normal.
-             * *   activating: The cluster is being activated.
-             * *   Inactive: The cluster is frozen.
-             * *   invalid: The cluster is valid.
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1065,7 +1216,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of synonym dictionaries.
+             * <p>The configurations of synonym dictionaries.</p>
              */
             public Builder synonymsDicts(java.util.List < SynonymsDicts> synonymsDicts) {
                 this.synonymsDicts = synonymsDicts;
@@ -1073,7 +1224,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was last updated.
+             * <p>The time when the cluster was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-18T10:10:04.484Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

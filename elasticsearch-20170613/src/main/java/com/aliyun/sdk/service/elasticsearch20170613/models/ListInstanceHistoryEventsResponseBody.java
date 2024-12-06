@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceHistoryEventsResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceHistoryEventsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceHistoryEventsResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Long xTotalCount;
@@ -171,6 +178,12 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceHistoryEventsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ecsId")
         private String ecsId;

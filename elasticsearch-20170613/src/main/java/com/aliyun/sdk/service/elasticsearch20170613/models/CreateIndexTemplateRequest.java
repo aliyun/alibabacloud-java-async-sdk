@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIndexTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateIndexTemplateRequest</p>
@@ -156,7 +157,10 @@ public class CreateIndexTemplateRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w24n9u900am****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -174,7 +178,7 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * dataStream.
+         * <p>This parameter is required.</p>
          */
         public Builder dataStream(Boolean dataStream) {
             this.putBodyParameter("dataStream", dataStream);
@@ -192,7 +196,7 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * indexPatterns.
+         * <p>This parameter is required.</p>
          */
         public Builder indexPatterns(java.util.List < String > indexPatterns) {
             this.putBodyParameter("indexPatterns", indexPatterns);
@@ -201,7 +205,10 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * indexTemplate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index-template</p>
          */
         public Builder indexTemplate(String indexTemplate) {
             this.putBodyParameter("indexTemplate", indexTemplate);
@@ -234,6 +241,12 @@ public class CreateIndexTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateIndexTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIndexTemplateRequest</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliases")
         private String aliases;

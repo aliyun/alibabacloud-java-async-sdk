@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiagnoseInstanceResponse} extends {@link TeaModel}
  *
  * <p>DiagnoseInstanceResponse</p>

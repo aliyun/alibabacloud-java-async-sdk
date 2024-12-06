@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelineIdsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPipelineIdsResponseBody</p>
@@ -70,6 +71,12 @@ public class ListPipelineIdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPipelineIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelineIdsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("available")
         private Boolean available;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLogstashSettingsRequest} extends {@link RequestModel}
  *
  * <p>UpdateLogstashSettingsRequest</p>
@@ -82,7 +83,11 @@ public class UpdateLogstashSettingsRequest extends Request {
         } 
 
         /**
-         * ls-cn-2r42btxr\*\*\*\*
+         * <p>ls-cn-2r42btxr****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-2r42btxr****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -100,7 +105,10 @@ public class UpdateLogstashSettingsRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

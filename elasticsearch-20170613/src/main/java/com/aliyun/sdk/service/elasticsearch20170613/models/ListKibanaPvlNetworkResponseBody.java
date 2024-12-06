@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListKibanaPvlNetworkResponseBody} extends {@link TeaModel}
  *
  * <p>ListKibanaPvlNetworkResponseBody</p>
@@ -49,7 +50,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * request id
+         * <p>request id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListKibanaPvlNetworkResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKibanaPvlNetworkResponseBody</p>
+     */
     public static class VSwitchIdsZone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("vswitchId")
         private String vswitchId;
@@ -131,6 +141,12 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListKibanaPvlNetworkResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKibanaPvlNetworkResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogstashResponseBody} extends {@link TeaModel}
  *
  * <p>ListLogstashResponseBody</p>
@@ -61,7 +62,7 @@ public class ListLogstashResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The billing method of the instance. Supported: prepaid (subscription) and postpaid (pay-as-you-go).
+         * <p>The billing method of the instance. Supported: prepaid (subscription) and postpaid (pay-as-you-go).</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -69,7 +70,10 @@ public class ListLogstashResponseBody extends TeaModel {
         }
 
         /**
-         * Detailed information about the matching instances.
+         * <p>Detailed information about the matching instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC442F2F-5068-4434-AA21-E78947A9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class ListLogstashResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the VPC.
+         * <p>The name of the VPC.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -90,6 +94,12 @@ public class ListLogstashResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLogstashResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogstashResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
@@ -117,7 +127,10 @@ public class ListLogstashResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The number of data nodes.
+             * <p>The number of data nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -131,6 +144,12 @@ public class ListLogstashResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogstashResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogstashResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -170,7 +189,10 @@ public class ListLogstashResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The disk size of the node.
+             * <p>The disk size of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +200,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the ECS instance.
+             * <p>The instance type of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -192,6 +217,12 @@ public class ListLogstashResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogstashResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogstashResponseBody</p>
+     */
     public static class NetworkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -263,7 +294,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-abc</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -293,6 +327,12 @@ public class ListLogstashResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogstashResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogstashResponseBody</p>
+     */
     public static class NodeSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
@@ -356,7 +396,10 @@ public class ListLogstashResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The network configurations.
+             * <p>The network configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -364,7 +407,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -372,7 +418,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The zone where the cluster resides.
+             * <p>The zone where the cluster resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -380,7 +429,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk.
+             * <p>The type of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logstash.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -394,6 +446,12 @@ public class ListLogstashResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogstashResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogstashResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
@@ -553,7 +611,7 @@ public class ListLogstashResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The configuration information of the data node.
+             * <p>The configuration information of the data node.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -561,7 +619,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-13T03:58:07.253Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -569,7 +630,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last updated.
+             * <p>The time when the instance was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls-cn-abc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -577,7 +641,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the cloud disk.
+             * <p>The tag value of the cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls-cn-n6w1o5jq****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -585,7 +652,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Currently, only Virtual Private Cloud (VPC) is supported.
+             * <p>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</p>
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -593,7 +660,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance. Valid values: Normal, Active, Inactive, and Invalid.
+             * <p>The state of the instance. Valid values: Normal, Active, Inactive, and Invalid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -601,11 +671,11 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to use disk encryption. Valid values:
-             * <p>
-             * 
-             * *   true: Enables the concurrent query feature for queries other than aggregate queries.
-             * *   false: Disables the concurrent query feature for queries other than aggregate queries.
+             * <p>Specifies whether to use disk encryption. Valid values:</p>
+             * <ul>
+             * <li>true: Enables the concurrent query feature for queries other than aggregate queries.</li>
+             * <li>false: Disables the concurrent query feature for queries other than aggregate queries.</li>
+             * </ul>
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -613,7 +683,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>postpaid</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -629,7 +702,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the instance. Currently, only 6.7.0\_with_X-Pack and 7.4.0\_with_X-Pack are supported.
+             * <p>The version of the instance. Currently, only 6.7.0_with_X-Pack and 7.4.0_with_X-Pack are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -637,7 +713,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the instance. Valid values:
+             * <p>The tag of the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-18T10:10:04.484Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -645,7 +724,10 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key of the cloud disk.
+             * <p>The tag key of the cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.7.0_with_X-Pack</p>
              */
             public Builder version(String version) {
                 this.version = version;

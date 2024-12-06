@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePublicNetworkResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePublicNetworkResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A88ECA1-D827-4581-AD39-05149586****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePublicNetworkResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePublicNetworkResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enablePublic")
         private Boolean enablePublic;
@@ -97,7 +107,10 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
             private Boolean enablePublic; 
 
             /**
-             * The status of the public network access switch.
+             * <p>The status of the public network access switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enablePublic(Boolean enablePublic) {
                 this.enablePublic = enablePublic;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSynonymsDictsResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateSynonymsDictsResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C5622CC-B312-426F-85AA-B0271*******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSynonymsDictsResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateSynonymsDictsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
@@ -133,7 +143,10 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The size of the dictionary file. Unit: bytes.
+             * <p>The size of the dictionary file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>220</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -141,7 +154,10 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dictionary file.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deploy_0.txt</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,11 +165,14 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the dictionary file. Valid values:
-             * <p>
+             * <p>The source type of the dictionary file. Valid values:</p>
+             * <ul>
+             * <li>OSS</li>
+             * <li>ORIGIN</li>
+             * </ul>
              * 
-             * *   OSS
-             * *   ORIGIN
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -161,7 +180,10 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
             }
 
             /**
-             * The dictionary type. The value is fixed as SYNONYMS.
+             * <p>The dictionary type. The value is fixed as SYNONYMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYNONYMS</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEmonMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetEmonMonitorDataResponseBody</p>
@@ -130,6 +131,12 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEmonMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEmonMonitorDataResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dps")
         private java.util.Map < String, ? > dps;

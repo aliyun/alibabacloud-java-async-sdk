@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTemplatesResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTemplatesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;

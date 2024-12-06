@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListShardRecoveriesRequest} extends {@link RequestModel}
  *
  * <p>ListShardRecoveriesRequest</p>
@@ -68,7 +69,11 @@ public class ListShardRecoveriesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-7mz293m9a003j****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -77,11 +82,14 @@ public class ListShardRecoveriesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return information about data restoration of shards. Valid values:
-         * <p>
+         * <p>Specifies whether to return information about data restoration of shards. Valid values:</p>
+         * <ul>
+         * <li>true: returns information about data restoration of shards that are being restored.</li>
+         * <li>false: returns information about data restoration of all shards.</li>
+         * </ul>
          * 
-         * *   true: returns information about data restoration of shards that are being restored.
-         * *   false: returns information about data restoration of all shards.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder activeOnly(Boolean activeOnly) {
             this.putQueryParameter("activeOnly", activeOnly);

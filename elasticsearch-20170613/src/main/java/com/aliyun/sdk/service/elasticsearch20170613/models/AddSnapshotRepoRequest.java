@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSnapshotRepoRequest} extends {@link RequestModel}
  *
  * <p>AddSnapshotRepoRequest</p>
@@ -68,7 +69,11 @@ public class AddSnapshotRepoRequest extends Request {
         } 
 
         /**
-         * The ID of the instance for which you want to access OSS repositories across clusters.
+         * <p>The ID of the instance for which you want to access OSS repositories across clusters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisSettingsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisSettingsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E82B8A8-EED7-4557-A6E9-D1AD3E58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosisSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosisSettingsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scene")
         private String scene;
@@ -109,7 +119,10 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * Scenarios of intelligent maintenance.
+             * <p>Scenarios of intelligent maintenance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business Search</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -117,7 +130,10 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last update for Intelligent Maintenance scenarios.
+             * <p>The timestamp of the last update for Intelligent Maintenance scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588994035385</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

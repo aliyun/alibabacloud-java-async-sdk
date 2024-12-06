@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVpcEndpointResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The endpoint domain name, which is used to configure the connection.
+         * <p>The endpoint domain name, which is used to configure the connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the endpoint on the service VPC side.
+         * <p>The ID of the endpoint on the service VPC side.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVpcEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVpcEndpointResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endpointDomain")
         private String endpointDomain;
@@ -157,7 +167,10 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service VPC-side endpoint.
+             * <p>The name of the service VPC-side endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>epsrv-bp1w0p3jdirbfmt6****</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;

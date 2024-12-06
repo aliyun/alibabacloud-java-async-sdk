@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIndexTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteIndexTemplateRequest</p>
@@ -69,7 +70,10 @@ public class DeleteIndexTemplateRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif24adwc0082****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +82,10 @@ public class DeleteIndexTemplateRequest extends Request {
         }
 
         /**
-         * IndexTemplate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index-name</p>
          */
         public Builder indexTemplate(String indexTemplate) {
             this.putPathParameter("IndexTemplate", indexTemplate);

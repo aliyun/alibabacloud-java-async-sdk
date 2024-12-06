@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelineRequest} extends {@link RequestModel}
  *
  * <p>ListPipelineRequest</p>
@@ -98,7 +99,11 @@ public class ListPipelineRequest extends Request {
         } 
 
         /**
-         * 15
+         * <p>15</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-oew1qbgl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -107,7 +112,10 @@ public class ListPipelineRequest extends Request {
         }
 
         /**
-         * The header of the response.
+         * <p>The header of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -116,7 +124,10 @@ public class ListPipelineRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pipeline_test</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("pipelineId", pipelineId);
@@ -125,7 +136,10 @@ public class ListPipelineRequest extends Request {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

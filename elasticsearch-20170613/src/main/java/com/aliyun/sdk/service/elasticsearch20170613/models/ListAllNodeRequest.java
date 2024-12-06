@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAllNodeRequest} extends {@link RequestModel}
  *
  * <p>ListAllNodeRequest</p>
@@ -68,7 +69,11 @@ public class ListAllNodeRequest extends Request {
         } 
 
         /**
-         * The return results.
+         * <p>The return results.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-tl32cpgwa002l****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -77,7 +82,10 @@ public class ListAllNodeRequest extends Request {
         }
 
         /**
-         * The Java Virtual Machine (JVM) heap memory usage of the node.
+         * <p>The Java Virtual Machine (JVM) heap memory usage of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder extended(Boolean extended) {
             this.putQueryParameter("extended", extended);

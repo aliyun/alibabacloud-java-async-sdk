@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAckOperatorResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAckOperatorResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6615EE8D-FD9D-4FD3-997E-6FEA5B8D82ED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAckOperatorResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAckOperatorResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -109,13 +119,16 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The installation status of ES-operator. Valid values:
-             * <p>
+             * <p>The installation status of ES-operator. Valid values:</p>
+             * <ul>
+             * <li>deployed: ES-operator is installed.</li>
+             * <li>not-deploy: ES-operator is not installed.</li>
+             * <li>failed: ES-operator fails to be installed.</li>
+             * <li>unknown: The installation status of ES-operator is unknown.</li>
+             * </ul>
              * 
-             * *   deployed: ES-operator is installed.
-             * *   not-deploy: ES-operator is not installed.
-             * *   failed: ES-operator fails to be installed.
-             * *   unknown: The installation status of ES-operator is unknown.
+             * <strong>example:</strong>
+             * <p>deployed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -123,7 +136,10 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * The version of ES-operator.
+             * <p>The version of ES-operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;

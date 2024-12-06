@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPluginsRequest} extends {@link RequestModel}
  *
  * <p>ListPluginsRequest</p>
@@ -110,7 +111,11 @@ public class ListPluginsRequest extends Request {
         } 
 
         /**
-         * 10
+         * <p>10</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q9o8r0008****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -119,7 +124,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * SYSTEM
+         * <p>SYSTEM</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analysis-ik</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -128,7 +136,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(String page) {
             this.putQueryParameter("page", page);
@@ -137,7 +148,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * The header of the response.
+         * <p>The header of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -146,7 +160,10 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);

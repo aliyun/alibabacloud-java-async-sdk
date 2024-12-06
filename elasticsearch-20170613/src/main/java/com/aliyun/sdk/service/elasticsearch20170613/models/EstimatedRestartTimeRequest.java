@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EstimatedRestartTimeRequest} extends {@link RequestModel}
  *
  * <p>EstimatedRestartTimeRequest</p>
@@ -82,7 +83,11 @@ public class EstimatedRestartTimeRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -100,7 +105,10 @@ public class EstimatedRestartTimeRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly restart the cluster. Default value: false.
+         * <p>Specifies whether to forcibly restart the cluster. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("force", force);

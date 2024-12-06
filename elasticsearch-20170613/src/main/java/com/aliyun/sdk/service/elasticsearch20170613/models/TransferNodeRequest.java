@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferNodeRequest} extends {@link RequestModel}
  *
  * <p>TransferNodeRequest</p>
@@ -97,7 +98,10 @@ public class TransferNodeRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q9o8r0008****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -124,7 +128,10 @@ public class TransferNodeRequest extends Request {
         }
 
         /**
-         * nodeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WORKER</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("nodeType", nodeType);
@@ -139,6 +146,12 @@ public class TransferNodeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TransferNodeRequest} extends {@link TeaModel}
+     *
+     * <p>TransferNodeRequest</p>
+     */
     public static class TransferNodeRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("host")
         private String host;

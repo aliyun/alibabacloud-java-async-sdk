@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EstimatedRestartTimeResponseBody} extends {@link TeaModel}
  *
  * <p>EstimatedRestartTimeResponseBody</p>
@@ -49,7 +50,10 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EstimatedRestartTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>EstimatedRestartTimeResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("unit")
         private String unit;
@@ -109,7 +119,10 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>second</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -117,7 +130,10 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated restart time.
+             * <p>The estimated restart time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder value(Long value) {
                 this.value = value;

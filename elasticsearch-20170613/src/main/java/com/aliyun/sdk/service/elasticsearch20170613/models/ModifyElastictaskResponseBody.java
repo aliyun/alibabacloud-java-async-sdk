@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyElastictaskResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyElastictaskResponseBody</p>
@@ -70,6 +71,12 @@ public class ModifyElastictaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyElastictaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyElastictaskResponseBody</p>
+     */
     public static class ElasticExpansionTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cronExpression")
         private String cronExpression;
@@ -191,6 +198,12 @@ public class ModifyElastictaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyElastictaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyElastictaskResponseBody</p>
+     */
     public static class ElasticShrinkTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cronExpression")
         private String cronExpression;
@@ -312,6 +325,12 @@ public class ModifyElastictaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyElastictaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyElastictaskResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("elasticExpansionTask")
         private ElasticExpansionTask elasticExpansionTask;

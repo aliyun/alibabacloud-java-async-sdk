@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExtendfilesResponseBody} extends {@link TeaModel}
  *
  * <p>ListExtendfilesResponseBody</p>
@@ -49,7 +50,10 @@ public class ListExtendfilesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class ListExtendfilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExtendfilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExtendfilesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("filePath")
         private String filePath;
@@ -133,7 +143,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * The path of the driver file.
+             * <p>The path of the driver file.</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -141,7 +151,10 @@ public class ListExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the driver file.
+             * <p>The size of the driver file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>968668</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -149,7 +162,10 @@ public class ListExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the driver file.
+             * <p>The name of the driver file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql-connector-java-5.1.35.jar</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -157,7 +173,10 @@ public class ListExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * The source type.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORIGIN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

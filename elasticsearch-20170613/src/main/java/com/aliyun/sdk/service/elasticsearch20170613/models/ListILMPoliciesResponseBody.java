@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListILMPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListILMPoliciesResponseBody</p>
@@ -70,6 +71,12 @@ public class ListILMPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListILMPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListILMPoliciesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;

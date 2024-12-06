@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceIndicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceIndicesResponseBody</p>
@@ -61,7 +62,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The total size of the OpenStore cold stage index for this instance. Unit: bytes.
+         * <p>The total size of the OpenStore cold stage index for this instance. Unit: bytes.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -69,7 +70,10 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of indexes in Cloud Hosting.
+         * <p>The total number of indexes in Cloud Hosting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * The total storage space occupied by the current index. Unit: bytes.
+         * <p>The total storage space occupied by the current index. Unit: bytes.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -90,6 +94,12 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceIndicesResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Managed-Count")
         private Integer xManagedCount;
@@ -153,7 +163,10 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             private Long xOSSStorageSize; 
 
             /**
-             * The details of the index list.
+             * <p>The details of the index list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder xManagedCount(Integer xManagedCount) {
                 this.xManagedCount = xManagedCount;
@@ -161,7 +174,10 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of indexes in the OpenStore cold phase.
+             * <p>The total number of indexes in the OpenStore cold phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18093942932</p>
              */
             public Builder xManagedStorageSize(Long xManagedStorageSize) {
                 this.xManagedStorageSize = xManagedStorageSize;
@@ -169,7 +185,10 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the index list was queried.
+             * <p>The time when the index list was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder xOSSCount(Integer xOSSCount) {
                 this.xOSSCount = xOSSCount;
@@ -177,7 +196,10 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9093942932</p>
              */
             public Builder xOSSStorageSize(Long xOSSStorageSize) {
                 this.xOSSStorageSize = xOSSStorageSize;
@@ -191,6 +213,12 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceIndicesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -302,7 +330,10 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * The name of the Elasticsearch index.
+             * <p>The name of the Elasticsearch index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-11T05:49:41.114Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -326,12 +357,15 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * The managed status of the index. The following three statuses are supported:
-             * <p>
+             * <p>The managed status of the index. The following three statuses are supported:</p>
+             * <ul>
+             * <li>following: Hosting.</li>
+             * <li>closing: The instance is being unhosted.</li>
+             * <li>closed: unmanaged.</li>
+             * </ul>
              * 
-             * *   following: Hosting.
-             * *   closing: The instance is being unhosted.
-             * *   closed: unmanaged.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isManaged(String isManaged) {
                 this.isManaged = isManaged;
@@ -339,15 +373,19 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * The current storage lifecycle. Value meaning:
-             * <p>
+             * <p>The current storage lifecycle. Value meaning:</p>
+             * <ul>
+             * <li>warm: warm.</li>
+             * <li>cold: the cold phase.</li>
+             * <li>hot: hot phase.</li>
+             * <li>delete: deletes a stage.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If this parameter is empty, the current index is not managed by the lifecycle.</p>
+             * </blockquote>
              * 
-             * *   warm: warm.
-             * *   cold: the cold phase.
-             * *   hot: hot phase.
-             * *   delete: deletes a stage.
-             * 
-             * >  If this parameter is empty, the current index is not managed by the lifecycle.
+             * <strong>example:</strong>
+             * <p>closing</p>
              */
             public Builder managedStatus(String managedStatus) {
                 this.managedStatus = managedStatus;
@@ -355,7 +393,10 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * The full lifecycle status of the current index.
+             * <p>The full lifecycle status of the current index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.kibana_task_manager_1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -371,12 +412,15 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * The running status of the index. The following three statuses are supported:
-             * <p>
+             * <p>The running status of the index. The following three statuses are supported:</p>
+             * <ul>
+             * <li>green: healthy.</li>
+             * <li>yellow: alerts.</li>
+             * <li>red: an exception.</li>
+             * </ul>
              * 
-             * *   green: healthy.
-             * *   yellow: alerts.
-             * *   red: an exception.
+             * <strong>example:</strong>
+             * <p>49298589</p>
              */
             public Builder size(Long size) {
                 this.size = size;

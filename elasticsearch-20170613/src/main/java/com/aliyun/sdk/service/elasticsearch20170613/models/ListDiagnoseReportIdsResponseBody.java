@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDiagnoseReportIdsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDiagnoseReportIdsResponseBody</p>
@@ -61,7 +62,7 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
         private java.util.List < String > result; 
 
         /**
-         * The header of the response.
+         * <p>The header of the response.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -69,7 +70,10 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDiagnoseReportIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDiagnoseReportIdsResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
@@ -117,7 +127,10 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;

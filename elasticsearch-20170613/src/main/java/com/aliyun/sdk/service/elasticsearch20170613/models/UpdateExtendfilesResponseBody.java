@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateExtendfilesResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateExtendfilesResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -70,6 +74,12 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateExtendfilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateExtendfilesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
@@ -121,7 +131,10 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * The size of the driver file. Unit: byte.
+             * <p>The size of the driver file. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1853083</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -129,7 +142,10 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the driver file.
+             * <p>The name of the driver file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql-connector-java-6.0.2.jar</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -137,7 +153,10 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the driver file. This parameter is fixed as ORIGIN, which indicates that the driver file is retained.
+             * <p>The source of the driver file. This parameter is fixed as ORIGIN, which indicates that the driver file is retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORIGIN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

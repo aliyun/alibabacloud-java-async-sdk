@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSnapshotReposByInstanceIdRequest} extends {@link RequestModel}
  *
  * <p>ListSnapshotReposByInstanceIdRequest</p>
@@ -54,7 +55,11 @@ public class ListSnapshotReposByInstanceIdRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-0pp1jxvcl000z****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

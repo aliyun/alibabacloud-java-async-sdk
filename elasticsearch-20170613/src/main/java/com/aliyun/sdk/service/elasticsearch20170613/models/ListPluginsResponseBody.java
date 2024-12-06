@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPluginsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPluginsResponseBody</p>
@@ -61,7 +62,7 @@ public class ListPluginsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The description of the plug-in.
+         * <p>The description of the plug-in.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -69,7 +70,10 @@ public class ListPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A5D8E74-565C-43DC-B031-29289FA9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class ListPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the plug-in.
+         * <p>The status of the plug-in.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -90,6 +94,12 @@ public class ListPluginsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPluginsResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
@@ -117,7 +127,10 @@ public class ListPluginsResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The address of the plug-in description document.
+             * <p>The address of the plug-in description document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -131,6 +144,12 @@ public class ListPluginsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPluginsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -206,7 +225,10 @@ public class ListPluginsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The source type of the plug-in.
+             * <p>The source type of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IK analysis plug-in for Elasticsearch.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -230,7 +252,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * <p>The name of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxx.html">https://xxxx.html</a></p>
              */
             public Builder specificationUrl(String specificationUrl) {
                 this.specificationUrl = specificationUrl;

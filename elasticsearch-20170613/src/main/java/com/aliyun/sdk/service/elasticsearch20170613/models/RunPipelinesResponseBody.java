@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunPipelinesResponseBody} extends {@link TeaModel}
  *
  * <p>RunPipelinesResponseBody</p>
@@ -49,7 +50,10 @@ public class RunPipelinesResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class RunPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result. Valid values:
-         * <p>
+         * <p>The returned result. Valid values:</p>
+         * <ul>
+         * <li>true: successful</li>
+         * <li>false: failed</li>
+         * </ul>
          * 
-         * *   true: successful
-         * *   false: failed
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
