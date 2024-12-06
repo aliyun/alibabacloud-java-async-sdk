@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class InitializeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppQualityCheck")
+    private String appQualityCheck;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Authorize")
     private String authorize;
 
@@ -89,6 +93,10 @@ public class InitializeRequest extends Request {
     private String ocr;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcedurePriority")
+    private String procedurePriority;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
@@ -126,6 +134,7 @@ public class InitializeRequest extends Request {
 
     private InitializeRequest(Builder builder) {
         super(builder);
+        this.appQualityCheck = builder.appQualityCheck;
         this.authorize = builder.authorize;
         this.callbackToken = builder.callbackToken;
         this.callbackUrl = builder.callbackUrl;
@@ -145,6 +154,7 @@ public class InitializeRequest extends Request {
         this.metaInfo = builder.metaInfo;
         this.model = builder.model;
         this.ocr = builder.ocr;
+        this.procedurePriority = builder.procedurePriority;
         this.productCode = builder.productCode;
         this.productFlow = builder.productFlow;
         this.returnUrl = builder.returnUrl;
@@ -167,6 +177,13 @@ public class InitializeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appQualityCheck
+     */
+    public String getAppQualityCheck() {
+        return this.appQualityCheck;
     }
 
     /**
@@ -303,6 +320,13 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return procedurePriority
+     */
+    public String getProcedurePriority() {
+        return this.procedurePriority;
+    }
+
+    /**
      * @return productCode
      */
     public String getProductCode() {
@@ -366,6 +390,7 @@ public class InitializeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InitializeRequest, Builder> {
+        private String appQualityCheck; 
         private String authorize; 
         private String callbackToken; 
         private String callbackUrl; 
@@ -385,6 +410,7 @@ public class InitializeRequest extends Request {
         private String metaInfo; 
         private String model; 
         private String ocr; 
+        private String procedurePriority; 
         private String productCode; 
         private String productFlow; 
         private String returnUrl; 
@@ -401,6 +427,7 @@ public class InitializeRequest extends Request {
 
         private Builder(InitializeRequest request) {
             super(request);
+            this.appQualityCheck = request.appQualityCheck;
             this.authorize = request.authorize;
             this.callbackToken = request.callbackToken;
             this.callbackUrl = request.callbackUrl;
@@ -420,6 +447,7 @@ public class InitializeRequest extends Request {
             this.metaInfo = request.metaInfo;
             this.model = request.model;
             this.ocr = request.ocr;
+            this.procedurePriority = request.procedurePriority;
             this.productCode = request.productCode;
             this.productFlow = request.productFlow;
             this.returnUrl = request.returnUrl;
@@ -430,6 +458,15 @@ public class InitializeRequest extends Request {
             this.showOcrResult = request.showOcrResult;
             this.styleConfig = request.styleConfig;
         } 
+
+        /**
+         * AppQualityCheck.
+         */
+        public Builder appQualityCheck(String appQualityCheck) {
+            this.putQueryParameter("AppQualityCheck", appQualityCheck);
+            this.appQualityCheck = appQualityCheck;
+            return this;
+        }
 
         /**
          * Authorize.
@@ -604,6 +641,15 @@ public class InitializeRequest extends Request {
         public Builder ocr(String ocr) {
             this.putQueryParameter("Ocr", ocr);
             this.ocr = ocr;
+            return this;
+        }
+
+        /**
+         * ProcedurePriority.
+         */
+        public Builder procedurePriority(String procedurePriority) {
+            this.putQueryParameter("ProcedurePriority", procedurePriority);
+            this.procedurePriority = procedurePriority;
             return this;
         }
 

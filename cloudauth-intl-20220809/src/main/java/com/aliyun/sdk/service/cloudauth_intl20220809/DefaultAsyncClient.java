@@ -40,7 +40,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated 
+     * @deprecated OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.  * @param request  the request parameters of CardOcr  CardOcrRequest
+     * @return CardOcrResponse
      */
     @Deprecated
     @Override
@@ -57,6 +58,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckResult  CheckResultRequest
+     * @return CheckResultResponse
+     */
     @Override
     public CompletableFuture<CheckResultResponse> checkResult(CheckResultRequest request) {
         try {
@@ -71,6 +76,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVerifyResult  DeleteVerifyResultRequest
+     * @return DeleteVerifyResultResponse
+     */
     @Override
     public CompletableFuture<DeleteVerifyResultResponse> deleteVerifyResult(DeleteVerifyResultRequest request) {
         try {
@@ -85,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DocOcr  DocOcrRequest
+     * @return DocOcrResponse
+     */
     @Override
     public CompletableFuture<DocOcrResponse> docOcr(DocOcrRequest request) {
         try {
@@ -99,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EkycVerify  EkycVerifyRequest
+     * @return EkycVerifyResponse
+     */
     @Override
     public CompletableFuture<EkycVerifyResponse> ekycVerify(EkycVerifyRequest request) {
         try {
@@ -113,6 +130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FaceCompare  FaceCompareRequest
+     * @return FaceCompareResponse
+     */
     @Override
     public CompletableFuture<FaceCompareResponse> faceCompare(FaceCompareRequest request) {
         try {
@@ -127,6 +148,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FaceGuardRisk  FaceGuardRiskRequest
+     * @return FaceGuardRiskResponse
+     */
+    @Override
+    public CompletableFuture<FaceGuardRiskResponse> faceGuardRisk(FaceGuardRiskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("FaceGuardRisk").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FaceGuardRiskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FaceGuardRiskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of FaceLiveness  FaceLivenessRequest
+     * @return FaceLivenessResponse
+     */
     @Override
     public CompletableFuture<FaceLivenessResponse> faceLiveness(FaceLivenessRequest request) {
         try {
@@ -141,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FraudResultCallBack  FraudResultCallBackRequest
+     * @return FraudResultCallBackResponse
+     */
     @Override
     public CompletableFuture<FraudResultCallBackResponse> fraudResultCallBack(FraudResultCallBackRequest request) {
         try {
@@ -155,6 +202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Id2MetaVerifyIntl  Id2MetaVerifyIntlRequest
+     * @return Id2MetaVerifyIntlResponse
+     */
     @Override
     public CompletableFuture<Id2MetaVerifyIntlResponse> id2MetaVerifyIntl(Id2MetaVerifyIntlRequest request) {
         try {
@@ -169,6 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Initialize  InitializeRequest
+     * @return InitializeResponse
+     */
     @Override
     public CompletableFuture<InitializeResponse> initialize(InitializeRequest request) {
         try {
@@ -183,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Mobile3MetaVerifyIntl  Mobile3MetaVerifyIntlRequest
+     * @return Mobile3MetaVerifyIntlResponse
+     */
     @Override
     public CompletableFuture<Mobile3MetaVerifyIntlResponse> mobile3MetaVerifyIntl(Mobile3MetaVerifyIntlRequest request) {
         try {

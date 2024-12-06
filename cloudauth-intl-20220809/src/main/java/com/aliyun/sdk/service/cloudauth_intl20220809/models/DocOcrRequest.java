@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DocOcrRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CardSide")
+    private String cardSide;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DocType")
     private String docType;
 
@@ -54,6 +58,7 @@ public class DocOcrRequest extends Request {
 
     private DocOcrRequest(Builder builder) {
         super(builder);
+        this.cardSide = builder.cardSide;
         this.docType = builder.docType;
         this.idFaceQuality = builder.idFaceQuality;
         this.idOcrPictureBase64 = builder.idOcrPictureBase64;
@@ -77,6 +82,13 @@ public class DocOcrRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cardSide
+     */
+    public String getCardSide() {
+        return this.cardSide;
     }
 
     /**
@@ -150,6 +162,7 @@ public class DocOcrRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DocOcrRequest, Builder> {
+        private String cardSide; 
         private String docType; 
         private String idFaceQuality; 
         private String idOcrPictureBase64; 
@@ -167,6 +180,7 @@ public class DocOcrRequest extends Request {
 
         private Builder(DocOcrRequest request) {
             super(request);
+            this.cardSide = request.cardSide;
             this.docType = request.docType;
             this.idFaceQuality = request.idFaceQuality;
             this.idOcrPictureBase64 = request.idOcrPictureBase64;
@@ -178,6 +192,15 @@ public class DocOcrRequest extends Request {
             this.productCode = request.productCode;
             this.spoof = request.spoof;
         } 
+
+        /**
+         * CardSide.
+         */
+        public Builder cardSide(String cardSide) {
+            this.putQueryParameter("CardSide", cardSide);
+            this.cardSide = cardSide;
+            return this;
+        }
 
         /**
          * DocType.

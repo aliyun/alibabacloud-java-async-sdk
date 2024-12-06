@@ -133,6 +133,9 @@ public class CheckResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtIdInfo")
         private String extIdInfo;
 
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
+        private String extInfo;
+
         @com.aliyun.core.annotation.NameInMap("ExtRiskInfo")
         private String extRiskInfo;
 
@@ -147,6 +150,7 @@ public class CheckResultResponseBody extends TeaModel {
             this.extBasicInfo = builder.extBasicInfo;
             this.extFaceInfo = builder.extFaceInfo;
             this.extIdInfo = builder.extIdInfo;
+            this.extInfo = builder.extInfo;
             this.extRiskInfo = builder.extRiskInfo;
             this.passed = builder.passed;
             this.subCode = builder.subCode;
@@ -189,6 +193,13 @@ public class CheckResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return extInfo
+         */
+        public String getExtInfo() {
+            return this.extInfo;
+        }
+
+        /**
          * @return extRiskInfo
          */
         public String getExtRiskInfo() {
@@ -214,6 +225,7 @@ public class CheckResultResponseBody extends TeaModel {
             private String extBasicInfo; 
             private String extFaceInfo; 
             private String extIdInfo; 
+            private String extInfo; 
             private String extRiskInfo; 
             private String passed; 
             private String subCode; 
@@ -247,6 +259,14 @@ public class CheckResultResponseBody extends TeaModel {
              */
             public Builder extIdInfo(String extIdInfo) {
                 this.extIdInfo = extIdInfo;
+                return this;
+            }
+
+            /**
+             * ExtInfo.
+             */
+            public Builder extInfo(String extInfo) {
+                this.extInfo = extInfo;
                 return this;
             }
 
