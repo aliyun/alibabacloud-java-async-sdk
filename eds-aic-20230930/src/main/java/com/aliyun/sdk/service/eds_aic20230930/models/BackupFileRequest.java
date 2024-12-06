@@ -18,6 +18,10 @@ public class BackupFileRequest extends Request {
     private java.util.List < String > androidInstanceIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupFileName")
+    private String backupFileName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupFilePath")
     @com.aliyun.core.annotation.Validation(required = true)
     private String backupFilePath;
@@ -45,6 +49,7 @@ public class BackupFileRequest extends Request {
     private BackupFileRequest(Builder builder) {
         super(builder);
         this.androidInstanceIdList = builder.androidInstanceIdList;
+        this.backupFileName = builder.backupFileName;
         this.backupFilePath = builder.backupFilePath;
         this.description = builder.description;
         this.sourceAppList = builder.sourceAppList;
@@ -71,6 +76,13 @@ public class BackupFileRequest extends Request {
      */
     public java.util.List < String > getAndroidInstanceIdList() {
         return this.androidInstanceIdList;
+    }
+
+    /**
+     * @return backupFileName
+     */
+    public String getBackupFileName() {
+        return this.backupFileName;
     }
 
     /**
@@ -117,6 +129,7 @@ public class BackupFileRequest extends Request {
 
     public static final class Builder extends Request.Builder<BackupFileRequest, Builder> {
         private java.util.List < String > androidInstanceIdList; 
+        private String backupFileName; 
         private String backupFilePath; 
         private String description; 
         private java.util.List < String > sourceAppList; 
@@ -131,6 +144,7 @@ public class BackupFileRequest extends Request {
         private Builder(BackupFileRequest request) {
             super(request);
             this.androidInstanceIdList = request.androidInstanceIdList;
+            this.backupFileName = request.backupFileName;
             this.backupFilePath = request.backupFilePath;
             this.description = request.description;
             this.sourceAppList = request.sourceAppList;
@@ -145,6 +159,15 @@ public class BackupFileRequest extends Request {
         public Builder androidInstanceIdList(java.util.List < String > androidInstanceIdList) {
             this.putQueryParameter("AndroidInstanceIdList", androidInstanceIdList);
             this.androidInstanceIdList = androidInstanceIdList;
+            return this;
+        }
+
+        /**
+         * BackupFileName.
+         */
+        public Builder backupFileName(String backupFileName) {
+            this.putQueryParameter("BackupFileName", backupFileName);
+            this.backupFileName = backupFileName;
             return this;
         }
 

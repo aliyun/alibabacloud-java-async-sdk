@@ -191,6 +191,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArchitectureType")
         private String architectureType;
 
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceAmount")
+        private Integer availableInstanceAmount;
+
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
@@ -269,6 +272,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         private InstanceGroupModel(Builder builder) {
             this.appInstanceGroupId = builder.appInstanceGroupId;
             this.architectureType = builder.architectureType;
+            this.availableInstanceAmount = builder.availableInstanceAmount;
             this.chargeType = builder.chargeType;
             this.cpu = builder.cpu;
             this.disks = builder.disks;
@@ -316,6 +320,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
          */
         public String getArchitectureType() {
             return this.architectureType;
+        }
+
+        /**
+         * @return availableInstanceAmount
+         */
+        public Integer getAvailableInstanceAmount() {
+            return this.availableInstanceAmount;
         }
 
         /**
@@ -496,6 +507,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String appInstanceGroupId; 
             private String architectureType; 
+            private Integer availableInstanceAmount; 
             private String chargeType; 
             private String cpu; 
             private java.util.List < Disks> disks; 
@@ -535,6 +547,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              */
             public Builder architectureType(String architectureType) {
                 this.architectureType = architectureType;
+                return this;
+            }
+
+            /**
+             * AvailableInstanceAmount.
+             */
+            public Builder availableInstanceAmount(Integer availableInstanceAmount) {
+                this.availableInstanceAmount = availableInstanceAmount;
                 return this;
             }
 
