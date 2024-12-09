@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of VerifyCaptcha  VerifyCaptchaRequest
+     * @return VerifyCaptchaResponse
+     */
     @Override
     public CompletableFuture<VerifyCaptchaResponse> verifyCaptcha(VerifyCaptchaRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyIntelligentCaptcha  VerifyIntelligentCaptchaRequest
+     * @return VerifyIntelligentCaptchaResponse
+     */
     @Override
     public CompletableFuture<VerifyIntelligentCaptchaResponse> verifyIntelligentCaptcha(VerifyIntelligentCaptchaRequest request) {
         try {

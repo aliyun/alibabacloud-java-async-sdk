@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.captcha20230305.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyIntelligentCaptchaResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyIntelligentCaptchaResponseBody</p>
  */
 public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private VerifyIntelligentCaptchaResponseBody(Builder builder) {
@@ -102,7 +102,10 @@ public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95784F***D39FDC5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,11 +134,17 @@ public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifyIntelligentCaptchaResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyIntelligentCaptchaResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("VerifyCode")
+        @com.aliyun.core.annotation.NameInMap("VerifyCode")
         private String verifyCode;
 
-        @NameInMap("VerifyResult")
+        @com.aliyun.core.annotation.NameInMap("VerifyResult")
         private Boolean verifyResult;
 
         private Result(Builder builder) {

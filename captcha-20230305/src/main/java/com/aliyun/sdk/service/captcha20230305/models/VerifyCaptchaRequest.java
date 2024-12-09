@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.captcha20230305.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyCaptchaRequest} extends {@link RequestModel}
  *
  * <p>VerifyCaptchaRequest</p>
  */
 public class VerifyCaptchaRequest extends Request {
-    @Query
-    @NameInMap("CaptchaVerifyParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaptchaVerifyParam")
     private String captchaVerifyParam;
 
     private VerifyCaptchaRequest(Builder builder) {
