@@ -24,11 +24,16 @@ public class SetUserSsoSettingsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SsoEnabled")
     private Boolean ssoEnabled;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SsoLoginWithDomain")
+    private Boolean ssoLoginWithDomain;
+
     private SetUserSsoSettingsRequest(Builder builder) {
         super(builder);
         this.auxiliaryDomain = builder.auxiliaryDomain;
         this.metadataDocument = builder.metadataDocument;
         this.ssoEnabled = builder.ssoEnabled;
+        this.ssoLoginWithDomain = builder.ssoLoginWithDomain;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class SetUserSsoSettingsRequest extends Request {
         return this.ssoEnabled;
     }
 
+    /**
+     * @return ssoLoginWithDomain
+     */
+    public Boolean getSsoLoginWithDomain() {
+        return this.ssoLoginWithDomain;
+    }
+
     public static final class Builder extends Request.Builder<SetUserSsoSettingsRequest, Builder> {
         private String auxiliaryDomain; 
         private String metadataDocument; 
         private Boolean ssoEnabled; 
+        private Boolean ssoLoginWithDomain; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class SetUserSsoSettingsRequest extends Request {
             this.auxiliaryDomain = request.auxiliaryDomain;
             this.metadataDocument = request.metadataDocument;
             this.ssoEnabled = request.ssoEnabled;
+            this.ssoLoginWithDomain = request.ssoLoginWithDomain;
         } 
 
         /**
@@ -119,6 +133,15 @@ public class SetUserSsoSettingsRequest extends Request {
         public Builder ssoEnabled(Boolean ssoEnabled) {
             this.putQueryParameter("SsoEnabled", ssoEnabled);
             this.ssoEnabled = ssoEnabled;
+            return this;
+        }
+
+        /**
+         * SsoLoginWithDomain.
+         */
+        public Builder ssoLoginWithDomain(Boolean ssoLoginWithDomain) {
+            this.putQueryParameter("SsoLoginWithDomain", ssoLoginWithDomain);
+            this.ssoLoginWithDomain = ssoLoginWithDomain;
             return this;
         }
 

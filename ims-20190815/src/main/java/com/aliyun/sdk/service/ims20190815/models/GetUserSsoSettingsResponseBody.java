@@ -90,10 +90,14 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SsoEnabled")
         private Boolean ssoEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("SsoLoginWithDomain")
+        private Boolean ssoLoginWithDomain;
+
         private UserSsoSettings(Builder builder) {
             this.auxiliaryDomain = builder.auxiliaryDomain;
             this.metadataDocument = builder.metadataDocument;
             this.ssoEnabled = builder.ssoEnabled;
+            this.ssoLoginWithDomain = builder.ssoLoginWithDomain;
         }
 
         public static Builder builder() {
@@ -125,10 +129,18 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
             return this.ssoEnabled;
         }
 
+        /**
+         * @return ssoLoginWithDomain
+         */
+        public Boolean getSsoLoginWithDomain() {
+            return this.ssoLoginWithDomain;
+        }
+
         public static final class Builder {
             private String auxiliaryDomain; 
             private String metadataDocument; 
             private Boolean ssoEnabled; 
+            private Boolean ssoLoginWithDomain; 
 
             /**
              * <p>The auxiliary domain name.</p>
@@ -160,6 +172,14 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
              */
             public Builder ssoEnabled(Boolean ssoEnabled) {
                 this.ssoEnabled = ssoEnabled;
+                return this;
+            }
+
+            /**
+             * SsoLoginWithDomain.
+             */
+            public Builder ssoLoginWithDomain(Boolean ssoLoginWithDomain) {
+                this.ssoLoginWithDomain = ssoLoginWithDomain;
                 return this;
             }
 
