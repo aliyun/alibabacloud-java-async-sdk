@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlgorithmVersionRequest} extends {@link RequestModel}
  *
  * <p>DeleteAlgorithmVersionRequest</p>
@@ -13,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteAlgorithmVersionRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("AlgorithmId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String algorithmId;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("AlgorithmVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String algorithmVersion;
 
     private DeleteAlgorithmVersionRequest(Builder builder) {
@@ -67,7 +70,10 @@ public class DeleteAlgorithmVersionRequest extends Request {
         } 
 
         /**
-         * AlgorithmId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algo-xsldfvu1334</p>
          */
         public Builder algorithmId(String algorithmId) {
             this.putPathParameter("AlgorithmId", algorithmId);
@@ -76,7 +82,10 @@ public class DeleteAlgorithmVersionRequest extends Request {
         }
 
         /**
-         * AlgorithmVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v0.0.1</p>
          */
         public Builder algorithmVersion(String algorithmVersion) {
             this.putPathParameter("AlgorithmVersion", algorithmVersion);

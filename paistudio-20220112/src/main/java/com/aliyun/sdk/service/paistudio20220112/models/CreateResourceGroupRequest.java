@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceGroupRequest</p>
@@ -183,6 +184,12 @@ public class CreateResourceGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateResourceGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

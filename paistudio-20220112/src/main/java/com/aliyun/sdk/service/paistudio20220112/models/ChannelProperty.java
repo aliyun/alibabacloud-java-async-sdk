@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChannelProperty} extends {@link TeaModel}
  *
  * <p>ChannelProperty</p>
@@ -51,7 +52,10 @@ public class ChannelProperty extends TeaModel {
         private String value; 
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SKlearn</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -59,7 +63,10 @@ public class ChannelProperty extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Framework</p>
          */
         public Builder value(String value) {
             this.value = value;

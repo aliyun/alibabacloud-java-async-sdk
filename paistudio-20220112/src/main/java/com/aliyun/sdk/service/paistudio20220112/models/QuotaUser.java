@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuotaUser} extends {@link TeaModel}
  *
  * <p>QuotaUser</p>
@@ -110,6 +111,12 @@ public class QuotaUser extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuotaUser} extends {@link TeaModel}
+     *
+     * <p>QuotaUser</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Submitted")
         private ResourceAmount submitted;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>ScaleQuotaResponseBody</p>
@@ -49,7 +50,10 @@ public class ScaleQuotaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Quota Id
+         * <p>Quota Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotamtl37ge7gkvdz</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceWebTerminalRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceWebTerminalRequest</p>
@@ -69,7 +70,10 @@ public class CreateInstanceWebTerminalRequest extends Request {
         } 
 
         /**
-         * TrainingJobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train1nc6686x36b</p>
          */
         public Builder trainingJobId(String trainingJobId) {
             this.putPathParameter("TrainingJobId", trainingJobId);
@@ -78,7 +82,10 @@ public class CreateInstanceWebTerminalRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train1nc6686x36b-master-0</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrainingJobOutputModelsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrainingJobOutputModelsResponseBody</p>
@@ -50,6 +51,12 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTrainingJobOutputModelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobOutputModelsResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -111,6 +118,12 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobOutputModelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobOutputModelsResponseBody</p>
+     */
     public static class OutputModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompressionSpec")
         private java.util.Map < String, ? > compressionSpec;

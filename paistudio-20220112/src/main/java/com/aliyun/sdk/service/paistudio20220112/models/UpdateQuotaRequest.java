@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateQuotaRequest} extends {@link RequestModel}
  *
  * <p>UpdateQuotaRequest</p>
@@ -123,7 +124,10 @@ public class UpdateQuotaRequest extends Request {
         } 
 
         /**
-         * Quota ID
+         * <p>Quota ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota-20210126170216-mtl37ge7gkvdz</p>
          */
         public Builder quotaId(String quotaId) {
             this.putPathParameter("QuotaId", quotaId);

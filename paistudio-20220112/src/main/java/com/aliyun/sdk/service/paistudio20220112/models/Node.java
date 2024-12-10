@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Node} extends {@link TeaModel}
  *
  * <p>Node</p>
@@ -25,6 +26,9 @@ public class Node extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("GPU")
     private String GPU;
+
+    @com.aliyun.core.annotation.NameInMap("GPUMemory")
+    private String GPUMemory;
 
     @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
@@ -104,6 +108,7 @@ public class Node extends TeaModel {
         this.CPU = builder.CPU;
         this.creatorId = builder.creatorId;
         this.GPU = builder.GPU;
+        this.GPUMemory = builder.GPUMemory;
         this.GPUType = builder.GPUType;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtExpiredTime = builder.gmtExpiredTime;
@@ -171,6 +176,13 @@ public class Node extends TeaModel {
      */
     public String getGPU() {
         return this.GPU;
+    }
+
+    /**
+     * @return GPUMemory
+     */
+    public String getGPUMemory() {
+        return this.GPUMemory;
     }
 
     /**
@@ -347,6 +359,7 @@ public class Node extends TeaModel {
         private String CPU; 
         private String creatorId; 
         private String GPU; 
+        private String GPUMemory; 
         private String GPUType; 
         private String gmtCreateTime; 
         private String gmtExpiredTime; 
@@ -409,6 +422,14 @@ public class Node extends TeaModel {
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
+            return this;
+        }
+
+        /**
+         * GPUMemory.
+         */
+        public Builder GPUMemory(String GPUMemory) {
+            this.GPUMemory = GPUMemory;
             return this;
         }
 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAlgorithmVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAlgorithmVersionsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAlgorithmVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlgorithmVersionsResponseBody</p>
+     */
     public static class AlgorithmVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlgorithmId")
         private String algorithmId;

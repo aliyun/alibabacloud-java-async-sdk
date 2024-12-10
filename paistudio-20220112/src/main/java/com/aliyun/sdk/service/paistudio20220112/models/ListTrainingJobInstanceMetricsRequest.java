@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrainingJobInstanceMetricsRequest} extends {@link RequestModel}
  *
  * <p>ListTrainingJobInstanceMetricsRequest</p>
@@ -125,7 +126,10 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         } 
 
         /**
-         * TrainingJobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trains930928remn</p>
          */
         public Builder trainingJobId(String trainingJobId) {
             this.putPathParameter("TrainingJobId", trainingJobId);
@@ -134,7 +138,10 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -152,7 +159,10 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GpuCoreUsage</p>
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -161,7 +171,10 @@ public class ListTrainingJobInstanceMetricsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

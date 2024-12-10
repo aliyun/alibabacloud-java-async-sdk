@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrainingJobErrorInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetTrainingJobErrorInfoResponseBody</p>
@@ -70,6 +71,12 @@ public class GetTrainingJobErrorInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTrainingJobErrorInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobErrorInfoResponseBody</p>
+     */
     public static class ErrorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdditionalInfo")
         private String additionalInfo;

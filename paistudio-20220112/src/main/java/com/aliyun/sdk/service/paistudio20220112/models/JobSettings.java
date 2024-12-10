@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JobSettings} extends {@link TeaModel}
  *
  * <p>JobSettings</p>

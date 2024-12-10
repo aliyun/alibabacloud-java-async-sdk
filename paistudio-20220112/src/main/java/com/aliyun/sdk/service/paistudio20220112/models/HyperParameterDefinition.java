@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HyperParameterDefinition} extends {@link TeaModel}
  *
  * <p>HyperParameterDefinition</p>
@@ -135,7 +136,7 @@ public class HyperParameterDefinition extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -159,7 +160,7 @@ public class HyperParameterDefinition extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.type = type;

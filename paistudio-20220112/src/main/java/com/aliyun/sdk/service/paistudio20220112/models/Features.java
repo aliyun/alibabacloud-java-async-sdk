@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Features} extends {@link TeaModel}
  *
  * <p>Features</p>
@@ -50,6 +51,12 @@ public class Features extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Features} extends {@link TeaModel}
+     *
+     * <p>Features</p>
+     */
     public static class Quota extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsEnabled")
         private Boolean isEnabled;

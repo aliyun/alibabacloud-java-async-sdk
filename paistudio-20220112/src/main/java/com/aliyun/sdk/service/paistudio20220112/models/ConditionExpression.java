@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConditionExpression} extends {@link TeaModel}
  *
  * <p>ConditionExpression</p>
@@ -64,7 +65,10 @@ public class ConditionExpression extends TeaModel {
         private java.util.List < String > values; 
 
         /**
-         * Key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SupportedMachineTypes</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -72,7 +76,10 @@ public class ConditionExpression extends TeaModel {
         }
 
         /**
-         * Operator.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -80,7 +87,7 @@ public class ConditionExpression extends TeaModel {
         }
 
         /**
-         * Values.
+         * <p>This parameter is required.</p>
          */
         public Builder values(java.util.List < String > values) {
             this.values = values;

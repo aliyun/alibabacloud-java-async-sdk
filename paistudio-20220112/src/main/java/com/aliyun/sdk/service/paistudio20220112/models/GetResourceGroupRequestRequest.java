@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceGroupRequestRequest} extends {@link RequestModel}
  *
  * <p>GetResourceGroupRequestRequest</p>
@@ -77,7 +78,10 @@ public class GetResourceGroupRequestRequest extends Request {
         }
 
         /**
-         * ResourceGroupID.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putQueryParameter("ResourceGroupID", resourceGroupID);

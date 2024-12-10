@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeMetricsRequest} extends {@link RequestModel}
  *
  * <p>GetNodeMetricsRequest</p>
@@ -139,7 +140,10 @@ public class GetNodeMetricsRequest extends Request {
         } 
 
         /**
-         * ResourceGroupID.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putPathParameter("ResourceGroupID", resourceGroupID);
@@ -148,7 +152,10 @@ public class GetNodeMetricsRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CpuUsageRate</p>
          */
         public Builder metricType(String metricType) {
             this.putPathParameter("MetricType", metricType);

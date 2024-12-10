@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetTrainingJobResponseBody</p>
@@ -71,6 +72,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OutputModel")
     private OutputModel outputModel;
 
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private Integer priority;
+
     @com.aliyun.core.annotation.NameInMap("PythonRequirements")
     private java.util.List < String > pythonRequirements;
 
@@ -90,7 +94,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
     private Scheduler scheduler;
 
     @com.aliyun.core.annotation.NameInMap("Settings")
-    private Settings settings;
+    private JobSettings settings;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
@@ -140,6 +144,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         this.latestProgress = builder.latestProgress;
         this.outputChannels = builder.outputChannels;
         this.outputModel = builder.outputModel;
+        this.priority = builder.priority;
         this.pythonRequirements = builder.pythonRequirements;
         this.reasonCode = builder.reasonCode;
         this.reasonMessage = builder.reasonMessage;
@@ -307,6 +312,13 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    /**
      * @return pythonRequirements
      */
     public java.util.List < String > getPythonRequirements() {
@@ -351,7 +363,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
     /**
      * @return settings
      */
-    public Settings getSettings() {
+    public JobSettings getSettings() {
         return this.settings;
     }
 
@@ -439,13 +451,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         private LatestProgress latestProgress; 
         private java.util.List < OutputChannels> outputChannels; 
         private OutputModel outputModel; 
+        private Integer priority; 
         private java.util.List < String > pythonRequirements; 
         private String reasonCode; 
         private String reasonMessage; 
         private String requestId; 
         private String roleArn; 
         private Scheduler scheduler; 
-        private Settings settings; 
+        private JobSettings settings; 
         private String status; 
         private java.util.List < StatusTransitions> statusTransitions; 
         private String trainingJobDescription; 
@@ -617,6 +630,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+
+        /**
          * PythonRequirements.
          */
         public Builder pythonRequirements(java.util.List < String > pythonRequirements) {
@@ -667,7 +688,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         /**
          * Settings.
          */
-        public Builder settings(Settings settings) {
+        public Builder settings(JobSettings settings) {
             this.settings = settings;
             return this;
         }
@@ -750,6 +771,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class InstanceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
@@ -871,6 +898,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class SpotSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpotDiscountLimit")
         private Float spotDiscountLimit;
@@ -932,6 +965,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class ComputeResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsCount")
         private Long ecsCount;
@@ -1113,6 +1152,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class ExperimentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExperimentId")
         private String experimentId;
@@ -1174,6 +1219,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class HyperParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1235,6 +1286,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class InputChannels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
@@ -1248,11 +1305,15 @@ public class GetTrainingJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Options")
         private String options;
 
+        @com.aliyun.core.annotation.NameInMap("VersionName")
+        private String versionName;
+
         private InputChannels(Builder builder) {
             this.datasetId = builder.datasetId;
             this.inputUri = builder.inputUri;
             this.name = builder.name;
             this.options = builder.options;
+            this.versionName = builder.versionName;
         }
 
         public static Builder builder() {
@@ -1291,11 +1352,19 @@ public class GetTrainingJobResponseBody extends TeaModel {
             return this.options;
         }
 
+        /**
+         * @return versionName
+         */
+        public String getVersionName() {
+            return this.versionName;
+        }
+
         public static final class Builder {
             private String datasetId; 
             private String inputUri; 
             private String name; 
             private String options; 
+            private String versionName; 
 
             /**
              * DatasetId.
@@ -1329,6 +1398,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * VersionName.
+             */
+            public Builder versionName(String versionName) {
+                this.versionName = versionName;
+                return this;
+            }
+
             public InputChannels build() {
                 return new InputChannels(this);
             } 
@@ -1336,6 +1413,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1417,6 +1500,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1478,6 +1567,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class LatestMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1559,6 +1654,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class OverallProgress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
@@ -1620,6 +1721,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class RemainingTime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
@@ -1681,6 +1788,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class LatestProgress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverallProgress")
         private OverallProgress overallProgress;
@@ -1742,6 +1855,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class OutputChannels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
@@ -1752,10 +1871,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutputUri")
         private String outputUri;
 
+        @com.aliyun.core.annotation.NameInMap("VersionName")
+        private String versionName;
+
         private OutputChannels(Builder builder) {
             this.datasetId = builder.datasetId;
             this.name = builder.name;
             this.outputUri = builder.outputUri;
+            this.versionName = builder.versionName;
         }
 
         public static Builder builder() {
@@ -1787,10 +1910,18 @@ public class GetTrainingJobResponseBody extends TeaModel {
             return this.outputUri;
         }
 
+        /**
+         * @return versionName
+         */
+        public String getVersionName() {
+            return this.versionName;
+        }
+
         public static final class Builder {
             private String datasetId; 
             private String name; 
             private String outputUri; 
+            private String versionName; 
 
             /**
              * DatasetId.
@@ -1816,6 +1947,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * VersionName.
+             */
+            public Builder versionName(String versionName) {
+                this.versionName = versionName;
+                return this;
+            }
+
             public OutputChannels build() {
                 return new OutputChannels(this);
             } 
@@ -1823,6 +1962,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class OutputModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutputChannelName")
         private String outputChannelName;
@@ -1884,11 +2029,21 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class Scheduler extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxRunningTimeInMinutes")
+        private String maxRunningTimeInMinutes;
+
         @com.aliyun.core.annotation.NameInMap("MaxRunningTimeInSeconds")
-        private Long maxRunningTimeInSeconds;
+        private String maxRunningTimeInSeconds;
 
         private Scheduler(Builder builder) {
+            this.maxRunningTimeInMinutes = builder.maxRunningTimeInMinutes;
             this.maxRunningTimeInSeconds = builder.maxRunningTimeInSeconds;
         }
 
@@ -1901,19 +2056,35 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxRunningTimeInMinutes
+         */
+        public String getMaxRunningTimeInMinutes() {
+            return this.maxRunningTimeInMinutes;
+        }
+
+        /**
          * @return maxRunningTimeInSeconds
          */
-        public Long getMaxRunningTimeInSeconds() {
+        public String getMaxRunningTimeInSeconds() {
             return this.maxRunningTimeInSeconds;
         }
 
         public static final class Builder {
-            private Long maxRunningTimeInSeconds; 
+            private String maxRunningTimeInMinutes; 
+            private String maxRunningTimeInSeconds; 
+
+            /**
+             * MaxRunningTimeInMinutes.
+             */
+            public Builder maxRunningTimeInMinutes(String maxRunningTimeInMinutes) {
+                this.maxRunningTimeInMinutes = maxRunningTimeInMinutes;
+                return this;
+            }
 
             /**
              * MaxRunningTimeInSeconds.
              */
-            public Builder maxRunningTimeInSeconds(Long maxRunningTimeInSeconds) {
+            public Builder maxRunningTimeInSeconds(String maxRunningTimeInSeconds) {
                 this.maxRunningTimeInSeconds = maxRunningTimeInSeconds;
                 return this;
             }
@@ -1925,107 +2096,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
-    public static class Settings extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AIMasterType")
-        private String AIMasterType;
-
-        @com.aliyun.core.annotation.NameInMap("EnableErrorMonitoringInAIMaster")
-        private Boolean enableErrorMonitoringInAIMaster;
-
-        @com.aliyun.core.annotation.NameInMap("ErrorMonitoringArgs")
-        private String errorMonitoringArgs;
-
-        @com.aliyun.core.annotation.NameInMap("Priority")
-        private Integer priority;
-
-        private Settings(Builder builder) {
-            this.AIMasterType = builder.AIMasterType;
-            this.enableErrorMonitoringInAIMaster = builder.enableErrorMonitoringInAIMaster;
-            this.errorMonitoringArgs = builder.errorMonitoringArgs;
-            this.priority = builder.priority;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Settings create() {
-            return builder().build();
-        }
-
-        /**
-         * @return AIMasterType
-         */
-        public String getAIMasterType() {
-            return this.AIMasterType;
-        }
-
-        /**
-         * @return enableErrorMonitoringInAIMaster
-         */
-        public Boolean getEnableErrorMonitoringInAIMaster() {
-            return this.enableErrorMonitoringInAIMaster;
-        }
-
-        /**
-         * @return errorMonitoringArgs
-         */
-        public String getErrorMonitoringArgs() {
-            return this.errorMonitoringArgs;
-        }
-
-        /**
-         * @return priority
-         */
-        public Integer getPriority() {
-            return this.priority;
-        }
-
-        public static final class Builder {
-            private String AIMasterType; 
-            private Boolean enableErrorMonitoringInAIMaster; 
-            private String errorMonitoringArgs; 
-            private Integer priority; 
-
-            /**
-             * AIMasterType.
-             */
-            public Builder AIMasterType(String AIMasterType) {
-                this.AIMasterType = AIMasterType;
-                return this;
-            }
-
-            /**
-             * EnableErrorMonitoringInAIMaster.
-             */
-            public Builder enableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {
-                this.enableErrorMonitoringInAIMaster = enableErrorMonitoringInAIMaster;
-                return this;
-            }
-
-            /**
-             * ErrorMonitoringArgs.
-             */
-            public Builder errorMonitoringArgs(String errorMonitoringArgs) {
-                this.errorMonitoringArgs = errorMonitoringArgs;
-                return this;
-            }
-
-            /**
-             * Priority.
-             */
-            public Builder priority(Integer priority) {
-                this.priority = priority;
-                return this;
-            }
-
-            public Settings build() {
-                return new Settings(this);
-            } 
-
-        } 
-
-    }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class StatusTransitions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -2147,6 +2223,12 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrainingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobResponseBody</p>
+     */
     public static class UserVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
         private java.util.List < String > extendedCIDRs;
@@ -2234,7 +2316,10 @@ public class GetTrainingJobResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-abcdef****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceGroupsResponseBody</p>
@@ -78,7 +79,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

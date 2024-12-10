@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueueInfo} extends {@link TeaModel}
  *
  * <p>QueueInfo</p>
@@ -53,9 +54,6 @@ public class QueueInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @com.aliyun.core.annotation.NameInMap("SubStatus")
-    private String subStatus;
-
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
@@ -67,6 +65,9 @@ public class QueueInfo extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("WorkloadName")
     private String workloadName;
+
+    @com.aliyun.core.annotation.NameInMap("WorkloadStatus")
+    private String workloadStatus;
 
     @com.aliyun.core.annotation.NameInMap("WorkloadType")
     private String workloadType;
@@ -89,11 +90,11 @@ public class QueueInfo extends TeaModel {
         this.reason = builder.reason;
         this.resource = builder.resource;
         this.status = builder.status;
-        this.subStatus = builder.subStatus;
         this.userId = builder.userId;
         this.userName = builder.userName;
         this.workloadId = builder.workloadId;
         this.workloadName = builder.workloadName;
+        this.workloadStatus = builder.workloadStatus;
         this.workloadType = builder.workloadType;
         this.workspaceId = builder.workspaceId;
     }
@@ -205,13 +206,6 @@ public class QueueInfo extends TeaModel {
     }
 
     /**
-     * @return subStatus
-     */
-    public String getSubStatus() {
-        return this.subStatus;
-    }
-
-    /**
      * @return userId
      */
     public String getUserId() {
@@ -237,6 +231,13 @@ public class QueueInfo extends TeaModel {
      */
     public String getWorkloadName() {
         return this.workloadName;
+    }
+
+    /**
+     * @return workloadStatus
+     */
+    public String getWorkloadStatus() {
+        return this.workloadStatus;
     }
 
     /**
@@ -268,11 +269,11 @@ public class QueueInfo extends TeaModel {
         private String reason; 
         private ResourceAmount resource; 
         private String status; 
-        private String subStatus; 
         private String userId; 
         private String userName; 
         private String workloadId; 
         private String workloadName; 
+        private String workloadStatus; 
         private String workloadType; 
         private String workspaceId; 
 
@@ -389,14 +390,6 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
-         * SubStatus.
-         */
-        public Builder subStatus(String subStatus) {
-            this.subStatus = subStatus;
-            return this;
-        }
-
-        /**
          * UserId.
          */
         public Builder userId(String userId) {
@@ -425,6 +418,14 @@ public class QueueInfo extends TeaModel {
          */
         public Builder workloadName(String workloadName) {
             this.workloadName = workloadName;
+            return this;
+        }
+
+        /**
+         * WorkloadStatus.
+         */
+        public Builder workloadStatus(String workloadStatus) {
+            this.workloadStatus = workloadStatus;
             return this;
         }
 

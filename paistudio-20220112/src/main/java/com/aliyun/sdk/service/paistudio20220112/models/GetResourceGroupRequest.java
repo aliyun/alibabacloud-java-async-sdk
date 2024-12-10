@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>GetResourceGroupRequest</p>
@@ -82,7 +83,10 @@ public class GetResourceGroupRequest extends Request {
         } 
 
         /**
-         * ResourceGroupID.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgmhpp8ib5lprq9k</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putPathParameter("ResourceGroupID", resourceGroupID);
@@ -116,6 +120,12 @@ public class GetResourceGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>GetResourceGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

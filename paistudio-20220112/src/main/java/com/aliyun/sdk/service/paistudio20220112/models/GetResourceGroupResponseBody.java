@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceGroupResponseBody</p>
@@ -310,6 +311,12 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceGroupResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;

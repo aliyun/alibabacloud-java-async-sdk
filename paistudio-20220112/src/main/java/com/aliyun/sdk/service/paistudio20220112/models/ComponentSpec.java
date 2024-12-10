@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ComponentSpec} extends {@link TeaModel}
  *
  * <p>ComponentSpec</p>
@@ -144,7 +145,7 @@ public class ComponentSpec extends TeaModel {
         }
 
         /**
-         * Command.
+         * <p>This parameter is required.</p>
          */
         public Builder command(String command) {
             this.command = command;
@@ -160,7 +161,7 @@ public class ComponentSpec extends TeaModel {
         }
 
         /**
-         * Image.
+         * <p>This parameter is required.</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -176,7 +177,7 @@ public class ComponentSpec extends TeaModel {
         }
 
         /**
-         * JobType.
+         * <p>This parameter is required.</p>
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;

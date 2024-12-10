@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UserQuotaPermission} extends {@link TeaModel}
  *
  * <p>UserQuotaPermission</p>

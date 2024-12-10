@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeType} extends {@link TeaModel}
  *
  * <p>NodeType</p>
@@ -20,6 +21,9 @@ public class NodeType extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GPU")
     private String GPU;
 
+    @com.aliyun.core.annotation.NameInMap("GPUMemory")
+    private String GPUMemory;
+
     @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
@@ -33,6 +37,7 @@ public class NodeType extends TeaModel {
         this.acceleratorType = builder.acceleratorType;
         this.CPU = builder.CPU;
         this.GPU = builder.GPU;
+        this.GPUMemory = builder.GPUMemory;
         this.GPUType = builder.GPUType;
         this.memory = builder.memory;
         this.nodeType = builder.nodeType;
@@ -68,6 +73,13 @@ public class NodeType extends TeaModel {
     }
 
     /**
+     * @return GPUMemory
+     */
+    public String getGPUMemory() {
+        return this.GPUMemory;
+    }
+
+    /**
      * @return GPUType
      */
     public String getGPUType() {
@@ -92,6 +104,7 @@ public class NodeType extends TeaModel {
         private String acceleratorType; 
         private String CPU; 
         private String GPU; 
+        private String GPUMemory; 
         private String GPUType; 
         private String memory; 
         private String nodeType; 
@@ -117,6 +130,14 @@ public class NodeType extends TeaModel {
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
+            return this;
+        }
+
+        /**
+         * GPUMemory.
+         */
+        public Builder GPUMemory(String GPUMemory) {
+            this.GPUMemory = GPUMemory;
             return this;
         }
 

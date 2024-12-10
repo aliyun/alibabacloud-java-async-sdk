@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AlgorithmSpec} extends {@link TeaModel}
  *
  * <p>AlgorithmSpec</p>
@@ -51,7 +52,6 @@ public class AlgorithmSpec extends TeaModel {
     private java.util.List < ConditionExpression > resourceRequirements;
 
     @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypes")
-    @Deprecated
     private java.util.List < String > supportedInstanceTypes;
 
     @com.aliyun.core.annotation.NameInMap("SupportsDistributedTraining")
@@ -205,7 +205,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * Command.
+         * <p>This parameter is required.</p>
          */
         public Builder command(java.util.List < String > command) {
             this.command = command;
@@ -237,7 +237,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * Image.
+         * <p>This parameter is required.</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -253,7 +253,7 @@ public class AlgorithmSpec extends TeaModel {
         }
 
         /**
-         * JobType.
+         * <p>This parameter is required.</p>
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -314,6 +314,12 @@ public class AlgorithmSpec extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AlgorithmSpec} extends {@link TeaModel}
+     *
+     * <p>AlgorithmSpec</p>
+     */
     public static class Policy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Value")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -355,7 +361,7 @@ public class AlgorithmSpec extends TeaModel {
             private String version; 
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -363,7 +369,7 @@ public class AlgorithmSpec extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>This parameter is required.</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -377,6 +383,12 @@ public class AlgorithmSpec extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AlgorithmSpec} extends {@link TeaModel}
+     *
+     * <p>AlgorithmSpec</p>
+     */
     public static class ComputeResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Policy")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -405,7 +417,7 @@ public class AlgorithmSpec extends TeaModel {
             private Policy policy; 
 
             /**
-             * Policy.
+             * <p>This parameter is required.</p>
              */
             public Builder policy(Policy policy) {
                 this.policy = policy;
@@ -419,6 +431,12 @@ public class AlgorithmSpec extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AlgorithmSpec} extends {@link TeaModel}
+     *
+     * <p>AlgorithmSpec</p>
+     */
     public static class Customization extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CodeDir")
         private Boolean codeDir;
@@ -460,6 +478,12 @@ public class AlgorithmSpec extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AlgorithmSpec} extends {@link TeaModel}
+     *
+     * <p>AlgorithmSpec</p>
+     */
     public static class OverallProgress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -521,6 +545,12 @@ public class AlgorithmSpec extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AlgorithmSpec} extends {@link TeaModel}
+     *
+     * <p>AlgorithmSpec</p>
+     */
     public static class RemainingTime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -582,6 +612,12 @@ public class AlgorithmSpec extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AlgorithmSpec} extends {@link TeaModel}
+     *
+     * <p>AlgorithmSpec</p>
+     */
     public static class ProgressDefinitions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverallProgress")
         private OverallProgress overallProgress;

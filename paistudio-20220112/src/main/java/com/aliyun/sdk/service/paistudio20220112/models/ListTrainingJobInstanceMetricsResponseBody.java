@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrainingJobInstanceMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrainingJobInstanceMetricsResponseBody</p>
@@ -70,6 +71,12 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTrainingJobInstanceMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobInstanceMetricsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
@@ -131,6 +138,12 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobInstanceMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobInstanceMetricsResponseBody</p>
+     */
     public static class InstanceMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;

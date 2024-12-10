@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrainingJobsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobsResponseBody</p>
+     */
     public static class InstanceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
@@ -211,6 +218,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobsResponseBody</p>
+     */
     public static class ComputeResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsCount")
         private Long ecsCount;
@@ -352,6 +365,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobsResponseBody</p>
+     */
     public static class ExperimentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExperimentId")
         private String experimentId;
@@ -413,6 +432,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobsResponseBody</p>
+     */
     public static class HyperParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -474,6 +499,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobsResponseBody</p>
+     */
     public static class InputChannels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
@@ -484,10 +515,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("VersionName")
+        private String versionName;
+
         private InputChannels(Builder builder) {
             this.datasetId = builder.datasetId;
             this.inputUri = builder.inputUri;
             this.name = builder.name;
+            this.versionName = builder.versionName;
         }
 
         public static Builder builder() {
@@ -519,10 +554,18 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return versionName
+         */
+        public String getVersionName() {
+            return this.versionName;
+        }
+
         public static final class Builder {
             private String datasetId; 
             private String inputUri; 
             private String name; 
+            private String versionName; 
 
             /**
              * DatasetId.
@@ -548,6 +591,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * VersionName.
+             */
+            public Builder versionName(String versionName) {
+                this.versionName = versionName;
+                return this;
+            }
+
             public InputChannels build() {
                 return new InputChannels(this);
             } 
@@ -555,6 +606,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobsResponseBody</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -616,6 +673,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobsResponseBody</p>
+     */
     public static class OutputChannels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
@@ -626,10 +689,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutputUri")
         private String outputUri;
 
+        @com.aliyun.core.annotation.NameInMap("VersionName")
+        private String versionName;
+
         private OutputChannels(Builder builder) {
             this.datasetId = builder.datasetId;
             this.name = builder.name;
             this.outputUri = builder.outputUri;
+            this.versionName = builder.versionName;
         }
 
         public static Builder builder() {
@@ -661,10 +728,18 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             return this.outputUri;
         }
 
+        /**
+         * @return versionName
+         */
+        public String getVersionName() {
+            return this.versionName;
+        }
+
         public static final class Builder {
             private String datasetId; 
             private String name; 
             private String outputUri; 
+            private String versionName; 
 
             /**
              * DatasetId.
@@ -690,6 +765,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * VersionName.
+             */
+            public Builder versionName(String versionName) {
+                this.versionName = versionName;
+                return this;
+            }
+
             public OutputChannels build() {
                 return new OutputChannels(this);
             } 
@@ -697,6 +780,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobsResponseBody</p>
+     */
     public static class Scheduler extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxRunningTimeInSeconds")
         private Long maxRunningTimeInSeconds;
@@ -738,6 +827,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobsResponseBody</p>
+     */
     public static class StatusTransitions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -859,6 +954,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobsResponseBody</p>
+     */
     public static class UserVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
@@ -966,7 +1067,10 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-abcdef****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -980,6 +1084,12 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrainingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobsResponseBody</p>
+     */
     public static class TrainingJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlgorithmName")
         private String algorithmName;

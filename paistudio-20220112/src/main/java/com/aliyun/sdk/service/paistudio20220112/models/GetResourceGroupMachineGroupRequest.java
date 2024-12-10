@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceGroupMachineGroupRequest} extends {@link RequestModel}
  *
  * <p>GetResourceGroupMachineGroupRequest</p>
@@ -83,7 +84,10 @@ public class GetResourceGroupMachineGroupRequest extends Request {
         } 
 
         /**
-         * MachineGroupID.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mgmioirqjgw6c5lg</p>
          */
         public Builder machineGroupID(String machineGroupID) {
             this.putPathParameter("MachineGroupID", machineGroupID);
@@ -92,7 +96,10 @@ public class GetResourceGroupMachineGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupID.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putPathParameter("ResourceGroupID", resourceGroupID);
@@ -117,6 +124,12 @@ public class GetResourceGroupMachineGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceGroupMachineGroupRequest} extends {@link TeaModel}
+     *
+     * <p>GetResourceGroupMachineGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

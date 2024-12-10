@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MetricDefinition} extends {@link TeaModel}
  *
  * <p>MetricDefinition</p>
@@ -71,7 +72,10 @@ public class MetricDefinition extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train:oob_score</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -79,7 +83,10 @@ public class MetricDefinition extends TeaModel {
         }
 
         /**
-         * Regex.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.<em>train:oob_score=([-+]?[0-9]</em>\.?[0-9]+(?:[eE][-+]?[0-9]+)?).*</p>
          */
         public Builder regex(String regex) {
             this.regex = regex;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserViewMetricsRequest} extends {@link RequestModel}
  *
  * <p>GetUserViewMetricsRequest</p>
@@ -154,7 +155,10 @@ public class GetUserViewMetricsRequest extends Request {
         } 
 
         /**
-         * ResourceGroupID.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgf0zhfqn1d4ity2</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putPathParameter("ResourceGroupID", resourceGroupID);
@@ -172,7 +176,10 @@ public class GetUserViewMetricsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -181,7 +188,10 @@ public class GetUserViewMetricsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

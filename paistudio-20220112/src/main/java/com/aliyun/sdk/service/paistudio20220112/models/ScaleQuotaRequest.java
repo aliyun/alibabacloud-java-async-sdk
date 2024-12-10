@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleQuotaRequest} extends {@link RequestModel}
  *
  * <p>ScaleQuotaRequest</p>
@@ -81,7 +82,10 @@ public class ScaleQuotaRequest extends Request {
         } 
 
         /**
-         * Quota ID
+         * <p>Quota ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotamtl37ge7gkvdz</p>
          */
         public Builder quotaId(String quotaId) {
             this.putPathParameter("QuotaId", quotaId);

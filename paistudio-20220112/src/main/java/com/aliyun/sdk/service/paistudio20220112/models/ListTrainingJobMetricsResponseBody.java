@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrainingJobMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrainingJobMetricsResponseBody</p>
@@ -17,9 +18,13 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Long totalCount;
+
     private ListTrainingJobMetricsResponseBody(Builder builder) {
         this.metrics = builder.metrics;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -44,9 +49,17 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List < Metrics> metrics; 
         private String requestId; 
+        private Long totalCount; 
 
         /**
          * Metrics.
@@ -64,12 +77,26 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
         public ListTrainingJobMetricsResponseBody build() {
             return new ListTrainingJobMetricsResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link ListTrainingJobMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobMetricsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -129,7 +156,10 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-18T22:20:55Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;

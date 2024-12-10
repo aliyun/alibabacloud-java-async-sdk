@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WorkloadDetails} extends {@link TeaModel}
  *
  * <p>WorkloadDetails</p>

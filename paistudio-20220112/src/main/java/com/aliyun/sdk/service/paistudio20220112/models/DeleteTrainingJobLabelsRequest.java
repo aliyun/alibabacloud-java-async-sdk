@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTrainingJobLabelsRequest} extends {@link RequestModel}
  *
  * <p>DeleteTrainingJobLabelsRequest</p>
@@ -69,7 +70,10 @@ public class DeleteTrainingJobLabelsRequest extends Request {
         } 
 
         /**
-         * TrainingJobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trainw52bqlfjbjc</p>
          */
         public Builder trainingJobId(String trainingJobId) {
             this.putPathParameter("TrainingJobId", trainingJobId);
@@ -78,7 +82,10 @@ public class DeleteTrainingJobLabelsRequest extends Request {
         }
 
         /**
-         * Keys.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RootModelID</p>
          */
         public Builder keys(String keys) {
             this.putQueryParameter("Keys", keys);

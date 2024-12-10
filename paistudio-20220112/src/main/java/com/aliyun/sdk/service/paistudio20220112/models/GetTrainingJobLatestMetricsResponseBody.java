@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrainingJobLatestMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>GetTrainingJobLatestMetricsResponseBody</p>
@@ -70,6 +71,12 @@ public class GetTrainingJobLatestMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTrainingJobLatestMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrainingJobLatestMetricsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -129,7 +136,10 @@ public class GetTrainingJobLatestMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-18T22:20:55Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;

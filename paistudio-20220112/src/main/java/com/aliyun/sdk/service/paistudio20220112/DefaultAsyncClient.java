@@ -56,6 +56,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CheckInstanceWebTerminal  CheckInstanceWebTerminalRequest
+     * @return CheckInstanceWebTerminalResponse
+     */
     @Override
     public CompletableFuture<CheckInstanceWebTerminalResponse> checkInstanceWebTerminal(CheckInstanceWebTerminalRequest request) {
         try {
@@ -70,6 +74,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAlgorithm  CreateAlgorithmRequest
+     * @return CreateAlgorithmResponse
+     */
     @Override
     public CompletableFuture<CreateAlgorithmResponse> createAlgorithm(CreateAlgorithmRequest request) {
         try {
@@ -84,6 +92,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAlgorithmVersion  CreateAlgorithmVersionRequest
+     * @return CreateAlgorithmVersionResponse
+     */
     @Override
     public CompletableFuture<CreateAlgorithmVersionResponse> createAlgorithmVersion(CreateAlgorithmVersionRequest request) {
         try {
@@ -98,6 +110,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstanceWebTerminal  CreateInstanceWebTerminalRequest
+     * @return CreateInstanceWebTerminalResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceWebTerminalResponse> createInstanceWebTerminal(CreateInstanceWebTerminalRequest request) {
         try {
@@ -112,6 +128,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateQuota  CreateQuotaRequest
+     * @return CreateQuotaResponse
+     */
     @Override
     public CompletableFuture<CreateQuotaResponse> createQuota(CreateQuotaRequest request) {
         try {
@@ -126,6 +146,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateResourceGroup  CreateResourceGroupRequest
+     * @return CreateResourceGroupResponse
+     */
     @Override
     public CompletableFuture<CreateResourceGroupResponse> createResourceGroup(CreateResourceGroupRequest request) {
         try {
@@ -140,6 +164,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTrainingJob  CreateTrainingJobRequest
+     * @return CreateTrainingJobResponse
+     */
     @Override
     public CompletableFuture<CreateTrainingJobResponse> createTrainingJob(CreateTrainingJobRequest request) {
         try {
@@ -154,6 +182,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAlgorithm  DeleteAlgorithmRequest
+     * @return DeleteAlgorithmResponse
+     */
     @Override
     public CompletableFuture<DeleteAlgorithmResponse> deleteAlgorithm(DeleteAlgorithmRequest request) {
         try {
@@ -168,6 +200,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAlgorithmVersion  DeleteAlgorithmVersionRequest
+     * @return DeleteAlgorithmVersionResponse
+     */
     @Override
     public CompletableFuture<DeleteAlgorithmVersionResponse> deleteAlgorithmVersion(DeleteAlgorithmVersionRequest request) {
         try {
@@ -183,9 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DeleteMachineGroup is deprecated, please use PaiStudio::2022-01-12::DeleteMachineGroup instead.  * @param request  the request parameters of DeleteMachineGroup  DeleteMachineGroupRequest
+     * @return DeleteMachineGroupResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteMachineGroupResponse> deleteMachineGroup(DeleteMachineGroupRequest request) {
         try {
@@ -200,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteQuota  DeleteQuotaRequest
+     * @return DeleteQuotaResponse
+     */
     @Override
     public CompletableFuture<DeleteQuotaResponse> deleteQuota(DeleteQuotaRequest request) {
         try {
@@ -214,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteResourceGroup  DeleteResourceGroupRequest
+     * @return DeleteResourceGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteResourceGroupResponse> deleteResourceGroup(DeleteResourceGroupRequest request) {
         try {
@@ -229,9 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DeleteResourceGroupMachineGroup is deprecated, please use PaiStudio::2022-01-12::DeleteResourceGroupMachineGroup instead.  * @param request  the request parameters of DeleteResourceGroupMachineGroup  DeleteResourceGroupMachineGroupRequest
+     * @return DeleteResourceGroupMachineGroupResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteResourceGroupMachineGroupResponse> deleteResourceGroupMachineGroup(DeleteResourceGroupMachineGroupRequest request) {
         try {
@@ -246,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTrainingJob  DeleteTrainingJobRequest
+     * @return DeleteTrainingJobResponse
+     */
     @Override
     public CompletableFuture<DeleteTrainingJobResponse> deleteTrainingJob(DeleteTrainingJobRequest request) {
         try {
@@ -260,6 +310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTrainingJobLabels  DeleteTrainingJobLabelsRequest
+     * @return DeleteTrainingJobLabelsResponse
+     */
     @Override
     public CompletableFuture<DeleteTrainingJobLabelsResponse> deleteTrainingJobLabels(DeleteTrainingJobLabelsRequest request) {
         try {
@@ -274,6 +328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAlgorithm  GetAlgorithmRequest
+     * @return GetAlgorithmResponse
+     */
     @Override
     public CompletableFuture<GetAlgorithmResponse> getAlgorithm(GetAlgorithmRequest request) {
         try {
@@ -288,6 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAlgorithmVersion  GetAlgorithmVersionRequest
+     * @return GetAlgorithmVersionResponse
+     */
     @Override
     public CompletableFuture<GetAlgorithmVersionResponse> getAlgorithmVersion(GetAlgorithmVersionRequest request) {
         try {
@@ -303,9 +365,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetMachineGroup is deprecated, please use PaiStudio::2022-01-12::GetMachineGroup instead.  * @param request  the request parameters of GetMachineGroup  GetMachineGroupRequest
+     * @return GetMachineGroupResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetMachineGroupResponse> getMachineGroup(GetMachineGroupRequest request) {
         try {
@@ -320,6 +383,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI GetNodeMetrics is deprecated, please use Cms::2019-01-01::DescribeMetricList instead.  * @param request  the request parameters of GetNodeMetrics  GetNodeMetricsRequest
+     * @return GetNodeMetricsResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetNodeMetricsResponse> getNodeMetrics(GetNodeMetricsRequest request) {
         try {
@@ -334,6 +402,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetQuota  GetQuotaRequest
+     * @return GetQuotaResponse
+     */
     @Override
     public CompletableFuture<GetQuotaResponse> getQuota(GetQuotaRequest request) {
         try {
@@ -348,6 +420,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourceGroup  GetResourceGroupRequest
+     * @return GetResourceGroupResponse
+     */
     @Override
     public CompletableFuture<GetResourceGroupResponse> getResourceGroup(GetResourceGroupRequest request) {
         try {
@@ -362,6 +438,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourceGroupMachineGroup  GetResourceGroupMachineGroupRequest
+     * @return GetResourceGroupMachineGroupResponse
+     */
     @Override
     public CompletableFuture<GetResourceGroupMachineGroupResponse> getResourceGroupMachineGroup(GetResourceGroupMachineGroupRequest request) {
         try {
@@ -376,6 +456,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI GetResourceGroupRequest is deprecated  * @param request  the request parameters of GetResourceGroupRequest  GetResourceGroupRequestRequest
+     * @return GetResourceGroupRequestResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetResourceGroupRequestResponse> getResourceGroupRequest(GetResourceGroupRequestRequest request) {
         try {
@@ -390,6 +475,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourceGroupTotal  GetResourceGroupTotalRequest
+     * @return GetResourceGroupTotalResponse
+     */
     @Override
     public CompletableFuture<GetResourceGroupTotalResponse> getResourceGroupTotal(GetResourceGroupTotalRequest request) {
         try {
@@ -404,6 +493,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetToken  GetTokenRequest
+     * @return GetTokenResponse
+     */
     @Override
     public CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request) {
         try {
@@ -418,6 +511,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTrainingJob  GetTrainingJobRequest
+     * @return GetTrainingJobResponse
+     */
     @Override
     public CompletableFuture<GetTrainingJobResponse> getTrainingJob(GetTrainingJobRequest request) {
         try {
@@ -432,6 +529,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTrainingJobErrorInfo  GetTrainingJobErrorInfoRequest
+     * @return GetTrainingJobErrorInfoResponse
+     */
     @Override
     public CompletableFuture<GetTrainingJobErrorInfoResponse> getTrainingJobErrorInfo(GetTrainingJobErrorInfoRequest request) {
         try {
@@ -446,6 +547,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTrainingJobLatestMetrics  GetTrainingJobLatestMetricsRequest
+     * @return GetTrainingJobLatestMetricsResponse
+     */
     @Override
     public CompletableFuture<GetTrainingJobLatestMetricsResponse> getTrainingJobLatestMetrics(GetTrainingJobLatestMetricsRequest request) {
         try {
@@ -460,6 +565,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI GetUserViewMetrics is deprecated, please use PaiStudio::2022-01-12::GetQuotaUserViewMetrics instead.  * @param request  the request parameters of GetUserViewMetrics  GetUserViewMetricsRequest
+     * @return GetUserViewMetricsResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetUserViewMetricsResponse> getUserViewMetrics(GetUserViewMetricsRequest request) {
         try {
@@ -474,6 +584,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAlgorithmVersions  ListAlgorithmVersionsRequest
+     * @return ListAlgorithmVersionsResponse
+     */
     @Override
     public CompletableFuture<ListAlgorithmVersionsResponse> listAlgorithmVersions(ListAlgorithmVersionsRequest request) {
         try {
@@ -488,6 +602,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAlgorithms  ListAlgorithmsRequest
+     * @return ListAlgorithmsResponse
+     */
     @Override
     public CompletableFuture<ListAlgorithmsResponse> listAlgorithms(ListAlgorithmsRequest request) {
         try {
@@ -502,6 +620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNodes  ListNodesRequest
+     * @return ListNodesResponse
+     */
     @Override
     public CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request) {
         try {
@@ -516,6 +638,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListQuotaWorkloads  ListQuotaWorkloadsRequest
+     * @return ListQuotaWorkloadsResponse
+     */
+    @Override
+    public CompletableFuture<ListQuotaWorkloadsResponse> listQuotaWorkloads(ListQuotaWorkloadsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListQuotaWorkloads").setMethod(HttpMethod.GET).setPathRegex("/api/v1/quotas/{QuotaId}/workloads").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListQuotaWorkloadsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListQuotaWorkloadsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListQuotas  ListQuotasRequest
+     * @return ListQuotasResponse
+     */
     @Override
     public CompletableFuture<ListQuotasResponse> listQuotas(ListQuotasRequest request) {
         try {
@@ -530,6 +674,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResourceGroupMachineGroups  ListResourceGroupMachineGroupsRequest
+     * @return ListResourceGroupMachineGroupsResponse
+     */
     @Override
     public CompletableFuture<ListResourceGroupMachineGroupsResponse> listResourceGroupMachineGroups(ListResourceGroupMachineGroupsRequest request) {
         try {
@@ -544,6 +692,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResourceGroups  ListResourceGroupsRequest
+     * @return ListResourceGroupsResponse
+     */
     @Override
     public CompletableFuture<ListResourceGroupsResponse> listResourceGroups(ListResourceGroupsRequest request) {
         try {
@@ -558,6 +710,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrainingJobEvents  ListTrainingJobEventsRequest
+     * @return ListTrainingJobEventsResponse
+     */
     @Override
     public CompletableFuture<ListTrainingJobEventsResponse> listTrainingJobEvents(ListTrainingJobEventsRequest request) {
         try {
@@ -572,6 +728,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrainingJobInstanceEvents  ListTrainingJobInstanceEventsRequest
+     * @return ListTrainingJobInstanceEventsResponse
+     */
     @Override
     public CompletableFuture<ListTrainingJobInstanceEventsResponse> listTrainingJobInstanceEvents(ListTrainingJobInstanceEventsRequest request) {
         try {
@@ -586,6 +746,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrainingJobInstanceMetrics  ListTrainingJobInstanceMetricsRequest
+     * @return ListTrainingJobInstanceMetricsResponse
+     */
     @Override
     public CompletableFuture<ListTrainingJobInstanceMetricsResponse> listTrainingJobInstanceMetrics(ListTrainingJobInstanceMetricsRequest request) {
         try {
@@ -600,6 +764,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrainingJobLogs  ListTrainingJobLogsRequest
+     * @return ListTrainingJobLogsResponse
+     */
     @Override
     public CompletableFuture<ListTrainingJobLogsResponse> listTrainingJobLogs(ListTrainingJobLogsRequest request) {
         try {
@@ -614,6 +782,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrainingJobMetrics  ListTrainingJobMetricsRequest
+     * @return ListTrainingJobMetricsResponse
+     */
     @Override
     public CompletableFuture<ListTrainingJobMetricsResponse> listTrainingJobMetrics(ListTrainingJobMetricsRequest request) {
         try {
@@ -628,6 +800,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrainingJobOutputModels  ListTrainingJobOutputModelsRequest
+     * @return ListTrainingJobOutputModelsResponse
+     */
     @Override
     public CompletableFuture<ListTrainingJobOutputModelsResponse> listTrainingJobOutputModels(ListTrainingJobOutputModelsRequest request) {
         try {
@@ -642,6 +818,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrainingJobs  ListTrainingJobsRequest
+     * @return ListTrainingJobsResponse
+     */
     @Override
     public CompletableFuture<ListTrainingJobsResponse> listTrainingJobs(ListTrainingJobsRequest request) {
         try {
@@ -656,6 +836,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ScaleQuota  ScaleQuotaRequest
+     * @return ScaleQuotaResponse
+     */
     @Override
     public CompletableFuture<ScaleQuotaResponse> scaleQuota(ScaleQuotaRequest request) {
         try {
@@ -670,6 +854,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopTrainingJob  StopTrainingJobRequest
+     * @return StopTrainingJobResponse
+     */
     @Override
     public CompletableFuture<StopTrainingJobResponse> stopTrainingJob(StopTrainingJobRequest request) {
         try {
@@ -684,6 +872,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAlgorithm  UpdateAlgorithmRequest
+     * @return UpdateAlgorithmResponse
+     */
     @Override
     public CompletableFuture<UpdateAlgorithmResponse> updateAlgorithm(UpdateAlgorithmRequest request) {
         try {
@@ -698,6 +890,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAlgorithmVersion  UpdateAlgorithmVersionRequest
+     * @return UpdateAlgorithmVersionResponse
+     */
     @Override
     public CompletableFuture<UpdateAlgorithmVersionResponse> updateAlgorithmVersion(UpdateAlgorithmVersionRequest request) {
         try {
@@ -712,6 +908,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateQuota  UpdateQuotaRequest
+     * @return UpdateQuotaResponse
+     */
     @Override
     public CompletableFuture<UpdateQuotaResponse> updateQuota(UpdateQuotaRequest request) {
         try {
@@ -726,6 +926,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateResourceGroup  UpdateResourceGroupRequest
+     * @return UpdateResourceGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateResourceGroupResponse> updateResourceGroup(UpdateResourceGroupRequest request) {
         try {
@@ -740,6 +944,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTrainingJobLabels  UpdateTrainingJobLabelsRequest
+     * @return UpdateTrainingJobLabelsResponse
+     */
     @Override
     public CompletableFuture<UpdateTrainingJobLabelsResponse> updateTrainingJobLabels(UpdateTrainingJobLabelsRequest request) {
         try {

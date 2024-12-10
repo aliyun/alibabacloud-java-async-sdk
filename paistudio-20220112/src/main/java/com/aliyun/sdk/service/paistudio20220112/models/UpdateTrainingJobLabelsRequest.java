@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTrainingJobLabelsRequest} extends {@link RequestModel}
  *
  * <p>UpdateTrainingJobLabelsRequest</p>
@@ -68,7 +69,10 @@ public class UpdateTrainingJobLabelsRequest extends Request {
         } 
 
         /**
-         * TrainingJobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train76rcaupa2cz</p>
          */
         public Builder trainingJobId(String trainingJobId) {
             this.putPathParameter("TrainingJobId", trainingJobId);
@@ -92,6 +96,12 @@ public class UpdateTrainingJobLabelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTrainingJobLabelsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTrainingJobLabelsRequest</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

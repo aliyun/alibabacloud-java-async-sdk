@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrainingJobErrorInfoRequest} extends {@link RequestModel}
  *
  * <p>GetTrainingJobErrorInfoRequest</p>
@@ -54,7 +55,10 @@ public class GetTrainingJobErrorInfoRequest extends Request {
         } 
 
         /**
-         * TrainingJobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>traineyfz0m2hsfv</p>
          */
         public Builder trainingJobId(String trainingJobId) {
             this.putPathParameter("TrainingJobId", trainingJobId);

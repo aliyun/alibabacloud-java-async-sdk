@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeSnapshot} extends {@link TeaModel}
  *
  * <p>NodeSnapshot</p>
@@ -210,6 +211,12 @@ public class NodeSnapshot extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link NodeSnapshot} extends {@link TeaModel}
+     *
+     * <p>NodeSnapshot</p>
+     */
     public static class Workloads extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
