@@ -113,6 +113,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     private Integer ephemeralStorage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
+    private String gpuDriverVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostAliases")
     private java.util.List < HostAliases> hostAliases;
 
@@ -244,6 +248,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         this.eipBandwidth = builder.eipBandwidth;
         this.enableSls = builder.enableSls;
         this.ephemeralStorage = builder.ephemeralStorage;
+        this.gpuDriverVersion = builder.gpuDriverVersion;
         this.hostAliases = builder.hostAliases;
         this.hostName = builder.hostName;
         this.imageRegistryCredentials = builder.imageRegistryCredentials;
@@ -454,6 +459,13 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     }
 
     /**
+     * @return gpuDriverVersion
+     */
+    public String getGpuDriverVersion() {
+        return this.gpuDriverVersion;
+    }
+
+    /**
      * @return hostAliases
      */
     public java.util.List < HostAliases> getHostAliases() {
@@ -660,6 +672,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         private Integer eipBandwidth; 
         private Boolean enableSls; 
         private Integer ephemeralStorage; 
+        private String gpuDriverVersion; 
         private java.util.List < HostAliases> hostAliases; 
         private String hostName; 
         private java.util.List < ImageRegistryCredentials> imageRegistryCredentials; 
@@ -717,6 +730,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             this.eipBandwidth = request.eipBandwidth;
             this.enableSls = request.enableSls;
             this.ephemeralStorage = request.ephemeralStorage;
+            this.gpuDriverVersion = request.gpuDriverVersion;
             this.hostAliases = request.hostAliases;
             this.hostName = request.hostName;
             this.imageRegistryCredentials = request.imageRegistryCredentials;
@@ -1060,6 +1074,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         public Builder ephemeralStorage(Integer ephemeralStorage) {
             this.putQueryParameter("EphemeralStorage", ephemeralStorage);
             this.ephemeralStorage = ephemeralStorage;
+            return this;
+        }
+
+        /**
+         * GpuDriverVersion.
+         */
+        public Builder gpuDriverVersion(String gpuDriverVersion) {
+            this.putQueryParameter("GpuDriverVersion", gpuDriverVersion);
+            this.gpuDriverVersion = gpuDriverVersion;
             return this;
         }
 

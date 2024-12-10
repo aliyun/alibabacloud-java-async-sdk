@@ -3465,6 +3465,9 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EphemeralStorage")
         private Integer ephemeralStorage;
 
+        @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
+        private String gpuDriverVersion;
+
         @com.aliyun.core.annotation.NameInMap("HostAliases")
         private java.util.List < HostAliases> hostAliases;
 
@@ -3573,6 +3576,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             this.egressBandwidth = builder.egressBandwidth;
             this.eipBandwidth = builder.eipBandwidth;
             this.ephemeralStorage = builder.ephemeralStorage;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
             this.hostAliases = builder.hostAliases;
             this.hostName = builder.hostName;
             this.imageRegistryCredentials = builder.imageRegistryCredentials;
@@ -3770,6 +3774,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          */
         public Integer getEphemeralStorage() {
             return this.ephemeralStorage;
+        }
+
+        /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
         }
 
         /**
@@ -3992,6 +4003,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private Long egressBandwidth; 
             private Integer eipBandwidth; 
             private Integer ephemeralStorage; 
+            private String gpuDriverVersion; 
             private java.util.List < HostAliases> hostAliases; 
             private String hostName; 
             private java.util.List < ImageRegistryCredentials> imageRegistryCredentials; 
@@ -4281,6 +4293,14 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
              */
             public Builder ephemeralStorage(Integer ephemeralStorage) {
                 this.ephemeralStorage = ephemeralStorage;
+                return this;
+            }
+
+            /**
+             * GpuDriverVersion.
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
                 return this;
             }
 

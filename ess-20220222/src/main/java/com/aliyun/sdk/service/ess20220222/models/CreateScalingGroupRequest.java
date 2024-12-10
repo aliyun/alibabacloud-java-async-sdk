@@ -25,6 +25,10 @@ public class CreateScalingGroupRequest extends Request {
     private Boolean azBalance;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CapacityOptions")
+    private CapacityOptions capacityOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -204,6 +208,7 @@ public class CreateScalingGroupRequest extends Request {
         this.albServerGroups = builder.albServerGroups;
         this.allocationStrategy = builder.allocationStrategy;
         this.azBalance = builder.azBalance;
+        this.capacityOptions = builder.capacityOptions;
         this.clientToken = builder.clientToken;
         this.compensateWithOnDemand = builder.compensateWithOnDemand;
         this.containerGroupId = builder.containerGroupId;
@@ -281,6 +286,13 @@ public class CreateScalingGroupRequest extends Request {
      */
     public Boolean getAzBalance() {
         return this.azBalance;
+    }
+
+    /**
+     * @return capacityOptions
+     */
+    public CapacityOptions getCapacityOptions() {
+        return this.capacityOptions;
     }
 
     /**
@@ -588,6 +600,7 @@ public class CreateScalingGroupRequest extends Request {
         private java.util.List < AlbServerGroups> albServerGroups; 
         private String allocationStrategy; 
         private Boolean azBalance; 
+        private CapacityOptions capacityOptions; 
         private String clientToken; 
         private Boolean compensateWithOnDemand; 
         private String containerGroupId; 
@@ -641,6 +654,7 @@ public class CreateScalingGroupRequest extends Request {
             this.albServerGroups = request.albServerGroups;
             this.allocationStrategy = request.allocationStrategy;
             this.azBalance = request.azBalance;
+            this.capacityOptions = request.capacityOptions;
             this.clientToken = request.clientToken;
             this.compensateWithOnDemand = request.compensateWithOnDemand;
             this.containerGroupId = request.containerGroupId;
@@ -729,6 +743,15 @@ public class CreateScalingGroupRequest extends Request {
         public Builder azBalance(Boolean azBalance) {
             this.putQueryParameter("AzBalance", azBalance);
             this.azBalance = azBalance;
+            return this;
+        }
+
+        /**
+         * CapacityOptions.
+         */
+        public Builder capacityOptions(CapacityOptions capacityOptions) {
+            this.putQueryParameter("CapacityOptions", capacityOptions);
+            this.capacityOptions = capacityOptions;
             return this;
         }
 
@@ -1432,6 +1455,127 @@ public class CreateScalingGroupRequest extends Request {
 
             public AlbServerGroups build() {
                 return new AlbServerGroups(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateScalingGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScalingGroupRequest</p>
+     */
+    public static class CapacityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CompensateWithOnDemand")
+        private Boolean compensateWithOnDemand;
+
+        @com.aliyun.core.annotation.NameInMap("OnDemandBaseCapacity")
+        private Integer onDemandBaseCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("OnDemandPercentageAboveBaseCapacity")
+        private Integer onDemandPercentageAboveBaseCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("SpotAutoReplaceOnDemand")
+        private Boolean spotAutoReplaceOnDemand;
+
+        private CapacityOptions(Builder builder) {
+            this.compensateWithOnDemand = builder.compensateWithOnDemand;
+            this.onDemandBaseCapacity = builder.onDemandBaseCapacity;
+            this.onDemandPercentageAboveBaseCapacity = builder.onDemandPercentageAboveBaseCapacity;
+            this.spotAutoReplaceOnDemand = builder.spotAutoReplaceOnDemand;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CapacityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return compensateWithOnDemand
+         */
+        public Boolean getCompensateWithOnDemand() {
+            return this.compensateWithOnDemand;
+        }
+
+        /**
+         * @return onDemandBaseCapacity
+         */
+        public Integer getOnDemandBaseCapacity() {
+            return this.onDemandBaseCapacity;
+        }
+
+        /**
+         * @return onDemandPercentageAboveBaseCapacity
+         */
+        public Integer getOnDemandPercentageAboveBaseCapacity() {
+            return this.onDemandPercentageAboveBaseCapacity;
+        }
+
+        /**
+         * @return spotAutoReplaceOnDemand
+         */
+        public Boolean getSpotAutoReplaceOnDemand() {
+            return this.spotAutoReplaceOnDemand;
+        }
+
+        public static final class Builder {
+            private Boolean compensateWithOnDemand; 
+            private Integer onDemandBaseCapacity; 
+            private Integer onDemandPercentageAboveBaseCapacity; 
+            private Boolean spotAutoReplaceOnDemand; 
+
+            /**
+             * <p>Specifies whether to automatically create pay-as-you-go instances to meet the requirement on the number of ECS instances when the expected capacity of preemptible instances cannot be provided due to reasons such as cost-related issues and insufficient resources. This parameter is available only if you set the MultiAZPolicy parameter to COST_OPTIMIZED. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder compensateWithOnDemand(Boolean compensateWithOnDemand) {
+                this.compensateWithOnDemand = compensateWithOnDemand;
+                return this;
+            }
+
+            /**
+             * <p>The minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
+             */
+            public Builder onDemandBaseCapacity(Integer onDemandBaseCapacity) {
+                this.onDemandBaseCapacity = onDemandBaseCapacity;
+                return this;
+            }
+
+            /**
+             * <p>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances reaches the requirement. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder onDemandPercentageAboveBaseCapacity(Integer onDemandPercentageAboveBaseCapacity) {
+                this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
+                return this;
+            }
+
+            /**
+             * SpotAutoReplaceOnDemand.
+             */
+            public Builder spotAutoReplaceOnDemand(Boolean spotAutoReplaceOnDemand) {
+                this.spotAutoReplaceOnDemand = spotAutoReplaceOnDemand;
+                return this;
+            }
+
+            public CapacityOptions build() {
+                return new CapacityOptions(this);
             } 
 
         } 

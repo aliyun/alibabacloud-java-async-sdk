@@ -46,6 +46,10 @@ public class StartInstanceRefreshRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkipMatching")
+    private Boolean skipMatching;
+
     private StartInstanceRefreshRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -56,6 +60,7 @@ public class StartInstanceRefreshRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.scalingGroupId = builder.scalingGroupId;
+        this.skipMatching = builder.skipMatching;
     }
 
     public static Builder builder() {
@@ -127,6 +132,13 @@ public class StartInstanceRefreshRequest extends Request {
         return this.scalingGroupId;
     }
 
+    /**
+     * @return skipMatching
+     */
+    public Boolean getSkipMatching() {
+        return this.skipMatching;
+    }
+
     public static final class Builder extends Request.Builder<StartInstanceRefreshRequest, Builder> {
         private String clientToken; 
         private DesiredConfiguration desiredConfiguration; 
@@ -136,6 +148,7 @@ public class StartInstanceRefreshRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
+        private Boolean skipMatching; 
 
         private Builder() {
             super();
@@ -151,6 +164,7 @@ public class StartInstanceRefreshRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.scalingGroupId = request.scalingGroupId;
+            this.skipMatching = request.skipMatching;
         } 
 
         /**
@@ -250,6 +264,15 @@ public class StartInstanceRefreshRequest extends Request {
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
             this.scalingGroupId = scalingGroupId;
+            return this;
+        }
+
+        /**
+         * SkipMatching.
+         */
+        public Builder skipMatching(Boolean skipMatching) {
+            this.putQueryParameter("SkipMatching", skipMatching);
+            this.skipMatching = skipMatching;
             return this;
         }
 

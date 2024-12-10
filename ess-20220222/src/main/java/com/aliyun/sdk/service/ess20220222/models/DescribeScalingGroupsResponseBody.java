@@ -245,6 +245,113 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
      *
      * <p>DescribeScalingGroupsResponseBody</p>
      */
+    public static class CapacityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CompensateWithOnDemand")
+        private Boolean compensateWithOnDemand;
+
+        @com.aliyun.core.annotation.NameInMap("OnDemandBaseCapacity")
+        private Integer onDemandBaseCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("OnDemandPercentageAboveBaseCapacity")
+        private Integer onDemandPercentageAboveBaseCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("SpotAutoReplaceOnDemand")
+        private Boolean spotAutoReplaceOnDemand;
+
+        private CapacityOptions(Builder builder) {
+            this.compensateWithOnDemand = builder.compensateWithOnDemand;
+            this.onDemandBaseCapacity = builder.onDemandBaseCapacity;
+            this.onDemandPercentageAboveBaseCapacity = builder.onDemandPercentageAboveBaseCapacity;
+            this.spotAutoReplaceOnDemand = builder.spotAutoReplaceOnDemand;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CapacityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return compensateWithOnDemand
+         */
+        public Boolean getCompensateWithOnDemand() {
+            return this.compensateWithOnDemand;
+        }
+
+        /**
+         * @return onDemandBaseCapacity
+         */
+        public Integer getOnDemandBaseCapacity() {
+            return this.onDemandBaseCapacity;
+        }
+
+        /**
+         * @return onDemandPercentageAboveBaseCapacity
+         */
+        public Integer getOnDemandPercentageAboveBaseCapacity() {
+            return this.onDemandPercentageAboveBaseCapacity;
+        }
+
+        /**
+         * @return spotAutoReplaceOnDemand
+         */
+        public Boolean getSpotAutoReplaceOnDemand() {
+            return this.spotAutoReplaceOnDemand;
+        }
+
+        public static final class Builder {
+            private Boolean compensateWithOnDemand; 
+            private Integer onDemandBaseCapacity; 
+            private Integer onDemandPercentageAboveBaseCapacity; 
+            private Boolean spotAutoReplaceOnDemand; 
+
+            /**
+             * CompensateWithOnDemand.
+             */
+            public Builder compensateWithOnDemand(Boolean compensateWithOnDemand) {
+                this.compensateWithOnDemand = compensateWithOnDemand;
+                return this;
+            }
+
+            /**
+             * OnDemandBaseCapacity.
+             */
+            public Builder onDemandBaseCapacity(Integer onDemandBaseCapacity) {
+                this.onDemandBaseCapacity = onDemandBaseCapacity;
+                return this;
+            }
+
+            /**
+             * OnDemandPercentageAboveBaseCapacity.
+             */
+            public Builder onDemandPercentageAboveBaseCapacity(Integer onDemandPercentageAboveBaseCapacity) {
+                this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
+                return this;
+            }
+
+            /**
+             * SpotAutoReplaceOnDemand.
+             */
+            public Builder spotAutoReplaceOnDemand(Boolean spotAutoReplaceOnDemand) {
+                this.spotAutoReplaceOnDemand = spotAutoReplaceOnDemand;
+                return this;
+            }
+
+            public CapacityOptions build() {
+                return new CapacityOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeScalingGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScalingGroupsResponseBody</p>
+     */
     public static class DBInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
@@ -921,6 +1028,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AzBalance")
         private Boolean azBalance;
 
+        @com.aliyun.core.annotation.NameInMap("CapacityOptions")
+        private CapacityOptions capacityOptions;
+
         @com.aliyun.core.annotation.NameInMap("CompensateWithOnDemand")
         private Boolean compensateWithOnDemand;
 
@@ -1098,6 +1208,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             this.albServerGroups = builder.albServerGroups;
             this.allocationStrategy = builder.allocationStrategy;
             this.azBalance = builder.azBalance;
+            this.capacityOptions = builder.capacityOptions;
             this.compensateWithOnDemand = builder.compensateWithOnDemand;
             this.creationTime = builder.creationTime;
             this.currentHostName = builder.currentHostName;
@@ -1198,6 +1309,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
          */
         public Boolean getAzBalance() {
             return this.azBalance;
+        }
+
+        /**
+         * @return capacityOptions
+         */
+        public CapacityOptions getCapacityOptions() {
+            return this.capacityOptions;
         }
 
         /**
@@ -1605,6 +1723,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             private java.util.List < AlbServerGroups> albServerGroups; 
             private String allocationStrategy; 
             private Boolean azBalance; 
+            private CapacityOptions capacityOptions; 
             private Boolean compensateWithOnDemand; 
             private String creationTime; 
             private String currentHostName; 
@@ -1720,6 +1839,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              */
             public Builder azBalance(Boolean azBalance) {
                 this.azBalance = azBalance;
+                return this;
+            }
+
+            /**
+             * CapacityOptions.
+             */
+            public Builder capacityOptions(CapacityOptions capacityOptions) {
+                this.capacityOptions = capacityOptions;
                 return this;
             }
 

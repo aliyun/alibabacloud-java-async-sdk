@@ -250,6 +250,9 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("SkipMatching")
+        private Boolean skipMatching;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -269,6 +272,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             this.minHealthyPercentage = builder.minHealthyPercentage;
             this.regionId = builder.regionId;
             this.scalingGroupId = builder.scalingGroupId;
+            this.skipMatching = builder.skipMatching;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.totalNeedUpdateCapacity = builder.totalNeedUpdateCapacity;
@@ -346,6 +350,13 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         }
 
         /**
+         * @return skipMatching
+         */
+        public Boolean getSkipMatching() {
+            return this.skipMatching;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -376,6 +387,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             private Integer minHealthyPercentage; 
             private String regionId; 
             private String scalingGroupId; 
+            private Boolean skipMatching; 
             private String startTime; 
             private String status; 
             private Integer totalNeedUpdateCapacity; 
@@ -473,6 +485,14 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
+                return this;
+            }
+
+            /**
+             * SkipMatching.
+             */
+            public Builder skipMatching(Boolean skipMatching) {
+                this.skipMatching = skipMatching;
                 return this;
             }
 
