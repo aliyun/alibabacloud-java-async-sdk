@@ -18,12 +18,20 @@ public class PriceEstimateOutput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
+    @com.aliyun.core.annotation.NameInMap("PostPayItems")
+    private java.util.List < PostPayItems> postPayItems;
+
+    @com.aliyun.core.annotation.NameInMap("PostPayTotalPrice")
+    private Float postPayTotalPrice;
+
     @com.aliyun.core.annotation.NameInMap("TotalPrice")
     private Float totalPrice;
 
     private PriceEstimateOutput(Builder builder) {
         this.apps = builder.apps;
         this.items = builder.items;
+        this.postPayItems = builder.postPayItems;
+        this.postPayTotalPrice = builder.postPayTotalPrice;
         this.totalPrice = builder.totalPrice;
     }
 
@@ -50,6 +58,20 @@ public class PriceEstimateOutput extends TeaModel {
     }
 
     /**
+     * @return postPayItems
+     */
+    public java.util.List < PostPayItems> getPostPayItems() {
+        return this.postPayItems;
+    }
+
+    /**
+     * @return postPayTotalPrice
+     */
+    public Float getPostPayTotalPrice() {
+        return this.postPayTotalPrice;
+    }
+
+    /**
      * @return totalPrice
      */
     public Float getTotalPrice() {
@@ -59,6 +81,8 @@ public class PriceEstimateOutput extends TeaModel {
     public static final class Builder {
         private java.util.List < Apps> apps; 
         private java.util.List < Items> items; 
+        private java.util.List < PostPayItems> postPayItems; 
+        private Float postPayTotalPrice; 
         private Float totalPrice; 
 
         /**
@@ -74,6 +98,22 @@ public class PriceEstimateOutput extends TeaModel {
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
+            return this;
+        }
+
+        /**
+         * PostPayItems.
+         */
+        public Builder postPayItems(java.util.List < PostPayItems> postPayItems) {
+            this.postPayItems = postPayItems;
+            return this;
+        }
+
+        /**
+         * PostPayTotalPrice.
+         */
+        public Builder postPayTotalPrice(Float postPayTotalPrice) {
+            this.postPayTotalPrice = postPayTotalPrice;
             return this;
         }
 
@@ -554,6 +594,300 @@ public class PriceEstimateOutput extends TeaModel {
 
             public Items build() {
                 return new Items(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PriceEstimateOutput} extends {@link TeaModel}
+     *
+     * <p>PriceEstimateOutput</p>
+     */
+    public static class PostPayItemsSteps extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Begin")
+        private Long begin;
+
+        @com.aliyun.core.annotation.NameInMap("End")
+        private Long end;
+
+        @com.aliyun.core.annotation.NameInMap("Price")
+        private Float price;
+
+        @com.aliyun.core.annotation.NameInMap("RegionIds")
+        private java.util.List < String > regionIds;
+
+        @com.aliyun.core.annotation.NameInMap("Unit")
+        private String unit;
+
+        private PostPayItemsSteps(Builder builder) {
+            this.begin = builder.begin;
+            this.end = builder.end;
+            this.price = builder.price;
+            this.regionIds = builder.regionIds;
+            this.unit = builder.unit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PostPayItemsSteps create() {
+            return builder().build();
+        }
+
+        /**
+         * @return begin
+         */
+        public Long getBegin() {
+            return this.begin;
+        }
+
+        /**
+         * @return end
+         */
+        public Long getEnd() {
+            return this.end;
+        }
+
+        /**
+         * @return price
+         */
+        public Float getPrice() {
+            return this.price;
+        }
+
+        /**
+         * @return regionIds
+         */
+        public java.util.List < String > getRegionIds() {
+            return this.regionIds;
+        }
+
+        /**
+         * @return unit
+         */
+        public String getUnit() {
+            return this.unit;
+        }
+
+        public static final class Builder {
+            private Long begin; 
+            private Long end; 
+            private Float price; 
+            private java.util.List < String > regionIds; 
+            private String unit; 
+
+            /**
+             * Begin.
+             */
+            public Builder begin(Long begin) {
+                this.begin = begin;
+                return this;
+            }
+
+            /**
+             * End.
+             */
+            public Builder end(Long end) {
+                this.end = end;
+                return this;
+            }
+
+            /**
+             * Price.
+             */
+            public Builder price(Float price) {
+                this.price = price;
+                return this;
+            }
+
+            /**
+             * RegionIds.
+             */
+            public Builder regionIds(java.util.List < String > regionIds) {
+                this.regionIds = regionIds;
+                return this;
+            }
+
+            /**
+             * Unit.
+             */
+            public Builder unit(String unit) {
+                this.unit = unit;
+                return this;
+            }
+
+            public PostPayItemsSteps build() {
+                return new PostPayItemsSteps(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PriceEstimateOutput} extends {@link TeaModel}
+     *
+     * <p>PriceEstimateOutput</p>
+     */
+    public static class PostPayItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Amount")
+        private Float amount;
+
+        @com.aliyun.core.annotation.NameInMap("Count")
+        private Long count;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Price")
+        private Float price;
+
+        @com.aliyun.core.annotation.NameInMap("Steps")
+        private java.util.List < PostPayItemsSteps> steps;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Unit")
+        private String unit;
+
+        private PostPayItems(Builder builder) {
+            this.amount = builder.amount;
+            this.count = builder.count;
+            this.id = builder.id;
+            this.price = builder.price;
+            this.steps = builder.steps;
+            this.type = builder.type;
+            this.unit = builder.unit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PostPayItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public Float getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return count
+         */
+        public Long getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return price
+         */
+        public Float getPrice() {
+            return this.price;
+        }
+
+        /**
+         * @return steps
+         */
+        public java.util.List < PostPayItemsSteps> getSteps() {
+            return this.steps;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return unit
+         */
+        public String getUnit() {
+            return this.unit;
+        }
+
+        public static final class Builder {
+            private Float amount; 
+            private Long count; 
+            private String id; 
+            private Float price; 
+            private java.util.List < PostPayItemsSteps> steps; 
+            private String type; 
+            private String unit; 
+
+            /**
+             * Amount.
+             */
+            public Builder amount(Float amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * Count.
+             */
+            public Builder count(Long count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Price.
+             */
+            public Builder price(Float price) {
+                this.price = price;
+                return this;
+            }
+
+            /**
+             * Steps.
+             */
+            public Builder steps(java.util.List < PostPayItemsSteps> steps) {
+                this.steps = steps;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Unit.
+             */
+            public Builder unit(String unit) {
+                this.unit = unit;
+                return this;
+            }
+
+            public PostPayItems build() {
+                return new PostPayItems(this);
             } 
 
         } 

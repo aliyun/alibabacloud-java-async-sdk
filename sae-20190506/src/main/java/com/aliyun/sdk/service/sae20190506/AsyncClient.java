@@ -478,6 +478,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWarningEventMetricResponse> getWarningEventMetric(GetWarningEventMetricRequest request);
 
     /**
+     * @param request the request parameters of GetWebshellToken  GetWebshellTokenRequest
+     * @return GetWebshellTokenResponse
+     */
+    CompletableFuture<GetWebshellTokenResponse> getWebshellToken(GetWebshellTokenRequest request);
+
+    /**
      * @param request the request parameters of ListAppEvents  ListAppEventsRequest
      * @return ListAppEventsResponse
      */

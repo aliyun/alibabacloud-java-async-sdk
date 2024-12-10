@@ -157,6 +157,10 @@ public class DeployApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NasId")
     private String nasId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OidcRoleName")
+    private String oidcRoleName;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OssAkId")
     private String ossAkId;
@@ -224,6 +228,10 @@ public class DeployApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Replicas")
     private Integer replicas;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretMountDesc")
+    private String secretMountDesc;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
@@ -304,6 +312,7 @@ public class DeployApplicationRequest extends Request {
         this.mountHost = builder.mountHost;
         this.nasConfigs = builder.nasConfigs;
         this.nasId = builder.nasId;
+        this.oidcRoleName = builder.oidcRoleName;
         this.ossAkId = builder.ossAkId;
         this.ossAkSecret = builder.ossAkSecret;
         this.ossMountDescs = builder.ossMountDescs;
@@ -321,6 +330,7 @@ public class DeployApplicationRequest extends Request {
         this.pythonModules = builder.pythonModules;
         this.readiness = builder.readiness;
         this.replicas = builder.replicas;
+        this.secretMountDesc = builder.secretMountDesc;
         this.securityGroupId = builder.securityGroupId;
         this.serviceTags = builder.serviceTags;
         this.slsConfigs = builder.slsConfigs;
@@ -599,6 +609,13 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return oidcRoleName
+     */
+    public String getOidcRoleName() {
+        return this.oidcRoleName;
+    }
+
+    /**
      * @return ossAkId
      */
     public String getOssAkId() {
@@ -718,6 +735,13 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return secretMountDesc
+     */
+    public String getSecretMountDesc() {
+        return this.secretMountDesc;
+    }
+
+    /**
      * @return securityGroupId
      */
     public String getSecurityGroupId() {
@@ -824,6 +848,7 @@ public class DeployApplicationRequest extends Request {
         private String mountHost; 
         private String nasConfigs; 
         private String nasId; 
+        private String oidcRoleName; 
         private String ossAkId; 
         private String ossAkSecret; 
         private String ossMountDescs; 
@@ -841,6 +866,7 @@ public class DeployApplicationRequest extends Request {
         private String pythonModules; 
         private String readiness; 
         private Integer replicas; 
+        private String secretMountDesc; 
         private String securityGroupId; 
         private String serviceTags; 
         private String slsConfigs; 
@@ -894,6 +920,7 @@ public class DeployApplicationRequest extends Request {
             this.mountHost = request.mountHost;
             this.nasConfigs = request.nasConfigs;
             this.nasId = request.nasId;
+            this.oidcRoleName = request.oidcRoleName;
             this.ossAkId = request.ossAkId;
             this.ossAkSecret = request.ossAkSecret;
             this.ossMountDescs = request.ossMountDescs;
@@ -911,6 +938,7 @@ public class DeployApplicationRequest extends Request {
             this.pythonModules = request.pythonModules;
             this.readiness = request.readiness;
             this.replicas = request.replicas;
+            this.secretMountDesc = request.secretMountDesc;
             this.securityGroupId = request.securityGroupId;
             this.serviceTags = request.serviceTags;
             this.slsConfigs = request.slsConfigs;
@@ -1446,7 +1474,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Apsara File Storage NAS file system. After the application is created, you may want to call other operations to manage the application. If you do not want to change the NAS configurations in these subsequent operations, you can omit the <strong>NasId</strong> parameter in the requests. If you want to unmount the NAS file system, you must set the <strong>NasId</strong> values in the subsequent requests to an empty string (&quot;&quot;).</p>
+         * <p>The ID of the File Storage NAS file system. After the application is created, you may want to call other operations to manage the application. If you do not want to change the NAS configurations in these subsequent operations, you can omit the <strong>NasId</strong> parameter in the requests. If you want to unmount the NAS file system, you must set the <strong>NasId</strong> values in the subsequent requests to an empty string (&quot;&quot;).</p>
          * 
          * <strong>example:</strong>
          * <p>10d3b4****</p>
@@ -1454,6 +1482,15 @@ public class DeployApplicationRequest extends Request {
         public Builder nasId(String nasId) {
             this.putQueryParameter("NasId", nasId);
             this.nasId = nasId;
+            return this;
+        }
+
+        /**
+         * OidcRoleName.
+         */
+        public Builder oidcRoleName(String oidcRoleName) {
+            this.putQueryParameter("OidcRoleName", oidcRoleName);
+            this.oidcRoleName = oidcRoleName;
             return this;
         }
 
@@ -1672,6 +1709,15 @@ public class DeployApplicationRequest extends Request {
         public Builder replicas(Integer replicas) {
             this.putQueryParameter("Replicas", replicas);
             this.replicas = replicas;
+            return this;
+        }
+
+        /**
+         * SecretMountDesc.
+         */
+        public Builder secretMountDesc(String secretMountDesc) {
+            this.putQueryParameter("SecretMountDesc", secretMountDesc);
+            this.secretMountDesc = secretMountDesc;
             return this;
         }
 

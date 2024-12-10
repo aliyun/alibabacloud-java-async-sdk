@@ -521,6 +521,119 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationConfigResponseBody</p>
      */
+    public static class SecretMountDesc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("SecretId")
+        private Long secretId;
+
+        @com.aliyun.core.annotation.NameInMap("SecretName")
+        private String secretName;
+
+        private SecretMountDesc(Builder builder) {
+            this.key = builder.key;
+            this.mountPath = builder.mountPath;
+            this.secretId = builder.secretId;
+            this.secretName = builder.secretName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecretMountDesc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return secretId
+         */
+        public Long getSecretId() {
+            return this.secretId;
+        }
+
+        /**
+         * @return secretName
+         */
+        public String getSecretName() {
+            return this.secretName;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String mountPath; 
+            private Long secretId; 
+            private String secretName; 
+
+            /**
+             * <p>The key-value pair that is stored in the ConfigMap.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The path on which the NAS file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp</p>
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * SecretId.
+             */
+            public Builder secretId(Long secretId) {
+                this.secretId = secretId;
+                return this;
+            }
+
+            /**
+             * SecretName.
+             */
+            public Builder secretName(String secretName) {
+                this.secretName = secretName;
+                return this;
+            }
+
+            public SecretMountDesc build() {
+                return new SecretMountDesc(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationConfigResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -715,6 +828,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NasId")
         private String nasId;
 
+        @com.aliyun.core.annotation.NameInMap("OidcRoleName")
+        private String oidcRoleName;
+
         @com.aliyun.core.annotation.NameInMap("OssAkId")
         private String ossAkId;
 
@@ -771,6 +887,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Replicas")
         private Integer replicas;
+
+        @com.aliyun.core.annotation.NameInMap("SecretMountDesc")
+        private java.util.List < SecretMountDesc> secretMountDesc;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -849,6 +968,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.namespaceId = builder.namespaceId;
             this.nasConfigs = builder.nasConfigs;
             this.nasId = builder.nasId;
+            this.oidcRoleName = builder.oidcRoleName;
             this.ossAkId = builder.ossAkId;
             this.ossAkSecret = builder.ossAkSecret;
             this.ossMountDescs = builder.ossMountDescs;
@@ -868,6 +988,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.readiness = builder.readiness;
             this.regionId = builder.regionId;
             this.replicas = builder.replicas;
+            this.secretMountDesc = builder.secretMountDesc;
             this.securityGroupId = builder.securityGroupId;
             this.serviceTags = builder.serviceTags;
             this.slsConfigs = builder.slsConfigs;
@@ -1171,6 +1292,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return oidcRoleName
+         */
+        public String getOidcRoleName() {
+            return this.oidcRoleName;
+        }
+
+        /**
          * @return ossAkId
          */
         public String getOssAkId() {
@@ -1304,6 +1432,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return secretMountDesc
+         */
+        public java.util.List < SecretMountDesc> getSecretMountDesc() {
+            return this.secretMountDesc;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -1428,6 +1563,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String namespaceId; 
             private String nasConfigs; 
             private String nasId; 
+            private String oidcRoleName; 
             private String ossAkId; 
             private String ossAkSecret; 
             private java.util.List < OssMountDescs> ossMountDescs; 
@@ -1447,6 +1583,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String readiness; 
             private String regionId; 
             private Integer replicas; 
+            private java.util.List < SecretMountDesc> secretMountDesc; 
             private String securityGroupId; 
             private java.util.Map < String, String > serviceTags; 
             private String slsConfigs; 
@@ -1978,6 +2115,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
+             * OidcRoleName.
+             */
+            public Builder oidcRoleName(String oidcRoleName) {
+                this.oidcRoleName = oidcRoleName;
+                return this;
+            }
+
+            /**
              * <p>The AccessKey ID that is used to read data from and write data to Object Storage Service (OSS) buckets.</p>
              * 
              * <strong>example:</strong>
@@ -2197,6 +2342,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder replicas(Integer replicas) {
                 this.replicas = replicas;
+                return this;
+            }
+
+            /**
+             * SecretMountDesc.
+             */
+            public Builder secretMountDesc(java.util.List < SecretMountDesc> secretMountDesc) {
+                this.secretMountDesc = secretMountDesc;
                 return this;
             }
 

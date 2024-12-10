@@ -302,6 +302,73 @@ public class DescribeIngressResponseBody extends TeaModel {
      *
      * <p>DescribeIngressResponseBody</p>
      */
+    public static class RuleActions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActionConfig")
+        private String actionConfig;
+
+        @com.aliyun.core.annotation.NameInMap("ActionType")
+        private String actionType;
+
+        private RuleActions(Builder builder) {
+            this.actionConfig = builder.actionConfig;
+            this.actionType = builder.actionType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RuleActions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return actionConfig
+         */
+        public String getActionConfig() {
+            return this.actionConfig;
+        }
+
+        /**
+         * @return actionType
+         */
+        public String getActionType() {
+            return this.actionType;
+        }
+
+        public static final class Builder {
+            private String actionConfig; 
+            private String actionType; 
+
+            /**
+             * ActionConfig.
+             */
+            public Builder actionConfig(String actionConfig) {
+                this.actionConfig = actionConfig;
+                return this;
+            }
+
+            /**
+             * ActionType.
+             */
+            public Builder actionType(String actionType) {
+                this.actionType = actionType;
+                return this;
+            }
+
+            public RuleActions build() {
+                return new RuleActions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeIngressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIngressResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -324,6 +391,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RewritePath")
         private String rewritePath;
 
+        @com.aliyun.core.annotation.NameInMap("RuleActions")
+        private java.util.List < RuleActions> ruleActions;
+
         private Rules(Builder builder) {
             this.appId = builder.appId;
             this.appName = builder.appName;
@@ -332,6 +402,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             this.domain = builder.domain;
             this.path = builder.path;
             this.rewritePath = builder.rewritePath;
+            this.ruleActions = builder.ruleActions;
         }
 
         public static Builder builder() {
@@ -391,6 +462,13 @@ public class DescribeIngressResponseBody extends TeaModel {
             return this.rewritePath;
         }
 
+        /**
+         * @return ruleActions
+         */
+        public java.util.List < RuleActions> getRuleActions() {
+            return this.ruleActions;
+        }
+
         public static final class Builder {
             private String appId; 
             private String appName; 
@@ -399,6 +477,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             private String domain; 
             private String path; 
             private String rewritePath; 
+            private java.util.List < RuleActions> ruleActions; 
 
             /**
              * <p>The protocol used to forward requests. Valid values:</p>
@@ -480,6 +559,14 @@ public class DescribeIngressResponseBody extends TeaModel {
              */
             public Builder rewritePath(String rewritePath) {
                 this.rewritePath = rewritePath;
+                return this;
+            }
+
+            /**
+             * RuleActions.
+             */
+            public Builder ruleActions(java.util.List < RuleActions> ruleActions) {
+                this.ruleActions = ruleActions;
                 return this;
             }
 
