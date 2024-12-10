@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetBucketAclRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BucketName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketName;
 
     private GetBucketAclRequest(Builder builder) {
@@ -55,6 +56,7 @@ public class GetBucketAclRequest extends Request {
 
         /**
          * <p>The name of the bucket.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
