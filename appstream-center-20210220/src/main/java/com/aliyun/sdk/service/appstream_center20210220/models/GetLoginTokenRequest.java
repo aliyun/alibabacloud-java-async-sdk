@@ -17,10 +17,6 @@ public class GetLoginTokenRequest extends Request {
     private String authenticationCode;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AvailableFeatures")
-    private java.util.Map < String, String > availableFeatures;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
@@ -153,7 +149,6 @@ public class GetLoginTokenRequest extends Request {
     private GetLoginTokenRequest(Builder builder) {
         super(builder);
         this.authenticationCode = builder.authenticationCode;
-        this.availableFeatures = builder.availableFeatures;
         this.clientId = builder.clientId;
         this.clientOS = builder.clientOS;
         this.clientType = builder.clientType;
@@ -206,13 +201,6 @@ public class GetLoginTokenRequest extends Request {
      */
     public String getAuthenticationCode() {
         return this.authenticationCode;
-    }
-
-    /**
-     * @return availableFeatures
-     */
-    public java.util.Map < String, String > getAvailableFeatures() {
-        return this.availableFeatures;
     }
 
     /**
@@ -441,7 +429,6 @@ public class GetLoginTokenRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetLoginTokenRequest, Builder> {
         private String authenticationCode; 
-        private java.util.Map < String, String > availableFeatures; 
         private String clientId; 
         private String clientOS; 
         private String clientType; 
@@ -482,7 +469,6 @@ public class GetLoginTokenRequest extends Request {
         private Builder(GetLoginTokenRequest request) {
             super(request);
             this.authenticationCode = request.authenticationCode;
-            this.availableFeatures = request.availableFeatures;
             this.clientId = request.clientId;
             this.clientOS = request.clientOS;
             this.clientType = request.clientType;
@@ -523,16 +509,6 @@ public class GetLoginTokenRequest extends Request {
         public Builder authenticationCode(String authenticationCode) {
             this.putQueryParameter("AuthenticationCode", authenticationCode);
             this.authenticationCode = authenticationCode;
-            return this;
-        }
-
-        /**
-         * AvailableFeatures.
-         */
-        public Builder availableFeatures(java.util.Map < String, String > availableFeatures) {
-            String availableFeaturesShrink = shrink(availableFeatures, "AvailableFeatures", "json");
-            this.putQueryParameter("AvailableFeatures", availableFeaturesShrink);
-            this.availableFeatures = availableFeatures;
             return this;
         }
 
