@@ -1233,6 +1233,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("domain")
+        private String domain;
+
         @com.aliyun.core.annotation.NameInMap("elasticDataNodeConfiguration")
         private ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
@@ -1309,6 +1312,7 @@ public class ListInstanceResponseBody extends TeaModel {
             this.createdAt = builder.createdAt;
             this.dedicateMaster = builder.dedicateMaster;
             this.description = builder.description;
+            this.domain = builder.domain;
             this.elasticDataNodeConfiguration = builder.elasticDataNodeConfiguration;
             this.endTime = builder.endTime;
             this.esVersion = builder.esVersion;
@@ -1382,6 +1386,13 @@ public class ListInstanceResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
         }
 
         /**
@@ -1552,6 +1563,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String createdAt; 
             private Boolean dedicateMaster; 
             private String description; 
+            private String domain; 
             private ElasticDataNodeConfiguration elasticDataNodeConfiguration; 
             private Long endTime; 
             private String esVersion; 
@@ -1642,6 +1654,14 @@ public class ListInstanceResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
                 return this;
             }
 
