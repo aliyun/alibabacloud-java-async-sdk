@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of FeedbackSession  FeedbackSessionRequest
+     * @return FeedbackSessionResponse
+     */
     @Override
     public CompletableFuture<FeedbackSessionResponse> feedbackSession(FeedbackSessionRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAsyncJobResult  GetAsyncJobResultRequest
+     * @return GetAsyncJobResultResponse
+     */
     @Override
     public CompletableFuture<GetAsyncJobResultResponse> getAsyncJobResult(GetAsyncJobResultRequest request) {
         try {

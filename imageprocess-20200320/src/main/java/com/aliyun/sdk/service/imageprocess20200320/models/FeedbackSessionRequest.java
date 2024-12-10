@@ -70,7 +70,7 @@ public class FeedbackSessionRequest extends Request {
         } 
 
         /**
-         * Feedback.
+         * <p>This parameter is required.</p>
          */
         public Builder feedback(String feedback) {
             this.putBodyParameter("Feedback", feedback);
@@ -79,7 +79,10 @@ public class FeedbackSessionRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69675e9ddaea4b1ca8b9ddbafd02edc2</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
