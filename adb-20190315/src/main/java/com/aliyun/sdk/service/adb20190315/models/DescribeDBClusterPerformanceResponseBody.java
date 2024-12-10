@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterPerformanceResponseBody</p>
  */
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
@@ -28,6 +31,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     private String startTime;
 
     private DescribeDBClusterPerformanceResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.DBClusterId = builder.DBClusterId;
         this.endTime = builder.endTime;
         this.performances = builder.performances;
@@ -41,6 +45,13 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
     public static DescribeDBClusterPerformanceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -79,11 +90,20 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String DBClusterId; 
         private String endTime; 
         private java.util.List < Performances> performances; 
         private String requestId; 
         private String startTime; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * <p>The cluster ID.</p>

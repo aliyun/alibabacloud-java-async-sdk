@@ -7,19 +7,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AttachUserENIRequest} extends {@link RequestModel}
+ * {@link CancelActiveOperationTasksRequest} extends {@link RequestModel}
  *
- * <p>AttachUserENIRequest</p>
+ * <p>CancelActiveOperationTasksRequest</p>
  */
-public class AttachUserENIRequest extends Request {
+public class CancelActiveOperationTasksRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AccessKeyId-copy")
-    private String accessKeyIdCopy;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DBClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String DBClusterId;
+    @com.aliyun.core.annotation.NameInMap("Ids")
+    private String ids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -30,6 +25,10 @@ public class AttachUserENIRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -37,21 +36,26 @@ public class AttachUserENIRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private AttachUserENIRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
+    private String securityToken;
+
+    private CancelActiveOperationTasksRequest(Builder builder) {
         super(builder);
-        this.accessKeyIdCopy = builder.accessKeyIdCopy;
-        this.DBClusterId = builder.DBClusterId;
+        this.ids = builder.ids;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static AttachUserENIRequest create() {
+    public static CancelActiveOperationTasksRequest create() {
         return builder().build();
     }
 
@@ -61,17 +65,10 @@ public class AttachUserENIRequest extends Request {
     }
 
     /**
-     * @return accessKeyIdCopy
+     * @return ids
      */
-    public String getAccessKeyIdCopy() {
-        return this.accessKeyIdCopy;
-    }
-
-    /**
-     * @return DBClusterId
-     */
-    public String getDBClusterId() {
-        return this.DBClusterId;
+    public String getIds() {
+        return this.ids;
     }
 
     /**
@@ -89,6 +86,13 @@ public class AttachUserENIRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -102,50 +106,43 @@ public class AttachUserENIRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<AttachUserENIRequest, Builder> {
-        private String accessKeyIdCopy; 
-        private String DBClusterId; 
+    /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public static final class Builder extends Request.Builder<CancelActiveOperationTasksRequest, Builder> {
+        private String ids; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String securityToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AttachUserENIRequest request) {
+        private Builder(CancelActiveOperationTasksRequest request) {
             super(request);
-            this.accessKeyIdCopy = request.accessKeyIdCopy;
-            this.DBClusterId = request.DBClusterId;
+            this.ids = request.ids;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * AccessKeyId-copy.
+         * Ids.
          */
-        public Builder accessKeyIdCopy(String accessKeyIdCopy) {
-            this.putQueryParameter("AccessKeyId-copy", accessKeyIdCopy);
-            this.accessKeyIdCopy = accessKeyIdCopy;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query cluster IDs.</p>
-         * </blockquote>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>am-bp11q28kvl688****</p>
-         */
-        public Builder DBClusterId(String DBClusterId) {
-            this.putQueryParameter("DBClusterId", DBClusterId);
-            this.DBClusterId = DBClusterId;
+        public Builder ids(String ids) {
+            this.putQueryParameter("Ids", ids);
+            this.ids = ids;
             return this;
         }
 
@@ -168,6 +165,15 @@ public class AttachUserENIRequest extends Request {
         }
 
         /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -185,9 +191,18 @@ public class AttachUserENIRequest extends Request {
             return this;
         }
 
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
+            return this;
+        }
+
         @Override
-        public AttachUserENIRequest build() {
-            return new AttachUserENIRequest(this);
+        public CancelActiveOperationTasksRequest build() {
+            return new CancelActiveOperationTasksRequest(this);
         } 
 
     } 

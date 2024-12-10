@@ -7,20 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AttachUserENIRequest} extends {@link RequestModel}
+ * {@link CheckServiceLinkedRoleRequest} extends {@link RequestModel}
  *
- * <p>AttachUserENIRequest</p>
+ * <p>CheckServiceLinkedRoleRequest</p>
  */
-public class AttachUserENIRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AccessKeyId-copy")
-    private String accessKeyIdCopy;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DBClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String DBClusterId;
-
+public class CheckServiceLinkedRoleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -30,6 +21,10 @@ public class AttachUserENIRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -37,41 +32,31 @@ public class AttachUserENIRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private AttachUserENIRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    private String serviceName;
+
+    private CheckServiceLinkedRoleRequest(Builder builder) {
         super(builder);
-        this.accessKeyIdCopy = builder.accessKeyIdCopy;
-        this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.serviceName = builder.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static AttachUserENIRequest create() {
+    public static CheckServiceLinkedRoleRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return accessKeyIdCopy
-     */
-    public String getAccessKeyIdCopy() {
-        return this.accessKeyIdCopy;
-    }
-
-    /**
-     * @return DBClusterId
-     */
-    public String getDBClusterId() {
-        return this.DBClusterId;
     }
 
     /**
@@ -89,6 +74,13 @@ public class AttachUserENIRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -102,52 +94,34 @@ public class AttachUserENIRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<AttachUserENIRequest, Builder> {
-        private String accessKeyIdCopy; 
-        private String DBClusterId; 
+    /**
+     * @return serviceName
+     */
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    public static final class Builder extends Request.Builder<CheckServiceLinkedRoleRequest, Builder> {
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String serviceName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AttachUserENIRequest request) {
+        private Builder(CheckServiceLinkedRoleRequest request) {
             super(request);
-            this.accessKeyIdCopy = request.accessKeyIdCopy;
-            this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
         } 
-
-        /**
-         * AccessKeyId-copy.
-         */
-        public Builder accessKeyIdCopy(String accessKeyIdCopy) {
-            this.putQueryParameter("AccessKeyId-copy", accessKeyIdCopy);
-            this.accessKeyIdCopy = accessKeyIdCopy;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query cluster IDs.</p>
-         * </blockquote>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>am-bp11q28kvl688****</p>
-         */
-        public Builder DBClusterId(String DBClusterId) {
-            this.putQueryParameter("DBClusterId", DBClusterId);
-            this.DBClusterId = DBClusterId;
-            return this;
-        }
 
         /**
          * OwnerAccount.
@@ -164,6 +138,15 @@ public class AttachUserENIRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -185,9 +168,18 @@ public class AttachUserENIRequest extends Request {
             return this;
         }
 
+        /**
+         * ServiceName.
+         */
+        public Builder serviceName(String serviceName) {
+            this.putQueryParameter("ServiceName", serviceName);
+            this.serviceName = serviceName;
+            return this;
+        }
+
         @Override
-        public AttachUserENIRequest build() {
-            return new AttachUserENIRequest(this);
+        public CheckServiceLinkedRoleRequest build() {
+            return new CheckServiceLinkedRoleRequest(this);
         } 
 
     } 

@@ -72,6 +72,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindDBResourcePoolWithUserResponse> bindDBResourcePoolWithUser(BindDBResourcePoolWithUserRequest request);
 
     /**
+     * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
+     * @return CancelActiveOperationTasksResponse
+     */
+    CompletableFuture<CancelActiveOperationTasksResponse> cancelActiveOperationTasks(CancelActiveOperationTasksRequest request);
+
+    /**
+     * @param request the request parameters of CheckServiceLinkedRole  CheckServiceLinkedRoleRequest
+     * @return CheckServiceLinkedRoleResponse
+     */
+    CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request);
+
+    /**
      * @param request the request parameters of CreateAccount  CreateAccountRequest
      * @return CreateAccountResponse
      */
@@ -116,10 +128,29 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateElasticPlanResponse> createElasticPlan(CreateElasticPlanRequest request);
 
     /**
+     * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
+     * @return CreateServiceLinkedRoleResponse
+     */
+    CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
+
+    /**
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
      * @return DeleteAccountResponse
      */
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</p>
+     * <ul>
+     * <li>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</li>
+     * <li>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteBackups  DeleteBackupsRequest
+     * @return DeleteBackupsResponse
+     */
+    CompletableFuture<DeleteBackupsResponse> deleteBackups(DeleteBackupsRequest request);
 
     /**
      * <b>description</b> :
@@ -170,6 +201,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAccountsResponse
      */
     CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationMaintainConf  DescribeActiveOperationMaintainConfRequest
+     * @return DescribeActiveOperationMaintainConfResponse
+     */
+    CompletableFuture<DescribeActiveOperationMaintainConfResponse> describeActiveOperationMaintainConf(DescribeActiveOperationMaintainConfRequest request);
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationTasks  DescribeActiveOperationTasksRequest
+     * @return DescribeActiveOperationTasksResponse
+     */
+    CompletableFuture<DescribeActiveOperationTasksResponse> describeActiveOperationTasks(DescribeActiveOperationTasksRequest request);
 
     /**
      * @param request the request parameters of DescribeAdviceServiceEnabled  DescribeAdviceServiceEnabledRequest
@@ -420,6 +463,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeExcessivePrimaryKeysResponse> describeExcessivePrimaryKeys(DescribeExcessivePrimaryKeysRequest request);
 
     /**
+     * @param request the request parameters of DescribeHistoryEventsStat  DescribeHistoryEventsStatRequest
+     * @return DescribeHistoryEventsStatResponse
+     */
+    CompletableFuture<DescribeHistoryEventsStatResponse> describeHistoryEventsStat(DescribeHistoryEventsStatRequest request);
+
+    /**
      * @param request the request parameters of DescribeInclinedTables  DescribeInclinedTablesRequest
      * @return DescribeInclinedTablesResponse
      */
@@ -432,6 +481,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeKernelVersionResponse> describeKernelVersion(DescribeKernelVersionRequest request);
 
     /**
+     * @param request the request parameters of DescribeKmsKeys  DescribeKmsKeysRequest
+     * @return DescribeKmsKeysResponse
+     */
+    CompletableFuture<DescribeKmsKeysResponse> describeKmsKeys(DescribeKmsKeysRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about how to asynchronously submit import and export tasks, see <a href="https://help.aliyun.com/document_detail/160291.html">Asynchronously submit an import or export task</a>.</p>
      * 
@@ -439,6 +494,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeLoadTasksRecordsResponse
      */
     CompletableFuture<DescribeLoadTasksRecordsResponse> describeLoadTasksRecords(DescribeLoadTasksRecordsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLogHubAttribute  DescribeLogHubAttributeRequest
+     * @return DescribeLogHubAttributeResponse
+     */
+    CompletableFuture<DescribeLogHubAttributeResponse> describeLogHubAttribute(DescribeLogHubAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLogStoreKeys  DescribeLogStoreKeysRequest
+     * @return DescribeLogStoreKeysResponse
+     */
+    CompletableFuture<DescribeLogStoreKeysResponse> describeLogStoreKeys(DescribeLogStoreKeysRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLoghubDetail  DescribeLoghubDetailRequest
+     * @return DescribeLoghubDetailResponse
+     */
+    CompletableFuture<DescribeLoghubDetailResponse> describeLoghubDetail(DescribeLoghubDetailRequest request);
 
     /**
      * @param request the request parameters of DescribeMaintenanceAction  DescribeMaintenanceActionRequest
@@ -465,10 +538,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeProcessListResponse> describeProcessList(DescribeProcessListRequest request);
 
     /**
+     * @param request the request parameters of DescribeRdsAnalysisResourceQuotas  DescribeRdsAnalysisResourceQuotasRequest
+     * @return DescribeRdsAnalysisResourceQuotasResponse
+     */
+    CompletableFuture<DescribeRdsAnalysisResourceQuotasResponse> describeRdsAnalysisResourceQuotas(DescribeRdsAnalysisResourceQuotasRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRegionsMixed  DescribeRegionsMixedRequest
+     * @return DescribeRegionsMixedResponse
+     */
+    CompletableFuture<DescribeRegionsMixedResponse> describeRegionsMixed(DescribeRegionsMixedRequest request);
 
     /**
      * @param request the request parameters of DescribeResubmitConfig  DescribeResubmitConfigRequest
@@ -519,6 +604,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSqlPatternResponse> describeSqlPattern(DescribeSqlPatternRequest request);
 
     /**
+     * @param request the request parameters of DescribeSyncAvailableDBClusterList  DescribeSyncAvailableDBClusterListRequest
+     * @return DescribeSyncAvailableDBClusterListResponse
+     */
+    CompletableFuture<DescribeSyncAvailableDBClusterListResponse> describeSyncAvailableDBClusterList(DescribeSyncAvailableDBClusterListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSyncJobList  DescribeSyncJobListRequest
+     * @return DescribeSyncJobListResponse
+     */
+    CompletableFuture<DescribeSyncJobListResponse> describeSyncJobList(DescribeSyncJobListRequest request);
+
+    /**
      * @param request the request parameters of DescribeTableAccessCount  DescribeTableAccessCountRequest
      * @return DescribeTableAccessCountResponse
      */
@@ -559,6 +656,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeVSwitchesResponse
      */
     CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVSwitchs  DescribeVSwitchsRequest
+     * @return DescribeVSwitchsResponse
+     */
+    CompletableFuture<DescribeVSwitchsResponse> describeVSwitchs(DescribeVSwitchsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVpcs  DescribeVpcsRequest
+     * @return DescribeVpcsResponse
+     */
+    CompletableFuture<DescribeVpcsResponse> describeVpcs(DescribeVpcsRequest request);
 
     /**
      * <b>description</b> :
@@ -620,6 +729,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAccountDescriptionResponse
      */
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of ModifyActiveOperationMaintainConf  ModifyActiveOperationMaintainConfRequest
+     * @return ModifyActiveOperationMaintainConfResponse
+     */
+    CompletableFuture<ModifyActiveOperationMaintainConfResponse> modifyActiveOperationMaintainConf(ModifyActiveOperationMaintainConfRequest request);
+
+    /**
+     * @param request the request parameters of ModifyActiveOperationTasks  ModifyActiveOperationTasksRequest
+     * @return ModifyActiveOperationTasksResponse
+     */
+    CompletableFuture<ModifyActiveOperationTasksResponse> modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request);
 
     /**
      * @param request the request parameters of ModifyAuditLogConfig  ModifyAuditLogConfigRequest
@@ -691,6 +812,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterSSLResponse> modifyDBClusterSSL(ModifyDBClusterSSLRequest request);
 
     /**
+     * @param request the request parameters of ModifyDBClusterVip  ModifyDBClusterVipRequest
+     * @return ModifyDBClusterVipResponse
+     */
+    CompletableFuture<ModifyDBClusterVipResponse> modifyDBClusterVip(ModifyDBClusterVipRequest request);
+
+    /**
      * <b>description</b> :
      * <h2>Precautions</h2>
      * <ul>
@@ -732,6 +859,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyLogBackupPolicyResponse> modifyLogBackupPolicy(ModifyLogBackupPolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifyLogHubStatus  ModifyLogHubStatusRequest
+     * @return ModifyLogHubStatusResponse
+     */
+    CompletableFuture<ModifyLogHubStatusResponse> modifyLogHubStatus(ModifyLogHubStatusRequest request);
+
+    /**
      * @param request the request parameters of ModifyMaintenanceAction  ModifyMaintenanceActionRequest
      * @return ModifyMaintenanceActionResponse
      */
@@ -748,6 +881,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifySQAConfigResponse
      */
     CompletableFuture<ModifySQAConfigResponse> modifySQAConfig(ModifySQAConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifySyncJob  ModifySyncJobRequest
+     * @return ModifySyncJobResponse
+     */
+    CompletableFuture<ModifySyncJobResponse> modifySyncJob(ModifySyncJobRequest request);
+
+    /**
+     * @param request the request parameters of OperateLogHub  OperateLogHubRequest
+     * @return OperateLogHubResponse
+     */
+    CompletableFuture<OperateLogHubResponse> operateLogHub(OperateLogHubRequest request);
 
     /**
      * @param request the request parameters of ReleaseClusterPublicConnection  ReleaseClusterPublicConnectionRequest

@@ -7,20 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AttachUserENIRequest} extends {@link RequestModel}
+ * {@link DescribeVpcsRequest} extends {@link RequestModel}
  *
- * <p>AttachUserENIRequest</p>
+ * <p>DescribeVpcsRequest</p>
  */
-public class AttachUserENIRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AccessKeyId-copy")
-    private String accessKeyIdCopy;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DBClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String DBClusterId;
-
+public class DescribeVpcsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -30,6 +21,10 @@ public class AttachUserENIRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -37,41 +32,41 @@ public class AttachUserENIRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private AttachUserENIRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
+    private String securityToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    private String zoneId;
+
+    private DescribeVpcsRequest(Builder builder) {
         super(builder);
-        this.accessKeyIdCopy = builder.accessKeyIdCopy;
-        this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityToken = builder.securityToken;
+        this.vpcId = builder.vpcId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static AttachUserENIRequest create() {
+    public static DescribeVpcsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return accessKeyIdCopy
-     */
-    public String getAccessKeyIdCopy() {
-        return this.accessKeyIdCopy;
-    }
-
-    /**
-     * @return DBClusterId
-     */
-    public String getDBClusterId() {
-        return this.DBClusterId;
     }
 
     /**
@@ -89,6 +84,13 @@ public class AttachUserENIRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -102,52 +104,52 @@ public class AttachUserENIRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<AttachUserENIRequest, Builder> {
-        private String accessKeyIdCopy; 
-        private String DBClusterId; 
+    /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeVpcsRequest, Builder> {
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String securityToken; 
+        private String vpcId; 
+        private String zoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AttachUserENIRequest request) {
+        private Builder(DescribeVpcsRequest request) {
             super(request);
-            this.accessKeyIdCopy = request.accessKeyIdCopy;
-            this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityToken = request.securityToken;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
-
-        /**
-         * AccessKeyId-copy.
-         */
-        public Builder accessKeyIdCopy(String accessKeyIdCopy) {
-            this.putQueryParameter("AccessKeyId-copy", accessKeyIdCopy);
-            this.accessKeyIdCopy = accessKeyIdCopy;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query cluster IDs.</p>
-         * </blockquote>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>am-bp11q28kvl688****</p>
-         */
-        public Builder DBClusterId(String DBClusterId) {
-            this.putQueryParameter("DBClusterId", DBClusterId);
-            this.DBClusterId = DBClusterId;
-            return this;
-        }
 
         /**
          * OwnerAccount.
@@ -164,6 +166,15 @@ public class AttachUserENIRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -185,9 +196,39 @@ public class AttachUserENIRequest extends Request {
             return this;
         }
 
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp13h7uzhulpuxvnp****</p>
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
+            return this;
+        }
+
         @Override
-        public AttachUserENIRequest build() {
-            return new AttachUserENIRequest(this);
+        public DescribeVpcsRequest build() {
+            return new DescribeVpcsRequest(this);
         } 
 
     } 

@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterShardNumberResponseBody</p>
  */
 public class DescribeDBClusterShardNumberResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AvailableShardNumbers")
+    private java.util.List < Integer > availableShardNumbers;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -19,6 +22,7 @@ public class DescribeDBClusterShardNumberResponseBody extends TeaModel {
     private Integer shardNumber;
 
     private DescribeDBClusterShardNumberResponseBody(Builder builder) {
+        this.availableShardNumbers = builder.availableShardNumbers;
         this.requestId = builder.requestId;
         this.shardNumber = builder.shardNumber;
     }
@@ -29,6 +33,13 @@ public class DescribeDBClusterShardNumberResponseBody extends TeaModel {
 
     public static DescribeDBClusterShardNumberResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return availableShardNumbers
+     */
+    public java.util.List < Integer > getAvailableShardNumbers() {
+        return this.availableShardNumbers;
     }
 
     /**
@@ -46,8 +57,17 @@ public class DescribeDBClusterShardNumberResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < Integer > availableShardNumbers; 
         private String requestId; 
         private Integer shardNumber; 
+
+        /**
+         * AvailableShardNumbers.
+         */
+        public Builder availableShardNumbers(java.util.List < Integer > availableShardNumbers) {
+            this.availableShardNumbers = availableShardNumbers;
+            return this;
+        }
 
         /**
          * RequestId.
