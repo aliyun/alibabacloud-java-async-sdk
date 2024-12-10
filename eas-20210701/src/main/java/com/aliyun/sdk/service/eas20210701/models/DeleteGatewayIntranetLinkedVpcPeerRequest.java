@@ -96,7 +96,10 @@ public class DeleteGatewayIntranetLinkedVpcPeerRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region where the private gateway resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -105,7 +108,10 @@ public class DeleteGatewayIntranetLinkedVpcPeerRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The ID of the private gateway. To obtain the private gateway ID, see <a href="https://help.aliyun.com/document_detail/2841911.html">ListGateway</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);
@@ -114,7 +120,7 @@ public class DeleteGatewayIntranetLinkedVpcPeerRequest extends Request {
         }
 
         /**
-         * PeerVpcs.
+         * <p>The VPC peer.</p>
          */
         public Builder peerVpcs(java.util.List < PeerVpcs> peerVpcs) {
             String peerVpcsShrink = shrink(peerVpcs, "PeerVpcs", "json");
@@ -124,7 +130,10 @@ public class DeleteGatewayIntranetLinkedVpcPeerRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the associated VPC. To obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zetuli9ws0qgjd******</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -184,7 +193,10 @@ public class DeleteGatewayIntranetLinkedVpcPeerRequest extends Request {
             private String vpcId; 
 
             /**
-             * Region.
+             * <p>The region where the VPC peer resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -192,7 +204,10 @@ public class DeleteGatewayIntranetLinkedVpcPeerRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC peer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf66uio7md****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

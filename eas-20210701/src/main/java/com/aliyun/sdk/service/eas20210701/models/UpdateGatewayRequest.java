@@ -31,6 +31,10 @@ public class UpdateGatewayRequest extends Request {
     private Boolean enableIntranet;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableSSLRedirection")
+    private Boolean enableSSLRedirection;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
@@ -52,6 +56,7 @@ public class UpdateGatewayRequest extends Request {
         this.clusterId = builder.clusterId;
         this.enableInternet = builder.enableInternet;
         this.enableIntranet = builder.enableIntranet;
+        this.enableSSLRedirection = builder.enableSSLRedirection;
         this.instanceType = builder.instanceType;
         this.isDefault = builder.isDefault;
         this.name = builder.name;
@@ -100,6 +105,13 @@ public class UpdateGatewayRequest extends Request {
     }
 
     /**
+     * @return enableSSLRedirection
+     */
+    public Boolean getEnableSSLRedirection() {
+        return this.enableSSLRedirection;
+    }
+
+    /**
      * @return instanceType
      */
     public String getInstanceType() {
@@ -132,6 +144,7 @@ public class UpdateGatewayRequest extends Request {
         private String clusterId; 
         private Boolean enableInternet; 
         private Boolean enableIntranet; 
+        private Boolean enableSSLRedirection; 
         private String instanceType; 
         private Boolean isDefault; 
         private String name; 
@@ -147,6 +160,7 @@ public class UpdateGatewayRequest extends Request {
             this.clusterId = request.clusterId;
             this.enableInternet = request.enableInternet;
             this.enableIntranet = request.enableIntranet;
+            this.enableSSLRedirection = request.enableSSLRedirection;
             this.instanceType = request.instanceType;
             this.isDefault = request.isDefault;
             this.name = request.name;
@@ -216,6 +230,15 @@ public class UpdateGatewayRequest extends Request {
         public Builder enableIntranet(Boolean enableIntranet) {
             this.putBodyParameter("EnableIntranet", enableIntranet);
             this.enableIntranet = enableIntranet;
+            return this;
+        }
+
+        /**
+         * EnableSSLRedirection.
+         */
+        public Builder enableSSLRedirection(Boolean enableSSLRedirection) {
+            this.putBodyParameter("EnableSSLRedirection", enableSSLRedirection);
+            this.enableSSLRedirection = enableSSLRedirection;
             return this;
         }
 

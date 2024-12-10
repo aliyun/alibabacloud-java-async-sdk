@@ -18,6 +18,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CpuCount")
     private Integer cpuCount;
 
+    @com.aliyun.core.annotation.NameInMap("CpuUsed")
+    private Integer cpuUsed;
+
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
@@ -27,8 +30,17 @@ public class DescribeResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GpuCount")
     private Integer gpuCount;
 
+    @com.aliyun.core.annotation.NameInMap("GpuUsed")
+    private Float gpuUsed;
+
     @com.aliyun.core.annotation.NameInMap("InstanceCount")
     private Integer instanceCount;
+
+    @com.aliyun.core.annotation.NameInMap("Memory")
+    private Integer memory;
+
+    @com.aliyun.core.annotation.NameInMap("MemoryUsed")
+    private Integer memoryUsed;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -63,10 +75,14 @@ public class DescribeResourceResponseBody extends TeaModel {
     private DescribeResourceResponseBody(Builder builder) {
         this.clusterId = builder.clusterId;
         this.cpuCount = builder.cpuCount;
+        this.cpuUsed = builder.cpuUsed;
         this.createTime = builder.createTime;
         this.extraData = builder.extraData;
         this.gpuCount = builder.gpuCount;
+        this.gpuUsed = builder.gpuUsed;
         this.instanceCount = builder.instanceCount;
+        this.memory = builder.memory;
+        this.memoryUsed = builder.memoryUsed;
         this.message = builder.message;
         this.ownerUid = builder.ownerUid;
         this.postPaidInstanceCount = builder.postPaidInstanceCount;
@@ -102,6 +118,13 @@ public class DescribeResourceResponseBody extends TeaModel {
     }
 
     /**
+     * @return cpuUsed
+     */
+    public Integer getCpuUsed() {
+        return this.cpuUsed;
+    }
+
+    /**
      * @return createTime
      */
     public String getCreateTime() {
@@ -123,10 +146,31 @@ public class DescribeResourceResponseBody extends TeaModel {
     }
 
     /**
+     * @return gpuUsed
+     */
+    public Float getGpuUsed() {
+        return this.gpuUsed;
+    }
+
+    /**
      * @return instanceCount
      */
     public Integer getInstanceCount() {
         return this.instanceCount;
+    }
+
+    /**
+     * @return memory
+     */
+    public Integer getMemory() {
+        return this.memory;
+    }
+
+    /**
+     * @return memoryUsed
+     */
+    public Integer getMemoryUsed() {
+        return this.memoryUsed;
     }
 
     /**
@@ -202,10 +246,14 @@ public class DescribeResourceResponseBody extends TeaModel {
     public static final class Builder {
         private String clusterId; 
         private Integer cpuCount; 
+        private Integer cpuUsed; 
         private String createTime; 
         private String extraData; 
         private Integer gpuCount; 
+        private Float gpuUsed; 
         private Integer instanceCount; 
+        private Integer memory; 
+        private Integer memoryUsed; 
         private String message; 
         private String ownerUid; 
         private Integer postPaidInstanceCount; 
@@ -236,6 +284,14 @@ public class DescribeResourceResponseBody extends TeaModel {
          */
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = cpuCount;
+            return this;
+        }
+
+        /**
+         * CpuUsed.
+         */
+        public Builder cpuUsed(Integer cpuUsed) {
+            this.cpuUsed = cpuUsed;
             return this;
         }
 
@@ -273,6 +329,14 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
+         * GpuUsed.
+         */
+        public Builder gpuUsed(Float gpuUsed) {
+            this.gpuUsed = gpuUsed;
+            return this;
+        }
+
+        /**
          * <p>The total number of instances in the resource group.</p>
          * 
          * <strong>example:</strong>
@@ -280,6 +344,22 @@ public class DescribeResourceResponseBody extends TeaModel {
          */
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
+            return this;
+        }
+
+        /**
+         * Memory.
+         */
+        public Builder memory(Integer memory) {
+            this.memory = memory;
+            return this;
+        }
+
+        /**
+         * MemoryUsed.
+         */
+        public Builder memoryUsed(Integer memoryUsed) {
+            this.memoryUsed = memoryUsed;
             return this;
         }
 

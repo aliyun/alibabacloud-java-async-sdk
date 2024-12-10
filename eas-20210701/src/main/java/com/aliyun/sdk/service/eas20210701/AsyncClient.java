@@ -374,6 +374,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGatewayIntranetLinkedVpcPeerResponse> listGatewayIntranetLinkedVpcPeer(ListGatewayIntranetLinkedVpcPeerRequest request);
 
     /**
+     * @param request the request parameters of ListGatewayIntranetSupportedZone  ListGatewayIntranetSupportedZoneRequest
+     * @return ListGatewayIntranetSupportedZoneResponse
+     */
+    CompletableFuture<ListGatewayIntranetSupportedZoneResponse> listGatewayIntranetSupportedZone(ListGatewayIntranetSupportedZoneRequest request);
+
+    /**
      * @param request the request parameters of ListGroups  ListGroupsRequest
      * @return ListGroupsResponse
      */

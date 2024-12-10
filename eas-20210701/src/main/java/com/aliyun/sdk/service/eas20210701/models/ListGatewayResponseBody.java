@@ -180,6 +180,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Replicas")
         private Integer replicas;
 
+        @com.aliyun.core.annotation.NameInMap("SSLRedirectionEnabled")
+        private Boolean SSLRedirectionEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -197,6 +200,7 @@ public class ListGatewayResponseBody extends TeaModel {
             this.intranetDomain = builder.intranetDomain;
             this.isDefault = builder.isDefault;
             this.replicas = builder.replicas;
+            this.SSLRedirectionEnabled = builder.SSLRedirectionEnabled;
             this.status = builder.status;
             this.updateTime = builder.updateTime;
         }
@@ -280,6 +284,13 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return SSLRedirectionEnabled
+         */
+        public Boolean getSSLRedirectionEnabled() {
+            return this.SSLRedirectionEnabled;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -304,6 +315,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private String intranetDomain; 
             private Boolean isDefault; 
             private Integer replicas; 
+            private Boolean SSLRedirectionEnabled; 
             private String status; 
             private String updateTime; 
 
@@ -418,6 +430,14 @@ public class ListGatewayResponseBody extends TeaModel {
              */
             public Builder replicas(Integer replicas) {
                 this.replicas = replicas;
+                return this;
+            }
+
+            /**
+             * SSLRedirectionEnabled.
+             */
+            public Builder SSLRedirectionEnabled(Boolean SSLRedirectionEnabled) {
+                this.SSLRedirectionEnabled = SSLRedirectionEnabled;
                 return this;
             }
 

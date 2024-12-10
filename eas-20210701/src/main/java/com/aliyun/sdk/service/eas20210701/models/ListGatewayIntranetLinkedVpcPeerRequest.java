@@ -82,7 +82,10 @@ public class ListGatewayIntranetLinkedVpcPeerRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region where the private gateway resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -91,7 +94,10 @@ public class ListGatewayIntranetLinkedVpcPeerRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The ID of the private gateway. To obtain the private gateway ID, see <a href="https://help.aliyun.com/document_detail/2841911.html">ListGateway</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);
@@ -100,7 +106,14 @@ public class ListGatewayIntranetLinkedVpcPeerRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the associated VPC. To obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
+         * <ul>
+         * <li>If you specify a VPC ID, only VPC peers corresponding to the ID are queried.</li>
+         * <li>Otherwise, all VPC peers are queried.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zetuli9ws0qgjd******</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

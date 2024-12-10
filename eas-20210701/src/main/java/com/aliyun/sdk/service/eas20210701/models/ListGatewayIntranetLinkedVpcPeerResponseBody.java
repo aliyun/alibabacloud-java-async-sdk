@@ -62,7 +62,10 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GatewayId.
+         * <p>The ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -70,7 +73,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         }
 
         /**
-         * PeerVpcList.
+         * <p>The list of VPC peers.</p>
          */
         public Builder peerVpcList(java.util.List < PeerVpcList> peerVpcList) {
             this.peerVpcList = peerVpcList;
@@ -78,7 +81,10 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -136,7 +142,10 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * Region.
+             * <p>The region where the VPC peer resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -144,7 +153,10 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC peer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf66uio7md****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -203,7 +215,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * PeerVpcs.
+             * <p>The ID of the VPC peers.</p>
              */
             public Builder peerVpcs(java.util.List < PeerVpcs> peerVpcs) {
                 this.peerVpcs = peerVpcs;
@@ -211,7 +223,10 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zetuli9ws0qgjd******</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

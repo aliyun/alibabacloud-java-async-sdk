@@ -62,7 +62,10 @@ public class DeleteGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GatewayId.
+         * <p>The ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -70,7 +73,10 @@ public class DeleteGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successfully delete intranet linked vpc Peer for gateway</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +84,10 @@ public class DeleteGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
