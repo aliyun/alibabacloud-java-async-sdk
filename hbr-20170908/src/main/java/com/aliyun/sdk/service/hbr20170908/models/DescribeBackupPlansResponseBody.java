@@ -222,6 +222,140 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
      *
      * <p>DescribeBackupPlansResponseBody</p>
      */
+    public static class HitTag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private HitTag(Builder builder) {
+            this.key = builder.key;
+            this.operator = builder.operator;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HitTag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String operator; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public HitTag build() {
+                return new HitTag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeBackupPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPlansResponseBody</p>
+     */
+    public static class HitTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HitTag")
+        private java.util.List < HitTag> hitTag;
+
+        private HitTags(Builder builder) {
+            this.hitTag = builder.hitTag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HitTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hitTag
+         */
+        public java.util.List < HitTag> getHitTag() {
+            return this.hitTag;
+        }
+
+        public static final class Builder {
+            private java.util.List < HitTag> hitTag; 
+
+            /**
+             * HitTag.
+             */
+            public Builder hitTag(java.util.List < HitTag> hitTag) {
+                this.hitTag = hitTag;
+                return this;
+            }
+
+            public HitTags build() {
+                return new HitTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeBackupPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPlansResponseBody</p>
+     */
     public static class TableNames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableName")
         private java.util.List < String > tableName;
@@ -932,6 +1066,9 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("CreatedByTag")
+        private Boolean createdByTag;
+
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
@@ -967,6 +1104,9 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
+
+        @com.aliyun.core.annotation.NameInMap("HitTags")
+        private HitTags hitTags;
 
         @com.aliyun.core.annotation.NameInMap("Include")
         private String include;
@@ -1039,6 +1179,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             this.clientId = builder.clientId;
             this.clusterId = builder.clusterId;
             this.createTime = builder.createTime;
+            this.createdByTag = builder.createdByTag;
             this.createdTime = builder.createdTime;
             this.crossAccountRoleName = builder.crossAccountRoleName;
             this.crossAccountType = builder.crossAccountType;
@@ -1051,6 +1192,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             this.disabled = builder.disabled;
             this.exclude = builder.exclude;
             this.fileSystemId = builder.fileSystemId;
+            this.hitTags = builder.hitTags;
             this.include = builder.include;
             this.instanceGroupId = builder.instanceGroupId;
             this.instanceId = builder.instanceId;
@@ -1129,6 +1271,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return createdByTag
+         */
+        public Boolean getCreatedByTag() {
+            return this.createdByTag;
         }
 
         /**
@@ -1213,6 +1362,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
          */
         public String getFileSystemId() {
             return this.fileSystemId;
+        }
+
+        /**
+         * @return hitTags
+         */
+        public HitTags getHitTags() {
+            return this.hitTags;
         }
 
         /**
@@ -1370,6 +1526,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private String clientId; 
             private String clusterId; 
             private Long createTime; 
+            private Boolean createdByTag; 
             private Long createdTime; 
             private String crossAccountRoleName; 
             private String crossAccountType; 
@@ -1382,6 +1539,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private Boolean disabled; 
             private String exclude; 
             private String fileSystemId; 
+            private HitTags hitTags; 
             private String include; 
             private String instanceGroupId; 
             private String instanceId; 
@@ -1478,6 +1636,14 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CreatedByTag.
+             */
+            public Builder createdByTag(Boolean createdByTag) {
+                this.createdByTag = createdByTag;
                 return this;
             }
 
@@ -1618,6 +1784,14 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
+                return this;
+            }
+
+            /**
+             * HitTags.
+             */
+            public Builder hitTags(HitTags hitTags) {
+                this.hitTags = hitTags;
                 return this;
             }
 

@@ -529,7 +529,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private String inventoryId; 
 
             /**
-             * IgnoreArchiveObject.
+             * <p>不在任务统计和失败文件列表中提示归档型对象</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ignoreArchiveObject(Boolean ignoreArchiveObject) {
                 this.ignoreArchiveObject = ignoreArchiveObject;
@@ -1037,7 +1040,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1045,7 +1051,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The tag-based matching rule.</p>
+             * <ul>
+             * <li><strong>EQUAL</strong>: Both the tag key and tag value are matched.</li>
+             * <li><strong>NOT</strong>: The tag key is matched and the tag value is not matched.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EQUAL</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -1053,7 +1066,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1312,7 +1328,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedByTag.
+             * <p>Indicates whether the resource is automatically associated with the related resource tag in the backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder createdByTag(Boolean createdByTag) {
                 this.createdByTag = createdByTag;
@@ -1405,7 +1424,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * HitTags.
+             * <p>The matched tag rules.</p>
              */
             public Builder hitTags(java.util.List < HitTags> hitTags) {
                 this.hitTags = hitTags;
