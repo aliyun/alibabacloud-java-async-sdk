@@ -21,10 +21,15 @@ public class RenewCertificateOrderForPackageRequestRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long orderId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private RenewCertificateOrderForPackageRequestRequest(Builder builder) {
         super(builder);
         this.csr = builder.csr;
         this.orderId = builder.orderId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -54,9 +59,17 @@ public class RenewCertificateOrderForPackageRequestRequest extends Request {
         return this.orderId;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<RenewCertificateOrderForPackageRequestRequest, Builder> {
         private String csr; 
         private Long orderId; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -66,6 +79,7 @@ public class RenewCertificateOrderForPackageRequestRequest extends Request {
             super(request);
             this.csr = request.csr;
             this.orderId = request.orderId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -101,6 +115,15 @@ public class RenewCertificateOrderForPackageRequestRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public RenewCertificateOrderForPackageRequestRequest build() {
             return new RenewCertificateOrderForPackageRequestRequest(this);
@@ -108,4 +131,71 @@ public class RenewCertificateOrderForPackageRequestRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RenewCertificateOrderForPackageRequestRequest} extends {@link TeaModel}
+     *
+     * <p>RenewCertificateOrderForPackageRequestRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

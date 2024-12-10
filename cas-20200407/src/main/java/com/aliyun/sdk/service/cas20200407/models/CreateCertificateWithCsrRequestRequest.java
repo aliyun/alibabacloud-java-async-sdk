@@ -32,6 +32,10 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
     private String productCode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Username")
     @com.aliyun.core.annotation.Validation(required = true)
     private String username;
@@ -47,6 +51,7 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         this.email = builder.email;
         this.phone = builder.phone;
         this.productCode = builder.productCode;
+        this.tags = builder.tags;
         this.username = builder.username;
         this.validateType = builder.validateType;
     }
@@ -93,6 +98,13 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return username
      */
     public String getUsername() {
@@ -111,6 +123,7 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         private String email; 
         private String phone; 
         private String productCode; 
+        private java.util.List < Tags> tags; 
         private String username; 
         private String validateType; 
 
@@ -124,6 +137,7 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
             this.email = request.email;
             this.phone = request.phone;
             this.productCode = request.productCode;
+            this.tags = request.tags;
             this.username = request.username;
             this.validateType = request.validateType;
         } 
@@ -192,6 +206,15 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * <p>The name of the applicant.</p>
          * <p>This parameter is required.</p>
          * 
@@ -229,4 +252,71 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCertificateWithCsrRequestRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCertificateWithCsrRequestRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

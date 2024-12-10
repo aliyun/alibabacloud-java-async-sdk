@@ -44,6 +44,10 @@ public class UploadUserCertificateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SignPrivateKey")
     private String signPrivateKey;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private UploadUserCertificateRequest(Builder builder) {
         super(builder);
         this.cert = builder.cert;
@@ -54,6 +58,7 @@ public class UploadUserCertificateRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.signCert = builder.signCert;
         this.signPrivateKey = builder.signPrivateKey;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -125,6 +130,13 @@ public class UploadUserCertificateRequest extends Request {
         return this.signPrivateKey;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<UploadUserCertificateRequest, Builder> {
         private String cert; 
         private String encryptCert; 
@@ -134,6 +146,7 @@ public class UploadUserCertificateRequest extends Request {
         private String resourceGroupId; 
         private String signCert; 
         private String signPrivateKey; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -149,6 +162,7 @@ public class UploadUserCertificateRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.signCert = request.signCert;
             this.signPrivateKey = request.signPrivateKey;
+            this.tags = request.tags;
         } 
 
         /**
@@ -260,6 +274,15 @@ public class UploadUserCertificateRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public UploadUserCertificateRequest build() {
             return new UploadUserCertificateRequest(this);
@@ -267,4 +290,76 @@ public class UploadUserCertificateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UploadUserCertificateRequest} extends {@link TeaModel}
+     *
+     * <p>UploadUserCertificateRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The private key of the certificate in the PEM format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE-----
+             * MIICDzCCAbagAw****
+             * -----END CERTIFICATE-----</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }
