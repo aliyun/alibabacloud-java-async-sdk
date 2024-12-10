@@ -23,14 +23,18 @@ public class SmsConversionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MessageId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String messageId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("To")
+    private String to;
 
     private SmsConversionRequest(Builder builder) {
         super(builder);
         this.conversionTime = builder.conversionTime;
         this.delivered = builder.delivered;
         this.messageId = builder.messageId;
+        this.to = builder.to;
     }
 
     public static Builder builder() {
@@ -67,10 +71,18 @@ public class SmsConversionRequest extends Request {
         return this.messageId;
     }
 
+    /**
+     * @return to
+     */
+    public String getTo() {
+        return this.to;
+    }
+
     public static final class Builder extends Request.Builder<SmsConversionRequest, Builder> {
         private Long conversionTime; 
         private Boolean delivered; 
         private String messageId; 
+        private String to; 
 
         private Builder() {
             super();
@@ -81,6 +93,7 @@ public class SmsConversionRequest extends Request {
             this.conversionTime = request.conversionTime;
             this.delivered = request.delivered;
             this.messageId = request.messageId;
+            this.to = request.to;
         } 
 
         /**
@@ -114,7 +127,6 @@ public class SmsConversionRequest extends Request {
 
         /**
          * <p>The ID of the OTP message.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1008030300****</p>
@@ -122,6 +134,15 @@ public class SmsConversionRequest extends Request {
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);
             this.messageId = messageId;
+            return this;
+        }
+
+        /**
+         * To.
+         */
+        public Builder to(String to) {
+            this.putQueryParameter("To", to);
+            this.to = to;
             return this;
         }
 
