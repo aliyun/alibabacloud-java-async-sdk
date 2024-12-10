@@ -279,6 +279,9 @@ public class ListJobRunsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
+        @com.aliyun.core.annotation.NameInMap("cuHours")
+        private Long cuHours;
+
         @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
         private String displayReleaseVersion;
 
@@ -300,6 +303,9 @@ public class ListJobRunsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("log")
         private RunLog log;
 
+        @com.aliyun.core.annotation.NameInMap("mbSeconds")
+        private Long mbSeconds;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -318,6 +324,9 @@ public class ListJobRunsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < Tag > tags;
 
+        @com.aliyun.core.annotation.NameInMap("vcoreSeconds")
+        private Long vcoreSeconds;
+
         @com.aliyun.core.annotation.NameInMap("webUI")
         private String webUI;
 
@@ -328,6 +337,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             this.codeType = builder.codeType;
             this.configurationOverrides = builder.configurationOverrides;
             this.creator = builder.creator;
+            this.cuHours = builder.cuHours;
             this.displayReleaseVersion = builder.displayReleaseVersion;
             this.endTime = builder.endTime;
             this.executionTimeoutSeconds = builder.executionTimeoutSeconds;
@@ -335,12 +345,14 @@ public class ListJobRunsResponseBody extends TeaModel {
             this.jobDriver = builder.jobDriver;
             this.jobRunId = builder.jobRunId;
             this.log = builder.log;
+            this.mbSeconds = builder.mbSeconds;
             this.name = builder.name;
             this.releaseVersion = builder.releaseVersion;
             this.state = builder.state;
             this.stateChangeReason = builder.stateChangeReason;
             this.submitTime = builder.submitTime;
             this.tags = builder.tags;
+            this.vcoreSeconds = builder.vcoreSeconds;
             this.webUI = builder.webUI;
             this.workspaceId = builder.workspaceId;
         }
@@ -372,6 +384,13 @@ public class ListJobRunsResponseBody extends TeaModel {
          */
         public String getCreator() {
             return this.creator;
+        }
+
+        /**
+         * @return cuHours
+         */
+        public Long getCuHours() {
+            return this.cuHours;
         }
 
         /**
@@ -424,6 +443,13 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
+         * @return mbSeconds
+         */
+        public Long getMbSeconds() {
+            return this.mbSeconds;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -466,6 +492,13 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
+         * @return vcoreSeconds
+         */
+        public Long getVcoreSeconds() {
+            return this.vcoreSeconds;
+        }
+
+        /**
          * @return webUI
          */
         public String getWebUI() {
@@ -483,6 +516,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             private String codeType; 
             private ConfigurationOverrides configurationOverrides; 
             private String creator; 
+            private Long cuHours; 
             private String displayReleaseVersion; 
             private Long endTime; 
             private Integer executionTimeoutSeconds; 
@@ -490,12 +524,14 @@ public class ListJobRunsResponseBody extends TeaModel {
             private JobDriver jobDriver; 
             private String jobRunId; 
             private RunLog log; 
+            private Long mbSeconds; 
             private String name; 
             private String releaseVersion; 
             private String state; 
             private StateChangeReason stateChangeReason; 
             private Long submitTime; 
             private java.util.List < Tag > tags; 
+            private Long vcoreSeconds; 
             private String webUI; 
             private String workspaceId; 
 
@@ -529,6 +565,14 @@ public class ListJobRunsResponseBody extends TeaModel {
              */
             public Builder creator(String creator) {
                 this.creator = creator;
+                return this;
+            }
+
+            /**
+             * cuHours.
+             */
+            public Builder cuHours(Long cuHours) {
+                this.cuHours = cuHours;
                 return this;
             }
 
@@ -598,6 +642,14 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
+             * mbSeconds.
+             */
+            public Builder mbSeconds(Long mbSeconds) {
+                this.mbSeconds = mbSeconds;
+                return this;
+            }
+
+            /**
              * <p>The job name.</p>
              * 
              * <strong>example:</strong>
@@ -654,6 +706,14 @@ public class ListJobRunsResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * vcoreSeconds.
+             */
+            public Builder vcoreSeconds(Long vcoreSeconds) {
+                this.vcoreSeconds = vcoreSeconds;
                 return this;
             }
 
