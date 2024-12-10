@@ -12,23 +12,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePatternPerformanceResponseBody</p>
  */
 public class DescribePatternPerformanceResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessIp")
+    private String accessIp;
+
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
+
+    @com.aliyun.core.annotation.NameInMap("FailedCount")
+    private Long failedCount;
 
     @com.aliyun.core.annotation.NameInMap("Performances")
     private java.util.List < Performances> performances;
 
+    @com.aliyun.core.annotation.NameInMap("QueryCount")
+    private Long queryCount;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("SQLPattern")
+    private String SQLPattern;
 
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
+    @com.aliyun.core.annotation.NameInMap("Tables")
+    private String tables;
+
+    @com.aliyun.core.annotation.NameInMap("User")
+    private String user;
+
     private DescribePatternPerformanceResponseBody(Builder builder) {
+        this.accessIp = builder.accessIp;
         this.endTime = builder.endTime;
+        this.failedCount = builder.failedCount;
         this.performances = builder.performances;
+        this.queryCount = builder.queryCount;
         this.requestId = builder.requestId;
+        this.SQLPattern = builder.SQLPattern;
         this.startTime = builder.startTime;
+        this.tables = builder.tables;
+        this.user = builder.user;
     }
 
     public static Builder builder() {
@@ -40,10 +64,24 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return accessIp
+     */
+    public String getAccessIp() {
+        return this.accessIp;
+    }
+
+    /**
      * @return endTime
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return failedCount
+     */
+    public Long getFailedCount() {
+        return this.failedCount;
     }
 
     /**
@@ -54,10 +92,24 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return queryCount
+     */
+    public Long getQueryCount() {
+        return this.queryCount;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return SQLPattern
+     */
+    public String getSQLPattern() {
+        return this.SQLPattern;
     }
 
     /**
@@ -67,11 +119,39 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         return this.startTime;
     }
 
+    /**
+     * @return tables
+     */
+    public String getTables() {
+        return this.tables;
+    }
+
+    /**
+     * @return user
+     */
+    public String getUser() {
+        return this.user;
+    }
+
     public static final class Builder {
+        private String accessIp; 
         private String endTime; 
+        private Long failedCount; 
         private java.util.List < Performances> performances; 
+        private Long queryCount; 
         private String requestId; 
+        private String SQLPattern; 
         private String startTime; 
+        private String tables; 
+        private String user; 
+
+        /**
+         * AccessIp.
+         */
+        public Builder accessIp(String accessIp) {
+            this.accessIp = accessIp;
+            return this;
+        }
 
         /**
          * <p>The end time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</p>
@@ -85,10 +165,26 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         }
 
         /**
+         * FailedCount.
+         */
+        public Builder failedCount(Long failedCount) {
+            this.failedCount = failedCount;
+            return this;
+        }
+
+        /**
          * <p>The queried performance metrics.</p>
          */
         public Builder performances(java.util.List < Performances> performances) {
             this.performances = performances;
+            return this;
+        }
+
+        /**
+         * QueryCount.
+         */
+        public Builder queryCount(Long queryCount) {
+            this.queryCount = queryCount;
             return this;
         }
 
@@ -104,6 +200,14 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         }
 
         /**
+         * SQLPattern.
+         */
+        public Builder SQLPattern(String SQLPattern) {
+            this.SQLPattern = SQLPattern;
+            return this;
+        }
+
+        /**
          * <p>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +215,22 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Tables.
+         */
+        public Builder tables(String tables) {
+            this.tables = tables;
+            return this;
+        }
+
+        /**
+         * User.
+         */
+        public Builder user(String user) {
+            this.user = user;
             return this;
         }
 

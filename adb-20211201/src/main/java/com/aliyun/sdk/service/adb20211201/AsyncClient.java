@@ -154,6 +154,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</p>
+     * <ul>
+     * <li>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteBackups  DeleteBackupsRequest
+     * @return DeleteBackupsResponse
+     */
+    CompletableFuture<DeleteBackupsResponse> deleteBackups(DeleteBackupsRequest request);
+
+    /**
+     * <b>description</b> :
      * <h3><a href="#"></a></h3>
      * <ul>
      * <li>You can call this operation to delete only subscription clusters.</li>
@@ -413,6 +425,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeColumnsResponse> describeColumns(DescribeColumnsRequest request);
 
     /**
+     * @param request the request parameters of DescribeCompactionServiceSwitch  DescribeCompactionServiceSwitchRequest
+     * @return DescribeCompactionServiceSwitchResponse
+     */
+    CompletableFuture<DescribeCompactionServiceSwitchResponse> describeCompactionServiceSwitch(DescribeCompactionServiceSwitchRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
      * 
@@ -563,6 +581,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEnabledPrivilegesResponse> describeEnabledPrivileges(DescribeEnabledPrivilegesRequest request);
 
     /**
+     * @param request the request parameters of DescribeEssdCacheConfig  DescribeEssdCacheConfigRequest
+     * @return DescribeEssdCacheConfigResponse
+     */
+    CompletableFuture<DescribeEssdCacheConfigResponse> describeEssdCacheConfig(DescribeEssdCacheConfigRequest request);
+
+    /**
      * @param request the request parameters of DescribeExcessivePrimaryKeys  DescribeExcessivePrimaryKeysRequest
      * @return DescribeExcessivePrimaryKeysResponse
      */
@@ -576,6 +600,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeJobResourceUsageResponse
      */
     CompletableFuture<DescribeJobResourceUsageResponse> describeJobResourceUsage(DescribeJobResourceUsageRequest request);
+
+    /**
+     * @param request the request parameters of DescribeKernelVersion  DescribeKernelVersionRequest
+     * @return DescribeKernelVersionResponse
+     */
+    CompletableFuture<DescribeKernelVersionResponse> describeKernelVersion(DescribeKernelVersionRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLakeCacheSize  DescribeLakeCacheSizeRequest
+     * @return DescribeLakeCacheSizeResponse
+     */
+    CompletableFuture<DescribeLakeCacheSizeResponse> describeLakeCacheSize(DescribeLakeCacheSizeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOperatorPermission  DescribeOperatorPermissionRequest
+     * @return DescribeOperatorPermissionResponse
+     */
+    CompletableFuture<DescribeOperatorPermissionResponse> describeOperatorPermission(DescribeOperatorPermissionRequest request);
 
     /**
      * <b>description</b> :
@@ -886,21 +928,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * @param request the request parameters of GetSparkDefinitions  GetSparkDefinitionsRequest
-     * @return GetSparkDefinitionsResponse
-     */
-    CompletableFuture<GetSparkDefinitionsResponse> getSparkDefinitions(GetSparkDefinitionsRequest request);
-
-    /**
-     * <b>description</b> :
      * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
      * <ul>
      * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
@@ -1033,6 +1060,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetViewObjectsResponse> getViewObjects(GetViewObjectsRequest request);
 
     /**
+     * @param request the request parameters of GrantOperatorPermission  GrantOperatorPermissionRequest
+     * @return GrantOperatorPermissionResponse
+     */
+    CompletableFuture<GrantOperatorPermissionResponse> grantOperatorPermission(GrantOperatorPermissionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
@@ -1125,6 +1158,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSparkTemplateFileIdsResponse> listSparkTemplateFileIds(ListSparkTemplateFileIdsRequest request);
 
     /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -1188,6 +1227,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyClusterConnectionStringResponse> modifyClusterConnectionString(ModifyClusterConnectionStringRequest request);
 
     /**
+     * @param request the request parameters of ModifyCompactionServiceSwitch  ModifyCompactionServiceSwitchRequest
+     * @return ModifyCompactionServiceSwitchResponse
+     */
+    CompletableFuture<ModifyCompactionServiceSwitchResponse> modifyCompactionServiceSwitch(ModifyCompactionServiceSwitchRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a></h3>
      * <ul>
@@ -1223,6 +1268,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterMaintainTimeResponse> modifyDBClusterMaintainTime(ModifyDBClusterMaintainTimeRequest request);
 
     /**
+     * @param request the request parameters of ModifyDBClusterResourceGroup  ModifyDBClusterResourceGroupRequest
+     * @return ModifyDBClusterResourceGroupResponse
+     */
+    CompletableFuture<ModifyDBClusterResourceGroupResponse> modifyDBClusterResourceGroup(ModifyDBClusterResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBClusterVip  ModifyDBClusterVipRequest
+     * @return ModifyDBClusterVipResponse
+     */
+    CompletableFuture<ModifyDBClusterVipResponse> modifyDBClusterVip(ModifyDBClusterVipRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -1239,6 +1296,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyElasticPlanResponse
      */
     CompletableFuture<ModifyElasticPlanResponse> modifyElasticPlan(ModifyElasticPlanRequest request);
+
+    /**
+     * @param request the request parameters of ModifyEssdCacheConfig  ModifyEssdCacheConfigRequest
+     * @return ModifyEssdCacheConfigResponse
+     */
+    CompletableFuture<ModifyEssdCacheConfigResponse> modifyEssdCacheConfig(ModifyEssdCacheConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifyLakeCacheSize  ModifyLakeCacheSizeRequest
+     * @return ModifyLakeCacheSizeResponse
+     */
+    CompletableFuture<ModifyLakeCacheSizeResponse> modifyLakeCacheSize(ModifyLakeCacheSizeRequest request);
 
     /**
      * @param request the request parameters of ModifyPerformanceView  ModifyPerformanceViewRequest
@@ -1272,27 +1341,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
-     * 
-     * @param request the request parameters of RenameSparkTemplateFile  RenameSparkTemplateFileRequest
-     * @return RenameSparkTemplateFileResponse
-     */
-    CompletableFuture<RenameSparkTemplateFileResponse> renameSparkTemplateFile(RenameSparkTemplateFileRequest request);
-
-    /**
-     * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
      */
     CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request);
+
+    /**
+     * @param request the request parameters of RevokeOperatorPermission  RevokeOperatorPermissionRequest
+     * @return RevokeOperatorPermissionResponse
+     */
+    CompletableFuture<RevokeOperatorPermissionResponse> revokeOperatorPermission(RevokeOperatorPermissionRequest request);
 
     /**
      * <b>description</b> :

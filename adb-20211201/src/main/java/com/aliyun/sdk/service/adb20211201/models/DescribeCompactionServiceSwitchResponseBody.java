@@ -7,18 +7,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RenameSparkTemplateFileResponseBody} extends {@link TeaModel}
+ * {@link DescribeCompactionServiceSwitchResponseBody} extends {@link TeaModel}
  *
- * <p>RenameSparkTemplateFileResponseBody</p>
+ * <p>DescribeCompactionServiceSwitchResponseBody</p>
  */
-public class RenameSparkTemplateFileResponseBody extends TeaModel {
+public class DescribeCompactionServiceSwitchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private RenameSparkTemplateFileResponseBody(Builder builder) {
+    private DescribeCompactionServiceSwitchResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -27,7 +27,7 @@ public class RenameSparkTemplateFileResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RenameSparkTemplateFileResponseBody create() {
+    public static DescribeCompactionServiceSwitchResponseBody create() {
         return builder().build();
     }
 
@@ -50,7 +50,7 @@ public class RenameSparkTemplateFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The data returned.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,34 +58,31 @@ public class RenameSparkTemplateFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16D332C4-ACEB-526A-9B53-2B708FED594A</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RenameSparkTemplateFileResponseBody build() {
-            return new RenameSparkTemplateFileResponseBody(this);
+        public DescribeCompactionServiceSwitchResponseBody build() {
+            return new DescribeCompactionServiceSwitchResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RenameSparkTemplateFileResponseBody} extends {@link TeaModel}
+     * {@link DescribeCompactionServiceSwitchResponseBody} extends {@link TeaModel}
      *
-     * <p>RenameSparkTemplateFileResponseBody</p>
+     * <p>DescribeCompactionServiceSwitchResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Succeeded")
-        private Boolean succeeded;
+        @com.aliyun.core.annotation.NameInMap("EnableCompactionService")
+        private Boolean enableCompactionService;
 
         private Data(Builder builder) {
-            this.succeeded = builder.succeeded;
+            this.enableCompactionService = builder.enableCompactionService;
         }
 
         public static Builder builder() {
@@ -97,27 +94,20 @@ public class RenameSparkTemplateFileResponseBody extends TeaModel {
         }
 
         /**
-         * @return succeeded
+         * @return enableCompactionService
          */
-        public Boolean getSucceeded() {
-            return this.succeeded;
+        public Boolean getEnableCompactionService() {
+            return this.enableCompactionService;
         }
 
         public static final class Builder {
-            private Boolean succeeded; 
+            private Boolean enableCompactionService; 
 
             /**
-             * <p>Indicates whether the request was successful. Valid values:</p>
-             * <ul>
-             * <li>True</li>
-             * <li>False</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>True</p>
+             * EnableCompactionService.
              */
-            public Builder succeeded(Boolean succeeded) {
-                this.succeeded = succeeded;
+            public Builder enableCompactionService(Boolean enableCompactionService) {
+                this.enableCompactionService = enableCompactionService;
                 return this;
             }
 

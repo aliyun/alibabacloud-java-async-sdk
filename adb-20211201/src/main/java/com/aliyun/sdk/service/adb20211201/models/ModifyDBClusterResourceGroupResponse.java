@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RenameSparkTemplateFileResponse} extends {@link TeaModel}
+ * {@link ModifyDBClusterResourceGroupResponse} extends {@link TeaModel}
  *
- * <p>RenameSparkTemplateFileResponse</p>
+ * <p>ModifyDBClusterResourceGroupResponse</p>
  */
-public class RenameSparkTemplateFileResponse extends Response {
+public class ModifyDBClusterResourceGroupResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class RenameSparkTemplateFileResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private RenameSparkTemplateFileResponseBody body;
+    private ModifyDBClusterResourceGroupResponseBody body;
 
-    private RenameSparkTemplateFileResponse(BuilderImpl builder) {
+    private ModifyDBClusterResourceGroupResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RenameSparkTemplateFileResponse create() {
+    public static ModifyDBClusterResourceGroupResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class RenameSparkTemplateFileResponse extends Response {
     /**
      * @return body
      */
-    public RenameSparkTemplateFileResponseBody getBody() {
+    public ModifyDBClusterResourceGroupResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RenameSparkTemplateFileResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyDBClusterResourceGroupResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RenameSparkTemplateFileResponseBody body);
+        Builder body(ModifyDBClusterResourceGroupResponseBody body);
 
         @Override
-        RenameSparkTemplateFileResponse build();
+        ModifyDBClusterResourceGroupResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RenameSparkTemplateFileResponse, Builder>
+            extends Response.BuilderImpl<ModifyDBClusterResourceGroupResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private RenameSparkTemplateFileResponseBody body; 
+        private ModifyDBClusterResourceGroupResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RenameSparkTemplateFileResponse response) {
+        private BuilderImpl(ModifyDBClusterResourceGroupResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class RenameSparkTemplateFileResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RenameSparkTemplateFileResponseBody body) {
+        public Builder body(ModifyDBClusterResourceGroupResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RenameSparkTemplateFileResponse build() {
-            return new RenameSparkTemplateFileResponse(this);
+        public ModifyDBClusterResourceGroupResponse build() {
+            return new ModifyDBClusterResourceGroupResponse(this);
         } 
 
     } 

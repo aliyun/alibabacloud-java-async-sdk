@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetSparkDefinitionsResponse} extends {@link TeaModel}
+ * {@link DescribeKernelVersionResponse} extends {@link TeaModel}
  *
- * <p>GetSparkDefinitionsResponse</p>
+ * <p>DescribeKernelVersionResponse</p>
  */
-public class GetSparkDefinitionsResponse extends Response {
+public class DescribeKernelVersionResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetSparkDefinitionsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetSparkDefinitionsResponseBody body;
+    private DescribeKernelVersionResponseBody body;
 
-    private GetSparkDefinitionsResponse(BuilderImpl builder) {
+    private DescribeKernelVersionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetSparkDefinitionsResponse create() {
+    public static DescribeKernelVersionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetSparkDefinitionsResponse extends Response {
     /**
      * @return body
      */
-    public GetSparkDefinitionsResponseBody getBody() {
+    public DescribeKernelVersionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetSparkDefinitionsResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeKernelVersionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetSparkDefinitionsResponseBody body);
+        Builder body(DescribeKernelVersionResponseBody body);
 
         @Override
-        GetSparkDefinitionsResponse build();
+        DescribeKernelVersionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetSparkDefinitionsResponse, Builder>
+            extends Response.BuilderImpl<DescribeKernelVersionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetSparkDefinitionsResponseBody body; 
+        private DescribeKernelVersionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetSparkDefinitionsResponse response) {
+        private BuilderImpl(DescribeKernelVersionResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetSparkDefinitionsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetSparkDefinitionsResponseBody body) {
+        public Builder body(DescribeKernelVersionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetSparkDefinitionsResponse build() {
-            return new GetSparkDefinitionsResponse(this);
+        public DescribeKernelVersionResponse build() {
+            return new DescribeKernelVersionResponse(this);
         } 
 
     } 

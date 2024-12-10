@@ -243,6 +243,9 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutputRows")
         private Long outputRows;
 
+        @com.aliyun.core.annotation.NameInMap("PatternId")
+        private String patternId;
+
         @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private Long peakMemory;
 
@@ -302,6 +305,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             this.executionTime = builder.executionTime;
             this.outputDataSize = builder.outputDataSize;
             this.outputRows = builder.outputRows;
+            this.patternId = builder.patternId;
             this.peakMemory = builder.peakMemory;
             this.processId = builder.processId;
             this.queryProperties = builder.queryProperties;
@@ -376,6 +380,13 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
          */
         public Long getOutputRows() {
             return this.outputRows;
+        }
+
+        /**
+         * @return patternId
+         */
+        public String getPatternId() {
+            return this.patternId;
         }
 
         /**
@@ -505,6 +516,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             private Long executionTime; 
             private Long outputDataSize; 
             private Long outputRows; 
+            private String patternId; 
             private Long peakMemory; 
             private String processId; 
             private java.util.List < QueryProperties> queryProperties; 
@@ -600,6 +612,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
+                return this;
+            }
+
+            /**
+             * PatternId.
+             */
+            public Builder patternId(String patternId) {
+                this.patternId = patternId;
                 return this;
             }
 

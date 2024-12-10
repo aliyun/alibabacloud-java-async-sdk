@@ -7,38 +7,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RenameSparkTemplateFileRequest} extends {@link RequestModel}
+ * {@link ModifyEssdCacheConfigRequest} extends {@link RequestModel}
  *
- * <p>RenameSparkTemplateFileRequest</p>
+ * <p>ModifyEssdCacheConfigRequest</p>
  */
-public class RenameSparkTemplateFileRequest extends Request {
+public class ModifyEssdCacheConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("EnableEssdCache")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Long id;
+    private Boolean enableEssdCache;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Name")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String name;
+    @com.aliyun.core.annotation.NameInMap("EssdCacheSize")
+    private Integer essdCacheSize;
 
-    private RenameSparkTemplateFileRequest(Builder builder) {
+    private ModifyEssdCacheConfigRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
-        this.id = builder.id;
-        this.name = builder.name;
+        this.enableEssdCache = builder.enableEssdCache;
+        this.essdCacheSize = builder.essdCacheSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RenameSparkTemplateFileRequest create() {
+    public static ModifyEssdCacheConfigRequest create() {
         return builder().build();
     }
 
@@ -55,41 +54,40 @@ public class RenameSparkTemplateFileRequest extends Request {
     }
 
     /**
-     * @return id
+     * @return enableEssdCache
      */
-    public Long getId() {
-        return this.id;
+    public Boolean getEnableEssdCache() {
+        return this.enableEssdCache;
     }
 
     /**
-     * @return name
+     * @return essdCacheSize
      */
-    public String getName() {
-        return this.name;
+    public Integer getEssdCacheSize() {
+        return this.essdCacheSize;
     }
 
-    public static final class Builder extends Request.Builder<RenameSparkTemplateFileRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyEssdCacheConfigRequest, Builder> {
         private String DBClusterId; 
-        private Long id; 
-        private String name; 
+        private Boolean enableEssdCache; 
+        private Integer essdCacheSize; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RenameSparkTemplateFileRequest request) {
+        private Builder(ModifyEssdCacheConfigRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
-            this.id = request.id;
-            this.name = request.name;
+            this.enableEssdCache = request.enableEssdCache;
+            this.essdCacheSize = request.essdCacheSize;
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>amv-d*****</p>
+         * <p>amv-bp10yt0gva71ei7d</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -98,34 +96,29 @@ public class RenameSparkTemplateFileRequest extends Request {
         }
 
         /**
-         * <p>The template file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>true</p>
          */
-        public Builder id(Long id) {
-            this.putQueryParameter("Id", id);
-            this.id = id;
+        public Builder enableEssdCache(Boolean enableEssdCache) {
+            this.putQueryParameter("EnableEssdCache", enableEssdCache);
+            this.enableEssdCache = enableEssdCache;
             return this;
         }
 
         /**
-         * <p>The name of the template file that you want to rename.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>new_template_name</p>
+         * EssdCacheSize.
          */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
+        public Builder essdCacheSize(Integer essdCacheSize) {
+            this.putQueryParameter("EssdCacheSize", essdCacheSize);
+            this.essdCacheSize = essdCacheSize;
             return this;
         }
 
         @Override
-        public RenameSparkTemplateFileRequest build() {
-            return new RenameSparkTemplateFileRequest(this);
+        public ModifyEssdCacheConfigRequest build() {
+            return new ModifyEssdCacheConfigRequest(this);
         } 
 
     } 

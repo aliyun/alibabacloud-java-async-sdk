@@ -203,6 +203,307 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      *
      * <p>DescribeDBClusterAttributeResponseBody</p>
      */
+    public static class StepList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
+
+        @com.aliyun.core.annotation.NameInMap("StepDesc")
+        private String stepDesc;
+
+        @com.aliyun.core.annotation.NameInMap("StepName")
+        private String stepName;
+
+        @com.aliyun.core.annotation.NameInMap("StepProgress")
+        private String stepProgress;
+
+        @com.aliyun.core.annotation.NameInMap("StepStatus")
+        private String stepStatus;
+
+        private StepList(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+            this.stepDesc = builder.stepDesc;
+            this.stepName = builder.stepName;
+            this.stepProgress = builder.stepProgress;
+            this.stepStatus = builder.stepStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StepList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return stepDesc
+         */
+        public String getStepDesc() {
+            return this.stepDesc;
+        }
+
+        /**
+         * @return stepName
+         */
+        public String getStepName() {
+            return this.stepName;
+        }
+
+        /**
+         * @return stepProgress
+         */
+        public String getStepProgress() {
+            return this.stepProgress;
+        }
+
+        /**
+         * @return stepStatus
+         */
+        public String getStepStatus() {
+            return this.stepStatus;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private String startTime; 
+            private String stepDesc; 
+            private String stepName; 
+            private String stepProgress; 
+            private String stepStatus; 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * StepDesc.
+             */
+            public Builder stepDesc(String stepDesc) {
+                this.stepDesc = stepDesc;
+                return this;
+            }
+
+            /**
+             * StepName.
+             */
+            public Builder stepName(String stepName) {
+                this.stepName = stepName;
+                return this;
+            }
+
+            /**
+             * StepProgress.
+             */
+            public Builder stepProgress(String stepProgress) {
+                this.stepProgress = stepProgress;
+                return this;
+            }
+
+            /**
+             * StepStatus.
+             */
+            public Builder stepStatus(String stepStatus) {
+                this.stepStatus = stepStatus;
+                return this;
+            }
+
+            public StepList build() {
+                return new StepList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAttributeResponseBody</p>
+     */
+    public static class TaskInfoStepList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("StepList")
+        private java.util.List < StepList> stepList;
+
+        private TaskInfoStepList(Builder builder) {
+            this.stepList = builder.stepList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TaskInfoStepList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return stepList
+         */
+        public java.util.List < StepList> getStepList() {
+            return this.stepList;
+        }
+
+        public static final class Builder {
+            private java.util.List < StepList> stepList; 
+
+            /**
+             * StepList.
+             */
+            public Builder stepList(java.util.List < StepList> stepList) {
+                this.stepList = stepList;
+                return this;
+            }
+
+            public TaskInfoStepList build() {
+                return new TaskInfoStepList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAttributeResponseBody</p>
+     */
+    public static class TaskInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Progress")
+        private String progress;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StepList")
+        private TaskInfoStepList stepList;
+
+        private TaskInfo(Builder builder) {
+            this.name = builder.name;
+            this.progress = builder.progress;
+            this.status = builder.status;
+            this.stepList = builder.stepList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TaskInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return stepList
+         */
+        public TaskInfoStepList getStepList() {
+            return this.stepList;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String progress; 
+            private String status; 
+            private TaskInfoStepList stepList; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Progress.
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * StepList.
+             */
+            public Builder stepList(TaskInfoStepList stepList) {
+                this.stepList = stepList;
+                return this;
+            }
+
+            public TaskInfo build() {
+                return new TaskInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAttributeResponseBody</p>
+     */
     public static class DBCluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClickhouseEngineCacheSize")
         private Integer clickhouseEngineCacheSize;
@@ -309,6 +610,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
+        @com.aliyun.core.annotation.NameInMap("TaskInfo")
+        private TaskInfo taskInfo;
+
         @com.aliyun.core.annotation.NameInMap("UserENIStatus")
         private Boolean userENIStatus;
 
@@ -357,6 +661,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.storageResourceTotal = builder.storageResourceTotal;
             this.supportedFeatures = builder.supportedFeatures;
             this.tags = builder.tags;
+            this.taskInfo = builder.taskInfo;
             this.userENIStatus = builder.userENIStatus;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
@@ -617,6 +922,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskInfo
+         */
+        public TaskInfo getTaskInfo() {
+            return this.taskInfo;
+        }
+
+        /**
          * @return userENIStatus
          */
         public Boolean getUserENIStatus() {
@@ -680,6 +992,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String storageResourceTotal; 
             private java.util.Map < String, String > supportedFeatures; 
             private Tags tags; 
+            private TaskInfo taskInfo; 
             private Boolean userENIStatus; 
             private String VPCId; 
             private String vSwitchId; 
@@ -1118,6 +1431,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TaskInfo.
+             */
+            public Builder taskInfo(TaskInfo taskInfo) {
+                this.taskInfo = taskInfo;
                 return this;
             }
 
