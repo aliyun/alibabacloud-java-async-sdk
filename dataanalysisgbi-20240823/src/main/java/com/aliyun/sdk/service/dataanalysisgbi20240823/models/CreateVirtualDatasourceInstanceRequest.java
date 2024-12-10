@@ -24,6 +24,10 @@ public class CreateVirtualDatasourceInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
+    private Integer type;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -34,6 +38,7 @@ public class CreateVirtualDatasourceInstanceRequest extends Request {
         this.regionId = builder.regionId;
         this.description = builder.description;
         this.name = builder.name;
+        this.type = builder.type;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -72,6 +77,13 @@ public class CreateVirtualDatasourceInstanceRequest extends Request {
     }
 
     /**
+     * @return type
+     */
+    public Integer getType() {
+        return this.type;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -82,6 +94,7 @@ public class CreateVirtualDatasourceInstanceRequest extends Request {
         private String regionId; 
         private String description; 
         private String name; 
+        private Integer type; 
         private String workspaceId; 
 
         private Builder() {
@@ -93,6 +106,7 @@ public class CreateVirtualDatasourceInstanceRequest extends Request {
             this.regionId = request.regionId;
             this.description = request.description;
             this.name = request.name;
+            this.type = request.type;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -120,6 +134,15 @@ public class CreateVirtualDatasourceInstanceRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * type.
+         */
+        public Builder type(Integer type) {
+            this.putBodyParameter("type", type);
+            this.type = type;
             return this;
         }
 
