@@ -39,6 +39,10 @@ public class RefreshLoginTokenRequest extends Request {
     private String officeSiteId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProfileRegion")
+    private String profileRegion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SessionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
@@ -55,6 +59,7 @@ public class RefreshLoginTokenRequest extends Request {
         this.loginIdentifier = builder.loginIdentifier;
         this.loginToken = builder.loginToken;
         this.officeSiteId = builder.officeSiteId;
+        this.profileRegion = builder.profileRegion;
         this.sessionId = builder.sessionId;
         this.uuid = builder.uuid;
     }
@@ -115,6 +120,13 @@ public class RefreshLoginTokenRequest extends Request {
     }
 
     /**
+     * @return profileRegion
+     */
+    public String getProfileRegion() {
+        return this.profileRegion;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -135,6 +147,7 @@ public class RefreshLoginTokenRequest extends Request {
         private String loginIdentifier; 
         private String loginToken; 
         private String officeSiteId; 
+        private String profileRegion; 
         private String sessionId; 
         private String uuid; 
 
@@ -150,6 +163,7 @@ public class RefreshLoginTokenRequest extends Request {
             this.loginIdentifier = request.loginIdentifier;
             this.loginToken = request.loginToken;
             this.officeSiteId = request.officeSiteId;
+            this.profileRegion = request.profileRegion;
             this.sessionId = request.sessionId;
             this.uuid = request.uuid;
         } 
@@ -211,6 +225,15 @@ public class RefreshLoginTokenRequest extends Request {
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
             this.officeSiteId = officeSiteId;
+            return this;
+        }
+
+        /**
+         * ProfileRegion.
+         */
+        public Builder profileRegion(String profileRegion) {
+            this.putQueryParameter("ProfileRegion", profileRegion);
+            this.profileRegion = profileRegion;
             return this;
         }
 
