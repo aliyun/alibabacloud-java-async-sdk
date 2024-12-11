@@ -29,6 +29,10 @@ public class FilterUsersRequest extends Request {
     private Boolean includeDesktopGroupCount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsQueryAllSubOrgs")
+    private Boolean isQueryAllSubOrgs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Long maxResults;
@@ -67,6 +71,7 @@ public class FilterUsersRequest extends Request {
         this.filter = builder.filter;
         this.includeDesktopCount = builder.includeDesktopCount;
         this.includeDesktopGroupCount = builder.includeDesktopGroupCount;
+        this.isQueryAllSubOrgs = builder.isQueryAllSubOrgs;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orderParam = builder.orderParam;
@@ -116,6 +121,13 @@ public class FilterUsersRequest extends Request {
      */
     public Boolean getIncludeDesktopGroupCount() {
         return this.includeDesktopGroupCount;
+    }
+
+    /**
+     * @return isQueryAllSubOrgs
+     */
+    public Boolean getIsQueryAllSubOrgs() {
+        return this.isQueryAllSubOrgs;
     }
 
     /**
@@ -179,6 +191,7 @@ public class FilterUsersRequest extends Request {
         private String filter; 
         private Boolean includeDesktopCount; 
         private Boolean includeDesktopGroupCount; 
+        private Boolean isQueryAllSubOrgs; 
         private Long maxResults; 
         private String nextToken; 
         private OrderParam orderParam; 
@@ -198,6 +211,7 @@ public class FilterUsersRequest extends Request {
             this.filter = request.filter;
             this.includeDesktopCount = request.includeDesktopCount;
             this.includeDesktopGroupCount = request.includeDesktopGroupCount;
+            this.isQueryAllSubOrgs = request.isQueryAllSubOrgs;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orderParam = request.orderParam;
@@ -282,6 +296,15 @@ public class FilterUsersRequest extends Request {
         public Builder includeDesktopGroupCount(Boolean includeDesktopGroupCount) {
             this.putQueryParameter("IncludeDesktopGroupCount", includeDesktopGroupCount);
             this.includeDesktopGroupCount = includeDesktopGroupCount;
+            return this;
+        }
+
+        /**
+         * IsQueryAllSubOrgs.
+         */
+        public Builder isQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
+            this.putQueryParameter("IsQueryAllSubOrgs", isQueryAllSubOrgs);
+            this.isQueryAllSubOrgs = isQueryAllSubOrgs;
             return this;
         }
 
