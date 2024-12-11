@@ -21,6 +21,10 @@ public class CreateServerGroupRequest extends Request {
     private ConnectionDrainConfig connectionDrainConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossZoneEnabled")
+    private Boolean crossZoneEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -82,6 +86,7 @@ public class CreateServerGroupRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.connectionDrainConfig = builder.connectionDrainConfig;
+        this.crossZoneEnabled = builder.crossZoneEnabled;
         this.dryRun = builder.dryRun;
         this.healthCheckConfig = builder.healthCheckConfig;
         this.protocol = builder.protocol;
@@ -123,6 +128,13 @@ public class CreateServerGroupRequest extends Request {
      */
     public ConnectionDrainConfig getConnectionDrainConfig() {
         return this.connectionDrainConfig;
+    }
+
+    /**
+     * @return crossZoneEnabled
+     */
+    public Boolean getCrossZoneEnabled() {
+        return this.crossZoneEnabled;
     }
 
     /**
@@ -226,6 +238,7 @@ public class CreateServerGroupRequest extends Request {
     public static final class Builder extends Request.Builder<CreateServerGroupRequest, Builder> {
         private String clientToken; 
         private ConnectionDrainConfig connectionDrainConfig; 
+        private Boolean crossZoneEnabled; 
         private Boolean dryRun; 
         private HealthCheckConfig healthCheckConfig; 
         private String protocol; 
@@ -249,6 +262,7 @@ public class CreateServerGroupRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.connectionDrainConfig = request.connectionDrainConfig;
+            this.crossZoneEnabled = request.crossZoneEnabled;
             this.dryRun = request.dryRun;
             this.healthCheckConfig = request.healthCheckConfig;
             this.protocol = request.protocol;
@@ -298,6 +312,15 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
+         * CrossZoneEnabled.
+         */
+        public Builder crossZoneEnabled(Boolean crossZoneEnabled) {
+            this.putQueryParameter("CrossZoneEnabled", crossZoneEnabled);
+            this.crossZoneEnabled = crossZoneEnabled;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
@@ -314,7 +337,7 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The configuration of health checks.</p>
+         * <p>The configuration of the health check feature.</p>
          * <p>This parameter is required.</p>
          */
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
@@ -750,7 +773,7 @@ public class CreateServerGroupRequest extends Request {
             private Integer unhealthyThreshold; 
 
             /**
-             * <p>The HTTP status codes that are used to indicate whether the backend server passes the health check.</p>
+             * <p>The HTTP status codes that indicate healthy backend servers.</p>
              */
             public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
@@ -790,16 +813,22 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The domain name that is used for health checks. The domain name must meet the following requirements:</p>
+             * <p>The domain name that is used for health checks.</p>
+             * <ul>
+             * <li><p><strong>Backend Server Internal IP</strong> (default): Use the internal IP address of backend servers as the health check domain name.</p>
+             * </li>
+             * <li><p><strong>Custom Domain Name</strong>: Enter a domain name.</p>
              * <ul>
              * <li>The domain name must be 1 to 80 characters in length.</li>
              * <li>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
-             * <li>The domain name must contain at least one period (.) but cannot start or end with a period (.).</li>
+             * <li>The domain name can contain at least one period (.) but cannot start or end with a period (.).</li>
              * <li>The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</li>
              * <li>The domain name cannot start or end with a hyphen (-).</li>
              * </ul>
+             * </li>
+             * </ul>
              * <blockquote>
-             * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+             * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -857,7 +886,7 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The URL that is used for health checks.</p>
+             * <p>The path that is used for health checks.</p>
              * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; =</code>. It can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \&quot; , +</code>. The URL must start with a forward slash (/).</p>
              * <blockquote>
              * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
@@ -876,7 +905,7 @@ public class CreateServerGroupRequest extends Request {
              * <ul>
              * <li><strong>HTTP</strong>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
              * <li><strong>HTTPS</strong>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS provides higher security than HTTP because HTTPS supports data encryption.</li>
-             * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
+             * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to probe the availability of backend servers.</li>
              * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
              * </ul>
              * 
@@ -902,7 +931,7 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <strong>fail</strong> to <strong>success</strong>.</p>
+             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
              * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * <p>Default value: <strong>3</strong>.</p>
              * 
@@ -915,7 +944,7 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <strong>success</strong> to <strong>fail</strong>.</p>
+             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
              * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * <p>Default value: <strong>3</strong>.</p>
              * 

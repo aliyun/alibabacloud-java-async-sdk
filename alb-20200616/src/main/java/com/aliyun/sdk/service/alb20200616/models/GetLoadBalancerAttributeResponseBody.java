@@ -586,7 +586,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The zone and the vSwitch in the zone. A maximum of 10 zones is returned. If the current region supports two or more zones, at least two zones are returned.</p>
+         * <p>The mappings between zones and vSwitches. At most 10 zones are returned. If the current region supports two or more zones, at least two zones are returned.</p>
          */
         public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
             this.zoneMappings = zoneMappings;
@@ -1216,7 +1216,17 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetAddressHcStatus.
+             * <p>The health status of the private IPv4 address of the ALB instance. 
+             * This parameter is returned only when the Status of the zone is Active.Valid values:</p>
+             * <ul>
+             * <li><p><strong>Healthy</strong></p>
+             * </li>
+             * <li><p><strong>Unhealthy</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Healthy</p>
              */
             public Builder intranetAddressHcStatus(String intranetAddressHcStatus) {
                 this.intranetAddressHcStatus = intranetAddressHcStatus;
@@ -1224,7 +1234,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv4LocalAddresses.
+             * <p>The IPv4 link-local addresses. The IP addresses that the ALB instance uses to communicate with the backend servers.</p>
              */
             public Builder ipv4LocalAddresses(java.util.List < String > ipv4LocalAddresses) {
                 this.ipv4LocalAddresses = ipv4LocalAddresses;
@@ -1244,7 +1254,17 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6AddressHcStatus.
+             * <p>The health status of the private IPv6 address of the ALB instance. 
+             * This parameter is returned only when the Status of the zone is Active.Valid values:</p>
+             * <ul>
+             * <li><p><strong>Healthy</strong></p>
+             * </li>
+             * <li><p><strong>Unhealthy</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Healthy</p>
              */
             public Builder ipv6AddressHcStatus(String ipv6AddressHcStatus) {
                 this.ipv6AddressHcStatus = ipv6AddressHcStatus;
@@ -1252,7 +1272,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6LocalAddresses.
+             * <p>The IPv6 link-local addresses. The IP addresses that the ALB instance uses to communicate with the backend servers.</p>
              */
             public Builder ipv6LocalAddresses(java.util.List < String > ipv6LocalAddresses) {
                 this.ipv6LocalAddresses = ipv6LocalAddresses;
@@ -1343,17 +1363,22 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the configuration read-only mode. Valid values:</p>
+             * <p>The zone status. Valid values:</p>
              * <ul>
-             * <li><strong>NonProtection</strong>: The configuration read-only mode is disabled. In this case, you cannot specify ModificationProtectionReason. If you specify ModificationProtectionReason, the value of the parameter is cleared.</li>
-             * <li><strong>ConsoleProtection</strong>: The configuration read-only mode is enabled. In this case, you can specify ModificationProtectionReason.</li>
+             * <li><p><strong>Active</strong>: The ALB instance is running.</p>
+             * </li>
+             * <li><p><strong>Stopped</strong>: The ALB instance is disabled. </p>
+             * </li>
+             * <li><p><strong>Shifted</strong>: The ALB instance is removed.</p>
+             * </li>
+             * <li><p><strong>Starting</strong>: The ALB instance is starting.</p>
+             * </li>
+             * <li><p><strong>Stopping</strong>: The ALB instance is stopping.</p>
+             * </li>
              * </ul>
-             * <blockquote>
-             * <p>If you set this parameter to <strong>ConsoleProtection</strong>, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
-             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>ConsoleProtection</p>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
