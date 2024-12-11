@@ -164,7 +164,10 @@ public class UpdateApplicationGroupRequest extends Request {
         }
 
         /**
-         * OperationName.
+         * <p>The name of the configuration update operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/business/v1/product/spus/{spu_id}</p>
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -173,7 +176,10 @@ public class UpdateApplicationGroupRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The JSON string that consists of a set of parameters. Default value: {}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;username&quot;: &quot;xx&quot;}</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");

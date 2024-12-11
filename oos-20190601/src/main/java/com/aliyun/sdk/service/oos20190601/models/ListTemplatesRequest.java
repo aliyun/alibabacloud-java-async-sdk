@@ -358,7 +358,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the template is an example template</p>
+         * <p>Specifies whether the template is an example template.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

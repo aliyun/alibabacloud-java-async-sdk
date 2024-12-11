@@ -50,7 +50,7 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The details of the application group.</p>
+         * <p>The information about the application group.</p>
          */
         public Builder applicationGroup(ApplicationGroup applicationGroup) {
             this.applicationGroup = applicationGroup;
@@ -83,6 +83,9 @@ public class GetApplicationGroupResponseBody extends TeaModel {
     public static class ApplicationGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
+
+        @com.aliyun.core.annotation.NameInMap("ApplicationSource")
+        private String applicationSource;
 
         @com.aliyun.core.annotation.NameInMap("CmsGroupId")
         private String cmsGroupId;
@@ -128,6 +131,7 @@ public class GetApplicationGroupResponseBody extends TeaModel {
 
         private ApplicationGroup(Builder builder) {
             this.applicationName = builder.applicationName;
+            this.applicationSource = builder.applicationSource;
             this.cmsGroupId = builder.cmsGroupId;
             this.createDate = builder.createDate;
             this.deployOutputs = builder.deployOutputs;
@@ -157,6 +161,13 @@ public class GetApplicationGroupResponseBody extends TeaModel {
          */
         public String getApplicationName() {
             return this.applicationName;
+        }
+
+        /**
+         * @return applicationSource
+         */
+        public String getApplicationSource() {
+            return this.applicationSource;
         }
 
         /**
@@ -259,6 +270,7 @@ public class GetApplicationGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String applicationName; 
+            private String applicationSource; 
             private String cmsGroupId; 
             private String createDate; 
             private String deployOutputs; 
@@ -282,6 +294,14 @@ public class GetApplicationGroupResponseBody extends TeaModel {
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
+                return this;
+            }
+
+            /**
+             * ApplicationSource.
+             */
+            public Builder applicationSource(String applicationSource) {
+                this.applicationSource = applicationSource;
                 return this;
             }
 
@@ -385,7 +405,10 @@ public class GetApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OperationMetadata.
+             * <p>The operation metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;PrometheusConfigMap&quot;:{&quot;模板1&quot;:{&quot;EnablePrometheus&quot;:false}}}</p>
              */
             public Builder operationMetadata(String operationMetadata) {
                 this.operationMetadata = operationMetadata;

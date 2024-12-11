@@ -1,3 +1,6 @@
+2024-12-11 Version: 3.0.9
+- Generated java-async 2019-06-01 for oos.
+
 2024-12-02 Version: 3.0.8
 - Generated java-async 2019-06-01 for oos.
 

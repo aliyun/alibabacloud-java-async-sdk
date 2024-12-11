@@ -111,6 +111,7 @@ public class ListInstancePackageStatesRequest extends Request {
         } 
 
         /**
+         * <p>ECS instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +124,10 @@ public class ListInstancePackageStatesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -132,7 +136,10 @@ public class ListInstancePackageStatesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctzxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -141,7 +148,10 @@ public class ListInstancePackageStatesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,7 +160,10 @@ public class ListInstancePackageStatesRequest extends Request {
         }
 
         /**
-         * TemplateNames.
+         * <p>List of extension names</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;template1&quot;,&quot;template2&quot;]</p>
          */
         public Builder templateNames(String templateNames) {
             this.putQueryParameter("TemplateNames", templateNames);

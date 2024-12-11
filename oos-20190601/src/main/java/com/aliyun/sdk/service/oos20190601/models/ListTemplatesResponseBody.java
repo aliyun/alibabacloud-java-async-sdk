@@ -651,7 +651,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * <p>The version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2.1</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

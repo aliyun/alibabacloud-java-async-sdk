@@ -127,6 +127,12 @@ public class UpdateInstancePackageStateRequest extends Request {
         } 
 
         /**
+         * <p>The operation type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>uninstall</li>
+         * <li>install</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +145,7 @@ public class UpdateInstancePackageStateRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +158,10 @@ public class UpdateInstancePackageStateRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The parameters for installing or uninstalling the extensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;username&quot;: &quot;xx&quot;}</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -161,7 +171,10 @@ public class UpdateInstancePackageStateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,6 +183,7 @@ public class UpdateInstancePackageStateRequest extends Request {
         }
 
         /**
+         * <p>The name of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +196,10 @@ public class UpdateInstancePackageStateRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * <p>The version of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

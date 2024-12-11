@@ -17,6 +17,10 @@ public class CreateApplicationRequest extends Request {
     private AlarmConfig alarmConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationSource")
+    private String applicationSource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -48,6 +52,7 @@ public class CreateApplicationRequest extends Request {
     private CreateApplicationRequest(Builder builder) {
         super(builder);
         this.alarmConfig = builder.alarmConfig;
+        this.applicationSource = builder.applicationSource;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.name = builder.name;
@@ -75,6 +80,13 @@ public class CreateApplicationRequest extends Request {
      */
     public AlarmConfig getAlarmConfig() {
         return this.alarmConfig;
+    }
+
+    /**
+     * @return applicationSource
+     */
+    public String getApplicationSource() {
+        return this.applicationSource;
     }
 
     /**
@@ -128,6 +140,7 @@ public class CreateApplicationRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
         private AlarmConfig alarmConfig; 
+        private String applicationSource; 
         private String clientToken; 
         private String description; 
         private String name; 
@@ -143,6 +156,7 @@ public class CreateApplicationRequest extends Request {
         private Builder(CreateApplicationRequest request) {
             super(request);
             this.alarmConfig = request.alarmConfig;
+            this.applicationSource = request.applicationSource;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.name = request.name;
@@ -159,6 +173,15 @@ public class CreateApplicationRequest extends Request {
             String alarmConfigShrink = shrink(alarmConfig, "AlarmConfig", "json");
             this.putQueryParameter("AlarmConfig", alarmConfigShrink);
             this.alarmConfig = alarmConfig;
+            return this;
+        }
+
+        /**
+         * ApplicationSource.
+         */
+        public Builder applicationSource(String applicationSource) {
+            this.putQueryParameter("ApplicationSource", applicationSource);
+            this.applicationSource = applicationSource;
             return this;
         }
 

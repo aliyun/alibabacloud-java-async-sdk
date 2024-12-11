@@ -38,7 +38,7 @@ public class UpdateInstancePackageStateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2597E94B-5346-42D1-BB58-XXXXXXXXXXX</p>

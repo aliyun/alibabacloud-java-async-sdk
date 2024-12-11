@@ -74,7 +74,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MaxResults.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +85,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Token string for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctzxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +96,7 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         }
 
         /**
-         * PackageStates.
+         * <p>List of extensions</p>
          */
         public Builder packageStates(java.util.List < PackageStates> packageStates) {
             this.packageStates = packageStates;
@@ -98,7 +104,7 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>1306108F-610C-40FD-AAD5-XXXXXX</p>
@@ -243,7 +249,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * Description.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -251,7 +260,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>Parameters</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -259,7 +271,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
             }
 
             /**
-             * Publisher.
+             * <p>Publisher</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud</p>
              */
             public Builder publisher(String publisher) {
                 this.publisher = publisher;
@@ -267,7 +282,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCategory.
+             * <p>Template type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Package</p>
              */
             public Builder templateCategory(String templateCategory) {
                 this.templateCategory = templateCategory;
@@ -275,7 +293,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>Template ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>087b1e11072a40259f6fxxxxxxxxx</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -283,7 +304,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>Template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-ECS-Docker</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -291,7 +315,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * <p>Template version number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v3</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -299,7 +326,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersionName.
+             * <p>Template version name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fix bug</p>
              */
             public Builder templateVersionName(String templateVersionName) {
                 this.templateVersionName = templateVersionName;
@@ -307,7 +337,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-04T11:17:28</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

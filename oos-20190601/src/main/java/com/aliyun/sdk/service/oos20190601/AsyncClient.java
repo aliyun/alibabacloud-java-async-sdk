@@ -254,6 +254,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
 
     /**
+     * @param request the request parameters of GetTemplateParameterConstraints  GetTemplateParameterConstraintsRequest
+     * @return GetTemplateParameterConstraintsResponse
+     */
+    CompletableFuture<GetTemplateParameterConstraintsResponse> getTemplateParameterConstraints(GetTemplateParameterConstraintsRequest request);
+
+    /**
      * @param request the request parameters of ListActions  ListActionsRequest
      * @return ListActionsResponse
      */
