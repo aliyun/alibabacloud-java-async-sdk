@@ -21,6 +21,12 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -31,6 +37,8 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         this.databaseList = builder.databaseList;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -65,6 +73,20 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -82,6 +104,8 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         private DatabaseList databaseList; 
         private String errorCode; 
         private String errorMessage; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String requestId; 
         private Boolean success; 
 
@@ -106,6 +130,22 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 

@@ -27,12 +27,19 @@ public class ListDataLakeDatabaseRequest extends Request {
     private String dataRegion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
-    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private ListDataLakeDatabaseRequest(Builder builder) {
@@ -40,6 +47,8 @@ public class ListDataLakeDatabaseRequest extends Request {
         this.regionId = builder.regionId;
         this.catalogName = builder.catalogName;
         this.dataRegion = builder.dataRegion;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.searchKey = builder.searchKey;
         this.tid = builder.tid;
     }
@@ -79,6 +88,20 @@ public class ListDataLakeDatabaseRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return searchKey
      */
     public String getSearchKey() {
@@ -96,6 +119,8 @@ public class ListDataLakeDatabaseRequest extends Request {
         private String regionId; 
         private String catalogName; 
         private String dataRegion; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String searchKey; 
         private Long tid; 
 
@@ -108,6 +133,8 @@ public class ListDataLakeDatabaseRequest extends Request {
             this.regionId = request.regionId;
             this.catalogName = request.catalogName;
             this.dataRegion = request.dataRegion;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.searchKey = request.searchKey;
             this.tid = request.tid;
         } 
@@ -142,6 +169,24 @@ public class ListDataLakeDatabaseRequest extends Request {
         public Builder dataRegion(String dataRegion) {
             this.putQueryParameter("DataRegion", dataRegion);
             this.dataRegion = dataRegion;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
