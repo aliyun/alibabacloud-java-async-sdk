@@ -84,6 +84,7 @@ public class RefreshObjectCacheByCacheTagRequest extends Request {
         } 
 
         /**
+         * <p>The tags of Cache. If multiple tags are returned, the tags are separated by commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

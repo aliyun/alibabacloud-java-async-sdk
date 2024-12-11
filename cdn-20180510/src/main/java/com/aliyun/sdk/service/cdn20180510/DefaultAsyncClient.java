@@ -4100,9 +4100,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>\<em>\</em> \<em>\</em></p>
-     * 
      * @param request the request parameters of ListRealtimeLogDelivery  ListRealtimeLogDeliveryRequest
      * @return ListRealtimeLogDeliveryResponse
      */

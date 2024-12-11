@@ -2340,9 +2340,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFCTriggerResponse> listFCTrigger(ListFCTriggerRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>\<em>\</em> \<em>\</em></p>
-     * 
      * @param request the request parameters of ListRealtimeLogDelivery  ListRealtimeLogDeliveryRequest
      * @return ListRealtimeLogDeliveryResponse
      */
