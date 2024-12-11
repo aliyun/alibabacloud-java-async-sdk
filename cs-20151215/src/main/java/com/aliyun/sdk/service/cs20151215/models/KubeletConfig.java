@@ -15,11 +15,20 @@ public class KubeletConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("allowedUnsafeSysctls")
     private java.util.List < String > allowedUnsafeSysctls;
 
+    @com.aliyun.core.annotation.NameInMap("clusterDNS")
+    private java.util.List < String > clusterDNS;
+
     @com.aliyun.core.annotation.NameInMap("containerLogMaxFiles")
     private Long containerLogMaxFiles;
 
     @com.aliyun.core.annotation.NameInMap("containerLogMaxSize")
     private String containerLogMaxSize;
+
+    @com.aliyun.core.annotation.NameInMap("cpuCFSQuota")
+    private Boolean cpuCFSQuota;
+
+    @com.aliyun.core.annotation.NameInMap("cpuCFSQuotaPeriod")
+    private String cpuCFSQuotaPeriod;
 
     @com.aliyun.core.annotation.NameInMap("cpuManagerPolicy")
     private String cpuManagerPolicy;
@@ -42,6 +51,12 @@ public class KubeletConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("featureGates")
     private java.util.Map < String, ? > featureGates;
 
+    @com.aliyun.core.annotation.NameInMap("imageGCHighThresholdPercent")
+    private Integer imageGCHighThresholdPercent;
+
+    @com.aliyun.core.annotation.NameInMap("imageGCLowThresholdPercent")
+    private Integer imageGCLowThresholdPercent;
+
     @com.aliyun.core.annotation.NameInMap("kubeAPIBurst")
     private Long kubeAPIBurst;
 
@@ -54,6 +69,12 @@ public class KubeletConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("maxPods")
     private Long maxPods;
 
+    @com.aliyun.core.annotation.NameInMap("memoryManagerPolicy")
+    private String memoryManagerPolicy;
+
+    @com.aliyun.core.annotation.NameInMap("podPidsLimit")
+    private Long podPidsLimit;
+
     @com.aliyun.core.annotation.NameInMap("readOnlyPort")
     private Long readOnlyPort;
 
@@ -63,16 +84,28 @@ public class KubeletConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("registryPullQPS")
     private Long registryPullQPS;
 
+    @com.aliyun.core.annotation.NameInMap("reservedMemory")
+    private java.util.List < ReservedMemory> reservedMemory;
+
     @com.aliyun.core.annotation.NameInMap("serializeImagePulls")
     private Boolean serializeImagePulls;
 
     @com.aliyun.core.annotation.NameInMap("systemReserved")
     private java.util.Map < String, ? > systemReserved;
 
+    @com.aliyun.core.annotation.NameInMap("topologyManagerPolicy")
+    private String topologyManagerPolicy;
+
+    @com.aliyun.core.annotation.NameInMap("tracing")
+    private Tracing tracing;
+
     private KubeletConfig(Builder builder) {
         this.allowedUnsafeSysctls = builder.allowedUnsafeSysctls;
+        this.clusterDNS = builder.clusterDNS;
         this.containerLogMaxFiles = builder.containerLogMaxFiles;
         this.containerLogMaxSize = builder.containerLogMaxSize;
+        this.cpuCFSQuota = builder.cpuCFSQuota;
+        this.cpuCFSQuotaPeriod = builder.cpuCFSQuotaPeriod;
         this.cpuManagerPolicy = builder.cpuManagerPolicy;
         this.eventBurst = builder.eventBurst;
         this.eventRecordQPS = builder.eventRecordQPS;
@@ -80,15 +113,22 @@ public class KubeletConfig extends TeaModel {
         this.evictionSoft = builder.evictionSoft;
         this.evictionSoftGracePeriod = builder.evictionSoftGracePeriod;
         this.featureGates = builder.featureGates;
+        this.imageGCHighThresholdPercent = builder.imageGCHighThresholdPercent;
+        this.imageGCLowThresholdPercent = builder.imageGCLowThresholdPercent;
         this.kubeAPIBurst = builder.kubeAPIBurst;
         this.kubeAPIQPS = builder.kubeAPIQPS;
         this.kubeReserved = builder.kubeReserved;
         this.maxPods = builder.maxPods;
+        this.memoryManagerPolicy = builder.memoryManagerPolicy;
+        this.podPidsLimit = builder.podPidsLimit;
         this.readOnlyPort = builder.readOnlyPort;
         this.registryBurst = builder.registryBurst;
         this.registryPullQPS = builder.registryPullQPS;
+        this.reservedMemory = builder.reservedMemory;
         this.serializeImagePulls = builder.serializeImagePulls;
         this.systemReserved = builder.systemReserved;
+        this.topologyManagerPolicy = builder.topologyManagerPolicy;
+        this.tracing = builder.tracing;
     }
 
     public static Builder builder() {
@@ -107,6 +147,13 @@ public class KubeletConfig extends TeaModel {
     }
 
     /**
+     * @return clusterDNS
+     */
+    public java.util.List < String > getClusterDNS() {
+        return this.clusterDNS;
+    }
+
+    /**
      * @return containerLogMaxFiles
      */
     public Long getContainerLogMaxFiles() {
@@ -118,6 +165,20 @@ public class KubeletConfig extends TeaModel {
      */
     public String getContainerLogMaxSize() {
         return this.containerLogMaxSize;
+    }
+
+    /**
+     * @return cpuCFSQuota
+     */
+    public Boolean getCpuCFSQuota() {
+        return this.cpuCFSQuota;
+    }
+
+    /**
+     * @return cpuCFSQuotaPeriod
+     */
+    public String getCpuCFSQuotaPeriod() {
+        return this.cpuCFSQuotaPeriod;
     }
 
     /**
@@ -170,6 +231,20 @@ public class KubeletConfig extends TeaModel {
     }
 
     /**
+     * @return imageGCHighThresholdPercent
+     */
+    public Integer getImageGCHighThresholdPercent() {
+        return this.imageGCHighThresholdPercent;
+    }
+
+    /**
+     * @return imageGCLowThresholdPercent
+     */
+    public Integer getImageGCLowThresholdPercent() {
+        return this.imageGCLowThresholdPercent;
+    }
+
+    /**
      * @return kubeAPIBurst
      */
     public Long getKubeAPIBurst() {
@@ -198,6 +273,20 @@ public class KubeletConfig extends TeaModel {
     }
 
     /**
+     * @return memoryManagerPolicy
+     */
+    public String getMemoryManagerPolicy() {
+        return this.memoryManagerPolicy;
+    }
+
+    /**
+     * @return podPidsLimit
+     */
+    public Long getPodPidsLimit() {
+        return this.podPidsLimit;
+    }
+
+    /**
      * @return readOnlyPort
      */
     public Long getReadOnlyPort() {
@@ -219,6 +308,13 @@ public class KubeletConfig extends TeaModel {
     }
 
     /**
+     * @return reservedMemory
+     */
+    public java.util.List < ReservedMemory> getReservedMemory() {
+        return this.reservedMemory;
+    }
+
+    /**
      * @return serializeImagePulls
      */
     public Boolean getSerializeImagePulls() {
@@ -232,10 +328,27 @@ public class KubeletConfig extends TeaModel {
         return this.systemReserved;
     }
 
+    /**
+     * @return topologyManagerPolicy
+     */
+    public String getTopologyManagerPolicy() {
+        return this.topologyManagerPolicy;
+    }
+
+    /**
+     * @return tracing
+     */
+    public Tracing getTracing() {
+        return this.tracing;
+    }
+
     public static final class Builder {
         private java.util.List < String > allowedUnsafeSysctls; 
+        private java.util.List < String > clusterDNS; 
         private Long containerLogMaxFiles; 
         private String containerLogMaxSize; 
+        private Boolean cpuCFSQuota; 
+        private String cpuCFSQuotaPeriod; 
         private String cpuManagerPolicy; 
         private Long eventBurst; 
         private Long eventRecordQPS; 
@@ -243,21 +356,36 @@ public class KubeletConfig extends TeaModel {
         private java.util.Map < String, ? > evictionSoft; 
         private java.util.Map < String, ? > evictionSoftGracePeriod; 
         private java.util.Map < String, ? > featureGates; 
+        private Integer imageGCHighThresholdPercent; 
+        private Integer imageGCLowThresholdPercent; 
         private Long kubeAPIBurst; 
         private Long kubeAPIQPS; 
         private java.util.Map < String, ? > kubeReserved; 
         private Long maxPods; 
+        private String memoryManagerPolicy; 
+        private Long podPidsLimit; 
         private Long readOnlyPort; 
         private Long registryBurst; 
         private Long registryPullQPS; 
+        private java.util.List < ReservedMemory> reservedMemory; 
         private Boolean serializeImagePulls; 
         private java.util.Map < String, ? > systemReserved; 
+        private String topologyManagerPolicy; 
+        private Tracing tracing; 
 
         /**
          * allowedUnsafeSysctls.
          */
         public Builder allowedUnsafeSysctls(java.util.List < String > allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = allowedUnsafeSysctls;
+            return this;
+        }
+
+        /**
+         * clusterDNS.
+         */
+        public Builder clusterDNS(java.util.List < String > clusterDNS) {
+            this.clusterDNS = clusterDNS;
             return this;
         }
 
@@ -274,6 +402,22 @@ public class KubeletConfig extends TeaModel {
          */
         public Builder containerLogMaxSize(String containerLogMaxSize) {
             this.containerLogMaxSize = containerLogMaxSize;
+            return this;
+        }
+
+        /**
+         * cpuCFSQuota.
+         */
+        public Builder cpuCFSQuota(Boolean cpuCFSQuota) {
+            this.cpuCFSQuota = cpuCFSQuota;
+            return this;
+        }
+
+        /**
+         * cpuCFSQuotaPeriod.
+         */
+        public Builder cpuCFSQuotaPeriod(String cpuCFSQuotaPeriod) {
+            this.cpuCFSQuotaPeriod = cpuCFSQuotaPeriod;
             return this;
         }
 
@@ -334,6 +478,22 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
+         * imageGCHighThresholdPercent.
+         */
+        public Builder imageGCHighThresholdPercent(Integer imageGCHighThresholdPercent) {
+            this.imageGCHighThresholdPercent = imageGCHighThresholdPercent;
+            return this;
+        }
+
+        /**
+         * imageGCLowThresholdPercent.
+         */
+        public Builder imageGCLowThresholdPercent(Integer imageGCLowThresholdPercent) {
+            this.imageGCLowThresholdPercent = imageGCLowThresholdPercent;
+            return this;
+        }
+
+        /**
          * kubeAPIBurst.
          */
         public Builder kubeAPIBurst(Long kubeAPIBurst) {
@@ -366,6 +526,22 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
+         * memoryManagerPolicy.
+         */
+        public Builder memoryManagerPolicy(String memoryManagerPolicy) {
+            this.memoryManagerPolicy = memoryManagerPolicy;
+            return this;
+        }
+
+        /**
+         * podPidsLimit.
+         */
+        public Builder podPidsLimit(Long podPidsLimit) {
+            this.podPidsLimit = podPidsLimit;
+            return this;
+        }
+
+        /**
          * readOnlyPort.
          */
         public Builder readOnlyPort(Long readOnlyPort) {
@@ -390,6 +566,14 @@ public class KubeletConfig extends TeaModel {
         }
 
         /**
+         * reservedMemory.
+         */
+        public Builder reservedMemory(java.util.List < ReservedMemory> reservedMemory) {
+            this.reservedMemory = reservedMemory;
+            return this;
+        }
+
+        /**
          * serializeImagePulls.
          */
         public Builder serializeImagePulls(Boolean serializeImagePulls) {
@@ -405,10 +589,160 @@ public class KubeletConfig extends TeaModel {
             return this;
         }
 
+        /**
+         * topologyManagerPolicy.
+         */
+        public Builder topologyManagerPolicy(String topologyManagerPolicy) {
+            this.topologyManagerPolicy = topologyManagerPolicy;
+            return this;
+        }
+
+        /**
+         * tracing.
+         */
+        public Builder tracing(Tracing tracing) {
+            this.tracing = tracing;
+            return this;
+        }
+
         public KubeletConfig build() {
             return new KubeletConfig(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link KubeletConfig} extends {@link TeaModel}
+     *
+     * <p>KubeletConfig</p>
+     */
+    public static class ReservedMemory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("limits")
+        private java.util.Map < String, ? > limits;
+
+        @com.aliyun.core.annotation.NameInMap("numaNode")
+        private Integer numaNode;
+
+        private ReservedMemory(Builder builder) {
+            this.limits = builder.limits;
+            this.numaNode = builder.numaNode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReservedMemory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return limits
+         */
+        public java.util.Map < String, ? > getLimits() {
+            return this.limits;
+        }
+
+        /**
+         * @return numaNode
+         */
+        public Integer getNumaNode() {
+            return this.numaNode;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, ? > limits; 
+            private Integer numaNode; 
+
+            /**
+             * limits.
+             */
+            public Builder limits(java.util.Map < String, ? > limits) {
+                this.limits = limits;
+                return this;
+            }
+
+            /**
+             * numaNode.
+             */
+            public Builder numaNode(Integer numaNode) {
+                this.numaNode = numaNode;
+                return this;
+            }
+
+            public ReservedMemory build() {
+                return new ReservedMemory(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link KubeletConfig} extends {@link TeaModel}
+     *
+     * <p>KubeletConfig</p>
+     */
+    public static class Tracing extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endpoint")
+        private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("samplingRatePerMillion")
+        private Integer samplingRatePerMillion;
+
+        private Tracing(Builder builder) {
+            this.endpoint = builder.endpoint;
+            this.samplingRatePerMillion = builder.samplingRatePerMillion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tracing create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
+         * @return samplingRatePerMillion
+         */
+        public Integer getSamplingRatePerMillion() {
+            return this.samplingRatePerMillion;
+        }
+
+        public static final class Builder {
+            private String endpoint; 
+            private Integer samplingRatePerMillion; 
+
+            /**
+             * endpoint.
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * samplingRatePerMillion.
+             */
+            public Builder samplingRatePerMillion(Integer samplingRatePerMillion) {
+                this.samplingRatePerMillion = samplingRatePerMillion;
+                return this;
+            }
+
+            public Tracing build() {
+                return new Tracing(this);
+            } 
+
+        } 
+
+    }
 }

@@ -21,10 +21,15 @@ public class DescribeClusterV2UserKubeconfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private Boolean privateIpAddress;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemporaryDurationMinutes")
+    private Long temporaryDurationMinutes;
+
     private DescribeClusterV2UserKubeconfigRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.privateIpAddress = builder.privateIpAddress;
+        this.temporaryDurationMinutes = builder.temporaryDurationMinutes;
     }
 
     public static Builder builder() {
@@ -54,9 +59,17 @@ public class DescribeClusterV2UserKubeconfigRequest extends Request {
         return this.privateIpAddress;
     }
 
+    /**
+     * @return temporaryDurationMinutes
+     */
+    public Long getTemporaryDurationMinutes() {
+        return this.temporaryDurationMinutes;
+    }
+
     public static final class Builder extends Request.Builder<DescribeClusterV2UserKubeconfigRequest, Builder> {
         private String clusterId; 
         private Boolean privateIpAddress; 
+        private Long temporaryDurationMinutes; 
 
         private Builder() {
             super();
@@ -66,6 +79,7 @@ public class DescribeClusterV2UserKubeconfigRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.privateIpAddress = request.privateIpAddress;
+            this.temporaryDurationMinutes = request.temporaryDurationMinutes;
         } 
 
         /**
@@ -83,6 +97,15 @@ public class DescribeClusterV2UserKubeconfigRequest extends Request {
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
             this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+
+        /**
+         * TemporaryDurationMinutes.
+         */
+        public Builder temporaryDurationMinutes(Long temporaryDurationMinutes) {
+            this.putQueryParameter("TemporaryDurationMinutes", temporaryDurationMinutes);
+            this.temporaryDurationMinutes = temporaryDurationMinutes;
             return this;
         }
 

@@ -372,9 +372,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateKubernetesTrigger  CreateKubernetesTriggerRequest
+     * @deprecated OpenAPI CreateKubernetesTrigger is deprecated, please use CS::2015-12-15::CreateTrigger instead.  * @param request  the request parameters of CreateKubernetesTrigger  CreateKubernetesTriggerRequest
      * @return CreateKubernetesTriggerResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateKubernetesTriggerResponse> createKubernetesTrigger(CreateKubernetesTriggerRequest request) {
         try {
@@ -542,9 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteKubernetesTrigger  DeleteKubernetesTriggerRequest
+     * @deprecated OpenAPI DeleteKubernetesTrigger is deprecated, please use CS::2015-12-15::DeleteTrigger instead.  * @param request  the request parameters of DeleteKubernetesTrigger  DeleteKubernetesTriggerRequest
      * @return DeleteKubernetesTriggerResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteKubernetesTriggerResponse> deleteKubernetesTrigger(DeleteKubernetesTriggerRequest request) {
         try {
@@ -949,7 +951,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeClusterV2UserKubeconfig is deprecated  * @param request  the request parameters of DescribeClusterV2UserKubeconfig  DescribeClusterV2UserKubeconfigRequest
+     * @deprecated OpenAPI DescribeClusterV2UserKubeconfig is deprecated, please use CS::2015-12-15::DescribeClusterUserKubeconfig instead.  * @param request  the request parameters of DescribeClusterV2UserKubeconfig  DescribeClusterV2UserKubeconfigRequest
      * @return DescribeClusterV2UserKubeconfigResponse
      */
     @Deprecated
@@ -1041,9 +1043,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeEdgeMachineActiveProcess  DescribeEdgeMachineActiveProcessRequest
+     * @deprecated OpenAPI DescribeEdgeMachineActiveProcess is deprecated  * @param request  the request parameters of DescribeEdgeMachineActiveProcess  DescribeEdgeMachineActiveProcessRequest
      * @return DescribeEdgeMachineActiveProcessResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeEdgeMachineActiveProcessResponse> describeEdgeMachineActiveProcess(DescribeEdgeMachineActiveProcessRequest request) {
         try {
@@ -1149,12 +1152,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/121053.html">Register an external Kubernetes cluster</a>.</p>
+     * @deprecated OpenAPI DescribeExternalAgent is deprecated  * @description For more information, see [Register an external Kubernetes cluster](https://help.aliyun.com/document_detail/121053.html).
      * 
      * @param request the request parameters of DescribeExternalAgent  DescribeExternalAgentRequest
      * @return DescribeExternalAgentResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeExternalAgentResponse> describeExternalAgent(DescribeExternalAgentRequest request) {
         try {
@@ -1469,9 +1472,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of EdgeClusterAddEdgeMachine  EdgeClusterAddEdgeMachineRequest
+     * @deprecated OpenAPI EdgeClusterAddEdgeMachine is deprecated  * @param request  the request parameters of EdgeClusterAddEdgeMachine  EdgeClusterAddEdgeMachineRequest
      * @return EdgeClusterAddEdgeMachineResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<EdgeClusterAddEdgeMachineResponse> edgeClusterAddEdgeMachine(EdgeClusterAddEdgeMachineRequest request) {
         try {
@@ -1603,9 +1607,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of GetKubernetesTrigger  GetKubernetesTriggerRequest
+     * @deprecated OpenAPI GetKubernetesTrigger is deprecated, please use CS::2015-12-15::DescribeTrigger instead.  * @param request  the request parameters of GetKubernetesTrigger  GetKubernetesTriggerRequest
      * @return GetKubernetesTriggerResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetKubernetesTriggerResponse> getKubernetesTrigger(GetKubernetesTriggerRequest request) {
         try {
@@ -1884,9 +1889,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ModifyClusterConfiguration  ModifyClusterConfigurationRequest
+     * @deprecated OpenAPI ModifyClusterConfiguration is deprecated, please use CS::2015-12-15::ModifyClusterAddon instead.  * @param request  the request parameters of ModifyClusterConfiguration  ModifyClusterConfigurationRequest
      * @return ModifyClusterConfigurationResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ModifyClusterConfigurationResponse> modifyClusterConfiguration(ModifyClusterConfigurationRequest request) {
         try {
