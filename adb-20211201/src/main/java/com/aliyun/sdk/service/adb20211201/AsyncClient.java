@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindDBResourceGroupWithUserResponse> bindDBResourceGroupWithUser(BindDBResourceGroupWithUserRequest request);
 
     /**
+     * @param request the request parameters of CancelSparkReplStatement  CancelSparkReplStatementRequest
+     * @return CancelSparkReplStatementResponse
+     */
+    CompletableFuture<CancelSparkReplStatementResponse> cancelSparkReplStatement(CancelSparkReplStatementRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -799,6 +805,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableElasticPlanResponse> enableElasticPlan(EnableElasticPlanRequest request);
 
     /**
+     * @param request the request parameters of ExecuteSparkReplStatement  ExecuteSparkReplStatementRequest
+     * @return ExecuteSparkReplStatementResponse
+     */
+    CompletableFuture<ExecuteSparkReplStatementResponse> executeSparkReplStatement(ExecuteSparkReplStatementRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
      * <ul>
@@ -938,6 +950,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSparkLogAnalyzeTaskResponse
      */
     CompletableFuture<GetSparkLogAnalyzeTaskResponse> getSparkLogAnalyzeTask(GetSparkLogAnalyzeTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetSparkReplSession  GetSparkReplSessionRequest
+     * @return GetSparkReplSessionResponse
+     */
+    CompletableFuture<GetSparkReplSessionResponse> getSparkReplSession(GetSparkReplSessionRequest request);
+
+    /**
+     * @param request the request parameters of GetSparkReplStatement  GetSparkReplStatementRequest
+     * @return GetSparkReplStatementResponse
+     */
+    CompletableFuture<GetSparkReplStatementResponse> getSparkReplStatement(GetSparkReplStatementRequest request);
 
     /**
      * <b>description</b> :
@@ -1368,6 +1392,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetSparkAppLogRootPathResponse
      */
     CompletableFuture<SetSparkAppLogRootPathResponse> setSparkAppLogRootPath(SetSparkAppLogRootPathRequest request);
+
+    /**
+     * @param request the request parameters of StartSparkReplSession  StartSparkReplSessionRequest
+     * @return StartSparkReplSessionResponse
+     */
+    CompletableFuture<StartSparkReplSessionResponse> startSparkReplSession(StartSparkReplSessionRequest request);
 
     /**
      * <b>description</b> :

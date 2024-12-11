@@ -50,7 +50,7 @@ public class DescribeCompactionServiceSwitchResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class DescribeCompactionServiceSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D761DA51-12F8-5457-AAA9-F52B9F436D2D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -104,7 +107,15 @@ public class DescribeCompactionServiceSwitchResponseBody extends TeaModel {
             private Boolean enableCompactionService; 
 
             /**
-             * EnableCompactionService.
+             * <p>Indicates whether the remote build feature is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableCompactionService(Boolean enableCompactionService) {
                 this.enableCompactionService = enableCompactionService;
