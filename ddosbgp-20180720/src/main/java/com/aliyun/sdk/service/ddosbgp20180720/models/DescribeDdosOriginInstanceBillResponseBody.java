@@ -326,7 +326,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * MonthlySummaryList.
+         * <p>The information about the monthly summary bills.</p>
          */
         public Builder monthlySummaryList(java.util.List < MonthlySummaryList> monthlySummaryList) {
             this.monthlySummaryList = monthlySummaryList;
@@ -850,7 +850,10 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * EnableDays.
+             * <p>The number of days that the instance is activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder enableDays(Integer enableDays) {
                 this.enableDays = enableDays;
@@ -858,7 +861,10 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * FlowCn.
+             * <p>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder flowCn(Long flowCn) {
                 this.flowCn = flowCn;
@@ -866,7 +872,10 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * FlowIntl.
+             * <p>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder flowIntl(Long flowIntl) {
                 this.flowIntl = flowIntl;
@@ -874,7 +883,13 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * IpCountCn.
+             * <p>The total number of protected IP addresses in the Chinese mainland.</p>
+             * <blockquote>
+             * <p> The total number of protected IP addresses is the sum of the daily numbers of protected IP addresses in a month.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>28</p>
              */
             public Builder ipCountCn(Integer ipCountCn) {
                 this.ipCountCn = ipCountCn;
@@ -882,7 +897,13 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * IpCountIntl.
+             * <p>The total number of protected IP addresses outside the Chinese mainland.</p>
+             * <blockquote>
+             * <p> The total number of protected IP addresses is the sum of the daily numbers of protected IP addresses in a month.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder ipCountIntl(Integer ipCountIntl) {
                 this.ipCountIntl = ipCountIntl;
@@ -890,7 +911,10 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * <p>The ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112873971277****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -898,7 +922,10 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * StandardAssetsFlowCn.
+             * <p>The total traffic of regular Alibaba Cloud services in the Chinese mainland. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder standardAssetsFlowCn(Long standardAssetsFlowCn) {
                 this.standardAssetsFlowCn = standardAssetsFlowCn;
@@ -906,7 +933,10 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * StandardAssetsFlowIntl.
+             * <p>The total traffic of regular Alibaba Cloud services outside the Chinese mainland. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder standardAssetsFlowIntl(Long standardAssetsFlowIntl) {
                 this.standardAssetsFlowIntl = standardAssetsFlowIntl;
@@ -914,7 +944,10 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * <p>The ID of the administrator account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102518028277****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

@@ -333,6 +333,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyRemarkResponse> modifyRemark(ModifyRemarkRequest request);
 
     /**
+     * @param request the request parameters of MoveResourceGroup  MoveResourceGroupRequest
+     * @return MoveResourceGroupResponse
+     */
+    CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request);
+
+    /**
      * @param request the request parameters of QuerySchedruleOnDemand  QuerySchedruleOnDemandRequest
      * @return QuerySchedruleOnDemandResponse
      */
