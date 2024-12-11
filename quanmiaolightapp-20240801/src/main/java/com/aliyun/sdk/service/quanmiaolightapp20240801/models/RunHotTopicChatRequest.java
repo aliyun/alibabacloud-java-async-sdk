@@ -42,6 +42,10 @@ public class RunHotTopicChatRequest extends Request {
     private Integer imageCount;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("messages")
+    private java.util.List < Messages> messages;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("modelCustomPromptTemplate")
     private String modelCustomPromptTemplate;
 
@@ -74,6 +78,7 @@ public class RunHotTopicChatRequest extends Request {
         this.hotTopicVersion = builder.hotTopicVersion;
         this.hotTopics = builder.hotTopics;
         this.imageCount = builder.imageCount;
+        this.messages = builder.messages;
         this.modelCustomPromptTemplate = builder.modelCustomPromptTemplate;
         this.modelId = builder.modelId;
         this.originalSessionId = builder.originalSessionId;
@@ -145,6 +150,13 @@ public class RunHotTopicChatRequest extends Request {
     }
 
     /**
+     * @return messages
+     */
+    public java.util.List < Messages> getMessages() {
+        return this.messages;
+    }
+
+    /**
      * @return modelCustomPromptTemplate
      */
     public String getModelCustomPromptTemplate() {
@@ -194,6 +206,7 @@ public class RunHotTopicChatRequest extends Request {
         private String hotTopicVersion; 
         private java.util.List < String > hotTopics; 
         private Integer imageCount; 
+        private java.util.List < Messages> messages; 
         private String modelCustomPromptTemplate; 
         private String modelId; 
         private String originalSessionId; 
@@ -214,6 +227,7 @@ public class RunHotTopicChatRequest extends Request {
             this.hotTopicVersion = request.hotTopicVersion;
             this.hotTopics = request.hotTopics;
             this.imageCount = request.imageCount;
+            this.messages = request.messages;
             this.modelCustomPromptTemplate = request.modelCustomPromptTemplate;
             this.modelId = request.modelId;
             this.originalSessionId = request.originalSessionId;
@@ -291,6 +305,16 @@ public class RunHotTopicChatRequest extends Request {
         }
 
         /**
+         * messages.
+         */
+        public Builder messages(java.util.List < Messages> messages) {
+            String messagesShrink = shrink(messages, "messages", "json");
+            this.putBodyParameter("messages", messagesShrink);
+            this.messages = messages;
+            return this;
+        }
+
+        /**
          * modelCustomPromptTemplate.
          */
         public Builder modelCustomPromptTemplate(String modelCustomPromptTemplate) {
@@ -352,6 +376,93 @@ public class RunHotTopicChatRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunHotTopicChatRequest} extends {@link TeaModel}
+     *
+     * <p>RunHotTopicChatRequest</p>
+     */
+    public static class Messages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("createTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("role")
+        private String role;
+
+        private Messages(Builder builder) {
+            this.content = builder.content;
+            this.createTime = builder.createTime;
+            this.role = builder.role;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Messages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String createTime; 
+            private String role; 
+
+            /**
+             * content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * createTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            public Messages build() {
+                return new Messages(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link RunHotTopicChatRequest} extends {@link TeaModel}
