@@ -343,7 +343,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalDataServiceId.
+             * <p>The Id of external data service</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder externalDataServiceId(Integer externalDataServiceId) {
                 this.externalDataServiceId = externalDataServiceId;

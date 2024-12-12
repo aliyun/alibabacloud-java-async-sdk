@@ -128,6 +128,7 @@ public class DeleteDocumentCollectionRequest extends Request {
         } 
 
         /**
+         * <p>The name of the document collection to be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,10 @@ public class DeleteDocumentCollectionRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,9 +157,9 @@ public class DeleteDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace. Default value: public.</p>
+         * <p>Namespace, default is public.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p>You can create a namespace using the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list of namespaces using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -167,9 +172,9 @@ public class DeleteDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The password of the namespace.</p>
+         * <p>Password for the namespace.</p>
          * <blockquote>
-         * <p> This value is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+         * <p>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -192,7 +197,7 @@ public class DeleteDocumentCollectionRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The ID of the region where the instance is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

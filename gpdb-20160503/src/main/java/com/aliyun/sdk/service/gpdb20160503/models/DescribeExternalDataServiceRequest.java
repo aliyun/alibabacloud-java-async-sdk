@@ -112,6 +112,7 @@ public class DescribeExternalDataServiceRequest extends Request {
         }
 
         /**
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

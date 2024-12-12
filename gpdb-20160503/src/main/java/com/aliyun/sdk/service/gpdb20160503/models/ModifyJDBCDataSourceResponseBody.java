@@ -38,7 +38,10 @@ public class ModifyJDBCDataSourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C125605-266F-41CA-8AC5-3A643D4F42C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

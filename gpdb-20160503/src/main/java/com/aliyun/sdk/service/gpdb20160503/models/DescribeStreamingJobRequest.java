@@ -84,7 +84,7 @@ public class DescribeStreamingJobRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class DescribeStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>Job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,13 @@ public class DescribeStreamingJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available region IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

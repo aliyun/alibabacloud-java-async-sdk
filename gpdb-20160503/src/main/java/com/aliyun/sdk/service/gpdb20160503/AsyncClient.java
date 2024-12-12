@@ -106,10 +106,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation when you need to create AnalyticDB for PostgreSQL instances to meet the requirements of new applications or services.
-     * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL instances. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</p>
+     * <p>Before using this interface, please make sure you have fully understood the <a href="https://help.aliyun.com/document_detail/35406.html">billing method</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of the AnalyticDB for PostgreSQL product.</p>
      * 
      * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -170,6 +167,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateNamespaceResponse
      */
     CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request);
+
+    /**
+     * @param request the request parameters of CreateRemoteADBDataSource  CreateRemoteADBDataSourceRequest
+     * @return CreateRemoteADBDataSourceResponse
+     */
+    CompletableFuture<CreateRemoteADBDataSourceResponse> createRemoteADBDataSource(CreateRemoteADBDataSourceRequest request);
 
     /**
      * <b>description</b> :
@@ -311,6 +314,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
 
     /**
+     * @param request the request parameters of DeleteRemoteADBDataSource  DeleteRemoteADBDataSourceRequest
+     * @return DeleteRemoteADBDataSourceResponse
+     */
+    CompletableFuture<DeleteRemoteADBDataSourceResponse> deleteRemoteADBDataSource(DeleteRemoteADBDataSourceRequest request);
+
+    /**
      * @param request the request parameters of DeleteSecret  DeleteSecretRequest
      * @return DeleteSecretResponse
      */
@@ -406,10 +415,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
-     * <p>You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.</p>
-     * <h2>Limits</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h2>Usage Instructions</h2>
+     * <p>This interface is generally used to view information such as the specifications, network type, and instance status of AnalyticDB for PostgreSQL instances.</p>
+     * <h2>QPS Limitation</h2>
+     * <p>The default single-user QPS limit for this interface is 1000 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please use it reasonably.
+     * &lt;props=&quot;china&quot;&gt;The QPS in this document is only a default reference value. For accurate information, please refer to the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API Rate Quota List</a>.</p>
      * 
      * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -1019,6 +1029,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNamespacesResponse> listNamespaces(ListNamespacesRequest request);
 
     /**
+     * @param request the request parameters of ListRemoteADBDataSources  ListRemoteADBDataSourcesRequest
+     * @return ListRemoteADBDataSourcesResponse
+     */
+    CompletableFuture<ListRemoteADBDataSourcesResponse> listRemoteADBDataSources(ListRemoteADBDataSourcesRequest request);
+
+    /**
      * @param request the request parameters of ListSchemas  ListSchemasRequest
      * @return ListSchemasResponse
      */
@@ -1183,6 +1199,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyParametersResponse
      */
     CompletableFuture<ModifyParametersResponse> modifyParameters(ModifyParametersRequest request);
+
+    /**
+     * @param request the request parameters of ModifyRemoteADBDataSource  ModifyRemoteADBDataSourceRequest
+     * @return ModifyRemoteADBDataSourceResponse
+     */
+    CompletableFuture<ModifyRemoteADBDataSourceResponse> modifyRemoteADBDataSource(ModifyRemoteADBDataSourceRequest request);
 
     /**
      * <b>description</b> :
@@ -1358,6 +1380,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
+     * @param request the request parameters of TextEmbedding  TextEmbeddingRequest
+     * @return TextEmbeddingResponse
+     */
+    CompletableFuture<TextEmbeddingResponse> textEmbedding(TextEmbeddingRequest request);
+
+    /**
      * @param request the request parameters of UnbindDBResourceGroupWithRole  UnbindDBResourceGroupWithRoleRequest
      * @return UnbindDBResourceGroupWithRoleResponse
      */
@@ -1420,6 +1448,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpgradeExtensionsResponse> upgradeExtensions(UpgradeExtensionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The vectorization algorithm for the document is specified by the CreateDocumentCollection API.</p>
+     * 
      * @param request the request parameters of UpsertChunks  UpsertChunksRequest
      * @return UpsertChunksResponse
      */

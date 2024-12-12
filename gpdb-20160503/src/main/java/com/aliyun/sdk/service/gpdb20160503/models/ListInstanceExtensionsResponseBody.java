@@ -86,7 +86,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * <p>The queried extensions.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;

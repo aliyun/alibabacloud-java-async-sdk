@@ -113,6 +113,7 @@ public class CreateStreamingDataServiceRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +128,7 @@ public class CreateStreamingDataServiceRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -140,7 +141,10 @@ public class CreateStreamingDataServiceRequest extends Request {
         }
 
         /**
-         * ServiceDescription.
+         * <p>The description of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-adbpgss</p>
          */
         public Builder serviceDescription(String serviceDescription) {
             this.putQueryParameter("ServiceDescription", serviceDescription);
@@ -149,6 +153,7 @@ public class CreateStreamingDataServiceRequest extends Request {
         }
 
         /**
+         * <p>The name of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +166,7 @@ public class CreateStreamingDataServiceRequest extends Request {
         }
 
         /**
+         * <p>The specifications of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

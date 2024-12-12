@@ -86,7 +86,10 @@ public class RerankResponseBody extends TeaModel {
         private Integer tokens; 
 
         /**
-         * Message.
+         * <p>Detailed information returned by the interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -94,7 +97,10 @@ public class RerankResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +108,7 @@ public class RerankResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>Rerank results.</p>
          */
         public Builder results(Results results) {
             this.results = results;
@@ -110,7 +116,14 @@ public class RerankResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>API execution status, value description:</p>
+         * <ul>
+         * <li><strong>success</strong>: Execution succeeded.</li>
+         * <li><strong>fail</strong>: Execution failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -118,7 +131,10 @@ public class RerankResponseBody extends TeaModel {
         }
 
         /**
-         * Tokens.
+         * <p>Number of consumed tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder tokens(Integer tokens) {
             this.tokens = tokens;
@@ -188,7 +204,10 @@ public class RerankResponseBody extends TeaModel {
             private Float relevanceScore; 
 
             /**
-             * Document.
+             * <p>Re-ordered document information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADBPG is the OLAP database of Alibaba Cloud.</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -196,7 +215,10 @@ public class RerankResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>Index of this document in the request parameter Documents, starting from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -204,7 +226,10 @@ public class RerankResponseBody extends TeaModel {
             }
 
             /**
-             * RelevanceScore.
+             * <p>Rerank similarity score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.31412</p>
              */
             public Builder relevanceScore(Float relevanceScore) {
                 this.relevanceScore = relevanceScore;
@@ -251,7 +276,7 @@ public class RerankResponseBody extends TeaModel {
             private java.util.List < ResultsResults> results; 
 
             /**
-             * Results.
+             * <p>Rerank results.</p>
              */
             public Builder results(java.util.List < ResultsResults> results) {
                 this.results = results;

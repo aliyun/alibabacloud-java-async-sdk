@@ -86,7 +86,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account name invalid</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,7 +97,7 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the SQL logs.</p>
+         * <p>The queried SQL execution logs.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -398,7 +401,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InternalError</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -406,7 +412,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User not authorized to operate on the specified resource.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -473,7 +482,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * QueryId.
+             * <p>The query ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2548026401648157601713924318883</p>
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;
@@ -514,7 +526,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The ID of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efc33bd7-f1dc-4b24-b4fb-ab0d5329b7bb</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

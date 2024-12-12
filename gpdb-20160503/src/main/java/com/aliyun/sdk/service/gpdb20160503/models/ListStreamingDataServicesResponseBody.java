@@ -62,7 +62,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,7 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceItems.
+         * <p>Returns real-time data service items</p>
          */
         public Builder serviceItems(java.util.List < ServiceItems> serviceItems) {
             this.serviceItems = serviceItems;
@@ -78,7 +81,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>Total record count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -256,7 +262,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T16:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -264,7 +273,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>Last modified time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T17:00:00Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -272,7 +284,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceDescription.
+             * <p>Service description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-adbpgss</p>
              */
             public Builder serviceDescription(String serviceDescription) {
                 this.serviceDescription = serviceDescription;
@@ -280,7 +295,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>Service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -288,7 +306,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceIp.
+             * <p>Service IP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder serviceIp(String serviceIp) {
                 this.serviceIp = serviceIp;
@@ -296,7 +317,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceManaged.
+             * <p>Whether it is a managed service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -304,7 +328,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-adbpgss</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -312,7 +339,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceOwnerId.
+             * <p>Service owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder serviceOwnerId(String serviceOwnerId) {
                 this.serviceOwnerId = serviceOwnerId;
@@ -320,7 +350,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePort.
+             * <p>Service port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5432</p>
              */
             public Builder servicePort(String servicePort) {
                 this.servicePort = servicePort;
@@ -328,7 +361,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceSpec.
+             * <p>Service specification (in CU).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder serviceSpec(String serviceSpec) {
                 this.serviceSpec = serviceSpec;
@@ -336,7 +372,13 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>Service type, with the following value:</p>
+             * <ul>
+             * <li><strong>adbpgss</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpgss</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -344,7 +386,20 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Service status, with the following values:</p>
+             * <ul>
+             * <li><p>Init: Initializing</p>
+             * </li>
+             * <li><p>Running: In operation</p>
+             * </li>
+             * <li><p>Exception: Abnormal</p>
+             * </li>
+             * <li><p>Paused: Suspended</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

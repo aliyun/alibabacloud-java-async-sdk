@@ -351,7 +351,7 @@ public class CreateStreamingJobRequest extends Request {
         } 
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>Target database account.</p>
          * 
          * <strong>example:</strong>
          * <p>test-account</p>
@@ -363,12 +363,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The delivery guarantee setting.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ATLEAST</li>
-         * <li>EXACTLY</li>
-         * </ul>
+         * <p>Delivery guarantee.</p>
          * 
          * <strong>example:</strong>
          * <p>ATLEAST / EXACTLY</p>
@@ -380,7 +375,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -393,7 +388,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The data source ID.</p>
+         * <p>Data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -406,7 +401,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The destination fields.</p>
+         * <p>Target data table mapping field list.</p>
          */
         public Builder destColumns(java.util.List < String > destColumns) {
             String destColumnsShrink = shrink(destColumns, "DestColumns", "json");
@@ -416,7 +411,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the destination database.</p>
+         * <p>Target database name.</p>
          * 
          * <strong>example:</strong>
          * <p>dest-db</p>
@@ -428,7 +423,10 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * DestSchema.
+         * <p>Target namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dest-schema</p>
          */
         public Builder destSchema(String destSchema) {
             this.putQueryParameter("DestSchema", destSchema);
@@ -437,7 +435,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the destination table.</p>
+         * <p>Target table name.</p>
          * 
          * <strong>example:</strong>
          * <p>dest-table</p>
@@ -449,7 +447,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The number of allowed error rows. Write failures occur when Kafka data does not match the destination table in AnalyticDB for PostgreSQL. If the specified value is exceeded, the job fails.</p>
+         * <p>When data in Kafka does not match the ADBPG target table, it will cause a write failure. This value is the number of error rows allowed; exceeding this will cause the task to fail.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -461,7 +459,13 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * FallbackOffset.
+         * <p>FallbackOffset, fallback offset</p>
+         * <ul>
+         * <li>The FallbackOffset parameter defines the behavior when the consumer does not request a specific offset or the requested offset exceeds the current Kafka cluster&quot;s recorded offset information. You can choose to start consuming from the earliest (newest) or latest (oldest) offset.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EARLIEST /  LATEST</p>
          */
         public Builder fallbackOffset(String fallbackOffset) {
             this.putQueryParameter("FallbackOffset", fallbackOffset);
@@ -470,7 +474,10 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>Kafka group name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_name.</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -479,7 +486,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The YAML configuration file of the job. This parameter must be specified when Mode is set to professional.</p>
+         * <p>Job configuration file, required for professional mode.</p>
          * 
          * <strong>example:</strong>
          * <p>DATABASE: adbpgss_test
@@ -610,7 +617,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The description of the job.</p>
+         * <p>Job description.</p>
          * 
          * <strong>example:</strong>
          * <p>test-job</p>
@@ -622,7 +629,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the job.</p>
+         * <p>Job name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -635,7 +642,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The update condition columns that are used to join the source data and the destination table. Typically, the columns are all the primary key columns of the destination table. If the values of all columns specified by this parameter in different rows are the same, the rows are considered duplicates.</p>
+         * <p>Match columns, usually all primary key columns of the target table. If all column values in this configuration are the same, the two rows of data are considered duplicates.</p>
          */
         public Builder matchColumns(java.util.List < String > matchColumns) {
             String matchColumnsShrink = shrink(matchColumns, "MatchColumns", "json");
@@ -645,10 +652,10 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The configuration mode. Valid values:</p>
+         * <p>Configuration mode</p>
          * <ol>
-         * <li>basic: In basic mode, you must configure the configuration parameters.</li>
-         * <li>professional: In professional mode, you can submit a YAML configuration file.</li>
+         * <li>Basic mode requires specifying some configuration fields</li>
+         * <li>Professional mode supports submitting a YAML file</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -661,7 +668,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The password of the database account.</p>
+         * <p>Target database password.</p>
          * 
          * <strong>example:</strong>
          * <p>pwd123</p>
@@ -673,7 +680,13 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> API to view available region IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -682,7 +695,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The source fields.</p>
+         * <p>Source data field list.</p>
          */
         public Builder srcColumns(java.util.List < String > srcColumns) {
             String srcColumnsShrink = shrink(srcColumns, "SrcColumns", "json");
@@ -692,10 +705,12 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to test the real-time job. Valid values:</p>
+         * <p>Whether to test the real-time task, values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -709,7 +724,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The columns to be updated if a row of data meets the update condition. Typically, the columns are all non-primary key columns of the destination table. When the columns specified by the MatchColumns parameter are used as conditions to join the source data and the destination table, data in columns of the UpdateColumns type is updated if data is matched.</p>
+         * <p>Update columns, usually all non-primary key columns of the target table. When data is determined to be duplicate through MatchColumns, updating the UpdateColumns column values will result in new data overwriting old data.</p>
          */
         public Builder updateColumns(java.util.List < String > updateColumns) {
             String updateColumnsShrink = shrink(updateColumns, "UpdateColumns", "json");
@@ -719,16 +734,10 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The write mode.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>insert</li>
-         * <li>update</li>
-         * <li>merge</li>
-         * </ul>
+         * <p>Write mode.</p>
          * 
          * <strong>example:</strong>
-         * <p>insert/update/merge</p>
+         * <p>INSERT/UPDATE/MERGE</p>
          */
         public Builder writeMode(String writeMode) {
             this.putQueryParameter("WriteMode", writeMode);

@@ -58,7 +58,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5E6EDEB8-D73E-5F2D-B948-86C8AEB05A68</p>
@@ -119,7 +119,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * <p>The tag key.</p>
+             * <p>Tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>test-key</p>
@@ -130,7 +130,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>Tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>test-value</p>
@@ -995,9 +995,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * <p>The service availability of the instance. Unit: %.</p>
+             * <p>Queries the current instance availability status, in percentage (%).</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1009,11 +1009,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access mode of the instance. Valid values:</p>
+             * <p>Access mode, with the following values:</p>
              * <ul>
-             * <li><strong>Performance</strong>: standard mode.</li>
-             * <li><strong>Safety</strong>: safe mode.</li>
-             * <li><strong>LVS</strong>: Linux Virtual Server (LVS) mode.</li>
+             * <li><strong>Performance</strong>: Standard access mode.</li>
+             * <li><strong>Safty</strong>: High-security access mode.</li>
+             * <li><strong>LVS</strong>: LVS link mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1025,7 +1025,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint that is used to connect to the instance.</p>
+             * <p>Instance connection address.</p>
              * 
              * <strong>example:</strong>
              * <p>gp-bp13ue79qk8y1****-master.gpdb.rds.aliyuncs.com</p>
@@ -1036,7 +1036,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the minor version.</p>
+             * <p>Minor version number of the kernel.</p>
              * 
              * <strong>example:</strong>
              * <p>mm.v6.3.10.1-202207141918</p>
@@ -1047,7 +1047,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores per compute node.</p>
+             * <p>Number of CPU cores for the compute node, unit: Core.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1058,9 +1058,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores per node.</p>
+             * <p>Number of CPU cores per node.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1072,7 +1072,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>Instance creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-11T09:16:26Z</p>
@@ -1083,10 +1083,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of the instance. Valid values:</p>
+             * <p>Instance series, with the following values:</p>
              * <ul>
              * <li><strong>Basic</strong>: Basic Edition.</li>
-             * <li><strong>HighAvailability</strong>: High-availability Edition.</li>
+             * <li><strong>HighAvailability</strong>: High Availability Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1098,9 +1098,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the instance.</p>
+             * <p>Instance specification.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter is only applicable to reserved storage mode instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1112,12 +1112,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance family of the instance. Valid values:</p>
+             * <p>Instance family, with the following values:</p>
              * <ul>
-             * <li><strong>s</strong>: shared.</li>
-             * <li><strong>x</strong>: general-purpose.</li>
-             * <li><strong>d</strong>: dedicated.</li>
-             * <li><strong>h</strong>: dedicated host.</li>
+             * <li><strong>s</strong>: Shared type.</li>
+             * <li><strong>x</strong>: General type.</li>
+             * <li><strong>d</strong>: Dedicated package.</li>
+             * <li><strong>h</strong>: Dedicated physical machine.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1129,7 +1129,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores.</p>
+             * <p>Number of CPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1140,7 +1140,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the instance.</p>
+             * <p>Instance description.</p>
              * 
              * <strong>example:</strong>
              * <p>gp-bp13ue79qk8y1****</p>
@@ -1151,9 +1151,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum disk throughput of the compute group. Unit: Mbit/s.</p>
+             * <p>Maximum BPS (disk throughput) of the compute group, in Mbps.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter is only applicable to reserved storage mode instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1165,9 +1165,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of compute groups.</p>
+             * <p>Number of compute groups.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter is only applicable to reserved storage mode instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1179,7 +1179,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
+             * <p>Instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>gp-bp13ue79qk8y1****</p>
@@ -1190,9 +1190,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory capacity per compute node.</p>
+             * <p>Memory of the compute node.</p>
              * <blockquote>
-             * <p> The unit of this parameter is MB for instances in reserved storage mode and GB for instances in Serverless mode or elastic storage mode.</p>
+             * <p>The unit for storage-reserved mode is MB; for Serverless and storage-elastic modes, it is GB.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1204,11 +1204,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type of the instance. Valid values:</p>
+             * <p>Instance resource type, with the following values:</p>
              * <ul>
              * <li><strong>Serverless</strong>: Serverless mode.</li>
-             * <li><strong>StorageElastic</strong>: elastic storage mode.</li>
-             * <li><strong>Classic</strong>: reserved storage mode.</li>
+             * <li><strong>StorageElastic</strong>: Storage elastic mode.</li>
+             * <li><strong>Classic</strong>: Storage reserved mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1220,10 +1220,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p>This parameter is deprecated and will not return any value.</p>
              * 
              * <strong>example:</strong>
-             * <p>2</p>
+             * <p>null</p>
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -1231,7 +1231,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the instance. For more information, see the &quot;Additional description of DBInstanceStatus&quot; section of this topic.</p>
+             * <p>Instance status. For more details, see the supplementary explanation of the DBInstanceStatus parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -1242,7 +1242,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum storage capacity per node. Unit: GB.</p>
+             * <p>Maximum storage space of a single replica, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -1253,7 +1253,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DeployMode.
+             * <p>The deployment mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>single</p>
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -1261,9 +1264,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption key.</p>
+             * <p>Encryption key.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances that have disk encryption enabled.</p>
+             * <p>This parameter is returned only for instances with disk encryption enabled.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1275,12 +1278,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption type. Valid values:</p>
+             * <p>Encryption type, with the following value:</p>
              * <ul>
-             * <li><strong>CloudDisk</strong>: disk encryption.</li>
+             * <li><strong>CloudDisk</strong>: Cloud disk encryption.</li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is returned only for instances that have disk encryption enabled.</p>
+             * <p>This parameter is returned only for instances with cloud disk encryption.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1292,7 +1295,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine of the instance.</p>
+             * <p>Database engine.</p>
              * 
              * <strong>example:</strong>
              * <p>gpdb</p>
@@ -1303,7 +1306,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine version of the instance.</p>
+             * <p>Database version.</p>
              * 
              * <strong>example:</strong>
              * <p>6.0</p>
@@ -1314,9 +1317,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the instance. The time is displayed in UTC.</p>
+             * <p>Instance expiration time (in UTC).</p>
              * <blockquote>
-             * <p> The expiration time of a pay-as-you-go instance is <code>2999-09-08T16:00:00Z</code>.</p>
+             * <p>The expiration time for pay-as-you-go instances is <code>2999-09-08T16:00:00Z</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1328,13 +1331,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk type of the compute group. Valid values:</p>
+             * <p>Compute group machine type, with the following values:</p>
              * <ul>
-             * <li><strong>0</strong>: SSD.</li>
-             * <li><strong>1</strong>: HDD.</li>
+             * <li><strong>0</strong>: SSD</li>
+             * <li><strong>1</strong>: HDD</li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter applies only to storage-reserved mode instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1346,9 +1349,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The wait period for the instance that has no traffic to become idle. Unit: seconds.</p>
+             * <p>Idle release waiting time. Unit: seconds.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in Serverless automatic scheduling mode.</p>
+             * <p>This parameter is returned only for instances in the Serverless automatic scheduling mode.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1360,10 +1363,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance. Valid values:</p>
+             * <p>Instance network type, with the following values:</p>
              * <ul>
-             * <li><strong>Classic</strong>: classic network.</li>
-             * <li><strong>VPC</strong>: VPC.</li>
+             * <li><strong>Classic</strong>: Classic network.</li>
+             * <li><strong>VPC</strong>: VPC network.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1375,13 +1378,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lock mode of the instance. Valid values:</p>
+             * <p>Lock mode, with the following values:</p>
              * <ul>
-             * <li><strong>Unlock</strong>: The instance is not locked.</li>
-             * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
-             * <li><strong>LockByExpiration</strong>: The instance is automatically locked due to instance expiration.</li>
-             * <li><strong>LockByRestoration</strong>: The instance is automatically locked due to instance restoration.</li>
-             * <li><strong>LockByDiskQuota</strong>: The instance is a read-only instance and is automatically locked when the disk space is full.</li>
+             * <li><strong>Unlock</strong>: Normal.</li>
+             * <li><strong>ManualLock</strong>: Manually triggered lock.</li>
+             * <li><strong>LockByExpiration</strong>: Automatically locked when the instance expires.</li>
+             * <li><strong>LockByRestoration</strong>: Automatically locked before the instance rolls back.</li>
+             * <li><strong>LockByDiskQuota</strong>: Automatically locked when the instance space is full.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1393,7 +1396,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p>This parameter is deprecated and will not return any value.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -1404,7 +1407,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the maintenance window.</p>
+             * <p>Maintenance end time.</p>
              * 
              * <strong>example:</strong>
              * <p>22:00Z</p>
@@ -1415,7 +1418,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the maintenance window.</p>
+             * <p>Maintenance start time.</p>
              * 
              * <strong>example:</strong>
              * <p>18:00Z</p>
@@ -1426,7 +1429,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of coordinator node resources.</p>
+             * <p>Master resources.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1437,7 +1440,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of coordinator nodes.</p>
+             * <p>Number of Master nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1448,9 +1451,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of concurrent connections to the instance.</p>
+             * <p>Maximum number of concurrent connections for the instance.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter is only applicable to reserved storage mode instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1462,9 +1465,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory capacity per node. The unit of this parameter can be one of the valid values of <strong>MemoryUnit</strong>.</p>
+             * <p>Memory size per replica, see the <strong>MemoryUnit</strong> parameter for the unit.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1476,9 +1479,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory capacity per compute node.</p>
+             * <p>Memory size of the compute node.</p>
              * <blockquote>
-             * <p> The unit of this parameter is MB for instances in reserved storage mode and GB for instances in Serverless mode or elastic storage mode.</p>
+             * <p>The unit is MB for the storage reserved mode; GB for Serverless and storage elastic modes.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1490,9 +1493,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the memory capacity.</p>
+             * <p>Memory unit.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter is only applicable to reserved storage mode instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1504,7 +1507,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minor version of the instance.</p>
+             * <p>Minor version of the kernel.</p>
              * 
              * <strong>example:</strong>
              * <p>6.3.10.1-202207141918</p>
@@ -1515,10 +1518,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. Valid values:</p>
+             * <p>Billing type, with the following values:</p>
              * <ul>
-             * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-             * <li><strong>Prepaid</strong>: subscription.</li>
+             * <li><strong>Postpaid</strong>: Pay-as-you-go.</li>
+             * <li><strong>Prepaid</strong>: Subscription.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1530,7 +1533,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number that is used to connect to the instance.</p>
+             * <p>Instance port number.</p>
              * 
              * <strong>example:</strong>
              * <p>5432</p>
@@ -1541,7 +1544,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ProdType.
+             * <p>The service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder prodType(String prodType) {
                 this.prodType = prodType;
@@ -1549,7 +1555,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p>This parameter has been deprecated and will not return a value.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -1560,7 +1566,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>Region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1571,7 +1577,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the instance belongs.</p>
+             * <p>ID of the resource group where the instance is located.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-bp67acfmxazb4p****</p>
@@ -1582,7 +1588,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running duration of the instance.</p>
+             * <p>Instance running time.</p>
              * 
              * <strong>example:</strong>
              * <p>4 days 22:58:55</p>
@@ -1593,10 +1599,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * <p>This parameter is deprecated and will not return any value.</p>
              * 
              * <strong>example:</strong>
-             * <p>127.0.0.1</p>
+             * <p>null</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -1604,7 +1610,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level of ESSDs. Only <strong>PL1</strong> is supported.</p>
+             * <p>Performance Level (PL), currently only <strong>PL1</strong> is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
@@ -1615,9 +1621,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of compute nodes.</p>
+             * <p>Number of Segment nodes.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in elastic storage mode or Serverless manual scheduling mode.</p>
+             * <p>This parameter applies only to instances in the storage elastic mode and Serverless manual scheduling mode.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1629,9 +1635,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of compute groups.</p>
+             * <p>Number of compute groups.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter applies only to storage-reserved mode instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1643,13 +1649,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the Serverless mode. Valid values:</p>
+             * <p>The mode of the Serverless instance, with the following values:</p>
              * <ul>
-             * <li><strong>Manual</strong>: manual scheduling.</li>
-             * <li><strong>Auto</strong>: automatic scheduling.</li>
+             * <li><strong>Manual</strong>: Manual scheduling.</li>
+             * <li><strong>Auto</strong>: Automatic scheduling.</li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is returned only for instances in Serverless mode.</p>
+             * <p>This parameter is returned only for Serverless mode instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1661,9 +1667,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold of computing resources. Unit: AnalyticDB compute units (ACUs).</p>
+             * <p>Compute resource threshold. Unit: ACU.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in Serverless automatic scheduling mode.</p>
+             * <p>This parameter is returned only for instances in the Serverless automatic scheduling mode.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1675,7 +1681,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyZoneId.
+             * <p>The secondary zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder standbyZoneId(String standbyZoneId) {
                 this.standbyZoneId = standbyZoneId;
@@ -1683,7 +1692,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance started to run.</p>
+             * <p>The time when the instance started running.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-11T09:26:43Z</p>
@@ -1694,9 +1703,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity per node. The unit of this parameter can be one of the valid values of <strong>StorageUnit</strong>.</p>
+             * <p>Storage size per replica, see the <strong>StorageUnit</strong> parameter for units.</p>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter applies only to storage-reserved mode instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1708,7 +1717,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity of the instance. Unit: GB.</p>
+             * <p>Storage space size, unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -1719,13 +1728,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the instance. Valid values:</p>
+             * <p>Storage type, with the following values:</p>
              * <ul>
-             * <li><strong>cloud_essd</strong>: enhanced SSD (ESSD).</li>
-             * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
+             * <li><strong>cloud_essd</strong>: ESSD cloud disk.</li>
+             * <li><strong>cloud_efficiency</strong>: Efficient cloud disk.</li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is returned only for instances in elastic storage mode.</p>
+             * <p>This parameter is only applicable to instances in the storage elastic mode.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1737,14 +1746,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the storage capacity. Valid values:</p>
+             * <p>Storage unit, with the following values:</p>
              * <ul>
              * <li><strong>GB SSD</strong></li>
              * <li><strong>TB SSD</strong></li>
              * <li><strong>GB HDD</strong></li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is returned only for instances in reserved storage mode.</p>
+             * <p>This parameter is only applicable to instances in the storage reserved mode.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1756,10 +1765,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance supports backup and restoration. Valid values:</p>
+             * <p>Indicates whether backup recovery is supported, with the following values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Backup recovery is supported.</li>
+             * <li><strong>false</strong>: Backup recovery is not supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1771,7 +1780,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are added to the instance.</p>
+             * <p>Tag key-value pairs.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1779,7 +1788,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID of the instance.</p>
+             * <p>vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1cpq8mr64paltkb****</p>
@@ -1790,10 +1799,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether vector search engine optimization is enabled. Valid values:</p>
+             * <p>Indicates whether vector engine optimization is enabled. The values are as follows:</p>
              * <ul>
-             * <li><strong>enabled</strong></li>
-             * <li><strong>disabled</strong></li>
+             * <li><strong>enabled</strong>: Indicates that vector engine optimization is enabled.</li>
+             * <li><strong>disabled</strong>: Indicates that vector engine optimization is disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1805,7 +1814,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID of the instance.</p>
+             * <p>VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp19ame5m1r3oejns****</p>
@@ -1816,7 +1825,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the instance.</p>
+             * <p>Zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-j</p>

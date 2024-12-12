@@ -411,6 +411,9 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The description of compute node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2C16G</p>
              */
             public Builder description(String description) {
                 this.description = description;

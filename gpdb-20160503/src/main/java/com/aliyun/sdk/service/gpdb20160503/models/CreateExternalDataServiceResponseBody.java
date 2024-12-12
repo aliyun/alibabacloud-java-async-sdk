@@ -50,7 +50,10 @@ public class CreateExternalDataServiceResponseBody extends TeaModel {
         private Integer serviceId; 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class CreateExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * <p>Service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder serviceId(Integer serviceId) {
             this.serviceId = serviceId;

@@ -311,9 +311,9 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         /**
          * <p>The status of the service. Valid values:</p>
          * <ul>
-         * <li>init</li>
-         * <li>running</li>
-         * <li>exception</li>
+         * <li>Init</li>
+         * <li>Running</li>
+         * <li>Exception</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +325,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceType.
+         * <p>The type of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -344,7 +347,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * ExternalDataServiceId.
+         * <p>The Id of External Data Service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2988</p>
          */
         public Builder externalDataServiceId(String externalDataServiceId) {
             this.externalDataServiceId = externalDataServiceId;
@@ -376,8 +382,8 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         /**
          * <p>The type of the external service. Valid values:</p>
          * <ul>
-         * <li>HDFS</li>
-         * <li>HIVE</li>
+         * <li>emr</li>
+         * <li>selfCreate</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -389,10 +395,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li>The address and hostname of the Hadoop cluster (data source) in the /etc/hosts directory.</li>
-         * <li></li>
-         * </ul>
+         * <p>The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1 localhost</p>
@@ -414,7 +417,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The content of the Hadoop MapReduceConf file.</p>
+         * <p>The content of the Hadoop mapred-site.xml file.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -425,7 +428,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The time when the service was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-23T02:11:47Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;

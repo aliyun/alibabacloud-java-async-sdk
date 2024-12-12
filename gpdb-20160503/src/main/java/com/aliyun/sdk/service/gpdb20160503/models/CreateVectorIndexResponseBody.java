@@ -62,7 +62,10 @@ public class CreateVectorIndexResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Message.
+         * <p>Detailed information returned by the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -70,7 +73,10 @@ public class CreateVectorIndexResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,14 @@ public class CreateVectorIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>API execution status. Value description:</p>
+         * <ul>
+         * <li><strong>success</strong>: Execution succeeded.</li>
+         * <li><strong>fail</strong>: Execution failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -50,7 +50,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>The queried database accounts.</p>
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -193,7 +193,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * <p>The type of the database account. Valid values: Super and Normal. Super indicates a privileged account and Normal indicates a standard account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Super</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;

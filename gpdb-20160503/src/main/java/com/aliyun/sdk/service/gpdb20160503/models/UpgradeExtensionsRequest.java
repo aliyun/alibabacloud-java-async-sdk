@@ -114,7 +114,10 @@ public class UpgradeExtensionsRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * <p>Database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);

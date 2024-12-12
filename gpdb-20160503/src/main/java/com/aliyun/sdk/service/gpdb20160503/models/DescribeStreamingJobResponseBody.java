@@ -338,7 +338,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         private String writeMode; 
 
         /**
-         * <p>The username of the account.</p>
+         * <p>Target database account.</p>
          * 
          * <strong>example:</strong>
          * <p>test-account</p>
@@ -349,7 +349,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Consistency.
+         * <p>Delivery guarantee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ATLEAST / EXACTLY</p>
          */
         public Builder consistency(String consistency) {
             this.consistency = consistency;
@@ -357,7 +360,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the job was created.</p>
+         * <p>Creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -369,10 +372,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the data source.</p>
+         * <p>Data source ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>test-kafka</p>
+         * <p>2</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -380,7 +383,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceName.
+         * <p>Data source name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_kafka</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.dataSourceName = dataSourceName;
@@ -388,7 +394,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The destination fields.</p>
+         * <p>Target data table mapping field list.</p>
          */
         public Builder destColumns(java.util.List < String > destColumns) {
             this.destColumns = destColumns;
@@ -396,7 +402,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the destination database.</p>
+         * <p>Target database name.</p>
          * 
          * <strong>example:</strong>
          * <p>dest-db</p>
@@ -407,7 +413,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * DestSchema.
+         * <p>Target namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dest-schema</p>
          */
         public Builder destSchema(String destSchema) {
             this.destSchema = destSchema;
@@ -415,7 +424,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the destination table.</p>
+         * <p>Target table name.</p>
          * 
          * <strong>example:</strong>
          * <p>dest-table</p>
@@ -426,7 +435,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorLimitCount.
+         * <p>When data in Kafka does not match the ADBPG target table, it can cause write failures. This value represents the number of error rows allowed; if exceeded, the task will fail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder errorLimitCount(Integer errorLimitCount) {
             this.errorLimitCount = errorLimitCount;
@@ -434,7 +446,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the job status. For example, if the job is in the Exception state, the cause of the exception is displayed. If the job is in the Running state, this parameter is left empty.</p>
+         * <p>Service status information, such as the reason for an exception. It is empty in the normal Running state.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -445,7 +457,13 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * FallbackOffset.
+         * <p>Fallback offset, which is the fallback position</p>
+         * <ul>
+         * <li>The FallbackOffset parameter defines the behavior when the consumer has not requested a specific offset to consume or the requested offset exceeds the current record&quot;s offset information in the Kafka cluster. You can choose to start consuming from the earliest (newest) or latest (oldest) offset.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EARLIEST /  LATEST</p>
          */
         public Builder fallbackOffset(String fallbackOffset) {
             this.fallbackOffset = fallbackOffset;
@@ -453,7 +471,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * <p>Kafka group name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -461,7 +482,129 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobConfig.
+         * <p>Job configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATABASE: adbpgss_test
+         * USER: adbpgss_test
+         * PASSWORD: adbpgssTest
+         * HOST: gp-xxx-master.gpdb.rds-aliyun-pre.rds.aliyuncs.com
+         * PORT: 5432
+         * KAFKA:
+         *   INPUT:
+         *     SOURCE:
+         *       BROKERS: broker1:9092,broker2:9092,broker3:9092
+         *       TOPIC: testtopic
+         *       FALLBACK_OFFSET: earliest
+         *     KEY:
+         *       COLUMNS:
+         *       - NAME: customer_id
+         *         TYPE: int
+         *       FORMAT: delimited
+         *       DELIMITED_OPTION:
+         *         DELIMITER: &quot;|&quot;
+         *     VALUE:
+         *       COLUMNS:
+         *       - TYPE: integer
+         *         NAME: l_orderkey
+         *       - TYPE: integer
+         *         NAME: l_partkey
+         *       - TYPE: integer
+         *         NAME: l_suppkey
+         *       - TYPE: integer
+         *         NAME: l_linenumber
+         *       - TYPE: decimal
+         *         NAME: l_quantity
+         *       - TYPE: decimal
+         *         NAME: l_extendedprice
+         *       - TYPE: decimal
+         *         NAME: l_discount
+         *       - TYPE: decimal
+         *         NAME: l_tax
+         *       - TYPE: char
+         *         NAME: l_returnflag
+         *       - TYPE: char
+         *         NAME: l_linestatus
+         *       - TYPE: date
+         *         NAME: l_shipdate
+         *       - TYPE: date
+         *         NAME: l_commitdate
+         *       - TYPE: date
+         *         NAME: l_receiptdate
+         *       - TYPE: text
+         *         NAME: l_shipinstruct
+         *       - TYPE: text
+         *         NAME: l_shipmode
+         *       - TYPE: text
+         *         NAME: l_comment
+         *       FORMAT: delimited
+         *       DELIMITED_OPTION:
+         *         DELIMITER: &quot;|&quot;
+         *     ERROR_LIMIT: 10
+         *   OUTPUT:
+         *     SCHEMA: adbpgss_test
+         *     TABLE: write_with_insert_plaintext
+         *     MODE: MERGE
+         *     MATCH_COLUMNS:
+         *     - l_orderkey
+         *     - l_partkey
+         *     - l_suppkey
+         *     UPDATE_COLUMNS:
+         *     - l_linenumber
+         *     - l_quantity
+         *     - l_extendedprice
+         *     - l_discount
+         *     - l_tax
+         *     - l_returnflag
+         *     - l_linestatus
+         *     - l_shipdate
+         *     - l_commitdate
+         *     - l_receiptdate
+         *     - l_shipinstruct
+         *     - l_shipmode
+         *     - l_comment
+         *     MAPPING:
+         *     - EXPRESSION: l_orderkey
+         *       NAME: l_orderkey
+         *     - EXPRESSION: l_partkey
+         *       NAME: l_partkey
+         *     - EXPRESSION: l_suppkey
+         *       NAME: l_suppkey
+         *     - EXPRESSION: l_linenumber
+         *       NAME: l_linenumber
+         *     - EXPRESSION: l_quantity
+         *       NAME: l_quantity
+         *     - EXPRESSION: l_extendedprice
+         *       NAME: l_extendedprice
+         *     - EXPRESSION: l_discount
+         *       NAME: l_discount
+         *     - EXPRESSION: l_tax
+         *       NAME: l_tax
+         *     - EXPRESSION: l_returnflag
+         *       NAME: l_returnflag
+         *     - EXPRESSION: l_linestatus
+         *       NAME: l_linestatus
+         *     - EXPRESSION: l_shipdate
+         *       NAME: l_shipdate
+         *     - EXPRESSION: l_commitdate
+         *       NAME: l_commitdate
+         *     - EXPRESSION: l_receiptdate
+         *       NAME: l_receiptdate
+         *     - EXPRESSION: l_shipinstruct
+         *       NAME: l_shipinstruct
+         *     - EXPRESSION: l_shipmode
+         *       NAME: l_shipmode
+         *     - EXPRESSION: l_comment
+         *       NAME: l_comment
+         *   COMMIT:
+         *     MAX_ROW: 1000
+         *     MINIMAL_INTERVAL: 1000
+         *     CONSISTENCY: ATLEAST
+         *   POLL:
+         *     BATCHSIZE: 1000
+         *     TIMEOUT: 1000
+         *   PROPERTIES:
+         *     group.id: testgroup</p>
          */
         public Builder jobConfig(String jobConfig) {
             this.jobConfig = jobConfig;
@@ -469,7 +612,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the job.</p>
+         * <p>Job description.</p>
          * 
          * <strong>example:</strong>
          * <p>test_job</p>
@@ -480,7 +623,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>Job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -491,7 +634,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the job.</p>
+         * <p>Job name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-job</p>
@@ -502,7 +645,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * MatchColumns.
+         * <p>Match columns, usually all primary key columns of the target table. If all column values in this configuration are the same, the two rows of data are considered duplicates.</p>
          */
         public Builder matchColumns(java.util.List < String > matchColumns) {
             this.matchColumns = matchColumns;
@@ -510,7 +653,14 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Mode.
+         * <p>Configuration mode</p>
+         * <ol>
+         * <li>Basic mode requires specifying some configuration fields</li>
+         * <li>Professional mode supports submitting YAML files</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>basic/professional</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -518,7 +668,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the job was last modified.</p>
+         * <p>Last modified time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -530,7 +680,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The password of the account.</p>
+         * <p>Target database password.</p>
          * 
          * <strong>example:</strong>
          * <p>pwd123</p>
@@ -541,7 +691,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
@@ -552,7 +702,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The source fields.</p>
+         * <p>Source field list.</p>
          */
         public Builder srcColumns(java.util.List < String > srcColumns) {
             this.srcColumns = srcColumns;
@@ -560,12 +710,16 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the job. Valid values:</p>
+         * <p>Service status, with possible values:</p>
          * <ul>
-         * <li>Init: The job is being initialized.</li>
-         * <li>Running: The job is running.</li>
-         * <li>Exception: The job encounters an exception.</li>
-         * <li>Paused: The job is paused.</li>
+         * <li><p>Init: Initializing</p>
+         * </li>
+         * <li><p>Running: Running</p>
+         * </li>
+         * <li><p>Exception: Exception</p>
+         * </li>
+         * <li><p>Paused: Paused</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -577,7 +731,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateColumns.
+         * <p>Update columns, usually all non-primary key columns of the target table. When data duplication is determined through MatchColumns, updating the UpdateColumns column values will result in new data overwriting old data.</p>
          */
         public Builder updateColumns(java.util.List < String > updateColumns) {
             this.updateColumns = updateColumns;
@@ -585,7 +739,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The write mode.</p>
+         * <p>Write mode.</p>
          * 
          * <strong>example:</strong>
          * <p>INSERT/UPDATE/MERGE</p>

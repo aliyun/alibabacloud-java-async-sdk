@@ -143,6 +143,7 @@ public class CreateStreamingDataSourceRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +156,7 @@ public class CreateStreamingDataSourceRequest extends Request {
         }
 
         /**
+         * <p>Data source configuration information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +169,10 @@ public class CreateStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceDescription.
+         * <p>Data source description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-kafka</p>
          */
         public Builder dataSourceDescription(String dataSourceDescription) {
             this.putQueryParameter("DataSourceDescription", dataSourceDescription);
@@ -176,6 +181,7 @@ public class CreateStreamingDataSourceRequest extends Request {
         }
 
         /**
+         * <p>Data source name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +194,10 @@ public class CreateStreamingDataSourceRequest extends Request {
         }
 
         /**
+         * <p>Data source type. Values:</p>
+         * <ul>
+         * <li>kafka</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +210,13 @@ public class CreateStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * <blockquote>
+         * <p>You can view available region IDs through the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -209,7 +225,7 @@ public class CreateStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The real-time data service ID.</p>
+         * <p>Real-time data service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

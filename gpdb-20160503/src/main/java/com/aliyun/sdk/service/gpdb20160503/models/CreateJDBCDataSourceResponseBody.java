@@ -50,7 +50,10 @@ public class CreateJDBCDataSourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataSourceId.
+         * <p>Data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -58,7 +61,10 @@ public class CreateJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C125605-266F-41CA-8AC5-3A643D4F42C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

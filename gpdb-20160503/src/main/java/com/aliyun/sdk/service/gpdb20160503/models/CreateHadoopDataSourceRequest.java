@@ -223,6 +223,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +236,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceDescription.
+         * <p>Service description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxf for hdfs data source</p>
          */
         public Builder dataSourceDescription(String dataSourceDescription) {
             this.putQueryParameter("DataSourceDescription", dataSourceDescription);
@@ -244,7 +248,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceName.
+         * <p>Service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs_pxf</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("DataSourceName", dataSourceName);
@@ -253,7 +260,16 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>Type of Hadoop external table to be enabled, with values:</p>
+         * <ul>
+         * <li><p>HDFS </p>
+         * </li>
+         * <li><p>Hive</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -262,7 +278,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * EmrInstanceId.
+         * <p>When HadoopCreateType=Emr, this field should contain the EMR instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-1234567</p>
          */
         public Builder emrInstanceId(String emrInstanceId) {
             this.putQueryParameter("EmrInstanceId", emrInstanceId);
@@ -271,10 +290,21 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The string that specifies the content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+         * <p>Content string of the Hadoop hdfs-site.xml file. This field is required when enabling an HDFS external table.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <?xml version="1.0" ?>
+         * <!-- Created at 2023-08-15 13:52:43.945 -->
+         * <configuration>
+         *     <property>
+         *         <name>dfs.datanode.cache.revocation.timeout.ms</name>
+         *         <value>900000</value>
+         *     </property>
+         *     <property>
+         *         <name>dfs.namenode.resource.check.interval</name>
+         *         <value>5000</value>
+         *     </property>
+         * </configuration>
          */
         public Builder HDFSConf(String HDFSConf) {
             this.putQueryParameter("HDFSConf", HDFSConf);
@@ -283,10 +313,25 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The string that specifies the content of the Hadoop core-site.xml file.</p>
+         * <p>Content string of the Hadoop core-site.xml file.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <?xml version="1.0" ?>
+         * <!-- Created at 2023-08-15 13:52:39.527 -->
+         * <configuration>
+         *     <property>
+         *         <name>hadoop.http.authentication.kerberos.keytab</name>
+         *         <value>/etc/emr/hadoop-conf/http.keytab</value>
+         *     </property>
+         *     <property>
+         *         <name>fs.oss.idle.timeout.millisecond</name>
+         *         <value>30000</value>
+         *     </property>
+         *     <property>
+         *         <name>fs.oss.download.thread.concurrency</name>
+         *         <value>32</value>
+         *     </property>
+         * </configuration>
          */
         public Builder hadoopCoreConf(String hadoopCoreConf) {
             this.putQueryParameter("HadoopCoreConf", hadoopCoreConf);
@@ -295,7 +340,16 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * HadoopCreateType.
+         * <p>External service type:</p>
+         * <ul>
+         * <li><p>emr</p>
+         * </li>
+         * <li><p>hadoop: Self-built Hadoop</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>emr</p>
          */
         public Builder hadoopCreateType(String hadoopCreateType) {
             this.putQueryParameter("HadoopCreateType", hadoopCreateType);
@@ -304,10 +358,12 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.</p>
+         * <p>Address and hostname of the Hadoop cluster&quot;s source node in the /etc/hosts file.</p>
          * 
          * <strong>example:</strong>
-         * <p>127.0.0.1 localhost</p>
+         * <p>192.168.220.128 master-1-1.c-xxx.cn-shanghai.emr.aliyuncs.com
+         * 192.168.220.129 core-1-1.c-xxx.cn-shanghai.emr.aliyuncs.com
+         * 192.168.220.130 core-1-2.c-xxx.cn-shanghai.emr.aliyuncs.com</p>
          */
         public Builder hadoopHostsAddress(String hadoopHostsAddress) {
             this.putQueryParameter("HadoopHostsAddress", hadoopHostsAddress);
@@ -316,10 +372,21 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The string that specifies the content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.</p>
+         * <p>Content string of the Hadoop hive-site.xml file. This field is required when enabling a HIVE external table.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <?xml version="1.0" ?>
+         * <!-- Created at 2023-08-15 13:52:50.646 -->
+         * <configuration>
+         *     <property>
+         *         <name>hive.exec.reducers.bytes.per.reducer</name>
+         *         <value>256000000</value>
+         *     </property>
+         *     <property>
+         *         <name>hive.stats.column.autogather</name>
+         *         <value>false</value>
+         *     </property>
+         * </configuration>
          */
         public Builder hiveConf(String hiveConf) {
             this.putQueryParameter("HiveConf", hiveConf);
@@ -328,7 +395,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * MapReduceConf.
+         * <p>Content string of the Hadoop mapred-site.xml file. This field is required when enabling an HDFS external table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder mapReduceConf(String mapReduceConf) {
             this.putQueryParameter("MapReduceConf", mapReduceConf);
@@ -337,9 +407,9 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>Region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -352,10 +422,21 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The string that specifies the content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+         * <p>Content string of the Hadoop yarn-site.xml file. This field is required when enabling an HDFS external table.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <?xml version="1.0" ?>
+         * <!-- Created at 2023-08-15 13:53:29.021 -->
+         * <configuration>
+         *     <property>
+         *         <name>yarn.nodemanager.linux-container-executor.nonsecure-mode.local-user</name>
+         *         <value>hadoop</value>
+         *     </property>
+         *     <property>
+         *         <name>yarn.scheduler.fair.dynamic.max.assign</name>
+         *         <value>true</value>
+         *     </property>
+         * </configuration>
          */
         public Builder yarnConf(String yarnConf) {
             this.putQueryParameter("YarnConf", yarnConf);

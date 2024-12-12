@@ -856,7 +856,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ProdType.
+             * <p>product type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder prodType(String prodType) {
                 this.prodType = prodType;

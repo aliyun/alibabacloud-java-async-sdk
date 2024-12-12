@@ -146,7 +146,10 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * CreateTime.
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T16:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -154,7 +157,10 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceConfig.
+         * <p>Data source configuration information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;brokers&quot;:&quot;broker0:9091,broker1:9091&quot;,&quot;topic&quot;:&quot;topic&quot;}</p>
          */
         public Builder dataSourceConfig(String dataSourceConfig) {
             this.dataSourceConfig = dataSourceConfig;
@@ -162,7 +168,10 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceDescription.
+         * <p>Data source description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-kafka</p>
          */
         public Builder dataSourceDescription(String dataSourceDescription) {
             this.dataSourceDescription = dataSourceDescription;
@@ -170,7 +179,10 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceId.
+         * <p>Data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -178,7 +190,10 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceName.
+         * <p>Data source name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-kafka</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.dataSourceName = dataSourceName;
@@ -186,7 +201,13 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceType.
+         * <p>Data source type, values include:</p>
+         * <ul>
+         * <li>kafka</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>kafka</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -194,7 +215,10 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>Service status message, for example, in case of an exception, it will show the reason for the exception. In normal Running state, this value is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -202,7 +226,10 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +237,10 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * <p>External data service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceId(Integer serviceId) {
             this.serviceId = serviceId;
@@ -218,11 +248,14 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the service. Valid values:</p>
+         * <p>Service status:</p>
          * <ul>
-         * <li>init</li>
-         * <li>running</li>
-         * <li>exception</li>
+         * <li><p>Initializing init</p>
+         * </li>
+         * <li><p>Running running</p>
+         * </li>
+         * <li><p>Exception exception</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

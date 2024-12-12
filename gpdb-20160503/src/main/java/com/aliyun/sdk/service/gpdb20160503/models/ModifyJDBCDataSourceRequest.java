@@ -154,6 +154,7 @@ public class ModifyJDBCDataSourceRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +167,10 @@ public class ModifyJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceDescription.
+         * <p>Data source description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dataSourceDescription(String dataSourceDescription) {
             this.putQueryParameter("DataSourceDescription", dataSourceDescription);
@@ -175,6 +179,7 @@ public class ModifyJDBCDataSourceRequest extends Request {
         }
 
         /**
+         * <p>Data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +192,10 @@ public class ModifyJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>Database type: - mysql - postgresql - sqlserver</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);

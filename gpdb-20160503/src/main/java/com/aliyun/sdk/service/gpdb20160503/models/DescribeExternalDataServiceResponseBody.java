@@ -122,7 +122,10 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * CreateTime.
+         * <p>The time when the service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T16:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -130,7 +133,10 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The time when the service was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T17:00:00Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -138,7 +144,10 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +166,10 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -187,7 +199,10 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;

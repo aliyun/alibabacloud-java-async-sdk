@@ -73,7 +73,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * Performances.
+         * <p>The queried performance metric.</p>
          */
         public Builder performances(Performances performances) {
             this.performances = performances;
@@ -178,6 +178,9 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
 
             /**
              * <p>The name of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpg_status,adbpg_disk_status,adbpg_connection_status,adbgp_segment_disk_usage_percent_max,adbpg_master_disk_usage_percent_max,adbpg_disk_usage_percent</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -186,6 +189,9 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
 
             /**
              * <p>The unit of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

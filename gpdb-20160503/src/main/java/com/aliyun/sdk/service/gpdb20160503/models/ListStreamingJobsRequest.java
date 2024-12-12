@@ -97,6 +97,7 @@ public class ListStreamingJobsRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class ListStreamingJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number, greater than 0 and not exceeding the maximum value of Integer. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -118,7 +122,14 @@ public class ListStreamingJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of records per page, with the following options:</p>
+         * <ul>
+         * <li><strong>30</strong> - <strong>50</strong> - <strong>100</strong>
+         * Default value: 30.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>kafka</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

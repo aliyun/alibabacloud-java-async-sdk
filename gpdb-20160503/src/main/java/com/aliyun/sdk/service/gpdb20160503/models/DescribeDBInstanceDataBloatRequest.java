@@ -127,7 +127,10 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
         }
 
         /**
-         * Database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -136,7 +139,10 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The sorting order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{Field: TableName, Type: Desc}</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);

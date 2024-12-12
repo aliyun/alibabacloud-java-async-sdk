@@ -50,7 +50,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The URL that is used to download the file.</p>
+         * <p>List of download records.</p>
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -58,7 +58,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FDE9942A-D919-527B-B559-5D0F6F20CCEC</p>
@@ -155,7 +155,10 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DownloadId.
+             * <p>Download record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1150</p>
              */
             public Builder downloadId(Long downloadId) {
                 this.downloadId = downloadId;
@@ -163,7 +166,10 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * <p>Download link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://perth-download-task.oss-cn-beijing.aliyuncs.com/">https://perth-download-task.oss-cn-beijing.aliyuncs.com/</a>*****</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -171,7 +177,10 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ExceptionMsg.
+             * <p>Error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error message</p>
              */
             public Builder exceptionMsg(String exceptionMsg) {
                 this.exceptionMsg = exceptionMsg;
@@ -179,7 +188,10 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>File name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20220509113448-20220509173448.csv</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -187,7 +199,15 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Task status, with possible values being:</p>
+             * <ul>
+             * <li><strong>running</strong>: Downloading.</li>
+             * <li><strong>finished</strong>: Completed.</li>
+             * <li><strong>failed</strong>: Download failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>finished</p>
              */
             public Builder status(String status) {
                 this.status = status;

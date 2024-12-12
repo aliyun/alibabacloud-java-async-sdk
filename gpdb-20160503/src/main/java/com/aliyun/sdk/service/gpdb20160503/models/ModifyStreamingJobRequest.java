@@ -322,7 +322,7 @@ public class ModifyStreamingJobRequest extends Request {
         } 
 
         /**
-         * <p>The name of the database account.</p>
+         * <p>Account name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-account</p>
@@ -334,12 +334,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The delivery guarantee setting.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ATLEAST</li>
-         * <li>EXACTLY</li>
-         * </ul>
+         * <p>Delivery guarantee.</p>
          * 
          * <strong>example:</strong>
          * <p>ATLEAST / EXACTLY</p>
@@ -351,7 +346,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -364,7 +359,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The destination fields.</p>
+         * <p>Target data table mapping field list.</p>
          */
         public Builder destColumns(java.util.List < String > destColumns) {
             String destColumnsShrink = shrink(destColumns, "DestColumns", "json");
@@ -374,7 +369,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the destination database.</p>
+         * <p>Target database name.</p>
          * 
          * <strong>example:</strong>
          * <p>dest-db</p>
@@ -386,7 +381,10 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * DestSchema.
+         * <p>Target schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dest-schema</p>
          */
         public Builder destSchema(String destSchema) {
             this.putQueryParameter("DestSchema", destSchema);
@@ -395,7 +393,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the destination table.</p>
+         * <p>Target table name.</p>
          * 
          * <strong>example:</strong>
          * <p>dest-table</p>
@@ -407,7 +405,10 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * ErrorLimitCount.
+         * <p>When the data in Kafka does not match the ADBPG target table, it will cause a write failure. This value is the number of error rows allowed; exceeding this will cause the task to fail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder errorLimitCount(Long errorLimitCount) {
             this.putQueryParameter("ErrorLimitCount", errorLimitCount);
@@ -416,7 +417,13 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * FallbackOffset.
+         * <p>FallbackOffset rollback position, offset rollback</p>
+         * <ul>
+         * <li>The FallbackOffset parameter defines the behavior when the consumer does not request a specific consumption point or the requested consumption point exceeds the current Kafka cluster&quot;s recorded points. You can choose to start consuming from the earliest (newest) or latest (oldest) point.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EARLIEST /  LATEST</p>
          */
         public Builder fallbackOffset(String fallbackOffset) {
             this.putQueryParameter("FallbackOffset", fallbackOffset);
@@ -425,7 +432,10 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>Kafka group name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_name</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -434,7 +444,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The YAML configuration file of the job. This parameter must be specified when Mode is set to professional.</p>
+         * <p>Job configuration file, required for professional mode.</p>
          * 
          * <strong>example:</strong>
          * <p>DATABASE: adbpgss_test
@@ -565,7 +575,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The description of the job.</p>
+         * <p>Job description.</p>
          * 
          * <strong>example:</strong>
          * <p>test-job</p>
@@ -577,7 +587,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>Job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -590,7 +600,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * MatchColumns.
+         * <p>Match columns, usually all primary key columns of the target table. If all column values in this configuration are the same, the two rows of data are considered duplicates.</p>
          */
         public Builder matchColumns(java.util.List < String > matchColumns) {
             String matchColumnsShrink = shrink(matchColumns, "MatchColumns", "json");
@@ -600,7 +610,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The password of the database account.</p>
+         * <p>Password.</p>
          * 
          * <strong>example:</strong>
          * <p>pwd123</p>
@@ -612,7 +622,13 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> API to view available region IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -621,7 +637,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The source fields.</p>
+         * <p>Source data field list.</p>
          */
         public Builder srcColumns(java.util.List < String > srcColumns) {
             String srcColumnsShrink = shrink(srcColumns, "SrcColumns", "json");
@@ -631,7 +647,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to test the real-time job. Valid values:</p>
+         * <p>Whether to test the real-time task, values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -648,7 +664,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * UpdateColumns.
+         * <p>Update columns, usually all non-primary key columns of the target table. When data duplication is determined through MatchColumns, updating the UpdateColumns column values will result in new data overwriting old data.</p>
          */
         public Builder updateColumns(java.util.List < String > updateColumns) {
             String updateColumnsShrink = shrink(updateColumns, "UpdateColumns", "json");
@@ -658,13 +674,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>The write mode.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>insert</li>
-         * <li>update</li>
-         * <li>merge</li>
-         * </ul>
+         * <p>Write mode.</p>
          * 
          * <strong>example:</strong>
          * <p>INSERT/UPDATE/MERGE</p>

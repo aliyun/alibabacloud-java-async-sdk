@@ -54,6 +54,10 @@ public class CreateDocumentCollectionRequest extends Request {
     private String metadata;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetadataIndices")
+    private String metadataIndices;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Metrics")
     private String metrics;
 
@@ -89,6 +93,7 @@ public class CreateDocumentCollectionRequest extends Request {
         this.managerAccount = builder.managerAccount;
         this.managerAccountPassword = builder.managerAccountPassword;
         this.metadata = builder.metadata;
+        this.metadataIndices = builder.metadataIndices;
         this.metrics = builder.metrics;
         this.namespace = builder.namespace;
         this.ownerId = builder.ownerId;
@@ -174,6 +179,13 @@ public class CreateDocumentCollectionRequest extends Request {
     }
 
     /**
+     * @return metadataIndices
+     */
+    public String getMetadataIndices() {
+        return this.metadataIndices;
+    }
+
+    /**
      * @return metrics
      */
     public String getMetrics() {
@@ -225,6 +237,7 @@ public class CreateDocumentCollectionRequest extends Request {
         private String managerAccount; 
         private String managerAccountPassword; 
         private String metadata; 
+        private String metadataIndices; 
         private String metrics; 
         private String namespace; 
         private Long ownerId; 
@@ -247,6 +260,7 @@ public class CreateDocumentCollectionRequest extends Request {
             this.managerAccount = request.managerAccount;
             this.managerAccountPassword = request.managerAccountPassword;
             this.metadata = request.metadata;
+            this.metadataIndices = request.metadataIndices;
             this.metrics = request.metrics;
             this.namespace = request.namespace;
             this.ownerId = request.ownerId;
@@ -411,6 +425,15 @@ public class CreateDocumentCollectionRequest extends Request {
         public Builder metadata(String metadata) {
             this.putQueryParameter("Metadata", metadata);
             this.metadata = metadata;
+            return this;
+        }
+
+        /**
+         * MetadataIndices.
+         */
+        public Builder metadataIndices(String metadataIndices) {
+            this.putQueryParameter("MetadataIndices", metadataIndices);
+            this.metadataIndices = metadataIndices;
             return this;
         }
 

@@ -156,9 +156,9 @@ public class UpsertChunksRequest extends Request {
         } 
 
         /**
-         * <p>The name of the document collection.</p>
+         * <p>Document collection name.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
+         * <p>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> API. You can use the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> API to view the already created document collections.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -172,6 +172,10 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +188,13 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>File name.</p>
+         * <blockquote>
+         * <p>If a file name is specified and not empty, it will overwrite the data for this file name; if empty, the chunks data will be appended directly to the document collection.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>mydoc.txt</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -193,9 +203,9 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace. Default value: public.</p>
+         * <p>Namespace, default is public.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * <p>You can create it using the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -208,9 +218,9 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * <p>The password of the namespace.</p>
+         * <p>Password corresponding to the namespace.</p>
          * <blockquote>
-         * <p> This value is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+         * <p>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -233,6 +243,7 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
+         * <p>Region ID where the instance is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +256,7 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * TextChunks.
+         * <p>List of split documents.</p>
          */
         public Builder textChunks(java.util.List < TextChunks> textChunks) {
             String textChunksShrink = shrink(textChunks, "TextChunks", "json");
@@ -307,7 +318,11 @@ public class UpsertChunksRequest extends Request {
             private java.util.Map < String, ? > metadata; 
 
             /**
+             * <p>Document content.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud-native data warehouse AnalyticDB PostgreSQL Edition provides a simple, fast, and cost-effective PB-level cloud data warehouse solution.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -315,7 +330,10 @@ public class UpsertChunksRequest extends Request {
             }
 
             /**
-             * Metadata.
+             * <p>Metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;title&quot;:&quot;test&quot;}</p>
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;

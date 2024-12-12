@@ -236,7 +236,10 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceManaged.
+         * <p>The service is managed by other aliyun product or not.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -255,7 +258,10 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceOwnerId.
+         * <p>The service account uid of the aliyun product</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder serviceOwnerId(String serviceOwnerId) {
             this.serviceOwnerId = serviceOwnerId;

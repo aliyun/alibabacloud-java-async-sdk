@@ -84,6 +84,7 @@ public class DescribeIMVInfosRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,6 +97,7 @@ public class DescribeIMVInfosRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,7 +110,10 @@ public class DescribeIMVInfosRequest extends Request {
         }
 
         /**
-         * MVName.
+         * <p>The name of MV</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public.&quot;mv1&quot;</p>
          */
         public Builder MVName(String MVName) {
             this.putQueryParameter("MVName", MVName);

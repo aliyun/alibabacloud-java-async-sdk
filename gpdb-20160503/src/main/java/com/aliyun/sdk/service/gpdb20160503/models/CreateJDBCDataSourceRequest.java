@@ -153,6 +153,7 @@ public class CreateJDBCDataSourceRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +166,10 @@ public class CreateJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceDescription.
+         * <p>Data source description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dataSourceDescription(String dataSourceDescription) {
             this.putQueryParameter("DataSourceDescription", dataSourceDescription);
@@ -174,7 +178,10 @@ public class CreateJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceName.
+         * <p>The name of data soruce</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jdbc_pxf</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("DataSourceName", dataSourceName);
@@ -183,7 +190,10 @@ public class CreateJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>The type of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);

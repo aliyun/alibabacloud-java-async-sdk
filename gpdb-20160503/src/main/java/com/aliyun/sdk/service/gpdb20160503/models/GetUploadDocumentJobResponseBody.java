@@ -387,7 +387,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InternalError</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -499,7 +502,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             private Integer embeddingTokens; 
 
             /**
-             * EmbeddingEntries.
+             * <p>The count of embedding entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder embeddingEntries(Integer embeddingEntries) {
                 this.embeddingEntries = embeddingEntries;

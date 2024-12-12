@@ -223,6 +223,7 @@ public class ModifyHadoopDataSourceRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +236,10 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceDescription.
+         * <p>Service description, with a maximum length of 256 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxf for hdfs data source</p>
          */
         public Builder dataSourceDescription(String dataSourceDescription) {
             this.putQueryParameter("DataSourceDescription", dataSourceDescription);
@@ -280,7 +284,10 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * EmrInstanceId.
+         * <p>When HadoopCreateType is Emr, the value of this field is the EMR instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-1234567</p>
          */
         public Builder emrInstanceId(String emrInstanceId) {
             this.putQueryParameter("EmrInstanceId", emrInstanceId);

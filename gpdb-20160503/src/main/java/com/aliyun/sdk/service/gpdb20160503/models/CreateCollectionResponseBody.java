@@ -62,7 +62,10 @@ public class CreateCollectionResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -70,7 +73,10 @@ public class CreateCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

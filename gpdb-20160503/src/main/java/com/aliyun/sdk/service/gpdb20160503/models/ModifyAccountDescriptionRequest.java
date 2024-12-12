@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyAccountDescriptionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountDescription")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String accountDescription;
 
     @com.aliyun.core.annotation.Query
@@ -106,7 +105,6 @@ public class ModifyAccountDescriptionRequest extends Request {
          * <li>The description can contain letters, underscores (_), hyphens (-), and digits.</li>
          * <li>The description must be 2 to 256 characters in length.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>testAccoutdescribe</p>
@@ -131,7 +129,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Idempotence check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to Ensure Idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

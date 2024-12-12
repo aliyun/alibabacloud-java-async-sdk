@@ -50,7 +50,10 @@ public class CreateStreamingDataSourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataSourceId.
+         * <p>Data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataSourceId(Integer dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -58,7 +61,10 @@ public class CreateStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

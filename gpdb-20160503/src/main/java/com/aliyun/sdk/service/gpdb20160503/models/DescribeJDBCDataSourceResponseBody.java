@@ -182,7 +182,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         private String statusMessage; 
 
         /**
-         * CreateTime.
+         * <p>The time when the service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T16:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -201,7 +204,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceId.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -209,7 +215,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceName.
+         * <p>The name of data soruce</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs_pxf</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.dataSourceName = dataSourceName;
@@ -244,7 +253,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * ExternalDataServiceId.
+         * <p>The id of the external data service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2989</p>
          */
         public Builder externalDataServiceId(String externalDataServiceId) {
             this.externalDataServiceId = externalDataServiceId;
@@ -285,7 +297,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The time when the data source was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-27T02:01:10Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -293,7 +308,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -301,7 +319,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * StatusMessage.
+         * <p>The message of the status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = statusMessage;

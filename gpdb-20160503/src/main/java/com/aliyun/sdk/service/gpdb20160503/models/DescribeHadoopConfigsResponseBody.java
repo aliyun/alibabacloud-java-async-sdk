@@ -80,7 +80,12 @@ public class DescribeHadoopConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigValue.
+         * <p>The configuration value.</p>
+         * 
+         * <strong>example:</strong>
+         * <?xml version="1.0"?>
+         * <configuration>
+         *     <property>
          */
         public Builder configValue(String configValue) {
             this.configValue = configValue;
