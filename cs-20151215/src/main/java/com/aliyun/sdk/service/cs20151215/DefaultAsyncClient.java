@@ -1677,7 +1677,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<InstallClusterAddonsResponse> installClusterAddons(InstallClusterAddonsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InstallClusterAddons").setMethod(HttpMethod.POST).setPathRegex("/clusters/{ClusterId}/components/install").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InstallClusterAddons").setMethod(HttpMethod.POST).setPathRegex("/clusters/{ClusterId}/components/install").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InstallClusterAddonsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -2383,7 +2383,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<UnInstallClusterAddonsResponse> unInstallClusterAddons(UnInstallClusterAddonsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UnInstallClusterAddons").setMethod(HttpMethod.POST).setPathRegex("/clusters/{ClusterId}/components/uninstall").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UnInstallClusterAddons").setMethod(HttpMethod.POST).setPathRegex("/clusters/{ClusterId}/components/uninstall").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnInstallClusterAddonsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
