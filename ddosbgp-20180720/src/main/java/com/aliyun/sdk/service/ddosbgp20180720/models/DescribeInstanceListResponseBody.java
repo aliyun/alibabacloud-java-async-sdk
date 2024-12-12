@@ -190,6 +190,9 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -207,6 +210,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             this.ipType = builder.ipType;
             this.product = builder.product;
             this.remark = builder.remark;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
         }
 
@@ -310,6 +314,13 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -330,6 +341,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             private String ipType; 
             private String product; 
             private String remark; 
+            private String resourceGroupId; 
             private String status; 
 
             /**
@@ -496,6 +508,14 @@ public class DescribeInstanceListResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
