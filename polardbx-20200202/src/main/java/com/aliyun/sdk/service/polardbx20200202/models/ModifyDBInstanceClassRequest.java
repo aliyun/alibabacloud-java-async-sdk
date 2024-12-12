@@ -30,6 +30,10 @@ public class ModifyDBInstanceClassRequest extends Request {
     private String dnClass;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnStorageSpace")
+    private String dnStorageSpace;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -60,6 +64,7 @@ public class ModifyDBInstanceClassRequest extends Request {
         this.cnClass = builder.cnClass;
         this.DBInstanceName = builder.DBInstanceName;
         this.dnClass = builder.dnClass;
+        this.dnStorageSpace = builder.dnStorageSpace;
         this.regionId = builder.regionId;
         this.specifiedDNScale = builder.specifiedDNScale;
         this.specifiedDNSpecMapJson = builder.specifiedDNSpecMapJson;
@@ -110,6 +115,13 @@ public class ModifyDBInstanceClassRequest extends Request {
     }
 
     /**
+     * @return dnStorageSpace
+     */
+    public String getDnStorageSpace() {
+        return this.dnStorageSpace;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -156,6 +168,7 @@ public class ModifyDBInstanceClassRequest extends Request {
         private String cnClass; 
         private String DBInstanceName; 
         private String dnClass; 
+        private String dnStorageSpace; 
         private String regionId; 
         private Boolean specifiedDNScale; 
         private String specifiedDNSpecMapJson; 
@@ -173,6 +186,7 @@ public class ModifyDBInstanceClassRequest extends Request {
             this.cnClass = request.cnClass;
             this.DBInstanceName = request.DBInstanceName;
             this.dnClass = request.dnClass;
+            this.dnStorageSpace = request.dnStorageSpace;
             this.regionId = request.regionId;
             this.specifiedDNScale = request.specifiedDNScale;
             this.specifiedDNSpecMapJson = request.specifiedDNSpecMapJson;
@@ -217,6 +231,15 @@ public class ModifyDBInstanceClassRequest extends Request {
         public Builder dnClass(String dnClass) {
             this.putQueryParameter("DnClass", dnClass);
             this.dnClass = dnClass;
+            return this;
+        }
+
+        /**
+         * DnStorageSpace.
+         */
+        public Builder dnStorageSpace(String dnStorageSpace) {
+            this.putQueryParameter("DnStorageSpace", dnStorageSpace);
+            this.dnStorageSpace = dnStorageSpace;
             return this;
         }
 
