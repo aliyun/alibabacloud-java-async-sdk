@@ -685,6 +685,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSchemasResponse> describeSchemas(DescribeSchemasRequest request);
 
     /**
+     * @param request the request parameters of DescribeSparkAppDiagnosisInfo  DescribeSparkAppDiagnosisInfoRequest
+     * @return DescribeSparkAppDiagnosisInfoResponse
+     */
+    CompletableFuture<DescribeSparkAppDiagnosisInfoResponse> describeSparkAppDiagnosisInfo(DescribeSparkAppDiagnosisInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSparkAppType  DescribeSparkAppTypeRequest
+     * @return DescribeSparkAppTypeResponse
+     */
+    CompletableFuture<DescribeSparkAppTypeResponse> describeSparkAppType(DescribeSparkAppTypeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
