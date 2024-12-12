@@ -45,6 +45,10 @@ public class CreateDomainRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private CreateDomainRequest(Builder builder) {
         super(builder);
         this.accessType = builder.accessType;
@@ -54,6 +58,7 @@ public class CreateDomainRequest extends Request {
         this.redirect = builder.redirect;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -118,6 +123,13 @@ public class CreateDomainRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreateDomainRequest, Builder> {
         private String accessType; 
         private String domain; 
@@ -126,6 +138,7 @@ public class CreateDomainRequest extends Request {
         private Redirect redirect; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -140,6 +153,7 @@ public class CreateDomainRequest extends Request {
             this.redirect = request.redirect;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
+            this.tag = request.tag;
         } 
 
         /**
@@ -235,6 +249,15 @@ public class CreateDomainRequest extends Request {
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
             this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -777,6 +800,9 @@ public class CreateDomainRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Backends")
         private java.util.List < String > backends;
 
+        @com.aliyun.core.annotation.NameInMap("BackupBackends")
+        private java.util.List < String > backupBackends;
+
         @com.aliyun.core.annotation.NameInMap("CnameEnabled")
         private Boolean cnameEnabled;
 
@@ -830,6 +856,7 @@ public class CreateDomainRequest extends Request {
 
         private Redirect(Builder builder) {
             this.backends = builder.backends;
+            this.backupBackends = builder.backupBackends;
             this.cnameEnabled = builder.cnameEnabled;
             this.connectTimeout = builder.connectTimeout;
             this.focusHttpBackend = builder.focusHttpBackend;
@@ -860,6 +887,13 @@ public class CreateDomainRequest extends Request {
          */
         public java.util.List < String > getBackends() {
             return this.backends;
+        }
+
+        /**
+         * @return backupBackends
+         */
+        public java.util.List < String > getBackupBackends() {
+            return this.backupBackends;
         }
 
         /**
@@ -969,6 +1003,7 @@ public class CreateDomainRequest extends Request {
 
         public static final class Builder {
             private java.util.List < String > backends; 
+            private java.util.List < String > backupBackends; 
             private Boolean cnameEnabled; 
             private Integer connectTimeout; 
             private Boolean focusHttpBackend; 
@@ -990,6 +1025,14 @@ public class CreateDomainRequest extends Request {
              */
             public Builder backends(java.util.List < String > backends) {
                 this.backends = backends;
+                return this;
+            }
+
+            /**
+             * BackupBackends.
+             */
+            public Builder backupBackends(java.util.List < String > backupBackends) {
+                this.backupBackends = backupBackends;
                 return this;
             }
 
@@ -1210,6 +1253,79 @@ public class CreateDomainRequest extends Request {
 
             public Redirect build() {
                 return new Redirect(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDomainRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDomainRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The custom header field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of the custom header field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbb</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

@@ -281,7 +281,10 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteCountryId.
+             * <p>IP region, formatted as a region code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder remoteCountryId(String remoteCountryId) {
                 this.remoteCountryId = remoteCountryId;

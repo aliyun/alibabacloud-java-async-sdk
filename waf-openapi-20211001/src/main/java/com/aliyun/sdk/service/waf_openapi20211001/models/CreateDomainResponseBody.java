@@ -87,9 +87,13 @@ public class CreateDomainResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
+        @com.aliyun.core.annotation.NameInMap("DomainId")
+        private String domainId;
+
         private DomainInfo(Builder builder) {
             this.cname = builder.cname;
             this.domain = builder.domain;
+            this.domainId = builder.domainId;
         }
 
         public static Builder builder() {
@@ -114,9 +118,17 @@ public class CreateDomainResponseBody extends TeaModel {
             return this.domain;
         }
 
+        /**
+         * @return domainId
+         */
+        public String getDomainId() {
+            return this.domainId;
+        }
+
         public static final class Builder {
             private String cname; 
             private String domain; 
+            private String domainId; 
 
             /**
              * <p>The CNAME that is assigned by WAF to the domain name.</p>
@@ -137,6 +149,14 @@ public class CreateDomainResponseBody extends TeaModel {
              */
             public Builder domain(String domain) {
                 this.domain = domain;
+                return this;
+            }
+
+            /**
+             * DomainId.
+             */
+            public Builder domainId(String domainId) {
+                this.domainId = domainId;
                 return this;
             }
 

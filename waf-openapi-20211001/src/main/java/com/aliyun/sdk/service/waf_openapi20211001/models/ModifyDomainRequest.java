@@ -757,6 +757,9 @@ public class ModifyDomainRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Backends")
         private java.util.List < String > backends;
 
+        @com.aliyun.core.annotation.NameInMap("BackupBackends")
+        private java.util.List < String > backupBackends;
+
         @com.aliyun.core.annotation.NameInMap("CnameEnabled")
         private Boolean cnameEnabled;
 
@@ -810,6 +813,7 @@ public class ModifyDomainRequest extends Request {
 
         private Redirect(Builder builder) {
             this.backends = builder.backends;
+            this.backupBackends = builder.backupBackends;
             this.cnameEnabled = builder.cnameEnabled;
             this.connectTimeout = builder.connectTimeout;
             this.focusHttpBackend = builder.focusHttpBackend;
@@ -840,6 +844,13 @@ public class ModifyDomainRequest extends Request {
          */
         public java.util.List < String > getBackends() {
             return this.backends;
+        }
+
+        /**
+         * @return backupBackends
+         */
+        public java.util.List < String > getBackupBackends() {
+            return this.backupBackends;
         }
 
         /**
@@ -949,6 +960,7 @@ public class ModifyDomainRequest extends Request {
 
         public static final class Builder {
             private java.util.List < String > backends; 
+            private java.util.List < String > backupBackends; 
             private Boolean cnameEnabled; 
             private Integer connectTimeout; 
             private Boolean focusHttpBackend; 
@@ -974,6 +986,14 @@ public class ModifyDomainRequest extends Request {
              */
             public Builder backends(java.util.List < String > backends) {
                 this.backends = backends;
+                return this;
+            }
+
+            /**
+             * BackupBackends.
+             */
+            public Builder backupBackends(java.util.List < String > backupBackends) {
+                this.backupBackends = backupBackends;
                 return this;
             }
 

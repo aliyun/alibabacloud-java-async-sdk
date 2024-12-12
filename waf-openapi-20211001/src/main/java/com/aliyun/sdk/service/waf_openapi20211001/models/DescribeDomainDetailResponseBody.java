@@ -904,6 +904,56 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
      *
      * <p>DescribeDomainDetailResponseBody</p>
      */
+    public static class BackupBackends extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Backend")
+        private String backend;
+
+        private BackupBackends(Builder builder) {
+            this.backend = builder.backend;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackupBackends create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backend
+         */
+        public String getBackend() {
+            return this.backend;
+        }
+
+        public static final class Builder {
+            private String backend; 
+
+            /**
+             * <p>The IP address or domain name of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
+             */
+            public Builder backend(String backend) {
+                this.backend = backend;
+                return this;
+            }
+
+            public BackupBackends build() {
+                return new BackupBackends(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailResponseBody</p>
+     */
     public static class RequestHeaders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -981,6 +1031,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backends")
         private java.util.List < Backends> backends;
 
+        @com.aliyun.core.annotation.NameInMap("BackupBackends")
+        private java.util.List < BackupBackends> backupBackends;
+
         @com.aliyun.core.annotation.NameInMap("ConnectTimeout")
         private Integer connectTimeout;
 
@@ -1022,6 +1075,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         private Redirect(Builder builder) {
             this.backends = builder.backends;
+            this.backupBackends = builder.backupBackends;
             this.connectTimeout = builder.connectTimeout;
             this.focusHttpBackend = builder.focusHttpBackend;
             this.keepalive = builder.keepalive;
@@ -1050,6 +1104,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
          */
         public java.util.List < Backends> getBackends() {
             return this.backends;
+        }
+
+        /**
+         * @return backupBackends
+         */
+        public java.util.List < BackupBackends> getBackupBackends() {
+            return this.backupBackends;
         }
 
         /**
@@ -1145,6 +1206,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < Backends> backends; 
+            private java.util.List < BackupBackends> backupBackends; 
             private Integer connectTimeout; 
             private Boolean focusHttpBackend; 
             private Boolean keepalive; 
@@ -1164,6 +1226,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
              */
             public Builder backends(java.util.List < Backends> backends) {
                 this.backends = backends;
+                return this;
+            }
+
+            /**
+             * BackupBackends.
+             */
+            public Builder backupBackends(java.util.List < BackupBackends> backupBackends) {
+                this.backupBackends = backupBackends;
                 return this;
             }
 
