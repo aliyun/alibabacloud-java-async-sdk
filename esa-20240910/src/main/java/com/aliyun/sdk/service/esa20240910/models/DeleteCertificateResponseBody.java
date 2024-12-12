@@ -74,7 +74,10 @@ public class DeleteCertificateResponseBody extends TeaModel {
         private String siteName; 
 
         /**
-         * Id.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babaded901474b9693acf530e0fb1d95</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -82,7 +85,10 @@ public class DeleteCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +96,10 @@ public class DeleteCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -98,7 +107,10 @@ public class DeleteCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The website name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;

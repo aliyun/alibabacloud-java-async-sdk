@@ -74,7 +74,10 @@ public class RevokeClientCertificateResponseBody extends TeaModel {
         private String siteName; 
 
         /**
-         * Id.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baba39055622c008b90285a8838ed09a</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -82,7 +85,10 @@ public class RevokeClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A123425345</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +96,10 @@ public class RevokeClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -98,7 +107,10 @@ public class RevokeClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The website name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;

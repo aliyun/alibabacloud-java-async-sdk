@@ -18,6 +18,9 @@ public class WafSiteSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AddSecurityHeaders")
     private AddSecurityHeaders addSecurityHeaders;
 
+    @com.aliyun.core.annotation.NameInMap("BotManagement")
+    private BotManagement botManagement;
+
     @com.aliyun.core.annotation.NameInMap("ClientIpIdentifier")
     private ClientIpIdentifier clientIpIdentifier;
 
@@ -27,6 +30,7 @@ public class WafSiteSettings extends TeaModel {
     private WafSiteSettings(Builder builder) {
         this.addBotProtectionHeaders = builder.addBotProtectionHeaders;
         this.addSecurityHeaders = builder.addSecurityHeaders;
+        this.botManagement = builder.botManagement;
         this.clientIpIdentifier = builder.clientIpIdentifier;
         this.securityLevel = builder.securityLevel;
     }
@@ -54,6 +58,13 @@ public class WafSiteSettings extends TeaModel {
     }
 
     /**
+     * @return botManagement
+     */
+    public BotManagement getBotManagement() {
+        return this.botManagement;
+    }
+
+    /**
      * @return clientIpIdentifier
      */
     public ClientIpIdentifier getClientIpIdentifier() {
@@ -70,6 +81,7 @@ public class WafSiteSettings extends TeaModel {
     public static final class Builder {
         private AddBotProtectionHeaders addBotProtectionHeaders; 
         private AddSecurityHeaders addSecurityHeaders; 
+        private BotManagement botManagement; 
         private ClientIpIdentifier clientIpIdentifier; 
         private SecurityLevel securityLevel; 
 
@@ -86,6 +98,14 @@ public class WafSiteSettings extends TeaModel {
          */
         public Builder addSecurityHeaders(AddSecurityHeaders addSecurityHeaders) {
             this.addSecurityHeaders = addSecurityHeaders;
+            return this;
+        }
+
+        /**
+         * BotManagement.
+         */
+        public Builder botManagement(BotManagement botManagement) {
+            this.botManagement = botManagement;
             return this;
         }
 
@@ -200,6 +220,428 @@ public class WafSiteSettings extends TeaModel {
 
             public AddSecurityHeaders build() {
                 return new AddSecurityHeaders(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link WafSiteSettings} extends {@link TeaModel}
+     *
+     * <p>WafSiteSettings</p>
+     */
+    public static class DefiniteBots extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Action")
+        private String action;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        private DefiniteBots(Builder builder) {
+            this.action = builder.action;
+            this.id = builder.id;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DefiniteBots create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private Long id; 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            public DefiniteBots build() {
+                return new DefiniteBots(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link WafSiteSettings} extends {@link TeaModel}
+     *
+     * <p>WafSiteSettings</p>
+     */
+    public static class EffectOnStatic extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        private EffectOnStatic(Builder builder) {
+            this.enable = builder.enable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EffectOnStatic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            public EffectOnStatic build() {
+                return new EffectOnStatic(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link WafSiteSettings} extends {@link TeaModel}
+     *
+     * <p>WafSiteSettings</p>
+     */
+    public static class JSDetection extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        private JSDetection(Builder builder) {
+            this.enable = builder.enable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static JSDetection create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            public JSDetection build() {
+                return new JSDetection(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link WafSiteSettings} extends {@link TeaModel}
+     *
+     * <p>WafSiteSettings</p>
+     */
+    public static class LikelyBots extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Action")
+        private String action;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        private LikelyBots(Builder builder) {
+            this.action = builder.action;
+            this.id = builder.id;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LikelyBots create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private Long id; 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            public LikelyBots build() {
+                return new LikelyBots(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link WafSiteSettings} extends {@link TeaModel}
+     *
+     * <p>WafSiteSettings</p>
+     */
+    public static class VerifiedBots extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Action")
+        private String action;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        private VerifiedBots(Builder builder) {
+            this.action = builder.action;
+            this.id = builder.id;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VerifiedBots create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private Long id; 
+
+            /**
+             * Action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            public VerifiedBots build() {
+                return new VerifiedBots(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link WafSiteSettings} extends {@link TeaModel}
+     *
+     * <p>WafSiteSettings</p>
+     */
+    public static class BotManagement extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefiniteBots")
+        private DefiniteBots definiteBots;
+
+        @com.aliyun.core.annotation.NameInMap("EffectOnStatic")
+        private EffectOnStatic effectOnStatic;
+
+        @com.aliyun.core.annotation.NameInMap("JSDetection")
+        private JSDetection JSDetection;
+
+        @com.aliyun.core.annotation.NameInMap("LikelyBots")
+        private LikelyBots likelyBots;
+
+        @com.aliyun.core.annotation.NameInMap("VerifiedBots")
+        private VerifiedBots verifiedBots;
+
+        private BotManagement(Builder builder) {
+            this.definiteBots = builder.definiteBots;
+            this.effectOnStatic = builder.effectOnStatic;
+            this.JSDetection = builder.JSDetection;
+            this.likelyBots = builder.likelyBots;
+            this.verifiedBots = builder.verifiedBots;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BotManagement create() {
+            return builder().build();
+        }
+
+        /**
+         * @return definiteBots
+         */
+        public DefiniteBots getDefiniteBots() {
+            return this.definiteBots;
+        }
+
+        /**
+         * @return effectOnStatic
+         */
+        public EffectOnStatic getEffectOnStatic() {
+            return this.effectOnStatic;
+        }
+
+        /**
+         * @return JSDetection
+         */
+        public JSDetection getJSDetection() {
+            return this.JSDetection;
+        }
+
+        /**
+         * @return likelyBots
+         */
+        public LikelyBots getLikelyBots() {
+            return this.likelyBots;
+        }
+
+        /**
+         * @return verifiedBots
+         */
+        public VerifiedBots getVerifiedBots() {
+            return this.verifiedBots;
+        }
+
+        public static final class Builder {
+            private DefiniteBots definiteBots; 
+            private EffectOnStatic effectOnStatic; 
+            private JSDetection JSDetection; 
+            private LikelyBots likelyBots; 
+            private VerifiedBots verifiedBots; 
+
+            /**
+             * DefiniteBots.
+             */
+            public Builder definiteBots(DefiniteBots definiteBots) {
+                this.definiteBots = definiteBots;
+                return this;
+            }
+
+            /**
+             * EffectOnStatic.
+             */
+            public Builder effectOnStatic(EffectOnStatic effectOnStatic) {
+                this.effectOnStatic = effectOnStatic;
+                return this;
+            }
+
+            /**
+             * JSDetection.
+             */
+            public Builder JSDetection(JSDetection JSDetection) {
+                this.JSDetection = JSDetection;
+                return this;
+            }
+
+            /**
+             * LikelyBots.
+             */
+            public Builder likelyBots(LikelyBots likelyBots) {
+                this.likelyBots = likelyBots;
+                return this;
+            }
+
+            /**
+             * VerifiedBots.
+             */
+            public Builder verifiedBots(VerifiedBots verifiedBots) {
+                this.verifiedBots = verifiedBots;
+                return this;
+            }
+
+            public BotManagement build() {
+                return new BotManagement(this);
             } 
 
         } 

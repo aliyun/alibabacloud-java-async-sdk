@@ -98,7 +98,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Certificate.
+         * <p>The certificate content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----</p>
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -106,7 +109,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +120,7 @@ public class GetClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The certificate information.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -122,7 +128,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -130,7 +139,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The website name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;
@@ -138,7 +150,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The certificate status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -340,7 +355,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CACertificateId.
+             * <p>The ID of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>babab9db65ee5efcca9f3d41d4b50d66</p>
              */
             public Builder CACertificateId(String CACertificateId) {
                 this.CACertificateId = CACertificateId;
@@ -348,7 +366,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CommonName.
+             * <p>The Common Name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -356,7 +377,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the certificate was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-24 07:48:51</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -364,7 +388,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baba39055622c008b90285a8838ed09a</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -372,7 +399,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GlobalSign nv-sa</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -380,7 +410,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The certificate name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourCertName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -388,7 +421,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * NotAfter.
+             * <p>The time when the certificate expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-31 02:08:00</p>
              */
             public Builder notAfter(String notAfter) {
                 this.notAfter = notAfter;
@@ -396,7 +432,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * NotBefore.
+             * <p>The time when the certificate takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-31 02:08:00</p>
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -404,7 +443,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * PubkeyAlgorithm.
+             * <p>The public-key algorithm of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder pubkeyAlgorithm(String pubkeyAlgorithm) {
                 this.pubkeyAlgorithm = pubkeyAlgorithm;
@@ -412,7 +454,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * SAN.
+             * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
              */
             public Builder SAN(String SAN) {
                 this.SAN = SAN;
@@ -420,7 +465,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureAlgorithm.
+             * <p>The signature algorithm of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA256-RSA</p>
              */
             public Builder signatureAlgorithm(String signatureAlgorithm) {
                 this.signatureAlgorithm = signatureAlgorithm;
@@ -428,7 +476,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The certificate status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -436,7 +487,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The certificate type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dcdn</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -444,7 +498,10 @@ public class GetClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the certificate was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-22 05:33:13</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

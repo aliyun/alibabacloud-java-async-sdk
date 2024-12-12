@@ -45,6 +45,9 @@ public class WafRuleConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("Notes")
+    private String notes;
+
     @com.aliyun.core.annotation.NameInMap("RateLimit")
     private RateLimit rateLimit;
 
@@ -60,6 +63,9 @@ public class WafRuleConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
+    @com.aliyun.core.annotation.NameInMap("Value")
+    private String value;
+
     private WafRuleConfig(Builder builder) {
         this.action = builder.action;
         this.actions = builder.actions;
@@ -72,11 +78,13 @@ public class WafRuleConfig extends TeaModel {
         this.managedRulesets = builder.managedRulesets;
         this.match = builder.match;
         this.name = builder.name;
+        this.notes = builder.notes;
         this.rateLimit = builder.rateLimit;
         this.sigchl = builder.sigchl;
         this.status = builder.status;
         this.timer = builder.timer;
         this.type = builder.type;
+        this.value = builder.value;
     }
 
     public static Builder builder() {
@@ -165,6 +173,13 @@ public class WafRuleConfig extends TeaModel {
     }
 
     /**
+     * @return notes
+     */
+    public String getNotes() {
+        return this.notes;
+    }
+
+    /**
      * @return rateLimit
      */
     public RateLimit getRateLimit() {
@@ -199,6 +214,13 @@ public class WafRuleConfig extends TeaModel {
         return this.type;
     }
 
+    /**
+     * @return value
+     */
+    public String getValue() {
+        return this.value;
+    }
+
     public static final class Builder {
         private String action; 
         private Actions actions; 
@@ -211,11 +233,13 @@ public class WafRuleConfig extends TeaModel {
         private java.util.List < ManagedRulesets> managedRulesets; 
         private WafRuleMatch match; 
         private String name; 
+        private String notes; 
         private RateLimit rateLimit; 
         private java.util.List < String > sigchl; 
         private String status; 
         private WafTimer timer; 
         private String type; 
+        private String value; 
 
         /**
          * Action.
@@ -306,6 +330,14 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
+         * Notes.
+         */
+        public Builder notes(String notes) {
+            this.notes = notes;
+            return this;
+        }
+
+        /**
          * RateLimit.
          */
         public Builder rateLimit(RateLimit rateLimit) {
@@ -342,6 +374,14 @@ public class WafRuleConfig extends TeaModel {
          */
         public Builder type(String type) {
             this.type = type;
+            return this;
+        }
+
+        /**
+         * Value.
+         */
+        public Builder value(String value) {
+            this.value = value;
             return this;
         }
 

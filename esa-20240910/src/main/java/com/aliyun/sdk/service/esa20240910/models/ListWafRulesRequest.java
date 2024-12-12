@@ -212,6 +212,9 @@ public class ListWafRulesRequest extends Request {
      * <p>ListWafRulesRequest</p>
      */
     public static class QueryArgs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfigValueLike")
+        private String configValueLike;
+
         @com.aliyun.core.annotation.NameInMap("Desc")
         private Boolean desc;
 
@@ -234,6 +237,7 @@ public class ListWafRulesRequest extends Request {
         private String status;
 
         private QueryArgs(Builder builder) {
+            this.configValueLike = builder.configValueLike;
             this.desc = builder.desc;
             this.id = builder.id;
             this.idNameLike = builder.idNameLike;
@@ -249,6 +253,13 @@ public class ListWafRulesRequest extends Request {
 
         public static QueryArgs create() {
             return builder().build();
+        }
+
+        /**
+         * @return configValueLike
+         */
+        public String getConfigValueLike() {
+            return this.configValueLike;
         }
 
         /**
@@ -301,6 +312,7 @@ public class ListWafRulesRequest extends Request {
         }
 
         public static final class Builder {
+            private String configValueLike; 
             private Boolean desc; 
             private Long id; 
             private String idNameLike; 
@@ -308,6 +320,14 @@ public class ListWafRulesRequest extends Request {
             private String orderBy; 
             private Long rulesetId; 
             private String status; 
+
+            /**
+             * ConfigValueLike.
+             */
+            public Builder configValueLike(String configValueLike) {
+                this.configValueLike = configValueLike;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to sort the returned data in descending order.</p>

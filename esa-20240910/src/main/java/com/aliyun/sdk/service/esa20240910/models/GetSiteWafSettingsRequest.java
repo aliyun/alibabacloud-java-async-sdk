@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetSiteWafSettingsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
+    private String path;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     private Long siteId;
 
@@ -22,6 +26,7 @@ public class GetSiteWafSettingsRequest extends Request {
 
     private GetSiteWafSettingsRequest(Builder builder) {
         super(builder);
+        this.path = builder.path;
         this.siteId = builder.siteId;
         this.siteVersion = builder.siteVersion;
     }
@@ -40,6 +45,13 @@ public class GetSiteWafSettingsRequest extends Request {
     }
 
     /**
+     * @return path
+     */
+    public String getPath() {
+        return this.path;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -54,6 +66,7 @@ public class GetSiteWafSettingsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetSiteWafSettingsRequest, Builder> {
+        private String path; 
         private Long siteId; 
         private Integer siteVersion; 
 
@@ -63,9 +76,19 @@ public class GetSiteWafSettingsRequest extends Request {
 
         private Builder(GetSiteWafSettingsRequest request) {
             super(request);
+            this.path = request.path;
             this.siteId = request.siteId;
             this.siteVersion = request.siteVersion;
         } 
+
+        /**
+         * Path.
+         */
+        public Builder path(String path) {
+            this.putQueryParameter("Path", path);
+            this.path = path;
+            return this;
+        }
 
         /**
          * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
