@@ -7,19 +7,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListInstancesOutput} extends {@link TeaModel}
+ * {@link GetInstanceLifecycleEventsOutput} extends {@link TeaModel}
  *
- * <p>ListInstancesOutput</p>
+ * <p>GetInstanceLifecycleEventsOutput</p>
  */
-public class ListInstancesOutput extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("instances")
-    private java.util.List < InstanceInfo > instances;
+public class GetInstanceLifecycleEventsOutput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("events")
+    private java.util.List < InstanceEventItem > events;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private ListInstancesOutput(Builder builder) {
-        this.instances = builder.instances;
+    private GetInstanceLifecycleEventsOutput(Builder builder) {
+        this.events = builder.events;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +27,15 @@ public class ListInstancesOutput extends TeaModel {
         return new Builder();
     }
 
-    public static ListInstancesOutput create() {
+    public static GetInstanceLifecycleEventsOutput create() {
         return builder().build();
     }
 
     /**
-     * @return instances
+     * @return events
      */
-    public java.util.List < InstanceInfo > getInstances() {
-        return this.instances;
+    public java.util.List < InstanceEventItem > getEvents() {
+        return this.events;
     }
 
     /**
@@ -46,14 +46,14 @@ public class ListInstancesOutput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceInfo > instances; 
+        private java.util.List < InstanceEventItem > events; 
         private String requestId; 
 
         /**
-         * instances.
+         * events.
          */
-        public Builder instances(java.util.List < InstanceInfo > instances) {
-            this.instances = instances;
+        public Builder events(java.util.List < InstanceEventItem > events) {
+            this.events = events;
             return this;
         }
 
@@ -65,8 +65,8 @@ public class ListInstancesOutput extends TeaModel {
             return this;
         }
 
-        public ListInstancesOutput build() {
-            return new ListInstancesOutput(this);
+        public GetInstanceLifecycleEventsOutput build() {
+            return new GetInstanceLifecycleEventsOutput(this);
         } 
 
     } 

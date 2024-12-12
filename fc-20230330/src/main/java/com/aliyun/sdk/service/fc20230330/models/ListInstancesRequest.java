@@ -18,8 +18,32 @@ public class ListInstancesRequest extends Request {
     private String functionName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTimeMs")
+    private Long endTimeMs;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceIds")
+    private java.util.List < String > instanceIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceStatus")
+    private java.util.List < String > instanceStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("limit")
+    private String limit;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startKey")
+    private String startKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startTimeMs")
+    private Long startTimeMs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("withAllActive")
@@ -28,7 +52,13 @@ public class ListInstancesRequest extends Request {
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
+        this.endTimeMs = builder.endTimeMs;
+        this.instanceIds = builder.instanceIds;
+        this.instanceStatus = builder.instanceStatus;
+        this.limit = builder.limit;
         this.qualifier = builder.qualifier;
+        this.startKey = builder.startKey;
+        this.startTimeMs = builder.startTimeMs;
         this.withAllActive = builder.withAllActive;
     }
 
@@ -53,10 +83,52 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return endTimeMs
+     */
+    public Long getEndTimeMs() {
+        return this.endTimeMs;
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public java.util.List < String > getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    /**
+     * @return instanceStatus
+     */
+    public java.util.List < String > getInstanceStatus() {
+        return this.instanceStatus;
+    }
+
+    /**
+     * @return limit
+     */
+    public String getLimit() {
+        return this.limit;
+    }
+
+    /**
      * @return qualifier
      */
     public String getQualifier() {
         return this.qualifier;
+    }
+
+    /**
+     * @return startKey
+     */
+    public String getStartKey() {
+        return this.startKey;
+    }
+
+    /**
+     * @return startTimeMs
+     */
+    public Long getStartTimeMs() {
+        return this.startTimeMs;
     }
 
     /**
@@ -68,7 +140,13 @@ public class ListInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String functionName; 
+        private Long endTimeMs; 
+        private java.util.List < String > instanceIds; 
+        private java.util.List < String > instanceStatus; 
+        private String limit; 
         private String qualifier; 
+        private String startKey; 
+        private Long startTimeMs; 
         private Boolean withAllActive; 
 
         private Builder() {
@@ -78,7 +156,13 @@ public class ListInstancesRequest extends Request {
         private Builder(ListInstancesRequest request) {
             super(request);
             this.functionName = request.functionName;
+            this.endTimeMs = request.endTimeMs;
+            this.instanceIds = request.instanceIds;
+            this.instanceStatus = request.instanceStatus;
+            this.limit = request.limit;
             this.qualifier = request.qualifier;
+            this.startKey = request.startKey;
+            this.startTimeMs = request.startTimeMs;
             this.withAllActive = request.withAllActive;
         } 
 
@@ -96,6 +180,44 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
+         * endTimeMs.
+         */
+        public Builder endTimeMs(Long endTimeMs) {
+            this.putQueryParameter("endTimeMs", endTimeMs);
+            this.endTimeMs = endTimeMs;
+            return this;
+        }
+
+        /**
+         * instanceIds.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            String instanceIdsShrink = shrink(instanceIds, "instanceIds", "json");
+            this.putQueryParameter("instanceIds", instanceIdsShrink);
+            this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * instanceStatus.
+         */
+        public Builder instanceStatus(java.util.List < String > instanceStatus) {
+            String instanceStatusShrink = shrink(instanceStatus, "instanceStatus", "json");
+            this.putQueryParameter("instanceStatus", instanceStatusShrink);
+            this.instanceStatus = instanceStatus;
+            return this;
+        }
+
+        /**
+         * limit.
+         */
+        public Builder limit(String limit) {
+            this.putQueryParameter("limit", limit);
+            this.limit = limit;
+            return this;
+        }
+
+        /**
          * <p>The function version or alias.</p>
          * 
          * <strong>example:</strong>
@@ -104,6 +226,24 @@ public class ListInstancesRequest extends Request {
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
             this.qualifier = qualifier;
+            return this;
+        }
+
+        /**
+         * startKey.
+         */
+        public Builder startKey(String startKey) {
+            this.putQueryParameter("startKey", startKey);
+            this.startKey = startKey;
+            return this;
+        }
+
+        /**
+         * startTimeMs.
+         */
+        public Builder startTimeMs(Long startTimeMs) {
+            this.putQueryParameter("startTimeMs", startTimeMs);
+            this.startTimeMs = startTimeMs;
             return this;
         }
 
