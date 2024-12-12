@@ -224,11 +224,6 @@ public class ListBatchMediaProducingJobsRequest extends Request {
          * </ul>
          * <!---->
          * 
-         * <ul>
-         * <li></li>
-         * <li></li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */

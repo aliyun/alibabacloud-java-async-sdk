@@ -106,6 +106,7 @@ public class SearchIndexJobRerunRequest extends Request {
         }
 
         /**
+         * <p>The ID of the media asset. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +119,10 @@ public class SearchIndexJobRerunRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The search library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);
@@ -127,7 +131,15 @@ public class SearchIndexJobRerunRequest extends Request {
         }
 
         /**
-         * Task.
+         * <p>The type of the job. Separate multiple types with commas (,).</p>
+         * <ul>
+         * <li>aiLabel: smart tagging.</li>
+         * <li>face: face recognition.</li>
+         * <li>mm: large visual model.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AiLabel,Face,Mm</p>
          */
         public Builder task(String task) {
             this.putQueryParameter("Task", task);

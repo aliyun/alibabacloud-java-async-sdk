@@ -342,6 +342,9 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Float endTime;
 
+        @com.aliyun.core.annotation.NameInMap("Expression")
+        private String expression;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Float startTime;
 
@@ -350,6 +353,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
 
         private OccurrencesInfos(Builder builder) {
             this.endTime = builder.endTime;
+            this.expression = builder.expression;
             this.startTime = builder.startTime;
             this.trackData = builder.trackData;
         }
@@ -370,6 +374,13 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         }
 
         /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
+        }
+
+        /**
          * @return startTime
          */
         public Float getStartTime() {
@@ -385,6 +396,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float endTime; 
+            private String expression; 
             private Float startTime; 
             private java.util.List < TrackData> trackData; 
 
@@ -396,6 +408,14 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
              */
             public Builder endTime(Float endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * Expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
                 return this;
             }
 

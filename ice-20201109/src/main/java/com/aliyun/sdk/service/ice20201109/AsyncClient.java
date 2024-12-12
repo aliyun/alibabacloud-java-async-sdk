@@ -48,9 +48,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</p>
+     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</p>
      * <ul>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * <li>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</li>
      * </ul>
      * 
@@ -684,8 +684,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</p>
      * <ul>
-     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</li>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</li>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of GetTemplate  GetTemplateRequest
@@ -997,6 +997,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTranscodeJobsResponse> listTranscodeJobs(ListTranscodeJobsRequest request);
 
     /**
+     * @param request the request parameters of QueryCopyrightExtractJob  QueryCopyrightExtractJobRequest
+     * @return QueryCopyrightExtractJobResponse
+     */
+    CompletableFuture<QueryCopyrightExtractJobResponse> queryCopyrightExtractJob(QueryCopyrightExtractJobRequest request);
+
+    /**
+     * @param request the request parameters of QueryCopyrightJobList  QueryCopyrightJobListRequest
+     * @return QueryCopyrightJobListResponse
+     */
+    CompletableFuture<QueryCopyrightJobListResponse> queryCopyrightJobList(QueryCopyrightJobListRequest request);
+
+    /**
      * @param request the request parameters of QueryDNAJobList  QueryDNAJobListRequest
      * @return QueryDNAJobListResponse
      */
@@ -1049,6 +1061,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QuerySmarttagJobResponse
      */
     CompletableFuture<QuerySmarttagJobResponse> querySmarttagJob(QuerySmarttagJobRequest request);
+
+    /**
+     * @param request the request parameters of QueryTraceAbJobList  QueryTraceAbJobListRequest
+     * @return QueryTraceAbJobListResponse
+     */
+    CompletableFuture<QueryTraceAbJobListResponse> queryTraceAbJobList(QueryTraceAbJobListRequest request);
+
+    /**
+     * @param request the request parameters of QueryTraceExtractJob  QueryTraceExtractJobRequest
+     * @return QueryTraceExtractJobResponse
+     */
+    CompletableFuture<QueryTraceExtractJobResponse> queryTraceExtractJob(QueryTraceExtractJobRequest request);
+
+    /**
+     * @param request the request parameters of QueryTraceM3u8JobList  QueryTraceM3u8JobListRequest
+     * @return QueryTraceM3u8JobListResponse
+     */
+    CompletableFuture<QueryTraceM3u8JobListResponse> queryTraceM3u8JobList(QueryTraceM3u8JobListRequest request);
 
     /**
      * <b>description</b> :
@@ -1261,6 +1291,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitBatchMediaProducingJobResponse> submitBatchMediaProducingJob(SubmitBatchMediaProducingJobRequest request);
 
     /**
+     * @param request the request parameters of SubmitCopyrightExtractJob  SubmitCopyrightExtractJobRequest
+     * @return SubmitCopyrightExtractJobResponse
+     */
+    CompletableFuture<SubmitCopyrightExtractJobResponse> submitCopyrightExtractJob(SubmitCopyrightExtractJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitCopyrightJob  SubmitCopyrightJobRequest
+     * @return SubmitCopyrightJobResponse
+     */
+    CompletableFuture<SubmitCopyrightJobResponse> submitCopyrightJob(SubmitCopyrightJobRequest request);
+
+    /**
      * @param request the request parameters of SubmitCustomizedVoiceJob  SubmitCustomizedVoiceJobRequest
      * @return SubmitCustomizedVoiceJobResponse
      */
@@ -1434,6 +1476,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitTextGenerateJobResponse
      */
     CompletableFuture<SubmitTextGenerateJobResponse> submitTextGenerateJob(SubmitTextGenerateJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitTraceAbJob  SubmitTraceAbJobRequest
+     * @return SubmitTraceAbJobResponse
+     */
+    CompletableFuture<SubmitTraceAbJobResponse> submitTraceAbJob(SubmitTraceAbJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitTraceExtractJob  SubmitTraceExtractJobRequest
+     * @return SubmitTraceExtractJobResponse
+     */
+    CompletableFuture<SubmitTraceExtractJobResponse> submitTraceExtractJob(SubmitTraceExtractJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitTraceM3u8Job  SubmitTraceM3u8JobRequest
+     * @return SubmitTraceM3u8JobResponse
+     */
+    CompletableFuture<SubmitTraceM3u8JobResponse> submitTraceM3u8Job(SubmitTraceM3u8JobRequest request);
 
     /**
      * @param request the request parameters of SubmitTranscodeJob  SubmitTranscodeJobRequest

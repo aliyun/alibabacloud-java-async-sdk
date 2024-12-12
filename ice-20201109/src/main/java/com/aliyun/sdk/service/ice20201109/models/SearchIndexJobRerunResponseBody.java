@@ -74,7 +74,10 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,10 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +104,14 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -144,7 +157,7 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
             private java.util.List < String > mediaIdsNoExist; 
 
             /**
-             * MediaIdsNoExist.
+             * <p>The media asset IDs that do not exist.</p>
              */
             public Builder mediaIdsNoExist(java.util.List < String > mediaIdsNoExist) {
                 this.mediaIdsNoExist = mediaIdsNoExist;

@@ -24,11 +24,15 @@ public class ListSearchLibResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
+    @com.aliyun.core.annotation.NameInMap("Total")
+    private Long total;
+
     private ListSearchLibResponseBody(Builder builder) {
         this.code = builder.code;
         this.requestId = builder.requestId;
         this.searchLibInfoList = builder.searchLibInfoList;
         this.success = builder.success;
+        this.total = builder.total;
     }
 
     public static Builder builder() {
@@ -67,14 +71,25 @@ public class ListSearchLibResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return total
+     */
+    public Long getTotal() {
+        return this.total;
+    }
+
     public static final class Builder {
         private String code; 
         private String requestId; 
         private java.util.List < SearchLibInfoList> searchLibInfoList; 
         private String success; 
+        private Long total; 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +97,10 @@ public class ListSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +108,7 @@ public class ListSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * SearchLibInfoList.
+         * <p>Information about search libraries.</p>
          */
         public Builder searchLibInfoList(java.util.List < SearchLibInfoList> searchLibInfoList) {
             this.searchLibInfoList = searchLibInfoList;
@@ -98,10 +116,24 @@ public class ListSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
+            return this;
+        }
+
+        /**
+         * <p>总数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
+        public Builder total(Long total) {
+            this.total = total;
             return this;
         }
 
@@ -156,7 +188,10 @@ public class ListSearchLibResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * SearchLibName.
+             * <p>The search library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>faceSearchLib</p>
              */
             public Builder searchLibName(String searchLibName) {
                 this.searchLibName = searchLibName;
@@ -164,7 +199,15 @@ public class ListSearchLibResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the search library.</p>
+             * <ul>
+             * <li>normal</li>
+             * <li>deleting</li>
+             * <li>deleteFail</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;

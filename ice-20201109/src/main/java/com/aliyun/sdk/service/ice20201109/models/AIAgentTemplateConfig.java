@@ -97,6 +97,73 @@ public class AIAgentTemplateConfig extends TeaModel {
      *
      * <p>AIAgentTemplateConfig</p>
      */
+    public static class LlmHistory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private String role;
+
+        private LlmHistory(Builder builder) {
+            this.content = builder.content;
+            this.role = builder.role;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LlmHistory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String role; 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            public LlmHistory build() {
+                return new LlmHistory(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentTemplateConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentTemplateConfig</p>
+     */
     public static class AvatarChat3D extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsrMaxSilence")
         private Integer asrMaxSilence;
@@ -106,6 +173,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("BailianAppParams")
         private String bailianAppParams;
+
+        @com.aliyun.core.annotation.NameInMap("EnableIntelligentSegment")
+        private Boolean enableIntelligentSegment;
 
         @com.aliyun.core.annotation.NameInMap("EnablePushToTalk")
         private Boolean enablePushToTalk;
@@ -118,6 +188,12 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
+
+        @com.aliyun.core.annotation.NameInMap("LlmHistory")
+        private java.util.List < LlmHistory> llmHistory;
+
+        @com.aliyun.core.annotation.NameInMap("LlmHistoryLimit")
+        private Integer llmHistoryLimit;
 
         @com.aliyun.core.annotation.NameInMap("MaxIdleTime")
         private Integer maxIdleTime;
@@ -140,6 +216,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Volume")
         private Long volume;
 
+        @com.aliyun.core.annotation.NameInMap("WakeUpQuery")
+        private String wakeUpQuery;
+
         @com.aliyun.core.annotation.NameInMap("WorkflowOverrideParams")
         private String workflowOverrideParams;
 
@@ -147,10 +226,13 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.asrMaxSilence = builder.asrMaxSilence;
             this.avatarId = builder.avatarId;
             this.bailianAppParams = builder.bailianAppParams;
+            this.enableIntelligentSegment = builder.enableIntelligentSegment;
             this.enablePushToTalk = builder.enablePushToTalk;
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
             this.gracefulShutdown = builder.gracefulShutdown;
             this.greeting = builder.greeting;
+            this.llmHistory = builder.llmHistory;
+            this.llmHistoryLimit = builder.llmHistoryLimit;
             this.maxIdleTime = builder.maxIdleTime;
             this.useVoiceprint = builder.useVoiceprint;
             this.userOfflineTimeout = builder.userOfflineTimeout;
@@ -158,6 +240,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.voiceId = builder.voiceId;
             this.voiceprintId = builder.voiceprintId;
             this.volume = builder.volume;
+            this.wakeUpQuery = builder.wakeUpQuery;
             this.workflowOverrideParams = builder.workflowOverrideParams;
         }
 
@@ -191,6 +274,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return enableIntelligentSegment
+         */
+        public Boolean getEnableIntelligentSegment() {
+            return this.enableIntelligentSegment;
+        }
+
+        /**
          * @return enablePushToTalk
          */
         public Boolean getEnablePushToTalk() {
@@ -216,6 +306,20 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public String getGreeting() {
             return this.greeting;
+        }
+
+        /**
+         * @return llmHistory
+         */
+        public java.util.List < LlmHistory> getLlmHistory() {
+            return this.llmHistory;
+        }
+
+        /**
+         * @return llmHistoryLimit
+         */
+        public Integer getLlmHistoryLimit() {
+            return this.llmHistoryLimit;
         }
 
         /**
@@ -268,6 +372,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return wakeUpQuery
+         */
+        public String getWakeUpQuery() {
+            return this.wakeUpQuery;
+        }
+
+        /**
          * @return workflowOverrideParams
          */
         public String getWorkflowOverrideParams() {
@@ -278,10 +389,13 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Integer asrMaxSilence; 
             private String avatarId; 
             private String bailianAppParams; 
+            private Boolean enableIntelligentSegment; 
             private Boolean enablePushToTalk; 
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
+            private java.util.List < LlmHistory> llmHistory; 
+            private Integer llmHistoryLimit; 
             private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
             private Integer userOfflineTimeout; 
@@ -289,6 +403,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             private String voiceId; 
             private String voiceprintId; 
             private Long volume; 
+            private String wakeUpQuery; 
             private String workflowOverrideParams; 
 
             /**
@@ -312,6 +427,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder bailianAppParams(String bailianAppParams) {
                 this.bailianAppParams = bailianAppParams;
+                return this;
+            }
+
+            /**
+             * EnableIntelligentSegment.
+             */
+            public Builder enableIntelligentSegment(Boolean enableIntelligentSegment) {
+                this.enableIntelligentSegment = enableIntelligentSegment;
                 return this;
             }
 
@@ -344,6 +467,22 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder greeting(String greeting) {
                 this.greeting = greeting;
+                return this;
+            }
+
+            /**
+             * LlmHistory.
+             */
+            public Builder llmHistory(java.util.List < LlmHistory> llmHistory) {
+                this.llmHistory = llmHistory;
+                return this;
+            }
+
+            /**
+             * LlmHistoryLimit.
+             */
+            public Builder llmHistoryLimit(Integer llmHistoryLimit) {
+                this.llmHistoryLimit = llmHistoryLimit;
                 return this;
             }
 
@@ -404,6 +543,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
+             * WakeUpQuery.
+             */
+            public Builder wakeUpQuery(String wakeUpQuery) {
+                this.wakeUpQuery = wakeUpQuery;
+                return this;
+            }
+
+            /**
              * WorkflowOverrideParams.
              */
             public Builder workflowOverrideParams(String workflowOverrideParams) {
@@ -413,6 +560,73 @@ public class AIAgentTemplateConfig extends TeaModel {
 
             public AvatarChat3D build() {
                 return new AvatarChat3D(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentTemplateConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentTemplateConfig</p>
+     */
+    public static class VisionChatLlmHistory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private String role;
+
+        private VisionChatLlmHistory(Builder builder) {
+            this.content = builder.content;
+            this.role = builder.role;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VisionChatLlmHistory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String role; 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            public VisionChatLlmHistory build() {
+                return new VisionChatLlmHistory(this);
             } 
 
         } 
@@ -446,6 +660,12 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
 
+        @com.aliyun.core.annotation.NameInMap("LlmHistory")
+        private java.util.List < VisionChatLlmHistory> llmHistory;
+
+        @com.aliyun.core.annotation.NameInMap("LlmHistoryLimit")
+        private Integer llmHistoryLimit;
+
         @com.aliyun.core.annotation.NameInMap("MaxIdleTime")
         private Integer maxIdleTime;
 
@@ -467,6 +687,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Volume")
         private Long volume;
 
+        @com.aliyun.core.annotation.NameInMap("WakeUpQuery")
+        private String wakeUpQuery;
+
         @com.aliyun.core.annotation.NameInMap("WorkflowOverrideParams")
         private String workflowOverrideParams;
 
@@ -478,6 +701,8 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
             this.gracefulShutdown = builder.gracefulShutdown;
             this.greeting = builder.greeting;
+            this.llmHistory = builder.llmHistory;
+            this.llmHistoryLimit = builder.llmHistoryLimit;
             this.maxIdleTime = builder.maxIdleTime;
             this.useVoiceprint = builder.useVoiceprint;
             this.userOfflineTimeout = builder.userOfflineTimeout;
@@ -485,6 +710,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.voiceId = builder.voiceId;
             this.voiceprintId = builder.voiceprintId;
             this.volume = builder.volume;
+            this.wakeUpQuery = builder.wakeUpQuery;
             this.workflowOverrideParams = builder.workflowOverrideParams;
         }
 
@@ -546,6 +772,20 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return llmHistory
+         */
+        public java.util.List < VisionChatLlmHistory> getLlmHistory() {
+            return this.llmHistory;
+        }
+
+        /**
+         * @return llmHistoryLimit
+         */
+        public Integer getLlmHistoryLimit() {
+            return this.llmHistoryLimit;
+        }
+
+        /**
          * @return maxIdleTime
          */
         public Integer getMaxIdleTime() {
@@ -595,6 +835,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return wakeUpQuery
+         */
+        public String getWakeUpQuery() {
+            return this.wakeUpQuery;
+        }
+
+        /**
          * @return workflowOverrideParams
          */
         public String getWorkflowOverrideParams() {
@@ -609,6 +856,8 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
+            private java.util.List < VisionChatLlmHistory> llmHistory; 
+            private Integer llmHistoryLimit; 
             private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
             private Integer userOfflineTimeout; 
@@ -616,6 +865,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             private String voiceId; 
             private String voiceprintId; 
             private Long volume; 
+            private String wakeUpQuery; 
             private String workflowOverrideParams; 
 
             /**
@@ -675,6 +925,22 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
+             * LlmHistory.
+             */
+            public Builder llmHistory(java.util.List < VisionChatLlmHistory> llmHistory) {
+                this.llmHistory = llmHistory;
+                return this;
+            }
+
+            /**
+             * LlmHistoryLimit.
+             */
+            public Builder llmHistoryLimit(Integer llmHistoryLimit) {
+                this.llmHistoryLimit = llmHistoryLimit;
+                return this;
+            }
+
+            /**
              * MaxIdleTime.
              */
             public Builder maxIdleTime(Integer maxIdleTime) {
@@ -731,6 +997,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
+             * WakeUpQuery.
+             */
+            public Builder wakeUpQuery(String wakeUpQuery) {
+                this.wakeUpQuery = wakeUpQuery;
+                return this;
+            }
+
+            /**
              * WorkflowOverrideParams.
              */
             public Builder workflowOverrideParams(String workflowOverrideParams) {
@@ -740,6 +1014,73 @@ public class AIAgentTemplateConfig extends TeaModel {
 
             public VisionChat build() {
                 return new VisionChat(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentTemplateConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentTemplateConfig</p>
+     */
+    public static class VoiceChatLlmHistory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private String role;
+
+        private VoiceChatLlmHistory(Builder builder) {
+            this.content = builder.content;
+            this.role = builder.role;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VoiceChatLlmHistory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String role; 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            public VoiceChatLlmHistory build() {
+                return new VoiceChatLlmHistory(this);
             } 
 
         } 
@@ -764,6 +1105,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BailianAppParams")
         private String bailianAppParams;
 
+        @com.aliyun.core.annotation.NameInMap("EnableIntelligentSegment")
+        private Boolean enableIntelligentSegment;
+
         @com.aliyun.core.annotation.NameInMap("EnablePushToTalk")
         private Boolean enablePushToTalk;
 
@@ -775,6 +1119,12 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
+
+        @com.aliyun.core.annotation.NameInMap("LlmHistory")
+        private java.util.List < VoiceChatLlmHistory> llmHistory;
+
+        @com.aliyun.core.annotation.NameInMap("LlmHistoryLimit")
+        private Integer llmHistoryLimit;
 
         @com.aliyun.core.annotation.NameInMap("MaxIdleTime")
         private Integer maxIdleTime;
@@ -797,6 +1147,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Volume")
         private Long volume;
 
+        @com.aliyun.core.annotation.NameInMap("WakeUpQuery")
+        private String wakeUpQuery;
+
         @com.aliyun.core.annotation.NameInMap("WorkflowOverrideParams")
         private String workflowOverrideParams;
 
@@ -805,10 +1158,13 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.avatarUrl = builder.avatarUrl;
             this.avatarUrlType = builder.avatarUrlType;
             this.bailianAppParams = builder.bailianAppParams;
+            this.enableIntelligentSegment = builder.enableIntelligentSegment;
             this.enablePushToTalk = builder.enablePushToTalk;
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
             this.gracefulShutdown = builder.gracefulShutdown;
             this.greeting = builder.greeting;
+            this.llmHistory = builder.llmHistory;
+            this.llmHistoryLimit = builder.llmHistoryLimit;
             this.maxIdleTime = builder.maxIdleTime;
             this.useVoiceprint = builder.useVoiceprint;
             this.userOfflineTimeout = builder.userOfflineTimeout;
@@ -816,6 +1172,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.voiceId = builder.voiceId;
             this.voiceprintId = builder.voiceprintId;
             this.volume = builder.volume;
+            this.wakeUpQuery = builder.wakeUpQuery;
             this.workflowOverrideParams = builder.workflowOverrideParams;
         }
 
@@ -856,6 +1213,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return enableIntelligentSegment
+         */
+        public Boolean getEnableIntelligentSegment() {
+            return this.enableIntelligentSegment;
+        }
+
+        /**
          * @return enablePushToTalk
          */
         public Boolean getEnablePushToTalk() {
@@ -881,6 +1245,20 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public String getGreeting() {
             return this.greeting;
+        }
+
+        /**
+         * @return llmHistory
+         */
+        public java.util.List < VoiceChatLlmHistory> getLlmHistory() {
+            return this.llmHistory;
+        }
+
+        /**
+         * @return llmHistoryLimit
+         */
+        public Integer getLlmHistoryLimit() {
+            return this.llmHistoryLimit;
         }
 
         /**
@@ -933,6 +1311,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return wakeUpQuery
+         */
+        public String getWakeUpQuery() {
+            return this.wakeUpQuery;
+        }
+
+        /**
          * @return workflowOverrideParams
          */
         public String getWorkflowOverrideParams() {
@@ -944,10 +1329,13 @@ public class AIAgentTemplateConfig extends TeaModel {
             private String avatarUrl; 
             private String avatarUrlType; 
             private String bailianAppParams; 
+            private Boolean enableIntelligentSegment; 
             private Boolean enablePushToTalk; 
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
+            private java.util.List < VoiceChatLlmHistory> llmHistory; 
+            private Integer llmHistoryLimit; 
             private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
             private Integer userOfflineTimeout; 
@@ -955,6 +1343,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             private String voiceId; 
             private String voiceprintId; 
             private Long volume; 
+            private String wakeUpQuery; 
             private String workflowOverrideParams; 
 
             /**
@@ -990,6 +1379,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
+             * EnableIntelligentSegment.
+             */
+            public Builder enableIntelligentSegment(Boolean enableIntelligentSegment) {
+                this.enableIntelligentSegment = enableIntelligentSegment;
+                return this;
+            }
+
+            /**
              * EnablePushToTalk.
              */
             public Builder enablePushToTalk(Boolean enablePushToTalk) {
@@ -1018,6 +1415,22 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder greeting(String greeting) {
                 this.greeting = greeting;
+                return this;
+            }
+
+            /**
+             * LlmHistory.
+             */
+            public Builder llmHistory(java.util.List < VoiceChatLlmHistory> llmHistory) {
+                this.llmHistory = llmHistory;
+                return this;
+            }
+
+            /**
+             * LlmHistoryLimit.
+             */
+            public Builder llmHistoryLimit(Integer llmHistoryLimit) {
+                this.llmHistoryLimit = llmHistoryLimit;
                 return this;
             }
 
@@ -1074,6 +1487,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder volume(Long volume) {
                 this.volume = volume;
+                return this;
+            }
+
+            /**
+             * WakeUpQuery.
+             */
+            public Builder wakeUpQuery(String wakeUpQuery) {
+                this.wakeUpQuery = wakeUpQuery;
                 return this;
             }
 
