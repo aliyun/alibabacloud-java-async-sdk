@@ -18,6 +18,9 @@ public class GenericSearchResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("sceneItems")
+    private java.util.List < SceneItem > sceneItems;
+
     @com.aliyun.core.annotation.NameInMap("searchInformation")
     private SearchInformation searchInformation;
 
@@ -27,6 +30,7 @@ public class GenericSearchResult extends TeaModel {
     private GenericSearchResult(Builder builder) {
         this.pageItems = builder.pageItems;
         this.requestId = builder.requestId;
+        this.sceneItems = builder.sceneItems;
         this.searchInformation = builder.searchInformation;
         this.weiboItems = builder.weiboItems;
     }
@@ -54,6 +58,13 @@ public class GenericSearchResult extends TeaModel {
     }
 
     /**
+     * @return sceneItems
+     */
+    public java.util.List < SceneItem > getSceneItems() {
+        return this.sceneItems;
+    }
+
+    /**
      * @return searchInformation
      */
     public SearchInformation getSearchInformation() {
@@ -70,6 +81,7 @@ public class GenericSearchResult extends TeaModel {
     public static final class Builder {
         private java.util.List < ScorePageItem > pageItems; 
         private String requestId; 
+        private java.util.List < SceneItem > sceneItems; 
         private SearchInformation searchInformation; 
         private java.util.List < WeiboItem > weiboItems; 
 
@@ -86,6 +98,14 @@ public class GenericSearchResult extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * sceneItems.
+         */
+        public Builder sceneItems(java.util.List < SceneItem > sceneItems) {
+            this.sceneItems = sceneItems;
             return this;
         }
 

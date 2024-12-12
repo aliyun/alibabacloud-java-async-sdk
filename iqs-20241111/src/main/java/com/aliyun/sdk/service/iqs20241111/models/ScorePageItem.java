@@ -20,6 +20,12 @@ public class ScorePageItem extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String displayLink;
 
+    @com.aliyun.core.annotation.NameInMap("hostLogo")
+    private String hostLogo;
+
+    @com.aliyun.core.annotation.NameInMap("hostname")
+    private String hostname;
+
     @com.aliyun.core.annotation.NameInMap("htmlSnippet")
     @com.aliyun.core.annotation.Validation(required = true)
     private String htmlSnippet;
@@ -51,6 +57,9 @@ public class ScorePageItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("score")
     private Double score;
 
+    @com.aliyun.core.annotation.NameInMap("siteLabel")
+    private String siteLabel;
+
     @com.aliyun.core.annotation.NameInMap("title")
     @com.aliyun.core.annotation.Validation(required = true)
     private String title;
@@ -58,6 +67,8 @@ public class ScorePageItem extends TeaModel {
     private ScorePageItem(Builder builder) {
         this.cardType = builder.cardType;
         this.displayLink = builder.displayLink;
+        this.hostLogo = builder.hostLogo;
+        this.hostname = builder.hostname;
         this.htmlSnippet = builder.htmlSnippet;
         this.htmlTitle = builder.htmlTitle;
         this.images = builder.images;
@@ -67,6 +78,7 @@ public class ScorePageItem extends TeaModel {
         this.pageMap = builder.pageMap;
         this.publishTime = builder.publishTime;
         this.score = builder.score;
+        this.siteLabel = builder.siteLabel;
         this.title = builder.title;
     }
 
@@ -90,6 +102,20 @@ public class ScorePageItem extends TeaModel {
      */
     public String getDisplayLink() {
         return this.displayLink;
+    }
+
+    /**
+     * @return hostLogo
+     */
+    public String getHostLogo() {
+        return this.hostLogo;
+    }
+
+    /**
+     * @return hostname
+     */
+    public String getHostname() {
+        return this.hostname;
     }
 
     /**
@@ -156,6 +182,13 @@ public class ScorePageItem extends TeaModel {
     }
 
     /**
+     * @return siteLabel
+     */
+    public String getSiteLabel() {
+        return this.siteLabel;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -165,6 +198,8 @@ public class ScorePageItem extends TeaModel {
     public static final class Builder {
         private String cardType; 
         private String displayLink; 
+        private String hostLogo; 
+        private String hostname; 
         private String htmlSnippet; 
         private String htmlTitle; 
         private java.util.List < IncludeImage > images; 
@@ -174,6 +209,7 @@ public class ScorePageItem extends TeaModel {
         private java.util.Map < String, String > pageMap; 
         private Long publishTime; 
         private Double score; 
+        private String siteLabel; 
         private String title; 
 
         /**
@@ -195,6 +231,22 @@ public class ScorePageItem extends TeaModel {
          */
         public Builder displayLink(String displayLink) {
             this.displayLink = displayLink;
+            return this;
+        }
+
+        /**
+         * hostLogo.
+         */
+        public Builder hostLogo(String hostLogo) {
+            this.hostLogo = hostLogo;
+            return this;
+        }
+
+        /**
+         * hostname.
+         */
+        public Builder hostname(String hostname) {
+            this.hostname = hostname;
             return this;
         }
 
@@ -279,6 +331,14 @@ public class ScorePageItem extends TeaModel {
          */
         public Builder score(Double score) {
             this.score = score;
+            return this;
+        }
+
+        /**
+         * siteLabel.
+         */
+        public Builder siteLabel(String siteLabel) {
+            this.siteLabel = siteLabel;
             return this;
         }
 
