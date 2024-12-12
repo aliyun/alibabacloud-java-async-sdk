@@ -182,7 +182,7 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the accounts used by the members in the workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console?spm=a2c4g.11186623.0.0.7f96340a3HFgqS">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the Tenant Members and Roles page, view the IDs of the accounts used by the members in the workspace.</p>
+         * <p>The IDs of the accounts used by the members in the workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the Tenant Members and Roles page, view the IDs of the accounts used by the members in the workspace.</p>
          */
         public Builder userIds(java.util.List < String > userIds) {
             String userIdsShrink = shrink(userIds, "UserIds", "json");

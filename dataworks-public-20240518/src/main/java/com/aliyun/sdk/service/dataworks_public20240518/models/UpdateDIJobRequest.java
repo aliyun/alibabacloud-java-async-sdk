@@ -673,7 +673,7 @@ public class UpdateDIJobRequest extends Request {
      */
     public static class OfflineResourceSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestedCu")
-        private Long requestedCu;
+        private Double requestedCu;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupIdentifier")
         private String resourceGroupIdentifier;
@@ -694,7 +694,7 @@ public class UpdateDIJobRequest extends Request {
         /**
          * @return requestedCu
          */
-        public Long getRequestedCu() {
+        public Double getRequestedCu() {
             return this.requestedCu;
         }
 
@@ -706,7 +706,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         public static final class Builder {
-            private Long requestedCu; 
+            private Double requestedCu; 
             private String resourceGroupIdentifier; 
 
             /**
@@ -715,7 +715,7 @@ public class UpdateDIJobRequest extends Request {
              * <strong>example:</strong>
              * <p>2.0</p>
              */
-            public Builder requestedCu(Long requestedCu) {
+            public Builder requestedCu(Double requestedCu) {
                 this.requestedCu = requestedCu;
                 return this;
             }
@@ -746,7 +746,7 @@ public class UpdateDIJobRequest extends Request {
      */
     public static class RealtimeResourceSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestedCu")
-        private Long requestedCu;
+        private Double requestedCu;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupIdentifier")
         private String resourceGroupIdentifier;
@@ -767,7 +767,7 @@ public class UpdateDIJobRequest extends Request {
         /**
          * @return requestedCu
          */
-        public Long getRequestedCu() {
+        public Double getRequestedCu() {
             return this.requestedCu;
         }
 
@@ -779,7 +779,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         public static final class Builder {
-            private Long requestedCu; 
+            private Double requestedCu; 
             private String resourceGroupIdentifier; 
 
             /**
@@ -788,7 +788,7 @@ public class UpdateDIJobRequest extends Request {
              * <strong>example:</strong>
              * <p>2.0</p>
              */
-            public Builder requestedCu(Long requestedCu) {
+            public Builder requestedCu(Double requestedCu) {
                 this.requestedCu = requestedCu;
                 return this;
             }
@@ -819,7 +819,7 @@ public class UpdateDIJobRequest extends Request {
      */
     public static class ScheduleResourceSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestedCu")
-        private Long requestedCu;
+        private Double requestedCu;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupIdentifier")
         private String resourceGroupIdentifier;
@@ -840,7 +840,7 @@ public class UpdateDIJobRequest extends Request {
         /**
          * @return requestedCu
          */
-        public Long getRequestedCu() {
+        public Double getRequestedCu() {
             return this.requestedCu;
         }
 
@@ -852,7 +852,7 @@ public class UpdateDIJobRequest extends Request {
         }
 
         public static final class Builder {
-            private Long requestedCu; 
+            private Double requestedCu; 
             private String resourceGroupIdentifier; 
 
             /**
@@ -861,7 +861,7 @@ public class UpdateDIJobRequest extends Request {
              * <strong>example:</strong>
              * <p>2.0</p>
              */
-            public Builder requestedCu(Long requestedCu) {
+            public Builder requestedCu(Double requestedCu) {
                 this.requestedCu = requestedCu;
                 return this;
             }

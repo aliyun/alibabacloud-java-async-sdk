@@ -273,7 +273,10 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -282,7 +285,10 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -62,7 +62,7 @@ public class GetNetworkResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Network.
+         * <p>The information about the network resource.</p>
          */
         public Builder network(Network network) {
             this.network = network;
@@ -78,7 +78,10 @@ public class GetNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -248,7 +251,17 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the network resource. Valid values:</p>
+             * <ul>
+             * <li>Pending: The network resource is waiting to be created.</li>
+             * <li>Creating: The network resource is being created.</li>
+             * <li>Running: The network resource is running as expected.</li>
+             * <li>Deleting: The network resource is being deleted.</li>
+             * <li>Deleted: The network resource is deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

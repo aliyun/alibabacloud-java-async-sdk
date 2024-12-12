@@ -527,12 +527,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetProjectMember  GetProjectMemberRequest
      * @return GetProjectMemberResponse
      */
     CompletableFuture<GetProjectMemberResponse> getProjectMember(GetProjectMemberRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetProjectRole  GetProjectRoleRequest
      * @return GetProjectRoleResponse
      */
@@ -590,6 +596,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorkflowDefinitionResponse> getWorkflowDefinition(GetWorkflowDefinitionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GrantMemberProjectRoles  GrantMemberProjectRolesRequest
      * @return GrantMemberProjectRolesResponse
      */
@@ -702,7 +711,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</li>
      * </ul>
@@ -758,12 +770,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListProjectMembers  ListProjectMembersRequest
      * @return ListProjectMembersResponse
      */
     CompletableFuture<ListProjectMembersResponse> listProjectMembers(ListProjectMembersRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
      * @return ListProjectRolesResponse
      */

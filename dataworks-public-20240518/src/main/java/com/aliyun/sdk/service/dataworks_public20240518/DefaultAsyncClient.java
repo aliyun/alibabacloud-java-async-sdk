@@ -1268,6 +1268,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetProjectMember  GetProjectMemberRequest
      * @return GetProjectMemberResponse
      */
@@ -1286,6 +1289,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetProjectRole  GetProjectRoleRequest
      * @return GetProjectRoleResponse
      */
@@ -1439,6 +1445,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GrantMemberProjectRoles  GrantMemberProjectRolesRequest
      * @return GrantMemberProjectRolesResponse
      */
@@ -1719,7 +1728,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only if you are assigned one of the following roles in DataWorks:</p>
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</li>
      * </ul>
@@ -1871,6 +1883,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListProjectMembers  ListProjectMembersRequest
      * @return ListProjectMembersResponse
      */
@@ -1889,6 +1904,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
      * @return ListProjectRolesResponse
      */

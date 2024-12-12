@@ -93,6 +93,7 @@ public class UpdateRouteRequest extends Request {
         }
 
         /**
+         * <p>The destination CIDR block of the route that you want to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

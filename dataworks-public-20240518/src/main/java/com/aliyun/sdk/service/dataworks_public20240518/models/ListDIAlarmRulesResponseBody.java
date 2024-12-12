@@ -119,13 +119,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private String severity; 
 
             /**
-             * <p>The alert notification method. Valid values:</p>
-             * <ul>
-             * <li>Mail</li>
-             * <li>Phone</li>
-             * <li>Sms</li>
-             * <li>Ding</li>
-             * </ul>
+             * <p>The alert notification methods.</p>
              */
             public Builder channels(java.util.List < String > channels) {
                 this.channels = channels;
@@ -387,7 +381,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private Long threshold; 
 
             /**
-             * <p>The types of DDL operations for which the alert rule takes effect.</p>
+             * <p>The types of DDL operations for which the alert rule takes effect. This parameter is returned only if the MetricType parameter is set to DdlReport.</p>
              */
             public Builder ddlReportTags(java.util.List < String > ddlReportTags) {
                 this.ddlReportTags = ddlReportTags;
@@ -633,7 +627,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert notification settings.</p>
+             * <p>The alert notification method and recipient settings.</p>
              */
             public Builder notificationSettings(NotificationSettings notificationSettings) {
                 this.notificationSettings = notificationSettings;

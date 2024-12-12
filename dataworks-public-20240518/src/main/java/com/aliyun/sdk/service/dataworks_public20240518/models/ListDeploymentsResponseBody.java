@@ -237,12 +237,12 @@ public class ListDeploymentsResponseBody extends TeaModel {
              * <p>The status of the stage.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>INIT</li>
-             * <li>RUNNING</li>
-             * <li>SUCCESS</li>
-             * <li>FAIL</li>
-             * <li>TERMINATION</li>
-             * <li>CANCEL</li>
+             * <li>Init</li>
+             * <li>Running</li>
+             * <li>Success</li>
+             * <li>Fail</li>
+             * <li>Termination</li>
+             * <li>Cancel</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -268,11 +268,11 @@ public class ListDeploymentsResponseBody extends TeaModel {
              * <p>The type of the stage. This parameter indicates the operation type in the stage.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>DEPLOY</li>
-             * <li>CHECK</li>
-             * <li>OFFLINE.</li>
-             * <li>BUILD</li>
-             * <li>DELETE</li>
+             * <li>Deploy</li>
+             * <li>Check</li>
+             * <li>Offline</li>
+             * <li>Build</li>
+             * <li>Delete</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -481,12 +481,12 @@ public class ListDeploymentsResponseBody extends TeaModel {
              * <p>The status of the process.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>INIT</li>
-             * <li>RUNNING</li>
-             * <li>FAIL</li>
-             * <li>SUCCESS</li>
-             * <li>TERMINATION</li>
-             * <li>CANCEL</li>
+             * <li>Init</li>
+             * <li>Running</li>
+             * <li>Success</li>
+             * <li>Fail</li>
+             * <li>Termination</li>
+             * <li>Cancel</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -573,7 +573,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private String totalCount; 
 
             /**
-             * <p>The processes.</p>
+             * <p>The deployment processes.</p>
              */
             public Builder deployments(java.util.List < Deployments> deployments) {
                 this.deployments = deployments;

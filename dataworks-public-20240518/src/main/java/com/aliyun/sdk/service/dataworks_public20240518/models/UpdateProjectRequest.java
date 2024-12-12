@@ -241,7 +241,14 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Specifies whether to disable or enable the workspace. Valid values:</p>
+         * <ul>
+         * <li>Available: enables the workspace.</li>
+         * <li>Forbidden: disables the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Forbidden</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
