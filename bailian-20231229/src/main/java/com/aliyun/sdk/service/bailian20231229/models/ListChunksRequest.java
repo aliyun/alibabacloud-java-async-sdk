@@ -22,6 +22,10 @@ public class ListChunksRequest extends Request {
     private java.util.List < String > fields;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    private String fileId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Filed")
     private String filed;
 
@@ -42,6 +46,7 @@ public class ListChunksRequest extends Request {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.fields = builder.fields;
+        this.fileId = builder.fileId;
         this.filed = builder.filed;
         this.indexId = builder.indexId;
         this.pageNum = builder.pageNum;
@@ -76,6 +81,13 @@ public class ListChunksRequest extends Request {
     }
 
     /**
+     * @return fileId
+     */
+    public String getFileId() {
+        return this.fileId;
+    }
+
+    /**
      * @return filed
      */
     public String getFiled() {
@@ -106,6 +118,7 @@ public class ListChunksRequest extends Request {
     public static final class Builder extends Request.Builder<ListChunksRequest, Builder> {
         private String workspaceId; 
         private java.util.List < String > fields; 
+        private String fileId; 
         private String filed; 
         private String indexId; 
         private Integer pageNum; 
@@ -119,6 +132,7 @@ public class ListChunksRequest extends Request {
             super(request);
             this.workspaceId = request.workspaceId;
             this.fields = request.fields;
+            this.fileId = request.fileId;
             this.filed = request.filed;
             this.indexId = request.indexId;
             this.pageNum = request.pageNum;
@@ -144,6 +158,15 @@ public class ListChunksRequest extends Request {
         public Builder fields(java.util.List < String > fields) {
             this.putBodyParameter("Fields", fields);
             this.fields = fields;
+            return this;
+        }
+
+        /**
+         * FileId.
+         */
+        public Builder fileId(String fileId) {
+            this.putBodyParameter("FileId", fileId);
+            this.fileId = fileId;
             return this;
         }
 
