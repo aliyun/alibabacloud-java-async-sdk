@@ -80,6 +80,9 @@ public class CreateFunctionInput extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String runtime;
 
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List < Tag > tags;
+
     @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
 
@@ -111,6 +114,7 @@ public class CreateFunctionInput extends TeaModel {
         this.ossMountConfig = builder.ossMountConfig;
         this.role = builder.role;
         this.runtime = builder.runtime;
+        this.tags = builder.tags;
         this.timeout = builder.timeout;
         this.tracingConfig = builder.tracingConfig;
         this.vpcConfig = builder.vpcConfig;
@@ -272,6 +276,13 @@ public class CreateFunctionInput extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tag > getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return timeout
      */
     public Integer getTimeout() {
@@ -314,6 +325,7 @@ public class CreateFunctionInput extends TeaModel {
         private OSSMountConfig ossMountConfig; 
         private String role; 
         private String runtime; 
+        private java.util.List < Tag > tags; 
         private Integer timeout; 
         private TracingConfig tracingConfig; 
         private VPCConfig vpcConfig; 
@@ -492,6 +504,14 @@ public class CreateFunctionInput extends TeaModel {
          */
         public Builder runtime(String runtime) {
             this.runtime = runtime;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List < Tag > tags) {
+            this.tags = tags;
             return this;
         }
 

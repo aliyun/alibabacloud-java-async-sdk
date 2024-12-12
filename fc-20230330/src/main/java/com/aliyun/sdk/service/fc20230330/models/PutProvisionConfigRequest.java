@@ -97,7 +97,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * <p>The information about the provisioned configuration.</p>
+         * <p>The provisioned instance configurations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(PutProvisionConfigInput body) {

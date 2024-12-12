@@ -213,7 +213,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of asynchronous tasks to return. Valid values: [1,100]. Default value: 20.</p>
+         * <p>The number of asynchronous tasks to return. The default value is 20. Valid values: [1,100].</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

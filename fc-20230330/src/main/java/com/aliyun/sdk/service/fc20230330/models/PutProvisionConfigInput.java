@@ -18,10 +18,14 @@ public class PutProvisionConfigInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("alwaysAllocateGPU")
     private Boolean alwaysAllocateGPU;
 
+    @com.aliyun.core.annotation.NameInMap("defaultTarget")
+    private Long defaultTarget;
+
     @com.aliyun.core.annotation.NameInMap("scheduledActions")
     private java.util.List < ScheduledAction > scheduledActions;
 
     @com.aliyun.core.annotation.NameInMap("target")
+    @Deprecated
     @com.aliyun.core.annotation.Validation(required = true)
     private Long target;
 
@@ -31,6 +35,7 @@ public class PutProvisionConfigInput extends TeaModel {
     private PutProvisionConfigInput(Builder builder) {
         this.alwaysAllocateCPU = builder.alwaysAllocateCPU;
         this.alwaysAllocateGPU = builder.alwaysAllocateGPU;
+        this.defaultTarget = builder.defaultTarget;
         this.scheduledActions = builder.scheduledActions;
         this.target = builder.target;
         this.targetTrackingPolicies = builder.targetTrackingPolicies;
@@ -59,6 +64,13 @@ public class PutProvisionConfigInput extends TeaModel {
     }
 
     /**
+     * @return defaultTarget
+     */
+    public Long getDefaultTarget() {
+        return this.defaultTarget;
+    }
+
+    /**
      * @return scheduledActions
      */
     public java.util.List < ScheduledAction > getScheduledActions() {
@@ -82,6 +94,7 @@ public class PutProvisionConfigInput extends TeaModel {
     public static final class Builder {
         private Boolean alwaysAllocateCPU; 
         private Boolean alwaysAllocateGPU; 
+        private Long defaultTarget; 
         private java.util.List < ScheduledAction > scheduledActions; 
         private Long target; 
         private java.util.List < TargetTrackingPolicy > targetTrackingPolicies; 
@@ -99,6 +112,14 @@ public class PutProvisionConfigInput extends TeaModel {
          */
         public Builder alwaysAllocateGPU(Boolean alwaysAllocateGPU) {
             this.alwaysAllocateGPU = alwaysAllocateGPU;
+            return this;
+        }
+
+        /**
+         * defaultTarget.
+         */
+        public Builder defaultTarget(Long defaultTarget) {
+            this.defaultTarget = defaultTarget;
             return this;
         }
 

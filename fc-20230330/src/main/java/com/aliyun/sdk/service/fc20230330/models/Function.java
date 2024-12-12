@@ -108,6 +108,9 @@ public class Function extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("stateReasonCode")
     private String stateReasonCode;
 
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List < Tag > tags;
+
     @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
 
@@ -150,6 +153,7 @@ public class Function extends TeaModel {
         this.state = builder.state;
         this.stateReason = builder.stateReason;
         this.stateReasonCode = builder.stateReasonCode;
+        this.tags = builder.tags;
         this.timeout = builder.timeout;
         this.tracingConfig = builder.tracingConfig;
         this.vpcConfig = builder.vpcConfig;
@@ -388,6 +392,13 @@ public class Function extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tag > getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return timeout
      */
     public Integer getTimeout() {
@@ -441,6 +452,7 @@ public class Function extends TeaModel {
         private String state; 
         private String stateReason; 
         private String stateReasonCode; 
+        private java.util.List < Tag > tags; 
         private Integer timeout; 
         private TracingConfig tracingConfig; 
         private VPCConfig vpcConfig; 
@@ -698,6 +710,14 @@ public class Function extends TeaModel {
          */
         public Builder stateReasonCode(String stateReasonCode) {
             this.stateReasonCode = stateReasonCode;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List < Tag > tags) {
+            this.tags = tags;
             return this;
         }
 

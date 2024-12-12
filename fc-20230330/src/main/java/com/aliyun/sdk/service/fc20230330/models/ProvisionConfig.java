@@ -24,6 +24,9 @@ public class ProvisionConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("currentError")
     private String currentError;
 
+    @com.aliyun.core.annotation.NameInMap("defaultTarget")
+    private Long defaultTarget;
+
     @com.aliyun.core.annotation.NameInMap("functionArn")
     private String functionArn;
 
@@ -41,6 +44,7 @@ public class ProvisionConfig extends TeaModel {
         this.alwaysAllocateGPU = builder.alwaysAllocateGPU;
         this.current = builder.current;
         this.currentError = builder.currentError;
+        this.defaultTarget = builder.defaultTarget;
         this.functionArn = builder.functionArn;
         this.scheduledActions = builder.scheduledActions;
         this.target = builder.target;
@@ -84,6 +88,13 @@ public class ProvisionConfig extends TeaModel {
     }
 
     /**
+     * @return defaultTarget
+     */
+    public Long getDefaultTarget() {
+        return this.defaultTarget;
+    }
+
+    /**
      * @return functionArn
      */
     public String getFunctionArn() {
@@ -116,6 +127,7 @@ public class ProvisionConfig extends TeaModel {
         private Boolean alwaysAllocateGPU; 
         private Long current; 
         private String currentError; 
+        private Long defaultTarget; 
         private String functionArn; 
         private java.util.List < ScheduledAction > scheduledActions; 
         private Long target; 
@@ -150,6 +162,14 @@ public class ProvisionConfig extends TeaModel {
          */
         public Builder currentError(String currentError) {
             this.currentError = currentError;
+            return this;
+        }
+
+        /**
+         * defaultTarget.
+         */
+        public Builder defaultTarget(Long defaultTarget) {
+            this.defaultTarget = defaultTarget;
             return this;
         }
 
