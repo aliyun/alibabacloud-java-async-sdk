@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link PredictSseRequest} extends {@link RequestModel}
+ * {@link PredictRequest} extends {@link RequestModel}
  *
- * <p>PredictSseRequest</p>
+ * <p>PredictRequest</p>
  */
-public class PredictSseRequest extends Request {
+public class PredictRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dbName")
     private String dbName;
@@ -32,7 +32,7 @@ public class PredictSseRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("parameters")
     private java.util.Map < String, ? > parameters;
 
-    private PredictSseRequest(Builder builder) {
+    private PredictRequest(Builder builder) {
         super(builder);
         this.dbName = builder.dbName;
         this.input = builder.input;
@@ -45,7 +45,7 @@ public class PredictSseRequest extends Request {
         return new Builder();
     }
 
-    public static PredictSseRequest create() {
+    public static PredictRequest create() {
         return builder().build();
     }
 
@@ -89,7 +89,7 @@ public class PredictSseRequest extends Request {
         return this.parameters;
     }
 
-    public static final class Builder extends Request.Builder<PredictSseRequest, Builder> {
+    public static final class Builder extends Request.Builder<PredictRequest, Builder> {
         private String dbName; 
         private String input; 
         private String instanceName; 
@@ -100,7 +100,7 @@ public class PredictSseRequest extends Request {
             super();
         } 
 
-        private Builder(PredictSseRequest request) {
+        private Builder(PredictRequest request) {
             super(request);
             this.dbName = request.dbName;
             this.input = request.input;
@@ -155,8 +155,8 @@ public class PredictSseRequest extends Request {
         }
 
         @Override
-        public PredictSseRequest build() {
-            return new PredictSseRequest(this);
+        public PredictRequest build() {
+            return new PredictRequest(this);
         } 
 
     } 

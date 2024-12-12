@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link PredictSseResponseBody} extends {@link TeaModel}
+ * {@link PredictResponseBody} extends {@link TeaModel}
  *
- * <p>PredictSseResponseBody</p>
+ * <p>PredictResponseBody</p>
  */
-public class PredictSseResponseBody extends TeaModel {
+public class PredictResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private Object data;
 
@@ -27,7 +27,7 @@ public class PredictSseResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private PredictSseResponseBody(Builder builder) {
+    private PredictResponseBody(Builder builder) {
         this.data = builder.data;
         this.errCode = builder.errCode;
         this.errMessage = builder.errMessage;
@@ -39,7 +39,7 @@ public class PredictSseResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static PredictSseResponseBody create() {
+    public static PredictResponseBody create() {
         return builder().build();
     }
 
@@ -128,8 +128,8 @@ public class PredictSseResponseBody extends TeaModel {
             return this;
         }
 
-        public PredictSseResponseBody build() {
-            return new PredictSseResponseBody(this);
+        public PredictResponseBody build() {
+            return new PredictResponseBody(this);
         } 
 
     } 

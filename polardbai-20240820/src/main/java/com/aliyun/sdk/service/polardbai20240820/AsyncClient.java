@@ -19,7 +19,19 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+     * @param request the request parameters of Predict  PredictRequest
+     * @return PredictResponse
+     */
+    CompletableFuture<PredictResponse> predict(PredictRequest request);
+
+    /**
+     * @param request the request parameters of PredictSse  PredictSseRequest
+     * @return PredictSseResponse
+     */
     CompletableFuture<PredictSseResponse> predictSse(PredictSseRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> predictSseWithAsyncResponseHandler(PredictSseRequest request, AsyncResponseHandler<PredictSseResponse, ReturnT> responseHandler);
 
     ResponseIterable<PredictSseResponseBody> predictSseWithResponseIterable(PredictSseRequest request);
 

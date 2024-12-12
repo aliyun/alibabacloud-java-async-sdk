@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link PredictSseResponse} extends {@link TeaModel}
+ * {@link PredictResponse} extends {@link TeaModel}
  *
- * <p>PredictSseResponse</p>
+ * <p>PredictResponse</p>
  */
-public class PredictSseResponse extends Response {
+public class PredictResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class PredictSseResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private PredictSseResponseBody body;
+    private PredictResponseBody body;
 
-    private PredictSseResponse(BuilderImpl builder) {
+    private PredictResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static PredictSseResponse create() {
+    public static PredictResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class PredictSseResponse extends Response {
     /**
      * @return body
      */
-    public PredictSseResponseBody getBody() {
+    public PredictResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<PredictSseResponse, Builder> {
+    public interface Builder extends Response.Builder<PredictResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(PredictSseResponseBody body);
+        Builder body(PredictResponseBody body);
 
         @Override
-        PredictSseResponse build();
+        PredictResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<PredictSseResponse, Builder>
+            extends Response.BuilderImpl<PredictResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private PredictSseResponseBody body; 
+        private PredictResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(PredictSseResponse response) {
+        private BuilderImpl(PredictResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class PredictSseResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(PredictSseResponseBody body) {
+        public Builder body(PredictResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public PredictSseResponse build() {
-            return new PredictSseResponse(this);
+        public PredictResponse build() {
+            return new PredictResponse(this);
         } 
 
     } 
