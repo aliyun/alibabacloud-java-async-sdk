@@ -19,7 +19,7 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
     private Long aliUid;
 
     @com.aliyun.core.annotation.NameInMap("Components")
-    private java.util.Map < String, ? > components;
+    private Object components;
 
     @com.aliyun.core.annotation.NameInMap("CouponPrice")
     private Float couponPrice;
@@ -120,7 +120,7 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
     /**
      * @return components
      */
-    public java.util.Map < String, ? > getComponents() {
+    public Object getComponents() {
         return this.components;
     }
 
@@ -246,7 +246,7 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
     public static final class Builder {
         private Long accountQuantity; 
         private Long aliUid; 
-        private java.util.Map < String, ? > components; 
+        private Object components; 
         private Float couponPrice; 
         private Long createdOn; 
         private java.util.List < String > instanceIds; 
@@ -284,7 +284,7 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
         /**
          * Components.
          */
-        public Builder components(java.util.Map < String, ? > components) {
+        public Builder components(Object components) {
             this.components = components;
             return this;
         }
