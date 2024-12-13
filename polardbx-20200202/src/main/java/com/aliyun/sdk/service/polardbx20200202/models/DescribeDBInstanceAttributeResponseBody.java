@@ -638,6 +638,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
+        @com.aliyun.core.annotation.NameInMap("PrimaryInstanceId")
+        private String primaryInstanceId;
+
         @com.aliyun.core.annotation.NameInMap("PrimaryZone")
         @com.aliyun.core.annotation.Validation(required = true)
         private String primaryZone;
@@ -731,6 +734,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.network = builder.network;
             this.payType = builder.payType;
             this.port = builder.port;
+            this.primaryInstanceId = builder.primaryInstanceId;
             this.primaryZone = builder.primaryZone;
             this.readDBInstances = builder.readDBInstances;
             this.regionId = builder.regionId;
@@ -1012,6 +1016,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return primaryInstanceId
+         */
+        public String getPrimaryInstanceId() {
+            return this.primaryInstanceId;
+        }
+
+        /**
          * @return primaryZone
          */
         public String getPrimaryZone() {
@@ -1174,6 +1185,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String network; 
             private String payType; 
             private String port; 
+            private String primaryInstanceId; 
             private String primaryZone; 
             private java.util.List < String > readDBInstances; 
             private String regionId; 
@@ -1478,6 +1490,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder port(String port) {
                 this.port = port;
+                return this;
+            }
+
+            /**
+             * PrimaryInstanceId.
+             */
+            public Builder primaryInstanceId(String primaryInstanceId) {
+                this.primaryInstanceId = primaryInstanceId;
                 return this;
             }
 
