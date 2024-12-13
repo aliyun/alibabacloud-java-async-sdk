@@ -24,7 +24,7 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientIp")
     private String clientIp;
 
@@ -198,7 +198,7 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
          * ClientIp.
          */
         public Builder clientIp(String clientIp) {
-            this.putBodyParameter("ClientIp", clientIp);
+            this.putQueryParameter("ClientIp", clientIp);
             this.clientIp = clientIp;
             return this;
         }
