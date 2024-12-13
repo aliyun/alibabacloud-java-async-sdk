@@ -1521,7 +1521,7 @@ public class CreateClusterRequest extends Request {
          * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: enables auto-renewal.</li>
-         * <li><code>false</code>: disables auto-renewal.</li>
+         * <li><code>false</code>: disables auto-renewal</li>
          * </ul>
          * <p>Default value: <code>false</code></p>
          * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
@@ -1537,7 +1537,7 @@ public class CreateClusterRequest extends Request {
 
         /**
          * <p>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <code>period_unit</code> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</p>
-         * <p>Default value: 1.</p>
+         * <p>Default value: 1</p>
          * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
          * 
          * <strong>example:</strong>
@@ -1628,7 +1628,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <ul>
          * <li><code>Kubernetes</code>: an ACK dedicated cluster.</li>
-         * <li><code>ManagedKubernetes</code>: an ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).</li>
+         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
          * <li><code>ExternalKubernetes</code>: a registered cluster.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -2011,7 +2011,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Cluster maintenance window.</p>
+         * <p>The configurations of the cluster maintenance window.</p>
          */
         public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
             this.putBodyParameter("maintenance_window", maintenanceWindow);
@@ -2023,7 +2023,7 @@ public class CreateClusterRequest extends Request {
          * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: enables auto-renewal.</li>
-         * <li><code>false</code>: disables auto-renewal.</li>
+         * <li><code>false</code>: disables auto-renewal</li>
          * </ul>
          * <p>Default value: <code>true</code></p>
          * 
@@ -2039,7 +2039,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.</p>
          * <p>Valid values: 1, 2, 3, 6, and 12.</p>
-         * <p>Default value: 1.</p>
+         * <p>Default value: 1</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2067,7 +2067,7 @@ public class CreateClusterRequest extends Request {
          * <p>The billing method of master nodes. Valid values:</p>
          * <ul>
          * <li><code>PrePaid</code>: subscription.</li>
-         * <li><code>PostPaid</code>: pay-as-you-go.</li>
+         * <li><code>PostPaid</code>: the pay-as-you-go.</li>
          * </ul>
          * <p>Default value: <code>PostPaid</code></p>
          * 
@@ -2081,7 +2081,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+         * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
          */
         public Builder masterInstanceTypes(java.util.List < String > masterInstanceTypes) {
             this.putBodyParameter("master_instance_types", masterInstanceTypes);
@@ -2092,7 +2092,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The subscription duration of master nodes. This parameter takes effect and is required only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
          * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-         * <p>Default value: 1.</p>
+         * <p>Default value: 1</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2120,7 +2120,7 @@ public class CreateClusterRequest extends Request {
          * <p>The system disk type of master nodes. Valid values:</p>
          * <ul>
          * <li><code>cloud_efficiency</code>: ultra disk</li>
-         * <li><code>cloud_ssd</code>: standard SSD</li>
+         * <li><code>cloud_ssd</code>: standard SSD.</li>
          * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
          * </ul>
          * <p>Default value: <code>cloud_ssd</code>. The default value may vary in different zones.</p>
@@ -2182,7 +2182,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * <p>The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and underscores (_). The cluster name cannot start with a hyphen (-).</p>
          * <p>This parameter is required.</p>
          * 
@@ -2273,7 +2273,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Cluster auto operation and maintenance policy.</p>
+         * <p>The automatic O&amp;M policy of the cluster.</p>
          */
         public Builder operationPolicy(OperationPolicy operationPolicy) {
             this.putBodyParameter("operation_policy", operationPolicy);
@@ -2301,7 +2301,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</p>
          * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-         * <p>Default value: 1.</p>
+         * <p>Default value: 1</p>
          * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
          * 
          * <strong>example:</strong>
@@ -2328,7 +2328,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The operating system distribution. Valid values:</p>
+         * <p>The OS distribution that is used. Valid values:</p>
          * <ul>
          * <li>CentOS</li>
          * <li>AliyunLinux</li>
@@ -2363,10 +2363,10 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</p>
          * <ul>
-         * <li><code>Default</code>. an ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
-         * <li><code>Edge</code>: an ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
-         * <li><code>Serverless</code>: an ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
-         * <li><code>Lingjun</code>: an ACK Lingjun Pro cluster.</li>
+         * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+         * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+         * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+         * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2530,11 +2530,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable security hardening based on Multi-Level Protection Scheme (MLPS). For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
+         * <p>Specifies whether to enable Multi-Level Protection Scheme (MLPS) security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enables security hardening based on MLPS.</li>
-         * <li><code>false</code>: disables security hardening based on MLPS.</li>
+         * <li><code>true</code>: enables MLPS security hardening.</li>
+         * <li><code>false</code>: disables MLPS security hardening.</li>
          * </ul>
          * <p>Default value: <code>false</code></p>
          * 
@@ -2565,9 +2565,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The tags to be added to nodes. You must add labels based on the following rules:</p>
+         * <p>The tags to be added to nodes. When you add tags to a node, the following rules apply:</p>
          * <ul>
-         * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
+         * <li>A tag is a case-sensitive key-value pair. You can add up to 20 tags.</li>
          * <li>When you add a tag, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
          * </ul>
          */
@@ -2578,7 +2578,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The taint. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
+         * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
         public Builder taints(java.util.List < Taint > taints) {
             this.putBodyParameter("taints", taints);
@@ -2699,7 +2699,7 @@ public class CreateClusterRequest extends Request {
          * <p>The billing method of worker nodes. Valid values:</p>
          * <ul>
          * <li><code>PrePaid</code>: subscription.</li>
-         * <li><code>PostPaid</code>: pay-as-you-go.</li>
+         * <li><code>PostPaid</code>: the pay-as-you-go.</li>
          * </ul>
          * <p>Default value: PostPaid.</p>
          * 
@@ -2724,7 +2724,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The subscription duration of worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
          * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-         * <p>Default value: 1.</p>
+         * <p>Default value: 1</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -3165,7 +3165,7 @@ public class CreateClusterRequest extends Request {
              * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
              * <ul>
              * <li><code>true</code>: enables auto-renewal.</li>
-             * <li><code>false</code>: disables auto-renewal.</li>
+             * <li><code>false</code>: disables auto-renewal</li>
              * </ul>
              * <p>Default value: <code>false</code></p>
              * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
@@ -3180,7 +3180,7 @@ public class CreateClusterRequest extends Request {
 
             /**
              * <p>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <code>period_unit</code> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</p>
-             * <p>Default value: 1.</p>
+             * <p>Default value: 1</p>
              * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
              * 
              * <strong>example:</strong>
@@ -3327,7 +3327,7 @@ public class CreateClusterRequest extends Request {
             /**
              * <p>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</p>
              * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-             * <p>Default value: 1.</p>
+             * <p>Default value: 1</p>
              * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
              * 
              * <strong>example:</strong>
@@ -3385,11 +3385,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable security hardening based on Multi-Level Protection Scheme (MLPS). For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
+             * <p>Specifies whether to enable Multi-Level Protection Scheme (MLPS) security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enables security hardening based on MLPS.</li>
-             * <li><code>false</code>: disables security hardening based on MLPS.</li>
+             * <li><code>true</code>: enables MLPS security hardening.</li>
+             * <li><code>false</code>: disables MLPS security hardening.</li>
              * </ul>
              * <p>Default value: <code>false</code></p>
              * 
@@ -3501,7 +3501,7 @@ public class CreateClusterRequest extends Request {
             private Boolean enabled; 
 
             /**
-             * <p>Cluster auto-upgrade frequency. Possible values: </p>
+             * <p>The automatic update frequency. Valid values:</p>
              * <ul>
              * <li>patch</li>
              * <li>stable</li>
@@ -3517,7 +3517,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Whether to enable automatic cluster upgrades.</p>
+             * <p>Specifies whether to enable auto cluster update.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3567,7 +3567,7 @@ public class CreateClusterRequest extends Request {
             private ClusterAutoUpgrade clusterAutoUpgrade; 
 
             /**
-             * <p>Automatic cluster upgrade</p>
+             * <p>The configurations of auto cluster update.</p>
              */
             public Builder clusterAutoUpgrade(ClusterAutoUpgrade clusterAutoUpgrade) {
                 this.clusterAutoUpgrade = clusterAutoUpgrade;

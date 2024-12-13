@@ -62,7 +62,7 @@ public class UnInstallClusterAddonsResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * cluster_id.
+         * <p>集群ID。</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -70,7 +70,7 @@ public class UnInstallClusterAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>请求ID。</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class UnInstallClusterAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * task_id.
+         * <p>任务ID。</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

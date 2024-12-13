@@ -20,10 +20,15 @@ public class GetClusterDiagnosisCheckItemsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("diagnosis_id")
     private String diagnosisId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("language")
+    private String language;
+
     private GetClusterDiagnosisCheckItemsRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.diagnosisId = builder.diagnosisId;
+        this.language = builder.language;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class GetClusterDiagnosisCheckItemsRequest extends Request {
         return this.diagnosisId;
     }
 
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
     public static final class Builder extends Request.Builder<GetClusterDiagnosisCheckItemsRequest, Builder> {
         private String clusterId; 
         private String diagnosisId; 
+        private String language; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class GetClusterDiagnosisCheckItemsRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.diagnosisId = request.diagnosisId;
+            this.language = request.language;
         } 
 
         /**
@@ -88,6 +102,18 @@ public class GetClusterDiagnosisCheckItemsRequest extends Request {
         public Builder diagnosisId(String diagnosisId) {
             this.putPathParameter("diagnosis_id", diagnosisId);
             this.diagnosisId = diagnosisId;
+            return this;
+        }
+
+        /**
+         * <p>查询语言。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_CN</p>
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("language", language);
+            this.language = language;
             return this;
         }
 

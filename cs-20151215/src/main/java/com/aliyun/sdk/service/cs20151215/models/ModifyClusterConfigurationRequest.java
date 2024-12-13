@@ -82,7 +82,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The custom configuration.</p>
+         * <p>The custom configurations.</p>
          */
         public Builder customizeConfig(java.util.List < CustomizeConfig> customizeConfig) {
             this.putBodyParameter("customize_config", customizeConfig);
@@ -215,7 +215,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             private String name; 
 
             /**
-             * <p>The custom configuration.</p>
+             * <p>The custom configurations.</p>
              */
             public Builder configs(java.util.List < Configs> configs) {
                 this.configs = configs;

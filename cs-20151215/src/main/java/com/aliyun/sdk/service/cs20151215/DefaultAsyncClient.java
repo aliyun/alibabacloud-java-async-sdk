@@ -2091,11 +2091,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>  When you remove a node, the pods on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</p>
      * <ul>
-     * <li>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </li>
-     * <li>The operation may have unexpected risks. Back up the data before you perform this operation. </li>
-     * <li>When the system removes a node, it sets the status of the node to Unschedulable. </li>
+     * <li>The operation may have unexpected risks. Back up the data before you perform this operation.</li>
+     * <li>Nodes remain in the Unschedulable state when they are being removed.</li>
      * <li>The system removes only worker nodes. It does not remove master nodes.</li>
+     * <li>Even if you set the <code>release_node</code> parameter to <code>true</code>, subscription nodes are not released. You must release the subscription nodes in the <a href="https://ecs.console.aliyun.com/">ECS console</a> after you remove the nodes.</li>
      * </ul>
      * 
      * @param request the request parameters of RemoveNodePoolNodes  RemoveNodePoolNodesRequest

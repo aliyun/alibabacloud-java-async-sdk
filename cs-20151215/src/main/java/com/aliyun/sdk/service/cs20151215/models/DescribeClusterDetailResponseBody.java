@@ -509,7 +509,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * <p>The on-premises domain name of the cluster.</p>
+         * <p>The domain name of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster.local</p>
@@ -561,7 +561,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The CIDR block of the pod.</p>
+         * <p>The CIDR block of the pod. The configuration of the Flannel network plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>172.20.0.0/16</p>
@@ -572,7 +572,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * control_plane_config.
+         * <p>The control plane configurations in an ACK dedicated cluster.</p>
          */
         public Builder controlPlaneConfig(ControlPlaneConfig controlPlaneConfig) {
             this.controlPlaneConfig = controlPlaneConfig;
@@ -729,7 +729,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the IP addresses of the node.</p>
+         * <p>The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel network plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>26</p>
@@ -789,7 +789,11 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The proxy mode. Valid values: ipvs and iptables.</p>
+         * <p>The kube-proxy mode. Valid values:</p>
+         * <ul>
+         * <li><code>iptables</code>: a mature and stable kube-proxy mode that uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
+         * <li><code>ipvs</code>: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios that require high load balancing performance.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ipvs</p>
@@ -833,7 +837,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The CIDR block of the Service.</p>
+         * <p>The CIDR block of the service network.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -907,7 +911,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time zone.</p>
+         * <p>The time zone</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -940,7 +944,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</p>
+         * <p>The ID of the vSwitche. This field is deprecated. Use vswitch_ids to query the vSwitches on the control plane and vswitch_ids to query the vSwitches on the data plane.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-2zete8s4qocqg0mf6****,vsw-2zete8s4qocqg0mf6****</p>
@@ -1283,7 +1287,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             private String systemDiskSnapshotPolicyId; 
 
             /**
-             * auto_renew.
+             * <p>Indicates whether auto-renewal is enabled for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1291,7 +1298,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * auto_renew_period.
+             * <p>The auto-renewal duration for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoRenewPeriod(Long autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -1299,7 +1309,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * charge_type.
+             * <p>The billing method of the control plane node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1307,7 +1320,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cloud_monitor_flags.
+             * <p>Indicates whether to install CloudMonitor for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
                 this.cloudMonitorFlags = cloudMonitorFlags;
@@ -1315,7 +1331,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cpu_policy.
+             * <p>The CPU management policy of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder cpuPolicy(String cpuPolicy) {
                 this.cpuPolicy = cpuPolicy;
@@ -1323,7 +1342,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * deploymentset_id.
+             * <p>The ID of the deployment set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-bp10b35imuam5amw****</p>
              */
             public Builder deploymentsetId(String deploymentsetId) {
                 this.deploymentsetId = deploymentsetId;
@@ -1331,7 +1353,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * image_id.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_3_x64_20G_alibase_20240819.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1339,7 +1364,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * image_type.
+             * <p>The type of the OS image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunLinux3</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -1347,7 +1375,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * instance_types.
+             * <p>The instance type of the node.</p>
              */
             public Builder instanceTypes(java.util.List < String > instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -1355,7 +1383,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * key_pair.
+             * <p>The name of the key pair. You must set key_pair or login_password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack</p>
              */
             public Builder keyPair(String keyPair) {
                 this.keyPair = keyPair;
@@ -1363,7 +1394,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * node_port_range.
+             * <p>The node port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000-32767</p>
              */
             public Builder nodePortRange(String nodePortRange) {
                 this.nodePortRange = nodePortRange;
@@ -1371,7 +1405,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * period.
+             * <p>The subscription duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -1379,7 +1416,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * period_unit.
+             * <p>The unit of the subscription duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -1387,7 +1427,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * runtime.
+             * <p>The runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>containerd</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -1395,7 +1438,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * security_hardening_os.
+             * <p>Indicates whether to enable Alibaba Cloud Linux Security Hardening.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder securityHardeningOs(Boolean securityHardeningOs) {
                 this.securityHardeningOs = securityHardeningOs;
@@ -1403,10 +1449,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes in the cluster. Master nodes and worker nodes are included.</p>
+             * <p>The number of control plane nodes.</p>
              * 
              * <strong>example:</strong>
-             * <p>5</p>
+             * <p>3</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -1414,7 +1460,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * soc_enabled.
+             * <p>Indicates whether to enable Multi-Level Protection Scheme (MLPS) security hardening.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder socEnabled(Boolean socEnabled) {
                 this.socEnabled = socEnabled;
@@ -1422,7 +1471,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_bursting_enabled.
+             * <p>Indicates whether to enable the burst feature for the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
                 this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
@@ -1430,7 +1482,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_category.
+             * <p>The category of the system disk for nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1438,7 +1493,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_performance_level.
+             * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -1446,7 +1504,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_provisioned_iops.
+             * <p>The preset read/write IOPS of the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
                 this.systemDiskProvisionedIops = systemDiskProvisionedIops;
@@ -1454,7 +1515,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_size.
+             * <p>The system disk size of the node. The value must be at least 40 GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder systemDiskSize(Long systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -1462,7 +1526,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_snapshot_policy_id.
+             * <p>The automatic snapshot policy of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-2zej1nogjvovnz4z****</p>
              */
             public Builder systemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
                 this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;

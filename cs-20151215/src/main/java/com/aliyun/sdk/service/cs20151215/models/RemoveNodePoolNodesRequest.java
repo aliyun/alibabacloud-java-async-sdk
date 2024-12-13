@@ -205,7 +205,11 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
+         * <p>This parameter is deprecated.</p>
          * <p>A list of nodes that you want to remove.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated. Use instance_ids instead.</p>
+         * </blockquote>
          */
         public Builder nodes(java.util.List < String > nodes) {
             String nodesShrink = shrink(nodes, "nodes", "json");
