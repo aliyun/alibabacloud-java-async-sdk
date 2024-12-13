@@ -1,3 +1,6 @@
+2024-12-13 Version: 3.0.5
+- Generated java-async 2018-05-10 for Cdn.
+
 2024-12-11 Version: 3.0.4
 - Generated java-async 2018-05-10 for Cdn.
 
