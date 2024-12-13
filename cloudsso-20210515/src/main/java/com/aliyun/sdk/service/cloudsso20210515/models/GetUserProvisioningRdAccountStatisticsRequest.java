@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserProvisioningRdAccountStatisticsRequest} extends {@link RequestModel}
  *
  * <p>GetUserProvisioningRdAccountStatisticsRequest</p>
@@ -67,7 +68,10 @@ public class GetUserProvisioningRdAccountStatisticsRequest extends Request {
         } 
 
         /**
-         * The ID of the resource directory.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -76,7 +80,10 @@ public class GetUserProvisioningRdAccountStatisticsRequest extends Request {
         }
 
         /**
-         * The ID of the member in the resource directory.
+         * <p>The ID of the member in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743382******</p>
          */
         public Builder rdMemberId(String rdMemberId) {
             this.putQueryParameter("RdMemberId", rdMemberId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetMFAAuthenticationStatusResponseBody} extends {@link TeaModel}
  *
  * <p>SetMFAAuthenticationStatusResponseBody</p>
@@ -37,7 +38,10 @@ public class SetMFAAuthenticationStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14E2B1A9-7713-5E6F-8409-8DE12DF51AF4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

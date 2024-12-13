@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMFADeviceForUserRequest} extends {@link RequestModel}
  *
  * <p>DeleteMFADeviceForUserRequest</p>
@@ -81,7 +82,10 @@ public class DeleteMFADeviceForUserRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -90,10 +94,11 @@ public class DeleteMFADeviceForUserRequest extends Request {
         }
 
         /**
-         * The ID of the MFA device.
-         * <p>
+         * <p>The ID of the MFA device.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/333531.html">ListMFADevicesForUser</a> operation to query the IDs of MFA devices.</p>
          * 
-         * You can call the [ListMFADevicesForUser](~~333531~~) operation to query the IDs of MFA devices.
+         * <strong>example:</strong>
+         * <p>mfa-00ujhet8pycljj7j****</p>
          */
         public Builder MFADeviceId(String MFADeviceId) {
             this.putQueryParameter("MFADeviceId", MFADeviceId);
@@ -102,7 +107,10 @@ public class DeleteMFADeviceForUserRequest extends Request {
         }
 
         /**
-         * The ID of the user.
+         * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGroupResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the group.
+         * <p>The information about the group.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -57,7 +58,10 @@ public class CreateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20E9650E-EC23-593E-933F-EA0D280D040C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateGroupResponseBody</p>
+     */
     public static class Group extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -157,7 +167,10 @@ public class CreateGroupResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the group was created.
+             * <p>The time when the group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-01T02:38:27Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -165,7 +178,10 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the group.
+             * <p>The description of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a group.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -173,7 +189,10 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-00jqzghi2n3o5hkh****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -181,7 +200,10 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -189,7 +211,10 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the group. The value is fixed as Manual, which indicates that the group is manually created.
+             * <p>The type of the group. The value is fixed as Manual, which indicates that the group is manually created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -197,7 +222,10 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the group was modified.
+             * <p>The time when the information about the group was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-01T02:38:27Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

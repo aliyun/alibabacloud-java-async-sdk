@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPasswordPolicyRequest} extends {@link RequestModel}
  *
  * <p>GetPasswordPolicyRequest</p>
@@ -53,7 +54,10 @@ public class GetPasswordPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskResponseBody</p>
@@ -49,7 +50,10 @@ public class GetTaskResponseBody extends TeaModel {
         private Task task; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>923CA5E8-57BF-5E15-8BA6-E75A966B7E3F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The task information.
+         * <p>The task information.</p>
          */
         public Builder task(Task task) {
             this.task = task;
@@ -70,6 +74,12 @@ public class GetTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskResponseBody</p>
+     */
     public static class Task extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
         private String accessConfigurationId;
@@ -277,7 +287,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The ID of the access configuration.
+             * <p>The ID of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac-00jhtfl8thteu6uj****</p>
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -285,7 +298,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access configuration.
+             * <p>The name of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS-Admin</p>
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -293,7 +309,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the task.
+             * <p>The end time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-05T02:58:08Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -301,10 +320,13 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the task failure.
-             * <p>
+             * <p>The cause of the task failure.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of <code>Status</code> is <code>Failed</code>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the value of `Status` is `Failed`.
+             * <strong>example:</strong>
+             * <p>No Permission.</p>
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
@@ -312,7 +334,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CloudSSO identity.
+             * <p>The ID of the CloudSSO identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u-00q8wbq42wiltcrk****</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -320,7 +345,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CloudSSO identity.
+             * <p>The name of the CloudSSO identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -328,11 +356,14 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the CloudSSO identity. Valid values:
-             * <p>
+             * <p>The type of the CloudSSO identity. Valid values:</p>
+             * <ul>
+             * <li>User</li>
+             * <li>Group</li>
+             * </ul>
              * 
-             * *   User
-             * *   Group
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -340,7 +371,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the task.
+             * <p>The start time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-05T02:58:07Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -348,12 +382,15 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task status. Valid values:
-             * <p>
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>InProgress: The task is running.</li>
+             * <li>Success: The task is successful.</li>
+             * <li>Failed: The task failed.</li>
+             * </ul>
              * 
-             * *   InProgress: The task is running.
-             * *   Success: The task is successful.
-             * *   Failed: The task failed.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -361,7 +398,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task object.
+             * <p>The ID of the task object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114240524784****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -369,7 +409,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task object.
+             * <p>The name of the task object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev-test</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -377,7 +420,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The path ID of the task object in the resource directory.
+             * <p>The path ID of the task object in the resource directory.</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -385,7 +428,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The path name of the task object in the resource directory.
+             * <p>The path name of the task object in the resource directory.</p>
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -393,7 +436,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.
+             * <p>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RD-Account</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -401,7 +447,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-shfqw1u1edszvxw5****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -409,13 +458,16 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task type. Valid values:
-             * <p>
+             * <p>The task type. Valid values:</p>
+             * <ul>
+             * <li>ProvisionAccessConfiguration: An access configuration is provisioned.</li>
+             * <li>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</li>
+             * <li>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</li>
+             * <li>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</li>
+             * </ul>
              * 
-             * *   ProvisionAccessConfiguration: An access configuration is provisioned.
-             * *   DeprovisionAccessConfiguration: An access configuration is de-provisioned.
-             * *   CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.
-             * *   DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.
+             * <strong>example:</strong>
+             * <p>DeleteAccessAssignment</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

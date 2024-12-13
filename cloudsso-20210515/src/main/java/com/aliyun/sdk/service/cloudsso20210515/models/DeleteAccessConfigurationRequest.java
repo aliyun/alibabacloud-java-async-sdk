@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccessConfigurationRequest} extends {@link RequestModel}
  *
  * <p>DeleteAccessConfigurationRequest</p>
@@ -81,7 +82,10 @@ public class DeleteAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the access configuration.
+         * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-001j9mcm3k7335bc****</p>
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -90,7 +94,10 @@ public class DeleteAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -99,11 +106,14 @@ public class DeleteAccessConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly remove system policies and inline policies. Valid values:
-         * <p>
+         * <p>Specifies whether to forcibly remove system policies and inline policies. Valid values:</p>
+         * <ul>
+         * <li>true: When you delete the access configuration, the associated system policies and inline policies are forcibly removed.</li>
+         * <li>false: When you delete the access configuration, the associated system policies and inline policies are not forcibly removed. This is the default value. If these policies exist in the access configuration, the deletion fails. Before you delete the access configuration, you must remove the system policies and inline policies. For more information, see <a href="https://help.aliyun.com/document_detail/336904.html">RemovePermissionPolicyFromAccessConfiguration</a>.</li>
+         * </ul>
          * 
-         * *   true: When you delete the access configuration, the associated system policies and inline policies are forcibly removed.
-         * *   false: When you delete the access configuration, the associated system policies and inline policies are not forcibly removed. This is the default value. If these policies exist in the access configuration, the deletion fails. Before you delete the access configuration, you must remove the system policies and inline policies. For more information, see [RemovePermissionPolicyFromAccessConfiguration](~~336904~~).
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceRemovePermissionPolicies(Boolean forceRemovePermissionPolicies) {
             this.putQueryParameter("ForceRemovePermissionPolicies", forceRemovePermissionPolicies);

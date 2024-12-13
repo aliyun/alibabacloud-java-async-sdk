@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserIdRequest} extends {@link RequestModel}
  *
  * <p>GetUserIdRequest</p>
@@ -67,7 +68,10 @@ public class GetUserIdRequest extends Request {
         } 
 
         /**
-         * The ID of the resource directory.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -76,7 +80,7 @@ public class GetUserIdRequest extends Request {
         }
 
         /**
-         * The identifier information about the user that is synchronized from an external identity provider (IdP).
+         * <p>The identifier information about the user that is synchronized from an external identity provider (IdP).</p>
          */
         public Builder externalId(ExternalId externalId) {
             String externalIdShrink = shrink(externalId, "ExternalId", "json");
@@ -92,6 +96,12 @@ public class GetUserIdRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserIdRequest} extends {@link TeaModel}
+     *
+     * <p>GetUserIdRequest</p>
+     */
     public static class ExternalId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -131,7 +141,10 @@ public class GetUserIdRequest extends Request {
             private String issuer; 
 
             /**
-             * The identifier of the user that is synchronized from an external IdP.
+             * <p>The identifier of the user that is synchronized from an external IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c73******a5fdd5</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -139,7 +152,10 @@ public class GetUserIdRequest extends Request {
             }
 
             /**
-             * The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.
+             * <p>The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SCIM</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;

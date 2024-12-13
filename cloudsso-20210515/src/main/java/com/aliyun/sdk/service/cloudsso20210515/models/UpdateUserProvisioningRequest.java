@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserProvisioningRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserProvisioningRequest</p>
@@ -109,7 +110,10 @@ public class UpdateUserProvisioningRequest extends Request {
         } 
 
         /**
-         * The ID of the resource directory.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -118,11 +122,14 @@ public class UpdateUserProvisioningRequest extends Request {
         }
 
         /**
-         * The new deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:
-         * <p>
+         * <p>The new deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
+         * <ul>
+         * <li>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</li>
+         * <li>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</li>
+         * </ul>
          * 
-         * *   Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.
-         * *   Keep: When you delete the RAM user provisioning, the system retains the synchronized users.
+         * <strong>example:</strong>
+         * <p>Delete</p>
          */
         public Builder newDeletionStrategy(String newDeletionStrategy) {
             this.putQueryParameter("NewDeletionStrategy", newDeletionStrategy);
@@ -131,7 +138,10 @@ public class UpdateUserProvisioningRequest extends Request {
         }
 
         /**
-         * The new description of the RAM user provisioning.
+         * <p>The new description of the RAM user provisioning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description*****</p>
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -140,11 +150,14 @@ public class UpdateUserProvisioningRequest extends Request {
         }
 
         /**
-         * The new conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:
-         * <p>
+         * <p>The new conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</p>
+         * <ul>
+         * <li>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</li>
+         * <li>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</li>
+         * </ul>
          * 
-         * *   KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix `_sso`.
-         * *   TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.
+         * <strong>example:</strong>
+         * <p>KeepBoth</p>
          */
         public Builder newDuplicationStrategy(String newDuplicationStrategy) {
             this.putQueryParameter("NewDuplicationStrategy", newDuplicationStrategy);
@@ -153,7 +166,10 @@ public class UpdateUserProvisioningRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user provisioning.
+         * <p>The ID of the RAM user provisioning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>up-002axzhapcbz6e63****</p>
          */
         public Builder userProvisioningId(String userProvisioningId) {
             this.putQueryParameter("UserProvisioningId", userProvisioningId);

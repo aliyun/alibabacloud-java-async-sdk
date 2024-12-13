@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteGroupRequest</p>
@@ -67,7 +68,10 @@ public class DeleteGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -76,7 +80,10 @@ public class DeleteGroupRequest extends Request {
         }
 
         /**
-         * The ID of the group.
+         * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-00jqzghi2n3o5hkh****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserProvisioningEventRequest} extends {@link RequestModel}
  *
  * <p>GetUserProvisioningEventRequest</p>
@@ -67,7 +68,10 @@ public class GetUserProvisioningEventRequest extends Request {
         } 
 
         /**
-         * The ID of the resource directory.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -76,7 +80,11 @@ public class GetUserProvisioningEventRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user provisioning event.
+         * <p>The ID of the RAM user provisioning event.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2636305.html">ListUserProvisioningEvents</a> operation to query the value of <code>EventId</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upe-wjKyNDmZvyZOiRcJ****</p>
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);

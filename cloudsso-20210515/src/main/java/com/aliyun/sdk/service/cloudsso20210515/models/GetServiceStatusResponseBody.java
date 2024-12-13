@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class GetServiceStatusResponseBody extends TeaModel {
         private ServiceStatus serviceStatus; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADADC31D-90EE-5459-99B0-D83DF07769A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status information of CloudSSO.
+         * <p>The status information of CloudSSO.</p>
          */
         public Builder serviceStatus(ServiceStatus serviceStatus) {
             this.serviceStatus = serviceStatus;
@@ -70,6 +74,12 @@ public class GetServiceStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceStatusResponseBody</p>
+     */
     public static class ServiceStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -133,7 +143,10 @@ public class GetServiceStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of your Alibaba Cloud account.
+             * <p>The ID of your Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151266687691****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -141,13 +154,17 @@ public class GetServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether you have permissions to enable CloudSSO. Valid values:
-             * <p>
+             * <p>Indicates whether you have permissions to enable CloudSSO. Valid values:</p>
+             * <ul>
+             * <li>Success: You have permissions to enable CloudSSO.</li>
+             * <li>Failed: You do not have permissions to enable CloudSSO.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The value of this parameter is returned only if the value of <code>Status</code> is <code>Disabled</code>.</p>
+             * </blockquote>
              * 
-             * *   Success: You have permissions to enable CloudSSO.
-             * *   Failed: You do not have permissions to enable CloudSSO.
-             * 
-             * >  The value of this parameter is returned only if the value of `Status` is `Disabled`.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder prerequisiteCheckResult(String prerequisiteCheckResult) {
                 this.prerequisiteCheckResult = prerequisiteCheckResult;
@@ -155,7 +172,7 @@ public class GetServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
              */
             public Builder regionsInUse(java.util.List < String > regionsInUse) {
                 this.regionsInUse = regionsInUse;
@@ -163,11 +180,14 @@ public class GetServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether CloudSSO is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether CloudSSO is enabled. Valid values:</p>
+             * <ul>
+             * <li>Enabled</li>
+             * <li>Disabled</li>
+             * </ul>
              * 
-             * *   Enabled
-             * *   Disabled
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

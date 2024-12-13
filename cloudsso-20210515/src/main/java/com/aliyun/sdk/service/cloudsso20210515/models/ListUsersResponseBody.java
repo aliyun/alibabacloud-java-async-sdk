@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersResponseBody</p>
@@ -97,11 +98,14 @@ public class ListUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * Indicates whether the queried entries are truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -109,7 +113,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -117,10 +124,13 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is <code>true</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only when the `IsTruncated` parameter is `true`.
+         * <strong>example:</strong>
+         * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -128,7 +138,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>734D9AAC-9A8E-5DF6-A633-ADE70FF2A9B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -136,7 +149,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -144,7 +160,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The users.
+         * <p>The users.</p>
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -157,6 +173,12 @@ public class ListUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class ExternalId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -196,7 +218,10 @@ public class ListUsersResponseBody extends TeaModel {
             private String issuer; 
 
             /**
-             * The identifier of the user that is synchronized from an external IdP.
+             * <p>The identifier of the user that is synchronized from an external IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c73******a5fdd5</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -204,7 +229,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.
+             * <p>The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SCIM</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -218,6 +246,12 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -377,7 +411,10 @@ public class ListUsersResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The time when the user was created. The value is displayed in UTC.
+             * <p>The time when the user was created. The value is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-30T09:20:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -385,7 +422,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the user.
+             * <p>The description of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a user.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -393,7 +433,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the user.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliceLee</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -401,7 +444,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:AliceLee@example.onmicrosoft.com">AliceLee@example.onmicrosoft.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -409,7 +455,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier information about the user synchronized from an external IdP.
+             * <p>The identifier information about the user synchronized from an external IdP.</p>
              */
             public Builder externalId(ExternalId externalId) {
                 this.externalId = externalId;
@@ -417,7 +463,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The first name of the user.
+             * <p>The first name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -425,7 +474,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The last name of the user.
+             * <p>The last name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lee</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -433,11 +485,14 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the user. Valid values:
-             * <p>
+             * <p>The type of the user. Valid values:</p>
+             * <ul>
+             * <li>Manual: The user is manually created.</li>
+             * <li>Synchronized: The user is synchronized from an external IdP.</li>
+             * </ul>
              * 
-             * *   Manual: The user is manually created.
-             * *   Synchronized: The user is synchronized from an external IdP.
+             * <strong>example:</strong>
+             * <p>Synchronized</p>
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -445,11 +500,14 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the user. Valid values:
-             * <p>
+             * <p>The status of the user. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The logon of the user is enabled.</li>
+             * <li>Disabled: The logon of the user is disabled.</li>
+             * </ul>
              * 
-             * *   Enabled: The logon of the user is enabled.
-             * *   Disabled: The logon of the user is disabled.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -457,7 +515,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the user was modified. The value is displayed in UTC.
+             * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-30T09:20:08Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -465,7 +526,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u-00bikzkuzbb58luh****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -473,7 +537,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user.
+             * <p>The name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:AliceLee@example.onmicrosoft.com">AliceLee@example.onmicrosoft.com</a></p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

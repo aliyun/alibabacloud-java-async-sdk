@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserIdResponseBody</p>
@@ -49,7 +50,10 @@ public class GetUserIdResponseBody extends TeaModel {
         private String userId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3A41736-A050-50B6-ABC5-590F376A0044</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class GetUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the CloudSSO user.
+         * <p>The ID of the CloudSSO user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-d8d1iox****</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

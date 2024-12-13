@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPermissionPolicyToAccessConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>AddPermissionPolicyToAccessConfigurationResponseBody</p>
@@ -37,7 +38,10 @@ public class AddPermissionPolicyToAccessConfigurationResponseBody extends TeaMod
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B7C6E839-FB65-59BE-B753-003AA8AF7DF7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

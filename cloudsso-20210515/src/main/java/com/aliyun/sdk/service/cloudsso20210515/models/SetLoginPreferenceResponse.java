@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetLoginPreferenceResponse} extends {@link TeaModel}
  *
  * <p>SetLoginPreferenceResponse</p>

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMFADeviceForUserResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMFADeviceForUserResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteMFADeviceForUserResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B9982ED-FD0D-5622-8EA0-7B768685DCE7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

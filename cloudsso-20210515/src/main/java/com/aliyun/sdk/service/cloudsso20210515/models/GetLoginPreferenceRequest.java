@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLoginPreferenceRequest} extends {@link RequestModel}
  *
  * <p>GetLoginPreferenceRequest</p>
@@ -53,7 +54,10 @@ public class GetLoginPreferenceRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

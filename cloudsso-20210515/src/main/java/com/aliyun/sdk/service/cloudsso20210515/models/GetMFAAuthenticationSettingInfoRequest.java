@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMFAAuthenticationSettingInfoRequest} extends {@link RequestModel}
  *
  * <p>GetMFAAuthenticationSettingInfoRequest</p>
@@ -53,7 +54,10 @@ public class GetMFAAuthenticationSettingInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

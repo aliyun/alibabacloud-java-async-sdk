@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserProvisioningRequest} extends {@link RequestModel}
  *
  * <p>GetUserProvisioningRequest</p>
@@ -67,7 +68,10 @@ public class GetUserProvisioningRequest extends Request {
         } 
 
         /**
-         * The ID of the resource directory.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -76,7 +80,10 @@ public class GetUserProvisioningRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user provisioning.
+         * <p>The ID of the RAM user provisioning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>up-002axzhapcbz6e63****</p>
          */
         public Builder userProvisioningId(String userProvisioningId) {
             this.putQueryParameter("UserProvisioningId", userProvisioningId);

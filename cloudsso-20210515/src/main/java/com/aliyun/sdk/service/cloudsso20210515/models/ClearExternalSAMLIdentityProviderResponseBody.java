@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ClearExternalSAMLIdentityProviderResponseBody} extends {@link TeaModel}
  *
  * <p>ClearExternalSAMLIdentityProviderResponseBody</p>
@@ -37,7 +38,10 @@ public class ClearExternalSAMLIdentityProviderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96D1E5FF-0301-5636-8D33-071E033CFB82</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

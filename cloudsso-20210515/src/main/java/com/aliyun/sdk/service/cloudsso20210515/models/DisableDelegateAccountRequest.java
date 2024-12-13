@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableDelegateAccountRequest} extends {@link RequestModel}
  *
  * <p>DisableDelegateAccountRequest</p>
@@ -53,7 +54,10 @@ public class DisableDelegateAccountRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>The ID of the delegated administrator account of CloudSSO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200971777065046</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);

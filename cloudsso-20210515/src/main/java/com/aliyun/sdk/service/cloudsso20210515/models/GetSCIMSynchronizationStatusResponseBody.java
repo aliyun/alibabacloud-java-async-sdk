@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSCIMSynchronizationStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetSCIMSynchronizationStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class GetSCIMSynchronizationStatusResponseBody extends TeaModel {
         private String SCIMSynchronizationStatus; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C086C2F-1C66-57B3-B14E-2C1DA70727CD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class GetSCIMSynchronizationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of SCIM synchronization. Valid values:
-         * <p>
+         * <p>The status of SCIM synchronization. Valid values:</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * </ul>
          * 
-         * *   Enabled
-         * *   Disabled
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder SCIMSynchronizationStatus(String SCIMSynchronizationStatus) {
             this.SCIMSynchronizationStatus = SCIMSynchronizationStatus;

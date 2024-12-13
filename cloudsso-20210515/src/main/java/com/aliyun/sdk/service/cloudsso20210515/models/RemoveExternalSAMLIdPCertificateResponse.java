@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveExternalSAMLIdPCertificateResponse} extends {@link TeaModel}
  *
  * <p>RemoveExternalSAMLIdPCertificateResponse</p>

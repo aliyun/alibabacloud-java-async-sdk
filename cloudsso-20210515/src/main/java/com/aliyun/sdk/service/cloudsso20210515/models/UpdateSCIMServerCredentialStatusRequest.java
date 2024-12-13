@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSCIMServerCredentialStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateSCIMServerCredentialStatusRequest</p>
@@ -81,7 +82,10 @@ public class UpdateSCIMServerCredentialStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the SCIM credential.
+         * <p>The ID of the SCIM credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scimcred-004whl0kvfwcypbi****</p>
          */
         public Builder credentialId(String credentialId) {
             this.putQueryParameter("CredentialId", credentialId);
@@ -90,7 +94,10 @@ public class UpdateSCIMServerCredentialStatusRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -99,11 +106,14 @@ public class UpdateSCIMServerCredentialStatusRequest extends Request {
         }
 
         /**
-         * The new status of the SCIM credential. Valid values:
-         * <p>
+         * <p>The new status of the SCIM credential. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The SCIM credential is enabled.</li>
+         * <li>Disabled: The SCIM credential is disabled.</li>
+         * </ul>
          * 
-         * *   Enabled: The SCIM credential is enabled.
-         * *   Disabled: The SCIM credential is disabled.
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder newStatus(String newStatus) {
             this.putQueryParameter("NewStatus", newStatus);

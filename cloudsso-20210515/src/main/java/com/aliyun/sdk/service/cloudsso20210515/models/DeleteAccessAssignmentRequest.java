@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccessAssignmentRequest} extends {@link RequestModel}
  *
  * <p>DeleteAccessAssignmentRequest</p>
@@ -137,7 +138,10 @@ public class DeleteAccessAssignmentRequest extends Request {
         } 
 
         /**
-         * The ID of the access configuration.
+         * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -146,11 +150,14 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to de-provision the access configuration when you remove the access permissions from the CloudSSO identity. The access configuration is used to assign the access permissions, and the identity is the only one that uses the access configuration and is associated with the account. Valid values:
-         * <p>
+         * <p>Specifies whether to de-provision the access configuration when you remove the access permissions from the CloudSSO identity. The access configuration is used to assign the access permissions, and the identity is the only one that uses the access configuration and is associated with the account. Valid values:</p>
+         * <ul>
+         * <li>DeprovisionForLastAccessAssignmentOnAccount: de-provisions the access configuration.</li>
+         * <li>None: does not de-provision the access configuration. This is the default value.</li>
+         * </ul>
          * 
-         * *   DeprovisionForLastAccessAssignmentOnAccount: de-provisions the access configuration.
-         * *   None: does not de-provision the access configuration. This is the default value.
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder deprovisionStrategy(String deprovisionStrategy) {
             this.putQueryParameter("DeprovisionStrategy", deprovisionStrategy);
@@ -159,7 +166,10 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -168,11 +178,14 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * The ID of the CloudSSO identity.
-         * <p>
+         * <p>The ID of the CloudSSO identity.</p>
+         * <ul>
+         * <li>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</li>
+         * <li>If you set <code>PrincipalType</code> to <code>Group</code>, set <code>PrincipalId</code> to the ID of the CloudSSO group.</li>
+         * </ul>
          * 
-         * *   If you set `PrincipalType` to `User`, set `PrincipalId` to the ID of the CloudSSO user.
-         * *   If you set `PrincipalType` to `Group`, set `PrincipalId` to the ID of the CloudSSO group.
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         public Builder principalId(String principalId) {
             this.putQueryParameter("PrincipalId", principalId);
@@ -181,11 +194,14 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * The type of the CloudSSO identity. Valid values:
-         * <p>
+         * <p>The type of the CloudSSO identity. Valid values:</p>
+         * <ul>
+         * <li>User</li>
+         * <li>Group</li>
+         * </ul>
          * 
-         * *   User
-         * *   Group
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("PrincipalType", principalType);
@@ -194,7 +210,10 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * The ID of the task object.
+         * <p>The ID of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -203,7 +222,10 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.
+         * <p>The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

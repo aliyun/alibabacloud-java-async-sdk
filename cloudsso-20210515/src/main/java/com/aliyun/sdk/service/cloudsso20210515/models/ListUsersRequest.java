@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersRequest} extends {@link RequestModel}
  *
  * <p>ListUsersRequest</p>
@@ -123,7 +124,10 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
-         * The ID of the resource directory.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -132,12 +136,12 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The filter condition.
-         * <p>
+         * <p>The filter condition.</p>
+         * <p>You must specify the value in the <code>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</code> format. The value is not case-sensitive. You can set <code>&lt;Attribute&gt;</code> only to <code>UserName</code> and <code>Operator</code> only to <code>eq</code> or <code>sw</code>. The value eq indicates Equals, and the value sw indicates Start With.</p>
+         * <p>For example, if you set the Filter parameter to UserName sw test, the operation queries the users whose names start with test. If you set the Filter parameter to UserName eq testuser, the operation queries the user whose name is <code>testuser</code>.</p>
          * 
-         * You must specify the value in the `<Attribute> <Operator> <Value>` format. The value is not case-sensitive. You can set `<Attribute>` only to `UserName` and `Operator` only to `eq` or `sw`. The value eq indicates Equals, and the value sw indicates Start With.
-         * 
-         * For example, if you set the Filter parameter to UserName sw test, the operation queries the users whose names start with test. If you set the Filter parameter to UserName eq testuser, the operation queries the user whose name is `testuser`.
+         * <strong>example:</strong>
+         * <p>UserName sw test</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -146,12 +150,12 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -160,10 +164,11 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of the `NextToken` parameter.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of the <code>NextToken</code> parameter.</p>
+         * <p>When you call this operation for the first time, if the total number of entries to return is larger than the value of the <code>MaxResults</code> parameter, the entries are truncated. The system returns entries based on the value of the <code>MaxResults</code> parameter, and does not return the excess entries. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and the <code>NextToken</code> parameter is returned. In the next call, you can use the value of the <code>NextToken</code> parameter and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of the <code>IsTruncated</code> parameter becomes <code>false</code>. This way, all entries are returned.</p>
          * 
-         * When you call this operation for the first time, if the total number of entries to return is larger than the value of the `MaxResults` parameter, the entries are truncated. The system returns entries based on the value of the `MaxResults` parameter, and does not return the excess entries. In this case, the value of the response parameter `IsTruncated` is `true`, and the `NextToken` parameter is returned. In the next call, you can use the value of the `NextToken` parameter and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of the `IsTruncated` parameter becomes `false`. This way, all entries are returned.
+         * <strong>example:</strong>
+         * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -172,11 +177,14 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The type of the user. The parameter can be used to filter users. Valid values:
-         * <p>
+         * <p>The type of the user. The parameter can be used to filter users. Valid values:</p>
+         * <ul>
+         * <li>Manual: The user is manually created.</li>
+         * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+         * </ul>
          * 
-         * *   Manual: The user is manually created.
-         * *   Synchronized: The user is synchronized from an external identity provider (IdP).
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder provisionType(String provisionType) {
             this.putQueryParameter("ProvisionType", provisionType);
@@ -185,11 +193,14 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The status of the user. The parameter can be used to filter users. Valid values:
-         * <p>
+         * <p>The status of the user. The parameter can be used to filter users. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The logon of the user is enabled.</li>
+         * <li>Disabled: The logon of the user is disabled.</li>
+         * </ul>
          * 
-         * *   Enabled: The logon of the user is enabled.
-         * *   Disabled: The logon of the user is disabled.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

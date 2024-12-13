@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserRequest</p>
@@ -67,7 +68,10 @@ public class DeleteUserRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -76,7 +80,10 @@ public class DeleteUserRequest extends Request {
         }
 
         /**
-         * The ID of the user.
+         * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

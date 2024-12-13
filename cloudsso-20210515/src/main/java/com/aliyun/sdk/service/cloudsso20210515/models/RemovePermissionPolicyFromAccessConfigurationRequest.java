@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemovePermissionPolicyFromAccessConfigurationRequest} extends {@link RequestModel}
  *
  * <p>RemovePermissionPolicyFromAccessConfigurationRequest</p>
@@ -95,7 +96,10 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
         } 
 
         /**
-         * The ID of the access configuration.
+         * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -104,7 +108,10 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -113,7 +120,10 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunECSFullAccess</p>
          */
         public Builder permissionPolicyName(String permissionPolicyName) {
             this.putQueryParameter("PermissionPolicyName", permissionPolicyName);
@@ -122,11 +132,14 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
         }
 
         /**
-         * The type of the policy. Valid values:
-         * <p>
+         * <p>The type of the policy. Valid values:</p>
+         * <ul>
+         * <li>System: system policy</li>
+         * <li>Inline: inline policy</li>
+         * </ul>
          * 
-         * *   System: system policy
-         * *   Inline: inline policy
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder permissionPolicyType(String permissionPolicyType) {
             this.putQueryParameter("PermissionPolicyType", permissionPolicyType);

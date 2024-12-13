@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccessConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccessConfigurationResponseBody</p>
@@ -49,7 +50,7 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the access configuration.
+         * <p>The information about the access configuration.</p>
          */
         public Builder accessConfiguration(AccessConfiguration accessConfiguration) {
             this.accessConfiguration = accessConfiguration;
@@ -57,7 +58,10 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D5E40508-483B-52F6-993C-D880B0F87591</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccessConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccessConfigurationResponseBody</p>
+     */
     public static class AccessConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
         private String accessConfigurationId;
@@ -181,7 +191,10 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The ID of the access configuration.
+             * <p>The ID of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac-00ccule7tadaijxc****</p>
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -189,7 +202,10 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access configuration.
+             * <p>The name of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC-Admin</p>
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -197,7 +213,10 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access configuration was created.
+             * <p>The time when the access configuration was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-30T09:39:44Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -205,7 +224,10 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the access configuration.
+             * <p>The description of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is an access configuration.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -213,7 +235,10 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.
+             * <p>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
              */
             public Builder relayState(String relayState) {
                 this.relayState = relayState;
@@ -221,10 +246,11 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.
-             * <p>
+             * <p>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+             * <p>Unit: seconds.</p>
              * 
-             * Unit: seconds.
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder sessionDuration(Integer sessionDuration) {
                 this.sessionDuration = sessionDuration;
@@ -232,7 +258,7 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The status notification.
+             * <p>The status notification.</p>
              */
             public Builder statusNotifications(java.util.List < String > statusNotifications) {
                 this.statusNotifications = statusNotifications;
@@ -240,7 +266,10 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the access configuration was modified.
+             * <p>The time when the information about the access configuration was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-26T03:02:11Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

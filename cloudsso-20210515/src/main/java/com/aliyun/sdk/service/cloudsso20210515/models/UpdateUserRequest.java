@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserRequest</p>
@@ -137,7 +138,10 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -146,7 +150,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The new description of the user.
+         * <p>The new description of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a user.</p>
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -155,7 +162,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The new display name of the user.
+         * <p>The new display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliceLee</p>
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -164,7 +174,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The new email address of the user.
+         * <p>The new email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:AliceLee@example.com">AliceLee@example.com</a></p>
          */
         public Builder newEmail(String newEmail) {
             this.putQueryParameter("NewEmail", newEmail);
@@ -173,7 +186,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The new first name of the user.
+         * <p>The new first name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder newFirstName(String newFirstName) {
             this.putQueryParameter("NewFirstName", newFirstName);
@@ -182,7 +198,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The new last name of the user.
+         * <p>The new last name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lee</p>
          */
         public Builder newLastName(String newLastName) {
             this.putQueryParameter("NewLastName", newLastName);
@@ -191,7 +210,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The ID of the user.
+         * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

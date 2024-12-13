@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMFAAuthenticationSettingInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetMFAAuthenticationSettingInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The MFA setting of all users.
+         * <p>The MFA setting of all users.</p>
          */
         public Builder MFAAuthenticationSettingInfo(MFAAuthenticationSettingInfo MFAAuthenticationSettingInfo) {
             this.MFAAuthenticationSettingInfo = MFAAuthenticationSettingInfo;
@@ -57,7 +58,10 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95D3B107-DA80-5B34-A3D0-9E82F8F0DA0E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMFAAuthenticationSettingInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMFAAuthenticationSettingInfoResponseBody</p>
+     */
     public static class MFAAuthenticationSettingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MfaAuthenticationAdvanceSettings")
         private String mfaAuthenticationAdvanceSettings;
@@ -109,13 +119,16 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
             private String operationForRiskLogin; 
 
             /**
-             * The MFA policy of all users. Valid values:
-             * <p>
+             * <p>The MFA policy of all users. Valid values:</p>
+             * <ul>
+             * <li>Enabled: MFA is enabled for all users.</li>
+             * <li>Byuser: User-specific settings are applied. For more information about how to configure MFA for a single user, see <a href="https://help.aliyun.com/document_detail/450135.html">UpdateUserMFAAuthenticationSettings</a>.</li>
+             * <li>Disabled: MFA is disabled for all users.</li>
+             * <li>OnlyRiskyLogin: MFA is required only for unusual logons.</li>
+             * </ul>
              * 
-             * *   Enabled: MFA is enabled for all users.
-             * *   Byuser: User-specific settings are applied. For more information about how to configure MFA for a single user, see [UpdateUserMFAAuthenticationSettings](~~450135~~).
-             * *   Disabled: MFA is disabled for all users.
-             * *   OnlyRiskyLogin: MFA is required only for unusual logons.
+             * <strong>example:</strong>
+             * <p>OnlyRiskyLogin</p>
              */
             public Builder mfaAuthenticationAdvanceSettings(String mfaAuthenticationAdvanceSettings) {
                 this.mfaAuthenticationAdvanceSettings = mfaAuthenticationAdvanceSettings;
@@ -123,13 +136,17 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The MFA policy for unusual logons. Valid values:
-             * <p>
+             * <p>The MFA policy for unusual logons. Valid values:</p>
+             * <ul>
+             * <li>Autonomous: MFA is prompted for users who initiated unusual logons. However, the users are allowed to skip MFA. If an MFA device is bound to a user who initiated an unusual logon, the user must pass MFA.</li>
+             * <li>EnforceVerify: MFA is required. If no MFA devices are bound to a user who initiated an unusual logon, the user must bind an MFA device. If an MFA device is already bound to a user who initiated an unusual logon, the user must pass MFA.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is displayed only when Byuser or OnlyRiskyLogin is returned for the MfaAuthenticationAdvanceSettings parameter.</p>
+             * </blockquote>
              * 
-             * *   Autonomous: MFA is prompted for users who initiated unusual logons. However, the users are allowed to skip MFA. If an MFA device is bound to a user who initiated an unusual logon, the user must pass MFA.
-             * *   EnforceVerify: MFA is required. If no MFA devices are bound to a user who initiated an unusual logon, the user must bind an MFA device. If an MFA device is already bound to a user who initiated an unusual logon, the user must pass MFA.
-             * 
-             * > This parameter is displayed only when Byuser or OnlyRiskyLogin is returned for the MfaAuthenticationAdvanceSettings parameter.
+             * <strong>example:</strong>
+             * <p>EnforceVerify</p>
              */
             public Builder operationForRiskLogin(String operationForRiskLogin) {
                 this.operationForRiskLogin = operationForRiskLogin;

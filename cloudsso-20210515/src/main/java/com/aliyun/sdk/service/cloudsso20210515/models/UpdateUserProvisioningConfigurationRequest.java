@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserProvisioningConfigurationRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserProvisioningConfigurationRequest</p>
@@ -81,7 +82,10 @@ public class UpdateUserProvisioningConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the resource directory.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -90,10 +94,11 @@ public class UpdateUserProvisioningConfigurationRequest extends Request {
         }
 
         /**
-         * The new default URL for a CloudSSO user who logs on to the Alibaba Cloud Management Console.
-         * <p>
+         * <p>The new default URL for a CloudSSO user who logs on to the Alibaba Cloud Management Console.</p>
+         * <p>Default value: <a href="https://homenew.console.aliyun.com">https://homenew.console.aliyun.com</a>.</p>
          * 
-         * Default value: https://homenew.console.aliyun.com.
+         * <strong>example:</strong>
+         * <p><a href="https://home.console.aliyun.com/home/dashboard/ProductAndService">https://home.console.aliyun.com/home/dashboard/ProductAndService</a></p>
          */
         public Builder newDefaultLandingPage(String newDefaultLandingPage) {
             this.putQueryParameter("NewDefaultLandingPage", newDefaultLandingPage);
@@ -102,14 +107,13 @@ public class UpdateUserProvisioningConfigurationRequest extends Request {
         }
 
         /**
-         * The new duration of the logon session.
-         * <p>
+         * <p>The new duration of the logon session.</p>
+         * <p>Unit: hours.</p>
+         * <p>Valid values: 1 to 24.</p>
+         * <p>Default value: 6.</p>
          * 
-         * Unit: hours.
-         * 
-         * Valid values: 1 to 24.
-         * 
-         * Default value: 6.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder newSessionDuration(Integer newSessionDuration) {
             this.putQueryParameter("NewSessionDuration", newSessionDuration);

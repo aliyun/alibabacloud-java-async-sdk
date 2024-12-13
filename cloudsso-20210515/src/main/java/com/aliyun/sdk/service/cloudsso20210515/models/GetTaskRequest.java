@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskRequest} extends {@link RequestModel}
  *
  * <p>GetTaskRequest</p>
@@ -67,7 +68,10 @@ public class GetTaskRequest extends Request {
         } 
 
         /**
-         * The directory ID.
+         * <p>The directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -76,7 +80,10 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-shfqw1u1edszvxw5****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

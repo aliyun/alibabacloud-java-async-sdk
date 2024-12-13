@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccessConfigurationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccessConfigurationsResponseBody</p>
@@ -97,7 +98,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * The access configurations.
+         * <p>The access configurations.</p>
          */
         public Builder accessConfigurations(java.util.List < AccessConfigurations> accessConfigurations) {
             this.accessConfigurations = accessConfigurations;
@@ -105,11 +106,14 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the queried entries are truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <ul>
+         * <li>true: The queried entries are truncated.</li>
+         * <li>false: The queried entries are not truncated.</li>
+         * </ul>
          * 
-         * *   true: The queried entries are truncated.
-         * *   false: The queried entries are not truncated.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -117,7 +121,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -125,10 +132,13 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is returned for the next page.
-         * <p>
+         * <p>The token that is returned for the next page.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is set to <code>true</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only when the `IsTruncated` parameter is set to `true`.
+         * <strong>example:</strong>
+         * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -136,7 +146,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BC0CBAC-45E1-5BD3-BF6E-F69D1D5391C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +157,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -157,6 +173,12 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccessConfigurationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccessConfigurationsResponseBody</p>
+     */
     public static class AccessConfigurations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
         private String accessConfigurationId;
@@ -268,7 +290,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The ID of the access configuration.
+             * <p>The ID of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac-00jhtfl8thteu6uj****</p>
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -276,7 +301,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access configuration.
+             * <p>The name of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS-Admin</p>
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -284,7 +312,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access configuration was created.
+             * <p>The time when the access configuration was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-02T08:44:23Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -292,7 +323,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the access configuration.
+             * <p>The description of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is an access configuration.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -300,7 +334,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.
+             * <p>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
              */
             public Builder relayState(String relayState) {
                 this.relayState = relayState;
@@ -308,10 +345,11 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.
-             * <p>
+             * <p>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+             * <p>Unit: seconds.</p>
              * 
-             * Unit: seconds.
+             * <strong>example:</strong>
+             * <p>900</p>
              */
             public Builder sessionDuration(Integer sessionDuration) {
                 this.sessionDuration = sessionDuration;
@@ -319,7 +357,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status notification.
+             * <p>The status notification.</p>
              */
             public Builder statusNotifications(java.util.List < String > statusNotifications) {
                 this.statusNotifications = statusNotifications;
@@ -327,7 +365,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the access configuration was modified.
+             * <p>The time when the information about the access configuration was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-02T08:44:23Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

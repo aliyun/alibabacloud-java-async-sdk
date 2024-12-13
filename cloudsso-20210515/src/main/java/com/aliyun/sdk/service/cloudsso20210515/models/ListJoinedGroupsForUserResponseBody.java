@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJoinedGroupsForUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListJoinedGroupsForUserResponseBody</p>
@@ -97,11 +98,14 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * Indicates whether the queried entries are truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <ul>
+         * <li>true: The queried entries are truncated.</li>
+         * <li>false: The queried entries are not truncated.</li>
+         * </ul>
          * 
-         * *   true: The queried entries are truncated.
-         * *   false: The queried entries are not truncated.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -109,7 +113,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The groups to which the user is added.
+         * <p>The groups to which the user is added.</p>
          */
         public Builder joinedGroups(java.util.List < JoinedGroups> joinedGroups) {
             this.joinedGroups = joinedGroups;
@@ -117,7 +121,10 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -125,10 +132,13 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is returned for the next page.
-         * <p>
+         * <p>The token that is returned for the next page.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of <code>IsTruncated</code> is <code>true</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only when the value of `IsTruncated` is `true`.
+         * <strong>example:</strong>
+         * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -136,7 +146,10 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9BBB45F-7877-5DE9-96A5-20E6CFA48929</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +157,10 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -157,6 +173,12 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJoinedGroupsForUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJoinedGroupsForUserResponseBody</p>
+     */
     public static class JoinedGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -244,7 +266,10 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The description of the group.
+             * <p>The description of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a group.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -252,7 +277,10 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-00jqzghi2n3o5hkh****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -260,7 +288,10 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -268,7 +299,10 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the user was added to the user group.
+             * <p>The time when the user was added to the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-01T06:58:18Z</p>
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -276,11 +310,14 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the group. Valid values:
-             * <p>
+             * <p>The type of the group. Valid values:</p>
+             * <ul>
+             * <li>Manual: The group is manually created.</li>
+             * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+             * </ul>
              * 
-             * *   Manual: The group is manually created.
-             * *   Synchronized: The user is synchronized from an external identity provider (IdP).
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -288,7 +325,10 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u-00q8wbq42wiltcrk****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

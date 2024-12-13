@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSCIMServerCredentialsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSCIMServerCredentialsResponseBody</p>
@@ -61,7 +62,10 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE4B7037-C315-5DD5-826E-57A87950BCD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * The SCIM credentials.
+         * <p>The SCIM credentials.</p>
          */
         public Builder SCIMServerCredentials(java.util.List < SCIMServerCredentials> SCIMServerCredentials) {
             this.SCIMServerCredentials = SCIMServerCredentials;
@@ -77,7 +81,10 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -90,6 +97,12 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSCIMServerCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSCIMServerCredentialsResponseBody</p>
+     */
     public static class SCIMServerCredentials extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -177,7 +190,10 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the SCIM credential was created.
+             * <p>The time when the SCIM credential was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-09T08:12:52Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -185,7 +201,10 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SCIM credential.
+             * <p>The ID of the SCIM credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scimcred-004whl0kvfwcypbi****</p>
              */
             public Builder credentialId(String credentialId) {
                 this.credentialId = credentialId;
@@ -193,7 +212,10 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SCIM credential.
+             * <p>The type of the SCIM credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BearerToken</p>
              */
             public Builder credentialType(String credentialType) {
                 this.credentialType = credentialType;
@@ -201,7 +223,10 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-00fc2p61****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -209,7 +234,10 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SCIM credential expires.
+             * <p>The time when the SCIM credential expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-09T08:12:52Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -217,11 +245,14 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SCIM credential. Valid values:
-             * <p>
+             * <p>The status of the SCIM credential. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The SCIM credential is enabled.</li>
+             * <li>Disabled: The SCIM credential is disabled.</li>
+             * </ul>
              * 
-             * *   Enabled: The SCIM credential is enabled.
-             * *   Disabled: The SCIM credential is disabled.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

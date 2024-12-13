@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserProvisioningsRequest} extends {@link RequestModel}
  *
  * <p>ListUserProvisioningsRequest</p>
@@ -137,7 +138,10 @@ public class ListUserProvisioningsRequest extends Request {
         } 
 
         /**
-         * The ID of the resource directory.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -146,12 +150,12 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page.
-         * <p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -160,10 +164,11 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * The token that is used to initiate the next request. If this is your first time to call this operation, you do not need to specify the `NextToken` parameter.
-         * <p>
+         * <p>The token that is used to initiate the next request. If this is your first time to call this operation, you do not need to specify the <code>NextToken</code> parameter.</p>
+         * <p>When you call this operation for the first time, if the total number of entries to return is larger than the value of <code>MaxResults</code>, the entries are truncated. The system returns entries based on the value of <code>MaxResults</code>, and does not return the excess entries. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and <code>NextToken</code> is returned. In the next call, you can use the value of <code>NextToken</code> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <code>IsTruncated</code> becomes <code>false</code>. This way, all entries are returned.</p>
          * 
-         * When you call this operation for the first time, if the total number of entries to return is larger than the value of `MaxResults`, the entries are truncated. The system returns entries based on the value of `MaxResults`, and does not return the excess entries. In this case, the value of the response parameter `IsTruncated` is `true`, and `NextToken` is returned. In the next call, you can use the value of `NextToken` and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of `IsTruncated` becomes `false`. This way, all entries are returned.
+         * <strong>example:</strong>
+         * <p>27EbL9j4ZgZjsMZFqbZFgbwQ1VXFU1Khcpx9e2vrW1zwzTBmTGWaM7ixHhRin8SCsxaJdazYVCzeKc2UF2QkyGb83cPhr8ZxrzoaiTd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -172,11 +177,14 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * The identity ID of the RAM user provisioning. Valid values:
-         * <p>
+         * <p>The identity ID of the RAM user provisioning. Valid values:</p>
+         * <ul>
+         * <li>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user group (g-********).</li>
+         * <li>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user (u-********).</li>
+         * </ul>
          * 
-         * *   If `Group` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user group (g-\*\*\*\*\*\*\*\*).
-         * *   If `User` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user (u-\*\*\*\*\*\*\*\*).
+         * <strong>example:</strong>
+         * <p>u-88d73u*****</p>
          */
         public Builder principalId(String principalId) {
             this.putQueryParameter("PrincipalId", principalId);
@@ -185,11 +193,14 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * The identity type of the RAM user provisioning. Valid values:
-         * <p>
+         * <p>The identity type of the RAM user provisioning. Valid values:</p>
+         * <ul>
+         * <li>User: The identity of the RAM user provisioning is a CloudSSO user.</li>
+         * <li>Group: The identity of the RAM user provisioning is a CloudSSO user group.</li>
+         * </ul>
          * 
-         * *   User: The identity of the RAM user provisioning is a CloudSSO user.
-         * *   Group: The identity of the RAM user provisioning is a CloudSSO user group.
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("PrincipalType", principalType);
@@ -198,7 +209,10 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * The ID of the object for which you create the RAM user provisioning. The value is fixed as the ID of the member in the resource directory.
+         * <p>The ID of the object for which you create the RAM user provisioning. The value is fixed as the ID of the member in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743382******</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -207,7 +221,10 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * The object for which you create the RAM user provisioning. The value is fixed as `RD-Account`.
+         * <p>The object for which you create the RAM user provisioning. The value is fixed as <code>RD-Account</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

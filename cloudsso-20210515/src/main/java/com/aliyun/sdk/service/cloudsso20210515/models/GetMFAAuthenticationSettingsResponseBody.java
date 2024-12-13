@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMFAAuthenticationSettingsResponseBody} extends {@link TeaModel}
  *
  * <p>GetMFAAuthenticationSettingsResponseBody</p>
@@ -49,12 +50,15 @@ public class GetMFAAuthenticationSettingsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether MFA is enabled for all users. Valid values:
-         * <p>
+         * <p>Indicates whether MFA is enabled for all users. Valid values:</p>
+         * <ul>
+         * <li>Enabled: MFA is enabled for all users.</li>
+         * <li>Byuser: User-specific settings are applied.</li>
+         * <li>Disabled: MFA is disabled for all users.</li>
+         * </ul>
          * 
-         * *   Enabled: MFA is enabled for all users.
-         * *   Byuser: User-specific settings are applied.
-         * *   Disabled: MFA is disabled for all users.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder MFAAuthenticationAdvanceSettings(String MFAAuthenticationAdvanceSettings) {
             this.MFAAuthenticationAdvanceSettings = MFAAuthenticationAdvanceSettings;
@@ -62,7 +66,10 @@ public class GetMFAAuthenticationSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2BC00C5-76A2-5FFC-A340-927940A98377</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

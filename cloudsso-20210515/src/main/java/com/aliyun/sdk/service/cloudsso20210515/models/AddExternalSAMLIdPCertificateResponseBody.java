@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddExternalSAMLIdPCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>AddExternalSAMLIdPCertificateResponseBody</p>
@@ -49,7 +50,10 @@ public class AddExternalSAMLIdPCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the SAML signing certificate.
+         * <p>The ID of the SAML signing certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idp-c-00wk2fb4foracls0****</p>
          */
         public Builder certificateId(String certificateId) {
             this.certificateId = certificateId;
@@ -57,7 +61,10 @@ public class AddExternalSAMLIdPCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12B3E332-DD16-515B-B695-39BA233AA172</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

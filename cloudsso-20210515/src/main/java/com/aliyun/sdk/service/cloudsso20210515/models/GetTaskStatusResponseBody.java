@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
         private TaskStatus taskStatus; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>005F4623-AE53-504D-830F-44825F7DC211</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status information about the task.
+         * <p>The status information about the task.</p>
          */
         public Builder taskStatus(TaskStatus taskStatus) {
             this.taskStatus = taskStatus;
@@ -70,6 +74,12 @@ public class GetTaskStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskStatusResponseBody</p>
+     */
     public static class TaskStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -157,7 +167,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The end time of the task.
+             * <p>The end time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-05T02:58:08Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -165,10 +178,13 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the task failure.
-             * <p>
+             * <p>The cause of the task failure.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of <code>Status</code> is <code>Failed</code>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the value of `Status` is `Failed`.
+             * <strong>example:</strong>
+             * <p>No Permission.</p>
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
@@ -176,7 +192,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the task.
+             * <p>The start time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-05T02:58:07Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -184,12 +203,15 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The task status. Valid values:
-             * <p>
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>InProgress: The task is running.</li>
+             * <li>Success: The task is successful.</li>
+             * <li>Failed: The task failed.</li>
+             * </ul>
              * 
-             * *   InProgress: The task is running.
-             * *   Success: The task is successful.
-             * *   Failed: The task failed.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -197,7 +219,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-shfqw1u1edszvxw5****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -205,13 +230,16 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The task type. Valid values:
-             * <p>
+             * <p>The task type. Valid values:</p>
+             * <ul>
+             * <li>ProvisionAccessConfiguration: An access configuration is provisioned.</li>
+             * <li>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</li>
+             * <li>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</li>
+             * <li>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</li>
+             * </ul>
              * 
-             * *   ProvisionAccessConfiguration: An access configuration is provisioned.
-             * *   DeprovisionAccessConfiguration: An access configuration is de-provisioned.
-             * *   CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.
-             * *   DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.
+             * <strong>example:</strong>
+             * <p>DeleteAccessAssignment</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

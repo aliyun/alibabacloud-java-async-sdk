@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessAssignmentResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccessAssignmentResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         private Task task; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4726AA56-E138-5C99-85E4-F493536D042F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         }
 
         /**
-         * The queried task.
+         * <p>The queried task.</p>
          */
         public Builder task(Task task) {
             this.task = task;
@@ -70,6 +74,12 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAccessAssignmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAccessAssignmentResponseBody</p>
+     */
     public static class Task extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
         private String accessConfigurationId;
@@ -241,7 +251,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The ID of the access configuration.
+             * <p>The ID of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac-00jhtfl8thteu6uj****</p>
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -249,7 +262,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access configuration.
+             * <p>The name of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS-Admin</p>
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -257,7 +273,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CloudSSO identity.
+             * <p>The ID of the CloudSSO identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u-00q8wbq42wiltcrk****</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -265,7 +284,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CloudSSO identity.
+             * <p>The name of the CloudSSO identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -273,11 +295,14 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the CloudSSO identity. Valid values:
-             * <p>
+             * <p>The type of the CloudSSO identity. Valid values:</p>
+             * <ul>
+             * <li>User</li>
+             * <li>Group</li>
+             * </ul>
              * 
-             * *   User
-             * *   Group
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -285,12 +310,15 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The task status. Valid values:
-             * <p>
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>InProgress: The task is running.</li>
+             * <li>Success: The task is successful.</li>
+             * <li>Failed: The task failed.</li>
+             * </ul>
              * 
-             * *   InProgress: The task is running.
-             * *   Success: The task is successful.
-             * *   Failed: The task failed.
+             * <strong>example:</strong>
+             * <p>InProgress</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -298,7 +326,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task object.
+             * <p>The ID of the task object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114240524784****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -306,7 +337,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task object.
+             * <p>The name of the task object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev-test</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -314,7 +348,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The path ID of the task object in the resource directory.
+             * <p>The path ID of the task object in the resource directory.</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -322,7 +356,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The path name of the task object in the resource directory.
+             * <p>The path name of the task object in the resource directory.</p>
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -330,7 +364,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.
+             * <p>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RD-Account</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -338,7 +375,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-sh6tceylhvgejpip****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -346,7 +386,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The task type. The value is fixed as CreateAccessAssignment, which indicates that access permissions on an account in your resource directory are assigned.
+             * <p>The task type. The value is fixed as CreateAccessAssignment, which indicates that access permissions on an account in your resource directory are assigned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateAccessAssignment</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

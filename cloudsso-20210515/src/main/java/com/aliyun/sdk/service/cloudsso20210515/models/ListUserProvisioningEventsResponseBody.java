@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserProvisioningEventsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserProvisioningEventsResponseBody</p>
@@ -97,11 +98,14 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         private java.util.List < UserProvisioningEvents> userProvisioningEvents; 
 
         /**
-         * Indicates whether the queried entries are truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -109,12 +113,12 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries per page.
-         * <p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,10 +126,13 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to initiate the next request.
-         * <p>
+         * <p>The token that is used to initiate the next request.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is set to <code>true</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only when the `IsTruncated` parameter is set to `true`.
+         * <strong>example:</strong>
+         * <p>2eEMmhmLa1b7Bbj9UzCgZUGj8DpDeG5TbNknuNKNP2h84KjJRnAb7vzzSDkYNmsidnAybyJYBfnPPB6xfgw54B1Wub2KQmC8LofzqBW2Y****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -133,7 +140,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0D85B43D-EF98-396D-B426-837E428D2D39</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +151,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -149,7 +162,7 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The RAM user provisioning events.
+         * <p>The RAM user provisioning events.</p>
          */
         public Builder userProvisioningEvents(java.util.List < UserProvisioningEvents> userProvisioningEvents) {
             this.userProvisioningEvents = userProvisioningEvents;
@@ -162,6 +175,12 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserProvisioningEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserProvisioningEventsResponseBody</p>
+     */
     public static class UserProvisioningEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -393,7 +412,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             private String userProvisioningId; 
 
             /**
-             * The creation time.
+             * <p>The creation time. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-28T03:55:55Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -401,11 +423,14 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:
-             * <p>
+             * <p>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
+             * <ul>
+             * <li>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</li>
+             * <li>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</li>
+             * </ul>
              * 
-             * *   Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.
-             * *   Keep: When you delete the RAM user provisioning, the system retains the synchronized users.
+             * <strong>example:</strong>
+             * <p>Keep</p>
              */
             public Builder deletionStrategy(String deletionStrategy) {
                 this.deletionStrategy = deletionStrategy;
@@ -413,7 +438,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-003qew84****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -421,11 +449,14 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:
-             * <p>
+             * <p>The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</p>
+             * <ul>
+             * <li>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</li>
+             * <li>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</li>
+             * </ul>
              * 
-             * *   KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix `_sso`.
-             * *   TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.
+             * <strong>example:</strong>
+             * <p>KeepBoth</p>
              */
             public Builder duplicationStrategy(String duplicationStrategy) {
                 this.duplicationStrategy = duplicationStrategy;
@@ -433,7 +464,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of execution failures.
+             * <p>The number of execution failures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -441,7 +475,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is displayed when the last execution of the RAM user provisioning event failed.
+             * <p>The error message that is displayed when the last execution of the RAM user provisioning event failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OperationConflict.UserProvisioning.Process.fail.ImsUserExists</p>
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
@@ -449,7 +486,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user provisioning event.
+             * <p>The ID of the RAM user provisioning event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>upe-wjKyNDmZvyZOiRcJ****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -457,7 +497,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the RAM user provisioning event was last executed.
+             * <p>The time at which the RAM user provisioning event was last executed. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-28T03:55:55Z</p>
              */
             public Builder latestAsyncTime(String latestAsyncTime) {
                 this.latestAsyncTime = latestAsyncTime;
@@ -465,11 +508,14 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The identity ID of the RAM user provisioning. Valid values:
-             * <p>
+             * <p>The identity ID of the RAM user provisioning. Valid values:</p>
+             * <ul>
+             * <li>If you set the <code>PrincipalType</code> parameter to <code>Group</code>, the value of this parameter is the ID of a CloudSSO user group (g-********).</li>
+             * <li>If you set the <code>PrincipalType</code> parameter to <code>User</code>, the value of this parameter is the ID of a CloudSSO user (u-********).</li>
+             * </ul>
              * 
-             * *   If `Group` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user group (g-\*\*\*\*\*\*\*\*).
-             * *   If `User` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user (u-\*\*\*\*\*\*\*\*).
+             * <strong>example:</strong>
+             * <p>g-02ha881d*****</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -477,11 +523,14 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The identity name of the RAM user provisioning. Valid values:
-             * <p>
+             * <p>The identity name of the RAM user provisioning. Valid values:</p>
+             * <ul>
+             * <li>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user group.</li>
+             * <li>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user.</li>
+             * </ul>
              * 
-             * *   If `Group` is returned for the `PrincipalType` parameter, the value of this parameter is the name of a CloudSSO user group.
-             * *   If `User` is returned for the `PrincipalType` parameter, the value of this parameter is the name of a CloudSSO user.
+             * <strong>example:</strong>
+             * <p>exampleGroupName</p>
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -489,11 +538,14 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The identity type of the RAM user provisioning. Valid values:
-             * <p>
+             * <p>The identity type of the RAM user provisioning. Valid values:</p>
+             * <ul>
+             * <li>User: The identity of the RAM user provisioning is a CloudSSO user.</li>
+             * <li>Group: The identity of the RAM user provisioning is a CloudSSO user group.</li>
+             * </ul>
              * 
-             * *   User: The identity of the RAM user provisioning is a CloudSSO user.
-             * *   Group: The identity of the RAM user provisioning is a CloudSSO user group.
+             * <strong>example:</strong>
+             * <p>Group</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -501,14 +553,17 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source operation. Valid values:
-             * <p>
+             * <p>The type of the source operation. Valid values:</p>
+             * <ul>
+             * <li>StartProvisioning: enables the RAM user provisioning.</li>
+             * <li>DeleteProvisioning: deletes the RAM user provisioning.</li>
+             * <li>AddUserToGroup: adds a user to a user group.</li>
+             * <li>RemoveUserFromGroup: removes a user from a user group.</li>
+             * <li>UserProvisioningDeletionClearing: deletes the RAM user provisioning and clears resources in the background.</li>
+             * </ul>
              * 
-             * *   StartProvisioning: enables the RAM user provisioning.
-             * *   DeleteProvisioning: deletes the RAM user provisioning.
-             * *   AddUserToGroup: adds a user to a user group.
-             * *   RemoveUserFromGroup: removes a user from a user group.
-             * *   UserProvisioningDeletionClearing: deletes the RAM user provisioning and clears resources in the background.
+             * <strong>example:</strong>
+             * <p>StartProvisioning</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -516,10 +571,11 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the object for which you create the RAM user provisioning.
-             * <p>
+             * <p>The ID of the object for which you create the RAM user provisioning.</p>
+             * <p>The value is fixed as the ID of the account in the resource directory.````</p>
              * 
-             * The value is fixed as the ID of the account in the resource directory.````
+             * <strong>example:</strong>
+             * <p>153218*******</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -527,10 +583,11 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the object for which you create the RAM user provisioning.
-             * <p>
+             * <p>The name of the object for which you create the RAM user provisioning.</p>
+             * <p>If <code>RD-Account</code> is returned, the value of this parameter is the name of the account that is used to access the instance.``</p>
              * 
-             * If `RD-Account` is returned, the value of this parameter is the name of the account that is used to access the instance.``
+             * <strong>example:</strong>
+             * <p>exampleRdMember</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -538,7 +595,7 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the resource directory in which you create the RAM user provisioning for the object.
+             * <p>The path of the resource directory in which you create the RAM user provisioning for the member.</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -546,7 +603,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The object for which you create the RAM user provisioning. The value is fixed as `RD-Account`.
+             * <p>The object for which you create the RAM user provisioning. The value is fixed as <code>RD-Account</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RD-Account</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -554,7 +614,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * <p>The modification time. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-28T03:55:55Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -562,7 +625,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user provisioning.
+             * <p>The ID of the RAM user provisioning.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>up-002axzhapcbz6e63****</p>
              */
             public Builder userProvisioningId(String userProvisioningId) {
                 this.userProvisioningId = userProvisioningId;

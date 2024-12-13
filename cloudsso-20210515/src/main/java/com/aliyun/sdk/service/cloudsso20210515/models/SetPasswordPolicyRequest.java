@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordPolicyRequest} extends {@link RequestModel}
  *
  * <p>SetPasswordPolicyRequest</p>
@@ -137,7 +138,10 @@ public class SetPasswordPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -146,12 +150,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The number of password retries.
-         * <p>
+         * <p>The number of password retries.</p>
+         * <p>If you enter wrong passwords for the specified consecutive times, the account is locked for 1 hour.</p>
+         * <p>Valid values: 0 to 32. The value 0 specifies that the number of password retries is not limited.</p>
          * 
-         * If you enter wrong passwords for the specified consecutive times, the account is locked for 1 hour.
-         * 
-         * Valid values: 0 to 32. The value 0 specifies that the number of password retries is not limited.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxLoginAttempts(Integer maxLoginAttempts) {
             this.putQueryParameter("MaxLoginAttempts", maxLoginAttempts);
@@ -160,10 +164,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The validity period of a password.
-         * <p>
+         * <p>The validity period of a password.</p>
+         * <p>Valid values: 1 to 120. Unit: days.</p>
          * 
-         * Valid values: 1 to 120. Unit: days.
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder maxPasswordAge(Integer maxPasswordAge) {
             this.putQueryParameter("MaxPasswordAge", maxPasswordAge);
@@ -172,10 +177,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The minimum number of unique characters in a password.
-         * <p>
+         * <p>The minimum number of unique characters in a password.</p>
+         * <p>The minimum value is 0, which specifies that the minimum number of unique characters in a password is not limited. The maximum value is the value of the <code>MinPasswordLength</code> parameter.</p>
          * 
-         * The minimum value is 0, which specifies that the minimum number of unique characters in a password is not limited. The maximum value is the value of the `MinPasswordLength` parameter.
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder minPasswordDifferentChars(Integer minPasswordDifferentChars) {
             this.putQueryParameter("MinPasswordDifferentChars", minPasswordDifferentChars);
@@ -184,10 +190,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The minimum password length.
-         * <p>
+         * <p>The minimum password length.</p>
+         * <p>Valid values: 8 to 32 characters.</p>
          * 
-         * Valid values: 8 to 32 characters.
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder minPasswordLength(Integer minPasswordLength) {
             this.putQueryParameter("MinPasswordLength", minPasswordLength);
@@ -196,11 +203,14 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether a password can contain the username. Valid value:
-         * <p>
+         * <p>Specifies whether a password can contain the username. Valid value:</p>
+         * <ul>
+         * <li>true: A password cannot contain the username.</li>
+         * <li>false: A password can contain the username.</li>
+         * </ul>
          * 
-         * *   true: A password cannot contain the username.
-         * *   false: A password can contain the username.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder passwordNotContainUsername(Boolean passwordNotContainUsername) {
             this.putQueryParameter("PasswordNotContainUsername", passwordNotContainUsername);
@@ -209,12 +219,14 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The policy for password history check.
-         * <p>
+         * <p>The policy for password history check.</p>
+         * <p>The previous N passwords cannot be reused. Valid values of N: 0 to 24. The value 0 specifies that all historical passwords can be reused.</p>
+         * <blockquote>
+         * <p> Passwords that are generated before January 5, 2024 are not counted as historical passwords.</p>
+         * </blockquote>
          * 
-         * The previous N passwords cannot be reused. Valid values of N: 0 to 24. The value 0 specifies that all historical passwords can be reused.
-         * 
-         * >  Passwords that are generated before January 5, 2024 are not counted as historical passwords.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder passwordReusePrevention(Integer passwordReusePrevention) {
             this.putQueryParameter("PasswordReusePrevention", passwordReusePrevention);

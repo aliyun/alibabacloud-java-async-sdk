@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeprovisionAccessConfigurationRequest} extends {@link RequestModel}
  *
  * <p>DeprovisionAccessConfigurationRequest</p>
@@ -95,7 +96,10 @@ public class DeprovisionAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the access configuration.
+         * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -104,7 +108,10 @@ public class DeprovisionAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The directory ID.
+         * <p>The directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -113,7 +120,10 @@ public class DeprovisionAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the task object.
+         * <p>The ID of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -122,7 +132,10 @@ public class DeprovisionAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.
+         * <p>The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

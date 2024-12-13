@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMFAAuthenticationStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetMFAAuthenticationStatusResponseBody</p>
@@ -49,11 +50,14 @@ public class GetMFAAuthenticationStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status of MFA. Valid values:
-         * <p>
+         * <p>The status of MFA. Valid values:</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * </ul>
          * 
-         * *   Enabled
-         * *   Disabled
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder MFAAuthenticationStatus(String MFAAuthenticationStatus) {
             this.MFAAuthenticationStatus = MFAAuthenticationStatus;
@@ -61,7 +65,10 @@ public class GetMFAAuthenticationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E688346-DF1A-5537-9BFC-8A9974D29586</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
