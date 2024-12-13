@@ -33,6 +33,10 @@ public class DescribeDesktopSessionsRequest extends Request {
     private String endUserId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserIdFilter")
+    private String endUserIdFilter;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
@@ -68,6 +72,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         this.desktopName = builder.desktopName;
         this.endTime = builder.endTime;
         this.endUserId = builder.endUserId;
+        this.endUserIdFilter = builder.endUserIdFilter;
         this.officeSiteId = builder.officeSiteId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -126,6 +131,13 @@ public class DescribeDesktopSessionsRequest extends Request {
     }
 
     /**
+     * @return endUserIdFilter
+     */
+    public String getEndUserIdFilter() {
+        return this.endUserIdFilter;
+    }
+
+    /**
      * @return officeSiteId
      */
     public String getOfficeSiteId() {
@@ -180,6 +192,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         private String desktopName; 
         private String endTime; 
         private String endUserId; 
+        private String endUserIdFilter; 
         private String officeSiteId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -199,6 +212,7 @@ public class DescribeDesktopSessionsRequest extends Request {
             this.desktopName = request.desktopName;
             this.endTime = request.endTime;
             this.endUserId = request.endUserId;
+            this.endUserIdFilter = request.endUserIdFilter;
             this.officeSiteId = request.officeSiteId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -259,6 +273,15 @@ public class DescribeDesktopSessionsRequest extends Request {
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * EndUserIdFilter.
+         */
+        public Builder endUserIdFilter(String endUserIdFilter) {
+            this.putQueryParameter("EndUserIdFilter", endUserIdFilter);
+            this.endUserIdFilter = endUserIdFilter;
             return this;
         }
 

@@ -530,6 +530,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomAccessPoint")
         private String customAccessPoint;
 
+        @com.aliyun.core.annotation.NameInMap("CustomDnsAddress")
+        private java.util.List < String > customDnsAddress;
+
         @com.aliyun.core.annotation.NameInMap("CustomSecurityGroupId")
         private String customSecurityGroupId;
 
@@ -671,6 +674,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.cloudBoxOfficeSite = builder.cloudBoxOfficeSite;
             this.creationTime = builder.creationTime;
             this.customAccessPoint = builder.customAccessPoint;
+            this.customDnsAddress = builder.customDnsAddress;
             this.customSecurityGroupId = builder.customSecurityGroupId;
             this.desktopAccessType = builder.desktopAccessType;
             this.desktopCount = builder.desktopCount;
@@ -799,6 +803,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public String getCustomAccessPoint() {
             return this.customAccessPoint;
+        }
+
+        /**
+         * @return customDnsAddress
+         */
+        public java.util.List < String > getCustomDnsAddress() {
+            return this.customDnsAddress;
         }
 
         /**
@@ -1114,6 +1125,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private Boolean cloudBoxOfficeSite; 
             private String creationTime; 
             private String customAccessPoint; 
+            private java.util.List < String > customDnsAddress; 
             private String customSecurityGroupId; 
             private String desktopAccessType; 
             private Long desktopCount; 
@@ -1275,6 +1287,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder customAccessPoint(String customAccessPoint) {
                 this.customAccessPoint = customAccessPoint;
+                return this;
+            }
+
+            /**
+             * CustomDnsAddress.
+             */
+            public Builder customDnsAddress(java.util.List < String > customDnsAddress) {
+                this.customDnsAddress = customDnsAddress;
                 return this;
             }
 
