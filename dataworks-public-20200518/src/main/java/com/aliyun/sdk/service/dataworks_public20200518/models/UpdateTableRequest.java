@@ -382,6 +382,9 @@ public class UpdateTableRequest extends Request {
 
         /**
          * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -708,6 +711,9 @@ public class UpdateTableRequest extends Request {
 
             /**
              * <p>The display name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>名称</p>
              */
             public Builder columnNameCn(String columnNameCn) {
                 this.columnNameCn = columnNameCn;
@@ -728,6 +734,9 @@ public class UpdateTableRequest extends Request {
 
             /**
              * <p>The comment of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;

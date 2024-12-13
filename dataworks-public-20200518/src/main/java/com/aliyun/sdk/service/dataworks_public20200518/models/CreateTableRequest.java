@@ -374,6 +374,9 @@ public class CreateTableRequest extends Request {
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reserved</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -393,6 +396,9 @@ public class CreateTableRequest extends Request {
 
         /**
          * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -721,6 +727,9 @@ public class CreateTableRequest extends Request {
 
             /**
              * <p>The display name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>columnName in chinese</p>
              */
             public Builder columnNameCn(String columnNameCn) {
                 this.columnNameCn = columnNameCn;
@@ -741,6 +750,9 @@ public class CreateTableRequest extends Request {
 
             /**
              * <p>The comment of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;

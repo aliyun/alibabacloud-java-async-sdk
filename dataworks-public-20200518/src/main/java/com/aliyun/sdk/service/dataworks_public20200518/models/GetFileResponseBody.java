@@ -1130,6 +1130,9 @@ public class GetFileResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndEffectDate")
         private Long endEffectDate;
 
+        @com.aliyun.core.annotation.NameInMap("IgnoreParentSkipRunningProperty")
+        private String ignoreParentSkipRunningProperty;
+
         @com.aliyun.core.annotation.NameInMap("InputList")
         private java.util.List < InputList> inputList;
 
@@ -1163,6 +1166,9 @@ public class GetFileResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Stop")
         private Boolean stop;
 
+        @com.aliyun.core.annotation.NameInMap("Timeout")
+        private Integer timeout;
+
         private NodeConfiguration(Builder builder) {
             this.applyScheduleImmediately = builder.applyScheduleImmediately;
             this.autoRerunIntervalMillis = builder.autoRerunIntervalMillis;
@@ -1172,6 +1178,7 @@ public class GetFileResponseBody extends TeaModel {
             this.dependentNodeIdList = builder.dependentNodeIdList;
             this.dependentType = builder.dependentType;
             this.endEffectDate = builder.endEffectDate;
+            this.ignoreParentSkipRunningProperty = builder.ignoreParentSkipRunningProperty;
             this.inputList = builder.inputList;
             this.inputParameters = builder.inputParameters;
             this.outputList = builder.outputList;
@@ -1183,6 +1190,7 @@ public class GetFileResponseBody extends TeaModel {
             this.startEffectDate = builder.startEffectDate;
             this.startImmediately = builder.startImmediately;
             this.stop = builder.stop;
+            this.timeout = builder.timeout;
         }
 
         public static Builder builder() {
@@ -1247,6 +1255,13 @@ public class GetFileResponseBody extends TeaModel {
          */
         public Long getEndEffectDate() {
             return this.endEffectDate;
+        }
+
+        /**
+         * @return ignoreParentSkipRunningProperty
+         */
+        public String getIgnoreParentSkipRunningProperty() {
+            return this.ignoreParentSkipRunningProperty;
         }
 
         /**
@@ -1326,6 +1341,13 @@ public class GetFileResponseBody extends TeaModel {
             return this.stop;
         }
 
+        /**
+         * @return timeout
+         */
+        public Integer getTimeout() {
+            return this.timeout;
+        }
+
         public static final class Builder {
             private String applyScheduleImmediately; 
             private Integer autoRerunIntervalMillis; 
@@ -1335,6 +1357,7 @@ public class GetFileResponseBody extends TeaModel {
             private String dependentNodeIdList; 
             private String dependentType; 
             private Long endEffectDate; 
+            private String ignoreParentSkipRunningProperty; 
             private java.util.List < InputList> inputList; 
             private java.util.List < InputParameters> inputParameters; 
             private java.util.List < OutputList> outputList; 
@@ -1346,6 +1369,7 @@ public class GetFileResponseBody extends TeaModel {
             private Long startEffectDate; 
             private Boolean startImmediately; 
             private Boolean stop; 
+            private Integer timeout; 
 
             /**
              * <p>Indicates whether scheduling configurations immediately take effect after the deployment.</p>
@@ -1443,6 +1467,14 @@ public class GetFileResponseBody extends TeaModel {
              */
             public Builder endEffectDate(Long endEffectDate) {
                 this.endEffectDate = endEffectDate;
+                return this;
+            }
+
+            /**
+             * IgnoreParentSkipRunningProperty.
+             */
+            public Builder ignoreParentSkipRunningProperty(String ignoreParentSkipRunningProperty) {
+                this.ignoreParentSkipRunningProperty = ignoreParentSkipRunningProperty;
                 return this;
             }
 
@@ -1575,6 +1607,14 @@ public class GetFileResponseBody extends TeaModel {
              */
             public Builder stop(Boolean stop) {
                 this.stop = stop;
+                return this;
+            }
+
+            /**
+             * Timeout.
+             */
+            public Builder timeout(Integer timeout) {
+                this.timeout = timeout;
                 return this;
             }
 

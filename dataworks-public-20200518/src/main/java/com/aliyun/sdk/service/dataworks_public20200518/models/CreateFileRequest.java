@@ -146,6 +146,10 @@ public class CreateFileRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Stop")
     private Boolean stop;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    private Integer timeout;
+
     private CreateFileRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -181,6 +185,7 @@ public class CreateFileRequest extends Request {
         this.startEffectDate = builder.startEffectDate;
         this.startImmediately = builder.startImmediately;
         this.stop = builder.stop;
+        this.timeout = builder.timeout;
     }
 
     public static Builder builder() {
@@ -427,6 +432,13 @@ public class CreateFileRequest extends Request {
         return this.stop;
     }
 
+    /**
+     * @return timeout
+     */
+    public Integer getTimeout() {
+        return this.timeout;
+    }
+
     public static final class Builder extends Request.Builder<CreateFileRequest, Builder> {
         private String regionId; 
         private String advancedSettings; 
@@ -461,6 +473,7 @@ public class CreateFileRequest extends Request {
         private Long startEffectDate; 
         private Boolean startImmediately; 
         private Boolean stop; 
+        private Integer timeout; 
 
         private Builder() {
             super();
@@ -501,6 +514,7 @@ public class CreateFileRequest extends Request {
             this.startEffectDate = request.startEffectDate;
             this.startImmediately = request.startImmediately;
             this.stop = request.stop;
+            this.timeout = request.timeout;
         } 
 
         /**
@@ -947,6 +961,15 @@ public class CreateFileRequest extends Request {
         public Builder stop(Boolean stop) {
             this.putBodyParameter("Stop", stop);
             this.stop = stop;
+            return this;
+        }
+
+        /**
+         * Timeout.
+         */
+        public Builder timeout(Integer timeout) {
+            this.putBodyParameter("Timeout", timeout);
+            this.timeout = timeout;
             return this;
         }
 

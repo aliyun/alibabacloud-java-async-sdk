@@ -98,7 +98,7 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The output tasks of the metatable.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -106,7 +106,10 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;0&quot;</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +128,10 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000-00000-00000-00000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true and false. The value true indicates that the request was successful. The value false indicates that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -196,7 +211,10 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
             private String taskName; 
 
             /**
-             * TaskId.
+             * <p>The ID of the output task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9876543210</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -204,7 +222,7 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The name of the output task.</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;

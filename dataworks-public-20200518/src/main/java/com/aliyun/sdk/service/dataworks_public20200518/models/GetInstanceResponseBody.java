@@ -230,8 +230,14 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
+        @com.aliyun.core.annotation.NameInMap("Owner")
+        private String owner;
+
         @com.aliyun.core.annotation.NameInMap("ParamValues")
         private String paramValues;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodNumber")
+        private Integer periodNumber;
 
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
@@ -274,7 +280,9 @@ public class GetInstanceResponseBody extends TeaModel {
             this.modifyTime = builder.modifyTime;
             this.nodeId = builder.nodeId;
             this.nodeName = builder.nodeName;
+            this.owner = builder.owner;
             this.paramValues = builder.paramValues;
+            this.periodNumber = builder.periodNumber;
             this.priority = builder.priority;
             this.relatedFlowId = builder.relatedFlowId;
             this.repeatInterval = builder.repeatInterval;
@@ -426,10 +434,24 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return owner
+         */
+        public String getOwner() {
+            return this.owner;
+        }
+
+        /**
          * @return paramValues
          */
         public String getParamValues() {
             return this.paramValues;
+        }
+
+        /**
+         * @return periodNumber
+         */
+        public Integer getPeriodNumber() {
+            return this.periodNumber;
         }
 
         /**
@@ -501,7 +523,9 @@ public class GetInstanceResponseBody extends TeaModel {
             private Long modifyTime; 
             private Long nodeId; 
             private String nodeName; 
+            private String owner; 
             private String paramValues; 
+            private Integer periodNumber; 
             private Integer priority; 
             private Long relatedFlowId; 
             private Long repeatInterval; 
@@ -730,6 +754,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * Owner.
+             */
+            public Builder owner(String owner) {
+                this.owner = owner;
+                return this;
+            }
+
+            /**
              * <p>The parameters related to the node.</p>
              * 
              * <strong>example:</strong>
@@ -737,6 +769,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder paramValues(String paramValues) {
                 this.paramValues = paramValues;
+                return this;
+            }
+
+            /**
+             * PeriodNumber.
+             */
+            public Builder periodNumber(Integer periodNumber) {
+                this.periodNumber = periodNumber;
                 return this;
             }
 

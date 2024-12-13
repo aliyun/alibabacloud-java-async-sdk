@@ -98,7 +98,7 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The error code.</p>
+         * <p>Error code</p>
          * 
          * <strong>example:</strong>
          * <p>1010040007</p>
@@ -109,7 +109,7 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>Error message</p>
          * 
          * <strong>example:</strong>
          * <p>qualifiedName should be in format as entity-table.entity-guid</p>
@@ -120,7 +120,7 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>HTTP status code</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -131,7 +131,7 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID: used for locating logs and troubleshooting</p>
          * 
          * <strong>example:</strong>
          * <p>64B-587A-8CED-969E1973887FXXX-TT</p>
@@ -142,9 +142,9 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the operation. Valid values:</p>
-         * <p>true: successful</p>
-         * <p>false: failed</p>
+         * <p>Operation result:</p>
+         * <p>true: Success</p>
+         * <p>false: Failure</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -155,9 +155,9 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <p>true</p>
-         * <p>false</p>
+         * <p>Whether the call was successful. Values are as follows:</p>
+         * <p>true: success</p>
+         * <p>false: failed</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

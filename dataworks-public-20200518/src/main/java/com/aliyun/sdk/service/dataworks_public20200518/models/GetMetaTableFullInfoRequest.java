@@ -152,6 +152,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         } 
 
         /**
+         * <p>Region information, typically the region where the service is located. For example, East China 2 (Shanghai) is <code>cn-shanghai</code>, and North China 3 (Zhangjiakou) is <code>cn-zhangjiakou</code>. You do not need to fill in RegionId; it will be automatically resolved based on the Endpoint you call.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +165,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the E-MapReduce (EMR) cluster. You can log on to the EMR console to obtain the ID of the cluster.</p>
+         * <p>The ID of the EMR cluster. You can log in to the EMR management console to obtain the cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C-010A704DA760****</p>
@@ -176,7 +177,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The type of the data source. Only emr is supported.</p>
+         * <p>Data type, currently only supports the value <code>emr</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>emr</p>
@@ -188,7 +189,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The name of the metadatabase of the EMR cluster. You can call the <a href="https://help.aliyun.com/document_detail/185662.html">ListMetaDB</a> operation to query the name of the metadatabase.</p>
+         * <p>The name of the EMR database. You can obtain the database name by calling the <a href="https://help.aliyun.com/document_detail/185662.html">ListMetaDB</a> interface.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -200,7 +201,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number requested for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -212,7 +213,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of items per page, with a default of 10 and a maximum of 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -224,7 +225,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The GUID of the metatable. You can call the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> operation to query the GUID of the metatable.</p>
+         * <p>The unique identifier of the table. You can obtain the unique identifier by calling the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> interface.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.engine_name.table_name</p>
@@ -236,7 +237,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The name of the metatable in the EMR cluster. You can call the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> operation to query the name of the metatable.</p>
+         * <p>The name of the EMR table. You can obtain the table name by calling the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> interface.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
