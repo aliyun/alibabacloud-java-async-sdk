@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGroupIdRequest} extends {@link RequestModel}
  *
  * <p>DeleteGroupIdRequest</p>
@@ -83,7 +84,7 @@ public class DeleteGroupIdRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class DeleteGroupIdRequest extends Request {
         }
 
         /**
-         * The ID of the group that you want to delete.
+         * <p>The ID of the group that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -101,7 +106,11 @@ public class DeleteGroupIdRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance from which you want to delete a group.
+         * <p>The ID of the ApsaraMQ for MQTT instance from which you want to delete a group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-cn-0pp1ldu****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

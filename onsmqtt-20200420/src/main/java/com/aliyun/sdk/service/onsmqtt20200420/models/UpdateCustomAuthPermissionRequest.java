@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomAuthPermissionRequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomAuthPermissionRequest</p>
@@ -129,7 +130,11 @@ public class UpdateCustomAuthPermissionRequest extends Request {
         } 
 
         /**
-         * Effect.
+         * <p>Specifies whether to allow or deny access.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALLOW</p>
          */
         public Builder effect(String effect) {
             this.putBodyParameter("Effect", effect);
@@ -138,7 +143,11 @@ public class UpdateCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * Identity.
+         * <p>Username or Client ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder identity(String identity) {
             this.putBodyParameter("Identity", identity);
@@ -147,7 +156,15 @@ public class UpdateCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * IdentityType.
+         * <p>The identity type. Valid values:</p>
+         * <ul>
+         * <li>USER</li>
+         * <li>CLIENT</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("IdentityType", identityType);
@@ -156,7 +173,11 @@ public class UpdateCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>ID of the Cloud Message Queue MQTT version instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-0pp12gl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -165,7 +186,11 @@ public class UpdateCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * PermitAction.
+         * <p>The permissions that you want to grant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUB_SUB</p>
          */
         public Builder permitAction(String permitAction) {
             this.putBodyParameter("PermitAction", permitAction);
@@ -174,7 +199,11 @@ public class UpdateCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * Topic.
+         * <p>Authorized Topic, supporting multi-level MQTT topics and wildcards.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test/t1</p>
          */
         public Builder topic(String topic) {
             this.putBodyParameter("Topic", topic);

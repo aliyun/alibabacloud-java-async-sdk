@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMqttTraceMessageSubscribeResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMqttTraceMessageSubscribeResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +97,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         }
 
         /**
-         * The delivery trace of the queried message.
+         * <p>The delivery trace of the queried message.</p>
          */
         public Builder messageTraceLists(java.util.List < MessageTraceLists> messageTraceLists) {
             this.messageTraceLists = messageTraceLists;
@@ -101,7 +105,10 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID that the system generates for the request. You can use the ID to troubleshoot issues. This parameter is a common parameter.
+         * <p>The unique ID that the system generates for the request. You can use the ID to troubleshoot issues. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E685844-ADAF-4D85-9EAC-F9471E8C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned delivery traces.
+         * <p>The returned delivery traces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -130,6 +143,12 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMqttTraceMessageSubscribeResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMqttTraceMessageSubscribeResponseBody</p>
+     */
     public static class MessageTraceLists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -217,11 +236,14 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * The action on the message. Valid values:
-             * <p>
+             * <p>The action on the message. Valid values:</p>
+             * <ul>
+             * <li><strong>sub</strong>: The ApsaraMQ for MQTT client subscribes to the message.</li>
+             * <li><strong>push_offline</strong>: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.</li>
+             * </ul>
              * 
-             * *   **sub**: The ApsaraMQ for MQTT client subscribes to the message.
-             * *   **push_offline**: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.
+             * <strong>example:</strong>
+             * <p>sub</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -229,11 +251,14 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             }
 
             /**
-             * The code returned for the action on the message. Valid values:
-             * <p>
+             * <p>The code returned for the action on the message. Valid values:</p>
+             * <ul>
+             * <li><strong>mqtt.trace.action.msg.sub</strong>: The value that is returned if the value of Action is <strong>sub</strong>.</li>
+             * <li><strong>mqtt.trace.action.msg.push.offline</strong>: The value that is returned if the value of Action is <strong>push_offline</strong>.</li>
+             * </ul>
              * 
-             * *   **mqtt.trace.action.msg.sub**: The value that is returned if the value of Action is **sub**.
-             * *   **mqtt.trace.action.msg.push.offline**: The value that is returned if the value of Action is **push_offline**.
+             * <strong>example:</strong>
+             * <p>mqtt.trace.action.msg.sub</p>
              */
             public Builder actionCode(String actionCode) {
                 this.actionCode = actionCode;
@@ -241,11 +266,14 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information for the action on the message. Valid values:
-             * <p>
+             * <p>The returned information for the action on the message. Valid values:</p>
+             * <ul>
+             * <li><strong>Push To Mqtt Client</strong>: The value that is returned if the value of Action is <strong>sub</strong>.</li>
+             * <li><strong>Push Offline Msg To Mqtt Client</strong>: The value that is returned if the value of Action is <strong>push_offline</strong>.</li>
+             * </ul>
              * 
-             * *   **Push To Mqtt Client**: The value that is returned if the value of Action is **sub**.
-             * *   **Push Offline Msg To Mqtt Client**: The value that is returned if the value of Action is **push_offline**.
+             * <strong>example:</strong>
+             * <p>Push To Mqtt Client</p>
              */
             public Builder actionInfo(String actionInfo) {
                 this.actionInfo = actionInfo;
@@ -253,7 +281,10 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the client that subscribes to the message.
+             * <p>The ID of the client that subscribes to the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test@@@consumer</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -261,7 +292,10 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             }
 
             /**
-             * The message ID.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AC1EC1B33D5978308DB17F3245E4****</p>
              */
             public Builder msgId(String msgId) {
                 this.msgId = msgId;
@@ -269,7 +303,10 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the message was delivered.
+             * <p>The time when the message was delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-25 16:46:41.274</p>
              */
             public Builder time(String time) {
                 this.time = time;

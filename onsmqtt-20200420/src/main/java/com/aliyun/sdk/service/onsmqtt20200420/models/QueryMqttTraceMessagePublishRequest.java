@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMqttTraceMessagePublishRequest} extends {@link RequestModel}
  *
  * <p>QueryMqttTraceMessagePublishRequest</p>
@@ -128,7 +129,7 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -137,7 +138,11 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
+         * <p>The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1618646400000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -146,7 +151,11 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
+         * <p>The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621591200000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -155,7 +164,11 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can view the instance ID in the **Basic Information** section on the **Instance Details** page that corresponds to the instance in the ApsaraMQ for MQTT console.
+         * <p>The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can view the instance ID in the <strong>Basic Information</strong> section on the <strong>Instance Details</strong> page that corresponds to the instance in the ApsaraMQ for MQTT console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-cn-i7m26mf****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -164,7 +177,11 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
         }
 
         /**
-         * The ID of the region where the ApsaraMQ for MQTT instance resides. For more information, see [Endpoints](~~181438~~).
+         * <p>The ID of the region where the ApsaraMQ for MQTT instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/181438.html">Endpoints</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder mqttRegionId(String mqttRegionId) {
             this.putQueryParameter("MqttRegionId", mqttRegionId);
@@ -173,7 +190,11 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
         }
 
         /**
-         * The message ID.
+         * <p>The message ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC1EC0030EAB78308DB16A3EC773****</p>
          */
         public Builder msgId(String msgId) {
             this.putQueryParameter("MsgId", msgId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloseConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>CloseConnectionResponseBody</p>
@@ -73,7 +74,10 @@ public class CloseConnectionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>Return code of the interface: 200 indicates success. Other values indicate error codes. For details about the error codes, see Error Codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class CloseConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Call result information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class CloseConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82B9E503-F4A1-4F30-976F-C6999FF9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class CloseConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. true means success, false means failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

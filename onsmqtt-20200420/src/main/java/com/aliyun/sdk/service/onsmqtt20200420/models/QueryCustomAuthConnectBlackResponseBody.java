@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCustomAuthConnectBlackResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCustomAuthConnectBlackResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed. For a list of error codes, see Error codes.
+         * <p>The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed. For a list of error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCustomAuthConnectBlackResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCustomAuthConnectBlackResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
@@ -181,7 +200,10 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
             private String permitAction; 
 
             /**
-             * The client ID.
+             * <p>The client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_TEST@@@test</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -189,7 +211,10 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to allow or deny access.
+             * <p>Indicates whether to allow or deny access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALLOW</p>
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -197,7 +222,10 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
             }
 
             /**
-             * The authorized permissions.
+             * <p>The authorized permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONNECT</p>
              */
             public Builder permitAction(String permitAction) {
                 this.permitAction = permitAction;
@@ -211,6 +239,12 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCustomAuthConnectBlackResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCustomAuthConnectBlackResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
@@ -250,7 +284,10 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
             private java.util.List < Results> results; 
 
             /**
-             * The pagination token that is used in the next request to retrieve a new page of results.
+             * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAZ0cM0HTqLXvgm7oMHWXcvc=</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -258,7 +295,7 @@ public class QueryCustomAuthConnectBlackResponseBody extends TeaModel {
             }
 
             /**
-             * The returned results.
+             * <p>The returned results.</p>
              */
             public Builder results(java.util.List < Results> results) {
                 this.results = results;

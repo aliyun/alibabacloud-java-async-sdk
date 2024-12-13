@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTokenResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTokenResponseBody</p>
@@ -49,7 +50,10 @@ public class QueryTokenResponseBody extends TeaModel {
         private Boolean tokenStatus; 
 
         /**
-         * The unique ID that the system generates for the request. This parameter is a common parameter.
+         * <p>The unique ID that the system generates for the request. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C8AADD0-6A95-436D-AFA0-3405CCE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class QueryTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the queried token. Valid values:
-         * <p>
+         * <p>The status of the queried token. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: indicates the token is valid.</li>
+         * <li><strong>false</strong>: indicates the token is invalid.</li>
+         * </ul>
          * 
-         * *   **true**: indicates the token is valid.
-         * *   **false**: indicates the token is invalid.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder tokenStatus(Boolean tokenStatus) {
             this.tokenStatus = tokenStatus;

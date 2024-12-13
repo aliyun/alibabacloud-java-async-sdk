@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomAuthIdentityRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomAuthIdentityRequest</p>
@@ -98,7 +99,10 @@ public class DeleteCustomAuthIdentityRequest extends Request {
         } 
 
         /**
-         * The client ID if you set IdentityType to CLIENT.
+         * <p>The client ID if you set IdentityType to CLIENT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@test</p>
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -107,11 +111,15 @@ public class DeleteCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The identity type. Valid values:
-         * <p>
+         * <p>The identity type. Valid values:</p>
+         * <ul>
+         * <li>USER</li>
+         * <li>CLIENT</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   USER
-         * *   CLIENT
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("IdentityType", identityType);
@@ -120,7 +128,11 @@ public class DeleteCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance.
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-0pp12gl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -129,7 +141,11 @@ public class DeleteCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The username.
+         * <p>The username.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("Username", username);

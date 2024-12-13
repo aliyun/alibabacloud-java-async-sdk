@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRegisterCodeRequest} extends {@link RequestModel}
  *
  * <p>GetRegisterCodeRequest</p>
@@ -54,7 +55,11 @@ public class GetRegisterCodeRequest extends Request {
         } 
 
         /**
-         * MqttInstanceId.
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-7mz2d******</p>
          */
         public Builder mqttInstanceId(String mqttInstanceId) {
             this.putQueryParameter("MqttInstanceId", mqttInstanceId);

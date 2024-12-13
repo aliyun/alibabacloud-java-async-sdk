@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomAuthConnectBlackRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomAuthConnectBlackRequest</p>
@@ -69,7 +70,11 @@ public class DeleteCustomAuthConnectBlackRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>The ID of the ApsaraMQ for MQTT client.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@test</p>
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -78,7 +83,11 @@ public class DeleteCustomAuthConnectBlackRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-0pp12gl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCustomAuthConnectBlackRequest} extends {@link RequestModel}
  *
  * <p>QueryCustomAuthConnectBlackRequest</p>
@@ -97,7 +98,10 @@ public class QueryCustomAuthConnectBlackRequest extends Request {
         } 
 
         /**
-         * The ID of the client to be queried.
+         * <p>The ID of the client to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@test</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -106,7 +110,11 @@ public class QueryCustomAuthConnectBlackRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance.
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-111****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,7 +123,10 @@ public class QueryCustomAuthConnectBlackRequest extends Request {
         }
 
         /**
-         * The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.
+         * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xOfRU60sGEwN1OlFBIL8Ew==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -124,7 +135,11 @@ public class QueryCustomAuthConnectBlackRequest extends Request {
         }
 
         /**
-         * The number of clients to be queried. Maximum value: 100.
+         * <p>The number of clients to be queried. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);

@@ -39,6 +39,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>仅铂金版和专业版实例支持使用ActiveCaCertificate接口。</li>
+     * <li>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</li>
+     * <li>ActiveCaCertificate接口仅支持对已在云消息队列 MQTT 版服务端注册的CA证书进行操作，您可以通过<a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a>接口查询指定实例下已注册的CA证书。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ActiveCaCertificate  ActiveCaCertificateRequest
+     * @return ActiveCaCertificateResponse
+     */
     @Override
     public CompletableFuture<ActiveCaCertificateResponse> activeCaCertificate(ActiveCaCertificateRequest request) {
         try {
@@ -53,6 +64,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <ul>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ActiveDeviceCertificate  ActiveDeviceCertificateRequest
+     * @return ActiveDeviceCertificateResponse
+     */
     @Override
     public CompletableFuture<ActiveDeviceCertificateResponse> activeDeviceCertificate(ActiveDeviceCertificateRequest request) {
         try {
@@ -67,6 +88,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddCustomAuthConnectBlack  AddCustomAuthConnectBlackRequest
+     * @return AddCustomAuthConnectBlackResponse
+     */
     @Override
     public CompletableFuture<AddCustomAuthConnectBlackResponse> addCustomAuthConnectBlack(AddCustomAuthConnectBlackRequest request) {
         try {
@@ -81,6 +106,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddCustomAuthIdentity  AddCustomAuthIdentityRequest
+     * @return AddCustomAuthIdentityResponse
+     */
     @Override
     public CompletableFuture<AddCustomAuthIdentityResponse> addCustomAuthIdentity(AddCustomAuthIdentityRequest request) {
         try {
@@ -95,6 +124,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddCustomAuthPermission  AddCustomAuthPermissionRequest
+     * @return AddCustomAuthPermissionResponse
+     */
     @Override
     public CompletableFuture<AddCustomAuthPermissionResponse> addCustomAuthPermission(AddCustomAuthPermissionRequest request) {
         try {
@@ -110,9 +143,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation up to 100 times per second per account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.
-      * *   Each successful call to the **ApplyToken** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</p>
+     * <ul>
+     * <li>Each successful call to the <strong>ApplyToken</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ApplyToken  ApplyTokenRequest
+     * @return ApplyTokenResponse
      */
     @Override
     public CompletableFuture<ApplyTokenResponse> applyToken(ApplyTokenRequest request) {
@@ -129,10 +167,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call the **BatchQuerySessionByClientIds** operation up to 100 times per second. For more information, see [Limits on QPS](~~163047~~).
-      * *   You can call the **BatchQuerySessionByClientIds** operation to query the status of up to 10 ApsaraMQ for MQTT clients in a single query.
-      * *   Each successful call to the **BatchQuerySessionByClientIds** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <p>  You can call the <strong>BatchQuerySessionByClientIds</strong> operation up to 100 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</p>
+     * <ul>
+     * <li>You can call the <strong>BatchQuerySessionByClientIds</strong> operation to query the status of up to 10 ApsaraMQ for MQTT clients in a single query.</li>
+     * <li>Each successful call to the <strong>BatchQuerySessionByClientIds</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of BatchQuerySessionByClientIds  BatchQuerySessionByClientIdsRequest
+     * @return BatchQuerySessionByClientIdsResponse
      */
     @Override
     public CompletableFuture<BatchQuerySessionByClientIdsResponse> batchQuerySessionByClientIds(BatchQuerySessionByClientIdsRequest request) {
@@ -148,6 +191,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>This API is still in the testing phase and is only available for Professional Edition instances in the Shanghai region. Legacy instances are not supported at this time.</p>
+     * 
+     * @param request the request parameters of CloseConnection  CloseConnectionRequest
+     * @return CloseConnectionResponse
+     */
     @Override
     public CompletableFuture<CloseConnectionResponse> closeConnection(CloseConnectionRequest request) {
         try {
@@ -163,8 +213,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Each successful call to the **CreateGroupId** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <p>Each successful call to the <strong>CreateGroupId</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</p>
+     * 
+     * @param request the request parameters of CreateGroupId  CreateGroupIdRequest
+     * @return CreateGroupIdResponse
      */
     @Override
     public CompletableFuture<CreateGroupIdResponse> createGroupId(CreateGroupIdRequest request) {
@@ -180,6 +233,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <ul>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation to delete only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
+     * <li>If you delete a specific CA certificate from an ApsaraMQ for MQTT broker, all device certificates that are issued by the CA certificate and are registered with the ApsaraMQ for MQTT broker are automatically deleted.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteCaCertificate  DeleteCaCertificateRequest
+     * @return DeleteCaCertificateResponse
+     */
     @Override
     public CompletableFuture<DeleteCaCertificateResponse> deleteCaCertificate(DeleteCaCertificateRequest request) {
         try {
@@ -194,6 +259,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomAuthConnectBlack  DeleteCustomAuthConnectBlackRequest
+     * @return DeleteCustomAuthConnectBlackResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomAuthConnectBlackResponse> deleteCustomAuthConnectBlack(DeleteCustomAuthConnectBlackRequest request) {
         try {
@@ -208,6 +277,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomAuthIdentity  DeleteCustomAuthIdentityRequest
+     * @return DeleteCustomAuthIdentityResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomAuthIdentityResponse> deleteCustomAuthIdentity(DeleteCustomAuthIdentityRequest request) {
         try {
@@ -222,6 +295,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomAuthPermission  DeleteCustomAuthPermissionRequest
+     * @return DeleteCustomAuthPermissionResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomAuthPermissionResponse> deleteCustomAuthPermission(DeleteCustomAuthPermissionRequest request) {
         try {
@@ -236,6 +313,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <ul>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteDeviceCertificate  DeleteDeviceCertificateRequest
+     * @return DeleteDeviceCertificateResponse
+     */
     @Override
     public CompletableFuture<DeleteDeviceCertificateResponse> deleteDeviceCertificate(DeleteDeviceCertificateRequest request) {
         try {
@@ -251,8 +338,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Each successful call to the **DeleteGroupId** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <p>Each successful call to the <strong>DeleteGroupId</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</p>
+     * 
+     * @param request the request parameters of DeleteGroupId  DeleteGroupIdRequest
+     * @return DeleteGroupIdResponse
      */
     @Override
     public CompletableFuture<DeleteGroupIdResponse> deleteGroupId(DeleteGroupIdRequest request) {
@@ -268,6 +358,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>仅铂金版和专业版实例支持使用GetCaCertificate接口。</li>
+     * <li>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetCaCertificate  GetCaCertificateRequest
+     * @return GetCaCertificateResponse
+     */
     @Override
     public CompletableFuture<GetCaCertificateResponse> getCaCertificate(GetCaCertificateRequest request) {
         try {
@@ -282,6 +382,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Only Platinum edition instances support the use of the GetDeviceCertificate interface. - The request frequency limit per user is 500 requests/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetDeviceCertificate  GetDeviceCertificateRequest
+     * @return GetDeviceCertificateResponse
+     */
     @Override
     public CompletableFuture<GetDeviceCertificateResponse> getDeviceCertificate(GetDeviceCertificateRequest request) {
         try {
@@ -297,9 +406,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. We recommend that you take note of this limit when you call this operation. For more information, see [Limits on QPS](~~163047~~).
-      * *   Each successful call to the **GetDeviceCredential** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</p>
+     * <ul>
+     * <li>Each successful call to the <strong>GetDeviceCredential</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetDeviceCredential  GetDeviceCredentialRequest
+     * @return GetDeviceCredentialResponse
      */
     @Override
     public CompletableFuture<GetDeviceCredentialResponse> getDeviceCredential(GetDeviceCredentialRequest request) {
@@ -315,6 +429,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  This API operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <ul>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetRegisterCode  GetRegisterCodeRequest
+     * @return GetRegisterCodeResponse
+     */
     @Override
     public CompletableFuture<GetRegisterCodeResponse> getRegisterCode(GetRegisterCodeRequest request) {
         try {
@@ -329,6 +453,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <ul>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation to deregister only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of InactivateCaCertificate  InactivateCaCertificateRequest
+     * @return InactivateCaCertificateResponse
+     */
     @Override
     public CompletableFuture<InactivateCaCertificateResponse> inactivateCaCertificate(InactivateCaCertificateRequest request) {
         try {
@@ -343,6 +478,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <ul>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of InactivateDeviceCertificate  InactivateDeviceCertificateRequest
+     * @return InactivateDeviceCertificateResponse
+     */
     @Override
     public CompletableFuture<InactivateDeviceCertificateResponse> inactivateDeviceCertificate(InactivateDeviceCertificateRequest request) {
         try {
@@ -357,6 +502,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Only Platinum and Professional instances support using the ListCaCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact the Micro Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListCaCertificate  ListCaCertificateRequest
+     * @return ListCaCertificateResponse
+     */
     @Override
     public CompletableFuture<ListCaCertificateResponse> listCaCertificate(ListCaCertificateRequest request) {
         try {
@@ -371,6 +525,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Only Platinum and Professional instances support using the ListDeviceCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListDeviceCertificate  ListDeviceCertificateRequest
+     * @return ListDeviceCertificateResponse
+     */
     @Override
     public CompletableFuture<ListDeviceCertificateResponse> listDeviceCertificate(ListDeviceCertificateRequest request) {
         try {
@@ -385,6 +548,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Only Platinum and Professional edition instances support using the ListDeviceCertificateByCaSn interface. - The request frequency limit for a single user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListDeviceCertificateByCaSn  ListDeviceCertificateByCaSnRequest
+     * @return ListDeviceCertificateByCaSnResponse
+     */
     @Override
     public CompletableFuture<ListDeviceCertificateByCaSnResponse> listDeviceCertificateByCaSn(ListDeviceCertificateByCaSnRequest request) {
         try {
@@ -399,6 +571,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDeviceCredentialClientId  ListDeviceCredentialClientIdRequest
+     * @return ListDeviceCredentialClientIdResponse
+     */
     @Override
     public CompletableFuture<ListDeviceCredentialClientIdResponse> listDeviceCredentialClientId(ListDeviceCredentialClientIdRequest request) {
         try {
@@ -414,8 +590,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Each successful call to the **ListGroupId** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <p>Each successful call to the <strong>ListGroupId</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</p>
+     * 
+     * @param request the request parameters of ListGroupId  ListGroupIdRequest
+     * @return ListGroupIdResponse
      */
     @Override
     public CompletableFuture<ListGroupIdResponse> listGroupId(ListGroupIdRequest request) {
@@ -431,6 +610,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCustomAuthConnectBlack  QueryCustomAuthConnectBlackRequest
+     * @return QueryCustomAuthConnectBlackResponse
+     */
     @Override
     public CompletableFuture<QueryCustomAuthConnectBlackResponse> queryCustomAuthConnectBlack(QueryCustomAuthConnectBlackRequest request) {
         try {
@@ -445,6 +628,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCustomAuthIdentity  QueryCustomAuthIdentityRequest
+     * @return QueryCustomAuthIdentityResponse
+     */
     @Override
     public CompletableFuture<QueryCustomAuthIdentityResponse> queryCustomAuthIdentity(QueryCustomAuthIdentityRequest request) {
         try {
@@ -459,6 +646,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCustomAuthPermission  QueryCustomAuthPermissionRequest
+     * @return QueryCustomAuthPermissionResponse
+     */
     @Override
     public CompletableFuture<QueryCustomAuthPermissionResponse> queryCustomAuthPermission(QueryCustomAuthPermissionRequest request) {
         try {
@@ -474,9 +665,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Each successful call to the **QueryMqttTraceDevice** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      * *   You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see [Limits on QPS](~~163047~~).
-      *
+     * <b>description</b> :
+     * <p>  Each successful call to the <strong>QueryMqttTraceDevice</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</p>
+     * <ul>
+     * <li>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryMqttTraceDevice  QueryMqttTraceDeviceRequest
+     * @return QueryMqttTraceDeviceResponse
      */
     @Override
     public CompletableFuture<QueryMqttTraceDeviceResponse> queryMqttTraceDevice(QueryMqttTraceDeviceRequest request) {
@@ -493,9 +689,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Each successful call to the **QueryMqttTraceMessageOfClient** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      * *   You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see [Limits on QPS](~~163047~~).
-      *
+     * <b>description</b> :
+     * <p>  Each successful call to the <strong>QueryMqttTraceMessageOfClient</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</p>
+     * <ul>
+     * <li>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryMqttTraceMessageOfClient  QueryMqttTraceMessageOfClientRequest
+     * @return QueryMqttTraceMessageOfClientResponse
      */
     @Override
     public CompletableFuture<QueryMqttTraceMessageOfClientResponse> queryMqttTraceMessageOfClient(QueryMqttTraceMessageOfClientRequest request) {
@@ -512,9 +713,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Each successful call to the **QueryMqttTraceMessagePublish** operation increases the messaging transactions per second (TPS). This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      * *   You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see [Limits on QPS](~~163047~~).
-      *
+     * <b>description</b> :
+     * <p>  Each successful call to the <strong>QueryMqttTraceMessagePublish</strong> operation increases the messaging transactions per second (TPS). This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</p>
+     * <ul>
+     * <li>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryMqttTraceMessagePublish  QueryMqttTraceMessagePublishRequest
+     * @return QueryMqttTraceMessagePublishResponse
      */
     @Override
     public CompletableFuture<QueryMqttTraceMessagePublishResponse> queryMqttTraceMessagePublish(QueryMqttTraceMessagePublishRequest request) {
@@ -531,9 +737,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Each successful call to the **QueryMqttTraceMessageSubscribe** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      * *   You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see [Limits on QPS](~~163047~~).
-      *
+     * <b>description</b> :
+     * <p>  Each successful call to the <strong>QueryMqttTraceMessageSubscribe</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</p>
+     * <ul>
+     * <li>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryMqttTraceMessageSubscribe  QueryMqttTraceMessageSubscribeRequest
+     * @return QueryMqttTraceMessageSubscribeResponse
      */
     @Override
     public CompletableFuture<QueryMqttTraceMessageSubscribeResponse> queryMqttTraceMessageSubscribe(QueryMqttTraceMessageSubscribeRequest request) {
@@ -550,9 +761,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation up to 500 times per second.**** For more information, see [Limits on QPS](~~163047~~).
-      * *   Each successful call to the **QuerySessionByClientId** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 500 times per second.**** For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</p>
+     * <ul>
+     * <li>Each successful call to the <strong>QuerySessionByClientId</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QuerySessionByClientId  QuerySessionByClientIdRequest
+     * @return QuerySessionByClientIdResponse
      */
     @Override
     public CompletableFuture<QuerySessionByClientIdResponse> querySessionByClientId(QuerySessionByClientIdRequest request) {
@@ -569,9 +785,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation up to 100 times per second per account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.
-      * *   Each successful call to the **QueryToken** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</p>
+     * <ul>
+     * <li>Each successful call to the <strong>QueryToken</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryToken  QueryTokenRequest
+     * @return QueryTokenResponse
      */
     @Override
     public CompletableFuture<QueryTokenResponse> queryToken(QueryTokenRequest request) {
@@ -588,10 +809,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Limits
-      * You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see [Limits on QPS](~~163047~~).
-      * >  Each successful call to the **RefreshDeviceCredential** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Limits</h2>
+     * <p>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</p>
+     * <blockquote>
+     * <p> Each successful call to the <strong>RefreshDeviceCredential</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of RefreshDeviceCredential  RefreshDeviceCredentialRequest
+     * @return RefreshDeviceCredentialResponse
      */
     @Override
     public CompletableFuture<RefreshDeviceCredentialResponse> refreshDeviceCredential(RefreshDeviceCredentialRequest request) {
@@ -607,6 +833,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Only Platinum and Professional instances support using the RegisterCaCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RegisterCaCertificate  RegisterCaCertificateRequest
+     * @return RegisterCaCertificateResponse
+     */
     @Override
     public CompletableFuture<RegisterCaCertificateResponse> registerCaCertificate(RegisterCaCertificateRequest request) {
         try {
@@ -622,9 +857,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see [Limits on QPS](~~163047~~).
-      * *   Each successful call to the **RegisterDeviceCredential** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</p>
+     * <ul>
+     * <li>Each successful call to the <strong>RegisterDeviceCredential</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RegisterDeviceCredential  RegisterDeviceCredentialRequest
+     * @return RegisterDeviceCredentialResponse
      */
     @Override
     public CompletableFuture<RegisterDeviceCredentialResponse> registerDeviceCredential(RegisterDeviceCredentialRequest request) {
@@ -641,9 +881,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation up to 5 times per second per account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.
-      * *   Each successful call to the **RevokeToken** operation increases the messaging transactions per second (TPS). This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 5 times per second per account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</p>
+     * <ul>
+     * <li>Each successful call to the <strong>RevokeToken</strong> operation increases the messaging transactions per second (TPS). This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RevokeToken  RevokeTokenRequest
+     * @return RevokeTokenResponse
      */
     @Override
     public CompletableFuture<RevokeTokenResponse> revokeToken(RevokeTokenRequest request) {
@@ -660,11 +905,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The **SendMessage** operation is called by applications on cloud servers. It is complementary to the operation that is called by ApsaraMQ for MQTT clients to send messages. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see [Developer guide](~~179160~~).
-      * *   Before you call the **SendMessage** operation, make sure that the kernel version of your ApsaraMQ for MQTT instance is 3.3.0 or later. You can obtain the information about the kernel version on the [Instance Details](https://mqtt.console.aliyun.com) page that corresponds to the instance in the **ApsaraMQ for MQTT console**.
-      * *   Messages that are sent by calling the **SendMessage** operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT to forward messages to ApsaraMQ for RocketMQ, send the messages by using an SDK. For more information, see [Export data from ApsaraMQ for MQTT to other Alibaba Cloud services](~~174527~~). You can call the **SendMessage** operation up to 1,000 times per second. For more information, see [Limits on QPS](~~163047~~).
-      * *   Each successful call to the **SendMessage** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For information about the billing details, see [Billing rules](~~52819~~).
-      *
+     * <b>description</b> :
+     * <p>  The <strong>SendMessage</strong> operation is called by applications on cloud servers. It is complementary to the operation that is called by ApsaraMQ for MQTT clients to send messages. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</p>
+     * <ul>
+     * <li>Before you call the <strong>SendMessage</strong> operation, make sure that the kernel version of your ApsaraMQ for MQTT instance is 3.3.0 or later. You can obtain the information about the kernel version on the <a href="https://mqtt.console.aliyun.com">Instance Details</a> page that corresponds to the instance in the <strong>ApsaraMQ for MQTT console</strong>.</li>
+     * <li>Messages that are sent by calling the <strong>SendMessage</strong> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT to forward messages to ApsaraMQ for RocketMQ, send the messages by using an SDK. For more information, see <a href="https://help.aliyun.com/document_detail/174527.html">Export data from ApsaraMQ for MQTT to other Alibaba Cloud services</a>. You can call the <strong>SendMessage</strong> operation up to 1,000 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</li>
+     * <li>Each successful call to the <strong>SendMessage</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For information about the billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SendMessage  SendMessageRequest
+     * @return SendMessageResponse
      */
     @Override
     public CompletableFuture<SendMessageResponse> sendMessage(SendMessageRequest request) {
@@ -681,9 +931,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see [Limits on QPS](~~163047~~).
-      * *   Each successful call to the **UnRegisterDeviceCredential** operation increases the number of transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
-      *
+     * @param request the request parameters of SetSniConfig  SetSniConfigRequest
+     * @return SetSniConfigResponse
+     */
+    @Override
+    public CompletableFuture<SetSniConfigResponse> setSniConfig(SetSniConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetSniConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetSniConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetSniConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</p>
+     * <ul>
+     * <li>Each successful call to the <strong>UnRegisterDeviceCredential</strong> operation increases the number of transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UnRegisterDeviceCredential  UnRegisterDeviceCredentialRequest
+     * @return UnRegisterDeviceCredentialResponse
      */
     @Override
     public CompletableFuture<UnRegisterDeviceCredentialResponse> unRegisterDeviceCredential(UnRegisterDeviceCredentialRequest request) {
@@ -699,6 +972,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCustomAuthIdentity  UpdateCustomAuthIdentityRequest
+     * @return UpdateCustomAuthIdentityResponse
+     */
     @Override
     public CompletableFuture<UpdateCustomAuthIdentityResponse> updateCustomAuthIdentity(UpdateCustomAuthIdentityRequest request) {
         try {
@@ -713,6 +990,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCustomAuthPermission  UpdateCustomAuthPermissionRequest
+     * @return UpdateCustomAuthPermissionResponse
+     */
     @Override
     public CompletableFuture<UpdateCustomAuthPermissionResponse> updateCustomAuthPermission(UpdateCustomAuthPermissionRequest request) {
         try {

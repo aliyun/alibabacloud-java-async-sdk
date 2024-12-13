@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRegisterCodeResponseBody} extends {@link TeaModel}
  *
  * <p>GetRegisterCodeResponseBody</p>
@@ -49,7 +50,10 @@ public class GetRegisterCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RegisterCode.
+         * <p>The registration code of the CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13274673-8f90-4630-bea1-9cccb25756ad2089******</p>
          */
         public Builder registerCode(String registerCode) {
             this.registerCode = registerCode;
@@ -57,7 +61,10 @@ public class GetRegisterCodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

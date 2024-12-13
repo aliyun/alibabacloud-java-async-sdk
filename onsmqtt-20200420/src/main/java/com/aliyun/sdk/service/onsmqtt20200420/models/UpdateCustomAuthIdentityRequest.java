@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomAuthIdentityRequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomAuthIdentityRequest</p>
@@ -128,7 +129,10 @@ public class UpdateCustomAuthIdentityRequest extends Request {
         } 
 
         /**
-         * The client ID if you set IdentityType to CLIENT.
+         * <p>The client ID if you set IdentityType to CLIENT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@test</p>
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -137,11 +141,15 @@ public class UpdateCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The identity type. Valid values:
-         * <p>
+         * <p>The identity type. Valid values:</p>
+         * <ul>
+         * <li>USER</li>
+         * <li>CLIENT</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   USER
-         * *   CLIENT
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("IdentityType", identityType);
@@ -150,7 +158,11 @@ public class UpdateCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance.
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-111****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -159,7 +171,11 @@ public class UpdateCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The AccessKey secret.
+         * <p>The AccessKey secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder secret(String secret) {
             this.putBodyParameter("Secret", secret);
@@ -168,7 +184,11 @@ public class UpdateCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The signature verification mode. ORIGIN: compares the password and AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.
+         * <p>The signature verification mode. ORIGIN: compares the password and AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIGNED</p>
          */
         public Builder signMode(String signMode) {
             this.putBodyParameter("SignMode", signMode);
@@ -177,7 +197,11 @@ public class UpdateCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The username.
+         * <p>The username.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("Username", username);

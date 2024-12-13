@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeviceCertificateByCaSnRequest} extends {@link RequestModel}
  *
  * <p>ListDeviceCertificateByCaSnRequest</p>
@@ -99,7 +100,11 @@ public class ListDeviceCertificateByCaSnRequest extends Request {
         } 
 
         /**
-         * CaSn.
+         * <p>The SN serial number of the CA certificate to be queried, indicating which CA certificate&quot;s registered device certificates are to be retrieved.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>007269004887******</p>
          */
         public Builder caSn(String caSn) {
             this.putQueryParameter("CaSn", caSn);
@@ -108,7 +113,11 @@ public class ListDeviceCertificateByCaSnRequest extends Request {
         }
 
         /**
-         * MqttInstanceId.
+         * <p>The instance ID bound to the CA certificate, which is the instance ID of the MQTT version of the cloud message queue.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-7mz2d******</p>
          */
         public Builder mqttInstanceId(String mqttInstanceId) {
             this.putQueryParameter("MqttInstanceId", mqttInstanceId);
@@ -117,7 +126,11 @@ public class ListDeviceCertificateByCaSnRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Indicates the page number of the returned results. The starting page is counted from 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -126,7 +139,11 @@ public class ListDeviceCertificateByCaSnRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of query records to display per page. Value range: 1 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

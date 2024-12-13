@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCaCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCaCertificateResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteCaCertificateResponseBody extends TeaModel {
         private String sn; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DeleteCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Sn.
+         * <p>The serial number of the CA certificate that you deleted. The serial number is the unique identifier of a CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>007269004887******</p>
          */
         public Builder sn(String sn) {
             this.sn = sn;

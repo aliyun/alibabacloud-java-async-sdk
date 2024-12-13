@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchQuerySessionByClientIdsResponseBody} extends {@link TeaModel}
  *
  * <p>BatchQuerySessionByClientIdsResponseBody</p>
@@ -49,7 +50,7 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status list of all queried ApsaraMQ for MQTT clients.
+         * <p>The status list of all queried ApsaraMQ for MQTT clients.</p>
          */
         public Builder onlineStatusList(java.util.List < OnlineStatusList> onlineStatusList) {
             this.onlineStatusList = onlineStatusList;
@@ -57,7 +58,10 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. This parameter is a common parameter.
+         * <p>The request ID. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63309FDB-ED6C-46AE-B31C-A172FBA0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchQuerySessionByClientIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchQuerySessionByClientIdsResponseBody</p>
+     */
     public static class OnlineStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
@@ -109,7 +119,10 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
             private Boolean onlineStatus; 
 
             /**
-             * The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see [Terms](~~42420~~).
+             * <p>The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see <a href="https://help.aliyun.com/document_detail/42420.html">Terms</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test@0001</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -117,11 +130,14 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ApsaraMQ for MQTT client is online. Valid values:
-             * <p>
+             * <p>Indicates whether the ApsaraMQ for MQTT client is online. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder onlineStatus(Boolean onlineStatus) {
                 this.onlineStatus = onlineStatus;

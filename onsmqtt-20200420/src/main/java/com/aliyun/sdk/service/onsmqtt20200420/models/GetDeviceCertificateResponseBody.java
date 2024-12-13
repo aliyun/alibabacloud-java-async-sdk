@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeviceCertificateResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>Certificate details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Public parameters, each request ID is unique and can be used for troubleshooting and problem localization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeviceCertificateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceCertificateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CaSn")
         private String caSn;
@@ -169,7 +179,10 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
             private String validEnd; 
 
             /**
-             * CaSn.
+             * <p>The SN serial number of the CA certificate to which the device certificate belongs, used to uniquely identify a CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00f26900ba87******</p>
              */
             public Builder caSn(String caSn) {
                 this.caSn = caSn;
@@ -177,7 +190,11 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceContent.
+             * <p>Content of the device certificate.</p>
+             * <p> represents a new line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN DEVICECERTIFICATE-----\nMIIDuzCCAqdGVzdC5jbi1xaW5n******\n-----END DEVICECERTIFICATE-----</p>
              */
             public Builder deviceContent(String deviceContent) {
                 this.deviceContent = deviceContent;
@@ -185,7 +202,10 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceName.
+             * <p>Name of the device certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mqtt_device</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -193,7 +213,10 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceSn.
+             * <p>The SN serial number of the device certificate, used to uniquely identify a device certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>356217374433******</p>
              */
             public Builder deviceSn(String deviceSn) {
                 this.deviceSn = deviceSn;
@@ -201,7 +224,16 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the device certificate. The values are as follows:</p>
+             * <ul>
+             * <li><strong>0</strong>: Indicates that the certificate is in an inactive state. - <strong>1</strong>: Indicates that the certificate is in an active state.<blockquote>
+             * <p>After the device certificate is registered, it is in an active state by default.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -209,7 +241,10 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * ValidBegin.
+             * <p>The start time when the device certificate becomes effective. The format is a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1654137303000</p>
              */
             public Builder validBegin(String validBegin) {
                 this.validBegin = validBegin;
@@ -217,7 +252,10 @@ public class GetDeviceCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * ValidEnd.
+             * <p>The end time when the device certificate becomes effective. The format is a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1969497303000</p>
              */
             public Builder validEnd(String validEnd) {
                 this.validEnd = validEnd;

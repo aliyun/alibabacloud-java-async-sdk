@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeviceCredentialClientIdResponseBody} extends {@link TeaModel}
  *
  * <p>ListDeviceCredentialClientIdResponseBody</p>
@@ -49,7 +50,7 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeviceCredentialClientIdList.
+         * <p>Returns the information list.</p>
          */
         public Builder deviceCredentialClientIdList(DeviceCredentialClientIdList deviceCredentialClientIdList) {
             this.deviceCredentialClientIdList = deviceCredentialClientIdList;
@@ -57,7 +58,10 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Public parameters, each request ID is unique and can be used for troubleshooting and problem localization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDeviceCredentialClientIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeviceCredentialClientIdResponseBody</p>
+     */
     public static class DeviceCredentialClientIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIdList")
         private java.util.List < String > clientIdList;
@@ -145,7 +155,7 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
             private String total; 
 
             /**
-             * ClientIdList.
+             * <p>Client list.</p>
              */
             public Builder clientIdList(java.util.List < String > clientIdList) {
                 this.clientIdList = clientIdList;
@@ -153,7 +163,14 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>Indicates whether there is a token (Token) for the next query. Values: </p>
+             * <ul>
+             * <li>For the first query and when there is no next query, this field does not need to be filled. </li>
+             * <li>If there is a next query, the value should be the NextToken returned from the previous API call.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>634dxxxxx75b5f</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -161,7 +178,10 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * <p>The current page number of the returned query records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(String pageNo) {
                 this.pageNo = pageNo;
@@ -169,7 +189,10 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The maximum number of results to display per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +200,10 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Total number of query results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder total(String total) {
                 this.total = total;

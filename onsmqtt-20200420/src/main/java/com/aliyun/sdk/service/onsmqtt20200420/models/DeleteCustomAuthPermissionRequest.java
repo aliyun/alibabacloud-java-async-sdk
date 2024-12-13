@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomAuthPermissionRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomAuthPermissionRequest</p>
@@ -99,7 +100,11 @@ public class DeleteCustomAuthPermissionRequest extends Request {
         } 
 
         /**
-         * The username or client ID.
+         * <p>The username or client ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder identity(String identity) {
             this.putBodyParameter("Identity", identity);
@@ -108,11 +113,15 @@ public class DeleteCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * The identity type. Valid values:
-         * <p>
+         * <p>The identity type. Valid values:</p>
+         * <ul>
+         * <li>USER</li>
+         * <li>CLIENT</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   USER
-         * *   CLIENT
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("IdentityType", identityType);
@@ -121,7 +130,11 @@ public class DeleteCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance.
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-cn-0pp1ldu****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -130,7 +143,11 @@ public class DeleteCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * The topic on which you want to grant permissions. Multi-level topics and Wildcard characters are supported.
+         * <p>The topic on which you want to grant permissions. Multi-level topics and Wildcard characters are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test/t1</p>
          */
         public Builder topic(String topic) {
             this.putBodyParameter("Topic", topic);

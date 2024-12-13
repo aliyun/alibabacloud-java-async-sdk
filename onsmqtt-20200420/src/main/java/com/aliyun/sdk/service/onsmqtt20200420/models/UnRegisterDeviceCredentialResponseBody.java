@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnRegisterDeviceCredentialResponseBody} extends {@link TeaModel}
  *
  * <p>UnRegisterDeviceCredentialResponseBody</p>
@@ -37,7 +38,10 @@ public class UnRegisterDeviceCredentialResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The unique ID that the system generates for the request. This parameter is a common parameter.
+         * <p>The unique ID that the system generates for the request. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4581CCD-62AF-44D9-B5B4-D1DBDC0E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

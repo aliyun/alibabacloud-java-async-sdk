@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloseConnectionRequest} extends {@link RequestModel}
  *
  * <p>CloseConnectionRequest</p>
@@ -69,7 +70,11 @@ public class CloseConnectionRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>Client ID of the device</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@test</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -78,7 +83,11 @@ public class CloseConnectionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>ID of the Micro Message Queue MQTT version instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-0pp12gl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

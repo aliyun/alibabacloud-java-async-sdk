@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCaCertificateRequest} extends {@link RequestModel}
  *
  * <p>ListCaCertificateRequest</p>
@@ -84,7 +85,11 @@ public class ListCaCertificateRequest extends Request {
         } 
 
         /**
-         * MqttInstanceId.
+         * <p>The instance ID of the Cloud Message Queue MQTT version, indicating which instance&quot;s CA certificates need to be viewed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-7mz2d******</p>
          */
         public Builder mqttInstanceId(String mqttInstanceId) {
             this.putQueryParameter("MqttInstanceId", mqttInstanceId);
@@ -93,7 +98,11 @@ public class ListCaCertificateRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Indicates the page number of the returned results. The starting page is counted from 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -102,7 +111,11 @@ public class ListCaCertificateRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of query records to display per page. Value range: 1 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

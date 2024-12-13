@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomAuthPermissionResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateCustomAuthPermissionResponseBody</p>
@@ -73,7 +74,10 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>Error code returned upon failed invocation. For more information, see Error Codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8CC04203-679B-4DED-89D9-E7C2E979****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. true: Call succeeded. false: Call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

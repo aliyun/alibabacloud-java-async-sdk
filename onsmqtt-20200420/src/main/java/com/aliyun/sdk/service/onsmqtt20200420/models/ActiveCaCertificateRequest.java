@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ActiveCaCertificateRequest} extends {@link RequestModel}
  *
  * <p>ActiveCaCertificateRequest</p>
@@ -69,7 +70,11 @@ public class ActiveCaCertificateRequest extends Request {
         } 
 
         /**
-         * MqttInstanceId.
+         * <p>CA证书所绑定的实例ID，即云消息队列 MQTT 版的实例ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-7mz2d******</p>
          */
         public Builder mqttInstanceId(String mqttInstanceId) {
             this.putQueryParameter("MqttInstanceId", mqttInstanceId);
@@ -78,7 +83,12 @@ public class ActiveCaCertificateRequest extends Request {
         }
 
         /**
-         * Sn.
+         * <p>待激活CA证书的SN序列号，用于唯一标识一个CA证书。</p>
+         * <p>取值范围：不超过128 Byte。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>007269004887******</p>
          */
         public Builder sn(String sn) {
             this.putQueryParameter("Sn", sn);

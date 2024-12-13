@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCaCertificateRequest} extends {@link RequestModel}
  *
  * <p>GetCaCertificateRequest</p>
@@ -69,7 +70,11 @@ public class GetCaCertificateRequest extends Request {
         } 
 
         /**
-         * MqttInstanceId.
+         * <p>The instance ID bound to the CA certificate, which is the instance ID of the MQTT version of the cloud message queue.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-7mz2d******</p>
          */
         public Builder mqttInstanceId(String mqttInstanceId) {
             this.putQueryParameter("MqttInstanceId", mqttInstanceId);
@@ -78,7 +83,11 @@ public class GetCaCertificateRequest extends Request {
         }
 
         /**
-         * Sn.
+         * <p>The SN serial number of the CA certificate to be queried, used to uniquely identify a CA certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>007269004887******</p>
          */
         public Builder sn(String sn) {
             this.putQueryParameter("Sn", sn);

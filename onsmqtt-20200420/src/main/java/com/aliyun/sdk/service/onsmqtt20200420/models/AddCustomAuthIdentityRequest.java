@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCustomAuthIdentityRequest} extends {@link RequestModel}
  *
  * <p>AddCustomAuthIdentityRequest</p>
@@ -127,7 +128,10 @@ public class AddCustomAuthIdentityRequest extends Request {
         } 
 
         /**
-         * The client ID if you set IdentityType to CLIENT.
+         * <p>The client ID if you set IdentityType to CLIENT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@test</p>
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -136,7 +140,11 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The identity type. Valid values: USER and CLIENT.
+         * <p>The identity type. Valid values: USER and CLIENT.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("IdentityType", identityType);
@@ -145,7 +153,11 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The ID of the Message Queue for MQTT instance.
+         * <p>The ID of the Message Queue for MQTT instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-cn-xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -154,7 +166,11 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The AccessKey secret.
+         * <p>The AccessKey secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder secret(String secret) {
             this.putBodyParameter("Secret", secret);
@@ -163,7 +179,10 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.
+         * <p>The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIGNED</p>
          */
         public Builder signMode(String signMode) {
             this.putBodyParameter("SignMode", signMode);
@@ -172,7 +191,11 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The username.
+         * <p>The username.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("Username", username);

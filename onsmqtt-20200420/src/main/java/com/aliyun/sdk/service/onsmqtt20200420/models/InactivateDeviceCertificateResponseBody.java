@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InactivateDeviceCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>InactivateDeviceCertificateResponseBody</p>
@@ -49,7 +50,10 @@ public class InactivateDeviceCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeviceSn.
+         * <p>The serial number of the device certificate that is deregistered. The serial number is the unique identifier of a device certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>356217374433******</p>
          */
         public Builder deviceSn(String deviceSn) {
             this.deviceSn = deviceSn;
@@ -57,7 +61,10 @@ public class InactivateDeviceCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

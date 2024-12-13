@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceCredentialResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeviceCredentialResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the access credential of the device.
+         * <p>The information about the access credential of the device.</p>
          */
         public Builder deviceCredential(DeviceCredential deviceCredential) {
             this.deviceCredential = deviceCredential;
@@ -57,7 +58,10 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. This parameter is a common parameter.
+         * <p>The request ID. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4581CCF-62AF-44D9-B5B4-D1DQDC0E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeviceCredentialResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceCredentialResponseBody</p>
+     */
     public static class DeviceCredential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
@@ -157,7 +167,10 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The client ID of the device.
+             * <p>The client ID of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test@@@test</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -165,7 +178,10 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the access credential of the device was created. Unit: milliseconds.
+             * <p>The timestamp that indicates when the access credential of the device was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605541382000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -173,7 +189,10 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey ID of the device.
+             * <p>The AccessKey ID of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DC.Z5fXh9sRRVufyLi6wo****</p>
              */
             public Builder deviceAccessKeyId(String deviceAccessKeyId) {
                 this.deviceAccessKeyId = deviceAccessKeyId;
@@ -181,7 +200,10 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret of the device.
+             * <p>The AccessKey secret of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DC.BJMkn4eMQJK2vaApTS****</p>
              */
             public Builder deviceAccessKeySecret(String deviceAccessKeySecret) {
                 this.deviceAccessKeySecret = deviceAccessKeySecret;
@@ -189,7 +211,10 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ApsaraMQ for MQTT instance.
+             * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>post-cn-0pp12gl****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -197,7 +222,10 @@ public class GetDeviceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the access credential of the device was last updated. The value of this parameter is a UNIX timestamp in milliseconds.
+             * <p>The timestamp that indicates when the access credential of the device was last updated. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605541382000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

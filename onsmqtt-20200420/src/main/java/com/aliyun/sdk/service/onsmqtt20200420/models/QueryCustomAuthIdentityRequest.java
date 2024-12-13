@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCustomAuthIdentityRequest} extends {@link RequestModel}
  *
  * <p>QueryCustomAuthIdentityRequest</p>
@@ -125,7 +126,10 @@ public class QueryCustomAuthIdentityRequest extends Request {
         } 
 
         /**
-         * The client ID if you set IdentityType to CLIENT.
+         * <p>The client ID if you set IdentityType to CLIENT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@test</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -134,13 +138,15 @@ public class QueryCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The identity type.
-         * <p>
+         * <p>The identity type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>USER</li>
+         * <li>CLIENT</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   USER
-         * *   CLIENT
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder identityType(String identityType) {
             this.putQueryParameter("IdentityType", identityType);
@@ -149,7 +155,11 @@ public class QueryCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance.
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-111****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -158,7 +168,10 @@ public class QueryCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.
+         * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhY2NvdW50IjoiMTM4MTcxODk3NDQzMjQ1OSIsImV2ZW50SWQiOiJGMkUxOUE3QS1FM0Q0LTVCOEYtQkU4OS1CNkMyM0RBM0UyRjIiLCJsb2dJZCI6IjY2LTEzODE3MTg5NzQ0MzI0NTkiLCJydyI6IlciLCJ0aW1lIjoxNjc4MzI2MTI1MDAwfQ</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -167,7 +180,11 @@ public class QueryCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The number of identities to be queried. Maximum value: 100.
+         * <p>The number of identities to be queried. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -176,7 +193,10 @@ public class QueryCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * The username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

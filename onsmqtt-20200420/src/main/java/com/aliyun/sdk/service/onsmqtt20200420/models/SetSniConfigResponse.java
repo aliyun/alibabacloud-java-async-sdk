@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InactivateDeviceCertificateResponse} extends {@link TeaModel}
+ * {@link SetSniConfigResponse} extends {@link TeaModel}
  *
- * <p>InactivateDeviceCertificateResponse</p>
+ * <p>SetSniConfigResponse</p>
  */
-public class InactivateDeviceCertificateResponse extends Response {
+public class SetSniConfigResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class InactivateDeviceCertificateResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private InactivateDeviceCertificateResponseBody body;
+    private SetSniConfigResponseBody body;
 
-    private InactivateDeviceCertificateResponse(BuilderImpl builder) {
+    private SetSniConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static InactivateDeviceCertificateResponse create() {
+    public static SetSniConfigResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class InactivateDeviceCertificateResponse extends Response {
     /**
      * @return body
      */
-    public InactivateDeviceCertificateResponseBody getBody() {
+    public SetSniConfigResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<InactivateDeviceCertificateResponse, Builder> {
+    public interface Builder extends Response.Builder<SetSniConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(InactivateDeviceCertificateResponseBody body);
+        Builder body(SetSniConfigResponseBody body);
 
         @Override
-        InactivateDeviceCertificateResponse build();
+        SetSniConfigResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<InactivateDeviceCertificateResponse, Builder>
+            extends Response.BuilderImpl<SetSniConfigResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private InactivateDeviceCertificateResponseBody body; 
+        private SetSniConfigResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(InactivateDeviceCertificateResponse response) {
+        private BuilderImpl(SetSniConfigResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class InactivateDeviceCertificateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(InactivateDeviceCertificateResponseBody body) {
+        public Builder body(SetSniConfigResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public InactivateDeviceCertificateResponse build() {
-            return new InactivateDeviceCertificateResponse(this);
+        public SetSniConfigResponse build() {
+            return new SetSniConfigResponse(this);
         } 
 
     } 

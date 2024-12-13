@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCustomAuthConnectBlackRequest} extends {@link RequestModel}
  *
  * <p>AddCustomAuthConnectBlackRequest</p>
@@ -69,7 +70,11 @@ public class AddCustomAuthConnectBlackRequest extends Request {
         } 
 
         /**
-         * The client ID of the device whose connections you want to disable.
+         * <p>The client ID of the device whose connections you want to disable.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@test</p>
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -78,7 +83,11 @@ public class AddCustomAuthConnectBlackRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance.
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-cn-i7m26mf****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

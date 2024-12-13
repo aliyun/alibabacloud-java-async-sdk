@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupIdResponseBody} extends {@link TeaModel}
  *
  * <p>ListGroupIdResponseBody</p>
@@ -49,7 +50,7 @@ public class ListGroupIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of a queried group.
+         * <p>The details of a queried group.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. This parameter is a common parameter.
+         * <p>The request ID. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95996EEB-D894-44FA-A87C-940F5CD9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListGroupIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGroupIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -145,7 +155,10 @@ public class ListGroupIdResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The time when the group was created.
+             * <p>The time when the group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1564577317000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -153,7 +166,10 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * The queried group that belongs to the ApsaraMQ for MQTT instance.
+             * <p>The queried group that belongs to the ApsaraMQ for MQTT instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test1</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -161,11 +177,14 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a separate namespace is configured for the ApsaraMQ for MQTT instance. Valid values:
-             * <p>
+             * <p>Indicates whether a separate namespace is configured for the ApsaraMQ for MQTT instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: A separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be unique within an ApsaraMQ for MQTT instance but can be the same across ApsaraMQ for MQTT instances.</li>
+             * <li><strong>false</strong>: No separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be globally unique within an ApsaraMQ for MQTT instance and across ApsaraMQ for MQTT instances.</li>
+             * </ul>
              * 
-             * *   **true**: A separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be unique within an ApsaraMQ for MQTT instance but can be the same across ApsaraMQ for MQTT instances.
-             * *   **false**: No separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be globally unique within an ApsaraMQ for MQTT instance and across ApsaraMQ for MQTT instances.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder independentNaming(Boolean independentNaming) {
                 this.independentNaming = independentNaming;
@@ -173,7 +192,10 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ApsaraMQ for MQTT instance to which the group belongs.
+             * <p>The ID of the ApsaraMQ for MQTT instance to which the group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>post-cn-45910tj****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -181,7 +203,10 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the group was last updated.
+             * <p>The time when the group was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1564577317000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

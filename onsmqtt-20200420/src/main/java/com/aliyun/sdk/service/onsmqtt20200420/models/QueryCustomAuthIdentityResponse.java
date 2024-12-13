@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCustomAuthIdentityResponse} extends {@link TeaModel}
  *
  * <p>QueryCustomAuthIdentityResponse</p>

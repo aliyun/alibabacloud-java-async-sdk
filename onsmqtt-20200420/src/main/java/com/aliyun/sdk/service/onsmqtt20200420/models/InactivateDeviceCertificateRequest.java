@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InactivateDeviceCertificateRequest} extends {@link RequestModel}
  *
  * <p>InactivateDeviceCertificateRequest</p>
@@ -84,7 +85,12 @@ public class InactivateDeviceCertificateRequest extends Request {
         } 
 
         /**
-         * CaSn.
+         * <p>The serial number of the CA certificate to which the device certificate that you want to deregister belongs. The serial number is the unique identifier of a CA certificate.</p>
+         * <p>The serial number of a CA certificate cannot exceed 128 bytes in size.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>007269004887******</p>
          */
         public Builder caSn(String caSn) {
             this.putQueryParameter("CaSn", caSn);
@@ -93,7 +99,11 @@ public class InactivateDeviceCertificateRequest extends Request {
         }
 
         /**
-         * DeviceSn.
+         * <p>The serial number of the device certificate that you want to deregister. The serial number is the unique identifier of a device.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>356217374433******</p>
          */
         public Builder deviceSn(String deviceSn) {
             this.putQueryParameter("DeviceSn", deviceSn);
@@ -102,7 +112,11 @@ public class InactivateDeviceCertificateRequest extends Request {
         }
 
         /**
-         * MqttInstanceId.
+         * <p>The ID of the ApsaraMQ for MQTT instance to which the device certificate that you want to deregister is bound.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-7mz2d******</p>
          */
         public Builder mqttInstanceId(String mqttInstanceId) {
             this.putQueryParameter("MqttInstanceId", mqttInstanceId);

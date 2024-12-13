@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCustomAuthIdentityResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCustomAuthIdentityResponseBody</p>
@@ -85,7 +86,10 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed. For a list of error codes, see Error codes.
+         * <p>The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed. For a list of error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11568B5B-13A8-4E72-9DBA-3A14F7D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCustomAuthIdentityResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCustomAuthIdentityResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
@@ -205,7 +224,10 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The client ID if IdentityType is set to CLIENT.
+             * <p>The client ID if IdentityType is set to CLIENT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_ICP@@@4d378084</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -213,11 +235,14 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * The identity type. Valid values:
-             * <p>
+             * <p>The identity type. Valid values:</p>
+             * <ul>
+             * <li>USER</li>
+             * <li>CLIENT</li>
+             * </ul>
              * 
-             * *   USER
-             * *   CLIENT
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder identityType(String identityType) {
                 this.identityType = identityType;
@@ -225,7 +250,10 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret.
+             * <p>The AccessKey secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62a5916d71767185b48907d85c2efae2</p>
              */
             public Builder secret(String secret) {
                 this.secret = secret;
@@ -233,7 +261,10 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.
+             * <p>The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIGNED</p>
              */
             public Builder signMode(String signMode) {
                 this.signMode = signMode;
@@ -241,7 +272,10 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -255,6 +289,12 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCustomAuthIdentityResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCustomAuthIdentityResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
@@ -294,7 +334,10 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
             private java.util.List < Results> results; 
 
             /**
-             * If excess return values exist, this parameter is returned.
+             * <p>If excess return values exist, this parameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAXA+GzVqTutYpgkFjBrchKzuvSbpuTqtt6OF9tsC9QnJ</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -302,7 +345,7 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * The returned results.
+             * <p>The returned results.</p>
              */
             public Builder results(java.util.List < Results> results) {
                 this.results = results;

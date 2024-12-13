@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterCaCertificateRequest} extends {@link RequestModel}
  *
  * <p>RegisterCaCertificateRequest</p>
@@ -99,7 +100,14 @@ public class RegisterCaCertificateRequest extends Request {
         } 
 
         /**
-         * CaContent.
+         * <p>Content of the CA certificate to be registered.</p>
+         * <blockquote>
+         * <p>Note that \n in the example represents a new line.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----\nMIIDuzCCAqdGVzdC5jbi1xaW5n******\n-----END CERTIFICATE-----</p>
          */
         public Builder caContent(String caContent) {
             this.putQueryParameter("CaContent", caContent);
@@ -108,7 +116,11 @@ public class RegisterCaCertificateRequest extends Request {
         }
 
         /**
-         * CaName.
+         * <p>Name of the CA certificate to be registered</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt_ca</p>
          */
         public Builder caName(String caName) {
             this.putQueryParameter("CaName", caName);
@@ -117,7 +129,11 @@ public class RegisterCaCertificateRequest extends Request {
         }
 
         /**
-         * MqttInstanceId.
+         * <p>The instance ID of the Cloud Message Queue MQTT version. When registering a CA certificate, you need to specify an instance to bind with.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-7mz2d******</p>
          */
         public Builder mqttInstanceId(String mqttInstanceId) {
             this.putQueryParameter("MqttInstanceId", mqttInstanceId);
@@ -126,7 +142,14 @@ public class RegisterCaCertificateRequest extends Request {
         }
 
         /**
-         * VerificationContent.
+         * <p>Content of the verification certificate for the CA certificate to be registered. It is used together with the registration code of the CA certificate to verify that the user possesses the private key of this CA certificate. </p>
+         * <blockquote>
+         * <p> in the example represents a line break.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----\nMIID/DCCAu+Y5sRMpp9tnd+4s******\n-----END CERTIFICATE-----</p>
          */
         public Builder verificationContent(String verificationContent) {
             this.putQueryParameter("VerificationContent", verificationContent);

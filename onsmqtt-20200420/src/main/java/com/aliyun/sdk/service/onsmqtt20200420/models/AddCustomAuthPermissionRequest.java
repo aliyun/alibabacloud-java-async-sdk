@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCustomAuthPermissionRequest} extends {@link RequestModel}
  *
  * <p>AddCustomAuthPermissionRequest</p>
@@ -129,7 +130,11 @@ public class AddCustomAuthPermissionRequest extends Request {
         } 
 
         /**
-         * Specify whether to allow or deny the permissions.
+         * <p>Specify whether to allow or deny the permissions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALLOW</p>
          */
         public Builder effect(String effect) {
             this.putBodyParameter("Effect", effect);
@@ -138,7 +143,11 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * The username or client ID.
+         * <p>The username or client ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder identity(String identity) {
             this.putBodyParameter("Identity", identity);
@@ -147,7 +156,11 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * The identity type. Valid values: USER and CLIENT.
+         * <p>The identity type. Valid values: USER and CLIENT.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("IdentityType", identityType);
@@ -156,7 +169,11 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance.
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-cn-0pp12gl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -165,7 +182,11 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * The permissions that you want to add.
+         * <p>The permissions that you want to add.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUB_SUB</p>
          */
         public Builder permitAction(String permitAction) {
             this.putBodyParameter("PermitAction", permitAction);
@@ -174,7 +195,11 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * The topic on which you want to add the permissions. Multi-level topics and wildcard characters are supported.
+         * <p>The topic on which you want to add the permissions. Multi-level topics and wildcard characters are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test/t1</p>
          */
         public Builder topic(String topic) {
             this.putBodyParameter("Topic", topic);

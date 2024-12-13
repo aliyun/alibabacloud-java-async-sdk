@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ActiveCaCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>ActiveCaCertificateResponseBody</p>
@@ -49,7 +50,10 @@ public class ActiveCaCertificateResponseBody extends TeaModel {
         private String sn; 
 
         /**
-         * RequestId.
+         * <p>Public parameters, each request ID is unique and can be used for troubleshooting and problem localization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ActiveCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Sn.
+         * <p>The SN serial number of the activated CA certificate, used to uniquely identify a CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>007269004887******</p>
          */
         public Builder sn(String sn) {
             this.sn = sn;

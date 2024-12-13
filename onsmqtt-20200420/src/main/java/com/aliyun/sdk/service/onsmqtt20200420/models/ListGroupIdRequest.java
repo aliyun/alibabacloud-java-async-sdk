@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupIdRequest} extends {@link RequestModel}
  *
  * <p>ListGroupIdRequest</p>
@@ -54,7 +55,11 @@ public class ListGroupIdRequest extends Request {
         } 
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance whose groups you want to query.
+         * <p>The ID of the ApsaraMQ for MQTT instance whose groups you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-cn-0pp1ldu****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

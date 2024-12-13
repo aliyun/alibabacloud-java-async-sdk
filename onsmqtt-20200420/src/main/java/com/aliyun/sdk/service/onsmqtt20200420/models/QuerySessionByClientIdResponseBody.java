@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySessionByClientIdResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySessionByClientIdResponseBody</p>
@@ -49,11 +50,14 @@ public class QuerySessionByClientIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the ApsaraMQ for MQTT client is connected to the ApsaraMQ for MQTT broker. Valid values:
-         * <p>
+         * <p>Indicates whether the ApsaraMQ for MQTT client is connected to the ApsaraMQ for MQTT broker. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder onlineStatus(Boolean onlineStatus) {
             this.onlineStatus = onlineStatus;
@@ -61,7 +65,10 @@ public class QuerySessionByClientIdResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. This parameter is a common parameter.
+         * <p>The request ID. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4581CCF-62AF-44D9-B5B4-D1DBBC0E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

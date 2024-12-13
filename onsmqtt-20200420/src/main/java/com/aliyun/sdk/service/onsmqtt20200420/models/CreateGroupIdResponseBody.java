@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupIdResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGroupIdResponseBody</p>
@@ -37,7 +38,10 @@ public class CreateGroupIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID. This parameter is a common parameter.
+         * <p>The request ID. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C7D722D-0F3D-4415-A9CD-A464D82C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

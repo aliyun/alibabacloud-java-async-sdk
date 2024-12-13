@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMqttTraceMessagePublishResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMqttTraceMessagePublishResponseBody</p>
@@ -49,7 +50,7 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The message traces.
+         * <p>The message traces.</p>
          */
         public Builder messageTraceLists(java.util.List < MessageTraceLists> messageTraceLists) {
             this.messageTraceLists = messageTraceLists;
@@ -57,7 +58,10 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.
+         * <p>The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69AD5550-BF22-438A-9202-A6E89185****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMqttTraceMessagePublishResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMqttTraceMessagePublishResponseBody</p>
+     */
     public static class MessageTraceLists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -157,11 +167,14 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * The action on the message. Valid values:
-             * <p>
+             * <p>The action on the message. Valid values:</p>
+             * <ul>
+             * <li><strong>pub_mqtt</strong>: indicates that the message was sent by an ApsaraMQ for MQTT client.</li>
+             * <li><strong>pub_mq</strong>: indicates that the message was sent by an ApsaraMQ for RocketMQ client.</li>
+             * </ul>
              * 
-             * *   **pub_mqtt**: indicates that the message was sent by an ApsaraMQ for MQTT client.
-             * *   **pub_mq**: indicates that the message was sent by an ApsaraMQ for RocketMQ client.
+             * <strong>example:</strong>
+             * <p>pub_mqtt</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -169,11 +182,14 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
             }
 
             /**
-             * The returned code for the action on the message. Valid values:
-             * <p>
+             * <p>The returned code for the action on the message. Valid values:</p>
+             * <ul>
+             * <li><strong>mqtt.trace.action.msg.pub.mqtt</strong>: This value is returned if the value of Action is <strong>pub_mqtt</strong>.</li>
+             * <li><strong>mqtt.trace.action.msg.pub.mq</strong>: This value is returned if the value of Action is <strong>pub_mq</strong>.</li>
+             * </ul>
              * 
-             * *   **mqtt.trace.action.msg.pub.mqtt**: This value is returned if the value of Action is **pub_mqtt**.
-             * *   **mqtt.trace.action.msg.pub.mq**: This value is returned if the value of Action is **pub_mq**.
+             * <strong>example:</strong>
+             * <p>mqtt.trace.action.msg.pub.mqtt</p>
              */
             public Builder actionCode(String actionCode) {
                 this.actionCode = actionCode;
@@ -181,11 +197,14 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information for the action on the message. Valid values:
-             * <p>
+             * <p>The returned information for the action on the message. Valid values:</p>
+             * <ul>
+             * <li><strong>Pub From Mqtt Client</strong>: This value is returned if the value of Action is <strong>pub_mqtt</strong>.</li>
+             * <li><strong>Pub From MQ</strong>: This value is returned if the value of Action is <strong>pub_mq</strong>.</li>
+             * </ul>
              * 
-             * *   **Pub From Mqtt Client**: This value is returned if the value of Action is **pub_mqtt**.
-             * *   **Pub From MQ**: This value is returned if the value of Action is **pub_mq**.
+             * <strong>example:</strong>
+             * <p>Pub From Mqtt Client</p>
              */
             public Builder actionInfo(String actionInfo) {
                 this.actionInfo = actionInfo;
@@ -193,7 +212,10 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the client that sends the message.
+             * <p>The ID of the client that sends the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test@@@producer</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -201,7 +223,10 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
             }
 
             /**
-             * The message ID.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AC1EC0030EAB78308DB16A3EC773BD95</p>
              */
             public Builder msgId(String msgId) {
                 this.msgId = msgId;
@@ -209,7 +234,10 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the message was sent.
+             * <p>The time when the message was sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-21 15:08:19.210</p>
              */
             public Builder time(String time) {
                 this.time = time;

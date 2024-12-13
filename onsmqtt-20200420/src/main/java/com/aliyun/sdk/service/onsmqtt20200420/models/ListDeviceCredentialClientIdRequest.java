@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeviceCredentialClientIdRequest} extends {@link RequestModel}
  *
  * <p>ListDeviceCredentialClientIdRequest</p>
@@ -126,7 +127,7 @@ public class ListDeviceCredentialClientIdRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -135,7 +136,11 @@ public class ListDeviceCredentialClientIdRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>Group ID of the MQTT version of the micro message queue.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_xxx</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -144,7 +149,11 @@ public class ListDeviceCredentialClientIdRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the Cloud Message Queue MQTT version instance, which must match the actual instance ID used by the client. You can obtain this ID from the <strong>Instance Details</strong> page in the console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-xxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +162,10 @@ public class ListDeviceCredentialClientIdRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Token for starting the next page query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFdXXXXXWa</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -162,7 +174,10 @@ public class ListDeviceCredentialClientIdRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Indicates the page number of the returned results. The starting page is counted from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -171,7 +186,12 @@ public class ListDeviceCredentialClientIdRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of query records to display per page. 
+         * Value range: 1 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

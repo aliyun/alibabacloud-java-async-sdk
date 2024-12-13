@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchQuerySessionByClientIdsRequest} extends {@link RequestModel}
  *
  * <p>BatchQuerySessionByClientIdsRequest</p>
@@ -83,7 +84,7 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +93,11 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
         }
 
         /**
-         * The ApsaraMQ for MQTT clients.
+         * <p>The ApsaraMQ for MQTT clients.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClientIdList.1</p>
          */
         public Builder clientIdList(java.util.List < String > clientIdList) {
             this.putQueryParameter("ClientIdList", clientIdList);
@@ -101,7 +106,11 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can obtain the instance ID on the **Instance Details** page that corresponds to the instance in the [ApsaraMQ for MQTT console](https://mqtt.console.aliyun.com).
+         * <p>The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can obtain the instance ID on the <strong>Instance Details</strong> page that corresponds to the instance in the <a href="https://mqtt.console.aliyun.com">ApsaraMQ for MQTT console</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post-cn-0pp12gl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

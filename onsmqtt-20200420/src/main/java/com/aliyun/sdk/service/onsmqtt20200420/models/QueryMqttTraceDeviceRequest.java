@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMqttTraceDeviceRequest} extends {@link RequestModel}
  *
  * <p>QueryMqttTraceDeviceRequest</p>
@@ -172,7 +173,7 @@ public class QueryMqttTraceDeviceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -181,7 +182,11 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
+         * <p>The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621580400000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -190,7 +195,11 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * The client ID of the device whose trace you want to query.
+         * <p>The client ID of the device whose trace you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test@@@producer</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -199,7 +208,11 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. If the input parameter value is greater than the total number of pages, the returned result is empty.
+         * <p>The number of the page to return. Pages start from page 1. If the input parameter value is greater than the total number of pages, the returned result is empty.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -208,7 +221,11 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
+         * <p>The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621584000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -217,7 +234,11 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can view the instance ID in the **Basic Information** section on the **Instance Details** page that corresponds to the instance in the ApsaraMQ for MQTT console.
+         * <p>The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can view the instance ID in the <strong>Basic Information</strong> section on the <strong>Instance Details</strong> page that corresponds to the instance in the ApsaraMQ for MQTT console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-cn-i7m26mf****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -226,7 +247,11 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * The ID of the region where the ApsaraMQ for MQTT instance resides. For more information, see [Endpoints](~~181438~~).
+         * <p>The ID of the region where the ApsaraMQ for MQTT instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/181438.html">Endpoints</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder mqttRegionId(String mqttRegionId) {
             this.putQueryParameter("MqttRegionId", mqttRegionId);
@@ -235,7 +260,11 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100.
+         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,13 +273,15 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * Specifies whether the returned results are displayed in reverse chronological order. Valid values:
-         * <p>
+         * <p>Specifies whether the returned results are displayed in reverse chronological order. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The returned results are displayed in reverse time order of actions on the device. This means that the information about the latest action on the device is displayed as the first entry and the information about the earliest action on the device is displayed as the last entry.</li>
+         * <li><strong>false</strong>: The returned results are displayed in time order of actions on the device. This means that the information about the earliest action on the device is displayed as the first entry and the information about the latest action on the device is displayed as the last entry.</li>
+         * </ul>
+         * <p>If you do not specify this parameter, the returned results are displayed in time order of actions on the device by default.</p>
          * 
-         * *   **true**: The returned results are displayed in reverse time order of actions on the device. This means that the information about the latest action on the device is displayed as the first entry and the information about the earliest action on the device is displayed as the last entry.
-         * *   **false**: The returned results are displayed in time order of actions on the device. This means that the information about the earliest action on the device is displayed as the first entry and the information about the latest action on the device is displayed as the last entry.
-         * 
-         * If you do not specify this parameter, the returned results are displayed in time order of actions on the device by default.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
