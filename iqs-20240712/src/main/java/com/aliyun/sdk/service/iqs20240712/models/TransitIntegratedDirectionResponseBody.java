@@ -1471,8 +1471,12 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("buslines")
         private java.util.List < Buslines> buslines;
 
+        @com.aliyun.core.annotation.NameInMap("index")
+        private String index;
+
         private Bus(Builder builder) {
             this.buslines = builder.buslines;
+            this.index = builder.index;
         }
 
         public static Builder builder() {
@@ -1490,14 +1494,30 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             return this.buslines;
         }
 
+        /**
+         * @return index
+         */
+        public String getIndex() {
+            return this.index;
+        }
+
         public static final class Builder {
             private java.util.List < Buslines> buslines; 
+            private String index; 
 
             /**
              * buslines.
              */
             public Builder buslines(java.util.List < Buslines> buslines) {
                 this.buslines = buslines;
+                return this;
+            }
+
+            /**
+             * index.
+             */
+            public Builder index(String index) {
+                this.index = index;
                 return this;
             }
 
@@ -1891,6 +1911,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
+        @com.aliyun.core.annotation.NameInMap("index")
+        private String index;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -1911,6 +1934,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             this.departureStop = builder.departureStop;
             this.distanceMeter = builder.distanceMeter;
             this.id = builder.id;
+            this.index = builder.index;
             this.name = builder.name;
             this.spaces = builder.spaces;
             this.time = builder.time;
@@ -1955,6 +1979,13 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         }
 
         /**
+         * @return index
+         */
+        public String getIndex() {
+            return this.index;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -1994,6 +2025,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private RailwayDepartureStop departureStop; 
             private String distanceMeter; 
             private String id; 
+            private String index; 
             private String name; 
             private java.util.List < Spaces> spaces; 
             private String time; 
@@ -2029,6 +2061,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * index.
+             */
+            public Builder index(String index) {
+                this.index = index;
                 return this;
             }
 
@@ -2098,6 +2138,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("driveTimeSecond")
         private String driveTimeSecond;
 
+        @com.aliyun.core.annotation.NameInMap("index")
+        private String index;
+
         @com.aliyun.core.annotation.NameInMap("originName")
         private String originName;
 
@@ -2112,6 +2155,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             this.destinationPoint = builder.destinationPoint;
             this.distanceMeter = builder.distanceMeter;
             this.driveTimeSecond = builder.driveTimeSecond;
+            this.index = builder.index;
             this.originName = builder.originName;
             this.originPoint = builder.originPoint;
             this.price = builder.price;
@@ -2154,6 +2198,13 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         }
 
         /**
+         * @return index
+         */
+        public String getIndex() {
+            return this.index;
+        }
+
+        /**
          * @return originName
          */
         public String getOriginName() {
@@ -2179,6 +2230,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String destinationPoint; 
             private String distanceMeter; 
             private String driveTimeSecond; 
+            private String index; 
             private String originName; 
             private String originPoint; 
             private String price; 
@@ -2212,6 +2264,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
              */
             public Builder driveTimeSecond(String driveTimeSecond) {
                 this.driveTimeSecond = driveTimeSecond;
+                return this;
+            }
+
+            /**
+             * index.
+             */
+            public Builder index(String index) {
+                this.index = index;
                 return this;
             }
 
@@ -2790,6 +2850,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("distanceMeter")
         private String distanceMeter;
 
+        @com.aliyun.core.annotation.NameInMap("index")
+        private String index;
+
         @com.aliyun.core.annotation.NameInMap("origin")
         private String origin;
 
@@ -2800,6 +2863,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             this.cost = builder.cost;
             this.destination = builder.destination;
             this.distanceMeter = builder.distanceMeter;
+            this.index = builder.index;
             this.origin = builder.origin;
             this.steps = builder.steps;
         }
@@ -2834,6 +2898,13 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         }
 
         /**
+         * @return index
+         */
+        public String getIndex() {
+            return this.index;
+        }
+
+        /**
          * @return origin
          */
         public String getOrigin() {
@@ -2851,6 +2922,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private WalkingCost cost; 
             private String destination; 
             private String distanceMeter; 
+            private String index; 
             private String origin; 
             private java.util.List < Steps> steps; 
 
@@ -2875,6 +2947,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
              */
             public Builder distanceMeter(String distanceMeter) {
                 this.distanceMeter = distanceMeter;
+                return this;
+            }
+
+            /**
+             * index.
+             */
+            public Builder index(String index) {
+                this.index = index;
                 return this;
             }
 
