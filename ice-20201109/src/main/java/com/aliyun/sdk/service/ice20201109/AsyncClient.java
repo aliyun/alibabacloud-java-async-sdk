@@ -981,8 +981,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</p>
      * <ul>
-     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</li>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</li>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ListTemplates  ListTemplatesRequest
@@ -1175,6 +1175,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SearchPublicMediaInfoResponse
      */
     CompletableFuture<SearchPublicMediaInfoResponse> searchPublicMediaInfo(SearchPublicMediaInfoRequest request);
+
+    /**
+     * @param request the request parameters of SendAIAgentDataChannelMessage  SendAIAgentDataChannelMessageRequest
+     * @return SendAIAgentDataChannelMessageResponse
+     */
+    CompletableFuture<SendAIAgentDataChannelMessageResponse> sendAIAgentDataChannelMessage(SendAIAgentDataChannelMessageRequest request);
 
     /**
      * @param request the request parameters of SendAIAgentSpeech  SendAIAgentSpeechRequest
@@ -1511,6 +1517,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitVideoTranslationJobResponse> submitVideoTranslationJob(SubmitVideoTranslationJobRequest request);
 
     /**
+     * @param request the request parameters of TakeoverAIAgentCall  TakeoverAIAgentCallRequest
+     * @return TakeoverAIAgentCallResponse
+     */
+    CompletableFuture<TakeoverAIAgentCallResponse> takeoverAIAgentCall(TakeoverAIAgentCallRequest request);
+
+    /**
      * @param request the request parameters of UpdateAIAgentInstance  UpdateAIAgentInstanceRequest
      * @return UpdateAIAgentInstanceResponse
      */
@@ -1617,9 +1629,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</p>
+     * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</p>
      * <ul>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</li>
+     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateTemplate  UpdateTemplateRequest
