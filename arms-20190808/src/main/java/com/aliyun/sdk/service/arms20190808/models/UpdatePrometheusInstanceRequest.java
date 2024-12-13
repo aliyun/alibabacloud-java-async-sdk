@@ -42,6 +42,10 @@ public class UpdatePrometheusInstanceRequest extends Request {
     private Boolean enableAuthToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
+    private String paymentType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -63,6 +67,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         this.enableAuthFreeRead = builder.enableAuthFreeRead;
         this.enableAuthFreeWrite = builder.enableAuthFreeWrite;
         this.enableAuthToken = builder.enableAuthToken;
+        this.paymentType = builder.paymentType;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.storageDuration = builder.storageDuration;
@@ -131,6 +136,13 @@ public class UpdatePrometheusInstanceRequest extends Request {
     }
 
     /**
+     * @return paymentType
+     */
+    public String getPaymentType() {
+        return this.paymentType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -159,6 +171,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         private Boolean enableAuthFreeRead; 
         private Boolean enableAuthFreeWrite; 
         private Boolean enableAuthToken; 
+        private String paymentType; 
         private String regionId; 
         private String resourceGroupId; 
         private Integer storageDuration; 
@@ -176,6 +189,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
             this.enableAuthFreeRead = request.enableAuthFreeRead;
             this.enableAuthFreeWrite = request.enableAuthFreeWrite;
             this.enableAuthToken = request.enableAuthToken;
+            this.paymentType = request.paymentType;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.storageDuration = request.storageDuration;
@@ -248,6 +262,15 @@ public class UpdatePrometheusInstanceRequest extends Request {
         public Builder enableAuthToken(Boolean enableAuthToken) {
             this.putQueryParameter("EnableAuthToken", enableAuthToken);
             this.enableAuthToken = enableAuthToken;
+            return this;
+        }
+
+        /**
+         * PaymentType.
+         */
+        public Builder paymentType(String paymentType) {
+            this.putQueryParameter("PaymentType", paymentType);
+            this.paymentType = paymentType;
             return this;
         }
 

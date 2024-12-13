@@ -562,6 +562,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWebhookContactResponse> deleteWebhookContact(DeleteWebhookContactRequest request);
 
     /**
+     * @param request the request parameters of DescribeAddonMetrics  DescribeAddonMetricsRequest
+     * @return DescribeAddonMetricsResponse
+     */
+    CompletableFuture<DescribeAddonMetricsResponse> describeAddonMetrics(DescribeAddonMetricsRequest request);
+
+    /**
      * @param request the request parameters of DescribeAddonRelease  DescribeAddonReleaseRequest
      * @return DescribeAddonReleaseResponse
      */
@@ -1061,6 +1067,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEnvServiceMonitorsResponse> listEnvServiceMonitors(ListEnvServiceMonitorsRequest request);
 
     /**
+     * @param request the request parameters of ListEnvironmentAddons  ListEnvironmentAddonsRequest
+     * @return ListEnvironmentAddonsResponse
+     */
+    CompletableFuture<ListEnvironmentAddonsResponse> listEnvironmentAddons(ListEnvironmentAddonsRequest request);
+
+    /**
+     * @param request the request parameters of ListEnvironmentAlertRules  ListEnvironmentAlertRulesRequest
+     * @return ListEnvironmentAlertRulesResponse
+     */
+    CompletableFuture<ListEnvironmentAlertRulesResponse> listEnvironmentAlertRules(ListEnvironmentAlertRulesRequest request);
+
+    /**
      * @param request the request parameters of ListEnvironmentDashboards  ListEnvironmentDashboardsRequest
      * @return ListEnvironmentDashboardsResponse
      */
@@ -1071,6 +1089,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListEnvironmentFeaturesResponse
      */
     CompletableFuture<ListEnvironmentFeaturesResponse> listEnvironmentFeatures(ListEnvironmentFeaturesRequest request);
+
+    /**
+     * @param request the request parameters of ListEnvironmentKubeResources  ListEnvironmentKubeResourcesRequest
+     * @return ListEnvironmentKubeResourcesResponse
+     */
+    CompletableFuture<ListEnvironmentKubeResourcesResponse> listEnvironmentKubeResources(ListEnvironmentKubeResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListEnvironmentMetricTargets  ListEnvironmentMetricTargetsRequest
+     * @return ListEnvironmentMetricTargetsResponse
+     */
+    CompletableFuture<ListEnvironmentMetricTargetsResponse> listEnvironmentMetricTargets(ListEnvironmentMetricTargetsRequest request);
 
     /**
      * @param request the request parameters of ListEnvironments  ListEnvironmentsRequest

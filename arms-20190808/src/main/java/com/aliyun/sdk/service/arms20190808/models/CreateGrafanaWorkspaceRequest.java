@@ -13,12 +13,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateGrafanaWorkspaceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountNumber")
+    private String accountNumber;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AliyunLang")
     private String aliyunLang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private String autoRenew;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomAccountNumber")
+    private String customAccountNumber;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
+    private String duration;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GrafanaVersion")
@@ -40,6 +56,10 @@ public class CreateGrafanaWorkspaceRequest extends Request {
     private String password;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
+    private String pricingCycle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -54,12 +74,17 @@ public class CreateGrafanaWorkspaceRequest extends Request {
 
     private CreateGrafanaWorkspaceRequest(Builder builder) {
         super(builder);
+        this.accountNumber = builder.accountNumber;
         this.aliyunLang = builder.aliyunLang;
+        this.autoRenew = builder.autoRenew;
+        this.customAccountNumber = builder.customAccountNumber;
         this.description = builder.description;
+        this.duration = builder.duration;
         this.grafanaVersion = builder.grafanaVersion;
         this.grafanaWorkspaceEdition = builder.grafanaWorkspaceEdition;
         this.grafanaWorkspaceName = builder.grafanaWorkspaceName;
         this.password = builder.password;
+        this.pricingCycle = builder.pricingCycle;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
@@ -79,6 +104,13 @@ public class CreateGrafanaWorkspaceRequest extends Request {
     }
 
     /**
+     * @return accountNumber
+     */
+    public String getAccountNumber() {
+        return this.accountNumber;
+    }
+
+    /**
      * @return aliyunLang
      */
     public String getAliyunLang() {
@@ -86,10 +118,31 @@ public class CreateGrafanaWorkspaceRequest extends Request {
     }
 
     /**
+     * @return autoRenew
+     */
+    public String getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return customAccountNumber
+     */
+    public String getCustomAccountNumber() {
+        return this.customAccountNumber;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return duration
+     */
+    public String getDuration() {
+        return this.duration;
     }
 
     /**
@@ -121,6 +174,13 @@ public class CreateGrafanaWorkspaceRequest extends Request {
     }
 
     /**
+     * @return pricingCycle
+     */
+    public String getPricingCycle() {
+        return this.pricingCycle;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -142,12 +202,17 @@ public class CreateGrafanaWorkspaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateGrafanaWorkspaceRequest, Builder> {
+        private String accountNumber; 
         private String aliyunLang; 
+        private String autoRenew; 
+        private String customAccountNumber; 
         private String description; 
+        private String duration; 
         private String grafanaVersion; 
         private String grafanaWorkspaceEdition; 
         private String grafanaWorkspaceName; 
         private String password; 
+        private String pricingCycle; 
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List < Tags> tags; 
@@ -158,16 +223,30 @@ public class CreateGrafanaWorkspaceRequest extends Request {
 
         private Builder(CreateGrafanaWorkspaceRequest request) {
             super(request);
+            this.accountNumber = request.accountNumber;
             this.aliyunLang = request.aliyunLang;
+            this.autoRenew = request.autoRenew;
+            this.customAccountNumber = request.customAccountNumber;
             this.description = request.description;
+            this.duration = request.duration;
             this.grafanaVersion = request.grafanaVersion;
             this.grafanaWorkspaceEdition = request.grafanaWorkspaceEdition;
             this.grafanaWorkspaceName = request.grafanaWorkspaceName;
             this.password = request.password;
+            this.pricingCycle = request.pricingCycle;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
         } 
+
+        /**
+         * AccountNumber.
+         */
+        public Builder accountNumber(String accountNumber) {
+            this.putQueryParameter("AccountNumber", accountNumber);
+            this.accountNumber = accountNumber;
+            return this;
+        }
 
         /**
          * <p>The language. Default value: zh. Valid values:</p>
@@ -186,6 +265,24 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(String autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * CustomAccountNumber.
+         */
+        public Builder customAccountNumber(String customAccountNumber) {
+            this.putQueryParameter("CustomAccountNumber", customAccountNumber);
+            this.customAccountNumber = customAccountNumber;
+            return this;
+        }
+
+        /**
          * <p>The description of the workspace</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +291,15 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Duration.
+         */
+        public Builder duration(String duration) {
+            this.putQueryParameter("Duration", duration);
+            this.duration = duration;
             return this;
         }
 
@@ -251,6 +357,15 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * PricingCycle.
+         */
+        public Builder pricingCycle(String pricingCycle) {
+            this.putQueryParameter("PricingCycle", pricingCycle);
+            this.pricingCycle = pricingCycle;
             return this;
         }
 

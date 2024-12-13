@@ -251,6 +251,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PaymentType")
         private String paymentType;
 
+        @com.aliyun.core.annotation.NameInMap("PaymentTypeUpdateTime")
+        private String paymentTypeUpdateTime;
+
         @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
@@ -302,6 +305,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -323,6 +329,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.httpApiInterUrl = builder.httpApiInterUrl;
             this.httpApiIntraUrl = builder.httpApiIntraUrl;
             this.paymentType = builder.paymentType;
+            this.paymentTypeUpdateTime = builder.paymentTypeUpdateTime;
             this.product = builder.product;
             this.pushGatewayInterUrl = builder.pushGatewayInterUrl;
             this.pushGatewayIntraUrl = builder.pushGatewayIntraUrl;
@@ -340,6 +347,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.userId = builder.userId;
             this.vSwitchId = builder.vSwitchId;
+            this.version = builder.version;
             this.vpcId = builder.vpcId;
         }
 
@@ -471,6 +479,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return paymentTypeUpdateTime
+         */
+        public String getPaymentTypeUpdateTime() {
+            return this.paymentTypeUpdateTime;
+        }
+
+        /**
          * @return product
          */
         public String getProduct() {
@@ -590,6 +605,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -614,6 +636,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String httpApiInterUrl; 
             private String httpApiIntraUrl; 
             private String paymentType; 
+            private String paymentTypeUpdateTime; 
             private String product; 
             private String pushGatewayInterUrl; 
             private String pushGatewayIntraUrl; 
@@ -631,6 +654,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
             private String userId; 
             private String vSwitchId; 
+            private String version; 
             private String vpcId; 
 
             /**
@@ -829,6 +853,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * PaymentTypeUpdateTime.
+             */
+            public Builder paymentTypeUpdateTime(String paymentTypeUpdateTime) {
+                this.paymentTypeUpdateTime = paymentTypeUpdateTime;
+                return this;
+            }
+
+            /**
              * <p>The product to which the Prometheus instance belongs. Valid values: arms and cms.</p>
              * 
              * <strong>example:</strong>
@@ -1006,6 +1038,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

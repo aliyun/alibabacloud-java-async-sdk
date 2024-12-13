@@ -1612,6 +1612,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeAddonMetrics  DescribeAddonMetricsRequest
+     * @return DescribeAddonMetricsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAddonMetricsResponse> describeAddonMetrics(DescribeAddonMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAddonMetrics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAddonMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAddonMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeAddonRelease  DescribeAddonReleaseRequest
      * @return DescribeAddonReleaseResponse
      */
@@ -3011,6 +3029,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListEnvironmentAddons  ListEnvironmentAddonsRequest
+     * @return ListEnvironmentAddonsResponse
+     */
+    @Override
+    public CompletableFuture<ListEnvironmentAddonsResponse> listEnvironmentAddons(ListEnvironmentAddonsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListEnvironmentAddons").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEnvironmentAddonsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEnvironmentAddonsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListEnvironmentAlertRules  ListEnvironmentAlertRulesRequest
+     * @return ListEnvironmentAlertRulesResponse
+     */
+    @Override
+    public CompletableFuture<ListEnvironmentAlertRulesResponse> listEnvironmentAlertRules(ListEnvironmentAlertRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListEnvironmentAlertRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEnvironmentAlertRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEnvironmentAlertRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListEnvironmentDashboards  ListEnvironmentDashboardsRequest
      * @return ListEnvironmentDashboardsResponse
      */
@@ -3041,6 +3095,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListEnvironmentFeaturesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListEnvironmentKubeResources  ListEnvironmentKubeResourcesRequest
+     * @return ListEnvironmentKubeResourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListEnvironmentKubeResourcesResponse> listEnvironmentKubeResources(ListEnvironmentKubeResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListEnvironmentKubeResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEnvironmentKubeResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEnvironmentKubeResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListEnvironmentMetricTargets  ListEnvironmentMetricTargetsRequest
+     * @return ListEnvironmentMetricTargetsResponse
+     */
+    @Override
+    public CompletableFuture<ListEnvironmentMetricTargetsResponse> listEnvironmentMetricTargets(ListEnvironmentMetricTargetsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListEnvironmentMetricTargets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEnvironmentMetricTargetsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEnvironmentMetricTargetsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

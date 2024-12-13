@@ -902,7 +902,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BackendServiceTraceRegion.
+             * <p>The region where the backend is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder backendServiceTraceRegion(String backendServiceTraceRegion) {
                 this.backendServiceTraceRegion = backendServiceTraceRegion;
@@ -910,7 +913,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile collection configurations.</p>
+             * <p>The collection configurations.</p>
              */
             public Builder bonreeSDKConfig(BonreeSDKConfig bonreeSDKConfig) {
                 this.bonreeSDKConfig = bonreeSDKConfig;

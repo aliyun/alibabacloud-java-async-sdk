@@ -109,7 +109,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The returned message.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -244,6 +244,9 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
      * <p>GetRumExceptionStackResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BinaryImages")
+        private String binaryImages;
+
         @com.aliyun.core.annotation.NameInMap("CrashAddress")
         private String crashAddress;
 
@@ -266,6 +269,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         private String uuid;
 
         private Data(Builder builder) {
+            this.binaryImages = builder.binaryImages;
             this.crashAddress = builder.crashAddress;
             this.crashReason = builder.crashReason;
             this.lines = builder.lines;
@@ -281,6 +285,13 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return binaryImages
+         */
+        public String getBinaryImages() {
+            return this.binaryImages;
         }
 
         /**
@@ -333,6 +344,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String binaryImages; 
             private String crashAddress; 
             private String crashReason; 
             private java.util.List < String > lines; 
@@ -340,6 +352,14 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             private String threadId; 
             private java.util.List < ThreadInfoList> threadInfoList; 
             private String uuid; 
+
+            /**
+             * BinaryImages.
+             */
+            public Builder binaryImages(String binaryImages) {
+                this.binaryImages = binaryImages;
+                return this;
+            }
 
             /**
              * CrashAddress.

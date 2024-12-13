@@ -42,6 +42,10 @@ public class CreatePrometheusInstanceRequest extends Request {
     private String grafanaInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
+    private String paymentType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -79,6 +83,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         this.clusterType = builder.clusterType;
         this.duration = builder.duration;
         this.grafanaInstanceId = builder.grafanaInstanceId;
+        this.paymentType = builder.paymentType;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupId = builder.securityGroupId;
@@ -151,6 +156,13 @@ public class CreatePrometheusInstanceRequest extends Request {
     }
 
     /**
+     * @return paymentType
+     */
+    public String getPaymentType() {
+        return this.paymentType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -207,6 +219,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         private String clusterType; 
         private Integer duration; 
         private String grafanaInstanceId; 
+        private String paymentType; 
         private String regionId; 
         private String resourceGroupId; 
         private String securityGroupId; 
@@ -228,6 +241,7 @@ public class CreatePrometheusInstanceRequest extends Request {
             this.clusterType = request.clusterType;
             this.duration = request.duration;
             this.grafanaInstanceId = request.grafanaInstanceId;
+            this.paymentType = request.paymentType;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.securityGroupId = request.securityGroupId;
@@ -328,6 +342,15 @@ public class CreatePrometheusInstanceRequest extends Request {
         public Builder grafanaInstanceId(String grafanaInstanceId) {
             this.putQueryParameter("GrafanaInstanceId", grafanaInstanceId);
             this.grafanaInstanceId = grafanaInstanceId;
+            return this;
+        }
+
+        /**
+         * PaymentType.
+         */
+        public Builder paymentType(String paymentType) {
+            this.putQueryParameter("PaymentType", paymentType);
+            this.paymentType = paymentType;
             return this;
         }
 
