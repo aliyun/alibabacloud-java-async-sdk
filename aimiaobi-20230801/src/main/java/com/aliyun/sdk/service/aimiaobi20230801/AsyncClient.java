@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCustomTopicViewPointByIdResponse> deleteCustomTopicViewPointById(DeleteCustomTopicViewPointByIdRequest request);
 
     /**
+     * @param request the request parameters of DeleteDocs  DeleteDocsRequest
+     * @return DeleteDocsResponse
+     */
+    CompletableFuture<DeleteDocsResponse> deleteDocs(DeleteDocsRequest request);
+
+    /**
      * @param request the request parameters of DeleteGeneratedContent  DeleteGeneratedContentRequest
      * @return DeleteGeneratedContentResponse
      */
@@ -174,6 +180,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDocClusterTaskResponse
      */
     CompletableFuture<GetDocClusterTaskResponse> getDocClusterTask(GetDocClusterTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetDocInfo  GetDocInfoRequest
+     * @return GetDocInfoResponse
+     */
+    CompletableFuture<GetDocInfoResponse> getDocInfo(GetDocInfoRequest request);
 
     /**
      * @param request the request parameters of GetEnterpriseVocAnalysisTask  GetEnterpriseVocAnalysisTaskRequest
@@ -306,6 +318,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDialoguesResponse
      */
     CompletableFuture<ListDialoguesResponse> listDialogues(ListDialoguesRequest request);
+
+    /**
+     * @param request the request parameters of ListDocs  ListDocsRequest
+     * @return ListDocsResponse
+     */
+    CompletableFuture<ListDocsResponse> listDocs(ListDocsRequest request);
 
     /**
      * @param request the request parameters of ListFreshViewPoints  ListFreshViewPointsRequest
@@ -446,6 +464,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunCustomHotTopicViewPointAnalysisResponse> runCustomHotTopicViewPointAnalysis(RunCustomHotTopicViewPointAnalysisRequest request);
 
     ResponseIterable<RunCustomHotTopicViewPointAnalysisResponseBody> runCustomHotTopicViewPointAnalysisWithResponseIterable(RunCustomHotTopicViewPointAnalysisRequest request);
+
+    /**
+     * @param request the request parameters of RunDocBrainmap  RunDocBrainmapRequest
+     * @return RunDocBrainmapResponse
+     */
+    CompletableFuture<RunDocBrainmapResponse> runDocBrainmap(RunDocBrainmapRequest request);
+
+    ResponseIterable<RunDocBrainmapResponseBody> runDocBrainmapWithResponseIterable(RunDocBrainmapRequest request);
+
+    /**
+     * @param request the request parameters of RunDocIntroduction  RunDocIntroductionRequest
+     * @return RunDocIntroductionResponse
+     */
+    CompletableFuture<RunDocIntroductionResponse> runDocIntroduction(RunDocIntroductionRequest request);
+
+    ResponseIterable<RunDocIntroductionResponseBody> runDocIntroductionWithResponseIterable(RunDocIntroductionRequest request);
+
+    /**
+     * @param request the request parameters of RunDocQa  RunDocQaRequest
+     * @return RunDocQaResponse
+     */
+    CompletableFuture<RunDocQaResponse> runDocQa(RunDocQaRequest request);
+
+    ResponseIterable<RunDocQaResponseBody> runDocQaWithResponseIterable(RunDocQaRequest request);
+
+    /**
+     * @param request the request parameters of RunDocSummary  RunDocSummaryRequest
+     * @return RunDocSummaryResponse
+     */
+    CompletableFuture<RunDocSummaryResponse> runDocSummary(RunDocSummaryRequest request);
+
+    ResponseIterable<RunDocSummaryResponseBody> runDocSummaryWithResponseIterable(RunDocSummaryRequest request);
+
+    /**
+     * @param request the request parameters of RunDocTranslation  RunDocTranslationRequest
+     * @return RunDocTranslationResponse
+     */
+    CompletableFuture<RunDocTranslationResponse> runDocTranslation(RunDocTranslationRequest request);
+
+    ResponseIterable<RunDocTranslationResponseBody> runDocTranslationWithResponseIterable(RunDocTranslationRequest request);
 
     /**
      * @param request the request parameters of RunExpandContent  RunExpandContentRequest
@@ -610,6 +668,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMaterialDocumentResponse
      */
     CompletableFuture<UpdateMaterialDocumentResponse> updateMaterialDocument(UpdateMaterialDocumentRequest request);
+
+    /**
+     * @param request the request parameters of UploadDoc  UploadDocRequest
+     * @return UploadDocResponse
+     */
+    CompletableFuture<UploadDocResponse> uploadDoc(UploadDocRequest request);
 
     /**
      * @param request the request parameters of ValidateUploadTemplate  ValidateUploadTemplateRequest
