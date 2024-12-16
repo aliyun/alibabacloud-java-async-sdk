@@ -270,7 +270,6 @@ public class EnrichRequest extends Request {
      */
     public static class SegmentParamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalAirport;
 
         @com.aliyun.core.annotation.NameInMap("arrival_city")
@@ -283,14 +282,12 @@ public class EnrichRequest extends Request {
         private String childCabin;
 
         @com.aliyun.core.annotation.NameInMap("departure_airport")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String departureAirport;
 
         @com.aliyun.core.annotation.NameInMap("departure_city")
         private String departureCity;
 
         @com.aliyun.core.annotation.NameInMap("departure_time")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String departureTime;
 
         @com.aliyun.core.annotation.NameInMap("marketing_flight_no")
@@ -384,7 +381,6 @@ public class EnrichRequest extends Request {
 
             /**
              * <p>arrival airport code (capitalized)</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -429,7 +425,6 @@ public class EnrichRequest extends Request {
 
             /**
              * <p>departure airport code (capitalized)</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>PVG</p>
@@ -452,7 +447,6 @@ public class EnrichRequest extends Request {
 
             /**
              * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-10 07:55:00</p>
