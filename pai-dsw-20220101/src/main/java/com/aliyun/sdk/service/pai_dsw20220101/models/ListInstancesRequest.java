@@ -105,6 +105,10 @@ public class ListInstancesRequest extends Request {
     private String status;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -133,6 +137,7 @@ public class ListInstancesRequest extends Request {
         this.resourceId = builder.resourceId;
         this.sortBy = builder.sortBy;
         this.status = builder.status;
+        this.tag = builder.tag;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -311,6 +316,13 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -341,6 +353,7 @@ public class ListInstancesRequest extends Request {
         private String resourceId; 
         private String sortBy; 
         private String status; 
+        private java.util.List < Tag> tag; 
         private String workspaceId; 
 
         private Builder() {
@@ -372,6 +385,7 @@ public class ListInstancesRequest extends Request {
             this.resourceId = request.resourceId;
             this.sortBy = request.sortBy;
             this.status = request.status;
+            this.tag = request.tag;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -584,6 +598,16 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
@@ -599,4 +623,71 @@ public class ListInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>ListInstancesRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

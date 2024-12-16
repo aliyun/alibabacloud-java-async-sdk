@@ -77,6 +77,10 @@ public class CreateInstanceRequest extends Request {
     private String resourceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
@@ -110,6 +114,7 @@ public class CreateInstanceRequest extends Request {
         this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
         this.resourceId = builder.resourceId;
+        this.tag = builder.tag;
         this.userId = builder.userId;
         this.userVpc = builder.userVpc;
         this.workspaceId = builder.workspaceId;
@@ -242,6 +247,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -286,6 +298,7 @@ public class CreateInstanceRequest extends Request {
         private Long priority; 
         private RequestedResource requestedResource; 
         private String resourceId; 
+        private java.util.List < Tag> tag; 
         private String userId; 
         private UserVpc userVpc; 
         private String workspaceId; 
@@ -313,6 +326,7 @@ public class CreateInstanceRequest extends Request {
             this.priority = request.priority;
             this.requestedResource = request.requestedResource;
             this.resourceId = request.resourceId;
+            this.tag = request.tag;
             this.userId = request.userId;
             this.userVpc = request.userVpc;
             this.workspaceId = request.workspaceId;
@@ -460,6 +474,15 @@ public class CreateInstanceRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putBodyParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -1131,6 +1154,73 @@ public class CreateInstanceRequest extends Request {
 
             public RequestedResource build() {
                 return new RequestedResource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

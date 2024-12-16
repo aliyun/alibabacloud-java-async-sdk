@@ -1367,6 +1367,73 @@ public class ListInstancesResponseBody extends TeaModel {
      *
      * <p>ListInstancesResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class UserVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
@@ -1614,6 +1681,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("TerminalUrl")
         private String terminalUrl;
 
@@ -1672,6 +1742,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.resourceId = builder.resourceId;
             this.resourceName = builder.resourceName;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.terminalUrl = builder.terminalUrl;
             this.userId = builder.userId;
             this.userName = builder.userName;
@@ -1922,6 +1993,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return terminalUrl
          */
         public String getTerminalUrl() {
@@ -2011,6 +2089,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceName; 
             private String status; 
+            private java.util.List < Tags> tags; 
             private String terminalUrl; 
             private String userId; 
             private String userName; 
@@ -2284,6 +2363,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

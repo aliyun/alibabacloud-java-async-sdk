@@ -105,6 +105,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
+    @com.aliyun.core.annotation.NameInMap("ProxyPath")
+    private String proxyPath;
+
     @com.aliyun.core.annotation.NameInMap("ReasonCode")
     private String reasonCode;
 
@@ -128,6 +131,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
+
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("TerminalUrl")
     private String terminalUrl;
@@ -185,6 +191,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.nodeErrorRecovery = builder.nodeErrorRecovery;
         this.paymentType = builder.paymentType;
         this.priority = builder.priority;
+        this.proxyPath = builder.proxyPath;
         this.reasonCode = builder.reasonCode;
         this.reasonMessage = builder.reasonMessage;
         this.requestId = builder.requestId;
@@ -193,6 +200,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.resourceName = builder.resourceName;
         this.status = builder.status;
         this.success = builder.success;
+        this.tags = builder.tags;
         this.terminalUrl = builder.terminalUrl;
         this.userId = builder.userId;
         this.userName = builder.userName;
@@ -429,6 +437,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return proxyPath
+     */
+    public String getProxyPath() {
+        return this.proxyPath;
+    }
+
+    /**
      * @return reasonCode
      */
     public String getReasonCode() {
@@ -482,6 +497,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
     }
 
     /**
@@ -572,6 +594,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private NodeErrorRecovery nodeErrorRecovery; 
         private String paymentType; 
         private Long priority; 
+        private String proxyPath; 
         private String reasonCode; 
         private String reasonMessage; 
         private String requestId; 
@@ -580,6 +603,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String resourceName; 
         private String status; 
         private Boolean success; 
+        private java.util.List < Tags> tags; 
         private String terminalUrl; 
         private String userId; 
         private String userName; 
@@ -841,6 +865,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * ProxyPath.
+         */
+        public Builder proxyPath(String proxyPath) {
+            this.proxyPath = proxyPath;
+            return this;
+        }
+
+        /**
          * ReasonCode.
          */
         public Builder reasonCode(String reasonCode) {
@@ -901,6 +933,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder success(Boolean success) {
             this.success = success;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.tags = tags;
             return this;
         }
 
@@ -2303,6 +2343,73 @@ public class GetInstanceResponseBody extends TeaModel {
 
             public RequestedResource build() {
                 return new RequestedResource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
