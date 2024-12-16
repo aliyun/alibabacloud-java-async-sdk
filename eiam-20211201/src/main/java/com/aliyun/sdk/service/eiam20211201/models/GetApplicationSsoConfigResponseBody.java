@@ -50,7 +50,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The SSO configuration information of the application.</p>
+         * <p>The single sign-on (SSO) configuration information of the application.</p>
          */
         public Builder applicationSsoConfig(ApplicationSsoConfig applicationSsoConfig) {
             this.applicationSsoConfig = applicationSsoConfig;
@@ -846,6 +846,79 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
      *
      * <p>GetApplicationSsoConfigResponseBody</p>
      */
+    public static class OptionalRelayStates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
+        private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("RelayState")
+        private String relayState;
+
+        private OptionalRelayStates(Builder builder) {
+            this.displayName = builder.displayName;
+            this.relayState = builder.relayState;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OptionalRelayStates create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return relayState
+         */
+        public String getRelayState() {
+            return this.relayState;
+        }
+
+        public static final class Builder {
+            private String displayName; 
+            private String relayState; 
+
+            /**
+             * <p>The display name of the RelayState</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ram Account SSO</p>
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * <p>RelayState.The user will see the display names of multiple optional redirect addresses in the application card of the application portal. After the user clicks and completes SSO, they will automatically jump to the corresponding address. This field can only be filled in after the default redirect address is filled in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://home.console.aliyun.com">https://home.console.aliyun.com</a></p>
+             */
+            public Builder relayState(String relayState) {
+                this.relayState = relayState;
+                return this;
+            }
+
+            public OptionalRelayStates build() {
+                return new OptionalRelayStates(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationSsoConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationSsoConfigResponseBody</p>
+     */
     public static class SamlSsoConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssertionSigned")
         private Boolean assertionSigned;
@@ -864,6 +937,9 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NameIdValueExpression")
         private String nameIdValueExpression;
+
+        @com.aliyun.core.annotation.NameInMap("OptionalRelayStates")
+        private java.util.List < OptionalRelayStates> optionalRelayStates;
 
         @com.aliyun.core.annotation.NameInMap("ResponseSigned")
         private Boolean responseSigned;
@@ -884,6 +960,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             this.idPEntityId = builder.idPEntityId;
             this.nameIdFormat = builder.nameIdFormat;
             this.nameIdValueExpression = builder.nameIdValueExpression;
+            this.optionalRelayStates = builder.optionalRelayStates;
             this.responseSigned = builder.responseSigned;
             this.signatureAlgorithm = builder.signatureAlgorithm;
             this.spEntityId = builder.spEntityId;
@@ -941,6 +1018,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return optionalRelayStates
+         */
+        public java.util.List < OptionalRelayStates> getOptionalRelayStates() {
+            return this.optionalRelayStates;
+        }
+
+        /**
          * @return responseSigned
          */
         public Boolean getResponseSigned() {
@@ -975,13 +1059,16 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private String idPEntityId; 
             private String nameIdFormat; 
             private String nameIdValueExpression; 
+            private java.util.List < OptionalRelayStates> optionalRelayStates; 
             private Boolean responseSigned; 
             private String signatureAlgorithm; 
             private String spEntityId; 
             private String spSsoAcsUrl; 
 
             /**
-             * <p>assertion是否签名</p>
+             * <p>Whether the Assertion needs a signature. ResponseSigned and AssertionSigned cannot be false at the same time.</p>
+             * <p>true: signature is required.
+             * false: signature is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1011,7 +1098,10 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IdPEntityId.
+             * <p>The custom issuer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/">https://example.com/</a></p>
              */
             public Builder idPEntityId(String idPEntityId) {
                 this.idPEntityId = idPEntityId;
@@ -1047,7 +1137,17 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>response是否签名</p>
+             * <p>Optional RelayState. The user will see the display names of multiple optional redirect addresses in the application card of the application portal. After the user clicks and completes SSO, they will automatically jump to the corresponding address. This field can only be filled in after the default redirect address is filled in.</p>
+             */
+            public Builder optionalRelayStates(java.util.List < OptionalRelayStates> optionalRelayStates) {
+                this.optionalRelayStates = optionalRelayStates;
+                return this;
+            }
+
+            /**
+             * <p>Whether the response needs to be signed. ResponseSigned and AssertionSigned cannot be false at the same time.</p>
+             * <p>true: signature is required.
+             * false: signature is not required.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1232,7 +1332,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application. This parameter is returned only when the SSO protocol of the application is SAML 2.0.</p>
+             * <p>The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application. This parameter is returned only if the SSO protocol of the application is SAML 2.0.</p>
              */
             public Builder samlSsoConfig(SamlSsoConfig samlSsoConfig) {
                 this.samlSsoConfig = samlSsoConfig;

@@ -81,6 +81,9 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
      * <p>GetPasswordExpirationConfigurationResponseBody</p>
      */
     public static class PasswordExpirationConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EffectiveAuthenticationSourceIds")
+        private java.util.List < String > effectiveAuthenticationSourceIds;
+
         @com.aliyun.core.annotation.NameInMap("PasswordExpirationAction")
         private String passwordExpirationAction;
 
@@ -103,6 +106,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         private Integer passwordValidMaxDay;
 
         private PasswordExpirationConfiguration(Builder builder) {
+            this.effectiveAuthenticationSourceIds = builder.effectiveAuthenticationSourceIds;
             this.passwordExpirationAction = builder.passwordExpirationAction;
             this.passwordExpirationNotificationChannels = builder.passwordExpirationNotificationChannels;
             this.passwordExpirationNotificationDuration = builder.passwordExpirationNotificationDuration;
@@ -118,6 +122,13 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
 
         public static PasswordExpirationConfiguration create() {
             return builder().build();
+        }
+
+        /**
+         * @return effectiveAuthenticationSourceIds
+         */
+        public java.util.List < String > getEffectiveAuthenticationSourceIds() {
+            return this.effectiveAuthenticationSourceIds;
         }
 
         /**
@@ -170,6 +181,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > effectiveAuthenticationSourceIds; 
             private String passwordExpirationAction; 
             private java.util.List < String > passwordExpirationNotificationChannels; 
             private Integer passwordExpirationNotificationDuration; 
@@ -177,6 +189,19 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             private String passwordExpirationStatus; 
             private Integer passwordForcedUpdateDuration; 
             private Integer passwordValidMaxDay; 
+
+            /**
+             * <p>The list of valid authentication IDs. The default is all [&quot;ia_all&quot;]</p>
+             * <p>ia_all: All. If you fill in this value, you cannot fill in other values</p>
+             * <p>ia_password: Account password login</p>
+             * <p>ia_otp_sms: SMS verification code login method</p>
+             * <p>ia_webauthn: WebAuthn authenticator login method</p>
+             * <p>idp_xxx: Specific identity provider authentication method</p>
+             */
+            public Builder effectiveAuthenticationSourceIds(java.util.List < String > effectiveAuthenticationSourceIds) {
+                this.effectiveAuthenticationSourceIds = effectiveAuthenticationSourceIds;
+                return this;
+            }
 
             /**
              * <p>The action to take when a password expires. Valid values:</p>

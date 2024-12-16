@@ -17,6 +17,10 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveAuthenticationSourceIds")
+    private java.util.List < String > effectiveAuthenticationSourceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
@@ -59,6 +63,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
     private SetPasswordExpirationConfigurationRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.effectiveAuthenticationSourceIds = builder.effectiveAuthenticationSourceIds;
         this.instanceId = builder.instanceId;
         this.passwordExpirationAction = builder.passwordExpirationAction;
         this.passwordExpirationNotificationChannels = builder.passwordExpirationNotificationChannels;
@@ -87,6 +92,13 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return effectiveAuthenticationSourceIds
+     */
+    public java.util.List < String > getEffectiveAuthenticationSourceIds() {
+        return this.effectiveAuthenticationSourceIds;
     }
 
     /**
@@ -147,6 +159,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetPasswordExpirationConfigurationRequest, Builder> {
         private String regionId; 
+        private java.util.List < String > effectiveAuthenticationSourceIds; 
         private String instanceId; 
         private String passwordExpirationAction; 
         private java.util.List < String > passwordExpirationNotificationChannels; 
@@ -163,6 +176,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         private Builder(SetPasswordExpirationConfigurationRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.effectiveAuthenticationSourceIds = request.effectiveAuthenticationSourceIds;
             this.instanceId = request.instanceId;
             this.passwordExpirationAction = request.passwordExpirationAction;
             this.passwordExpirationNotificationChannels = request.passwordExpirationNotificationChannels;
@@ -179,6 +193,15 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * EffectiveAuthenticationSourceIds.
+         */
+        public Builder effectiveAuthenticationSourceIds(java.util.List < String > effectiveAuthenticationSourceIds) {
+            this.putQueryParameter("EffectiveAuthenticationSourceIds", effectiveAuthenticationSourceIds);
+            this.effectiveAuthenticationSourceIds = effectiveAuthenticationSourceIds;
             return this;
         }
 

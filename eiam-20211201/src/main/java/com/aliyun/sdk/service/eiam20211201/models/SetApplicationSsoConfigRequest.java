@@ -22,6 +22,10 @@ public class SetApplicationSsoConfigRequest extends Request {
     private String applicationId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InitLoginType")
     private String initLoginType;
 
@@ -46,6 +50,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.applicationId = builder.applicationId;
+        this.clientToken = builder.clientToken;
         this.initLoginType = builder.initLoginType;
         this.initLoginUrl = builder.initLoginUrl;
         this.instanceId = builder.instanceId;
@@ -78,6 +83,13 @@ public class SetApplicationSsoConfigRequest extends Request {
      */
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -118,6 +130,7 @@ public class SetApplicationSsoConfigRequest extends Request {
     public static final class Builder extends Request.Builder<SetApplicationSsoConfigRequest, Builder> {
         private String regionId; 
         private String applicationId; 
+        private String clientToken; 
         private String initLoginType; 
         private String initLoginUrl; 
         private String instanceId; 
@@ -132,6 +145,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.applicationId = request.applicationId;
+            this.clientToken = request.clientToken;
             this.initLoginType = request.initLoginType;
             this.initLoginUrl = request.initLoginUrl;
             this.instanceId = request.instanceId;
@@ -158,6 +172,15 @@ public class SetApplicationSsoConfigRequest extends Request {
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
             this.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -743,6 +766,75 @@ public class SetApplicationSsoConfigRequest extends Request {
      *
      * <p>SetApplicationSsoConfigRequest</p>
      */
+    public static class OptionalRelayStates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
+        private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("RelayState")
+        @com.aliyun.core.annotation.Validation(maxLength = 256)
+        private String relayState;
+
+        private OptionalRelayStates(Builder builder) {
+            this.displayName = builder.displayName;
+            this.relayState = builder.relayState;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OptionalRelayStates create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return relayState
+         */
+        public String getRelayState() {
+            return this.relayState;
+        }
+
+        public static final class Builder {
+            private String displayName; 
+            private String relayState; 
+
+            /**
+             * DisplayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * RelayState.
+             */
+            public Builder relayState(String relayState) {
+                this.relayState = relayState;
+                return this;
+            }
+
+            public OptionalRelayStates build() {
+                return new OptionalRelayStates(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SetApplicationSsoConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetApplicationSsoConfigRequest</p>
+     */
     public static class SamlSsoConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssertionSigned")
         private Boolean assertionSigned;
@@ -761,6 +853,9 @@ public class SetApplicationSsoConfigRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("NameIdValueExpression")
         private String nameIdValueExpression;
+
+        @com.aliyun.core.annotation.NameInMap("OptionalRelayStates")
+        private java.util.List < OptionalRelayStates> optionalRelayStates;
 
         @com.aliyun.core.annotation.NameInMap("ResponseSigned")
         private Boolean responseSigned;
@@ -781,6 +876,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             this.idPEntityId = builder.idPEntityId;
             this.nameIdFormat = builder.nameIdFormat;
             this.nameIdValueExpression = builder.nameIdValueExpression;
+            this.optionalRelayStates = builder.optionalRelayStates;
             this.responseSigned = builder.responseSigned;
             this.signatureAlgorithm = builder.signatureAlgorithm;
             this.spEntityId = builder.spEntityId;
@@ -838,6 +934,13 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
+         * @return optionalRelayStates
+         */
+        public java.util.List < OptionalRelayStates> getOptionalRelayStates() {
+            return this.optionalRelayStates;
+        }
+
+        /**
          * @return responseSigned
          */
         public Boolean getResponseSigned() {
@@ -872,6 +975,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String idPEntityId; 
             private String nameIdFormat; 
             private String nameIdValueExpression; 
+            private java.util.List < OptionalRelayStates> optionalRelayStates; 
             private Boolean responseSigned; 
             private String signatureAlgorithm; 
             private String spEntityId; 
@@ -944,6 +1048,14 @@ public class SetApplicationSsoConfigRequest extends Request {
              */
             public Builder nameIdValueExpression(String nameIdValueExpression) {
                 this.nameIdValueExpression = nameIdValueExpression;
+                return this;
+            }
+
+            /**
+             * OptionalRelayStates.
+             */
+            public Builder optionalRelayStates(java.util.List < OptionalRelayStates> optionalRelayStates) {
+                this.optionalRelayStates = optionalRelayStates;
                 return this;
             }
 

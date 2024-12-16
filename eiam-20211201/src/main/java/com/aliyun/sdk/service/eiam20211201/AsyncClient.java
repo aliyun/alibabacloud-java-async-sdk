@@ -83,6 +83,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateIdentityProvider  CreateIdentityProviderRequest
+     * @return CreateIdentityProviderResponse
+     */
+    CompletableFuture<CreateIdentityProviderResponse> createIdentityProvider(CreateIdentityProviderRequest request);
+
+    /**
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
      * @return CreateInstanceResponse
      */
@@ -138,6 +144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteGroupResponse
      */
     CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteIdentityProvider  DeleteIdentityProviderRequest
+     * @return DeleteIdentityProviderResponse
+     */
+    CompletableFuture<DeleteIdentityProviderResponse> deleteIdentityProvider(DeleteIdentityProviderRequest request);
 
     /**
      * <b>description</b> :
@@ -212,6 +224,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableDomainProxyTokenResponse> disableDomainProxyToken(DisableDomainProxyTokenRequest request);
 
     /**
+     * @param request the request parameters of DisableIdentityProviderUdPull  DisableIdentityProviderUdPullRequest
+     * @return DisableIdentityProviderUdPullResponse
+     */
+    CompletableFuture<DisableIdentityProviderUdPullResponse> disableIdentityProviderUdPull(DisableIdentityProviderUdPullRequest request);
+
+    /**
      * @param request the request parameters of DisableInitDomainAutoRedirect  DisableInitDomainAutoRedirectRequest
      * @return DisableInitDomainAutoRedirectResponse
      */
@@ -258,6 +276,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableDomainProxyTokenResponse
      */
     CompletableFuture<EnableDomainProxyTokenResponse> enableDomainProxyToken(EnableDomainProxyTokenRequest request);
+
+    /**
+     * @param request the request parameters of EnableIdentityProviderUdPull  EnableIdentityProviderUdPullRequest
+     * @return EnableIdentityProviderUdPullResponse
+     */
+    CompletableFuture<EnableIdentityProviderUdPullResponse> enableIdentityProviderUdPull(EnableIdentityProviderUdPullRequest request);
 
     /**
      * @param request the request parameters of EnableInitDomainAutoRedirect  EnableInitDomainAutoRedirectRequest
@@ -324,6 +348,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetGroupResponse
      */
     CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request);
+
+    /**
+     * @param request the request parameters of GetIdentityProvider  GetIdentityProviderRequest
+     * @return GetIdentityProviderResponse
+     */
+    CompletableFuture<GetIdentityProviderResponse> getIdentityProvider(GetIdentityProviderRequest request);
+
+    /**
+     * @param request the request parameters of GetIdentityProviderUdPullConfiguration  GetIdentityProviderUdPullConfigurationRequest
+     * @return GetIdentityProviderUdPullConfigurationResponse
+     */
+    CompletableFuture<GetIdentityProviderUdPullConfigurationResponse> getIdentityProviderUdPullConfiguration(GetIdentityProviderUdPullConfigurationRequest request);
 
     /**
      * @param request the request parameters of GetInstance  GetInstanceRequest
@@ -453,6 +489,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListGroupsForUserResponse
      */
     CompletableFuture<ListGroupsForUserResponse> listGroupsForUser(ListGroupsForUserRequest request);
+
+    /**
+     * @param request the request parameters of ListIdentityProviders  ListIdentityProvidersRequest
+     * @return ListIdentityProvidersResponse
+     */
+    CompletableFuture<ListIdentityProvidersResponse> listIdentityProviders(ListIdentityProvidersRequest request);
 
     /**
      * @param request the request parameters of ListInstances  ListInstancesRequest
@@ -620,6 +662,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetForgetPasswordConfigurationResponse> setForgetPasswordConfiguration(SetForgetPasswordConfigurationRequest request);
 
     /**
+     * @param request the request parameters of SetIdentityProviderUdPullConfiguration  SetIdentityProviderUdPullConfigurationRequest
+     * @return SetIdentityProviderUdPullConfigurationResponse
+     */
+    CompletableFuture<SetIdentityProviderUdPullConfigurationResponse> setIdentityProviderUdPullConfiguration(SetIdentityProviderUdPullConfigurationRequest request);
+
+    /**
      * @param request the request parameters of SetPasswordComplexityConfiguration  SetPasswordComplexityConfigurationRequest
      * @return SetPasswordComplexityConfigurationResponse
      */
@@ -678,6 +726,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateGroupDescriptionResponse
      */
     CompletableFuture<UpdateGroupDescriptionResponse> updateGroupDescription(UpdateGroupDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateIdentityProvider  UpdateIdentityProviderRequest
+     * @return UpdateIdentityProviderResponse
+     */
+    CompletableFuture<UpdateIdentityProviderResponse> updateIdentityProvider(UpdateIdentityProviderRequest request);
 
     /**
      * @param request the request parameters of UpdateInstanceDescription  UpdateInstanceDescriptionRequest
