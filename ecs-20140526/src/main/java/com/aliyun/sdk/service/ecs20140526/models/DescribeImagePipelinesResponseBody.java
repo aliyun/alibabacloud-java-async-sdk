@@ -86,7 +86,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>The information about the image templates.</p>
+         * <p>Details of the image templates.</p>
          */
         public Builder imagePipeline(ImagePipeline imagePipeline) {
             this.imagePipeline = imagePipeline;

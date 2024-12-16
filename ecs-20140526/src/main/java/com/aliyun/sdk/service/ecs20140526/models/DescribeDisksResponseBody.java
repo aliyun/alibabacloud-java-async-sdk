@@ -1700,6 +1700,10 @@ public class DescribeDisksResponseBody extends TeaModel {
 
             /**
              * <p>The locations in which data is stored.</p>
+             * <p>This parameter is returned only if you specify <code>Placement</code> in the AdditionalAttributes.N request parameter.</p>
+             * <blockquote>
+             * <p> This parameter is valid only for Regional ESSDs (cloud_regional_disk_auto).</p>
+             * </blockquote>
              */
             public Builder placement(Placement placement) {
                 this.placement = placement;

@@ -475,7 +475,10 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>You cannot modify this parameter when you modify a security group rule by specifying its ID.<br>You can add a new rule that meets your business requirements and delete the original rule.</p>
+         * <p>The network interface controller (NIC) type.</p>
+         * <blockquote>
+         * <p> You cannot modify this parameter when you modify a security group rule by specifying the ID of the rule. If you want to change the NIC type of a security group rule, you can create a security group rule of a desired NIC type and delete the existing rule.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>intranet</p>
@@ -597,7 +600,7 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>The security group rule ID.<br>This parameter is required when you modify a security group rule based on the security group rule ID.</p>
+         * <p>The ID of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/2679845.html">DescribeSecurityGroupAttribute</a> operation to query the IDs of security group rules in a security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sgr-bp67acfmxa123b***</p>

@@ -286,10 +286,10 @@ public class ModifyDiskDeploymentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the dedicated block storage cluster.</p>
+         * <p>The ID of the dedicated block storage cluster to which data disk N belongs.</p>
          * <ul>
-         * <li>When you migrate a disk to a dedicated block storage cluster, the StorageClusterId parameter must be specified.</li>
-         * <li>When you migrate a disk to a public block storage cluster, the StorageClusterId parameter must be left empty.</li>
+         * <li>When you migrate a disk to a dedicated block storage cluster, the<code> StorageClusterId</code> parameter must be specified.</li>
+         * <li>When you migrate a disk to a public block storage cluster, the <code>StorageClusterId</code> parameter must be left empty.</li>
          * </ul>
          * <p>This parameter is empty by default, which indicates that the disk is migrated to a public block storage cluster.</p>
          * 

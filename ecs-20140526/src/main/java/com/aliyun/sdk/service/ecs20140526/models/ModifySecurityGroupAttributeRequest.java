@@ -178,7 +178,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
 
         /**
          * <p>The new description of the security group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
-         * <p>By default, this parameter is left empty.</p>
+         * <p>By default, the parameter is empty, which indicates that the description remains unchanged.</p>
          * 
          * <strong>example:</strong>
          * <p>TestDescription</p>
@@ -253,7 +253,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
 
         /**
          * <p>The new name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-         * <p>This parameter is empty by default.</p>
+         * <p>By default, the parameter is empty, which indicates that the name remains unchanged.</p>
          * 
          * <strong>example:</strong>
          * <p>SecurityGroupTestName</p>

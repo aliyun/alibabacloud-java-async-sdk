@@ -835,10 +835,14 @@ public class ImportImageRequest extends Request {
      * <p>ImportImageRequest</p>
      */
     public static class Features extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImdsSupport")
+        private String imdsSupport;
+
         @com.aliyun.core.annotation.NameInMap("NvmeSupport")
         private String nvmeSupport;
 
         private Features(Builder builder) {
+            this.imdsSupport = builder.imdsSupport;
             this.nvmeSupport = builder.nvmeSupport;
         }
 
@@ -851,6 +855,13 @@ public class ImportImageRequest extends Request {
         }
 
         /**
+         * @return imdsSupport
+         */
+        public String getImdsSupport() {
+            return this.imdsSupport;
+        }
+
+        /**
          * @return nvmeSupport
          */
         public String getNvmeSupport() {
@@ -858,7 +869,16 @@ public class ImportImageRequest extends Request {
         }
 
         public static final class Builder {
+            private String imdsSupport; 
             private String nvmeSupport; 
+
+            /**
+             * ImdsSupport.
+             */
+            public Builder imdsSupport(String imdsSupport) {
+                this.imdsSupport = imdsSupport;
+                return this;
+            }
 
             /**
              * <p>Specifies whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>

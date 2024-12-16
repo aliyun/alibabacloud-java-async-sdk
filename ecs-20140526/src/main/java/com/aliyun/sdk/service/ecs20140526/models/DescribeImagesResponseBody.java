@@ -421,6 +421,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private String encrypted;
+
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
@@ -447,6 +450,7 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         private DiskDeviceMapping(Builder builder) {
             this.device = builder.device;
+            this.encrypted = builder.encrypted;
             this.format = builder.format;
             this.importOSSBucket = builder.importOSSBucket;
             this.importOSSObject = builder.importOSSObject;
@@ -470,6 +474,13 @@ public class DescribeImagesResponseBody extends TeaModel {
          */
         public String getDevice() {
             return this.device;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public String getEncrypted() {
+            return this.encrypted;
         }
 
         /**
@@ -530,6 +541,7 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String device; 
+            private String encrypted; 
             private String format; 
             private String importOSSBucket; 
             private String importOSSObject; 
@@ -547,6 +559,14 @@ public class DescribeImagesResponseBody extends TeaModel {
              */
             public Builder device(String device) {
                 this.device = device;
+                return this;
+            }
+
+            /**
+             * Encrypted.
+             */
+            public Builder encrypted(String encrypted) {
+                this.encrypted = encrypted;
                 return this;
             }
 
@@ -699,10 +719,14 @@ public class DescribeImagesResponseBody extends TeaModel {
      * <p>DescribeImagesResponseBody</p>
      */
     public static class Features extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImdsSupport")
+        private String imdsSupport;
+
         @com.aliyun.core.annotation.NameInMap("NvmeSupport")
         private String nvmeSupport;
 
         private Features(Builder builder) {
+            this.imdsSupport = builder.imdsSupport;
             this.nvmeSupport = builder.nvmeSupport;
         }
 
@@ -715,6 +739,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return imdsSupport
+         */
+        public String getImdsSupport() {
+            return this.imdsSupport;
+        }
+
+        /**
          * @return nvmeSupport
          */
         public String getNvmeSupport() {
@@ -722,7 +753,16 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String imdsSupport; 
             private String nvmeSupport; 
+
+            /**
+             * ImdsSupport.
+             */
+            public Builder imdsSupport(String imdsSupport) {
+                this.imdsSupport = imdsSupport;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>

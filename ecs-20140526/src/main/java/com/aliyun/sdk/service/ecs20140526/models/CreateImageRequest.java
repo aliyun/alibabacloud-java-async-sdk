@@ -41,6 +41,10 @@ public class CreateImageRequest extends Request {
     private java.util.List < DiskDeviceMapping> diskDeviceMapping;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Features")
+    private Features features;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageFamily")
     private String imageFamily;
 
@@ -102,6 +106,7 @@ public class CreateImageRequest extends Request {
         this.description = builder.description;
         this.detectionStrategy = builder.detectionStrategy;
         this.diskDeviceMapping = builder.diskDeviceMapping;
+        this.features = builder.features;
         this.imageFamily = builder.imageFamily;
         this.imageName = builder.imageName;
         this.imageVersion = builder.imageVersion;
@@ -177,6 +182,13 @@ public class CreateImageRequest extends Request {
      */
     public java.util.List < DiskDeviceMapping> getDiskDeviceMapping() {
         return this.diskDeviceMapping;
+    }
+
+    /**
+     * @return features
+     */
+    public Features getFeatures() {
+        return this.features;
     }
 
     /**
@@ -278,6 +290,7 @@ public class CreateImageRequest extends Request {
         private String description; 
         private String detectionStrategy; 
         private java.util.List < DiskDeviceMapping> diskDeviceMapping; 
+        private Features features; 
         private String imageFamily; 
         private String imageName; 
         private String imageVersion; 
@@ -305,6 +318,7 @@ public class CreateImageRequest extends Request {
             this.description = request.description;
             this.detectionStrategy = request.detectionStrategy;
             this.diskDeviceMapping = request.diskDeviceMapping;
+            this.features = request.features;
             this.imageFamily = request.imageFamily;
             this.imageName = request.imageName;
             this.imageVersion = request.imageVersion;
@@ -415,6 +429,15 @@ public class CreateImageRequest extends Request {
         public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
             this.diskDeviceMapping = diskDeviceMapping;
+            return this;
+        }
+
+        /**
+         * Features.
+         */
+        public Builder features(Features features) {
+            this.putQueryParameter("Features", features);
+            this.features = features;
             return this;
         }
 
@@ -734,6 +757,53 @@ public class CreateImageRequest extends Request {
 
             public DiskDeviceMapping build() {
                 return new DiskDeviceMapping(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateImageRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImageRequest</p>
+     */
+    public static class Features extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImdsSupport")
+        private String imdsSupport;
+
+        private Features(Builder builder) {
+            this.imdsSupport = builder.imdsSupport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Features create() {
+            return builder().build();
+        }
+
+        /**
+         * @return imdsSupport
+         */
+        public String getImdsSupport() {
+            return this.imdsSupport;
+        }
+
+        public static final class Builder {
+            private String imdsSupport; 
+
+            /**
+             * ImdsSupport.
+             */
+            public Builder imdsSupport(String imdsSupport) {
+                this.imdsSupport = imdsSupport;
+                return this;
+            }
+
+            public Features build() {
+                return new Features(this);
             } 
 
         } 

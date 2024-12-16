@@ -86,7 +86,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>Details about the private pools that the instances match.</p>
+         * <p>The information about the association between private pools and instances.</p>
          */
         public Builder instances(Instances instances) {
             this.instances = instances;

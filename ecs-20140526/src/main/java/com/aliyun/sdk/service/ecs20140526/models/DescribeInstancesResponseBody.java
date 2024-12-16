@@ -175,6 +175,53 @@ public class DescribeInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeInstancesResponseBody</p>
      */
+    public static class AdditionalInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableHighDensityMode")
+        private Boolean enableHighDensityMode;
+
+        private AdditionalInfo(Builder builder) {
+            this.enableHighDensityMode = builder.enableHighDensityMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdditionalInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableHighDensityMode
+         */
+        public Boolean getEnableHighDensityMode() {
+            return this.enableHighDensityMode;
+        }
+
+        public static final class Builder {
+            private Boolean enableHighDensityMode; 
+
+            /**
+             * EnableHighDensityMode.
+             */
+            public Builder enableHighDensityMode(Boolean enableHighDensityMode) {
+                this.enableHighDensityMode = enableHighDensityMode;
+                return this;
+            }
+
+            public AdditionalInfo build() {
+                return new AdditionalInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class CpuOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoreCount")
         private Integer coreCount;
@@ -2398,6 +2445,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
      * <p>DescribeInstancesResponseBody</p>
      */
     public static class Instance extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AdditionalInfo")
+        private AdditionalInfo additionalInfo;
+
         @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
 
@@ -2594,6 +2644,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private String zoneId;
 
         private Instance(Builder builder) {
+            this.additionalInfo = builder.additionalInfo;
             this.autoReleaseTime = builder.autoReleaseTime;
             this.clusterId = builder.clusterId;
             this.cpu = builder.cpu;
@@ -2667,6 +2718,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static Instance create() {
             return builder().build();
+        }
+
+        /**
+         * @return additionalInfo
+         */
+        public AdditionalInfo getAdditionalInfo() {
+            return this.additionalInfo;
         }
 
         /**
@@ -3125,6 +3183,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AdditionalInfo additionalInfo; 
             private String autoReleaseTime; 
             private String clusterId; 
             private Integer cpu; 
@@ -3190,6 +3249,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vlanId; 
             private VpcAttributes vpcAttributes; 
             private String zoneId; 
+
+            /**
+             * AdditionalInfo.
+             */
+            public Builder additionalInfo(AdditionalInfo additionalInfo) {
+                this.additionalInfo = additionalInfo;
+                return this;
+            }
 
             /**
              * <p>The automatic release time of the pay-as-you-go instance.</p>
