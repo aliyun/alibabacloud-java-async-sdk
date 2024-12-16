@@ -35,6 +35,10 @@ public class UpdateCloudRecordRequest extends Request {
     private java.util.List < Images> images;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LayoutSpecifiedUsers")
+    private LayoutSpecifiedUsers layoutSpecifiedUsers;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Panes")
     private java.util.List < Panes> panes;
 
@@ -59,6 +63,7 @@ public class UpdateCloudRecordRequest extends Request {
         this.channelId = builder.channelId;
         this.clockWidgets = builder.clockWidgets;
         this.images = builder.images;
+        this.layoutSpecifiedUsers = builder.layoutSpecifiedUsers;
         this.panes = builder.panes;
         this.taskId = builder.taskId;
         this.templateId = builder.templateId;
@@ -114,6 +119,13 @@ public class UpdateCloudRecordRequest extends Request {
     }
 
     /**
+     * @return layoutSpecifiedUsers
+     */
+    public LayoutSpecifiedUsers getLayoutSpecifiedUsers() {
+        return this.layoutSpecifiedUsers;
+    }
+
+    /**
      * @return panes
      */
     public java.util.List < Panes> getPanes() {
@@ -147,6 +159,7 @@ public class UpdateCloudRecordRequest extends Request {
         private String channelId; 
         private java.util.List < ClockWidgets> clockWidgets; 
         private java.util.List < Images> images; 
+        private LayoutSpecifiedUsers layoutSpecifiedUsers; 
         private java.util.List < Panes> panes; 
         private String taskId; 
         private String templateId; 
@@ -163,6 +176,7 @@ public class UpdateCloudRecordRequest extends Request {
             this.channelId = request.channelId;
             this.clockWidgets = request.clockWidgets;
             this.images = request.images;
+            this.layoutSpecifiedUsers = request.layoutSpecifiedUsers;
             this.panes = request.panes;
             this.taskId = request.taskId;
             this.templateId = request.templateId;
@@ -217,6 +231,16 @@ public class UpdateCloudRecordRequest extends Request {
         public Builder images(java.util.List < Images> images) {
             this.putQueryParameter("Images", images);
             this.images = images;
+            return this;
+        }
+
+        /**
+         * LayoutSpecifiedUsers.
+         */
+        public Builder layoutSpecifiedUsers(LayoutSpecifiedUsers layoutSpecifiedUsers) {
+            String layoutSpecifiedUsersShrink = shrink(layoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
+            this.putQueryParameter("LayoutSpecifiedUsers", layoutSpecifiedUsersShrink);
+            this.layoutSpecifiedUsers = layoutSpecifiedUsers;
             return this;
         }
 
@@ -1144,6 +1168,75 @@ public class UpdateCloudRecordRequest extends Request {
 
             public Images build() {
                 return new Images(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateCloudRecordRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCloudRecordRequest</p>
+     */
+    public static class LayoutSpecifiedUsers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ids")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List < String > ids;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String type;
+
+        private LayoutSpecifiedUsers(Builder builder) {
+            this.ids = builder.ids;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LayoutSpecifiedUsers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ids
+         */
+        public java.util.List < String > getIds() {
+            return this.ids;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > ids; 
+            private String type; 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder ids(java.util.List < String > ids) {
+                this.ids = ids;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public LayoutSpecifiedUsers build() {
+                return new LayoutSpecifiedUsers(this);
             } 
 
         } 

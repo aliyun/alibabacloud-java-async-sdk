@@ -266,6 +266,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeChannelsResponse> describeChannels(DescribeChannelsRequest request);
 
     /**
+     * @param request the request parameters of DescribeCloudNotes  DescribeCloudNotesRequest
+     * @return DescribeCloudNotesResponse
+     */
+    CompletableFuture<DescribeCloudNotesResponse> describeCloudNotes(DescribeCloudNotesRequest request);
+
+    /**
      * @param request the request parameters of DescribeEndPointEventList  DescribeEndPointEventListRequest
      * @return DescribeEndPointEventListResponse
      */
@@ -518,6 +524,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartCategoryCallbackResponse> startCategoryCallback(StartCategoryCallbackRequest request);
 
     /**
+     * @param request the request parameters of StartCloudNote  StartCloudNoteRequest
+     * @return StartCloudNoteResponse
+     */
+    CompletableFuture<StartCloudNoteResponse> startCloudNote(StartCloudNoteRequest request);
+
+    /**
      * @param request the request parameters of StartCloudRecord  StartCloudRecordRequest
      * @return StartCloudRecordResponse
      */
@@ -552,6 +564,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopChannelResponse
      */
     CompletableFuture<StopChannelResponse> stopChannel(StopChannelRequest request);
+
+    /**
+     * @param request the request parameters of StopCloudNote  StopCloudNoteRequest
+     * @return StopCloudNoteResponse
+     */
+    CompletableFuture<StopCloudNoteResponse> stopCloudNote(StopCloudNoteRequest request);
 
     /**
      * @param request the request parameters of StopCloudRecord  StopCloudRecordRequest

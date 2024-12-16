@@ -39,6 +39,10 @@ public class StartStreamingOutRequest extends Request {
     private java.util.List < Images> images;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LayoutSpecifiedUsers")
+    private LayoutSpecifiedUsers layoutSpecifiedUsers;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Panes")
     private java.util.List < Panes> panes;
 
@@ -73,6 +77,7 @@ public class StartStreamingOutRequest extends Request {
         this.clockWidgets = builder.clockWidgets;
         this.cropMode = builder.cropMode;
         this.images = builder.images;
+        this.layoutSpecifiedUsers = builder.layoutSpecifiedUsers;
         this.panes = builder.panes;
         this.regionColor = builder.regionColor;
         this.taskId = builder.taskId;
@@ -137,6 +142,13 @@ public class StartStreamingOutRequest extends Request {
     }
 
     /**
+     * @return layoutSpecifiedUsers
+     */
+    public LayoutSpecifiedUsers getLayoutSpecifiedUsers() {
+        return this.layoutSpecifiedUsers;
+    }
+
+    /**
      * @return panes
      */
     public java.util.List < Panes> getPanes() {
@@ -185,6 +197,7 @@ public class StartStreamingOutRequest extends Request {
         private java.util.List < ClockWidgets> clockWidgets; 
         private Integer cropMode; 
         private java.util.List < Images> images; 
+        private LayoutSpecifiedUsers layoutSpecifiedUsers; 
         private java.util.List < Panes> panes; 
         private RegionColor regionColor; 
         private String taskId; 
@@ -204,6 +217,7 @@ public class StartStreamingOutRequest extends Request {
             this.clockWidgets = request.clockWidgets;
             this.cropMode = request.cropMode;
             this.images = request.images;
+            this.layoutSpecifiedUsers = request.layoutSpecifiedUsers;
             this.panes = request.panes;
             this.regionColor = request.regionColor;
             this.taskId = request.taskId;
@@ -269,6 +283,16 @@ public class StartStreamingOutRequest extends Request {
         public Builder images(java.util.List < Images> images) {
             this.putQueryParameter("Images", images);
             this.images = images;
+            return this;
+        }
+
+        /**
+         * LayoutSpecifiedUsers.
+         */
+        public Builder layoutSpecifiedUsers(LayoutSpecifiedUsers layoutSpecifiedUsers) {
+            String layoutSpecifiedUsersShrink = shrink(layoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
+            this.putQueryParameter("LayoutSpecifiedUsers", layoutSpecifiedUsersShrink);
+            this.layoutSpecifiedUsers = layoutSpecifiedUsers;
             return this;
         }
 
@@ -1214,6 +1238,75 @@ public class StartStreamingOutRequest extends Request {
 
             public Images build() {
                 return new Images(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartStreamingOutRequest} extends {@link TeaModel}
+     *
+     * <p>StartStreamingOutRequest</p>
+     */
+    public static class LayoutSpecifiedUsers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ids")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List < String > ids;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String type;
+
+        private LayoutSpecifiedUsers(Builder builder) {
+            this.ids = builder.ids;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LayoutSpecifiedUsers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ids
+         */
+        public java.util.List < String > getIds() {
+            return this.ids;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > ids; 
+            private String type; 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder ids(java.util.List < String > ids) {
+                this.ids = ids;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public LayoutSpecifiedUsers build() {
+                return new LayoutSpecifiedUsers(this);
             } 
 
         } 
