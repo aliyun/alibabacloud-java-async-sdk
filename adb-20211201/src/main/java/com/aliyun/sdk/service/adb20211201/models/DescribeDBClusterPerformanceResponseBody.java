@@ -159,12 +159,16 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
+        @com.aliyun.core.annotation.NameInMap("TranslateKey")
+        private String translateKey;
+
         @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private Series(Builder builder) {
             this.name = builder.name;
             this.tags = builder.tags;
+            this.translateKey = builder.translateKey;
             this.values = builder.values;
         }
 
@@ -191,6 +195,13 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return translateKey
+         */
+        public String getTranslateKey() {
+            return this.translateKey;
+        }
+
+        /**
          * @return values
          */
         public java.util.List < String > getValues() {
@@ -200,6 +211,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String tags; 
+            private String translateKey; 
             private java.util.List < String > values; 
 
             /**
@@ -458,6 +470,14 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
              */
             public Builder tags(String tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TranslateKey.
+             */
+            public Builder translateKey(String translateKey) {
+                this.translateKey = translateKey;
                 return this;
             }
 
