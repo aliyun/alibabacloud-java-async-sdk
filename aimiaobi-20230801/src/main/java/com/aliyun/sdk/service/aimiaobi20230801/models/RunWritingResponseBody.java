@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunWritingResponseBody</p>
  */
 public class RunWritingResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("End")
+    private Boolean end;
+
     @com.aliyun.core.annotation.NameInMap("Header")
     private RunWritingResponseBodyHeader header;
 
@@ -22,6 +25,7 @@ public class RunWritingResponseBody extends TeaModel {
     private String requestId;
 
     private RunWritingResponseBody(Builder builder) {
+        this.end = builder.end;
         this.header = builder.header;
         this.payload = builder.payload;
         this.requestId = builder.requestId;
@@ -33,6 +37,13 @@ public class RunWritingResponseBody extends TeaModel {
 
     public static RunWritingResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return end
+     */
+    public Boolean getEnd() {
+        return this.end;
     }
 
     /**
@@ -57,9 +68,18 @@ public class RunWritingResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean end; 
         private RunWritingResponseBodyHeader header; 
         private Payload payload; 
         private String requestId; 
+
+        /**
+         * End.
+         */
+        public Builder end(Boolean end) {
+            this.end = end;
+            return this;
+        }
 
         /**
          * Header.
