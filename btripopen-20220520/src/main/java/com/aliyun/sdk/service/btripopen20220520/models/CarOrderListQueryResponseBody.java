@@ -533,6 +533,9 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("memo")
         private String memo;
 
+        @com.aliyun.core.annotation.NameInMap("order_id")
+        private String orderId;
+
         @com.aliyun.core.annotation.NameInMap("order_status")
         private Integer orderStatus;
 
@@ -647,6 +650,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             this.invoiceTitle = builder.invoiceTitle;
             this.isSpecial = builder.isSpecial;
             this.memo = builder.memo;
+            this.orderId = builder.orderId;
             this.orderStatus = builder.orderStatus;
             this.passengerName = builder.passengerName;
             this.payTime = builder.payTime;
@@ -866,6 +870,13 @@ public class CarOrderListQueryResponseBody extends TeaModel {
          */
         public String getMemo() {
             return this.memo;
+        }
+
+        /**
+         * @return orderId
+         */
+        public String getOrderId() {
+            return this.orderId;
         }
 
         /**
@@ -1098,6 +1109,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             private String invoiceTitle; 
             private Boolean isSpecial; 
             private String memo; 
+            private String orderId; 
             private Integer orderStatus; 
             private String passengerName; 
             private String payTime; 
@@ -1333,6 +1345,14 @@ public class CarOrderListQueryResponseBody extends TeaModel {
              */
             public Builder memo(String memo) {
                 this.memo = memo;
+                return this;
+            }
+
+            /**
+             * order_id.
+             */
+            public Builder orderId(String orderId) {
+                this.orderId = orderId;
                 return this;
             }
 

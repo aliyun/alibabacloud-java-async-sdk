@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class FlightItineraryScanQueryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("bill_date")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String billDate;
 
     @com.aliyun.core.annotation.Query
@@ -154,10 +153,7 @@ public class FlightItineraryScanQueryRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-12-01</p>
+         * bill_date.
          */
         public Builder billDate(String billDate) {
             this.putQueryParameter("bill_date", billDate);

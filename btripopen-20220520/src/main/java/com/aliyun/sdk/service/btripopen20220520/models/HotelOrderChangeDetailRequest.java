@@ -18,17 +18,14 @@ public class HotelOrderChangeDetailRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("change_order_id")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String changeOrderId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dis_order_id")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sale_order_id")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String saleOrderId;
 
     @com.aliyun.core.annotation.Header
@@ -122,10 +119,7 @@ public class HotelOrderChangeDetailRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>21351235134</p>
+         * change_order_id.
          */
         public Builder changeOrderId(String changeOrderId) {
             this.putBodyParameter("change_order_id", changeOrderId);
@@ -134,10 +128,7 @@ public class HotelOrderChangeDetailRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dis123</p>
+         * dis_order_id.
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -146,10 +137,7 @@ public class HotelOrderChangeDetailRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1402002197440511306</p>
+         * sale_order_id.
          */
         public Builder saleOrderId(String saleOrderId) {
             this.putBodyParameter("sale_order_id", saleOrderId);

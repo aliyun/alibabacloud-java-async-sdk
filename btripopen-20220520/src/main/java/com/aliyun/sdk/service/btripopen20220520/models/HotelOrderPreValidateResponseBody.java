@@ -695,9 +695,17 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_policy_type")
         private Integer cancelPolicyType;
 
+        @com.aliyun.core.annotation.NameInMap("content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("short_desc")
+        private String shortDesc;
+
         private BtripHotelCancelPolicyDTO(Builder builder) {
             this.btripHotelCancelPolicyInfoDTOList = builder.btripHotelCancelPolicyInfoDTOList;
             this.cancelPolicyType = builder.cancelPolicyType;
+            this.content = builder.content;
+            this.shortDesc = builder.shortDesc;
         }
 
         public static Builder builder() {
@@ -722,9 +730,25 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             return this.cancelPolicyType;
         }
 
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return shortDesc
+         */
+        public String getShortDesc() {
+            return this.shortDesc;
+        }
+
         public static final class Builder {
             private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList; 
             private Integer cancelPolicyType; 
+            private String content; 
+            private String shortDesc; 
 
             /**
              * btrip_hotel_cancel_policy_info_d_t_o_list.
@@ -739,6 +763,22 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
              */
             public Builder cancelPolicyType(Integer cancelPolicyType) {
                 this.cancelPolicyType = cancelPolicyType;
+                return this;
+            }
+
+            /**
+             * content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * short_desc.
+             */
+            public Builder shortDesc(String shortDesc) {
+                this.shortDesc = shortDesc;
                 return this;
             }
 

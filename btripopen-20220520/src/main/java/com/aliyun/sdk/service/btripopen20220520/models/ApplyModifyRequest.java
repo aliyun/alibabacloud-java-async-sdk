@@ -65,6 +65,14 @@ public class ApplyModifyRequest extends Request {
     private HotelShare hotelShare;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("intl_flight_budget")
+    private Long intlFlightBudget;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("intl_hotel_budget")
+    private Long intlHotelBudget;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("itinerary_list")
     private java.util.List < ItineraryList> itineraryList;
 
@@ -175,6 +183,8 @@ public class ApplyModifyRequest extends Request {
         this.flightBudget = builder.flightBudget;
         this.hotelBudget = builder.hotelBudget;
         this.hotelShare = builder.hotelShare;
+        this.intlFlightBudget = builder.intlFlightBudget;
+        this.intlHotelBudget = builder.intlHotelBudget;
         this.itineraryList = builder.itineraryList;
         this.itineraryRule = builder.itineraryRule;
         this.itinerarySetList = builder.itinerarySetList;
@@ -302,6 +312,20 @@ public class ApplyModifyRequest extends Request {
      */
     public HotelShare getHotelShare() {
         return this.hotelShare;
+    }
+
+    /**
+     * @return intlFlightBudget
+     */
+    public Long getIntlFlightBudget() {
+        return this.intlFlightBudget;
+    }
+
+    /**
+     * @return intlHotelBudget
+     */
+    public Long getIntlHotelBudget() {
+        return this.intlHotelBudget;
     }
 
     /**
@@ -479,6 +503,8 @@ public class ApplyModifyRequest extends Request {
         private Long flightBudget; 
         private Long hotelBudget; 
         private HotelShare hotelShare; 
+        private Long intlFlightBudget; 
+        private Long intlHotelBudget; 
         private java.util.List < ItineraryList> itineraryList; 
         private Integer itineraryRule; 
         private java.util.List < ItinerarySetList> itinerarySetList; 
@@ -522,6 +548,8 @@ public class ApplyModifyRequest extends Request {
             this.flightBudget = request.flightBudget;
             this.hotelBudget = request.hotelBudget;
             this.hotelShare = request.hotelShare;
+            this.intlFlightBudget = request.intlFlightBudget;
+            this.intlHotelBudget = request.intlHotelBudget;
             this.itineraryList = request.itineraryList;
             this.itineraryRule = request.itineraryRule;
             this.itinerarySetList = request.itinerarySetList;
@@ -669,6 +697,24 @@ public class ApplyModifyRequest extends Request {
             String hotelShareShrink = shrink(hotelShare, "hotel_share", "json");
             this.putBodyParameter("hotel_share", hotelShareShrink);
             this.hotelShare = hotelShare;
+            return this;
+        }
+
+        /**
+         * intl_flight_budget.
+         */
+        public Builder intlFlightBudget(Long intlFlightBudget) {
+            this.putBodyParameter("intl_flight_budget", intlFlightBudget);
+            this.intlFlightBudget = intlFlightBudget;
+            return this;
+        }
+
+        /**
+         * intl_hotel_budget.
+         */
+        public Builder intlHotelBudget(Long intlHotelBudget) {
+            this.putBodyParameter("intl_hotel_budget", intlHotelBudget);
+            this.intlHotelBudget = intlHotelBudget;
             return this;
         }
 

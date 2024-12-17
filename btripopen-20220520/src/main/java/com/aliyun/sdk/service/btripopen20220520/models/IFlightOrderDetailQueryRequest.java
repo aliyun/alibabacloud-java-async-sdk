@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link FlightOrderQueryRequest} extends {@link RequestModel}
+ * {@link IFlightOrderDetailQueryRequest} extends {@link RequestModel}
  *
- * <p>FlightOrderQueryRequest</p>
+ * <p>IFlightOrderDetailQueryRequest</p>
  */
-public class FlightOrderQueryRequest extends Request {
+public class IFlightOrderDetailQueryRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -21,27 +21,22 @@ public class FlightOrderQueryRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long orderId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("user_id")
-    private String userId;
-
     @com.aliyun.core.annotation.Header
-    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
-    private String xAcsBtripSoCorpToken;
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
+    private String xAcsBtripCorpToken;
 
-    private FlightOrderQueryRequest(Builder builder) {
+    private IFlightOrderDetailQueryRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.orderId = builder.orderId;
-        this.userId = builder.userId;
-        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
+        this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static FlightOrderQueryRequest create() {
+    public static IFlightOrderDetailQueryRequest create() {
         return builder().build();
     }
 
@@ -65,35 +60,26 @@ public class FlightOrderQueryRequest extends Request {
     }
 
     /**
-     * @return userId
+     * @return xAcsBtripCorpToken
      */
-    public String getUserId() {
-        return this.userId;
+    public String getXAcsBtripCorpToken() {
+        return this.xAcsBtripCorpToken;
     }
 
-    /**
-     * @return xAcsBtripSoCorpToken
-     */
-    public String getXAcsBtripSoCorpToken() {
-        return this.xAcsBtripSoCorpToken;
-    }
-
-    public static final class Builder extends Request.Builder<FlightOrderQueryRequest, Builder> {
+    public static final class Builder extends Request.Builder<IFlightOrderDetailQueryRequest, Builder> {
         private String regionId; 
         private Long orderId; 
-        private String userId; 
-        private String xAcsBtripSoCorpToken; 
+        private String xAcsBtripCorpToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(FlightOrderQueryRequest request) {
+        private Builder(IFlightOrderDetailQueryRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.orderId = request.orderId;
-            this.userId = request.userId;
-            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
+            this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
         /**
@@ -109,7 +95,7 @@ public class FlightOrderQueryRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>246584390</p>
+         * <p>1017035199702438072</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("order_id", orderId);
@@ -118,26 +104,17 @@ public class FlightOrderQueryRequest extends Request {
         }
 
         /**
-         * user_id.
+         * x-acs-btrip-corp-token.
          */
-        public Builder userId(String userId) {
-            this.putQueryParameter("user_id", userId);
-            this.userId = userId;
-            return this;
-        }
-
-        /**
-         * x-acs-btrip-so-corp-token.
-         */
-        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
-            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
-            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
+        public Builder xAcsBtripCorpToken(String xAcsBtripCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-corp-token", xAcsBtripCorpToken);
+            this.xAcsBtripCorpToken = xAcsBtripCorpToken;
             return this;
         }
 
         @Override
-        public FlightOrderQueryRequest build() {
-            return new FlightOrderQueryRequest(this);
+        public IFlightOrderDetailQueryRequest build() {
+            return new IFlightOrderDetailQueryRequest(this);
         } 
 
     } 

@@ -473,6 +473,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("voucher_type")
         private Integer voucherType;
 
+        @com.aliyun.core.annotation.NameInMap("voucher_type_desc")
+        private String voucherTypeDesc;
+
         @com.aliyun.core.annotation.NameInMap("voyage_name")
         private String voyageName;
 
@@ -581,6 +584,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             this.travelerName = builder.travelerName;
             this.upgradeCost = builder.upgradeCost;
             this.voucherType = builder.voucherType;
+            this.voucherTypeDesc = builder.voucherTypeDesc;
             this.voyageName = builder.voyageName;
         }
 
@@ -1321,6 +1325,13 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return voucherTypeDesc
+         */
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
+        }
+
+        /**
          * @return voyageName
          */
         public String getVoyageName() {
@@ -1432,6 +1443,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             private String travelerName; 
             private Double upgradeCost; 
             private Integer voucherType; 
+            private String voucherTypeDesc; 
             private String voyageName; 
 
             /**
@@ -2263,6 +2275,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder voucherType(Integer voucherType) {
                 this.voucherType = voucherType;
+                return this;
+            }
+
+            /**
+             * voucher_type_desc.
+             */
+            public Builder voucherTypeDesc(String voucherTypeDesc) {
+                this.voucherTypeDesc = voucherTypeDesc;
                 return this;
             }
 

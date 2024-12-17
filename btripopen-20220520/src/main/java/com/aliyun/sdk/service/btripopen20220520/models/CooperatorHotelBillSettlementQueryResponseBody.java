@@ -416,6 +416,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("voucher_type")
         private Integer voucherType;
 
+        @com.aliyun.core.annotation.NameInMap("voucher_type_desc")
+        private String voucherTypeDesc;
+
         private Items(Builder builder) {
             this.alipayTradeNo = builder.alipayTradeNo;
             this.applyArrCityCode = builder.applyArrCityCode;
@@ -501,6 +504,7 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             this.travelerMemberTypeName = builder.travelerMemberTypeName;
             this.travelerName = builder.travelerName;
             this.voucherType = builder.voucherType;
+            this.voucherTypeDesc = builder.voucherTypeDesc;
         }
 
         public static Builder builder() {
@@ -1099,6 +1103,13 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.voucherType;
         }
 
+        /**
+         * @return voucherTypeDesc
+         */
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
+        }
+
         public static final class Builder {
             private String alipayTradeNo; 
             private String applyArrCityCode; 
@@ -1184,6 +1195,7 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             private String travelerMemberTypeName; 
             private String travelerName; 
             private Integer voucherType; 
+            private String voucherTypeDesc; 
 
             /**
              * alipay_trade_no.
@@ -1854,6 +1866,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder voucherType(Integer voucherType) {
                 this.voucherType = voucherType;
+                return this;
+            }
+
+            /**
+             * voucher_type_desc.
+             */
+            public Builder voucherTypeDesc(String voucherTypeDesc) {
+                this.voucherTypeDesc = voucherTypeDesc;
                 return this;
             }
 

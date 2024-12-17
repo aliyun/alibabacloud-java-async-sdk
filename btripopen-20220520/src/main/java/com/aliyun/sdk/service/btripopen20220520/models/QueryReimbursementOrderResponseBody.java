@@ -1018,11 +1018,17 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("itineraries")
         private java.util.List < Itineraries> itineraries;
 
+        @com.aliyun.core.annotation.NameInMap("payment_finish_time")
+        private String paymentFinishTime;
+
         @com.aliyun.core.annotation.NameInMap("payment_infos")
         private java.util.List < PaymentInfos> paymentInfos;
 
         @com.aliyun.core.annotation.NameInMap("personal_amount")
         private String personalAmount;
+
+        @com.aliyun.core.annotation.NameInMap("process_end_time")
+        private String processEndTime;
 
         @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
@@ -1065,8 +1071,10 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.isDeleted = builder.isDeleted;
             this.itineraries = builder.itineraries;
+            this.paymentFinishTime = builder.paymentFinishTime;
             this.paymentInfos = builder.paymentInfos;
             this.personalAmount = builder.personalAmount;
+            this.processEndTime = builder.processEndTime;
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
             this.reason = builder.reason;
@@ -1178,6 +1186,13 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
 
         /**
+         * @return paymentFinishTime
+         */
+        public String getPaymentFinishTime() {
+            return this.paymentFinishTime;
+        }
+
+        /**
          * @return paymentInfos
          */
         public java.util.List < PaymentInfos> getPaymentInfos() {
@@ -1189,6 +1204,13 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
          */
         public String getPersonalAmount() {
             return this.personalAmount;
+        }
+
+        /**
+         * @return processEndTime
+         */
+        public String getProcessEndTime() {
+            return this.processEndTime;
         }
 
         /**
@@ -1268,8 +1290,10 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String gmtModified; 
             private String isDeleted; 
             private java.util.List < Itineraries> itineraries; 
+            private String paymentFinishTime; 
             private java.util.List < PaymentInfos> paymentInfos; 
             private String personalAmount; 
+            private String processEndTime; 
             private String projectCode; 
             private String projectName; 
             private String reason; 
@@ -1385,6 +1409,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             }
 
             /**
+             * payment_finish_time.
+             */
+            public Builder paymentFinishTime(String paymentFinishTime) {
+                this.paymentFinishTime = paymentFinishTime;
+                return this;
+            }
+
+            /**
              * payment_infos.
              */
             public Builder paymentInfos(java.util.List < PaymentInfos> paymentInfos) {
@@ -1397,6 +1429,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
              */
             public Builder personalAmount(String personalAmount) {
                 this.personalAmount = personalAmount;
+                return this;
+            }
+
+            /**
+             * process_end_time.
+             */
+            public Builder processEndTime(String processEndTime) {
+                this.processEndTime = processEndTime;
                 return this;
             }
 

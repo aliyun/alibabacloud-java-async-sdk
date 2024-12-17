@@ -161,11 +161,15 @@ public class HotelOrderCreateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_order_id")
         private Long btripOrderId;
 
+        @com.aliyun.core.annotation.NameInMap("payment_no")
+        private String paymentNo;
+
         @com.aliyun.core.annotation.NameInMap("total_price")
         private Long totalPrice;
 
         private Module(Builder builder) {
             this.btripOrderId = builder.btripOrderId;
+            this.paymentNo = builder.paymentNo;
             this.totalPrice = builder.totalPrice;
         }
 
@@ -185,6 +189,13 @@ public class HotelOrderCreateResponseBody extends TeaModel {
         }
 
         /**
+         * @return paymentNo
+         */
+        public String getPaymentNo() {
+            return this.paymentNo;
+        }
+
+        /**
          * @return totalPrice
          */
         public Long getTotalPrice() {
@@ -193,6 +204,7 @@ public class HotelOrderCreateResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long btripOrderId; 
+            private String paymentNo; 
             private Long totalPrice; 
 
             /**
@@ -200,6 +212,14 @@ public class HotelOrderCreateResponseBody extends TeaModel {
              */
             public Builder btripOrderId(Long btripOrderId) {
                 this.btripOrderId = btripOrderId;
+                return this;
+            }
+
+            /**
+             * payment_no.
+             */
+            public Builder paymentNo(String paymentNo) {
+                this.paymentNo = paymentNo;
                 return this;
             }
 

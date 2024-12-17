@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddEmployeeRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("attribute")
+    private String attribute;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("avatar")
     private String avatar;
 
@@ -100,6 +104,7 @@ public class AddEmployeeRequest extends Request {
 
     private AddEmployeeRequest(Builder builder) {
         super(builder);
+        this.attribute = builder.attribute;
         this.avatar = builder.avatar;
         this.baseCityCodeList = builder.baseCityCodeList;
         this.birthday = builder.birthday;
@@ -134,6 +139,13 @@ public class AddEmployeeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return attribute
+     */
+    public String getAttribute() {
+        return this.attribute;
     }
 
     /**
@@ -284,6 +296,7 @@ public class AddEmployeeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddEmployeeRequest, Builder> {
+        private String attribute; 
         private String avatar; 
         private java.util.List < String > baseCityCodeList; 
         private String birthday; 
@@ -312,6 +325,7 @@ public class AddEmployeeRequest extends Request {
 
         private Builder(AddEmployeeRequest request) {
             super(request);
+            this.attribute = request.attribute;
             this.avatar = request.avatar;
             this.baseCityCodeList = request.baseCityCodeList;
             this.birthday = request.birthday;
@@ -334,6 +348,15 @@ public class AddEmployeeRequest extends Request {
             this.userNick = request.userNick;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
+
+        /**
+         * attribute.
+         */
+        public Builder attribute(String attribute) {
+            this.putBodyParameter("attribute", attribute);
+            this.attribute = attribute;
+            return this;
+        }
 
         /**
          * avatar.

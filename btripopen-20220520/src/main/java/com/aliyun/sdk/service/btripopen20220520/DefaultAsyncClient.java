@@ -868,6 +868,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ElectronicItineraryBatchApply  ElectronicItineraryBatchApplyRequest
+     * @return ElectronicItineraryBatchApplyResponse
+     */
+    @Override
+    public CompletableFuture<ElectronicItineraryBatchApplyResponse> electronicItineraryBatchApply(ElectronicItineraryBatchApplyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ElectronicItineraryBatchApply").setMethod(HttpMethod.POST).setPathRegex("/invoice/v1/apply-itinerary-batch-task").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ElectronicItineraryBatchApplyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ElectronicItineraryBatchApplyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ElectronicItineraryGetApplyResult  ElectronicItineraryGetApplyResultRequest
+     * @return ElectronicItineraryGetApplyResultResponse
+     */
+    @Override
+    public CompletableFuture<ElectronicItineraryGetApplyResultResponse> electronicItineraryGetApplyResult(ElectronicItineraryGetApplyResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ElectronicItineraryGetApplyResult").setMethod(HttpMethod.GET).setPathRegex("/invoice/v1/get-itinerary-batch-task").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ElectronicItineraryGetApplyResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ElectronicItineraryGetApplyResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EntityAdd  EntityAddRequest
      * @return EntityAddResponse
      */
@@ -1348,6 +1384,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<FlightOrderListQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of FlightOrderListQueryV2  FlightOrderListQueryV2Request
+     * @return FlightOrderListQueryV2Response
+     */
+    @Override
+    public CompletableFuture<FlightOrderListQueryV2Response> flightOrderListQueryV2(FlightOrderListQueryV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FlightOrderListQueryV2").setMethod(HttpMethod.GET).setPathRegex("/open/v2/Flight-order-list-query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FlightOrderListQueryV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FlightOrderListQueryV2Response> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2014,6 +2068,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<HotelSuggestV2Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IFlightOrderDetailQuery  IFlightOrderDetailQueryRequest
+     * @return IFlightOrderDetailQueryResponse
+     */
+    @Override
+    public CompletableFuture<IFlightOrderDetailQueryResponse> iFlightOrderDetailQuery(IFlightOrderDetailQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IFlightOrderDetailQuery").setMethod(HttpMethod.GET).setPathRegex("/open/v1/intlFlight-order-detail-query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IFlightOrderDetailQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IFlightOrderDetailQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IFlightOrderListQuery  IFlightOrderListQueryRequest
+     * @return IFlightOrderListQueryResponse
+     */
+    @Override
+    public CompletableFuture<IFlightOrderListQueryResponse> iFlightOrderListQuery(IFlightOrderListQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IFlightOrderListQuery").setMethod(HttpMethod.GET).setPathRegex("/open/v1/intlFlight-order-list-query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IFlightOrderListQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IFlightOrderListQueryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2698,6 +2788,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ProjectModifyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryEmployeeDetail  QueryEmployeeDetailRequest
+     * @return QueryEmployeeDetailResponse
+     */
+    @Override
+    public CompletableFuture<QueryEmployeeDetailResponse> queryEmployeeDetail(QueryEmployeeDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryEmployeeDetail").setMethod(HttpMethod.GET).setPathRegex("/user/v1/employeeDetail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryEmployeeDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryEmployeeDetailResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

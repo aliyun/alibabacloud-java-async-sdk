@@ -28,7 +28,6 @@ public class UpdateDepartmentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("out_dept_pid")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String outDeptPid;
 
     @com.aliyun.core.annotation.Header
@@ -144,10 +143,7 @@ public class UpdateDepartmentRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dept456</p>
+         * out_dept_pid.
          */
         public Builder outDeptPid(String outDeptPid) {
             this.putBodyParameter("out_dept_pid", outDeptPid);

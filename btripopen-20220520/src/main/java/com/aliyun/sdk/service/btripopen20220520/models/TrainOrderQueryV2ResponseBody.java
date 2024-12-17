@@ -218,6 +218,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_index")
         private Integer segmentIndex;
 
+        @com.aliyun.core.annotation.NameInMap("short_ticket_no")
+        private String shortTicketNo;
+
         @com.aliyun.core.annotation.NameInMap("start_time")
         private String startTime;
 
@@ -261,6 +264,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             this.originTicketNo = builder.originTicketNo;
             this.outTicketStatus = builder.outTicketStatus;
             this.segmentIndex = builder.segmentIndex;
+            this.shortTicketNo = builder.shortTicketNo;
             this.startTime = builder.startTime;
             this.ticketEntrance = builder.ticketEntrance;
             this.ticketNo = builder.ticketNo;
@@ -406,6 +410,13 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return shortTicketNo
+         */
+        public String getShortTicketNo() {
+            return this.shortTicketNo;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -480,6 +491,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String originTicketNo; 
             private String outTicketStatus; 
             private Integer segmentIndex; 
+            private String shortTicketNo; 
             private String startTime; 
             private String ticketEntrance; 
             private String ticketNo; 
@@ -630,6 +642,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
              */
             public Builder segmentIndex(Integer segmentIndex) {
                 this.segmentIndex = segmentIndex;
+                return this;
+            }
+
+            /**
+             * short_ticket_no.
+             */
+            public Builder shortTicketNo(String shortTicketNo) {
+                this.shortTicketNo = shortTicketNo;
                 return this;
             }
 
@@ -1845,6 +1865,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
 
+        @com.aliyun.core.annotation.NameInMap("short_ticket_no")
+        private String shortTicketNo;
+
         @com.aliyun.core.annotation.NameInMap("start_time")
         private String startTime;
 
@@ -1883,6 +1906,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             this.seatTypeName = builder.seatTypeName;
             this.segmentIndex = builder.segmentIndex;
             this.serviceFee = builder.serviceFee;
+            this.shortTicketNo = builder.shortTicketNo;
             this.startTime = builder.startTime;
             this.ticketEntrance = builder.ticketEntrance;
             this.ticketNo = builder.ticketNo;
@@ -1993,6 +2017,13 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return shortTicketNo
+         */
+        public String getShortTicketNo() {
+            return this.shortTicketNo;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -2062,6 +2093,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String seatTypeName; 
             private Integer segmentIndex; 
             private Double serviceFee; 
+            private String shortTicketNo; 
             private String startTime; 
             private String ticketEntrance; 
             private String ticketNo; 
@@ -2172,6 +2204,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
              */
             public Builder serviceFee(Double serviceFee) {
                 this.serviceFee = serviceFee;
+                return this;
+            }
+
+            /**
+             * short_ticket_no.
+             */
+            public Builder shortTicketNo(String shortTicketNo) {
+                this.shortTicketNo = shortTicketNo;
                 return this;
             }
 

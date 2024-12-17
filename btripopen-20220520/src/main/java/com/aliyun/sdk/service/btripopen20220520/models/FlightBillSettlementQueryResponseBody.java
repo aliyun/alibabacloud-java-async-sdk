@@ -212,6 +212,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
 
+        @com.aliyun.core.annotation.NameInMap("book_mode")
+        private String bookMode;
+
         @com.aliyun.core.annotation.NameInMap("book_time")
         private String bookTime;
 
@@ -248,6 +251,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_fee")
         private Double changeFee;
 
+        @com.aliyun.core.annotation.NameInMap("change_reason_code")
+        private String changeReasonCode;
+
         @com.aliyun.core.annotation.NameInMap("change_result")
         private String changeResult;
 
@@ -265,6 +271,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("coupon")
         private Double coupon;
+
+        @com.aliyun.core.annotation.NameInMap("deductible_tax")
+        private Double deductibleTax;
 
         @com.aliyun.core.annotation.NameInMap("dep_airport_code")
         private String depAirportCode;
@@ -350,6 +359,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("negotiation_coupon_fee")
         private Double negotiationCouponFee;
 
+        @com.aliyun.core.annotation.NameInMap("offline_status")
+        private String offlineStatus;
+
         @com.aliyun.core.annotation.NameInMap("oil_fee")
         private Double oilFee;
 
@@ -388,6 +400,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Double refundFee;
+
+        @com.aliyun.core.annotation.NameInMap("refund_reason_code")
+        private String refundReasonCode;
 
         @com.aliyun.core.annotation.NameInMap("refund_result")
         private String refundResult;
@@ -458,6 +473,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("voucher_type")
         private Integer voucherType;
 
+        @com.aliyun.core.annotation.NameInMap("voucher_type_desc")
+        private String voucherTypeDesc;
+
         @com.aliyun.core.annotation.NameInMap("voyage_name")
         private String voyageName;
 
@@ -480,6 +498,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.arrStation = builder.arrStation;
             this.arrTime = builder.arrTime;
             this.billRecordTime = builder.billRecordTime;
+            this.bookMode = builder.bookMode;
             this.bookTime = builder.bookTime;
             this.bookerId = builder.bookerId;
             this.bookerJobNo = builder.bookerJobNo;
@@ -492,12 +511,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
             this.changeFee = builder.changeFee;
+            this.changeReasonCode = builder.changeReasonCode;
             this.changeResult = builder.changeResult;
             this.corpPayOrderFee = builder.corpPayOrderFee;
             this.corpSettlePrice = builder.corpSettlePrice;
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
             this.coupon = builder.coupon;
+            this.deductibleTax = builder.deductibleTax;
             this.depAirportCode = builder.depAirportCode;
             this.depCityCode = builder.depCityCode;
             this.department = builder.department;
@@ -526,6 +547,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.mostDifferenceReason = builder.mostDifferenceReason;
             this.mostPrice = builder.mostPrice;
             this.negotiationCouponFee = builder.negotiationCouponFee;
+            this.offlineStatus = builder.offlineStatus;
             this.oilFee = builder.oilFee;
             this.orderId = builder.orderId;
             this.overApplyId = builder.overApplyId;
@@ -539,6 +561,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.refundAffiliateNo = builder.refundAffiliateNo;
             this.refundApplyId = builder.refundApplyId;
             this.refundFee = builder.refundFee;
+            this.refundReasonCode = builder.refundReasonCode;
             this.refundResult = builder.refundResult;
             this.refundUpgradeCost = builder.refundUpgradeCost;
             this.remark = builder.remark;
@@ -562,6 +585,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.travelerName = builder.travelerName;
             this.upgradeCost = builder.upgradeCost;
             this.voucherType = builder.voucherType;
+            this.voucherTypeDesc = builder.voucherTypeDesc;
             this.voyageName = builder.voyageName;
         }
 
@@ -700,6 +724,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return bookMode
+         */
+        public String getBookMode() {
+            return this.bookMode;
+        }
+
+        /**
          * @return bookTime
          */
         public String getBookTime() {
@@ -784,6 +815,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return changeReasonCode
+         */
+        public String getChangeReasonCode() {
+            return this.changeReasonCode;
+        }
+
+        /**
          * @return changeResult
          */
         public String getChangeResult() {
@@ -823,6 +861,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public Double getCoupon() {
             return this.coupon;
+        }
+
+        /**
+         * @return deductibleTax
+         */
+        public Double getDeductibleTax() {
+            return this.deductibleTax;
         }
 
         /**
@@ -1022,6 +1067,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return offlineStatus
+         */
+        public String getOfflineStatus() {
+            return this.offlineStatus;
+        }
+
+        /**
          * @return oilFee
          */
         public Double getOilFee() {
@@ -1110,6 +1162,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public Double getRefundFee() {
             return this.refundFee;
+        }
+
+        /**
+         * @return refundReasonCode
+         */
+        public String getRefundReasonCode() {
+            return this.refundReasonCode;
         }
 
         /**
@@ -1274,6 +1333,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return voucherTypeDesc
+         */
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
+        }
+
+        /**
          * @return voyageName
          */
         public String getVoyageName() {
@@ -1299,6 +1365,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String arrStation; 
             private String arrTime; 
             private String billRecordTime; 
+            private String bookMode; 
             private String bookTime; 
             private String bookerId; 
             private String bookerJobNo; 
@@ -1311,12 +1378,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String capitalDirection; 
             private String cascadeDepartment; 
             private Double changeFee; 
+            private String changeReasonCode; 
             private String changeResult; 
             private Double corpPayOrderFee; 
             private Double corpSettlePrice; 
             private String costCenter; 
             private String costCenterNumber; 
             private Double coupon; 
+            private Double deductibleTax; 
             private String depAirportCode; 
             private String depCityCode; 
             private String department; 
@@ -1345,6 +1414,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String mostDifferenceReason; 
             private Double mostPrice; 
             private Double negotiationCouponFee; 
+            private String offlineStatus; 
             private Double oilFee; 
             private String orderId; 
             private String overApplyId; 
@@ -1358,6 +1428,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String refundAffiliateNo; 
             private String refundApplyId; 
             private Double refundFee; 
+            private String refundReasonCode; 
             private String refundResult; 
             private Double refundUpgradeCost; 
             private String remark; 
@@ -1381,6 +1452,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String travelerName; 
             private Double upgradeCost; 
             private Integer voucherType; 
+            private String voucherTypeDesc; 
             private String voyageName; 
 
             /**
@@ -1528,6 +1600,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * book_mode.
+             */
+            public Builder bookMode(String bookMode) {
+                this.bookMode = bookMode;
+                return this;
+            }
+
+            /**
              * book_time.
              */
             public Builder bookTime(String bookTime) {
@@ -1624,6 +1704,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * change_reason_code.
+             */
+            public Builder changeReasonCode(String changeReasonCode) {
+                this.changeReasonCode = changeReasonCode;
+                return this;
+            }
+
+            /**
              * change_result.
              */
             public Builder changeResult(String changeResult) {
@@ -1668,6 +1756,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder coupon(Double coupon) {
                 this.coupon = coupon;
+                return this;
+            }
+
+            /**
+             * deductible_tax.
+             */
+            public Builder deductibleTax(Double deductibleTax) {
+                this.deductibleTax = deductibleTax;
                 return this;
             }
 
@@ -1896,6 +1992,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * offline_status.
+             */
+            public Builder offlineStatus(String offlineStatus) {
+                this.offlineStatus = offlineStatus;
+                return this;
+            }
+
+            /**
              * oil_fee.
              */
             public Builder oilFee(Double oilFee) {
@@ -1996,6 +2100,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder refundFee(Double refundFee) {
                 this.refundFee = refundFee;
+                return this;
+            }
+
+            /**
+             * refund_reason_code.
+             */
+            public Builder refundReasonCode(String refundReasonCode) {
+                this.refundReasonCode = refundReasonCode;
                 return this;
             }
 
@@ -2183,6 +2295,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder voucherType(Integer voucherType) {
                 this.voucherType = voucherType;
+                return this;
+            }
+
+            /**
+             * voucher_type_desc.
+             */
+            public Builder voucherTypeDesc(String voucherTypeDesc) {
+                this.voucherTypeDesc = voucherTypeDesc;
                 return this;
             }
 

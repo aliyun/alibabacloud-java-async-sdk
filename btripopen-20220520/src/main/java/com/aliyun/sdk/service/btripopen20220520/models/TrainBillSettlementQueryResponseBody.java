@@ -245,6 +245,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("coupon")
         private Double coupon;
 
+        @com.aliyun.core.annotation.NameInMap("deductible_tax")
+        private Double deductibleTax;
+
         @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
@@ -281,6 +284,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("is_transfer_order")
         private String isTransferOrder;
 
+        @com.aliyun.core.annotation.NameInMap("long_ticket_no")
+        private String longTicketNo;
+
         @com.aliyun.core.annotation.NameInMap("max_cabin")
         private String maxCabin;
 
@@ -289,6 +295,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("order_price")
         private Double orderPrice;
+
+        @com.aliyun.core.annotation.NameInMap("order_ticket_no")
+        private String orderTicketNo;
 
         @com.aliyun.core.annotation.NameInMap("over_apply_id")
         private String overApplyId;
@@ -407,6 +416,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("voucher_type")
         private Integer voucherType;
 
+        @com.aliyun.core.annotation.NameInMap("voucher_type_desc")
+        private String voucherTypeDesc;
+
         private DataList(Builder builder) {
             this.alipayTradeNo = builder.alipayTradeNo;
             this.applyArrCityCode = builder.applyArrCityCode;
@@ -437,6 +449,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
             this.coupon = builder.coupon;
+            this.deductibleTax = builder.deductibleTax;
             this.depCityCode = builder.depCityCode;
             this.depCityName = builder.depCityName;
             this.department = builder.department;
@@ -449,9 +462,11 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.index = builder.index;
             this.invoiceTitle = builder.invoiceTitle;
             this.isTransferOrder = builder.isTransferOrder;
+            this.longTicketNo = builder.longTicketNo;
             this.maxCabin = builder.maxCabin;
             this.orderId = builder.orderId;
             this.orderPrice = builder.orderPrice;
+            this.orderTicketNo = builder.orderTicketNo;
             this.overApplyId = builder.overApplyId;
             this.paymentDepartmentId = builder.paymentDepartmentId;
             this.paymentDepartmentName = builder.paymentDepartmentName;
@@ -491,6 +506,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.travelerMemberTypeName = builder.travelerMemberTypeName;
             this.travelerName = builder.travelerName;
             this.voucherType = builder.voucherType;
+            this.voucherTypeDesc = builder.voucherTypeDesc;
         }
 
         public static Builder builder() {
@@ -705,6 +721,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return deductibleTax
+         */
+        public Double getDeductibleTax() {
+            return this.deductibleTax;
+        }
+
+        /**
          * @return depCityCode
          */
         public String getDepCityCode() {
@@ -789,6 +812,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return longTicketNo
+         */
+        public String getLongTicketNo() {
+            return this.longTicketNo;
+        }
+
+        /**
          * @return maxCabin
          */
         public String getMaxCabin() {
@@ -807,6 +837,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         public Double getOrderPrice() {
             return this.orderPrice;
+        }
+
+        /**
+         * @return orderTicketNo
+         */
+        public String getOrderTicketNo() {
+            return this.orderTicketNo;
         }
 
         /**
@@ -1082,6 +1119,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.voucherType;
         }
 
+        /**
+         * @return voucherTypeDesc
+         */
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
+        }
+
         public static final class Builder {
             private String alipayTradeNo; 
             private String applyArrCityCode; 
@@ -1112,6 +1156,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String costCenter; 
             private String costCenterNumber; 
             private Double coupon; 
+            private Double deductibleTax; 
             private String depCityCode; 
             private String depCityName; 
             private String department; 
@@ -1124,9 +1169,11 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String index; 
             private String invoiceTitle; 
             private String isTransferOrder; 
+            private String longTicketNo; 
             private String maxCabin; 
             private String orderId; 
             private Double orderPrice; 
+            private String orderTicketNo; 
             private String overApplyId; 
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
@@ -1166,6 +1213,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String travelerMemberTypeName; 
             private String travelerName; 
             private Integer voucherType; 
+            private String voucherTypeDesc; 
 
             /**
              * alipay_trade_no.
@@ -1400,6 +1448,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * deductible_tax.
+             */
+            public Builder deductibleTax(Double deductibleTax) {
+                this.deductibleTax = deductibleTax;
+                return this;
+            }
+
+            /**
              * dep_city_code.
              */
             public Builder depCityCode(String depCityCode) {
@@ -1496,6 +1552,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * long_ticket_no.
+             */
+            public Builder longTicketNo(String longTicketNo) {
+                this.longTicketNo = longTicketNo;
+                return this;
+            }
+
+            /**
              * max_cabin.
              */
             public Builder maxCabin(String maxCabin) {
@@ -1516,6 +1580,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder orderPrice(Double orderPrice) {
                 this.orderPrice = orderPrice;
+                return this;
+            }
+
+            /**
+             * order_ticket_no.
+             */
+            public Builder orderTicketNo(String orderTicketNo) {
+                this.orderTicketNo = orderTicketNo;
                 return this;
             }
 
@@ -1831,6 +1903,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder voucherType(Integer voucherType) {
                 this.voucherType = voucherType;
+                return this;
+            }
+
+            /**
+             * voucher_type_desc.
+             */
+            public Builder voucherTypeDesc(String voucherTypeDesc) {
+                this.voucherTypeDesc = voucherTypeDesc;
                 return this;
             }
 

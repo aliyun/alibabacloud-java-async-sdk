@@ -2887,6 +2887,12 @@ public class ApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("intl_flight_budget")
+        private Long intlFlightBudget;
+
+        @com.aliyun.core.annotation.NameInMap("intl_hotel_budget")
+        private Long intlHotelBudget;
+
         @com.aliyun.core.annotation.NameInMap("itinerary_list")
         private java.util.List < ItineraryList> itineraryList;
 
@@ -2968,6 +2974,8 @@ public class ApplyQueryResponseBody extends TeaModel {
             this.hotelBudget = builder.hotelBudget;
             this.hotelShare = builder.hotelShare;
             this.id = builder.id;
+            this.intlFlightBudget = builder.intlFlightBudget;
+            this.intlHotelBudget = builder.intlHotelBudget;
             this.itineraryList = builder.itineraryList;
             this.itineraryRule = builder.itineraryRule;
             this.itinerarySetList = builder.itinerarySetList;
@@ -3116,6 +3124,20 @@ public class ApplyQueryResponseBody extends TeaModel {
          */
         public Long getId() {
             return this.id;
+        }
+
+        /**
+         * @return intlFlightBudget
+         */
+        public Long getIntlFlightBudget() {
+            return this.intlFlightBudget;
+        }
+
+        /**
+         * @return intlHotelBudget
+         */
+        public Long getIntlHotelBudget() {
+            return this.intlHotelBudget;
         }
 
         /**
@@ -3283,6 +3305,8 @@ public class ApplyQueryResponseBody extends TeaModel {
             private Long hotelBudget; 
             private HotelShare hotelShare; 
             private Long id; 
+            private Long intlFlightBudget; 
+            private Long intlHotelBudget; 
             private java.util.List < ItineraryList> itineraryList; 
             private Integer itineraryRule; 
             private java.util.List < ItinerarySetList> itinerarySetList; 
@@ -3441,6 +3465,22 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * intl_flight_budget.
+             */
+            public Builder intlFlightBudget(Long intlFlightBudget) {
+                this.intlFlightBudget = intlFlightBudget;
+                return this;
+            }
+
+            /**
+             * intl_hotel_budget.
+             */
+            public Builder intlHotelBudget(Long intlHotelBudget) {
+                this.intlHotelBudget = intlHotelBudget;
                 return this;
             }
 

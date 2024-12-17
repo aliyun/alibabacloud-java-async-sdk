@@ -239,6 +239,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("coupon_price")
         private Double couponPrice;
 
+        @com.aliyun.core.annotation.NameInMap("deductible_tax")
+        private Double deductibleTax;
+
         @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
@@ -389,8 +392,17 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("user_confirm_desc")
         private String userConfirmDesc;
 
+        @com.aliyun.core.annotation.NameInMap("vehicle_scene_id")
+        private String vehicleSceneId;
+
+        @com.aliyun.core.annotation.NameInMap("vehicle_scene_name")
+        private String vehicleSceneName;
+
         @com.aliyun.core.annotation.NameInMap("voucher_type")
         private Integer voucherType;
+
+        @com.aliyun.core.annotation.NameInMap("voucher_type_desc")
+        private String voucherTypeDesc;
 
         private DataList(Builder builder) {
             this.alipayTradeNo = builder.alipayTradeNo;
@@ -420,6 +432,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.costCenterNumber = builder.costCenterNumber;
             this.coupon = builder.coupon;
             this.couponPrice = builder.couponPrice;
+            this.deductibleTax = builder.deductibleTax;
             this.depCityCode = builder.depCityCode;
             this.department = builder.department;
             this.departmentId = builder.departmentId;
@@ -470,7 +483,10 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.travelerMemberTypeName = builder.travelerMemberTypeName;
             this.travelerName = builder.travelerName;
             this.userConfirmDesc = builder.userConfirmDesc;
+            this.vehicleSceneId = builder.vehicleSceneId;
+            this.vehicleSceneName = builder.vehicleSceneName;
             this.voucherType = builder.voucherType;
+            this.voucherTypeDesc = builder.voucherTypeDesc;
         }
 
         public static Builder builder() {
@@ -668,6 +684,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public Double getCouponPrice() {
             return this.couponPrice;
+        }
+
+        /**
+         * @return deductibleTax
+         */
+        public Double getDeductibleTax() {
+            return this.deductibleTax;
         }
 
         /**
@@ -1021,10 +1044,31 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return vehicleSceneId
+         */
+        public String getVehicleSceneId() {
+            return this.vehicleSceneId;
+        }
+
+        /**
+         * @return vehicleSceneName
+         */
+        public String getVehicleSceneName() {
+            return this.vehicleSceneName;
+        }
+
+        /**
          * @return voucherType
          */
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        /**
+         * @return voucherTypeDesc
+         */
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
         }
 
         public static final class Builder {
@@ -1055,6 +1099,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String costCenterNumber; 
             private Double coupon; 
             private Double couponPrice; 
+            private Double deductibleTax; 
             private String depCityCode; 
             private String department; 
             private String departmentId; 
@@ -1105,7 +1150,10 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String travelerMemberTypeName; 
             private String travelerName; 
             private String userConfirmDesc; 
+            private String vehicleSceneId; 
+            private String vehicleSceneName; 
             private Integer voucherType; 
+            private String voucherTypeDesc; 
 
             /**
              * alipay_trade_no.
@@ -1320,6 +1368,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder couponPrice(Double couponPrice) {
                 this.couponPrice = couponPrice;
+                return this;
+            }
+
+            /**
+             * deductible_tax.
+             */
+            public Builder deductibleTax(Double deductibleTax) {
+                this.deductibleTax = deductibleTax;
                 return this;
             }
 
@@ -1727,10 +1783,34 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * vehicle_scene_id.
+             */
+            public Builder vehicleSceneId(String vehicleSceneId) {
+                this.vehicleSceneId = vehicleSceneId;
+                return this;
+            }
+
+            /**
+             * vehicle_scene_name.
+             */
+            public Builder vehicleSceneName(String vehicleSceneName) {
+                this.vehicleSceneName = vehicleSceneName;
+                return this;
+            }
+
+            /**
              * voucher_type.
              */
             public Builder voucherType(Integer voucherType) {
                 this.voucherType = voucherType;
+                return this;
+            }
+
+            /**
+             * voucher_type_desc.
+             */
+            public Builder voucherTypeDesc(String voucherTypeDesc) {
+                this.voucherTypeDesc = voucherTypeDesc;
                 return this;
             }
 

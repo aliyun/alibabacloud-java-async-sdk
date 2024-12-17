@@ -188,6 +188,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
 
+        @com.aliyun.core.annotation.NameInMap("book_mode")
+        private String bookMode;
+
         @com.aliyun.core.annotation.NameInMap("book_reason")
         private String bookReason;
 
@@ -250,6 +253,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("country_code")
         private String countryCode;
+
+        @com.aliyun.core.annotation.NameInMap("deductible_tax")
+        private Double deductibleTax;
 
         @com.aliyun.core.annotation.NameInMap("department")
         private String department;
@@ -413,6 +419,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("voucher_type")
         private Integer voucherType;
 
+        @com.aliyun.core.annotation.NameInMap("voucher_type_desc")
+        private String voucherTypeDesc;
+
         private DataList(Builder builder) {
             this.alipayTradeNo = builder.alipayTradeNo;
             this.amountCurrency = builder.amountCurrency;
@@ -424,6 +433,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             this.applyId = builder.applyId;
             this.averageNights = builder.averageNights;
             this.billRecordTime = builder.billRecordTime;
+            this.bookMode = builder.bookMode;
             this.bookReason = builder.bookReason;
             this.bookTime = builder.bookTime;
             this.bookerId = builder.bookerId;
@@ -445,6 +455,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             this.costCenterNumber = builder.costCenterNumber;
             this.country = builder.country;
             this.countryCode = builder.countryCode;
+            this.deductibleTax = builder.deductibleTax;
             this.department = builder.department;
             this.departmentId = builder.departmentId;
             this.exceedReason = builder.exceedReason;
@@ -499,6 +510,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             this.travelerMemberType = builder.travelerMemberType;
             this.travelerName = builder.travelerName;
             this.voucherType = builder.voucherType;
+            this.voucherTypeDesc = builder.voucherTypeDesc;
         }
 
         public static Builder builder() {
@@ -577,6 +589,13 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getBillRecordTime() {
             return this.billRecordTime;
+        }
+
+        /**
+         * @return bookMode
+         */
+        public String getBookMode() {
+            return this.bookMode;
         }
 
         /**
@@ -724,6 +743,13 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        /**
+         * @return deductibleTax
+         */
+        public Double getDeductibleTax() {
+            return this.deductibleTax;
         }
 
         /**
@@ -1104,6 +1130,13 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.voucherType;
         }
 
+        /**
+         * @return voucherTypeDesc
+         */
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
+        }
+
         public static final class Builder {
             private String alipayTradeNo; 
             private String amountCurrency; 
@@ -1115,6 +1148,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             private String applyId; 
             private Double averageNights; 
             private String billRecordTime; 
+            private String bookMode; 
             private String bookReason; 
             private String bookTime; 
             private String bookerId; 
@@ -1136,6 +1170,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             private String costCenterNumber; 
             private String country; 
             private String countryCode; 
+            private Double deductibleTax; 
             private String department; 
             private String departmentId; 
             private String exceedReason; 
@@ -1190,6 +1225,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             private String travelerMemberType; 
             private String travelerName; 
             private Integer voucherType; 
+            private String voucherTypeDesc; 
 
             /**
              * alipay_trade_no.
@@ -1268,6 +1304,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder billRecordTime(String billRecordTime) {
                 this.billRecordTime = billRecordTime;
+                return this;
+            }
+
+            /**
+             * book_mode.
+             */
+            public Builder bookMode(String bookMode) {
+                this.bookMode = bookMode;
                 return this;
             }
 
@@ -1436,6 +1480,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
+                return this;
+            }
+
+            /**
+             * deductible_tax.
+             */
+            public Builder deductibleTax(Double deductibleTax) {
+                this.deductibleTax = deductibleTax;
                 return this;
             }
 
@@ -1868,6 +1920,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder voucherType(Integer voucherType) {
                 this.voucherType = voucherType;
+                return this;
+            }
+
+            /**
+             * voucher_type_desc.
+             */
+            public Builder voucherTypeDesc(String voucherTypeDesc) {
+                this.voucherTypeDesc = voucherTypeDesc;
                 return this;
             }
 

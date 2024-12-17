@@ -372,6 +372,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
      * <p>HotelOrderListQueryResponseBody</p>
      */
     public static class PriceInfoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("category")
+        private String category;
+
         @com.aliyun.core.annotation.NameInMap("category_code")
         private Integer categoryCode;
 
@@ -397,6 +400,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         private Integer type;
 
         private PriceInfoList(Builder builder) {
+            this.category = builder.category;
             this.categoryCode = builder.categoryCode;
             this.categoryType = builder.categoryType;
             this.gmtCreate = builder.gmtCreate;
@@ -413,6 +417,13 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
 
         public static PriceInfoList create() {
             return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -472,6 +483,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String category; 
             private Integer categoryCode; 
             private Integer categoryType; 
             private String gmtCreate; 
@@ -480,6 +492,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             private Double price; 
             private String tradeId; 
             private Integer type; 
+
+            /**
+             * category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
 
             /**
              * category_code.
@@ -632,6 +652,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_title")
         private String btripTitle;
 
+        @com.aliyun.core.annotation.NameInMap("category")
+        private Integer category;
+
         @com.aliyun.core.annotation.NameInMap("check_in")
         private String checkIn;
 
@@ -655,6 +678,12 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("cost_center")
         private CostCenter costCenter;
+
+        @com.aliyun.core.annotation.NameInMap("country_code")
+        private String countryCode;
+
+        @com.aliyun.core.annotation.NameInMap("country_name")
+        private String countryName;
 
         @com.aliyun.core.annotation.NameInMap("depart_id")
         private String departId;
@@ -719,6 +748,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("room_type")
         private String roomType;
 
+        @com.aliyun.core.annotation.NameInMap("supplier")
+        private String supplier;
+
         @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
@@ -743,6 +775,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         private Module(Builder builder) {
             this.applyId = builder.applyId;
             this.btripTitle = builder.btripTitle;
+            this.category = builder.category;
             this.checkIn = builder.checkIn;
             this.checkOut = builder.checkOut;
             this.city = builder.city;
@@ -751,6 +784,8 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             this.corpId = builder.corpId;
             this.corpName = builder.corpName;
             this.costCenter = builder.costCenter;
+            this.countryCode = builder.countryCode;
+            this.countryName = builder.countryName;
             this.departId = builder.departId;
             this.departName = builder.departName;
             this.extendField = builder.extendField;
@@ -772,6 +807,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             this.projectTitle = builder.projectTitle;
             this.roomNum = builder.roomNum;
             this.roomType = builder.roomType;
+            this.supplier = builder.supplier;
             this.thirdpartApplyId = builder.thirdpartApplyId;
             this.thirdpartBusinessId = builder.thirdpartBusinessId;
             this.thirdpartItineraryId = builder.thirdpartItineraryId;
@@ -801,6 +837,13 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
          */
         public String getBtripTitle() {
             return this.btripTitle;
+        }
+
+        /**
+         * @return category
+         */
+        public Integer getCategory() {
+            return this.category;
         }
 
         /**
@@ -857,6 +900,20 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
          */
         public CostCenter getCostCenter() {
             return this.costCenter;
+        }
+
+        /**
+         * @return countryCode
+         */
+        public String getCountryCode() {
+            return this.countryCode;
+        }
+
+        /**
+         * @return countryName
+         */
+        public String getCountryName() {
+            return this.countryName;
         }
 
         /**
@@ -1007,6 +1064,13 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return supplier
+         */
+        public String getSupplier() {
+            return this.supplier;
+        }
+
+        /**
          * @return thirdpartApplyId
          */
         public String getThirdpartApplyId() {
@@ -1058,6 +1122,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Long applyId; 
             private String btripTitle; 
+            private Integer category; 
             private String checkIn; 
             private String checkOut; 
             private String city; 
@@ -1066,6 +1131,8 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             private String corpId; 
             private String corpName; 
             private CostCenter costCenter; 
+            private String countryCode; 
+            private String countryName; 
             private String departId; 
             private String departName; 
             private String extendField; 
@@ -1087,6 +1154,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             private String projectTitle; 
             private Integer roomNum; 
             private String roomType; 
+            private String supplier; 
             private String thirdpartApplyId; 
             private String thirdpartBusinessId; 
             private String thirdpartItineraryId; 
@@ -1108,6 +1176,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
              */
             public Builder btripTitle(String btripTitle) {
                 this.btripTitle = btripTitle;
+                return this;
+            }
+
+            /**
+             * category.
+             */
+            public Builder category(Integer category) {
+                this.category = category;
                 return this;
             }
 
@@ -1172,6 +1248,22 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
              */
             public Builder costCenter(CostCenter costCenter) {
                 this.costCenter = costCenter;
+                return this;
+            }
+
+            /**
+             * country_code.
+             */
+            public Builder countryCode(String countryCode) {
+                this.countryCode = countryCode;
+                return this;
+            }
+
+            /**
+             * country_name.
+             */
+            public Builder countryName(String countryName) {
+                this.countryName = countryName;
                 return this;
             }
 
@@ -1340,6 +1432,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
              */
             public Builder roomType(String roomType) {
                 this.roomType = roomType;
+                return this;
+            }
+
+            /**
+             * supplier.
+             */
+            public Builder supplier(String supplier) {
+                this.supplier = supplier;
                 return this;
             }
 

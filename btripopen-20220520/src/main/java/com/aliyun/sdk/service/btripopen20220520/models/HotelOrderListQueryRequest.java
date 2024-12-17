@@ -21,6 +21,10 @@ public class HotelOrderListQueryRequest extends Request {
     private Long applyId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("category")
+    private Integer category;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("depart_id")
     private String departId;
 
@@ -64,6 +68,7 @@ public class HotelOrderListQueryRequest extends Request {
         super(builder);
         this.allApply = builder.allApply;
         this.applyId = builder.applyId;
+        this.category = builder.category;
         this.departId = builder.departId;
         this.endTime = builder.endTime;
         this.page = builder.page;
@@ -101,6 +106,13 @@ public class HotelOrderListQueryRequest extends Request {
      */
     public Long getApplyId() {
         return this.applyId;
+    }
+
+    /**
+     * @return category
+     */
+    public Integer getCategory() {
+        return this.category;
     }
 
     /**
@@ -176,6 +188,7 @@ public class HotelOrderListQueryRequest extends Request {
     public static final class Builder extends Request.Builder<HotelOrderListQueryRequest, Builder> {
         private Boolean allApply; 
         private Long applyId; 
+        private Integer category; 
         private String departId; 
         private String endTime; 
         private Integer page; 
@@ -195,6 +208,7 @@ public class HotelOrderListQueryRequest extends Request {
             super(request);
             this.allApply = request.allApply;
             this.applyId = request.applyId;
+            this.category = request.category;
             this.departId = request.departId;
             this.endTime = request.endTime;
             this.page = request.page;
@@ -222,6 +236,15 @@ public class HotelOrderListQueryRequest extends Request {
         public Builder applyId(Long applyId) {
             this.putQueryParameter("apply_id", applyId);
             this.applyId = applyId;
+            return this;
+        }
+
+        /**
+         * category.
+         */
+        public Builder category(Integer category) {
+            this.putQueryParameter("category", category);
+            this.category = category;
             return this;
         }
 

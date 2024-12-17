@@ -1241,6 +1241,12 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_info_d_t_o_s")
         private java.util.List < FlightInfoDTOS> flightInfoDTOS;
 
+        @com.aliyun.core.annotation.NameInMap("non_refundable_change_service_price")
+        private Long nonRefundableChangeServicePrice;
+
+        @com.aliyun.core.annotation.NameInMap("non_refundable_change_upgrade_price")
+        private Long nonRefundableChangeUpgradePrice;
+
         @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
 
@@ -1278,6 +1284,8 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
             this.applyTime = builder.applyTime;
             this.contactInfoDTO = builder.contactInfoDTO;
             this.flightInfoDTOS = builder.flightInfoDTOS;
+            this.nonRefundableChangeServicePrice = builder.nonRefundableChangeServicePrice;
+            this.nonRefundableChangeUpgradePrice = builder.nonRefundableChangeUpgradePrice;
             this.orderId = builder.orderId;
             this.outOrderId = builder.outOrderId;
             this.outSubOrderId = builder.outSubOrderId;
@@ -1318,6 +1326,20 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
          */
         public java.util.List < FlightInfoDTOS> getFlightInfoDTOS() {
             return this.flightInfoDTOS;
+        }
+
+        /**
+         * @return nonRefundableChangeServicePrice
+         */
+        public Long getNonRefundableChangeServicePrice() {
+            return this.nonRefundableChangeServicePrice;
+        }
+
+        /**
+         * @return nonRefundableChangeUpgradePrice
+         */
+        public Long getNonRefundableChangeUpgradePrice() {
+            return this.nonRefundableChangeUpgradePrice;
         }
 
         /**
@@ -1401,6 +1423,8 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
             private String applyTime; 
             private ContactInfoDTO contactInfoDTO; 
             private java.util.List < FlightInfoDTOS> flightInfoDTOS; 
+            private Long nonRefundableChangeServicePrice; 
+            private Long nonRefundableChangeUpgradePrice; 
             private Long orderId; 
             private String outOrderId; 
             private String outSubOrderId; 
@@ -1434,6 +1458,22 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
              */
             public Builder flightInfoDTOS(java.util.List < FlightInfoDTOS> flightInfoDTOS) {
                 this.flightInfoDTOS = flightInfoDTOS;
+                return this;
+            }
+
+            /**
+             * non_refundable_change_service_price.
+             */
+            public Builder nonRefundableChangeServicePrice(Long nonRefundableChangeServicePrice) {
+                this.nonRefundableChangeServicePrice = nonRefundableChangeServicePrice;
+                return this;
+            }
+
+            /**
+             * non_refundable_change_upgrade_price.
+             */
+            public Builder nonRefundableChangeUpgradePrice(Long nonRefundableChangeUpgradePrice) {
+                this.nonRefundableChangeUpgradePrice = nonRefundableChangeUpgradePrice;
                 return this;
             }
 

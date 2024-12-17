@@ -296,6 +296,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DepartmentSaveResponse> departmentSave(DepartmentSaveRequest request);
 
     /**
+     * @param request the request parameters of ElectronicItineraryBatchApply  ElectronicItineraryBatchApplyRequest
+     * @return ElectronicItineraryBatchApplyResponse
+     */
+    CompletableFuture<ElectronicItineraryBatchApplyResponse> electronicItineraryBatchApply(ElectronicItineraryBatchApplyRequest request);
+
+    /**
+     * @param request the request parameters of ElectronicItineraryGetApplyResult  ElectronicItineraryGetApplyResultRequest
+     * @return ElectronicItineraryGetApplyResultResponse
+     */
+    CompletableFuture<ElectronicItineraryGetApplyResultResponse> electronicItineraryGetApplyResult(ElectronicItineraryGetApplyResultRequest request);
+
+    /**
      * @param request the request parameters of EntityAdd  EntityAddRequest
      * @return EntityAddResponse
      */
@@ -456,6 +468,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return FlightOrderListQueryResponse
      */
     CompletableFuture<FlightOrderListQueryResponse> flightOrderListQuery(FlightOrderListQueryRequest request);
+
+    /**
+     * @param request the request parameters of FlightOrderListQueryV2  FlightOrderListQueryV2Request
+     * @return FlightOrderListQueryV2Response
+     */
+    CompletableFuture<FlightOrderListQueryV2Response> flightOrderListQueryV2(FlightOrderListQueryV2Request request);
 
     /**
      * @param request the request parameters of FlightOrderQuery  FlightOrderQueryRequest
@@ -678,6 +696,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return HotelSuggestV2Response
      */
     CompletableFuture<HotelSuggestV2Response> hotelSuggestV2(HotelSuggestV2Request request);
+
+    /**
+     * @param request the request parameters of IFlightOrderDetailQuery  IFlightOrderDetailQueryRequest
+     * @return IFlightOrderDetailQueryResponse
+     */
+    CompletableFuture<IFlightOrderDetailQueryResponse> iFlightOrderDetailQuery(IFlightOrderDetailQueryRequest request);
+
+    /**
+     * @param request the request parameters of IFlightOrderListQuery  IFlightOrderListQueryRequest
+     * @return IFlightOrderListQueryResponse
+     */
+    CompletableFuture<IFlightOrderListQueryResponse> iFlightOrderListQuery(IFlightOrderListQueryRequest request);
 
     /**
      * @param request the request parameters of IeFlightBillSettlementQuery  IeFlightBillSettlementQueryRequest
@@ -906,6 +936,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ProjectModifyResponse
      */
     CompletableFuture<ProjectModifyResponse> projectModify(ProjectModifyRequest request);
+
+    /**
+     * @param request the request parameters of QueryEmployeeDetail  QueryEmployeeDetailRequest
+     * @return QueryEmployeeDetailResponse
+     */
+    CompletableFuture<QueryEmployeeDetailResponse> queryEmployeeDetail(QueryEmployeeDetailRequest request);
 
     /**
      * @param request the request parameters of QueryGroupCorpList  QueryGroupCorpListRequest

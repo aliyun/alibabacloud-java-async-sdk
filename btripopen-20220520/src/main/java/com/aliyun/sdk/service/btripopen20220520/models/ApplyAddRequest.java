@@ -69,6 +69,14 @@ public class ApplyAddRequest extends Request {
     private String internationalFlightCabins;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("intl_flight_budget")
+    private Long intlFlightBudget;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("intl_hotel_budget")
+    private Long intlHotelBudget;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("itinerary_list")
     private java.util.List < ItineraryList> itineraryList;
 
@@ -184,6 +192,8 @@ public class ApplyAddRequest extends Request {
         this.hotelBudget = builder.hotelBudget;
         this.hotelShare = builder.hotelShare;
         this.internationalFlightCabins = builder.internationalFlightCabins;
+        this.intlFlightBudget = builder.intlFlightBudget;
+        this.intlHotelBudget = builder.intlHotelBudget;
         this.itineraryList = builder.itineraryList;
         this.itineraryRule = builder.itineraryRule;
         this.itinerarySetList = builder.itinerarySetList;
@@ -319,6 +329,20 @@ public class ApplyAddRequest extends Request {
      */
     public String getInternationalFlightCabins() {
         return this.internationalFlightCabins;
+    }
+
+    /**
+     * @return intlFlightBudget
+     */
+    public Long getIntlFlightBudget() {
+        return this.intlFlightBudget;
+    }
+
+    /**
+     * @return intlHotelBudget
+     */
+    public Long getIntlHotelBudget() {
+        return this.intlHotelBudget;
     }
 
     /**
@@ -504,6 +528,8 @@ public class ApplyAddRequest extends Request {
         private Long hotelBudget; 
         private HotelShare hotelShare; 
         private String internationalFlightCabins; 
+        private Long intlFlightBudget; 
+        private Long intlHotelBudget; 
         private java.util.List < ItineraryList> itineraryList; 
         private Integer itineraryRule; 
         private java.util.List < ItinerarySetList> itinerarySetList; 
@@ -549,6 +575,8 @@ public class ApplyAddRequest extends Request {
             this.hotelBudget = request.hotelBudget;
             this.hotelShare = request.hotelShare;
             this.internationalFlightCabins = request.internationalFlightCabins;
+            this.intlFlightBudget = request.intlFlightBudget;
+            this.intlHotelBudget = request.intlHotelBudget;
             this.itineraryList = request.itineraryList;
             this.itineraryRule = request.itineraryRule;
             this.itinerarySetList = request.itinerarySetList;
@@ -706,6 +734,24 @@ public class ApplyAddRequest extends Request {
         public Builder internationalFlightCabins(String internationalFlightCabins) {
             this.putBodyParameter("international_flight_cabins", internationalFlightCabins);
             this.internationalFlightCabins = internationalFlightCabins;
+            return this;
+        }
+
+        /**
+         * intl_flight_budget.
+         */
+        public Builder intlFlightBudget(Long intlFlightBudget) {
+            this.putBodyParameter("intl_flight_budget", intlFlightBudget);
+            this.intlFlightBudget = intlFlightBudget;
+            return this;
+        }
+
+        /**
+         * intl_hotel_budget.
+         */
+        public Builder intlHotelBudget(Long intlHotelBudget) {
+            this.putBodyParameter("intl_hotel_budget", intlHotelBudget);
+            this.intlHotelBudget = intlHotelBudget;
             return this;
         }
 
