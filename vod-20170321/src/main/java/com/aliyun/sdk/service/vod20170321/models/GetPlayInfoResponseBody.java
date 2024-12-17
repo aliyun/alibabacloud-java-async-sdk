@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -107,6 +112,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
+        @com.aliyun.core.annotation.NameInMap("CodecName")
+        private String codecName;
+
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
@@ -176,6 +184,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         private PlayInfo(Builder builder) {
             this.bitDepth = builder.bitDepth;
             this.bitrate = builder.bitrate;
+            this.codecName = builder.codecName;
             this.creationTime = builder.creationTime;
             this.definition = builder.definition;
             this.duration = builder.duration;
@@ -220,6 +229,13 @@ public class GetPlayInfoResponseBody extends TeaModel {
          */
         public String getBitrate() {
             return this.bitrate;
+        }
+
+        /**
+         * @return codecName
+         */
+        public String getCodecName() {
+            return this.codecName;
         }
 
         /**
@@ -379,6 +395,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public static final class Builder {
             private Integer bitDepth; 
             private String bitrate; 
+            private String codecName; 
             private String creationTime; 
             private String definition; 
             private String duration; 
@@ -421,6 +438,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
+                return this;
+            }
+
+            /**
+             * CodecName.
+             */
+            public Builder codecName(String codecName) {
+                this.codecName = codecName;
                 return this;
             }
 
@@ -732,7 +757,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
      */
     public static class PlayInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PlayInfo")
-        private java.util.List < PlayInfo> playInfo;
+        private java.util.List<PlayInfo> playInfo;
 
         private PlayInfoList(Builder builder) {
             this.playInfo = builder.playInfo;
@@ -749,17 +774,17 @@ public class GetPlayInfoResponseBody extends TeaModel {
         /**
          * @return playInfo
          */
-        public java.util.List < PlayInfo> getPlayInfo() {
+        public java.util.List<PlayInfo> getPlayInfo() {
             return this.playInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PlayInfo> playInfo; 
+            private java.util.List<PlayInfo> playInfo; 
 
             /**
              * PlayInfo.
              */
-            public Builder playInfo(java.util.List < PlayInfo> playInfo) {
+            public Builder playInfo(java.util.List<PlayInfo> playInfo) {
                 this.playInfo = playInfo;
                 return this;
             }

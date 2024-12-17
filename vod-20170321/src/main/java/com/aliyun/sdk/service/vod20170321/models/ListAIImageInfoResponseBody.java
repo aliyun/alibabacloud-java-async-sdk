@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAIImageInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AIImageInfoList")
-    private java.util.List < AIImageInfoList> AIImageInfoList;
+    private java.util.List<AIImageInfoList> AIImageInfoList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListAIImageInfoResponseBody extends TeaModel {
     /**
      * @return AIImageInfoList
      */
-    public java.util.List < AIImageInfoList> getAIImageInfoList() {
+    public java.util.List<AIImageInfoList> getAIImageInfoList() {
         return this.AIImageInfoList;
     }
 
@@ -46,13 +51,13 @@ public class ListAIImageInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AIImageInfoList> AIImageInfoList; 
+        private java.util.List<AIImageInfoList> AIImageInfoList; 
         private String requestId; 
 
         /**
          * <p>The image files that are uploaded for AI processing.</p>
          */
-        public Builder AIImageInfoList(java.util.List < AIImageInfoList> AIImageInfoList) {
+        public Builder AIImageInfoList(java.util.List<AIImageInfoList> AIImageInfoList) {
             this.AIImageInfoList = AIImageInfoList;
             return this;
         }

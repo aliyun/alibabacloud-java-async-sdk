@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -187,7 +192,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataItem")
-        private java.util.List < DataItem> dataItem;
+        private java.util.List<DataItem> dataItem;
 
         private Data(Builder builder) {
             this.dataItem = builder.dataItem;
@@ -204,17 +209,17 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         /**
          * @return dataItem
          */
-        public java.util.List < DataItem> getDataItem() {
+        public java.util.List<DataItem> getDataItem() {
             return this.dataItem;
         }
 
         public static final class Builder {
-            private java.util.List < DataItem> dataItem; 
+            private java.util.List<DataItem> dataItem; 
 
             /**
              * DataItem.
              */
-            public Builder dataItem(java.util.List < DataItem> dataItem) {
+            public Builder dataItem(java.util.List<DataItem> dataItem) {
                 this.dataItem = dataItem;
                 return this;
             }
@@ -304,7 +309,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
      */
     public static class TranscodeData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TranscodeDataItem")
-        private java.util.List < TranscodeDataItem> transcodeDataItem;
+        private java.util.List<TranscodeDataItem> transcodeDataItem;
 
         private TranscodeData(Builder builder) {
             this.transcodeDataItem = builder.transcodeDataItem;
@@ -321,17 +326,17 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         /**
          * @return transcodeDataItem
          */
-        public java.util.List < TranscodeDataItem> getTranscodeDataItem() {
+        public java.util.List<TranscodeDataItem> getTranscodeDataItem() {
             return this.transcodeDataItem;
         }
 
         public static final class Builder {
-            private java.util.List < TranscodeDataItem> transcodeDataItem; 
+            private java.util.List<TranscodeDataItem> transcodeDataItem; 
 
             /**
              * TranscodeDataItem.
              */
-            public Builder transcodeDataItem(java.util.List < TranscodeDataItem> transcodeDataItem) {
+            public Builder transcodeDataItem(java.util.List<TranscodeDataItem> transcodeDataItem) {
                 this.transcodeDataItem = transcodeDataItem;
                 return this;
             }

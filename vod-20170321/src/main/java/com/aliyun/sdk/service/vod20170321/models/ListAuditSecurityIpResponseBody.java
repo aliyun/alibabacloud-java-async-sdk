@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecurityIpList")
-    private java.util.List < SecurityIpList> securityIpList;
+    private java.util.List<SecurityIpList> securityIpList;
 
     private ListAuditSecurityIpResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
     /**
      * @return securityIpList
      */
-    public java.util.List < SecurityIpList> getSecurityIpList() {
+    public java.util.List<SecurityIpList> getSecurityIpList() {
         return this.securityIpList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SecurityIpList> securityIpList; 
+        private java.util.List<SecurityIpList> securityIpList; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
         /**
          * <p>The details of the review security group.</p>
          */
-        public Builder securityIpList(java.util.List < SecurityIpList> securityIpList) {
+        public Builder securityIpList(java.util.List<SecurityIpList> securityIpList) {
             this.securityIpList = securityIpList;
             return this;
         }

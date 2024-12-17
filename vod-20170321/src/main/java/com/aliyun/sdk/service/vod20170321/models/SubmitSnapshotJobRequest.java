@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class SubmitSnapshotJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpecifiedOffsetTimes")
-    private java.util.List < Long > specifiedOffsetTimes;
+    private java.util.List<Long> specifiedOffsetTimes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpriteSnapshotConfig")
@@ -117,7 +122,7 @@ public class SubmitSnapshotJobRequest extends Request {
     /**
      * @return specifiedOffsetTimes
      */
-    public java.util.List < Long > getSpecifiedOffsetTimes() {
+    public java.util.List<Long> getSpecifiedOffsetTimes() {
         return this.specifiedOffsetTimes;
     }
 
@@ -155,7 +160,7 @@ public class SubmitSnapshotJobRequest extends Request {
         private Long interval; 
         private String snapshotTemplateId; 
         private Long specifiedOffsetTime; 
-        private java.util.List < Long > specifiedOffsetTimes; 
+        private java.util.List<Long> specifiedOffsetTimes; 
         private String spriteSnapshotConfig; 
         private String userData; 
         private String videoId; 
@@ -255,7 +260,7 @@ public class SubmitSnapshotJobRequest extends Request {
         /**
          * <p>The playback positions at which you want to capture snapshots. Unit: milliseconds. You can specify up to 30 playback positions in a request.</p>
          */
-        public Builder specifiedOffsetTimes(java.util.List < Long > specifiedOffsetTimes) {
+        public Builder specifiedOffsetTimes(java.util.List<Long> specifiedOffsetTimes) {
             String specifiedOffsetTimesShrink = shrink(specifiedOffsetTimes, "SpecifiedOffsetTimes", "json");
             this.putQueryParameter("SpecifiedOffsetTimes", specifiedOffsetTimesShrink);
             this.specifiedOffsetTimes = specifiedOffsetTimes;

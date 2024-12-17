@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CancelUrlUploadJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CanceledJobs")
-    private java.util.List < String > canceledJobs;
+    private java.util.List<String> canceledJobs;
 
     @com.aliyun.core.annotation.NameInMap("NonExists")
-    private java.util.List < String > nonExists;
+    private java.util.List<String> nonExists;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
     /**
      * @return canceledJobs
      */
-    public java.util.List < String > getCanceledJobs() {
+    public java.util.List<String> getCanceledJobs() {
         return this.canceledJobs;
     }
 
     /**
      * @return nonExists
      */
-    public java.util.List < String > getNonExists() {
+    public java.util.List<String> getNonExists() {
         return this.nonExists;
     }
 
@@ -57,14 +62,14 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > canceledJobs; 
-        private java.util.List < String > nonExists; 
+        private java.util.List<String> canceledJobs; 
+        private java.util.List<String> nonExists; 
         private String requestId; 
 
         /**
          * <p>The IDs of canceled jobs.</p>
          */
-        public Builder canceledJobs(java.util.List < String > canceledJobs) {
+        public Builder canceledJobs(java.util.List<String> canceledJobs) {
             this.canceledJobs = canceledJobs;
             return this;
         }
@@ -72,7 +77,7 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
         /**
          * <p>The jobs that do not exist.</p>
          */
-        public Builder nonExists(java.util.List < String > nonExists) {
+        public Builder nonExists(java.util.List<String> nonExists) {
             this.nonExists = nonExists;
             return this;
         }

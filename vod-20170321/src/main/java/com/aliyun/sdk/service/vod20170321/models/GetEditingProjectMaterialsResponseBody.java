@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
      */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Snapshot")
-        private java.util.List < String > snapshot;
+        private java.util.List<String> snapshot;
 
         private Snapshots(Builder builder) {
             this.snapshot = builder.snapshot;
@@ -99,17 +104,17 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         /**
          * @return snapshot
          */
-        public java.util.List < String > getSnapshot() {
+        public java.util.List<String> getSnapshot() {
             return this.snapshot;
         }
 
         public static final class Builder {
-            private java.util.List < String > snapshot; 
+            private java.util.List<String> snapshot; 
 
             /**
              * Snapshot.
              */
-            public Builder snapshot(java.util.List < String > snapshot) {
+            public Builder snapshot(java.util.List<String> snapshot) {
                 this.snapshot = snapshot;
                 return this;
             }
@@ -129,7 +134,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
      */
     public static class Sprites extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sprite")
-        private java.util.List < String > sprite;
+        private java.util.List<String> sprite;
 
         private Sprites(Builder builder) {
             this.sprite = builder.sprite;
@@ -146,17 +151,17 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         /**
          * @return sprite
          */
-        public java.util.List < String > getSprite() {
+        public java.util.List<String> getSprite() {
             return this.sprite;
         }
 
         public static final class Builder {
-            private java.util.List < String > sprite; 
+            private java.util.List<String> sprite; 
 
             /**
              * Sprite.
              */
-            public Builder sprite(java.util.List < String > sprite) {
+            public Builder sprite(java.util.List<String> sprite) {
                 this.sprite = sprite;
                 return this;
             }
@@ -596,7 +601,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
      */
     public static class MaterialList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Material")
-        private java.util.List < Material> material;
+        private java.util.List<Material> material;
 
         private MaterialList(Builder builder) {
             this.material = builder.material;
@@ -613,17 +618,17 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         /**
          * @return material
          */
-        public java.util.List < Material> getMaterial() {
+        public java.util.List<Material> getMaterial() {
             return this.material;
         }
 
         public static final class Builder {
-            private java.util.List < Material> material; 
+            private java.util.List<Material> material; 
 
             /**
              * Material.
              */
-            public Builder material(java.util.List < Material> material) {
+            public Builder material(java.util.List<Material> material) {
                 this.material = material;
                 return this;
             }

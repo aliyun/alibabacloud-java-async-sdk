@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RetrievalData")
-    private java.util.List < RetrievalData> retrievalData;
+    private java.util.List<RetrievalData> retrievalData;
 
     private DescribeVodTieringStorageRetrievalDataResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
     /**
      * @return retrievalData
      */
-    public java.util.List < RetrievalData> getRetrievalData() {
+    public java.util.List<RetrievalData> getRetrievalData() {
         return this.retrievalData;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RetrievalData> retrievalData; 
+        private java.util.List<RetrievalData> retrievalData; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
         /**
          * <p>The data retrieval information.</p>
          */
-        public Builder retrievalData(java.util.List < RetrievalData> retrievalData) {
+        public Builder retrievalData(java.util.List<RetrievalData> retrievalData) {
             this.retrievalData = retrievalData;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StorageData")
-    private java.util.List < StorageData> storageData;
+    private java.util.List<StorageData> storageData;
 
     private DescribeVodTieringStorageDataResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
     /**
      * @return storageData
      */
-    public java.util.List < StorageData> getStorageData() {
+    public java.util.List<StorageData> getStorageData() {
         return this.storageData;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StorageData> storageData; 
+        private java.util.List<StorageData> storageData; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
         /**
          * <p>The storage usage data returned.</p>
          */
-        public Builder storageData(java.util.List < StorageData> storageData) {
+        public Builder storageData(java.util.List<StorageData> storageData) {
             this.storageData = storageData;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -297,7 +302,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
      */
     public static class UsageDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        private java.util.List<DataModule> dataModule;
 
         private UsageDataPerInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -314,17 +319,17 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

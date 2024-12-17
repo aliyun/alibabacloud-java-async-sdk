@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchMediaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MediaList")
-    private java.util.List < MediaList> mediaList;
+    private java.util.List<MediaList> mediaList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,7 +47,7 @@ public class SearchMediaResponseBody extends TeaModel {
     /**
      * @return mediaList
      */
-    public java.util.List < MediaList> getMediaList() {
+    public java.util.List<MediaList> getMediaList() {
         return this.mediaList;
     }
 
@@ -68,7 +73,7 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MediaList> mediaList; 
+        private java.util.List<MediaList> mediaList; 
         private String requestId; 
         private String scrollToken; 
         private Long total; 
@@ -76,7 +81,7 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * <p>The information about the media assets.</p>
          */
-        public Builder mediaList(java.util.List < MediaList> mediaList) {
+        public Builder mediaList(java.util.List<MediaList> mediaList) {
             this.mediaList = mediaList;
             return this;
         }
@@ -233,7 +238,7 @@ public class SearchMediaResponseBody extends TeaModel {
         private String labelName;
 
         @com.aliyun.core.annotation.NameInMap("Occurrences")
-        private java.util.List < Occurrences> occurrences;
+        private java.util.List<Occurrences> occurrences;
 
         private AiLabelInfo(Builder builder) {
             this.category = builder.category;
@@ -274,7 +279,7 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * @return occurrences
          */
-        public java.util.List < Occurrences> getOccurrences() {
+        public java.util.List<Occurrences> getOccurrences() {
             return this.occurrences;
         }
 
@@ -282,7 +287,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String category; 
             private String labelId; 
             private String labelName; 
-            private java.util.List < Occurrences> occurrences; 
+            private java.util.List<Occurrences> occurrences; 
 
             /**
              * <p>The category.</p>
@@ -320,7 +325,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The clips.</p>
              */
-            public Builder occurrences(java.util.List < Occurrences> occurrences) {
+            public Builder occurrences(java.util.List<Occurrences> occurrences) {
                 this.occurrences = occurrences;
                 return this;
             }
@@ -436,10 +441,10 @@ public class SearchMediaResponseBody extends TeaModel {
      */
     public static class AiData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AiLabelInfo")
-        private java.util.List < AiLabelInfo> aiLabelInfo;
+        private java.util.List<AiLabelInfo> aiLabelInfo;
 
         @com.aliyun.core.annotation.NameInMap("OcrInfo")
-        private java.util.List < OcrInfo> ocrInfo;
+        private java.util.List<OcrInfo> ocrInfo;
 
         private AiData(Builder builder) {
             this.aiLabelInfo = builder.aiLabelInfo;
@@ -457,25 +462,25 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * @return aiLabelInfo
          */
-        public java.util.List < AiLabelInfo> getAiLabelInfo() {
+        public java.util.List<AiLabelInfo> getAiLabelInfo() {
             return this.aiLabelInfo;
         }
 
         /**
          * @return ocrInfo
          */
-        public java.util.List < OcrInfo> getOcrInfo() {
+        public java.util.List<OcrInfo> getOcrInfo() {
             return this.ocrInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AiLabelInfo> aiLabelInfo; 
-            private java.util.List < OcrInfo> ocrInfo; 
+            private java.util.List<AiLabelInfo> aiLabelInfo; 
+            private java.util.List<OcrInfo> ocrInfo; 
 
             /**
              * <p>The AI tags.</p>
              */
-            public Builder aiLabelInfo(java.util.List < AiLabelInfo> aiLabelInfo) {
+            public Builder aiLabelInfo(java.util.List<AiLabelInfo> aiLabelInfo) {
                 this.aiLabelInfo = aiLabelInfo;
                 return this;
             }
@@ -483,7 +488,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The information about subtitles.</p>
              */
-            public Builder ocrInfo(java.util.List < OcrInfo> ocrInfo) {
+            public Builder ocrInfo(java.util.List<OcrInfo> ocrInfo) {
                 this.ocrInfo = ocrInfo;
                 return this;
             }
@@ -747,7 +752,7 @@ public class SearchMediaResponseBody extends TeaModel {
         private String businessType;
 
         @com.aliyun.core.annotation.NameInMap("Categories")
-        private java.util.List < Categories> categories;
+        private java.util.List<Categories> categories;
 
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -816,7 +821,7 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * @return categories
          */
-        public java.util.List < Categories> getCategories() {
+        public java.util.List<Categories> getCategories() {
             return this.categories;
         }
 
@@ -886,7 +891,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private String businessType; 
-            private java.util.List < Categories> categories; 
+            private java.util.List<Categories> categories; 
             private String creationTime; 
             private String description; 
             private String mediaId; 
@@ -927,7 +932,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The list of category IDs.</p>
              */
-            public Builder categories(java.util.List < Categories> categories) {
+            public Builder categories(java.util.List<Categories> categories) {
                 this.categories = categories;
                 return this;
             }
@@ -1096,10 +1101,10 @@ public class SearchMediaResponseBody extends TeaModel {
         private Long size;
 
         @com.aliyun.core.annotation.NameInMap("Snapshots")
-        private java.util.List < String > snapshots;
+        private java.util.List<String> snapshots;
 
         @com.aliyun.core.annotation.NameInMap("SpriteSnapshots")
-        private java.util.List < String > spriteSnapshots;
+        private java.util.List<String> spriteSnapshots;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -1261,14 +1266,14 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * @return snapshots
          */
-        public java.util.List < String > getSnapshots() {
+        public java.util.List<String> getSnapshots() {
             return this.snapshots;
         }
 
         /**
          * @return spriteSnapshots
          */
-        public java.util.List < String > getSpriteSnapshots() {
+        public java.util.List<String> getSpriteSnapshots() {
             return this.spriteSnapshots;
         }
 
@@ -1330,8 +1335,8 @@ public class SearchMediaResponseBody extends TeaModel {
             private String restoreExpiration; 
             private String restoreStatus; 
             private Long size; 
-            private java.util.List < String > snapshots; 
-            private java.util.List < String > spriteSnapshots; 
+            private java.util.List<String> snapshots; 
+            private java.util.List<String> spriteSnapshots; 
             private String status; 
             private String storageClass; 
             private String storageLocation; 
@@ -1528,7 +1533,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The automatic snapshots.</p>
              */
-            public Builder snapshots(java.util.List < String > snapshots) {
+            public Builder snapshots(java.util.List<String> snapshots) {
                 this.snapshots = snapshots;
                 return this;
             }
@@ -1536,7 +1541,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The sprite snapshots.</p>
              */
-            public Builder spriteSnapshots(java.util.List < String > spriteSnapshots) {
+            public Builder spriteSnapshots(java.util.List<String> spriteSnapshots) {
                 this.spriteSnapshots = spriteSnapshots;
                 return this;
             }
@@ -1993,10 +1998,10 @@ public class SearchMediaResponseBody extends TeaModel {
         private Long size;
 
         @com.aliyun.core.annotation.NameInMap("Snapshots")
-        private java.util.List < String > snapshots;
+        private java.util.List<String> snapshots;
 
         @com.aliyun.core.annotation.NameInMap("SpriteSnapshots")
-        private java.util.List < String > spriteSnapshots;
+        private java.util.List<String> spriteSnapshots;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -2154,14 +2159,14 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * @return snapshots
          */
-        public java.util.List < String > getSnapshots() {
+        public java.util.List<String> getSnapshots() {
             return this.snapshots;
         }
 
         /**
          * @return spriteSnapshots
          */
-        public java.util.List < String > getSpriteSnapshots() {
+        public java.util.List<String> getSpriteSnapshots() {
             return this.spriteSnapshots;
         }
 
@@ -2229,8 +2234,8 @@ public class SearchMediaResponseBody extends TeaModel {
             private String restoreExpiration; 
             private String restoreStatus; 
             private Long size; 
-            private java.util.List < String > snapshots; 
-            private java.util.List < String > spriteSnapshots; 
+            private java.util.List<String> snapshots; 
+            private java.util.List<String> spriteSnapshots; 
             private String status; 
             private String storageClass; 
             private String storageLocation; 
@@ -2417,7 +2422,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The automatic snapshots.</p>
              */
-            public Builder snapshots(java.util.List < String > snapshots) {
+            public Builder snapshots(java.util.List<String> snapshots) {
                 this.snapshots = snapshots;
                 return this;
             }
@@ -2425,7 +2430,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The sprite snapshots.</p>
              */
-            public Builder spriteSnapshots(java.util.List < String > spriteSnapshots) {
+            public Builder spriteSnapshots(java.util.List<String> spriteSnapshots) {
                 this.spriteSnapshots = spriteSnapshots;
                 return this;
             }

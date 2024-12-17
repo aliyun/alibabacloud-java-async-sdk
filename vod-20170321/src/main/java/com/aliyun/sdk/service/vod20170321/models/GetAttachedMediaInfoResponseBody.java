@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAttachedMediaInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AttachedMediaList")
-    private java.util.List < AttachedMediaList> attachedMediaList;
+    private java.util.List<AttachedMediaList> attachedMediaList;
 
     @com.aliyun.core.annotation.NameInMap("NonExistMediaIds")
-    private java.util.List < String > nonExistMediaIds;
+    private java.util.List<String> nonExistMediaIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
     /**
      * @return attachedMediaList
      */
-    public java.util.List < AttachedMediaList> getAttachedMediaList() {
+    public java.util.List<AttachedMediaList> getAttachedMediaList() {
         return this.attachedMediaList;
     }
 
     /**
      * @return nonExistMediaIds
      */
-    public java.util.List < String > getNonExistMediaIds() {
+    public java.util.List<String> getNonExistMediaIds() {
         return this.nonExistMediaIds;
     }
 
@@ -57,14 +62,14 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AttachedMediaList> attachedMediaList; 
-        private java.util.List < String > nonExistMediaIds; 
+        private java.util.List<AttachedMediaList> attachedMediaList; 
+        private java.util.List<String> nonExistMediaIds; 
         private String requestId; 
 
         /**
          * <p>The information about the media assets.</p>
          */
-        public Builder attachedMediaList(java.util.List < AttachedMediaList> attachedMediaList) {
+        public Builder attachedMediaList(java.util.List<AttachedMediaList> attachedMediaList) {
             this.attachedMediaList = attachedMediaList;
             return this;
         }
@@ -72,7 +77,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         /**
          * <p>The IDs of the auxiliary media assets that do not exist.</p>
          */
-        public Builder nonExistMediaIds(java.util.List < String > nonExistMediaIds) {
+        public Builder nonExistMediaIds(java.util.List<String> nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
             return this;
         }
@@ -224,7 +229,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         private String appId;
 
         @com.aliyun.core.annotation.NameInMap("Categories")
-        private java.util.List < Categories> categories;
+        private java.util.List<Categories> categories;
 
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -289,7 +294,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         /**
          * @return categories
          */
-        public java.util.List < Categories> getCategories() {
+        public java.util.List<Categories> getCategories() {
             return this.categories;
         }
 
@@ -365,7 +370,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appId; 
-            private java.util.List < Categories> categories; 
+            private java.util.List<Categories> categories; 
             private String creationTime; 
             private String description; 
             private String mediaId; 
@@ -391,7 +396,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             /**
              * <p>The categories.</p>
              */
-            public Builder categories(java.util.List < Categories> categories) {
+            public Builder categories(java.util.List<Categories> categories) {
                 this.categories = categories;
                 return this;
             }

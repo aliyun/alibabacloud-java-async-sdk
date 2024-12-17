@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -271,7 +276,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
      */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RealTimeCodeProportionData")
-        private java.util.List < RealTimeCodeProportionData> realTimeCodeProportionData;
+        private java.util.List<RealTimeCodeProportionData> realTimeCodeProportionData;
 
         private Value(Builder builder) {
             this.realTimeCodeProportionData = builder.realTimeCodeProportionData;
@@ -288,17 +293,17 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         /**
          * @return realTimeCodeProportionData
          */
-        public java.util.List < RealTimeCodeProportionData> getRealTimeCodeProportionData() {
+        public java.util.List<RealTimeCodeProportionData> getRealTimeCodeProportionData() {
             return this.realTimeCodeProportionData;
         }
 
         public static final class Builder {
-            private java.util.List < RealTimeCodeProportionData> realTimeCodeProportionData; 
+            private java.util.List<RealTimeCodeProportionData> realTimeCodeProportionData; 
 
             /**
              * RealTimeCodeProportionData.
              */
-            public Builder realTimeCodeProportionData(java.util.List < RealTimeCodeProportionData> realTimeCodeProportionData) {
+            public Builder realTimeCodeProportionData(java.util.List<RealTimeCodeProportionData> realTimeCodeProportionData) {
                 this.realTimeCodeProportionData = realTimeCodeProportionData;
                 return this;
             }
@@ -388,7 +393,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
      */
     public static class RealTimeHttpCodeData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsageData")
-        private java.util.List < UsageData> usageData;
+        private java.util.List<UsageData> usageData;
 
         private RealTimeHttpCodeData(Builder builder) {
             this.usageData = builder.usageData;
@@ -405,17 +410,17 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
         /**
          * @return usageData
          */
-        public java.util.List < UsageData> getUsageData() {
+        public java.util.List<UsageData> getUsageData() {
             return this.usageData;
         }
 
         public static final class Builder {
-            private java.util.List < UsageData> usageData; 
+            private java.util.List<UsageData> usageData; 
 
             /**
              * UsageData.
              */
-            public Builder usageData(java.util.List < UsageData> usageData) {
+            public Builder usageData(java.util.List<UsageData> usageData) {
                 this.usageData = usageData;
                 return this;
             }

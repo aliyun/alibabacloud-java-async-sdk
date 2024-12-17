@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QpsModel")
-        private java.util.List < QpsModel> qpsModel;
+        private java.util.List<QpsModel> qpsModel;
 
         private Data(Builder builder) {
             this.qpsModel = builder.qpsModel;
@@ -172,17 +177,17 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
         /**
          * @return qpsModel
          */
-        public java.util.List < QpsModel> getQpsModel() {
+        public java.util.List<QpsModel> getQpsModel() {
             return this.qpsModel;
         }
 
         public static final class Builder {
-            private java.util.List < QpsModel> qpsModel; 
+            private java.util.List<QpsModel> qpsModel; 
 
             /**
              * QpsModel.
              */
-            public Builder qpsModel(java.util.List < QpsModel> qpsModel) {
+            public Builder qpsModel(java.util.List<QpsModel> qpsModel) {
                 this.qpsModel = qpsModel;
                 return this;
             }

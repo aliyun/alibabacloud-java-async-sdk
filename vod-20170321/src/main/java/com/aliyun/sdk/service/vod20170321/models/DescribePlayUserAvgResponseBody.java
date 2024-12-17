@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
      */
     public static class UserPlayStatisAvgs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserPlayStatisAvg")
-        private java.util.List < UserPlayStatisAvg> userPlayStatisAvg;
+        private java.util.List<UserPlayStatisAvg> userPlayStatisAvg;
 
         private UserPlayStatisAvgs(Builder builder) {
             this.userPlayStatisAvg = builder.userPlayStatisAvg;
@@ -195,17 +200,17 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
         /**
          * @return userPlayStatisAvg
          */
-        public java.util.List < UserPlayStatisAvg> getUserPlayStatisAvg() {
+        public java.util.List<UserPlayStatisAvg> getUserPlayStatisAvg() {
             return this.userPlayStatisAvg;
         }
 
         public static final class Builder {
-            private java.util.List < UserPlayStatisAvg> userPlayStatisAvg; 
+            private java.util.List<UserPlayStatisAvg> userPlayStatisAvg; 
 
             /**
              * UserPlayStatisAvg.
              */
-            public Builder userPlayStatisAvg(java.util.List < UserPlayStatisAvg> userPlayStatisAvg) {
+            public Builder userPlayStatisAvg(java.util.List<UserPlayStatisAvg> userPlayStatisAvg) {
                 this.userPlayStatisAvg = userPlayStatisAvg;
                 return this;
             }

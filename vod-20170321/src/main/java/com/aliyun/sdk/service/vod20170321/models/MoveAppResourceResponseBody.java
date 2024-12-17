@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class MoveAppResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FailedResourceIds")
-    private java.util.List < String > failedResourceIds;
+    private java.util.List<String> failedResourceIds;
 
     @com.aliyun.core.annotation.NameInMap("NonExistResourceIds")
-    private java.util.List < String > nonExistResourceIds;
+    private java.util.List<String> nonExistResourceIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class MoveAppResourceResponseBody extends TeaModel {
     /**
      * @return failedResourceIds
      */
-    public java.util.List < String > getFailedResourceIds() {
+    public java.util.List<String> getFailedResourceIds() {
         return this.failedResourceIds;
     }
 
     /**
      * @return nonExistResourceIds
      */
-    public java.util.List < String > getNonExistResourceIds() {
+    public java.util.List<String> getNonExistResourceIds() {
         return this.nonExistResourceIds;
     }
 
@@ -57,14 +62,14 @@ public class MoveAppResourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > failedResourceIds; 
-        private java.util.List < String > nonExistResourceIds; 
+        private java.util.List<String> failedResourceIds; 
+        private java.util.List<String> nonExistResourceIds; 
         private String requestId; 
 
         /**
          * <p>The IDs of the resources that failed to be migrated.</p>
          */
-        public Builder failedResourceIds(java.util.List < String > failedResourceIds) {
+        public Builder failedResourceIds(java.util.List<String> failedResourceIds) {
             this.failedResourceIds = failedResourceIds;
             return this;
         }
@@ -72,7 +77,7 @@ public class MoveAppResourceResponseBody extends TeaModel {
         /**
          * <p>The IDs of the resources that were not found.</p>
          */
-        public Builder nonExistResourceIds(java.util.List < String > nonExistResourceIds) {
+        public Builder nonExistResourceIds(java.util.List<String> nonExistResourceIds) {
             this.nonExistResourceIds = nonExistResourceIds;
             return this;
         }

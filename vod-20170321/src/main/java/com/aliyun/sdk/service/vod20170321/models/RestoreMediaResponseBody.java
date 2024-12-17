@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -198,7 +203,7 @@ public class RestoreMediaResponseBody extends TeaModel {
      */
     public static class ForbiddenList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaForbiddenReasonDTO")
-        private java.util.List < MediaForbiddenReasonDTO> mediaForbiddenReasonDTO;
+        private java.util.List<MediaForbiddenReasonDTO> mediaForbiddenReasonDTO;
 
         private ForbiddenList(Builder builder) {
             this.mediaForbiddenReasonDTO = builder.mediaForbiddenReasonDTO;
@@ -215,17 +220,17 @@ public class RestoreMediaResponseBody extends TeaModel {
         /**
          * @return mediaForbiddenReasonDTO
          */
-        public java.util.List < MediaForbiddenReasonDTO> getMediaForbiddenReasonDTO() {
+        public java.util.List<MediaForbiddenReasonDTO> getMediaForbiddenReasonDTO() {
             return this.mediaForbiddenReasonDTO;
         }
 
         public static final class Builder {
-            private java.util.List < MediaForbiddenReasonDTO> mediaForbiddenReasonDTO; 
+            private java.util.List<MediaForbiddenReasonDTO> mediaForbiddenReasonDTO; 
 
             /**
              * MediaForbiddenReasonDTO.
              */
-            public Builder mediaForbiddenReasonDTO(java.util.List < MediaForbiddenReasonDTO> mediaForbiddenReasonDTO) {
+            public Builder mediaForbiddenReasonDTO(java.util.List<MediaForbiddenReasonDTO> mediaForbiddenReasonDTO) {
                 this.mediaForbiddenReasonDTO = mediaForbiddenReasonDTO;
                 return this;
             }
@@ -245,7 +250,7 @@ public class RestoreMediaResponseBody extends TeaModel {
      */
     public static class IgnoredList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaId")
-        private java.util.List < String > mediaId;
+        private java.util.List<String> mediaId;
 
         private IgnoredList(Builder builder) {
             this.mediaId = builder.mediaId;
@@ -262,12 +267,12 @@ public class RestoreMediaResponseBody extends TeaModel {
         /**
          * @return mediaId
          */
-        public java.util.List < String > getMediaId() {
+        public java.util.List<String> getMediaId() {
             return this.mediaId;
         }
 
         public static final class Builder {
-            private java.util.List < String > mediaId; 
+            private java.util.List<String> mediaId; 
 
             /**
              * <p>The ID of the media asset.</p>
@@ -275,7 +280,7 @@ public class RestoreMediaResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>fa10ee70898671edb99f6eb3690d****</p>
              */
-            public Builder mediaId(java.util.List < String > mediaId) {
+            public Builder mediaId(java.util.List<String> mediaId) {
                 this.mediaId = mediaId;
                 return this;
             }

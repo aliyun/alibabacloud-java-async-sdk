@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListVodTemplateResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VodTemplateInfoList")
-    private java.util.List < VodTemplateInfoList> vodTemplateInfoList;
+    private java.util.List<VodTemplateInfoList> vodTemplateInfoList;
 
     private ListVodTemplateResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListVodTemplateResponseBody extends TeaModel {
     /**
      * @return vodTemplateInfoList
      */
-    public java.util.List < VodTemplateInfoList> getVodTemplateInfoList() {
+    public java.util.List<VodTemplateInfoList> getVodTemplateInfoList() {
         return this.vodTemplateInfoList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < VodTemplateInfoList> vodTemplateInfoList; 
+        private java.util.List<VodTemplateInfoList> vodTemplateInfoList; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class ListVodTemplateResponseBody extends TeaModel {
         /**
          * <p>The snapshot templates.</p>
          */
-        public Builder vodTemplateInfoList(java.util.List < VodTemplateInfoList> vodTemplateInfoList) {
+        public Builder vodTemplateInfoList(java.util.List<VodTemplateInfoList> vodTemplateInfoList) {
             this.vodTemplateInfoList = vodTemplateInfoList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RegisterMediaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FailedFileURLs")
-    private java.util.List < String > failedFileURLs;
+    private java.util.List<String> failedFileURLs;
 
     @com.aliyun.core.annotation.NameInMap("RegisteredMediaList")
-    private java.util.List < RegisteredMediaList> registeredMediaList;
+    private java.util.List<RegisteredMediaList> registeredMediaList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class RegisterMediaResponseBody extends TeaModel {
     /**
      * @return failedFileURLs
      */
-    public java.util.List < String > getFailedFileURLs() {
+    public java.util.List<String> getFailedFileURLs() {
         return this.failedFileURLs;
     }
 
     /**
      * @return registeredMediaList
      */
-    public java.util.List < RegisteredMediaList> getRegisteredMediaList() {
+    public java.util.List<RegisteredMediaList> getRegisteredMediaList() {
         return this.registeredMediaList;
     }
 
@@ -57,14 +62,14 @@ public class RegisterMediaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > failedFileURLs; 
-        private java.util.List < RegisteredMediaList> registeredMediaList; 
+        private java.util.List<String> failedFileURLs; 
+        private java.util.List<RegisteredMediaList> registeredMediaList; 
         private String requestId; 
 
         /**
          * <p>The URLs of the media files that failed to be registered.</p>
          */
-        public Builder failedFileURLs(java.util.List < String > failedFileURLs) {
+        public Builder failedFileURLs(java.util.List<String> failedFileURLs) {
             this.failedFileURLs = failedFileURLs;
             return this;
         }
@@ -72,7 +77,7 @@ public class RegisterMediaResponseBody extends TeaModel {
         /**
          * <p>The media files that are registered, including newly registered and repeatedly registered media files.</p>
          */
-        public Builder registeredMediaList(java.util.List < RegisteredMediaList> registeredMediaList) {
+        public Builder registeredMediaList(java.util.List<RegisteredMediaList> registeredMediaList) {
             this.registeredMediaList = registeredMediaList;
             return this;
         }

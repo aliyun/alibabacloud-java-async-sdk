@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -161,7 +166,7 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
      */
     public static class TranscodeJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TranscodeJob")
-        private java.util.List < TranscodeJob> transcodeJob;
+        private java.util.List<TranscodeJob> transcodeJob;
 
         private TranscodeJobs(Builder builder) {
             this.transcodeJob = builder.transcodeJob;
@@ -178,17 +183,17 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         /**
          * @return transcodeJob
          */
-        public java.util.List < TranscodeJob> getTranscodeJob() {
+        public java.util.List<TranscodeJob> getTranscodeJob() {
             return this.transcodeJob;
         }
 
         public static final class Builder {
-            private java.util.List < TranscodeJob> transcodeJob; 
+            private java.util.List<TranscodeJob> transcodeJob; 
 
             /**
              * TranscodeJob.
              */
-            public Builder transcodeJob(java.util.List < TranscodeJob> transcodeJob) {
+            public Builder transcodeJob(java.util.List<TranscodeJob> transcodeJob) {
                 this.transcodeJob = transcodeJob;
                 return this;
             }

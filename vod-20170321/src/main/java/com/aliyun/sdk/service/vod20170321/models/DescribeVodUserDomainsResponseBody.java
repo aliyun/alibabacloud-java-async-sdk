@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -275,7 +280,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
      */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
-        private java.util.List < Source> source;
+        private java.util.List<Source> source;
 
         private Sources(Builder builder) {
             this.source = builder.source;
@@ -292,17 +297,17 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         /**
          * @return source
          */
-        public java.util.List < Source> getSource() {
+        public java.util.List<Source> getSource() {
             return this.source;
         }
 
         public static final class Builder {
-            private java.util.List < Source> source; 
+            private java.util.List<Source> source; 
 
             /**
              * Source.
              */
-            public Builder source(java.util.List < Source> source) {
+            public Builder source(java.util.List<Source> source) {
                 this.source = source;
                 return this;
             }
@@ -565,7 +570,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
      */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageData")
-        private java.util.List < PageData> pageData;
+        private java.util.List<PageData> pageData;
 
         private Domains(Builder builder) {
             this.pageData = builder.pageData;
@@ -582,17 +587,17 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         /**
          * @return pageData
          */
-        public java.util.List < PageData> getPageData() {
+        public java.util.List<PageData> getPageData() {
             return this.pageData;
         }
 
         public static final class Builder {
-            private java.util.List < PageData> pageData; 
+            private java.util.List<PageData> pageData; 
 
             /**
              * PageData.
              */
-            public Builder pageData(java.util.List < PageData> pageData) {
+            public Builder pageData(java.util.List<PageData> pageData) {
                 this.pageData = pageData;
                 return this;
             }

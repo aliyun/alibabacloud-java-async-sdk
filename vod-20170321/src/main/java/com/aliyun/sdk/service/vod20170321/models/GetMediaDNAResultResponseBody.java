@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -295,7 +300,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
      */
     public static class VideoDNA extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Detail")
-        private java.util.List < Detail> detail;
+        private java.util.List<Detail> detail;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private String primaryKey;
@@ -320,7 +325,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.List < Detail> getDetail() {
+        public java.util.List<Detail> getDetail() {
             return this.detail;
         }
 
@@ -339,14 +344,14 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Detail> detail; 
+            private java.util.List<Detail> detail; 
             private String primaryKey; 
             private String similarity; 
 
             /**
              * <p>The details of the matched video. Information such as the location and duration of the video is returned.</p>
              */
-            public Builder detail(java.util.List < Detail> detail) {
+            public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
                 return this;
             }
@@ -388,7 +393,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
      */
     public static class DNAResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VideoDNA")
-        private java.util.List < VideoDNA> videoDNA;
+        private java.util.List<VideoDNA> videoDNA;
 
         private DNAResult(Builder builder) {
             this.videoDNA = builder.videoDNA;
@@ -405,17 +410,17 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         /**
          * @return videoDNA
          */
-        public java.util.List < VideoDNA> getVideoDNA() {
+        public java.util.List<VideoDNA> getVideoDNA() {
             return this.videoDNA;
         }
 
         public static final class Builder {
-            private java.util.List < VideoDNA> videoDNA; 
+            private java.util.List<VideoDNA> videoDNA; 
 
             /**
              * <p>The video fingerprint recognition result.</p>
              */
-            public Builder videoDNA(java.util.List < VideoDNA> videoDNA) {
+            public Builder videoDNA(java.util.List<VideoDNA> videoDNA) {
                 this.videoDNA = videoDNA;
                 return this;
             }

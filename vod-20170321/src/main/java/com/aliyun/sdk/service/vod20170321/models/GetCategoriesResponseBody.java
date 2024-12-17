@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -450,7 +455,7 @@ public class GetCategoriesResponseBody extends TeaModel {
      */
     public static class SubCategories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
-        private java.util.List < SubCategoriesCategory> category;
+        private java.util.List<SubCategoriesCategory> category;
 
         private SubCategories(Builder builder) {
             this.category = builder.category;
@@ -467,17 +472,17 @@ public class GetCategoriesResponseBody extends TeaModel {
         /**
          * @return category
          */
-        public java.util.List < SubCategoriesCategory> getCategory() {
+        public java.util.List<SubCategoriesCategory> getCategory() {
             return this.category;
         }
 
         public static final class Builder {
-            private java.util.List < SubCategoriesCategory> category; 
+            private java.util.List<SubCategoriesCategory> category; 
 
             /**
              * <p>The information about the category.</p>
              */
-            public Builder category(java.util.List < SubCategoriesCategory> category) {
+            public Builder category(java.util.List<SubCategoriesCategory> category) {
                 this.category = category;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -608,19 +613,19 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
      */
     public static class MediaAuditResultTimeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ad")
-        private java.util.List < Ad> ad;
+        private java.util.List<Ad> ad;
 
         @com.aliyun.core.annotation.NameInMap("Live")
-        private java.util.List < Live> live;
+        private java.util.List<Live> live;
 
         @com.aliyun.core.annotation.NameInMap("Logo")
-        private java.util.List < Logo> logo;
+        private java.util.List<Logo> logo;
 
         @com.aliyun.core.annotation.NameInMap("Porn")
-        private java.util.List < Porn> porn;
+        private java.util.List<Porn> porn;
 
         @com.aliyun.core.annotation.NameInMap("Terrorism")
-        private java.util.List < Terrorism> terrorism;
+        private java.util.List<Terrorism> terrorism;
 
         private MediaAuditResultTimeline(Builder builder) {
             this.ad = builder.ad;
@@ -641,49 +646,49 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         /**
          * @return ad
          */
-        public java.util.List < Ad> getAd() {
+        public java.util.List<Ad> getAd() {
             return this.ad;
         }
 
         /**
          * @return live
          */
-        public java.util.List < Live> getLive() {
+        public java.util.List<Live> getLive() {
             return this.live;
         }
 
         /**
          * @return logo
          */
-        public java.util.List < Logo> getLogo() {
+        public java.util.List<Logo> getLogo() {
             return this.logo;
         }
 
         /**
          * @return porn
          */
-        public java.util.List < Porn> getPorn() {
+        public java.util.List<Porn> getPorn() {
             return this.porn;
         }
 
         /**
          * @return terrorism
          */
-        public java.util.List < Terrorism> getTerrorism() {
+        public java.util.List<Terrorism> getTerrorism() {
             return this.terrorism;
         }
 
         public static final class Builder {
-            private java.util.List < Ad> ad; 
-            private java.util.List < Live> live; 
-            private java.util.List < Logo> logo; 
-            private java.util.List < Porn> porn; 
-            private java.util.List < Terrorism> terrorism; 
+            private java.util.List<Ad> ad; 
+            private java.util.List<Live> live; 
+            private java.util.List<Logo> logo; 
+            private java.util.List<Porn> porn; 
+            private java.util.List<Terrorism> terrorism; 
 
             /**
              * <p>The collection of ad timelines.</p>
              */
-            public Builder ad(java.util.List < Ad> ad) {
+            public Builder ad(java.util.List<Ad> ad) {
                 this.ad = ad;
                 return this;
             }
@@ -691,7 +696,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             /**
              * <p>The collection of undesirable content timelines.</p>
              */
-            public Builder live(java.util.List < Live> live) {
+            public Builder live(java.util.List<Live> live) {
                 this.live = live;
                 return this;
             }
@@ -699,7 +704,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             /**
              * <p>The collection of logo timelines.</p>
              */
-            public Builder logo(java.util.List < Logo> logo) {
+            public Builder logo(java.util.List<Logo> logo) {
                 this.logo = logo;
                 return this;
             }
@@ -707,7 +712,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             /**
              * <p>The collection of pornographic content timelines.</p>
              */
-            public Builder porn(java.util.List < Porn> porn) {
+            public Builder porn(java.util.List<Porn> porn) {
                 this.porn = porn;
                 return this;
             }
@@ -715,7 +720,7 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             /**
              * <p>The collection of terrorist content timelines.</p>
              */
-            public Builder terrorism(java.util.List < Terrorism> terrorism) {
+            public Builder terrorism(java.util.List<Terrorism> terrorism) {
                 this.terrorism = terrorism;
                 return this;
             }

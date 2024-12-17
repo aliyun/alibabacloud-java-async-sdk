@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MaterialList")
-    private java.util.List < MaterialList> materialList;
+    private java.util.List<MaterialList> materialList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     /**
      * @return materialList
      */
-    public java.util.List < MaterialList> getMaterialList() {
+    public java.util.List<MaterialList> getMaterialList() {
         return this.materialList;
     }
 
@@ -46,13 +51,13 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MaterialList> materialList; 
+        private java.util.List<MaterialList> materialList; 
         private String requestId; 
 
         /**
          * <p>The materials.</p>
          */
-        public Builder materialList(java.util.List < MaterialList> materialList) {
+        public Builder materialList(java.util.List<MaterialList> materialList) {
             this.materialList = materialList;
             return this;
         }
@@ -115,13 +120,13 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         private Long size;
 
         @com.aliyun.core.annotation.NameInMap("Snapshots")
-        private java.util.List < String > snapshots;
+        private java.util.List<String> snapshots;
 
         @com.aliyun.core.annotation.NameInMap("SpriteConfig")
         private String spriteConfig;
 
         @com.aliyun.core.annotation.NameInMap("Sprites")
-        private java.util.List < String > sprites;
+        private java.util.List<String> sprites;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -240,7 +245,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         /**
          * @return snapshots
          */
-        public java.util.List < String > getSnapshots() {
+        public java.util.List<String> getSnapshots() {
             return this.snapshots;
         }
 
@@ -254,7 +259,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         /**
          * @return sprites
          */
-        public java.util.List < String > getSprites() {
+        public java.util.List<String> getSprites() {
             return this.sprites;
         }
 
@@ -291,9 +296,9 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             private String materialType; 
             private String modifyTime; 
             private Long size; 
-            private java.util.List < String > snapshots; 
+            private java.util.List<String> snapshots; 
             private String spriteConfig; 
-            private java.util.List < String > sprites; 
+            private java.util.List<String> sprites; 
             private String status; 
             private String tags; 
             private String title; 
@@ -424,7 +429,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             /**
              * <p>The URLs of snapshots.</p>
              */
-            public Builder snapshots(java.util.List < String > snapshots) {
+            public Builder snapshots(java.util.List<String> snapshots) {
                 this.snapshots = snapshots;
                 return this;
             }
@@ -443,7 +448,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             /**
              * <p>The URLs of sprite snapshots.</p>
              */
-            public Builder sprites(java.util.List < String > sprites) {
+            public Builder sprites(java.util.List<String> sprites) {
                 this.sprites = sprites;
                 return this;
             }

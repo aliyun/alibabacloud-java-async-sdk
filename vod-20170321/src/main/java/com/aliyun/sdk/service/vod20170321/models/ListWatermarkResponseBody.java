@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListWatermarkResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("WatermarkInfos")
-    private java.util.List < WatermarkInfos> watermarkInfos;
+    private java.util.List<WatermarkInfos> watermarkInfos;
 
     private ListWatermarkResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListWatermarkResponseBody extends TeaModel {
     /**
      * @return watermarkInfos
      */
-    public java.util.List < WatermarkInfos> getWatermarkInfos() {
+    public java.util.List<WatermarkInfos> getWatermarkInfos() {
         return this.watermarkInfos;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < WatermarkInfos> watermarkInfos; 
+        private java.util.List<WatermarkInfos> watermarkInfos; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class ListWatermarkResponseBody extends TeaModel {
         /**
          * <p>The information about the watermark template.</p>
          */
-        public Builder watermarkInfos(java.util.List < WatermarkInfos> watermarkInfos) {
+        public Builder watermarkInfos(java.util.List<WatermarkInfos> watermarkInfos) {
             this.watermarkInfos = watermarkInfos;
             return this;
         }

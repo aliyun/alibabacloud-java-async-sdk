@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -346,7 +351,7 @@ public class ListAIJobResponseBody extends TeaModel {
      */
     public static class AIJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AIJob")
-        private java.util.List < AIJob> AIJob;
+        private java.util.List<AIJob> AIJob;
 
         private AIJobList(Builder builder) {
             this.AIJob = builder.AIJob;
@@ -363,17 +368,17 @@ public class ListAIJobResponseBody extends TeaModel {
         /**
          * @return AIJob
          */
-        public java.util.List < AIJob> getAIJob() {
+        public java.util.List<AIJob> getAIJob() {
             return this.AIJob;
         }
 
         public static final class Builder {
-            private java.util.List < AIJob> AIJob; 
+            private java.util.List<AIJob> AIJob; 
 
             /**
              * AIJob.
              */
-            public Builder AIJob(java.util.List < AIJob> AIJob) {
+            public Builder AIJob(java.util.List<AIJob> AIJob) {
                 this.AIJob = AIJob;
                 return this;
             }
@@ -393,7 +398,7 @@ public class ListAIJobResponseBody extends TeaModel {
      */
     public static class NonExistAIJobIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private NonExistAIJobIds(Builder builder) {
             this.string = builder.string;
@@ -410,17 +415,17 @@ public class ListAIJobResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }

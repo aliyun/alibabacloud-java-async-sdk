@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAIImageJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AIImageJobList")
-    private java.util.List < AIImageJobList> AIImageJobList;
+    private java.util.List<AIImageJobList> AIImageJobList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
     /**
      * @return AIImageJobList
      */
-    public java.util.List < AIImageJobList> getAIImageJobList() {
+    public java.util.List<AIImageJobList> getAIImageJobList() {
         return this.AIImageJobList;
     }
 
@@ -46,13 +51,13 @@ public class GetAIImageJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AIImageJobList> AIImageJobList; 
+        private java.util.List<AIImageJobList> AIImageJobList; 
         private String requestId; 
 
         /**
          * <p>The image AI processing jobs.</p>
          */
-        public Builder AIImageJobList(java.util.List < AIImageJobList> AIImageJobList) {
+        public Builder AIImageJobList(java.util.List<AIImageJobList> AIImageJobList) {
             this.AIImageJobList = AIImageJobList;
             return this;
         }

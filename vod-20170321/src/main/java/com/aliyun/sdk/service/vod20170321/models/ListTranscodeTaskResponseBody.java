@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TranscodeTaskList")
-    private java.util.List < TranscodeTaskList> transcodeTaskList;
+    private java.util.List<TranscodeTaskList> transcodeTaskList;
 
     private ListTranscodeTaskResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
     /**
      * @return transcodeTaskList
      */
-    public java.util.List < TranscodeTaskList> getTranscodeTaskList() {
+    public java.util.List<TranscodeTaskList> getTranscodeTaskList() {
         return this.transcodeTaskList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TranscodeTaskList> transcodeTaskList; 
+        private java.util.List<TranscodeTaskList> transcodeTaskList; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
         /**
          * <p>Details about transcoding tasks.</p>
          */
-        public Builder transcodeTaskList(java.util.List < TranscodeTaskList> transcodeTaskList) {
+        public Builder transcodeTaskList(java.util.List<TranscodeTaskList> transcodeTaskList) {
             this.transcodeTaskList = transcodeTaskList;
             return this;
         }

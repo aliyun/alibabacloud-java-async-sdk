@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -133,7 +138,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         private String video;
 
         @com.aliyun.core.annotation.NameInMap("WatermarkIds")
-        private java.util.List < String > watermarkIds;
+        private java.util.List<String> watermarkIds;
 
         private TranscodeTemplateList(Builder builder) {
             this.audio = builder.audio;
@@ -286,7 +291,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         /**
          * @return watermarkIds
          */
-        public java.util.List < String > getWatermarkIds() {
+        public java.util.List<String> getWatermarkIds() {
             return this.watermarkIds;
         }
 
@@ -308,7 +313,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             private String transcodeTemplateId; 
             private String type; 
             private String video; 
-            private java.util.List < String > watermarkIds; 
+            private java.util.List<String> watermarkIds; 
 
             /**
              * <p>The transcoding configurations of the audio stream. The value is a JSON string.</p>
@@ -536,7 +541,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             /**
              * <p>The IDs of the associated watermarks.</p>
              */
-            public Builder watermarkIds(java.util.List < String > watermarkIds) {
+            public Builder watermarkIds(java.util.List<String> watermarkIds) {
                 this.watermarkIds = watermarkIds;
                 return this;
             }
@@ -577,7 +582,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         private String transcodeTemplateGroupId;
 
         @com.aliyun.core.annotation.NameInMap("TranscodeTemplateList")
-        private java.util.List < TranscodeTemplateList> transcodeTemplateList;
+        private java.util.List<TranscodeTemplateList> transcodeTemplateList;
 
         private TranscodeTemplateGroup(Builder builder) {
             this.appId = builder.appId;
@@ -650,7 +655,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         /**
          * @return transcodeTemplateList
          */
-        public java.util.List < TranscodeTemplateList> getTranscodeTemplateList() {
+        public java.util.List<TranscodeTemplateList> getTranscodeTemplateList() {
             return this.transcodeTemplateList;
         }
 
@@ -662,7 +667,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             private String modifyTime; 
             private String name; 
             private String transcodeTemplateGroupId; 
-            private java.util.List < TranscodeTemplateList> transcodeTemplateList; 
+            private java.util.List<TranscodeTemplateList> transcodeTemplateList; 
 
             /**
              * <p>The ID of the application.</p>
@@ -752,7 +757,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             /**
              * <p>The information about the transcoding templates.</p>
              */
-            public Builder transcodeTemplateList(java.util.List < TranscodeTemplateList> transcodeTemplateList) {
+            public Builder transcodeTemplateList(java.util.List<TranscodeTemplateList> transcodeTemplateList) {
                 this.transcodeTemplateList = transcodeTemplateList;
                 return this;
             }

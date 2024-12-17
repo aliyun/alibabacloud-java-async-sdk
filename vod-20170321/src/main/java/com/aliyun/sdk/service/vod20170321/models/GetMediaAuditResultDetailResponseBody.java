@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -431,7 +436,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
      */
     public static class MediaAuditResultDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
@@ -452,7 +457,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -464,13 +469,13 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer total; 
 
             /**
              * <p>The review results returned.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

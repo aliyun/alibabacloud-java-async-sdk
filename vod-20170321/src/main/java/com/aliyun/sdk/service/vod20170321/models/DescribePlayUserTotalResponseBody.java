@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -456,7 +461,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
      */
     public static class UserPlayStatisTotals extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserPlayStatisTotal")
-        private java.util.List < UserPlayStatisTotal> userPlayStatisTotal;
+        private java.util.List<UserPlayStatisTotal> userPlayStatisTotal;
 
         private UserPlayStatisTotals(Builder builder) {
             this.userPlayStatisTotal = builder.userPlayStatisTotal;
@@ -473,17 +478,17 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         /**
          * @return userPlayStatisTotal
          */
-        public java.util.List < UserPlayStatisTotal> getUserPlayStatisTotal() {
+        public java.util.List<UserPlayStatisTotal> getUserPlayStatisTotal() {
             return this.userPlayStatisTotal;
         }
 
         public static final class Builder {
-            private java.util.List < UserPlayStatisTotal> userPlayStatisTotal; 
+            private java.util.List<UserPlayStatisTotal> userPlayStatisTotal; 
 
             /**
              * UserPlayStatisTotal.
              */
-            public Builder userPlayStatisTotal(java.util.List < UserPlayStatisTotal> userPlayStatisTotal) {
+            public Builder userPlayStatisTotal(java.util.List<UserPlayStatisTotal> userPlayStatisTotal) {
                 this.userPlayStatisTotal = userPlayStatisTotal;
                 return this;
             }

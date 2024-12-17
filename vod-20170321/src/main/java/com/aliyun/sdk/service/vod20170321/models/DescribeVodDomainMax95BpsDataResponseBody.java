@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -306,7 +311,7 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
      */
     public static class DetailData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Max95Detail")
-        private java.util.List < Max95Detail> max95Detail;
+        private java.util.List<Max95Detail> max95Detail;
 
         private DetailData(Builder builder) {
             this.max95Detail = builder.max95Detail;
@@ -323,17 +328,17 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         /**
          * @return max95Detail
          */
-        public java.util.List < Max95Detail> getMax95Detail() {
+        public java.util.List<Max95Detail> getMax95Detail() {
             return this.max95Detail;
         }
 
         public static final class Builder {
-            private java.util.List < Max95Detail> max95Detail; 
+            private java.util.List<Max95Detail> max95Detail; 
 
             /**
              * Max95Detail.
              */
-            public Builder max95Detail(java.util.List < Max95Detail> max95Detail) {
+            public Builder max95Detail(java.util.List<Max95Detail> max95Detail) {
                 this.max95Detail = max95Detail;
                 return this;
             }

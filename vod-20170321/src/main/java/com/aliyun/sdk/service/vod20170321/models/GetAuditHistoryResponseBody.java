@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAuditHistoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Histories")
-    private java.util.List < Histories> histories;
+    private java.util.List<Histories> histories;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,7 +47,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
     /**
      * @return histories
      */
-    public java.util.List < Histories> getHistories() {
+    public java.util.List<Histories> getHistories() {
         return this.histories;
     }
 
@@ -68,7 +73,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Histories> histories; 
+        private java.util.List<Histories> histories; 
         private String requestId; 
         private String status; 
         private Long total; 
@@ -76,7 +81,7 @@ public class GetAuditHistoryResponseBody extends TeaModel {
         /**
          * <p>The review records.</p>
          */
-        public Builder histories(java.util.List < Histories> histories) {
+        public Builder histories(java.util.List<Histories> histories) {
             this.histories = histories;
             return this;
         }

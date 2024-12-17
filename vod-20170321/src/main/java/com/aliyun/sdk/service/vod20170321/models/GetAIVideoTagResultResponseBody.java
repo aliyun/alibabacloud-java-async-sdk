@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -135,7 +140,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         private String tag;
 
         @com.aliyun.core.annotation.NameInMap("Times")
-        private java.util.List < String > times;
+        private java.util.List<String> times;
 
         private Keyword(Builder builder) {
             this.tag = builder.tag;
@@ -160,13 +165,13 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         /**
          * @return times
          */
-        public java.util.List < String > getTimes() {
+        public java.util.List<String> getTimes() {
             return this.times;
         }
 
         public static final class Builder {
             private String tag; 
-            private java.util.List < String > times; 
+            private java.util.List<String> times; 
 
             /**
              * <p>The tag string.</p>
@@ -182,7 +187,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             /**
              * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
              */
-            public Builder times(java.util.List < String > times) {
+            public Builder times(java.util.List<String> times) {
                 this.times = times;
                 return this;
             }
@@ -205,7 +210,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         private String tag;
 
         @com.aliyun.core.annotation.NameInMap("Times")
-        private java.util.List < String > times;
+        private java.util.List<String> times;
 
         private Location(Builder builder) {
             this.tag = builder.tag;
@@ -230,13 +235,13 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         /**
          * @return times
          */
-        public java.util.List < String > getTimes() {
+        public java.util.List<String> getTimes() {
             return this.times;
         }
 
         public static final class Builder {
             private String tag; 
-            private java.util.List < String > times; 
+            private java.util.List<String> times; 
 
             /**
              * <p>The tag string.</p>
@@ -252,7 +257,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             /**
              * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
              */
-            public Builder times(java.util.List < String > times) {
+            public Builder times(java.util.List<String> times) {
                 this.times = times;
                 return this;
             }
@@ -278,7 +283,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         private String tag;
 
         @com.aliyun.core.annotation.NameInMap("Times")
-        private java.util.List < String > times;
+        private java.util.List<String> times;
 
         private Person(Builder builder) {
             this.faceUrl = builder.faceUrl;
@@ -311,14 +316,14 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         /**
          * @return times
          */
-        public java.util.List < String > getTimes() {
+        public java.util.List<String> getTimes() {
             return this.times;
         }
 
         public static final class Builder {
             private String faceUrl; 
             private String tag; 
-            private java.util.List < String > times; 
+            private java.util.List<String> times; 
 
             /**
              * <p>The URL of the profile photo.</p>
@@ -348,7 +353,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             /**
              * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
              */
-            public Builder times(java.util.List < String > times) {
+            public Builder times(java.util.List<String> times) {
                 this.times = times;
                 return this;
             }
@@ -371,7 +376,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         private String tag;
 
         @com.aliyun.core.annotation.NameInMap("Times")
-        private java.util.List < String > times;
+        private java.util.List<String> times;
 
         private Time(Builder builder) {
             this.tag = builder.tag;
@@ -396,13 +401,13 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         /**
          * @return times
          */
-        public java.util.List < String > getTimes() {
+        public java.util.List<String> getTimes() {
             return this.times;
         }
 
         public static final class Builder {
             private String tag; 
-            private java.util.List < String > times; 
+            private java.util.List<String> times; 
 
             /**
              * <p>The tag string.</p>
@@ -418,7 +423,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             /**
              * <p>The points in time when the tags are displayed. Unit: milliseconds.</p>
              */
-            public Builder times(java.util.List < String > times) {
+            public Builder times(java.util.List<String> times) {
                 this.times = times;
                 return this;
             }
@@ -438,19 +443,19 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
      */
     public static class VideoTagResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
-        private java.util.List < Category> category;
+        private java.util.List<Category> category;
 
         @com.aliyun.core.annotation.NameInMap("Keyword")
-        private java.util.List < Keyword> keyword;
+        private java.util.List<Keyword> keyword;
 
         @com.aliyun.core.annotation.NameInMap("Location")
-        private java.util.List < Location> location;
+        private java.util.List<Location> location;
 
         @com.aliyun.core.annotation.NameInMap("Person")
-        private java.util.List < Person> person;
+        private java.util.List<Person> person;
 
         @com.aliyun.core.annotation.NameInMap("Time")
-        private java.util.List < Time> time;
+        private java.util.List<Time> time;
 
         private VideoTagResult(Builder builder) {
             this.category = builder.category;
@@ -471,49 +476,49 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         /**
          * @return category
          */
-        public java.util.List < Category> getCategory() {
+        public java.util.List<Category> getCategory() {
             return this.category;
         }
 
         /**
          * @return keyword
          */
-        public java.util.List < Keyword> getKeyword() {
+        public java.util.List<Keyword> getKeyword() {
             return this.keyword;
         }
 
         /**
          * @return location
          */
-        public java.util.List < Location> getLocation() {
+        public java.util.List<Location> getLocation() {
             return this.location;
         }
 
         /**
          * @return person
          */
-        public java.util.List < Person> getPerson() {
+        public java.util.List<Person> getPerson() {
             return this.person;
         }
 
         /**
          * @return time
          */
-        public java.util.List < Time> getTime() {
+        public java.util.List<Time> getTime() {
             return this.time;
         }
 
         public static final class Builder {
-            private java.util.List < Category> category; 
-            private java.util.List < Keyword> keyword; 
-            private java.util.List < Location> location; 
-            private java.util.List < Person> person; 
-            private java.util.List < Time> time; 
+            private java.util.List<Category> category; 
+            private java.util.List<Keyword> keyword; 
+            private java.util.List<Location> location; 
+            private java.util.List<Person> person; 
+            private java.util.List<Time> time; 
 
             /**
              * <p>The video categories.</p>
              */
-            public Builder category(java.util.List < Category> category) {
+            public Builder category(java.util.List<Category> category) {
                 this.category = category;
                 return this;
             }
@@ -521,7 +526,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             /**
              * <p>The keyword tags.</p>
              */
-            public Builder keyword(java.util.List < Keyword> keyword) {
+            public Builder keyword(java.util.List<Keyword> keyword) {
                 this.keyword = keyword;
                 return this;
             }
@@ -529,7 +534,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             /**
              * <p>The location tags.</p>
              */
-            public Builder location(java.util.List < Location> location) {
+            public Builder location(java.util.List<Location> location) {
                 this.location = location;
                 return this;
             }
@@ -537,7 +542,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             /**
              * <p>The figure tags.</p>
              */
-            public Builder person(java.util.List < Person> person) {
+            public Builder person(java.util.List<Person> person) {
                 this.person = person;
                 return this;
             }
@@ -545,7 +550,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             /**
              * <p>The time tags.</p>
              */
-            public Builder time(java.util.List < Time> time) {
+            public Builder time(java.util.List<Time> time) {
                 this.time = time;
                 return this;
             }

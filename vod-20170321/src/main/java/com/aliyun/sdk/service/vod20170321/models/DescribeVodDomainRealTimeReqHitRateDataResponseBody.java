@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReqHitRateDataModel")
-        private java.util.List < ReqHitRateDataModel> reqHitRateDataModel;
+        private java.util.List<ReqHitRateDataModel> reqHitRateDataModel;
 
         private Data(Builder builder) {
             this.reqHitRateDataModel = builder.reqHitRateDataModel;
@@ -172,17 +177,17 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
         /**
          * @return reqHitRateDataModel
          */
-        public java.util.List < ReqHitRateDataModel> getReqHitRateDataModel() {
+        public java.util.List<ReqHitRateDataModel> getReqHitRateDataModel() {
             return this.reqHitRateDataModel;
         }
 
         public static final class Builder {
-            private java.util.List < ReqHitRateDataModel> reqHitRateDataModel; 
+            private java.util.List<ReqHitRateDataModel> reqHitRateDataModel; 
 
             /**
              * ReqHitRateDataModel.
              */
-            public Builder reqHitRateDataModel(java.util.List < ReqHitRateDataModel> reqHitRateDataModel) {
+            public Builder reqHitRateDataModel(java.util.List<ReqHitRateDataModel> reqHitRateDataModel) {
                 this.reqHitRateDataModel = reqHitRateDataModel;
                 return this;
             }

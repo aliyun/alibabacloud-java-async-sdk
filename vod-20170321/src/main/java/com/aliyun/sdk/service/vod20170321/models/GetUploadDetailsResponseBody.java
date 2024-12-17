@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,16 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetUploadDetailsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ForbiddenMediaIds")
-    private java.util.List < String > forbiddenMediaIds;
+    private java.util.List<String> forbiddenMediaIds;
 
     @com.aliyun.core.annotation.NameInMap("NonExistMediaIds")
-    private java.util.List < String > nonExistMediaIds;
+    private java.util.List<String> nonExistMediaIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UploadDetails")
-    private java.util.List < UploadDetails> uploadDetails;
+    private java.util.List<UploadDetails> uploadDetails;
 
     private GetUploadDetailsResponseBody(Builder builder) {
         this.forbiddenMediaIds = builder.forbiddenMediaIds;
@@ -42,14 +47,14 @@ public class GetUploadDetailsResponseBody extends TeaModel {
     /**
      * @return forbiddenMediaIds
      */
-    public java.util.List < String > getForbiddenMediaIds() {
+    public java.util.List<String> getForbiddenMediaIds() {
         return this.forbiddenMediaIds;
     }
 
     /**
      * @return nonExistMediaIds
      */
-    public java.util.List < String > getNonExistMediaIds() {
+    public java.util.List<String> getNonExistMediaIds() {
         return this.nonExistMediaIds;
     }
 
@@ -63,20 +68,20 @@ public class GetUploadDetailsResponseBody extends TeaModel {
     /**
      * @return uploadDetails
      */
-    public java.util.List < UploadDetails> getUploadDetails() {
+    public java.util.List<UploadDetails> getUploadDetails() {
         return this.uploadDetails;
     }
 
     public static final class Builder {
-        private java.util.List < String > forbiddenMediaIds; 
-        private java.util.List < String > nonExistMediaIds; 
+        private java.util.List<String> forbiddenMediaIds; 
+        private java.util.List<String> nonExistMediaIds; 
         private String requestId; 
-        private java.util.List < UploadDetails> uploadDetails; 
+        private java.util.List<UploadDetails> uploadDetails; 
 
         /**
          * <p>The IDs of the media files that cannot be accessed.</p>
          */
-        public Builder forbiddenMediaIds(java.util.List < String > forbiddenMediaIds) {
+        public Builder forbiddenMediaIds(java.util.List<String> forbiddenMediaIds) {
             this.forbiddenMediaIds = forbiddenMediaIds;
             return this;
         }
@@ -84,7 +89,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         /**
          * <p>The IDs of the media files that do not exist.</p>
          */
-        public Builder nonExistMediaIds(java.util.List < String > nonExistMediaIds) {
+        public Builder nonExistMediaIds(java.util.List<String> nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
             return this;
         }
@@ -103,7 +108,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         /**
          * <p>The upload details.</p>
          */
-        public Builder uploadDetails(java.util.List < UploadDetails> uploadDetails) {
+        public Builder uploadDetails(java.util.List<UploadDetails> uploadDetails) {
             this.uploadDetails = uploadDetails;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -187,7 +192,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataItem")
-        private java.util.List < DataItem> dataItem;
+        private java.util.List<DataItem> dataItem;
 
         private Data(Builder builder) {
             this.dataItem = builder.dataItem;
@@ -204,17 +209,17 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         /**
          * @return dataItem
          */
-        public java.util.List < DataItem> getDataItem() {
+        public java.util.List<DataItem> getDataItem() {
             return this.dataItem;
         }
 
         public static final class Builder {
-            private java.util.List < DataItem> dataItem; 
+            private java.util.List<DataItem> dataItem; 
 
             /**
              * DataItem.
              */
-            public Builder dataItem(java.util.List < DataItem> dataItem) {
+            public Builder dataItem(java.util.List<DataItem> dataItem) {
                 this.dataItem = dataItem;
                 return this;
             }
@@ -304,7 +309,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
      */
     public static class AIData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AIDataItem")
-        private java.util.List < AIDataItem> AIDataItem;
+        private java.util.List<AIDataItem> AIDataItem;
 
         private AIData(Builder builder) {
             this.AIDataItem = builder.AIDataItem;
@@ -321,17 +326,17 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         /**
          * @return AIDataItem
          */
-        public java.util.List < AIDataItem> getAIDataItem() {
+        public java.util.List<AIDataItem> getAIDataItem() {
             return this.AIDataItem;
         }
 
         public static final class Builder {
-            private java.util.List < AIDataItem> AIDataItem; 
+            private java.util.List<AIDataItem> AIDataItem; 
 
             /**
              * AIDataItem.
              */
-            public Builder AIDataItem(java.util.List < AIDataItem> AIDataItem) {
+            public Builder AIDataItem(java.util.List<AIDataItem> AIDataItem) {
                 this.AIDataItem = AIDataItem;
                 return this;
             }

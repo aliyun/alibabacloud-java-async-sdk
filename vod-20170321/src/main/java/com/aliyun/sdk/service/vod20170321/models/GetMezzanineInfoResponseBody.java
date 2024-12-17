@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1060,7 +1065,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
      */
     public static class Mezzanine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioStreamList")
-        private java.util.List < AudioStreamList> audioStreamList;
+        private java.util.List<AudioStreamList> audioStreamList;
 
         @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
@@ -1108,7 +1113,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         private String videoId;
 
         @com.aliyun.core.annotation.NameInMap("VideoStreamList")
-        private java.util.List < VideoStreamList> videoStreamList;
+        private java.util.List<VideoStreamList> videoStreamList;
 
         @com.aliyun.core.annotation.NameInMap("Width")
         private Long width;
@@ -1145,7 +1150,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         /**
          * @return audioStreamList
          */
-        public java.util.List < AudioStreamList> getAudioStreamList() {
+        public java.util.List<AudioStreamList> getAudioStreamList() {
             return this.audioStreamList;
         }
 
@@ -1257,7 +1262,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         /**
          * @return videoStreamList
          */
-        public java.util.List < VideoStreamList> getVideoStreamList() {
+        public java.util.List<VideoStreamList> getVideoStreamList() {
             return this.videoStreamList;
         }
 
@@ -1269,7 +1274,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AudioStreamList> audioStreamList; 
+            private java.util.List<AudioStreamList> audioStreamList; 
             private String bitrate; 
             private String creationTime; 
             private String duration; 
@@ -1285,13 +1290,13 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             private String status; 
             private String storageClass; 
             private String videoId; 
-            private java.util.List < VideoStreamList> videoStreamList; 
+            private java.util.List<VideoStreamList> videoStreamList; 
             private Long width; 
 
             /**
              * <p>The codec time base.</p>
              */
-            public Builder audioStreamList(java.util.List < AudioStreamList> audioStreamList) {
+            public Builder audioStreamList(java.util.List<AudioStreamList> audioStreamList) {
                 this.audioStreamList = audioStreamList;
                 return this;
             }
@@ -1493,7 +1498,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             /**
              * <p>The HDR type of the video stream.</p>
              */
-            public Builder videoStreamList(java.util.List < VideoStreamList> videoStreamList) {
+            public Builder videoStreamList(java.util.List<VideoStreamList> videoStreamList) {
                 this.videoStreamList = videoStreamList;
                 return this;
             }

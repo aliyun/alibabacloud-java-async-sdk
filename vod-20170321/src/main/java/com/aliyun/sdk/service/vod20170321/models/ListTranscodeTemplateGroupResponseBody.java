@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroupList")
-    private java.util.List < TranscodeTemplateGroupList> transcodeTemplateGroupList;
+    private java.util.List<TranscodeTemplateGroupList> transcodeTemplateGroupList;
 
     private ListTranscodeTemplateGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
     /**
      * @return transcodeTemplateGroupList
      */
-    public java.util.List < TranscodeTemplateGroupList> getTranscodeTemplateGroupList() {
+    public java.util.List<TranscodeTemplateGroupList> getTranscodeTemplateGroupList() {
         return this.transcodeTemplateGroupList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TranscodeTemplateGroupList> transcodeTemplateGroupList; 
+        private java.util.List<TranscodeTemplateGroupList> transcodeTemplateGroupList; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
         /**
          * <p>The transcoding template groups.</p>
          */
-        public Builder transcodeTemplateGroupList(java.util.List < TranscodeTemplateGroupList> transcodeTemplateGroupList) {
+        public Builder transcodeTemplateGroupList(java.util.List<TranscodeTemplateGroupList> transcodeTemplateGroupList) {
             this.transcodeTemplateGroupList = transcodeTemplateGroupList;
             return this;
         }

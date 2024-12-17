@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppPolicyList")
-    private java.util.List < AppPolicyList> appPolicyList;
+    private java.util.List<AppPolicyList> appPolicyList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     /**
      * @return appPolicyList
      */
-    public java.util.List < AppPolicyList> getAppPolicyList() {
+    public java.util.List<AppPolicyList> getAppPolicyList() {
         return this.appPolicyList;
     }
 
@@ -46,7 +51,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AppPolicyList> appPolicyList; 
+        private java.util.List<AppPolicyList> appPolicyList; 
         private String requestId; 
 
         /**
@@ -55,7 +60,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
          * <p>A maximum of 100 entries can be returned.</p>
          * </blockquote>
          */
-        public Builder appPolicyList(java.util.List < AppPolicyList> appPolicyList) {
+        public Builder appPolicyList(java.util.List<AppPolicyList> appPolicyList) {
             this.appPolicyList = appPolicyList;
             return this;
         }

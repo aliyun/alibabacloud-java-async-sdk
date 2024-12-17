@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -372,7 +377,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String label;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
@@ -409,7 +414,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -436,7 +441,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String label; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private String suggestion; 
             private String type; 
             private String url; 
@@ -460,7 +465,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>Details of image review results.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
@@ -900,7 +905,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String averageScore;
 
         @com.aliyun.core.annotation.NameInMap("CounterList")
-        private java.util.List < CounterList> counterList;
+        private java.util.List<CounterList> counterList;
 
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -912,7 +917,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String suggestion;
 
         @com.aliyun.core.annotation.NameInMap("TopList")
-        private java.util.List < TopList> topList;
+        private java.util.List<TopList> topList;
 
         private AdResult(Builder builder) {
             this.averageScore = builder.averageScore;
@@ -941,7 +946,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return counterList
          */
-        public java.util.List < CounterList> getCounterList() {
+        public java.util.List<CounterList> getCounterList() {
             return this.counterList;
         }
 
@@ -969,17 +974,17 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return topList
          */
-        public java.util.List < TopList> getTopList() {
+        public java.util.List<TopList> getTopList() {
             return this.topList;
         }
 
         public static final class Builder {
             private String averageScore; 
-            private java.util.List < CounterList> counterList; 
+            private java.util.List<CounterList> counterList; 
             private String label; 
             private String maxScore; 
             private String suggestion; 
-            private java.util.List < TopList> topList; 
+            private java.util.List<TopList> topList; 
 
             /**
              * <p>The average score of the review results.</p>
@@ -995,7 +1000,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The statistics about tag frames.</p>
              */
-            public Builder counterList(java.util.List < CounterList> counterList) {
+            public Builder counterList(java.util.List<CounterList> counterList) {
                 this.counterList = counterList;
                 return this;
             }
@@ -1045,7 +1050,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The information about the image with the highest score of the category that is indicated by Label.</p>
              */
-            public Builder topList(java.util.List < TopList> topList) {
+            public Builder topList(java.util.List<TopList> topList) {
                 this.topList = topList;
                 return this;
             }
@@ -1268,7 +1273,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String averageScore;
 
         @com.aliyun.core.annotation.NameInMap("CounterList")
-        private java.util.List < LiveResultCounterList> counterList;
+        private java.util.List<LiveResultCounterList> counterList;
 
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -1280,7 +1285,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String suggestion;
 
         @com.aliyun.core.annotation.NameInMap("TopList")
-        private java.util.List < LiveResultTopList> topList;
+        private java.util.List<LiveResultTopList> topList;
 
         private LiveResult(Builder builder) {
             this.averageScore = builder.averageScore;
@@ -1309,7 +1314,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return counterList
          */
-        public java.util.List < LiveResultCounterList> getCounterList() {
+        public java.util.List<LiveResultCounterList> getCounterList() {
             return this.counterList;
         }
 
@@ -1337,17 +1342,17 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return topList
          */
-        public java.util.List < LiveResultTopList> getTopList() {
+        public java.util.List<LiveResultTopList> getTopList() {
             return this.topList;
         }
 
         public static final class Builder {
             private String averageScore; 
-            private java.util.List < LiveResultCounterList> counterList; 
+            private java.util.List<LiveResultCounterList> counterList; 
             private String label; 
             private String maxScore; 
             private String suggestion; 
-            private java.util.List < LiveResultTopList> topList; 
+            private java.util.List<LiveResultTopList> topList; 
 
             /**
              * <p>The average score of the review results.</p>
@@ -1363,7 +1368,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The statistics about tag frames.</p>
              */
-            public Builder counterList(java.util.List < LiveResultCounterList> counterList) {
+            public Builder counterList(java.util.List<LiveResultCounterList> counterList) {
                 this.counterList = counterList;
                 return this;
             }
@@ -1413,7 +1418,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The information about the image with the highest score of the category that is indicated by Label.</p>
              */
-            public Builder topList(java.util.List < LiveResultTopList> topList) {
+            public Builder topList(java.util.List<LiveResultTopList> topList) {
                 this.topList = topList;
                 return this;
             }
@@ -1636,7 +1641,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String averageScore;
 
         @com.aliyun.core.annotation.NameInMap("CounterList")
-        private java.util.List < LogoResultCounterList> counterList;
+        private java.util.List<LogoResultCounterList> counterList;
 
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -1648,7 +1653,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String suggestion;
 
         @com.aliyun.core.annotation.NameInMap("TopList")
-        private java.util.List < LogoResultTopList> topList;
+        private java.util.List<LogoResultTopList> topList;
 
         private LogoResult(Builder builder) {
             this.averageScore = builder.averageScore;
@@ -1677,7 +1682,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return counterList
          */
-        public java.util.List < LogoResultCounterList> getCounterList() {
+        public java.util.List<LogoResultCounterList> getCounterList() {
             return this.counterList;
         }
 
@@ -1705,17 +1710,17 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return topList
          */
-        public java.util.List < LogoResultTopList> getTopList() {
+        public java.util.List<LogoResultTopList> getTopList() {
             return this.topList;
         }
 
         public static final class Builder {
             private String averageScore; 
-            private java.util.List < LogoResultCounterList> counterList; 
+            private java.util.List<LogoResultCounterList> counterList; 
             private String label; 
             private String maxScore; 
             private String suggestion; 
-            private java.util.List < LogoResultTopList> topList; 
+            private java.util.List<LogoResultTopList> topList; 
 
             /**
              * <p>The average score of the review results.</p>
@@ -1731,7 +1736,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The statistics about tag frames.</p>
              */
-            public Builder counterList(java.util.List < LogoResultCounterList> counterList) {
+            public Builder counterList(java.util.List<LogoResultCounterList> counterList) {
                 this.counterList = counterList;
                 return this;
             }
@@ -1781,7 +1786,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The information about the image with the highest score of the category that is indicated by Label.</p>
              */
-            public Builder topList(java.util.List < LogoResultTopList> topList) {
+            public Builder topList(java.util.List<LogoResultTopList> topList) {
                 this.topList = topList;
                 return this;
             }
@@ -2006,7 +2011,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String averageScore;
 
         @com.aliyun.core.annotation.NameInMap("CounterList")
-        private java.util.List < PornResultCounterList> counterList;
+        private java.util.List<PornResultCounterList> counterList;
 
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -2018,7 +2023,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String suggestion;
 
         @com.aliyun.core.annotation.NameInMap("TopList")
-        private java.util.List < PornResultTopList> topList;
+        private java.util.List<PornResultTopList> topList;
 
         private PornResult(Builder builder) {
             this.averageScore = builder.averageScore;
@@ -2047,7 +2052,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return counterList
          */
-        public java.util.List < PornResultCounterList> getCounterList() {
+        public java.util.List<PornResultCounterList> getCounterList() {
             return this.counterList;
         }
 
@@ -2075,17 +2080,17 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return topList
          */
-        public java.util.List < PornResultTopList> getTopList() {
+        public java.util.List<PornResultTopList> getTopList() {
             return this.topList;
         }
 
         public static final class Builder {
             private String averageScore; 
-            private java.util.List < PornResultCounterList> counterList; 
+            private java.util.List<PornResultCounterList> counterList; 
             private String label; 
             private String maxScore; 
             private String suggestion; 
-            private java.util.List < PornResultTopList> topList; 
+            private java.util.List<PornResultTopList> topList; 
 
             /**
              * <p>The average score of the review results.</p>
@@ -2101,7 +2106,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The statistics about tag frames.</p>
              */
-            public Builder counterList(java.util.List < PornResultCounterList> counterList) {
+            public Builder counterList(java.util.List<PornResultCounterList> counterList) {
                 this.counterList = counterList;
                 return this;
             }
@@ -2147,7 +2152,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The information about the image with the highest score of the category that is indicated by Label.</p>
              */
-            public Builder topList(java.util.List < PornResultTopList> topList) {
+            public Builder topList(java.util.List<PornResultTopList> topList) {
                 this.topList = topList;
                 return this;
             }
@@ -2394,7 +2399,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String averageScore;
 
         @com.aliyun.core.annotation.NameInMap("CounterList")
-        private java.util.List < TerrorismResultCounterList> counterList;
+        private java.util.List<TerrorismResultCounterList> counterList;
 
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -2406,7 +2411,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String suggestion;
 
         @com.aliyun.core.annotation.NameInMap("TopList")
-        private java.util.List < TerrorismResultTopList> topList;
+        private java.util.List<TerrorismResultTopList> topList;
 
         private TerrorismResult(Builder builder) {
             this.averageScore = builder.averageScore;
@@ -2435,7 +2440,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return counterList
          */
-        public java.util.List < TerrorismResultCounterList> getCounterList() {
+        public java.util.List<TerrorismResultCounterList> getCounterList() {
             return this.counterList;
         }
 
@@ -2463,17 +2468,17 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return topList
          */
-        public java.util.List < TerrorismResultTopList> getTopList() {
+        public java.util.List<TerrorismResultTopList> getTopList() {
             return this.topList;
         }
 
         public static final class Builder {
             private String averageScore; 
-            private java.util.List < TerrorismResultCounterList> counterList; 
+            private java.util.List<TerrorismResultCounterList> counterList; 
             private String label; 
             private String maxScore; 
             private String suggestion; 
-            private java.util.List < TerrorismResultTopList> topList; 
+            private java.util.List<TerrorismResultTopList> topList; 
 
             /**
              * <p>The average score of the review results.</p>
@@ -2489,7 +2494,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The statistics about tag frames.</p>
              */
-            public Builder counterList(java.util.List < TerrorismResultCounterList> counterList) {
+            public Builder counterList(java.util.List<TerrorismResultCounterList> counterList) {
                 this.counterList = counterList;
                 return this;
             }
@@ -2551,7 +2556,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The information about the image with the highest score of the category that is indicated by Label.</p>
              */
-            public Builder topList(java.util.List < TerrorismResultTopList> topList) {
+            public Builder topList(java.util.List<TerrorismResultTopList> topList) {
                 this.topList = topList;
                 return this;
             }
@@ -2757,10 +2762,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String abnormalModules;
 
         @com.aliyun.core.annotation.NameInMap("AudioResult")
-        private java.util.List < AudioResult> audioResult;
+        private java.util.List<AudioResult> audioResult;
 
         @com.aliyun.core.annotation.NameInMap("ImageResult")
-        private java.util.List < ImageResult> imageResult;
+        private java.util.List<ImageResult> imageResult;
 
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -2769,7 +2774,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         private String suggestion;
 
         @com.aliyun.core.annotation.NameInMap("TextResult")
-        private java.util.List < TextResult> textResult;
+        private java.util.List<TextResult> textResult;
 
         @com.aliyun.core.annotation.NameInMap("VideoResult")
         private VideoResult videoResult;
@@ -2802,14 +2807,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return audioResult
          */
-        public java.util.List < AudioResult> getAudioResult() {
+        public java.util.List<AudioResult> getAudioResult() {
             return this.audioResult;
         }
 
         /**
          * @return imageResult
          */
-        public java.util.List < ImageResult> getImageResult() {
+        public java.util.List<ImageResult> getImageResult() {
             return this.imageResult;
         }
 
@@ -2830,7 +2835,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * @return textResult
          */
-        public java.util.List < TextResult> getTextResult() {
+        public java.util.List<TextResult> getTextResult() {
             return this.textResult;
         }
 
@@ -2843,11 +2848,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String abnormalModules; 
-            private java.util.List < AudioResult> audioResult; 
-            private java.util.List < ImageResult> imageResult; 
+            private java.util.List<AudioResult> audioResult; 
+            private java.util.List<ImageResult> imageResult; 
             private String label; 
             private String suggestion; 
-            private java.util.List < TextResult> textResult; 
+            private java.util.List<TextResult> textResult; 
             private VideoResult videoResult; 
 
             /**
@@ -2869,7 +2874,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The results of audio review.</p>
              */
-            public Builder audioResult(java.util.List < AudioResult> audioResult) {
+            public Builder audioResult(java.util.List<AudioResult> audioResult) {
                 this.audioResult = audioResult;
                 return this;
             }
@@ -2877,7 +2882,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The results of image review.</p>
              */
-            public Builder imageResult(java.util.List < ImageResult> imageResult) {
+            public Builder imageResult(java.util.List<ImageResult> imageResult) {
                 this.imageResult = imageResult;
                 return this;
             }
@@ -2917,7 +2922,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             /**
              * <p>The results of text review.</p>
              */
-            public Builder textResult(java.util.List < TextResult> textResult) {
+            public Builder textResult(java.util.List<TextResult> textResult) {
                 this.textResult = textResult;
                 return this;
             }

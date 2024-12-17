@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FailedPolicyNames")
-    private java.util.List < String > failedPolicyNames;
+    private java.util.List<String> failedPolicyNames;
 
     @com.aliyun.core.annotation.NameInMap("NonExistPolicyNames")
-    private java.util.List < String > nonExistPolicyNames;
+    private java.util.List<String> nonExistPolicyNames;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
     /**
      * @return failedPolicyNames
      */
-    public java.util.List < String > getFailedPolicyNames() {
+    public java.util.List<String> getFailedPolicyNames() {
         return this.failedPolicyNames;
     }
 
     /**
      * @return nonExistPolicyNames
      */
-    public java.util.List < String > getNonExistPolicyNames() {
+    public java.util.List<String> getNonExistPolicyNames() {
         return this.nonExistPolicyNames;
     }
 
@@ -57,14 +62,14 @@ public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > failedPolicyNames; 
-        private java.util.List < String > nonExistPolicyNames; 
+        private java.util.List<String> failedPolicyNames; 
+        private java.util.List<String> nonExistPolicyNames; 
         private String requestId; 
 
         /**
          * <p>The names of the policies that failed to be granted to the RAM user or RAM role.</p>
          */
-        public Builder failedPolicyNames(java.util.List < String > failedPolicyNames) {
+        public Builder failedPolicyNames(java.util.List<String> failedPolicyNames) {
             this.failedPolicyNames = failedPolicyNames;
             return this;
         }
@@ -72,7 +77,7 @@ public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
         /**
          * <p>The name of the policy that was not found.</p>
          */
-        public Builder nonExistPolicyNames(java.util.List < String > nonExistPolicyNames) {
+        public Builder nonExistPolicyNames(java.util.List<String> nonExistPolicyNames) {
             this.nonExistPolicyNames = nonExistPolicyNames;
             return this;
         }

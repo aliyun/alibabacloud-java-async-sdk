@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAppInfosResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppInfoList")
-    private java.util.List < AppInfoList> appInfoList;
+    private java.util.List<AppInfoList> appInfoList;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("NonExistAppIds")
-    private java.util.List < String > nonExistAppIds;
+    private java.util.List<String> nonExistAppIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,7 +47,7 @@ public class GetAppInfosResponseBody extends TeaModel {
     /**
      * @return appInfoList
      */
-    public java.util.List < AppInfoList> getAppInfoList() {
+    public java.util.List<AppInfoList> getAppInfoList() {
         return this.appInfoList;
     }
 
@@ -56,7 +61,7 @@ public class GetAppInfosResponseBody extends TeaModel {
     /**
      * @return nonExistAppIds
      */
-    public java.util.List < String > getNonExistAppIds() {
+    public java.util.List<String> getNonExistAppIds() {
         return this.nonExistAppIds;
     }
 
@@ -68,15 +73,15 @@ public class GetAppInfosResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AppInfoList> appInfoList; 
+        private java.util.List<AppInfoList> appInfoList; 
         private String code; 
-        private java.util.List < String > nonExistAppIds; 
+        private java.util.List<String> nonExistAppIds; 
         private String requestId; 
 
         /**
          * <p>The details of applications.</p>
          */
-        public Builder appInfoList(java.util.List < AppInfoList> appInfoList) {
+        public Builder appInfoList(java.util.List<AppInfoList> appInfoList) {
             this.appInfoList = appInfoList;
             return this;
         }
@@ -95,7 +100,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         /**
          * <p>The IDs of applications that do not exist.</p>
          */
-        public Builder nonExistAppIds(java.util.List < String > nonExistAppIds) {
+        public Builder nonExistAppIds(java.util.List<String> nonExistAppIds) {
             this.nonExistAppIds = nonExistAppIds;
             return this;
         }

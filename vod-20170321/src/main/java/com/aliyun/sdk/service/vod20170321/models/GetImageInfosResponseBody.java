@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetImageInfosResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImageInfo")
-    private java.util.List < ImageInfo> imageInfo;
+    private java.util.List<ImageInfo> imageInfo;
 
     @com.aliyun.core.annotation.NameInMap("NonExistImageIds")
-    private java.util.List < String > nonExistImageIds;
+    private java.util.List<String> nonExistImageIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class GetImageInfosResponseBody extends TeaModel {
     /**
      * @return imageInfo
      */
-    public java.util.List < ImageInfo> getImageInfo() {
+    public java.util.List<ImageInfo> getImageInfo() {
         return this.imageInfo;
     }
 
     /**
      * @return nonExistImageIds
      */
-    public java.util.List < String > getNonExistImageIds() {
+    public java.util.List<String> getNonExistImageIds() {
         return this.nonExistImageIds;
     }
 
@@ -57,14 +62,14 @@ public class GetImageInfosResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ImageInfo> imageInfo; 
-        private java.util.List < String > nonExistImageIds; 
+        private java.util.List<ImageInfo> imageInfo; 
+        private java.util.List<String> nonExistImageIds; 
         private String requestId; 
 
         /**
          * <p>The image information.</p>
          */
-        public Builder imageInfo(java.util.List < ImageInfo> imageInfo) {
+        public Builder imageInfo(java.util.List<ImageInfo> imageInfo) {
             this.imageInfo = imageInfo;
             return this;
         }
@@ -72,7 +77,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         /**
          * <p>The IDs of the images that do not exist.</p>
          */
-        public Builder nonExistImageIds(java.util.List < String > nonExistImageIds) {
+        public Builder nonExistImageIds(java.util.List<String> nonExistImageIds) {
             this.nonExistImageIds = nonExistImageIds;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
      */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Snapshot")
-        private java.util.List < Snapshot> snapshot;
+        private java.util.List<Snapshot> snapshot;
 
         private Snapshots(Builder builder) {
             this.snapshot = builder.snapshot;
@@ -172,17 +177,17 @@ public class ListSnapshotsResponseBody extends TeaModel {
         /**
          * @return snapshot
          */
-        public java.util.List < Snapshot> getSnapshot() {
+        public java.util.List<Snapshot> getSnapshot() {
             return this.snapshot;
         }
 
         public static final class Builder {
-            private java.util.List < Snapshot> snapshot; 
+            private java.util.List<Snapshot> snapshot; 
 
             /**
              * Snapshot.
              */
-            public Builder snapshot(java.util.List < Snapshot> snapshot) {
+            public Builder snapshot(java.util.List<Snapshot> snapshot) {
                 this.snapshot = snapshot;
                 return this;
             }

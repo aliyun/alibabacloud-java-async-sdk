@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetTranscodeSummaryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NonExistVideoIds")
-    private java.util.List < String > nonExistVideoIds;
+    private java.util.List<String> nonExistVideoIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TranscodeSummaryList")
-    private java.util.List < TranscodeSummaryList> transcodeSummaryList;
+    private java.util.List<TranscodeSummaryList> transcodeSummaryList;
 
     private GetTranscodeSummaryResponseBody(Builder builder) {
         this.nonExistVideoIds = builder.nonExistVideoIds;
@@ -38,7 +43,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
     /**
      * @return nonExistVideoIds
      */
-    public java.util.List < String > getNonExistVideoIds() {
+    public java.util.List<String> getNonExistVideoIds() {
         return this.nonExistVideoIds;
     }
 
@@ -52,19 +57,19 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
     /**
      * @return transcodeSummaryList
      */
-    public java.util.List < TranscodeSummaryList> getTranscodeSummaryList() {
+    public java.util.List<TranscodeSummaryList> getTranscodeSummaryList() {
         return this.transcodeSummaryList;
     }
 
     public static final class Builder {
-        private java.util.List < String > nonExistVideoIds; 
+        private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
-        private java.util.List < TranscodeSummaryList> transcodeSummaryList; 
+        private java.util.List<TranscodeSummaryList> transcodeSummaryList; 
 
         /**
          * <p>The IDs of the audio or video files that do not exist.</p>
          */
-        public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
+        public Builder nonExistVideoIds(java.util.List<String> nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
             return this;
         }
@@ -83,7 +88,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         /**
          * <p>The transcoding summary of the file.</p>
          */
-        public Builder transcodeSummaryList(java.util.List < TranscodeSummaryList> transcodeSummaryList) {
+        public Builder transcodeSummaryList(java.util.List<TranscodeSummaryList> transcodeSummaryList) {
             this.transcodeSummaryList = transcodeSummaryList;
             return this;
         }
@@ -141,7 +146,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         private String transcodeTemplateId;
 
         @com.aliyun.core.annotation.NameInMap("WatermarkIdList")
-        private java.util.List < String > watermarkIdList;
+        private java.util.List<String> watermarkIdList;
 
         @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
@@ -266,7 +271,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         /**
          * @return watermarkIdList
          */
-        public java.util.List < String > getWatermarkIdList() {
+        public java.util.List<String> getWatermarkIdList() {
             return this.watermarkIdList;
         }
 
@@ -291,7 +296,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             private String transcodeJobStatus; 
             private Long transcodeProgress; 
             private String transcodeTemplateId; 
-            private java.util.List < String > watermarkIdList; 
+            private java.util.List<String> watermarkIdList; 
             private String width; 
 
             /**
@@ -445,7 +450,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             /**
              * <p>The IDs of the watermarks that are applied to the output video.</p>
              */
-            public Builder watermarkIdList(java.util.List < String > watermarkIdList) {
+            public Builder watermarkIdList(java.util.List<String> watermarkIdList) {
                 this.watermarkIdList = watermarkIdList;
                 return this;
             }
@@ -482,7 +487,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         private String creationTime;
 
         @com.aliyun.core.annotation.NameInMap("TranscodeJobInfoSummaryList")
-        private java.util.List < TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList;
+        private java.util.List<TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList;
 
         @com.aliyun.core.annotation.NameInMap("TranscodeStatus")
         private String transcodeStatus;
@@ -527,7 +532,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         /**
          * @return transcodeJobInfoSummaryList
          */
-        public java.util.List < TranscodeJobInfoSummaryList> getTranscodeJobInfoSummaryList() {
+        public java.util.List<TranscodeJobInfoSummaryList> getTranscodeJobInfoSummaryList() {
             return this.transcodeJobInfoSummaryList;
         }
 
@@ -555,7 +560,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private String completeTime; 
             private String creationTime; 
-            private java.util.List < TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList; 
+            private java.util.List<TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList; 
             private String transcodeStatus; 
             private String transcodeTemplateGroupId; 
             private String videoId; 
@@ -585,7 +590,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             /**
              * <p>The summaries of transcoding jobs.</p>
              */
-            public Builder transcodeJobInfoSummaryList(java.util.List < TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList) {
+            public Builder transcodeJobInfoSummaryList(java.util.List<TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList) {
                 this.transcodeJobInfoSummaryList = transcodeJobInfoSummaryList;
                 return this;
             }

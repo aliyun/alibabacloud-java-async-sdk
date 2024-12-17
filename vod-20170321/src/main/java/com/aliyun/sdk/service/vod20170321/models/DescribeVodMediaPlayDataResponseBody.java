@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
     private Long pageSize;
 
     @com.aliyun.core.annotation.NameInMap("QoeInfoList")
-    private java.util.List < QoeInfoList> qoeInfoList;
+    private java.util.List<QoeInfoList> qoeInfoList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
     /**
      * @return qoeInfoList
      */
-    public java.util.List < QoeInfoList> getQoeInfoList() {
+    public java.util.List<QoeInfoList> getQoeInfoList() {
         return this.qoeInfoList;
     }
 
@@ -81,7 +86,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
     public static final class Builder {
         private Long pageNo; 
         private Long pageSize; 
-        private java.util.List < QoeInfoList> qoeInfoList; 
+        private java.util.List<QoeInfoList> qoeInfoList; 
         private String requestId; 
         private Long totalCount; 
 
@@ -110,7 +115,7 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
         /**
          * <p>The data returned.</p>
          */
-        public Builder qoeInfoList(java.util.List < QoeInfoList> qoeInfoList) {
+        public Builder qoeInfoList(java.util.List<QoeInfoList> qoeInfoList) {
             this.qoeInfoList = qoeInfoList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -182,7 +187,7 @@ public class SubmitAIJobResponseBody extends TeaModel {
      */
     public static class AIJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AIJob")
-        private java.util.List < AIJob> AIJob;
+        private java.util.List<AIJob> AIJob;
 
         private AIJobList(Builder builder) {
             this.AIJob = builder.AIJob;
@@ -199,17 +204,17 @@ public class SubmitAIJobResponseBody extends TeaModel {
         /**
          * @return AIJob
          */
-        public java.util.List < AIJob> getAIJob() {
+        public java.util.List<AIJob> getAIJob() {
             return this.AIJob;
         }
 
         public static final class Builder {
-            private java.util.List < AIJob> AIJob; 
+            private java.util.List<AIJob> AIJob; 
 
             /**
              * AIJob.
              */
-            public Builder AIJob(java.util.List < AIJob> AIJob) {
+            public Builder AIJob(java.util.List<AIJob> AIJob) {
                 this.AIJob = AIJob;
                 return this;
             }

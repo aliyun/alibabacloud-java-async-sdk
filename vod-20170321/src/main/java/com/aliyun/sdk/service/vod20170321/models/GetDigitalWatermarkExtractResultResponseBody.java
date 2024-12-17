@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AiExtractResultList")
-    private java.util.List < AiExtractResultList> aiExtractResultList;
+    private java.util.List<AiExtractResultList> aiExtractResultList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
     /**
      * @return aiExtractResultList
      */
-    public java.util.List < AiExtractResultList> getAiExtractResultList() {
+    public java.util.List<AiExtractResultList> getAiExtractResultList() {
         return this.aiExtractResultList;
     }
 
@@ -46,13 +51,13 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AiExtractResultList> aiExtractResultList; 
+        private java.util.List<AiExtractResultList> aiExtractResultList; 
         private String requestId; 
 
         /**
          * <p>The details of the watermark extraction job.</p>
          */
-        public Builder aiExtractResultList(java.util.List < AiExtractResultList> aiExtractResultList) {
+        public Builder aiExtractResultList(java.util.List<AiExtractResultList> aiExtractResultList) {
             this.aiExtractResultList = aiExtractResultList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
      */
     public static class TopPlayVideos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopPlayVideoStatis")
-        private java.util.List < TopPlayVideoStatis> topPlayVideoStatis;
+        private java.util.List<TopPlayVideoStatis> topPlayVideoStatis;
 
         private TopPlayVideos(Builder builder) {
             this.topPlayVideoStatis = builder.topPlayVideoStatis;
@@ -310,17 +315,17 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         /**
          * @return topPlayVideoStatis
          */
-        public java.util.List < TopPlayVideoStatis> getTopPlayVideoStatis() {
+        public java.util.List<TopPlayVideoStatis> getTopPlayVideoStatis() {
             return this.topPlayVideoStatis;
         }
 
         public static final class Builder {
-            private java.util.List < TopPlayVideoStatis> topPlayVideoStatis; 
+            private java.util.List<TopPlayVideoStatis> topPlayVideoStatis; 
 
             /**
              * TopPlayVideoStatis.
              */
-            public Builder topPlayVideoStatis(java.util.List < TopPlayVideoStatis> topPlayVideoStatis) {
+            public Builder topPlayVideoStatis(java.util.List<TopPlayVideoStatis> topPlayVideoStatis) {
                 this.topPlayVideoStatis = topPlayVideoStatis;
                 return this;
             }

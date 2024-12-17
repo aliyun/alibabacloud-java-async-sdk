@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetVideoInfosResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NonExistVideoIds")
-    private java.util.List < String > nonExistVideoIds;
+    private java.util.List<String> nonExistVideoIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VideoList")
-    private java.util.List < VideoList> videoList;
+    private java.util.List<VideoList> videoList;
 
     private GetVideoInfosResponseBody(Builder builder) {
         this.nonExistVideoIds = builder.nonExistVideoIds;
@@ -38,7 +43,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
     /**
      * @return nonExistVideoIds
      */
-    public java.util.List < String > getNonExistVideoIds() {
+    public java.util.List<String> getNonExistVideoIds() {
         return this.nonExistVideoIds;
     }
 
@@ -52,19 +57,19 @@ public class GetVideoInfosResponseBody extends TeaModel {
     /**
      * @return videoList
      */
-    public java.util.List < VideoList> getVideoList() {
+    public java.util.List<VideoList> getVideoList() {
         return this.videoList;
     }
 
     public static final class Builder {
-        private java.util.List < String > nonExistVideoIds; 
+        private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
-        private java.util.List < VideoList> videoList; 
+        private java.util.List<VideoList> videoList; 
 
         /**
          * <p>The IDs of the videos that do not exist.</p>
          */
-        public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
+        public Builder nonExistVideoIds(java.util.List<String> nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
             return this;
         }
@@ -83,7 +88,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
         /**
          * <p>The information about the audio or video files.</p>
          */
-        public Builder videoList(java.util.List < VideoList> videoList) {
+        public Builder videoList(java.util.List<VideoList> videoList) {
             this.videoList = videoList;
             return this;
         }
@@ -138,7 +143,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
         private Long size;
 
         @com.aliyun.core.annotation.NameInMap("Snapshots")
-        private java.util.List < String > snapshots;
+        private java.util.List<String> snapshots;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -283,7 +288,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
         /**
          * @return snapshots
          */
-        public java.util.List < String > getSnapshots() {
+        public java.util.List<String> getSnapshots() {
             return this.snapshots;
         }
 
@@ -356,7 +361,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             private String restoreExpiration; 
             private String restoreStatus; 
             private Long size; 
-            private java.util.List < String > snapshots; 
+            private java.util.List<String> snapshots; 
             private String status; 
             private String storageClass; 
             private String storageLocation; 
@@ -510,7 +515,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             /**
              * <p>The video snapshot URLs.</p>
              */
-            public Builder snapshots(java.util.List < String > snapshots) {
+            public Builder snapshots(java.util.List<String> snapshots) {
                 this.snapshots = snapshots;
                 return this;
             }

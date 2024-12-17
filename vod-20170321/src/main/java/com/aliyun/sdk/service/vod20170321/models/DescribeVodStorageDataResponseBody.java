@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
      */
     public static class StorageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageDataItem")
-        private java.util.List < StorageDataItem> storageDataItem;
+        private java.util.List<StorageDataItem> storageDataItem;
 
         private StorageData(Builder builder) {
             this.storageDataItem = builder.storageDataItem;
@@ -222,17 +227,17 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         /**
          * @return storageDataItem
          */
-        public java.util.List < StorageDataItem> getStorageDataItem() {
+        public java.util.List<StorageDataItem> getStorageDataItem() {
             return this.storageDataItem;
         }
 
         public static final class Builder {
-            private java.util.List < StorageDataItem> storageDataItem; 
+            private java.util.List<StorageDataItem> storageDataItem; 
 
             /**
              * StorageDataItem.
              */
-            public Builder storageDataItem(java.util.List < StorageDataItem> storageDataItem) {
+            public Builder storageDataItem(java.util.List<StorageDataItem> storageDataItem) {
                 this.storageDataItem = storageDataItem;
                 return this;
             }

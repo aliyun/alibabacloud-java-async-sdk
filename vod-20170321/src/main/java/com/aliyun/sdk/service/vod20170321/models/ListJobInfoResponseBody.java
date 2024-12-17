@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListJobInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobInfoList")
-    private java.util.List < JobInfoList> jobInfoList;
+    private java.util.List<JobInfoList> jobInfoList;
 
     @com.aliyun.core.annotation.NameInMap("JobType")
     private String jobType;
@@ -42,7 +47,7 @@ public class ListJobInfoResponseBody extends TeaModel {
     /**
      * @return jobInfoList
      */
-    public java.util.List < JobInfoList> getJobInfoList() {
+    public java.util.List<JobInfoList> getJobInfoList() {
         return this.jobInfoList;
     }
 
@@ -68,7 +73,7 @@ public class ListJobInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < JobInfoList> jobInfoList; 
+        private java.util.List<JobInfoList> jobInfoList; 
         private String jobType; 
         private String mediaId; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListJobInfoResponseBody extends TeaModel {
         /**
          * JobInfoList.
          */
-        public Builder jobInfoList(java.util.List < JobInfoList> jobInfoList) {
+        public Builder jobInfoList(java.util.List<JobInfoList> jobInfoList) {
             this.jobInfoList = jobInfoList;
             return this;
         }

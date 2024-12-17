@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteMezzaninesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NonExistVideoIds")
-    private java.util.List < String > nonExistVideoIds;
+    private java.util.List<String> nonExistVideoIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UnRemoveableVideoIds")
-    private java.util.List < String > unRemoveableVideoIds;
+    private java.util.List<String> unRemoveableVideoIds;
 
     private DeleteMezzaninesResponseBody(Builder builder) {
         this.nonExistVideoIds = builder.nonExistVideoIds;
@@ -38,7 +43,7 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
     /**
      * @return nonExistVideoIds
      */
-    public java.util.List < String > getNonExistVideoIds() {
+    public java.util.List<String> getNonExistVideoIds() {
         return this.nonExistVideoIds;
     }
 
@@ -52,19 +57,19 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
     /**
      * @return unRemoveableVideoIds
      */
-    public java.util.List < String > getUnRemoveableVideoIds() {
+    public java.util.List<String> getUnRemoveableVideoIds() {
         return this.unRemoveableVideoIds;
     }
 
     public static final class Builder {
-        private java.util.List < String > nonExistVideoIds; 
+        private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
-        private java.util.List < String > unRemoveableVideoIds; 
+        private java.util.List<String> unRemoveableVideoIds; 
 
         /**
          * <p>The IDs of the audio or video files that do not exist.</p>
          */
-        public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
+        public Builder nonExistVideoIds(java.util.List<String> nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
             return this;
         }
@@ -86,7 +91,7 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
          * <p> In most cases, source files cannot be deleted if they are used for original-quality playback or you do not have required permissions to delete them. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
          * </blockquote>
          */
-        public Builder unRemoveableVideoIds(java.util.List < String > unRemoveableVideoIds) {
+        public Builder unRemoveableVideoIds(java.util.List<String> unRemoveableVideoIds) {
             this.unRemoveableVideoIds = unRemoveableVideoIds;
             return this;
         }

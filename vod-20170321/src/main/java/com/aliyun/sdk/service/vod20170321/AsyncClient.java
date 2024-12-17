@@ -471,6 +471,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWatermarkResponse> deleteWatermark(DeleteWatermarkRequest request);
 
     /**
+     * @param request the request parameters of DescribeMediaDistribution  DescribeMediaDistributionRequest
+     * @return DescribeMediaDistributionResponse
+     */
+    CompletableFuture<DescribeMediaDistributionResponse> describeMediaDistribution(DescribeMediaDistributionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
      * <ul>

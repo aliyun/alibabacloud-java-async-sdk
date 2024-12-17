@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NonExistTranscodeTemplateIds")
-    private java.util.List < String > nonExistTranscodeTemplateIds;
+    private java.util.List<String> nonExistTranscodeTemplateIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
     /**
      * @return nonExistTranscodeTemplateIds
      */
-    public java.util.List < String > getNonExistTranscodeTemplateIds() {
+    public java.util.List<String> getNonExistTranscodeTemplateIds() {
         return this.nonExistTranscodeTemplateIds;
     }
 
@@ -46,13 +51,13 @@ public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > nonExistTranscodeTemplateIds; 
+        private java.util.List<String> nonExistTranscodeTemplateIds; 
         private String requestId; 
 
         /**
          * <p>The IDs of transcoding templates that were not found.</p>
          */
-        public Builder nonExistTranscodeTemplateIds(java.util.List < String > nonExistTranscodeTemplateIds) {
+        public Builder nonExistTranscodeTemplateIds(java.util.List<String> nonExistTranscodeTemplateIds) {
             this.nonExistTranscodeTemplateIds = nonExistTranscodeTemplateIds;
             return this;
         }

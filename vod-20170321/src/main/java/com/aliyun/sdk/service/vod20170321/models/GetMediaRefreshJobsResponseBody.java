@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetMediaRefreshJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MediaRefreshJobs")
-    private java.util.List < MediaRefreshJobs> mediaRefreshJobs;
+    private java.util.List<MediaRefreshJobs> mediaRefreshJobs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
     /**
      * @return mediaRefreshJobs
      */
-    public java.util.List < MediaRefreshJobs> getMediaRefreshJobs() {
+    public java.util.List<MediaRefreshJobs> getMediaRefreshJobs() {
         return this.mediaRefreshJobs;
     }
 
@@ -46,13 +51,13 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MediaRefreshJobs> mediaRefreshJobs; 
+        private java.util.List<MediaRefreshJobs> mediaRefreshJobs; 
         private String requestId; 
 
         /**
          * <p>The media refresh or prefetch jobs.</p>
          */
-        public Builder mediaRefreshJobs(java.util.List < MediaRefreshJobs> mediaRefreshJobs) {
+        public Builder mediaRefreshJobs(java.util.List<MediaRefreshJobs> mediaRefreshJobs) {
             this.mediaRefreshJobs = mediaRefreshJobs;
             return this;
         }
