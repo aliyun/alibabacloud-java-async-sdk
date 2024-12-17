@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchGetProjectTaskResponse> batchGetProjectTask(BatchGetProjectTaskRequest request);
 
     /**
+     * @param request the request parameters of BatchQueryIndividuationText  BatchQueryIndividuationTextRequest
+     * @return BatchQueryIndividuationTextResponse
+     */
+    CompletableFuture<BatchQueryIndividuationTextResponse> batchQueryIndividuationText(BatchQueryIndividuationTextRequest request);
+
+    /**
      * @param request the request parameters of CheckSession  CheckSessionRequest
      * @return CheckSessionResponse
      */
@@ -56,10 +62,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAICoachTaskSessionResponse> createAICoachTaskSession(CreateAICoachTaskSessionRequest request);
 
     /**
+     * @param request the request parameters of CreateAnchor  CreateAnchorRequest
+     * @return CreateAnchorResponse
+     */
+    CompletableFuture<CreateAnchorResponse> createAnchor(CreateAnchorRequest request);
+
+    /**
      * @param request the request parameters of CreateIllustrationTask  CreateIllustrationTaskRequest
      * @return CreateIllustrationTaskResponse
      */
     CompletableFuture<CreateIllustrationTaskResponse> createIllustrationTask(CreateIllustrationTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateIndividuationProject  CreateIndividuationProjectRequest
+     * @return CreateIndividuationProjectResponse
+     */
+    CompletableFuture<CreateIndividuationProjectResponse> createIndividuationProject(CreateIndividuationProjectRequest request);
+
+    /**
+     * @param request the request parameters of CreateIndividuationTextTask  CreateIndividuationTextTaskRequest
+     * @return CreateIndividuationTextTaskResponse
+     */
+    CompletableFuture<CreateIndividuationTextTaskResponse> createIndividuationTextTask(CreateIndividuationTextTaskRequest request);
 
     /**
      * @param request the request parameters of CreateRealisticPortrait  CreateRealisticPortraitRequest
@@ -72,6 +96,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateTextTaskResponse
      */
     CompletableFuture<CreateTextTaskResponse> createTextTask(CreateTextTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteIndividuationProject  DeleteIndividuationProjectRequest
+     * @return DeleteIndividuationProjectResponse
+     */
+    CompletableFuture<DeleteIndividuationProjectResponse> deleteIndividuationProject(DeleteIndividuationProjectRequest request);
+
+    /**
+     * @param request the request parameters of DeleteIndividuationText  DeleteIndividuationTextRequest
+     * @return DeleteIndividuationTextResponse
+     */
+    CompletableFuture<DeleteIndividuationTextResponse> deleteIndividuationText(DeleteIndividuationTextRequest request);
 
     /**
      * @param request the request parameters of FinishAICoachTaskSession  FinishAICoachTaskSessionRequest
@@ -196,6 +232,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryAvatarResourceResponse> queryAvatarResource(QueryAvatarResourceRequest request);
 
     /**
+     * @param request the request parameters of QueryIndividuationTextTask  QueryIndividuationTextTaskRequest
+     * @return QueryIndividuationTextTaskResponse
+     */
+    CompletableFuture<QueryIndividuationTextTaskResponse> queryIndividuationTextTask(QueryIndividuationTextTaskRequest request);
+
+    /**
      * @param request the request parameters of QuerySessionInfo  QuerySessionInfoRequest
      * @return QuerySessionInfoResponse
      */
@@ -226,6 +268,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SelectResourceResponse
      */
     CompletableFuture<SelectResourceResponse> selectResource(SelectResourceRequest request);
+
+    /**
+     * @param request the request parameters of SendSdkMessage  SendSdkMessageRequest
+     * @return SendSdkMessageResponse
+     */
+    CompletableFuture<SendSdkMessageResponse> sendSdkMessage(SendSdkMessageRequest request);
 
     /**
      * @param request the request parameters of SendTextMsg  SendTextMsgRequest

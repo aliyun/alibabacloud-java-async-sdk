@@ -77,6 +77,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchQueryIndividuationText  BatchQueryIndividuationTextRequest
+     * @return BatchQueryIndividuationTextResponse
+     */
+    @Override
+    public CompletableFuture<BatchQueryIndividuationTextResponse> batchQueryIndividuationText(BatchQueryIndividuationTextRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchQueryIndividuationText").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/individuationText/batchQueryText").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchQueryIndividuationTextResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchQueryIndividuationTextResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CheckSession  CheckSessionRequest
      * @return CheckSessionResponse
      */
@@ -149,6 +167,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAnchor  CreateAnchorRequest
+     * @return CreateAnchorResponse
+     */
+    @Override
+    public CompletableFuture<CreateAnchorResponse> createAnchor(CreateAnchorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAnchor").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/digitalHuman/anchorOpen/createAnchor").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAnchorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAnchorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateIllustrationTask  CreateIllustrationTaskRequest
      * @return CreateIllustrationTaskResponse
      */
@@ -161,6 +197,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateIllustrationTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateIndividuationProject  CreateIndividuationProjectRequest
+     * @return CreateIndividuationProjectResponse
+     */
+    @Override
+    public CompletableFuture<CreateIndividuationProjectResponse> createIndividuationProject(CreateIndividuationProjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateIndividuationProject").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/individuationText/createProject").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateIndividuationProjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateIndividuationProjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateIndividuationTextTask  CreateIndividuationTextTaskRequest
+     * @return CreateIndividuationTextTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateIndividuationTextTaskResponse> createIndividuationTextTask(CreateIndividuationTextTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateIndividuationTextTask").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/individuationText/createTextTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateIndividuationTextTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateIndividuationTextTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -197,6 +269,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateTextTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteIndividuationProject  DeleteIndividuationProjectRequest
+     * @return DeleteIndividuationProjectResponse
+     */
+    @Override
+    public CompletableFuture<DeleteIndividuationProjectResponse> deleteIndividuationProject(DeleteIndividuationProjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteIndividuationProject").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/individuationText/deleteProject").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteIndividuationProjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteIndividuationProjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteIndividuationText  DeleteIndividuationTextRequest
+     * @return DeleteIndividuationTextResponse
+     */
+    @Override
+    public CompletableFuture<DeleteIndividuationTextResponse> deleteIndividuationText(DeleteIndividuationTextRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteIndividuationText").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/individuationText/deleteText").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteIndividuationTextResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteIndividuationTextResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -573,6 +681,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryIndividuationTextTask  QueryIndividuationTextTaskRequest
+     * @return QueryIndividuationTextTaskResponse
+     */
+    @Override
+    public CompletableFuture<QueryIndividuationTextTaskResponse> queryIndividuationTextTask(QueryIndividuationTextTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryIndividuationTextTask").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/individuationText/queryTextTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryIndividuationTextTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryIndividuationTextTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QuerySessionInfo  QuerySessionInfoRequest
      * @return QuerySessionInfoResponse
      */
@@ -667,6 +793,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SelectResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SendSdkMessage  SendSdkMessageRequest
+     * @return SendSdkMessageResponse
+     */
+    @Override
+    public CompletableFuture<SendSdkMessageResponse> sendSdkMessage(SendSdkMessageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SendSdkMessage").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/sdk/sendMessage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SendSdkMessageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SendSdkMessageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
