@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class QuerySessionInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("statusList")
-    private java.util.List < String > statusList;
+    private java.util.List<String> statusList;
 
     private QuerySessionInfoRequest(Builder builder) {
         super(builder);
@@ -73,7 +78,7 @@ public class QuerySessionInfoRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < String > getStatusList() {
+    public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
@@ -81,7 +86,7 @@ public class QuerySessionInfoRequest extends Request {
         private Integer pageNo; 
         private Integer pageSize; 
         private String projectId; 
-        private java.util.List < String > statusList; 
+        private java.util.List<String> statusList; 
 
         private Builder() {
             super();
@@ -125,7 +130,7 @@ public class QuerySessionInfoRequest extends Request {
         /**
          * statusList.
          */
-        public Builder statusList(java.util.List < String > statusList) {
+        public Builder statusList(java.util.List<String> statusList) {
             String statusListShrink = shrink(statusList, "statusList", "simple");
             this.putQueryParameter("statusList", statusListShrink);
             this.statusList = statusList;

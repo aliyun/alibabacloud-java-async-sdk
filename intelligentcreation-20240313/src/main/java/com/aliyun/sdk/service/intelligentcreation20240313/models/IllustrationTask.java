@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class IllustrationTask extends TeaModel {
     private String gmtModified;
 
     @com.aliyun.core.annotation.NameInMap("illustrationIds")
-    private java.util.List < Long > illustrationIds;
+    private java.util.List<Long> illustrationIds;
 
     @com.aliyun.core.annotation.NameInMap("illustrationTaskId")
     private Long illustrationTaskId;
@@ -64,7 +69,7 @@ public class IllustrationTask extends TeaModel {
     /**
      * @return illustrationIds
      */
-    public java.util.List < Long > getIllustrationIds() {
+    public java.util.List<Long> getIllustrationIds() {
         return this.illustrationIds;
     }
 
@@ -92,7 +97,7 @@ public class IllustrationTask extends TeaModel {
     public static final class Builder {
         private String gmtCreate; 
         private String gmtModified; 
-        private java.util.List < Long > illustrationIds; 
+        private java.util.List<Long> illustrationIds; 
         private Long illustrationTaskId; 
         private String taskStatus; 
         private Long textId; 
@@ -116,7 +121,7 @@ public class IllustrationTask extends TeaModel {
         /**
          * illustrationIds.
          */
-        public Builder illustrationIds(java.util.List < Long > illustrationIds) {
+        public Builder illustrationIds(java.util.List<Long> illustrationIds) {
             this.illustrationIds = illustrationIds;
             return this;
         }

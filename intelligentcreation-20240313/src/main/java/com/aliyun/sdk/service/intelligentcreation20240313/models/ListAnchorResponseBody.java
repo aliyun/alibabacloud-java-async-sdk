@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListAnchorResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("list")
-    private java.util.List < AnchorResponse > list;
+    private java.util.List<AnchorResponse> list;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -75,7 +80,7 @@ public class ListAnchorResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < AnchorResponse > getList() {
+    public java.util.List<AnchorResponse> getList() {
         return this.list;
     }
 
@@ -104,7 +109,7 @@ public class ListAnchorResponseBody extends TeaModel {
         private String code; 
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < AnchorResponse > list; 
+        private java.util.List<AnchorResponse> list; 
         private String requestId; 
         private Boolean success; 
         private Integer total; 
@@ -139,7 +144,7 @@ public class ListAnchorResponseBody extends TeaModel {
         /**
          * list.
          */
-        public Builder list(java.util.List < AnchorResponse > list) {
+        public Builder list(java.util.List<AnchorResponse> list) {
             this.list = list;
             return this;
         }

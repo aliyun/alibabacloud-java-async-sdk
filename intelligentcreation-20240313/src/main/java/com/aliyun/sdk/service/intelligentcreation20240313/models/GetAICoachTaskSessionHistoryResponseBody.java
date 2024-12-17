@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("conversationList")
-    private java.util.List < ConversationList> conversationList;
+    private java.util.List<ConversationList> conversationList;
 
     @com.aliyun.core.annotation.NameInMap("duration")
     private Long duration;
@@ -33,6 +38,9 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.NameInMap("total")
+    private Integer total;
+
     @com.aliyun.core.annotation.NameInMap("uid")
     private String uid;
 
@@ -44,6 +52,7 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         this.scriptName = builder.scriptName;
         this.startTime = builder.startTime;
         this.status = builder.status;
+        this.total = builder.total;
         this.uid = builder.uid;
     }
 
@@ -58,7 +67,7 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     /**
      * @return conversationList
      */
-    public java.util.List < ConversationList> getConversationList() {
+    public java.util.List<ConversationList> getConversationList() {
         return this.conversationList;
     }
 
@@ -105,6 +114,13 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     }
 
     /**
+     * @return total
+     */
+    public Integer getTotal() {
+        return this.total;
+    }
+
+    /**
      * @return uid
      */
     public String getUid() {
@@ -112,19 +128,20 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConversationList> conversationList; 
+        private java.util.List<ConversationList> conversationList; 
         private Long duration; 
         private String endTime; 
         private String requestId; 
         private String scriptName; 
         private String startTime; 
         private String status; 
+        private Integer total; 
         private String uid; 
 
         /**
          * conversationList.
          */
-        public Builder conversationList(java.util.List < ConversationList> conversationList) {
+        public Builder conversationList(java.util.List<ConversationList> conversationList) {
             this.conversationList = conversationList;
             return this;
         }
@@ -178,6 +195,14 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         }
 
         /**
+         * total.
+         */
+        public Builder total(Integer total) {
+            this.total = total;
+            return this;
+        }
+
+        /**
          * uid.
          */
         public Builder uid(String uid) {
@@ -198,18 +223,26 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
      * <p>GetAICoachTaskSessionHistoryResponseBody</p>
      */
     public static class ConversationList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("audioUrl")
+        private String audioUrl;
+
         @com.aliyun.core.annotation.NameInMap("evaluationResult")
         private String evaluationResult;
 
         @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
+        @com.aliyun.core.annotation.NameInMap("recordId")
+        private String recordId;
+
         @com.aliyun.core.annotation.NameInMap("role")
         private String role;
 
         private ConversationList(Builder builder) {
+            this.audioUrl = builder.audioUrl;
             this.evaluationResult = builder.evaluationResult;
             this.message = builder.message;
+            this.recordId = builder.recordId;
             this.role = builder.role;
         }
 
@@ -219,6 +252,13 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
 
         public static ConversationList create() {
             return builder().build();
+        }
+
+        /**
+         * @return audioUrl
+         */
+        public String getAudioUrl() {
+            return this.audioUrl;
         }
 
         /**
@@ -236,6 +276,13 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return recordId
+         */
+        public String getRecordId() {
+            return this.recordId;
+        }
+
+        /**
          * @return role
          */
         public String getRole() {
@@ -243,9 +290,19 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String audioUrl; 
             private String evaluationResult; 
             private String message; 
+            private String recordId; 
             private String role; 
+
+            /**
+             * audioUrl.
+             */
+            public Builder audioUrl(String audioUrl) {
+                this.audioUrl = audioUrl;
+                return this;
+            }
 
             /**
              * evaluationResult.
@@ -260,6 +317,14 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
              */
             public Builder message(String message) {
                 this.message = message;
+                return this;
+            }
+
+            /**
+             * recordId.
+             */
+            public Builder recordId(String recordId) {
+                this.recordId = recordId;
                 return this;
             }
 

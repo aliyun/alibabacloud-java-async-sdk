@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("taskList")
-    private java.util.List < TaskList> taskList;
+    private java.util.List<TaskList> taskList;
 
     private ListAICoachTaskPageResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
     /**
      * @return taskList
      */
-    public java.util.List < TaskList> getTaskList() {
+    public java.util.List<TaskList> getTaskList() {
         return this.taskList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TaskList> taskList; 
+        private java.util.List<TaskList> taskList; 
 
         /**
          * <p>Id of the request</p>
@@ -63,7 +68,7 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
         /**
          * taskList.
          */
-        public Builder taskList(java.util.List < TaskList> taskList) {
+        public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
             return this;
         }

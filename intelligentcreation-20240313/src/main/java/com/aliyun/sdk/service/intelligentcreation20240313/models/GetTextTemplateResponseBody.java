@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -189,7 +194,7 @@ public class GetTextTemplateResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("textStyles")
-        private java.util.List < TextStyles> textStyles;
+        private java.util.List<TextStyles> textStyles;
 
         private TextModeTypes(Builder builder) {
             this.name = builder.name;
@@ -214,13 +219,13 @@ public class GetTextTemplateResponseBody extends TeaModel {
         /**
          * @return textStyles
          */
-        public java.util.List < TextStyles> getTextStyles() {
+        public java.util.List<TextStyles> getTextStyles() {
             return this.textStyles;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < TextStyles> textStyles; 
+            private java.util.List<TextStyles> textStyles; 
 
             /**
              * name.
@@ -233,7 +238,7 @@ public class GetTextTemplateResponseBody extends TeaModel {
             /**
              * textStyles.
              */
-            public Builder textStyles(java.util.List < TextStyles> textStyles) {
+            public Builder textStyles(java.util.List<TextStyles> textStyles) {
                 this.textStyles = textStyles;
                 return this;
             }
@@ -256,7 +261,7 @@ public class GetTextTemplateResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("textModeTypes")
-        private java.util.List < TextModeTypes> textModeTypes;
+        private java.util.List<TextModeTypes> textModeTypes;
 
         private AvailableIndustry(Builder builder) {
             this.name = builder.name;
@@ -281,13 +286,13 @@ public class GetTextTemplateResponseBody extends TeaModel {
         /**
          * @return textModeTypes
          */
-        public java.util.List < TextModeTypes> getTextModeTypes() {
+        public java.util.List<TextModeTypes> getTextModeTypes() {
             return this.textModeTypes;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < TextModeTypes> textModeTypes; 
+            private java.util.List<TextModeTypes> textModeTypes; 
 
             /**
              * name.
@@ -300,7 +305,7 @@ public class GetTextTemplateResponseBody extends TeaModel {
             /**
              * textModeTypes.
              */
-            public Builder textModeTypes(java.util.List < TextModeTypes> textModeTypes) {
+            public Builder textModeTypes(java.util.List<TextModeTypes> textModeTypes) {
                 this.textModeTypes = textModeTypes;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class SelectImageTaskResponseBody extends TeaModel {
     private String gmtCreate;
 
     @com.aliyun.core.annotation.NameInMap("imageInfos")
-    private java.util.List < ImageInfos> imageInfos;
+    private java.util.List<ImageInfos> imageInfos;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -98,7 +103,7 @@ public class SelectImageTaskResponseBody extends TeaModel {
     /**
      * @return imageInfos
      */
-    public java.util.List < ImageInfos> getImageInfos() {
+    public java.util.List<ImageInfos> getImageInfos() {
         return this.imageInfos;
     }
 
@@ -149,7 +154,7 @@ public class SelectImageTaskResponseBody extends TeaModel {
         private String failed; 
         private String generationSource; 
         private String gmtCreate; 
-        private java.util.List < ImageInfos> imageInfos; 
+        private java.util.List<ImageInfos> imageInfos; 
         private String requestId; 
         private String scene; 
         private String status; 
@@ -192,7 +197,7 @@ public class SelectImageTaskResponseBody extends TeaModel {
         /**
          * imageInfos.
          */
-        public Builder imageInfos(java.util.List < ImageInfos> imageInfos) {
+        public Builder imageInfos(java.util.List<ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
             return this;
         }

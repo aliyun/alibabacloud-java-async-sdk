@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListAvatarProjectRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("projectIdList")
-    private java.util.List < String > projectIdList;
+    private java.util.List<String> projectIdList;
 
     private ListAvatarProjectRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class ListAvatarProjectRequest extends Request {
     /**
      * @return projectIdList
      */
-    public java.util.List < String > getProjectIdList() {
+    public java.util.List<String> getProjectIdList() {
         return this.projectIdList;
     }
 
     public static final class Builder extends Request.Builder<ListAvatarProjectRequest, Builder> {
-        private java.util.List < String > projectIdList; 
+        private java.util.List<String> projectIdList; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class ListAvatarProjectRequest extends Request {
         /**
          * projectIdList.
          */
-        public Builder projectIdList(java.util.List < String > projectIdList) {
+        public Builder projectIdList(java.util.List<String> projectIdList) {
             String projectIdListShrink = shrink(projectIdList, "projectIdList", "simple");
             this.putQueryParameter("projectIdList", projectIdListShrink);
             this.projectIdList = projectIdList;

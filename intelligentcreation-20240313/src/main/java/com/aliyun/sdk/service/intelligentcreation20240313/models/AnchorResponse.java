@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AnchorResponse</p>
  */
 public class AnchorResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("anchorCategory")
+    private String anchorCategory;
+
     @com.aliyun.core.annotation.NameInMap("anchorId")
     private String anchorId;
 
@@ -56,6 +64,7 @@ public class AnchorResponse extends Response {
 
     private AnchorResponse(BuilderImpl builder) {
         super(builder);
+        this.anchorCategory = builder.anchorCategory;
         this.anchorId = builder.anchorId;
         this.anchorMaterialName = builder.anchorMaterialName;
         this.anchorType = builder.anchorType;
@@ -79,6 +88,13 @@ public class AnchorResponse extends Response {
     @Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
+    }
+
+    /**
+     * @return anchorCategory
+     */
+    public String getAnchorCategory() {
+        return this.anchorCategory;
     }
 
     /**
@@ -181,6 +197,8 @@ public class AnchorResponse extends Response {
 
     public interface Builder extends Response.Builder<AnchorResponse, Builder> {
 
+        Builder anchorCategory(String anchorCategory);
+
         Builder anchorId(String anchorId);
 
         Builder anchorMaterialName(String anchorMaterialName);
@@ -217,6 +235,7 @@ public class AnchorResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<AnchorResponse, Builder>
             implements Builder {
+        private String anchorCategory; 
         private String anchorId; 
         private String anchorMaterialName; 
         private String anchorType; 
@@ -238,6 +257,7 @@ public class AnchorResponse extends Response {
 
         private BuilderImpl(AnchorResponse response) {
             super(response);
+            this.anchorCategory = response.anchorCategory;
             this.anchorId = response.anchorId;
             this.anchorMaterialName = response.anchorMaterialName;
             this.anchorType = response.anchorType;
@@ -253,6 +273,15 @@ public class AnchorResponse extends Response {
             this.supportBgChange = response.supportBgChange;
             this.useScene = response.useScene;
         } 
+
+        /**
+         * anchorCategory.
+         */
+        @Override
+        public Builder anchorCategory(String anchorCategory) {
+            this.anchorCategory = anchorCategory;
+            return this;
+        }
 
         /**
          * anchorId.

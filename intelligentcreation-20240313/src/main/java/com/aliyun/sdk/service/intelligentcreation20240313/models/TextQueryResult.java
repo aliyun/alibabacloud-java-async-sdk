@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class TextQueryResult extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("texts")
-    private java.util.List < Text > texts;
+    private java.util.List<Text> texts;
 
     @com.aliyun.core.annotation.NameInMap("total")
     private Integer total;
@@ -45,7 +50,7 @@ public class TextQueryResult extends TeaModel {
     /**
      * @return texts
      */
-    public java.util.List < Text > getTexts() {
+    public java.util.List<Text> getTexts() {
         return this.texts;
     }
 
@@ -58,7 +63,7 @@ public class TextQueryResult extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Text > texts; 
+        private java.util.List<Text> texts; 
         private Integer total; 
 
         /**
@@ -72,7 +77,7 @@ public class TextQueryResult extends TeaModel {
         /**
          * texts.
          */
-        public Builder texts(java.util.List < Text > texts) {
+        public Builder texts(java.util.List<Text> texts) {
             this.texts = texts;
             return this;
         }

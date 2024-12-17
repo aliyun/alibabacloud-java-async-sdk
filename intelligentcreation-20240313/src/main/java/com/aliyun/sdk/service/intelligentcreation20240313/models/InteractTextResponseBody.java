@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,10 +27,10 @@ public class InteractTextResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("relatedImages")
-    private java.util.List < String > relatedImages;
+    private java.util.List<String> relatedImages;
 
     @com.aliyun.core.annotation.NameInMap("relatedVideos")
-    private java.util.List < String > relatedVideos;
+    private java.util.List<String> relatedVideos;
 
     @com.aliyun.core.annotation.NameInMap("sessionId")
     private String sessionId;
@@ -75,14 +80,14 @@ public class InteractTextResponseBody extends TeaModel {
     /**
      * @return relatedImages
      */
-    public java.util.List < String > getRelatedImages() {
+    public java.util.List<String> getRelatedImages() {
         return this.relatedImages;
     }
 
     /**
      * @return relatedVideos
      */
-    public java.util.List < String > getRelatedVideos() {
+    public java.util.List<String> getRelatedVideos() {
         return this.relatedVideos;
     }
 
@@ -104,8 +109,8 @@ public class InteractTextResponseBody extends TeaModel {
         private Boolean end; 
         private Integer index; 
         private String message; 
-        private java.util.List < String > relatedImages; 
-        private java.util.List < String > relatedVideos; 
+        private java.util.List<String> relatedImages; 
+        private java.util.List<String> relatedVideos; 
         private String sessionId; 
         private Integer type; 
 
@@ -136,7 +141,7 @@ public class InteractTextResponseBody extends TeaModel {
         /**
          * relatedImages.
          */
-        public Builder relatedImages(java.util.List < String > relatedImages) {
+        public Builder relatedImages(java.util.List<String> relatedImages) {
             this.relatedImages = relatedImages;
             return this;
         }
@@ -144,7 +149,7 @@ public class InteractTextResponseBody extends TeaModel {
         /**
          * relatedVideos.
          */
-        public Builder relatedVideos(java.util.List < String > relatedVideos) {
+        public Builder relatedVideos(java.util.List<String> relatedVideos) {
             this.relatedVideos = relatedVideos;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAvatarProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("queryAvatarProjectResultList")
-    private java.util.List < QueryAvatarProjectResultList> queryAvatarProjectResultList;
+    private java.util.List<QueryAvatarProjectResultList> queryAvatarProjectResultList;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListAvatarProjectResponseBody extends TeaModel {
     /**
      * @return queryAvatarProjectResultList
      */
-    public java.util.List < QueryAvatarProjectResultList> getQueryAvatarProjectResultList() {
+    public java.util.List<QueryAvatarProjectResultList> getQueryAvatarProjectResultList() {
         return this.queryAvatarProjectResultList;
     }
 
@@ -46,13 +51,13 @@ public class ListAvatarProjectResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < QueryAvatarProjectResultList> queryAvatarProjectResultList; 
+        private java.util.List<QueryAvatarProjectResultList> queryAvatarProjectResultList; 
         private String requestId; 
 
         /**
          * queryAvatarProjectResultList.
          */
-        public Builder queryAvatarProjectResultList(java.util.List < QueryAvatarProjectResultList> queryAvatarProjectResultList) {
+        public Builder queryAvatarProjectResultList(java.util.List<QueryAvatarProjectResultList> queryAvatarProjectResultList) {
             this.queryAvatarProjectResultList = queryAvatarProjectResultList;
             return this;
         }

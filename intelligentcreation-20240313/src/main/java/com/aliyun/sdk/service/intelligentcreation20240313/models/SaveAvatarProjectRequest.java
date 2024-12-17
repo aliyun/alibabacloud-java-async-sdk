@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class SaveAvatarProjectRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("frames")
-    private java.util.List < Frames> frames;
+    private java.util.List<Frames> frames;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("operateType")
@@ -74,7 +79,7 @@ public class SaveAvatarProjectRequest extends Request {
     /**
      * @return frames
      */
-    public java.util.List < Frames> getFrames() {
+    public java.util.List<Frames> getFrames() {
         return this.frames;
     }
 
@@ -115,7 +120,7 @@ public class SaveAvatarProjectRequest extends Request {
 
     public static final class Builder extends Request.Builder<SaveAvatarProjectRequest, Builder> {
         private String agentId; 
-        private java.util.List < Frames> frames; 
+        private java.util.List<Frames> frames; 
         private String operateType; 
         private String projectId; 
         private String projectName; 
@@ -149,7 +154,7 @@ public class SaveAvatarProjectRequest extends Request {
         /**
          * frames.
          */
-        public Builder frames(java.util.List < Frames> frames) {
+        public Builder frames(java.util.List<Frames> frames) {
             this.putBodyParameter("frames", frames);
             this.frames = frames;
             return this;
@@ -536,7 +541,7 @@ public class SaveAvatarProjectRequest extends Request {
      */
     public static class Frames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("layers")
-        private java.util.List < Layers> layers;
+        private java.util.List<Layers> layers;
 
         @com.aliyun.core.annotation.NameInMap("videoScript")
         private VideoScript videoScript;
@@ -557,7 +562,7 @@ public class SaveAvatarProjectRequest extends Request {
         /**
          * @return layers
          */
-        public java.util.List < Layers> getLayers() {
+        public java.util.List<Layers> getLayers() {
             return this.layers;
         }
 
@@ -569,13 +574,13 @@ public class SaveAvatarProjectRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Layers> layers; 
+            private java.util.List<Layers> layers; 
             private VideoScript videoScript; 
 
             /**
              * layers.
              */
-            public Builder layers(java.util.List < Layers> layers) {
+            public Builder layers(java.util.List<Layers> layers) {
                 this.layers = layers;
                 return this;
             }

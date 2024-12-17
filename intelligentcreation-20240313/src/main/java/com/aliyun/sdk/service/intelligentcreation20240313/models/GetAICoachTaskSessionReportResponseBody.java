@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -21,6 +26,9 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("evaluationResult")
     private String evaluationResult;
 
+    @com.aliyun.core.annotation.NameInMap("feedback")
+    private Boolean feedback;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
@@ -40,6 +48,7 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
         this.duration = builder.duration;
         this.endTime = builder.endTime;
         this.evaluationResult = builder.evaluationResult;
+        this.feedback = builder.feedback;
         this.requestId = builder.requestId;
         this.scriptName = builder.scriptName;
         this.startTime = builder.startTime;
@@ -74,6 +83,13 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
      */
     public String getEvaluationResult() {
         return this.evaluationResult;
+    }
+
+    /**
+     * @return feedback
+     */
+    public Boolean getFeedback() {
+        return this.feedback;
     }
 
     /**
@@ -115,6 +131,7 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
         private Long duration; 
         private String endTime; 
         private String evaluationResult; 
+        private Boolean feedback; 
         private String requestId; 
         private String scriptName; 
         private String startTime; 
@@ -142,6 +159,14 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
          */
         public Builder evaluationResult(String evaluationResult) {
             this.evaluationResult = evaluationResult;
+            return this;
+        }
+
+        /**
+         * feedback.
+         */
+        public Builder feedback(Boolean feedback) {
+            this.feedback = feedback;
             return this;
         }
 

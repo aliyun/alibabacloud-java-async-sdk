@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class TextTaskCreateCmd extends TeaModel {
     private ReferenceTag referenceTag;
 
     @com.aliyun.core.annotation.NameInMap("relatedRagIds")
-    private java.util.List < Long > relatedRagIds;
+    private java.util.List<Long> relatedRagIds;
 
     @com.aliyun.core.annotation.NameInMap("streamApi")
     private Boolean streamApi;
@@ -58,7 +63,7 @@ public class TextTaskCreateCmd extends TeaModel {
     private String theme;
 
     @com.aliyun.core.annotation.NameInMap("themes")
-    private java.util.List < String > themes;
+    private java.util.List<String> themes;
 
     private TextTaskCreateCmd(Builder builder) {
         this.agentId = builder.agentId;
@@ -145,7 +150,7 @@ public class TextTaskCreateCmd extends TeaModel {
     /**
      * @return relatedRagIds
      */
-    public java.util.List < Long > getRelatedRagIds() {
+    public java.util.List<Long> getRelatedRagIds() {
         return this.relatedRagIds;
     }
 
@@ -187,7 +192,7 @@ public class TextTaskCreateCmd extends TeaModel {
     /**
      * @return themes
      */
-    public java.util.List < String > getThemes() {
+    public java.util.List<String> getThemes() {
         return this.themes;
     }
 
@@ -200,13 +205,13 @@ public class TextTaskCreateCmd extends TeaModel {
         private Integer number; 
         private String point; 
         private ReferenceTag referenceTag; 
-        private java.util.List < Long > relatedRagIds; 
+        private java.util.List<Long> relatedRagIds; 
         private Boolean streamApi; 
         private String style; 
         private String target; 
         private String textModeType; 
         private String theme; 
-        private java.util.List < String > themes; 
+        private java.util.List<String> themes; 
 
         /**
          * agentId.
@@ -278,7 +283,7 @@ public class TextTaskCreateCmd extends TeaModel {
         /**
          * relatedRagIds.
          */
-        public Builder relatedRagIds(java.util.List < Long > relatedRagIds) {
+        public Builder relatedRagIds(java.util.List<Long> relatedRagIds) {
             this.relatedRagIds = relatedRagIds;
             return this;
         }
@@ -326,7 +331,7 @@ public class TextTaskCreateCmd extends TeaModel {
         /**
          * themes.
          */
-        public Builder themes(java.util.List < String > themes) {
+        public Builder themes(java.util.List<String> themes) {
             this.themes = themes;
             return this;
         }

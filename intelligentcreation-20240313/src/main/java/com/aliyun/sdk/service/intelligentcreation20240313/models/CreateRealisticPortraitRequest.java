@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateRealisticPortraitRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ages")
-    private java.util.List < Integer > ages;
+    private java.util.List<Integer> ages;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cloth")
@@ -30,7 +35,7 @@ public class CreateRealisticPortraitRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("face")
-    private java.util.List < Integer > face;
+    private java.util.List<Integer> face;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("figure")
@@ -102,7 +107,7 @@ public class CreateRealisticPortraitRequest extends Request {
     /**
      * @return ages
      */
-    public java.util.List < Integer > getAges() {
+    public java.util.List<Integer> getAges() {
         return this.ages;
     }
 
@@ -130,7 +135,7 @@ public class CreateRealisticPortraitRequest extends Request {
     /**
      * @return face
      */
-    public java.util.List < Integer > getFace() {
+    public java.util.List<Integer> getFace() {
         return this.face;
     }
 
@@ -198,11 +203,11 @@ public class CreateRealisticPortraitRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRealisticPortraitRequest, Builder> {
-        private java.util.List < Integer > ages; 
+        private java.util.List<Integer> ages; 
         private Integer cloth; 
         private Integer color; 
         private String custom; 
-        private java.util.List < Integer > face; 
+        private java.util.List<Integer> face; 
         private Integer figure; 
         private Integer gender; 
         private Integer hairColor; 
@@ -238,7 +243,7 @@ public class CreateRealisticPortraitRequest extends Request {
         /**
          * ages.
          */
-        public Builder ages(java.util.List < Integer > ages) {
+        public Builder ages(java.util.List<Integer> ages) {
             this.putBodyParameter("ages", ages);
             this.ages = ages;
             return this;
@@ -274,7 +279,7 @@ public class CreateRealisticPortraitRequest extends Request {
         /**
          * face.
          */
-        public Builder face(java.util.List < Integer > face) {
+        public Builder face(java.util.List<Integer> face) {
             this.putBodyParameter("face", face);
             this.face = face;
             return this;

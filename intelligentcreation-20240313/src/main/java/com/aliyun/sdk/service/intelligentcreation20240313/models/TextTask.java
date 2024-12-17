@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -51,7 +56,7 @@ public class TextTask extends TeaModel {
     private String target;
 
     @com.aliyun.core.annotation.NameInMap("textIds")
-    private java.util.List < Long > textIds;
+    private java.util.List<Long> textIds;
 
     @com.aliyun.core.annotation.NameInMap("textModeType")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -64,7 +69,7 @@ public class TextTask extends TeaModel {
     private String textTaskStatus;
 
     @com.aliyun.core.annotation.NameInMap("texts")
-    private java.util.List < Text > texts;
+    private java.util.List<Text> texts;
 
     @com.aliyun.core.annotation.NameInMap("theme")
     private String theme;
@@ -189,7 +194,7 @@ public class TextTask extends TeaModel {
     /**
      * @return textIds
      */
-    public java.util.List < Long > getTextIds() {
+    public java.util.List<Long> getTextIds() {
         return this.textIds;
     }
 
@@ -217,7 +222,7 @@ public class TextTask extends TeaModel {
     /**
      * @return texts
      */
-    public java.util.List < Text > getTexts() {
+    public java.util.List<Text> getTexts() {
         return this.texts;
     }
 
@@ -248,11 +253,11 @@ public class TextTask extends TeaModel {
         private Integer relatedRagId; 
         private String style; 
         private String target; 
-        private java.util.List < Long > textIds; 
+        private java.util.List<Long> textIds; 
         private String textModeType; 
         private Long textTaskId; 
         private String textTaskStatus; 
-        private java.util.List < Text > texts; 
+        private java.util.List<Text> texts; 
         private String theme; 
         private String themeDesc; 
 
@@ -358,7 +363,7 @@ public class TextTask extends TeaModel {
         /**
          * textIds.
          */
-        public Builder textIds(java.util.List < Long > textIds) {
+        public Builder textIds(java.util.List<Long> textIds) {
             this.textIds = textIds;
             return this;
         }
@@ -390,7 +395,7 @@ public class TextTask extends TeaModel {
         /**
          * texts.
          */
-        public Builder texts(java.util.List < Text > texts) {
+        public Builder texts(java.util.List<Text> texts) {
             this.texts = texts;
             return this;
         }

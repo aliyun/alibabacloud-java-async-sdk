@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class CountTextResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("countTextCmdList")
-    private java.util.List < CountTextCmdList> countTextCmdList;
+    private java.util.List<CountTextCmdList> countTextCmdList;
 
     private CountTextResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class CountTextResponseBody extends TeaModel {
     /**
      * @return countTextCmdList
      */
-    public java.util.List < CountTextCmdList> getCountTextCmdList() {
+    public java.util.List<CountTextCmdList> getCountTextCmdList() {
         return this.countTextCmdList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < CountTextCmdList> countTextCmdList; 
+        private java.util.List<CountTextCmdList> countTextCmdList; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class CountTextResponseBody extends TeaModel {
         /**
          * countTextCmdList.
          */
-        public Builder countTextCmdList(java.util.List < CountTextCmdList> countTextCmdList) {
+        public Builder countTextCmdList(java.util.List<CountTextCmdList> countTextCmdList) {
             this.countTextCmdList = countTextCmdList;
             return this;
         }

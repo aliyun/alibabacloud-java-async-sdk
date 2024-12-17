@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryAvatarResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("queryResourceInfoList")
-    private java.util.List < QueryResourceInfoList> queryResourceInfoList;
+    private java.util.List<QueryResourceInfoList> queryResourceInfoList;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class QueryAvatarResourceResponseBody extends TeaModel {
     /**
      * @return queryResourceInfoList
      */
-    public java.util.List < QueryResourceInfoList> getQueryResourceInfoList() {
+    public java.util.List<QueryResourceInfoList> getQueryResourceInfoList() {
         return this.queryResourceInfoList;
     }
 
@@ -46,13 +51,13 @@ public class QueryAvatarResourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < QueryResourceInfoList> queryResourceInfoList; 
+        private java.util.List<QueryResourceInfoList> queryResourceInfoList; 
         private String requestId; 
 
         /**
          * queryResourceInfoList.
          */
-        public Builder queryResourceInfoList(java.util.List < QueryResourceInfoList> queryResourceInfoList) {
+        public Builder queryResourceInfoList(java.util.List<QueryResourceInfoList> queryResourceInfoList) {
             this.queryResourceInfoList = queryResourceInfoList;
             return this;
         }

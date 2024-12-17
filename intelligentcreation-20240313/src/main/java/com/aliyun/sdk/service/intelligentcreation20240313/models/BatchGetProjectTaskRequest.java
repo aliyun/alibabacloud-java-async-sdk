@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class BatchGetProjectTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("taskIdList")
-    private java.util.List < String > taskIdList;
+    private java.util.List<String> taskIdList;
 
     private BatchGetProjectTaskRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class BatchGetProjectTaskRequest extends Request {
     /**
      * @return taskIdList
      */
-    public java.util.List < String > getTaskIdList() {
+    public java.util.List<String> getTaskIdList() {
         return this.taskIdList;
     }
 
     public static final class Builder extends Request.Builder<BatchGetProjectTaskRequest, Builder> {
-        private java.util.List < String > taskIdList; 
+        private java.util.List<String> taskIdList; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class BatchGetProjectTaskRequest extends Request {
         /**
          * taskIdList.
          */
-        public Builder taskIdList(java.util.List < String > taskIdList) {
+        public Builder taskIdList(java.util.List<String> taskIdList) {
             String taskIdListShrink = shrink(taskIdList, "taskIdList", "simple");
             this.putQueryParameter("taskIdList", taskIdListShrink);
             this.taskIdList = taskIdList;

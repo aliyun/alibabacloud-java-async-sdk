@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAnchorRequest</p>
  */
 public class ListAnchorRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("anchorCategory")
+    private String anchorCategory;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("anchorType")
     private String anchorType;
@@ -42,6 +51,7 @@ public class ListAnchorRequest extends Request {
 
     private ListAnchorRequest(Builder builder) {
         super(builder);
+        this.anchorCategory = builder.anchorCategory;
         this.anchorType = builder.anchorType;
         this.coverRate = builder.coverRate;
         this.digitalHumanType = builder.digitalHumanType;
@@ -62,6 +72,13 @@ public class ListAnchorRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return anchorCategory
+     */
+    public String getAnchorCategory() {
+        return this.anchorCategory;
     }
 
     /**
@@ -114,6 +131,7 @@ public class ListAnchorRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAnchorRequest, Builder> {
+        private String anchorCategory; 
         private String anchorType; 
         private String coverRate; 
         private String digitalHumanType; 
@@ -128,6 +146,7 @@ public class ListAnchorRequest extends Request {
 
         private Builder(ListAnchorRequest request) {
             super(request);
+            this.anchorCategory = request.anchorCategory;
             this.anchorType = request.anchorType;
             this.coverRate = request.coverRate;
             this.digitalHumanType = request.digitalHumanType;
@@ -136,6 +155,15 @@ public class ListAnchorRequest extends Request {
             this.resSpecType = request.resSpecType;
             this.useScene = request.useScene;
         } 
+
+        /**
+         * anchorCategory.
+         */
+        public Builder anchorCategory(String anchorCategory) {
+            this.putQueryParameter("anchorCategory", anchorCategory);
+            this.anchorCategory = anchorCategory;
+            return this;
+        }
 
         /**
          * anchorType.

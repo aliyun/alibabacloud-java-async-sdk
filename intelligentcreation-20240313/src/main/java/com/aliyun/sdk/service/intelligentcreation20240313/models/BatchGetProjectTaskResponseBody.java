@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class BatchGetProjectTaskResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resultList")
-    private java.util.List < ResultList> resultList;
+    private java.util.List<ResultList> resultList;
 
     private BatchGetProjectTaskResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class BatchGetProjectTaskResponseBody extends TeaModel {
     /**
      * @return resultList
      */
-    public java.util.List < ResultList> getResultList() {
+    public java.util.List<ResultList> getResultList() {
         return this.resultList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultList> resultList; 
+        private java.util.List<ResultList> resultList; 
 
         /**
          * <p>Id of the request</p>
@@ -63,7 +68,7 @@ public class BatchGetProjectTaskResponseBody extends TeaModel {
         /**
          * resultList.
          */
-        public Builder resultList(java.util.List < ResultList> resultList) {
+        public Builder resultList(java.util.List<ResultList> resultList) {
             this.resultList = resultList;
             return this;
         }

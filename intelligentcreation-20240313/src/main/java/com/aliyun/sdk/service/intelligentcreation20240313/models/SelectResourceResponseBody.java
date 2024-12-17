@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class SelectResourceResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resourceInfoList")
-    private java.util.List < ResourceInfoList> resourceInfoList;
+    private java.util.List<ResourceInfoList> resourceInfoList;
 
     private SelectResourceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class SelectResourceResponseBody extends TeaModel {
     /**
      * @return resourceInfoList
      */
-    public java.util.List < ResourceInfoList> getResourceInfoList() {
+    public java.util.List<ResourceInfoList> getResourceInfoList() {
         return this.resourceInfoList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourceInfoList> resourceInfoList; 
+        private java.util.List<ResourceInfoList> resourceInfoList; 
 
         /**
          * requestId.
@@ -60,7 +65,7 @@ public class SelectResourceResponseBody extends TeaModel {
         /**
          * resourceInfoList.
          */
-        public Builder resourceInfoList(java.util.List < ResourceInfoList> resourceInfoList) {
+        public Builder resourceInfoList(java.util.List<ResourceInfoList> resourceInfoList) {
             this.resourceInfoList = resourceInfoList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class Text extends TeaModel {
     private String gmtModified;
 
     @com.aliyun.core.annotation.NameInMap("illustrationTaskIdList")
-    private java.util.List < Long > illustrationTaskIdList;
+    private java.util.List<Long> illustrationTaskIdList;
 
     @com.aliyun.core.annotation.NameInMap("publishStatus")
     private String publishStatus;
@@ -62,7 +67,7 @@ public class Text extends TeaModel {
     private Long textTaskId;
 
     @com.aliyun.core.annotation.NameInMap("textThemes")
-    private java.util.List < String > textThemes;
+    private java.util.List<String> textThemes;
 
     @com.aliyun.core.annotation.NameInMap("title")
     private String title;
@@ -150,7 +155,7 @@ public class Text extends TeaModel {
     /**
      * @return illustrationTaskIdList
      */
-    public java.util.List < Long > getIllustrationTaskIdList() {
+    public java.util.List<Long> getIllustrationTaskIdList() {
         return this.illustrationTaskIdList;
     }
 
@@ -213,7 +218,7 @@ public class Text extends TeaModel {
     /**
      * @return textThemes
      */
-    public java.util.List < String > getTextThemes() {
+    public java.util.List<String> getTextThemes() {
         return this.textThemes;
     }
 
@@ -245,7 +250,7 @@ public class Text extends TeaModel {
         private String errMsg; 
         private String gmtCreate; 
         private String gmtModified; 
-        private java.util.List < Long > illustrationTaskIdList; 
+        private java.util.List<Long> illustrationTaskIdList; 
         private String publishStatus; 
         private String textContent; 
         private Long textId; 
@@ -254,7 +259,7 @@ public class Text extends TeaModel {
         private String textStatus; 
         private String textStyleType; 
         private Long textTaskId; 
-        private java.util.List < String > textThemes; 
+        private java.util.List<String> textThemes; 
         private String title; 
         private String userNameCreate; 
         private String userNameModified; 
@@ -313,7 +318,7 @@ public class Text extends TeaModel {
         /**
          * illustrationTaskIdList.
          */
-        public Builder illustrationTaskIdList(java.util.List < Long > illustrationTaskIdList) {
+        public Builder illustrationTaskIdList(java.util.List<Long> illustrationTaskIdList) {
             this.illustrationTaskIdList = illustrationTaskIdList;
             return this;
         }
@@ -394,7 +399,7 @@ public class Text extends TeaModel {
         /**
          * textThemes.
          */
-        public Builder textThemes(java.util.List < String > textThemes) {
+        public Builder textThemes(java.util.List<String> textThemes) {
             this.textThemes = textThemes;
             return this;
         }

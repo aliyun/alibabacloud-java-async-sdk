@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SubmitProjectTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("frames")
-    private java.util.List < Frames> frames;
+    private java.util.List<Frames> frames;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("scaleType")
@@ -52,7 +57,7 @@ public class SubmitProjectTaskRequest extends Request {
     /**
      * @return frames
      */
-    public java.util.List < Frames> getFrames() {
+    public java.util.List<Frames> getFrames() {
         return this.frames;
     }
 
@@ -78,7 +83,7 @@ public class SubmitProjectTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitProjectTaskRequest, Builder> {
-        private java.util.List < Frames> frames; 
+        private java.util.List<Frames> frames; 
         private String scaleType; 
         private Integer subtitleTag; 
         private Integer transparentBackground; 
@@ -98,7 +103,7 @@ public class SubmitProjectTaskRequest extends Request {
         /**
          * <p>frame</p>
          */
-        public Builder frames(java.util.List < Frames> frames) {
+        public Builder frames(java.util.List<Frames> frames) {
             this.putBodyParameter("frames", frames);
             this.frames = frames;
             return this;
@@ -145,6 +150,9 @@ public class SubmitProjectTaskRequest extends Request {
      * <p>SubmitProjectTaskRequest</p>
      */
     public static class Material extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("anchorStyleLevel")
+        private String anchorStyleLevel;
+
         @com.aliyun.core.annotation.NameInMap("format")
         private String format;
 
@@ -161,6 +169,7 @@ public class SubmitProjectTaskRequest extends Request {
         private Integer volume;
 
         private Material(Builder builder) {
+            this.anchorStyleLevel = builder.anchorStyleLevel;
             this.format = builder.format;
             this.id = builder.id;
             this.speed = builder.speed;
@@ -174,6 +183,13 @@ public class SubmitProjectTaskRequest extends Request {
 
         public static Material create() {
             return builder().build();
+        }
+
+        /**
+         * @return anchorStyleLevel
+         */
+        public String getAnchorStyleLevel() {
+            return this.anchorStyleLevel;
         }
 
         /**
@@ -212,11 +228,20 @@ public class SubmitProjectTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private String anchorStyleLevel; 
             private String format; 
             private String id; 
             private String speed; 
             private String url; 
             private Integer volume; 
+
+            /**
+             * anchorStyleLevel.
+             */
+            public Builder anchorStyleLevel(String anchorStyleLevel) {
+                this.anchorStyleLevel = anchorStyleLevel;
+                return this;
+            }
 
             /**
              * format.
@@ -837,7 +862,7 @@ public class SubmitProjectTaskRequest extends Request {
         private Integer index;
 
         @com.aliyun.core.annotation.NameInMap("layers")
-        private java.util.List < Layers> layers;
+        private java.util.List<Layers> layers;
 
         @com.aliyun.core.annotation.NameInMap("subtitle")
         private Subtitle subtitle;
@@ -870,7 +895,7 @@ public class SubmitProjectTaskRequest extends Request {
         /**
          * @return layers
          */
-        public java.util.List < Layers> getLayers() {
+        public java.util.List<Layers> getLayers() {
             return this.layers;
         }
 
@@ -890,7 +915,7 @@ public class SubmitProjectTaskRequest extends Request {
 
         public static final class Builder {
             private Integer index; 
-            private java.util.List < Layers> layers; 
+            private java.util.List<Layers> layers; 
             private Subtitle subtitle; 
             private VideoScript videoScript; 
 
@@ -905,7 +930,7 @@ public class SubmitProjectTaskRequest extends Request {
             /**
              * layers.
              */
-            public Builder layers(java.util.List < Layers> layers) {
+            public Builder layers(java.util.List<Layers> layers) {
                 this.layers = layers;
                 return this;
             }

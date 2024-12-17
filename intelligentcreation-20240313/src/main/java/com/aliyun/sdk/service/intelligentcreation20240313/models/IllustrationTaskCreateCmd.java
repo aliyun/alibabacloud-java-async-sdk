@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.intelligentcreation20240313.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class IllustrationTaskCreateCmd extends TeaModel {
     private Integer nums;
 
     @com.aliyun.core.annotation.NameInMap("ossPaths")
-    private java.util.List < String > ossPaths;
+    private java.util.List<String> ossPaths;
 
     @com.aliyun.core.annotation.NameInMap("stickerText")
     private String stickerText;
@@ -89,7 +94,7 @@ public class IllustrationTaskCreateCmd extends TeaModel {
     /**
      * @return ossPaths
      */
-    public java.util.List < String > getOssPaths() {
+    public java.util.List<String> getOssPaths() {
         return this.ossPaths;
     }
 
@@ -106,7 +111,7 @@ public class IllustrationTaskCreateCmd extends TeaModel {
         private Integer dstWidth; 
         private String idempotentId; 
         private Integer nums; 
-        private java.util.List < String > ossPaths; 
+        private java.util.List<String> ossPaths; 
         private String stickerText; 
 
         /**
@@ -152,7 +157,7 @@ public class IllustrationTaskCreateCmd extends TeaModel {
         /**
          * ossPaths.
          */
-        public Builder ossPaths(java.util.List < String > ossPaths) {
+        public Builder ossPaths(java.util.List<String> ossPaths) {
             this.ossPaths = ossPaths;
             return this;
         }
