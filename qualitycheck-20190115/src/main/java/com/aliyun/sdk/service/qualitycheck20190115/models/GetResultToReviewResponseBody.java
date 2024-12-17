@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -386,7 +391,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class Dialogues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dialogue")
-        private java.util.List < Dialogue> dialogue;
+        private java.util.List<Dialogue> dialogue;
 
         private Dialogues(Builder builder) {
             this.dialogue = builder.dialogue;
@@ -403,17 +408,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return dialogue
          */
-        public java.util.List < Dialogue> getDialogue() {
+        public java.util.List<Dialogue> getDialogue() {
             return this.dialogue;
         }
 
         public static final class Builder {
-            private java.util.List < Dialogue> dialogue; 
+            private java.util.List<Dialogue> dialogue; 
 
             /**
              * Dialogue.
              */
-            public Builder dialogue(java.util.List < Dialogue> dialogue) {
+            public Builder dialogue(java.util.List<Dialogue> dialogue) {
                 this.dialogue = dialogue;
                 return this;
             }
@@ -560,7 +565,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class HitRuleReviewInfoComplainHistories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComplainHistories")
-        private java.util.List < ComplainHistories> complainHistories;
+        private java.util.List<ComplainHistories> complainHistories;
 
         private HitRuleReviewInfoComplainHistories(Builder builder) {
             this.complainHistories = builder.complainHistories;
@@ -577,17 +582,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return complainHistories
          */
-        public java.util.List < ComplainHistories> getComplainHistories() {
+        public java.util.List<ComplainHistories> getComplainHistories() {
             return this.complainHistories;
         }
 
         public static final class Builder {
-            private java.util.List < ComplainHistories> complainHistories; 
+            private java.util.List<ComplainHistories> complainHistories; 
 
             /**
              * ComplainHistories.
              */
-            public Builder complainHistories(java.util.List < ComplainHistories> complainHistories) {
+            public Builder complainHistories(java.util.List<ComplainHistories> complainHistories) {
                 this.complainHistories = complainHistories;
                 return this;
             }
@@ -607,7 +612,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class Cid extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
-        private java.util.List < String > cid;
+        private java.util.List<String> cid;
 
         private Cid(Builder builder) {
             this.cid = builder.cid;
@@ -624,17 +629,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return cid
          */
-        public java.util.List < String > getCid() {
+        public java.util.List<String> getCid() {
             return this.cid;
         }
 
         public static final class Builder {
-            private java.util.List < String > cid; 
+            private java.util.List<String> cid; 
 
             /**
              * Cid.
              */
-            public Builder cid(java.util.List < String > cid) {
+            public Builder cid(java.util.List<String> cid) {
                 this.cid = cid;
                 return this;
             }
@@ -821,7 +826,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class KeyWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyWord")
-        private java.util.List < KeyWord> keyWord;
+        private java.util.List<KeyWord> keyWord;
 
         private KeyWords(Builder builder) {
             this.keyWord = builder.keyWord;
@@ -838,17 +843,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return keyWord
          */
-        public java.util.List < KeyWord> getKeyWord() {
+        public java.util.List<KeyWord> getKeyWord() {
             return this.keyWord;
         }
 
         public static final class Builder {
-            private java.util.List < KeyWord> keyWord; 
+            private java.util.List<KeyWord> keyWord; 
 
             /**
              * KeyWord.
              */
-            public Builder keyWord(java.util.List < KeyWord> keyWord) {
+            public Builder keyWord(java.util.List<KeyWord> keyWord) {
                 this.keyWord = keyWord;
                 return this;
             }
@@ -1122,7 +1127,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class ConditionHitInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionHitInfo")
-        private java.util.List < ConditionHitInfo> conditionHitInfo;
+        private java.util.List<ConditionHitInfo> conditionHitInfo;
 
         private ConditionHitInfoList(Builder builder) {
             this.conditionHitInfo = builder.conditionHitInfo;
@@ -1139,17 +1144,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return conditionHitInfo
          */
-        public java.util.List < ConditionHitInfo> getConditionHitInfo() {
+        public java.util.List<ConditionHitInfo> getConditionHitInfo() {
             return this.conditionHitInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ConditionHitInfo> conditionHitInfo; 
+            private java.util.List<ConditionHitInfo> conditionHitInfo; 
 
             /**
              * ConditionHitInfo.
              */
-            public Builder conditionHitInfo(java.util.List < ConditionHitInfo> conditionHitInfo) {
+            public Builder conditionHitInfo(java.util.List<ConditionHitInfo> conditionHitInfo) {
                 this.conditionHitInfo = conditionHitInfo;
                 return this;
             }
@@ -1543,7 +1548,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class HitRuleReviewInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitRuleReviewInfo")
-        private java.util.List < HitRuleReviewInfo> hitRuleReviewInfo;
+        private java.util.List<HitRuleReviewInfo> hitRuleReviewInfo;
 
         private HitRuleReviewInfoList(Builder builder) {
             this.hitRuleReviewInfo = builder.hitRuleReviewInfo;
@@ -1560,17 +1565,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return hitRuleReviewInfo
          */
-        public java.util.List < HitRuleReviewInfo> getHitRuleReviewInfo() {
+        public java.util.List<HitRuleReviewInfo> getHitRuleReviewInfo() {
             return this.hitRuleReviewInfo;
         }
 
         public static final class Builder {
-            private java.util.List < HitRuleReviewInfo> hitRuleReviewInfo; 
+            private java.util.List<HitRuleReviewInfo> hitRuleReviewInfo; 
 
             /**
              * HitRuleReviewInfo.
              */
-            public Builder hitRuleReviewInfo(java.util.List < HitRuleReviewInfo> hitRuleReviewInfo) {
+            public Builder hitRuleReviewInfo(java.util.List<HitRuleReviewInfo> hitRuleReviewInfo) {
                 this.hitRuleReviewInfo = hitRuleReviewInfo;
                 return this;
             }
@@ -1717,7 +1722,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class ManualScoreInfoComplainHistories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComplainHistories")
-        private java.util.List < ComplainHistoriesComplainHistories> complainHistories;
+        private java.util.List<ComplainHistoriesComplainHistories> complainHistories;
 
         private ManualScoreInfoComplainHistories(Builder builder) {
             this.complainHistories = builder.complainHistories;
@@ -1734,17 +1739,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return complainHistories
          */
-        public java.util.List < ComplainHistoriesComplainHistories> getComplainHistories() {
+        public java.util.List<ComplainHistoriesComplainHistories> getComplainHistories() {
             return this.complainHistories;
         }
 
         public static final class Builder {
-            private java.util.List < ComplainHistoriesComplainHistories> complainHistories; 
+            private java.util.List<ComplainHistoriesComplainHistories> complainHistories; 
 
             /**
              * ComplainHistories.
              */
-            public Builder complainHistories(java.util.List < ComplainHistoriesComplainHistories> complainHistories) {
+            public Builder complainHistories(java.util.List<ComplainHistoriesComplainHistories> complainHistories) {
                 this.complainHistories = complainHistories;
                 return this;
             }
@@ -1911,7 +1916,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class ManualScoreInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ManualScoreInfo")
-        private java.util.List < ManualScoreInfo> manualScoreInfo;
+        private java.util.List<ManualScoreInfo> manualScoreInfo;
 
         private ManualScoreInfoList(Builder builder) {
             this.manualScoreInfo = builder.manualScoreInfo;
@@ -1928,17 +1933,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return manualScoreInfo
          */
-        public java.util.List < ManualScoreInfo> getManualScoreInfo() {
+        public java.util.List<ManualScoreInfo> getManualScoreInfo() {
             return this.manualScoreInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ManualScoreInfo> manualScoreInfo; 
+            private java.util.List<ManualScoreInfo> manualScoreInfo; 
 
             /**
              * ManualScoreInfo.
              */
-            public Builder manualScoreInfo(java.util.List < ManualScoreInfo> manualScoreInfo) {
+            public Builder manualScoreInfo(java.util.List<ManualScoreInfo> manualScoreInfo) {
                 this.manualScoreInfo = manualScoreInfo;
                 return this;
             }
@@ -2025,7 +2030,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class ReviewHistoryReviewRightRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewRightRule")
-        private java.util.List < ReviewRightRule> reviewRightRule;
+        private java.util.List<ReviewRightRule> reviewRightRule;
 
         private ReviewHistoryReviewRightRule(Builder builder) {
             this.reviewRightRule = builder.reviewRightRule;
@@ -2042,17 +2047,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return reviewRightRule
          */
-        public java.util.List < ReviewRightRule> getReviewRightRule() {
+        public java.util.List<ReviewRightRule> getReviewRightRule() {
             return this.reviewRightRule;
         }
 
         public static final class Builder {
-            private java.util.List < ReviewRightRule> reviewRightRule; 
+            private java.util.List<ReviewRightRule> reviewRightRule; 
 
             /**
              * ReviewRightRule.
              */
-            public Builder reviewRightRule(java.util.List < ReviewRightRule> reviewRightRule) {
+            public Builder reviewRightRule(java.util.List<ReviewRightRule> reviewRightRule) {
                 this.reviewRightRule = reviewRightRule;
                 return this;
             }
@@ -2339,7 +2344,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class ReviewHistoryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewHistory")
-        private java.util.List < ReviewHistory> reviewHistory;
+        private java.util.List<ReviewHistory> reviewHistory;
 
         private ReviewHistoryList(Builder builder) {
             this.reviewHistory = builder.reviewHistory;
@@ -2356,17 +2361,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return reviewHistory
          */
-        public java.util.List < ReviewHistory> getReviewHistory() {
+        public java.util.List<ReviewHistory> getReviewHistory() {
             return this.reviewHistory;
         }
 
         public static final class Builder {
-            private java.util.List < ReviewHistory> reviewHistory; 
+            private java.util.List<ReviewHistory> reviewHistory; 
 
             /**
              * ReviewHistory.
              */
-            public Builder reviewHistory(java.util.List < ReviewHistory> reviewHistory) {
+            public Builder reviewHistory(java.util.List<ReviewHistory> reviewHistory) {
                 this.reviewHistory = reviewHistory;
                 return this;
             }
@@ -2386,7 +2391,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class ReviewKeyIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewKeyIdList")
-        private java.util.List < Long > reviewKeyIdList;
+        private java.util.List<Long> reviewKeyIdList;
 
         private ReviewKeyIdList(Builder builder) {
             this.reviewKeyIdList = builder.reviewKeyIdList;
@@ -2403,17 +2408,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return reviewKeyIdList
          */
-        public java.util.List < Long > getReviewKeyIdList() {
+        public java.util.List<Long> getReviewKeyIdList() {
             return this.reviewKeyIdList;
         }
 
         public static final class Builder {
-            private java.util.List < Long > reviewKeyIdList; 
+            private java.util.List<Long> reviewKeyIdList; 
 
             /**
              * ReviewKeyIdList.
              */
-            public Builder reviewKeyIdList(java.util.List < Long > reviewKeyIdList) {
+            public Builder reviewKeyIdList(java.util.List<Long> reviewKeyIdList) {
                 this.reviewKeyIdList = reviewKeyIdList;
                 return this;
             }
@@ -2500,7 +2505,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
      */
     public static class DataReviewTypeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewTypeIdList")
-        private java.util.List < ReviewTypeIdList> reviewTypeIdList;
+        private java.util.List<ReviewTypeIdList> reviewTypeIdList;
 
         private DataReviewTypeIdList(Builder builder) {
             this.reviewTypeIdList = builder.reviewTypeIdList;
@@ -2517,17 +2522,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         /**
          * @return reviewTypeIdList
          */
-        public java.util.List < ReviewTypeIdList> getReviewTypeIdList() {
+        public java.util.List<ReviewTypeIdList> getReviewTypeIdList() {
             return this.reviewTypeIdList;
         }
 
         public static final class Builder {
-            private java.util.List < ReviewTypeIdList> reviewTypeIdList; 
+            private java.util.List<ReviewTypeIdList> reviewTypeIdList; 
 
             /**
              * ReviewTypeIdList.
              */
-            public Builder reviewTypeIdList(java.util.List < ReviewTypeIdList> reviewTypeIdList) {
+            public Builder reviewTypeIdList(java.util.List<ReviewTypeIdList> reviewTypeIdList) {
                 this.reviewTypeIdList = reviewTypeIdList;
                 return this;
             }

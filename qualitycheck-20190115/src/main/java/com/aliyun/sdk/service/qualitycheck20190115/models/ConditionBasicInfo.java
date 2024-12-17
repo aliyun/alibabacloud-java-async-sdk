@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class ConditionBasicInfo extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("Operators")
-    private java.util.List < OperatorBasicInfo > operators;
+    private java.util.List<OperatorBasicInfo> operators;
 
     @com.aliyun.core.annotation.NameInMap("Rid")
     private String rid;
@@ -104,7 +109,7 @@ public class ConditionBasicInfo extends TeaModel {
     /**
      * @return operators
      */
-    public java.util.List < OperatorBasicInfo > getOperators() {
+    public java.util.List<OperatorBasicInfo> getOperators() {
         return this.operators;
     }
 
@@ -129,7 +134,7 @@ public class ConditionBasicInfo extends TeaModel {
         private Long id; 
         private String lambda; 
         private String name; 
-        private java.util.List < OperatorBasicInfo > operators; 
+        private java.util.List<OperatorBasicInfo> operators; 
         private String rid; 
         private String userGroup; 
 
@@ -184,7 +189,7 @@ public class ConditionBasicInfo extends TeaModel {
         /**
          * Operators.
          */
-        public Builder operators(java.util.List < OperatorBasicInfo > operators) {
+        public Builder operators(java.util.List<OperatorBasicInfo> operators) {
             this.operators = operators;
             return this;
         }

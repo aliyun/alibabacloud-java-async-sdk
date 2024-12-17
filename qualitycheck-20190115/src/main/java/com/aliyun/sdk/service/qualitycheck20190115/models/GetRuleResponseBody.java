@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -139,7 +144,7 @@ public class GetRuleResponseBody extends TeaModel {
      */
     public static class BusinessCategoryNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessCategoryNameList")
-        private java.util.List < String > businessCategoryNameList;
+        private java.util.List<String> businessCategoryNameList;
 
         private BusinessCategoryNameList(Builder builder) {
             this.businessCategoryNameList = builder.businessCategoryNameList;
@@ -156,17 +161,17 @@ public class GetRuleResponseBody extends TeaModel {
         /**
          * @return businessCategoryNameList
          */
-        public java.util.List < String > getBusinessCategoryNameList() {
+        public java.util.List<String> getBusinessCategoryNameList() {
             return this.businessCategoryNameList;
         }
 
         public static final class Builder {
-            private java.util.List < String > businessCategoryNameList; 
+            private java.util.List<String> businessCategoryNameList; 
 
             /**
              * BusinessCategoryNameList.
              */
-            public Builder businessCategoryNameList(java.util.List < String > businessCategoryNameList) {
+            public Builder businessCategoryNameList(java.util.List<String> businessCategoryNameList) {
                 this.businessCategoryNameList = businessCategoryNameList;
                 return this;
             }
@@ -653,7 +658,7 @@ public class GetRuleResponseBody extends TeaModel {
      */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleInfo")
-        private java.util.List < RuleInfo> ruleInfo;
+        private java.util.List<RuleInfo> ruleInfo;
 
         private Rules(Builder builder) {
             this.ruleInfo = builder.ruleInfo;
@@ -670,17 +675,17 @@ public class GetRuleResponseBody extends TeaModel {
         /**
          * @return ruleInfo
          */
-        public java.util.List < RuleInfo> getRuleInfo() {
+        public java.util.List<RuleInfo> getRuleInfo() {
             return this.ruleInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RuleInfo> ruleInfo; 
+            private java.util.List<RuleInfo> ruleInfo; 
 
             /**
              * RuleInfo.
              */
-            public Builder ruleInfo(java.util.List < RuleInfo> ruleInfo) {
+            public Builder ruleInfo(java.util.List<RuleInfo> ruleInfo) {
                 this.ruleInfo = ruleInfo;
                 return this;
             }

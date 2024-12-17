@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -182,7 +187,7 @@ public class OperatorBasicInfo extends TeaModel {
         private String answerThreshold;
 
         @com.aliyun.core.annotation.NameInMap("AntModelInfo")
-        private java.util.Map < String, String > antModelInfo;
+        private java.util.Map<String, String> antModelInfo;
 
         @com.aliyun.core.annotation.NameInMap("Average")
         private Boolean average;
@@ -224,7 +229,7 @@ public class OperatorBasicInfo extends TeaModel {
         private String endType;
 
         @com.aliyun.core.annotation.NameInMap("Excludes")
-        private java.util.List < String > excludes;
+        private java.util.List<String> excludes;
 
         @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
@@ -251,7 +256,7 @@ public class OperatorBasicInfo extends TeaModel {
         private Integer keywordMatchSize;
 
         @com.aliyun.core.annotation.NameInMap("Keywords")
-        private java.util.List < String > keywords;
+        private java.util.List<String> keywords;
 
         @com.aliyun.core.annotation.NameInMap("KnowledgeInfo")
         private String knowledgeInfo;
@@ -269,7 +274,7 @@ public class OperatorBasicInfo extends TeaModel {
         private Integer knowledgeTargetType;
 
         @com.aliyun.core.annotation.NameInMap("LgfSentences")
-        private java.util.List < String > lgfSentences;
+        private java.util.List<String> lgfSentences;
 
         @com.aliyun.core.annotation.NameInMap("MaxEmotionChangeValue")
         private Integer maxEmotionChangeValue;
@@ -293,13 +298,13 @@ public class OperatorBasicInfo extends TeaModel {
         private Integer poutputType;
 
         @com.aliyun.core.annotation.NameInMap("Pvalues")
-        private java.util.List < String > pvalues;
+        private java.util.List<String> pvalues;
 
         @com.aliyun.core.annotation.NameInMap("QuestionThreshold")
         private String questionThreshold;
 
         @com.aliyun.core.annotation.NameInMap("References")
-        private java.util.List < String > references;
+        private java.util.List<String> references;
 
         @com.aliyun.core.annotation.NameInMap("Regex")
         private String regex;
@@ -314,10 +319,10 @@ public class OperatorBasicInfo extends TeaModel {
         private Double similarityThreshold;
 
         @com.aliyun.core.annotation.NameInMap("SimilarlySentences")
-        private java.util.List < String > similarlySentences;
+        private java.util.List<String> similarlySentences;
 
         @com.aliyun.core.annotation.NameInMap("Synonyms")
-        private java.util.Map < String, java.util.List<String>> synonyms;
+        private java.util.Map<String, java.util.List<String>> synonyms;
 
         @com.aliyun.core.annotation.NameInMap("Target")
         private Integer target;
@@ -411,7 +416,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return antModelInfo
          */
-        public java.util.Map < String, String > getAntModelInfo() {
+        public java.util.Map<String, String> getAntModelInfo() {
             return this.antModelInfo;
         }
 
@@ -509,7 +514,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return excludes
          */
-        public java.util.List < String > getExcludes() {
+        public java.util.List<String> getExcludes() {
             return this.excludes;
         }
 
@@ -572,7 +577,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return keywords
          */
-        public java.util.List < String > getKeywords() {
+        public java.util.List<String> getKeywords() {
             return this.keywords;
         }
 
@@ -614,7 +619,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return lgfSentences
          */
-        public java.util.List < String > getLgfSentences() {
+        public java.util.List<String> getLgfSentences() {
             return this.lgfSentences;
         }
 
@@ -670,7 +675,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return pvalues
          */
-        public java.util.List < String > getPvalues() {
+        public java.util.List<String> getPvalues() {
             return this.pvalues;
         }
 
@@ -684,7 +689,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return references
          */
-        public java.util.List < String > getReferences() {
+        public java.util.List<String> getReferences() {
             return this.references;
         }
 
@@ -719,14 +724,14 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return similarlySentences
          */
-        public java.util.List < String > getSimilarlySentences() {
+        public java.util.List<String> getSimilarlySentences() {
             return this.similarlySentences;
         }
 
         /**
          * @return synonyms
          */
-        public java.util.Map < String, java.util.List<String>> getSynonyms() {
+        public java.util.Map<String, java.util.List<String>> getSynonyms() {
             return this.synonyms;
         }
 
@@ -774,7 +779,7 @@ public class OperatorBasicInfo extends TeaModel {
 
         public static final class Builder {
             private String answerThreshold; 
-            private java.util.Map < String, String > antModelInfo; 
+            private java.util.Map<String, String> antModelInfo; 
             private Boolean average; 
             private String beginType; 
             private String botId; 
@@ -788,7 +793,7 @@ public class OperatorBasicInfo extends TeaModel {
             private Integer delayTime; 
             private Boolean differentRole; 
             private String endType; 
-            private java.util.List < String > excludes; 
+            private java.util.List<String> excludes; 
             private Integer from; 
             private Boolean fromEnd; 
             private Integer hitTime; 
@@ -797,13 +802,13 @@ public class OperatorBasicInfo extends TeaModel {
             private Integer intervalEnd; 
             private Integer keywordExtension; 
             private Integer keywordMatchSize; 
-            private java.util.List < String > keywords; 
+            private java.util.List<String> keywords; 
             private String knowledgeInfo; 
             private Integer knowledgeSentenceNum; 
             private String knowledgeTargetId; 
             private String knowledgeTargetName; 
             private Integer knowledgeTargetType; 
-            private java.util.List < String > lgfSentences; 
+            private java.util.List<String> lgfSentences; 
             private Integer maxEmotionChangeValue; 
             private Integer minWordSize; 
             private Boolean nearDialogue; 
@@ -811,15 +816,15 @@ public class OperatorBasicInfo extends TeaModel {
             private String phrase; 
             private String pkey; 
             private Integer poutputType; 
-            private java.util.List < String > pvalues; 
+            private java.util.List<String> pvalues; 
             private String questionThreshold; 
-            private java.util.List < String > references; 
+            private java.util.List<String> references; 
             private String regex; 
             private Integer roleId; 
             private Integer score; 
             private Double similarityThreshold; 
-            private java.util.List < String > similarlySentences; 
-            private java.util.Map < String, java.util.List<String>> synonyms; 
+            private java.util.List<String> similarlySentences; 
+            private java.util.Map<String, java.util.List<String>> synonyms; 
             private Integer target; 
             private String targetRole; 
             private Float threshold; 
@@ -838,7 +843,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * AntModelInfo.
              */
-            public Builder antModelInfo(java.util.Map < String, String > antModelInfo) {
+            public Builder antModelInfo(java.util.Map<String, String> antModelInfo) {
                 this.antModelInfo = antModelInfo;
                 return this;
             }
@@ -950,7 +955,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * Excludes.
              */
-            public Builder excludes(java.util.List < String > excludes) {
+            public Builder excludes(java.util.List<String> excludes) {
                 this.excludes = excludes;
                 return this;
             }
@@ -1022,7 +1027,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * Keywords.
              */
-            public Builder keywords(java.util.List < String > keywords) {
+            public Builder keywords(java.util.List<String> keywords) {
                 this.keywords = keywords;
                 return this;
             }
@@ -1070,7 +1075,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * LgfSentences.
              */
-            public Builder lgfSentences(java.util.List < String > lgfSentences) {
+            public Builder lgfSentences(java.util.List<String> lgfSentences) {
                 this.lgfSentences = lgfSentences;
                 return this;
             }
@@ -1134,7 +1139,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * Pvalues.
              */
-            public Builder pvalues(java.util.List < String > pvalues) {
+            public Builder pvalues(java.util.List<String> pvalues) {
                 this.pvalues = pvalues;
                 return this;
             }
@@ -1150,7 +1155,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * References.
              */
-            public Builder references(java.util.List < String > references) {
+            public Builder references(java.util.List<String> references) {
                 this.references = references;
                 return this;
             }
@@ -1190,7 +1195,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * SimilarlySentences.
              */
-            public Builder similarlySentences(java.util.List < String > similarlySentences) {
+            public Builder similarlySentences(java.util.List<String> similarlySentences) {
                 this.similarlySentences = similarlySentences;
                 return this;
             }
@@ -1198,7 +1203,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * Synonyms.
              */
-            public Builder synonyms(java.util.Map < String, java.util.List<String>> synonyms) {
+            public Builder synonyms(java.util.Map<String, java.util.List<String>> synonyms) {
                 this.synonyms = synonyms;
                 return this;
             }

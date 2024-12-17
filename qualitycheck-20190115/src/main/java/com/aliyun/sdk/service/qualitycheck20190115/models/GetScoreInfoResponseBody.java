@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -246,7 +251,7 @@ public class GetScoreInfoResponseBody extends TeaModel {
      */
     public static class ScoreInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScoreParam")
-        private java.util.List < ScoreParam> scoreParam;
+        private java.util.List<ScoreParam> scoreParam;
 
         private ScoreInfos(Builder builder) {
             this.scoreParam = builder.scoreParam;
@@ -263,17 +268,17 @@ public class GetScoreInfoResponseBody extends TeaModel {
         /**
          * @return scoreParam
          */
-        public java.util.List < ScoreParam> getScoreParam() {
+        public java.util.List<ScoreParam> getScoreParam() {
             return this.scoreParam;
         }
 
         public static final class Builder {
-            private java.util.List < ScoreParam> scoreParam; 
+            private java.util.List<ScoreParam> scoreParam; 
 
             /**
              * ScoreParam.
              */
-            public Builder scoreParam(java.util.List < ScoreParam> scoreParam) {
+            public Builder scoreParam(java.util.List<ScoreParam> scoreParam) {
                 this.scoreParam = scoreParam;
                 return this;
             }
@@ -380,7 +385,7 @@ public class GetScoreInfoResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScorePo")
-        private java.util.List < ScorePo> scorePo;
+        private java.util.List<ScorePo> scorePo;
 
         private Data(Builder builder) {
             this.scorePo = builder.scorePo;
@@ -397,17 +402,17 @@ public class GetScoreInfoResponseBody extends TeaModel {
         /**
          * @return scorePo
          */
-        public java.util.List < ScorePo> getScorePo() {
+        public java.util.List<ScorePo> getScorePo() {
             return this.scorePo;
         }
 
         public static final class Builder {
-            private java.util.List < ScorePo> scorePo; 
+            private java.util.List<ScorePo> scorePo; 
 
             /**
              * ScorePo.
              */
-            public Builder scorePo(java.util.List < ScorePo> scorePo) {
+            public Builder scorePo(java.util.List<ScorePo> scorePo) {
                 this.scorePo = scorePo;
                 return this;
             }

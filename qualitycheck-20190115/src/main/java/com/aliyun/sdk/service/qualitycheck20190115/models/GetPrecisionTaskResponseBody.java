@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -266,7 +271,7 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
      */
     public static class Precisions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Precision")
-        private java.util.List < Precision> precision;
+        private java.util.List<Precision> precision;
 
         private Precisions(Builder builder) {
             this.precision = builder.precision;
@@ -283,17 +288,17 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
         /**
          * @return precision
          */
-        public java.util.List < Precision> getPrecision() {
+        public java.util.List<Precision> getPrecision() {
             return this.precision;
         }
 
         public static final class Builder {
-            private java.util.List < Precision> precision; 
+            private java.util.List<Precision> precision; 
 
             /**
              * Precision.
              */
-            public Builder precision(java.util.List < Precision> precision) {
+            public Builder precision(java.util.List<Precision> precision) {
                 this.precision = precision;
                 return this;
             }

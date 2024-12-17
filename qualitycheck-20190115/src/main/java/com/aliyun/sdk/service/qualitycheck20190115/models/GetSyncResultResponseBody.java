@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetSyncResultResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -76,7 +81,7 @@ public class GetSyncResultResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -125,7 +130,7 @@ public class GetSyncResultResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -152,7 +157,7 @@ public class GetSyncResultResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -747,10 +752,10 @@ public class GetSyncResultResponseBody extends TeaModel {
      */
     public static class Hits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
-        private java.util.List < String > cid;
+        private java.util.List<String> cid;
 
         @com.aliyun.core.annotation.NameInMap("KeyWords")
-        private java.util.List < KeyWords> keyWords;
+        private java.util.List<KeyWords> keyWords;
 
         @com.aliyun.core.annotation.NameInMap("Phrase")
         private Phrase phrase;
@@ -772,14 +777,14 @@ public class GetSyncResultResponseBody extends TeaModel {
         /**
          * @return cid
          */
-        public java.util.List < String > getCid() {
+        public java.util.List<String> getCid() {
             return this.cid;
         }
 
         /**
          * @return keyWords
          */
-        public java.util.List < KeyWords> getKeyWords() {
+        public java.util.List<KeyWords> getKeyWords() {
             return this.keyWords;
         }
 
@@ -791,14 +796,14 @@ public class GetSyncResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > cid; 
-            private java.util.List < KeyWords> keyWords; 
+            private java.util.List<String> cid; 
+            private java.util.List<KeyWords> keyWords; 
             private Phrase phrase; 
 
             /**
              * Cid.
              */
-            public Builder cid(java.util.List < String > cid) {
+            public Builder cid(java.util.List<String> cid) {
                 this.cid = cid;
                 return this;
             }
@@ -806,7 +811,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             /**
              * KeyWords.
              */
-            public Builder keyWords(java.util.List < KeyWords> keyWords) {
+            public Builder keyWords(java.util.List<KeyWords> keyWords) {
                 this.keyWords = keyWords;
                 return this;
             }
@@ -834,7 +839,7 @@ public class GetSyncResultResponseBody extends TeaModel {
      */
     public static class HitResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hits")
-        private java.util.List < Hits> hits;
+        private java.util.List<Hits> hits;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -867,7 +872,7 @@ public class GetSyncResultResponseBody extends TeaModel {
         /**
          * @return hits
          */
-        public java.util.List < Hits> getHits() {
+        public java.util.List<Hits> getHits() {
             return this.hits;
         }
 
@@ -900,7 +905,7 @@ public class GetSyncResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Hits> hits; 
+            private java.util.List<Hits> hits; 
             private String name; 
             private Integer reviewResult; 
             private String rid; 
@@ -909,7 +914,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             /**
              * Hits.
              */
-            public Builder hits(java.util.List < Hits> hits) {
+            public Builder hits(java.util.List<Hits> hits) {
                 this.hits = hits;
                 return this;
             }
@@ -1311,7 +1316,7 @@ public class GetSyncResultResponseBody extends TeaModel {
         private Agent agent;
 
         @com.aliyun.core.annotation.NameInMap("AsrResult")
-        private java.util.List < AsrResult> asrResult;
+        private java.util.List<AsrResult> asrResult;
 
         @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
@@ -1323,7 +1328,7 @@ public class GetSyncResultResponseBody extends TeaModel {
         private String errorMessage;
 
         @com.aliyun.core.annotation.NameInMap("HitResult")
-        private java.util.List < HitResult> hitResult;
+        private java.util.List<HitResult> hitResult;
 
         @com.aliyun.core.annotation.NameInMap("Recording")
         private Recording recording;
@@ -1388,7 +1393,7 @@ public class GetSyncResultResponseBody extends TeaModel {
         /**
          * @return asrResult
          */
-        public java.util.List < AsrResult> getAsrResult() {
+        public java.util.List<AsrResult> getAsrResult() {
             return this.asrResult;
         }
 
@@ -1416,7 +1421,7 @@ public class GetSyncResultResponseBody extends TeaModel {
         /**
          * @return hitResult
          */
-        public java.util.List < HitResult> getHitResult() {
+        public java.util.List<HitResult> getHitResult() {
             return this.hitResult;
         }
 
@@ -1485,11 +1490,11 @@ public class GetSyncResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private Agent agent; 
-            private java.util.List < AsrResult> asrResult; 
+            private java.util.List<AsrResult> asrResult; 
             private String comments; 
             private String createTime; 
             private String errorMessage; 
-            private java.util.List < HitResult> hitResult; 
+            private java.util.List<HitResult> hitResult; 
             private Recording recording; 
             private String resolver; 
             private Integer reviewResult; 
@@ -1511,7 +1516,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             /**
              * AsrResult.
              */
-            public Builder asrResult(java.util.List < AsrResult> asrResult) {
+            public Builder asrResult(java.util.List<AsrResult> asrResult) {
                 this.asrResult = asrResult;
                 return this;
             }
@@ -1543,7 +1548,7 @@ public class GetSyncResultResponseBody extends TeaModel {
             /**
              * HitResult.
              */
-            public Builder hitResult(java.util.List < HitResult> hitResult) {
+            public Builder hitResult(java.util.List<HitResult> hitResult) {
                 this.hitResult = hitResult;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -206,7 +211,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
      */
     public static class AllRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleNameInfo")
-        private java.util.List < RuleNameInfo> ruleNameInfo;
+        private java.util.List<RuleNameInfo> ruleNameInfo;
 
         private AllRuleList(Builder builder) {
             this.ruleNameInfo = builder.ruleNameInfo;
@@ -223,17 +228,17 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         /**
          * @return ruleNameInfo
          */
-        public java.util.List < RuleNameInfo> getRuleNameInfo() {
+        public java.util.List<RuleNameInfo> getRuleNameInfo() {
             return this.ruleNameInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RuleNameInfo> ruleNameInfo; 
+            private java.util.List<RuleNameInfo> ruleNameInfo; 
 
             /**
              * RuleNameInfo.
              */
-            public Builder ruleNameInfo(java.util.List < RuleNameInfo> ruleNameInfo) {
+            public Builder ruleNameInfo(java.util.List<RuleNameInfo> ruleNameInfo) {
                 this.ruleNameInfo = ruleNameInfo;
                 return this;
             }
@@ -320,7 +325,7 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
      */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleNameInfo")
-        private java.util.List < RuleListRuleNameInfo> ruleNameInfo;
+        private java.util.List<RuleListRuleNameInfo> ruleNameInfo;
 
         private RuleList(Builder builder) {
             this.ruleNameInfo = builder.ruleNameInfo;
@@ -337,17 +342,17 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
         /**
          * @return ruleNameInfo
          */
-        public java.util.List < RuleListRuleNameInfo> getRuleNameInfo() {
+        public java.util.List<RuleListRuleNameInfo> getRuleNameInfo() {
             return this.ruleNameInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RuleListRuleNameInfo> ruleNameInfo; 
+            private java.util.List<RuleListRuleNameInfo> ruleNameInfo; 
 
             /**
              * RuleNameInfo.
              */
-            public Builder ruleNameInfo(java.util.List < RuleListRuleNameInfo> ruleNameInfo) {
+            public Builder ruleNameInfo(java.util.List<RuleListRuleNameInfo> ruleNameInfo) {
                 this.ruleNameInfo = ruleNameInfo;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Messages")
-    private java.util.List < String > messages;
+    private java.util.List<String> messages;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
     /**
      * @return messages
      */
-    public java.util.List < String > getMessages() {
+    public java.util.List<String> getMessages() {
         return this.messages;
     }
 
@@ -93,7 +98,7 @@ public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
         private String code; 
         private String data; 
         private String message; 
-        private java.util.List < String > messages; 
+        private java.util.List<String> messages; 
         private String requestId; 
         private Boolean success; 
 
@@ -124,7 +129,7 @@ public class DeleteCheckTypeToSchemeResponseBody extends TeaModel {
         /**
          * Messages.
          */
-        public Builder messages(java.util.List < String > messages) {
+        public Builder messages(java.util.List<String> messages) {
             this.messages = messages;
             return this;
         }

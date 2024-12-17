@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListRulesV4ResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < RuleCountInfo > data;
+    private java.util.List<RuleCountInfo> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -34,7 +39,7 @@ public class ListRulesV4ResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Messages")
-    private java.util.List < String > messages;
+    private java.util.List<String> messages;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -106,7 +111,7 @@ public class ListRulesV4ResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < RuleCountInfo > getData() {
+    public java.util.List<RuleCountInfo> getData() {
         return this.data;
     }
 
@@ -127,7 +132,7 @@ public class ListRulesV4ResponseBody extends TeaModel {
     /**
      * @return messages
      */
-    public java.util.List < String > getMessages() {
+    public java.util.List<String> getMessages() {
         return this.messages;
     }
 
@@ -171,10 +176,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         private String code; 
         private Integer count; 
         private Integer currentPage; 
-        private java.util.List < RuleCountInfo > data; 
+        private java.util.List<RuleCountInfo> data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > messages; 
+        private java.util.List<String> messages; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -216,7 +221,7 @@ public class ListRulesV4ResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < RuleCountInfo > data) {
+        public Builder data(java.util.List<RuleCountInfo> data) {
             this.data = data;
             return this;
         }
@@ -240,7 +245,7 @@ public class ListRulesV4ResponseBody extends TeaModel {
         /**
          * Messages.
          */
-        public Builder messages(java.util.List < String > messages) {
+        public Builder messages(java.util.List<String> messages) {
             this.messages = messages;
             return this;
         }

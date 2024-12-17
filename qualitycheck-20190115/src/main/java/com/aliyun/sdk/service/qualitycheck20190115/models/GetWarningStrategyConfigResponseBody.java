@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -433,7 +438,7 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
      */
     public static class DataWarningStrategyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("warningStrategyList")
-        private java.util.List < WarningStrategyList> warningStrategyList;
+        private java.util.List<WarningStrategyList> warningStrategyList;
 
         private DataWarningStrategyList(Builder builder) {
             this.warningStrategyList = builder.warningStrategyList;
@@ -450,17 +455,17 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
         /**
          * @return warningStrategyList
          */
-        public java.util.List < WarningStrategyList> getWarningStrategyList() {
+        public java.util.List<WarningStrategyList> getWarningStrategyList() {
             return this.warningStrategyList;
         }
 
         public static final class Builder {
-            private java.util.List < WarningStrategyList> warningStrategyList; 
+            private java.util.List<WarningStrategyList> warningStrategyList; 
 
             /**
              * warningStrategyList.
              */
-            public Builder warningStrategyList(java.util.List < WarningStrategyList> warningStrategyList) {
+            public Builder warningStrategyList(java.util.List<WarningStrategyList> warningStrategyList) {
                 this.warningStrategyList = warningStrategyList;
                 return this;
             }

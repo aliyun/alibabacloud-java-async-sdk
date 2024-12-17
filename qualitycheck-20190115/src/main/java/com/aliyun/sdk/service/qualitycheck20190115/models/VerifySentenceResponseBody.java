@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -199,7 +204,7 @@ public class VerifySentenceResponseBody extends TeaModel {
      */
     public static class Line extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
-        private java.util.List < String > line;
+        private java.util.List<String> line;
 
         private Line(Builder builder) {
             this.line = builder.line;
@@ -216,17 +221,17 @@ public class VerifySentenceResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < String > getLine() {
+        public java.util.List<String> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < String > line; 
+            private java.util.List<String> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < String > line) {
+            public Builder line(java.util.List<String> line) {
                 this.line = line;
                 return this;
             }
@@ -313,7 +318,7 @@ public class VerifySentenceResponseBody extends TeaModel {
      */
     public static class TargetLine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
-        private java.util.List < String > line;
+        private java.util.List<String> line;
 
         private TargetLine(Builder builder) {
             this.line = builder.line;
@@ -330,17 +335,17 @@ public class VerifySentenceResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < String > getLine() {
+        public java.util.List<String> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < String > line; 
+            private java.util.List<String> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < String > line) {
+            public Builder line(java.util.List<String> line) {
                 this.line = line;
                 return this;
             }
@@ -514,7 +519,7 @@ public class VerifySentenceResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Delta")
-        private java.util.List < Delta> delta;
+        private java.util.List<Delta> delta;
 
         private Data(Builder builder) {
             this.delta = builder.delta;
@@ -531,17 +536,17 @@ public class VerifySentenceResponseBody extends TeaModel {
         /**
          * @return delta
          */
-        public java.util.List < Delta> getDelta() {
+        public java.util.List<Delta> getDelta() {
             return this.delta;
         }
 
         public static final class Builder {
-            private java.util.List < Delta> delta; 
+            private java.util.List<Delta> delta; 
 
             /**
              * Delta.
              */
-            public Builder delta(java.util.List < Delta> delta) {
+            public Builder delta(java.util.List<Delta> delta) {
                 this.delta = delta;
                 return this;
             }

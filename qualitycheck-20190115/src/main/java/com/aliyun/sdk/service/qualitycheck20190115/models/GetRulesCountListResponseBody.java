@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -299,7 +304,7 @@ public class GetRulesCountListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < String > data;
+        private java.util.List<String> data;
 
         private Data(Builder builder) {
             this.data = builder.data;
@@ -316,17 +321,17 @@ public class GetRulesCountListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < String > getData() {
+        public java.util.List<String> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < String > data; 
+            private java.util.List<String> data; 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < String > data) {
+            public Builder data(java.util.List<String> data) {
                 this.data = data;
                 return this;
             }
@@ -346,7 +351,7 @@ public class GetRulesCountListResponseBody extends TeaModel {
      */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
-        private java.util.List < String > message;
+        private java.util.List<String> message;
 
         private Messages(Builder builder) {
             this.message = builder.message;
@@ -363,17 +368,17 @@ public class GetRulesCountListResponseBody extends TeaModel {
         /**
          * @return message
          */
-        public java.util.List < String > getMessage() {
+        public java.util.List<String> getMessage() {
             return this.message;
         }
 
         public static final class Builder {
-            private java.util.List < String > message; 
+            private java.util.List<String> message; 
 
             /**
              * Message.
              */
-            public Builder message(java.util.List < String > message) {
+            public Builder message(java.util.List<String> message) {
                 this.message = message;
                 return this;
             }

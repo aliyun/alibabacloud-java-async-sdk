@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -63,7 +68,7 @@ public class GetRulesCountListRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RequireInfos")
-    private java.util.List < String > requireInfos;
+    private java.util.List<String> requireInfos;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Rid")
@@ -247,7 +252,7 @@ public class GetRulesCountListRequest extends Request {
     /**
      * @return requireInfos
      */
-    public java.util.List < String > getRequireInfos() {
+    public java.util.List<String> getRequireInfos() {
         return this.requireInfos;
     }
 
@@ -355,7 +360,7 @@ public class GetRulesCountListRequest extends Request {
         private String lastUpdateEmpid; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > requireInfos; 
+        private java.util.List<String> requireInfos; 
         private Long rid; 
         private String ruleIdOrRuleName; 
         private Integer ruleScoreSingleType; 
@@ -515,7 +520,7 @@ public class GetRulesCountListRequest extends Request {
         /**
          * RequireInfos.
          */
-        public Builder requireInfos(java.util.List < String > requireInfos) {
+        public Builder requireInfos(java.util.List<String> requireInfos) {
             this.putBodyParameter("RequireInfos", requireInfos);
             this.requireInfos = requireInfos;
             return this;

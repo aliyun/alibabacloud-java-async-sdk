@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GraphFlowNode extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Conditions")
-    private java.util.List < ConditionBasicInfo > conditions;
+    private java.util.List<ConditionBasicInfo> conditions;
 
     @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
@@ -28,7 +33,7 @@ public class GraphFlowNode extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("NextNodes")
-    private java.util.List < NextNodes> nextNodes;
+    private java.util.List<NextNodes> nextNodes;
 
     @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
@@ -66,7 +71,7 @@ public class GraphFlowNode extends TeaModel {
     /**
      * @return conditions
      */
-    public java.util.List < ConditionBasicInfo > getConditions() {
+    public java.util.List<ConditionBasicInfo> getConditions() {
         return this.conditions;
     }
 
@@ -101,7 +106,7 @@ public class GraphFlowNode extends TeaModel {
     /**
      * @return nextNodes
      */
-    public java.util.List < NextNodes> getNextNodes() {
+    public java.util.List<NextNodes> getNextNodes() {
         return this.nextNodes;
     }
 
@@ -134,12 +139,12 @@ public class GraphFlowNode extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConditionBasicInfo > conditions; 
+        private java.util.List<ConditionBasicInfo> conditions; 
         private String content; 
         private Long id; 
         private Integer index; 
         private String name; 
-        private java.util.List < NextNodes> nextNodes; 
+        private java.util.List<NextNodes> nextNodes; 
         private String nodeType; 
         private Properties properties; 
         private Long rid; 
@@ -148,7 +153,7 @@ public class GraphFlowNode extends TeaModel {
         /**
          * Conditions.
          */
-        public Builder conditions(java.util.List < ConditionBasicInfo > conditions) {
+        public Builder conditions(java.util.List<ConditionBasicInfo> conditions) {
             this.conditions = conditions;
             return this;
         }
@@ -188,7 +193,7 @@ public class GraphFlowNode extends TeaModel {
         /**
          * NextNodes.
          */
-        public Builder nextNodes(java.util.List < NextNodes> nextNodes) {
+        public Builder nextNodes(java.util.List<NextNodes> nextNodes) {
             this.nextNodes = nextNodes;
             return this;
         }
@@ -254,7 +259,7 @@ public class GraphFlowNode extends TeaModel {
         private Long nextNodeId;
 
         @com.aliyun.core.annotation.NameInMap("Triggers")
-        private java.util.List < String > triggers;
+        private java.util.List<String> triggers;
 
         private NextNodes(Builder builder) {
             this.checkType = builder.checkType;
@@ -311,7 +316,7 @@ public class GraphFlowNode extends TeaModel {
         /**
          * @return triggers
          */
-        public java.util.List < String > getTriggers() {
+        public java.util.List<String> getTriggers() {
             return this.triggers;
         }
 
@@ -321,7 +326,7 @@ public class GraphFlowNode extends TeaModel {
             private String lambda; 
             private String name; 
             private Long nextNodeId; 
-            private java.util.List < String > triggers; 
+            private java.util.List<String> triggers; 
 
             /**
              * CheckType.
@@ -366,7 +371,7 @@ public class GraphFlowNode extends TeaModel {
             /**
              * Triggers.
              */
-            public Builder triggers(java.util.List < String > triggers) {
+            public Builder triggers(java.util.List<String> triggers) {
                 this.triggers = triggers;
                 return this;
             }
@@ -422,7 +427,7 @@ public class GraphFlowNode extends TeaModel {
         private Integer scoreType;
 
         @com.aliyun.core.annotation.NameInMap("Triggers")
-        private java.util.List < String > triggers;
+        private java.util.List<String> triggers;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -539,7 +544,7 @@ public class GraphFlowNode extends TeaModel {
         /**
          * @return triggers
          */
-        public java.util.List < String > getTriggers() {
+        public java.util.List<String> getTriggers() {
             return this.triggers;
         }
 
@@ -563,7 +568,7 @@ public class GraphFlowNode extends TeaModel {
             private Integer scoreNumType; 
             private Integer scoreRuleHitType; 
             private Integer scoreType; 
-            private java.util.List < String > triggers; 
+            private java.util.List<String> triggers; 
             private String type; 
 
             /**
@@ -665,7 +670,7 @@ public class GraphFlowNode extends TeaModel {
             /**
              * Triggers.
              */
-            public Builder triggers(java.util.List < String > triggers) {
+            public Builder triggers(java.util.List<String> triggers) {
                 this.triggers = triggers;
                 return this;
             }

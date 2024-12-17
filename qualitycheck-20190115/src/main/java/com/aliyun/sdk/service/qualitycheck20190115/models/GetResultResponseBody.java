@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -473,7 +478,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class ResultInfoAsrResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsrResult")
-        private java.util.List < AsrResult> asrResult;
+        private java.util.List<AsrResult> asrResult;
 
         private ResultInfoAsrResult(Builder builder) {
             this.asrResult = builder.asrResult;
@@ -490,17 +495,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return asrResult
          */
-        public java.util.List < AsrResult> getAsrResult() {
+        public java.util.List<AsrResult> getAsrResult() {
             return this.asrResult;
         }
 
         public static final class Builder {
-            private java.util.List < AsrResult> asrResult; 
+            private java.util.List<AsrResult> asrResult; 
 
             /**
              * AsrResult.
              */
-            public Builder asrResult(java.util.List < AsrResult> asrResult) {
+            public Builder asrResult(java.util.List<AsrResult> asrResult) {
                 this.asrResult = asrResult;
                 return this;
             }
@@ -908,7 +913,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class Excludes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Exclude")
-        private java.util.List < String > exclude;
+        private java.util.List<String> exclude;
 
         private Excludes(Builder builder) {
             this.exclude = builder.exclude;
@@ -925,17 +930,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return exclude
          */
-        public java.util.List < String > getExclude() {
+        public java.util.List<String> getExclude() {
             return this.exclude;
         }
 
         public static final class Builder {
-            private java.util.List < String > exclude; 
+            private java.util.List<String> exclude; 
 
             /**
              * Exclude.
              */
-            public Builder exclude(java.util.List < String > exclude) {
+            public Builder exclude(java.util.List<String> exclude) {
                 this.exclude = exclude;
                 return this;
             }
@@ -1109,7 +1114,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class Intents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Intent")
-        private java.util.List < Intent> intent;
+        private java.util.List<Intent> intent;
 
         private Intents(Builder builder) {
             this.intent = builder.intent;
@@ -1126,17 +1131,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return intent
          */
-        public java.util.List < Intent> getIntent() {
+        public java.util.List<Intent> getIntent() {
             return this.intent;
         }
 
         public static final class Builder {
-            private java.util.List < Intent> intent; 
+            private java.util.List<Intent> intent; 
 
             /**
              * Intent.
              */
-            public Builder intent(java.util.List < Intent> intent) {
+            public Builder intent(java.util.List<Intent> intent) {
                 this.intent = intent;
                 return this;
             }
@@ -1223,7 +1228,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class Keywords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Keyword")
-        private java.util.List < String > keyword;
+        private java.util.List<String> keyword;
 
         private Keywords(Builder builder) {
             this.keyword = builder.keyword;
@@ -1240,17 +1245,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return keyword
          */
-        public java.util.List < String > getKeyword() {
+        public java.util.List<String> getKeyword() {
             return this.keyword;
         }
 
         public static final class Builder {
-            private java.util.List < String > keyword; 
+            private java.util.List<String> keyword; 
 
             /**
              * Keyword.
              */
-            public Builder keyword(java.util.List < String > keyword) {
+            public Builder keyword(java.util.List<String> keyword) {
                 this.keyword = keyword;
                 return this;
             }
@@ -2004,7 +2009,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class Operators extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Operator")
-        private java.util.List < Operator> operator;
+        private java.util.List<Operator> operator;
 
         private Operators(Builder builder) {
             this.operator = builder.operator;
@@ -2021,17 +2026,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return operator
          */
-        public java.util.List < Operator> getOperator() {
+        public java.util.List<Operator> getOperator() {
             return this.operator;
         }
 
         public static final class Builder {
-            private java.util.List < Operator> operator; 
+            private java.util.List<Operator> operator; 
 
             /**
              * Operator.
              */
-            public Builder operator(java.util.List < Operator> operator) {
+            public Builder operator(java.util.List<Operator> operator) {
                 this.operator = operator;
                 return this;
             }
@@ -2218,7 +2223,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class HitResultConditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+        private java.util.List<Conditions> conditions;
 
         private HitResultConditions(Builder builder) {
             this.conditions = builder.conditions;
@@ -2235,17 +2240,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
         public static final class Builder {
-            private java.util.List < Conditions> conditions; 
+            private java.util.List<Conditions> conditions; 
 
             /**
              * Conditions.
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }
@@ -2265,7 +2270,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class Cid extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
-        private java.util.List < String > cid;
+        private java.util.List<String> cid;
 
         private Cid(Builder builder) {
             this.cid = builder.cid;
@@ -2282,17 +2287,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return cid
          */
-        public java.util.List < String > getCid() {
+        public java.util.List<String> getCid() {
             return this.cid;
         }
 
         public static final class Builder {
-            private java.util.List < String > cid; 
+            private java.util.List<String> cid; 
 
             /**
              * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
              */
-            public Builder cid(java.util.List < String > cid) {
+            public Builder cid(java.util.List<String> cid) {
                 this.cid = cid;
                 return this;
             }
@@ -2419,7 +2424,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class KeyWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyWord")
-        private java.util.List < KeyWord> keyWord;
+        private java.util.List<KeyWord> keyWord;
 
         private KeyWords(Builder builder) {
             this.keyWord = builder.keyWord;
@@ -2436,17 +2441,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return keyWord
          */
-        public java.util.List < KeyWord> getKeyWord() {
+        public java.util.List<KeyWord> getKeyWord() {
             return this.keyWord;
         }
 
         public static final class Builder {
-            private java.util.List < KeyWord> keyWord; 
+            private java.util.List<KeyWord> keyWord; 
 
             /**
              * KeyWord.
              */
-            public Builder keyWord(java.util.List < KeyWord> keyWord) {
+            public Builder keyWord(java.util.List<KeyWord> keyWord) {
                 this.keyWord = keyWord;
                 return this;
             }
@@ -2680,7 +2685,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class Hits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hit")
-        private java.util.List < Hit> hit;
+        private java.util.List<Hit> hit;
 
         private Hits(Builder builder) {
             this.hit = builder.hit;
@@ -2697,17 +2702,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return hit
          */
-        public java.util.List < Hit> getHit() {
+        public java.util.List<Hit> getHit() {
             return this.hit;
         }
 
         public static final class Builder {
-            private java.util.List < Hit> hit; 
+            private java.util.List<Hit> hit; 
 
             /**
              * Hit.
              */
-            public Builder hit(java.util.List < Hit> hit) {
+            public Builder hit(java.util.List<Hit> hit) {
                 this.hit = hit;
                 return this;
             }
@@ -2934,7 +2939,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class ResultInfoHitResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitResult")
-        private java.util.List < HitResult> hitResult;
+        private java.util.List<HitResult> hitResult;
 
         private ResultInfoHitResult(Builder builder) {
             this.hitResult = builder.hitResult;
@@ -2951,17 +2956,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return hitResult
          */
-        public java.util.List < HitResult> getHitResult() {
+        public java.util.List<HitResult> getHitResult() {
             return this.hitResult;
         }
 
         public static final class Builder {
-            private java.util.List < HitResult> hitResult; 
+            private java.util.List<HitResult> hitResult; 
 
             /**
              * HitResult.
              */
-            public Builder hitResult(java.util.List < HitResult> hitResult) {
+            public Builder hitResult(java.util.List<HitResult> hitResult) {
                 this.hitResult = hitResult;
                 return this;
             }
@@ -3088,7 +3093,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class ResultInfoHitScore extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitScore")
-        private java.util.List < HitScore> hitScore;
+        private java.util.List<HitScore> hitScore;
 
         private ResultInfoHitScore(Builder builder) {
             this.hitScore = builder.hitScore;
@@ -3105,17 +3110,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return hitScore
          */
-        public java.util.List < HitScore> getHitScore() {
+        public java.util.List<HitScore> getHitScore() {
             return this.hitScore;
         }
 
         public static final class Builder {
-            private java.util.List < HitScore> hitScore; 
+            private java.util.List<HitScore> hitScore; 
 
             /**
              * HitScore.
              */
-            public Builder hitScore(java.util.List < HitScore> hitScore) {
+            public Builder hitScore(java.util.List<HitScore> hitScore) {
                 this.hitScore = hitScore;
                 return this;
             }
@@ -3809,7 +3814,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class ReviewHistoryReviewRightRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewRightRule")
-        private java.util.List < ReviewRightRule> reviewRightRule;
+        private java.util.List<ReviewRightRule> reviewRightRule;
 
         private ReviewHistoryReviewRightRule(Builder builder) {
             this.reviewRightRule = builder.reviewRightRule;
@@ -3826,17 +3831,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return reviewRightRule
          */
-        public java.util.List < ReviewRightRule> getReviewRightRule() {
+        public java.util.List<ReviewRightRule> getReviewRightRule() {
             return this.reviewRightRule;
         }
 
         public static final class Builder {
-            private java.util.List < ReviewRightRule> reviewRightRule; 
+            private java.util.List<ReviewRightRule> reviewRightRule; 
 
             /**
              * ReviewRightRule.
              */
-            public Builder reviewRightRule(java.util.List < ReviewRightRule> reviewRightRule) {
+            public Builder reviewRightRule(java.util.List<ReviewRightRule> reviewRightRule) {
                 this.reviewRightRule = reviewRightRule;
                 return this;
             }
@@ -4123,7 +4128,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class ReviewHistoryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewHistory")
-        private java.util.List < ReviewHistory> reviewHistory;
+        private java.util.List<ReviewHistory> reviewHistory;
 
         private ReviewHistoryList(Builder builder) {
             this.reviewHistory = builder.reviewHistory;
@@ -4140,17 +4145,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return reviewHistory
          */
-        public java.util.List < ReviewHistory> getReviewHistory() {
+        public java.util.List<ReviewHistory> getReviewHistory() {
             return this.reviewHistory;
         }
 
         public static final class Builder {
-            private java.util.List < ReviewHistory> reviewHistory; 
+            private java.util.List<ReviewHistory> reviewHistory; 
 
             /**
              * ReviewHistory.
              */
-            public Builder reviewHistory(java.util.List < ReviewHistory> reviewHistory) {
+            public Builder reviewHistory(java.util.List<ReviewHistory> reviewHistory) {
                 this.reviewHistory = reviewHistory;
                 return this;
             }
@@ -4170,7 +4175,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class ReviewKeyIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewKeyIdList")
-        private java.util.List < Long > reviewKeyIdList;
+        private java.util.List<Long> reviewKeyIdList;
 
         private ReviewKeyIdList(Builder builder) {
             this.reviewKeyIdList = builder.reviewKeyIdList;
@@ -4187,17 +4192,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return reviewKeyIdList
          */
-        public java.util.List < Long > getReviewKeyIdList() {
+        public java.util.List<Long> getReviewKeyIdList() {
             return this.reviewKeyIdList;
         }
 
         public static final class Builder {
-            private java.util.List < Long > reviewKeyIdList; 
+            private java.util.List<Long> reviewKeyIdList; 
 
             /**
              * ReviewKeyIdList.
              */
-            public Builder reviewKeyIdList(java.util.List < Long > reviewKeyIdList) {
+            public Builder reviewKeyIdList(java.util.List<Long> reviewKeyIdList) {
                 this.reviewKeyIdList = reviewKeyIdList;
                 return this;
             }
@@ -4284,7 +4289,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class ResultInfoReviewTypeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReviewTypeIdList")
-        private java.util.List < ReviewTypeIdList> reviewTypeIdList;
+        private java.util.List<ReviewTypeIdList> reviewTypeIdList;
 
         private ResultInfoReviewTypeIdList(Builder builder) {
             this.reviewTypeIdList = builder.reviewTypeIdList;
@@ -4301,17 +4306,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return reviewTypeIdList
          */
-        public java.util.List < ReviewTypeIdList> getReviewTypeIdList() {
+        public java.util.List<ReviewTypeIdList> getReviewTypeIdList() {
             return this.reviewTypeIdList;
         }
 
         public static final class Builder {
-            private java.util.List < ReviewTypeIdList> reviewTypeIdList; 
+            private java.util.List<ReviewTypeIdList> reviewTypeIdList; 
 
             /**
              * ReviewTypeIdList.
              */
-            public Builder reviewTypeIdList(java.util.List < ReviewTypeIdList> reviewTypeIdList) {
+            public Builder reviewTypeIdList(java.util.List<ReviewTypeIdList> reviewTypeIdList) {
                 this.reviewTypeIdList = reviewTypeIdList;
                 return this;
             }
@@ -4331,7 +4336,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class SchemeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemeIdList")
-        private java.util.List < Long > schemeIdList;
+        private java.util.List<Long> schemeIdList;
 
         private SchemeIdList(Builder builder) {
             this.schemeIdList = builder.schemeIdList;
@@ -4348,17 +4353,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return schemeIdList
          */
-        public java.util.List < Long > getSchemeIdList() {
+        public java.util.List<Long> getSchemeIdList() {
             return this.schemeIdList;
         }
 
         public static final class Builder {
-            private java.util.List < Long > schemeIdList; 
+            private java.util.List<Long> schemeIdList; 
 
             /**
              * SchemeIdList.
              */
-            public Builder schemeIdList(java.util.List < Long > schemeIdList) {
+            public Builder schemeIdList(java.util.List<Long> schemeIdList) {
                 this.schemeIdList = schemeIdList;
                 return this;
             }
@@ -4378,7 +4383,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class SchemeNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemeNameList")
-        private java.util.List < String > schemeNameList;
+        private java.util.List<String> schemeNameList;
 
         private SchemeNameList(Builder builder) {
             this.schemeNameList = builder.schemeNameList;
@@ -4395,17 +4400,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return schemeNameList
          */
-        public java.util.List < String > getSchemeNameList() {
+        public java.util.List<String> getSchemeNameList() {
             return this.schemeNameList;
         }
 
         public static final class Builder {
-            private java.util.List < String > schemeNameList; 
+            private java.util.List<String> schemeNameList; 
 
             /**
              * SchemeNameList.
              */
-            public Builder schemeNameList(java.util.List < String > schemeNameList) {
+            public Builder schemeNameList(java.util.List<String> schemeNameList) {
                 this.schemeNameList = schemeNameList;
                 return this;
             }
@@ -4992,7 +4997,7 @@ public class GetResultResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultInfo")
-        private java.util.List < ResultInfo> resultInfo;
+        private java.util.List<ResultInfo> resultInfo;
 
         private Data(Builder builder) {
             this.resultInfo = builder.resultInfo;
@@ -5009,17 +5014,17 @@ public class GetResultResponseBody extends TeaModel {
         /**
          * @return resultInfo
          */
-        public java.util.List < ResultInfo> getResultInfo() {
+        public java.util.List<ResultInfo> getResultInfo() {
             return this.resultInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ResultInfo> resultInfo; 
+            private java.util.List<ResultInfo> resultInfo; 
 
             /**
              * ResultInfo.
              */
-            public Builder resultInfo(java.util.List < ResultInfo> resultInfo) {
+            public Builder resultInfo(java.util.List<ResultInfo> resultInfo) {
                 this.resultInfo = resultInfo;
                 return this;
             }

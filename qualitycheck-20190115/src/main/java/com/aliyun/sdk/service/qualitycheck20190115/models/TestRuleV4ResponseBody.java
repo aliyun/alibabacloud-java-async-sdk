@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -177,7 +182,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         private NextNodeSituations situation;
 
         @com.aliyun.core.annotation.NameInMap("Triggers")
-        private java.util.List < String > triggers;
+        private java.util.List<String> triggers;
 
         private BranchInfoList(Builder builder) {
             this.checkType = builder.checkType;
@@ -242,7 +247,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         /**
          * @return triggers
          */
-        public java.util.List < String > getTriggers() {
+        public java.util.List<String> getTriggers() {
             return this.triggers;
         }
 
@@ -253,7 +258,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             private String name; 
             private Long nextNodeId; 
             private NextNodeSituations situation; 
-            private java.util.List < String > triggers; 
+            private java.util.List<String> triggers; 
 
             /**
              * CheckType.
@@ -306,7 +311,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             /**
              * Triggers.
              */
-            public Builder triggers(java.util.List < String > triggers) {
+            public Builder triggers(java.util.List<String> triggers) {
                 this.triggers = triggers;
                 return this;
             }
@@ -940,10 +945,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
      */
     public static class ConditionHitInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cid")
-        private java.util.List < String > cid;
+        private java.util.List<String> cid;
 
         @com.aliyun.core.annotation.NameInMap("KeyWords")
-        private java.util.List < KeyWords> keyWords;
+        private java.util.List<KeyWords> keyWords;
 
         @com.aliyun.core.annotation.NameInMap("Phrase")
         private Phrase phrase;
@@ -965,14 +970,14 @@ public class TestRuleV4ResponseBody extends TeaModel {
         /**
          * @return cid
          */
-        public java.util.List < String > getCid() {
+        public java.util.List<String> getCid() {
             return this.cid;
         }
 
         /**
          * @return keyWords
          */
-        public java.util.List < KeyWords> getKeyWords() {
+        public java.util.List<KeyWords> getKeyWords() {
             return this.keyWords;
         }
 
@@ -984,14 +989,14 @@ public class TestRuleV4ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > cid; 
-            private java.util.List < KeyWords> keyWords; 
+            private java.util.List<String> cid; 
+            private java.util.List<KeyWords> keyWords; 
             private Phrase phrase; 
 
             /**
              * Cid.
              */
-            public Builder cid(java.util.List < String > cid) {
+            public Builder cid(java.util.List<String> cid) {
                 this.cid = cid;
                 return this;
             }
@@ -999,7 +1004,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             /**
              * KeyWords.
              */
-            public Builder keyWords(java.util.List < KeyWords> keyWords) {
+            public Builder keyWords(java.util.List<KeyWords> keyWords) {
                 this.keyWords = keyWords;
                 return this;
             }
@@ -1030,13 +1035,13 @@ public class TestRuleV4ResponseBody extends TeaModel {
         private Long branchHitId;
 
         @com.aliyun.core.annotation.NameInMap("BranchInfoList")
-        private java.util.List < BranchInfoList> branchInfoList;
+        private java.util.List<BranchInfoList> branchInfoList;
 
         @com.aliyun.core.annotation.NameInMap("ConditionHitInfoList")
-        private java.util.List < ConditionHitInfoList> conditionHitInfoList;
+        private java.util.List<ConditionHitInfoList> conditionHitInfoList;
 
         @com.aliyun.core.annotation.NameInMap("ConditionInfoList")
-        private java.util.List < ConditionBasicInfo > conditionInfoList;
+        private java.util.List<ConditionBasicInfo> conditionInfoList;
 
         @com.aliyun.core.annotation.NameInMap("JudgeNodeName")
         private String judgeNodeName;
@@ -1099,21 +1104,21 @@ public class TestRuleV4ResponseBody extends TeaModel {
         /**
          * @return branchInfoList
          */
-        public java.util.List < BranchInfoList> getBranchInfoList() {
+        public java.util.List<BranchInfoList> getBranchInfoList() {
             return this.branchInfoList;
         }
 
         /**
          * @return conditionHitInfoList
          */
-        public java.util.List < ConditionHitInfoList> getConditionHitInfoList() {
+        public java.util.List<ConditionHitInfoList> getConditionHitInfoList() {
             return this.conditionHitInfoList;
         }
 
         /**
          * @return conditionInfoList
          */
-        public java.util.List < ConditionBasicInfo > getConditionInfoList() {
+        public java.util.List<ConditionBasicInfo> getConditionInfoList() {
             return this.conditionInfoList;
         }
 
@@ -1182,9 +1187,9 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long branchHitId; 
-            private java.util.List < BranchInfoList> branchInfoList; 
-            private java.util.List < ConditionHitInfoList> conditionHitInfoList; 
-            private java.util.List < ConditionBasicInfo > conditionInfoList; 
+            private java.util.List<BranchInfoList> branchInfoList; 
+            private java.util.List<ConditionHitInfoList> conditionHitInfoList; 
+            private java.util.List<ConditionBasicInfo> conditionInfoList; 
             private String judgeNodeName; 
             private String lambda; 
             private Boolean matched; 
@@ -1206,7 +1211,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             /**
              * BranchInfoList.
              */
-            public Builder branchInfoList(java.util.List < BranchInfoList> branchInfoList) {
+            public Builder branchInfoList(java.util.List<BranchInfoList> branchInfoList) {
                 this.branchInfoList = branchInfoList;
                 return this;
             }
@@ -1214,7 +1219,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             /**
              * ConditionHitInfoList.
              */
-            public Builder conditionHitInfoList(java.util.List < ConditionHitInfoList> conditionHitInfoList) {
+            public Builder conditionHitInfoList(java.util.List<ConditionHitInfoList> conditionHitInfoList) {
                 this.conditionHitInfoList = conditionHitInfoList;
                 return this;
             }
@@ -1222,7 +1227,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             /**
              * ConditionInfoList.
              */
-            public Builder conditionInfoList(java.util.List < ConditionBasicInfo > conditionInfoList) {
+            public Builder conditionInfoList(java.util.List<ConditionBasicInfo> conditionInfoList) {
                 this.conditionInfoList = conditionInfoList;
                 return this;
             }
@@ -1401,7 +1406,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
      */
     public static class UnhitRuleReviewInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionInfoList")
-        private java.util.List < ConditionBasicInfo > conditionInfoList;
+        private java.util.List<ConditionBasicInfo> conditionInfoList;
 
         @com.aliyun.core.annotation.NameInMap("Matched")
         private Boolean matched;
@@ -1430,7 +1435,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         /**
          * @return conditionInfoList
          */
-        public java.util.List < ConditionBasicInfo > getConditionInfoList() {
+        public java.util.List<ConditionBasicInfo> getConditionInfoList() {
             return this.conditionInfoList;
         }
 
@@ -1456,7 +1461,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConditionBasicInfo > conditionInfoList; 
+            private java.util.List<ConditionBasicInfo> conditionInfoList; 
             private Boolean matched; 
             private Long rid; 
             private Integer taskFlowType; 
@@ -1464,7 +1469,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             /**
              * ConditionInfoList.
              */
-            public Builder conditionInfoList(java.util.List < ConditionBasicInfo > conditionInfoList) {
+            public Builder conditionInfoList(java.util.List<ConditionBasicInfo> conditionInfoList) {
                 this.conditionInfoList = conditionInfoList;
                 return this;
             }
@@ -1508,13 +1513,13 @@ public class TestRuleV4ResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitRuleReviewInfoList")
-        private java.util.List < HitRuleReviewInfoList> hitRuleReviewInfoList;
+        private java.util.List<HitRuleReviewInfoList> hitRuleReviewInfoList;
 
         @com.aliyun.core.annotation.NameInMap("HitTaskFlowList")
-        private java.util.List < HitTaskFlowList> hitTaskFlowList;
+        private java.util.List<HitTaskFlowList> hitTaskFlowList;
 
         @com.aliyun.core.annotation.NameInMap("UnhitRuleReviewInfoList")
-        private java.util.List < UnhitRuleReviewInfoList> unhitRuleReviewInfoList;
+        private java.util.List<UnhitRuleReviewInfoList> unhitRuleReviewInfoList;
 
         private Data(Builder builder) {
             this.hitRuleReviewInfoList = builder.hitRuleReviewInfoList;
@@ -1533,33 +1538,33 @@ public class TestRuleV4ResponseBody extends TeaModel {
         /**
          * @return hitRuleReviewInfoList
          */
-        public java.util.List < HitRuleReviewInfoList> getHitRuleReviewInfoList() {
+        public java.util.List<HitRuleReviewInfoList> getHitRuleReviewInfoList() {
             return this.hitRuleReviewInfoList;
         }
 
         /**
          * @return hitTaskFlowList
          */
-        public java.util.List < HitTaskFlowList> getHitTaskFlowList() {
+        public java.util.List<HitTaskFlowList> getHitTaskFlowList() {
             return this.hitTaskFlowList;
         }
 
         /**
          * @return unhitRuleReviewInfoList
          */
-        public java.util.List < UnhitRuleReviewInfoList> getUnhitRuleReviewInfoList() {
+        public java.util.List<UnhitRuleReviewInfoList> getUnhitRuleReviewInfoList() {
             return this.unhitRuleReviewInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < HitRuleReviewInfoList> hitRuleReviewInfoList; 
-            private java.util.List < HitTaskFlowList> hitTaskFlowList; 
-            private java.util.List < UnhitRuleReviewInfoList> unhitRuleReviewInfoList; 
+            private java.util.List<HitRuleReviewInfoList> hitRuleReviewInfoList; 
+            private java.util.List<HitTaskFlowList> hitTaskFlowList; 
+            private java.util.List<UnhitRuleReviewInfoList> unhitRuleReviewInfoList; 
 
             /**
              * HitRuleReviewInfoList.
              */
-            public Builder hitRuleReviewInfoList(java.util.List < HitRuleReviewInfoList> hitRuleReviewInfoList) {
+            public Builder hitRuleReviewInfoList(java.util.List<HitRuleReviewInfoList> hitRuleReviewInfoList) {
                 this.hitRuleReviewInfoList = hitRuleReviewInfoList;
                 return this;
             }
@@ -1567,7 +1572,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             /**
              * HitTaskFlowList.
              */
-            public Builder hitTaskFlowList(java.util.List < HitTaskFlowList> hitTaskFlowList) {
+            public Builder hitTaskFlowList(java.util.List<HitTaskFlowList> hitTaskFlowList) {
                 this.hitTaskFlowList = hitTaskFlowList;
                 return this;
             }
@@ -1575,7 +1580,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             /**
              * UnhitRuleReviewInfoList.
              */
-            public Builder unhitRuleReviewInfoList(java.util.List < UnhitRuleReviewInfoList> unhitRuleReviewInfoList) {
+            public Builder unhitRuleReviewInfoList(java.util.List<UnhitRuleReviewInfoList> unhitRuleReviewInfoList) {
                 this.unhitRuleReviewInfoList = unhitRuleReviewInfoList;
                 return this;
             }

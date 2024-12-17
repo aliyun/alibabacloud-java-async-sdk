@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessCategoryBasicInfo")
-        private java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo;
+        private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfo;
 
         private Data(Builder builder) {
             this.businessCategoryBasicInfo = builder.businessCategoryBasicInfo;
@@ -243,17 +248,17 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
         /**
          * @return businessCategoryBasicInfo
          */
-        public java.util.List < BusinessCategoryBasicInfo> getBusinessCategoryBasicInfo() {
+        public java.util.List<BusinessCategoryBasicInfo> getBusinessCategoryBasicInfo() {
             return this.businessCategoryBasicInfo;
         }
 
         public static final class Builder {
-            private java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo; 
+            private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfo; 
 
             /**
              * BusinessCategoryBasicInfo.
              */
-            public Builder businessCategoryBasicInfo(java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo) {
+            public Builder businessCategoryBasicInfo(java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfo) {
                 this.businessCategoryBasicInfo = businessCategoryBasicInfo;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -206,7 +211,7 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
      */
     public static class AllRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleNameInfo")
-        private java.util.List < RuleNameInfo> ruleNameInfo;
+        private java.util.List<RuleNameInfo> ruleNameInfo;
 
         private AllRuleList(Builder builder) {
             this.ruleNameInfo = builder.ruleNameInfo;
@@ -223,17 +228,17 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         /**
          * @return ruleNameInfo
          */
-        public java.util.List < RuleNameInfo> getRuleNameInfo() {
+        public java.util.List<RuleNameInfo> getRuleNameInfo() {
             return this.ruleNameInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RuleNameInfo> ruleNameInfo; 
+            private java.util.List<RuleNameInfo> ruleNameInfo; 
 
             /**
              * RuleNameInfo.
              */
-            public Builder ruleNameInfo(java.util.List < RuleNameInfo> ruleNameInfo) {
+            public Builder ruleNameInfo(java.util.List<RuleNameInfo> ruleNameInfo) {
                 this.ruleNameInfo = ruleNameInfo;
                 return this;
             }
@@ -320,7 +325,7 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
      */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleNameInfo")
-        private java.util.List < RuleListRuleNameInfo> ruleNameInfo;
+        private java.util.List<RuleListRuleNameInfo> ruleNameInfo;
 
         private RuleList(Builder builder) {
             this.ruleNameInfo = builder.ruleNameInfo;
@@ -337,17 +342,17 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         /**
          * @return ruleNameInfo
          */
-        public java.util.List < RuleListRuleNameInfo> getRuleNameInfo() {
+        public java.util.List<RuleListRuleNameInfo> getRuleNameInfo() {
             return this.ruleNameInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RuleListRuleNameInfo> ruleNameInfo; 
+            private java.util.List<RuleListRuleNameInfo> ruleNameInfo; 
 
             /**
              * RuleNameInfo.
              */
-            public Builder ruleNameInfo(java.util.List < RuleListRuleNameInfo> ruleNameInfo) {
+            public Builder ruleNameInfo(java.util.List<RuleListRuleNameInfo> ruleNameInfo) {
                 this.ruleNameInfo = ruleNameInfo;
                 return this;
             }
@@ -474,7 +479,7 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
      */
     public static class SkillGroupScreens extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SkillGroupScreen")
-        private java.util.List < SkillGroupScreen> skillGroupScreen;
+        private java.util.List<SkillGroupScreen> skillGroupScreen;
 
         private SkillGroupScreens(Builder builder) {
             this.skillGroupScreen = builder.skillGroupScreen;
@@ -491,17 +496,17 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         /**
          * @return skillGroupScreen
          */
-        public java.util.List < SkillGroupScreen> getSkillGroupScreen() {
+        public java.util.List<SkillGroupScreen> getSkillGroupScreen() {
             return this.skillGroupScreen;
         }
 
         public static final class Builder {
-            private java.util.List < SkillGroupScreen> skillGroupScreen; 
+            private java.util.List<SkillGroupScreen> skillGroupScreen; 
 
             /**
              * SkillGroupScreen.
              */
-            public Builder skillGroupScreen(java.util.List < SkillGroupScreen> skillGroupScreen) {
+            public Builder skillGroupScreen(java.util.List<SkillGroupScreen> skillGroupScreen) {
                 this.skillGroupScreen = skillGroupScreen;
                 return this;
             }
@@ -988,7 +993,7 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SkillGroupConfig")
-        private java.util.List < SkillGroupConfig> skillGroupConfig;
+        private java.util.List<SkillGroupConfig> skillGroupConfig;
 
         private Data(Builder builder) {
             this.skillGroupConfig = builder.skillGroupConfig;
@@ -1005,17 +1010,17 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         /**
          * @return skillGroupConfig
          */
-        public java.util.List < SkillGroupConfig> getSkillGroupConfig() {
+        public java.util.List<SkillGroupConfig> getSkillGroupConfig() {
             return this.skillGroupConfig;
         }
 
         public static final class Builder {
-            private java.util.List < SkillGroupConfig> skillGroupConfig; 
+            private java.util.List<SkillGroupConfig> skillGroupConfig; 
 
             /**
              * SkillGroupConfig.
              */
-            public Builder skillGroupConfig(java.util.List < SkillGroupConfig> skillGroupConfig) {
+            public Builder skillGroupConfig(java.util.List<SkillGroupConfig> skillGroupConfig) {
                 this.skillGroupConfig = skillGroupConfig;
                 return this;
             }

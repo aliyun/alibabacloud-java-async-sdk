@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RulesInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Conditions")
-    private java.util.List < ConditionBasicInfo > conditions;
+    private java.util.List<ConditionBasicInfo> conditions;
 
     @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("Dialogues")
-    private java.util.List < RuleTestDialogue > dialogues;
+    private java.util.List<RuleTestDialogue> dialogues;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -28,7 +33,7 @@ public class RulesInfo extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Rules")
-    private java.util.List < RuleInfo > rules;
+    private java.util.List<RuleInfo> rules;
 
     private RulesInfo(Builder builder) {
         this.conditions = builder.conditions;
@@ -50,7 +55,7 @@ public class RulesInfo extends TeaModel {
     /**
      * @return conditions
      */
-    public java.util.List < ConditionBasicInfo > getConditions() {
+    public java.util.List<ConditionBasicInfo> getConditions() {
         return this.conditions;
     }
 
@@ -64,7 +69,7 @@ public class RulesInfo extends TeaModel {
     /**
      * @return dialogues
      */
-    public java.util.List < RuleTestDialogue > getDialogues() {
+    public java.util.List<RuleTestDialogue> getDialogues() {
         return this.dialogues;
     }
 
@@ -85,22 +90,22 @@ public class RulesInfo extends TeaModel {
     /**
      * @return rules
      */
-    public java.util.List < RuleInfo > getRules() {
+    public java.util.List<RuleInfo> getRules() {
         return this.rules;
     }
 
     public static final class Builder {
-        private java.util.List < ConditionBasicInfo > conditions; 
+        private java.util.List<ConditionBasicInfo> conditions; 
         private Integer count; 
-        private java.util.List < RuleTestDialogue > dialogues; 
+        private java.util.List<RuleTestDialogue> dialogues; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < RuleInfo > rules; 
+        private java.util.List<RuleInfo> rules; 
 
         /**
          * Conditions.
          */
-        public Builder conditions(java.util.List < ConditionBasicInfo > conditions) {
+        public Builder conditions(java.util.List<ConditionBasicInfo> conditions) {
             this.conditions = conditions;
             return this;
         }
@@ -116,7 +121,7 @@ public class RulesInfo extends TeaModel {
         /**
          * Dialogues.
          */
-        public Builder dialogues(java.util.List < RuleTestDialogue > dialogues) {
+        public Builder dialogues(java.util.List<RuleTestDialogue> dialogues) {
             this.dialogues = dialogues;
             return this;
         }
@@ -140,7 +145,7 @@ public class RulesInfo extends TeaModel {
         /**
          * Rules.
          */
-        public Builder rules(java.util.List < RuleInfo > rules) {
+        public Builder rules(java.util.List<RuleInfo> rules) {
             this.rules = rules;
             return this;
         }

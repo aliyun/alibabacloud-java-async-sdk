@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -206,7 +211,7 @@ public class ListWarningConfigResponseBody extends TeaModel {
      */
     public static class Channels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channel")
-        private java.util.List < Channel> channel;
+        private java.util.List<Channel> channel;
 
         private Channels(Builder builder) {
             this.channel = builder.channel;
@@ -223,17 +228,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
         /**
          * @return channel
          */
-        public java.util.List < Channel> getChannel() {
+        public java.util.List<Channel> getChannel() {
             return this.channel;
         }
 
         public static final class Builder {
-            private java.util.List < Channel> channel; 
+            private java.util.List<Channel> channel; 
 
             /**
              * Channel.
              */
-            public Builder channel(java.util.List < Channel> channel) {
+            public Builder channel(java.util.List<Channel> channel) {
                 this.channel = channel;
                 return this;
             }
@@ -253,7 +258,7 @@ public class ListWarningConfigResponseBody extends TeaModel {
      */
     public static class RidList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RidList")
-        private java.util.List < String > ridList;
+        private java.util.List<String> ridList;
 
         private RidList(Builder builder) {
             this.ridList = builder.ridList;
@@ -270,17 +275,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
         /**
          * @return ridList
          */
-        public java.util.List < String > getRidList() {
+        public java.util.List<String> getRidList() {
             return this.ridList;
         }
 
         public static final class Builder {
-            private java.util.List < String > ridList; 
+            private java.util.List<String> ridList; 
 
             /**
              * RidList.
              */
-            public Builder ridList(java.util.List < String > ridList) {
+            public Builder ridList(java.util.List<String> ridList) {
                 this.ridList = ridList;
                 return this;
             }
@@ -367,7 +372,7 @@ public class ListWarningConfigResponseBody extends TeaModel {
      */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WarningRule")
-        private java.util.List < WarningRule> warningRule;
+        private java.util.List<WarningRule> warningRule;
 
         private RuleList(Builder builder) {
             this.warningRule = builder.warningRule;
@@ -384,17 +389,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
         /**
          * @return warningRule
          */
-        public java.util.List < WarningRule> getWarningRule() {
+        public java.util.List<WarningRule> getWarningRule() {
             return this.warningRule;
         }
 
         public static final class Builder {
-            private java.util.List < WarningRule> warningRule; 
+            private java.util.List<WarningRule> warningRule; 
 
             /**
              * WarningRule.
              */
-            public Builder warningRule(java.util.List < WarningRule> warningRule) {
+            public Builder warningRule(java.util.List<WarningRule> warningRule) {
                 this.warningRule = warningRule;
                 return this;
             }
@@ -601,7 +606,7 @@ public class ListWarningConfigResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WarningConfigInfo")
-        private java.util.List < WarningConfigInfo> warningConfigInfo;
+        private java.util.List<WarningConfigInfo> warningConfigInfo;
 
         private Data(Builder builder) {
             this.warningConfigInfo = builder.warningConfigInfo;
@@ -618,17 +623,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
         /**
          * @return warningConfigInfo
          */
-        public java.util.List < WarningConfigInfo> getWarningConfigInfo() {
+        public java.util.List<WarningConfigInfo> getWarningConfigInfo() {
             return this.warningConfigInfo;
         }
 
         public static final class Builder {
-            private java.util.List < WarningConfigInfo> warningConfigInfo; 
+            private java.util.List<WarningConfigInfo> warningConfigInfo; 
 
             /**
              * WarningConfigInfo.
              */
-            public Builder warningConfigInfo(java.util.List < WarningConfigInfo> warningConfigInfo) {
+            public Builder warningConfigInfo(java.util.List<WarningConfigInfo> warningConfigInfo) {
                 this.warningConfigInfo = warningConfigInfo;
                 return this;
             }

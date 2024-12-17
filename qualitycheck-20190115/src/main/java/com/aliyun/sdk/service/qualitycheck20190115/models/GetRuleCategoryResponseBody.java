@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class GetRuleCategoryResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleCountInfo")
-        private java.util.List < RuleCountInfo> ruleCountInfo;
+        private java.util.List<RuleCountInfo> ruleCountInfo;
 
         private Data(Builder builder) {
             this.ruleCountInfo = builder.ruleCountInfo;
@@ -243,17 +248,17 @@ public class GetRuleCategoryResponseBody extends TeaModel {
         /**
          * @return ruleCountInfo
          */
-        public java.util.List < RuleCountInfo> getRuleCountInfo() {
+        public java.util.List<RuleCountInfo> getRuleCountInfo() {
             return this.ruleCountInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RuleCountInfo> ruleCountInfo; 
+            private java.util.List<RuleCountInfo> ruleCountInfo; 
 
             /**
              * RuleCountInfo.
              */
-            public Builder ruleCountInfo(java.util.List < RuleCountInfo> ruleCountInfo) {
+            public Builder ruleCountInfo(java.util.List<RuleCountInfo> ruleCountInfo) {
                 this.ruleCountInfo = ruleCountInfo;
                 return this;
             }

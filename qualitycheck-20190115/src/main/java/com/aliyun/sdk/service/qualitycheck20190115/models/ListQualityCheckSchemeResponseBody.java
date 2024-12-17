@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -76,7 +81,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -125,7 +130,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -152,7 +157,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -406,7 +411,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
      */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private RuleList(Builder builder) {
             this.rules = builder.rules;
@@ -423,17 +428,17 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
@@ -595,10 +600,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        private java.util.List<RuleList> ruleList;
 
         @com.aliyun.core.annotation.NameInMap("SchemeCheckTypeList")
-        private java.util.List < SchemeCheckTypeList> schemeCheckTypeList;
+        private java.util.List<SchemeCheckTypeList> schemeCheckTypeList;
 
         @com.aliyun.core.annotation.NameInMap("SchemeId")
         private Long schemeId;
@@ -684,14 +689,14 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
         /**
          * @return schemeCheckTypeList
          */
-        public java.util.List < SchemeCheckTypeList> getSchemeCheckTypeList() {
+        public java.util.List<SchemeCheckTypeList> getSchemeCheckTypeList() {
             return this.schemeCheckTypeList;
         }
 
@@ -750,8 +755,8 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             private Integer dataType; 
             private String description; 
             private String name; 
-            private java.util.List < RuleList> ruleList; 
-            private java.util.List < SchemeCheckTypeList> schemeCheckTypeList; 
+            private java.util.List<RuleList> ruleList; 
+            private java.util.List<SchemeCheckTypeList> schemeCheckTypeList; 
             private Long schemeId; 
             private Integer status; 
             private Integer templateType; 
@@ -803,7 +808,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             /**
              * RuleList.
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }
@@ -811,7 +816,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             /**
              * SchemeCheckTypeList.
              */
-            public Builder schemeCheckTypeList(java.util.List < SchemeCheckTypeList> schemeCheckTypeList) {
+            public Builder schemeCheckTypeList(java.util.List<SchemeCheckTypeList> schemeCheckTypeList) {
                 this.schemeCheckTypeList = schemeCheckTypeList;
                 return this;
             }

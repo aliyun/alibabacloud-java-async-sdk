@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -139,7 +144,7 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
      */
     public static class Line extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
-        private java.util.List < String > line;
+        private java.util.List<String> line;
 
         private Line(Builder builder) {
             this.line = builder.line;
@@ -156,17 +161,17 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < String > getLine() {
+        public java.util.List<String> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < String > line; 
+            private java.util.List<String> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < String > line) {
+            public Builder line(java.util.List<String> line) {
                 this.line = line;
                 return this;
             }
@@ -253,7 +258,7 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
      */
     public static class TargetLine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
-        private java.util.List < String > line;
+        private java.util.List<String> line;
 
         private TargetLine(Builder builder) {
             this.line = builder.line;
@@ -270,17 +275,17 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < String > getLine() {
+        public java.util.List<String> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < String > line; 
+            private java.util.List<String> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < String > line) {
+            public Builder line(java.util.List<String> line) {
                 this.line = line;
                 return this;
             }
@@ -454,7 +459,7 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
      */
     public static class Deltas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Delta")
-        private java.util.List < Delta> delta;
+        private java.util.List<Delta> delta;
 
         private Deltas(Builder builder) {
             this.delta = builder.delta;
@@ -471,17 +476,17 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         /**
          * @return delta
          */
-        public java.util.List < Delta> getDelta() {
+        public java.util.List<Delta> getDelta() {
             return this.delta;
         }
 
         public static final class Builder {
-            private java.util.List < Delta> delta; 
+            private java.util.List<Delta> delta; 
 
             /**
              * Delta.
              */
-            public Builder delta(java.util.List < Delta> delta) {
+            public Builder delta(java.util.List<Delta> delta) {
                 this.delta = delta;
                 return this;
             }
@@ -808,7 +813,7 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
      */
     public static class Dialogues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dialogue")
-        private java.util.List < Dialogue> dialogue;
+        private java.util.List<Dialogue> dialogue;
 
         private Dialogues(Builder builder) {
             this.dialogue = builder.dialogue;
@@ -825,17 +830,17 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         /**
          * @return dialogue
          */
-        public java.util.List < Dialogue> getDialogue() {
+        public java.util.List<Dialogue> getDialogue() {
             return this.dialogue;
         }
 
         public static final class Builder {
-            private java.util.List < Dialogue> dialogue; 
+            private java.util.List<Dialogue> dialogue; 
 
             /**
              * Dialogue.
              */
-            public Builder dialogue(java.util.List < Dialogue> dialogue) {
+            public Builder dialogue(java.util.List<Dialogue> dialogue) {
                 this.dialogue = dialogue;
                 return this;
             }

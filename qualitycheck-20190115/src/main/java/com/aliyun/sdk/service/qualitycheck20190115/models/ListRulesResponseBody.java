@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListRulesResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -72,7 +77,7 @@ public class ListRulesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -114,7 +119,7 @@ public class ListRulesResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -140,7 +145,7 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -199,7 +204,7 @@ public class ListRulesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessCategoryNameList")
-        private java.util.List < String > businessCategoryNameList;
+        private java.util.List<String> businessCategoryNameList;
 
         @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
@@ -244,7 +249,7 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return businessCategoryNameList
          */
-        public java.util.List < String > getBusinessCategoryNameList() {
+        public java.util.List<String> getBusinessCategoryNameList() {
             return this.businessCategoryNameList;
         }
 
@@ -298,7 +303,7 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > businessCategoryNameList; 
+            private java.util.List<String> businessCategoryNameList; 
             private String comments; 
             private String createTime; 
             private String name; 
@@ -310,7 +315,7 @@ public class ListRulesResponseBody extends TeaModel {
             /**
              * BusinessCategoryNameList.
              */
-            public Builder businessCategoryNameList(java.util.List < String > businessCategoryNameList) {
+            public Builder businessCategoryNameList(java.util.List<String> businessCategoryNameList) {
                 this.businessCategoryNameList = businessCategoryNameList;
                 return this;
             }

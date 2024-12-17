@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,13 +21,13 @@ public class RuleCountInfo extends TeaModel {
     private Integer autoReview;
 
     @com.aliyun.core.annotation.NameInMap("BusinessCategoryBasicInfoList")
-    private java.util.List < BusinessCategoryBasicInfo > businessCategoryBasicInfoList;
+    private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfoList;
 
     @com.aliyun.core.annotation.NameInMap("BusinessCategoryNameList")
-    private java.util.List < String > businessCategoryNameList;
+    private java.util.List<String> businessCategoryNameList;
 
     @com.aliyun.core.annotation.NameInMap("BusinessRange")
-    private java.util.List < Integer > businessRange;
+    private java.util.List<Integer> businessRange;
 
     @com.aliyun.core.annotation.NameInMap("CheckNumber")
     private Long checkNumber;
@@ -221,21 +226,21 @@ public class RuleCountInfo extends TeaModel {
     /**
      * @return businessCategoryBasicInfoList
      */
-    public java.util.List < BusinessCategoryBasicInfo > getBusinessCategoryBasicInfoList() {
+    public java.util.List<BusinessCategoryBasicInfo> getBusinessCategoryBasicInfoList() {
         return this.businessCategoryBasicInfoList;
     }
 
     /**
      * @return businessCategoryNameList
      */
-    public java.util.List < String > getBusinessCategoryNameList() {
+    public java.util.List<String> getBusinessCategoryNameList() {
         return this.businessCategoryNameList;
     }
 
     /**
      * @return businessRange
      */
-    public java.util.List < Integer > getBusinessRange() {
+    public java.util.List<Integer> getBusinessRange() {
         return this.businessRange;
     }
 
@@ -542,9 +547,9 @@ public class RuleCountInfo extends TeaModel {
 
     public static final class Builder {
         private Integer autoReview; 
-        private java.util.List < BusinessCategoryBasicInfo > businessCategoryBasicInfoList; 
-        private java.util.List < String > businessCategoryNameList; 
-        private java.util.List < Integer > businessRange; 
+        private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfoList; 
+        private java.util.List<String> businessCategoryNameList; 
+        private java.util.List<Integer> businessRange; 
         private Long checkNumber; 
         private String comments; 
         private String createEmpName; 
@@ -600,7 +605,7 @@ public class RuleCountInfo extends TeaModel {
         /**
          * BusinessCategoryBasicInfoList.
          */
-        public Builder businessCategoryBasicInfoList(java.util.List < BusinessCategoryBasicInfo > businessCategoryBasicInfoList) {
+        public Builder businessCategoryBasicInfoList(java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfoList) {
             this.businessCategoryBasicInfoList = businessCategoryBasicInfoList;
             return this;
         }
@@ -608,7 +613,7 @@ public class RuleCountInfo extends TeaModel {
         /**
          * BusinessCategoryNameList.
          */
-        public Builder businessCategoryNameList(java.util.List < String > businessCategoryNameList) {
+        public Builder businessCategoryNameList(java.util.List<String> businessCategoryNameList) {
             this.businessCategoryNameList = businessCategoryNameList;
             return this;
         }
@@ -616,7 +621,7 @@ public class RuleCountInfo extends TeaModel {
         /**
          * BusinessRange.
          */
-        public Builder businessRange(java.util.List < Integer > businessRange) {
+        public Builder businessRange(java.util.List<Integer> businessRange) {
             this.businessRange = businessRange;
             return this;
         }

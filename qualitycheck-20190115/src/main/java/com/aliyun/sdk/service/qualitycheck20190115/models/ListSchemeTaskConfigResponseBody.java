@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -299,7 +304,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
      */
     public static class ListObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ListObject")
-        private java.util.List < ? > listObject;
+        private java.util.List<?> listObject;
 
         private ListObject(Builder builder) {
             this.listObject = builder.listObject;
@@ -316,17 +321,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return listObject
          */
-        public java.util.List < ? > getListObject() {
+        public java.util.List<?> getListObject() {
             return this.listObject;
         }
 
         public static final class Builder {
-            private java.util.List < ? > listObject; 
+            private java.util.List<?> listObject; 
 
             /**
              * ListObject.
              */
-            public Builder listObject(java.util.List < ? > listObject) {
+            public Builder listObject(java.util.List<?> listObject) {
                 this.listObject = listObject;
                 return this;
             }
@@ -473,7 +478,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
      */
     public static class AssignConfigContests extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssignConfigContest")
-        private java.util.List < AssignConfigContest> assignConfigContest;
+        private java.util.List<AssignConfigContest> assignConfigContest;
 
         private AssignConfigContests(Builder builder) {
             this.assignConfigContest = builder.assignConfigContest;
@@ -490,17 +495,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return assignConfigContest
          */
-        public java.util.List < AssignConfigContest> getAssignConfigContest() {
+        public java.util.List<AssignConfigContest> getAssignConfigContest() {
             return this.assignConfigContest;
         }
 
         public static final class Builder {
-            private java.util.List < AssignConfigContest> assignConfigContest; 
+            private java.util.List<AssignConfigContest> assignConfigContest; 
 
             /**
              * AssignConfigContest.
              */
-            public Builder assignConfigContest(java.util.List < AssignConfigContest> assignConfigContest) {
+            public Builder assignConfigContest(java.util.List<AssignConfigContest> assignConfigContest) {
                 this.assignConfigContest = assignConfigContest;
                 return this;
             }
@@ -567,7 +572,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
      */
     public static class AssignConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssignConfig")
-        private java.util.List < AssignConfig> assignConfig;
+        private java.util.List<AssignConfig> assignConfig;
 
         private AssignConfigs(Builder builder) {
             this.assignConfig = builder.assignConfig;
@@ -584,17 +589,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return assignConfig
          */
-        public java.util.List < AssignConfig> getAssignConfig() {
+        public java.util.List<AssignConfig> getAssignConfig() {
             return this.assignConfig;
         }
 
         public static final class Builder {
-            private java.util.List < AssignConfig> assignConfig; 
+            private java.util.List<AssignConfig> assignConfig; 
 
             /**
              * AssignConfig.
              */
-            public Builder assignConfig(java.util.List < AssignConfig> assignConfig) {
+            public Builder assignConfig(java.util.List<AssignConfig> assignConfig) {
                 this.assignConfig = assignConfig;
                 return this;
             }
@@ -721,7 +726,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
      */
     public static class SchemeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemeIdList")
-        private java.util.List < Long > schemeIdList;
+        private java.util.List<Long> schemeIdList;
 
         private SchemeIdList(Builder builder) {
             this.schemeIdList = builder.schemeIdList;
@@ -738,17 +743,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return schemeIdList
          */
-        public java.util.List < Long > getSchemeIdList() {
+        public java.util.List<Long> getSchemeIdList() {
             return this.schemeIdList;
         }
 
         public static final class Builder {
-            private java.util.List < Long > schemeIdList; 
+            private java.util.List<Long> schemeIdList; 
 
             /**
              * SchemeIdList.
              */
-            public Builder schemeIdList(java.util.List < Long > schemeIdList) {
+            public Builder schemeIdList(java.util.List<Long> schemeIdList) {
                 this.schemeIdList = schemeIdList;
                 return this;
             }
@@ -835,7 +840,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
      */
     public static class DataSchemeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemeList")
-        private java.util.List < SchemeList> schemeList;
+        private java.util.List<SchemeList> schemeList;
 
         private DataSchemeList(Builder builder) {
             this.schemeList = builder.schemeList;
@@ -852,17 +857,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return schemeList
          */
-        public java.util.List < SchemeList> getSchemeList() {
+        public java.util.List<SchemeList> getSchemeList() {
             return this.schemeList;
         }
 
         public static final class Builder {
-            private java.util.List < SchemeList> schemeList; 
+            private java.util.List<SchemeList> schemeList; 
 
             /**
              * SchemeList.
              */
-            public Builder schemeList(java.util.List < SchemeList> schemeList) {
+            public Builder schemeList(java.util.List<SchemeList> schemeList) {
                 this.schemeList = schemeList;
                 return this;
             }
@@ -1429,7 +1434,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < DataData> data;
+        private java.util.List<DataData> data;
 
         private Data(Builder builder) {
             this.data = builder.data;
@@ -1446,17 +1451,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < DataData> getData() {
+        public java.util.List<DataData> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < DataData> data; 
+            private java.util.List<DataData> data; 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < DataData> data) {
+            public Builder data(java.util.List<DataData> data) {
                 this.data = data;
                 return this;
             }
@@ -1476,7 +1481,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
      */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
-        private java.util.List < String > message;
+        private java.util.List<String> message;
 
         private Messages(Builder builder) {
             this.message = builder.message;
@@ -1493,17 +1498,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return message
          */
-        public java.util.List < String > getMessage() {
+        public java.util.List<String> getMessage() {
             return this.message;
         }
 
         public static final class Builder {
-            private java.util.List < String > message; 
+            private java.util.List<String> message; 
 
             /**
              * Message.
              */
-            public Builder message(java.util.List < String > message) {
+            public Builder message(java.util.List<String> message) {
                 this.message = message;
                 return this;
             }

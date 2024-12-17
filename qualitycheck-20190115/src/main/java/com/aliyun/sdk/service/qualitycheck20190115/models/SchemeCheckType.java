@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class SchemeCheckType extends TeaModel {
     private Long schemeId;
 
     @com.aliyun.core.annotation.NameInMap("SchemeScoreInfoList")
-    private java.util.List < SchemeScoreInfoList> schemeScoreInfoList;
+    private java.util.List<SchemeScoreInfoList> schemeScoreInfoList;
 
     @com.aliyun.core.annotation.NameInMap("Score")
     private Integer score;
@@ -34,7 +39,7 @@ public class SchemeCheckType extends TeaModel {
     private Integer sourceScore;
 
     @com.aliyun.core.annotation.NameInMap("TaskFlowScoreInfoList")
-    private java.util.List < TaskFlowScoreInfoList> taskFlowScoreInfoList;
+    private java.util.List<TaskFlowScoreInfoList> taskFlowScoreInfoList;
 
     private SchemeCheckType(Builder builder) {
         this.checkName = builder.checkName;
@@ -86,7 +91,7 @@ public class SchemeCheckType extends TeaModel {
     /**
      * @return schemeScoreInfoList
      */
-    public java.util.List < SchemeScoreInfoList> getSchemeScoreInfoList() {
+    public java.util.List<SchemeScoreInfoList> getSchemeScoreInfoList() {
         return this.schemeScoreInfoList;
     }
 
@@ -107,7 +112,7 @@ public class SchemeCheckType extends TeaModel {
     /**
      * @return taskFlowScoreInfoList
      */
-    public java.util.List < TaskFlowScoreInfoList> getTaskFlowScoreInfoList() {
+    public java.util.List<TaskFlowScoreInfoList> getTaskFlowScoreInfoList() {
         return this.taskFlowScoreInfoList;
     }
 
@@ -116,10 +121,10 @@ public class SchemeCheckType extends TeaModel {
         private Long checkType; 
         private Integer enable; 
         private Long schemeId; 
-        private java.util.List < SchemeScoreInfoList> schemeScoreInfoList; 
+        private java.util.List<SchemeScoreInfoList> schemeScoreInfoList; 
         private Integer score; 
         private Integer sourceScore; 
-        private java.util.List < TaskFlowScoreInfoList> taskFlowScoreInfoList; 
+        private java.util.List<TaskFlowScoreInfoList> taskFlowScoreInfoList; 
 
         /**
          * CheckName.
@@ -156,7 +161,7 @@ public class SchemeCheckType extends TeaModel {
         /**
          * SchemeScoreInfoList.
          */
-        public Builder schemeScoreInfoList(java.util.List < SchemeScoreInfoList> schemeScoreInfoList) {
+        public Builder schemeScoreInfoList(java.util.List<SchemeScoreInfoList> schemeScoreInfoList) {
             this.schemeScoreInfoList = schemeScoreInfoList;
             return this;
         }
@@ -180,7 +185,7 @@ public class SchemeCheckType extends TeaModel {
         /**
          * TaskFlowScoreInfoList.
          */
-        public Builder taskFlowScoreInfoList(java.util.List < TaskFlowScoreInfoList> taskFlowScoreInfoList) {
+        public Builder taskFlowScoreInfoList(java.util.List<TaskFlowScoreInfoList> taskFlowScoreInfoList) {
             this.taskFlowScoreInfoList = taskFlowScoreInfoList;
             return this;
         }
@@ -573,7 +578,7 @@ public class SchemeCheckType extends TeaModel {
      */
     public static class TaskFlowScoreInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchemeScoreInfoList")
-        private java.util.List < TaskFlowScoreInfoListSchemeScoreInfoList> schemeScoreInfoList;
+        private java.util.List<TaskFlowScoreInfoListSchemeScoreInfoList> schemeScoreInfoList;
 
         @com.aliyun.core.annotation.NameInMap("TaskFlowId")
         private Long taskFlowId;
@@ -602,7 +607,7 @@ public class SchemeCheckType extends TeaModel {
         /**
          * @return schemeScoreInfoList
          */
-        public java.util.List < TaskFlowScoreInfoListSchemeScoreInfoList> getSchemeScoreInfoList() {
+        public java.util.List<TaskFlowScoreInfoListSchemeScoreInfoList> getSchemeScoreInfoList() {
             return this.schemeScoreInfoList;
         }
 
@@ -628,7 +633,7 @@ public class SchemeCheckType extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TaskFlowScoreInfoListSchemeScoreInfoList> schemeScoreInfoList; 
+            private java.util.List<TaskFlowScoreInfoListSchemeScoreInfoList> schemeScoreInfoList; 
             private Long taskFlowId; 
             private String taskFlowName; 
             private Integer taskFlowType; 
@@ -636,7 +641,7 @@ public class SchemeCheckType extends TeaModel {
             /**
              * SchemeScoreInfoList.
              */
-            public Builder schemeScoreInfoList(java.util.List < TaskFlowScoreInfoListSchemeScoreInfoList> schemeScoreInfoList) {
+            public Builder schemeScoreInfoList(java.util.List<TaskFlowScoreInfoListSchemeScoreInfoList> schemeScoreInfoList) {
                 this.schemeScoreInfoList = schemeScoreInfoList;
                 return this;
             }

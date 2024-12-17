@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -286,7 +291,7 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelCustomizationDataSetPo")
-        private java.util.List < ModelCustomizationDataSetPo> modelCustomizationDataSetPo;
+        private java.util.List<ModelCustomizationDataSetPo> modelCustomizationDataSetPo;
 
         private Data(Builder builder) {
             this.modelCustomizationDataSetPo = builder.modelCustomizationDataSetPo;
@@ -303,17 +308,17 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         /**
          * @return modelCustomizationDataSetPo
          */
-        public java.util.List < ModelCustomizationDataSetPo> getModelCustomizationDataSetPo() {
+        public java.util.List<ModelCustomizationDataSetPo> getModelCustomizationDataSetPo() {
             return this.modelCustomizationDataSetPo;
         }
 
         public static final class Builder {
-            private java.util.List < ModelCustomizationDataSetPo> modelCustomizationDataSetPo; 
+            private java.util.List<ModelCustomizationDataSetPo> modelCustomizationDataSetPo; 
 
             /**
              * ModelCustomizationDataSetPo.
              */
-            public Builder modelCustomizationDataSetPo(java.util.List < ModelCustomizationDataSetPo> modelCustomizationDataSetPo) {
+            public Builder modelCustomizationDataSetPo(java.util.List<ModelCustomizationDataSetPo> modelCustomizationDataSetPo) {
                 this.modelCustomizationDataSetPo = modelCustomizationDataSetPo;
                 return this;
             }

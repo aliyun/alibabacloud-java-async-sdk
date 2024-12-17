@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class RuleInfo extends TeaModel {
     private Integer autoReview;
 
     @com.aliyun.core.annotation.NameInMap("BusinessCategoryNameList")
-    private java.util.List < String > businessCategoryNameList;
+    private java.util.List<String> businessCategoryNameList;
 
     @com.aliyun.core.annotation.NameInMap("CheckType")
     private Long checkType;
@@ -40,7 +45,7 @@ public class RuleInfo extends TeaModel {
     private Integer deny;
 
     @com.aliyun.core.annotation.NameInMap("Dialogues")
-    private java.util.List < RuleTestDialogue > dialogues;
+    private java.util.List<RuleTestDialogue> dialogues;
 
     @com.aliyun.core.annotation.NameInMap("Effective")
     private Integer effective;
@@ -169,7 +174,7 @@ public class RuleInfo extends TeaModel {
     private Integer taskFlowType;
 
     @com.aliyun.core.annotation.NameInMap("Triggers")
-    private java.util.List < String > triggers;
+    private java.util.List<String> triggers;
 
     @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
@@ -253,7 +258,7 @@ public class RuleInfo extends TeaModel {
     /**
      * @return businessCategoryNameList
      */
-    public java.util.List < String > getBusinessCategoryNameList() {
+    public java.util.List<String> getBusinessCategoryNameList() {
         return this.businessCategoryNameList;
     }
 
@@ -309,7 +314,7 @@ public class RuleInfo extends TeaModel {
     /**
      * @return dialogues
      */
-    public java.util.List < RuleTestDialogue > getDialogues() {
+    public java.util.List<RuleTestDialogue> getDialogues() {
         return this.dialogues;
     }
 
@@ -610,7 +615,7 @@ public class RuleInfo extends TeaModel {
     /**
      * @return triggers
      */
-    public java.util.List < String > getTriggers() {
+    public java.util.List<String> getTriggers() {
         return this.triggers;
     }
 
@@ -630,7 +635,7 @@ public class RuleInfo extends TeaModel {
 
     public static final class Builder {
         private Integer autoReview; 
-        private java.util.List < String > businessCategoryNameList; 
+        private java.util.List<String> businessCategoryNameList; 
         private Long checkType; 
         private String comments; 
         private Integer configType; 
@@ -638,7 +643,7 @@ public class RuleInfo extends TeaModel {
         private String createEmpid; 
         private String createTime; 
         private Integer deny; 
-        private java.util.List < RuleTestDialogue > dialogues; 
+        private java.util.List<RuleTestDialogue> dialogues; 
         private Integer effective; 
         private String effectiveEndTime; 
         private String effectiveStartTime; 
@@ -681,7 +686,7 @@ public class RuleInfo extends TeaModel {
         private Integer targetType; 
         private Long taskFlowId; 
         private Integer taskFlowType; 
-        private java.util.List < String > triggers; 
+        private java.util.List<String> triggers; 
         private Integer type; 
         private String weight; 
 
@@ -696,7 +701,7 @@ public class RuleInfo extends TeaModel {
         /**
          * BusinessCategoryNameList.
          */
-        public Builder businessCategoryNameList(java.util.List < String > businessCategoryNameList) {
+        public Builder businessCategoryNameList(java.util.List<String> businessCategoryNameList) {
             this.businessCategoryNameList = businessCategoryNameList;
             return this;
         }
@@ -760,7 +765,7 @@ public class RuleInfo extends TeaModel {
         /**
          * Dialogues.
          */
-        public Builder dialogues(java.util.List < RuleTestDialogue > dialogues) {
+        public Builder dialogues(java.util.List<RuleTestDialogue> dialogues) {
             this.dialogues = dialogues;
             return this;
         }
@@ -1104,7 +1109,7 @@ public class RuleInfo extends TeaModel {
         /**
          * Triggers.
          */
-        public Builder triggers(java.util.List < String > triggers) {
+        public Builder triggers(java.util.List<String> triggers) {
             this.triggers = triggers;
             return this;
         }
