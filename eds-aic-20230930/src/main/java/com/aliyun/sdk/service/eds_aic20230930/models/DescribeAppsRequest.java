@@ -29,6 +29,10 @@ public class DescribeAppsRequest extends Request {
     private String installationStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MD5")
+    private String mD5;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer maxResults;
@@ -47,6 +51,7 @@ public class DescribeAppsRequest extends Request {
         this.appName = builder.appName;
         this.bizRegionId = builder.bizRegionId;
         this.installationStatus = builder.installationStatus;
+        this.mD5 = builder.mD5;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.status = builder.status;
@@ -94,6 +99,13 @@ public class DescribeAppsRequest extends Request {
     }
 
     /**
+     * @return mD5
+     */
+    public String getMD5() {
+        return this.mD5;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -119,6 +131,7 @@ public class DescribeAppsRequest extends Request {
         private String appName; 
         private String bizRegionId; 
         private String installationStatus; 
+        private String mD5; 
         private Integer maxResults; 
         private String nextToken; 
         private String status; 
@@ -133,6 +146,7 @@ public class DescribeAppsRequest extends Request {
             this.appName = request.appName;
             this.bizRegionId = request.bizRegionId;
             this.installationStatus = request.installationStatus;
+            this.mD5 = request.mD5;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.status = request.status;
@@ -171,6 +185,15 @@ public class DescribeAppsRequest extends Request {
         public Builder installationStatus(String installationStatus) {
             this.putQueryParameter("InstallationStatus", installationStatus);
             this.installationStatus = installationStatus;
+            return this;
+        }
+
+        /**
+         * MD5.
+         */
+        public Builder mD5(String mD5) {
+            this.putQueryParameter("MD5", mD5);
+            this.mD5 = mD5;
             return this;
         }
 

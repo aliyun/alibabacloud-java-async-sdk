@@ -124,11 +124,32 @@ public class DescribeTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
+        @com.aliyun.core.annotation.NameInMap("FailedChildCount")
+        private Integer failedChildCount;
+
         @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
+        private String instanceName;
+
         @com.aliyun.core.annotation.NameInMap("InvokeId")
         private String invokeId;
+
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private Integer level;
+
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("Param")
+        private String param;
+
+        @com.aliyun.core.annotation.NameInMap("ParentTaskId")
+        private String parentTaskId;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -139,8 +160,14 @@ public class DescribeTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
+        @com.aliyun.core.annotation.NameInMap("RunningChildCount")
+        private Integer runningChildCount;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
+
+        @com.aliyun.core.annotation.NameInMap("SuccessChildCount")
+        private Integer successChildCount;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -151,18 +178,31 @@ public class DescribeTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
+        @com.aliyun.core.annotation.NameInMap("TotalChildCount")
+        private Integer totalChildCount;
+
         private Data(Builder builder) {
             this.errorCode = builder.errorCode;
             this.errorMsg = builder.errorMsg;
+            this.failedChildCount = builder.failedChildCount;
             this.finishTime = builder.finishTime;
+            this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
             this.invokeId = builder.invokeId;
+            this.level = builder.level;
+            this.operator = builder.operator;
+            this.param = builder.param;
+            this.parentTaskId = builder.parentTaskId;
             this.regionId = builder.regionId;
             this.resourceId = builder.resourceId;
             this.result = builder.result;
+            this.runningChildCount = builder.runningChildCount;
             this.startTime = builder.startTime;
+            this.successChildCount = builder.successChildCount;
             this.taskId = builder.taskId;
             this.taskStatus = builder.taskStatus;
             this.taskType = builder.taskType;
+            this.totalChildCount = builder.totalChildCount;
         }
 
         public static Builder builder() {
@@ -188,6 +228,13 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return failedChildCount
+         */
+        public Integer getFailedChildCount() {
+            return this.failedChildCount;
+        }
+
+        /**
          * @return finishTime
          */
         public String getFinishTime() {
@@ -195,10 +242,52 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
          * @return invokeId
          */
         public String getInvokeId() {
             return this.invokeId;
+        }
+
+        /**
+         * @return level
+         */
+        public Integer getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return param
+         */
+        public String getParam() {
+            return this.param;
+        }
+
+        /**
+         * @return parentTaskId
+         */
+        public String getParentTaskId() {
+            return this.parentTaskId;
         }
 
         /**
@@ -223,10 +312,24 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return runningChildCount
+         */
+        public Integer getRunningChildCount() {
+            return this.runningChildCount;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
             return this.startTime;
+        }
+
+        /**
+         * @return successChildCount
+         */
+        public Integer getSuccessChildCount() {
+            return this.successChildCount;
         }
 
         /**
@@ -250,18 +353,35 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.taskType;
         }
 
+        /**
+         * @return totalChildCount
+         */
+        public Integer getTotalChildCount() {
+            return this.totalChildCount;
+        }
+
         public static final class Builder {
             private String errorCode; 
             private String errorMsg; 
+            private Integer failedChildCount; 
             private String finishTime; 
+            private String instanceId; 
+            private String instanceName; 
             private String invokeId; 
+            private Integer level; 
+            private String operator; 
+            private String param; 
+            private String parentTaskId; 
             private String regionId; 
             private String resourceId; 
             private String result; 
+            private Integer runningChildCount; 
             private String startTime; 
+            private Integer successChildCount; 
             private String taskId; 
             private String taskStatus; 
             private String taskType; 
+            private Integer totalChildCount; 
 
             /**
              * ErrorCode.
@@ -280,6 +400,14 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
+             * FailedChildCount.
+             */
+            public Builder failedChildCount(Integer failedChildCount) {
+                this.failedChildCount = failedChildCount;
+                return this;
+            }
+
+            /**
              * FinishTime.
              */
             public Builder finishTime(String finishTime) {
@@ -288,10 +416,58 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
              * InvokeId.
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;
+                return this;
+            }
+
+            /**
+             * Level.
+             */
+            public Builder level(Integer level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * Operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * Param.
+             */
+            public Builder param(String param) {
+                this.param = param;
+                return this;
+            }
+
+            /**
+             * ParentTaskId.
+             */
+            public Builder parentTaskId(String parentTaskId) {
+                this.parentTaskId = parentTaskId;
                 return this;
             }
 
@@ -320,10 +496,26 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
+             * RunningChildCount.
+             */
+            public Builder runningChildCount(Integer runningChildCount) {
+                this.runningChildCount = runningChildCount;
+                return this;
+            }
+
+            /**
              * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * SuccessChildCount.
+             */
+            public Builder successChildCount(Integer successChildCount) {
+                this.successChildCount = successChildCount;
                 return this;
             }
 
@@ -348,6 +540,14 @@ public class DescribeTasksResponseBody extends TeaModel {
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
+                return this;
+            }
+
+            /**
+             * TotalChildCount.
+             */
+            public Builder totalChildCount(Integer totalChildCount) {
+                this.totalChildCount = totalChildCount;
                 return this;
             }
 

@@ -18,9 +18,13 @@ public class SendFileResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
     private SendFileResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -45,9 +49,17 @@ public class SendFileResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private java.util.List < Data> data; 
         private String requestId; 
+        private String taskId; 
 
         /**
          * Data.
@@ -62,6 +74,14 @@ public class SendFileResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
             return this;
         }
 

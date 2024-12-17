@@ -121,6 +121,9 @@ public class DescribeAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AndroidAppVersion")
         private String androidAppVersion;
 
+        @com.aliyun.core.annotation.NameInMap("ApkSize")
+        private String apkSize;
+
         @com.aliyun.core.annotation.NameInMap("AppId")
         private Integer appId;
 
@@ -148,6 +151,9 @@ public class DescribeAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceGroupList")
         private java.util.List < String > instanceGroupList;
 
+        @com.aliyun.core.annotation.NameInMap("MD5")
+        private String mD5;
+
         @com.aliyun.core.annotation.NameInMap("PackageName")
         private String packageName;
 
@@ -156,6 +162,7 @@ public class DescribeAppsResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.androidAppVersion = builder.androidAppVersion;
+            this.apkSize = builder.apkSize;
             this.appId = builder.appId;
             this.appName = builder.appName;
             this.bizRegionId = builder.bizRegionId;
@@ -165,6 +172,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             this.iconUrl = builder.iconUrl;
             this.installationStatus = builder.installationStatus;
             this.instanceGroupList = builder.instanceGroupList;
+            this.mD5 = builder.mD5;
             this.packageName = builder.packageName;
             this.status = builder.status;
         }
@@ -182,6 +190,13 @@ public class DescribeAppsResponseBody extends TeaModel {
          */
         public String getAndroidAppVersion() {
             return this.androidAppVersion;
+        }
+
+        /**
+         * @return apkSize
+         */
+        public String getApkSize() {
+            return this.apkSize;
         }
 
         /**
@@ -248,6 +263,13 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return mD5
+         */
+        public String getMD5() {
+            return this.mD5;
+        }
+
+        /**
          * @return packageName
          */
         public String getPackageName() {
@@ -263,6 +285,7 @@ public class DescribeAppsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String androidAppVersion; 
+            private String apkSize; 
             private Integer appId; 
             private String appName; 
             private String bizRegionId; 
@@ -272,6 +295,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String iconUrl; 
             private String installationStatus; 
             private java.util.List < String > instanceGroupList; 
+            private String mD5; 
             private String packageName; 
             private String status; 
 
@@ -280,6 +304,14 @@ public class DescribeAppsResponseBody extends TeaModel {
              */
             public Builder androidAppVersion(String androidAppVersion) {
                 this.androidAppVersion = androidAppVersion;
+                return this;
+            }
+
+            /**
+             * ApkSize.
+             */
+            public Builder apkSize(String apkSize) {
+                this.apkSize = apkSize;
                 return this;
             }
 
@@ -352,6 +384,14 @@ public class DescribeAppsResponseBody extends TeaModel {
              */
             public Builder instanceGroupList(java.util.List < String > instanceGroupList) {
                 this.instanceGroupList = instanceGroupList;
+                return this;
+            }
+
+            /**
+             * MD5.
+             */
+            public Builder mD5(String mD5) {
+                this.mD5 = mD5;
                 return this;
             }
 
