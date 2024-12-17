@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
@@ -143,6 +144,10 @@ public class CreateInstanceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicaCount")
+    private Integer replicaCount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -174,6 +179,10 @@ public class CreateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SlaveReadOnlyCount")
     private Integer slaveReadOnlyCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlaveReplicaCount")
+    private Integer slaveReplicaCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SrcDBInstanceId")
@@ -233,6 +242,7 @@ public class CreateInstanceRequest extends Request {
         this.readOnlyCount = builder.readOnlyCount;
         this.recoverConfigMode = builder.recoverConfigMode;
         this.regionId = builder.regionId;
+        this.replicaCount = builder.replicaCount;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -241,6 +251,7 @@ public class CreateInstanceRequest extends Request {
         this.securityToken = builder.securityToken;
         this.shardCount = builder.shardCount;
         this.slaveReadOnlyCount = builder.slaveReadOnlyCount;
+        this.slaveReplicaCount = builder.slaveReplicaCount;
         this.srcDBInstanceId = builder.srcDBInstanceId;
         this.tag = builder.tag;
         this.token = builder.token;
@@ -487,6 +498,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return replicaCount
+     */
+    public Integer getReplicaCount() {
+        return this.replicaCount;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -540,6 +558,13 @@ public class CreateInstanceRequest extends Request {
      */
     public Integer getSlaveReadOnlyCount() {
         return this.slaveReadOnlyCount;
+    }
+
+    /**
+     * @return slaveReplicaCount
+     */
+    public Integer getSlaveReplicaCount() {
+        return this.slaveReplicaCount;
     }
 
     /**
@@ -617,6 +642,7 @@ public class CreateInstanceRequest extends Request {
         private Integer readOnlyCount; 
         private String recoverConfigMode; 
         private String regionId; 
+        private Integer replicaCount; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -625,6 +651,7 @@ public class CreateInstanceRequest extends Request {
         private String securityToken; 
         private Integer shardCount; 
         private Integer slaveReadOnlyCount; 
+        private Integer slaveReplicaCount; 
         private String srcDBInstanceId; 
         private java.util.List < Tag> tag; 
         private String token; 
@@ -670,6 +697,7 @@ public class CreateInstanceRequest extends Request {
             this.readOnlyCount = request.readOnlyCount;
             this.recoverConfigMode = request.recoverConfigMode;
             this.regionId = request.regionId;
+            this.replicaCount = request.replicaCount;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -678,6 +706,7 @@ public class CreateInstanceRequest extends Request {
             this.securityToken = request.securityToken;
             this.shardCount = request.shardCount;
             this.slaveReadOnlyCount = request.slaveReadOnlyCount;
+            this.slaveReplicaCount = request.slaveReplicaCount;
             this.srcDBInstanceId = request.srcDBInstanceId;
             this.tag = request.tag;
             this.token = request.token;
@@ -687,15 +716,16 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable append-only file (AOF) persistence for the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable append-only file (AOF) persistence for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>yes</strong> (default): enables AOF persistence.</li>
+         * <li><strong>no</strong>: disables AOF persistence.</li>
+         * </ul>
+         * <p>**</p>
+         * <p><strong>Description</strong> This parameter is applicable to classic instances, and is unavailable for cloud-native instances.</p>
          * 
-         * *   **yes** (default): enables AOF persistence.
-         * *   **no**: disables AOF persistence.
-         * 
-         * **
-         * 
-         * **Description** This parameter is applicable to classic instances, and is unavailable for cloud-native instances.
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         public Builder appendonly(String appendonly) {
             this.putQueryParameter("Appendonly", appendonly);
@@ -704,11 +734,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong>: disables auto-renewal.</li>
+         * </ul>
          * 
-         * *   **true**: enables auto-renewal.
-         * *   **false**: disables auto-renewal.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -717,10 +750,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The subscription duration that is supported by auto-renewal. Unit: months. Valid values: **1**, **2**, **3**, **6**, and **12**.
-         * <p>
+         * <p>The subscription duration that is supported by auto-renewal. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is required only if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required only if the **AutoRenew** parameter is set to **true**.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder autoRenewPeriod(String autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -729,11 +765,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a coupon. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to use a coupon. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: uses a coupon.</li>
+         * <li><strong>false</strong>: does not use a coupon.</li>
+         * </ul>
          * 
-         * *   **true**: uses a coupon.
-         * *   **false**: does not use a coupon.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoUseCoupon(String autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -742,10 +781,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * If your instance is a cloud-native cluster instance, we recommend that you use [DescribeClusterBackupList](~~2679158~~) to query the backup set ID of the cluster instance, such as cb-xx. Then, set the ClusterBackupId request parameter to the backup set ID to clone the cluster instance. This eliminates the need to specify the backup set ID of each shard.
-         * <p>
+         * <p>If your instance is a cloud-native cluster instance, we recommend that you use <a href="https://help.aliyun.com/document_detail/2679158.html">DescribeClusterBackupList</a> to query the backup set ID of the cluster instance, such as cb-xx. Then, set the ClusterBackupId request parameter to the backup set ID to clone the cluster instance. This eliminates the need to specify the backup set ID of each shard.</p>
+         * <p>You can set the BackupId parameter to the backup set ID of the source instance. The system uses the data stored in the backup set to create an instance. You can call the <a href="https://help.aliyun.com/document_detail/61081.html">DescribeBackups</a> operation to query backup set IDs. If the source instance is a cluster instance, set the BackupId parameter to the backup set IDs of all shards of the source instance, separated by commas (,). Example: &quot;10**,11**,15**&quot;.</p>
          * 
-         * You can set the BackupId parameter to the backup set ID of the source instance. The system uses the data stored in the backup set to create an instance. You can call the [DescribeBackups](~~61081~~) operation to query backup set IDs. If the source instance is a cluster instance, set the BackupId parameter to the backup set IDs of all shards of the source instance, separated by commas (,). Example: "10\*\*,11\*\*,15\*\*".
+         * <strong>example:</strong>
+         * <p>111111111</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -754,7 +794,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the promotional event or business information.
+         * <p>The ID of the promotional event or business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000000000</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -763,10 +806,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the instance. Unit: MB.
-         * <p>
+         * <p>The storage capacity of the instance. Unit: MB.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the <strong>Capacity</strong> and <strong>InstanceClass</strong> parameters when you call this operation.</p>
+         * </blockquote>
          * 
-         * > You must specify at least one of the **Capacity** and **InstanceClass** parameters when you call this operation.
+         * <strong>example:</strong>
+         * <p>16384</p>
          */
         public Builder capacity(Long capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -775,11 +821,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Default value: PrePaid. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Default value: PrePaid. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -788,11 +837,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is supported for specific new cluster instances. You can query the backup set ID by using the [DescribeClusterBackupList](~~2679158~~) operation.
-         * <p>
+         * <p>This parameter is supported for specific new cluster instances. You can query the backup set ID by using the <a href="https://help.aliyun.com/document_detail/2679158.html">DescribeClusterBackupList</a> operation.</p>
+         * <ul>
+         * <li>If this parameter is supported, you can specify the backup set ID. In this case, you do not need to specify the <strong>BackupId</strong> parameter.</li>
+         * <li>If this parameter is not supported, set the BackupId parameter to the IDs of backup sets for all shards of the source instance, separated by commas (,). Example: &quot;2158****20,2158****22&quot;.</li>
+         * </ul>
          * 
-         * *   If this parameter is supported, you can specify the backup set ID. In this case, you do not need to specify the **BackupId** parameter.
-         * *   If this parameter is not supported, set the BackupId parameter to the IDs of backup sets for all shards of the source instance, separated by commas (,). Example: "2158\*\*\*\*20,2158\*\*\*\*22".
+         * <strong>example:</strong>
+         * <p>cb-hyxdof5x9kqbtust</p>
          */
         public Builder clusterBackupId(String clusterBackupId) {
             this.putQueryParameter("ClusterBackupId", clusterBackupId);
@@ -801,7 +853,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **AllocateInstancePublicConnection**.
+         * <p>The operation that you want to perform. Set the value to <strong>AllocateInstancePublicConnection</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -810,7 +865,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: `default`.
+         * <p>The coupon code. Default value: <code>default</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -819,7 +877,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated cluster. This parameter is required if you create an instance in a dedicated cluster.
+         * <p>The ID of the dedicated cluster. This parameter is required if you create an instance in a dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dhg-uv4fnk6r7zff****</p>
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -828,11 +889,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**: performs a dry run and sends the request. If the request passes the dry run, the instance is created.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -841,20 +905,24 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The engine version. Valid values for **classic instances**:
-         * <p>
+         * <p>The engine version. Valid values for <strong>classic instances</strong>:</p>
+         * <ul>
+         * <li><strong>2.8</strong> (not recommended due to <a href="https://help.aliyun.com/document_detail/2674657.html">scheduled EOFS</a>)</li>
+         * <li><strong>4.0</strong> (not recommended)</li>
+         * <li><strong>5.0</strong></li>
+         * </ul>
+         * <p>Valid values for <strong>cloud-native instances</strong>:</p>
+         * <ul>
+         * <li><strong>5.0</strong></li>
+         * <li><strong>6.0</strong> (recommended)</li>
+         * <li><strong>7.0</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is <strong>5.0</strong>.</p>
+         * </blockquote>
          * 
-         * *   **2.8** (not recommended due to [scheduled EOFS](~~2674657~~))
-         * *   **4.0** (not recommended)
-         * *   **5.0**
-         * 
-         * Valid values for **cloud-native instances**:
-         * 
-         * *   **5.0**
-         * *   **6.0** (recommended)
-         * *   **7.0**
-         * 
-         * >  The default value is **5.0**.
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -863,14 +931,20 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the new instance as the first child instance of the distributed instance. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to use the new instance as the first child instance of the distributed instance. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: uses the new instance as the first child instance.</p>
+         * </li>
+         * <li><p><strong>false</strong>: does not use the new instance as the first child instance.</p>
+         * </li>
+         * <li><p>If you want to create an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that runs Redis 5.0, you must set this parameter to <strong>true</strong>.</p>
+         * </li>
+         * <li><p>This parameter is available only on the China site (aliyun.com).</p>
+         * </li>
+         * </ul>
          * 
-         * *   **true**: uses the new instance as the first child instance.
-         * *   **false**: does not use the new instance as the first child instance.
-         * *   If you want to create an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that runs Redis 5.0, you must set this parameter to **true**.
-         * 
-         * *   This parameter is available only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder globalInstance(Boolean globalInstance) {
             this.putQueryParameter("GlobalInstance", globalInstance);
@@ -879,7 +953,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the distributed instance. This parameter is available only on the China site (aliyun.com).
+         * <p>The ID of the distributed instance. This parameter is available only on the China site (aliyun.com).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gr-bp14rkqrhac****</p>
          */
         public Builder globalInstanceId(String globalInstanceId) {
             this.putQueryParameter("GlobalInstanceId", globalInstanceId);
@@ -888,7 +965,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The global IP whitelist template for the instance. Multiple IP whitelist templates should be separated by English commas (,) and cannot be duplicated.
+         * <p>The global IP whitelist template for the instance. Multiple IP whitelist templates should be separated by English commas (,) and cannot be duplicated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-zsldxfiwjmti0kcm****</p>
          */
         public Builder globalSecurityGroupIds(String globalSecurityGroupIds) {
             this.putQueryParameter("GlobalSecurityGroupIds", globalSecurityGroupIds);
@@ -897,12 +977,12 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The instance type. For example, redis.master.small.default indicates a Community Edition standard master-replica instance that has 1 GB of memory. For more information, see [Overview](~~26350~~).
-         * <p>
+         * <p>The instance type. For example, redis.master.small.default indicates a Community Edition standard master-replica instance that has 1 GB of memory. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a>.</p>
+         * <p>**</p>
+         * <p><strong>Description</strong> You must specify at least one of the <strong>Capacity</strong> and <strong>InstanceClass</strong> parameters when you call the CreateInstance operation.</p>
          * 
-         * **
-         * 
-         * **Description** You must specify at least one of the **Capacity** and **InstanceClass** parameters when you call the CreateInstance operation.
+         * <strong>example:</strong>
+         * <p>redis.master.small.default</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -911,7 +991,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The name of the instance. The name must be 2 to 80 characters in length and must start with a letter. It cannot contain spaces or specific special characters. These special characters include `@ / : = " < > { [ ] }`
+         * <p>The name of the instance. The name must be 2 to 80 characters in length and must start with a letter. It cannot contain spaces or specific special characters. These special characters include <code>@ / : = &quot; &lt; &gt; { [ ] }</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -920,11 +1003,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The category of the instance. Default value: Redis. Valid values:
-         * <p>
+         * <p>The category of the instance. Default value: Redis. Valid values:</p>
+         * <ul>
+         * <li><strong>Redis</strong></li>
+         * <li><strong>Memcache</strong></li>
+         * </ul>
          * 
-         * *   **Redis**
-         * *   **Memcache**
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -933,10 +1019,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Default value: VPC. Valid values:
-         * <p>
+         * <p>The network type of the instance. Default value: VPC. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * </ul>
          * 
-         * *   **VPC**
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -945,15 +1034,19 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The node type. Valid values:
-         * <p>
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li><strong>MASTER_SLAVE</strong>: high availability (master-replica)</li>
+         * <li><strong>STAND_ALONE</strong>: standalone</li>
+         * <li><strong>double</strong>: master-replica</li>
+         * <li><strong>single</strong>: standalone</li>
+         * </ul>
+         * <blockquote>
+         * <p> To create a cloud-native instance, set this parameter to <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong>. To create a classic instance, set this parameter to <strong>double</strong> or <strong>single</strong>.</p>
+         * </blockquote>
          * 
-         * *   **MASTER_SLAVE**: high availability (master-replica)
-         * *   **STAND_ALONE**: standalone
-         * *   **double**: master-replica
-         * *   **single**: standalone
-         * 
-         * >  To create a cloud-native instance, set this parameter to **MASTER_SLAVE** or **STAND_ALONE**. To create a classic instance, set this parameter to **double** or **single**.
+         * <strong>example:</strong>
+         * <p>STAND_ALONE</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -980,7 +1073,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The parameter template ID, which must be globally unique.
+         * <p>The parameter template ID, which must be globally unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpg-test**</p>
          */
         public Builder paramGroupId(String paramGroupId) {
             this.putQueryParameter("ParamGroupId", paramGroupId);
@@ -989,7 +1085,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The password that is used to connect to the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`
+         * <p>The password that is used to connect to the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pass!123456</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -998,10 +1097,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The subscription duration. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**,**36**, and **60**. Unit: months.
-         * <p>
+         * <p>The subscription duration. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>,<strong>36</strong>, and <strong>60</strong>. Unit: months.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only if the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is available and required only if the **ChargeType** parameter is set to **PrePaid**.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -1010,7 +1112,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The port number that is used to connect to the instance. Valid values: **1024** to **65535**. Default value: **6379**.
+         * <p>The port number that is used to connect to the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>. Default value: <strong>6379</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -1019,10 +1124,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The private IP address of the instance.
-         * <p>
+         * <p>The private IP address of the instance.</p>
+         * <blockquote>
+         * <p>The private IP address must be available within the CIDR block of the vSwitch to which to connect the instance.</p>
+         * </blockquote>
          * 
-         * > The private IP address must be available within the CIDR block of the vSwitch to which to connect the instance.
+         * <strong>example:</strong>
+         * <p>172.16.0.***</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -1031,10 +1139,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The number of read replicas in the primary zone. This parameter applies only to read/write splitting instances that use cloud disks. You can use this parameter to customize the number of read replicas. Valid values: 1 to 9.
-         * <p>
+         * <p>The number of read replicas in the primary zone. This parameter applies only to read/write splitting instances that use cloud disks. You can use this parameter to customize the number of read replicas. Valid values: 1 to 9.</p>
+         * <blockquote>
+         * <p> The sum of the values of this parameter and SlaveReadOnlyCount cannot be greater than 9.</p>
+         * </blockquote>
          * 
-         * >  The sum of the values of this parameter and SlaveReadOnlyCount cannot be greater than 9.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder readOnlyCount(Integer readOnlyCount) {
             this.putQueryParameter("ReadOnlyCount", readOnlyCount);
@@ -1052,7 +1163,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to create the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
+         * <p>The ID of the region where you want to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -1061,7 +1176,19 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * ReplicaCount.
+         */
+        public Builder replicaCount(Integer replicaCount) {
+            this.putQueryParameter("ReplicaCount", replicaCount);
+            this.replicaCount = replicaCount;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-resourcegroupid1</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -1088,7 +1215,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * If data flashback is enabled for the source instance, you can use this parameter to specify a point in time within the backup retention period of the source instance. The system uses the backup data of the source instance at the point in time to create an instance. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>If data flashback is enabled for the source instance, you can use this parameter to specify a point in time within the backup retention period of the source instance. The system uses the backup data of the source instance at the point in time to create an instance. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-19T16:00:00Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -1097,10 +1227,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The secondary zone ID of the instance. You can call the [DescribeZones](~~472448~~) operation to query the most recent zone list.
-         * <p>
+         * <p>The secondary zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/472448.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <blockquote>
+         * <p>If you specify this parameter, the master node and replica node of the instance can be deployed in different zones and disaster recovery is implemented across zones. The instance can withstand failures in data centers.</p>
+         * </blockquote>
          * 
-         * > If you specify this parameter, the master node and replica node of the instance can be deployed in different zones and disaster recovery is implemented across zones. The instance can withstand failures in data centers.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder secondaryZoneId(String secondaryZoneId) {
             this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
@@ -1109,7 +1242,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 系统自动生成的安全 Token，无需传入
+         * <p>系统自动生成的安全 Token，无需传入</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -1118,7 +1251,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The number of data shards. This parameter is available only if you create a cluster instance that uses cloud disks.
+         * <p>The number of data shards. This parameter is available only if you create a cluster instance that uses cloud disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);
@@ -1127,10 +1263,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The number of read replicas in the secondary zone. This parameter is used to create a read/write splitting instance that is deployed across multiple zones. The sum of the values of this parameter and ReadOnlyCount cannot be greater than 9.
-         * <p>
+         * <p>The number of read replicas in the secondary zone. This parameter is used to create a read/write splitting instance that is deployed across multiple zones. The sum of the values of this parameter and ReadOnlyCount cannot be greater than 9.</p>
+         * <blockquote>
+         * <p>When you create a multi-zone read/write splitting instance, you must specify both SlaveReadOnlyCount and SecondaryZoneId.</p>
+         * </blockquote>
          * 
-         * > When you create a multi-zone read/write splitting instance, you must specify both SlaveReadOnlyCount and SecondaryZoneId.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder slaveReadOnlyCount(Integer slaveReadOnlyCount) {
             this.putQueryParameter("SlaveReadOnlyCount", slaveReadOnlyCount);
@@ -1139,10 +1278,22 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance.
-         * <p>
+         * SlaveReplicaCount.
+         */
+        public Builder slaveReplicaCount(Integer slaveReplicaCount) {
+            this.putQueryParameter("SlaveReplicaCount", slaveReplicaCount);
+            this.slaveReplicaCount = slaveReplicaCount;
+            return this;
+        }
+
+        /**
+         * <p>If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance.</p>
+         * <blockquote>
+         * <p> After you specify the SrcDBInstanceId parameter, use the <strong>BackupId</strong>, <strong>ClusterBackupId</strong> (recommended for cloud-native cluster instances), or <strong>RestoreTime</strong> parameter to specify the backup set or the specific point in time that you want to use to create an instance. The SrcDBInstanceId parameter must be used in combination with one of the preceding three parameters.</p>
+         * </blockquote>
          * 
-         * >  After you specify the SrcDBInstanceId parameter, use the **BackupId**, **ClusterBackupId** (recommended for cloud-native cluster instances), or **RestoreTime** parameter to specify the backup set or the specific point in time that you want to use to create an instance. The SrcDBInstanceId parameter must be used in combination with one of the preceding three parameters.
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder srcDBInstanceId(String srcDBInstanceId) {
             this.putQueryParameter("SrcDBInstanceId", srcDBInstanceId);
@@ -1151,7 +1302,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The tags of the instance.
+         * <p>The tags of the instance.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1160,7 +1311,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -1169,7 +1323,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which you want the instance to connect.
+         * <p>The ID of the vSwitch to which you want the instance to connect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1178,7 +1335,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1nme44gek34slfc****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1187,7 +1347,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The primary zone ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent zone list.
+         * <p>The primary zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1202,6 +1365,12 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1241,14 +1410,18 @@ public class CreateInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The keys of the tags that are added to the instance.
-             * <p>
+             * <p>The keys of the tags that are added to the instance.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p><strong>N</strong> specifies the serial number of the tag. Up to 20 tags can be added to a single instance. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag.</p>
+             * </li>
+             * <li><p>If the key of the tag does not exist, the tag is automatically created.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   **N** specifies the serial number of the tag. Up to 20 tags can be added to a single instance. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag.
-             * 
-             * *   If the key of the tag does not exist, the tag is automatically created.
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1256,10 +1429,13 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The values of the tags that are added to the instance.
-             * <p>
+             * <p>The values of the tags that are added to the instance.</p>
+             * <blockquote>
+             * <p><strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+             * </blockquote>
              * 
-             * > **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;

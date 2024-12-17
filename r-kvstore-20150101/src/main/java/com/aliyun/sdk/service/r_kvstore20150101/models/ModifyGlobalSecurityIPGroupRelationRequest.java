@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGlobalSecurityIPGroupRelationRequest} extends {@link RequestModel}
  *
  * <p>ModifyGlobalSecurityIPGroupRelationRequest</p>
@@ -168,7 +169,11 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-t4n885e834f6****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -177,7 +182,11 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends Request {
         }
 
         /**
-         * The ID of the IP whitelist template.
+         * <p>The ID of the IP whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-zsldxfiwjmti0kcm****</p>
          */
         public Builder globalSecurityGroupId(String globalSecurityGroupId) {
             this.putQueryParameter("GlobalSecurityGroupId", globalSecurityGroupId);
@@ -204,7 +213,11 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -213,7 +226,10 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

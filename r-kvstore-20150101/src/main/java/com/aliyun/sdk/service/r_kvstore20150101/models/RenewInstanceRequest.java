@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewInstanceRequest</p>
@@ -274,13 +275,15 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Default value: true. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables automatic payment.</li>
+         * <li><strong>false</strong>: disables automatic payment.</li>
+         * </ul>
+         * <p>If you select false, you must choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong> in the top navigation bar. In the left-side navigation pane, click <strong>Orders</strong>. Find the specified order and pay for it.</p>
          * 
-         * *   **true**: enables automatic payment.
-         * *   **false**: disables automatic payment.
-         * 
-         * If you select false, you must choose **Expenses** > **Renewal Management** in the top navigation bar. In the left-side navigation pane, click **Orders**. Find the specified order and pay for it.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -289,11 +292,14 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables auto-renewal. The instance is renewed based on the specified renewal duration. For example, if you set the renewal duration to three months, you are charged for three months of service each time the instance is automatically renewed.</li>
+         * <li><strong>false</strong> (default): disables auto-renewal.</li>
+         * </ul>
          * 
-         * *   **true**: enables auto-renewal. The instance is renewed based on the specified renewal duration. For example, if you set the renewal duration to three months, you are charged for three months of service each time the instance is automatically renewed.
-         * *   **false** (default): disables auto-renewal.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -302,7 +308,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the promotional event or business information.
+         * <p>The ID of the promotional event or business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000000000</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -311,10 +320,13 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the instance. Unit: MB. When you renew the instance, you can specify this parameter to change specifications of the instance.
-         * <p>
+         * <p>The storage capacity of the instance. Unit: MB. When you renew the instance, you can specify this parameter to change specifications of the instance.</p>
+         * <blockquote>
+         * <p>To change the specifications when you renew the instance, you must specify at least one of the <code>Capacity</code> and <code>InstanceClass</code> parameters.</p>
+         * </blockquote>
          * 
-         * > To change the specifications when you renew the instance, you must specify at least one of the `Capacity` and `InstanceClass` parameters.
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder capacity(String capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -323,7 +335,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TF-ModifyInstanceSpec-1686645570-7dac7257-4a14-4811-939c-51a282f</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -332,7 +347,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+         * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -341,7 +359,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The source of the request. The default value is **OpenAPI** and cannot be changed.
+         * <p>The source of the request. The default value is <strong>OpenAPI</strong> and cannot be changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI</p>
          */
         public Builder fromApp(String fromApp) {
             this.putQueryParameter("FromApp", fromApp);
@@ -350,10 +371,13 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The instance type code. For more information, see [Instance specifications overview](~~26350~~). When you renew the instance, you can specify this parameter to change specifications of the instance.
-         * <p>
+         * <p>The instance type code. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Instance specifications overview</a>. When you renew the instance, you can specify this parameter to change specifications of the instance.</p>
+         * <blockquote>
+         * <p>To change the specifications when you renew the instance, you must specify at least one of the <code>Capacity</code> and <code>InstanceClass</code> parameters.</p>
+         * </blockquote>
          * 
-         * > To change the specifications when you renew the instance, you must specify at least one of the `Capacity` and `InstanceClass` parameters.
+         * <strong>example:</strong>
+         * <p>redis.master.small.default</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -362,7 +386,11 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -389,7 +417,11 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The renewal period. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**. Unit: months.
+         * <p>The renewal period. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>. Unit: months.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

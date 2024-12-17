@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchNetworkRequest} extends {@link RequestModel}
  *
  * <p>SwitchNetworkRequest</p>
@@ -217,14 +218,18 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The retention period of the classic network endpoint. Valid values: **14**, **30**, **60**, and **120**. Unit: days.
-         * <p>
+         * <p>The retention period of the classic network endpoint. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: days.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is available and required only when the <strong>RetainClassic</strong> parameter is set to <strong>True</strong>.</p>
+         * </li>
+         * <li><p>After you complete the switchover operation, you can also call the <a href="https://help.aliyun.com/document_detail/61010.html">ModifyInstanceNetExpireTime</a> operation to modify the retention period of the classic network endpoint.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter is available and required only when the **RetainClassic** parameter is set to **True**.
-         * 
-         * *   After you complete the switchover operation, you can also call the [ModifyInstanceNetExpireTime](~~61010~~) operation to modify the retention period of the classic network endpoint.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder classicExpiredDays(String classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -233,7 +238,11 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -278,13 +287,17 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain the original classic network endpoint after you switch the instance from classic network to VPC. Default value: False. Valid values:
-         * <p>
+         * <p>Specifies whether to retain the original classic network endpoint after you switch the instance from classic network to VPC. Default value: False. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong>: retains the classic network endpoint.</li>
+         * <li><strong>False</strong>: does not retain the classic network endpoint.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when the network type of the instance is classic network.</p>
+         * </blockquote>
          * 
-         * *   **True**: retains the classic network endpoint.
-         * *   **False**: does not retain the classic network endpoint.
-         * 
-         * > This parameter is available only when the network type of the instance is classic network.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder retainClassic(String retainClassic) {
             this.putQueryParameter("RetainClassic", retainClassic);
@@ -302,7 +315,10 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The network type to which you want to switch. If you want to switch to VPC network, Set the value to **VPC**.
+         * <p>The network type to which you want to switch. If you want to switch to VPC network, Set the value to <strong>VPC</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder targetNetworkType(String targetNetworkType) {
             this.putQueryParameter("TargetNetworkType", targetNetworkType);
@@ -311,10 +327,13 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query the VPC ID.
-         * <p>
+         * <p>The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the VPC ID.</p>
+         * <blockquote>
+         * <p>The vSwitch and the ApsaraDB for Redis instance must be deployed in the same zone.</p>
+         * </blockquote>
          * 
-         * > The vSwitch and the ApsaraDB for Redis instance must be deployed in the same zone.
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -323,14 +342,18 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query the VPC ID.
-         * <p>
+         * <p>The ID of the VPC to which you want to switch. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the VPC ID.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The VPC and the ApsaraDB for Redis instance must be deployed in the same region.</p>
+         * </li>
+         * <li><p>After you set this parameter, you must also set the <strong>VSwitchId</strong> parameter.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   The VPC and the ApsaraDB for Redis instance must be deployed in the same region.
-         * 
-         * *   After you set this parameter, you must also set the **VSwitchId** parameter.
+         * <strong>example:</strong>
+         * <p>vpc-bp1nme44gek34slfc****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

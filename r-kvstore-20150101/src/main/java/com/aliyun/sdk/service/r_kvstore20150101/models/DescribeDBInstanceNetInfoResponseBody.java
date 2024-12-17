@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceNetInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceNetInfoResponseBody</p>
@@ -61,11 +62,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The network type. Valid values:
-         * <p>
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><strong>CLASSIC</strong>: The instance runs in a classic network.</li>
+         * <li><strong>VPC</strong>: The instance runs in a virtual private cloud (VPC).</li>
+         * </ul>
          * 
-         * *   **CLASSIC**: The instance runs in a classic network.
-         * *   **VPC**: The instance runs in a virtual private cloud (VPC).
+         * <strong>example:</strong>
+         * <p>CLASSIC</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.instanceNetworkType = instanceNetworkType;
@@ -73,7 +77,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The network information about the instance.
+         * <p>The network information about the instance.</p>
          */
         public Builder netInfoItems(NetInfoItems netInfoItems) {
             this.netInfoItems = netInfoItems;
@@ -81,7 +85,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC77D4E1-2A7C-4F0B-A4CC-CE0B9C314B9B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,6 +101,12 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceNetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceNetInfoResponseBody</p>
+     */
     public static class InstanceNetInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
@@ -253,7 +266,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The endpoint of the instance.
+             * <p>The endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -261,12 +277,15 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the instance. Valid values:
-             * <p>
+             * <p>The network type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Internet</li>
+             * <li><strong>1</strong>: classic network</li>
+             * <li><strong>2</strong>: Virtual Private Cloud (VPC)</li>
+             * </ul>
              * 
-             * *   **0**: Internet
-             * *   **1**: classic network
-             * *   **2**: Virtual Private Cloud (VPC)
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -274,11 +293,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the address is a private endpoint. Valid values:
-             * <p>
+             * <p>Indicates whether the address is a private endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The address is not a private endpoint.</li>
+             * <li><strong>1</strong>: The address is a private endpoint.</li>
+             * </ul>
              * 
-             * *   **0**: The address is not a private endpoint.
-             * *   **1**: The address is a private endpoint.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder directConnection(Integer directConnection) {
                 this.directConnection = directConnection;
@@ -286,7 +308,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the classic network endpoint. Unit: seconds.
+             * <p>The expiration time of the classic network endpoint. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5183779</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -294,7 +319,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.49.***</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -302,12 +330,15 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the IP address. Valid values:
-             * <p>
+             * <p>The network type of the IP address. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong>: Internet</li>
+             * <li><strong>Inner</strong>: classic network</li>
+             * <li><strong>Private</strong>: VPC</li>
+             * </ul>
              * 
-             * *   **Public**: Internet
-             * *   **Inner**: classic network
-             * *   **Private**: VPC
+             * <strong>example:</strong>
+             * <p>Inner</p>
              */
             public Builder IPType(String IPType) {
                 this.IPType = IPType;
@@ -315,10 +346,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the address is the endpoint for the secondary zone. Valid values: 1 and 0. A value of 1 indicates that the address is the endpoint for the secondary zone.
-             * <p>
+             * <p>Indicates whether the address is the endpoint for the secondary zone. Valid values: 1 and 0. A value of 1 indicates that the address is the endpoint for the secondary zone.</p>
+             * <blockquote>
+             * <p> This parameter is returned only after you enable the multi-zone read/write splitting architecture for the instance.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only after you enable the multi-zone read/write splitting architecture for the instance.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isSlaveProxy(Integer isSlaveProxy) {
                 this.isSlaveProxy = isSlaveProxy;
@@ -326,7 +360,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The service port of the instance.
+             * <p>The service port of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6379</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -334,10 +371,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining validity period of the classic network endpoint. Unit: seconds.
-             * <p>
+             * <p>The remaining validity period of the classic network endpoint. Unit: seconds.</p>
+             * <blockquote>
+             * <p> **A value of 0 indicates that the endpoint never expires.</p>
+             * </blockquote>
              * 
-             * >  **A value of 0 indicates that the endpoint never expires.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder upgradeable(String upgradeable) {
                 this.upgradeable = upgradeable;
@@ -345,7 +385,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the instance belongs.
+             * <p>The ID of the VPC to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1nme44gek34slfc****</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -353,7 +396,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp1ky7j6qc7umk****</p>
              */
             public Builder VPCInstanceId(String VPCInstanceId) {
                 this.VPCInstanceId = VPCInstanceId;
@@ -361,7 +407,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1e7clcw529l773d****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -375,6 +424,12 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceNetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceNetInfoResponseBody</p>
+     */
     public static class NetInfoItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceNetInfo")
         private java.util.List < InstanceNetInfo> instanceNetInfo;

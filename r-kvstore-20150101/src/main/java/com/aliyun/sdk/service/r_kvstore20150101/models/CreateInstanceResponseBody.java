@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstanceResponseBody</p>
@@ -290,7 +291,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * The maximum bandwidth of the instance. Unit: MB/s.
+         * <p>The maximum bandwidth of the instance. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder bandwidth(Long bandwidth) {
             this.bandwidth = bandwidth;
@@ -298,7 +302,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The storage capacity of the instance. Unit: MB.
+         * <p>The storage capacity of the instance. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16384</p>
          */
         public Builder capacity(Long capacity) {
             this.capacity = capacity;
@@ -306,11 +313,14 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -318,7 +328,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the instance.
+         * <p>The configurations of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;EvictionPolicy&quot;:&quot;volatile-lru&quot;,&quot;hash-max-ziplist-entries&quot;:512,&quot;zset-max-ziplist-entries&quot;:128,&quot;zset-max-ziplist-value&quot;:64,&quot;set-max-intset-entries&quot;:512,&quot;hash-max-ziplist-value&quot;:64}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -326,7 +339,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The internal endpoint of the instance.
+         * <p>The internal endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
          */
         public Builder connectionDomain(String connectionDomain) {
             this.connectionDomain = connectionDomain;
@@ -334,7 +350,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of connections supported by the instance.
+         * <p>The maximum number of connections supported by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder connections(Long connections) {
             this.connections = connections;
@@ -342,7 +361,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the subscription expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>The time when the subscription expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-18T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -350,7 +372,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The GUID of the instance.
+         * <p>The GUID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -358,7 +383,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -366,7 +394,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the instance. The return value is Creating.
+         * <p>The state of the instance. The return value is Creating.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -374,11 +405,14 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>CLASSIC</strong>: classic network</li>
+         * <li><strong>VPC</strong>: VPC</li>
+         * </ul>
          * 
-         * *   **CLASSIC**: classic network
-         * *   **VPC**: VPC
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.networkType = networkType;
@@ -386,11 +420,14 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The node type. Valid values:
-         * <p>
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li><strong>STAND_ALONE</strong>: standalone</li>
+         * <li><strong>MASTER_SLAVE</strong>: master-replica</li>
+         * </ul>
          * 
-         * *   **STAND_ALONE**: standalone
-         * *   **MASTER_SLAVE**: master-replica
+         * <strong>example:</strong>
+         * <p>MASTER_SLAVE</p>
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
@@ -398,7 +435,11 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2084452111111</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -406,7 +447,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The port number that is used to connect to the instance.
+         * <p>The port number that is used to connect to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -414,7 +458,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The private IP address of the instance.
+         * <p>The private IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.10</p>
          */
         public Builder privateIpAddr(String privateIpAddr) {
             this.privateIpAddr = privateIpAddr;
@@ -422,7 +469,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The expected maximum queries per second (QPS).
+         * <p>The expected maximum queries per second (QPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder QPS(Long QPS) {
             this.QPS = QPS;
@@ -430,7 +480,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hongkong</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -438,7 +491,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DEA3CC9-F81D-4387-8E97-CEA40F09****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -446,7 +502,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The username that is used to connect to the instance. By default, ApsaraDB for Redis provides a username that is named after the instance ID.
+         * <p>The username that is used to connect to the instance. By default, ApsaraDB for Redis provides a username that is named after the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -454,7 +513,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vSwitch to which the instance is connected.
+         * <p>The ID of the vSwitch to which the instance is connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -462,7 +524,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1nme44gek34slfc****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -470,7 +535,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The zone ID of the instance.
+         * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddShardingNodeResponseBody} extends {@link TeaModel}
  *
  * <p>AddShardingNodeResponseBody</p>
@@ -61,7 +62,7 @@ public class AddShardingNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the data shards.
+         * <p>The IDs of the data shards.</p>
          */
         public Builder nodeIds(java.util.List < String > nodeIds) {
             this.nodeIds = nodeIds;
@@ -69,7 +70,10 @@ public class AddShardingNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20741011111111</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -77,7 +81,10 @@ public class AddShardingNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B79C1A90-495B-4E99-A2AA-A4DB13B8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

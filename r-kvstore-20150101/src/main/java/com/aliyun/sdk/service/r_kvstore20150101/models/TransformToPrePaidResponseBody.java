@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransformToPrePaidResponseBody} extends {@link TeaModel}
  *
  * <p>TransformToPrePaidResponseBody</p>
@@ -61,7 +62,10 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The time when the instance expires after the billing method of the instance is changed from pay-as-you-go to subscription.
+         * <p>The time when the instance expires after the billing method of the instance is changed from pay-as-you-go to subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-18T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -69,7 +73,10 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111111111</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -77,7 +84,10 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>426F1356-B6EF-4DAD-A1C3-DE53B9DAF586</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

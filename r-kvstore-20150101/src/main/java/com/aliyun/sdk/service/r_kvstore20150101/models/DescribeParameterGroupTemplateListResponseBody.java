@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterGroupTemplateListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParameterGroupTemplateListResponseBody</p>
@@ -61,10 +62,11 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The compatible engine version. Valid values:
-         * <p>
+         * <p>The compatible engine version. Valid values:</p>
+         * <p>ApsaraDB for Redis Community Edition: 5.0, 6.0, and 7.0. Tair DRAM-based instances: 5.0 and 6.0. Tair persistent memory-optimized instances: 6.0. Tair ESSD-based instances: 4.0.</p>
          * 
-         * ApsaraDB for Redis Community Edition: 5.0, 6.0, and 7.0. Tair DRAM-based instances: 5.0 and 6.0. Tair persistent memory-optimized instances: 6.0. Tair ESSD-based instances: 4.0.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -72,7 +74,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about parameters.
+         * <p>The information about parameters.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -80,7 +82,10 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -93,6 +98,12 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParameterGroupTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterGroupTemplateListResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
@@ -216,7 +227,10 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * The regular expression used to validate input.
+             * <p>The regular expression used to validate input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;\d+\s+\d+\s+\d+&quot;</p>
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -224,7 +238,10 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the modification takes effect. Valid values: 0 and 1. A value of 0 indicates that the modification does not take effect. A value of 1 indicates that the modification takes effect.
+             * <p>Indicates whether the modification takes effect. Valid values: 0 and 1. A value of 0 indicates that the modification does not take effect. A value of 1 indicates that the modification takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder effective(Long effective) {
                 this.effective = effective;
@@ -232,7 +249,10 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.
+             * <p>A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder factor(Long factor) {
                 this.factor = factor;
@@ -240,7 +260,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter.
+             * <p>The description of the parameter.</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -248,7 +268,10 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appendonly</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -256,7 +279,10 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the parameter.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -264,11 +290,14 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter can be modified. Valid values:
-             * <p>
+             * <p>Indicates whether the parameter can be modified. Valid values:</p>
+             * <ul>
+             * <li><strong>0: The parameter cannot be modified.</strong></li>
+             * <li><strong>1</strong>: The parameter can be modified.</li>
+             * </ul>
              * 
-             * *   **0: The parameter cannot be modified.**
-             * *   **1**: The parameter can be modified.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder revisable(Long revisable) {
                 this.revisable = revisable;
@@ -276,7 +305,10 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the minor version can be changed. Valid values: true and false.
+             * <p>Indicates whether the minor version can be changed. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportModifyForMinorVersion(Boolean supportModifyForMinorVersion) {
                 this.supportModifyForMinorVersion = supportModifyForMinorVersion;
@@ -284,7 +316,10 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the parameter value. Valid values: INT (ordinary integer), STRING (fixed string), and B (byte).
+             * <p>The unit of the parameter value. Valid values: INT (ordinary integer), STRING (fixed string), and B (byte).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

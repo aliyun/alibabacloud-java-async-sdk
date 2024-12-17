@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesRequest} extends {@link RequestModel}
  *
  * <p>DescribeZonesRequest</p>
@@ -137,10 +138,14 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * The display language of the response. Default value: zh-CN. Valid values:
-         * <p>
-         * * **zh-C**N: Chinese
-         * * **en-US**: English
+         * <p>The display language of the response. Default value: zh-CN. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-C</strong>N: Chinese</li>
+         * <li><strong>en-US</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -167,7 +172,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

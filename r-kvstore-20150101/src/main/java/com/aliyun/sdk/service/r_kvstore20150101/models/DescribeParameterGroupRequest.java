@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeParameterGroupRequest</p>
@@ -156,7 +157,11 @@ public class DescribeParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the parameter template.
+         * <p>The ID of the parameter template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpg-sys-00*****</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);

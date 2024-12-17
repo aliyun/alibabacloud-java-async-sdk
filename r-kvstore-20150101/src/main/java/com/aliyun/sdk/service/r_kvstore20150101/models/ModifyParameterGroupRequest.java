@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyParameterGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyParameterGroupRequest</p>
@@ -197,11 +198,15 @@ public class ModifyParameterGroupRequest extends Request {
         } 
 
         /**
-         * The service category. Valid values:
-         * <p>
+         * <p>The service category. Valid values:</p>
+         * <ul>
+         * <li><strong>standard</strong>: Community Edition</li>
+         * <li><strong>enterprise</strong>: Enhanced Edition (Tair)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **standard**: Community Edition
-         * *   **enterprise**: Enhanced Edition (Tair)
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -228,7 +233,10 @@ public class ModifyParameterGroupRequest extends Request {
         }
 
         /**
-         * The description of the parameter template. The description must be 0 to 200 characters in length.
+         * <p>The description of the parameter template. The description must be 0 to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder parameterGroupDesc(String parameterGroupDesc) {
             this.putQueryParameter("ParameterGroupDesc", parameterGroupDesc);
@@ -237,7 +245,11 @@ public class ModifyParameterGroupRequest extends Request {
         }
 
         /**
-         * The parameter template ID.
+         * <p>The parameter template ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sys-001****</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -246,11 +258,15 @@ public class ModifyParameterGroupRequest extends Request {
         }
 
         /**
-         * The new name of the parameter template. The name must meet the following requirements:
-         * <p>
+         * <p>The new name of the parameter template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name can contain letters, digits, and underscores (_). It must start with a letter and cannot contain Chinese characters.</li>
+         * <li>The name can be 8 to 64 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, and underscores (\_). It must start with a letter and cannot contain Chinese characters.
-         * *   The name can be 8 to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>testGroupName</p>
          */
         public Builder parameterGroupName(String parameterGroupName) {
             this.putQueryParameter("ParameterGroupName", parameterGroupName);
@@ -259,10 +275,14 @@ public class ModifyParameterGroupRequest extends Request {
         }
 
         /**
-         * A JSON-formatted object that specifies the parameter-value pairs. Format: {"Parameter 1":"Value 1","Parameter 2":"Value 2"...}. The specified value overwrites the original content.
-         * <p>
+         * <p>A JSON-formatted object that specifies the parameter-value pairs. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. The specified value overwrites the original content.</p>
+         * <blockquote>
+         * <p> The parameters that can be added for different editions are displayed in the console.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The parameters that can be added for different editions are displayed in the console.
+         * <strong>example:</strong>
+         * <p>{&quot;hz&quot;:&quot;12&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);

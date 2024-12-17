@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateInstancePublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>AllocateInstancePublicConnectionRequest</p>
@@ -177,10 +178,14 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.
-         * <p>
+         * <p>The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.</p>
+         * <blockquote>
+         * <p> The endpoint is in the <code>&lt;prefix&gt;.redis.rds.aliyuncs.com</code> format.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The endpoint is in the `<prefix>.redis.rds.aliyuncs.com` format.
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -189,7 +194,11 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -216,7 +225,11 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The service port number of the instance. Valid values: **1024** to **65535**.
+         * <p>The service port number of the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

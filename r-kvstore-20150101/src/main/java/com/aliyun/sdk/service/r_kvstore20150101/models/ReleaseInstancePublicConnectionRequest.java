@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseInstancePublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>ReleaseInstancePublicConnectionRequest</p>
@@ -162,7 +163,11 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The public endpoint to be released.
+         * <p>The public endpoint to be released.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -171,7 +176,11 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the instance for which you want to release a public endpoint.
+         * <p>The ID of the instance for which you want to release a public endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

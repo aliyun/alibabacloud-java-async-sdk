@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnlockDBInstanceWriteResponseBody} extends {@link TeaModel}
  *
  * <p>UnlockDBInstanceWriteResponseBody</p>
@@ -61,7 +62,10 @@ public class UnlockDBInstanceWriteResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-2ev03avw0r0552***</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -69,7 +73,10 @@ public class UnlockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class UnlockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10****</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

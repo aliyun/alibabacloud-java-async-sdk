@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGlobalSecurityIPGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyGlobalSecurityIPGroupRequest</p>
@@ -183,7 +184,11 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * The IP addresses in the IP whitelist template.
+         * <p>The IP addresses in the IP whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1,10.10.10.10,172.16.0.1</p>
          */
         public Builder gIpList(String gIpList) {
             this.putQueryParameter("GIpList", gIpList);
@@ -192,12 +197,16 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * The name of the IP whitelist template. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+         * <li>The name must start with a letter and end with a letter or a digit.</li>
+         * <li>The name must be 2 to 120 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain lowercase letters, digits, and underscores (\_).
-         * *   The name must start with a letter and end with a letter or a digit.
-         * *   The name must be 2 to 120 characters in length.
+         * <strong>example:</strong>
+         * <p>test_123</p>
          */
         public Builder globalIgName(String globalIgName) {
             this.putQueryParameter("GlobalIgName", globalIgName);
@@ -206,7 +215,11 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * The ID of the IP whitelist template.
+         * <p>The ID of the IP whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-zsldxfiwjmti0kcm****</p>
          */
         public Builder globalSecurityGroupId(String globalSecurityGroupId) {
             this.putQueryParameter("GlobalSecurityGroupId", globalSecurityGroupId);
@@ -233,7 +246,11 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,7 +259,10 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

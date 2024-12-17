@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartInstanceRequest} extends {@link RequestModel}
  *
  * <p>RestartInstanceRequest</p>
@@ -175,11 +176,14 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * The time when you want to restart the instance. Default value: Immediately. Valid values:
-         * <p>
+         * <p>The time when you want to restart the instance. Default value: Immediately. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: immediately restarts the instance.</li>
+         * <li><strong>MaintainTime</strong>: restarts the instance during the maintenance window.</li>
+         * </ul>
          * 
-         * *   **Immediately**: immediately restarts the instance.
-         * *   **MaintainTime**: restarts the instance during the maintenance window.
+         * <strong>example:</strong>
+         * <p>Immediately</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -188,7 +192,11 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -242,13 +250,17 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to update to the latest minor version when the instance is restarted. Valid values:
-         * <p>
+         * <p>Specifies whether to update to the latest minor version when the instance is restarted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: updates the minor version.</li>
+         * <li><strong>false</strong>: does not update the minor version.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The default value is <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**: updates the minor version.
-         * *   **false**: does not update the minor version.
-         * 
-         * > The default value is **true**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder upgradeMinorVersion(Boolean upgradeMinorVersion) {
             this.putQueryParameter("UpgradeMinorVersion", upgradeMinorVersion);

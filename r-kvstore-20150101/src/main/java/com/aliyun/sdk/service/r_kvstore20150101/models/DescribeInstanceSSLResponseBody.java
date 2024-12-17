@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSSLResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSSLResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         private String SSLExpiredTime; 
 
         /**
-         * The common name of the CA certificate. The default value is the internal endpoint of the instance.
+         * <p>The common name of the CA certificate. The default value is the internal endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
          */
         public Builder certCommonName(String certCommonName) {
             this.certCommonName = certCommonName;
@@ -105,7 +109,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The download URL of the CA certificate.
+         * <p>The download URL of the CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://apsaradb-public.oss-ap-sout****-1.aliy****.com/ApsaraDB-CA-Chain.zip">https://apsaradb-public.oss-ap-sout****-1.aliy****.com/ApsaraDB-CA-Chain.zip</a></p>
          */
         public Builder certDownloadURL(String certDownloadURL) {
             this.certDownloadURL = certDownloadURL;
@@ -113,7 +120,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -121,7 +131,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02260F96-913E-4655-9BA5-A3651CAF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,11 +142,14 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the TLS (SSL) encryption feature. Valid values:
-         * <p>
+         * <p>The status of the TLS (SSL) encryption feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong>: SSL encryption is enabled.</li>
+         * <li><strong>Disable</strong>: SSL encryption is disabled.</li>
+         * </ul>
          * 
-         * *   **Enable**: SSL encryption is enabled.
-         * *   **Disable**: SSL encryption is disabled.
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.SSLEnabled = SSLEnabled;
@@ -141,7 +157,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the CA certificate expires.
+         * <p>The time when the CA certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-05T09:05:53Z</p>
          */
         public Builder SSLExpiredTime(String SSLExpiredTime) {
             this.SSLExpiredTime = SSLExpiredTime;

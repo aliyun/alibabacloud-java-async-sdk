@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGlobalSecurityIPGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateGlobalSecurityIPGroupRequest</p>
@@ -168,10 +169,14 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * The IP addresses in the IP whitelist template.
-         * <p>
+         * <p>The IP addresses in the IP whitelist template.</p>
+         * <blockquote>
+         * <p> Separate multiple IP addresses with commas (,). The maximum number of IP addresses is 1,000.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Separate multiple IP addresses with commas (,). The maximum number of IP addresses is 1,000.
+         * <strong>example:</strong>
+         * <p>111.175.56.206,47.253.88.168,111.181.0.162</p>
          */
         public Builder gIpList(String gIpList) {
             this.putQueryParameter("GIpList", gIpList);
@@ -180,12 +185,16 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * The name of the IP whitelist template. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+         * <li>The name must start with a letter and end with a letter or digit.</li>
+         * <li>The name must be 2 to 120 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain lowercase letters, digits, and underscores (\_).
-         * *   The name must start with a letter and end with a letter or digit.
-         * *   The name must be 2 to 120 characters in length.
+         * <strong>example:</strong>
+         * <p>test_123</p>
          */
         public Builder globalIgName(String globalIgName) {
             this.putQueryParameter("GlobalIgName", globalIgName);
@@ -212,7 +221,11 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -221,7 +234,10 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

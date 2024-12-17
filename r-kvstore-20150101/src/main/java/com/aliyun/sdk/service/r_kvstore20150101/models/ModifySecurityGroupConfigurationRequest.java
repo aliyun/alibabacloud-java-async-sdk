@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityGroupConfigurationRequest} extends {@link RequestModel}
  *
  * <p>ModifySecurityGroupConfigurationRequest</p>
@@ -162,7 +163,11 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -207,7 +212,11 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the security group that you want to manage. You can specify up to 10 security groups. Separate multiple security group IDs with commas (,).
+         * <p>The ID of the security group that you want to manage. You can specify up to 10 security groups. Separate multiple security group IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bpcfmyiu4ekp****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRunningLogRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRunningLogRecordsResponseBody</p>
@@ -133,7 +134,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The type of the database engine.
+         * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -141,7 +145,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -149,7 +156,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the log entries.
+         * <p>Details about the log entries.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -157,7 +164,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -165,7 +175,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of log entries returned on the current page.
+         * <p>The number of log entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -173,7 +186,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned on each page.
+         * <p>The maximum number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -181,7 +197,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>093B8579-9264-43A0-ABA9-AA86****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +208,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range to query.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-03T07:01Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -197,7 +219,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -210,6 +235,12 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRunningLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRunningLogRecordsResponseBody</p>
+     */
     public static class LogRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -273,7 +304,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             private String nodeId; 
 
             /**
-             * The content of the log.
+             * <p>The content of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONFIG REWRITE executed with success.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -281,7 +315,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the log was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the log was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-03T07:07:30Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -289,7 +326,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp1zxszhcgatnx****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -297,10 +337,13 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
-             * <p>
+             * <p>The ID of the node.</p>
+             * <blockquote>
+             * <p> If a standard instance is queried, <code>(null)</code> is returned.</p>
+             * </blockquote>
              * 
-             * >  If a standard instance is queried, `(null)` is returned.
+             * <strong>example:</strong>
+             * <p>r-bp1zxszhcgatnx****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -314,6 +357,12 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRunningLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRunningLogRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogRecords")
         private java.util.List < LogRecords> logRecords;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceAutoUpgradeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceAutoUpgradeRequest</p>
@@ -162,7 +163,11 @@ public class ModifyDBInstanceAutoUpgradeRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to obtain the ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -216,11 +221,15 @@ public class ModifyDBInstanceAutoUpgradeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic minor version update. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic minor version update. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enables automatic minor version update.</li>
+         * <li><strong>0</strong>: disables automatic minor version update.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: enables automatic minor version update.
-         * *   **0**: disables automatic minor version update.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

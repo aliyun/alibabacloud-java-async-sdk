@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditLogConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuditLogConfigResponseBody</p>
@@ -61,13 +62,17 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
         private String retention; 
 
         /**
-         * Indicates whether the audit log feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the audit log feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.</p>
+         * </blockquote>
          * 
-         * *   **true**: enabled
-         * *   **false**: disabled
-         * 
-         * > You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dbAudit(String dbAudit) {
             this.dbAudit = dbAudit;
@@ -75,7 +80,10 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +91,10 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period of audit logs. Unit: days.
+         * <p>The retention period of audit logs. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder retention(String retention) {
             this.retention = retention;

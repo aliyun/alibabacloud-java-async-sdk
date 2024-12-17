@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuditRecordsResponseBody</p>
@@ -121,7 +122,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The end time of the query.
+         * <p>The end time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-25T12:10:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -129,7 +133,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -137,7 +144,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The collection of returned audit log entries.
+         * <p>The collection of returned audit log entries.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -145,7 +152,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -153,7 +163,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -161,7 +174,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F5EB478-824E-4AC4-8D2B-58F31A02****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +185,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the query.
+         * <p>The start time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-24T12:10:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -177,7 +196,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22222</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -190,6 +212,12 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAuditRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuditRecordsResponseBody</p>
+     */
     public static class SQL extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
@@ -313,7 +341,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             private String totalExecutionTimes; 
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -321,7 +352,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -329,7 +363,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the command was run.
+             * <p>The time when the command was run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-25T03:22:08Z</p>
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -337,7 +374,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -345,7 +385,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.16.100.***</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -353,10 +396,13 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
-             * <p>
+             * <p>The ID of the node.</p>
+             * <blockquote>
+             * <p>A specific node ID is returned only if the instance uses the cluster or read/write splitting architecture.</p>
+             * </blockquote>
              * 
-             * > A specific node ID is returned only if the instance uses the cluster or read/write splitting architecture.
+             * <strong>example:</strong>
+             * <p>r-bp1zxszhcgatnx****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -364,7 +410,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The command that was run.
+             * <p>The command that was run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONFIG GET maxmemory</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -372,7 +421,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the command.
+             * <p>The type of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>non_read_write</p>
              */
             public Builder SQLType(String SQLType) {
                 this.SQLType = SQLType;
@@ -380,7 +432,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time consumed to run the command.
+             * <p>The amount of time consumed to run the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalExecutionTimes(String totalExecutionTimes) {
                 this.totalExecutionTimes = totalExecutionTimes;
@@ -394,6 +449,12 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAuditRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuditRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SQL")
         private java.util.List < SQL> SQL;

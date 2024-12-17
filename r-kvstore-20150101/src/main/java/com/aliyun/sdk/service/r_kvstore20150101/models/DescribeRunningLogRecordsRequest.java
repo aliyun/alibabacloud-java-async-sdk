@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRunningLogRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRunningLogRecordsRequest</p>
@@ -304,14 +305,18 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The shard type of the cluster instance. Valid values:
-         * <p>
+         * <p>The shard type of the cluster instance. Valid values:</p>
+         * <ul>
+         * <li><strong>proxy</strong>: proxy node</li>
+         * <li><strong>db</strong>: data node</li>
+         * <li><strong>cs</strong>: config server node</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set this parameter, you must also set the <strong>NodeId</strong> parameter.</p>
+         * </blockquote>
          * 
-         * *   **proxy**: proxy node
-         * *   **db**: data node
-         * *   **cs**: config server node
-         * 
-         * >  If you set this parameter, you must also set the **NodeId** parameter.
+         * <strong>example:</strong>
+         * <p>proxy</p>
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -320,7 +325,10 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -329,7 +337,11 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you specify 1 hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you specify 1 hour. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-03T08:01Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -338,7 +350,11 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -347,11 +363,16 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the node in the instance. You can set this parameter to query the operational logs of a specified node.
-         * <p>
+         * <p>The ID of the node in the instance. You can set this parameter to query the operational logs of a specified node.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is available only for read/write splitting and cluster instances of ApsaraDB for Redis.</li>
+         * <li>If you set this parameter, you must also set the <strong>CharacterType</strong> parameter.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   This parameter is available only for read/write splitting and cluster instances of ApsaraDB for Redis.
-         * > *   If you set this parameter, you must also set the **CharacterType** parameter.
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -360,11 +381,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The method that is used to sort the returned log entries. Valid values:
-         * <p>
+         * <p>The method that is used to sort the returned log entries. Valid values:</p>
+         * <ul>
+         * <li><strong>asc</strong>: ascending order</li>
+         * <li><strong>desc</strong>: descending order</li>
+         * </ul>
          * 
-         * *   **asc**: ascending order
-         * *   **desc**: descending order
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -391,7 +415,10 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and less than or equal to the maximum value supported by the integer data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -400,7 +427,10 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -409,7 +439,10 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The keyword that is used to query operational logs.
+         * <p>The keyword that is used to query operational logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aof</p>
          */
         public Builder queryKeyword(String queryKeyword) {
             this.putQueryParameter("QueryKeyword", queryKeyword);
@@ -418,7 +451,10 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -445,11 +481,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The role of the data shard. Default value: master. Valid values:
-         * <p>
+         * <p>The role of the data shard. Default value: master. Valid values:</p>
+         * <ul>
+         * <li><strong>master</strong>: master node</li>
+         * <li><strong>slave</strong>: replica node</li>
+         * </ul>
          * 
-         * *   **master**: master node
-         * *   **slave**: replica node
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);
@@ -467,7 +506,11 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-03T07:01Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

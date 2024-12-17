@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LockDBInstanceWriteResponseBody} extends {@link TeaModel}
  *
  * <p>LockDBInstanceWriteResponseBody</p>
@@ -73,7 +74,10 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-2ev03avw0r0552***</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -81,7 +85,10 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * The reason why write operations on the instance are locked.
+         * <p>The reason why write operations on the instance are locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lock reason</p>
          */
         public Builder lockReason(String lockReason) {
             this.lockReason = lockReason;
@@ -89,7 +96,10 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21986****</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

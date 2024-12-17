@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterGroupSupportParamResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParameterGroupSupportParamResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
         private java.util.List < ResourceList> resourceList; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB73740C-23E2-4392-9DA4-2660C74C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
         }
 
         /**
-         * The parameters.
+         * <p>The parameters.</p>
          */
         public Builder resourceList(java.util.List < ResourceList> resourceList) {
             this.resourceList = resourceList;
@@ -70,6 +74,12 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParameterGroupSupportParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterGroupSupportParamResponseBody</p>
+     */
     public static class ResourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -133,7 +143,10 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
             private String paramName; 
 
             /**
-             * The service category.
+             * <p>The service category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -141,7 +154,10 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
             }
 
             /**
-             * The engine type.
+             * <p>The engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redis</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -149,7 +165,10 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
             }
 
             /**
-             * The engine version.
+             * <p>The engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder dbVersion(String dbVersion) {
                 this.dbVersion = dbVersion;
@@ -157,7 +176,10 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rt_threshold_ms</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;

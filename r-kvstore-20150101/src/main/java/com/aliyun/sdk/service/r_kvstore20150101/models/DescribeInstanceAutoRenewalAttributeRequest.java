@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAutoRenewalAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceAutoRenewalAttributeRequest</p>
@@ -168,7 +169,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,10 +181,13 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>By default, the system checks whether auto-renewal is enabled for all instances.</p>
+         * </blockquote>
          * 
-         * > By default, the system checks whether auto-renewal is enabled for all instances.
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -207,7 +214,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer greater than **0**. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,10 +226,13 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * <blockquote>
+         * <p>The default value is <strong>30</strong>.</p>
+         * </blockquote>
          * 
-         * > The default value is **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -228,7 +241,11 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

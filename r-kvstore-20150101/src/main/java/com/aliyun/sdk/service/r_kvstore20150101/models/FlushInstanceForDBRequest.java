@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlushInstanceForDBRequest} extends {@link RequestModel}
  *
  * <p>FlushInstanceForDBRequest</p>
@@ -125,7 +126,11 @@ public class FlushInstanceForDBRequest extends Request {
         } 
 
         /**
-         * The index number of the database. Valid values: 0 to 255.
+         * <p>The index number of the database. Valid values: 0 to 255.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dbIndex(Integer dbIndex) {
             this.putQueryParameter("DbIndex", dbIndex);
@@ -134,7 +139,11 @@ public class FlushInstanceForDBRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

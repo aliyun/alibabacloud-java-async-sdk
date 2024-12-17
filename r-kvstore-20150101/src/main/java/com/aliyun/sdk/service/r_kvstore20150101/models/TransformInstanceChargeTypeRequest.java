@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransformInstanceChargeTypeRequest} extends {@link RequestModel}
  *
  * <p>TransformInstanceChargeTypeRequest</p>
@@ -218,11 +219,14 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Default value: true. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Automatic payment is enabled.</li>
+         * <li><strong>false</strong>: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane of the Billing Management console, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
+         * </ul>
          * 
-         * *   **true**: Automatic payment is enabled.
-         * *   **false**: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose **Expenses** > **Renewal Management**. In the left-side navigation pane of the Billing Management console, click **Orders**. On the **Orders** page, find the order and complete the payment.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -231,11 +235,14 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong> (default): disables auto-renewal.</li>
+         * </ul>
          * 
-         * *   **true**: enables auto-renewal.
-         * *   **false** (default): disables auto-renewal.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -244,10 +251,13 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration that is supported by auto-renewal. Unit: month. Valid values: **1**, **2**, **3**, **6**, and **12**.
-         * <p>
+         * <p>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is required if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if the **AutoRenew** parameter is set to **true**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewPeriod(Long autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -256,11 +266,15 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The new billing method. Valid values:
-         * <p>
+         * <p>The new billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription. If you set this parameter to PrePaid, you must also specify the <strong>Period</strong> parameter.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also specify the **Period** parameter.
-         * *   **PostPaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -269,7 +283,11 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the ID of the instance.
+         * <p>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -296,10 +314,13 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, **36**.
-         * <p>
+         * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is valid and required only if you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is valid and required only if you set the **ChargeType** parameter to **PrePaid**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

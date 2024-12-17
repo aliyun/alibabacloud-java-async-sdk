@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeHistoryTasksRequest</p>
@@ -253,7 +254,10 @@ public class DescribeHistoryTasksRequest extends Request {
         } 
 
         /**
-         * The minimum execution duration of a task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.
+         * <p>The minimum execution duration of a task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder fromExecTime(Integer fromExecTime) {
             this.putQueryParameter("FromExecTime", fromExecTime);
@@ -262,7 +266,11 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-02T11:31:03Z</p>
          */
         public Builder fromStartTime(String fromStartTime) {
             this.putQueryParameter("FromStartTime", fromStartTime);
@@ -271,7 +279,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The instance ID. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs.
+         * <p>The instance ID. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-uf62br2491p5l****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -280,7 +291,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * Set the value to Instance.
+         * <p>Set the value to Instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -289,7 +303,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -298,7 +315,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 10 to 100. Default value: 10.
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -307,7 +327,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -343,18 +366,22 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The task status. Valid values:
-         * <p>
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>Scheduled</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Succeed</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>Cancelling</strong></li>
+         * <li><strong>Canceled</strong></li>
+         * <li><strong>Waiting</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is empty by default, which indicates that tasks in all states are queried. Separate multiple states with commas (,).</p>
+         * </blockquote>
          * 
-         * *   **Scheduled**
-         * *   **Running**
-         * *   **Succeed**
-         * *   **Failed**
-         * *   **Cancelling**
-         * *   **Canceled**
-         * *   **Waiting**
-         * 
-         * >  This parameter is empty by default, which indicates that tasks in all states are queried. Separate multiple states with commas (,).
+         * <strong>example:</strong>
+         * <p>Scheduled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -363,7 +390,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The task ID. This parameter is empty by default, which indicates that you can specify an unlimited number of task IDs. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs.
+         * <p>The task ID. This parameter is empty by default, which indicates that you can specify an unlimited number of task IDs. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-83br18hloy3faf****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -372,18 +402,22 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The task type. This parameter is empty by default, which indicates that you can specify an unlimited number of task types.
-         * <p>
+         * <p>The task type. This parameter is empty by default, which indicates that you can specify an unlimited number of task types.</p>
+         * <ul>
+         * <li><strong>ModifyInsSpec</strong></li>
+         * <li><strong>DeleteInsNode</strong></li>
+         * <li><strong>AddInsNode</strong></li>
+         * <li><strong>HaSwitch</strong></li>
+         * <li><strong>RestartIns</strong></li>
+         * <li><strong>CreateIns</strong></li>
+         * <li><strong>ModifyInsConfig</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> Separate multiple task types with commas (,).</p>
+         * </blockquote>
          * 
-         * *   **ModifyInsSpec**
-         * *   **DeleteInsNode**
-         * *   **AddInsNode**
-         * *   **HaSwitch**
-         * *   **RestartIns**
-         * *   **CreateIns**
-         * *   **ModifyInsConfig**
-         * 
-         * >  Separate multiple task types with commas (,).
+         * <strong>example:</strong>
+         * <p>ModifyInsSpec</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -392,7 +426,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.
+         * <p>The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder toExecTime(Integer toExecTime) {
             this.putQueryParameter("ToExecTime", toExecTime);
@@ -401,7 +438,11 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-02T11:31:03Z</p>
          */
         public Builder toStartTime(String toStartTime) {
             this.putQueryParameter("ToStartTime", toStartTime);

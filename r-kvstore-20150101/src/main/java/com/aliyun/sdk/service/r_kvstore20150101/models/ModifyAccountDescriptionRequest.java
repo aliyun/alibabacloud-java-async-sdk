@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountDescriptionRequest</p>
@@ -191,12 +192,16 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The description of the account.
-         * <p>
+         * <p>The description of the account.</p>
+         * <ul>
+         * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The description must be 2 to 256 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The description must start with a letter and cannot start with `http://` or `https://`.
-         * *   The description can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The description must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>testescription</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -205,7 +210,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The username of the account. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.
+         * <p>The username of the account. You can call the <a href="https://help.aliyun.com/document_detail/95802.html">DescribeAccounts</a> operation to query the username of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoaccount</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -214,7 +223,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

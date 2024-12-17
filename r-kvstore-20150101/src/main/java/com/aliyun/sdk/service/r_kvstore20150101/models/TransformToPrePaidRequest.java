@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransformToPrePaidRequest} extends {@link RequestModel}
  *
  * <p>TransformToPrePaidRequest</p>
@@ -18,6 +19,14 @@ public class TransformToPrePaidRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private String autoRenew;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
+    private Long autoRenewPeriod;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -53,6 +62,8 @@ public class TransformToPrePaidRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.autoPay = builder.autoPay;
+        this.autoRenew = builder.autoRenew;
+        this.autoRenewPeriod = builder.autoRenewPeriod;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -87,6 +98,20 @@ public class TransformToPrePaidRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public String getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return autoRenewPeriod
+     */
+    public Long getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     /**
@@ -141,6 +166,8 @@ public class TransformToPrePaidRequest extends Request {
     public static final class Builder extends Request.Builder<TransformToPrePaidRequest, Builder> {
         private String regionId; 
         private Boolean autoPay; 
+        private String autoRenew; 
+        private Long autoRenewPeriod; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -157,6 +184,8 @@ public class TransformToPrePaidRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -176,11 +205,14 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manually renew an instance</a>.</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see [Manually renew an instance](~~26352~~).
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -189,7 +221,29 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the ID of the instance.
+         * AutoRenew.
+         */
+        public Builder autoRenew(String autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoRenewPeriod.
+         */
+        public Builder autoRenewPeriod(Long autoRenewPeriod) {
+            this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
+            this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -216,7 +270,11 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance. Unit: months. Valid values: **1** to **9**, **12**, **24**, and **36**.
+         * <p>The subscription duration of the instance. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

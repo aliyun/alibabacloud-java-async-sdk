@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBNodeDirectVipInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBNodeDirectVipInfoResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The virtual IP addresses (VIPs) of shards in an ApsaraDB for Redis cluster instance.
+         * <p>The virtual IP addresses (VIPs) of shards in an ApsaraDB for Redis cluster instance.</p>
          */
         public Builder directVipInfo(DirectVipInfo directVipInfo) {
             this.directVipInfo = directVipInfo;
@@ -69,7 +70,10 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -77,7 +81,10 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABAF95F6-35C1-4177-AF3A-70969EBD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBNodeDirectVipInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodeDirectVipInfoResponseBody</p>
+     */
     public static class VipInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
@@ -153,10 +166,13 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             private String vip; 
 
             /**
-             * The network type of the security group. Valid values:
-             * <p>
+             * <p>The network type of the security group. Valid values:</p>
+             * <ul>
+             * <li><strong>vpc</strong>: Virtual Private Cloud (VPC)</li>
+             * </ul>
              * 
-             * *   **vpc**: Virtual Private Cloud (VPC)
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -164,7 +180,10 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The shard ID.
+             * <p>The shard ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-8vb3679b04551444-db-2</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -172,7 +191,10 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The port number. Valid values: **1024** to **65535**. Default value: **6379**.
+             * <p>The port number. Valid values: <strong>1024</strong> to <strong>65535</strong>. Default value: <strong>6379</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6379</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -180,7 +202,10 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The VIP of the shard.
+             * <p>The VIP of the shard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.115.61.8</p>
              */
             public Builder vip(String vip) {
                 this.vip = vip;
@@ -194,6 +219,12 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBNodeDirectVipInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodeDirectVipInfoResponseBody</p>
+     */
     public static class DirectVipInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VipInfo")
         private java.util.List < VipInfo> vipInfo;

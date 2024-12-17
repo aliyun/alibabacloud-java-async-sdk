@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceParameterRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceParameterRequest</p>
@@ -167,7 +168,11 @@ public class ModifyInstanceParameterRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -194,7 +199,13 @@ public class ModifyInstanceParameterRequest extends Request {
         }
 
         /**
-         * ParameterGroupId.
+         * <p>The parameter template ID.</p>
+         * <blockquote>
+         * <p>You can view the list of parameter templates in the target region, including the parameter template ID, through the DescribeParameterGroups interface.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>g-idhwofwofewhf****</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -203,7 +214,10 @@ public class ModifyInstanceParameterRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The information about parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;hz&quot;: &quot;50&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -212,7 +226,11 @@ public class ModifyInstanceParameterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

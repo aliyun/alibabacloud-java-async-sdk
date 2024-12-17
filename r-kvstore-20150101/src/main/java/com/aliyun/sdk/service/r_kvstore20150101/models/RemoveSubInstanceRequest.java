@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveSubInstanceRequest} extends {@link RequestModel}
  *
  * <p>RemoveSubInstanceRequest</p>
@@ -124,7 +125,11 @@ public class RemoveSubInstanceRequest extends Request {
         } 
 
         /**
-         * Instance ID.
+         * <p>Instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

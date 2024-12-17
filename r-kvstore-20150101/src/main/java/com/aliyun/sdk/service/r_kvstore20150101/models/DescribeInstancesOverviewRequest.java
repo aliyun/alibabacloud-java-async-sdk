@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesOverviewRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstancesOverviewRequest</p>
@@ -333,12 +334,15 @@ public class DescribeInstancesOverviewRequest extends Request {
         } 
 
         /**
-         * The architecture of the instance. Valid values:
-         * <p>
+         * <p>The architecture of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cluster</strong>: cluster architecture</li>
+         * <li><strong>standard</strong>: standard architecture</li>
+         * <li><strong>rwsplit</strong>: read/write splitting architecture</li>
+         * </ul>
          * 
-         * *   **cluster**: cluster architecture
-         * *   **standard**: standard architecture
-         * *   **rwsplit**: read/write splitting architecture
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder architectureType(String architectureType) {
             this.putQueryParameter("ArchitectureType", architectureType);
@@ -347,11 +351,14 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -360,11 +367,14 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The edition of the instance. Valid values:
-         * <p>
+         * <p>The edition of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Community</strong>: Community Edition</li>
+         * <li><strong>Enterprise</strong>: Enhanced Edition (Tair)</li>
+         * </ul>
          * 
-         * *   **Community**: Community Edition
-         * *   **Enterprise**: Enhanced Edition (Tair)
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
          */
         public Builder editionType(String editionType) {
             this.putQueryParameter("EditionType", editionType);
@@ -373,7 +383,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance.
+         * <p>The database engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -382,7 +395,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. For more information, see [Instance types](~~107984~~).
+         * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis.master.small.default</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -391,10 +407,13 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The IDs of instances.
-         * <p>
+         * <p>The IDs of instances.</p>
+         * <blockquote>
+         * <p>By default, all instances that belong to this account are queried. If you specify multiple instance IDs, separate the instance IDs with commas (,).</p>
+         * </blockquote>
          * 
-         * > By default, all instances that belong to this account are queried. If you specify multiple instance IDs, separate the instance IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -403,26 +422,30 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The state of the instance. Valid values:
-         * <p>
+         * <p>The state of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The instance is normal.</li>
+         * <li><strong>Creating</strong>: The instance is being created.</li>
+         * <li><strong>Changing</strong>: The configurations of the instance are being changed.</li>
+         * <li><strong>Inactive</strong>: The instance is disabled.</li>
+         * <li><strong>Flushing</strong>: The instance is being released.</li>
+         * <li><strong>Released</strong>: The instance is released.</li>
+         * <li><strong>Transforming</strong>: The billing method of the instance is being changed.</li>
+         * <li><strong>Unavailable</strong>: The instance is unavailable.</li>
+         * <li><strong>Error</strong>: The instance failed to be created.</li>
+         * <li><strong>Migrating</strong>: The instance is being migrated.</li>
+         * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
+         * <li><strong>MinorVersionUpgrading</strong>: The minor version of the instance is being updated.</li>
+         * <li><strong>NetworkModifying</strong>: The network type of the instance is being changed.</li>
+         * <li><strong>SSLModifying</strong>: The SSL certificate of the instance is being changed.</li>
+         * <li><strong>MajorVersionUpgrading</strong>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information about instance states, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
+         * </blockquote>
          * 
-         * *   **Normal**: The instance is normal.
-         * *   **Creating**: The instance is being created.
-         * *   **Changing**: The configurations of the instance are being changed.
-         * *   **Inactive**: The instance is disabled.
-         * *   **Flushing**: The instance is being released.
-         * *   **Released**: The instance is released.
-         * *   **Transforming**: The billing method of the instance is being changed.
-         * *   **Unavailable**: The instance is unavailable.
-         * *   **Error**: The instance failed to be created.
-         * *   **Migrating**: The instance is being migrated.
-         * *   **BackupRecovering**: The instance is being restored from a backup.
-         * *   **MinorVersionUpgrading**: The minor version of the instance is being updated.
-         * *   **NetworkModifying**: The network type of the instance is being changed.
-         * *   **SSLModifying**: The SSL certificate of the instance is being changed.
-         * *   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.
-         * 
-         * > For more information about instance states, see [Instance states and impacts](~~200740~~).
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -431,12 +454,15 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The category of the instance. Valid values:
-         * <p>
+         * <p>The category of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Tair</strong></li>
+         * <li><strong>Redis</strong></li>
+         * <li><strong>Memcache</strong></li>
+         * </ul>
          * 
-         * *   **Tair**
-         * *   **Redis**
-         * *   **Memcache**
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -445,11 +471,14 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>CLASSIC</strong>: classic network</li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
+         * </ul>
          * 
-         * *   **CLASSIC**: classic network
-         * *   **VPC**: Virtual Private Cloud (VPC)
+         * <strong>example:</strong>
+         * <p>CLASSIC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -476,7 +505,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The private IP address of the instance.
+         * <p>The private IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.49.***</p>
          */
         public Builder privateIp(String privateIp) {
             this.putQueryParameter("PrivateIp", privateIp);
@@ -485,7 +517,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instances you want to query reside. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
+         * <p>The ID of the region in which the instances you want to query reside. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -494,10 +529,13 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instances you want to query belong.
-         * <p>
+         * <p>The ID of the resource group to which the instances you want to query belong.</p>
+         * <blockquote>
+         * <p>You can query resource group IDs by using the ApsaraDB for Redis console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * </blockquote>
          * 
-         * > You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -524,7 +562,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The keyword used for fuzzy search. The keyword can be based on an instance ID or an instance description.
+         * <p>The keyword used for fuzzy search. The keyword can be based on an instance ID or an instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -542,7 +583,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -551,7 +595,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1nme44gek34slfc****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -560,7 +607,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance.
+         * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

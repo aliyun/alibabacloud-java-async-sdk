@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The **region IDs**.
+         * <p>The <strong>region IDs</strong>.</p>
          */
         public Builder regionIds(RegionIds regionIds) {
             this.regionIds = regionIds;
@@ -57,7 +58,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD425AD3-CC7B-4EE2-A5CB-2F61BA73****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class ZoneIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private java.util.List < String > zoneId;
@@ -111,6 +121,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class KVStoreRegion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -186,7 +202,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String zoneIds; 
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -194,7 +213,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the region.
+             * <p>The endpoint of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-kvstore.aliyuncs.com</p>
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -202,7 +224,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -210,7 +235,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The zone IDs.
+             * <p>The zone IDs.</p>
              */
             public Builder zoneIdList(ZoneIdList zoneIdList) {
                 this.zoneIdList = zoneIdList;
@@ -218,7 +243,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the zones in the region.
+             * <p>The IDs of the zones in the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneIds(String zoneIds) {
                 this.zoneIds = zoneIds;
@@ -232,6 +260,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class RegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KVStoreRegion")
         private java.util.List < KVStoreRegion> KVStoreRegion;

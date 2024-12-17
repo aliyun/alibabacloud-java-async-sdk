@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeActiveOperationTaskRequest</p>
@@ -206,11 +207,14 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the historical tasks. Default value: 0. Valid values:
-         * <p>
+         * <p>Specifies whether to return the historical tasks. Default value: 0. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: returns the current task.</li>
+         * <li><strong>1</strong>: returns the historical tasks.</li>
+         * </ul>
          * 
-         * *   **0**: returns the current task.
-         * *   **1**: returns the historical tasks.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -237,7 +241,10 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -246,7 +253,10 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Specify a value greater than **10**. Default value: **30**.
+         * <p>The number of entries to return on each page. Specify a value greater than <strong>10</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -255,10 +265,14 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The region ID of the O&M task. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
-         * <p>
+         * <p>The region ID of the O&amp;M task. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <blockquote>
+         * <p>A value of <strong>all</strong> indicates all region IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > A value of **all** indicates all region IDs.
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -294,12 +308,16 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The type of the O\&M task. Valid values:
-         * <p>
+         * <p>The type of the O&amp;M task. Valid values:</p>
+         * <ul>
+         * <li><strong>rds_apsaradb_ha</strong>: master-replica switchover</li>
+         * <li><strong>rds_apsaradb_transfer</strong>: instance migration</li>
+         * <li><strong>rds_apsaradb_upgrade</strong>: minor version update</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **rds_apsaradb_ha**: master-replica switchover
-         * *   **rds_apsaradb_transfer**: instance migration
-         * *   **rds_apsaradb_upgrade**: minor version update
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

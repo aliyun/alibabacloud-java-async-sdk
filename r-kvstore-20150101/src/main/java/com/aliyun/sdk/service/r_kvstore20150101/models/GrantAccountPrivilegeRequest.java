@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantAccountPrivilegeRequest} extends {@link RequestModel}
  *
  * <p>GrantAccountPrivilegeRequest</p>
@@ -191,7 +192,11 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The name of the account. You can call the [DescribeAccounts](~~DescribeAccounts~~) operation to obtain the name of the account.
+         * <p>The name of the account. You can call the <a href="~~DescribeAccounts~~">DescribeAccounts</a> operation to obtain the name of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoaccount</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -200,11 +205,15 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The permissions of the account. Default value: RoleReadWrite. Valid values:
-         * <p>
+         * <p>The permissions of the account. Default value: RoleReadWrite. Valid values:</p>
+         * <ul>
+         * <li>RoleReadOnly: The account has the read-only permissions.</li>
+         * <li>RoleReadWrite: The account has the read and write permissions.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   RoleReadOnly: The account has the read-only permissions.
-         * *   RoleReadWrite: The account has the read and write permissions.
+         * <strong>example:</strong>
+         * <p>RoleReadWrite</p>
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -213,7 +222,11 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the account belongs.
+         * <p>The ID of the instance to which the account belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

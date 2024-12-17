@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityGroupConfigurationResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of security groups.
+         * <p>The list of security groups.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>981C0D6A-D9DD-466C-92DA-F29DF755****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupConfigurationResponseBody</p>
+     */
     public static class EcsSecurityGroupRelation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
@@ -121,11 +131,14 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * The network type of the security group. Valid values:
-             * <p>
+             * <p>The network type of the security group. Valid values:</p>
+             * <ul>
+             * <li><strong>classic</strong>: the classic network.</li>
+             * <li><strong>vpc</strong>: the virtual private cloud (VPC).</li>
+             * </ul>
              * 
-             * *   **classic**: the classic network.
-             * *   **vpc**: the virtual private cloud (VPC).
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -133,7 +146,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the instance is deployed.
+             * <p>The ID of the region where the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -141,7 +157,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp14p9y07ns3gwq****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -155,6 +174,12 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupConfigurationResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsSecurityGroupRelation")
         private java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation;

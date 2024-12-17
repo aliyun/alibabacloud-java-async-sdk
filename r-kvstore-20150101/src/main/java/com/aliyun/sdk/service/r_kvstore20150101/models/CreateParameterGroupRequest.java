@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateParameterGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateParameterGroupRequest</p>
@@ -213,7 +214,15 @@ public class CreateParameterGroupRequest extends Request {
         } 
 
         /**
-         * Category.
+         * <p>The service category. Valid values:</p>
+         * <ul>
+         * <li><strong>standard</strong>: Community Edition</li>
+         * <li><strong>enterprise</strong>: Enhanced Edition (Tair)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -222,7 +231,16 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * <p>The engine type. Valid values:</p>
+         * <ul>
+         * <li><strong>redis</strong>: ApsaraDB for Redis Community Edition instance or Tair DRAM-based instance</li>
+         * <li><strong>tair_pena</strong>: Tair persistent memory-optimized instance</li>
+         * <li><strong>tair_pdb</strong>: Tair ESSD/SSD-based instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -231,7 +249,17 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>The compatible engine version. Valid values:</p>
+         * <ul>
+         * <li>For ApsaraDB for Redis Community Edition instances, set the parameter to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
+         * <li>For Tair DRAM-based instances that are compatible with Redis 5.0, 6.0, or 7.0, set the parameter to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
+         * <li>For Tair persistent memory-optimized instances that are compatible with Redis 6.0, set the parameter to <strong>1.0</strong>.</li>
+         * <li>For Tair ESSD-based instances that are compatible with Redis 6.0, set the parameter to <strong>1.0</strong>. For Tair SSD-based instances that are compatible with Redis 6.0, set the parameter to <strong>2.0</strong>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -258,7 +286,10 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * ParameterGroupDesc.
+         * <p>The description of the parameter template. The description must be 0 to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder parameterGroupDesc(String parameterGroupDesc) {
             this.putQueryParameter("ParameterGroupDesc", parameterGroupDesc);
@@ -267,7 +298,15 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * ParameterGroupName.
+         * <p>The new name of the parameter template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name can contain letters, digits, and underscores (_). It must start with a letter and cannot contain Chinese characters.</li>
+         * <li>The name can be 8 to 64 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tw_test1</p>
          */
         public Builder parameterGroupName(String parameterGroupName) {
             this.putQueryParameter("ParameterGroupName", parameterGroupName);
@@ -276,7 +315,14 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>A JSON-formatted object that specifies the parameter-value pairs. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. The specified value overwrites the original content.</p>
+         * <blockquote>
+         * <p> The parameters that can be added for different editions are displayed in the console.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;hz&quot;:&quot;15&quot;,&quot;#no_loose_disabled-commands&quot;:&quot;flushall&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -285,7 +331,11 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

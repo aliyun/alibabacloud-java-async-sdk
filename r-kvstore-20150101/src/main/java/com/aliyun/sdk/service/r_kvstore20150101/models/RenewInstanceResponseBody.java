@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RenewInstanceResponseBody</p>
@@ -61,7 +62,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The end time of the order.
+         * <p>The end time of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-19T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -69,7 +73,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111111111</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -77,7 +84,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2222245-222A-4155-9349-E22222****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

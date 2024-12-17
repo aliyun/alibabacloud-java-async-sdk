@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGlobalSecurityIPGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGlobalSecurityIPGroupResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the global IP whitelist template.
+         * <p>The information about the global IP whitelist template.</p>
          */
         public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
@@ -57,7 +58,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGlobalSecurityIPGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateGlobalSecurityIPGroupResponseBody</p>
+     */
     public static class GlobalSecurityIPGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GIpList")
         private String gIpList;
@@ -133,7 +143,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The IP addresses in the IP whitelist template.
+             * <p>The IP addresses in the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -141,7 +154,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist template.
+             * <p>The name of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>white_list_test_sg</p>
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -149,7 +165,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IP whitelist template.
+             * <p>The ID of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-sdgwqyp4f5j1x3qk7yvm</p>
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -157,7 +176,10 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

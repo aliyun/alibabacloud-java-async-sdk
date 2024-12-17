@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceMajorVersionRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceMajorVersionRequest</p>
@@ -176,13 +177,17 @@ public class ModifyInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * The time when the major version is upgraded. Valid values:
-         * <p>
+         * <p>The time when the major version is upgraded. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: immediately upgrades the major version. This is the default value.</li>
+         * <li><strong>MaintainTime</strong>: upgrades the major version in the maintenance window.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
+         * </blockquote>
          * 
-         * *   **Immediately**: immediately upgrades the major version. This is the default value.
-         * *   **MaintainTime**: upgrades the major version in the maintenance window.
-         * 
-         * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+         * <strong>example:</strong>
+         * <p>Immediately</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -191,7 +196,11 @@ public class ModifyInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -200,7 +209,11 @@ public class ModifyInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * The major version to which you want to upgrade the instance. Valid values: **4.0** and **5.0**.
+         * <p>The major version to which you want to upgrade the instance. Valid values: <strong>4.0</strong> and <strong>5.0</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
          */
         public Builder majorVersion(String majorVersion) {
             this.putQueryParameter("MajorVersion", majorVersion);

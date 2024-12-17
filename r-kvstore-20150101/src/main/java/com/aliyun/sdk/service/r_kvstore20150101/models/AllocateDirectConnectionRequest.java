@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateDirectConnectionRequest} extends {@link RequestModel}
  *
  * <p>AllocateDirectConnectionRequest</p>
@@ -175,7 +176,10 @@ public class AllocateDirectConnectionRequest extends Request {
         }
 
         /**
-         * The prefix of the private endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.
+         * <p>The prefix of the private endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redisdirect123</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -184,7 +188,11 @@ public class AllocateDirectConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -211,7 +219,10 @@ public class AllocateDirectConnectionRequest extends Request {
         }
 
         /**
-         * The port number of the instance. Valid values: **1024** to **65535**. Default value: **6379**.
+         * <p>The port number of the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>. Default value: <strong>6379</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

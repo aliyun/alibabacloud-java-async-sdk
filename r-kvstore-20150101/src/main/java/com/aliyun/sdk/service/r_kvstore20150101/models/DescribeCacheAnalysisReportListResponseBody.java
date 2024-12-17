@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCacheAnalysisReportListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCacheAnalysisReportListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the offline key analytics tasks.
+         * <p>Details of the offline key analytics tasks.</p>
          */
         public Builder dailyTasks(DailyTasks dailyTasks) {
             this.dailyTasks = dailyTasks;
@@ -69,7 +70,10 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1041xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -77,7 +81,10 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>743D0A03-52DE-4E6F-8D09-EC1414CF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCacheAnalysisReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisReportListResponseBody</p>
+     */
     public static class Task extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
@@ -153,7 +166,10 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The ID of the child node in the cluster instance.
+             * <p>The ID of the child node in the cluster instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp1zxszhcgatnx****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -161,7 +177,10 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the offline key analytics task.
+             * <p>The start time of the offline key analytics task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-01T19:08:49Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -169,11 +188,14 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the offline key analytics task. Valid values:
-             * <p>
+             * <p>The state of the offline key analytics task. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>running</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **running**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -181,7 +203,10 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>156465****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -195,6 +220,12 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisReportListResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Task")
         private java.util.List < Task> task;
@@ -236,6 +267,12 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisReportListResponseBody</p>
+     */
     public static class DailyTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
@@ -275,7 +312,10 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             private Tasks tasks; 
 
             /**
-             * The date when the offline key analytics task was performed.
+             * <p>The date when the offline key analytics task was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-01Z</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -283,7 +323,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the offline key analytics tasks.
+             * <p>Details of the offline key analytics tasks.</p>
              */
             public Builder tasks(Tasks tasks) {
                 this.tasks = tasks;
@@ -297,6 +337,12 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisReportListResponseBody</p>
+     */
     public static class DailyTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DailyTask")
         private java.util.List < DailyTask> dailyTask;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyParameterGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyParameterGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyParameterGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The parameter template ID.
+         * <p>The parameter template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGroupName</p>
          */
         public Builder paramGroupId(String paramGroupId) {
             this.paramGroupId = paramGroupId;
@@ -57,7 +61,10 @@ public class ModifyParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD425AD3-CC7B-4EE2-A5CB-2F61BA73****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

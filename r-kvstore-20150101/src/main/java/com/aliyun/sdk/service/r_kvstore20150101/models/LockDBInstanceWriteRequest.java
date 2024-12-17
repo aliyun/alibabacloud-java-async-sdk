@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LockDBInstanceWriteRequest} extends {@link RequestModel}
  *
  * <p>LockDBInstanceWriteRequest</p>
@@ -162,7 +163,11 @@ public class LockDBInstanceWriteRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -171,7 +176,11 @@ public class LockDBInstanceWriteRequest extends Request {
         }
 
         /**
-         * The reason why write operations on the instance are locked.
+         * <p>The reason why write operations on the instance are locked.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lock reason</p>
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);

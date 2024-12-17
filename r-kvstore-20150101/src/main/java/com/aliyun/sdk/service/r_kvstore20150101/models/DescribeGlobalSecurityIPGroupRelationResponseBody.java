@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalSecurityIPGroupRelationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGlobalSecurityIPGroupRelationResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-t4n885e834f6****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -69,7 +73,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         }
 
         /**
-         * The information about the associated global IP whitelist template.
+         * <p>The information about the associated global IP whitelist template.</p>
          */
         public Builder globalSecurityIPGroupRel(java.util.List < GlobalSecurityIPGroupRel> globalSecurityIPGroupRel) {
             this.globalSecurityIPGroupRel = globalSecurityIPGroupRel;
@@ -77,7 +81,10 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGlobalSecurityIPGroupRelationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalSecurityIPGroupRelationResponseBody</p>
+     */
     public static class GlobalSecurityIPGroupRel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GIpList")
         private String gIpList;
@@ -153,10 +166,13 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
             private String regionId; 
 
             /**
-             * The IP address in the IP whitelist template.
-             * <p>
+             * <p>The IP address in the IP whitelist template.</p>
+             * <blockquote>
+             * <p> Multiple IP addresses are separated by commas (,).</p>
+             * </blockquote>
              * 
-             * >  Multiple IP addresses are separated by commas (,).
+             * <strong>example:</strong>
+             * <p>192.168.0.1,10.10.10.10</p>
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -164,7 +180,10 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the IP whitelist template.
+             * <p>The name of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_123</p>
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -172,7 +191,10 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the IP whitelist template.
+             * <p>The ID of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-zsldxfiwjmti0kcm****</p>
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -180,7 +202,10 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

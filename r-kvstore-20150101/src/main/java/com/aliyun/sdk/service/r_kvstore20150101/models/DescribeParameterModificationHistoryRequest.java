@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterModificationHistoryRequest} extends {@link RequestModel}
  *
  * <p>DescribeParameterModificationHistoryRequest</p>
@@ -205,7 +206,11 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-05T09:49:27Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -214,7 +219,11 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -223,10 +232,13 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * The ID of the node.
-         * <p>
+         * <p>The ID of the node.</p>
+         * <blockquote>
+         * <p>You can set this parameter to query the parameter settings of the specified node in a cluster instance.</p>
+         * </blockquote>
          * 
-         * > You can set this parameter to query the parameter settings of the specified node in a cluster instance.
+         * <strong>example:</strong>
+         * <p>r-bp1xxxxxxxxxxxxx-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -253,7 +265,10 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * The name of the parameter.
+         * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>script_check_enable</p>
          */
         public Builder parameterName(String parameterName) {
             this.putQueryParameter("ParameterName", parameterName);
@@ -289,7 +304,11 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-05T08:49:27Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

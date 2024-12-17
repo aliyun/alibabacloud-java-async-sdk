@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceAttributeRequest</p>
@@ -189,7 +190,11 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -198,7 +203,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the instance. The name must be 2 to 80 characters in length. The name must start with a letter and cannot contain spaces and the following special characters: `@ / : = " < > { [ ] }`
+         * <p>The new name of the instance. The name must be 2 to 80 characters in length. The name must start with a letter and cannot contain spaces and the following special characters: <code>@ / : = &quot; &lt; &gt; { [ ] }</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>newinstancename</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -207,13 +215,17 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * [The release protection state of the instance.](~~165005~~) Valid values:
-         * <p>
+         * <p><a href="https://help.aliyun.com/document_detail/165005.html">The release protection state of the instance.</a> Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only for pay-as-you-go instances.</p>
+         * </blockquote>
          * 
-         * *   **true**: enabled
-         * *   **false**: disabled
-         * 
-         * > This parameter is available only for pay-as-you-go instances.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder instanceReleaseProtection(Boolean instanceReleaseProtection) {
             this.putQueryParameter("InstanceReleaseProtection", instanceReleaseProtection);
@@ -222,10 +234,13 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The new password for the default account. The default account is named after the instance ID. Example: r-bp10noxlhcoim2\*\*\*\*.
-         * <p>
+         * <p>The new password for the default account. The default account is named after the instance ID. Example: r-bp10noxlhcoim2****.</p>
+         * <blockquote>
+         * <p>The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. These special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
+         * </blockquote>
          * 
-         * > The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`
+         * <strong>example:</strong>
+         * <p>uW8+nsrp</p>
          */
         public Builder newPassword(String newPassword) {
             this.putQueryParameter("NewPassword", newPassword);

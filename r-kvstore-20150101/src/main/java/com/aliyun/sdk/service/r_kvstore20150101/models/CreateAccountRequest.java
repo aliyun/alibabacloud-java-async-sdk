@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateAccountRequest</p>
@@ -233,12 +234,15 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The description of the account.
-         * <p>
+         * <p>The description of the account.</p>
+         * <ul>
+         * <li>The description must start with a letter, and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The description must be 2 to 256 characters in length.</li>
+         * </ul>
          * 
-         * *   The description must start with a letter, and cannot start with `http://` or `https://`.
-         * *   The description can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The description must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>testaccount</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -247,12 +251,16 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The name of the account. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the account. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name can contain lowercase letters, digits, and hyphens (-), and must start with a lowercase letter.</li>
+         * <li>The name can be up to 100 characters in length.</li>
+         * <li>The name cannot be one of the reserved words in the <a href="https://help.aliyun.com/document_detail/92665.html#title-84o-mok-b6h">Reserved words for Redis account names</a> section.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain lowercase letters, digits, and hyphens (-), and must start with a lowercase letter.
-         * *   The name can be up to 100 characters in length.
-         * *   The name cannot be one of the reserved words in the [Reserved words for Redis account names](~~92665~~#title-84o-mok-b6h) section.
+         * <strong>example:</strong>
+         * <p>demoaccount</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -261,7 +269,11 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The password of the account. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`
+         * <p>The password of the account. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uWonno21****</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -270,11 +282,14 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The permissions of the account. Valid values:
-         * <p>
+         * <p>The permissions of the account. Valid values:</p>
+         * <ul>
+         * <li><strong>RoleReadOnly</strong>: The account has read-only permissions.</li>
+         * <li><strong>RoleReadWrite</strong>: The account has read and write permissions.</li>
+         * </ul>
          * 
-         * *   **RoleReadOnly**: The account has read-only permissions.
-         * *   **RoleReadWrite**: The account has read and write permissions.
+         * <strong>example:</strong>
+         * <p>RoleReadOnly</p>
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -283,7 +298,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The type of the account. Set the value to **Normal**, which indicates that the account is a standard account.
+         * <p>The type of the account. Set the value to <strong>Normal</strong>, which indicates that the account is a standard account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -292,7 +310,11 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

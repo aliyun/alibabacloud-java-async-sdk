@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceParameterResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInstanceParameterResponseBody</p>
@@ -61,7 +62,10 @@ public class ModifyInstanceParameterResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -69,7 +73,10 @@ public class ModifyInstanceParameterResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>561AFBF1-BE20-44DB-9BD1-6988B53E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class ModifyInstanceParameterResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>578678678</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

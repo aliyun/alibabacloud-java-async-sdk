@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddShardingNodeRequest} extends {@link RequestModel}
  *
  * <p>AddShardingNodeRequest</p>
@@ -246,13 +247,17 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account.</li>
+         * <li><strong>false</strong>: disables automatic payment. In this case, you must manually renew the instance in the console before the instance expires. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Renewal</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The default value is <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-         * *   **false**: disables automatic payment. In this case, you must manually renew the instance in the console before the instance expires. For more information, see [Renewal](~~26352~~).
-         * 
-         * > The default value is **true**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -261,7 +266,10 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * The business information. This is an additional parameter.
+         * <p>The business information. This is an additional parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000000000</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -270,7 +278,10 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * The ID of the coupon.
+         * <p>The ID of the coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -279,11 +290,14 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable forced transmission during a configuration change. Valid values:
-         * <p>
+         * <p>Specifies whether to enable forced transmission during a configuration change. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</li>
+         * <li><strong>true</strong>: The system skips the version check and directly performs the configuration change.</li>
+         * </ul>
          * 
-         * *   **false** (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.
-         * *   **true**: The system skips the version check and directly performs the configuration change.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceTrans(Boolean forceTrans) {
             this.putQueryParameter("ForceTrans", forceTrans);
@@ -292,7 +306,11 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -346,10 +364,13 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * The number of data shards that you want to add. Default value: **1**.
-         * <p>
+         * <p>The number of data shards that you want to add. Default value: <strong>1</strong>.</p>
+         * <blockquote>
+         * <p> The instance can contain 2 to 256 data shards. You can add up to 64 data shards at a time. Make sure that the number of shards does not exceed this limit.</p>
+         * </blockquote>
          * 
-         * >  The instance can contain 2 to 256 data shards. You can add up to 64 data shards at a time. Make sure that the number of shards does not exceed this limit.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);
@@ -358,7 +379,10 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.
+         * <p>The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SDK</p>
          */
         public Builder sourceBiz(String sourceBiz) {
             this.putQueryParameter("SourceBiz", sourceBiz);
@@ -367,7 +391,10 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * The vSwitch ID. You can specify a different vSwitch within the same virtual private cloud (VPC). In this case, the new data shards are created in the specified vSwitch. If you do not specify this parameter, the new data shards are created in the original vSwitch.
+         * <p>The vSwitch ID. You can specify a different vSwitch within the same virtual private cloud (VPC). In this case, the new data shards are created in the specified vSwitch. If you do not specify this parameter, the new data shards are created in the original vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

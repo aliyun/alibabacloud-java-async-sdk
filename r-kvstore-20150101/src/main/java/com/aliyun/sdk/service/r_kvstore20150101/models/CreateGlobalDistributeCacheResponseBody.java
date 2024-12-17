@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGlobalDistributeCacheResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGlobalDistributeCacheResponseBody</p>
@@ -37,7 +38,10 @@ public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E681E498-5A0D-44F2-B1A7-912DC3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

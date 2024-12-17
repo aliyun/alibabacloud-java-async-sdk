@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlushExpireKeysRequest} extends {@link RequestModel}
  *
  * <p>FlushExpireKeysRequest</p>
@@ -161,13 +162,17 @@ public class FlushExpireKeysRequest extends Request {
         }
 
         /**
-         * The time when the minor version is upgraded. Valid values:
-         * <p>
+         * <p>The time when the minor version is upgraded. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: immediately deletes expired keys.</li>
+         * <li><strong>MaintainTime</strong>:deletes expired key in the maintenance window.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
+         * </blockquote>
          * 
-         * *   **Immediately**: immediately deletes expired keys.
-         * *   **MaintainTime**:deletes expired key in the maintenance window.
-         * 
-         * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+         * <strong>example:</strong>
+         * <p>Immediately</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -176,7 +181,11 @@ public class FlushExpireKeysRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteParameterGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteParameterGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteParameterGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The parameter template ID, which is globally unique.
+         * <p>The parameter template ID, which is globally unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sys-001*****</p>
          */
         public Builder paramGroupId(String paramGroupId) {
             this.paramGroupId = paramGroupId;
@@ -57,7 +61,10 @@ public class DeleteParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

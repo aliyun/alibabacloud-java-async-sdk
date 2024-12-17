@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteShardingNodeRequest} extends {@link RequestModel}
  *
  * <p>DeleteShardingNodeRequest</p>
@@ -191,11 +192,14 @@ public class DeleteShardingNodeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable forced transmission during a configuration change. Valid values:
-         * <p>
+         * <p>Specifies whether to enable forced transmission during a configuration change. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</li>
+         * <li><strong>true</strong>: The system skips the version check and directly performs the configuration change.</li>
+         * </ul>
          * 
-         * *   **false** (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.
-         * *   **true**: The system skips the version check and directly performs the configuration change.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceTrans(Boolean forceTrans) {
             this.putQueryParameter("ForceTrans", forceTrans);
@@ -204,7 +208,11 @@ public class DeleteShardingNodeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -213,10 +221,13 @@ public class DeleteShardingNodeRequest extends Request {
         }
 
         /**
-         * The ID of the data shard that you want to remove. You can specify multiple IDs at a time. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the data shard that you want to remove. You can specify multiple IDs at a time. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>If you specify both the NodeId and ShardCount parameters, the system prioritizes the NodeId parameter.</p>
+         * </blockquote>
          * 
-         * > If you specify both the NodeId and ShardCount parameters, the system prioritizes the NodeId parameter.
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****-db-0,r-bp1zxszhcgatnx****-db-1</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -270,10 +281,13 @@ public class DeleteShardingNodeRequest extends Request {
         }
 
         /**
-         * The number of data shards that you want to remove. Shard removal starts from the end of the shard list.
-         * <p>
+         * <p>The number of data shards that you want to remove. Shard removal starts from the end of the shard list.</p>
+         * <blockquote>
+         * <p>For example, the instance has the following data shards: db-0, db-1, db-2, db-3, and db-4. In this case, if you set this parameter to 2, db-3 and db-4 are removed.</p>
+         * </blockquote>
          * 
-         * > For example, the instance has the following data shards: db-0, db-1, db-2, db-3, and db-4. In this case, if you set this parameter to 2, db-3 and db-4 are removed.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);

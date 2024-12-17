@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParametersRequest} extends {@link RequestModel}
  *
  * <p>DescribeParametersRequest</p>
@@ -152,7 +153,11 @@ public class DescribeParametersRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -161,10 +166,13 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * The ID of the node.
-         * <p>
+         * <p>The ID of the node.</p>
+         * <blockquote>
+         * <p>You can set this parameter to query the parameter settings of the specified node in a cluster instance.</p>
+         * </blockquote>
          * 
-         * > You can set this parameter to query the parameter settings of the specified node in a cluster instance.
+         * <strong>example:</strong>
+         * <p>r-bp1xxxxxxxxxxxxx-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -191,7 +199,10 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

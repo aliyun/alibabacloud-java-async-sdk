@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupTasksRequest</p>
@@ -175,7 +176,10 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The progress of the backup task in percentage.
+         * <p>The progress of the backup task in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1162****</p>
          */
         public Builder backupJobId(String backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
@@ -184,7 +188,11 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The details of the backup tasks.
+         * <p>The details of the backup tasks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -193,13 +201,17 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The backup mode. Valid values:
-         * <p>
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Automated</strong>: automatic backup. You can call the <a href="https://help.aliyun.com/document_detail/61078.html">DescribeBackupPolicy</a> operation to query the automatic backup policy.</li>
+         * <li><strong>Manual</strong>: manual backup.</li>
+         * </ul>
+         * <blockquote>
+         * <p>By default, the information about backup tasks in both modes is returned.</p>
+         * </blockquote>
          * 
-         * *   **Automated**: automatic backup. You can call the [DescribeBackupPolicy](~~61078~~) operation to query the automatic backup policy.
-         * *   **Manual**: manual backup.
-         * 
-         * > By default, the information about backup tasks in both modes is returned.
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder jobMode(String jobMode) {
             this.putQueryParameter("JobMode", jobMode);

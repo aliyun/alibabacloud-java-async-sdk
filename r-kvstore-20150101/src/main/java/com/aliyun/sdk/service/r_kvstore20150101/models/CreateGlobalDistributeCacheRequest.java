@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGlobalDistributeCacheRequest} extends {@link RequestModel}
  *
  * <p>CreateGlobalDistributeCacheRequest</p>
@@ -175,11 +176,14 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The time when you want to restart the instance. Default value: Immediately. Valid values:
-         * <p>
+         * <p>The time when you want to restart the instance. Default value: Immediately. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: immediately restarts the instance.</li>
+         * <li><strong>MaintainTime</strong>: restarts the instance during the maintenance window.</li>
+         * </ul>
          * 
-         * *   **Immediately**: immediately restarts the instance.
-         * *   **MaintainTime**: restarts the instance during the maintenance window.
+         * <strong>example:</strong>
+         * <p>Immediately</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -206,10 +210,13 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
-         * <p>
+         * <p>The ID of the resource group.</p>
+         * <blockquote>
+         * <p> You do not need to specify system parameters.</p>
+         * </blockquote>
          * 
-         * >  You do not need to specify system parameters.
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -245,7 +252,11 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The ID of the existing instance.
+         * <p>The ID of the existing instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder seedSubInstanceId(String seedSubInstanceId) {
             this.putQueryParameter("SeedSubInstanceId", seedSubInstanceId);

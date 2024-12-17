@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTasksResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details of the task.
+         * <p>The details of the task.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -93,7 +94,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>608FAEC9-485E-4C65-82DE-2E5B955E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTasksResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
@@ -265,7 +284,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The beginning time of the task. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The beginning time of the task. The time follows the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-13T06:16:54Z</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -273,7 +295,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the subtask.
+             * <p>The name of the subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>init_redis</p>
              */
             public Builder currentStepName(String currentStepName) {
                 this.currentStepName = currentStepName;
@@ -281,7 +306,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the task. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The end time of the task. The time follows the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-13T06:17:18Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -289,7 +317,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task. Unit: %.
+             * <p>The progress of the task. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Float progress) {
                 this.progress = progress;
@@ -297,10 +328,13 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated remaining duration of the task. Unit: seconds.
-             * <p>
+             * <p>The estimated remaining duration of the task. Unit: seconds.</p>
+             * <blockquote>
+             * <p> If the task is not running, this parameter is not returned or the returned value is <strong>0</strong>.</p>
+             * </blockquote>
              * 
-             * >  If the task is not running, this parameter is not returned or the returned value is **0**.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder remain(Integer remain) {
                 this.remain = remain;
@@ -308,15 +342,18 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The task is pending.</li>
+             * <li><strong>1</strong>: The task is running.</li>
+             * <li><strong>2</strong>: The task is complete.</li>
+             * <li><strong>4</strong>: The task is closed.</li>
+             * <li><strong>7</strong>: The task is paused.</li>
+             * <li><strong>8</strong>: The task is interrupted.</li>
+             * </ul>
              * 
-             * *   **0**: The task is pending.
-             * *   **1**: The task is running.
-             * *   **2**: The task is complete.
-             * *   **4**: The task is closed.
-             * *   **7**: The task is paused.
-             * *   **8**: The task is interrupted.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -324,10 +361,13 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the subtask.
-             * <p>
+             * <p>The progress of the subtask.</p>
+             * <blockquote>
+             * <p> If the subtask does not exist, this parameter is not returned.</p>
+             * </blockquote>
              * 
-             * >  If the subtask does not exist, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>3/3</p>
              */
             public Builder stepProgressInfo(String stepProgressInfo) {
                 this.stepProgressInfo = stepProgressInfo;
@@ -335,10 +375,13 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the subtask in the JSON format. This includes the expected remaining duration (**remain**), the name of the subtask (**name**), and the task progress (**progress**).
-             * <p>
+             * <p>The information about the subtask in the JSON format. This includes the expected remaining duration (<strong>remain</strong>), the name of the subtask (<strong>name</strong>), and the task progress (<strong>progress</strong>).</p>
+             * <blockquote>
+             * <p> If the subtask does not exist, this parameter is not returned.</p>
+             * </blockquote>
              * 
-             * >  If the subtask does not exist, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>[{&quot;remain&quot;:0,&quot;name&quot;:&quot;init_instance&quot;,&quot;progress&quot;:100},{&quot;remain&quot;:107,&quot;name&quot;:&quot;init_redis&quot;,&quot;progress&quot;:12.3},{&quot;remain&quot;:1881,&quot;name&quot;:&quot;init_config&quot;,&quot;progress&quot;:0}]</p>
              */
             public Builder stepsInfo(String stepsInfo) {
                 this.stepsInfo = stepsInfo;
@@ -346,7 +389,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the task.
+             * <p>The identifier of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ModifyDBInstanceParameter</p>
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -354,7 +400,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32302****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

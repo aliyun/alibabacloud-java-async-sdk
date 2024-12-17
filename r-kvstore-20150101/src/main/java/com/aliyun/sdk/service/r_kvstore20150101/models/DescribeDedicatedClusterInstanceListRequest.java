@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedClusterInstanceListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDedicatedClusterInstanceListRequest</p>
@@ -264,10 +265,13 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         } 
 
         /**
-         * The ID of the dedicated cluster. You can view the dedicated cluster ID on the Dedicated Clusters page in the ApsaraDB for MyBase console.
-         * <p>
+         * <p>The ID of the dedicated cluster. You can view the dedicated cluster ID on the Dedicated Clusters page in the ApsaraDB for MyBase console.</p>
+         * <blockquote>
+         * <p>Separate multiple IDs with commas (,).</p>
+         * </blockquote>
          * 
-         * > Separate multiple IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>dhg-5f2v98840ioq****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -276,10 +280,13 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the host in the dedicated cluster. You can call the [DescribeDedicatedHosts](~~200944~~) operation to query the host ID.
-         * <p>
+         * <p>The ID of the host in the dedicated cluster. You can call the <a href="https://help.aliyun.com/document_detail/200944.html">DescribeDedicatedHosts</a> operation to query the host ID.</p>
+         * <blockquote>
+         * <p>Separate multiple IDs with commas (,).</p>
+         * </blockquote>
          * 
-         * > Separate multiple IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>ch-t4n664a9mal4c****</p>
          */
         public Builder dedicatedHostName(String dedicatedHostName) {
             this.putQueryParameter("DedicatedHostName", dedicatedHostName);
@@ -288,7 +295,10 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Set the value to **Redis**.
+         * <p>The database engine of the instance. Set the value to <strong>Redis</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -297,7 +307,10 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance. Set the value to **5.0**.
+         * <p>The database engine version of the instance. Set the value to <strong>5.0</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -306,10 +319,13 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>The instance must be created by using a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB for MyBase?</a></p>
+         * </blockquote>
          * 
-         * > The instance must be created by using a dedicated cluster. For more information, see [What is ApsaraDB for MyBase?](~~141455~~)
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -318,12 +334,15 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Internet</li>
+         * <li><strong>1</strong>: classic network</li>
+         * <li><strong>2</strong>: Virtual Private Cloud (VPC)</li>
+         * </ul>
          * 
-         * *   **0**: Internet
-         * *   **1**: classic network
-         * *   **2**: Virtual Private Cloud (VPC)
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder instanceNetType(String instanceNetType) {
             this.putQueryParameter("InstanceNetType", instanceNetType);
@@ -332,17 +351,20 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * The state of the instance. Valid values:
-         * <p>
+         * <p>The state of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The instance is being created.</li>
+         * <li><strong>1</strong>: The instance is running.</li>
+         * <li><strong>3</strong>: The instance is being deleted.</li>
+         * <li><strong>5</strong>: The configurations of the instance are being changed.</li>
+         * <li><strong>6</strong>: The instance is being migrated.</li>
+         * <li><strong>7</strong>: The instance is being restored from a backup.</li>
+         * <li><strong>8</strong>: A master-replica switchover is in progress.</li>
+         * <li><strong>9</strong>: Expired data of the instance is being deleted.</li>
+         * </ul>
          * 
-         * *   **0**: The instance is being created.
-         * *   **1**: The instance is running.
-         * *   **3**: The instance is being deleted.
-         * *   **5**: The configurations of the instance are being changed.
-         * *   **6**: The instance is being migrated.
-         * *   **7**: The instance is being restored from a backup.
-         * *   **8**: A master-replica switchover is in progress.
-         * *   **9**: Expired data of the instance is being deleted.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instanceStatus(Integer instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -369,7 +391,10 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -378,7 +403,10 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -387,7 +415,11 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -423,7 +455,10 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeZones](~~94527~~) operation to query the most recent zone list.
+         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/94527.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceConfigRequest</p>
@@ -147,7 +148,11 @@ public class DescribeInstanceConfigRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

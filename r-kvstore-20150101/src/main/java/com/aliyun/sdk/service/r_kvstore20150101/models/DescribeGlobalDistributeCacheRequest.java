@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalDistributeCacheRequest} extends {@link RequestModel}
  *
  * <p>DescribeGlobalDistributeCacheRequest</p>
@@ -188,7 +189,10 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The ID of the distributed instance.
+         * <p>The ID of the distributed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gr-bp14rkqrhac****</p>
          */
         public Builder globalInstanceId(String globalInstanceId) {
             this.putQueryParameter("GlobalInstanceId", globalInstanceId);
@@ -215,7 +219,10 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -224,7 +231,10 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The number of entries to return each page.
+         * <p>The number of entries to return each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -260,7 +270,10 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The ID of the child instance that is attached to the distributed instance.
+         * <p>The ID of the child instance that is attached to the distributed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gr-bp1zcjlobkyrq****</p>
          */
         public Builder subInstanceId(String subInstanceId) {
             this.putQueryParameter("SubInstanceId", subInstanceId);

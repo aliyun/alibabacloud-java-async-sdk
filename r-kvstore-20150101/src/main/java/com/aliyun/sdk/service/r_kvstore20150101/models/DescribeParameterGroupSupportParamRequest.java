@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterGroupSupportParamRequest} extends {@link RequestModel}
  *
  * <p>DescribeParameterGroupSupportParamRequest</p>
@@ -175,11 +176,14 @@ public class DescribeParameterGroupSupportParamRequest extends Request {
         }
 
         /**
-         * The service category. Valid values:
-         * <p>
+         * <p>The service category. Valid values:</p>
+         * <ul>
+         * <li><strong>standard</strong>: ApsaraDB for Redis Community Edition</li>
+         * <li><strong>enterprise</strong>: ApsaraDB for Redis Enhanced Edition (Tair)</li>
+         * </ul>
          * 
-         * *   **standard**: ApsaraDB for Redis Community Edition
-         * *   **enterprise**: ApsaraDB for Redis Enhanced Edition (Tair)
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -188,12 +192,15 @@ public class DescribeParameterGroupSupportParamRequest extends Request {
         }
 
         /**
-         * The engine type. Valid values:
-         * <p>
+         * <p>The engine type. Valid values:</p>
+         * <ul>
+         * <li><strong>redis</strong>: ApsaraDB for Redis Community Edition instance or Tair DRAM-based instance</li>
+         * <li><strong>tair_pena</strong>: Tair persistent memory-optimized instance</li>
+         * <li><strong>tair_pdb</strong>: Tair ESSD/SSD-based instance</li>
+         * </ul>
          * 
-         * *   **redis**: ApsaraDB for Redis Community Edition instance or Tair DRAM-based instance
-         * *   **tair_pena**: Tair persistent memory-optimized instance
-         * *   **tair_pdb**: Tair ESSD/SSD-based instance
+         * <strong>example:</strong>
+         * <p>redis</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -202,13 +209,17 @@ public class DescribeParameterGroupSupportParamRequest extends Request {
         }
 
         /**
-         * The compatible engine version. Valid values:
-         * <p>
+         * <p>The compatible engine version. Valid values:</p>
+         * <ul>
+         * <li>For ApsaraDB for Redis Community Edition instances, set the parameter to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
+         * <li>For Tair DRAM-based instances that are compatible with Redis 5.0 or Redis 6.0, set the parameter to <strong>5.0</strong> or <strong>6.0</strong>.</li>
+         * <li>For Tair persistent memory-optimized instances that are compatible with Redis 6.0, set the parameter to <strong>1.0</strong>.</li>
+         * <li>For Tair ESSD-based instances that are compatible with Redis 6.0, set the parameter to <strong>1.0</strong>. For Tair SSD-based instances that are compatible with Redis 6.0, set the parameter to <strong>2.0</strong>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   For ApsaraDB for Redis Community Edition instances, set the parameter to **5.0**, **6.0**, or **7.0**.
-         * *   For Tair DRAM-based instances that are compatible with Redis 5.0 or Redis 6.0, set the parameter to **5.0** or **6.0**.
-         * *   For Tair persistent memory-optimized instances that are compatible with Redis 6.0, set the parameter to **1.0**.
-         * *   For Tair ESSD-based instances that are compatible with Redis 6.0, set the parameter to **1.0**. For Tair SSD-based instances that are compatible with Redis 6.0, set the parameter to **2.0**.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);

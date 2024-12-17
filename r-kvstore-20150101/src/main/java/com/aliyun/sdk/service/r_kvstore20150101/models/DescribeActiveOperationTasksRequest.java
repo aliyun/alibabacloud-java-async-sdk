@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeActiveOperationTasksRequest</p>
@@ -265,7 +266,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * AllowCancel.
+         * <p>The filter condition that is used to return tasks based on the settings of task cancellation. Default value: -1. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: returns all tasks.</li>
+         * <li><strong>0</strong>: returns only tasks that cannot be canceled.</li>
+         * <li><strong>1</strong>: returns only tasks that can be canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder allowCancel(Integer allowCancel) {
             this.putQueryParameter("AllowCancel", allowCancel);
@@ -274,7 +283,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * AllowChange.
+         * <p>The filter condition that is used to return tasks based on the settings of the switching time. Default value: -1. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: returns all tasks.</li>
+         * <li><strong>0</strong>: returns only tasks for which the switching time cannot be changed.</li>
+         * <li><strong>1</strong>: returns only tasks for which the switching time can be changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder allowChange(Integer allowChange) {
             this.putQueryParameter("AllowChange", allowChange);
@@ -283,7 +300,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ChangeLevel.
+         * <p>The type of task configuration change. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong> (default): The configurations of all O&amp;M tasks are changed.</li>
+         * <li><strong>S0</strong>: The configurations of tasks initiated to fix exceptions are changed.</li>
+         * <li><strong>S1</strong>: The configurations of system O&amp;M tasks are changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder changeLevel(String changeLevel) {
             this.putQueryParameter("ChangeLevel", changeLevel);
@@ -292,7 +317,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * DbType.
+         * <p>The database type. Valid values: <strong>redis</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -301,7 +329,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * InsName.
+         * <p>The name of the instance. You can leave this parameter empty. If you configure this parameter, you can specify the name only of one instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-wz96fzmpvpr2qnqnlb</p>
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -328,7 +359,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -337,7 +371,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 25. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -346,7 +383,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The name of the service. Valid values: RDS, POLARDB, MongoDB, and Redis. For Redis instances, set the value to Redis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         public Builder productId(String productId) {
             this.putQueryParameter("ProductId", productId);
@@ -355,7 +395,13 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region ID of the O&amp;M task. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <blockquote>
+         * <p>A value of <strong>all</strong> indicates all region IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -391,7 +437,18 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of operation and maintenance events. It is used to filter and return tasks. The values are as follows:. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: All events.</li>
+         * <li><strong>3</strong>: Events awaiting processing.</li>
+         * <li><strong>4</strong>: Events being processed.</li>
+         * <li><strong>5</strong>: Events that have successfully ended.</li>
+         * <li><strong>6</strong>: Events that have ended in failure.</li>
+         * <li><strong>7</strong>: Events that have been canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -400,7 +457,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the O&amp;M task. If left blank, all types will be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchNetworkResponseBody} extends {@link TeaModel}
  *
  * <p>SwitchNetworkResponseBody</p>
@@ -49,7 +50,10 @@ public class SwitchNetworkResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0997EE8-F4C2-4503-9168-85177ED78C70</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class SwitchNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>578678678</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

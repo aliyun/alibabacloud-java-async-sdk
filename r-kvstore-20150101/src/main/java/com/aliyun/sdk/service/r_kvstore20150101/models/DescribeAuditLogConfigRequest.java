@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditLogConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeAuditLogConfigRequest</p>
@@ -139,7 +140,11 @@ public class DescribeAuditLogConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -166,7 +171,11 @@ public class DescribeAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeInstanceAttribute](~~60996~~) operation to query the region ID of the instance.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60996.html">DescribeInstanceAttribute</a> operation to query the region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hanghzou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeParameterGroupsRequest</p>
@@ -138,7 +139,10 @@ public class DescribeParameterGroupsRequest extends Request {
         } 
 
         /**
-         * The database type. Valid values: **redis** (default) and **tair**.
+         * <p>The database type. Valid values: <strong>redis</strong> (default) and <strong>tair</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -165,7 +169,7 @@ public class DescribeParameterGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

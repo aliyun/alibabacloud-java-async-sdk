@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountPasswordRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountPasswordRequest</p>
@@ -206,7 +207,11 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The username of the account for which you want to change the password. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.
+         * <p>The username of the account for which you want to change the password. You can call the <a href="https://help.aliyun.com/document_detail/95802.html">DescribeAccounts</a> operation to query the username of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testaccount</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -215,7 +220,11 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -224,7 +233,11 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The new password to be set for the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`
+         * <p>The new password to be set for the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newPassWd888****</p>
          */
         public Builder newAccountPassword(String newAccountPassword) {
             this.putQueryParameter("NewAccountPassword", newAccountPassword);
@@ -233,10 +246,14 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The current password of the account.
-         * <p>
+         * <p>The current password of the account.</p>
+         * <blockquote>
+         * <p>If you forget your password, you can call the <a href="https://help.aliyun.com/document_detail/95941.html">ResetAccountPassword</a> operation to reset your password.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If you forget your password, you can call the [ResetAccountPassword](~~95941~~) operation to reset your password.
+         * <strong>example:</strong>
+         * <p>oldPassWd999****</p>
          */
         public Builder oldAccountPassword(String oldAccountPassword) {
             this.putQueryParameter("OldAccountPassword", oldAccountPassword);

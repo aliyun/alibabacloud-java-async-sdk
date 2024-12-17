@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterBackupListRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterBackupListRequest</p>
@@ -211,7 +212,10 @@ public class DescribeClusterBackupListRequest extends Request {
         } 
 
         /**
-         * The backup set ID.
+         * <p>The backup set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb-hyxdof5x9kqbtust</p>
          */
         public Builder clusterBackupId(String clusterBackupId) {
             this.putQueryParameter("ClusterBackupId", clusterBackupId);
@@ -220,7 +224,11 @@ public class DescribeClusterBackupListRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+         * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-13T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -229,7 +237,11 @@ public class DescribeClusterBackupListRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-t4nj72oug5r5646qog</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -256,7 +268,10 @@ public class DescribeClusterBackupListRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -265,7 +280,10 @@ public class DescribeClusterBackupListRequest extends Request {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -274,7 +292,11 @@ public class DescribeClusterBackupListRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -310,7 +332,11 @@ public class DescribeClusterBackupListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-03T07:01Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

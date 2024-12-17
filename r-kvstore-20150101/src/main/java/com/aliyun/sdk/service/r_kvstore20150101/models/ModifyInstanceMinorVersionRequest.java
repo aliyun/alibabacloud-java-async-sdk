@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceMinorVersionRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceMinorVersionRequest</p>
@@ -175,13 +176,17 @@ public class ModifyInstanceMinorVersionRequest extends Request {
         }
 
         /**
-         * The time when the minor version is updated. Valid values:
-         * <p>
+         * <p>The time when the minor version is updated. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: The minor version is immediately updated.</li>
+         * <li><strong>MaintainTime</strong>: The minor version is updated within the maintenance window.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
+         * </blockquote>
          * 
-         * *   **Immediately**: The minor version is immediately updated.
-         * *   **MaintainTime**: The minor version is updated within the maintenance window.
-         * 
-         * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+         * <strong>example:</strong>
+         * <p>Immediately</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -190,7 +195,11 @@ public class ModifyInstanceMinorVersionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,7 +208,10 @@ public class ModifyInstanceMinorVersionRequest extends Request {
         }
 
         /**
-         * The minor version to which you want to update. Default value: **latest_version**.
+         * <p>The minor version to which you want to update. Default value: <strong>latest_version</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest_version</p>
          */
         public Builder minorversion(String minorversion) {
             this.putQueryParameter("Minorversion", minorversion);
