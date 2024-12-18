@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteJobsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExecutorIds")
-    private java.util.List < String > executorIds;
+    private java.util.List<String> executorIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobSpec")
-    private java.util.List < JobSpec> jobSpec;
+    private java.util.List<JobSpec> jobSpec;
 
     private DeleteJobsRequest(Builder builder) {
         super(builder);
@@ -42,20 +47,20 @@ public class DeleteJobsRequest extends Request {
     /**
      * @return executorIds
      */
-    public java.util.List < String > getExecutorIds() {
+    public java.util.List<String> getExecutorIds() {
         return this.executorIds;
     }
 
     /**
      * @return jobSpec
      */
-    public java.util.List < JobSpec> getJobSpec() {
+    public java.util.List<JobSpec> getJobSpec() {
         return this.jobSpec;
     }
 
     public static final class Builder extends Request.Builder<DeleteJobsRequest, Builder> {
-        private java.util.List < String > executorIds; 
-        private java.util.List < JobSpec> jobSpec; 
+        private java.util.List<String> executorIds; 
+        private java.util.List<JobSpec> jobSpec; 
 
         private Builder() {
             super();
@@ -70,7 +75,7 @@ public class DeleteJobsRequest extends Request {
         /**
          * ExecutorIds.
          */
-        public Builder executorIds(java.util.List < String > executorIds) {
+        public Builder executorIds(java.util.List<String> executorIds) {
             String executorIdsShrink = shrink(executorIds, "ExecutorIds", "json");
             this.putQueryParameter("ExecutorIds", executorIdsShrink);
             this.executorIds = executorIds;
@@ -80,7 +85,7 @@ public class DeleteJobsRequest extends Request {
         /**
          * JobSpec.
          */
-        public Builder jobSpec(java.util.List < JobSpec> jobSpec) {
+        public Builder jobSpec(java.util.List<JobSpec> jobSpec) {
             String jobSpecShrink = shrink(jobSpec, "JobSpec", "json");
             this.putQueryParameter("JobSpec", jobSpecShrink);
             this.jobSpec = jobSpec;
@@ -102,7 +107,7 @@ public class DeleteJobsRequest extends Request {
      */
     public static class TaskSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArrayIndex")
-        private java.util.List < Integer > arrayIndex;
+        private java.util.List<Integer> arrayIndex;
 
         @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
@@ -123,7 +128,7 @@ public class DeleteJobsRequest extends Request {
         /**
          * @return arrayIndex
          */
-        public java.util.List < Integer > getArrayIndex() {
+        public java.util.List<Integer> getArrayIndex() {
             return this.arrayIndex;
         }
 
@@ -135,13 +140,13 @@ public class DeleteJobsRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > arrayIndex; 
+            private java.util.List<Integer> arrayIndex; 
             private String taskName; 
 
             /**
              * ArrayIndex.
              */
-            public Builder arrayIndex(java.util.List < Integer > arrayIndex) {
+            public Builder arrayIndex(java.util.List<Integer> arrayIndex) {
                 this.arrayIndex = arrayIndex;
                 return this;
             }
@@ -172,7 +177,7 @@ public class DeleteJobsRequest extends Request {
         private String jobId;
 
         @com.aliyun.core.annotation.NameInMap("TaskSpec")
-        private java.util.List < TaskSpec> taskSpec;
+        private java.util.List<TaskSpec> taskSpec;
 
         private JobSpec(Builder builder) {
             this.jobId = builder.jobId;
@@ -197,13 +202,13 @@ public class DeleteJobsRequest extends Request {
         /**
          * @return taskSpec
          */
-        public java.util.List < TaskSpec> getTaskSpec() {
+        public java.util.List<TaskSpec> getTaskSpec() {
             return this.taskSpec;
         }
 
         public static final class Builder {
             private String jobId; 
-            private java.util.List < TaskSpec> taskSpec; 
+            private java.util.List<TaskSpec> taskSpec; 
 
             /**
              * JobId.
@@ -216,7 +221,7 @@ public class DeleteJobsRequest extends Request {
             /**
              * TaskSpec.
              */
-            public Builder taskSpec(java.util.List < TaskSpec> taskSpec) {
+            public Builder taskSpec(java.util.List<TaskSpec> taskSpec) {
                 this.taskSpec = taskSpec;
                 return this;
             }

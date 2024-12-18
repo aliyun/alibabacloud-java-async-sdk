@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class CreateJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tasks")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Tasks> tasks;
+    private java.util.List<Tasks> tasks;
 
     private CreateJobRequest(Builder builder) {
         super(builder);
@@ -87,7 +92,7 @@ public class CreateJobRequest extends Request {
     /**
      * @return tasks
      */
-    public java.util.List < Tasks> getTasks() {
+    public java.util.List<Tasks> getTasks() {
         return this.tasks;
     }
 
@@ -96,7 +101,7 @@ public class CreateJobRequest extends Request {
         private String jobDescription; 
         private String jobName; 
         private String jobScheduler; 
-        private java.util.List < Tasks> tasks; 
+        private java.util.List<Tasks> tasks; 
 
         private Builder() {
             super();
@@ -154,7 +159,7 @@ public class CreateJobRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder tasks(java.util.List < Tasks> tasks) {
+        public Builder tasks(java.util.List<Tasks> tasks) {
             String tasksShrink = shrink(tasks, "Tasks", "json");
             this.putQueryParameter("Tasks", tasksShrink);
             this.tasks = tasks;
@@ -179,7 +184,7 @@ public class CreateJobRequest extends Request {
         private Boolean enableExternalIpAddress;
 
         @com.aliyun.core.annotation.NameInMap("Vswitch")
-        private java.util.List < String > vswitch;
+        private java.util.List<String> vswitch;
 
         private Network(Builder builder) {
             this.enableExternalIpAddress = builder.enableExternalIpAddress;
@@ -204,13 +209,13 @@ public class CreateJobRequest extends Request {
         /**
          * @return vswitch
          */
-        public java.util.List < String > getVswitch() {
+        public java.util.List<String> getVswitch() {
             return this.vswitch;
         }
 
         public static final class Builder {
             private Boolean enableExternalIpAddress; 
-            private java.util.List < String > vswitch; 
+            private java.util.List<String> vswitch; 
 
             /**
              * EnableExternalIpAddress.
@@ -223,7 +228,7 @@ public class CreateJobRequest extends Request {
             /**
              * Vswitch.
              */
-            public Builder vswitch(java.util.List < String > vswitch) {
+            public Builder vswitch(java.util.List<String> vswitch) {
                 this.vswitch = vswitch;
                 return this;
             }
@@ -317,7 +322,7 @@ public class CreateJobRequest extends Request {
         private Network network;
 
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private DeploymentPolicy(Builder builder) {
             this.allocationSpec = builder.allocationSpec;
@@ -350,14 +355,14 @@ public class CreateJobRequest extends Request {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
             private String allocationSpec; 
             private Network network; 
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * AllocationSpec.
@@ -378,7 +383,7 @@ public class CreateJobRequest extends Request {
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -622,7 +627,7 @@ public class CreateJobRequest extends Request {
         private Float cores;
 
         @com.aliyun.core.annotation.NameInMap("Disks")
-        private java.util.List < Disks> disks;
+        private java.util.List<Disks> disks;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
@@ -651,7 +656,7 @@ public class CreateJobRequest extends Request {
         /**
          * @return disks
          */
-        public java.util.List < Disks> getDisks() {
+        public java.util.List<Disks> getDisks() {
             return this.disks;
         }
 
@@ -664,7 +669,7 @@ public class CreateJobRequest extends Request {
 
         public static final class Builder {
             private Float cores; 
-            private java.util.List < Disks> disks; 
+            private java.util.List<Disks> disks; 
             private Float memory; 
 
             /**
@@ -678,7 +683,7 @@ public class CreateJobRequest extends Request {
             /**
              * Disks.
              */
-            public Builder disks(java.util.List < Disks> disks) {
+            public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
                 return this;
             }
@@ -776,10 +781,10 @@ public class CreateJobRequest extends Request {
         private String appId;
 
         @com.aliyun.core.annotation.NameInMap("Command")
-        private java.util.List < String > command;
+        private java.util.List<String> command;
 
         @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
-        private java.util.List < EnvironmentVars> environmentVars;
+        private java.util.List<EnvironmentVars> environmentVars;
 
         @com.aliyun.core.annotation.NameInMap("Image")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -814,14 +819,14 @@ public class CreateJobRequest extends Request {
         /**
          * @return command
          */
-        public java.util.List < String > getCommand() {
+        public java.util.List<String> getCommand() {
             return this.command;
         }
 
         /**
          * @return environmentVars
          */
-        public java.util.List < EnvironmentVars> getEnvironmentVars() {
+        public java.util.List<EnvironmentVars> getEnvironmentVars() {
             return this.environmentVars;
         }
 
@@ -841,8 +846,8 @@ public class CreateJobRequest extends Request {
 
         public static final class Builder {
             private String appId; 
-            private java.util.List < String > command; 
-            private java.util.List < EnvironmentVars> environmentVars; 
+            private java.util.List<String> command; 
+            private java.util.List<EnvironmentVars> environmentVars; 
             private String image; 
             private String workingDir; 
 
@@ -857,7 +862,7 @@ public class CreateJobRequest extends Request {
             /**
              * Command.
              */
-            public Builder command(java.util.List < String > command) {
+            public Builder command(java.util.List<String> command) {
                 this.command = command;
                 return this;
             }
@@ -865,7 +870,7 @@ public class CreateJobRequest extends Request {
             /**
              * EnvironmentVars.
              */
-            public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
+            public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
                 return this;
             }
@@ -1173,10 +1178,10 @@ public class CreateJobRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("TaskExecutor")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < TaskExecutor> taskExecutor;
+        private java.util.List<TaskExecutor> taskExecutor;
 
         @com.aliyun.core.annotation.NameInMap("VolumeMount")
-        private java.util.List < VolumeMount> volumeMount;
+        private java.util.List<VolumeMount> volumeMount;
 
         private TaskSpec(Builder builder) {
             this.resource = builder.resource;
@@ -1202,21 +1207,21 @@ public class CreateJobRequest extends Request {
         /**
          * @return taskExecutor
          */
-        public java.util.List < TaskExecutor> getTaskExecutor() {
+        public java.util.List<TaskExecutor> getTaskExecutor() {
             return this.taskExecutor;
         }
 
         /**
          * @return volumeMount
          */
-        public java.util.List < VolumeMount> getVolumeMount() {
+        public java.util.List<VolumeMount> getVolumeMount() {
             return this.volumeMount;
         }
 
         public static final class Builder {
             private Resource resource; 
-            private java.util.List < TaskExecutor> taskExecutor; 
-            private java.util.List < VolumeMount> volumeMount; 
+            private java.util.List<TaskExecutor> taskExecutor; 
+            private java.util.List<VolumeMount> volumeMount; 
 
             /**
              * Resource.
@@ -1229,7 +1234,7 @@ public class CreateJobRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder taskExecutor(java.util.List < TaskExecutor> taskExecutor) {
+            public Builder taskExecutor(java.util.List<TaskExecutor> taskExecutor) {
                 this.taskExecutor = taskExecutor;
                 return this;
             }
@@ -1237,7 +1242,7 @@ public class CreateJobRequest extends Request {
             /**
              * VolumeMount.
              */
-            public Builder volumeMount(java.util.List < VolumeMount> volumeMount) {
+            public Builder volumeMount(java.util.List<VolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
                 return this;
             }

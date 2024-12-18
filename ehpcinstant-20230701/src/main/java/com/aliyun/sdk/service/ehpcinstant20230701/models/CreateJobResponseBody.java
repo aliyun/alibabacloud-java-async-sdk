@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateJobResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tasks")
-    private java.util.List < Tasks> tasks;
+    private java.util.List<Tasks> tasks;
 
     private CreateJobResponseBody(Builder builder) {
         this.jobId = builder.jobId;
@@ -52,14 +57,14 @@ public class CreateJobResponseBody extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < Tasks> getTasks() {
+    public java.util.List<Tasks> getTasks() {
         return this.tasks;
     }
 
     public static final class Builder {
         private String jobId; 
         private String requestId; 
-        private java.util.List < Tasks> tasks; 
+        private java.util.List<Tasks> tasks; 
 
         /**
          * JobId.
@@ -80,7 +85,7 @@ public class CreateJobResponseBody extends TeaModel {
         /**
          * Tasks.
          */
-        public Builder tasks(java.util.List < Tasks> tasks) {
+        public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
             return this;
         }
@@ -99,7 +104,7 @@ public class CreateJobResponseBody extends TeaModel {
      */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecutorIds")
-        private java.util.List < String > executorIds;
+        private java.util.List<String> executorIds;
 
         @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
@@ -120,7 +125,7 @@ public class CreateJobResponseBody extends TeaModel {
         /**
          * @return executorIds
          */
-        public java.util.List < String > getExecutorIds() {
+        public java.util.List<String> getExecutorIds() {
             return this.executorIds;
         }
 
@@ -132,13 +137,13 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > executorIds; 
+            private java.util.List<String> executorIds; 
             private String taskName; 
 
             /**
              * ExecutorIds.
              */
-            public Builder executorIds(java.util.List < String > executorIds) {
+            public Builder executorIds(java.util.List<String> executorIds) {
                 this.executorIds = executorIds;
                 return this;
             }

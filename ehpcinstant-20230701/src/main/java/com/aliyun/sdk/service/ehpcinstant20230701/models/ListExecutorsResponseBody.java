@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListExecutorsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Executors")
-    private java.util.List < Executors> executors;
+    private java.util.List<Executors> executors;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
@@ -46,7 +51,7 @@ public class ListExecutorsResponseBody extends TeaModel {
     /**
      * @return executors
      */
-    public java.util.List < Executors> getExecutors() {
+    public java.util.List<Executors> getExecutors() {
         return this.executors;
     }
 
@@ -79,7 +84,7 @@ public class ListExecutorsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Executors> executors; 
+        private java.util.List<Executors> executors; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         /**
          * Executors.
          */
-        public Builder executors(java.util.List < Executors> executors) {
+        public Builder executors(java.util.List<Executors> executors) {
             this.executors = executors;
             return this;
         }
@@ -209,7 +214,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         private Float cores;
 
         @com.aliyun.core.annotation.NameInMap("Disks")
-        private java.util.List < Disks> disks;
+        private java.util.List<Disks> disks;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
@@ -238,7 +243,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         /**
          * @return disks
          */
-        public java.util.List < Disks> getDisks() {
+        public java.util.List<Disks> getDisks() {
             return this.disks;
         }
 
@@ -251,7 +256,7 @@ public class ListExecutorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float cores; 
-            private java.util.List < Disks> disks; 
+            private java.util.List<Disks> disks; 
             private Float memory; 
 
             /**
@@ -265,7 +270,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             /**
              * Disks.
              */
-            public Builder disks(java.util.List < Disks> disks) {
+            public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
                 return this;
             }
@@ -372,16 +377,16 @@ public class ListExecutorsResponseBody extends TeaModel {
         private String executorId;
 
         @com.aliyun.core.annotation.NameInMap("ExternalIpAddress")
-        private java.util.List < String > externalIpAddress;
+        private java.util.List<String> externalIpAddress;
 
         @com.aliyun.core.annotation.NameInMap("HostName")
-        private java.util.List < String > hostName;
+        private java.util.List<String> hostName;
 
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
         @com.aliyun.core.annotation.NameInMap("IpAddress")
-        private java.util.List < String > ipAddress;
+        private java.util.List<String> ipAddress;
 
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
@@ -405,7 +410,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         private String statusReason;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
@@ -477,14 +482,14 @@ public class ListExecutorsResponseBody extends TeaModel {
         /**
          * @return externalIpAddress
          */
-        public java.util.List < String > getExternalIpAddress() {
+        public java.util.List<String> getExternalIpAddress() {
             return this.externalIpAddress;
         }
 
         /**
          * @return hostName
          */
-        public java.util.List < String > getHostName() {
+        public java.util.List<String> getHostName() {
             return this.hostName;
         }
 
@@ -498,7 +503,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
@@ -554,7 +559,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -584,10 +589,10 @@ public class ListExecutorsResponseBody extends TeaModel {
             private String createTime; 
             private String endTime; 
             private String executorId; 
-            private java.util.List < String > externalIpAddress; 
-            private java.util.List < String > hostName; 
+            private java.util.List<String> externalIpAddress; 
+            private java.util.List<String> hostName; 
             private String image; 
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
             private String jobId; 
             private String jobName; 
             private Resource resource; 
@@ -595,7 +600,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String statusReason; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String taskName; 
             private Boolean taskSustainable; 
             private String vswitchId; 
@@ -635,7 +640,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             /**
              * ExternalIpAddress.
              */
-            public Builder externalIpAddress(java.util.List < String > externalIpAddress) {
+            public Builder externalIpAddress(java.util.List<String> externalIpAddress) {
                 this.externalIpAddress = externalIpAddress;
                 return this;
             }
@@ -643,7 +648,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             /**
              * HostName.
              */
-            public Builder hostName(java.util.List < String > hostName) {
+            public Builder hostName(java.util.List<String> hostName) {
                 this.hostName = hostName;
                 return this;
             }
@@ -659,7 +664,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             /**
              * IpAddress.
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }
@@ -723,7 +728,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

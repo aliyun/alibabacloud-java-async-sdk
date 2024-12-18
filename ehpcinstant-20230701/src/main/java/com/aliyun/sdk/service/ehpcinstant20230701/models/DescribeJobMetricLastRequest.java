@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeJobMetricLastRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ArrayIndex")
-    private java.util.List < Integer > arrayIndex;
+    private java.util.List<Integer> arrayIndex;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobId")
@@ -47,7 +52,7 @@ public class DescribeJobMetricLastRequest extends Request {
     /**
      * @return arrayIndex
      */
-    public java.util.List < Integer > getArrayIndex() {
+    public java.util.List<Integer> getArrayIndex() {
         return this.arrayIndex;
     }
 
@@ -66,7 +71,7 @@ public class DescribeJobMetricLastRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeJobMetricLastRequest, Builder> {
-        private java.util.List < Integer > arrayIndex; 
+        private java.util.List<Integer> arrayIndex; 
         private String jobId; 
         private String taskName; 
 
@@ -84,7 +89,7 @@ public class DescribeJobMetricLastRequest extends Request {
         /**
          * ArrayIndex.
          */
-        public Builder arrayIndex(java.util.List < Integer > arrayIndex) {
+        public Builder arrayIndex(java.util.List<Integer> arrayIndex) {
             String arrayIndexShrink = shrink(arrayIndex, "ArrayIndex", "json");
             this.putQueryParameter("ArrayIndex", arrayIndexShrink);
             this.arrayIndex = arrayIndex;

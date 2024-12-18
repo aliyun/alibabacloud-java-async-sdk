@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,11 +210,20 @@ public class GetImageResponseBody extends TeaModel {
      * <p>GetImageResponseBody</p>
      */
     public static class ContainerImageSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Architecture")
+        private String architecture;
+
         @com.aliyun.core.annotation.NameInMap("IsACREnterprise")
         private Boolean isACREnterprise;
 
         @com.aliyun.core.annotation.NameInMap("IsACRRegistry")
         private Boolean isACRRegistry;
+
+        @com.aliyun.core.annotation.NameInMap("OsTag")
+        private String osTag;
+
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
 
         @com.aliyun.core.annotation.NameInMap("RegistryCredential")
         private RegistryCredential registryCredential;
@@ -221,8 +235,11 @@ public class GetImageResponseBody extends TeaModel {
         private String registryUrl;
 
         private ContainerImageSpec(Builder builder) {
+            this.architecture = builder.architecture;
             this.isACREnterprise = builder.isACREnterprise;
             this.isACRRegistry = builder.isACRRegistry;
+            this.osTag = builder.osTag;
+            this.platform = builder.platform;
             this.registryCredential = builder.registryCredential;
             this.registryCriId = builder.registryCriId;
             this.registryUrl = builder.registryUrl;
@@ -237,6 +254,13 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
+         * @return architecture
+         */
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+        /**
          * @return isACREnterprise
          */
         public Boolean getIsACREnterprise() {
@@ -248,6 +272,20 @@ public class GetImageResponseBody extends TeaModel {
          */
         public Boolean getIsACRRegistry() {
             return this.isACRRegistry;
+        }
+
+        /**
+         * @return osTag
+         */
+        public String getOsTag() {
+            return this.osTag;
+        }
+
+        /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
         }
 
         /**
@@ -272,11 +310,22 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String architecture; 
             private Boolean isACREnterprise; 
             private Boolean isACRRegistry; 
+            private String osTag; 
+            private String platform; 
             private RegistryCredential registryCredential; 
             private String registryCriId; 
             private String registryUrl; 
+
+            /**
+             * Architecture.
+             */
+            public Builder architecture(String architecture) {
+                this.architecture = architecture;
+                return this;
+            }
 
             /**
              * IsACREnterprise.
@@ -291,6 +340,22 @@ public class GetImageResponseBody extends TeaModel {
              */
             public Builder isACRRegistry(Boolean isACRRegistry) {
                 this.isACRRegistry = isACRRegistry;
+                return this;
+            }
+
+            /**
+             * OsTag.
+             */
+            public Builder osTag(String osTag) {
+                this.osTag = osTag;
+                return this;
+            }
+
+            /**
+             * Platform.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
                 return this;
             }
 
@@ -320,6 +385,93 @@ public class GetImageResponseBody extends TeaModel {
 
             public ContainerImageSpec build() {
                 return new ContainerImageSpec(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageResponseBody</p>
+     */
+    public static class DocumentInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Document")
+        private String document;
+
+        @com.aliyun.core.annotation.NameInMap("DocumentId")
+        private String documentId;
+
+        @com.aliyun.core.annotation.NameInMap("EncodingMode")
+        private String encodingMode;
+
+        private DocumentInfo(Builder builder) {
+            this.document = builder.document;
+            this.documentId = builder.documentId;
+            this.encodingMode = builder.encodingMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DocumentInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return document
+         */
+        public String getDocument() {
+            return this.document;
+        }
+
+        /**
+         * @return documentId
+         */
+        public String getDocumentId() {
+            return this.documentId;
+        }
+
+        /**
+         * @return encodingMode
+         */
+        public String getEncodingMode() {
+            return this.encodingMode;
+        }
+
+        public static final class Builder {
+            private String document; 
+            private String documentId; 
+            private String encodingMode; 
+
+            /**
+             * Document.
+             */
+            public Builder document(String document) {
+                this.document = document;
+                return this;
+            }
+
+            /**
+             * DocumentId.
+             */
+            public Builder documentId(String documentId) {
+                this.documentId = documentId;
+                return this;
+            }
+
+            /**
+             * EncodingMode.
+             */
+            public Builder encodingMode(String encodingMode) {
+                this.encodingMode = encodingMode;
+                return this;
+            }
+
+            public DocumentInfo build() {
+                return new DocumentInfo(this);
             } 
 
         } 
@@ -451,6 +603,9 @@ public class GetImageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DocumentInfo")
+        private DocumentInfo documentInfo;
+
         @com.aliyun.core.annotation.NameInMap("ImageType")
         @com.aliyun.core.annotation.Validation(required = true)
         private String imageType;
@@ -475,6 +630,7 @@ public class GetImageResponseBody extends TeaModel {
             this.containerImageSpec = builder.containerImageSpec;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.documentInfo = builder.documentInfo;
             this.imageType = builder.imageType;
             this.name = builder.name;
             this.size = builder.size;
@@ -517,6 +673,13 @@ public class GetImageResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return documentInfo
+         */
+        public DocumentInfo getDocumentInfo() {
+            return this.documentInfo;
         }
 
         /**
@@ -566,6 +729,7 @@ public class GetImageResponseBody extends TeaModel {
             private ContainerImageSpec containerImageSpec; 
             private String createTime; 
             private String description; 
+            private DocumentInfo documentInfo; 
             private String imageType; 
             private String name; 
             private String size; 
@@ -602,6 +766,14 @@ public class GetImageResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DocumentInfo.
+             */
+            public Builder documentInfo(DocumentInfo documentInfo) {
+                this.documentInfo = documentInfo;
                 return this;
             }
 

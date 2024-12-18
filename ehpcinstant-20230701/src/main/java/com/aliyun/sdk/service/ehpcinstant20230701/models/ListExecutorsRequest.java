@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -124,16 +129,16 @@ public class ListExecutorsRequest extends Request {
      */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecutorIds")
-        private java.util.List < String > executorIds;
+        private java.util.List<String> executorIds;
 
         @com.aliyun.core.annotation.NameInMap("IpAddresses")
-        private java.util.List < String > ipAddresses;
+        private java.util.List<String> ipAddresses;
 
         @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
         @com.aliyun.core.annotation.NameInMap("Status")
-        private java.util.List < String > status;
+        private java.util.List<String> status;
 
         @com.aliyun.core.annotation.NameInMap("TimeCreatedAfter")
         private Integer timeCreatedAfter;
@@ -161,14 +166,14 @@ public class ListExecutorsRequest extends Request {
         /**
          * @return executorIds
          */
-        public java.util.List < String > getExecutorIds() {
+        public java.util.List<String> getExecutorIds() {
             return this.executorIds;
         }
 
         /**
          * @return ipAddresses
          */
-        public java.util.List < String > getIpAddresses() {
+        public java.util.List<String> getIpAddresses() {
             return this.ipAddresses;
         }
 
@@ -182,7 +187,7 @@ public class ListExecutorsRequest extends Request {
         /**
          * @return status
          */
-        public java.util.List < String > getStatus() {
+        public java.util.List<String> getStatus() {
             return this.status;
         }
 
@@ -201,17 +206,17 @@ public class ListExecutorsRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > executorIds; 
-            private java.util.List < String > ipAddresses; 
+            private java.util.List<String> executorIds; 
+            private java.util.List<String> ipAddresses; 
             private String jobName; 
-            private java.util.List < String > status; 
+            private java.util.List<String> status; 
             private Integer timeCreatedAfter; 
             private Integer timeCreatedBefore; 
 
             /**
              * ExecutorIds.
              */
-            public Builder executorIds(java.util.List < String > executorIds) {
+            public Builder executorIds(java.util.List<String> executorIds) {
                 this.executorIds = executorIds;
                 return this;
             }
@@ -219,7 +224,7 @@ public class ListExecutorsRequest extends Request {
             /**
              * IpAddresses.
              */
-            public Builder ipAddresses(java.util.List < String > ipAddresses) {
+            public Builder ipAddresses(java.util.List<String> ipAddresses) {
                 this.ipAddresses = ipAddresses;
                 return this;
             }
@@ -235,7 +240,7 @@ public class ListExecutorsRequest extends Request {
             /**
              * Status.
              */
-            public Builder status(java.util.List < String > status) {
+            public Builder status(java.util.List<String> status) {
                 this.status = status;
                 return this;
             }

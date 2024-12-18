@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListImagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Images")
-    private java.util.List < Images> images;
+    private java.util.List<Images> images;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -50,7 +55,7 @@ public class ListImagesResponseBody extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < Images> getImages() {
+    public java.util.List<Images> getImages() {
         return this.images;
     }
 
@@ -90,7 +95,7 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Images> images; 
+        private java.util.List<Images> images; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class ListImagesResponseBody extends TeaModel {
         /**
          * Images.
          */
-        public Builder images(java.util.List < Images> images) {
+        public Builder images(java.util.List<Images> images) {
             this.images = images;
             return this;
         }
@@ -168,6 +173,9 @@ public class ListImagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DocumentId")
+        private Integer documentId;
+
         @com.aliyun.core.annotation.NameInMap("ImageId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String imageId;
@@ -179,17 +187,30 @@ public class ListImagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("OsTag")
+        private String osTag;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private String updateTime;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
+
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        private Integer weight;
 
         private Images(Builder builder) {
             this.appId = builder.appId;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.documentId = builder.documentId;
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
             this.name = builder.name;
+            this.osTag = builder.osTag;
+            this.updateTime = builder.updateTime;
             this.version = builder.version;
+            this.weight = builder.weight;
         }
 
         public static Builder builder() {
@@ -222,6 +243,13 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return documentId
+         */
+        public Integer getDocumentId() {
+            return this.documentId;
+        }
+
+        /**
          * @return imageId
          */
         public String getImageId() {
@@ -243,20 +271,45 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return osTag
+         */
+        public String getOsTag() {
+            return this.osTag;
+        }
+
+        /**
+         * @return updateTime
+         */
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
             return this.version;
         }
 
+        /**
+         * @return weight
+         */
+        public Integer getWeight() {
+            return this.weight;
+        }
+
         public static final class Builder {
             private String appId; 
             private String createTime; 
             private String description; 
+            private Integer documentId; 
             private String imageId; 
             private String imageType; 
             private String name; 
+            private String osTag; 
+            private String updateTime; 
             private String version; 
+            private Integer weight; 
 
             /**
              * <p>This parameter is required.</p>
@@ -279,6 +332,14 @@ public class ListImagesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DocumentId.
+             */
+            public Builder documentId(Integer documentId) {
+                this.documentId = documentId;
                 return this;
             }
 
@@ -313,10 +374,34 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
+             * OsTag.
+             */
+            public Builder osTag(String osTag) {
+                this.osTag = osTag;
+                return this;
+            }
+
+            /**
+             * UpdateTime.
+             */
+            public Builder updateTime(String updateTime) {
+                this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
              * Version.
              */
             public Builder version(String version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * Weight.
+             */
+            public Builder weight(Integer weight) {
+                this.weight = weight;
                 return this;
             }
 

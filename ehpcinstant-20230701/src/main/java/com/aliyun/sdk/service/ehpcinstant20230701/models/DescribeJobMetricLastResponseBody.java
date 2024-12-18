@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeJobMetricLastResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Metrics")
-    private java.util.List < Metrics> metrics;
+    private java.util.List<Metrics> metrics;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
     /**
      * @return metrics
      */
-    public java.util.List < Metrics> getMetrics() {
+    public java.util.List<Metrics> getMetrics() {
         return this.metrics;
     }
 
@@ -46,13 +51,13 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Metrics> metrics; 
+        private java.util.List<Metrics> metrics; 
         private String requestId; 
 
         /**
          * Metrics.
          */
-        public Builder metrics(java.util.List < Metrics> metrics) {
+        public Builder metrics(java.util.List<Metrics> metrics) {
             this.metrics = metrics;
             return this;
         }

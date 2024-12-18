@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobList")
-    private java.util.List < JobList> jobList;
+    private java.util.List<JobList> jobList;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListJobsResponseBody extends TeaModel {
     /**
      * @return jobList
      */
-    public java.util.List < JobList> getJobList() {
+    public java.util.List<JobList> getJobList() {
         return this.jobList;
     }
 
@@ -79,7 +84,7 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < JobList> jobList; 
+        private java.util.List<JobList> jobList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * JobList.
          */
-        public Builder jobList(java.util.List < JobList> jobList) {
+        public Builder jobList(java.util.List<JobList> jobList) {
             this.jobList = jobList;
             return this;
         }
@@ -233,7 +238,7 @@ public class ListJobsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TaskCount")
         private Integer taskCount;
@@ -330,7 +335,7 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -358,7 +363,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String ownerUid; 
             private String startTime; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Integer taskCount; 
             private Boolean taskSustainable; 
 
@@ -437,7 +442,7 @@ public class ListJobsResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

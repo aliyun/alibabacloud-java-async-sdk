@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListJobsResponse} extends {@link TeaModel}
+ * {@link GetAppVersionsResponse} extends {@link TeaModel}
  *
- * <p>ListJobsResponse</p>
+ * <p>GetAppVersionsResponse</p>
  */
-public class ListJobsResponse extends Response {
+public class GetAppVersionsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListJobsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListJobsResponseBody body;
+    private GetAppVersionsResponseBody body;
 
-    private ListJobsResponse(BuilderImpl builder) {
+    private GetAppVersionsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListJobsResponse create() {
+    public static GetAppVersionsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListJobsResponse extends Response {
     /**
      * @return body
      */
-    public ListJobsResponseBody getBody() {
+    public GetAppVersionsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListJobsResponse, Builder> {
+    public interface Builder extends Response.Builder<GetAppVersionsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListJobsResponseBody body);
+        Builder body(GetAppVersionsResponseBody body);
 
         @Override
-        ListJobsResponse build();
+        GetAppVersionsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListJobsResponse, Builder>
+            extends Response.BuilderImpl<GetAppVersionsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListJobsResponseBody body; 
+        private GetAppVersionsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListJobsResponse response) {
+        private BuilderImpl(GetAppVersionsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListJobsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListJobsResponseBody body) {
+        public Builder body(GetAppVersionsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListJobsResponse build() {
-            return new ListJobsResponse(this);
+        public GetAppVersionsResponse build() {
+            return new GetAppVersionsResponse(this);
         } 
 
     } 

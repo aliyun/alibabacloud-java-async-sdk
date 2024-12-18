@@ -12,30 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListImagesRequest} extends {@link RequestModel}
+ * {@link GetAppVersionsRequest} extends {@link RequestModel}
  *
- * <p>ListImagesRequest</p>
+ * <p>GetAppVersionsRequest</p>
  */
-public class ListImagesRequest extends Request {
+public class GetAppVersionsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String appName;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageCategory")
     private String imageCategory;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ImageIds")
-    private java.util.List<String> imageIds;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ImageNames")
-    private java.util.List<String> imageNames;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageType")
     private String imageType;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Mode")
-    private String mode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -45,13 +38,11 @@ public class ListImagesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    private ListImagesRequest(Builder builder) {
+    private GetAppVersionsRequest(Builder builder) {
         super(builder);
+        this.appName = builder.appName;
         this.imageCategory = builder.imageCategory;
-        this.imageIds = builder.imageIds;
-        this.imageNames = builder.imageNames;
         this.imageType = builder.imageType;
-        this.mode = builder.mode;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -60,13 +51,20 @@ public class ListImagesRequest extends Request {
         return new Builder();
     }
 
-    public static ListImagesRequest create() {
+    public static GetAppVersionsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appName
+     */
+    public String getAppName() {
+        return this.appName;
     }
 
     /**
@@ -77,31 +75,10 @@ public class ListImagesRequest extends Request {
     }
 
     /**
-     * @return imageIds
-     */
-    public java.util.List<String> getImageIds() {
-        return this.imageIds;
-    }
-
-    /**
-     * @return imageNames
-     */
-    public java.util.List<String> getImageNames() {
-        return this.imageNames;
-    }
-
-    /**
      * @return imageType
      */
     public String getImageType() {
         return this.imageType;
-    }
-
-    /**
-     * @return mode
-     */
-    public String getMode() {
-        return this.mode;
     }
 
     /**
@@ -118,12 +95,10 @@ public class ListImagesRequest extends Request {
         return this.pageSize;
     }
 
-    public static final class Builder extends Request.Builder<ListImagesRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetAppVersionsRequest, Builder> {
+        private String appName; 
         private String imageCategory; 
-        private java.util.List<String> imageIds; 
-        private java.util.List<String> imageNames; 
         private String imageType; 
-        private String mode; 
         private Long pageNumber; 
         private Long pageSize; 
 
@@ -131,16 +106,26 @@ public class ListImagesRequest extends Request {
             super();
         } 
 
-        private Builder(ListImagesRequest request) {
+        private Builder(GetAppVersionsRequest request) {
             super(request);
+            this.appName = request.appName;
             this.imageCategory = request.imageCategory;
-            this.imageIds = request.imageIds;
-            this.imageNames = request.imageNames;
             this.imageType = request.imageType;
-            this.mode = request.mode;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V-Ray</p>
+         */
+        public Builder appName(String appName) {
+            this.putQueryParameter("AppName", appName);
+            this.appName = appName;
+            return this;
+        }
 
         /**
          * ImageCategory.
@@ -152,40 +137,11 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * ImageIds.
-         */
-        public Builder imageIds(java.util.List<String> imageIds) {
-            String imageIdsShrink = shrink(imageIds, "ImageIds", "json");
-            this.putQueryParameter("ImageIds", imageIdsShrink);
-            this.imageIds = imageIds;
-            return this;
-        }
-
-        /**
-         * ImageNames.
-         */
-        public Builder imageNames(java.util.List<String> imageNames) {
-            String imageNamesShrink = shrink(imageNames, "ImageNames", "json");
-            this.putQueryParameter("ImageNames", imageNamesShrink);
-            this.imageNames = imageNames;
-            return this;
-        }
-
-        /**
          * ImageType.
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
             this.imageType = imageType;
-            return this;
-        }
-
-        /**
-         * Mode.
-         */
-        public Builder mode(String mode) {
-            this.putQueryParameter("Mode", mode);
-            this.mode = mode;
             return this;
         }
 
@@ -208,8 +164,8 @@ public class ListImagesRequest extends Request {
         }
 
         @Override
-        public ListImagesRequest build() {
-            return new ListImagesRequest(this);
+        public GetAppVersionsRequest build() {
+            return new GetAppVersionsRequest(this);
         } 
 
     } 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class GetJobResponseBody extends TeaModel {
         private Boolean enableExternalIpAddress;
 
         @com.aliyun.core.annotation.NameInMap("Vswitch")
-        private java.util.List < String > vswitch;
+        private java.util.List<String> vswitch;
 
         private Network(Builder builder) {
             this.enableExternalIpAddress = builder.enableExternalIpAddress;
@@ -107,13 +112,13 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * @return vswitch
          */
-        public java.util.List < String > getVswitch() {
+        public java.util.List<String> getVswitch() {
             return this.vswitch;
         }
 
         public static final class Builder {
             private Boolean enableExternalIpAddress; 
-            private java.util.List < String > vswitch; 
+            private java.util.List<String> vswitch; 
 
             /**
              * EnableExternalIpAddress.
@@ -126,7 +131,7 @@ public class GetJobResponseBody extends TeaModel {
             /**
              * Vswitch.
              */
-            public Builder vswitch(java.util.List < String > vswitch) {
+            public Builder vswitch(java.util.List<String> vswitch) {
                 this.vswitch = vswitch;
                 return this;
             }
@@ -219,7 +224,7 @@ public class GetJobResponseBody extends TeaModel {
         private Network network;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private DeploymentPolicy(Builder builder) {
             this.allocationSpec = builder.allocationSpec;
@@ -252,14 +257,14 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
             private String allocationSpec; 
             private Network network; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * AllocationSpec.
@@ -280,7 +285,7 @@ public class GetJobResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -671,7 +676,7 @@ public class GetJobResponseBody extends TeaModel {
         private Float cores;
 
         @com.aliyun.core.annotation.NameInMap("Disks")
-        private java.util.List < Disks> disks;
+        private java.util.List<Disks> disks;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
@@ -700,7 +705,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * @return disks
          */
-        public java.util.List < Disks> getDisks() {
+        public java.util.List<Disks> getDisks() {
             return this.disks;
         }
 
@@ -713,7 +718,7 @@ public class GetJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float cores; 
-            private java.util.List < Disks> disks; 
+            private java.util.List<Disks> disks; 
             private Integer memory; 
 
             /**
@@ -727,7 +732,7 @@ public class GetJobResponseBody extends TeaModel {
             /**
              * Disks.
              */
-            public Builder disks(java.util.List < Disks> disks) {
+            public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
                 return this;
             }
@@ -892,7 +897,7 @@ public class GetJobResponseBody extends TeaModel {
         private Resource resource;
 
         @com.aliyun.core.annotation.NameInMap("TaskExecutor")
-        private java.util.List < TaskExecutor> taskExecutor;
+        private java.util.List<TaskExecutor> taskExecutor;
 
         private TaskSpec(Builder builder) {
             this.resource = builder.resource;
@@ -917,13 +922,13 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * @return taskExecutor
          */
-        public java.util.List < TaskExecutor> getTaskExecutor() {
+        public java.util.List<TaskExecutor> getTaskExecutor() {
             return this.taskExecutor;
         }
 
         public static final class Builder {
             private Resource resource; 
-            private java.util.List < TaskExecutor> taskExecutor; 
+            private java.util.List<TaskExecutor> taskExecutor; 
 
             /**
              * Resource.
@@ -936,7 +941,7 @@ public class GetJobResponseBody extends TeaModel {
             /**
              * TaskExecutor.
              */
-            public Builder taskExecutor(java.util.List < TaskExecutor> taskExecutor) {
+            public Builder taskExecutor(java.util.List<TaskExecutor> taskExecutor) {
                 this.taskExecutor = taskExecutor;
                 return this;
             }
@@ -959,7 +964,7 @@ public class GetJobResponseBody extends TeaModel {
         private ExecutorPolicy executorPolicy;
 
         @com.aliyun.core.annotation.NameInMap("ExecutorStatus")
-        private java.util.List < ExecutorStatus> executorStatus;
+        private java.util.List<ExecutorStatus> executorStatus;
 
         @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
@@ -996,7 +1001,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * @return executorStatus
          */
-        public java.util.List < ExecutorStatus> getExecutorStatus() {
+        public java.util.List<ExecutorStatus> getExecutorStatus() {
             return this.executorStatus;
         }
 
@@ -1023,7 +1028,7 @@ public class GetJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private ExecutorPolicy executorPolicy; 
-            private java.util.List < ExecutorStatus> executorStatus; 
+            private java.util.List<ExecutorStatus> executorStatus; 
             private String taskName; 
             private TaskSpec taskSpec; 
             private Boolean taskSustainable; 
@@ -1039,7 +1044,7 @@ public class GetJobResponseBody extends TeaModel {
             /**
              * ExecutorStatus.
              */
-            public Builder executorStatus(java.util.List < ExecutorStatus> executorStatus) {
+            public Builder executorStatus(java.util.List<ExecutorStatus> executorStatus) {
                 this.executorStatus = executorStatus;
                 return this;
             }
@@ -1110,7 +1115,7 @@ public class GetJobResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tasks")
-        private java.util.List < Tasks> tasks;
+        private java.util.List<Tasks> tasks;
 
         private JobInfo(Builder builder) {
             this.createTime = builder.createTime;
@@ -1199,7 +1204,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * @return tasks
          */
-        public java.util.List < Tasks> getTasks() {
+        public java.util.List<Tasks> getTasks() {
             return this.tasks;
         }
 
@@ -1213,7 +1218,7 @@ public class GetJobResponseBody extends TeaModel {
             private String jobScheduler; 
             private String startTime; 
             private String status; 
-            private java.util.List < Tasks> tasks; 
+            private java.util.List<Tasks> tasks; 
 
             /**
              * CreateTime.
@@ -1290,7 +1295,7 @@ public class GetJobResponseBody extends TeaModel {
             /**
              * Tasks.
              */
-            public Builder tasks(java.util.List < Tasks> tasks) {
+            public Builder tasks(java.util.List<Tasks> tasks) {
                 this.tasks = tasks;
                 return this;
             }
