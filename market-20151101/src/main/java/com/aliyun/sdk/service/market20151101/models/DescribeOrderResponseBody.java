@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeOrderResponseBody extends TeaModel {
     private Long aliUid;
 
     @com.aliyun.core.annotation.NameInMap("Components")
-    private java.util.Map < String, ? > components;
+    private java.util.Map<String, ?> components;
 
     @com.aliyun.core.annotation.NameInMap("CouponPrice")
     private Float couponPrice;
@@ -128,7 +133,7 @@ public class DescribeOrderResponseBody extends TeaModel {
     /**
      * @return components
      */
-    public java.util.Map < String, ? > getComponents() {
+    public java.util.Map<String, ?> getComponents() {
         return this.components;
     }
 
@@ -268,7 +273,7 @@ public class DescribeOrderResponseBody extends TeaModel {
     public static final class Builder {
         private Long accountQuantity; 
         private Long aliUid; 
-        private java.util.Map < String, ? > components; 
+        private java.util.Map<String, ?> components; 
         private Float couponPrice; 
         private Long createdOn; 
         private InstanceIds instanceIds; 
@@ -308,7 +313,7 @@ public class DescribeOrderResponseBody extends TeaModel {
         /**
          * Components.
          */
-        public Builder components(java.util.Map < String, ? > components) {
+        public Builder components(java.util.Map<String, ?> components) {
             this.components = components;
             return this;
         }
@@ -479,7 +484,7 @@ public class DescribeOrderResponseBody extends TeaModel {
      */
     public static class InstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
-        private java.util.List < String > instanceId;
+        private java.util.List<String> instanceId;
 
         private InstanceIds(Builder builder) {
             this.instanceId = builder.instanceId;
@@ -496,17 +501,17 @@ public class DescribeOrderResponseBody extends TeaModel {
         /**
          * @return instanceId
          */
-        public java.util.List < String > getInstanceId() {
+        public java.util.List<String> getInstanceId() {
             return this.instanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceId; 
+            private java.util.List<String> instanceId; 
 
             /**
              * InstanceId.
              */
-            public Builder instanceId(java.util.List < String > instanceId) {
+            public Builder instanceId(java.util.List<String> instanceId) {
                 this.instanceId = instanceId;
                 return this;
             }
@@ -526,7 +531,7 @@ public class DescribeOrderResponseBody extends TeaModel {
      */
     public static class SupplierTelephones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Telephone")
-        private java.util.List < String > telephone;
+        private java.util.List<String> telephone;
 
         private SupplierTelephones(Builder builder) {
             this.telephone = builder.telephone;
@@ -543,17 +548,17 @@ public class DescribeOrderResponseBody extends TeaModel {
         /**
          * @return telephone
          */
-        public java.util.List < String > getTelephone() {
+        public java.util.List<String> getTelephone() {
             return this.telephone;
         }
 
         public static final class Builder {
-            private java.util.List < String > telephone; 
+            private java.util.List<String> telephone; 
 
             /**
              * Telephone.
              */
-            public Builder telephone(java.util.List < String > telephone) {
+            public Builder telephone(java.util.List<String> telephone) {
                 this.telephone = telephone;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -646,7 +651,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
      */
     public static class PropertyValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyValue")
-        private java.util.List < PropertyValue> propertyValue;
+        private java.util.List<PropertyValue> propertyValue;
 
         private PropertyValues(Builder builder) {
             this.propertyValue = builder.propertyValue;
@@ -663,17 +668,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return propertyValue
          */
-        public java.util.List < PropertyValue> getPropertyValue() {
+        public java.util.List<PropertyValue> getPropertyValue() {
             return this.propertyValue;
         }
 
         public static final class Builder {
-            private java.util.List < PropertyValue> propertyValue; 
+            private java.util.List<PropertyValue> propertyValue; 
 
             /**
              * PropertyValue.
              */
-            public Builder propertyValue(java.util.List < PropertyValue> propertyValue) {
+            public Builder propertyValue(java.util.List<PropertyValue> propertyValue) {
                 this.propertyValue = propertyValue;
                 return this;
             }
@@ -820,7 +825,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
      */
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Property")
-        private java.util.List < Property> property;
+        private java.util.List<Property> property;
 
         private Properties(Builder builder) {
             this.property = builder.property;
@@ -837,17 +842,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return property
          */
-        public java.util.List < Property> getProperty() {
+        public java.util.List<Property> getProperty() {
             return this.property;
         }
 
         public static final class Builder {
-            private java.util.List < Property> property; 
+            private java.util.List<Property> property; 
 
             /**
              * Property.
              */
-            public Builder property(java.util.List < Property> property) {
+            public Builder property(java.util.List<Property> property) {
                 this.property = property;
                 return this;
             }
@@ -974,7 +979,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
      */
     public static class Modules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Module")
-        private java.util.List < Module> module;
+        private java.util.List<Module> module;
 
         private Modules(Builder builder) {
             this.module = builder.module;
@@ -991,17 +996,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return module
          */
-        public java.util.List < Module> getModule() {
+        public java.util.List<Module> getModule() {
             return this.module;
         }
 
         public static final class Builder {
-            private java.util.List < Module> module; 
+            private java.util.List<Module> module; 
 
             /**
              * Module.
              */
-            public Builder module(java.util.List < Module> module) {
+            public Builder module(java.util.List<Module> module) {
                 this.module = module;
                 return this;
             }

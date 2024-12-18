@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Results")
-    private java.util.List < Results> results;
+    private java.util.List<Results> results;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
@@ -82,7 +87,7 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
         private Integer totalCount; 
 
         /**
@@ -112,7 +117,7 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
         /**
          * Results.
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }

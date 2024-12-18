@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceForIsvResponseBody</p>
  */
 public class DescribeInstanceForIsvResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ActiveAddress")
+    private String activeAddress;
+
+    @com.aliyun.core.annotation.NameInMap("AppJson")
+    private String appJson;
+
+    @com.aliyun.core.annotation.NameInMap("AutoRenewal")
+    private String autoRenewal;
+
     @com.aliyun.core.annotation.NameInMap("BeganOn")
     private Long beganOn;
 
@@ -27,11 +41,20 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExtendJson")
     private String extendJson;
 
+    @com.aliyun.core.annotation.NameInMap("HostJson")
+    private String hostJson;
+
+    @com.aliyun.core.annotation.NameInMap("ImageJson")
+    private String imageJson;
+
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private Long instanceId;
 
     @com.aliyun.core.annotation.NameInMap("IsTrial")
     private Boolean isTrial;
+
+    @com.aliyun.core.annotation.NameInMap("LicenseCode")
+    private String licenseCode;
 
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
@@ -61,13 +84,19 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     private String supplierName;
 
     private DescribeInstanceForIsvResponseBody(Builder builder) {
+        this.activeAddress = builder.activeAddress;
+        this.appJson = builder.appJson;
+        this.autoRenewal = builder.autoRenewal;
         this.beganOn = builder.beganOn;
         this.componentJson = builder.componentJson;
         this.createdOn = builder.createdOn;
         this.endOn = builder.endOn;
         this.extendJson = builder.extendJson;
+        this.hostJson = builder.hostJson;
+        this.imageJson = builder.imageJson;
         this.instanceId = builder.instanceId;
         this.isTrial = builder.isTrial;
+        this.licenseCode = builder.licenseCode;
         this.orderId = builder.orderId;
         this.productCode = builder.productCode;
         this.productName = builder.productName;
@@ -85,6 +114,27 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
 
     public static DescribeInstanceForIsvResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return activeAddress
+     */
+    public String getActiveAddress() {
+        return this.activeAddress;
+    }
+
+    /**
+     * @return appJson
+     */
+    public String getAppJson() {
+        return this.appJson;
+    }
+
+    /**
+     * @return autoRenewal
+     */
+    public String getAutoRenewal() {
+        return this.autoRenewal;
     }
 
     /**
@@ -123,6 +173,20 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     }
 
     /**
+     * @return hostJson
+     */
+    public String getHostJson() {
+        return this.hostJson;
+    }
+
+    /**
+     * @return imageJson
+     */
+    public String getImageJson() {
+        return this.imageJson;
+    }
+
+    /**
      * @return instanceId
      */
     public Long getInstanceId() {
@@ -134,6 +198,13 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
      */
     public Boolean getIsTrial() {
         return this.isTrial;
+    }
+
+    /**
+     * @return licenseCode
+     */
+    public String getLicenseCode() {
+        return this.licenseCode;
     }
 
     /**
@@ -200,13 +271,19 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String activeAddress; 
+        private String appJson; 
+        private String autoRenewal; 
         private Long beganOn; 
         private String componentJson; 
         private Long createdOn; 
         private Long endOn; 
         private String extendJson; 
+        private String hostJson; 
+        private String imageJson; 
         private Long instanceId; 
         private Boolean isTrial; 
+        private String licenseCode; 
         private Long orderId; 
         private String productCode; 
         private String productName; 
@@ -216,6 +293,30 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private String supplierName; 
+
+        /**
+         * ActiveAddress.
+         */
+        public Builder activeAddress(String activeAddress) {
+            this.activeAddress = activeAddress;
+            return this;
+        }
+
+        /**
+         * AppJson.
+         */
+        public Builder appJson(String appJson) {
+            this.appJson = appJson;
+            return this;
+        }
+
+        /**
+         * AutoRenewal.
+         */
+        public Builder autoRenewal(String autoRenewal) {
+            this.autoRenewal = autoRenewal;
+            return this;
+        }
 
         /**
          * BeganOn.
@@ -258,6 +359,22 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
         }
 
         /**
+         * HostJson.
+         */
+        public Builder hostJson(String hostJson) {
+            this.hostJson = hostJson;
+            return this;
+        }
+
+        /**
+         * ImageJson.
+         */
+        public Builder imageJson(String imageJson) {
+            this.imageJson = imageJson;
+            return this;
+        }
+
+        /**
          * InstanceId.
          */
         public Builder instanceId(Long instanceId) {
@@ -270,6 +387,14 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
          */
         public Builder isTrial(Boolean isTrial) {
             this.isTrial = isTrial;
+            return this;
+        }
+
+        /**
+         * LicenseCode.
+         */
+        public Builder licenseCode(String licenseCode) {
+            this.licenseCode = licenseCode;
             return this;
         }
 

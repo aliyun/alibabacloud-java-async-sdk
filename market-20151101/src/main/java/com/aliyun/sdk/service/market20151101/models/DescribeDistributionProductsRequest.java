@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDistributionProductsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -49,7 +54,7 @@ public class DescribeDistributionProductsRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -68,7 +73,7 @@ public class DescribeDistributionProductsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDistributionProductsRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Long pageNumber; 
         private Long pageSize; 
 
@@ -86,7 +91,7 @@ public class DescribeDistributionProductsRequest extends Request {
         /**
          * Filter.
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;

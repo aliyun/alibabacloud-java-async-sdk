@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -446,7 +451,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class Coupons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Coupon")
-        private java.util.List < Coupon> coupon;
+        private java.util.List<Coupon> coupon;
 
         private Coupons(Builder builder) {
             this.coupon = builder.coupon;
@@ -463,17 +468,17 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return coupon
          */
-        public java.util.List < Coupon> getCoupon() {
+        public java.util.List<Coupon> getCoupon() {
             return this.coupon;
         }
 
         public static final class Builder {
-            private java.util.List < Coupon> coupon; 
+            private java.util.List<Coupon> coupon; 
 
             /**
              * Coupon.
              */
-            public Builder coupon(java.util.List < Coupon> coupon) {
+            public Builder coupon(java.util.List<Coupon> coupon) {
                 this.coupon = coupon;
                 return this;
             }
@@ -580,7 +585,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class PromotionRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PromotionRule")
-        private java.util.List < PromotionRule> promotionRule;
+        private java.util.List<PromotionRule> promotionRule;
 
         private PromotionRules(Builder builder) {
             this.promotionRule = builder.promotionRule;
@@ -597,17 +602,17 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return promotionRule
          */
-        public java.util.List < PromotionRule> getPromotionRule() {
+        public java.util.List<PromotionRule> getPromotionRule() {
             return this.promotionRule;
         }
 
         public static final class Builder {
-            private java.util.List < PromotionRule> promotionRule; 
+            private java.util.List<PromotionRule> promotionRule; 
 
             /**
              * PromotionRule.
              */
-            public Builder promotionRule(java.util.List < PromotionRule> promotionRule) {
+            public Builder promotionRule(java.util.List<PromotionRule> promotionRule) {
                 this.promotionRule = promotionRule;
                 return this;
             }

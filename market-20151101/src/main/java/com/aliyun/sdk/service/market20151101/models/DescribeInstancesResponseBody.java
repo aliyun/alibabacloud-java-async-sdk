@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -506,7 +511,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class InstanceItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceItem")
-        private java.util.List < InstanceItem> instanceItem;
+        private java.util.List<InstanceItem> instanceItem;
 
         private InstanceItems(Builder builder) {
             this.instanceItem = builder.instanceItem;
@@ -523,17 +528,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return instanceItem
          */
-        public java.util.List < InstanceItem> getInstanceItem() {
+        public java.util.List<InstanceItem> getInstanceItem() {
             return this.instanceItem;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceItem> instanceItem; 
+            private java.util.List<InstanceItem> instanceItem; 
 
             /**
              * InstanceItem.
              */
-            public Builder instanceItem(java.util.List < InstanceItem> instanceItem) {
+            public Builder instanceItem(java.util.List<InstanceItem> instanceItem) {
                 this.instanceItem = instanceItem;
                 return this;
             }

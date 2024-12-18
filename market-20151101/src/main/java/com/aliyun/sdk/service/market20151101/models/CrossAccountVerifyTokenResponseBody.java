@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -142,7 +147,7 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthRoles")
-        private java.util.List < String > authRoles;
+        private java.util.List<String> authRoles;
 
         @com.aliyun.core.annotation.NameInMap("AuthTime")
         private Long authTime;
@@ -171,7 +176,7 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         /**
          * @return authRoles
          */
-        public java.util.List < String > getAuthRoles() {
+        public java.util.List<String> getAuthRoles() {
             return this.authRoles;
         }
 
@@ -197,7 +202,7 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > authRoles; 
+            private java.util.List<String> authRoles; 
             private Long authTime; 
             private String name; 
             private String uid; 
@@ -205,7 +210,7 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
             /**
              * AuthRoles.
              */
-            public Builder authRoles(java.util.List < String > authRoles) {
+            public Builder authRoles(java.util.List<String> authRoles) {
                 this.authRoles = authRoles;
                 return this;
             }

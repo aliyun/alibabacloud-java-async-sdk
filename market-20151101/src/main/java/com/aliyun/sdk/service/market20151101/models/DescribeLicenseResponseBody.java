@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -146,7 +151,7 @@ public class DescribeLicenseResponseBody extends TeaModel {
      */
     public static class ExtendArray extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LicenseAttribute")
-        private java.util.List < LicenseAttribute> licenseAttribute;
+        private java.util.List<LicenseAttribute> licenseAttribute;
 
         private ExtendArray(Builder builder) {
             this.licenseAttribute = builder.licenseAttribute;
@@ -163,17 +168,17 @@ public class DescribeLicenseResponseBody extends TeaModel {
         /**
          * @return licenseAttribute
          */
-        public java.util.List < LicenseAttribute> getLicenseAttribute() {
+        public java.util.List<LicenseAttribute> getLicenseAttribute() {
             return this.licenseAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < LicenseAttribute> licenseAttribute; 
+            private java.util.List<LicenseAttribute> licenseAttribute; 
 
             /**
              * LicenseAttribute.
              */
-            public Builder licenseAttribute(java.util.List < LicenseAttribute> licenseAttribute) {
+            public Builder licenseAttribute(java.util.List<LicenseAttribute> licenseAttribute) {
                 this.licenseAttribute = licenseAttribute;
                 return this;
             }
