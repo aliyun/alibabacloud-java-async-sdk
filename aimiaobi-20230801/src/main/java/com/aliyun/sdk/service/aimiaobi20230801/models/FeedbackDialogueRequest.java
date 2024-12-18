@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class FeedbackDialogueRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RatingTags")
-    private java.util.List < String > ratingTags;
+    private java.util.List<String> ratingTags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SessionId")
@@ -121,7 +126,7 @@ public class FeedbackDialogueRequest extends Request {
     /**
      * @return ratingTags
      */
-    public java.util.List < String > getRatingTags() {
+    public java.util.List<String> getRatingTags() {
         return this.ratingTags;
     }
 
@@ -146,7 +151,7 @@ public class FeedbackDialogueRequest extends Request {
         private String goodText; 
         private String modifiedResponse; 
         private String rating; 
-        private java.util.List < String > ratingTags; 
+        private java.util.List<String> ratingTags; 
         private String sessionId; 
         private String taskId; 
 
@@ -227,7 +232,7 @@ public class FeedbackDialogueRequest extends Request {
         /**
          * RatingTags.
          */
-        public Builder ratingTags(java.util.List < String > ratingTags) {
+        public Builder ratingTags(java.util.List<String> ratingTags) {
             String ratingTagsShrink = shrink(ratingTags, "RatingTags", "json");
             this.putBodyParameter("RatingTags", ratingTagsShrink);
             this.ratingTags = ratingTags;

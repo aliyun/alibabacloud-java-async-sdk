@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReplyMessagList")
-        private java.util.List < ReplyMessagList> replyMessagList;
+        private java.util.List<ReplyMessagList> replyMessagList;
 
         private Data(Builder builder) {
             this.replyMessagList = builder.replyMessagList;
@@ -243,17 +248,17 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
         /**
          * @return replyMessagList
          */
-        public java.util.List < ReplyMessagList> getReplyMessagList() {
+        public java.util.List<ReplyMessagList> getReplyMessagList() {
             return this.replyMessagList;
         }
 
         public static final class Builder {
-            private java.util.List < ReplyMessagList> replyMessagList; 
+            private java.util.List<ReplyMessagList> replyMessagList; 
 
             /**
              * ReplyMessagList.
              */
-            public Builder replyMessagList(java.util.List < ReplyMessagList> replyMessagList) {
+            public Builder replyMessagList(java.util.List<ReplyMessagList> replyMessagList) {
                 this.replyMessagList = replyMessagList;
                 return this;
             }

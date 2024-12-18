@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -162,7 +167,7 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
         private String fileKey;
 
         @com.aliyun.core.annotation.NameInMap("FormDatas")
-        private java.util.Map < String, ? > formDatas;
+        private java.util.Map<String, ?> formDatas;
 
         @com.aliyun.core.annotation.NameInMap("PostUrl")
         private String postUrl;
@@ -191,7 +196,7 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
         /**
          * @return formDatas
          */
-        public java.util.Map < String, ? > getFormDatas() {
+        public java.util.Map<String, ?> getFormDatas() {
             return this.formDatas;
         }
 
@@ -204,7 +209,7 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String fileKey; 
-            private java.util.Map < String, ? > formDatas; 
+            private java.util.Map<String, ?> formDatas; 
             private String postUrl; 
 
             /**
@@ -218,7 +223,7 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
             /**
              * FormDatas.
              */
-            public Builder formDatas(java.util.Map < String, ? > formDatas) {
+            public Builder formDatas(java.util.Map<String, ?> formDatas) {
                 this.formDatas = formDatas;
                 return this;
             }

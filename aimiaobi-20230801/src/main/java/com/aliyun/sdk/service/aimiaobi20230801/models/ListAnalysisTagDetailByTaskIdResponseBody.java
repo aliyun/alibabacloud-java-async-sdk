@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -69,7 +74,7 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -124,7 +129,7 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private Integer maxResults; 
         private String message; 
@@ -144,7 +149,7 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -225,7 +230,7 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         private String tagName;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         private ContentTags(Builder builder) {
             this.summaryOverview = builder.summaryOverview;
@@ -258,14 +263,14 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
             private String summaryOverview; 
             private String tagName; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
 
             /**
              * SummaryOverview.
@@ -286,7 +291,7 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -309,7 +314,7 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("ContentTags")
-        private java.util.List < ContentTags> contentTags;
+        private java.util.List<ContentTags> contentTags;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -346,7 +351,7 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         /**
          * @return contentTags
          */
-        public java.util.List < ContentTags> getContentTags() {
+        public java.util.List<ContentTags> getContentTags() {
             return this.contentTags;
         }
 
@@ -373,7 +378,7 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
 
         public static final class Builder {
             private String content; 
-            private java.util.List < ContentTags> contentTags; 
+            private java.util.List<ContentTags> contentTags; 
             private Long id; 
             private String tagTaskType; 
             private String taskId; 
@@ -389,7 +394,7 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
             /**
              * ContentTags.
              */
-            public Builder contentTags(java.util.List < ContentTags> contentTags) {
+            public Builder contentTags(java.util.List<ContentTags> contentTags) {
                 this.contentTags = contentTags;
                 return this;
             }

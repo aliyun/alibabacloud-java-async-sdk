@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -246,7 +251,7 @@ public class GetTopicByIdResponseBody extends TeaModel {
      */
     public static class StructureSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocList")
-        private java.util.List < DocList> docList;
+        private java.util.List<DocList> docList;
 
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
@@ -271,7 +276,7 @@ public class GetTopicByIdResponseBody extends TeaModel {
         /**
          * @return docList
          */
-        public java.util.List < DocList> getDocList() {
+        public java.util.List<DocList> getDocList() {
             return this.docList;
         }
 
@@ -290,14 +295,14 @@ public class GetTopicByIdResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DocList> docList; 
+            private java.util.List<DocList> docList; 
             private String summary; 
             private String title; 
 
             /**
              * DocList.
              */
-            public Builder docList(java.util.List < DocList> docList) {
+            public Builder docList(java.util.List<DocList> docList) {
                 this.docList = docList;
                 return this;
             }
@@ -348,7 +353,7 @@ public class GetTopicByIdResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("StructureSummary")
-        private java.util.List < StructureSummary> structureSummary;
+        private java.util.List<StructureSummary> structureSummary;
 
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
@@ -429,7 +434,7 @@ public class GetTopicByIdResponseBody extends TeaModel {
         /**
          * @return structureSummary
          */
-        public java.util.List < StructureSummary> getStructureSummary() {
+        public java.util.List<StructureSummary> getStructureSummary() {
             return this.structureSummary;
         }
 
@@ -481,7 +486,7 @@ public class GetTopicByIdResponseBody extends TeaModel {
             private Long hotValue; 
             private String id; 
             private String status; 
-            private java.util.List < StructureSummary> structureSummary; 
+            private java.util.List<StructureSummary> structureSummary; 
             private String summary; 
             private String taskErrorMessage; 
             private Integer taskStatus; 
@@ -532,7 +537,7 @@ public class GetTopicByIdResponseBody extends TeaModel {
             /**
              * StructureSummary.
              */
-            public Builder structureSummary(java.util.List < StructureSummary> structureSummary) {
+            public Builder structureSummary(java.util.List<StructureSummary> structureSummary) {
                 this.structureSummary = structureSummary;
                 return this;
             }

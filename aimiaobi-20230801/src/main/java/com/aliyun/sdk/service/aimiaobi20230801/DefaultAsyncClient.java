@@ -41,6 +41,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddDatasetDocument  AddDatasetDocumentRequest
+     * @return AddDatasetDocumentResponse
+     */
+    @Override
+    public CompletableFuture<AddDatasetDocumentResponse> addDatasetDocument(AddDatasetDocumentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddDatasetDocument").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddDatasetDocumentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddDatasetDocumentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
      * @return CancelAsyncTaskResponse
      */
@@ -71,6 +89,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ClearIntervenesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDataset  CreateDatasetRequest
+     * @return CreateDatasetResponse
+     */
+    @Override
+    public CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDataset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDatasetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDatasetResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -161,6 +197,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteCustomTopicViewPointByIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
+     * @return DeleteDatasetResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDataset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDatasetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDatasetDocument  DeleteDatasetDocumentRequest
+     * @return DeleteDatasetDocumentResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDatasetDocumentResponse> deleteDatasetDocument(DeleteDatasetDocumentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDatasetDocument").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDatasetDocumentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDatasetDocumentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -503,6 +575,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDataSourceOrderConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDataset  GetDatasetRequest
+     * @return GetDatasetResponse
+     */
+    @Override
+    public CompletableFuture<GetDatasetResponse> getDataset(GetDatasetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDataset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDatasetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDatasetDocument  GetDatasetDocumentRequest
+     * @return GetDatasetDocumentResponse
+     */
+    @Override
+    public CompletableFuture<GetDatasetDocumentResponse> getDatasetDocument(GetDatasetDocumentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDatasetDocument").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDatasetDocumentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDatasetDocumentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -923,6 +1031,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListDatasetDocuments  ListDatasetDocumentsRequest
+     * @return ListDatasetDocumentsResponse
+     */
+    @Override
+    public CompletableFuture<ListDatasetDocumentsResponse> listDatasetDocuments(ListDatasetDocumentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDatasetDocuments").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDatasetDocumentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDatasetDocumentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDatasets  ListDatasetsRequest
+     * @return ListDatasetsResponse
+     */
+    @Override
+    public CompletableFuture<ListDatasetsResponse> listDatasets(ListDatasetsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDatasets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDatasetsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDatasetsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListDialogues  ListDialoguesRequest
      * @return ListDialoguesResponse
      */
@@ -1169,6 +1313,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListPlanningProposalResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSearchTaskDialogueDatas  ListSearchTaskDialogueDatasRequest
+     * @return ListSearchTaskDialogueDatasResponse
+     */
+    @Override
+    public CompletableFuture<ListSearchTaskDialogueDatasResponse> listSearchTaskDialogueDatas(ListSearchTaskDialogueDatasRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSearchTaskDialogueDatas").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSearchTaskDialogueDatasResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSearchTaskDialogueDatasResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSearchTaskDialogues  ListSearchTaskDialoguesRequest
+     * @return ListSearchTaskDialoguesResponse
+     */
+    @Override
+    public CompletableFuture<ListSearchTaskDialoguesResponse> listSearchTaskDialogues(ListSearchTaskDialoguesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSearchTaskDialogues").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSearchTaskDialoguesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSearchTaskDialoguesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSearchTasks  ListSearchTasksRequest
+     * @return ListSearchTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListSearchTasksResponse> listSearchTasks(ListSearchTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSearchTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSearchTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSearchTasksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1591,6 +1789,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunSearchGeneration  RunSearchGenerationRequest
+     * @return RunSearchGenerationResponse
+     */
+    @Override
+    public CompletableFuture<RunSearchGenerationResponse> runSearchGeneration(RunSearchGenerationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunSearchGeneration").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaosou/runSearchGeneration").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunSearchGenerationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunSearchGenerationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunSearchGenerationResponseBody> runSearchGenerationWithResponseIterable(RunSearchGenerationRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunSearchGeneration").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaosou/runSearchGeneration").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunSearchGenerationResponseBodyIterator iterator = RunSearchGenerationResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of RunStepByStepWriting  RunStepByStepWritingRequest
      * @return RunStepByStepWritingResponse
      */
@@ -1869,6 +2095,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SearchDatasetDocuments  SearchDatasetDocumentsRequest
+     * @return SearchDatasetDocumentsResponse
+     */
+    @Override
+    public CompletableFuture<SearchDatasetDocumentsResponse> searchDatasetDocuments(SearchDatasetDocumentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchDatasetDocuments").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchDatasetDocumentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchDatasetDocumentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SearchNews  SearchNewsRequest
      * @return SearchNewsResponse
      */
@@ -2025,6 +2269,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateCustomTextResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDataset  UpdateDatasetRequest
+     * @return UpdateDatasetResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDatasetResponse> updateDataset(UpdateDatasetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateDataset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDatasetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDatasetDocument  UpdateDatasetDocumentRequest
+     * @return UpdateDatasetDocumentResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDatasetDocumentResponse> updateDatasetDocument(UpdateDatasetDocumentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateDatasetDocument").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDatasetDocumentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDatasetDocumentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

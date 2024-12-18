@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class InsertInterveneGlobalReplyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ReplyMessagList")
-    private java.util.List < ReplyMessagList> replyMessagList;
+    private java.util.List<ReplyMessagList> replyMessagList;
 
     private InsertInterveneGlobalReplyRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class InsertInterveneGlobalReplyRequest extends Request {
     /**
      * @return replyMessagList
      */
-    public java.util.List < ReplyMessagList> getReplyMessagList() {
+    public java.util.List<ReplyMessagList> getReplyMessagList() {
         return this.replyMessagList;
     }
 
     public static final class Builder extends Request.Builder<InsertInterveneGlobalReplyRequest, Builder> {
         private String regionId; 
         private String agentKey; 
-        private java.util.List < ReplyMessagList> replyMessagList; 
+        private java.util.List<ReplyMessagList> replyMessagList; 
 
         private Builder() {
             super();
@@ -106,7 +111,7 @@ public class InsertInterveneGlobalReplyRequest extends Request {
         /**
          * ReplyMessagList.
          */
-        public Builder replyMessagList(java.util.List < ReplyMessagList> replyMessagList) {
+        public Builder replyMessagList(java.util.List<ReplyMessagList> replyMessagList) {
             String replyMessagListShrink = shrink(replyMessagList, "ReplyMessagList", "json");
             this.putBodyParameter("ReplyMessagList", replyMessagListShrink);
             this.replyMessagList = replyMessagList;

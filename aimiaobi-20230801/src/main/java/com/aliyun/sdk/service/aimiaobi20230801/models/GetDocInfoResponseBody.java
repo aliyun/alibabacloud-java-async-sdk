@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -177,7 +182,7 @@ public class GetDocInfoResponseBody extends TeaModel {
         private String statusMessage;
 
         @com.aliyun.core.annotation.NameInMap("VideoContents")
-        private java.util.List < String > videoContents;
+        private java.util.List<String> videoContents;
 
         private Data(Builder builder) {
             this.categoryId = builder.categoryId;
@@ -242,7 +247,7 @@ public class GetDocInfoResponseBody extends TeaModel {
         /**
          * @return videoContents
          */
-        public java.util.List < String > getVideoContents() {
+        public java.util.List<String> getVideoContents() {
             return this.videoContents;
         }
 
@@ -253,7 +258,7 @@ public class GetDocInfoResponseBody extends TeaModel {
             private String fileUrl; 
             private Integer status; 
             private String statusMessage; 
-            private java.util.List < String > videoContents; 
+            private java.util.List<String> videoContents; 
 
             /**
              * CategoryId.
@@ -306,7 +311,7 @@ public class GetDocInfoResponseBody extends TeaModel {
             /**
              * VideoContents.
              */
-            public Builder videoContents(java.util.List < String > videoContents) {
+            public Builder videoContents(java.util.List<String> videoContents) {
                 this.videoContents = videoContents;
                 return this;
             }

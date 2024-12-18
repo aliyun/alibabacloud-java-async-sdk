@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -180,7 +185,7 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("KeywordList")
-        private java.util.List < String > keywordList;
+        private java.util.List<String> keywordList;
 
         @com.aliyun.core.annotation.NameInMap("Keywords")
         private String keywords;
@@ -281,7 +286,7 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         /**
          * @return keywordList
          */
-        public java.util.List < String > getKeywordList() {
+        public java.util.List<String> getKeywordList() {
             return this.keywordList;
         }
 
@@ -342,7 +347,7 @@ public class GetGeneratedContentResponseBody extends TeaModel {
             private String createUser; 
             private String deviceId; 
             private Long id; 
-            private java.util.List < String > keywordList; 
+            private java.util.List<String> keywordList; 
             private String keywords; 
             private String prompt; 
             private String taskId; 
@@ -410,7 +415,7 @@ public class GetGeneratedContentResponseBody extends TeaModel {
             /**
              * KeywordList.
              */
-            public Builder keywordList(java.util.List < String > keywordList) {
+            public Builder keywordList(java.util.List<String> keywordList) {
                 this.keywordList = keywordList;
                 return this;
             }

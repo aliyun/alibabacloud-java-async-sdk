@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -168,7 +173,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         private String docUuid;
 
         @com.aliyun.core.annotation.NameInMap("ImageUrls")
-        private java.util.List < String > imageUrls;
+        private java.util.List<String> imageUrls;
 
         @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
@@ -245,7 +250,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         /**
          * @return imageUrls
          */
-        public java.util.List < String > getImageUrls() {
+        public java.util.List<String> getImageUrls() {
             return this.imageUrls;
         }
 
@@ -316,7 +321,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
             private String author; 
             private String content; 
             private String docUuid; 
-            private java.util.List < String > imageUrls; 
+            private java.util.List<String> imageUrls; 
             private String pubTime; 
             private String searchSource; 
             private String searchSourceName; 
@@ -354,7 +359,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
             /**
              * ImageUrls.
              */
-            public Builder imageUrls(java.util.List < String > imageUrls) {
+            public Builder imageUrls(java.util.List<String> imageUrls) {
                 this.imageUrls = imageUrls;
                 return this;
             }
@@ -446,7 +451,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("News")
-        private java.util.List < News> news;
+        private java.util.List<News> news;
 
         @com.aliyun.core.annotation.NameInMap("NewsType")
         private String newsType;
@@ -475,7 +480,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         /**
          * @return news
          */
-        public java.util.List < News> getNews() {
+        public java.util.List<News> getNews() {
             return this.news;
         }
 
@@ -501,7 +506,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < News> news; 
+            private java.util.List<News> news; 
             private String newsType; 
             private String newsTypeName; 
             private Integer totalPages; 
@@ -509,7 +514,7 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
             /**
              * News.
              */
-            public Builder news(java.util.List < News> news) {
+            public Builder news(java.util.List<News> news) {
                 this.news = news;
                 return this;
             }

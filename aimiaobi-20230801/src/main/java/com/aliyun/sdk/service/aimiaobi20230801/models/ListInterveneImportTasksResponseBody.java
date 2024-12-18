@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -292,7 +297,7 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("StatusList")
-        private java.util.List < StatusList> statusList;
+        private java.util.List<StatusList> statusList;
 
         @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
@@ -329,7 +334,7 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         /**
          * @return statusList
          */
-        public java.util.List < StatusList> getStatusList() {
+        public java.util.List<StatusList> getStatusList() {
             return this.statusList;
         }
 
@@ -343,7 +348,7 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageIndex; 
             private Integer pageSize; 
-            private java.util.List < StatusList> statusList; 
+            private java.util.List<StatusList> statusList; 
             private Integer totalSize; 
 
             /**
@@ -365,7 +370,7 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
             /**
              * StatusList.
              */
-            public Builder statusList(java.util.List < StatusList> statusList) {
+            public Builder statusList(java.util.List<StatusList> statusList) {
                 this.statusList = statusList;
                 return this;
             }

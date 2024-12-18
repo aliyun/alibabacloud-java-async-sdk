@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -392,19 +397,19 @@ public class InsertInterveneRuleRequest extends Request {
      */
     public static class InterveneRuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerConfig")
-        private java.util.List < AnswerConfig> answerConfig;
+        private java.util.List<AnswerConfig> answerConfig;
 
         @com.aliyun.core.annotation.NameInMap("EffectConfig")
         private EffectConfig effectConfig;
 
         @com.aliyun.core.annotation.NameInMap("InterveneConfigList")
-        private java.util.List < InterveneConfigList> interveneConfigList;
+        private java.util.List<InterveneConfigList> interveneConfigList;
 
         @com.aliyun.core.annotation.NameInMap("InterveneType")
         private Integer interveneType;
 
         @com.aliyun.core.annotation.NameInMap("NamespaceList")
-        private java.util.List < String > namespaceList;
+        private java.util.List<String> namespaceList;
 
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
@@ -433,7 +438,7 @@ public class InsertInterveneRuleRequest extends Request {
         /**
          * @return answerConfig
          */
-        public java.util.List < AnswerConfig> getAnswerConfig() {
+        public java.util.List<AnswerConfig> getAnswerConfig() {
             return this.answerConfig;
         }
 
@@ -447,7 +452,7 @@ public class InsertInterveneRuleRequest extends Request {
         /**
          * @return interveneConfigList
          */
-        public java.util.List < InterveneConfigList> getInterveneConfigList() {
+        public java.util.List<InterveneConfigList> getInterveneConfigList() {
             return this.interveneConfigList;
         }
 
@@ -461,7 +466,7 @@ public class InsertInterveneRuleRequest extends Request {
         /**
          * @return namespaceList
          */
-        public java.util.List < String > getNamespaceList() {
+        public java.util.List<String> getNamespaceList() {
             return this.namespaceList;
         }
 
@@ -480,18 +485,18 @@ public class InsertInterveneRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < AnswerConfig> answerConfig; 
+            private java.util.List<AnswerConfig> answerConfig; 
             private EffectConfig effectConfig; 
-            private java.util.List < InterveneConfigList> interveneConfigList; 
+            private java.util.List<InterveneConfigList> interveneConfigList; 
             private Integer interveneType; 
-            private java.util.List < String > namespaceList; 
+            private java.util.List<String> namespaceList; 
             private Long ruleId; 
             private String ruleName; 
 
             /**
              * AnswerConfig.
              */
-            public Builder answerConfig(java.util.List < AnswerConfig> answerConfig) {
+            public Builder answerConfig(java.util.List<AnswerConfig> answerConfig) {
                 this.answerConfig = answerConfig;
                 return this;
             }
@@ -507,7 +512,7 @@ public class InsertInterveneRuleRequest extends Request {
             /**
              * InterveneConfigList.
              */
-            public Builder interveneConfigList(java.util.List < InterveneConfigList> interveneConfigList) {
+            public Builder interveneConfigList(java.util.List<InterveneConfigList> interveneConfigList) {
                 this.interveneConfigList = interveneConfigList;
                 return this;
             }
@@ -523,7 +528,7 @@ public class InsertInterveneRuleRequest extends Request {
             /**
              * NamespaceList.
              */
-            public Builder namespaceList(java.util.List < String > namespaceList) {
+            public Builder namespaceList(java.util.List<String> namespaceList) {
                 this.namespaceList = namespaceList;
                 return this;
             }

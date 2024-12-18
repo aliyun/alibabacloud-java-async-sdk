@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -229,7 +234,7 @@ public class ListIntervenesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InterveneList")
-        private java.util.List < InterveneList> interveneList;
+        private java.util.List<InterveneList> interveneList;
 
         @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Integer pageIndex;
@@ -258,7 +263,7 @@ public class ListIntervenesResponseBody extends TeaModel {
         /**
          * @return interveneList
          */
-        public java.util.List < InterveneList> getInterveneList() {
+        public java.util.List<InterveneList> getInterveneList() {
             return this.interveneList;
         }
 
@@ -284,7 +289,7 @@ public class ListIntervenesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < InterveneList> interveneList; 
+            private java.util.List<InterveneList> interveneList; 
             private Integer pageIndex; 
             private Integer pageSize; 
             private Long totalSize; 
@@ -292,7 +297,7 @@ public class ListIntervenesResponseBody extends TeaModel {
             /**
              * InterveneList.
              */
-            public Builder interveneList(java.util.List < InterveneList> interveneList) {
+            public Builder interveneList(java.util.List<InterveneList> interveneList) {
                 this.interveneList = interveneList;
                 return this;
             }

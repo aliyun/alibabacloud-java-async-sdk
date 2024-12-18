@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListBuildConfigsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class ListBuildConfigsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class ListBuildConfigsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -238,7 +243,7 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Keywords")
-        private java.util.List < Keywords> keywords;
+        private java.util.List<Keywords> keywords;
 
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
@@ -307,7 +312,7 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         /**
          * @return keywords
          */
-        public java.util.List < Keywords> getKeywords() {
+        public java.util.List<Keywords> getKeywords() {
             return this.keywords;
         }
 
@@ -351,7 +356,7 @@ public class ListBuildConfigsResponseBody extends TeaModel {
             private String createTime; 
             private String createUser; 
             private Long id; 
-            private java.util.List < Keywords> keywords; 
+            private java.util.List<Keywords> keywords; 
             private String tag; 
             private String tagDescription; 
             private String type; 
@@ -393,7 +398,7 @@ public class ListBuildConfigsResponseBody extends TeaModel {
             /**
              * Keywords.
              */
-            public Builder keywords(java.util.List < Keywords> keywords) {
+            public Builder keywords(java.util.List<Keywords> keywords) {
                 this.keywords = keywords;
                 return this;
             }

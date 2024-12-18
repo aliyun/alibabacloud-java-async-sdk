@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class ListCustomViewPointsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Attitudes")
-    private java.util.List < String > attitudes;
+    private java.util.List<String> attitudes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomViewPointId")
@@ -35,7 +40,7 @@ public class ListCustomViewPointsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomViewPointIds")
-    private java.util.List < String > customViewPointIds;
+    private java.util.List<String> customViewPointIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -104,7 +109,7 @@ public class ListCustomViewPointsRequest extends Request {
     /**
      * @return attitudes
      */
-    public java.util.List < String > getAttitudes() {
+    public java.util.List<String> getAttitudes() {
         return this.attitudes;
     }
 
@@ -118,7 +123,7 @@ public class ListCustomViewPointsRequest extends Request {
     /**
      * @return customViewPointIds
      */
-    public java.util.List < String > getCustomViewPointIds() {
+    public java.util.List<String> getCustomViewPointIds() {
         return this.customViewPointIds;
     }
 
@@ -154,9 +159,9 @@ public class ListCustomViewPointsRequest extends Request {
         private String regionId; 
         private String agentKey; 
         private String attitude; 
-        private java.util.List < String > attitudes; 
+        private java.util.List<String> attitudes; 
         private String customViewPointId; 
-        private java.util.List < String > customViewPointIds; 
+        private java.util.List<String> customViewPointIds; 
         private Integer maxResults; 
         private String nextToken; 
         private String topic; 
@@ -213,7 +218,7 @@ public class ListCustomViewPointsRequest extends Request {
         /**
          * Attitudes.
          */
-        public Builder attitudes(java.util.List < String > attitudes) {
+        public Builder attitudes(java.util.List<String> attitudes) {
             String attitudesShrink = shrink(attitudes, "Attitudes", "json");
             this.putBodyParameter("Attitudes", attitudesShrink);
             this.attitudes = attitudes;
@@ -232,7 +237,7 @@ public class ListCustomViewPointsRequest extends Request {
         /**
          * CustomViewPointIds.
          */
-        public Builder customViewPointIds(java.util.List < String > customViewPointIds) {
+        public Builder customViewPointIds(java.util.List<String> customViewPointIds) {
             String customViewPointIdsShrink = shrink(customViewPointIds, "CustomViewPointIds", "json");
             this.putBodyParameter("CustomViewPointIds", customViewPointIdsShrink);
             this.customViewPointIds = customViewPointIds;

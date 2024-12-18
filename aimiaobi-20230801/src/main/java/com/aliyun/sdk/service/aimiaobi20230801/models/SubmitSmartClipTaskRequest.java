@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -717,20 +722,20 @@ public class SubmitSmartClipTaskRequest extends Request {
      */
     public static class InputConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackgroundMusics")
-        private java.util.List < BackgroundMusics> backgroundMusics;
+        private java.util.List<BackgroundMusics> backgroundMusics;
 
         @com.aliyun.core.annotation.NameInMap("SpeechTexts")
-        private java.util.List < String > speechTexts;
+        private java.util.List<String> speechTexts;
 
         @com.aliyun.core.annotation.NameInMap("Stickers")
-        private java.util.List < Stickers> stickers;
+        private java.util.List<Stickers> stickers;
 
         @com.aliyun.core.annotation.NameInMap("Titles")
-        private java.util.List < String > titles;
+        private java.util.List<String> titles;
 
         @com.aliyun.core.annotation.NameInMap("VideoIds")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < VideoIds> videoIds;
+        private java.util.List<VideoIds> videoIds;
 
         private InputConfig(Builder builder) {
             this.backgroundMusics = builder.backgroundMusics;
@@ -751,49 +756,49 @@ public class SubmitSmartClipTaskRequest extends Request {
         /**
          * @return backgroundMusics
          */
-        public java.util.List < BackgroundMusics> getBackgroundMusics() {
+        public java.util.List<BackgroundMusics> getBackgroundMusics() {
             return this.backgroundMusics;
         }
 
         /**
          * @return speechTexts
          */
-        public java.util.List < String > getSpeechTexts() {
+        public java.util.List<String> getSpeechTexts() {
             return this.speechTexts;
         }
 
         /**
          * @return stickers
          */
-        public java.util.List < Stickers> getStickers() {
+        public java.util.List<Stickers> getStickers() {
             return this.stickers;
         }
 
         /**
          * @return titles
          */
-        public java.util.List < String > getTitles() {
+        public java.util.List<String> getTitles() {
             return this.titles;
         }
 
         /**
          * @return videoIds
          */
-        public java.util.List < VideoIds> getVideoIds() {
+        public java.util.List<VideoIds> getVideoIds() {
             return this.videoIds;
         }
 
         public static final class Builder {
-            private java.util.List < BackgroundMusics> backgroundMusics; 
-            private java.util.List < String > speechTexts; 
-            private java.util.List < Stickers> stickers; 
-            private java.util.List < String > titles; 
-            private java.util.List < VideoIds> videoIds; 
+            private java.util.List<BackgroundMusics> backgroundMusics; 
+            private java.util.List<String> speechTexts; 
+            private java.util.List<Stickers> stickers; 
+            private java.util.List<String> titles; 
+            private java.util.List<VideoIds> videoIds; 
 
             /**
              * BackgroundMusics.
              */
-            public Builder backgroundMusics(java.util.List < BackgroundMusics> backgroundMusics) {
+            public Builder backgroundMusics(java.util.List<BackgroundMusics> backgroundMusics) {
                 this.backgroundMusics = backgroundMusics;
                 return this;
             }
@@ -801,7 +806,7 @@ public class SubmitSmartClipTaskRequest extends Request {
             /**
              * SpeechTexts.
              */
-            public Builder speechTexts(java.util.List < String > speechTexts) {
+            public Builder speechTexts(java.util.List<String> speechTexts) {
                 this.speechTexts = speechTexts;
                 return this;
             }
@@ -809,7 +814,7 @@ public class SubmitSmartClipTaskRequest extends Request {
             /**
              * Stickers.
              */
-            public Builder stickers(java.util.List < Stickers> stickers) {
+            public Builder stickers(java.util.List<Stickers> stickers) {
                 this.stickers = stickers;
                 return this;
             }
@@ -817,7 +822,7 @@ public class SubmitSmartClipTaskRequest extends Request {
             /**
              * Titles.
              */
-            public Builder titles(java.util.List < String > titles) {
+            public Builder titles(java.util.List<String> titles) {
                 this.titles = titles;
                 return this;
             }
@@ -825,7 +830,7 @@ public class SubmitSmartClipTaskRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder videoIds(java.util.List < VideoIds> videoIds) {
+            public Builder videoIds(java.util.List<VideoIds> videoIds) {
                 this.videoIds = videoIds;
                 return this;
             }

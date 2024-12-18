@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -128,7 +133,7 @@ public class GenerateViewPointRequest extends Request {
      */
     public static class ReferenceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MiniDoc")
-        private java.util.List < String > miniDoc;
+        private java.util.List<String> miniDoc;
 
         private ReferenceData(Builder builder) {
             this.miniDoc = builder.miniDoc;
@@ -145,17 +150,17 @@ public class GenerateViewPointRequest extends Request {
         /**
          * @return miniDoc
          */
-        public java.util.List < String > getMiniDoc() {
+        public java.util.List<String> getMiniDoc() {
             return this.miniDoc;
         }
 
         public static final class Builder {
-            private java.util.List < String > miniDoc; 
+            private java.util.List<String> miniDoc; 
 
             /**
              * MiniDoc.
              */
-            public Builder miniDoc(java.util.List < String > miniDoc) {
+            public Builder miniDoc(java.util.List<String> miniDoc) {
                 this.miniDoc = miniDoc;
                 return this;
             }

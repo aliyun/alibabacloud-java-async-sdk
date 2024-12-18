@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -69,7 +74,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -124,7 +129,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private Integer maxResults; 
         private String message; 
@@ -144,7 +149,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -231,7 +236,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         private String docUuid;
 
         @com.aliyun.core.annotation.NameInMap("ImageUrls")
-        private java.util.List < String > imageUrls;
+        private java.util.List<String> imageUrls;
 
         @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
@@ -243,7 +248,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         private String summary;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -308,7 +313,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         /**
          * @return imageUrls
          */
-        public java.util.List < String > getImageUrls() {
+        public java.util.List<String> getImageUrls() {
             return this.imageUrls;
         }
 
@@ -336,7 +341,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -366,11 +371,11 @@ public class ListHotViewPointsResponseBody extends TeaModel {
             private String content; 
             private String docId; 
             private String docUuid; 
-            private java.util.List < String > imageUrls; 
+            private java.util.List<String> imageUrls; 
             private String pubTime; 
             private String source; 
             private String summary; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
             private String title; 
             private String topic; 
             private String url; 
@@ -410,7 +415,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
             /**
              * ImageUrls.
              */
-            public Builder imageUrls(java.util.List < String > imageUrls) {
+            public Builder imageUrls(java.util.List<String> imageUrls) {
                 this.imageUrls = imageUrls;
                 return this;
             }
@@ -442,7 +447,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -553,7 +558,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
      */
     public static class ViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
-        private java.util.List < Outlines> outlines;
+        private java.util.List<Outlines> outlines;
 
         @com.aliyun.core.annotation.NameInMap("Point")
         private String point;
@@ -578,7 +583,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         /**
          * @return outlines
          */
-        public java.util.List < Outlines> getOutlines() {
+        public java.util.List<Outlines> getOutlines() {
             return this.outlines;
         }
 
@@ -597,14 +602,14 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Outlines> outlines; 
+            private java.util.List<Outlines> outlines; 
             private String point; 
             private String summary; 
 
             /**
              * Outlines.
              */
-            public Builder outlines(java.util.List < Outlines> outlines) {
+            public Builder outlines(java.util.List<Outlines> outlines) {
                 this.outlines = outlines;
                 return this;
             }
@@ -646,13 +651,13 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         private String attitudeType;
 
         @com.aliyun.core.annotation.NameInMap("News")
-        private java.util.List < News> news;
+        private java.util.List<News> news;
 
         @com.aliyun.core.annotation.NameInMap("Ratio")
         private String ratio;
 
         @com.aliyun.core.annotation.NameInMap("ViewPoints")
-        private java.util.List < ViewPoints> viewPoints;
+        private java.util.List<ViewPoints> viewPoints;
 
         private Data(Builder builder) {
             this.attitude = builder.attitude;
@@ -687,7 +692,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         /**
          * @return news
          */
-        public java.util.List < News> getNews() {
+        public java.util.List<News> getNews() {
             return this.news;
         }
 
@@ -701,16 +706,16 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         /**
          * @return viewPoints
          */
-        public java.util.List < ViewPoints> getViewPoints() {
+        public java.util.List<ViewPoints> getViewPoints() {
             return this.viewPoints;
         }
 
         public static final class Builder {
             private String attitude; 
             private String attitudeType; 
-            private java.util.List < News> news; 
+            private java.util.List<News> news; 
             private String ratio; 
-            private java.util.List < ViewPoints> viewPoints; 
+            private java.util.List<ViewPoints> viewPoints; 
 
             /**
              * Attitude.
@@ -731,7 +736,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
             /**
              * News.
              */
-            public Builder news(java.util.List < News> news) {
+            public Builder news(java.util.List<News> news) {
                 this.news = news;
                 return this;
             }
@@ -747,7 +752,7 @@ public class ListHotViewPointsResponseBody extends TeaModel {
             /**
              * ViewPoints.
              */
-            public Builder viewPoints(java.util.List < ViewPoints> viewPoints) {
+            public Builder viewPoints(java.util.List<ViewPoints> viewPoints) {
                 this.viewPoints = viewPoints;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
      */
     public static class ViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
-        private java.util.List < Outlines> outlines;
+        private java.util.List<Outlines> outlines;
 
         @com.aliyun.core.annotation.NameInMap("Point")
         private String point;
@@ -251,7 +256,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return outlines
          */
-        public java.util.List < Outlines> getOutlines() {
+        public java.util.List<Outlines> getOutlines() {
             return this.outlines;
         }
 
@@ -270,14 +275,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         }
 
         public static final class Builder {
-            private java.util.List < Outlines> outlines; 
+            private java.util.List<Outlines> outlines; 
             private String point; 
             private String summary; 
 
             /**
              * Outlines.
              */
-            public Builder outlines(java.util.List < Outlines> outlines) {
+            public Builder outlines(java.util.List<Outlines> outlines) {
                 this.outlines = outlines;
                 return this;
             }
@@ -322,7 +327,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         private String ratio;
 
         @com.aliyun.core.annotation.NameInMap("ViewPoints")
-        private java.util.List < ViewPoints> viewPoints;
+        private java.util.List<ViewPoints> viewPoints;
 
         private Attitudes(Builder builder) {
             this.attitude = builder.attitude;
@@ -363,7 +368,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return viewPoints
          */
-        public java.util.List < ViewPoints> getViewPoints() {
+        public java.util.List<ViewPoints> getViewPoints() {
             return this.viewPoints;
         }
 
@@ -371,7 +376,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String attitude; 
             private String attitudeType; 
             private String ratio; 
-            private java.util.List < ViewPoints> viewPoints; 
+            private java.util.List<ViewPoints> viewPoints; 
 
             /**
              * Attitude.
@@ -400,7 +405,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             /**
              * ViewPoints.
              */
-            public Builder viewPoints(java.util.List < ViewPoints> viewPoints) {
+            public Builder viewPoints(java.util.List<ViewPoints> viewPoints) {
                 this.viewPoints = viewPoints;
                 return this;
             }
@@ -420,7 +425,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
      */
     public static class FreshViewPointsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitudes")
-        private java.util.List < Attitudes> attitudes;
+        private java.util.List<Attitudes> attitudes;
 
         private FreshViewPointsResult(Builder builder) {
             this.attitudes = builder.attitudes;
@@ -437,17 +442,17 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return attitudes
          */
-        public java.util.List < Attitudes> getAttitudes() {
+        public java.util.List<Attitudes> getAttitudes() {
             return this.attitudes;
         }
 
         public static final class Builder {
-            private java.util.List < Attitudes> attitudes; 
+            private java.util.List<Attitudes> attitudes; 
 
             /**
              * Attitudes.
              */
-            public Builder attitudes(java.util.List < Attitudes> attitudes) {
+            public Builder attitudes(java.util.List<Attitudes> attitudes) {
                 this.attitudes = attitudes;
                 return this;
             }
@@ -479,7 +484,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         private String docUuid;
 
         @com.aliyun.core.annotation.NameInMap("ImageUrls")
-        private java.util.List < String > imageUrls;
+        private java.util.List<String> imageUrls;
 
         @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
@@ -491,7 +496,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         private String summary;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -556,7 +561,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return imageUrls
          */
-        public java.util.List < String > getImageUrls() {
+        public java.util.List<String> getImageUrls() {
             return this.imageUrls;
         }
 
@@ -584,7 +589,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -614,11 +619,11 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String createTime; 
             private String docId; 
             private String docUuid; 
-            private java.util.List < String > imageUrls; 
+            private java.util.List<String> imageUrls; 
             private String pubTime; 
             private String source; 
             private String summary; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
             private String title; 
             private String topic; 
             private String url; 
@@ -658,7 +663,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             /**
              * ImageUrls.
              */
-            public Builder imageUrls(java.util.List < String > imageUrls) {
+            public Builder imageUrls(java.util.List<String> imageUrls) {
                 this.imageUrls = imageUrls;
                 return this;
             }
@@ -690,7 +695,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -801,7 +806,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
      */
     public static class AttitudesViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
-        private java.util.List < ViewPointsOutlines> outlines;
+        private java.util.List<ViewPointsOutlines> outlines;
 
         @com.aliyun.core.annotation.NameInMap("Point")
         private String point;
@@ -826,7 +831,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return outlines
          */
-        public java.util.List < ViewPointsOutlines> getOutlines() {
+        public java.util.List<ViewPointsOutlines> getOutlines() {
             return this.outlines;
         }
 
@@ -845,14 +850,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         }
 
         public static final class Builder {
-            private java.util.List < ViewPointsOutlines> outlines; 
+            private java.util.List<ViewPointsOutlines> outlines; 
             private String point; 
             private String summary; 
 
             /**
              * Outlines.
              */
-            public Builder outlines(java.util.List < ViewPointsOutlines> outlines) {
+            public Builder outlines(java.util.List<ViewPointsOutlines> outlines) {
                 this.outlines = outlines;
                 return this;
             }
@@ -894,13 +899,13 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         private String attitudeType;
 
         @com.aliyun.core.annotation.NameInMap("News")
-        private java.util.List < News> news;
+        private java.util.List<News> news;
 
         @com.aliyun.core.annotation.NameInMap("Ratio")
         private String ratio;
 
         @com.aliyun.core.annotation.NameInMap("ViewPoints")
-        private java.util.List < AttitudesViewPoints> viewPoints;
+        private java.util.List<AttitudesViewPoints> viewPoints;
 
         private HotViewPointsResultAttitudes(Builder builder) {
             this.attitude = builder.attitude;
@@ -935,7 +940,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return news
          */
-        public java.util.List < News> getNews() {
+        public java.util.List<News> getNews() {
             return this.news;
         }
 
@@ -949,16 +954,16 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return viewPoints
          */
-        public java.util.List < AttitudesViewPoints> getViewPoints() {
+        public java.util.List<AttitudesViewPoints> getViewPoints() {
             return this.viewPoints;
         }
 
         public static final class Builder {
             private String attitude; 
             private String attitudeType; 
-            private java.util.List < News> news; 
+            private java.util.List<News> news; 
             private String ratio; 
-            private java.util.List < AttitudesViewPoints> viewPoints; 
+            private java.util.List<AttitudesViewPoints> viewPoints; 
 
             /**
              * Attitude.
@@ -979,7 +984,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             /**
              * News.
              */
-            public Builder news(java.util.List < News> news) {
+            public Builder news(java.util.List<News> news) {
                 this.news = news;
                 return this;
             }
@@ -995,7 +1000,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             /**
              * ViewPoints.
              */
-            public Builder viewPoints(java.util.List < AttitudesViewPoints> viewPoints) {
+            public Builder viewPoints(java.util.List<AttitudesViewPoints> viewPoints) {
                 this.viewPoints = viewPoints;
                 return this;
             }
@@ -1015,7 +1020,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
      */
     public static class HotViewPointsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitudes")
-        private java.util.List < HotViewPointsResultAttitudes> attitudes;
+        private java.util.List<HotViewPointsResultAttitudes> attitudes;
 
         private HotViewPointsResult(Builder builder) {
             this.attitudes = builder.attitudes;
@@ -1032,17 +1037,17 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return attitudes
          */
-        public java.util.List < HotViewPointsResultAttitudes> getAttitudes() {
+        public java.util.List<HotViewPointsResultAttitudes> getAttitudes() {
             return this.attitudes;
         }
 
         public static final class Builder {
-            private java.util.List < HotViewPointsResultAttitudes> attitudes; 
+            private java.util.List<HotViewPointsResultAttitudes> attitudes; 
 
             /**
              * Attitudes.
              */
-            public Builder attitudes(java.util.List < HotViewPointsResultAttitudes> attitudes) {
+            public Builder attitudes(java.util.List<HotViewPointsResultAttitudes> attitudes) {
                 this.attitudes = attitudes;
                 return this;
             }
@@ -1129,7 +1134,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
      */
     public static class TimedViewPointsResultAttitudesViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
-        private java.util.List < AttitudesViewPointsOutlines> outlines;
+        private java.util.List<AttitudesViewPointsOutlines> outlines;
 
         @com.aliyun.core.annotation.NameInMap("Point")
         private String point;
@@ -1154,7 +1159,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return outlines
          */
-        public java.util.List < AttitudesViewPointsOutlines> getOutlines() {
+        public java.util.List<AttitudesViewPointsOutlines> getOutlines() {
             return this.outlines;
         }
 
@@ -1173,14 +1178,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         }
 
         public static final class Builder {
-            private java.util.List < AttitudesViewPointsOutlines> outlines; 
+            private java.util.List<AttitudesViewPointsOutlines> outlines; 
             private String point; 
             private String summary; 
 
             /**
              * Outlines.
              */
-            public Builder outlines(java.util.List < AttitudesViewPointsOutlines> outlines) {
+            public Builder outlines(java.util.List<AttitudesViewPointsOutlines> outlines) {
                 this.outlines = outlines;
                 return this;
             }
@@ -1237,7 +1242,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         private String url;
 
         @com.aliyun.core.annotation.NameInMap("ViewPoints")
-        private java.util.List < TimedViewPointsResultAttitudesViewPoints> viewPoints;
+        private java.util.List<TimedViewPointsResultAttitudesViewPoints> viewPoints;
 
         private TimedViewPointsResultAttitudes(Builder builder) {
             this.attitude = builder.attitude;
@@ -1310,7 +1315,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return viewPoints
          */
-        public java.util.List < TimedViewPointsResultAttitudesViewPoints> getViewPoints() {
+        public java.util.List<TimedViewPointsResultAttitudesViewPoints> getViewPoints() {
             return this.viewPoints;
         }
 
@@ -1322,7 +1327,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             private String source; 
             private String title; 
             private String url; 
-            private java.util.List < TimedViewPointsResultAttitudesViewPoints> viewPoints; 
+            private java.util.List<TimedViewPointsResultAttitudesViewPoints> viewPoints; 
 
             /**
              * Attitude.
@@ -1383,7 +1388,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             /**
              * ViewPoints.
              */
-            public Builder viewPoints(java.util.List < TimedViewPointsResultAttitudesViewPoints> viewPoints) {
+            public Builder viewPoints(java.util.List<TimedViewPointsResultAttitudesViewPoints> viewPoints) {
                 this.viewPoints = viewPoints;
                 return this;
             }
@@ -1403,7 +1408,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
      */
     public static class TimedViewPointsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitudes")
-        private java.util.List < TimedViewPointsResultAttitudes> attitudes;
+        private java.util.List<TimedViewPointsResultAttitudes> attitudes;
 
         private TimedViewPointsResult(Builder builder) {
             this.attitudes = builder.attitudes;
@@ -1420,17 +1425,17 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return attitudes
          */
-        public java.util.List < TimedViewPointsResultAttitudes> getAttitudes() {
+        public java.util.List<TimedViewPointsResultAttitudes> getAttitudes() {
             return this.attitudes;
         }
 
         public static final class Builder {
-            private java.util.List < TimedViewPointsResultAttitudes> attitudes; 
+            private java.util.List<TimedViewPointsResultAttitudes> attitudes; 
 
             /**
              * Attitudes.
              */
-            public Builder attitudes(java.util.List < TimedViewPointsResultAttitudes> attitudes) {
+            public Builder attitudes(java.util.List<TimedViewPointsResultAttitudes> attitudes) {
                 this.attitudes = attitudes;
                 return this;
             }
@@ -1537,7 +1542,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
      */
     public static class Summaries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocList")
-        private java.util.List < DocList> docList;
+        private java.util.List<DocList> docList;
 
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
@@ -1562,7 +1567,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return docList
          */
-        public java.util.List < DocList> getDocList() {
+        public java.util.List<DocList> getDocList() {
             return this.docList;
         }
 
@@ -1581,14 +1586,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         }
 
         public static final class Builder {
-            private java.util.List < DocList> docList; 
+            private java.util.List<DocList> docList; 
             private String summary; 
             private String title; 
 
             /**
              * DocList.
              */
-            public Builder docList(java.util.List < DocList> docList) {
+            public Builder docList(java.util.List<DocList> docList) {
                 this.docList = docList;
                 return this;
             }
@@ -1624,7 +1629,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
      */
     public static class TopicSummaryResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summaries")
-        private java.util.List < Summaries> summaries;
+        private java.util.List<Summaries> summaries;
 
         private TopicSummaryResult(Builder builder) {
             this.summaries = builder.summaries;
@@ -1641,17 +1646,17 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return summaries
          */
-        public java.util.List < Summaries> getSummaries() {
+        public java.util.List<Summaries> getSummaries() {
             return this.summaries;
         }
 
         public static final class Builder {
-            private java.util.List < Summaries> summaries; 
+            private java.util.List<Summaries> summaries; 
 
             /**
              * Summaries.
              */
-            public Builder summaries(java.util.List < Summaries> summaries) {
+            public Builder summaries(java.util.List<Summaries> summaries) {
                 this.summaries = summaries;
                 return this;
             }
@@ -1865,7 +1870,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
      */
     public static class WebReviewPointsResultAttitudesViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
-        private java.util.List < WebReviewPointsResultAttitudesViewPointsOutlines> outlines;
+        private java.util.List<WebReviewPointsResultAttitudesViewPointsOutlines> outlines;
 
         @com.aliyun.core.annotation.NameInMap("Point")
         private String point;
@@ -1890,7 +1895,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return outlines
          */
-        public java.util.List < WebReviewPointsResultAttitudesViewPointsOutlines> getOutlines() {
+        public java.util.List<WebReviewPointsResultAttitudesViewPointsOutlines> getOutlines() {
             return this.outlines;
         }
 
@@ -1909,14 +1914,14 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         }
 
         public static final class Builder {
-            private java.util.List < WebReviewPointsResultAttitudesViewPointsOutlines> outlines; 
+            private java.util.List<WebReviewPointsResultAttitudesViewPointsOutlines> outlines; 
             private String point; 
             private String summary; 
 
             /**
              * Outlines.
              */
-            public Builder outlines(java.util.List < WebReviewPointsResultAttitudesViewPointsOutlines> outlines) {
+            public Builder outlines(java.util.List<WebReviewPointsResultAttitudesViewPointsOutlines> outlines) {
                 this.outlines = outlines;
                 return this;
             }
@@ -1958,13 +1963,13 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         private String attitudeType;
 
         @com.aliyun.core.annotation.NameInMap("Comments")
-        private java.util.List < Comments> comments;
+        private java.util.List<Comments> comments;
 
         @com.aliyun.core.annotation.NameInMap("Ratio")
         private String ratio;
 
         @com.aliyun.core.annotation.NameInMap("ViewPoints")
-        private java.util.List < WebReviewPointsResultAttitudesViewPoints> viewPoints;
+        private java.util.List<WebReviewPointsResultAttitudesViewPoints> viewPoints;
 
         private WebReviewPointsResultAttitudes(Builder builder) {
             this.attitude = builder.attitude;
@@ -1999,7 +2004,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return comments
          */
-        public java.util.List < Comments> getComments() {
+        public java.util.List<Comments> getComments() {
             return this.comments;
         }
 
@@ -2013,16 +2018,16 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return viewPoints
          */
-        public java.util.List < WebReviewPointsResultAttitudesViewPoints> getViewPoints() {
+        public java.util.List<WebReviewPointsResultAttitudesViewPoints> getViewPoints() {
             return this.viewPoints;
         }
 
         public static final class Builder {
             private String attitude; 
             private String attitudeType; 
-            private java.util.List < Comments> comments; 
+            private java.util.List<Comments> comments; 
             private String ratio; 
-            private java.util.List < WebReviewPointsResultAttitudesViewPoints> viewPoints; 
+            private java.util.List<WebReviewPointsResultAttitudesViewPoints> viewPoints; 
 
             /**
              * Attitude.
@@ -2043,7 +2048,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             /**
              * Comments.
              */
-            public Builder comments(java.util.List < Comments> comments) {
+            public Builder comments(java.util.List<Comments> comments) {
                 this.comments = comments;
                 return this;
             }
@@ -2059,7 +2064,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             /**
              * ViewPoints.
              */
-            public Builder viewPoints(java.util.List < WebReviewPointsResultAttitudesViewPoints> viewPoints) {
+            public Builder viewPoints(java.util.List<WebReviewPointsResultAttitudesViewPoints> viewPoints) {
                 this.viewPoints = viewPoints;
                 return this;
             }
@@ -2079,7 +2084,7 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
      */
     public static class WebReviewPointsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitudes")
-        private java.util.List < WebReviewPointsResultAttitudes> attitudes;
+        private java.util.List<WebReviewPointsResultAttitudes> attitudes;
 
         private WebReviewPointsResult(Builder builder) {
             this.attitudes = builder.attitudes;
@@ -2096,17 +2101,17 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         /**
          * @return attitudes
          */
-        public java.util.List < WebReviewPointsResultAttitudes> getAttitudes() {
+        public java.util.List<WebReviewPointsResultAttitudes> getAttitudes() {
             return this.attitudes;
         }
 
         public static final class Builder {
-            private java.util.List < WebReviewPointsResultAttitudes> attitudes; 
+            private java.util.List<WebReviewPointsResultAttitudes> attitudes; 
 
             /**
              * Attitudes.
              */
-            public Builder attitudes(java.util.List < WebReviewPointsResultAttitudes> attitudes) {
+            public Builder attitudes(java.util.List<WebReviewPointsResultAttitudes> attitudes) {
                 this.attitudes = attitudes;
                 return this;
             }

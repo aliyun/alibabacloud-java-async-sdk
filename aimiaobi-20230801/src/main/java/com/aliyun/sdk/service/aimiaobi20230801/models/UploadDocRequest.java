@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class UploadDocRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Docs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Docs> docs;
+    private java.util.List<Docs> docs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -68,7 +73,7 @@ public class UploadDocRequest extends Request {
     /**
      * @return docs
      */
-    public java.util.List < Docs> getDocs() {
+    public java.util.List<Docs> getDocs() {
         return this.docs;
     }
 
@@ -82,7 +87,7 @@ public class UploadDocRequest extends Request {
     public static final class Builder extends Request.Builder<UploadDocRequest, Builder> {
         private String regionId; 
         private String categoryId; 
-        private java.util.List < Docs> docs; 
+        private java.util.List<Docs> docs; 
         private String workspaceId; 
 
         private Builder() {
@@ -118,7 +123,7 @@ public class UploadDocRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder docs(java.util.List < Docs> docs) {
+        public Builder docs(java.util.List<Docs> docs) {
             String docsShrink = shrink(docs, "Docs", "json");
             this.putBodyParameter("Docs", docsShrink);
             this.docs = docs;

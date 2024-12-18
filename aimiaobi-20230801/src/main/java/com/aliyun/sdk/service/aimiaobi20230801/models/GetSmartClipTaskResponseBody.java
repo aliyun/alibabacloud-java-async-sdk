@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -439,7 +444,7 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("SubJobs")
-        private java.util.List < SubJobs> subJobs;
+        private java.util.List<SubJobs> subJobs;
 
         private Data(Builder builder) {
             this.errorMessage = builder.errorMessage;
@@ -472,14 +477,14 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
         /**
          * @return subJobs
          */
-        public java.util.List < SubJobs> getSubJobs() {
+        public java.util.List<SubJobs> getSubJobs() {
             return this.subJobs;
         }
 
         public static final class Builder {
             private String errorMessage; 
             private String status; 
-            private java.util.List < SubJobs> subJobs; 
+            private java.util.List<SubJobs> subJobs; 
 
             /**
              * ErrorMessage.
@@ -500,7 +505,7 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
             /**
              * SubJobs.
              */
-            public Builder subJobs(java.util.List < SubJobs> subJobs) {
+            public Builder subJobs(java.util.List<SubJobs> subJobs) {
                 this.subJobs = subJobs;
                 return this;
             }

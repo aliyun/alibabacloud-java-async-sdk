@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -266,7 +271,7 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserConfigDataSourceList")
-        private java.util.List < UserConfigDataSourceList> userConfigDataSourceList;
+        private java.util.List<UserConfigDataSourceList> userConfigDataSourceList;
 
         private Data(Builder builder) {
             this.userConfigDataSourceList = builder.userConfigDataSourceList;
@@ -283,17 +288,17 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
         /**
          * @return userConfigDataSourceList
          */
-        public java.util.List < UserConfigDataSourceList> getUserConfigDataSourceList() {
+        public java.util.List<UserConfigDataSourceList> getUserConfigDataSourceList() {
             return this.userConfigDataSourceList;
         }
 
         public static final class Builder {
-            private java.util.List < UserConfigDataSourceList> userConfigDataSourceList; 
+            private java.util.List<UserConfigDataSourceList> userConfigDataSourceList; 
 
             /**
              * UserConfigDataSourceList.
              */
-            public Builder userConfigDataSourceList(java.util.List < UserConfigDataSourceList> userConfigDataSourceList) {
+            public Builder userConfigDataSourceList(java.util.List<UserConfigDataSourceList> userConfigDataSourceList) {
                 this.userConfigDataSourceList = userConfigDataSourceList;
                 return this;
             }

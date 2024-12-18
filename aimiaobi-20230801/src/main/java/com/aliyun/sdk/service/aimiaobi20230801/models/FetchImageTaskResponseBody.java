@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -249,7 +254,7 @@ public class FetchImageTaskResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("ImageList")
-        private java.util.List < ImageList> imageList;
+        private java.util.List<ImageList> imageList;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -282,7 +287,7 @@ public class FetchImageTaskResponseBody extends TeaModel {
         /**
          * @return imageList
          */
-        public java.util.List < ImageList> getImageList() {
+        public java.util.List<ImageList> getImageList() {
             return this.imageList;
         }
 
@@ -302,7 +307,7 @@ public class FetchImageTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long id; 
-            private java.util.List < ImageList> imageList; 
+            private java.util.List<ImageList> imageList; 
             private String taskId; 
             private String taskStatus; 
 
@@ -317,7 +322,7 @@ public class FetchImageTaskResponseBody extends TeaModel {
             /**
              * ImageList.
              */
-            public Builder imageList(java.util.List < ImageList> imageList) {
+            public Builder imageList(java.util.List<ImageList> imageList) {
                 this.imageList = imageList;
                 return this;
             }
@@ -353,7 +358,7 @@ public class FetchImageTaskResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskInfoList")
-        private java.util.List < TaskInfoList> taskInfoList;
+        private java.util.List<TaskInfoList> taskInfoList;
 
         private Data(Builder builder) {
             this.taskInfoList = builder.taskInfoList;
@@ -370,17 +375,17 @@ public class FetchImageTaskResponseBody extends TeaModel {
         /**
          * @return taskInfoList
          */
-        public java.util.List < TaskInfoList> getTaskInfoList() {
+        public java.util.List<TaskInfoList> getTaskInfoList() {
             return this.taskInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < TaskInfoList> taskInfoList; 
+            private java.util.List<TaskInfoList> taskInfoList; 
 
             /**
              * TaskInfoList.
              */
-            public Builder taskInfoList(java.util.List < TaskInfoList> taskInfoList) {
+            public Builder taskInfoList(java.util.List<TaskInfoList> taskInfoList) {
                 this.taskInfoList = taskInfoList;
                 return this;
             }

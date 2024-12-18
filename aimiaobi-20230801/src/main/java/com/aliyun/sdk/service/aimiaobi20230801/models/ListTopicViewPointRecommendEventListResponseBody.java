@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListTopicViewPointRecommendEventListResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < String > data;
+    private java.util.List<String> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -69,7 +74,7 @@ public class ListTopicViewPointRecommendEventListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < String > getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 
@@ -124,7 +129,7 @@ public class ListTopicViewPointRecommendEventListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < String > data; 
+        private java.util.List<String> data; 
         private Integer httpStatusCode; 
         private Integer maxResults; 
         private String message; 
@@ -144,7 +149,7 @@ public class ListTopicViewPointRecommendEventListResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < String > data) {
+        public Builder data(java.util.List<String> data) {
             this.data = data;
             return this;
         }

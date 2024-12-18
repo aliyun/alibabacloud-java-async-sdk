@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -475,7 +480,7 @@ public class RunWritingRequest extends Request {
      */
     public static class ReferenceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Articles")
-        private java.util.List < Articles> articles;
+        private java.util.List<Articles> articles;
 
         private ReferenceData(Builder builder) {
             this.articles = builder.articles;
@@ -492,17 +497,17 @@ public class RunWritingRequest extends Request {
         /**
          * @return articles
          */
-        public java.util.List < Articles> getArticles() {
+        public java.util.List<Articles> getArticles() {
             return this.articles;
         }
 
         public static final class Builder {
-            private java.util.List < Articles> articles; 
+            private java.util.List<Articles> articles; 
 
             /**
              * Articles.
              */
-            public Builder articles(java.util.List < Articles> articles) {
+            public Builder articles(java.util.List<Articles> articles) {
                 this.articles = articles;
                 return this;
             }
@@ -702,7 +707,7 @@ public class RunWritingRequest extends Request {
         private PromptTag promptTag;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UseSearch")
         private Boolean useSearch;
@@ -739,7 +744,7 @@ public class RunWritingRequest extends Request {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -753,7 +758,7 @@ public class RunWritingRequest extends Request {
         public static final class Builder {
             private String domain; 
             private PromptTag promptTag; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Boolean useSearch; 
 
             /**
@@ -775,7 +780,7 @@ public class RunWritingRequest extends Request {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

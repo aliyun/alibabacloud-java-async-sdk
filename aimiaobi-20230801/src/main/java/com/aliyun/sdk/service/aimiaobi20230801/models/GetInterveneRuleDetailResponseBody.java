@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -333,7 +338,7 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
      */
     public static class InterveneRuleDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerConfig")
-        private java.util.List < AnswerConfig> answerConfig;
+        private java.util.List<AnswerConfig> answerConfig;
 
         @com.aliyun.core.annotation.NameInMap("EffectConfig")
         private EffectConfig effectConfig;
@@ -342,7 +347,7 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         private Integer interveneType;
 
         @com.aliyun.core.annotation.NameInMap("NamespaceList")
-        private java.util.List < String > namespaceList;
+        private java.util.List<String> namespaceList;
 
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
@@ -370,7 +375,7 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         /**
          * @return answerConfig
          */
-        public java.util.List < AnswerConfig> getAnswerConfig() {
+        public java.util.List<AnswerConfig> getAnswerConfig() {
             return this.answerConfig;
         }
 
@@ -391,7 +396,7 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         /**
          * @return namespaceList
          */
-        public java.util.List < String > getNamespaceList() {
+        public java.util.List<String> getNamespaceList() {
             return this.namespaceList;
         }
 
@@ -410,17 +415,17 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AnswerConfig> answerConfig; 
+            private java.util.List<AnswerConfig> answerConfig; 
             private EffectConfig effectConfig; 
             private Integer interveneType; 
-            private java.util.List < String > namespaceList; 
+            private java.util.List<String> namespaceList; 
             private Long ruleId; 
             private String ruleName; 
 
             /**
              * AnswerConfig.
              */
-            public Builder answerConfig(java.util.List < AnswerConfig> answerConfig) {
+            public Builder answerConfig(java.util.List<AnswerConfig> answerConfig) {
                 this.answerConfig = answerConfig;
                 return this;
             }
@@ -444,7 +449,7 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
             /**
              * NamespaceList.
              */
-            public Builder namespaceList(java.util.List < String > namespaceList) {
+            public Builder namespaceList(java.util.List<String> namespaceList) {
                 this.namespaceList = namespaceList;
                 return this;
             }

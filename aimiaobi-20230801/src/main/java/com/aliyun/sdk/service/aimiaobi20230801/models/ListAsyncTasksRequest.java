@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -51,7 +56,7 @@ public class ListAsyncTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskStatusList")
-    private java.util.List < Integer > taskStatusList;
+    private java.util.List<Integer> taskStatusList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskType")
@@ -59,7 +64,7 @@ public class ListAsyncTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskTypeList")
-    private java.util.List < String > taskTypeList;
+    private java.util.List<String> taskTypeList;
 
     private ListAsyncTasksRequest(Builder builder) {
         super(builder);
@@ -156,7 +161,7 @@ public class ListAsyncTasksRequest extends Request {
     /**
      * @return taskStatusList
      */
-    public java.util.List < Integer > getTaskStatusList() {
+    public java.util.List<Integer> getTaskStatusList() {
         return this.taskStatusList;
     }
 
@@ -170,7 +175,7 @@ public class ListAsyncTasksRequest extends Request {
     /**
      * @return taskTypeList
      */
-    public java.util.List < String > getTaskTypeList() {
+    public java.util.List<String> getTaskTypeList() {
         return this.taskTypeList;
     }
 
@@ -184,9 +189,9 @@ public class ListAsyncTasksRequest extends Request {
         private String taskCode; 
         private String taskName; 
         private Integer taskStatus; 
-        private java.util.List < Integer > taskStatusList; 
+        private java.util.List<Integer> taskStatusList; 
         private String taskType; 
-        private java.util.List < String > taskTypeList; 
+        private java.util.List<String> taskTypeList; 
 
         private Builder() {
             super();
@@ -295,7 +300,7 @@ public class ListAsyncTasksRequest extends Request {
         /**
          * TaskStatusList.
          */
-        public Builder taskStatusList(java.util.List < Integer > taskStatusList) {
+        public Builder taskStatusList(java.util.List<Integer> taskStatusList) {
             String taskStatusListShrink = shrink(taskStatusList, "TaskStatusList", "json");
             this.putBodyParameter("TaskStatusList", taskStatusListShrink);
             this.taskStatusList = taskStatusList;
@@ -314,7 +319,7 @@ public class ListAsyncTasksRequest extends Request {
         /**
          * TaskTypeList.
          */
-        public Builder taskTypeList(java.util.List < String > taskTypeList) {
+        public Builder taskTypeList(java.util.List<String> taskTypeList) {
             String taskTypeListShrink = shrink(taskTypeList, "TaskTypeList", "json");
             this.putBodyParameter("TaskTypeList", taskTypeListShrink);
             this.taskTypeList = taskTypeList;

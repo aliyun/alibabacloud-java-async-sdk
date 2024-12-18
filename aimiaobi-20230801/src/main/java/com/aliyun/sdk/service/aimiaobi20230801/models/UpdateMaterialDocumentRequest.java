@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class UpdateMaterialDocumentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocKeywords")
-    private java.util.List < String > docKeywords;
+    private java.util.List<String> docKeywords;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocType")
@@ -124,7 +129,7 @@ public class UpdateMaterialDocumentRequest extends Request {
     /**
      * @return docKeywords
      */
-    public java.util.List < String > getDocKeywords() {
+    public java.util.List<String> getDocKeywords() {
         return this.docKeywords;
     }
 
@@ -215,7 +220,7 @@ public class UpdateMaterialDocumentRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateMaterialDocumentRequest, Builder> {
         private String agentKey; 
         private String author; 
-        private java.util.List < String > docKeywords; 
+        private java.util.List<String> docKeywords; 
         private String docType; 
         private String externalUrl; 
         private String htmlContent; 
@@ -276,7 +281,7 @@ public class UpdateMaterialDocumentRequest extends Request {
         /**
          * DocKeywords.
          */
-        public Builder docKeywords(java.util.List < String > docKeywords) {
+        public Builder docKeywords(java.util.List<String> docKeywords) {
             String docKeywordsShrink = shrink(docKeywords, "DocKeywords", "json");
             this.putBodyParameter("DocKeywords", docKeywordsShrink);
             this.docKeywords = docKeywords;

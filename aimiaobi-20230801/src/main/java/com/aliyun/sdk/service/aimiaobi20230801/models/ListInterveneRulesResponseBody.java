@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -246,7 +251,7 @@ public class ListInterveneRulesResponseBody extends TeaModel {
      */
     public static class InterveneRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerConfig")
-        private java.util.List < AnswerConfig> answerConfig;
+        private java.util.List<AnswerConfig> answerConfig;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -258,7 +263,7 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         private Integer interveneType;
 
         @com.aliyun.core.annotation.NameInMap("NamespaceList")
-        private java.util.List < String > namespaceList;
+        private java.util.List<String> namespaceList;
 
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
@@ -287,7 +292,7 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         /**
          * @return answerConfig
          */
-        public java.util.List < AnswerConfig> getAnswerConfig() {
+        public java.util.List<AnswerConfig> getAnswerConfig() {
             return this.answerConfig;
         }
 
@@ -315,7 +320,7 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         /**
          * @return namespaceList
          */
-        public java.util.List < String > getNamespaceList() {
+        public java.util.List<String> getNamespaceList() {
             return this.namespaceList;
         }
 
@@ -334,18 +339,18 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AnswerConfig> answerConfig; 
+            private java.util.List<AnswerConfig> answerConfig; 
             private String createTime; 
             private String effectTime; 
             private Integer interveneType; 
-            private java.util.List < String > namespaceList; 
+            private java.util.List<String> namespaceList; 
             private Long ruleId; 
             private String ruleName; 
 
             /**
              * AnswerConfig.
              */
-            public Builder answerConfig(java.util.List < AnswerConfig> answerConfig) {
+            public Builder answerConfig(java.util.List<AnswerConfig> answerConfig) {
                 this.answerConfig = answerConfig;
                 return this;
             }
@@ -377,7 +382,7 @@ public class ListInterveneRulesResponseBody extends TeaModel {
             /**
              * NamespaceList.
              */
-            public Builder namespaceList(java.util.List < String > namespaceList) {
+            public Builder namespaceList(java.util.List<String> namespaceList) {
                 this.namespaceList = namespaceList;
                 return this;
             }
@@ -416,7 +421,7 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         private Long count;
 
         @com.aliyun.core.annotation.NameInMap("InterveneRuleList")
-        private java.util.List < InterveneRuleList> interveneRuleList;
+        private java.util.List<InterveneRuleList> interveneRuleList;
 
         @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Integer pageIndex;
@@ -449,7 +454,7 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         /**
          * @return interveneRuleList
          */
-        public java.util.List < InterveneRuleList> getInterveneRuleList() {
+        public java.util.List<InterveneRuleList> getInterveneRuleList() {
             return this.interveneRuleList;
         }
 
@@ -469,7 +474,7 @@ public class ListInterveneRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long count; 
-            private java.util.List < InterveneRuleList> interveneRuleList; 
+            private java.util.List<InterveneRuleList> interveneRuleList; 
             private Integer pageIndex; 
             private Integer pageSize; 
 
@@ -484,7 +489,7 @@ public class ListInterveneRulesResponseBody extends TeaModel {
             /**
              * InterveneRuleList.
              */
-            public Builder interveneRuleList(java.util.List < InterveneRuleList> interveneRuleList) {
+            public Builder interveneRuleList(java.util.List<InterveneRuleList> interveneRuleList) {
                 this.interveneRuleList = interveneRuleList;
                 return this;
             }

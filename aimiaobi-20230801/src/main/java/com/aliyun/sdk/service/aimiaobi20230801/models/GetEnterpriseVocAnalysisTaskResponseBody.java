@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -246,7 +251,7 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
      */
     public static class FilterDimensionStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagValueCountStatistic")
-        private java.util.List < TagValueCountStatistic> tagValueCountStatistic;
+        private java.util.List<TagValueCountStatistic> tagValueCountStatistic;
 
         private FilterDimensionStatistics(Builder builder) {
             this.tagValueCountStatistic = builder.tagValueCountStatistic;
@@ -263,17 +268,17 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
         /**
          * @return tagValueCountStatistic
          */
-        public java.util.List < TagValueCountStatistic> getTagValueCountStatistic() {
+        public java.util.List<TagValueCountStatistic> getTagValueCountStatistic() {
             return this.tagValueCountStatistic;
         }
 
         public static final class Builder {
-            private java.util.List < TagValueCountStatistic> tagValueCountStatistic; 
+            private java.util.List<TagValueCountStatistic> tagValueCountStatistic; 
 
             /**
              * TagValueCountStatistic.
              */
-            public Builder tagValueCountStatistic(java.util.List < TagValueCountStatistic> tagValueCountStatistic) {
+            public Builder tagValueCountStatistic(java.util.List<TagValueCountStatistic> tagValueCountStatistic) {
                 this.tagValueCountStatistic = tagValueCountStatistic;
                 return this;
             }
@@ -380,7 +385,7 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
      */
     public static class TagDimensionStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagValueCountStatistic")
-        private java.util.List < TagDimensionStatisticsTagValueCountStatistic> tagValueCountStatistic;
+        private java.util.List<TagDimensionStatisticsTagValueCountStatistic> tagValueCountStatistic;
 
         private TagDimensionStatistics(Builder builder) {
             this.tagValueCountStatistic = builder.tagValueCountStatistic;
@@ -397,17 +402,17 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
         /**
          * @return tagValueCountStatistic
          */
-        public java.util.List < TagDimensionStatisticsTagValueCountStatistic> getTagValueCountStatistic() {
+        public java.util.List<TagDimensionStatisticsTagValueCountStatistic> getTagValueCountStatistic() {
             return this.tagValueCountStatistic;
         }
 
         public static final class Builder {
-            private java.util.List < TagDimensionStatisticsTagValueCountStatistic> tagValueCountStatistic; 
+            private java.util.List<TagDimensionStatisticsTagValueCountStatistic> tagValueCountStatistic; 
 
             /**
              * TagValueCountStatistic.
              */
-            public Builder tagValueCountStatistic(java.util.List < TagDimensionStatisticsTagValueCountStatistic> tagValueCountStatistic) {
+            public Builder tagValueCountStatistic(java.util.List<TagDimensionStatisticsTagValueCountStatistic> tagValueCountStatistic) {
                 this.tagValueCountStatistic = tagValueCountStatistic;
                 return this;
             }

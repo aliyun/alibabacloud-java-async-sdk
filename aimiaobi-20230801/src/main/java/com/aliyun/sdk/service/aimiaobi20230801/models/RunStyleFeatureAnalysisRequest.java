@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class RunStyleFeatureAnalysisRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Contents")
-    private java.util.List < String > contents;
+    private java.util.List<String> contents;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaterialIds")
-    private java.util.List < Long > materialIds;
+    private java.util.List<Long> materialIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -60,14 +65,14 @@ public class RunStyleFeatureAnalysisRequest extends Request {
     /**
      * @return contents
      */
-    public java.util.List < String > getContents() {
+    public java.util.List<String> getContents() {
         return this.contents;
     }
 
     /**
      * @return materialIds
      */
-    public java.util.List < Long > getMaterialIds() {
+    public java.util.List<Long> getMaterialIds() {
         return this.materialIds;
     }
 
@@ -80,8 +85,8 @@ public class RunStyleFeatureAnalysisRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunStyleFeatureAnalysisRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > contents; 
-        private java.util.List < Long > materialIds; 
+        private java.util.List<String> contents; 
+        private java.util.List<Long> materialIds; 
         private String workspaceId; 
 
         private Builder() {
@@ -108,7 +113,7 @@ public class RunStyleFeatureAnalysisRequest extends Request {
         /**
          * Contents.
          */
-        public Builder contents(java.util.List < String > contents) {
+        public Builder contents(java.util.List<String> contents) {
             String contentsShrink = shrink(contents, "Contents", "json");
             this.putBodyParameter("Contents", contentsShrink);
             this.contents = contents;
@@ -118,7 +123,7 @@ public class RunStyleFeatureAnalysisRequest extends Request {
         /**
          * MaterialIds.
          */
-        public Builder materialIds(java.util.List < Long > materialIds) {
+        public Builder materialIds(java.util.List<Long> materialIds) {
             String materialIdsShrink = shrink(materialIds, "MaterialIds", "json");
             this.putBodyParameter("MaterialIds", materialIdsShrink);
             this.materialIds = materialIds;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class ListHotNewsWithTypeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NewsTypes")
-    private java.util.List < String > newsTypes;
+    private java.util.List<String> newsTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Size")
@@ -91,7 +96,7 @@ public class ListHotNewsWithTypeRequest extends Request {
     /**
      * @return newsTypes
      */
-    public java.util.List < String > getNewsTypes() {
+    public java.util.List<String> getNewsTypes() {
         return this.newsTypes;
     }
 
@@ -107,7 +112,7 @@ public class ListHotNewsWithTypeRequest extends Request {
         private String agentKey; 
         private Integer current; 
         private String newsType; 
-        private java.util.List < String > newsTypes; 
+        private java.util.List<String> newsTypes; 
         private Integer size; 
 
         private Builder() {
@@ -166,7 +171,7 @@ public class ListHotNewsWithTypeRequest extends Request {
         /**
          * NewsTypes.
          */
-        public Builder newsTypes(java.util.List < String > newsTypes) {
+        public Builder newsTypes(java.util.List<String> newsTypes) {
             String newsTypesShrink = shrink(newsTypes, "NewsTypes", "json");
             this.putBodyParameter("NewsTypes", newsTypesShrink);
             this.newsTypes = newsTypes;

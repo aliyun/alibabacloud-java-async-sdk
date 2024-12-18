@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddDatasetDocument  AddDatasetDocumentRequest
+     * @return AddDatasetDocumentResponse
+     */
+    CompletableFuture<AddDatasetDocumentResponse> addDatasetDocument(AddDatasetDocumentRequest request);
+
+    /**
      * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
      * @return CancelAsyncTaskResponse
      */
@@ -30,6 +36,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ClearIntervenesResponse
      */
     CompletableFuture<ClearIntervenesResponse> clearIntervenes(ClearIntervenesRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataset  CreateDatasetRequest
+     * @return CreateDatasetResponse
+     */
+    CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
 
     /**
      * @param request the request parameters of CreateGeneratedContent  CreateGeneratedContentRequest
@@ -60,6 +72,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCustomTopicViewPointByIdResponse
      */
     CompletableFuture<DeleteCustomTopicViewPointByIdResponse> deleteCustomTopicViewPointById(DeleteCustomTopicViewPointByIdRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
+     * @return DeleteDatasetResponse
+     */
+    CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDatasetDocument  DeleteDatasetDocumentRequest
+     * @return DeleteDatasetDocumentResponse
+     */
+    CompletableFuture<DeleteDatasetDocumentResponse> deleteDatasetDocument(DeleteDatasetDocumentRequest request);
 
     /**
      * @param request the request parameters of DeleteDocs  DeleteDocsRequest
@@ -174,6 +198,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDataSourceOrderConfigResponse
      */
     CompletableFuture<GetDataSourceOrderConfigResponse> getDataSourceOrderConfig(GetDataSourceOrderConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetDataset  GetDatasetRequest
+     * @return GetDatasetResponse
+     */
+    CompletableFuture<GetDatasetResponse> getDataset(GetDatasetRequest request);
+
+    /**
+     * @param request the request parameters of GetDatasetDocument  GetDatasetDocumentRequest
+     * @return GetDatasetDocumentResponse
+     */
+    CompletableFuture<GetDatasetDocumentResponse> getDatasetDocument(GetDatasetDocumentRequest request);
 
     /**
      * @param request the request parameters of GetDocClusterTask  GetDocClusterTaskRequest
@@ -314,6 +350,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCustomViewPointsResponse> listCustomViewPoints(ListCustomViewPointsRequest request);
 
     /**
+     * @param request the request parameters of ListDatasetDocuments  ListDatasetDocumentsRequest
+     * @return ListDatasetDocumentsResponse
+     */
+    CompletableFuture<ListDatasetDocumentsResponse> listDatasetDocuments(ListDatasetDocumentsRequest request);
+
+    /**
+     * @param request the request parameters of ListDatasets  ListDatasetsRequest
+     * @return ListDatasetsResponse
+     */
+    CompletableFuture<ListDatasetsResponse> listDatasets(ListDatasetsRequest request);
+
+    /**
      * @param request the request parameters of ListDialogues  ListDialoguesRequest
      * @return ListDialoguesResponse
      */
@@ -396,6 +444,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPlanningProposalResponse
      */
     CompletableFuture<ListPlanningProposalResponse> listPlanningProposal(ListPlanningProposalRequest request);
+
+    /**
+     * @param request the request parameters of ListSearchTaskDialogueDatas  ListSearchTaskDialogueDatasRequest
+     * @return ListSearchTaskDialogueDatasResponse
+     */
+    CompletableFuture<ListSearchTaskDialogueDatasResponse> listSearchTaskDialogueDatas(ListSearchTaskDialogueDatasRequest request);
+
+    /**
+     * @param request the request parameters of ListSearchTaskDialogues  ListSearchTaskDialoguesRequest
+     * @return ListSearchTaskDialoguesResponse
+     */
+    CompletableFuture<ListSearchTaskDialoguesResponse> listSearchTaskDialogues(ListSearchTaskDialoguesRequest request);
+
+    /**
+     * @param request the request parameters of ListSearchTasks  ListSearchTasksRequest
+     * @return ListSearchTasksResponse
+     */
+    CompletableFuture<ListSearchTasksResponse> listSearchTasks(ListSearchTasksRequest request);
 
     /**
      * @param request the request parameters of ListTimedViewAttitude  ListTimedViewAttitudeRequest
@@ -522,6 +588,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunKeywordsExtractionGenerationResponseBody> runKeywordsExtractionGenerationWithResponseIterable(RunKeywordsExtractionGenerationRequest request);
 
     /**
+     * @param request the request parameters of RunSearchGeneration  RunSearchGenerationRequest
+     * @return RunSearchGenerationResponse
+     */
+    CompletableFuture<RunSearchGenerationResponse> runSearchGeneration(RunSearchGenerationRequest request);
+
+    ResponseIterable<RunSearchGenerationResponseBody> runSearchGenerationWithResponseIterable(RunSearchGenerationRequest request);
+
+    /**
      * @param request the request parameters of RunStepByStepWriting  RunStepByStepWritingRequest
      * @return RunStepByStepWritingResponse
      */
@@ -604,6 +678,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveMaterialDocumentResponse> saveMaterialDocument(SaveMaterialDocumentRequest request);
 
     /**
+     * @param request the request parameters of SearchDatasetDocuments  SearchDatasetDocumentsRequest
+     * @return SearchDatasetDocumentsResponse
+     */
+    CompletableFuture<SearchDatasetDocumentsResponse> searchDatasetDocuments(SearchDatasetDocumentsRequest request);
+
+    /**
      * @param request the request parameters of SearchNews  SearchNewsRequest
      * @return SearchNewsResponse
      */
@@ -656,6 +736,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCustomTextResponse
      */
     CompletableFuture<UpdateCustomTextResponse> updateCustomText(UpdateCustomTextRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataset  UpdateDatasetRequest
+     * @return UpdateDatasetResponse
+     */
+    CompletableFuture<UpdateDatasetResponse> updateDataset(UpdateDatasetRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDatasetDocument  UpdateDatasetDocumentRequest
+     * @return UpdateDatasetDocumentResponse
+     */
+    CompletableFuture<UpdateDatasetDocumentResponse> updateDatasetDocument(UpdateDatasetDocumentRequest request);
 
     /**
      * @param request the request parameters of UpdateGeneratedContent  UpdateGeneratedContentRequest

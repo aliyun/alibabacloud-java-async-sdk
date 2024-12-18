@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class FetchImageTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskIdList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > taskIdList;
+    private java.util.List<String> taskIdList;
 
     private FetchImageTaskRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class FetchImageTaskRequest extends Request {
     /**
      * @return taskIdList
      */
-    public java.util.List < String > getTaskIdList() {
+    public java.util.List<String> getTaskIdList() {
         return this.taskIdList;
     }
 
@@ -84,7 +89,7 @@ public class FetchImageTaskRequest extends Request {
         private String regionId; 
         private String agentKey; 
         private String articleTaskId; 
-        private java.util.List < String > taskIdList; 
+        private java.util.List<String> taskIdList; 
 
         private Builder() {
             super();
@@ -137,7 +142,7 @@ public class FetchImageTaskRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;9d8c9185-3f75-4a20-aca1-c5bb53dd97b3&quot;]</p>
          */
-        public Builder taskIdList(java.util.List < String > taskIdList) {
+        public Builder taskIdList(java.util.List<String> taskIdList) {
             String taskIdListShrink = shrink(taskIdList, "TaskIdList", "json");
             this.putBodyParameter("TaskIdList", taskIdListShrink);
             this.taskIdList = taskIdList;

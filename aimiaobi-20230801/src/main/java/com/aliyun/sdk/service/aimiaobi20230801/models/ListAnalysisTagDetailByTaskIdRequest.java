@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListAnalysisTagDetailByTaskIdRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Categories")
-    private java.util.List < String > categories;
+    private java.util.List<String> categories;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Current")
@@ -81,7 +86,7 @@ public class ListAnalysisTagDetailByTaskIdRequest extends Request {
     /**
      * @return categories
      */
-    public java.util.List < String > getCategories() {
+    public java.util.List<String> getCategories() {
         return this.categories;
     }
 
@@ -129,7 +134,7 @@ public class ListAnalysisTagDetailByTaskIdRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListAnalysisTagDetailByTaskIdRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > categories; 
+        private java.util.List<String> categories; 
         private Integer current; 
         private Integer maxResults; 
         private String nextToken; 
@@ -165,7 +170,7 @@ public class ListAnalysisTagDetailByTaskIdRequest extends Request {
         /**
          * Categories.
          */
-        public Builder categories(java.util.List < String > categories) {
+        public Builder categories(java.util.List<String> categories) {
             String categoriesShrink = shrink(categories, "Categories", "json");
             this.putBodyParameter("Categories", categoriesShrink);
             this.categories = categories;

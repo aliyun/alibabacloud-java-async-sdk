@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -333,7 +338,7 @@ public class RunDocQaResponseBody extends TeaModel {
      */
     public static class MediaUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClipInfos")
-        private java.util.List < ClipInfos> clipInfos;
+        private java.util.List<ClipInfos> clipInfos;
 
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
@@ -358,7 +363,7 @@ public class RunDocQaResponseBody extends TeaModel {
         /**
          * @return clipInfos
          */
-        public java.util.List < ClipInfos> getClipInfos() {
+        public java.util.List<ClipInfos> getClipInfos() {
             return this.clipInfos;
         }
 
@@ -377,14 +382,14 @@ public class RunDocQaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ClipInfos> clipInfos; 
+            private java.util.List<ClipInfos> clipInfos; 
             private String fileUrl; 
             private String mediaType; 
 
             /**
              * ClipInfos.
              */
-            public Builder clipInfos(java.util.List < ClipInfos> clipInfos) {
+            public Builder clipInfos(java.util.List<ClipInfos> clipInfos) {
                 this.clipInfos = clipInfos;
                 return this;
             }
@@ -623,13 +628,13 @@ public class RunDocQaResponseBody extends TeaModel {
         private Boolean isReject;
 
         @com.aliyun.core.annotation.NameInMap("MediaUrlList")
-        private java.util.List < MediaUrlList> mediaUrlList;
+        private java.util.List<MediaUrlList> mediaUrlList;
 
         @com.aliyun.core.annotation.NameInMap("Recommends")
-        private java.util.List < Recommends> recommends;
+        private java.util.List<Recommends> recommends;
 
         @com.aliyun.core.annotation.NameInMap("References")
-        private java.util.List < References> references;
+        private java.util.List<References> references;
 
         private Output(Builder builder) {
             this.content = builder.content;
@@ -672,21 +677,21 @@ public class RunDocQaResponseBody extends TeaModel {
         /**
          * @return mediaUrlList
          */
-        public java.util.List < MediaUrlList> getMediaUrlList() {
+        public java.util.List<MediaUrlList> getMediaUrlList() {
             return this.mediaUrlList;
         }
 
         /**
          * @return recommends
          */
-        public java.util.List < Recommends> getRecommends() {
+        public java.util.List<Recommends> getRecommends() {
             return this.recommends;
         }
 
         /**
          * @return references
          */
-        public java.util.List < References> getReferences() {
+        public java.util.List<References> getReferences() {
             return this.references;
         }
 
@@ -694,9 +699,9 @@ public class RunDocQaResponseBody extends TeaModel {
             private String content; 
             private String interveneContent; 
             private Boolean isReject; 
-            private java.util.List < MediaUrlList> mediaUrlList; 
-            private java.util.List < Recommends> recommends; 
-            private java.util.List < References> references; 
+            private java.util.List<MediaUrlList> mediaUrlList; 
+            private java.util.List<Recommends> recommends; 
+            private java.util.List<References> references; 
 
             /**
              * Content.
@@ -725,7 +730,7 @@ public class RunDocQaResponseBody extends TeaModel {
             /**
              * MediaUrlList.
              */
-            public Builder mediaUrlList(java.util.List < MediaUrlList> mediaUrlList) {
+            public Builder mediaUrlList(java.util.List<MediaUrlList> mediaUrlList) {
                 this.mediaUrlList = mediaUrlList;
                 return this;
             }
@@ -733,7 +738,7 @@ public class RunDocQaResponseBody extends TeaModel {
             /**
              * Recommends.
              */
-            public Builder recommends(java.util.List < Recommends> recommends) {
+            public Builder recommends(java.util.List<Recommends> recommends) {
                 this.recommends = recommends;
                 return this;
             }
@@ -741,7 +746,7 @@ public class RunDocQaResponseBody extends TeaModel {
             /**
              * References.
              */
-            public Builder references(java.util.List < References> references) {
+            public Builder references(java.util.List<References> references) {
                 this.references = references;
                 return this;
             }

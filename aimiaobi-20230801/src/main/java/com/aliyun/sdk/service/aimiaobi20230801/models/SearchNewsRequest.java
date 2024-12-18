@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class SearchNewsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SearchSources")
-    private java.util.List < String > searchSources;
+    private java.util.List<String> searchSources;
 
     private SearchNewsRequest(Builder builder) {
         super(builder);
@@ -122,7 +127,7 @@ public class SearchNewsRequest extends Request {
     /**
      * @return searchSources
      */
-    public java.util.List < String > getSearchSources() {
+    public java.util.List<String> getSearchSources() {
         return this.searchSources;
     }
 
@@ -134,7 +139,7 @@ public class SearchNewsRequest extends Request {
         private Integer page; 
         private Integer pageSize; 
         private String query; 
-        private java.util.List < String > searchSources; 
+        private java.util.List<String> searchSources; 
 
         private Builder() {
             super();
@@ -221,7 +226,7 @@ public class SearchNewsRequest extends Request {
         /**
          * SearchSources.
          */
-        public Builder searchSources(java.util.List < String > searchSources) {
+        public Builder searchSources(java.util.List<String> searchSources) {
             String searchSourcesShrink = shrink(searchSources, "SearchSources", "json");
             this.putBodyParameter("SearchSources", searchSourcesShrink);
             this.searchSources = searchSources;

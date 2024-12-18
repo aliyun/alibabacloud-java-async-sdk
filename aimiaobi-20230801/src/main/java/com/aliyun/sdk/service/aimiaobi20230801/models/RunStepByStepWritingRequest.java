@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -582,7 +587,7 @@ public class RunStepByStepWritingRequest extends Request {
      */
     public static class Outlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Articles")
-        private java.util.List < OutlinesArticles> articles;
+        private java.util.List<OutlinesArticles> articles;
 
         @com.aliyun.core.annotation.NameInMap("Outline")
         private String outline;
@@ -603,7 +608,7 @@ public class RunStepByStepWritingRequest extends Request {
         /**
          * @return articles
          */
-        public java.util.List < OutlinesArticles> getArticles() {
+        public java.util.List<OutlinesArticles> getArticles() {
             return this.articles;
         }
 
@@ -615,13 +620,13 @@ public class RunStepByStepWritingRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < OutlinesArticles> articles; 
+            private java.util.List<OutlinesArticles> articles; 
             private String outline; 
 
             /**
              * Articles.
              */
-            public Builder articles(java.util.List < OutlinesArticles> articles) {
+            public Builder articles(java.util.List<OutlinesArticles> articles) {
                 this.articles = articles;
                 return this;
             }
@@ -649,16 +654,16 @@ public class RunStepByStepWritingRequest extends Request {
      */
     public static class ReferenceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Articles")
-        private java.util.List < Articles> articles;
+        private java.util.List<Articles> articles;
 
         @com.aliyun.core.annotation.NameInMap("MiniDoc")
-        private java.util.List < String > miniDoc;
+        private java.util.List<String> miniDoc;
 
         @com.aliyun.core.annotation.NameInMap("Outlines")
-        private java.util.List < Outlines> outlines;
+        private java.util.List<Outlines> outlines;
 
         @com.aliyun.core.annotation.NameInMap("Summarization")
-        private java.util.List < String > summarization;
+        private java.util.List<String> summarization;
 
         private ReferenceData(Builder builder) {
             this.articles = builder.articles;
@@ -678,41 +683,41 @@ public class RunStepByStepWritingRequest extends Request {
         /**
          * @return articles
          */
-        public java.util.List < Articles> getArticles() {
+        public java.util.List<Articles> getArticles() {
             return this.articles;
         }
 
         /**
          * @return miniDoc
          */
-        public java.util.List < String > getMiniDoc() {
+        public java.util.List<String> getMiniDoc() {
             return this.miniDoc;
         }
 
         /**
          * @return outlines
          */
-        public java.util.List < Outlines> getOutlines() {
+        public java.util.List<Outlines> getOutlines() {
             return this.outlines;
         }
 
         /**
          * @return summarization
          */
-        public java.util.List < String > getSummarization() {
+        public java.util.List<String> getSummarization() {
             return this.summarization;
         }
 
         public static final class Builder {
-            private java.util.List < Articles> articles; 
-            private java.util.List < String > miniDoc; 
-            private java.util.List < Outlines> outlines; 
-            private java.util.List < String > summarization; 
+            private java.util.List<Articles> articles; 
+            private java.util.List<String> miniDoc; 
+            private java.util.List<Outlines> outlines; 
+            private java.util.List<String> summarization; 
 
             /**
              * Articles.
              */
-            public Builder articles(java.util.List < Articles> articles) {
+            public Builder articles(java.util.List<Articles> articles) {
                 this.articles = articles;
                 return this;
             }
@@ -720,7 +725,7 @@ public class RunStepByStepWritingRequest extends Request {
             /**
              * MiniDoc.
              */
-            public Builder miniDoc(java.util.List < String > miniDoc) {
+            public Builder miniDoc(java.util.List<String> miniDoc) {
                 this.miniDoc = miniDoc;
                 return this;
             }
@@ -728,7 +733,7 @@ public class RunStepByStepWritingRequest extends Request {
             /**
              * Outlines.
              */
-            public Builder outlines(java.util.List < Outlines> outlines) {
+            public Builder outlines(java.util.List<Outlines> outlines) {
                 this.outlines = outlines;
                 return this;
             }
@@ -736,7 +741,7 @@ public class RunStepByStepWritingRequest extends Request {
             /**
              * Summarization.
              */
-            public Builder summarization(java.util.List < String > summarization) {
+            public Builder summarization(java.util.List<String> summarization) {
                 this.summarization = summarization;
                 return this;
             }
@@ -933,7 +938,7 @@ public class RunStepByStepWritingRequest extends Request {
         private String domain;
 
         @com.aliyun.core.annotation.NameInMap("Keywords")
-        private java.util.List < String > keywords;
+        private java.util.List<String> keywords;
 
         @com.aliyun.core.annotation.NameInMap("PromptTag")
         private PromptTag promptTag;
@@ -945,7 +950,7 @@ public class RunStepByStepWritingRequest extends Request {
         private String step;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UseSearch")
         private Boolean useSearch;
@@ -978,7 +983,7 @@ public class RunStepByStepWritingRequest extends Request {
         /**
          * @return keywords
          */
-        public java.util.List < String > getKeywords() {
+        public java.util.List<String> getKeywords() {
             return this.keywords;
         }
 
@@ -1006,7 +1011,7 @@ public class RunStepByStepWritingRequest extends Request {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1019,11 +1024,11 @@ public class RunStepByStepWritingRequest extends Request {
 
         public static final class Builder {
             private String domain; 
-            private java.util.List < String > keywords; 
+            private java.util.List<String> keywords; 
             private PromptTag promptTag; 
             private String scene; 
             private String step; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Boolean useSearch; 
 
             /**
@@ -1037,7 +1042,7 @@ public class RunStepByStepWritingRequest extends Request {
             /**
              * Keywords.
              */
-            public Builder keywords(java.util.List < String > keywords) {
+            public Builder keywords(java.util.List<String> keywords) {
                 this.keywords = keywords;
                 return this;
             }
@@ -1069,7 +1074,7 @@ public class RunStepByStepWritingRequest extends Request {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

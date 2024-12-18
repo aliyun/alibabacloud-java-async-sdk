@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -159,7 +164,7 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
      */
     public static class Topics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocIds")
-        private java.util.List < String > docIds;
+        private java.util.List<String> docIds;
 
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
@@ -184,7 +189,7 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
         /**
          * @return docIds
          */
-        public java.util.List < String > getDocIds() {
+        public java.util.List<String> getDocIds() {
             return this.docIds;
         }
 
@@ -203,14 +208,14 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > docIds; 
+            private java.util.List<String> docIds; 
             private String summary; 
             private String title; 
 
             /**
              * DocIds.
              */
-            public Builder docIds(java.util.List < String > docIds) {
+            public Builder docIds(java.util.List<String> docIds) {
                 this.docIds = docIds;
                 return this;
             }
@@ -252,7 +257,7 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Topics")
-        private java.util.List < Topics> topics;
+        private java.util.List<Topics> topics;
 
         private Data(Builder builder) {
             this.errorMessage = builder.errorMessage;
@@ -285,14 +290,14 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
         /**
          * @return topics
          */
-        public java.util.List < Topics> getTopics() {
+        public java.util.List<Topics> getTopics() {
             return this.topics;
         }
 
         public static final class Builder {
             private String errorMessage; 
             private String status; 
-            private java.util.List < Topics> topics; 
+            private java.util.List<Topics> topics; 
 
             /**
              * ErrorMessage.
@@ -313,7 +318,7 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
             /**
              * Topics.
              */
-            public Builder topics(java.util.List < Topics> topics) {
+            public Builder topics(java.util.List<Topics> topics) {
                 this.topics = topics;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
     private Integer current;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -76,7 +81,7 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -125,7 +130,7 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer current; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -152,7 +157,7 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -240,7 +245,7 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("KeywordList")
-        private java.util.List < String > keywordList;
+        private java.util.List<String> keywordList;
 
         @com.aliyun.core.annotation.NameInMap("Keywords")
         private String keywords;
@@ -341,7 +346,7 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
         /**
          * @return keywordList
          */
-        public java.util.List < String > getKeywordList() {
+        public java.util.List<String> getKeywordList() {
             return this.keywordList;
         }
 
@@ -402,7 +407,7 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
             private String createUser; 
             private String deviceId; 
             private Long id; 
-            private java.util.List < String > keywordList; 
+            private java.util.List<String> keywordList; 
             private String keywords; 
             private String prompt; 
             private String taskId; 
@@ -470,7 +475,7 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
             /**
              * KeywordList.
              */
-            public Builder keywordList(java.util.List < String > keywordList) {
+            public Builder keywordList(java.util.List<String> keywordList) {
                 this.keywordList = keywordList;
                 return this;
             }

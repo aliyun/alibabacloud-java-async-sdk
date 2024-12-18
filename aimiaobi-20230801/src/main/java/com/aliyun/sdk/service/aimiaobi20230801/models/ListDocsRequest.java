@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class ListDocsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Statuses")
-    private java.util.List < Integer > statuses;
+    private java.util.List<Integer> statuses;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -127,7 +132,7 @@ public class ListDocsRequest extends Request {
     /**
      * @return statuses
      */
-    public java.util.List < Integer > getStatuses() {
+    public java.util.List<Integer> getStatuses() {
         return this.statuses;
     }
 
@@ -146,7 +151,7 @@ public class ListDocsRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private Integer skip; 
-        private java.util.List < Integer > statuses; 
+        private java.util.List<Integer> statuses; 
         private String workspaceId; 
 
         private Builder() {
@@ -232,7 +237,7 @@ public class ListDocsRequest extends Request {
         /**
          * Statuses.
          */
-        public Builder statuses(java.util.List < Integer > statuses) {
+        public Builder statuses(java.util.List<Integer> statuses) {
             String statusesShrink = shrink(statuses, "Statuses", "json");
             this.putBodyParameter("Statuses", statusesShrink);
             this.statuses = statuses;

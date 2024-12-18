@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class ListMaterialDocumentsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocTypeList")
-    private java.util.List < String > docTypeList;
+    private java.util.List<String> docTypeList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("GeneratePublicUrl")
@@ -55,7 +60,7 @@ public class ListMaterialDocumentsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Keywords")
-    private java.util.List < String > keywords;
+    private java.util.List<String> keywords;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Query")
@@ -167,7 +172,7 @@ public class ListMaterialDocumentsRequest extends Request {
     /**
      * @return docTypeList
      */
-    public java.util.List < String > getDocTypeList() {
+    public java.util.List<String> getDocTypeList() {
         return this.docTypeList;
     }
 
@@ -188,7 +193,7 @@ public class ListMaterialDocumentsRequest extends Request {
     /**
      * @return keywords
      */
-    public java.util.List < String > getKeywords() {
+    public java.util.List<String> getKeywords() {
         return this.keywords;
     }
 
@@ -242,10 +247,10 @@ public class ListMaterialDocumentsRequest extends Request {
         private String createTimeStart; 
         private Integer current; 
         private String docType; 
-        private java.util.List < String > docTypeList; 
+        private java.util.List<String> docTypeList; 
         private Boolean generatePublicUrl; 
         private Long id; 
-        private java.util.List < String > keywords; 
+        private java.util.List<String> keywords; 
         private String query; 
         private Integer shareAttr; 
         private Integer size; 
@@ -347,7 +352,7 @@ public class ListMaterialDocumentsRequest extends Request {
         /**
          * DocTypeList.
          */
-        public Builder docTypeList(java.util.List < String > docTypeList) {
+        public Builder docTypeList(java.util.List<String> docTypeList) {
             String docTypeListShrink = shrink(docTypeList, "DocTypeList", "json");
             this.putBodyParameter("DocTypeList", docTypeListShrink);
             this.docTypeList = docTypeList;
@@ -375,7 +380,7 @@ public class ListMaterialDocumentsRequest extends Request {
         /**
          * Keywords.
          */
-        public Builder keywords(java.util.List < String > keywords) {
+        public Builder keywords(java.util.List<String> keywords) {
             String keywordsShrink = shrink(keywords, "Keywords", "json");
             this.putBodyParameter("Keywords", keywordsShrink);
             this.keywords = keywords;

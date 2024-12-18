@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -282,10 +287,10 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         private String author;
 
         @com.aliyun.core.annotation.NameInMap("Category")
-        private java.util.List < String > category;
+        private java.util.List<String> category;
 
         @com.aliyun.core.annotation.NameInMap("Comments")
-        private java.util.List < Comments> comments;
+        private java.util.List<Comments> comments;
 
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -303,7 +308,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         private String hotTopic;
 
         @com.aliyun.core.annotation.NameInMap("ImgList")
-        private java.util.List < String > imgList;
+        private java.util.List<String> imgList;
 
         @com.aliyun.core.annotation.NameInMap("Logo")
         private String logo;
@@ -379,14 +384,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         /**
          * @return category
          */
-        public java.util.List < String > getCategory() {
+        public java.util.List<String> getCategory() {
             return this.category;
         }
 
         /**
          * @return comments
          */
-        public java.util.List < Comments> getComments() {
+        public java.util.List<Comments> getComments() {
             return this.comments;
         }
 
@@ -428,7 +433,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         /**
          * @return imgList
          */
-        public java.util.List < String > getImgList() {
+        public java.util.List<String> getImgList() {
             return this.imgList;
         }
 
@@ -485,14 +490,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             private String analysisCategory; 
             private String analysisTopic; 
             private String author; 
-            private java.util.List < String > category; 
-            private java.util.List < Comments> comments; 
+            private java.util.List<String> category; 
+            private java.util.List<Comments> comments; 
             private String content; 
             private String createTime; 
             private String domain; 
             private String dt; 
             private String hotTopic; 
-            private java.util.List < String > imgList; 
+            private java.util.List<String> imgList; 
             private String logo; 
             private String pubTime; 
             private String summary; 
@@ -528,7 +533,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             /**
              * Category.
              */
-            public Builder category(java.util.List < String > category) {
+            public Builder category(java.util.List<String> category) {
                 this.category = category;
                 return this;
             }
@@ -536,7 +541,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             /**
              * Comments.
              */
-            public Builder comments(java.util.List < Comments> comments) {
+            public Builder comments(java.util.List<Comments> comments) {
                 this.comments = comments;
                 return this;
             }
@@ -584,7 +589,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             /**
              * ImgList.
              */
-            public Builder imgList(java.util.List < String > imgList) {
+            public Builder imgList(java.util.List<String> imgList) {
                 this.imgList = imgList;
                 return this;
             }
@@ -736,7 +741,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         private Integer outputToken;
 
         @com.aliyun.core.annotation.NameInMap("Summaries")
-        private java.util.List < Summaries> summaries;
+        private java.util.List<Summaries> summaries;
 
         private Summary(Builder builder) {
             this.inputToken = builder.inputToken;
@@ -769,14 +774,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         /**
          * @return summaries
          */
-        public java.util.List < Summaries> getSummaries() {
+        public java.util.List<Summaries> getSummaries() {
             return this.summaries;
         }
 
         public static final class Builder {
             private Integer inputToken; 
             private Integer outputToken; 
-            private java.util.List < Summaries> summaries; 
+            private java.util.List<Summaries> summaries; 
 
             /**
              * InputToken.
@@ -797,7 +802,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             /**
              * Summaries.
              */
-            public Builder summaries(java.util.List < Summaries> summaries) {
+            public Builder summaries(java.util.List<Summaries> summaries) {
                 this.summaries = summaries;
                 return this;
             }
@@ -841,13 +846,13 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("Images")
-        private java.util.List < Images> images;
+        private java.util.List<Images> images;
 
         @com.aliyun.core.annotation.NameInMap("InputToken")
         private Integer inputToken;
 
         @com.aliyun.core.annotation.NameInMap("News")
-        private java.util.List < News> news;
+        private java.util.List<News> news;
 
         @com.aliyun.core.annotation.NameInMap("OutputToken")
         private Integer outputToken;
@@ -942,7 +947,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         /**
          * @return images
          */
-        public java.util.List < Images> getImages() {
+        public java.util.List<Images> getImages() {
             return this.images;
         }
 
@@ -956,7 +961,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         /**
          * @return news
          */
-        public java.util.List < News> getNews() {
+        public java.util.List<News> getNews() {
             return this.news;
         }
 
@@ -990,9 +995,9 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             private String hotTopicVersion; 
             private Double hotValue; 
             private String id; 
-            private java.util.List < Images> images; 
+            private java.util.List<Images> images; 
             private Integer inputToken; 
-            private java.util.List < News> news; 
+            private java.util.List<News> news; 
             private Integer outputToken; 
             private Summary summary; 
             private String textSummary; 
@@ -1064,7 +1069,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             /**
              * Images.
              */
-            public Builder images(java.util.List < Images> images) {
+            public Builder images(java.util.List<Images> images) {
                 this.images = images;
                 return this;
             }
@@ -1080,7 +1085,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             /**
              * News.
              */
-            public Builder news(java.util.List < News> news) {
+            public Builder news(java.util.List<News> news) {
                 this.news = news;
                 return this;
             }
@@ -1231,7 +1236,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < DataData> data;
+        private java.util.List<DataData> data;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -1256,7 +1261,7 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < DataData> getData() {
+        public java.util.List<DataData> getData() {
             return this.data;
         }
 
@@ -1275,14 +1280,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataData> data; 
+            private java.util.List<DataData> data; 
             private Integer totalCount; 
             private TotalTokenInfo totalTokenInfo; 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < DataData> data) {
+            public Builder data(java.util.List<DataData> data) {
                 this.data = data;
                 return this;
             }

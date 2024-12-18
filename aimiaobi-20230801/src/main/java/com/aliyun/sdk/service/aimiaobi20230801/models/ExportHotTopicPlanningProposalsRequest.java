@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ExportHotTopicPlanningProposalsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomViewPointIds")
-    private java.util.List < String > customViewPointIds;
+    private java.util.List<String> customViewPointIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExportType")
@@ -31,7 +36,7 @@ public class ExportHotTopicPlanningProposalsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Titles")
-    private java.util.List < String > titles;
+    private java.util.List<String> titles;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Topic")
@@ -89,7 +94,7 @@ public class ExportHotTopicPlanningProposalsRequest extends Request {
     /**
      * @return customViewPointIds
      */
-    public java.util.List < String > getCustomViewPointIds() {
+    public java.util.List<String> getCustomViewPointIds() {
         return this.customViewPointIds;
     }
 
@@ -103,7 +108,7 @@ public class ExportHotTopicPlanningProposalsRequest extends Request {
     /**
      * @return titles
      */
-    public java.util.List < String > getTitles() {
+    public java.util.List<String> getTitles() {
         return this.titles;
     }
 
@@ -131,9 +136,9 @@ public class ExportHotTopicPlanningProposalsRequest extends Request {
     public static final class Builder extends Request.Builder<ExportHotTopicPlanningProposalsRequest, Builder> {
         private String regionId; 
         private String agentKey; 
-        private java.util.List < String > customViewPointIds; 
+        private java.util.List<String> customViewPointIds; 
         private String exportType; 
-        private java.util.List < String > titles; 
+        private java.util.List<String> titles; 
         private String topic; 
         private String topicSource; 
         private String viewPointType; 
@@ -178,7 +183,7 @@ public class ExportHotTopicPlanningProposalsRequest extends Request {
         /**
          * CustomViewPointIds.
          */
-        public Builder customViewPointIds(java.util.List < String > customViewPointIds) {
+        public Builder customViewPointIds(java.util.List<String> customViewPointIds) {
             String customViewPointIdsShrink = shrink(customViewPointIds, "CustomViewPointIds", "json");
             this.putBodyParameter("CustomViewPointIds", customViewPointIdsShrink);
             this.customViewPointIds = customViewPointIds;
@@ -197,7 +202,7 @@ public class ExportHotTopicPlanningProposalsRequest extends Request {
         /**
          * Titles.
          */
-        public Builder titles(java.util.List < String > titles) {
+        public Builder titles(java.util.List<String> titles) {
             String titlesShrink = shrink(titles, "Titles", "json");
             this.putBodyParameter("Titles", titlesShrink);
             this.titles = titles;

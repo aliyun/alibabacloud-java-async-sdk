@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
     private Integer current;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -76,7 +81,7 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -125,7 +130,7 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer current; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -152,7 +157,7 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -231,7 +236,7 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         private String createUserName;
 
         @com.aliyun.core.annotation.NameInMap("DocKeywords")
-        private java.util.List < String > docKeywords;
+        private java.util.List<String> docKeywords;
 
         @com.aliyun.core.annotation.NameInMap("DocType")
         private String docType;
@@ -344,7 +349,7 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         /**
          * @return docKeywords
          */
-        public java.util.List < String > getDocKeywords() {
+        public java.util.List<String> getDocKeywords() {
             return this.docKeywords;
         }
 
@@ -465,7 +470,7 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
             private String createTime; 
             private String createUser; 
             private String createUserName; 
-            private java.util.List < String > docKeywords; 
+            private java.util.List<String> docKeywords; 
             private String docType; 
             private String externalUrl; 
             private String htmlContent; 
@@ -518,7 +523,7 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
             /**
              * DocKeywords.
              */
-            public Builder docKeywords(java.util.List < String > docKeywords) {
+            public Builder docKeywords(java.util.List<String> docKeywords) {
                 this.docKeywords = docKeywords;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -159,7 +164,7 @@ public class ListInterveneCntResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CntList")
-        private java.util.List < ? > cntList;
+        private java.util.List<?> cntList;
 
         @com.aliyun.core.annotation.NameInMap("PageCnt")
         private Integer pageCnt;
@@ -188,7 +193,7 @@ public class ListInterveneCntResponseBody extends TeaModel {
         /**
          * @return cntList
          */
-        public java.util.List < ? > getCntList() {
+        public java.util.List<?> getCntList() {
             return this.cntList;
         }
 
@@ -214,7 +219,7 @@ public class ListInterveneCntResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ? > cntList; 
+            private java.util.List<?> cntList; 
             private Integer pageCnt; 
             private Integer pageIndex; 
             private Integer pageSize; 
@@ -222,7 +227,7 @@ public class ListInterveneCntResponseBody extends TeaModel {
             /**
              * CntList.
              */
-            public Builder cntList(java.util.List < ? > cntList) {
+            public Builder cntList(java.util.List<?> cntList) {
                 this.cntList = cntList;
                 return this;
             }

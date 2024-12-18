@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -433,7 +438,7 @@ public class RunDocIntroductionResponseBody extends TeaModel {
      */
     public static class Introductions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Blocks")
-        private java.util.List < Blocks> blocks;
+        private java.util.List<Blocks> blocks;
 
         @com.aliyun.core.annotation.NameInMap("StartPageId")
         private Integer startPageId;
@@ -462,7 +467,7 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         /**
          * @return blocks
          */
-        public java.util.List < Blocks> getBlocks() {
+        public java.util.List<Blocks> getBlocks() {
             return this.blocks;
         }
 
@@ -488,7 +493,7 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Blocks> blocks; 
+            private java.util.List<Blocks> blocks; 
             private Integer startPageId; 
             private String summary; 
             private String title; 
@@ -496,7 +501,7 @@ public class RunDocIntroductionResponseBody extends TeaModel {
             /**
              * Blocks.
              */
-            public Builder blocks(java.util.List < Blocks> blocks) {
+            public Builder blocks(java.util.List<Blocks> blocks) {
                 this.blocks = blocks;
                 return this;
             }
@@ -540,7 +545,7 @@ public class RunDocIntroductionResponseBody extends TeaModel {
      */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Introductions")
-        private java.util.List < Introductions> introductions;
+        private java.util.List<Introductions> introductions;
 
         @com.aliyun.core.annotation.NameInMap("KeyPoint")
         private String keyPoint;
@@ -565,7 +570,7 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         /**
          * @return introductions
          */
-        public java.util.List < Introductions> getIntroductions() {
+        public java.util.List<Introductions> getIntroductions() {
             return this.introductions;
         }
 
@@ -584,14 +589,14 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Introductions> introductions; 
+            private java.util.List<Introductions> introductions; 
             private String keyPoint; 
             private String summary; 
 
             /**
              * Introductions.
              */
-            public Builder introductions(java.util.List < Introductions> introductions) {
+            public Builder introductions(java.util.List<Introductions> introductions) {
                 this.introductions = introductions;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,15 +23,15 @@ public class RunDocQaRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CategoryIds")
-    private java.util.List < String > categoryIds;
+    private java.util.List<String> categoryIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConversationContexts")
-    private java.util.List < ConversationContexts> conversationContexts;
+    private java.util.List<ConversationContexts> conversationContexts;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocIds")
-    private java.util.List < String > docIds;
+    private java.util.List<String> docIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Query")
@@ -88,21 +93,21 @@ public class RunDocQaRequest extends Request {
     /**
      * @return categoryIds
      */
-    public java.util.List < String > getCategoryIds() {
+    public java.util.List<String> getCategoryIds() {
         return this.categoryIds;
     }
 
     /**
      * @return conversationContexts
      */
-    public java.util.List < ConversationContexts> getConversationContexts() {
+    public java.util.List<ConversationContexts> getConversationContexts() {
         return this.conversationContexts;
     }
 
     /**
      * @return docIds
      */
-    public java.util.List < String > getDocIds() {
+    public java.util.List<String> getDocIds() {
         return this.docIds;
     }
 
@@ -143,9 +148,9 @@ public class RunDocQaRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunDocQaRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > categoryIds; 
-        private java.util.List < ConversationContexts> conversationContexts; 
-        private java.util.List < String > docIds; 
+        private java.util.List<String> categoryIds; 
+        private java.util.List<ConversationContexts> conversationContexts; 
+        private java.util.List<String> docIds; 
         private String query; 
         private String referenceContent; 
         private String searchSource; 
@@ -181,7 +186,7 @@ public class RunDocQaRequest extends Request {
         /**
          * CategoryIds.
          */
-        public Builder categoryIds(java.util.List < String > categoryIds) {
+        public Builder categoryIds(java.util.List<String> categoryIds) {
             String categoryIdsShrink = shrink(categoryIds, "CategoryIds", "json");
             this.putBodyParameter("CategoryIds", categoryIdsShrink);
             this.categoryIds = categoryIds;
@@ -191,7 +196,7 @@ public class RunDocQaRequest extends Request {
         /**
          * ConversationContexts.
          */
-        public Builder conversationContexts(java.util.List < ConversationContexts> conversationContexts) {
+        public Builder conversationContexts(java.util.List<ConversationContexts> conversationContexts) {
             String conversationContextsShrink = shrink(conversationContexts, "ConversationContexts", "json");
             this.putBodyParameter("ConversationContexts", conversationContextsShrink);
             this.conversationContexts = conversationContexts;
@@ -201,7 +206,7 @@ public class RunDocQaRequest extends Request {
         /**
          * DocIds.
          */
-        public Builder docIds(java.util.List < String > docIds) {
+        public Builder docIds(java.util.List<String> docIds) {
             String docIdsShrink = shrink(docIds, "DocIds", "json");
             this.putBodyParameter("DocIds", docIdsShrink);
             this.docIds = docIds;

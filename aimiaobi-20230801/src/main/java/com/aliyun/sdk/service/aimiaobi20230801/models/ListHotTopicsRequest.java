@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class ListHotTopicsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TopicIds")
-    private java.util.List < String > topicIds;
+    private java.util.List<String> topicIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TopicQuery")
@@ -47,7 +52,7 @@ public class ListHotTopicsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Topics")
-    private java.util.List < String > topics;
+    private java.util.List<String> topics;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WithNews")
@@ -111,7 +116,7 @@ public class ListHotTopicsRequest extends Request {
     /**
      * @return topicIds
      */
-    public java.util.List < String > getTopicIds() {
+    public java.util.List<String> getTopicIds() {
         return this.topicIds;
     }
 
@@ -139,7 +144,7 @@ public class ListHotTopicsRequest extends Request {
     /**
      * @return topics
      */
-    public java.util.List < String > getTopics() {
+    public java.util.List<String> getTopics() {
         return this.topics;
     }
 
@@ -155,11 +160,11 @@ public class ListHotTopicsRequest extends Request {
         private String agentKey; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > topicIds; 
+        private java.util.List<String> topicIds; 
         private String topicQuery; 
         private String topicSource; 
         private String topicVersion; 
-        private java.util.List < String > topics; 
+        private java.util.List<String> topics; 
         private Boolean withNews; 
 
         private Builder() {
@@ -222,7 +227,7 @@ public class ListHotTopicsRequest extends Request {
         /**
          * TopicIds.
          */
-        public Builder topicIds(java.util.List < String > topicIds) {
+        public Builder topicIds(java.util.List<String> topicIds) {
             String topicIdsShrink = shrink(topicIds, "TopicIds", "json");
             this.putBodyParameter("TopicIds", topicIdsShrink);
             this.topicIds = topicIds;
@@ -259,7 +264,7 @@ public class ListHotTopicsRequest extends Request {
         /**
          * Topics.
          */
-        public Builder topics(java.util.List < String > topics) {
+        public Builder topics(java.util.List<String> topics) {
             String topicsShrink = shrink(topics, "Topics", "json");
             this.putBodyParameter("Topics", topicsShrink);
             this.topics = topics;

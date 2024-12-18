@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -513,7 +518,7 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
      */
     public static class ExtraOutput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("summarization")
-        private java.util.List < String > summarization;
+        private java.util.List<String> summarization;
 
         private ExtraOutput(Builder builder) {
             this.summarization = builder.summarization;
@@ -530,17 +535,17 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         /**
          * @return summarization
          */
-        public java.util.List < String > getSummarization() {
+        public java.util.List<String> getSummarization() {
             return this.summarization;
         }
 
         public static final class Builder {
-            private java.util.List < String > summarization; 
+            private java.util.List<String> summarization; 
 
             /**
              * summarization.
              */
-            public Builder summarization(java.util.List < String > summarization) {
+            public Builder summarization(java.util.List<String> summarization) {
                 this.summarization = summarization;
                 return this;
             }
@@ -560,13 +565,13 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
      */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Articles")
-        private java.util.List < Articles> articles;
+        private java.util.List<Articles> articles;
 
         @com.aliyun.core.annotation.NameInMap("ExtraOutput")
         private ExtraOutput extraOutput;
 
         @com.aliyun.core.annotation.NameInMap("MiniDoc")
-        private java.util.List < String > miniDoc;
+        private java.util.List<String> miniDoc;
 
         @com.aliyun.core.annotation.NameInMap("SearchQuery")
         private String searchQuery;
@@ -593,7 +598,7 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         /**
          * @return articles
          */
-        public java.util.List < Articles> getArticles() {
+        public java.util.List<Articles> getArticles() {
             return this.articles;
         }
 
@@ -607,7 +612,7 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         /**
          * @return miniDoc
          */
-        public java.util.List < String > getMiniDoc() {
+        public java.util.List<String> getMiniDoc() {
             return this.miniDoc;
         }
 
@@ -626,16 +631,16 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Articles> articles; 
+            private java.util.List<Articles> articles; 
             private ExtraOutput extraOutput; 
-            private java.util.List < String > miniDoc; 
+            private java.util.List<String> miniDoc; 
             private String searchQuery; 
             private String text; 
 
             /**
              * Articles.
              */
-            public Builder articles(java.util.List < Articles> articles) {
+            public Builder articles(java.util.List<Articles> articles) {
                 this.articles = articles;
                 return this;
             }
@@ -651,7 +656,7 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
             /**
              * MiniDoc.
              */
-            public Builder miniDoc(java.util.List < String > miniDoc) {
+            public Builder miniDoc(java.util.List<String> miniDoc) {
                 this.miniDoc = miniDoc;
                 return this;
             }

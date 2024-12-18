@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class DocumentExtractionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Urls")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > urls;
+    private java.util.List<String> urls;
 
     private DocumentExtractionRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class DocumentExtractionRequest extends Request {
     /**
      * @return urls
      */
-    public java.util.List < String > getUrls() {
+    public java.util.List<String> getUrls() {
         return this.urls;
     }
 
     public static final class Builder extends Request.Builder<DocumentExtractionRequest, Builder> {
         private String regionId; 
         private String agentKey; 
-        private java.util.List < String > urls; 
+        private java.util.List<String> urls; 
 
         private Builder() {
             super();
@@ -107,7 +112,7 @@ public class DocumentExtractionRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder urls(java.util.List < String > urls) {
+        public Builder urls(java.util.List<String> urls) {
             String urlsShrink = shrink(urls, "Urls", "json");
             this.putBodyParameter("Urls", urlsShrink);
             this.urls = urls;

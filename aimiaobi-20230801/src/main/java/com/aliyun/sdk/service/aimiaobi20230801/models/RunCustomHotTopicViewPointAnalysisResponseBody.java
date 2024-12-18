@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -266,7 +271,7 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
      */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AskUser")
-        private java.util.List < String > askUser;
+        private java.util.List<String> askUser;
 
         @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
         private String asyncTaskId;
@@ -303,7 +308,7 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         /**
          * @return askUser
          */
-        public java.util.List < String > getAskUser() {
+        public java.util.List<String> getAskUser() {
             return this.askUser;
         }
 
@@ -343,7 +348,7 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > askUser; 
+            private java.util.List<String> askUser; 
             private String asyncTaskId; 
             private String attitude; 
             private String customViewPointId; 
@@ -353,7 +358,7 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
             /**
              * AskUser.
              */
-            public Builder askUser(java.util.List < String > askUser) {
+            public Builder askUser(java.util.List<String> askUser) {
                 this.askUser = askUser;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -69,7 +74,7 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -124,7 +129,7 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private Integer maxResults; 
         private String message; 
@@ -144,7 +149,7 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -286,7 +291,7 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
-        private java.util.List < Outlines> outlines;
+        private java.util.List<Outlines> outlines;
 
         @com.aliyun.core.annotation.NameInMap("Point")
         private String point;
@@ -311,7 +316,7 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
         /**
          * @return outlines
          */
-        public java.util.List < Outlines> getOutlines() {
+        public java.util.List<Outlines> getOutlines() {
             return this.outlines;
         }
 
@@ -330,14 +335,14 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Outlines> outlines; 
+            private java.util.List<Outlines> outlines; 
             private String point; 
             private String summary; 
 
             /**
              * Outlines.
              */
-            public Builder outlines(java.util.List < Outlines> outlines) {
+            public Builder outlines(java.util.List<Outlines> outlines) {
                 this.outlines = outlines;
                 return this;
             }

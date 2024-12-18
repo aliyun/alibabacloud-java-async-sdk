@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -162,10 +167,10 @@ public class UploadDocResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocIds")
-        private java.util.List < String > docIds;
+        private java.util.List<String> docIds;
 
         @com.aliyun.core.annotation.NameInMap("ExistedIds")
-        private java.util.List < String > existedIds;
+        private java.util.List<String> existedIds;
 
         private Data(Builder builder) {
             this.docIds = builder.docIds;
@@ -183,25 +188,25 @@ public class UploadDocResponseBody extends TeaModel {
         /**
          * @return docIds
          */
-        public java.util.List < String > getDocIds() {
+        public java.util.List<String> getDocIds() {
             return this.docIds;
         }
 
         /**
          * @return existedIds
          */
-        public java.util.List < String > getExistedIds() {
+        public java.util.List<String> getExistedIds() {
             return this.existedIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > docIds; 
-            private java.util.List < String > existedIds; 
+            private java.util.List<String> docIds; 
+            private java.util.List<String> existedIds; 
 
             /**
              * DocIds.
              */
-            public Builder docIds(java.util.List < String > docIds) {
+            public Builder docIds(java.util.List<String> docIds) {
                 this.docIds = docIds;
                 return this;
             }
@@ -209,7 +214,7 @@ public class UploadDocResponseBody extends TeaModel {
             /**
              * ExistedIds.
              */
-            public Builder existedIds(java.util.List < String > existedIds) {
+            public Builder existedIds(java.util.List<String> existedIds) {
                 this.existedIds = existedIds;
                 return this;
             }

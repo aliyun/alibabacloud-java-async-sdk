@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
      */
     public static class ViewPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Outlines")
-        private java.util.List < Outlines> outlines;
+        private java.util.List<Outlines> outlines;
 
         @com.aliyun.core.annotation.NameInMap("Point")
         private String point;
@@ -251,7 +256,7 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         /**
          * @return outlines
          */
-        public java.util.List < Outlines> getOutlines() {
+        public java.util.List<Outlines> getOutlines() {
             return this.outlines;
         }
 
@@ -270,14 +275,14 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         }
 
         public static final class Builder {
-            private java.util.List < Outlines> outlines; 
+            private java.util.List<Outlines> outlines; 
             private String point; 
             private String summary; 
 
             /**
              * Outlines.
              */
-            public Builder outlines(java.util.List < Outlines> outlines) {
+            public Builder outlines(java.util.List<Outlines> outlines) {
                 this.outlines = outlines;
                 return this;
             }
@@ -322,7 +327,7 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         private String ratio;
 
         @com.aliyun.core.annotation.NameInMap("ViewPoints")
-        private java.util.List < ViewPoints> viewPoints;
+        private java.util.List<ViewPoints> viewPoints;
 
         private Attitudes(Builder builder) {
             this.attitude = builder.attitude;
@@ -363,7 +368,7 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         /**
          * @return viewPoints
          */
-        public java.util.List < ViewPoints> getViewPoints() {
+        public java.util.List<ViewPoints> getViewPoints() {
             return this.viewPoints;
         }
 
@@ -371,7 +376,7 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
             private String attitude; 
             private String attitudeType; 
             private String ratio; 
-            private java.util.List < ViewPoints> viewPoints; 
+            private java.util.List<ViewPoints> viewPoints; 
 
             /**
              * Attitude.
@@ -400,7 +405,7 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
             /**
              * ViewPoints.
              */
-            public Builder viewPoints(java.util.List < ViewPoints> viewPoints) {
+            public Builder viewPoints(java.util.List<ViewPoints> viewPoints) {
                 this.viewPoints = viewPoints;
                 return this;
             }
@@ -420,7 +425,7 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
      */
     public static class CustomViewPointsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attitudes")
-        private java.util.List < Attitudes> attitudes;
+        private java.util.List<Attitudes> attitudes;
 
         @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
@@ -441,7 +446,7 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         /**
          * @return attitudes
          */
-        public java.util.List < Attitudes> getAttitudes() {
+        public java.util.List<Attitudes> getAttitudes() {
             return this.attitudes;
         }
 
@@ -453,13 +458,13 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         }
 
         public static final class Builder {
-            private java.util.List < Attitudes> attitudes; 
+            private java.util.List<Attitudes> attitudes; 
             private String topic; 
 
             /**
              * Attitudes.
              */
-            public Builder attitudes(java.util.List < Attitudes> attitudes) {
+            public Builder attitudes(java.util.List<Attitudes> attitudes) {
                 this.attitudes = attitudes;
                 return this;
             }

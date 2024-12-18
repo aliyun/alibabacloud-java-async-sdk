@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class GenerateImageTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ParagraphList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ParagraphList> paragraphList;
+    private java.util.List<ParagraphList> paragraphList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Size")
@@ -88,7 +93,7 @@ public class GenerateImageTaskRequest extends Request {
     /**
      * @return paragraphList
      */
-    public java.util.List < ParagraphList> getParagraphList() {
+    public java.util.List<ParagraphList> getParagraphList() {
         return this.paragraphList;
     }
 
@@ -110,7 +115,7 @@ public class GenerateImageTaskRequest extends Request {
         private String regionId; 
         private String agentKey; 
         private String articleTaskId; 
-        private java.util.List < ParagraphList> paragraphList; 
+        private java.util.List<ParagraphList> paragraphList; 
         private String size; 
         private String style; 
 
@@ -164,7 +169,7 @@ public class GenerateImageTaskRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder paragraphList(java.util.List < ParagraphList> paragraphList) {
+        public Builder paragraphList(java.util.List<ParagraphList> paragraphList) {
             String paragraphListShrink = shrink(paragraphList, "ParagraphList", "json");
             this.putBodyParameter("ParagraphList", paragraphListShrink);
             this.paragraphList = paragraphList;

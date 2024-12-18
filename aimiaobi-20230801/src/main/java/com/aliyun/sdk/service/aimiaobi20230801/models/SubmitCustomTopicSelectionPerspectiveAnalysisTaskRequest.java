@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Re
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Documents")
-    private java.util.List < Documents> documents;
+    private java.util.List<Documents> documents;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Prompt")
@@ -74,7 +79,7 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Re
     /**
      * @return documents
      */
-    public java.util.List < Documents> getDocuments() {
+    public java.util.List<Documents> getDocuments() {
         return this.documents;
     }
 
@@ -95,7 +100,7 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Re
     public static final class Builder extends Request.Builder<SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest, Builder> {
         private String regionId; 
         private String agentKey; 
-        private java.util.List < Documents> documents; 
+        private java.util.List<Documents> documents; 
         private String prompt; 
         private String topic; 
 
@@ -136,7 +141,7 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Re
         /**
          * Documents.
          */
-        public Builder documents(java.util.List < Documents> documents) {
+        public Builder documents(java.util.List<Documents> documents) {
             String documentsShrink = shrink(documents, "Documents", "json");
             this.putBodyParameter("Documents", documentsShrink);
             this.documents = documents;

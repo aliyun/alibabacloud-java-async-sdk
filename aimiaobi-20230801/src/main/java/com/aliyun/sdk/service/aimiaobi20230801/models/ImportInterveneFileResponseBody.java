@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -159,7 +164,7 @@ public class ImportInterveneFileResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailIdList")
-        private java.util.List < String > failIdList;
+        private java.util.List<String> failIdList;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -180,7 +185,7 @@ public class ImportInterveneFileResponseBody extends TeaModel {
         /**
          * @return failIdList
          */
-        public java.util.List < String > getFailIdList() {
+        public java.util.List<String> getFailIdList() {
             return this.failIdList;
         }
 
@@ -192,13 +197,13 @@ public class ImportInterveneFileResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > failIdList; 
+            private java.util.List<String> failIdList; 
             private String taskId; 
 
             /**
              * FailIdList.
              */
-            public Builder failIdList(java.util.List < String > failIdList) {
+            public Builder failIdList(java.util.List<String> failIdList) {
                 this.failIdList = failIdList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,11 +28,11 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Documents")
-    private java.util.List < Documents> documents;
+    private java.util.List<Documents> documents;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PerspectiveTypes")
-    private java.util.List < String > perspectiveTypes;
+    private java.util.List<String> perspectiveTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Topic")
@@ -73,14 +78,14 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
     /**
      * @return documents
      */
-    public java.util.List < Documents> getDocuments() {
+    public java.util.List<Documents> getDocuments() {
         return this.documents;
     }
 
     /**
      * @return perspectiveTypes
      */
-    public java.util.List < String > getPerspectiveTypes() {
+    public java.util.List<String> getPerspectiveTypes() {
         return this.perspectiveTypes;
     }
 
@@ -94,8 +99,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
     public static final class Builder extends Request.Builder<SubmitTopicSelectionPerspectiveAnalysisTaskRequest, Builder> {
         private String regionId; 
         private String agentKey; 
-        private java.util.List < Documents> documents; 
-        private java.util.List < String > perspectiveTypes; 
+        private java.util.List<Documents> documents; 
+        private java.util.List<String> perspectiveTypes; 
         private String topic; 
 
         private Builder() {
@@ -135,7 +140,7 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
         /**
          * Documents.
          */
-        public Builder documents(java.util.List < Documents> documents) {
+        public Builder documents(java.util.List<Documents> documents) {
             String documentsShrink = shrink(documents, "Documents", "json");
             this.putBodyParameter("Documents", documentsShrink);
             this.documents = documents;
@@ -145,7 +150,7 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
         /**
          * PerspectiveTypes.
          */
-        public Builder perspectiveTypes(java.util.List < String > perspectiveTypes) {
+        public Builder perspectiveTypes(java.util.List<String> perspectiveTypes) {
             String perspectiveTypesShrink = shrink(perspectiveTypes, "PerspectiveTypes", "json");
             this.putBodyParameter("PerspectiveTypes", perspectiveTypesShrink);
             this.perspectiveTypes = perspectiveTypes;
@@ -247,7 +252,7 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
         private String author;
 
         @com.aliyun.core.annotation.NameInMap("Comments")
-        private java.util.List < Comments> comments;
+        private java.util.List<Comments> comments;
 
         @com.aliyun.core.annotation.NameInMap("Content")
         @com.aliyun.core.annotation.Validation(required = true, maxLength = 3000, minLength = 30)
@@ -302,7 +307,7 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
         /**
          * @return comments
          */
-        public java.util.List < Comments> getComments() {
+        public java.util.List<Comments> getComments() {
             return this.comments;
         }
 
@@ -350,7 +355,7 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
 
         public static final class Builder {
             private String author; 
-            private java.util.List < Comments> comments; 
+            private java.util.List<Comments> comments; 
             private String content; 
             private String pubTime; 
             private String source; 
@@ -369,7 +374,7 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends Request 
             /**
              * Comments.
              */
-            public Builder comments(java.util.List < Comments> comments) {
+            public Builder comments(java.util.List<Comments> comments) {
                 this.comments = comments;
                 return this;
             }

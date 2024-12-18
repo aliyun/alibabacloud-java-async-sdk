@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -180,7 +185,7 @@ public class RunTranslateGenerationRequest extends Request {
     public static class ReferenceData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contents")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > contents;
+        private java.util.List<String> contents;
 
         private ReferenceData(Builder builder) {
             this.contents = builder.contents;
@@ -197,17 +202,17 @@ public class RunTranslateGenerationRequest extends Request {
         /**
          * @return contents
          */
-        public java.util.List < String > getContents() {
+        public java.util.List<String> getContents() {
             return this.contents;
         }
 
         public static final class Builder {
-            private java.util.List < String > contents; 
+            private java.util.List<String> contents; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder contents(java.util.List < String > contents) {
+            public Builder contents(java.util.List<String> contents) {
                 this.contents = contents;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -333,7 +338,7 @@ public class GetPropertiesResponseBody extends TeaModel {
      */
     public static class SearchSamples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Articles")
-        private java.util.List < Articles> articles;
+        private java.util.List<Articles> articles;
 
         @com.aliyun.core.annotation.NameInMap("Prompt")
         private String prompt;
@@ -358,7 +363,7 @@ public class GetPropertiesResponseBody extends TeaModel {
         /**
          * @return articles
          */
-        public java.util.List < Articles> getArticles() {
+        public java.util.List<Articles> getArticles() {
             return this.articles;
         }
 
@@ -377,14 +382,14 @@ public class GetPropertiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Articles> articles; 
+            private java.util.List<Articles> articles; 
             private String prompt; 
             private String text; 
 
             /**
              * Articles.
              */
-            public Builder articles(java.util.List < Articles> articles) {
+            public Builder articles(java.util.List<Articles> articles) {
                 this.articles = articles;
                 return this;
             }
@@ -510,10 +515,10 @@ public class GetPropertiesResponseBody extends TeaModel {
         private String productDescription;
 
         @com.aliyun.core.annotation.NameInMap("SearchSamples")
-        private java.util.List < SearchSamples> searchSamples;
+        private java.util.List<SearchSamples> searchSamples;
 
         @com.aliyun.core.annotation.NameInMap("SearchSources")
-        private java.util.List < SearchSources> searchSources;
+        private java.util.List<SearchSources> searchSources;
 
         private IntelligentSearchConfig(Builder builder) {
             this.productDescription = builder.productDescription;
@@ -539,21 +544,21 @@ public class GetPropertiesResponseBody extends TeaModel {
         /**
          * @return searchSamples
          */
-        public java.util.List < SearchSamples> getSearchSamples() {
+        public java.util.List<SearchSamples> getSearchSamples() {
             return this.searchSamples;
         }
 
         /**
          * @return searchSources
          */
-        public java.util.List < SearchSources> getSearchSources() {
+        public java.util.List<SearchSources> getSearchSources() {
             return this.searchSources;
         }
 
         public static final class Builder {
             private String productDescription; 
-            private java.util.List < SearchSamples> searchSamples; 
-            private java.util.List < SearchSources> searchSources; 
+            private java.util.List<SearchSamples> searchSamples; 
+            private java.util.List<SearchSources> searchSources; 
 
             /**
              * ProductDescription.
@@ -566,7 +571,7 @@ public class GetPropertiesResponseBody extends TeaModel {
             /**
              * SearchSamples.
              */
-            public Builder searchSamples(java.util.List < SearchSamples> searchSamples) {
+            public Builder searchSamples(java.util.List<SearchSamples> searchSamples) {
                 this.searchSamples = searchSamples;
                 return this;
             }
@@ -574,7 +579,7 @@ public class GetPropertiesResponseBody extends TeaModel {
             /**
              * SearchSources.
              */
-            public Builder searchSources(java.util.List < SearchSources> searchSources) {
+            public Builder searchSources(java.util.List<SearchSources> searchSources) {
                 this.searchSources = searchSources;
                 return this;
             }
@@ -922,19 +927,19 @@ public class GetPropertiesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChatConfig")
-        private java.util.Map < String, ? > chatConfig;
+        private java.util.Map<String, ?> chatConfig;
 
         @com.aliyun.core.annotation.NameInMap("ConsoleConfig")
         private ConsoleConfig consoleConfig;
 
         @com.aliyun.core.annotation.NameInMap("GeneralConfigMap")
-        private java.util.Map < String, ? > generalConfigMap;
+        private java.util.Map<String, ?> generalConfigMap;
 
         @com.aliyun.core.annotation.NameInMap("IntelligentSearchConfig")
         private IntelligentSearchConfig intelligentSearchConfig;
 
         @com.aliyun.core.annotation.NameInMap("SearchSources")
-        private java.util.List < DataSearchSources> searchSources;
+        private java.util.List<DataSearchSources> searchSources;
 
         @com.aliyun.core.annotation.NameInMap("SlrAuthorized")
         private Boolean slrAuthorized;
@@ -943,10 +948,10 @@ public class GetPropertiesResponseBody extends TeaModel {
         private UserInfo userInfo;
 
         @com.aliyun.core.annotation.NameInMap("WanxiangImageSizeConfig")
-        private java.util.List < WanxiangImageSizeConfig> wanxiangImageSizeConfig;
+        private java.util.List<WanxiangImageSizeConfig> wanxiangImageSizeConfig;
 
         @com.aliyun.core.annotation.NameInMap("WanxiangImageStyleConfig")
-        private java.util.List < WanxiangImageStyleConfig> wanxiangImageStyleConfig;
+        private java.util.List<WanxiangImageStyleConfig> wanxiangImageStyleConfig;
 
         private Data(Builder builder) {
             this.chatConfig = builder.chatConfig;
@@ -971,7 +976,7 @@ public class GetPropertiesResponseBody extends TeaModel {
         /**
          * @return chatConfig
          */
-        public java.util.Map < String, ? > getChatConfig() {
+        public java.util.Map<String, ?> getChatConfig() {
             return this.chatConfig;
         }
 
@@ -985,7 +990,7 @@ public class GetPropertiesResponseBody extends TeaModel {
         /**
          * @return generalConfigMap
          */
-        public java.util.Map < String, ? > getGeneralConfigMap() {
+        public java.util.Map<String, ?> getGeneralConfigMap() {
             return this.generalConfigMap;
         }
 
@@ -999,7 +1004,7 @@ public class GetPropertiesResponseBody extends TeaModel {
         /**
          * @return searchSources
          */
-        public java.util.List < DataSearchSources> getSearchSources() {
+        public java.util.List<DataSearchSources> getSearchSources() {
             return this.searchSources;
         }
 
@@ -1020,32 +1025,32 @@ public class GetPropertiesResponseBody extends TeaModel {
         /**
          * @return wanxiangImageSizeConfig
          */
-        public java.util.List < WanxiangImageSizeConfig> getWanxiangImageSizeConfig() {
+        public java.util.List<WanxiangImageSizeConfig> getWanxiangImageSizeConfig() {
             return this.wanxiangImageSizeConfig;
         }
 
         /**
          * @return wanxiangImageStyleConfig
          */
-        public java.util.List < WanxiangImageStyleConfig> getWanxiangImageStyleConfig() {
+        public java.util.List<WanxiangImageStyleConfig> getWanxiangImageStyleConfig() {
             return this.wanxiangImageStyleConfig;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > chatConfig; 
+            private java.util.Map<String, ?> chatConfig; 
             private ConsoleConfig consoleConfig; 
-            private java.util.Map < String, ? > generalConfigMap; 
+            private java.util.Map<String, ?> generalConfigMap; 
             private IntelligentSearchConfig intelligentSearchConfig; 
-            private java.util.List < DataSearchSources> searchSources; 
+            private java.util.List<DataSearchSources> searchSources; 
             private Boolean slrAuthorized; 
             private UserInfo userInfo; 
-            private java.util.List < WanxiangImageSizeConfig> wanxiangImageSizeConfig; 
-            private java.util.List < WanxiangImageStyleConfig> wanxiangImageStyleConfig; 
+            private java.util.List<WanxiangImageSizeConfig> wanxiangImageSizeConfig; 
+            private java.util.List<WanxiangImageStyleConfig> wanxiangImageStyleConfig; 
 
             /**
              * ChatConfig.
              */
-            public Builder chatConfig(java.util.Map < String, ? > chatConfig) {
+            public Builder chatConfig(java.util.Map<String, ?> chatConfig) {
                 this.chatConfig = chatConfig;
                 return this;
             }
@@ -1061,7 +1066,7 @@ public class GetPropertiesResponseBody extends TeaModel {
             /**
              * GeneralConfigMap.
              */
-            public Builder generalConfigMap(java.util.Map < String, ? > generalConfigMap) {
+            public Builder generalConfigMap(java.util.Map<String, ?> generalConfigMap) {
                 this.generalConfigMap = generalConfigMap;
                 return this;
             }
@@ -1077,7 +1082,7 @@ public class GetPropertiesResponseBody extends TeaModel {
             /**
              * SearchSources.
              */
-            public Builder searchSources(java.util.List < DataSearchSources> searchSources) {
+            public Builder searchSources(java.util.List<DataSearchSources> searchSources) {
                 this.searchSources = searchSources;
                 return this;
             }
@@ -1101,7 +1106,7 @@ public class GetPropertiesResponseBody extends TeaModel {
             /**
              * WanxiangImageSizeConfig.
              */
-            public Builder wanxiangImageSizeConfig(java.util.List < WanxiangImageSizeConfig> wanxiangImageSizeConfig) {
+            public Builder wanxiangImageSizeConfig(java.util.List<WanxiangImageSizeConfig> wanxiangImageSizeConfig) {
                 this.wanxiangImageSizeConfig = wanxiangImageSizeConfig;
                 return this;
             }
@@ -1109,7 +1114,7 @@ public class GetPropertiesResponseBody extends TeaModel {
             /**
              * WanxiangImageStyleConfig.
              */
-            public Builder wanxiangImageStyleConfig(java.util.List < WanxiangImageStyleConfig> wanxiangImageStyleConfig) {
+            public Builder wanxiangImageStyleConfig(java.util.List<WanxiangImageStyleConfig> wanxiangImageStyleConfig) {
                 this.wanxiangImageStyleConfig = wanxiangImageStyleConfig;
                 return this;
             }

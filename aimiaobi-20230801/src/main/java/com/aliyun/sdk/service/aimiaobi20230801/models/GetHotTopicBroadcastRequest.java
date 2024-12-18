@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class GetHotTopicBroadcastRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Topics")
-    private java.util.List < String > topics;
+    private java.util.List<String> topics;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -139,7 +144,7 @@ public class GetHotTopicBroadcastRequest extends Request {
     /**
      * @return topics
      */
-    public java.util.List < String > getTopics() {
+    public java.util.List<String> getTopics() {
         return this.topics;
     }
 
@@ -159,7 +164,7 @@ public class GetHotTopicBroadcastRequest extends Request {
         private Integer size; 
         private StepForCustomSummaryStyleConfig stepForCustomSummaryStyleConfig; 
         private StepForNewsBroadcastContentConfig stepForNewsBroadcastContentConfig; 
-        private java.util.List < String > topics; 
+        private java.util.List<String> topics; 
         private String workspaceId; 
 
         private Builder() {
@@ -257,7 +262,7 @@ public class GetHotTopicBroadcastRequest extends Request {
         /**
          * Topics.
          */
-        public Builder topics(java.util.List < String > topics) {
+        public Builder topics(java.util.List<String> topics) {
             String topicsShrink = shrink(topics, "Topics", "json");
             this.putBodyParameter("Topics", topicsShrink);
             this.topics = topics;
@@ -449,10 +454,10 @@ public class GetHotTopicBroadcastRequest extends Request {
      */
     public static class StepForNewsBroadcastContentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
-        private java.util.List < String > categories;
+        private java.util.List<String> categories;
 
         @com.aliyun.core.annotation.NameInMap("CustomHotValueWeights")
-        private java.util.List < CustomHotValueWeights> customHotValueWeights;
+        private java.util.List<CustomHotValueWeights> customHotValueWeights;
 
         @com.aliyun.core.annotation.NameInMap("TopicCount")
         private Integer topicCount;
@@ -474,14 +479,14 @@ public class GetHotTopicBroadcastRequest extends Request {
         /**
          * @return categories
          */
-        public java.util.List < String > getCategories() {
+        public java.util.List<String> getCategories() {
             return this.categories;
         }
 
         /**
          * @return customHotValueWeights
          */
-        public java.util.List < CustomHotValueWeights> getCustomHotValueWeights() {
+        public java.util.List<CustomHotValueWeights> getCustomHotValueWeights() {
             return this.customHotValueWeights;
         }
 
@@ -493,14 +498,14 @@ public class GetHotTopicBroadcastRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > categories; 
-            private java.util.List < CustomHotValueWeights> customHotValueWeights; 
+            private java.util.List<String> categories; 
+            private java.util.List<CustomHotValueWeights> customHotValueWeights; 
             private Integer topicCount; 
 
             /**
              * Categories.
              */
-            public Builder categories(java.util.List < String > categories) {
+            public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
                 return this;
             }
@@ -508,7 +513,7 @@ public class GetHotTopicBroadcastRequest extends Request {
             /**
              * CustomHotValueWeights.
              */
-            public Builder customHotValueWeights(java.util.List < CustomHotValueWeights> customHotValueWeights) {
+            public Builder customHotValueWeights(java.util.List<CustomHotValueWeights> customHotValueWeights) {
                 this.customHotValueWeights = customHotValueWeights;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,11 +24,11 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ContentTags")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ContentTags> contentTags;
+    private java.util.List<ContentTags> contentTags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Contents")
-    private java.util.List < Contents> contents;
+    private java.util.List<Contents> contents;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FileKey")
@@ -31,7 +36,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FilterTags")
-    private java.util.List < FilterTags> filterTags;
+    private java.util.List<FilterTags> filterTags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaterialType")
@@ -97,14 +102,14 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
     /**
      * @return contentTags
      */
-    public java.util.List < ContentTags> getContentTags() {
+    public java.util.List<ContentTags> getContentTags() {
         return this.contentTags;
     }
 
     /**
      * @return contents
      */
-    public java.util.List < Contents> getContents() {
+    public java.util.List<Contents> getContents() {
         return this.contents;
     }
 
@@ -118,7 +123,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
     /**
      * @return filterTags
      */
-    public java.util.List < FilterTags> getFilterTags() {
+    public java.util.List<FilterTags> getFilterTags() {
         return this.filterTags;
     }
 
@@ -166,10 +171,10 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitEnterpriseVocAnalysisTaskRequest, Builder> {
         private String regionId; 
-        private java.util.List < ContentTags> contentTags; 
-        private java.util.List < Contents> contents; 
+        private java.util.List<ContentTags> contentTags; 
+        private java.util.List<Contents> contents; 
         private String fileKey; 
-        private java.util.List < FilterTags> filterTags; 
+        private java.util.List<FilterTags> filterTags; 
         private String materialType; 
         private String modelId; 
         private String positiveSample; 
@@ -208,7 +213,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder contentTags(java.util.List < ContentTags> contentTags) {
+        public Builder contentTags(java.util.List<ContentTags> contentTags) {
             String contentTagsShrink = shrink(contentTags, "ContentTags", "json");
             this.putBodyParameter("ContentTags", contentTagsShrink);
             this.contentTags = contentTags;
@@ -218,7 +223,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         /**
          * Contents.
          */
-        public Builder contents(java.util.List < Contents> contents) {
+        public Builder contents(java.util.List<Contents> contents) {
             String contentsShrink = shrink(contents, "Contents", "json");
             this.putBodyParameter("Contents", contentsShrink);
             this.contents = contents;
@@ -237,7 +242,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         /**
          * FilterTags.
          */
-        public Builder filterTags(java.util.List < FilterTags> filterTags) {
+        public Builder filterTags(java.util.List<FilterTags> filterTags) {
             String filterTagsShrink = shrink(filterTags, "FilterTags", "json");
             this.putBodyParameter("FilterTags", filterTagsShrink);
             this.filterTags = filterTags;

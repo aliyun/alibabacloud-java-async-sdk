@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class UpdateGeneratedContentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Keywords")
-    private java.util.List < String > keywords;
+    private java.util.List<String> keywords;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Prompt")
@@ -110,7 +115,7 @@ public class UpdateGeneratedContentRequest extends Request {
     /**
      * @return keywords
      */
-    public java.util.List < String > getKeywords() {
+    public java.util.List<String> getKeywords() {
         return this.keywords;
     }
 
@@ -134,7 +139,7 @@ public class UpdateGeneratedContentRequest extends Request {
         private String content; 
         private String contentText; 
         private Long id; 
-        private java.util.List < String > keywords; 
+        private java.util.List<String> keywords; 
         private String prompt; 
         private String title; 
 
@@ -208,7 +213,7 @@ public class UpdateGeneratedContentRequest extends Request {
         /**
          * Keywords.
          */
-        public Builder keywords(java.util.List < String > keywords) {
+        public Builder keywords(java.util.List<String> keywords) {
             String keywordsShrink = shrink(keywords, "Keywords", "json");
             this.putBodyParameter("Keywords", keywordsShrink);
             this.keywords = keywords;

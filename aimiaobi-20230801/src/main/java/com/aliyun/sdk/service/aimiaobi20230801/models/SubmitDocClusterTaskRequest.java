@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class SubmitDocClusterTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Documents")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Documents> documents;
+    private java.util.List<Documents> documents;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SummaryLength")
@@ -81,7 +86,7 @@ public class SubmitDocClusterTaskRequest extends Request {
     /**
      * @return documents
      */
-    public java.util.List < Documents> getDocuments() {
+    public java.util.List<Documents> getDocuments() {
         return this.documents;
     }
 
@@ -109,7 +114,7 @@ public class SubmitDocClusterTaskRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitDocClusterTaskRequest, Builder> {
         private String regionId; 
         private String agentKey; 
-        private java.util.List < Documents> documents; 
+        private java.util.List<Documents> documents; 
         private Integer summaryLength; 
         private Integer titleLength; 
         private Integer topicCount; 
@@ -152,7 +157,7 @@ public class SubmitDocClusterTaskRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder documents(java.util.List < Documents> documents) {
+        public Builder documents(java.util.List<Documents> documents) {
             String documentsShrink = shrink(documents, "Documents", "json");
             this.putBodyParameter("Documents", documentsShrink);
             this.documents = documents;
