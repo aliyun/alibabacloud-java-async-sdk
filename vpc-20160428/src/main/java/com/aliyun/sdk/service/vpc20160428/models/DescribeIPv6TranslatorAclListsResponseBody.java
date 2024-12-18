@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
      */
     public static class Ipv6TranslatorAcls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPv6TranslatorAcl")
-        private java.util.List < IPv6TranslatorAcl> iPv6TranslatorAcl;
+        private java.util.List<IPv6TranslatorAcl> iPv6TranslatorAcl;
 
         private Ipv6TranslatorAcls(Builder builder) {
             this.iPv6TranslatorAcl = builder.iPv6TranslatorAcl;
@@ -241,17 +246,17 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         /**
          * @return iPv6TranslatorAcl
          */
-        public java.util.List < IPv6TranslatorAcl> getIPv6TranslatorAcl() {
+        public java.util.List<IPv6TranslatorAcl> getIPv6TranslatorAcl() {
             return this.iPv6TranslatorAcl;
         }
 
         public static final class Builder {
-            private java.util.List < IPv6TranslatorAcl> iPv6TranslatorAcl; 
+            private java.util.List<IPv6TranslatorAcl> iPv6TranslatorAcl; 
 
             /**
              * IPv6TranslatorAcl.
              */
-            public Builder iPv6TranslatorAcl(java.util.List < IPv6TranslatorAcl> iPv6TranslatorAcl) {
+            public Builder iPv6TranslatorAcl(java.util.List<IPv6TranslatorAcl> iPv6TranslatorAcl) {
                 this.iPv6TranslatorAcl = iPv6TranslatorAcl;
                 return this;
             }

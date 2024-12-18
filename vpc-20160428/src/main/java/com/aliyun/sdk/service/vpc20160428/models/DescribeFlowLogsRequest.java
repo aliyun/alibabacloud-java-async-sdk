@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -79,7 +84,7 @@ public class DescribeFlowLogsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficType")
@@ -240,7 +245,7 @@ public class DescribeFlowLogsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -275,7 +280,7 @@ public class DescribeFlowLogsRequest extends Request {
         private Long resourceOwnerId; 
         private String resourceType; 
         private String status; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String trafficType; 
         private String vpcId; 
 
@@ -503,7 +508,7 @@ public class DescribeFlowLogsRequest extends Request {
         /**
          * <p>The list of tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

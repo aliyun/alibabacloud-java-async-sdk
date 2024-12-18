@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VpnCertificateRelations")
-    private java.util.List < VpnCertificateRelations> vpnCertificateRelations;
+    private java.util.List<VpnCertificateRelations> vpnCertificateRelations;
 
     private ListVpnCertificateAssociationsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
     /**
      * @return vpnCertificateRelations
      */
-    public java.util.List < VpnCertificateRelations> getVpnCertificateRelations() {
+    public java.util.List<VpnCertificateRelations> getVpnCertificateRelations() {
         return this.vpnCertificateRelations;
     }
 
@@ -83,7 +88,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VpnCertificateRelations> vpnCertificateRelations; 
+        private java.util.List<VpnCertificateRelations> vpnCertificateRelations; 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -136,7 +141,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         /**
          * <p>The association information.</p>
          */
-        public Builder vpnCertificateRelations(java.util.List < VpnCertificateRelations> vpnCertificateRelations) {
+        public Builder vpnCertificateRelations(java.util.List<VpnCertificateRelations> vpnCertificateRelations) {
             this.vpnCertificateRelations = vpnCertificateRelations;
             return this;
         }

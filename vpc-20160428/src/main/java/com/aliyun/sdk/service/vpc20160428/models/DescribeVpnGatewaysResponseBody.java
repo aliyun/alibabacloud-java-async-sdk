@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
      */
     public static class EniInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EniInstanceId")
-        private java.util.List < String > eniInstanceId;
+        private java.util.List<String> eniInstanceId;
 
         private EniInstanceIds(Builder builder) {
             this.eniInstanceId = builder.eniInstanceId;
@@ -168,17 +173,17 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         /**
          * @return eniInstanceId
          */
-        public java.util.List < String > getEniInstanceId() {
+        public java.util.List<String> getEniInstanceId() {
             return this.eniInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > eniInstanceId; 
+            private java.util.List<String> eniInstanceId; 
 
             /**
              * EniInstanceId.
              */
-            public Builder eniInstanceId(java.util.List < String > eniInstanceId) {
+            public Builder eniInstanceId(java.util.List<String> eniInstanceId) {
                 this.eniInstanceId = eniInstanceId;
                 return this;
             }
@@ -477,7 +482,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -494,17 +499,17 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1247,7 +1252,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
      */
     public static class VpnGateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpnGateway")
-        private java.util.List < VpnGateway> vpnGateway;
+        private java.util.List<VpnGateway> vpnGateway;
 
         private VpnGateways(Builder builder) {
             this.vpnGateway = builder.vpnGateway;
@@ -1264,17 +1269,17 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         /**
          * @return vpnGateway
          */
-        public java.util.List < VpnGateway> getVpnGateway() {
+        public java.util.List<VpnGateway> getVpnGateway() {
             return this.vpnGateway;
         }
 
         public static final class Builder {
-            private java.util.List < VpnGateway> vpnGateway; 
+            private java.util.List<VpnGateway> vpnGateway; 
 
             /**
              * VpnGateway.
              */
-            public Builder vpnGateway(java.util.List < VpnGateway> vpnGateway) {
+            public Builder vpnGateway(java.util.List<VpnGateway> vpnGateway) {
                 this.vpnGateway = vpnGateway;
                 return this;
             }

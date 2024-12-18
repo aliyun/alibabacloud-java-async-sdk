@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -370,7 +375,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
      */
     public static class SslVpnClientCertKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SslVpnClientCertKey")
-        private java.util.List < SslVpnClientCertKey> sslVpnClientCertKey;
+        private java.util.List<SslVpnClientCertKey> sslVpnClientCertKey;
 
         private SslVpnClientCertKeys(Builder builder) {
             this.sslVpnClientCertKey = builder.sslVpnClientCertKey;
@@ -387,17 +392,17 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         /**
          * @return sslVpnClientCertKey
          */
-        public java.util.List < SslVpnClientCertKey> getSslVpnClientCertKey() {
+        public java.util.List<SslVpnClientCertKey> getSslVpnClientCertKey() {
             return this.sslVpnClientCertKey;
         }
 
         public static final class Builder {
-            private java.util.List < SslVpnClientCertKey> sslVpnClientCertKey; 
+            private java.util.List<SslVpnClientCertKey> sslVpnClientCertKey; 
 
             /**
              * SslVpnClientCertKey.
              */
-            public Builder sslVpnClientCertKey(java.util.List < SslVpnClientCertKey> sslVpnClientCertKey) {
+            public Builder sslVpnClientCertKey(java.util.List<SslVpnClientCertKey> sslVpnClientCertKey) {
                 this.sslVpnClientCertKey = sslVpnClientCertKey;
                 return this;
             }

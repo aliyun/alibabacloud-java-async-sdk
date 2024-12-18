@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -316,7 +321,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
      */
     public static class Ipv6EgressOnlyRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6EgressOnlyRule")
-        private java.util.List < Ipv6EgressOnlyRule> ipv6EgressOnlyRule;
+        private java.util.List<Ipv6EgressOnlyRule> ipv6EgressOnlyRule;
 
         private Ipv6EgressOnlyRules(Builder builder) {
             this.ipv6EgressOnlyRule = builder.ipv6EgressOnlyRule;
@@ -333,17 +338,17 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         /**
          * @return ipv6EgressOnlyRule
          */
-        public java.util.List < Ipv6EgressOnlyRule> getIpv6EgressOnlyRule() {
+        public java.util.List<Ipv6EgressOnlyRule> getIpv6EgressOnlyRule() {
             return this.ipv6EgressOnlyRule;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6EgressOnlyRule> ipv6EgressOnlyRule; 
+            private java.util.List<Ipv6EgressOnlyRule> ipv6EgressOnlyRule; 
 
             /**
              * Ipv6EgressOnlyRule.
              */
-            public Builder ipv6EgressOnlyRule(java.util.List < Ipv6EgressOnlyRule> ipv6EgressOnlyRule) {
+            public Builder ipv6EgressOnlyRule(java.util.List<Ipv6EgressOnlyRule> ipv6EgressOnlyRule) {
                 this.ipv6EgressOnlyRule = ipv6EgressOnlyRule;
                 return this;
             }

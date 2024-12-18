@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListIpv4GatewaysResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Ipv4GatewayModels")
-    private java.util.List < Ipv4GatewayModels> ipv4GatewayModels;
+    private java.util.List<Ipv4GatewayModels> ipv4GatewayModels;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
     /**
      * @return ipv4GatewayModels
      */
-    public java.util.List < Ipv4GatewayModels> getIpv4GatewayModels() {
+    public java.util.List<Ipv4GatewayModels> getIpv4GatewayModels() {
         return this.ipv4GatewayModels;
     }
 
@@ -68,7 +73,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Ipv4GatewayModels> ipv4GatewayModels; 
+        private java.util.List<Ipv4GatewayModels> ipv4GatewayModels; 
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
@@ -76,7 +81,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         /**
          * <p>The list of IPv4 gateways.</p>
          */
-        public Builder ipv4GatewayModels(java.util.List < Ipv4GatewayModels> ipv4GatewayModels) {
+        public Builder ipv4GatewayModels(java.util.List<Ipv4GatewayModels> ipv4GatewayModels) {
             this.ipv4GatewayModels = ipv4GatewayModels;
             return this;
         }
@@ -229,7 +234,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -314,7 +319,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -334,7 +339,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             private String ipv4GatewayRouteTableId; 
             private String resourceGroupId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
 
             /**
@@ -439,7 +444,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             /**
              * <p>The list of tags that are added to the resource group.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

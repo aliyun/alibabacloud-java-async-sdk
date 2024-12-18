@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -308,7 +313,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
      */
     public static class EgressAclEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EgressAclEntry")
-        private java.util.List < EgressAclEntry> egressAclEntry;
+        private java.util.List<EgressAclEntry> egressAclEntry;
 
         private EgressAclEntries(Builder builder) {
             this.egressAclEntry = builder.egressAclEntry;
@@ -325,17 +330,17 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         /**
          * @return egressAclEntry
          */
-        public java.util.List < EgressAclEntry> getEgressAclEntry() {
+        public java.util.List<EgressAclEntry> getEgressAclEntry() {
             return this.egressAclEntry;
         }
 
         public static final class Builder {
-            private java.util.List < EgressAclEntry> egressAclEntry; 
+            private java.util.List<EgressAclEntry> egressAclEntry; 
 
             /**
              * EgressAclEntry.
              */
-            public Builder egressAclEntry(java.util.List < EgressAclEntry> egressAclEntry) {
+            public Builder egressAclEntry(java.util.List<EgressAclEntry> egressAclEntry) {
                 this.egressAclEntry = egressAclEntry;
                 return this;
             }
@@ -558,7 +563,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
      */
     public static class IngressAclEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IngressAclEntry")
-        private java.util.List < IngressAclEntry> ingressAclEntry;
+        private java.util.List<IngressAclEntry> ingressAclEntry;
 
         private IngressAclEntries(Builder builder) {
             this.ingressAclEntry = builder.ingressAclEntry;
@@ -575,17 +580,17 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         /**
          * @return ingressAclEntry
          */
-        public java.util.List < IngressAclEntry> getIngressAclEntry() {
+        public java.util.List<IngressAclEntry> getIngressAclEntry() {
             return this.ingressAclEntry;
         }
 
         public static final class Builder {
-            private java.util.List < IngressAclEntry> ingressAclEntry; 
+            private java.util.List<IngressAclEntry> ingressAclEntry; 
 
             /**
              * IngressAclEntry.
              */
-            public Builder ingressAclEntry(java.util.List < IngressAclEntry> ingressAclEntry) {
+            public Builder ingressAclEntry(java.util.List<IngressAclEntry> ingressAclEntry) {
                 this.ingressAclEntry = ingressAclEntry;
                 return this;
             }
@@ -706,7 +711,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
      */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < Resource> resource;
+        private java.util.List<Resource> resource;
 
         private Resources(Builder builder) {
             this.resource = builder.resource;
@@ -723,17 +728,17 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < Resource> resource; 
+            private java.util.List<Resource> resource; 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }

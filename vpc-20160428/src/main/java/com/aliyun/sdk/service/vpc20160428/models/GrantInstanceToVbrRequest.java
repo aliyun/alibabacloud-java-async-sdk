@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class GrantInstanceToVbrRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VbrInstanceIds")
-    private java.util.List < String > vbrInstanceIds;
+    private java.util.List<String> vbrInstanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VbrOwnerUid")
@@ -88,7 +93,7 @@ public class GrantInstanceToVbrRequest extends Request {
     /**
      * @return vbrInstanceIds
      */
-    public java.util.List < String > getVbrInstanceIds() {
+    public java.util.List<String> getVbrInstanceIds() {
         return this.vbrInstanceIds;
     }
 
@@ -110,7 +115,7 @@ public class GrantInstanceToVbrRequest extends Request {
         private String grantType; 
         private String instanceId; 
         private String regionId; 
-        private java.util.List < String > vbrInstanceIds; 
+        private java.util.List<String> vbrInstanceIds; 
         private Long vbrOwnerUid; 
         private String vbrRegionNo; 
 
@@ -175,7 +180,7 @@ public class GrantInstanceToVbrRequest extends Request {
         /**
          * <p>The information about the VBRs.</p>
          */
-        public Builder vbrInstanceIds(java.util.List < String > vbrInstanceIds) {
+        public Builder vbrInstanceIds(java.util.List<String> vbrInstanceIds) {
             String vbrInstanceIdsShrink = shrink(vbrInstanceIds, "VbrInstanceIds", "simple");
             this.putQueryParameter("VbrInstanceIds", vbrInstanceIdsShrink);
             this.vbrInstanceIds = vbrInstanceIds;

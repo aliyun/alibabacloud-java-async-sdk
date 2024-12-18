@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -431,7 +436,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
      */
     public static class ForwardTableEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardTableEntry")
-        private java.util.List < ForwardTableEntry> forwardTableEntry;
+        private java.util.List<ForwardTableEntry> forwardTableEntry;
 
         private ForwardTableEntries(Builder builder) {
             this.forwardTableEntry = builder.forwardTableEntry;
@@ -448,17 +453,17 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         /**
          * @return forwardTableEntry
          */
-        public java.util.List < ForwardTableEntry> getForwardTableEntry() {
+        public java.util.List<ForwardTableEntry> getForwardTableEntry() {
             return this.forwardTableEntry;
         }
 
         public static final class Builder {
-            private java.util.List < ForwardTableEntry> forwardTableEntry; 
+            private java.util.List<ForwardTableEntry> forwardTableEntry; 
 
             /**
              * ForwardTableEntry.
              */
-            public Builder forwardTableEntry(java.util.List < ForwardTableEntry> forwardTableEntry) {
+            public Builder forwardTableEntry(java.util.List<ForwardTableEntry> forwardTableEntry) {
                 this.forwardTableEntry = forwardTableEntry;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -101,11 +106,11 @@ public class CreateVpnAttachmentRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TunnelOptionsSpecification")
-    private java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification;
+    private java.util.List<TunnelOptionsSpecification> tunnelOptionsSpecification;
 
     private CreateVpnAttachmentRequest(Builder builder) {
         super(builder);
@@ -297,14 +302,14 @@ public class CreateVpnAttachmentRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return tunnelOptionsSpecification
      */
-    public java.util.List < TunnelOptionsSpecification> getTunnelOptionsSpecification() {
+    public java.util.List<TunnelOptionsSpecification> getTunnelOptionsSpecification() {
         return this.tunnelOptionsSpecification;
     }
 
@@ -330,8 +335,8 @@ public class CreateVpnAttachmentRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<TunnelOptionsSpecification> tunnelOptionsSpecification; 
 
         private Builder() {
             super();
@@ -723,7 +728,7 @@ public class CreateVpnAttachmentRequest extends Request {
          * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -732,7 +737,7 @@ public class CreateVpnAttachmentRequest extends Request {
         /**
          * TunnelOptionsSpecification.
          */
-        public Builder tunnelOptionsSpecification(java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification) {
+        public Builder tunnelOptionsSpecification(java.util.List<TunnelOptionsSpecification> tunnelOptionsSpecification) {
             this.putBodyParameter("TunnelOptionsSpecification", tunnelOptionsSpecification);
             this.tunnelOptionsSpecification = tunnelOptionsSpecification;
             return this;

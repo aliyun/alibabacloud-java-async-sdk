@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -75,7 +80,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -116,7 +121,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListEnhanhcedNatGatewayAvailableZonesRequest, Builder> {
         private String acceptLanguage; 
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -157,7 +162,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         /**
          * <p>The filter information. You can specify a filter key and a filter value.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;

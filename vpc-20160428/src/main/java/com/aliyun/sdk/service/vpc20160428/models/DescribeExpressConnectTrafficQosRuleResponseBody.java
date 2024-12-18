@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleList")
-    private java.util.List < RuleList> ruleList;
+    private java.util.List<RuleList> ruleList;
 
     private DescribeExpressConnectTrafficQosRuleResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
     /**
      * @return ruleList
      */
-    public java.util.List < RuleList> getRuleList() {
+    public java.util.List<RuleList> getRuleList() {
         return this.ruleList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RuleList> ruleList; 
+        private java.util.List<RuleList> ruleList; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         /**
          * <p>The list of QoS rules.</p>
          */
-        public Builder ruleList(java.util.List < RuleList> ruleList) {
+        public Builder ruleList(java.util.List<RuleList> ruleList) {
             this.ruleList = ruleList;
             return this;
         }

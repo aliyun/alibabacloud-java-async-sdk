@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListIpsecServersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IpsecServers")
-    private java.util.List < IpsecServers> ipsecServers;
+    private java.util.List<IpsecServers> ipsecServers;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
     /**
      * @return ipsecServers
      */
-    public java.util.List < IpsecServers> getIpsecServers() {
+    public java.util.List<IpsecServers> getIpsecServers() {
         return this.ipsecServers;
     }
 
@@ -79,7 +84,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IpsecServers> ipsecServers; 
+        private java.util.List<IpsecServers> ipsecServers; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         /**
          * <p>The list of IPsec servers.</p>
          */
-        public Builder ipsecServers(java.util.List < IpsecServers> ipsecServers) {
+        public Builder ipsecServers(java.util.List<IpsecServers> ipsecServers) {
             this.ipsecServers = ipsecServers;
             return this;
         }

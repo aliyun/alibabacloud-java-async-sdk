@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -48,7 +53,7 @@ public class EnableVpcIpv4GatewayRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteTableList")
-    private java.util.List < String > routeTableList;
+    private java.util.List<String> routeTableList;
 
     private EnableVpcIpv4GatewayRequest(Builder builder) {
         super(builder);
@@ -135,7 +140,7 @@ public class EnableVpcIpv4GatewayRequest extends Request {
     /**
      * @return routeTableList
      */
-    public java.util.List < String > getRouteTableList() {
+    public java.util.List<String> getRouteTableList() {
         return this.routeTableList;
     }
 
@@ -148,7 +153,7 @@ public class EnableVpcIpv4GatewayRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > routeTableList; 
+        private java.util.List<String> routeTableList; 
 
         private Builder() {
             super();
@@ -265,7 +270,7 @@ public class EnableVpcIpv4GatewayRequest extends Request {
         /**
          * <p>A list of route tables. The system adds a 0.0.0.0/0 route that points to the IPv4 gateway to the route tables.</p>
          */
-        public Builder routeTableList(java.util.List < String > routeTableList) {
+        public Builder routeTableList(java.util.List<String> routeTableList) {
             this.putQueryParameter("RouteTableList", routeTableList);
             this.routeTableList = routeTableList;
             return this;

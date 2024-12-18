@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,12 +52,12 @@ public class ListTrafficMirrorFiltersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterIds")
     @com.aliyun.core.annotation.Validation(maxLength = 128)
-    private java.util.List < String > trafficMirrorFilterIds;
+    private java.util.List<String> trafficMirrorFilterIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterName")
@@ -145,14 +150,14 @@ public class ListTrafficMirrorFiltersRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return trafficMirrorFilterIds
      */
-    public java.util.List < String > getTrafficMirrorFilterIds() {
+    public java.util.List<String> getTrafficMirrorFilterIds() {
         return this.trafficMirrorFilterIds;
     }
 
@@ -172,8 +177,8 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < String > trafficMirrorFilterIds; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<String> trafficMirrorFilterIds; 
         private String trafficMirrorFilterName; 
 
         private Builder() {
@@ -289,7 +294,7 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         /**
          * <p>The tag list.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -301,7 +306,7 @@ public class ListTrafficMirrorFiltersRequest extends Request {
          * <strong>example:</strong>
          * <p>tmf-j6cmls82xnc86vtpe****</p>
          */
-        public Builder trafficMirrorFilterIds(java.util.List < String > trafficMirrorFilterIds) {
+        public Builder trafficMirrorFilterIds(java.util.List<String> trafficMirrorFilterIds) {
             this.putQueryParameter("TrafficMirrorFilterIds", trafficMirrorFilterIds);
             this.trafficMirrorFilterIds = trafficMirrorFilterIds;
             return this;

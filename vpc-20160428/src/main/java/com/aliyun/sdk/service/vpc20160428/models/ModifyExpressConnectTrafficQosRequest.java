@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyExpressConnectTrafficQosRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddInstanceList")
-    private java.util.List < AddInstanceList> addInstanceList;
+    private java.util.List<AddInstanceList> addInstanceList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -48,7 +53,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemoveInstanceList")
-    private java.util.List < RemoveInstanceList> removeInstanceList;
+    private java.util.List<RemoveInstanceList> removeInstanceList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -84,7 +89,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
     /**
      * @return addInstanceList
      */
-    public java.util.List < AddInstanceList> getAddInstanceList() {
+    public java.util.List<AddInstanceList> getAddInstanceList() {
         return this.addInstanceList;
     }
 
@@ -140,7 +145,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
     /**
      * @return removeInstanceList
      */
-    public java.util.List < RemoveInstanceList> getRemoveInstanceList() {
+    public java.util.List<RemoveInstanceList> getRemoveInstanceList() {
         return this.removeInstanceList;
     }
 
@@ -152,7 +157,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyExpressConnectTrafficQosRequest, Builder> {
-        private java.util.List < AddInstanceList> addInstanceList; 
+        private java.util.List<AddInstanceList> addInstanceList; 
         private String clientToken; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -160,7 +165,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         private String qosId; 
         private String qosName; 
         private String regionId; 
-        private java.util.List < RemoveInstanceList> removeInstanceList; 
+        private java.util.List<RemoveInstanceList> removeInstanceList; 
         private String resourceOwnerAccount; 
 
         private Builder() {
@@ -184,7 +189,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         /**
          * <p>The instances to be added. Ignore this parameter if no instances are to be added.</p>
          */
-        public Builder addInstanceList(java.util.List < AddInstanceList> addInstanceList) {
+        public Builder addInstanceList(java.util.List<AddInstanceList> addInstanceList) {
             this.putQueryParameter("AddInstanceList", addInstanceList);
             this.addInstanceList = addInstanceList;
             return this;
@@ -278,7 +283,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         /**
          * <p>The instances to be removed. Ignore this parameter if no instances are to be removed.</p>
          */
-        public Builder removeInstanceList(java.util.List < RemoveInstanceList> removeInstanceList) {
+        public Builder removeInstanceList(java.util.List<RemoveInstanceList> removeInstanceList) {
             this.putQueryParameter("RemoveInstanceList", removeInstanceList);
             this.removeInstanceList = removeInstanceList;
             return this;

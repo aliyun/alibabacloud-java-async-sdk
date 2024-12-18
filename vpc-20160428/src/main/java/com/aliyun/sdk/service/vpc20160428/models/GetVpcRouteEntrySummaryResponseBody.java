@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RouteEntrySummarys")
-    private java.util.List < RouteEntrySummarys> routeEntrySummarys;
+    private java.util.List<RouteEntrySummarys> routeEntrySummarys;
 
     private GetVpcRouteEntrySummaryResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
     /**
      * @return routeEntrySummarys
      */
-    public java.util.List < RouteEntrySummarys> getRouteEntrySummarys() {
+    public java.util.List<RouteEntrySummarys> getRouteEntrySummarys() {
         return this.routeEntrySummarys;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RouteEntrySummarys> routeEntrySummarys; 
+        private java.util.List<RouteEntrySummarys> routeEntrySummarys; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         /**
          * <p>The information about the routes in the route tables.</p>
          */
-        public Builder routeEntrySummarys(java.util.List < RouteEntrySummarys> routeEntrySummarys) {
+        public Builder routeEntrySummarys(java.util.List<RouteEntrySummarys> routeEntrySummarys) {
             this.routeEntrySummarys = routeEntrySummarys;
             return this;
         }
@@ -162,7 +167,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
      */
     public static class RouteEntrySummarys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntrySummarys")
-        private java.util.List < EntrySummarys> entrySummarys;
+        private java.util.List<EntrySummarys> entrySummarys;
 
         @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
@@ -183,7 +188,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         /**
          * @return entrySummarys
          */
-        public java.util.List < EntrySummarys> getEntrySummarys() {
+        public java.util.List<EntrySummarys> getEntrySummarys() {
             return this.entrySummarys;
         }
 
@@ -195,13 +200,13 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EntrySummarys> entrySummarys; 
+            private java.util.List<EntrySummarys> entrySummarys; 
             private String routeTableId; 
 
             /**
              * <p>The information about the routes of different types in one route table.</p>
              */
-            public Builder entrySummarys(java.util.List < EntrySummarys> entrySummarys) {
+            public Builder entrySummarys(java.util.List<EntrySummarys> entrySummarys) {
                 this.entrySummarys = entrySummarys;
                 return this;
             }

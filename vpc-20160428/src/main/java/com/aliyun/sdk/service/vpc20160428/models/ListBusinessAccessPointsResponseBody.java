@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListBusinessAccessPointsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BusinessAccessPoints")
-    private java.util.List < BusinessAccessPoints> businessAccessPoints;
+    private java.util.List<BusinessAccessPoints> businessAccessPoints;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
     /**
      * @return businessAccessPoints
      */
-    public java.util.List < BusinessAccessPoints> getBusinessAccessPoints() {
+    public java.util.List<BusinessAccessPoints> getBusinessAccessPoints() {
         return this.businessAccessPoints;
     }
 
@@ -46,13 +51,13 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BusinessAccessPoints> businessAccessPoints; 
+        private java.util.List<BusinessAccessPoints> businessAccessPoints; 
         private String requestId; 
 
         /**
          * <p>The list of access points.</p>
          */
-        public Builder businessAccessPoints(java.util.List < BusinessAccessPoints> businessAccessPoints) {
+        public Builder businessAccessPoints(java.util.List<BusinessAccessPoints> businessAccessPoints) {
             this.businessAccessPoints = businessAccessPoints;
             return this;
         }

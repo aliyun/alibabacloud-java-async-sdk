@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
      */
     public static class GatewayIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GatewayIds")
-        private java.util.List < String > gatewayIds;
+        private java.util.List<String> gatewayIds;
 
         private GatewayIds(Builder builder) {
             this.gatewayIds = builder.gatewayIds;
@@ -172,17 +177,17 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         /**
          * @return gatewayIds
          */
-        public java.util.List < String > getGatewayIds() {
+        public java.util.List<String> getGatewayIds() {
             return this.gatewayIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > gatewayIds; 
+            private java.util.List<String> gatewayIds; 
 
             /**
              * GatewayIds.
              */
-            public Builder gatewayIds(java.util.List < String > gatewayIds) {
+            public Builder gatewayIds(java.util.List<String> gatewayIds) {
                 this.gatewayIds = gatewayIds;
                 return this;
             }
@@ -277,7 +282,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -294,17 +299,17 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -324,7 +329,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
      */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
-        private java.util.List < String > vSwitchId;
+        private java.util.List<String> vSwitchId;
 
         private VSwitchIds(Builder builder) {
             this.vSwitchId = builder.vSwitchId;
@@ -341,17 +346,17 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         /**
          * @return vSwitchId
          */
-        public java.util.List < String > getVSwitchId() {
+        public java.util.List<String> getVSwitchId() {
             return this.vSwitchId;
         }
 
         public static final class Builder {
-            private java.util.List < String > vSwitchId; 
+            private java.util.List<String> vSwitchId; 
 
             /**
              * VSwitchId.
              */
-            public Builder vSwitchId(java.util.List < String > vSwitchId) {
+            public Builder vSwitchId(java.util.List<String> vSwitchId) {
                 this.vSwitchId = vSwitchId;
                 return this;
             }
@@ -767,7 +772,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
      */
     public static class RouterTableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouterTableListType")
-        private java.util.List < RouterTableListType> routerTableListType;
+        private java.util.List<RouterTableListType> routerTableListType;
 
         private RouterTableList(Builder builder) {
             this.routerTableListType = builder.routerTableListType;
@@ -784,17 +789,17 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         /**
          * @return routerTableListType
          */
-        public java.util.List < RouterTableListType> getRouterTableListType() {
+        public java.util.List<RouterTableListType> getRouterTableListType() {
             return this.routerTableListType;
         }
 
         public static final class Builder {
-            private java.util.List < RouterTableListType> routerTableListType; 
+            private java.util.List<RouterTableListType> routerTableListType; 
 
             /**
              * RouterTableListType.
              */
-            public Builder routerTableListType(java.util.List < RouterTableListType> routerTableListType) {
+            public Builder routerTableListType(java.util.List<RouterTableListType> routerTableListType) {
                 this.routerTableListType = routerTableListType;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListFullNatEntriesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FullNatEntryNames")
-    private java.util.List < String > fullNatEntryNames;
+    private java.util.List<String> fullNatEntryNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FullNatTableId")
@@ -50,7 +55,7 @@ public class ListFullNatEntriesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
-    private java.util.List < String > networkInterfaceIds;
+    private java.util.List<String> networkInterfaceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -127,7 +132,7 @@ public class ListFullNatEntriesRequest extends Request {
     /**
      * @return fullNatEntryNames
      */
-    public java.util.List < String > getFullNatEntryNames() {
+    public java.util.List<String> getFullNatEntryNames() {
         return this.fullNatEntryNames;
     }
 
@@ -176,7 +181,7 @@ public class ListFullNatEntriesRequest extends Request {
     /**
      * @return networkInterfaceIds
      */
-    public java.util.List < String > getNetworkInterfaceIds() {
+    public java.util.List<String> getNetworkInterfaceIds() {
         return this.networkInterfaceIds;
     }
 
@@ -225,14 +230,14 @@ public class ListFullNatEntriesRequest extends Request {
     public static final class Builder extends Request.Builder<ListFullNatEntriesRequest, Builder> {
         private String clientToken; 
         private String fullNatEntryId; 
-        private java.util.List < String > fullNatEntryNames; 
+        private java.util.List<String> fullNatEntryNames; 
         private String fullNatTableId; 
         private String ipProtocol; 
         private Long maxResults; 
         private String natGatewayId; 
         private String natIp; 
         private String natIpPort; 
-        private java.util.List < String > networkInterfaceIds; 
+        private java.util.List<String> networkInterfaceIds; 
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -296,7 +301,7 @@ public class ListFullNatEntriesRequest extends Request {
          * <p>The name of the FULLNAT entry that you want to query. You can specify at most 20 names.</p>
          * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          */
-        public Builder fullNatEntryNames(java.util.List < String > fullNatEntryNames) {
+        public Builder fullNatEntryNames(java.util.List<String> fullNatEntryNames) {
             this.putQueryParameter("FullNatEntryNames", fullNatEntryNames);
             this.fullNatEntryNames = fullNatEntryNames;
             return this;
@@ -387,7 +392,7 @@ public class ListFullNatEntriesRequest extends Request {
         /**
          * <p>The ID of the elastic network interface (ENI) that you want to query.</p>
          */
-        public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
+        public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
             this.networkInterfaceIds = networkInterfaceIds;
             return this;

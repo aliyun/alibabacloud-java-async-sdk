@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class ListPrefixListsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrefixListIds")
-    private java.util.List < String > prefixListIds;
+    private java.util.List<String> prefixListIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrefixListName")
@@ -56,7 +61,7 @@ public class ListPrefixListsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListPrefixListsRequest(Builder builder) {
         super(builder);
@@ -117,7 +122,7 @@ public class ListPrefixListsRequest extends Request {
     /**
      * @return prefixListIds
      */
-    public java.util.List < String > getPrefixListIds() {
+    public java.util.List<String> getPrefixListIds() {
         return this.prefixListIds;
     }
 
@@ -159,7 +164,7 @@ public class ListPrefixListsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -168,13 +173,13 @@ public class ListPrefixListsRequest extends Request {
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > prefixListIds; 
+        private java.util.List<String> prefixListIds; 
         private String prefixListName; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -247,7 +252,7 @@ public class ListPrefixListsRequest extends Request {
          * <strong>example:</strong>
          * <p>pl-m5estsqsdqwg88hjf****</p>
          */
-        public Builder prefixListIds(java.util.List < String > prefixListIds) {
+        public Builder prefixListIds(java.util.List<String> prefixListIds) {
             this.putQueryParameter("PrefixListIds", prefixListIds);
             this.prefixListIds = prefixListIds;
             return this;
@@ -313,7 +318,7 @@ public class ListPrefixListsRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

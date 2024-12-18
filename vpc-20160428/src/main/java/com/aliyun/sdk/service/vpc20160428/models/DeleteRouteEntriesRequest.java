@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class DeleteRouteEntriesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteEntries")
-    private java.util.List < RouteEntries> routeEntries;
+    private java.util.List<RouteEntries> routeEntries;
 
     private DeleteRouteEntriesRequest(Builder builder) {
         super(builder);
@@ -97,7 +102,7 @@ public class DeleteRouteEntriesRequest extends Request {
     /**
      * @return routeEntries
      */
-    public java.util.List < RouteEntries> getRouteEntries() {
+    public java.util.List<RouteEntries> getRouteEntries() {
         return this.routeEntries;
     }
 
@@ -107,7 +112,7 @@ public class DeleteRouteEntriesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < RouteEntries> routeEntries; 
+        private java.util.List<RouteEntries> routeEntries; 
 
         private Builder() {
             super();
@@ -175,7 +180,7 @@ public class DeleteRouteEntriesRequest extends Request {
         /**
          * <p>The information about the routes that you want to delete.</p>
          */
-        public Builder routeEntries(java.util.List < RouteEntries> routeEntries) {
+        public Builder routeEntries(java.util.List<RouteEntries> routeEntries) {
             this.putQueryParameter("RouteEntries", routeEntries);
             this.routeEntries = routeEntries;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFullNatEntriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FullNatEntries")
-    private java.util.List < FullNatEntries> fullNatEntries;
+    private java.util.List<FullNatEntries> fullNatEntries;
 
     @com.aliyun.core.annotation.NameInMap("FullNatTableId")
     private String fullNatTableId;
@@ -54,7 +59,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     /**
      * @return fullNatEntries
      */
-    public java.util.List < FullNatEntries> getFullNatEntries() {
+    public java.util.List<FullNatEntries> getFullNatEntries() {
         return this.fullNatEntries;
     }
 
@@ -101,7 +106,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FullNatEntries> fullNatEntries; 
+        private java.util.List<FullNatEntries> fullNatEntries; 
         private String fullNatTableId; 
         private Long maxResults; 
         private String natGatewayId; 
@@ -112,7 +117,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         /**
          * <p>The information about the FULLNAT entries that are queried.</p>
          */
-        public Builder fullNatEntries(java.util.List < FullNatEntries> fullNatEntries) {
+        public Builder fullNatEntries(java.util.List<FullNatEntries> fullNatEntries) {
             this.fullNatEntries = fullNatEntries;
             return this;
         }

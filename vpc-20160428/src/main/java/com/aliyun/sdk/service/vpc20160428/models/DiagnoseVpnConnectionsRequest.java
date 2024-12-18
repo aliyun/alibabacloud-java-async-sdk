@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,11 +36,11 @@ public class DiagnoseVpnConnectionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TunnelIds")
-    private java.util.List < String > tunnelIds;
+    private java.util.List<String> tunnelIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpnConnectionIds")
-    private java.util.List < String > vpnConnectionIds;
+    private java.util.List<String> vpnConnectionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
@@ -96,14 +101,14 @@ public class DiagnoseVpnConnectionsRequest extends Request {
     /**
      * @return tunnelIds
      */
-    public java.util.List < String > getTunnelIds() {
+    public java.util.List<String> getTunnelIds() {
         return this.tunnelIds;
     }
 
     /**
      * @return vpnConnectionIds
      */
-    public java.util.List < String > getVpnConnectionIds() {
+    public java.util.List<String> getVpnConnectionIds() {
         return this.vpnConnectionIds;
     }
 
@@ -119,8 +124,8 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         private Integer pageSize; 
         private String regionId; 
         private Long resourceOwnerId; 
-        private java.util.List < String > tunnelIds; 
-        private java.util.List < String > vpnConnectionIds; 
+        private java.util.List<String> tunnelIds; 
+        private java.util.List<String> vpnConnectionIds; 
         private String vpnGatewayId; 
 
         private Builder() {
@@ -188,7 +193,7 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         /**
          * <p>The list of tunnel IDs.</p>
          */
-        public Builder tunnelIds(java.util.List < String > tunnelIds) {
+        public Builder tunnelIds(java.util.List<String> tunnelIds) {
             this.putQueryParameter("TunnelIds", tunnelIds);
             this.tunnelIds = tunnelIds;
             return this;
@@ -197,7 +202,7 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         /**
          * <p>The IDs of IPsec-VPN connections.</p>
          */
-        public Builder vpnConnectionIds(java.util.List < String > vpnConnectionIds) {
+        public Builder vpnConnectionIds(java.util.List<String> vpnConnectionIds) {
             this.putQueryParameter("VpnConnectionIds", vpnConnectionIds);
             this.vpnConnectionIds = vpnConnectionIds;
             return this;

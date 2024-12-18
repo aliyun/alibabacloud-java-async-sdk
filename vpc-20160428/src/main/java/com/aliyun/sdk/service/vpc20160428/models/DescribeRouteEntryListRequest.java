@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeRouteEntryListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestCidrBlockList")
-    private java.util.List < String > destCidrBlockList;
+    private java.util.List<String> destCidrBlockList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
@@ -120,7 +125,7 @@ public class DescribeRouteEntryListRequest extends Request {
     /**
      * @return destCidrBlockList
      */
-    public java.util.List < String > getDestCidrBlockList() {
+    public java.util.List<String> getDestCidrBlockList() {
         return this.destCidrBlockList;
     }
 
@@ -237,7 +242,7 @@ public class DescribeRouteEntryListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRouteEntryListRequest, Builder> {
-        private java.util.List < String > destCidrBlockList; 
+        private java.util.List<String> destCidrBlockList; 
         private String destinationCidrBlock; 
         private String ipVersion; 
         private Integer maxResult; 
@@ -283,7 +288,7 @@ public class DescribeRouteEntryListRequest extends Request {
         /**
          * <p>The destination CIDR blocks of the routes.</p>
          */
-        public Builder destCidrBlockList(java.util.List < String > destCidrBlockList) {
+        public Builder destCidrBlockList(java.util.List<String> destCidrBlockList) {
             this.putQueryParameter("DestCidrBlockList", destCidrBlockList);
             this.destCidrBlockList = destCidrBlockList;
             return this;

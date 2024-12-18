@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EgressRules")
-    private java.util.List < EgressRules> egressRules;
+    private java.util.List<EgressRules> egressRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IngressRules")
-    private java.util.List < IngressRules> ingressRules;
+    private java.util.List<IngressRules> ingressRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -98,14 +103,14 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
     /**
      * @return egressRules
      */
-    public java.util.List < EgressRules> getEgressRules() {
+    public java.util.List<EgressRules> getEgressRules() {
         return this.egressRules;
     }
 
     /**
      * @return ingressRules
      */
-    public java.util.List < IngressRules> getIngressRules() {
+    public java.util.List<IngressRules> getIngressRules() {
         return this.ingressRules;
     }
 
@@ -154,8 +159,8 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
     public static final class Builder extends Request.Builder<CreateTrafficMirrorFilterRulesRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < EgressRules> egressRules; 
-        private java.util.List < IngressRules> ingressRules; 
+        private java.util.List<EgressRules> egressRules; 
+        private java.util.List<IngressRules> ingressRules; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -216,7 +221,7 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
         /**
          * <p>The list of outbound rules.</p>
          */
-        public Builder egressRules(java.util.List < EgressRules> egressRules) {
+        public Builder egressRules(java.util.List<EgressRules> egressRules) {
             this.putQueryParameter("EgressRules", egressRules);
             this.egressRules = egressRules;
             return this;
@@ -225,7 +230,7 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
         /**
          * <p>The list of inbound rules.</p>
          */
-        public Builder ingressRules(java.util.List < IngressRules> ingressRules) {
+        public Builder ingressRules(java.util.List<IngressRules> ingressRules) {
             this.putQueryParameter("IngressRules", ingressRules);
             this.ingressRules = ingressRules;
             return this;

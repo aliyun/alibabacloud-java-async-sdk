@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Endpoints")
-    private java.util.List < Endpoints> endpoints;
+    private java.util.List<Endpoints> endpoints;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
@@ -46,7 +51,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
     /**
      * @return endpoints
      */
-    public java.util.List < Endpoints> getEndpoints() {
+    public java.util.List<Endpoints> getEndpoints() {
         return this.endpoints;
     }
 
@@ -79,7 +84,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Endpoints> endpoints; 
+        private java.util.List<Endpoints> endpoints; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         /**
          * <p>The list of gateway endpoints.</p>
          */
-        public Builder endpoints(java.util.List < Endpoints> endpoints) {
+        public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
@@ -228,7 +233,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
      */
     public static class Endpoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedRouteTables")
-        private java.util.List < String > associatedRouteTables;
+        private java.util.List<String> associatedRouteTables;
 
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -255,7 +260,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         private String serviceName;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -285,7 +290,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         /**
          * @return associatedRouteTables
          */
-        public java.util.List < String > getAssociatedRouteTables() {
+        public java.util.List<String> getAssociatedRouteTables() {
             return this.associatedRouteTables;
         }
 
@@ -348,7 +353,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -360,7 +365,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > associatedRouteTables; 
+            private java.util.List<String> associatedRouteTables; 
             private String creationTime; 
             private String endpointDescription; 
             private String endpointId; 
@@ -369,13 +374,13 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             private String policyDocument; 
             private String resourceGroupId; 
             private String serviceName; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
 
             /**
              * <p>The ID of the route table associated with the gateway endpoint.</p>
              */
-            public Builder associatedRouteTables(java.util.List < String > associatedRouteTables) {
+            public Builder associatedRouteTables(java.util.List<String> associatedRouteTables) {
                 this.associatedRouteTables = associatedRouteTables;
                 return this;
             }
@@ -480,7 +485,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             /**
              * <p>The tag list.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

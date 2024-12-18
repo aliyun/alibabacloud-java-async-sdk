@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class CreateTrafficMirrorFilterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EgressRules")
-    private java.util.List < EgressRules> egressRules;
+    private java.util.List<EgressRules> egressRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IngressRules")
-    private java.util.List < IngressRules> ingressRules;
+    private java.util.List<IngressRules> ingressRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -55,7 +60,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterDescription")
@@ -112,14 +117,14 @@ public class CreateTrafficMirrorFilterRequest extends Request {
     /**
      * @return egressRules
      */
-    public java.util.List < EgressRules> getEgressRules() {
+    public java.util.List<EgressRules> getEgressRules() {
         return this.egressRules;
     }
 
     /**
      * @return ingressRules
      */
-    public java.util.List < IngressRules> getIngressRules() {
+    public java.util.List<IngressRules> getIngressRules() {
         return this.ingressRules;
     }
 
@@ -168,7 +173,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -189,15 +194,15 @@ public class CreateTrafficMirrorFilterRequest extends Request {
     public static final class Builder extends Request.Builder<CreateTrafficMirrorFilterRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < EgressRules> egressRules; 
-        private java.util.List < IngressRules> ingressRules; 
+        private java.util.List<EgressRules> egressRules; 
+        private java.util.List<IngressRules> ingressRules; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String trafficMirrorFilterDescription; 
         private String trafficMirrorFilterName; 
 
@@ -257,7 +262,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         /**
          * <p>The list of outbound rules.</p>
          */
-        public Builder egressRules(java.util.List < EgressRules> egressRules) {
+        public Builder egressRules(java.util.List<EgressRules> egressRules) {
             this.putQueryParameter("EgressRules", egressRules);
             this.egressRules = egressRules;
             return this;
@@ -266,7 +271,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         /**
          * <p>The list of inbound rules.</p>
          */
-        public Builder ingressRules(java.util.List < IngressRules> ingressRules) {
+        public Builder ingressRules(java.util.List<IngressRules> ingressRules) {
             this.putQueryParameter("IngressRules", ingressRules);
             this.ingressRules = ingressRules;
             return this;
@@ -337,7 +342,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         /**
          * <p>The tag of the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("QosList")
-    private java.util.List < QosList> qosList;
+    private java.util.List<QosList> qosList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
     /**
      * @return qosList
      */
-    public java.util.List < QosList> getQosList() {
+    public java.util.List<QosList> getQosList() {
         return this.qosList;
     }
 
@@ -93,7 +98,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         private String count; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < QosList> qosList; 
+        private java.util.List<QosList> qosList; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -124,7 +129,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         /**
          * QosList.
          */
-        public Builder qosList(java.util.List < QosList> qosList) {
+        public Builder qosList(java.util.List<QosList> qosList) {
             this.qosList = qosList;
             return this;
         }
@@ -431,9 +436,76 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
      *
      * <p>DescribeExpressConnectTrafficQosResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeExpressConnectTrafficQosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressConnectTrafficQosResponseBody</p>
+     */
     public static class QosList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedInstanceList")
-        private java.util.List < AssociatedInstanceList> associatedInstanceList;
+        private java.util.List<AssociatedInstanceList> associatedInstanceList;
 
         @com.aliyun.core.annotation.NameInMap("Progressing")
         private Integer progressing;
@@ -448,10 +520,16 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         private String qosName;
 
         @com.aliyun.core.annotation.NameInMap("QueueList")
-        private java.util.List < QueueList> queueList;
+        private java.util.List<QueueList> queueList;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private QosList(Builder builder) {
             this.associatedInstanceList = builder.associatedInstanceList;
@@ -460,7 +538,9 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             this.qosId = builder.qosId;
             this.qosName = builder.qosName;
             this.queueList = builder.queueList;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -474,7 +554,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         /**
          * @return associatedInstanceList
          */
-        public java.util.List < AssociatedInstanceList> getAssociatedInstanceList() {
+        public java.util.List<AssociatedInstanceList> getAssociatedInstanceList() {
             return this.associatedInstanceList;
         }
 
@@ -509,8 +589,15 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         /**
          * @return queueList
          */
-        public java.util.List < QueueList> getQueueList() {
+        public java.util.List<QueueList> getQueueList() {
             return this.queueList;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -520,19 +607,28 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
-            private java.util.List < AssociatedInstanceList> associatedInstanceList; 
+            private java.util.List<AssociatedInstanceList> associatedInstanceList; 
             private Integer progressing; 
             private String qosDescription; 
             private String qosId; 
             private String qosName; 
-            private java.util.List < QueueList> queueList; 
+            private java.util.List<QueueList> queueList; 
+            private String resourceGroupId; 
             private String status; 
+            private java.util.List<Tags> tags; 
 
             /**
              * AssociatedInstanceList.
              */
-            public Builder associatedInstanceList(java.util.List < AssociatedInstanceList> associatedInstanceList) {
+            public Builder associatedInstanceList(java.util.List<AssociatedInstanceList> associatedInstanceList) {
                 this.associatedInstanceList = associatedInstanceList;
                 return this;
             }
@@ -572,8 +668,16 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             /**
              * QueueList.
              */
-            public Builder queueList(java.util.List < QueueList> queueList) {
+            public Builder queueList(java.util.List<QueueList> queueList) {
                 this.queueList = queueList;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -582,6 +686,14 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

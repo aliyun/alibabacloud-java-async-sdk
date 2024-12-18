@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AvailableZoneIdList")
-    private java.util.List < AvailableZoneIdList> availableZoneIdList;
+    private java.util.List<AvailableZoneIdList> availableZoneIdList;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -38,7 +43,7 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
     /**
      * @return availableZoneIdList
      */
-    public java.util.List < AvailableZoneIdList> getAvailableZoneIdList() {
+    public java.util.List<AvailableZoneIdList> getAvailableZoneIdList() {
         return this.availableZoneIdList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AvailableZoneIdList> availableZoneIdList; 
+        private java.util.List<AvailableZoneIdList> availableZoneIdList; 
         private String regionId; 
         private String requestId; 
 
         /**
          * AvailableZoneIdList.
          */
-        public Builder availableZoneIdList(java.util.List < AvailableZoneIdList> availableZoneIdList) {
+        public Builder availableZoneIdList(java.util.List<AvailableZoneIdList> availableZoneIdList) {
             this.availableZoneIdList = availableZoneIdList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetDhcpOptionsSetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AssociateVpcs")
-    private java.util.List < AssociateVpcs> associateVpcs;
+    private java.util.List<AssociateVpcs> associateVpcs;
 
     @com.aliyun.core.annotation.NameInMap("DhcpOptions")
     private DhcpOptions dhcpOptions;
@@ -40,7 +45,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private GetDhcpOptionsSetResponseBody(Builder builder) {
         this.associateVpcs = builder.associateVpcs;
@@ -66,7 +71,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     /**
      * @return associateVpcs
      */
-    public java.util.List < AssociateVpcs> getAssociateVpcs() {
+    public java.util.List<AssociateVpcs> getAssociateVpcs() {
         return this.associateVpcs;
     }
 
@@ -129,12 +134,12 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
-        private java.util.List < AssociateVpcs> associateVpcs; 
+        private java.util.List<AssociateVpcs> associateVpcs; 
         private DhcpOptions dhcpOptions; 
         private String dhcpOptionsSetDescription; 
         private String dhcpOptionsSetId; 
@@ -143,12 +148,12 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String status; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         /**
          * <p>The information about the virtual private cloud (VPC) that is associated with the DHCP options set.</p>
          */
-        public Builder associateVpcs(java.util.List < AssociateVpcs> associateVpcs) {
+        public Builder associateVpcs(java.util.List<AssociateVpcs> associateVpcs) {
             this.associateVpcs = associateVpcs;
             return this;
         }
@@ -247,7 +252,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         /**
          * <p>The tag list.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }

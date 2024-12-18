@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PublicIpAddressPoolIds")
-    private java.util.List < String > publicIpAddressPoolIds;
+    private java.util.List<String> publicIpAddressPoolIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -71,7 +76,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListPublicIpAddressPoolsRequest(Builder builder) {
         super(builder);
@@ -157,7 +162,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
     /**
      * @return publicIpAddressPoolIds
      */
-    public java.util.List < String > getPublicIpAddressPoolIds() {
+    public java.util.List<String> getPublicIpAddressPoolIds() {
         return this.publicIpAddressPoolIds;
     }
 
@@ -206,7 +211,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -218,14 +223,14 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > publicIpAddressPoolIds; 
+        private java.util.List<String> publicIpAddressPoolIds; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Boolean securityProtectionEnabled; 
         private String status; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -356,7 +361,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
          * <p>The IDs of the IP address pool.</p>
          * <p>You can enter up to 100 IDs.</p>
          */
-        public Builder publicIpAddressPoolIds(java.util.List < String > publicIpAddressPoolIds) {
+        public Builder publicIpAddressPoolIds(java.util.List<String> publicIpAddressPoolIds) {
             this.putQueryParameter("PublicIpAddressPoolIds", publicIpAddressPoolIds);
             this.publicIpAddressPoolIds = publicIpAddressPoolIds;
             return this;
@@ -442,7 +447,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         /**
          * <p>The tags to add to the resource.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

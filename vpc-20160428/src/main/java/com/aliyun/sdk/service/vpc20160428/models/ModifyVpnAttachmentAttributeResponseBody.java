@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -70,7 +75,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("TunnelOptionsSpecification")
-    private java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification;
+    private java.util.List<TunnelOptionsSpecification> tunnelOptionsSpecification;
 
     @com.aliyun.core.annotation.NameInMap("VcoHealthCheck")
     private VcoHealthCheck vcoHealthCheck;
@@ -255,7 +260,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     /**
      * @return tunnelOptionsSpecification
      */
-    public java.util.List < TunnelOptionsSpecification> getTunnelOptionsSpecification() {
+    public java.util.List<TunnelOptionsSpecification> getTunnelOptionsSpecification() {
         return this.tunnelOptionsSpecification;
     }
 
@@ -307,7 +312,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         private String resourceGroupId; 
         private String spec; 
         private String status; 
-        private java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification; 
+        private java.util.List<TunnelOptionsSpecification> tunnelOptionsSpecification; 
         private VcoHealthCheck vcoHealthCheck; 
         private VpnBgpConfig vpnBgpConfig; 
         private String vpnConnectionId; 
@@ -546,7 +551,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         /**
          * TunnelOptionsSpecification.
          */
-        public Builder tunnelOptionsSpecification(java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification) {
+        public Builder tunnelOptionsSpecification(java.util.List<TunnelOptionsSpecification> tunnelOptionsSpecification) {
             this.tunnelOptionsSpecification = tunnelOptionsSpecification;
             return this;
         }

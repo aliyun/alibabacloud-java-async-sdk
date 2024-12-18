@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
      */
     public static class CenGrantRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CbnGrantRule")
-        private java.util.List < CbnGrantRule> cbnGrantRule;
+        private java.util.List<CbnGrantRule> cbnGrantRule;
 
         private CenGrantRules(Builder builder) {
             this.cbnGrantRule = builder.cbnGrantRule;
@@ -264,17 +269,17 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         /**
          * @return cbnGrantRule
          */
-        public java.util.List < CbnGrantRule> getCbnGrantRule() {
+        public java.util.List<CbnGrantRule> getCbnGrantRule() {
             return this.cbnGrantRule;
         }
 
         public static final class Builder {
-            private java.util.List < CbnGrantRule> cbnGrantRule; 
+            private java.util.List<CbnGrantRule> cbnGrantRule; 
 
             /**
              * CbnGrantRule.
              */
-            public Builder cbnGrantRule(java.util.List < CbnGrantRule> cbnGrantRule) {
+            public Builder cbnGrantRule(java.util.List<CbnGrantRule> cbnGrantRule) {
                 this.cbnGrantRule = cbnGrantRule;
                 return this;
             }

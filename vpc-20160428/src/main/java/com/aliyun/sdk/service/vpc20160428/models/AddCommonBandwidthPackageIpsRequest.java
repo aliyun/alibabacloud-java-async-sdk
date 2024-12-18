@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpInstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > ipInstanceIds;
+    private java.util.List<String> ipInstanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpType")
@@ -94,7 +99,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
     /**
      * @return ipInstanceIds
      */
-    public java.util.List < String > getIpInstanceIds() {
+    public java.util.List<String> getIpInstanceIds() {
         return this.ipInstanceIds;
     }
 
@@ -143,7 +148,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
     public static final class Builder extends Request.Builder<AddCommonBandwidthPackageIpsRequest, Builder> {
         private String bandwidthPackageId; 
         private String clientToken; 
-        private java.util.List < String > ipInstanceIds; 
+        private java.util.List<String> ipInstanceIds; 
         private String ipType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -202,7 +207,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
          * <p>You can specify at most 10 EIP IDs at a time.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder ipInstanceIds(java.util.List < String > ipInstanceIds) {
+        public Builder ipInstanceIds(java.util.List<String> ipInstanceIds) {
             this.putQueryParameter("IpInstanceIds", ipInstanceIds);
             this.ipInstanceIds = ipInstanceIds;
             return this;

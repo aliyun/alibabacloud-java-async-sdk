@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class CreatePhysicalConnectionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceAdvancedCapacity")
-    private java.util.List < String > deviceAdvancedCapacity;
+    private java.util.List<String> deviceAdvancedCapacity;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LineOperator")
@@ -81,7 +86,7 @@ public class CreatePhysicalConnectionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -158,7 +163,7 @@ public class CreatePhysicalConnectionRequest extends Request {
     /**
      * @return deviceAdvancedCapacity
      */
-    public java.util.List < String > getDeviceAdvancedCapacity() {
+    public java.util.List<String> getDeviceAdvancedCapacity() {
         return this.deviceAdvancedCapacity;
     }
 
@@ -242,7 +247,7 @@ public class CreatePhysicalConnectionRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -265,7 +270,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         private String circuitCode; 
         private String clientToken; 
         private String description; 
-        private java.util.List < String > deviceAdvancedCapacity; 
+        private java.util.List<String> deviceAdvancedCapacity; 
         private String lineOperator; 
         private String name; 
         private String ownerAccount; 
@@ -277,7 +282,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String type; 
         private Integer bandwidth; 
 
@@ -365,7 +370,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         /**
          * <p>The advanced features of the device.</p>
          */
-        public Builder deviceAdvancedCapacity(java.util.List < String > deviceAdvancedCapacity) {
+        public Builder deviceAdvancedCapacity(java.util.List<String> deviceAdvancedCapacity) {
             this.putQueryParameter("DeviceAdvancedCapacity", deviceAdvancedCapacity);
             this.deviceAdvancedCapacity = deviceAdvancedCapacity;
             return this;
@@ -518,7 +523,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         /**
          * <p>The tag list.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

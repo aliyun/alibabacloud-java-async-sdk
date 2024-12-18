@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("EcGrantRelations")
-    private java.util.List < EcGrantRelations> ecGrantRelations;
+    private java.util.List<EcGrantRelations> ecGrantRelations;
 
     @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
@@ -57,7 +62,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
     /**
      * @return ecGrantRelations
      */
-    public java.util.List < EcGrantRelations> getEcGrantRelations() {
+    public java.util.List<EcGrantRelations> getEcGrantRelations() {
         return this.ecGrantRelations;
     }
 
@@ -91,7 +96,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < EcGrantRelations> ecGrantRelations; 
+        private java.util.List<EcGrantRelations> ecGrantRelations; 
         private Integer page; 
         private Integer pageSize; 
         private String requestId; 
@@ -111,7 +116,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         /**
          * <p>The query results.</p>
          */
-        public Builder ecGrantRelations(java.util.List < EcGrantRelations> ecGrantRelations) {
+        public Builder ecGrantRelations(java.util.List<EcGrantRelations> ecGrantRelations) {
             this.ecGrantRelations = ecGrantRelations;
             return this;
         }

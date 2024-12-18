@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -69,7 +74,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityProtectionTypes")
-    private java.util.List < String > securityProtectionTypes;
+    private java.util.List<String> securityProtectionTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Zone")
@@ -201,7 +206,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
     /**
      * @return securityProtectionTypes
      */
-    public java.util.List < String > getSecurityProtectionTypes() {
+    public java.util.List<String> getSecurityProtectionTypes() {
         return this.securityProtectionTypes;
     }
 
@@ -226,7 +231,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > securityProtectionTypes; 
+        private java.util.List<String> securityProtectionTypes; 
         private String zone; 
 
         private Builder() {
@@ -423,7 +428,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         /**
          * SecurityProtectionTypes.
          */
-        public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
+        public Builder securityProtectionTypes(java.util.List<String> securityProtectionTypes) {
             this.putQueryParameter("SecurityProtectionTypes", securityProtectionTypes);
             this.securityProtectionTypes = securityProtectionTypes;
             return this;

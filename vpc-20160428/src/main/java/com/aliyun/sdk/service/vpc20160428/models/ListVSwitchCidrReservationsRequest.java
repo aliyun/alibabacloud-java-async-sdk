@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -48,11 +53,11 @@ public class ListVSwitchCidrReservationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationIds")
-    private java.util.List < String > vSwitchCidrReservationIds;
+    private java.util.List<String> vSwitchCidrReservationIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationType")
@@ -150,14 +155,14 @@ public class ListVSwitchCidrReservationsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return vSwitchCidrReservationIds
      */
-    public java.util.List < String > getVSwitchCidrReservationIds() {
+    public java.util.List<String> getVSwitchCidrReservationIds() {
         return this.vSwitchCidrReservationIds;
     }
 
@@ -184,8 +189,8 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < String > vSwitchCidrReservationIds; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<String> vSwitchCidrReservationIds; 
         private String vSwitchCidrReservationType; 
         private String vSwitchId; 
 
@@ -306,7 +311,7 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -315,7 +320,7 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         /**
          * <p>The ID of the reserved CIDR block. You can specify at most 10 IDs.</p>
          */
-        public Builder vSwitchCidrReservationIds(java.util.List < String > vSwitchCidrReservationIds) {
+        public Builder vSwitchCidrReservationIds(java.util.List<String> vSwitchCidrReservationIds) {
             this.putQueryParameter("VSwitchCidrReservationIds", vSwitchCidrReservationIds);
             this.vSwitchCidrReservationIds = vSwitchCidrReservationIds;
             return this;

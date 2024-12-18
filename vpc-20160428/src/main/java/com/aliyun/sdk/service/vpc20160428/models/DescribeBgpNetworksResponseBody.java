@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
      */
     public static class BgpNetworks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BgpNetwork")
-        private java.util.List < BgpNetwork> bgpNetwork;
+        private java.util.List<BgpNetwork> bgpNetwork;
 
         private BgpNetworks(Builder builder) {
             this.bgpNetwork = builder.bgpNetwork;
@@ -287,17 +292,17 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         /**
          * @return bgpNetwork
          */
-        public java.util.List < BgpNetwork> getBgpNetwork() {
+        public java.util.List<BgpNetwork> getBgpNetwork() {
             return this.bgpNetwork;
         }
 
         public static final class Builder {
-            private java.util.List < BgpNetwork> bgpNetwork; 
+            private java.util.List<BgpNetwork> bgpNetwork; 
 
             /**
              * BgpNetwork.
              */
-            public Builder bgpNetwork(java.util.List < BgpNetwork> bgpNetwork) {
+            public Builder bgpNetwork(java.util.List<BgpNetwork> bgpNetwork) {
                 this.bgpNetwork = bgpNetwork;
                 return this;
             }

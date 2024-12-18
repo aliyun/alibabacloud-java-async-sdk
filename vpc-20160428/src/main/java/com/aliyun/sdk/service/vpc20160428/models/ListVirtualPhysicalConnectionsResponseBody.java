@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnections")
-    private java.util.List < VirtualPhysicalConnections> virtualPhysicalConnections;
+    private java.util.List<VirtualPhysicalConnections> virtualPhysicalConnections;
 
     private ListVirtualPhysicalConnectionsResponseBody(Builder builder) {
         this.count = builder.count;
@@ -74,7 +79,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
     /**
      * @return virtualPhysicalConnections
      */
-    public java.util.List < VirtualPhysicalConnections> getVirtualPhysicalConnections() {
+    public java.util.List<VirtualPhysicalConnections> getVirtualPhysicalConnections() {
         return this.virtualPhysicalConnections;
     }
 
@@ -83,7 +88,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VirtualPhysicalConnections> virtualPhysicalConnections; 
+        private java.util.List<VirtualPhysicalConnections> virtualPhysicalConnections; 
 
         /**
          * <p>The number of entries returned in this query.</p>
@@ -136,7 +141,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         /**
          * <p>The list of hosted connections returned.</p>
          */
-        public Builder virtualPhysicalConnections(java.util.List < VirtualPhysicalConnections> virtualPhysicalConnections) {
+        public Builder virtualPhysicalConnections(java.util.List<VirtualPhysicalConnections> virtualPhysicalConnections) {
             this.virtualPhysicalConnections = virtualPhysicalConnections;
             return this;
         }
@@ -311,7 +316,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -556,7 +561,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -609,7 +614,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String spec; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private String virtualPhysicalConnectionStatus; 
             private String vlanId; 
@@ -969,7 +974,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             /**
              * <p>The tag list.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

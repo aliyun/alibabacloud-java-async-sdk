@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
-    private java.util.List < String > networkInterfaceIds;
+    private java.util.List<String> networkInterfaceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -116,7 +121,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
     /**
      * @return networkInterfaceIds
      */
-    public java.util.List < String > getNetworkInterfaceIds() {
+    public java.util.List<String> getNetworkInterfaceIds() {
         return this.networkInterfaceIds;
     }
 
@@ -213,7 +218,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSnatTableEntriesRequest, Builder> {
         private String natGatewayId; 
-        private java.util.List < String > networkInterfaceIds; 
+        private java.util.List<String> networkInterfaceIds; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -269,7 +274,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         /**
          * NetworkInterfaceIds.
          */
-        public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
+        public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
             this.networkInterfaceIds = networkInterfaceIds;
             return this;

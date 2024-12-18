@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,11 +40,11 @@ public class ListNatIpsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatIpIds")
-    private java.util.List < String > natIpIds;
+    private java.util.List<String> natIpIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatIpName")
-    private java.util.List < String > natIpName;
+    private java.util.List<String> natIpName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatIpStatus")
@@ -139,14 +144,14 @@ public class ListNatIpsRequest extends Request {
     /**
      * @return natIpIds
      */
-    public java.util.List < String > getNatIpIds() {
+    public java.util.List<String> getNatIpIds() {
         return this.natIpIds;
     }
 
     /**
      * @return natIpName
      */
-    public java.util.List < String > getNatIpName() {
+    public java.util.List<String> getNatIpName() {
         return this.natIpName;
     }
 
@@ -205,8 +210,8 @@ public class ListNatIpsRequest extends Request {
         private String maxResults; 
         private String natGatewayId; 
         private String natIpCidr; 
-        private java.util.List < String > natIpIds; 
-        private java.util.List < String > natIpName; 
+        private java.util.List<String> natIpIds; 
+        private java.util.List<String> natIpName; 
         private String natIpStatus; 
         private String nextToken; 
         private String ownerAccount; 
@@ -312,7 +317,7 @@ public class ListNatIpsRequest extends Request {
          * <strong>example:</strong>
          * <p>vpcnatip-gw8a863sut1zijxh0****</p>
          */
-        public Builder natIpIds(java.util.List < String > natIpIds) {
+        public Builder natIpIds(java.util.List<String> natIpIds) {
             this.putQueryParameter("NatIpIds", natIpIds);
             this.natIpIds = natIpIds;
             return this;
@@ -324,7 +329,7 @@ public class ListNatIpsRequest extends Request {
          * <strong>example:</strong>
          * <p>test</p>
          */
-        public Builder natIpName(java.util.List < String > natIpName) {
+        public Builder natIpName(java.util.List<String> natIpName) {
             this.putQueryParameter("NatIpName", natIpName);
             this.natIpName = natIpName;
             return this;

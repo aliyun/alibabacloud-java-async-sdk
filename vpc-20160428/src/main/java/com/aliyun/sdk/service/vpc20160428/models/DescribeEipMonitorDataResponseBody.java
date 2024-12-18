@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -244,7 +249,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
      */
     public static class EipMonitorDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipMonitorData")
-        private java.util.List < EipMonitorData> eipMonitorData;
+        private java.util.List<EipMonitorData> eipMonitorData;
 
         private EipMonitorDatas(Builder builder) {
             this.eipMonitorData = builder.eipMonitorData;
@@ -261,17 +266,17 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         /**
          * @return eipMonitorData
          */
-        public java.util.List < EipMonitorData> getEipMonitorData() {
+        public java.util.List<EipMonitorData> getEipMonitorData() {
             return this.eipMonitorData;
         }
 
         public static final class Builder {
-            private java.util.List < EipMonitorData> eipMonitorData; 
+            private java.util.List<EipMonitorData> eipMonitorData; 
 
             /**
              * EipMonitorData.
              */
-            public Builder eipMonitorData(java.util.List < EipMonitorData> eipMonitorData) {
+            public Builder eipMonitorData(java.util.List<EipMonitorData> eipMonitorData) {
                 this.eipMonitorData = eipMonitorData;
                 return this;
             }

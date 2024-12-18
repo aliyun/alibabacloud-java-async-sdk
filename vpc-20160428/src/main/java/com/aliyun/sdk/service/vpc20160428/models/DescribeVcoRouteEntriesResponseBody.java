@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,10 +30,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VcoRouteEntries")
-    private java.util.List < VcoRouteEntries> vcoRouteEntries;
+    private java.util.List<VcoRouteEntries> vcoRouteEntries;
 
     @com.aliyun.core.annotation.NameInMap("VpnRouteCounts")
-    private java.util.List < VpnRouteCounts> vpnRouteCounts;
+    private java.util.List<VpnRouteCounts> vpnRouteCounts;
 
     private DescribeVcoRouteEntriesResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -78,14 +83,14 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
     /**
      * @return vcoRouteEntries
      */
-    public java.util.List < VcoRouteEntries> getVcoRouteEntries() {
+    public java.util.List<VcoRouteEntries> getVcoRouteEntries() {
         return this.vcoRouteEntries;
     }
 
     /**
      * @return vpnRouteCounts
      */
-    public java.util.List < VpnRouteCounts> getVpnRouteCounts() {
+    public java.util.List<VpnRouteCounts> getVpnRouteCounts() {
         return this.vpnRouteCounts;
     }
 
@@ -94,8 +99,8 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VcoRouteEntries> vcoRouteEntries; 
-        private java.util.List < VpnRouteCounts> vpnRouteCounts; 
+        private java.util.List<VcoRouteEntries> vcoRouteEntries; 
+        private java.util.List<VpnRouteCounts> vpnRouteCounts; 
 
         /**
          * <p>The number of the returned page.</p>
@@ -144,7 +149,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>The list of routes.</p>
          */
-        public Builder vcoRouteEntries(java.util.List < VcoRouteEntries> vcoRouteEntries) {
+        public Builder vcoRouteEntries(java.util.List<VcoRouteEntries> vcoRouteEntries) {
             this.vcoRouteEntries = vcoRouteEntries;
             return this;
         }
@@ -152,7 +157,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         /**
          * VpnRouteCounts.
          */
-        public Builder vpnRouteCounts(java.util.List < VpnRouteCounts> vpnRouteCounts) {
+        public Builder vpnRouteCounts(java.util.List<VpnRouteCounts> vpnRouteCounts) {
             this.vpnRouteCounts = vpnRouteCounts;
             return this;
         }
@@ -183,7 +188,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         private String nextHop;
 
         @com.aliyun.core.annotation.NameInMap("NextHopTunnelIdList")
-        private java.util.List < String > nextHopTunnelIdList;
+        private java.util.List<String> nextHopTunnelIdList;
 
         @com.aliyun.core.annotation.NameInMap("RouteDest")
         private String routeDest;
@@ -256,7 +261,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         /**
          * @return nextHopTunnelIdList
          */
-        public java.util.List < String > getNextHopTunnelIdList() {
+        public java.util.List<String> getNextHopTunnelIdList() {
             return this.nextHopTunnelIdList;
         }
 
@@ -307,7 +312,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             private String community; 
             private Long createTime; 
             private String nextHop; 
-            private java.util.List < String > nextHopTunnelIdList; 
+            private java.util.List<String> nextHopTunnelIdList; 
             private String routeDest; 
             private String routeEntryType; 
             private String source; 
@@ -363,7 +368,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             /**
              * NextHopTunnelIdList.
              */
-            public Builder nextHopTunnelIdList(java.util.List < String > nextHopTunnelIdList) {
+            public Builder nextHopTunnelIdList(java.util.List<String> nextHopTunnelIdList) {
                 this.nextHopTunnelIdList = nextHopTunnelIdList;
                 return this;
             }

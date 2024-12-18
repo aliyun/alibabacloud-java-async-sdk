@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DhcpOptionsSets")
-    private java.util.List < DhcpOptionsSets> dhcpOptionsSets;
+    private java.util.List<DhcpOptionsSets> dhcpOptionsSets;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     /**
      * @return dhcpOptionsSets
      */
-    public java.util.List < DhcpOptionsSets> getDhcpOptionsSets() {
+    public java.util.List<DhcpOptionsSets> getDhcpOptionsSets() {
         return this.dhcpOptionsSets;
     }
 
@@ -68,7 +73,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DhcpOptionsSets> dhcpOptionsSets; 
+        private java.util.List<DhcpOptionsSets> dhcpOptionsSets; 
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
@@ -76,7 +81,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         /**
          * <p>The list of the DHCP options sets.</p>
          */
-        public Builder dhcpOptionsSets(java.util.List < DhcpOptionsSets> dhcpOptionsSets) {
+        public Builder dhcpOptionsSets(java.util.List<DhcpOptionsSets> dhcpOptionsSets) {
             this.dhcpOptionsSets = dhcpOptionsSets;
             return this;
         }
@@ -356,7 +361,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private DhcpOptionsSets(Builder builder) {
             this.associateVpcCount = builder.associateVpcCount;
@@ -437,7 +442,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -450,7 +455,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             private Long ownerId; 
             private String resourceGroupId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The number of VPCs with which the DHCP options set is associated.</p>
@@ -546,7 +551,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             /**
              * <p>The tag list.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

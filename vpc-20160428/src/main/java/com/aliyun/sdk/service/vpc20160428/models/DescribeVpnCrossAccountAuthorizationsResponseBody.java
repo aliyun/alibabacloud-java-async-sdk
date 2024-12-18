@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CrossAccountAuthorizations")
-    private java.util.List < CrossAccountAuthorizations> crossAccountAuthorizations;
+    private java.util.List<CrossAccountAuthorizations> crossAccountAuthorizations;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
     /**
      * @return crossAccountAuthorizations
      */
-    public java.util.List < CrossAccountAuthorizations> getCrossAccountAuthorizations() {
+    public java.util.List<CrossAccountAuthorizations> getCrossAccountAuthorizations() {
         return this.crossAccountAuthorizations;
     }
 
@@ -79,7 +84,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
     }
 
     public static final class Builder {
-        private java.util.List < CrossAccountAuthorizations> crossAccountAuthorizations; 
+        private java.util.List<CrossAccountAuthorizations> crossAccountAuthorizations; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         /**
          * <p>The cross-account authorization information about the IPsec-VPN connection.</p>
          */
-        public Builder crossAccountAuthorizations(java.util.List < CrossAccountAuthorizations> crossAccountAuthorizations) {
+        public Builder crossAccountAuthorizations(java.util.List<CrossAccountAuthorizations> crossAccountAuthorizations) {
             this.crossAccountAuthorizations = crossAccountAuthorizations;
             return this;
         }

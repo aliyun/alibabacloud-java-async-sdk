@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,6 +20,10 @@ public class ModifyForwardEntryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExternalIp")
@@ -78,6 +87,7 @@ public class ModifyForwardEntryRequest extends Request {
     private ModifyForwardEntryRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.externalIp = builder.externalIp;
         this.externalPort = builder.externalPort;
         this.forwardEntryId = builder.forwardEntryId;
@@ -112,6 +122,13 @@ public class ModifyForwardEntryRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -214,6 +231,7 @@ public class ModifyForwardEntryRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyForwardEntryRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private String externalIp; 
         private String externalPort; 
         private String forwardEntryId; 
@@ -236,6 +254,7 @@ public class ModifyForwardEntryRequest extends Request {
         private Builder(ModifyForwardEntryRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.externalIp = request.externalIp;
             this.externalPort = request.externalPort;
             this.forwardEntryId = request.forwardEntryId;
@@ -265,6 +284,15 @@ public class ModifyForwardEntryRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

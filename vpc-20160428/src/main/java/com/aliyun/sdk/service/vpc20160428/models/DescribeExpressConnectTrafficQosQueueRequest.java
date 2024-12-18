@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,11 +35,11 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueueIdList")
-    private java.util.List < String > queueIdList;
+    private java.util.List<String> queueIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueueNameList")
-    private java.util.List < String > queueNameList;
+    private java.util.List<String> queueNameList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -101,14 +106,14 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
     /**
      * @return queueIdList
      */
-    public java.util.List < String > getQueueIdList() {
+    public java.util.List<String> getQueueIdList() {
         return this.queueIdList;
     }
 
     /**
      * @return queueNameList
      */
-    public java.util.List < String > getQueueNameList() {
+    public java.util.List<String> getQueueNameList() {
         return this.queueNameList;
     }
 
@@ -131,8 +136,8 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String qosId; 
-        private java.util.List < String > queueIdList; 
-        private java.util.List < String > queueNameList; 
+        private java.util.List<String> queueIdList; 
+        private java.util.List<String> queueNameList; 
         private String regionId; 
         private String resourceOwnerAccount; 
 
@@ -191,7 +196,7 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
         /**
          * QueueIdList.
          */
-        public Builder queueIdList(java.util.List < String > queueIdList) {
+        public Builder queueIdList(java.util.List<String> queueIdList) {
             this.putQueryParameter("QueueIdList", queueIdList);
             this.queueIdList = queueIdList;
             return this;
@@ -200,7 +205,7 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
         /**
          * QueueNameList.
          */
-        public Builder queueNameList(java.util.List < String > queueNameList) {
+        public Builder queueNameList(java.util.List<String> queueNameList) {
             this.putQueryParameter("QueueNameList", queueNameList);
             this.queueNameList = queueNameList;
             return this;

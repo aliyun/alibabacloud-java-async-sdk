@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Logs")
-        private java.util.List < String > logs;
+        private java.util.List<String> logs;
 
         private Data(Builder builder) {
             this.logs = builder.logs;
@@ -195,17 +200,17 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         /**
          * @return logs
          */
-        public java.util.List < String > getLogs() {
+        public java.util.List<String> getLogs() {
             return this.logs;
         }
 
         public static final class Builder {
-            private java.util.List < String > logs; 
+            private java.util.List<String> logs; 
 
             /**
              * Logs.
              */
-            public Builder logs(java.util.List < String > logs) {
+            public Builder logs(java.util.List<String> logs) {
                 this.logs = logs;
                 return this;
             }

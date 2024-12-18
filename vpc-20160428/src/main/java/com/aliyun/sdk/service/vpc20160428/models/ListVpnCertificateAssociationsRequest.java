@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class ListVpnCertificateAssociationsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertificateId")
     @com.aliyun.core.annotation.Validation(maxLength = 128)
-    private java.util.List < String > certificateId;
+    private java.util.List<String> certificateId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertificateType")
@@ -37,7 +42,7 @@ public class ListVpnCertificateAssociationsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
     @com.aliyun.core.annotation.Validation(maxLength = 128)
-    private java.util.List < String > vpnGatewayId;
+    private java.util.List<String> vpnGatewayId;
 
     private ListVpnCertificateAssociationsRequest(Builder builder) {
         super(builder);
@@ -65,7 +70,7 @@ public class ListVpnCertificateAssociationsRequest extends Request {
     /**
      * @return certificateId
      */
-    public java.util.List < String > getCertificateId() {
+    public java.util.List<String> getCertificateId() {
         return this.certificateId;
     }
 
@@ -100,17 +105,17 @@ public class ListVpnCertificateAssociationsRequest extends Request {
     /**
      * @return vpnGatewayId
      */
-    public java.util.List < String > getVpnGatewayId() {
+    public java.util.List<String> getVpnGatewayId() {
         return this.vpnGatewayId;
     }
 
     public static final class Builder extends Request.Builder<ListVpnCertificateAssociationsRequest, Builder> {
-        private java.util.List < String > certificateId; 
+        private java.util.List<String> certificateId; 
         private String certificateType; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
-        private java.util.List < String > vpnGatewayId; 
+        private java.util.List<String> vpnGatewayId; 
 
         private Builder() {
             super();
@@ -133,7 +138,7 @@ public class ListVpnCertificateAssociationsRequest extends Request {
          * <strong>example:</strong>
          * <p>6bfe4218-ea1d****</p>
          */
-        public Builder certificateId(java.util.List < String > certificateId) {
+        public Builder certificateId(java.util.List<String> certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
             this.certificateId = certificateId;
             return this;
@@ -204,7 +209,7 @@ public class ListVpnCertificateAssociationsRequest extends Request {
          * <strong>example:</strong>
          * <p>vpn-bp1q8bgx4xnkm****</p>
          */
-        public Builder vpnGatewayId(java.util.List < String > vpnGatewayId) {
+        public Builder vpnGatewayId(java.util.List<String> vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);
             this.vpnGatewayId = vpnGatewayId;
             return this;

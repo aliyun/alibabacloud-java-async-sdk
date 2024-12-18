@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     private FullNatTable fullNatTable;
 
     @com.aliyun.core.annotation.NameInMap("IpList")
-    private java.util.List < IpList> ipList;
+    private java.util.List<IpList> ipList;
 
     @com.aliyun.core.annotation.NameInMap("LogDelivery")
     private LogDelivery logDelivery;
@@ -207,7 +212,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     /**
      * @return ipList
      */
-    public java.util.List < IpList> getIpList() {
+    public java.util.List<IpList> getIpList() {
         return this.ipList;
     }
 
@@ -321,7 +326,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         private String expiredTime; 
         private ForwardTable forwardTable; 
         private FullNatTable fullNatTable; 
-        private java.util.List < IpList> ipList; 
+        private java.util.List<IpList> ipList; 
         private LogDelivery logDelivery; 
         private String name; 
         private String natGatewayId; 
@@ -451,7 +456,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         /**
          * <p>The elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.</p>
          */
-        public Builder ipList(java.util.List < IpList> ipList) {
+        public Builder ipList(java.util.List<IpList> ipList) {
             this.ipList = ipList;
             return this;
         }

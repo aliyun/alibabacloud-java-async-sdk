@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
     private String totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessions")
-    private java.util.List < TrafficMirrorSessions> trafficMirrorSessions;
+    private java.util.List<TrafficMirrorSessions> trafficMirrorSessions;
 
     private ListTrafficMirrorSessionsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -63,7 +68,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
     /**
      * @return trafficMirrorSessions
      */
-    public java.util.List < TrafficMirrorSessions> getTrafficMirrorSessions() {
+    public java.util.List<TrafficMirrorSessions> getTrafficMirrorSessions() {
         return this.trafficMirrorSessions;
     }
 
@@ -71,7 +76,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
-        private java.util.List < TrafficMirrorSessions> trafficMirrorSessions; 
+        private java.util.List<TrafficMirrorSessions> trafficMirrorSessions; 
 
         /**
          * <p>The token that is used for the next query. Valid values:</p>
@@ -113,7 +118,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         /**
          * <p>The details about the traffic mirror session.</p>
          */
-        public Builder trafficMirrorSessions(java.util.List < TrafficMirrorSessions> trafficMirrorSessions) {
+        public Builder trafficMirrorSessions(java.util.List<TrafficMirrorSessions> trafficMirrorSessions) {
             this.trafficMirrorSessions = trafficMirrorSessions;
             return this;
         }
@@ -220,7 +225,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterId")
         private String trafficMirrorFilterId;
@@ -241,7 +246,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         private String trafficMirrorSessionStatus;
 
         @com.aliyun.core.annotation.NameInMap("TrafficMirrorSourceIds")
-        private java.util.List < String > trafficMirrorSourceIds;
+        private java.util.List<String> trafficMirrorSourceIds;
 
         @com.aliyun.core.annotation.NameInMap("TrafficMirrorTargetId")
         private String trafficMirrorTargetId;
@@ -317,7 +322,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -366,7 +371,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         /**
          * @return trafficMirrorSourceIds
          */
-        public java.util.List < String > getTrafficMirrorSourceIds() {
+        public java.util.List<String> getTrafficMirrorSourceIds() {
             return this.trafficMirrorSourceIds;
         }
 
@@ -397,14 +402,14 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             private Integer packetLength; 
             private Integer priority; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String trafficMirrorFilterId; 
             private String trafficMirrorSessionBusinessStatus; 
             private String trafficMirrorSessionDescription; 
             private String trafficMirrorSessionId; 
             private String trafficMirrorSessionName; 
             private String trafficMirrorSessionStatus; 
-            private java.util.List < String > trafficMirrorSourceIds; 
+            private java.util.List<String> trafficMirrorSourceIds; 
             private String trafficMirrorTargetId; 
             private String trafficMirrorTargetType; 
             private Integer virtualNetworkId; 
@@ -472,7 +477,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             /**
              * <p>The tag list.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -556,7 +561,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             /**
              * <p>The ID of the traffic mirror source.</p>
              */
-            public Builder trafficMirrorSourceIds(java.util.List < String > trafficMirrorSourceIds) {
+            public Builder trafficMirrorSourceIds(java.util.List<String> trafficMirrorSourceIds) {
                 this.trafficMirrorSourceIds = trafficMirrorSourceIds;
                 return this;
             }

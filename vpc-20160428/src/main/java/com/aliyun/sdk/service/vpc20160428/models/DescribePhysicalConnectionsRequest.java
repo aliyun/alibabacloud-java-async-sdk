@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeReservationData")
@@ -60,7 +65,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private DescribePhysicalConnectionsRequest(Builder builder) {
         super(builder);
@@ -101,7 +106,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -171,13 +176,13 @@ public class DescribePhysicalConnectionsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<DescribePhysicalConnectionsRequest, Builder> {
         private String clientToken; 
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Boolean includeReservationData; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -187,7 +192,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -225,7 +230,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
         /**
          * <p>The filter keys.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -336,7 +341,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
         /**
          * <p>The tag list.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -360,7 +365,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.key = builder.key;
@@ -385,13 +390,13 @@ public class DescribePhysicalConnectionsRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The key of the filter. Valid values:</p>
@@ -465,7 +470,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
              * <strong>example:</strong>
              * <p>1</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

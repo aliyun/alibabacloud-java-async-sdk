@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("QueueList")
-    private java.util.List < QueueList> queueList;
+    private java.util.List<QueueList> queueList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
     /**
      * @return queueList
      */
-    public java.util.List < QueueList> getQueueList() {
+    public java.util.List<QueueList> getQueueList() {
         return this.queueList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
     }
 
     public static final class Builder {
-        private java.util.List < QueueList> queueList; 
+        private java.util.List<QueueList> queueList; 
         private String requestId; 
 
         /**
          * QueueList.
          */
-        public Builder queueList(java.util.List < QueueList> queueList) {
+        public Builder queueList(java.util.List<QueueList> queueList) {
             this.queueList = queueList;
             return this;
         }
@@ -444,7 +449,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         private String queueType;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        private java.util.List<RuleList> ruleList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -513,7 +518,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
@@ -531,7 +536,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
             private String queueId; 
             private String queueName; 
             private String queueType; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
             private String status; 
 
             /**
@@ -585,7 +590,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
             /**
              * RuleList.
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }

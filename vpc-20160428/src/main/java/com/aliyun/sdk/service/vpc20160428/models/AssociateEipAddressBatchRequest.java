@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class AssociateEipAddressBatchRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Mode")
@@ -102,7 +107,7 @@ public class AssociateEipAddressBatchRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -145,7 +150,7 @@ public class AssociateEipAddressBatchRequest extends Request {
         private String bindedInstanceId; 
         private String bindedInstanceType; 
         private String clientToken; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String mode; 
         private Long ownerId; 
         private String regionId; 
@@ -221,7 +226,7 @@ public class AssociateEipAddressBatchRequest extends Request {
          * <p>You must enter at least one EIP. You can enter up to 50 EIPs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

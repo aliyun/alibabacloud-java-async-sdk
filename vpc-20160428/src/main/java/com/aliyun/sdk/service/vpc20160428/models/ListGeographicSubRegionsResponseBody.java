@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
     private Long count;
 
     @com.aliyun.core.annotation.NameInMap("GeographicSubRegions")
-    private java.util.List < String > geographicSubRegions;
+    private java.util.List<String> geographicSubRegions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
     /**
      * @return geographicSubRegions
      */
-    public java.util.List < String > getGeographicSubRegions() {
+    public java.util.List<String> getGeographicSubRegions() {
         return this.geographicSubRegions;
     }
 
@@ -58,7 +63,7 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long count; 
-        private java.util.List < String > geographicSubRegions; 
+        private java.util.List<String> geographicSubRegions; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
         /**
          * <p>The region list.</p>
          */
-        public Builder geographicSubRegions(java.util.List < String > geographicSubRegions) {
+        public Builder geographicSubRegions(java.util.List<String> geographicSubRegions) {
             this.geographicSubRegions = geographicSubRegions;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
      */
     public static class EipInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipInfo")
-        private java.util.List < EipInfo> eipInfo;
+        private java.util.List<EipInfo> eipInfo;
 
         private EipInfos(Builder builder) {
             this.eipInfo = builder.eipInfo;
@@ -241,17 +246,17 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         /**
          * @return eipInfo
          */
-        public java.util.List < EipInfo> getEipInfo() {
+        public java.util.List<EipInfo> getEipInfo() {
             return this.eipInfo;
         }
 
         public static final class Builder {
-            private java.util.List < EipInfo> eipInfo; 
+            private java.util.List<EipInfo> eipInfo; 
 
             /**
              * EipInfo.
              */
-            public Builder eipInfo(java.util.List < EipInfo> eipInfo) {
+            public Builder eipInfo(java.util.List<EipInfo> eipInfo) {
                 this.eipInfo = eipInfo;
                 return this;
             }

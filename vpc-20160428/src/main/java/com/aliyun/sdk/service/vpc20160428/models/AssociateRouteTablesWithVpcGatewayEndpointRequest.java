@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,7 +54,7 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteTableIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > routeTableIds;
+    private java.util.List<String> routeTableIds;
 
     private AssociateRouteTablesWithVpcGatewayEndpointRequest(Builder builder) {
         super(builder);
@@ -136,7 +141,7 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends Request {
     /**
      * @return routeTableIds
      */
-    public java.util.List < String > getRouteTableIds() {
+    public java.util.List<String> getRouteTableIds() {
         return this.routeTableIds;
     }
 
@@ -149,7 +154,7 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > routeTableIds; 
+        private java.util.List<String> routeTableIds; 
 
         private Builder() {
             super();
@@ -269,7 +274,7 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends Request {
          * <strong>example:</strong>
          * <p>vtb-m5elgtm3aj586iitr****</p>
          */
-        public Builder routeTableIds(java.util.List < String > routeTableIds) {
+        public Builder routeTableIds(java.util.List<String> routeTableIds) {
             this.putQueryParameter("RouteTableIds", routeTableIds);
             this.routeTableIds = routeTableIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ApList> apList;
+    private java.util.List<ApList> apList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -27,7 +32,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceAdvancedCapacity")
-    private java.util.List < String > deviceAdvancedCapacity;
+    private java.util.List<String> deviceAdvancedCapacity;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
@@ -69,7 +74,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateHighReliablePhysicalConnectionRequest(Builder builder) {
         super(builder);
@@ -112,7 +117,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
     /**
      * @return apList
      */
-    public java.util.List < ApList> getApList() {
+    public java.util.List<ApList> getApList() {
         return this.apList;
     }
 
@@ -126,7 +131,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
     /**
      * @return deviceAdvancedCapacity
      */
-    public java.util.List < String > getDeviceAdvancedCapacity() {
+    public java.util.List<String> getDeviceAdvancedCapacity() {
         return this.deviceAdvancedCapacity;
     }
 
@@ -196,15 +201,15 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateHighReliablePhysicalConnectionRequest, Builder> {
         private String acceptLanguage; 
-        private java.util.List < ApList> apList; 
+        private java.util.List<ApList> apList; 
         private String clientToken; 
-        private java.util.List < String > deviceAdvancedCapacity; 
+        private java.util.List<String> deviceAdvancedCapacity; 
         private String dryRun; 
         private String highReliableType; 
         private String ownerAccount; 
@@ -214,7 +219,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -250,7 +255,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder apList(java.util.List < ApList> apList) {
+        public Builder apList(java.util.List<ApList> apList) {
             this.putQueryParameter("ApList", apList);
             this.apList = apList;
             return this;
@@ -268,7 +273,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
         /**
          * DeviceAdvancedCapacity.
          */
-        public Builder deviceAdvancedCapacity(java.util.List < String > deviceAdvancedCapacity) {
+        public Builder deviceAdvancedCapacity(java.util.List<String> deviceAdvancedCapacity) {
             this.putQueryParameter("DeviceAdvancedCapacity", deviceAdvancedCapacity);
             this.deviceAdvancedCapacity = deviceAdvancedCapacity;
             return this;
@@ -364,7 +369,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

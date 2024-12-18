@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -186,7 +191,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
      */
     public static class TagKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
-        private java.util.List < TagKey> tagKey;
+        private java.util.List<TagKey> tagKey;
 
         private TagKeys(Builder builder) {
             this.tagKey = builder.tagKey;
@@ -203,12 +208,12 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         /**
          * @return tagKey
          */
-        public java.util.List < TagKey> getTagKey() {
+        public java.util.List<TagKey> getTagKey() {
             return this.tagKey;
         }
 
         public static final class Builder {
-            private java.util.List < TagKey> tagKey; 
+            private java.util.List<TagKey> tagKey; 
 
             /**
              * <p>The tag key.</p>
@@ -216,7 +221,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>FinanceDept</p>
              */
-            public Builder tagKey(java.util.List < TagKey> tagKey) {
+            public Builder tagKey(java.util.List<TagKey> tagKey) {
                 this.tagKey = tagKey;
                 return this;
             }

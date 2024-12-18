@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeFailoverTestJobsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -79,7 +84,7 @@ public class DescribeFailoverTestJobsRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -127,7 +132,7 @@ public class DescribeFailoverTestJobsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeFailoverTestJobsRequest, Builder> {
         private String clientToken; 
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
         private String ownerAccount; 
@@ -170,7 +175,7 @@ public class DescribeFailoverTestJobsRequest extends Request {
         /**
          * <p>The filter information.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -255,7 +260,7 @@ public class DescribeFailoverTestJobsRequest extends Request {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.key = builder.key;
@@ -280,13 +285,13 @@ public class DescribeFailoverTestJobsRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The filter key. Valid values:</p>
@@ -316,7 +321,7 @@ public class DescribeFailoverTestJobsRequest extends Request {
              * <p>You can specify at most five filter values for each filter key. The logical operator among filter values is OR. If a filter value is matched, the filter key is considered matched.</p>
              * </blockquote>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

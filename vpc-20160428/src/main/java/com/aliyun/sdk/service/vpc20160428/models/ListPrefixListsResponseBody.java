@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("PrefixLists")
-    private java.util.List < PrefixLists> prefixLists;
+    private java.util.List<PrefixLists> prefixLists;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
     /**
      * @return prefixLists
      */
-    public java.util.List < PrefixLists> getPrefixLists() {
+    public java.util.List<PrefixLists> getPrefixLists() {
         return this.prefixLists;
     }
 
@@ -81,7 +86,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
     public static final class Builder {
         private Long maxResults; 
         private String nextToken; 
-        private java.util.List < PrefixLists> prefixLists; 
+        private java.util.List<PrefixLists> prefixLists; 
         private String requestId; 
         private Long totalCount; 
 
@@ -114,7 +119,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         /**
          * <p>The information about the prefix lists.</p>
          */
-        public Builder prefixLists(java.util.List < PrefixLists> prefixLists) {
+        public Builder prefixLists(java.util.List<PrefixLists> prefixLists) {
             this.prefixLists = prefixLists;
             return this;
         }
@@ -228,7 +233,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
      */
     public static class PrefixLists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrBlocks")
-        private java.util.List < String > cidrBlocks;
+        private java.util.List<String> cidrBlocks;
 
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -270,7 +275,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private PrefixLists(Builder builder) {
             this.cidrBlocks = builder.cidrBlocks;
@@ -301,7 +306,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         /**
          * @return cidrBlocks
          */
-        public java.util.List < String > getCidrBlocks() {
+        public java.util.List<String> getCidrBlocks() {
             return this.cidrBlocks;
         }
 
@@ -399,12 +404,12 @@ public class ListPrefixListsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < String > cidrBlocks; 
+            private java.util.List<String> cidrBlocks; 
             private String creationTime; 
             private String ipVersion; 
             private Integer maxEntries; 
@@ -418,12 +423,12 @@ public class ListPrefixListsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String shareType; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The CIDR block specified in the prefix list.</p>
              */
-            public Builder cidrBlocks(java.util.List < String > cidrBlocks) {
+            public Builder cidrBlocks(java.util.List<String> cidrBlocks) {
                 this.cidrBlocks = cidrBlocks;
                 return this;
             }
@@ -595,7 +600,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

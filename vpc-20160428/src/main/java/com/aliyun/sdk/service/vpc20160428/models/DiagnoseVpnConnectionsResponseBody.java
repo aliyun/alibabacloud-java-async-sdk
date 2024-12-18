@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VpnConnections")
-    private java.util.List < VpnConnections> vpnConnections;
+    private java.util.List<VpnConnections> vpnConnections;
 
     private DiagnoseVpnConnectionsResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -74,7 +79,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
     /**
      * @return vpnConnections
      */
-    public java.util.List < VpnConnections> getVpnConnections() {
+    public java.util.List<VpnConnections> getVpnConnections() {
         return this.vpnConnections;
     }
 
@@ -83,7 +88,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VpnConnections> vpnConnections; 
+        private java.util.List<VpnConnections> vpnConnections; 
 
         /**
          * <p>The page number.</p>
@@ -132,7 +137,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         /**
          * <p>The diagnostic information.</p>
          */
-        public Builder vpnConnections(java.util.List < VpnConnections> vpnConnections) {
+        public Builder vpnConnections(java.util.List<VpnConnections> vpnConnections) {
             this.vpnConnections = vpnConnections;
             return this;
         }

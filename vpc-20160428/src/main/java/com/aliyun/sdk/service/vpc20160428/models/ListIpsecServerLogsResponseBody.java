@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < String > data;
+    private java.util.List<String> data;
 
     @com.aliyun.core.annotation.NameInMap("IsCompleted")
     private Boolean isCompleted;
@@ -57,7 +62,7 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < String > getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < String > data; 
+        private java.util.List<String> data; 
         private Boolean isCompleted; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -112,7 +117,7 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
          * <p>An array of strings.</p>
          * <p>Each item in the array is a log entry.</p>
          */
-        public Builder data(java.util.List < String > data) {
+        public Builder data(java.util.List<String> data) {
             this.data = data;
             return this;
         }

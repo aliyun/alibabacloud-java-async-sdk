@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RouteEntries")
-    private java.util.List < RouteEntries> routeEntries;
+    private java.util.List<RouteEntries> routeEntries;
 
     private ListVpcPublishedRouteEntriesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
     /**
      * @return routeEntries
      */
-    public java.util.List < RouteEntries> getRouteEntries() {
+    public java.util.List<RouteEntries> getRouteEntries() {
         return this.routeEntries;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < RouteEntries> routeEntries; 
+        private java.util.List<RouteEntries> routeEntries; 
 
         /**
          * NextToken.
@@ -80,7 +85,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         /**
          * RouteEntries.
          */
-        public Builder routeEntries(java.util.List < RouteEntries> routeEntries) {
+        public Builder routeEntries(java.util.List<RouteEntries> routeEntries) {
             this.routeEntries = routeEntries;
             return this;
         }
@@ -192,7 +197,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         private String routeEntryId;
 
         @com.aliyun.core.annotation.NameInMap("RoutePublishTargets")
-        private java.util.List < RoutePublishTargets> routePublishTargets;
+        private java.util.List<RoutePublishTargets> routePublishTargets;
 
         @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
@@ -229,7 +234,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         /**
          * @return routePublishTargets
          */
-        public java.util.List < RoutePublishTargets> getRoutePublishTargets() {
+        public java.util.List<RoutePublishTargets> getRoutePublishTargets() {
             return this.routePublishTargets;
         }
 
@@ -243,7 +248,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         public static final class Builder {
             private String destinationCidrBlock; 
             private String routeEntryId; 
-            private java.util.List < RoutePublishTargets> routePublishTargets; 
+            private java.util.List<RoutePublishTargets> routePublishTargets; 
             private String routeTableId; 
 
             /**
@@ -265,7 +270,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
             /**
              * RoutePublishTargets.
              */
-            public Builder routePublishTargets(java.util.List < RoutePublishTargets> routePublishTargets) {
+            public Builder routePublishTargets(java.util.List<RoutePublishTargets> routePublishTargets) {
                 this.routePublishTargets = routePublishTargets;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CidrReservationUsages")
-    private java.util.List < CidrReservationUsages> cidrReservationUsages;
+    private java.util.List<CidrReservationUsages> cidrReservationUsages;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
@@ -46,7 +51,7 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
     /**
      * @return cidrReservationUsages
      */
-    public java.util.List < CidrReservationUsages> getCidrReservationUsages() {
+    public java.util.List<CidrReservationUsages> getCidrReservationUsages() {
         return this.cidrReservationUsages;
     }
 
@@ -79,7 +84,7 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CidrReservationUsages> cidrReservationUsages; 
+        private java.util.List<CidrReservationUsages> cidrReservationUsages; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
         /**
          * <p>A list of reserved CIDR blocks that are in use.</p>
          */
-        public Builder cidrReservationUsages(java.util.List < CidrReservationUsages> cidrReservationUsages) {
+        public Builder cidrReservationUsages(java.util.List<CidrReservationUsages> cidrReservationUsages) {
             this.cidrReservationUsages = cidrReservationUsages;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListNatIpsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NatIps")
-    private java.util.List < NatIps> natIps;
+    private java.util.List<NatIps> natIps;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class ListNatIpsResponseBody extends TeaModel {
     /**
      * @return natIps
      */
-    public java.util.List < NatIps> getNatIps() {
+    public java.util.List<NatIps> getNatIps() {
         return this.natIps;
     }
 
@@ -68,7 +73,7 @@ public class ListNatIpsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NatIps> natIps; 
+        private java.util.List<NatIps> natIps; 
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
@@ -76,7 +81,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         /**
          * <p>The list of IP addresses of the NAT gateway.</p>
          */
-        public Builder natIps(java.util.List < NatIps> natIps) {
+        public Builder natIps(java.util.List<NatIps> natIps) {
             this.natIps = natIps;
             return this;
         }

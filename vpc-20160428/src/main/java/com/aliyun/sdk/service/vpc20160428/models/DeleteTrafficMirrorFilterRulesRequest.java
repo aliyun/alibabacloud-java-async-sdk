@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,7 +54,7 @@ public class DeleteTrafficMirrorFilterRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterRuleIds")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
-    private java.util.List < String > trafficMirrorFilterRuleIds;
+    private java.util.List<String> trafficMirrorFilterRuleIds;
 
     private DeleteTrafficMirrorFilterRulesRequest(Builder builder) {
         super(builder);
@@ -136,7 +141,7 @@ public class DeleteTrafficMirrorFilterRulesRequest extends Request {
     /**
      * @return trafficMirrorFilterRuleIds
      */
-    public java.util.List < String > getTrafficMirrorFilterRuleIds() {
+    public java.util.List<String> getTrafficMirrorFilterRuleIds() {
         return this.trafficMirrorFilterRuleIds;
     }
 
@@ -149,7 +154,7 @@ public class DeleteTrafficMirrorFilterRulesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String trafficMirrorFilterId; 
-        private java.util.List < String > trafficMirrorFilterRuleIds; 
+        private java.util.List<String> trafficMirrorFilterRuleIds; 
 
         private Builder() {
             super();
@@ -269,7 +274,7 @@ public class DeleteTrafficMirrorFilterRulesRequest extends Request {
          * <strong>example:</strong>
          * <p>tmr-j6cbmubn323k7jlq3****</p>
          */
-        public Builder trafficMirrorFilterRuleIds(java.util.List < String > trafficMirrorFilterRuleIds) {
+        public Builder trafficMirrorFilterRuleIds(java.util.List<String> trafficMirrorFilterRuleIds) {
             this.putQueryParameter("TrafficMirrorFilterRuleIds", trafficMirrorFilterRuleIds);
             this.trafficMirrorFilterRuleIds = trafficMirrorFilterRuleIds;
             return this;

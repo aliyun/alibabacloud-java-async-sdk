@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DeleteRouteEntryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextHopList")
-    private java.util.List < NextHopList> nextHopList;
+    private java.util.List<NextHopList> nextHopList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -96,7 +101,7 @@ public class DeleteRouteEntryRequest extends Request {
     /**
      * @return nextHopList
      */
-    public java.util.List < NextHopList> getNextHopList() {
+    public java.util.List<NextHopList> getNextHopList() {
         return this.nextHopList;
     }
 
@@ -152,7 +157,7 @@ public class DeleteRouteEntryRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteRouteEntryRequest, Builder> {
         private String destinationCidrBlock; 
         private String nextHopId; 
-        private java.util.List < NextHopList> nextHopList; 
+        private java.util.List<NextHopList> nextHopList; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -210,7 +215,7 @@ public class DeleteRouteEntryRequest extends Request {
         /**
          * <p>The list of the next hop of the ECMP route.</p>
          */
-        public Builder nextHopList(java.util.List < NextHopList> nextHopList) {
+        public Builder nextHopList(java.util.List<NextHopList> nextHopList) {
             this.putQueryParameter("NextHopList", nextHopList);
             this.nextHopList = nextHopList;
             return this;

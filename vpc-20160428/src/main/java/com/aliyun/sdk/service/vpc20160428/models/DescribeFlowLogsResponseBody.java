@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -251,7 +256,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -268,17 +273,17 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -298,7 +303,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
      */
     public static class TrafficPath extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrafficPathList")
-        private java.util.List < String > trafficPathList;
+        private java.util.List<String> trafficPathList;
 
         private TrafficPath(Builder builder) {
             this.trafficPathList = builder.trafficPathList;
@@ -315,17 +320,17 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         /**
          * @return trafficPathList
          */
-        public java.util.List < String > getTrafficPathList() {
+        public java.util.List<String> getTrafficPathList() {
             return this.trafficPathList;
         }
 
         public static final class Builder {
-            private java.util.List < String > trafficPathList; 
+            private java.util.List<String> trafficPathList; 
 
             /**
              * TrafficPathList.
              */
-            public Builder trafficPathList(java.util.List < String > trafficPathList) {
+            public Builder trafficPathList(java.util.List<String> trafficPathList) {
                 this.trafficPathList = trafficPathList;
                 return this;
             }
@@ -865,7 +870,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
      */
     public static class FlowLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowLog")
-        private java.util.List < FlowLog> flowLog;
+        private java.util.List<FlowLog> flowLog;
 
         private FlowLogs(Builder builder) {
             this.flowLog = builder.flowLog;
@@ -882,17 +887,17 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         /**
          * @return flowLog
          */
-        public java.util.List < FlowLog> getFlowLog() {
+        public java.util.List<FlowLog> getFlowLog() {
             return this.flowLog;
         }
 
         public static final class Builder {
-            private java.util.List < FlowLog> flowLog; 
+            private java.util.List<FlowLog> flowLog; 
 
             /**
              * FlowLog.
              */
-            public Builder flowLog(java.util.List < FlowLog> flowLog) {
+            public Builder flowLog(java.util.List<FlowLog> flowLog) {
                 this.flowLog = flowLog;
                 return this;
             }

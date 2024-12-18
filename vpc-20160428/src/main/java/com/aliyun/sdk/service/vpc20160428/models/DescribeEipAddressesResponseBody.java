@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
      */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
-        private java.util.List < LockReason> lockReason;
+        private java.util.List<LockReason> lockReason;
 
         private OperationLocks(Builder builder) {
             this.lockReason = builder.lockReason;
@@ -222,12 +227,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         /**
          * @return lockReason
          */
-        public java.util.List < LockReason> getLockReason() {
+        public java.util.List<LockReason> getLockReason() {
             return this.lockReason;
         }
 
         public static final class Builder {
-            private java.util.List < LockReason> lockReason; 
+            private java.util.List<LockReason> lockReason; 
 
             /**
              * <p>The reason why the EIP is locked. Valid values:</p>
@@ -239,7 +244,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>financial</p>
              */
-            public Builder lockReason(java.util.List < LockReason> lockReason) {
+            public Builder lockReason(java.util.List<LockReason> lockReason) {
                 this.lockReason = lockReason;
                 return this;
             }
@@ -259,7 +264,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
      */
     public static class SecurityProtectionTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityProtectionType")
-        private java.util.List < String > securityProtectionType;
+        private java.util.List<String> securityProtectionType;
 
         private SecurityProtectionTypes(Builder builder) {
             this.securityProtectionType = builder.securityProtectionType;
@@ -276,17 +281,17 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         /**
          * @return securityProtectionType
          */
-        public java.util.List < String > getSecurityProtectionType() {
+        public java.util.List<String> getSecurityProtectionType() {
             return this.securityProtectionType;
         }
 
         public static final class Builder {
-            private java.util.List < String > securityProtectionType; 
+            private java.util.List<String> securityProtectionType; 
 
             /**
              * SecurityProtectionType.
              */
-            public Builder securityProtectionType(java.util.List < String > securityProtectionType) {
+            public Builder securityProtectionType(java.util.List<String> securityProtectionType) {
                 this.securityProtectionType = securityProtectionType;
                 return this;
             }
@@ -379,7 +384,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -396,17 +401,17 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1477,7 +1482,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
      */
     public static class EipAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipAddress")
-        private java.util.List < EipAddress> eipAddress;
+        private java.util.List<EipAddress> eipAddress;
 
         private EipAddresses(Builder builder) {
             this.eipAddress = builder.eipAddress;
@@ -1494,17 +1499,17 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         /**
          * @return eipAddress
          */
-        public java.util.List < EipAddress> getEipAddress() {
+        public java.util.List<EipAddress> getEipAddress() {
             return this.eipAddress;
         }
 
         public static final class Builder {
-            private java.util.List < EipAddress> eipAddress; 
+            private java.util.List<EipAddress> eipAddress; 
 
             /**
              * EipAddress.
              */
-            public Builder eipAddress(java.util.List < EipAddress> eipAddress) {
+            public Builder eipAddress(java.util.List<EipAddress> eipAddress) {
                 this.eipAddress = eipAddress;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class AssociateNetworkAclRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Resource")
-    private java.util.List < Resource> resource;
+    private java.util.List<Resource> resource;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -121,7 +126,7 @@ public class AssociateNetworkAclRequest extends Request {
     /**
      * @return resource
      */
-    public java.util.List < Resource> getResource() {
+    public java.util.List<Resource> getResource() {
         return this.resource;
     }
 
@@ -146,7 +151,7 @@ public class AssociateNetworkAclRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < Resource> resource; 
+        private java.util.List<Resource> resource; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -242,7 +247,7 @@ public class AssociateNetworkAclRequest extends Request {
         /**
          * <p>The information about the associated resources.</p>
          */
-        public Builder resource(java.util.List < Resource> resource) {
+        public Builder resource(java.util.List<Resource> resource) {
             this.putQueryParameter("Resource", resource);
             this.resource = resource;
             return this;

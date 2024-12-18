@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("FailoverTestJobList")
-    private java.util.List < FailoverTestJobList> failoverTestJobList;
+    private java.util.List<FailoverTestJobList> failoverTestJobList;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -57,7 +62,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     /**
      * @return failoverTestJobList
      */
-    public java.util.List < FailoverTestJobList> getFailoverTestJobList() {
+    public java.util.List<FailoverTestJobList> getFailoverTestJobList() {
         return this.failoverTestJobList;
     }
 
@@ -91,7 +96,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < FailoverTestJobList> failoverTestJobList; 
+        private java.util.List<FailoverTestJobList> failoverTestJobList; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         /**
          * <p>The list of failover tests.</p>
          */
-        public Builder failoverTestJobList(java.util.List < FailoverTestJobList> failoverTestJobList) {
+        public Builder failoverTestJobList(java.util.List<FailoverTestJobList> failoverTestJobList) {
             this.failoverTestJobList = failoverTestJobList;
             return this;
         }
@@ -177,7 +182,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ResourceId")
-        private java.util.List < String > resourceId;
+        private java.util.List<String> resourceId;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
@@ -250,7 +255,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         /**
          * @return resourceId
          */
-        public java.util.List < String > getResourceId() {
+        public java.util.List<String> getResourceId() {
             return this.resourceId;
         }
 
@@ -288,7 +293,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             private String jobId; 
             private String jobType; 
             private String name; 
-            private java.util.List < String > resourceId; 
+            private java.util.List<String> resourceId; 
             private String resourceType; 
             private String startTime; 
             private String status; 
@@ -358,7 +363,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the failover test resources.</p>
              */
-            public Builder resourceId(java.util.List < String > resourceId) {
+            public Builder resourceId(java.util.List<String> resourceId) {
                 this.resourceId = resourceId;
                 return this;
             }

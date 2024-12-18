@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservations")
-    private java.util.List < VSwitchCidrReservations> vSwitchCidrReservations;
+    private java.util.List<VSwitchCidrReservations> vSwitchCidrReservations;
 
     private ListVSwitchCidrReservationsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
     /**
      * @return vSwitchCidrReservations
      */
-    public java.util.List < VSwitchCidrReservations> getVSwitchCidrReservations() {
+    public java.util.List<VSwitchCidrReservations> getVSwitchCidrReservations() {
         return this.vSwitchCidrReservations;
     }
 
@@ -83,7 +88,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < VSwitchCidrReservations> vSwitchCidrReservations; 
+        private java.util.List<VSwitchCidrReservations> vSwitchCidrReservations; 
 
         /**
          * <p>The number of entries to return per page.</p>
@@ -136,7 +141,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         /**
          * <p>A list of reserved CIDR blocks.</p>
          */
-        public Builder vSwitchCidrReservations(java.util.List < VSwitchCidrReservations> vSwitchCidrReservations) {
+        public Builder vSwitchCidrReservations(java.util.List<VSwitchCidrReservations> vSwitchCidrReservations) {
             this.vSwitchCidrReservations = vSwitchCidrReservations;
             return this;
         }
@@ -243,7 +248,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -328,7 +333,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -387,7 +392,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             private String creationTime; 
             private String ipVersion; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private String vSwitchCidrReservationCidr; 
             private String vSwitchCidrReservationDescription; 
@@ -464,7 +469,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

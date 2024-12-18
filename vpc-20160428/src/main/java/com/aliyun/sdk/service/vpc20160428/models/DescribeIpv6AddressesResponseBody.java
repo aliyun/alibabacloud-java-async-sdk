@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -502,7 +507,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -519,17 +524,17 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1022,7 +1027,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
      */
     public static class Ipv6Addresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6Address")
-        private java.util.List < Ipv6Address> ipv6Address;
+        private java.util.List<Ipv6Address> ipv6Address;
 
         private Ipv6Addresses(Builder builder) {
             this.ipv6Address = builder.ipv6Address;
@@ -1039,12 +1044,12 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         /**
          * @return ipv6Address
          */
-        public java.util.List < Ipv6Address> getIpv6Address() {
+        public java.util.List<Ipv6Address> getIpv6Address() {
             return this.ipv6Address;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6Address> ipv6Address; 
+            private java.util.List<Ipv6Address> ipv6Address; 
 
             /**
              * <p>The IPv6 address.</p>
@@ -1052,7 +1057,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>2408:XXXX:153:3921:851c:c435:7b12:1c5f</p>
              */
-            public Builder ipv6Address(java.util.List < Ipv6Address> ipv6Address) {
+            public Builder ipv6Address(java.util.List<Ipv6Address> ipv6Address) {
                 this.ipv6Address = ipv6Address;
                 return this;
             }

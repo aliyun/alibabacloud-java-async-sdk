@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
      */
     public static class AccessPointFeatureModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointFeatureModel")
-        private java.util.List < AccessPointFeatureModel> accessPointFeatureModel;
+        private java.util.List<AccessPointFeatureModel> accessPointFeatureModel;
 
         private AccessPointFeatureModels(Builder builder) {
             this.accessPointFeatureModel = builder.accessPointFeatureModel;
@@ -241,17 +246,17 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         /**
          * @return accessPointFeatureModel
          */
-        public java.util.List < AccessPointFeatureModel> getAccessPointFeatureModel() {
+        public java.util.List<AccessPointFeatureModel> getAccessPointFeatureModel() {
             return this.accessPointFeatureModel;
         }
 
         public static final class Builder {
-            private java.util.List < AccessPointFeatureModel> accessPointFeatureModel; 
+            private java.util.List<AccessPointFeatureModel> accessPointFeatureModel; 
 
             /**
              * AccessPointFeatureModel.
              */
-            public Builder accessPointFeatureModel(java.util.List < AccessPointFeatureModel> accessPointFeatureModel) {
+            public Builder accessPointFeatureModel(java.util.List<AccessPointFeatureModel> accessPointFeatureModel) {
                 this.accessPointFeatureModel = accessPointFeatureModel;
                 return this;
             }
@@ -508,7 +513,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
      */
     public static class AccessPointSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointType")
-        private java.util.List < AccessPointType> accessPointType;
+        private java.util.List<AccessPointType> accessPointType;
 
         private AccessPointSet(Builder builder) {
             this.accessPointType = builder.accessPointType;
@@ -525,17 +530,17 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         /**
          * @return accessPointType
          */
-        public java.util.List < AccessPointType> getAccessPointType() {
+        public java.util.List<AccessPointType> getAccessPointType() {
             return this.accessPointType;
         }
 
         public static final class Builder {
-            private java.util.List < AccessPointType> accessPointType; 
+            private java.util.List<AccessPointType> accessPointType; 
 
             /**
              * AccessPointType.
              */
-            public Builder accessPointType(java.util.List < AccessPointType> accessPointType) {
+            public Builder accessPointType(java.util.List<AccessPointType> accessPointType) {
                 this.accessPointType = accessPointType;
                 return this;
             }

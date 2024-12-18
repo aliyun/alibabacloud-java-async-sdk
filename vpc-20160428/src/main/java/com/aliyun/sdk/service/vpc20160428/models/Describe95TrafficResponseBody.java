@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,7 +206,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
      */
     public static class Traffic95DetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Traffic95Detail")
-        private java.util.List < Traffic95Detail> traffic95Detail;
+        private java.util.List<Traffic95Detail> traffic95Detail;
 
         private Traffic95DetailList(Builder builder) {
             this.traffic95Detail = builder.traffic95Detail;
@@ -218,17 +223,17 @@ public class Describe95TrafficResponseBody extends TeaModel {
         /**
          * @return traffic95Detail
          */
-        public java.util.List < Traffic95Detail> getTraffic95Detail() {
+        public java.util.List<Traffic95Detail> getTraffic95Detail() {
             return this.traffic95Detail;
         }
 
         public static final class Builder {
-            private java.util.List < Traffic95Detail> traffic95Detail; 
+            private java.util.List<Traffic95Detail> traffic95Detail; 
 
             /**
              * Traffic95Detail.
              */
-            public Builder traffic95Detail(java.util.List < Traffic95Detail> traffic95Detail) {
+            public Builder traffic95Detail(java.util.List<Traffic95Detail> traffic95Detail) {
                 this.traffic95Detail = traffic95Detail;
                 return this;
             }

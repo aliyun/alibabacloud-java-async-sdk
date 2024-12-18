@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Zone")
-        private java.util.List < Zone> zone;
+        private java.util.List<Zone> zone;
 
         private Zones(Builder builder) {
             this.zone = builder.zone;
@@ -195,17 +200,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return zone
          */
-        public java.util.List < Zone> getZone() {
+        public java.util.List<Zone> getZone() {
             return this.zone;
         }
 
         public static final class Builder {
-            private java.util.List < Zone> zone; 
+            private java.util.List<Zone> zone; 
 
             /**
              * Zone.
              */
-            public Builder zone(java.util.List < Zone> zone) {
+            public Builder zone(java.util.List<Zone> zone) {
                 this.zone = zone;
                 return this;
             }

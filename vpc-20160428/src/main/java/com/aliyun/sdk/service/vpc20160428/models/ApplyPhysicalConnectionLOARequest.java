@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PMInfo")
-    private java.util.List < PMInfo> PMInfo;
+    private java.util.List<PMInfo> PMInfo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PeerLocation")
@@ -164,7 +169,7 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
     /**
      * @return PMInfo
      */
-    public java.util.List < PMInfo> getPMInfo() {
+    public java.util.List<PMInfo> getPMInfo() {
         return this.PMInfo;
     }
 
@@ -212,7 +217,7 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         private String lineType; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < PMInfo> PMInfo; 
+        private java.util.List<PMInfo> PMInfo; 
         private String peerLocation; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -349,7 +354,7 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         /**
          * <p>The information about the construction engineer.</p>
          */
-        public Builder PMInfo(java.util.List < PMInfo> PMInfo) {
+        public Builder PMInfo(java.util.List<PMInfo> PMInfo) {
             this.putQueryParameter("PMInfo", PMInfo);
             this.PMInfo = PMInfo;
             return this;

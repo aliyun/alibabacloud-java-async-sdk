@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
      */
     public static class AclEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclEntry")
-        private java.util.List < AclEntry> aclEntry;
+        private java.util.List<AclEntry> aclEntry;
 
         private AclEntries(Builder builder) {
             this.aclEntry = builder.aclEntry;
@@ -310,17 +315,17 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
         /**
          * @return aclEntry
          */
-        public java.util.List < AclEntry> getAclEntry() {
+        public java.util.List<AclEntry> getAclEntry() {
             return this.aclEntry;
         }
 
         public static final class Builder {
-            private java.util.List < AclEntry> aclEntry; 
+            private java.util.List<AclEntry> aclEntry; 
 
             /**
              * AclEntry.
              */
-            public Builder aclEntry(java.util.List < AclEntry> aclEntry) {
+            public Builder aclEntry(java.util.List<AclEntry> aclEntry) {
                 this.aclEntry = aclEntry;
                 return this;
             }

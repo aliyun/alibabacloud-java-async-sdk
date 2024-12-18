@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -145,7 +150,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
      */
     public static class ForwardTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardTableId")
-        private java.util.List < String > forwardTableId;
+        private java.util.List<String> forwardTableId;
 
         private ForwardTableIds(Builder builder) {
             this.forwardTableId = builder.forwardTableId;
@@ -162,17 +167,17 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         /**
          * @return forwardTableId
          */
-        public java.util.List < String > getForwardTableId() {
+        public java.util.List<String> getForwardTableId() {
             return this.forwardTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > forwardTableId; 
+            private java.util.List<String> forwardTableId; 
 
             /**
              * ForwardTableId.
              */
-            public Builder forwardTableId(java.util.List < String > forwardTableId) {
+            public Builder forwardTableId(java.util.List<String> forwardTableId) {
                 this.forwardTableId = forwardTableId;
                 return this;
             }
@@ -192,7 +197,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
      */
     public static class FullNatTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FullNatTableId")
-        private java.util.List < String > fullNatTableId;
+        private java.util.List<String> fullNatTableId;
 
         private FullNatTableIds(Builder builder) {
             this.fullNatTableId = builder.fullNatTableId;
@@ -209,17 +214,17 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         /**
          * @return fullNatTableId
          */
-        public java.util.List < String > getFullNatTableId() {
+        public java.util.List<String> getFullNatTableId() {
             return this.fullNatTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > fullNatTableId; 
+            private java.util.List<String> fullNatTableId; 
 
             /**
              * FullNatTableId.
              */
-            public Builder fullNatTableId(java.util.List < String > fullNatTableId) {
+            public Builder fullNatTableId(java.util.List<String> fullNatTableId) {
                 this.fullNatTableId = fullNatTableId;
                 return this;
             }
@@ -239,7 +244,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
      */
     public static class SnatTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SnatTableId")
-        private java.util.List < String > snatTableId;
+        private java.util.List<String> snatTableId;
 
         private SnatTableIds(Builder builder) {
             this.snatTableId = builder.snatTableId;
@@ -256,17 +261,17 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         /**
          * @return snatTableId
          */
-        public java.util.List < String > getSnatTableId() {
+        public java.util.List<String> getSnatTableId() {
             return this.snatTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > snatTableId; 
+            private java.util.List<String> snatTableId; 
 
             /**
              * SnatTableId.
              */
-            public Builder snatTableId(java.util.List < String > snatTableId) {
+            public Builder snatTableId(java.util.List<String> snatTableId) {
                 this.snatTableId = snatTableId;
                 return this;
             }

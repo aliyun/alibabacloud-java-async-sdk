@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -251,7 +256,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
      */
     public static class PublicIpAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PublicIpAddresse")
-        private java.util.List < PublicIpAddresse> publicIpAddresse;
+        private java.util.List<PublicIpAddresse> publicIpAddresse;
 
         private PublicIpAddresses(Builder builder) {
             this.publicIpAddresse = builder.publicIpAddresse;
@@ -268,17 +273,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return publicIpAddresse
          */
-        public java.util.List < PublicIpAddresse> getPublicIpAddresse() {
+        public java.util.List<PublicIpAddresse> getPublicIpAddresse() {
             return this.publicIpAddresse;
         }
 
         public static final class Builder {
-            private java.util.List < PublicIpAddresse> publicIpAddresse; 
+            private java.util.List<PublicIpAddresse> publicIpAddresse; 
 
             /**
              * PublicIpAddresse.
              */
-            public Builder publicIpAddresse(java.util.List < PublicIpAddresse> publicIpAddresse) {
+            public Builder publicIpAddresse(java.util.List<PublicIpAddresse> publicIpAddresse) {
                 this.publicIpAddresse = publicIpAddresse;
                 return this;
             }
@@ -298,7 +303,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
      */
     public static class SecurityProtectionTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityProtectionType")
-        private java.util.List < String > securityProtectionType;
+        private java.util.List<String> securityProtectionType;
 
         private SecurityProtectionTypes(Builder builder) {
             this.securityProtectionType = builder.securityProtectionType;
@@ -315,17 +320,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return securityProtectionType
          */
-        public java.util.List < String > getSecurityProtectionType() {
+        public java.util.List<String> getSecurityProtectionType() {
             return this.securityProtectionType;
         }
 
         public static final class Builder {
-            private java.util.List < String > securityProtectionType; 
+            private java.util.List<String> securityProtectionType; 
 
             /**
              * SecurityProtectionType.
              */
-            public Builder securityProtectionType(java.util.List < String > securityProtectionType) {
+            public Builder securityProtectionType(java.util.List<String> securityProtectionType) {
                 this.securityProtectionType = securityProtectionType;
                 return this;
             }
@@ -418,7 +423,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -435,17 +440,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1135,7 +1140,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
      */
     public static class CommonBandwidthPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommonBandwidthPackage")
-        private java.util.List < CommonBandwidthPackage> commonBandwidthPackage;
+        private java.util.List<CommonBandwidthPackage> commonBandwidthPackage;
 
         private CommonBandwidthPackages(Builder builder) {
             this.commonBandwidthPackage = builder.commonBandwidthPackage;
@@ -1152,17 +1157,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return commonBandwidthPackage
          */
-        public java.util.List < CommonBandwidthPackage> getCommonBandwidthPackage() {
+        public java.util.List<CommonBandwidthPackage> getCommonBandwidthPackage() {
             return this.commonBandwidthPackage;
         }
 
         public static final class Builder {
-            private java.util.List < CommonBandwidthPackage> commonBandwidthPackage; 
+            private java.util.List<CommonBandwidthPackage> commonBandwidthPackage; 
 
             /**
              * CommonBandwidthPackage.
              */
-            public Builder commonBandwidthPackage(java.util.List < CommonBandwidthPackage> commonBandwidthPackage) {
+            public Builder commonBandwidthPackage(java.util.List<CommonBandwidthPackage> commonBandwidthPackage) {
                 this.commonBandwidthPackage = commonBandwidthPackage;
                 return this;
             }

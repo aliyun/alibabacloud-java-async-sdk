@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -218,7 +223,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      */
     public static class ForwardTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardTableId")
-        private java.util.List < String > forwardTableId;
+        private java.util.List<String> forwardTableId;
 
         private ForwardTableIds(Builder builder) {
             this.forwardTableId = builder.forwardTableId;
@@ -235,17 +240,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * @return forwardTableId
          */
-        public java.util.List < String > getForwardTableId() {
+        public java.util.List<String> getForwardTableId() {
             return this.forwardTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > forwardTableId; 
+            private java.util.List<String> forwardTableId; 
 
             /**
              * ForwardTableId.
              */
-            public Builder forwardTableId(java.util.List < String > forwardTableId) {
+            public Builder forwardTableId(java.util.List<String> forwardTableId) {
                 this.forwardTableId = forwardTableId;
                 return this;
             }
@@ -265,7 +270,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      */
     public static class FullNatTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FullNatTableId")
-        private java.util.List < String > fullNatTableId;
+        private java.util.List<String> fullNatTableId;
 
         private FullNatTableIds(Builder builder) {
             this.fullNatTableId = builder.fullNatTableId;
@@ -282,17 +287,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * @return fullNatTableId
          */
-        public java.util.List < String > getFullNatTableId() {
+        public java.util.List<String> getFullNatTableId() {
             return this.fullNatTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > fullNatTableId; 
+            private java.util.List<String> fullNatTableId; 
 
             /**
              * FullNatTableId.
              */
-            public Builder fullNatTableId(java.util.List < String > fullNatTableId) {
+            public Builder fullNatTableId(java.util.List<String> fullNatTableId) {
                 this.fullNatTableId = fullNatTableId;
                 return this;
             }
@@ -464,7 +469,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      */
     public static class IpLists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpList")
-        private java.util.List < IpList> ipList;
+        private java.util.List<IpList> ipList;
 
         private IpLists(Builder builder) {
             this.ipList = builder.ipList;
@@ -481,17 +486,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * @return ipList
          */
-        public java.util.List < IpList> getIpList() {
+        public java.util.List<IpList> getIpList() {
             return this.ipList;
         }
 
         public static final class Builder {
-            private java.util.List < IpList> ipList; 
+            private java.util.List<IpList> ipList; 
 
             /**
              * IpList.
              */
-            public Builder ipList(java.util.List < IpList> ipList) {
+            public Builder ipList(java.util.List<IpList> ipList) {
                 this.ipList = ipList;
                 return this;
             }
@@ -726,7 +731,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      */
     public static class SnatTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SnatTableId")
-        private java.util.List < String > snatTableId;
+        private java.util.List<String> snatTableId;
 
         private SnatTableIds(Builder builder) {
             this.snatTableId = builder.snatTableId;
@@ -743,17 +748,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * @return snatTableId
          */
-        public java.util.List < String > getSnatTableId() {
+        public java.util.List<String> getSnatTableId() {
             return this.snatTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > snatTableId; 
+            private java.util.List<String> snatTableId; 
 
             /**
              * SnatTableId.
              */
-            public Builder snatTableId(java.util.List < String > snatTableId) {
+            public Builder snatTableId(java.util.List<String> snatTableId) {
                 this.snatTableId = snatTableId;
                 return this;
             }
@@ -846,7 +851,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -863,17 +868,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1667,7 +1672,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      */
     public static class NatGateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NatGateway")
-        private java.util.List < NatGateway> natGateway;
+        private java.util.List<NatGateway> natGateway;
 
         private NatGateways(Builder builder) {
             this.natGateway = builder.natGateway;
@@ -1684,17 +1689,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * @return natGateway
          */
-        public java.util.List < NatGateway> getNatGateway() {
+        public java.util.List<NatGateway> getNatGateway() {
             return this.natGateway;
         }
 
         public static final class Builder {
-            private java.util.List < NatGateway> natGateway; 
+            private java.util.List<NatGateway> natGateway; 
 
             /**
              * NatGateway.
              */
-            public Builder natGateway(java.util.List < NatGateway> natGateway) {
+            public Builder natGateway(java.util.List<NatGateway> natGateway) {
                 this.natGateway = natGateway;
                 return this;
             }

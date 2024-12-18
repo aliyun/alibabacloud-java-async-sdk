@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("PublicIpAddressPoolList")
-    private java.util.List < PublicIpAddressPoolList> publicIpAddressPoolList;
+    private java.util.List<PublicIpAddressPoolList> publicIpAddressPoolList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -49,7 +54,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     /**
      * @return publicIpAddressPoolList
      */
-    public java.util.List < PublicIpAddressPoolList> getPublicIpAddressPoolList() {
+    public java.util.List<PublicIpAddressPoolList> getPublicIpAddressPoolList() {
         return this.publicIpAddressPoolList;
     }
 
@@ -69,7 +74,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < PublicIpAddressPoolList> publicIpAddressPoolList; 
+        private java.util.List<PublicIpAddressPoolList> publicIpAddressPoolList; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -91,7 +96,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         /**
          * <p>The IP address pools.</p>
          */
-        public Builder publicIpAddressPoolList(java.util.List < PublicIpAddressPoolList> publicIpAddressPoolList) {
+        public Builder publicIpAddressPoolList(java.util.List<PublicIpAddressPoolList> publicIpAddressPoolList) {
             this.publicIpAddressPoolList = publicIpAddressPoolList;
             return this;
         }
@@ -238,7 +243,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("SecurityProtectionTypes")
-        private java.util.List < String > securityProtectionTypes;
+        private java.util.List<String> securityProtectionTypes;
 
         @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
@@ -247,7 +252,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TotalIpNum")
         private Integer totalIpNum;
@@ -259,7 +264,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         private String userType;
 
         @com.aliyun.core.annotation.NameInMap("Zones")
-        private java.util.List < String > zones;
+        private java.util.List<String> zones;
 
         private PublicIpAddressPoolList(Builder builder) {
             this.bizType = builder.bizType;
@@ -371,7 +376,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         /**
          * @return securityProtectionTypes
          */
-        public java.util.List < String > getSecurityProtectionTypes() {
+        public java.util.List<String> getSecurityProtectionTypes() {
             return this.securityProtectionTypes;
         }
 
@@ -392,7 +397,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -420,7 +425,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         /**
          * @return zones
          */
-        public java.util.List < String > getZones() {
+        public java.util.List<String> getZones() {
             return this.zones;
         }
 
@@ -436,14 +441,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             private String publicIpAddressPoolId; 
             private String regionId; 
             private String resourceGroupId; 
-            private java.util.List < String > securityProtectionTypes; 
+            private java.util.List<String> securityProtectionTypes; 
             private String shareType; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Integer totalIpNum; 
             private Integer usedIpNum; 
             private String userType; 
-            private java.util.List < String > zones; 
+            private java.util.List<String> zones; 
 
             /**
              * <p>The service type of the IP address pool.</p>
@@ -600,7 +605,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
              * <li>If the value is set to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Pro/Premium is used.</li>
              * </ul>
              */
-            public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
+            public Builder securityProtectionTypes(java.util.List<String> securityProtectionTypes) {
                 this.securityProtectionTypes = securityProtectionTypes;
                 return this;
             }
@@ -639,7 +644,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             /**
              * <p>The tag list.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -684,7 +689,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             /**
              * <p>The zone of the IP address pool. This parameter is returned only when the service type of the IP address pool is CloudBox.</p>
              */
-            public Builder zones(java.util.List < String > zones) {
+            public Builder zones(java.util.List<String> zones) {
                 this.zones = zones;
                 return this;
             }

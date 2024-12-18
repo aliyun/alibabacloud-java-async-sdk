@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -274,7 +279,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
      */
     public static class BackendServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackendServer")
-        private java.util.List < BackendServer> backendServer;
+        private java.util.List<BackendServer> backendServer;
 
         private BackendServers(Builder builder) {
             this.backendServer = builder.backendServer;
@@ -291,17 +296,17 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         /**
          * @return backendServer
          */
-        public java.util.List < BackendServer> getBackendServer() {
+        public java.util.List<BackendServer> getBackendServer() {
             return this.backendServer;
         }
 
         public static final class Builder {
-            private java.util.List < BackendServer> backendServer; 
+            private java.util.List<BackendServer> backendServer; 
 
             /**
              * BackendServer.
              */
-            public Builder backendServer(java.util.List < BackendServer> backendServer) {
+            public Builder backendServer(java.util.List<BackendServer> backendServer) {
                 this.backendServer = backendServer;
                 return this;
             }
@@ -394,7 +399,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
      */
     public static class PublicIpAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
-        private java.util.List < PublicIpAddress> publicIpAddress;
+        private java.util.List<PublicIpAddress> publicIpAddress;
 
         private PublicIpAddresses(Builder builder) {
             this.publicIpAddress = builder.publicIpAddress;
@@ -411,17 +416,17 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         /**
          * @return publicIpAddress
          */
-        public java.util.List < PublicIpAddress> getPublicIpAddress() {
+        public java.util.List<PublicIpAddress> getPublicIpAddress() {
             return this.publicIpAddress;
         }
 
         public static final class Builder {
-            private java.util.List < PublicIpAddress> publicIpAddress; 
+            private java.util.List<PublicIpAddress> publicIpAddress; 
 
             /**
              * PublicIpAddress.
              */
-            public Builder publicIpAddress(java.util.List < PublicIpAddress> publicIpAddress) {
+            public Builder publicIpAddress(java.util.List<PublicIpAddress> publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
                 return this;
             }
@@ -840,7 +845,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
      */
     public static class GlobalAccelerationInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstance")
-        private java.util.List < GlobalAccelerationInstance> globalAccelerationInstance;
+        private java.util.List<GlobalAccelerationInstance> globalAccelerationInstance;
 
         private GlobalAccelerationInstances(Builder builder) {
             this.globalAccelerationInstance = builder.globalAccelerationInstance;
@@ -857,17 +862,17 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         /**
          * @return globalAccelerationInstance
          */
-        public java.util.List < GlobalAccelerationInstance> getGlobalAccelerationInstance() {
+        public java.util.List<GlobalAccelerationInstance> getGlobalAccelerationInstance() {
             return this.globalAccelerationInstance;
         }
 
         public static final class Builder {
-            private java.util.List < GlobalAccelerationInstance> globalAccelerationInstance; 
+            private java.util.List<GlobalAccelerationInstance> globalAccelerationInstance; 
 
             /**
              * GlobalAccelerationInstance.
              */
-            public Builder globalAccelerationInstance(java.util.List < GlobalAccelerationInstance> globalAccelerationInstance) {
+            public Builder globalAccelerationInstance(java.util.List<GlobalAccelerationInstance> globalAccelerationInstance) {
                 this.globalAccelerationInstance = globalAccelerationInstance;
                 return this;
             }

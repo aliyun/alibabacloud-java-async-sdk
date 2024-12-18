@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,11 +48,11 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleIdList")
-    private java.util.List < String > ruleIdList;
+    private java.util.List<String> ruleIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleNameList")
-    private java.util.List < String > ruleNameList;
+    private java.util.List<String> ruleNameList;
 
     private DescribeExpressConnectTrafficQosRuleRequest(Builder builder) {
         super(builder);
@@ -127,14 +132,14 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends Request {
     /**
      * @return ruleIdList
      */
-    public java.util.List < String > getRuleIdList() {
+    public java.util.List<String> getRuleIdList() {
         return this.ruleIdList;
     }
 
     /**
      * @return ruleNameList
      */
-    public java.util.List < String > getRuleNameList() {
+    public java.util.List<String> getRuleNameList() {
         return this.ruleNameList;
     }
 
@@ -146,8 +151,8 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends Request {
         private String queueId; 
         private String regionId; 
         private String resourceOwnerAccount; 
-        private java.util.List < String > ruleIdList; 
-        private java.util.List < String > ruleNameList; 
+        private java.util.List<String> ruleIdList; 
+        private java.util.List<String> ruleNameList; 
 
         private Builder() {
             super();
@@ -250,7 +255,7 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends Request {
         /**
          * <p>The list of QoS rule IDs.</p>
          */
-        public Builder ruleIdList(java.util.List < String > ruleIdList) {
+        public Builder ruleIdList(java.util.List<String> ruleIdList) {
             this.putQueryParameter("RuleIdList", ruleIdList);
             this.ruleIdList = ruleIdList;
             return this;
@@ -259,7 +264,7 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends Request {
         /**
          * <p>The list of QoS rule names.</p>
          */
-        public Builder ruleNameList(java.util.List < String > ruleNameList) {
+        public Builder ruleNameList(java.util.List<String> ruleNameList) {
             this.putQueryParameter("RuleNameList", ruleNameList);
             this.ruleNameList = ruleNameList;
             return this;

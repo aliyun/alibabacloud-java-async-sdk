@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("PrefixListEntry")
-    private java.util.List < PrefixListEntry> prefixListEntry;
+    private java.util.List<PrefixListEntry> prefixListEntry;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     /**
      * @return prefixListEntry
      */
-    public java.util.List < PrefixListEntry> getPrefixListEntry() {
+    public java.util.List<PrefixListEntry> getPrefixListEntry() {
         return this.prefixListEntry;
     }
 
@@ -81,7 +86,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     public static final class Builder {
         private Long count; 
         private String nextToken; 
-        private java.util.List < PrefixListEntry> prefixListEntry; 
+        private java.util.List<PrefixListEntry> prefixListEntry; 
         private String requestId; 
         private Long totalCount; 
 
@@ -114,7 +119,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         /**
          * <p>The information about the prefix list.</p>
          */
-        public Builder prefixListEntry(java.util.List < PrefixListEntry> prefixListEntry) {
+        public Builder prefixListEntry(java.util.List<PrefixListEntry> prefixListEntry) {
             this.prefixListEntry = prefixListEntry;
             return this;
         }

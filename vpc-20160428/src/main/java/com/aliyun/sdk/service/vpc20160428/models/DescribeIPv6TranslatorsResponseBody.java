@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
      */
     public static class Ipv6TranslatorEntryIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntryId")
-        private java.util.List < String > ipv6TranslatorEntryId;
+        private java.util.List<String> ipv6TranslatorEntryId;
 
         private Ipv6TranslatorEntryIds(Builder builder) {
             this.ipv6TranslatorEntryId = builder.ipv6TranslatorEntryId;
@@ -168,17 +173,17 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         /**
          * @return ipv6TranslatorEntryId
          */
-        public java.util.List < String > getIpv6TranslatorEntryId() {
+        public java.util.List<String> getIpv6TranslatorEntryId() {
             return this.ipv6TranslatorEntryId;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipv6TranslatorEntryId; 
+            private java.util.List<String> ipv6TranslatorEntryId; 
 
             /**
              * Ipv6TranslatorEntryId.
              */
-            public Builder ipv6TranslatorEntryId(java.util.List < String > ipv6TranslatorEntryId) {
+            public Builder ipv6TranslatorEntryId(java.util.List<String> ipv6TranslatorEntryId) {
                 this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
                 return this;
             }
@@ -575,7 +580,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
      */
     public static class Ipv6Translators extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6Translator")
-        private java.util.List < Ipv6Translator> ipv6Translator;
+        private java.util.List<Ipv6Translator> ipv6Translator;
 
         private Ipv6Translators(Builder builder) {
             this.ipv6Translator = builder.ipv6Translator;
@@ -592,17 +597,17 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         /**
          * @return ipv6Translator
          */
-        public java.util.List < Ipv6Translator> getIpv6Translator() {
+        public java.util.List<Ipv6Translator> getIpv6Translator() {
             return this.ipv6Translator;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6Translator> ipv6Translator; 
+            private java.util.List<Ipv6Translator> ipv6Translator; 
 
             /**
              * Ipv6Translator.
              */
-            public Builder ipv6Translator(java.util.List < Ipv6Translator> ipv6Translator) {
+            public Builder ipv6Translator(java.util.List<Ipv6Translator> ipv6Translator) {
                 this.ipv6Translator = ipv6Translator;
                 return this;
             }

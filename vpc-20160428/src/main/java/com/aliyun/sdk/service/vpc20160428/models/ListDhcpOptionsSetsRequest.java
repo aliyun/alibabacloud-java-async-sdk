@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListDhcpOptionsSetsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetId")
-    private java.util.List < String > dhcpOptionsSetId;
+    private java.util.List<String> dhcpOptionsSetId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetName")
@@ -60,7 +65,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListDhcpOptionsSetsRequest(Builder builder) {
         super(builder);
@@ -94,7 +99,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
     /**
      * @return dhcpOptionsSetId
      */
-    public java.util.List < String > getDhcpOptionsSetId() {
+    public java.util.List<String> getDhcpOptionsSetId() {
         return this.dhcpOptionsSetId;
     }
 
@@ -171,12 +176,12 @@ public class ListDhcpOptionsSetsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<ListDhcpOptionsSetsRequest, Builder> {
-        private java.util.List < String > dhcpOptionsSetId; 
+        private java.util.List<String> dhcpOptionsSetId; 
         private String dhcpOptionsSetName; 
         private String domainName; 
         private Integer maxResults; 
@@ -187,7 +192,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -215,7 +220,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
          * <strong>example:</strong>
          * <p>dopt-o6w0df4epg9zo8isy****</p>
          */
-        public Builder dhcpOptionsSetId(java.util.List < String > dhcpOptionsSetId) {
+        public Builder dhcpOptionsSetId(java.util.List<String> dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
             this.dhcpOptionsSetId = dhcpOptionsSetId;
             return this;
@@ -354,7 +359,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
         /**
          * <p>The tag list.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

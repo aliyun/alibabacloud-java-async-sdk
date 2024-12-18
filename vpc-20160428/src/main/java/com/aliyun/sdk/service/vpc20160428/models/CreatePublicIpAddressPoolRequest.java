@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -63,15 +68,15 @@ public class CreatePublicIpAddressPoolRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityProtectionTypes")
-    private java.util.List < String > securityProtectionTypes;
+    private java.util.List<String> securityProtectionTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Zones")
-    private java.util.List < String > zones;
+    private java.util.List<String> zones;
 
     private CreatePublicIpAddressPoolRequest(Builder builder) {
         super(builder);
@@ -192,21 +197,21 @@ public class CreatePublicIpAddressPoolRequest extends Request {
     /**
      * @return securityProtectionTypes
      */
-    public java.util.List < String > getSecurityProtectionTypes() {
+    public java.util.List<String> getSecurityProtectionTypes() {
         return this.securityProtectionTypes;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return zones
      */
-    public java.util.List < String > getZones() {
+    public java.util.List<String> getZones() {
         return this.zones;
     }
 
@@ -223,9 +228,9 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > securityProtectionTypes; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < String > zones; 
+        private java.util.List<String> securityProtectionTypes; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<String> zones; 
 
         private Builder() {
             super();
@@ -423,7 +428,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
          * <li>If you set the parameter to AntiDDoS_Enhanced, Anti-DDoS Pro/Premium is used.</li>
          * </ul>
          */
-        public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
+        public Builder securityProtectionTypes(java.util.List<String> securityProtectionTypes) {
             this.putQueryParameter("SecurityProtectionTypes", securityProtectionTypes);
             this.securityProtectionTypes = securityProtectionTypes;
             return this;
@@ -432,7 +437,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         /**
          * <p>The tag of the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -441,7 +446,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         /**
          * <p>The zone of the IP address pool. If you set <strong>BizType</strong> to <strong>CloudBox</strong>, this parameter is required.</p>
          */
-        public Builder zones(java.util.List < String > zones) {
+        public Builder zones(java.util.List<String> zones) {
             this.putQueryParameter("Zones", zones);
             this.zones = zones;
             return this;

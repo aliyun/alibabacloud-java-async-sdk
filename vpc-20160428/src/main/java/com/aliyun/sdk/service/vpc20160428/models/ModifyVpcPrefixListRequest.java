@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyVpcPrefixListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddPrefixListEntry")
-    private java.util.List < AddPrefixListEntry> addPrefixListEntry;
+    private java.util.List<AddPrefixListEntry> addPrefixListEntry;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -56,7 +61,7 @@ public class ModifyVpcPrefixListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemovePrefixListEntry")
-    private java.util.List < RemovePrefixListEntry> removePrefixListEntry;
+    private java.util.List<RemovePrefixListEntry> removePrefixListEntry;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -99,7 +104,7 @@ public class ModifyVpcPrefixListRequest extends Request {
     /**
      * @return addPrefixListEntry
      */
-    public java.util.List < AddPrefixListEntry> getAddPrefixListEntry() {
+    public java.util.List<AddPrefixListEntry> getAddPrefixListEntry() {
         return this.addPrefixListEntry;
     }
 
@@ -169,7 +174,7 @@ public class ModifyVpcPrefixListRequest extends Request {
     /**
      * @return removePrefixListEntry
      */
-    public java.util.List < RemovePrefixListEntry> getRemovePrefixListEntry() {
+    public java.util.List<RemovePrefixListEntry> getRemovePrefixListEntry() {
         return this.removePrefixListEntry;
     }
 
@@ -188,7 +193,7 @@ public class ModifyVpcPrefixListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyVpcPrefixListRequest, Builder> {
-        private java.util.List < AddPrefixListEntry> addPrefixListEntry; 
+        private java.util.List<AddPrefixListEntry> addPrefixListEntry; 
         private String clientToken; 
         private Boolean dryRun; 
         private Integer maxEntries; 
@@ -198,7 +203,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         private String prefixListId; 
         private String prefixListName; 
         private String regionId; 
-        private java.util.List < RemovePrefixListEntry> removePrefixListEntry; 
+        private java.util.List<RemovePrefixListEntry> removePrefixListEntry; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -226,7 +231,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         /**
          * <p>The information about CIDR blocks to be added to the prefix list.</p>
          */
-        public Builder addPrefixListEntry(java.util.List < AddPrefixListEntry> addPrefixListEntry) {
+        public Builder addPrefixListEntry(java.util.List<AddPrefixListEntry> addPrefixListEntry) {
             this.putQueryParameter("AddPrefixListEntry", addPrefixListEntry);
             this.addPrefixListEntry = addPrefixListEntry;
             return this;
@@ -349,7 +354,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         /**
          * <p>The information about CIDR blocks to be deleted to the prefix list.</p>
          */
-        public Builder removePrefixListEntry(java.util.List < RemovePrefixListEntry> removePrefixListEntry) {
+        public Builder removePrefixListEntry(java.util.List<RemovePrefixListEntry> removePrefixListEntry) {
             this.putQueryParameter("RemovePrefixListEntry", removePrefixListEntry);
             this.removePrefixListEntry = removePrefixListEntry;
             return this;

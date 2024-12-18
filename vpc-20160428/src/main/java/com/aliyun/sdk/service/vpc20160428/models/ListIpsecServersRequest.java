@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class ListIpsecServersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpsecServerId")
     @com.aliyun.core.annotation.Validation(maxLength = 128)
-    private java.util.List < String > ipsecServerId;
+    private java.util.List<String> ipsecServerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpsecServerName")
@@ -69,7 +74,7 @@ public class ListIpsecServersRequest extends Request {
     /**
      * @return ipsecServerId
      */
-    public java.util.List < String > getIpsecServerId() {
+    public java.util.List<String> getIpsecServerId() {
         return this.ipsecServerId;
     }
 
@@ -116,7 +121,7 @@ public class ListIpsecServersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListIpsecServersRequest, Builder> {
-        private java.util.List < String > ipsecServerId; 
+        private java.util.List<String> ipsecServerId; 
         private String ipsecServerName; 
         private Integer maxResults; 
         private String nextToken; 
@@ -145,7 +150,7 @@ public class ListIpsecServersRequest extends Request {
          * <strong>example:</strong>
          * <p>iss-bp1bo3xuvcxo7ixll****</p>
          */
-        public Builder ipsecServerId(java.util.List < String > ipsecServerId) {
+        public Builder ipsecServerId(java.util.List<String> ipsecServerId) {
             this.putQueryParameter("IpsecServerId", ipsecServerId);
             this.ipsecServerId = ipsecServerId;
             return this;

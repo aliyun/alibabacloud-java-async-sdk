@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -258,7 +263,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
      */
     public static class VpnRouteCounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpnRouteCount")
-        private java.util.List < VpnRouteCount> vpnRouteCount;
+        private java.util.List<VpnRouteCount> vpnRouteCount;
 
         private VpnRouteCounts(Builder builder) {
             this.vpnRouteCount = builder.vpnRouteCount;
@@ -275,17 +280,17 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         /**
          * @return vpnRouteCount
          */
-        public java.util.List < VpnRouteCount> getVpnRouteCount() {
+        public java.util.List<VpnRouteCount> getVpnRouteCount() {
             return this.vpnRouteCount;
         }
 
         public static final class Builder {
-            private java.util.List < VpnRouteCount> vpnRouteCount; 
+            private java.util.List<VpnRouteCount> vpnRouteCount; 
 
             /**
              * VpnRouteCount.
              */
-            public Builder vpnRouteCount(java.util.List < VpnRouteCount> vpnRouteCount) {
+            public Builder vpnRouteCount(java.util.List<VpnRouteCount> vpnRouteCount) {
                 this.vpnRouteCount = vpnRouteCount;
                 return this;
             }
@@ -600,7 +605,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
      */
     public static class VpnRouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpnRouteEntry")
-        private java.util.List < VpnRouteEntry> vpnRouteEntry;
+        private java.util.List<VpnRouteEntry> vpnRouteEntry;
 
         private VpnRouteEntries(Builder builder) {
             this.vpnRouteEntry = builder.vpnRouteEntry;
@@ -617,17 +622,17 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         /**
          * @return vpnRouteEntry
          */
-        public java.util.List < VpnRouteEntry> getVpnRouteEntry() {
+        public java.util.List<VpnRouteEntry> getVpnRouteEntry() {
             return this.vpnRouteEntry;
         }
 
         public static final class Builder {
-            private java.util.List < VpnRouteEntry> vpnRouteEntry; 
+            private java.util.List<VpnRouteEntry> vpnRouteEntry; 
 
             /**
              * VpnRouteEntry.
              */
-            public Builder vpnRouteEntry(java.util.List < VpnRouteEntry> vpnRouteEntry) {
+            public Builder vpnRouteEntry(java.util.List<VpnRouteEntry> vpnRouteEntry) {
                 this.vpnRouteEntry = vpnRouteEntry;
                 return this;
             }

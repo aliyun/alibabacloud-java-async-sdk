@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
     private Integer failedCount;
 
     @com.aliyun.core.annotation.NameInMap("FailedRouteEntries")
-    private java.util.List < FailedRouteEntries> failedRouteEntries;
+    private java.util.List<FailedRouteEntries> failedRouteEntries;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -49,7 +54,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
     /**
      * @return failedRouteEntries
      */
-    public java.util.List < FailedRouteEntries> getFailedRouteEntries() {
+    public java.util.List<FailedRouteEntries> getFailedRouteEntries() {
         return this.failedRouteEntries;
     }
 
@@ -69,7 +74,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer failedCount; 
-        private java.util.List < FailedRouteEntries> failedRouteEntries; 
+        private java.util.List<FailedRouteEntries> failedRouteEntries; 
         private String requestId; 
         private Integer successCount; 
 
@@ -87,7 +92,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>The information about the route entry that failed to be deleted.</p>
          */
-        public Builder failedRouteEntries(java.util.List < FailedRouteEntries> failedRouteEntries) {
+        public Builder failedRouteEntries(java.util.List<FailedRouteEntries> failedRouteEntries) {
             this.failedRouteEntries = failedRouteEntries;
             return this;
         }

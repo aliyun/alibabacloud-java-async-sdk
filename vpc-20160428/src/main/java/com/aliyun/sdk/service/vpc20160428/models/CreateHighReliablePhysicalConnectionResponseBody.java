@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -186,7 +191,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
      */
     public static class ErrorInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("errorInfoList")
-        private java.util.List < ErrorInfoListErrorInfoList> errorInfoList;
+        private java.util.List<ErrorInfoListErrorInfoList> errorInfoList;
 
         private ErrorInfoList(Builder builder) {
             this.errorInfoList = builder.errorInfoList;
@@ -203,17 +208,17 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         /**
          * @return errorInfoList
          */
-        public java.util.List < ErrorInfoListErrorInfoList> getErrorInfoList() {
+        public java.util.List<ErrorInfoListErrorInfoList> getErrorInfoList() {
             return this.errorInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < ErrorInfoListErrorInfoList> errorInfoList; 
+            private java.util.List<ErrorInfoListErrorInfoList> errorInfoList; 
 
             /**
              * errorInfoList.
              */
-            public Builder errorInfoList(java.util.List < ErrorInfoListErrorInfoList> errorInfoList) {
+            public Builder errorInfoList(java.util.List<ErrorInfoListErrorInfoList> errorInfoList) {
                 this.errorInfoList = errorInfoList;
                 return this;
             }
@@ -300,7 +305,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
      */
     public static class PhysicalConnectionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("physicalConnectionList")
-        private java.util.List < PhysicalConnectionListPhysicalConnectionList> physicalConnectionList;
+        private java.util.List<PhysicalConnectionListPhysicalConnectionList> physicalConnectionList;
 
         private PhysicalConnectionList(Builder builder) {
             this.physicalConnectionList = builder.physicalConnectionList;
@@ -317,17 +322,17 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         /**
          * @return physicalConnectionList
          */
-        public java.util.List < PhysicalConnectionListPhysicalConnectionList> getPhysicalConnectionList() {
+        public java.util.List<PhysicalConnectionListPhysicalConnectionList> getPhysicalConnectionList() {
             return this.physicalConnectionList;
         }
 
         public static final class Builder {
-            private java.util.List < PhysicalConnectionListPhysicalConnectionList> physicalConnectionList; 
+            private java.util.List<PhysicalConnectionListPhysicalConnectionList> physicalConnectionList; 
 
             /**
              * physicalConnectionList.
              */
-            public Builder physicalConnectionList(java.util.List < PhysicalConnectionListPhysicalConnectionList> physicalConnectionList) {
+            public Builder physicalConnectionList(java.util.List<PhysicalConnectionListPhysicalConnectionList> physicalConnectionList) {
                 this.physicalConnectionList = physicalConnectionList;
                 return this;
             }

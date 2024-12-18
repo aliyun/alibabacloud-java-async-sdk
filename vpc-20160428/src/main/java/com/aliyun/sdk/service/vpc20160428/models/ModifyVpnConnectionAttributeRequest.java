@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -91,7 +96,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TunnelOptionsSpecification")
-    private java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification;
+    private java.util.List<TunnelOptionsSpecification> tunnelOptionsSpecification;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpnConnectionId")
@@ -272,7 +277,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
     /**
      * @return tunnelOptionsSpecification
      */
-    public java.util.List < TunnelOptionsSpecification> getTunnelOptionsSpecification() {
+    public java.util.List<TunnelOptionsSpecification> getTunnelOptionsSpecification() {
         return this.tunnelOptionsSpecification;
     }
 
@@ -303,7 +308,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         private String remoteSubnet; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification; 
+        private java.util.List<TunnelOptionsSpecification> tunnelOptionsSpecification; 
         private String vpnConnectionId; 
 
         private Builder() {
@@ -673,7 +678,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
          * <p>The tunnel configurations.</p>
          * <p>You can specify parameters in the <strong>TunnelOptionsSpecification</strong> array when you modify the configurations of an IPsec-VPN connection in dual-tunnel mode. You can modify the configurations of both the active and standby tunnels of the IPsec-VPN connection.</p>
          */
-        public Builder tunnelOptionsSpecification(java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification) {
+        public Builder tunnelOptionsSpecification(java.util.List<TunnelOptionsSpecification> tunnelOptionsSpecification) {
             this.putBodyParameter("TunnelOptionsSpecification", tunnelOptionsSpecification);
             this.tunnelOptionsSpecification = tunnelOptionsSpecification;
             return this;

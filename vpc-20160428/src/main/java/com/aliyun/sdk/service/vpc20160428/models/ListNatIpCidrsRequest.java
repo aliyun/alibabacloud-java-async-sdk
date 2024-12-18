@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class ListNatIpCidrsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatIpCidrName")
-    private java.util.List < String > natIpCidrName;
+    private java.util.List<String> natIpCidrName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatIpCidrStatus")
@@ -43,7 +48,7 @@ public class ListNatIpCidrsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatIpCidrs")
-    private java.util.List < String > natIpCidrs;
+    private java.util.List<String> natIpCidrs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -139,7 +144,7 @@ public class ListNatIpCidrsRequest extends Request {
     /**
      * @return natIpCidrName
      */
-    public java.util.List < String > getNatIpCidrName() {
+    public java.util.List<String> getNatIpCidrName() {
         return this.natIpCidrName;
     }
 
@@ -153,7 +158,7 @@ public class ListNatIpCidrsRequest extends Request {
     /**
      * @return natIpCidrs
      */
-    public java.util.List < String > getNatIpCidrs() {
+    public java.util.List<String> getNatIpCidrs() {
         return this.natIpCidrs;
     }
 
@@ -205,9 +210,9 @@ public class ListNatIpCidrsRequest extends Request {
         private String maxResults; 
         private String natGatewayId; 
         private String natIpCidr; 
-        private java.util.List < String > natIpCidrName; 
+        private java.util.List<String> natIpCidrName; 
         private String natIpCidrStatus; 
-        private java.util.List < String > natIpCidrs; 
+        private java.util.List<String> natIpCidrs; 
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -312,7 +317,7 @@ public class ListNatIpCidrsRequest extends Request {
          * <strong>example:</strong>
          * <p>test</p>
          */
-        public Builder natIpCidrName(java.util.List < String > natIpCidrName) {
+        public Builder natIpCidrName(java.util.List<String> natIpCidrName) {
             this.putQueryParameter("NatIpCidrName", natIpCidrName);
             this.natIpCidrName = natIpCidrName;
             return this;
@@ -336,7 +341,7 @@ public class ListNatIpCidrsRequest extends Request {
          * <strong>example:</strong>
          * <p>172.16.0.0/24</p>
          */
-        public Builder natIpCidrs(java.util.List < String > natIpCidrs) {
+        public Builder natIpCidrs(java.util.List<String> natIpCidrs) {
             this.putQueryParameter("NatIpCidrs", natIpCidrs);
             this.natIpCidrs = natIpCidrs;
             return this;

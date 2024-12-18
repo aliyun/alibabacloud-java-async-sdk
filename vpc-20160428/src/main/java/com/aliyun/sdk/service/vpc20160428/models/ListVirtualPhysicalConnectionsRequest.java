@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,11 +44,11 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnectionAliUids")
-    private java.util.List < String > virtualPhysicalConnectionAliUids;
+    private java.util.List<String> virtualPhysicalConnectionAliUids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnectionBusinessStatus")
@@ -51,15 +56,15 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnectionIds")
-    private java.util.List < String > virtualPhysicalConnectionIds;
+    private java.util.List<String> virtualPhysicalConnectionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnectionStatuses")
-    private java.util.List < String > virtualPhysicalConnectionStatuses;
+    private java.util.List<String> virtualPhysicalConnectionStatuses;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VlanIds")
-    private java.util.List < String > vlanIds;
+    private java.util.List<String> vlanIds;
 
     private ListVirtualPhysicalConnectionsRequest(Builder builder) {
         super(builder);
@@ -135,14 +140,14 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return virtualPhysicalConnectionAliUids
      */
-    public java.util.List < String > getVirtualPhysicalConnectionAliUids() {
+    public java.util.List<String> getVirtualPhysicalConnectionAliUids() {
         return this.virtualPhysicalConnectionAliUids;
     }
 
@@ -156,21 +161,21 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
     /**
      * @return virtualPhysicalConnectionIds
      */
-    public java.util.List < String > getVirtualPhysicalConnectionIds() {
+    public java.util.List<String> getVirtualPhysicalConnectionIds() {
         return this.virtualPhysicalConnectionIds;
     }
 
     /**
      * @return virtualPhysicalConnectionStatuses
      */
-    public java.util.List < String > getVirtualPhysicalConnectionStatuses() {
+    public java.util.List<String> getVirtualPhysicalConnectionStatuses() {
         return this.virtualPhysicalConnectionStatuses;
     }
 
     /**
      * @return vlanIds
      */
-    public java.util.List < String > getVlanIds() {
+    public java.util.List<String> getVlanIds() {
         return this.vlanIds;
     }
 
@@ -181,12 +186,12 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         private String physicalConnectionId; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < String > virtualPhysicalConnectionAliUids; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<String> virtualPhysicalConnectionAliUids; 
         private String virtualPhysicalConnectionBusinessStatus; 
-        private java.util.List < String > virtualPhysicalConnectionIds; 
-        private java.util.List < String > virtualPhysicalConnectionStatuses; 
-        private java.util.List < String > vlanIds; 
+        private java.util.List<String> virtualPhysicalConnectionIds; 
+        private java.util.List<String> virtualPhysicalConnectionStatuses; 
+        private java.util.List<String> vlanIds; 
 
         private Builder() {
             super();
@@ -294,7 +299,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         /**
          * <p>The tag list.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -306,7 +311,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
          * <strong>example:</strong>
          * <p>189xxx</p>
          */
-        public Builder virtualPhysicalConnectionAliUids(java.util.List < String > virtualPhysicalConnectionAliUids) {
+        public Builder virtualPhysicalConnectionAliUids(java.util.List<String> virtualPhysicalConnectionAliUids) {
             this.putQueryParameter("VirtualPhysicalConnectionAliUids", virtualPhysicalConnectionAliUids);
             this.virtualPhysicalConnectionAliUids = virtualPhysicalConnectionAliUids;
             return this;
@@ -335,7 +340,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
          * <strong>example:</strong>
          * <p>pc-xxx</p>
          */
-        public Builder virtualPhysicalConnectionIds(java.util.List < String > virtualPhysicalConnectionIds) {
+        public Builder virtualPhysicalConnectionIds(java.util.List<String> virtualPhysicalConnectionIds) {
             this.putQueryParameter("VirtualPhysicalConnectionIds", virtualPhysicalConnectionIds);
             this.virtualPhysicalConnectionIds = virtualPhysicalConnectionIds;
             return this;
@@ -347,7 +352,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
          * <strong>example:</strong>
          * <p>pc-xxx</p>
          */
-        public Builder virtualPhysicalConnectionStatuses(java.util.List < String > virtualPhysicalConnectionStatuses) {
+        public Builder virtualPhysicalConnectionStatuses(java.util.List<String> virtualPhysicalConnectionStatuses) {
             this.putQueryParameter("VirtualPhysicalConnectionStatuses", virtualPhysicalConnectionStatuses);
             this.virtualPhysicalConnectionStatuses = virtualPhysicalConnectionStatuses;
             return this;
@@ -359,7 +364,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
          * <strong>example:</strong>
          * <p>pc-xxx</p>
          */
-        public Builder vlanIds(java.util.List < String > vlanIds) {
+        public Builder vlanIds(java.util.List<String> vlanIds) {
             this.putQueryParameter("VlanIds", vlanIds);
             this.vlanIds = vlanIds;
             return this;

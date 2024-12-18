@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GatewayRouteEntryModels")
-    private java.util.List < GatewayRouteEntryModels> gatewayRouteEntryModels;
+    private java.util.List<GatewayRouteEntryModels> gatewayRouteEntryModels;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
     /**
      * @return gatewayRouteEntryModels
      */
-    public java.util.List < GatewayRouteEntryModels> getGatewayRouteEntryModels() {
+    public java.util.List<GatewayRouteEntryModels> getGatewayRouteEntryModels() {
         return this.gatewayRouteEntryModels;
     }
 
@@ -68,7 +73,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GatewayRouteEntryModels> gatewayRouteEntryModels; 
+        private java.util.List<GatewayRouteEntryModels> gatewayRouteEntryModels; 
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
@@ -76,7 +81,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         /**
          * <p>The details of the routes in the gateway route table.</p>
          */
-        public Builder gatewayRouteEntryModels(java.util.List < GatewayRouteEntryModels> gatewayRouteEntryModels) {
+        public Builder gatewayRouteEntryModels(java.util.List<GatewayRouteEntryModels> gatewayRouteEntryModels) {
             this.gatewayRouteEntryModels = gatewayRouteEntryModels;
             return this;
         }
@@ -280,7 +285,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         private String nextHopType;
 
         @com.aliyun.core.annotation.NameInMap("NextHops")
-        private java.util.List < NextHops> nextHops;
+        private java.util.List<NextHops> nextHops;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -341,7 +346,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         /**
          * @return nextHops
          */
-        public java.util.List < NextHops> getNextHops() {
+        public java.util.List<NextHops> getNextHops() {
             return this.nextHops;
         }
 
@@ -358,7 +363,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             private String name; 
             private String nextHopId; 
             private String nextHopType; 
-            private java.util.List < NextHops> nextHops; 
+            private java.util.List<NextHops> nextHops; 
             private String status; 
 
             /**
@@ -425,7 +430,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             /**
              * <p>The information about the next hop.</p>
              */
-            public Builder nextHops(java.util.List < NextHops> nextHops) {
+            public Builder nextHops(java.util.List<NextHops> nextHops) {
                 this.nextHops = nextHops;
                 return this;
             }

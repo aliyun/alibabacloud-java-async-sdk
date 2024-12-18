@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Zones")
-    private java.util.List < Zones> zones;
+    private java.util.List<Zones> zones;
 
     private ListEnhanhcedNatGatewayAvailableZonesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
     /**
      * @return zones
      */
-    public java.util.List < Zones> getZones() {
+    public java.util.List<Zones> getZones() {
         return this.zones;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Zones> zones; 
+        private java.util.List<Zones> zones; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
         /**
          * <p>The list of zones.</p>
          */
-        public Builder zones(java.util.List < Zones> zones) {
+        public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
             return this;
         }

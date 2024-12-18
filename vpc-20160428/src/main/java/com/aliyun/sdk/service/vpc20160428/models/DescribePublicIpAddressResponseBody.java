@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
-    private java.util.List < String > publicIpAddress;
+    private java.util.List<String> publicIpAddress;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -90,7 +95,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     /**
      * @return publicIpAddress
      */
-    public java.util.List < String > getPublicIpAddress() {
+    public java.util.List<String> getPublicIpAddress() {
         return this.publicIpAddress;
     }
 
@@ -127,7 +132,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > publicIpAddress; 
+        private java.util.List<String> publicIpAddress; 
         private String regionId; 
         private String requestId; 
         private Boolean success; 
@@ -183,7 +188,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>110.11.1.0/24</p>
          */
-        public Builder publicIpAddress(java.util.List < String > publicIpAddress) {
+        public Builder publicIpAddress(java.util.List<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }

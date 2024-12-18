@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,8 +43,16 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private CreateExpressConnectTrafficQosRequest(Builder builder) {
         super(builder);
@@ -49,7 +62,9 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
         this.qosDescription = builder.qosDescription;
         this.qosName = builder.qosName;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -108,10 +123,24 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
     }
 
     public static final class Builder extends Request.Builder<CreateExpressConnectTrafficQosRequest, Builder> {
@@ -121,7 +150,9 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
         private String qosDescription; 
         private String qosName; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -135,7 +166,9 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
             this.qosDescription = request.qosDescription;
             this.qosName = request.qosName;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.tags = request.tags;
         } 
 
         /**
@@ -213,11 +246,29 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
             this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -228,4 +279,71 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateExpressConnectTrafficQosRequest} extends {@link TeaModel}
+     *
+     * <p>CreateExpressConnectTrafficQosRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

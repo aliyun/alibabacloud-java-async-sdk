@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     private String totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilters")
-    private java.util.List < TrafficMirrorFilters> trafficMirrorFilters;
+    private java.util.List<TrafficMirrorFilters> trafficMirrorFilters;
 
     private ListTrafficMirrorFiltersResponseBody(Builder builder) {
         this.count = builder.count;
@@ -85,7 +90,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     /**
      * @return trafficMirrorFilters
      */
-    public java.util.List < TrafficMirrorFilters> getTrafficMirrorFilters() {
+    public java.util.List<TrafficMirrorFilters> getTrafficMirrorFilters() {
         return this.trafficMirrorFilters;
     }
 
@@ -95,7 +100,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
-        private java.util.List < TrafficMirrorFilters> trafficMirrorFilters; 
+        private java.util.List<TrafficMirrorFilters> trafficMirrorFilters; 
 
         /**
          * <p>The number of entries returned.</p>
@@ -159,7 +164,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The information about the filters.</p>
          */
-        public Builder trafficMirrorFilters(java.util.List < TrafficMirrorFilters> trafficMirrorFilters) {
+        public Builder trafficMirrorFilters(java.util.List<TrafficMirrorFilters> trafficMirrorFilters) {
             this.trafficMirrorFilters = trafficMirrorFilters;
             return this;
         }
@@ -854,16 +859,16 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         private String creationTime;
 
         @com.aliyun.core.annotation.NameInMap("EgressRules")
-        private java.util.List < EgressRules> egressRules;
+        private java.util.List<EgressRules> egressRules;
 
         @com.aliyun.core.annotation.NameInMap("IngressRules")
-        private java.util.List < IngressRules> ingressRules;
+        private java.util.List<IngressRules> ingressRules;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterDescription")
         private String trafficMirrorFilterDescription;
@@ -907,14 +912,14 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * @return egressRules
          */
-        public java.util.List < EgressRules> getEgressRules() {
+        public java.util.List<EgressRules> getEgressRules() {
             return this.egressRules;
         }
 
         /**
          * @return ingressRules
          */
-        public java.util.List < IngressRules> getIngressRules() {
+        public java.util.List<IngressRules> getIngressRules() {
             return this.ingressRules;
         }
 
@@ -928,7 +933,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -962,10 +967,10 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String creationTime; 
-            private java.util.List < EgressRules> egressRules; 
-            private java.util.List < IngressRules> ingressRules; 
+            private java.util.List<EgressRules> egressRules; 
+            private java.util.List<IngressRules> ingressRules; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String trafficMirrorFilterDescription; 
             private String trafficMirrorFilterId; 
             private String trafficMirrorFilterName; 
@@ -985,7 +990,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             /**
              * <p>The information about the outbound rules.</p>
              */
-            public Builder egressRules(java.util.List < EgressRules> egressRules) {
+            public Builder egressRules(java.util.List<EgressRules> egressRules) {
                 this.egressRules = egressRules;
                 return this;
             }
@@ -993,7 +998,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             /**
              * <p>The information about the inbound rules.</p>
              */
-            public Builder ingressRules(java.util.List < IngressRules> ingressRules) {
+            public Builder ingressRules(java.util.List<IngressRules> ingressRules) {
                 this.ingressRules = ingressRules;
                 return this;
             }
@@ -1012,7 +1017,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             /**
              * <p>The tag list.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

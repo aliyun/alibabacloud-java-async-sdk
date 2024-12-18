@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -413,7 +418,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
      */
     public static class SnatTableEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SnatTableEntry")
-        private java.util.List < SnatTableEntry> snatTableEntry;
+        private java.util.List<SnatTableEntry> snatTableEntry;
 
         private SnatTableEntries(Builder builder) {
             this.snatTableEntry = builder.snatTableEntry;
@@ -430,17 +435,17 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         /**
          * @return snatTableEntry
          */
-        public java.util.List < SnatTableEntry> getSnatTableEntry() {
+        public java.util.List<SnatTableEntry> getSnatTableEntry() {
             return this.snatTableEntry;
         }
 
         public static final class Builder {
-            private java.util.List < SnatTableEntry> snatTableEntry; 
+            private java.util.List<SnatTableEntry> snatTableEntry; 
 
             /**
              * SnatTableEntry.
              */
-            public Builder snatTableEntry(java.util.List < SnatTableEntry> snatTableEntry) {
+            public Builder snatTableEntry(java.util.List<SnatTableEntry> snatTableEntry) {
                 this.snatTableEntry = snatTableEntry;
                 return this;
             }

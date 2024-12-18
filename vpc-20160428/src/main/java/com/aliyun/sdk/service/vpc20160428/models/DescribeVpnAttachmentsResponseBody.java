@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VpnAttachments")
-    private java.util.List < VpnAttachments> vpnAttachments;
+    private java.util.List<VpnAttachments> vpnAttachments;
 
     private DescribeVpnAttachmentsResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -74,7 +79,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     /**
      * @return vpnAttachments
      */
-    public java.util.List < VpnAttachments> getVpnAttachments() {
+    public java.util.List<VpnAttachments> getVpnAttachments() {
         return this.vpnAttachments;
     }
 
@@ -83,7 +88,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VpnAttachments> vpnAttachments; 
+        private java.util.List<VpnAttachments> vpnAttachments; 
 
         /**
          * <p>The page number.</p>
@@ -132,7 +137,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The list of IPsec-VPN connections associated with the transit router.</p>
          */
-        public Builder vpnAttachments(java.util.List < VpnAttachments> vpnAttachments) {
+        public Builder vpnAttachments(java.util.List<VpnAttachments> vpnAttachments) {
             this.vpnAttachments = vpnAttachments;
             return this;
         }
@@ -236,7 +241,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         private String tag;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
@@ -309,7 +314,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -334,7 +339,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             private String instanceId; 
             private String name; 
             private String tag; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String transitRouterId; 
             private String transitRouterName; 
 
@@ -408,7 +413,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

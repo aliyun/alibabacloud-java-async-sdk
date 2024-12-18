@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Services")
-    private java.util.List < Services> services;
+    private java.util.List<Services> services;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
@@ -67,7 +72,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     /**
      * @return services
      */
-    public java.util.List < Services> getServices() {
+    public java.util.List<Services> getServices() {
         return this.services;
     }
 
@@ -82,7 +87,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Services> services; 
+        private java.util.List<Services> services; 
         private String totalCount; 
 
         /**
@@ -125,7 +130,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         /**
          * <p>The list of entries returned.</p>
          */
-        public Builder services(java.util.List < Services> services) {
+        public Builder services(java.util.List<Services> services) {
             this.services = services;
             return this;
         }

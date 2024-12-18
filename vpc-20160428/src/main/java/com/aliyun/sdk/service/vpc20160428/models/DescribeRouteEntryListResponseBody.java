@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -399,7 +404,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
      */
     public static class NextHops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextHop")
-        private java.util.List < NextHop> nextHop;
+        private java.util.List<NextHop> nextHop;
 
         private NextHops(Builder builder) {
             this.nextHop = builder.nextHop;
@@ -416,17 +421,17 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         /**
          * @return nextHop
          */
-        public java.util.List < NextHop> getNextHop() {
+        public java.util.List<NextHop> getNextHop() {
             return this.nextHop;
         }
 
         public static final class Builder {
-            private java.util.List < NextHop> nextHop; 
+            private java.util.List<NextHop> nextHop; 
 
             /**
              * NextHop.
              */
-            public Builder nextHop(java.util.List < NextHop> nextHop) {
+            public Builder nextHop(java.util.List<NextHop> nextHop) {
                 this.nextHop = nextHop;
                 return this;
             }
@@ -769,7 +774,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
      */
     public static class RouteEntrys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteEntry")
-        private java.util.List < RouteEntry> routeEntry;
+        private java.util.List<RouteEntry> routeEntry;
 
         private RouteEntrys(Builder builder) {
             this.routeEntry = builder.routeEntry;
@@ -786,17 +791,17 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         /**
          * @return routeEntry
          */
-        public java.util.List < RouteEntry> getRouteEntry() {
+        public java.util.List<RouteEntry> getRouteEntry() {
             return this.routeEntry;
         }
 
         public static final class Builder {
-            private java.util.List < RouteEntry> routeEntry; 
+            private java.util.List<RouteEntry> routeEntry; 
 
             /**
              * RouteEntry.
              */
-            public Builder routeEntry(java.util.List < RouteEntry> routeEntry) {
+            public Builder routeEntry(java.util.List<RouteEntry> routeEntry) {
                 this.routeEntry = routeEntry;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("PublicIpPoolCidrBlockList")
-    private java.util.List < PublicIpPoolCidrBlockList> publicIpPoolCidrBlockList;
+    private java.util.List<PublicIpPoolCidrBlockList> publicIpPoolCidrBlockList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -49,7 +54,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     /**
      * @return publicIpPoolCidrBlockList
      */
-    public java.util.List < PublicIpPoolCidrBlockList> getPublicIpPoolCidrBlockList() {
+    public java.util.List<PublicIpPoolCidrBlockList> getPublicIpPoolCidrBlockList() {
         return this.publicIpPoolCidrBlockList;
     }
 
@@ -69,7 +74,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < PublicIpPoolCidrBlockList> publicIpPoolCidrBlockList; 
+        private java.util.List<PublicIpPoolCidrBlockList> publicIpPoolCidrBlockList; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -91,7 +96,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         /**
          * <p>The total number of entries returned.</p>
          */
-        public Builder publicIpPoolCidrBlockList(java.util.List < PublicIpPoolCidrBlockList> publicIpPoolCidrBlockList) {
+        public Builder publicIpPoolCidrBlockList(java.util.List<PublicIpPoolCidrBlockList> publicIpPoolCidrBlockList) {
             this.publicIpPoolCidrBlockList = publicIpPoolCidrBlockList;
             return this;
         }

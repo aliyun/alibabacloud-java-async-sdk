@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -757,7 +762,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
      */
     public static class EniInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EniInstanceId")
-        private java.util.List < String > eniInstanceId;
+        private java.util.List<String> eniInstanceId;
 
         private EniInstanceIds(Builder builder) {
             this.eniInstanceId = builder.eniInstanceId;
@@ -774,17 +779,17 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         /**
          * @return eniInstanceId
          */
-        public java.util.List < String > getEniInstanceId() {
+        public java.util.List<String> getEniInstanceId() {
             return this.eniInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > eniInstanceId; 
+            private java.util.List<String> eniInstanceId; 
 
             /**
              * EniInstanceId.
              */
-            public Builder eniInstanceId(java.util.List < String > eniInstanceId) {
+            public Builder eniInstanceId(java.util.List<String> eniInstanceId) {
                 this.eniInstanceId = eniInstanceId;
                 return this;
             }
@@ -1083,7 +1088,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -1100,12 +1105,12 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * <p>The tag that is automatically generated for the VPN gateway. The tag consists of the following parameters:</p>
@@ -1149,7 +1154,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;VpnEnableBgp&quot;:&quot;true&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;VpnNewImage&quot;:&quot;true&quot;,&quot;description&quot;:&quot;forwarding1.3.7&quot;,&quot;VpnVersion&quot;:&quot;v1.2.4&quot;}</p>
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     private String diagnoseId;
 
     @com.aliyun.core.annotation.NameInMap("DiagnoseResult")
-    private java.util.List < DiagnoseResult> diagnoseResult;
+    private java.util.List<DiagnoseResult> diagnoseResult;
 
     @com.aliyun.core.annotation.NameInMap("FinishTime")
     private String finishTime;
@@ -80,7 +85,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     /**
      * @return diagnoseResult
      */
-    public java.util.List < DiagnoseResult> getDiagnoseResult() {
+    public java.util.List<DiagnoseResult> getDiagnoseResult() {
         return this.diagnoseResult;
     }
 
@@ -136,7 +141,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public static final class Builder {
         private String beginTime; 
         private String diagnoseId; 
-        private java.util.List < DiagnoseResult> diagnoseResult; 
+        private java.util.List<DiagnoseResult> diagnoseResult; 
         private String finishTime; 
         private Integer finishedCount; 
         private String requestId; 
@@ -171,7 +176,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         /**
          * <p>The information about the diagnostic items.</p>
          */
-        public Builder diagnoseResult(java.util.List < DiagnoseResult> diagnoseResult) {
+        public Builder diagnoseResult(java.util.List<DiagnoseResult> diagnoseResult) {
             this.diagnoseResult = diagnoseResult;
             return this;
         }

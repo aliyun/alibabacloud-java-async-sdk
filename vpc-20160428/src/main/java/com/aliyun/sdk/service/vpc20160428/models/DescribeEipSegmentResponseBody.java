@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -390,7 +395,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
      */
     public static class EipSegments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipSegment")
-        private java.util.List < EipSegment> eipSegment;
+        private java.util.List<EipSegment> eipSegment;
 
         private EipSegments(Builder builder) {
             this.eipSegment = builder.eipSegment;
@@ -407,17 +412,17 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         /**
          * @return eipSegment
          */
-        public java.util.List < EipSegment> getEipSegment() {
+        public java.util.List<EipSegment> getEipSegment() {
             return this.eipSegment;
         }
 
         public static final class Builder {
-            private java.util.List < EipSegment> eipSegment; 
+            private java.util.List<EipSegment> eipSegment; 
 
             /**
              * EipSegment.
              */
-            public Builder eipSegment(java.util.List < EipSegment> eipSegment) {
+            public Builder eipSegment(java.util.List<EipSegment> eipSegment) {
                 this.eipSegment = eipSegment;
                 return this;
             }

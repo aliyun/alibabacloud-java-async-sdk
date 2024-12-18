@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
      */
     public static class IPv4Sets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPv4Set")
-        private java.util.List < IPv4Set> iPv4Set;
+        private java.util.List<IPv4Set> iPv4Set;
 
         private IPv4Sets(Builder builder) {
             this.iPv4Set = builder.iPv4Set;
@@ -243,17 +248,17 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         /**
          * @return iPv4Set
          */
-        public java.util.List < IPv4Set> getIPv4Set() {
+        public java.util.List<IPv4Set> getIPv4Set() {
             return this.iPv4Set;
         }
 
         public static final class Builder {
-            private java.util.List < IPv4Set> iPv4Set; 
+            private java.util.List<IPv4Set> iPv4Set; 
 
             /**
              * IPv4Set.
              */
-            public Builder iPv4Set(java.util.List < IPv4Set> iPv4Set) {
+            public Builder iPv4Set(java.util.List<IPv4Set> iPv4Set) {
                 this.iPv4Set = iPv4Set;
                 return this;
             }
@@ -420,7 +425,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
      */
     public static class AssociateNetworkInterfaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociateNetworkInterface")
-        private java.util.List < AssociateNetworkInterface> associateNetworkInterface;
+        private java.util.List<AssociateNetworkInterface> associateNetworkInterface;
 
         private AssociateNetworkInterfaces(Builder builder) {
             this.associateNetworkInterface = builder.associateNetworkInterface;
@@ -437,17 +442,17 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         /**
          * @return associateNetworkInterface
          */
-        public java.util.List < AssociateNetworkInterface> getAssociateNetworkInterface() {
+        public java.util.List<AssociateNetworkInterface> getAssociateNetworkInterface() {
             return this.associateNetworkInterface;
         }
 
         public static final class Builder {
-            private java.util.List < AssociateNetworkInterface> associateNetworkInterface; 
+            private java.util.List<AssociateNetworkInterface> associateNetworkInterface; 
 
             /**
              * AssociateNetworkInterface.
              */
-            public Builder associateNetworkInterface(java.util.List < AssociateNetworkInterface> associateNetworkInterface) {
+            public Builder associateNetworkInterface(java.util.List<AssociateNetworkInterface> associateNetworkInterface) {
                 this.associateNetworkInterface = associateNetworkInterface;
                 return this;
             }

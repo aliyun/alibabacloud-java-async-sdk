@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,7 +206,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
      */
     public static class GlobalAccelerationInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstance")
-        private java.util.List < GlobalAccelerationInstance> globalAccelerationInstance;
+        private java.util.List<GlobalAccelerationInstance> globalAccelerationInstance;
 
         private GlobalAccelerationInstances(Builder builder) {
             this.globalAccelerationInstance = builder.globalAccelerationInstance;
@@ -218,17 +223,17 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
         /**
          * @return globalAccelerationInstance
          */
-        public java.util.List < GlobalAccelerationInstance> getGlobalAccelerationInstance() {
+        public java.util.List<GlobalAccelerationInstance> getGlobalAccelerationInstance() {
             return this.globalAccelerationInstance;
         }
 
         public static final class Builder {
-            private java.util.List < GlobalAccelerationInstance> globalAccelerationInstance; 
+            private java.util.List<GlobalAccelerationInstance> globalAccelerationInstance; 
 
             /**
              * GlobalAccelerationInstance.
              */
-            public Builder globalAccelerationInstance(java.util.List < GlobalAccelerationInstance> globalAccelerationInstance) {
+            public Builder globalAccelerationInstance(java.util.List<GlobalAccelerationInstance> globalAccelerationInstance) {
                 this.globalAccelerationInstance = globalAccelerationInstance;
                 return this;
             }

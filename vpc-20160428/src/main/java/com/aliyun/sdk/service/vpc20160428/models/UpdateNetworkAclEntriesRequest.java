@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EgressAclEntries")
-    private java.util.List < EgressAclEntries> egressAclEntries;
+    private java.util.List<EgressAclEntries> egressAclEntries;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IngressAclEntries")
-    private java.util.List < IngressAclEntries> ingressAclEntries;
+    private java.util.List<IngressAclEntries> ingressAclEntries;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkAclId")
@@ -108,14 +113,14 @@ public class UpdateNetworkAclEntriesRequest extends Request {
     /**
      * @return egressAclEntries
      */
-    public java.util.List < EgressAclEntries> getEgressAclEntries() {
+    public java.util.List<EgressAclEntries> getEgressAclEntries() {
         return this.egressAclEntries;
     }
 
     /**
      * @return ingressAclEntries
      */
-    public java.util.List < IngressAclEntries> getIngressAclEntries() {
+    public java.util.List<IngressAclEntries> getIngressAclEntries() {
         return this.ingressAclEntries;
     }
 
@@ -178,8 +183,8 @@ public class UpdateNetworkAclEntriesRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateNetworkAclEntriesRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < EgressAclEntries> egressAclEntries; 
-        private java.util.List < IngressAclEntries> ingressAclEntries; 
+        private java.util.List<EgressAclEntries> egressAclEntries; 
+        private java.util.List<IngressAclEntries> ingressAclEntries; 
         private String networkAclId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -244,7 +249,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         /**
          * <p>The information about the outbound rules.</p>
          */
-        public Builder egressAclEntries(java.util.List < EgressAclEntries> egressAclEntries) {
+        public Builder egressAclEntries(java.util.List<EgressAclEntries> egressAclEntries) {
             this.putQueryParameter("EgressAclEntries", egressAclEntries);
             this.egressAclEntries = egressAclEntries;
             return this;
@@ -253,7 +258,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         /**
          * <p>The information about the inbound rule.</p>
          */
-        public Builder ingressAclEntries(java.util.List < IngressAclEntries> ingressAclEntries) {
+        public Builder ingressAclEntries(java.util.List<IngressAclEntries> ingressAclEntries) {
             this.putQueryParameter("IngressAclEntries", ingressAclEntries);
             this.ingressAclEntries = ingressAclEntries;
             return this;

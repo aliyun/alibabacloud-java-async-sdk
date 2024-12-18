@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -400,7 +405,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
      */
     public static class VpnPbrRouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpnPbrRouteEntry")
-        private java.util.List < VpnPbrRouteEntry> vpnPbrRouteEntry;
+        private java.util.List<VpnPbrRouteEntry> vpnPbrRouteEntry;
 
         private VpnPbrRouteEntries(Builder builder) {
             this.vpnPbrRouteEntry = builder.vpnPbrRouteEntry;
@@ -417,17 +422,17 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         /**
          * @return vpnPbrRouteEntry
          */
-        public java.util.List < VpnPbrRouteEntry> getVpnPbrRouteEntry() {
+        public java.util.List<VpnPbrRouteEntry> getVpnPbrRouteEntry() {
             return this.vpnPbrRouteEntry;
         }
 
         public static final class Builder {
-            private java.util.List < VpnPbrRouteEntry> vpnPbrRouteEntry; 
+            private java.util.List<VpnPbrRouteEntry> vpnPbrRouteEntry; 
 
             /**
              * VpnPbrRouteEntry.
              */
-            public Builder vpnPbrRouteEntry(java.util.List < VpnPbrRouteEntry> vpnPbrRouteEntry) {
+            public Builder vpnPbrRouteEntry(java.util.List<VpnPbrRouteEntry> vpnPbrRouteEntry) {
                 this.vpnPbrRouteEntry = vpnPbrRouteEntry;
                 return this;
             }

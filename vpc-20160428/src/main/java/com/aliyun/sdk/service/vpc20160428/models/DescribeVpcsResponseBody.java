@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -233,7 +238,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
      */
     public static class Ipv6CidrBlocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
-        private java.util.List < Ipv6CidrBlock> ipv6CidrBlock;
+        private java.util.List<Ipv6CidrBlock> ipv6CidrBlock;
 
         private Ipv6CidrBlocks(Builder builder) {
             this.ipv6CidrBlock = builder.ipv6CidrBlock;
@@ -250,12 +255,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * @return ipv6CidrBlock
          */
-        public java.util.List < Ipv6CidrBlock> getIpv6CidrBlock() {
+        public java.util.List<Ipv6CidrBlock> getIpv6CidrBlock() {
             return this.ipv6CidrBlock;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6CidrBlock> ipv6CidrBlock; 
+            private java.util.List<Ipv6CidrBlock> ipv6CidrBlock; 
 
             /**
              * <p>The IPv6 CIDR block of the VPC.</p>
@@ -263,7 +268,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>2408:XXXX:0:a600::/56</p>
              */
-            public Builder ipv6CidrBlock(java.util.List < Ipv6CidrBlock> ipv6CidrBlock) {
+            public Builder ipv6CidrBlock(java.util.List<Ipv6CidrBlock> ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
                 return this;
             }
@@ -283,7 +288,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
      */
     public static class NatGatewayIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NatGatewayIds")
-        private java.util.List < String > natGatewayIds;
+        private java.util.List<String> natGatewayIds;
 
         private NatGatewayIds(Builder builder) {
             this.natGatewayIds = builder.natGatewayIds;
@@ -300,17 +305,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * @return natGatewayIds
          */
-        public java.util.List < String > getNatGatewayIds() {
+        public java.util.List<String> getNatGatewayIds() {
             return this.natGatewayIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > natGatewayIds; 
+            private java.util.List<String> natGatewayIds; 
 
             /**
              * NatGatewayIds.
              */
-            public Builder natGatewayIds(java.util.List < String > natGatewayIds) {
+            public Builder natGatewayIds(java.util.List<String> natGatewayIds) {
                 this.natGatewayIds = natGatewayIds;
                 return this;
             }
@@ -330,7 +335,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
      */
     public static class RouterTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouterTableIds")
-        private java.util.List < String > routerTableIds;
+        private java.util.List<String> routerTableIds;
 
         private RouterTableIds(Builder builder) {
             this.routerTableIds = builder.routerTableIds;
@@ -347,17 +352,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * @return routerTableIds
          */
-        public java.util.List < String > getRouterTableIds() {
+        public java.util.List<String> getRouterTableIds() {
             return this.routerTableIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > routerTableIds; 
+            private java.util.List<String> routerTableIds; 
 
             /**
              * RouterTableIds.
              */
-            public Builder routerTableIds(java.util.List < String > routerTableIds) {
+            public Builder routerTableIds(java.util.List<String> routerTableIds) {
                 this.routerTableIds = routerTableIds;
                 return this;
             }
@@ -377,7 +382,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
      */
     public static class SecondaryCidrBlocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlock")
-        private java.util.List < String > secondaryCidrBlock;
+        private java.util.List<String> secondaryCidrBlock;
 
         private SecondaryCidrBlocks(Builder builder) {
             this.secondaryCidrBlock = builder.secondaryCidrBlock;
@@ -394,17 +399,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * @return secondaryCidrBlock
          */
-        public java.util.List < String > getSecondaryCidrBlock() {
+        public java.util.List<String> getSecondaryCidrBlock() {
             return this.secondaryCidrBlock;
         }
 
         public static final class Builder {
-            private java.util.List < String > secondaryCidrBlock; 
+            private java.util.List<String> secondaryCidrBlock; 
 
             /**
              * SecondaryCidrBlock.
              */
-            public Builder secondaryCidrBlock(java.util.List < String > secondaryCidrBlock) {
+            public Builder secondaryCidrBlock(java.util.List<String> secondaryCidrBlock) {
                 this.secondaryCidrBlock = secondaryCidrBlock;
                 return this;
             }
@@ -497,7 +502,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -514,17 +519,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -544,7 +549,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
      */
     public static class UserCidrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserCidr")
-        private java.util.List < String > userCidr;
+        private java.util.List<String> userCidr;
 
         private UserCidrs(Builder builder) {
             this.userCidr = builder.userCidr;
@@ -561,17 +566,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * @return userCidr
          */
-        public java.util.List < String > getUserCidr() {
+        public java.util.List<String> getUserCidr() {
             return this.userCidr;
         }
 
         public static final class Builder {
-            private java.util.List < String > userCidr; 
+            private java.util.List<String> userCidr; 
 
             /**
              * UserCidr.
              */
-            public Builder userCidr(java.util.List < String > userCidr) {
+            public Builder userCidr(java.util.List<String> userCidr) {
                 this.userCidr = userCidr;
                 return this;
             }
@@ -591,7 +596,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
      */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
-        private java.util.List < String > vSwitchId;
+        private java.util.List<String> vSwitchId;
 
         private VSwitchIds(Builder builder) {
             this.vSwitchId = builder.vSwitchId;
@@ -608,17 +613,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * @return vSwitchId
          */
-        public java.util.List < String > getVSwitchId() {
+        public java.util.List<String> getVSwitchId() {
             return this.vSwitchId;
         }
 
         public static final class Builder {
-            private java.util.List < String > vSwitchId; 
+            private java.util.List<String> vSwitchId; 
 
             /**
              * VSwitchId.
              */
-            public Builder vSwitchId(java.util.List < String > vSwitchId) {
+            public Builder vSwitchId(java.util.List<String> vSwitchId) {
                 this.vSwitchId = vSwitchId;
                 return this;
             }
@@ -1205,7 +1210,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
      */
     public static class Vpcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vpc")
-        private java.util.List < Vpc> vpc;
+        private java.util.List<Vpc> vpc;
 
         private Vpcs(Builder builder) {
             this.vpc = builder.vpc;
@@ -1222,17 +1227,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * @return vpc
          */
-        public java.util.List < Vpc> getVpc() {
+        public java.util.List<Vpc> getVpc() {
             return this.vpc;
         }
 
         public static final class Builder {
-            private java.util.List < Vpc> vpc; 
+            private java.util.List<Vpc> vpc; 
 
             /**
              * Vpc.
              */
-            public Builder vpc(java.util.List < Vpc> vpc) {
+            public Builder vpc(java.util.List<Vpc> vpc) {
                 this.vpc = vpc;
                 return this;
             }

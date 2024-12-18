@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -241,17 +246,17 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -504,7 +509,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
      */
     public static class CustomerGateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomerGateway")
-        private java.util.List < CustomerGateway> customerGateway;
+        private java.util.List<CustomerGateway> customerGateway;
 
         private CustomerGateways(Builder builder) {
             this.customerGateway = builder.customerGateway;
@@ -521,17 +526,17 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         /**
          * @return customerGateway
          */
-        public java.util.List < CustomerGateway> getCustomerGateway() {
+        public java.util.List<CustomerGateway> getCustomerGateway() {
             return this.customerGateway;
         }
 
         public static final class Builder {
-            private java.util.List < CustomerGateway> customerGateway; 
+            private java.util.List<CustomerGateway> customerGateway; 
 
             /**
              * CustomerGateway.
              */
-            public Builder customerGateway(java.util.List < CustomerGateway> customerGateway) {
+            public Builder customerGateway(java.util.List<CustomerGateway> customerGateway) {
                 this.customerGateway = customerGateway;
                 return this;
             }

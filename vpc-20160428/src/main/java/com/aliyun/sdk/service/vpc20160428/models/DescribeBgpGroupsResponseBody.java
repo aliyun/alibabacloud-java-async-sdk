@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -511,7 +516,7 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
      */
     public static class BgpGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BgpGroup")
-        private java.util.List < BgpGroup> bgpGroup;
+        private java.util.List<BgpGroup> bgpGroup;
 
         private BgpGroups(Builder builder) {
             this.bgpGroup = builder.bgpGroup;
@@ -528,17 +533,17 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         /**
          * @return bgpGroup
          */
-        public java.util.List < BgpGroup> getBgpGroup() {
+        public java.util.List<BgpGroup> getBgpGroup() {
             return this.bgpGroup;
         }
 
         public static final class Builder {
-            private java.util.List < BgpGroup> bgpGroup; 
+            private java.util.List<BgpGroup> bgpGroup; 
 
             /**
              * BgpGroup.
              */
-            public Builder bgpGroup(java.util.List < BgpGroup> bgpGroup) {
+            public Builder bgpGroup(java.util.List<BgpGroup> bgpGroup) {
                 this.bgpGroup = bgpGroup;
                 return this;
             }

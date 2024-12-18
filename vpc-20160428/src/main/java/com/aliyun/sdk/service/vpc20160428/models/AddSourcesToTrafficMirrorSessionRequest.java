@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,7 +54,7 @@ public class AddSourcesToTrafficMirrorSessionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficMirrorSourceIds")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
-    private java.util.List < String > trafficMirrorSourceIds;
+    private java.util.List<String> trafficMirrorSourceIds;
 
     private AddSourcesToTrafficMirrorSessionRequest(Builder builder) {
         super(builder);
@@ -136,7 +141,7 @@ public class AddSourcesToTrafficMirrorSessionRequest extends Request {
     /**
      * @return trafficMirrorSourceIds
      */
-    public java.util.List < String > getTrafficMirrorSourceIds() {
+    public java.util.List<String> getTrafficMirrorSourceIds() {
         return this.trafficMirrorSourceIds;
     }
 
@@ -149,7 +154,7 @@ public class AddSourcesToTrafficMirrorSessionRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String trafficMirrorSessionId; 
-        private java.util.List < String > trafficMirrorSourceIds; 
+        private java.util.List<String> trafficMirrorSourceIds; 
 
         private Builder() {
             super();
@@ -271,7 +276,7 @@ public class AddSourcesToTrafficMirrorSessionRequest extends Request {
          * <strong>example:</strong>
          * <p>eni-j6ccmrl8z3xkvxgw****</p>
          */
-        public Builder trafficMirrorSourceIds(java.util.List < String > trafficMirrorSourceIds) {
+        public Builder trafficMirrorSourceIds(java.util.List<String> trafficMirrorSourceIds) {
             this.putQueryParameter("TrafficMirrorSourceIds", trafficMirrorSourceIds);
             this.trafficMirrorSourceIds = trafficMirrorSourceIds;
             return this;

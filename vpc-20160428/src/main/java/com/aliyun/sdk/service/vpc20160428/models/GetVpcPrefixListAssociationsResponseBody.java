@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("PrefixListAssociation")
-    private java.util.List < PrefixListAssociation> prefixListAssociation;
+    private java.util.List<PrefixListAssociation> prefixListAssociation;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     /**
      * @return prefixListAssociation
      */
-    public java.util.List < PrefixListAssociation> getPrefixListAssociation() {
+    public java.util.List<PrefixListAssociation> getPrefixListAssociation() {
         return this.prefixListAssociation;
     }
 
@@ -81,7 +86,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     public static final class Builder {
         private Long count; 
         private String nextToken; 
-        private java.util.List < PrefixListAssociation> prefixListAssociation; 
+        private java.util.List<PrefixListAssociation> prefixListAssociation; 
         private String requestId; 
         private Long totalCount; 
 
@@ -114,7 +119,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         /**
          * <p>The information about the network instances that are associated with the prefix list.</p>
          */
-        public Builder prefixListAssociation(java.util.List < PrefixListAssociation> prefixListAssociation) {
+        public Builder prefixListAssociation(java.util.List<PrefixListAssociation> prefixListAssociation) {
             this.prefixListAssociation = prefixListAssociation;
             return this;
         }

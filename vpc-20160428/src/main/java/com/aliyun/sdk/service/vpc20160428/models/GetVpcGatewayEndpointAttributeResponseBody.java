@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,13 +42,13 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.NameInMap("RouteTables")
-    private java.util.List < String > routeTables;
+    private java.util.List<String> routeTables;
 
     @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
@@ -130,7 +135,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     /**
      * @return routeTables
      */
-    public java.util.List < String > getRouteTables() {
+    public java.util.List<String> getRouteTables() {
         return this.routeTables;
     }
 
@@ -144,7 +149,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -164,9 +169,9 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         private String policyDocument; 
         private String requestId; 
         private String resourceGroupId; 
-        private java.util.List < String > routeTables; 
+        private java.util.List<String> routeTables; 
         private String serviceName; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String vpcId; 
 
         /**
@@ -268,7 +273,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         /**
          * <p>The ID of the route table associated with the gateway endpoint.</p>
          */
-        public Builder routeTables(java.util.List < String > routeTables) {
+        public Builder routeTables(java.util.List<String> routeTables) {
             this.routeTables = routeTables;
             return this;
         }
@@ -287,7 +292,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         /**
          * <p>The tag list.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSslVpnClientsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClientInfoList")
-    private java.util.List < ClientInfoList> clientInfoList;
+    private java.util.List<ClientInfoList> clientInfoList;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -54,7 +59,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
     /**
      * @return clientInfoList
      */
-    public java.util.List < ClientInfoList> getClientInfoList() {
+    public java.util.List<ClientInfoList> getClientInfoList() {
         return this.clientInfoList;
     }
 
@@ -101,7 +106,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClientInfoList> clientInfoList; 
+        private java.util.List<ClientInfoList> clientInfoList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
@@ -112,7 +117,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         /**
          * <p>The list of clients.</p>
          */
-        public Builder clientInfoList(java.util.List < ClientInfoList> clientInfoList) {
+        public Builder clientInfoList(java.util.List<ClientInfoList> clientInfoList) {
             this.clientInfoList = clientInfoList;
             return this;
         }

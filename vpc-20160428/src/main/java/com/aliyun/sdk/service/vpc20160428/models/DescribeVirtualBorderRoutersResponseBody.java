@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -254,7 +259,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
      */
     public static class AssociatedCens extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedCen")
-        private java.util.List < AssociatedCen> associatedCen;
+        private java.util.List<AssociatedCen> associatedCen;
 
         private AssociatedCens(Builder builder) {
             this.associatedCen = builder.associatedCen;
@@ -271,17 +276,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * @return associatedCen
          */
-        public java.util.List < AssociatedCen> getAssociatedCen() {
+        public java.util.List<AssociatedCen> getAssociatedCen() {
             return this.associatedCen;
         }
 
         public static final class Builder {
-            private java.util.List < AssociatedCen> associatedCen; 
+            private java.util.List<AssociatedCen> associatedCen; 
 
             /**
              * AssociatedCen.
              */
-            public Builder associatedCen(java.util.List < AssociatedCen> associatedCen) {
+            public Builder associatedCen(java.util.List<AssociatedCen> associatedCen) {
                 this.associatedCen = associatedCen;
                 return this;
             }
@@ -703,7 +708,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
      */
     public static class AssociatedPhysicalConnections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedPhysicalConnection")
-        private java.util.List < AssociatedPhysicalConnection> associatedPhysicalConnection;
+        private java.util.List<AssociatedPhysicalConnection> associatedPhysicalConnection;
 
         private AssociatedPhysicalConnections(Builder builder) {
             this.associatedPhysicalConnection = builder.associatedPhysicalConnection;
@@ -720,17 +725,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * @return associatedPhysicalConnection
          */
-        public java.util.List < AssociatedPhysicalConnection> getAssociatedPhysicalConnection() {
+        public java.util.List<AssociatedPhysicalConnection> getAssociatedPhysicalConnection() {
             return this.associatedPhysicalConnection;
         }
 
         public static final class Builder {
-            private java.util.List < AssociatedPhysicalConnection> associatedPhysicalConnection; 
+            private java.util.List<AssociatedPhysicalConnection> associatedPhysicalConnection; 
 
             /**
              * AssociatedPhysicalConnection.
              */
-            public Builder associatedPhysicalConnection(java.util.List < AssociatedPhysicalConnection> associatedPhysicalConnection) {
+            public Builder associatedPhysicalConnection(java.util.List<AssociatedPhysicalConnection> associatedPhysicalConnection) {
                 this.associatedPhysicalConnection = associatedPhysicalConnection;
                 return this;
             }
@@ -823,7 +828,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
      */
     public static class VirtualBorderRouterTypeTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private VirtualBorderRouterTypeTags(Builder builder) {
             this.tags = builder.tags;
@@ -840,17 +845,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -1877,7 +1882,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
      */
     public static class VirtualBorderRouterSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterType")
-        private java.util.List < VirtualBorderRouterType> virtualBorderRouterType;
+        private java.util.List<VirtualBorderRouterType> virtualBorderRouterType;
 
         private VirtualBorderRouterSet(Builder builder) {
             this.virtualBorderRouterType = builder.virtualBorderRouterType;
@@ -1894,17 +1899,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * @return virtualBorderRouterType
          */
-        public java.util.List < VirtualBorderRouterType> getVirtualBorderRouterType() {
+        public java.util.List<VirtualBorderRouterType> getVirtualBorderRouterType() {
             return this.virtualBorderRouterType;
         }
 
         public static final class Builder {
-            private java.util.List < VirtualBorderRouterType> virtualBorderRouterType; 
+            private java.util.List<VirtualBorderRouterType> virtualBorderRouterType; 
 
             /**
              * VirtualBorderRouterType.
              */
-            public Builder virtualBorderRouterType(java.util.List < VirtualBorderRouterType> virtualBorderRouterType) {
+            public Builder virtualBorderRouterType(java.util.List<VirtualBorderRouterType> virtualBorderRouterType) {
                 this.virtualBorderRouterType = virtualBorderRouterType;
                 return this;
             }

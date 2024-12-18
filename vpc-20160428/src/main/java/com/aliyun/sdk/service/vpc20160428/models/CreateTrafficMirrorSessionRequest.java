@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -60,7 +65,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterId")
@@ -78,7 +83,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficMirrorSourceIds")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
-    private java.util.List < String > trafficMirrorSourceIds;
+    private java.util.List<String> trafficMirrorSourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficMirrorTargetId")
@@ -210,7 +215,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -238,7 +243,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
     /**
      * @return trafficMirrorSourceIds
      */
-    public java.util.List < String > getTrafficMirrorSourceIds() {
+    public java.util.List<String> getTrafficMirrorSourceIds() {
         return this.trafficMirrorSourceIds;
     }
 
@@ -275,11 +280,11 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String trafficMirrorFilterId; 
         private String trafficMirrorSessionDescription; 
         private String trafficMirrorSessionName; 
-        private java.util.List < String > trafficMirrorSourceIds; 
+        private java.util.List<String> trafficMirrorSourceIds; 
         private String trafficMirrorTargetId; 
         private String trafficMirrorTargetType; 
         private Integer virtualNetworkId; 
@@ -450,7 +455,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         /**
          * <p>The tag of the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -502,7 +507,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
          * <strong>example:</strong>
          * <p>eni-j6c2fp57q8rr47rp****</p>
          */
-        public Builder trafficMirrorSourceIds(java.util.List < String > trafficMirrorSourceIds) {
+        public Builder trafficMirrorSourceIds(java.util.List<String> trafficMirrorSourceIds) {
             this.putQueryParameter("TrafficMirrorSourceIds", trafficMirrorSourceIds);
             this.trafficMirrorSourceIds = trafficMirrorSourceIds;
             return this;
