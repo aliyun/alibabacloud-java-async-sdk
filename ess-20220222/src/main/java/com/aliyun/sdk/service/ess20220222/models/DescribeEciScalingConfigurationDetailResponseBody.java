@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -128,7 +133,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
      */
     public static class AcrRegistryInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domains")
-        private java.util.List < String > domains;
+        private java.util.List<String> domains;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -157,7 +162,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return domains
          */
-        public java.util.List < String > getDomains() {
+        public java.util.List<String> getDomains() {
             return this.domains;
         }
 
@@ -183,7 +188,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         }
 
         public static final class Builder {
-            private java.util.List < String > domains; 
+            private java.util.List<String> domains; 
             private String instanceId; 
             private String instanceName; 
             private String regionId; 
@@ -191,7 +196,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. Multiple domain names are separated by commas (,).</p>
              */
-            public Builder domains(java.util.List < String > domains) {
+            public Builder domains(java.util.List<String> domains) {
                 this.domains = domains;
                 return this;
             }
@@ -571,16 +576,16 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
      */
     public static class Containers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Args")
-        private java.util.List < String > args;
+        private java.util.List<String> args;
 
         @com.aliyun.core.annotation.NameInMap("Commands")
-        private java.util.List < String > commands;
+        private java.util.List<String> commands;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
         @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
-        private java.util.List < EnvironmentVars> environmentVars;
+        private java.util.List<EnvironmentVars> environmentVars;
 
         @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
@@ -592,7 +597,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private String imagePullPolicy;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerExecs")
-        private java.util.List < String > lifecyclePostStartHandlerExecs;
+        private java.util.List<String> lifecyclePostStartHandlerExecs;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetHost")
         private String lifecyclePostStartHandlerHttpGetHost;
@@ -613,7 +618,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private Integer lifecyclePostStartHandlerTcpSocketPort;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerExecs")
-        private java.util.List < String > lifecyclePreStopHandlerExecs;
+        private java.util.List<String> lifecyclePreStopHandlerExecs;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetHost")
         private String lifecyclePreStopHandlerHttpGetHost;
@@ -634,7 +639,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private Integer lifecyclePreStopHandlerTcpSocketPort;
 
         @com.aliyun.core.annotation.NameInMap("LivenessProbeExecCommands")
-        private java.util.List < String > livenessProbeExecCommands;
+        private java.util.List<String> livenessProbeExecCommands;
 
         @com.aliyun.core.annotation.NameInMap("LivenessProbeFailureThreshold")
         private Integer livenessProbeFailureThreshold;
@@ -670,10 +675,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Ports")
-        private java.util.List < Ports> ports;
+        private java.util.List<Ports> ports;
 
         @com.aliyun.core.annotation.NameInMap("ReadinessProbeExecCommands")
-        private java.util.List < String > readinessProbeExecCommands;
+        private java.util.List<String> readinessProbeExecCommands;
 
         @com.aliyun.core.annotation.NameInMap("ReadinessProbeFailureThreshold")
         private Integer readinessProbeFailureThreshold;
@@ -703,7 +708,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private Integer readinessProbeTimeoutSeconds;
 
         @com.aliyun.core.annotation.NameInMap("SecurityContextCapabilityAdds")
-        private java.util.List < String > securityContextCapabilityAdds;
+        private java.util.List<String> securityContextCapabilityAdds;
 
         @com.aliyun.core.annotation.NameInMap("SecurityContextReadOnlyRootFilesystem")
         private Boolean securityContextReadOnlyRootFilesystem;
@@ -721,7 +726,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private Boolean tty;
 
         @com.aliyun.core.annotation.NameInMap("VolumeMounts")
-        private java.util.List < VolumeMounts> volumeMounts;
+        private java.util.List<VolumeMounts> volumeMounts;
 
         @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
@@ -792,14 +797,14 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return args
          */
-        public java.util.List < String > getArgs() {
+        public java.util.List<String> getArgs() {
             return this.args;
         }
 
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
@@ -813,7 +818,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return environmentVars
          */
-        public java.util.List < EnvironmentVars> getEnvironmentVars() {
+        public java.util.List<EnvironmentVars> getEnvironmentVars() {
             return this.environmentVars;
         }
 
@@ -841,7 +846,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return lifecyclePostStartHandlerExecs
          */
-        public java.util.List < String > getLifecyclePostStartHandlerExecs() {
+        public java.util.List<String> getLifecyclePostStartHandlerExecs() {
             return this.lifecyclePostStartHandlerExecs;
         }
 
@@ -890,7 +895,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return lifecyclePreStopHandlerExecs
          */
-        public java.util.List < String > getLifecyclePreStopHandlerExecs() {
+        public java.util.List<String> getLifecyclePreStopHandlerExecs() {
             return this.lifecyclePreStopHandlerExecs;
         }
 
@@ -939,7 +944,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return livenessProbeExecCommands
          */
-        public java.util.List < String > getLivenessProbeExecCommands() {
+        public java.util.List<String> getLivenessProbeExecCommands() {
             return this.livenessProbeExecCommands;
         }
 
@@ -1023,14 +1028,14 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return ports
          */
-        public java.util.List < Ports> getPorts() {
+        public java.util.List<Ports> getPorts() {
             return this.ports;
         }
 
         /**
          * @return readinessProbeExecCommands
          */
-        public java.util.List < String > getReadinessProbeExecCommands() {
+        public java.util.List<String> getReadinessProbeExecCommands() {
             return this.readinessProbeExecCommands;
         }
 
@@ -1100,7 +1105,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return securityContextCapabilityAdds
          */
-        public java.util.List < String > getSecurityContextCapabilityAdds() {
+        public java.util.List<String> getSecurityContextCapabilityAdds() {
             return this.securityContextCapabilityAdds;
         }
 
@@ -1142,7 +1147,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return volumeMounts
          */
-        public java.util.List < VolumeMounts> getVolumeMounts() {
+        public java.util.List<VolumeMounts> getVolumeMounts() {
             return this.volumeMounts;
         }
 
@@ -1154,28 +1159,28 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         }
 
         public static final class Builder {
-            private java.util.List < String > args; 
-            private java.util.List < String > commands; 
+            private java.util.List<String> args; 
+            private java.util.List<String> commands; 
             private Float cpu; 
-            private java.util.List < EnvironmentVars> environmentVars; 
+            private java.util.List<EnvironmentVars> environmentVars; 
             private Integer gpu; 
             private String image; 
             private String imagePullPolicy; 
-            private java.util.List < String > lifecyclePostStartHandlerExecs; 
+            private java.util.List<String> lifecyclePostStartHandlerExecs; 
             private String lifecyclePostStartHandlerHttpGetHost; 
             private String lifecyclePostStartHandlerHttpGetPath; 
             private Integer lifecyclePostStartHandlerHttpGetPort; 
             private String lifecyclePostStartHandlerHttpGetScheme; 
             private String lifecyclePostStartHandlerTcpSocketHost; 
             private Integer lifecyclePostStartHandlerTcpSocketPort; 
-            private java.util.List < String > lifecyclePreStopHandlerExecs; 
+            private java.util.List<String> lifecyclePreStopHandlerExecs; 
             private String lifecyclePreStopHandlerHttpGetHost; 
             private String lifecyclePreStopHandlerHttpGetPath; 
             private Integer lifecyclePreStopHandlerHttpGetPort; 
             private String lifecyclePreStopHandlerHttpGetScheme; 
             private String lifecyclePreStopHandlerTcpSocketHost; 
             private Integer lifecyclePreStopHandlerTcpSocketPort; 
-            private java.util.List < String > livenessProbeExecCommands; 
+            private java.util.List<String> livenessProbeExecCommands; 
             private Integer livenessProbeFailureThreshold; 
             private String livenessProbeHttpGetPath; 
             private Integer livenessProbeHttpGetPort; 
@@ -1187,8 +1192,8 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private Integer livenessProbeTimeoutSeconds; 
             private Float memory; 
             private String name; 
-            private java.util.List < Ports> ports; 
-            private java.util.List < String > readinessProbeExecCommands; 
+            private java.util.List<Ports> ports; 
+            private java.util.List<String> readinessProbeExecCommands; 
             private Integer readinessProbeFailureThreshold; 
             private String readinessProbeHttpGetPath; 
             private Integer readinessProbeHttpGetPort; 
@@ -1198,19 +1203,19 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private Integer readinessProbeSuccessThreshold; 
             private Integer readinessProbeTcpSocketPort; 
             private Integer readinessProbeTimeoutSeconds; 
-            private java.util.List < String > securityContextCapabilityAdds; 
+            private java.util.List<String> securityContextCapabilityAdds; 
             private Boolean securityContextReadOnlyRootFilesystem; 
             private Long securityContextRunAsUser; 
             private Boolean stdin; 
             private Boolean stdinOnce; 
             private Boolean tty; 
-            private java.util.List < VolumeMounts> volumeMounts; 
+            private java.util.List<VolumeMounts> volumeMounts; 
             private String workingDir; 
 
             /**
              * <p>The arguments that are passed to the container startup commands.</p>
              */
-            public Builder args(java.util.List < String > args) {
+            public Builder args(java.util.List<String> args) {
                 this.args = args;
                 return this;
             }
@@ -1218,7 +1223,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The container startup commands.</p>
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
@@ -1237,7 +1242,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The environment variables.</p>
              */
-            public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
+            public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
                 return this;
             }
@@ -1278,7 +1283,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The commands that are run by using a CLI for configuring the postStart callback function within the container.</p>
              */
-            public Builder lifecyclePostStartHandlerExecs(java.util.List < String > lifecyclePostStartHandlerExecs) {
+            public Builder lifecyclePostStartHandlerExecs(java.util.List<String> lifecyclePostStartHandlerExecs) {
                 this.lifecyclePostStartHandlerExecs = lifecyclePostStartHandlerExecs;
                 return this;
             }
@@ -1352,7 +1357,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The commands that are run by using a CLI for configuring the preStop callback function within the container.</p>
              */
-            public Builder lifecyclePreStopHandlerExecs(java.util.List < String > lifecyclePreStopHandlerExecs) {
+            public Builder lifecyclePreStopHandlerExecs(java.util.List<String> lifecyclePreStopHandlerExecs) {
                 this.lifecyclePreStopHandlerExecs = lifecyclePreStopHandlerExecs;
                 return this;
             }
@@ -1426,7 +1431,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The commands that are run in the container when you use a CLI to perform liveness probes.</p>
              */
-            public Builder livenessProbeExecCommands(java.util.List < String > livenessProbeExecCommands) {
+            public Builder livenessProbeExecCommands(java.util.List<String> livenessProbeExecCommands) {
                 this.livenessProbeExecCommands = livenessProbeExecCommands;
                 return this;
             }
@@ -1560,7 +1565,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The exposed ports and protocols.</p>
              */
-            public Builder ports(java.util.List < Ports> ports) {
+            public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
                 return this;
             }
@@ -1568,7 +1573,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The commands that are run in the container when you use a CLI to perform readiness probes.</p>
              */
-            public Builder readinessProbeExecCommands(java.util.List < String > readinessProbeExecCommands) {
+            public Builder readinessProbeExecCommands(java.util.List<String> readinessProbeExecCommands) {
                 this.readinessProbeExecCommands = readinessProbeExecCommands;
                 return this;
             }
@@ -1680,7 +1685,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The permissions that are granted to the processes in the container. Valid values: NET_ADMIN and NET_RAW.</p>
              */
-            public Builder securityContextCapabilityAdds(java.util.List < String > securityContextCapabilityAdds) {
+            public Builder securityContextCapabilityAdds(java.util.List<String> securityContextCapabilityAdds) {
                 this.securityContextCapabilityAdds = securityContextCapabilityAdds;
                 return this;
             }
@@ -1750,7 +1755,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The volumes that are mounted to the container.</p>
              */
-            public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
+            public Builder volumeMounts(java.util.List<VolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
                 return this;
             }
@@ -1854,7 +1859,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
      */
     public static class HostAliases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hostnames")
-        private java.util.List < String > hostnames;
+        private java.util.List<String> hostnames;
 
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -1875,7 +1880,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return hostnames
          */
-        public java.util.List < String > getHostnames() {
+        public java.util.List<String> getHostnames() {
             return this.hostnames;
         }
 
@@ -1887,13 +1892,13 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         }
 
         public static final class Builder {
-            private java.util.List < String > hostnames; 
+            private java.util.List<String> hostnames; 
             private String ip; 
 
             /**
              * <p>The added hostnames.</p>
              */
-            public Builder hostnames(java.util.List < String > hostnames) {
+            public Builder hostnames(java.util.List<String> hostnames) {
                 this.hostnames = hostnames;
                 return this;
             }
@@ -2359,19 +2364,19 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private String imagePullPolicy;
 
         @com.aliyun.core.annotation.NameInMap("InitContainerArgs")
-        private java.util.List < String > initContainerArgs;
+        private java.util.List<String> initContainerArgs;
 
         @com.aliyun.core.annotation.NameInMap("InitContainerCommands")
-        private java.util.List < String > initContainerCommands;
+        private java.util.List<String> initContainerCommands;
 
         @com.aliyun.core.annotation.NameInMap("InitContainerEnvironmentVars")
-        private java.util.List < InitContainerEnvironmentVars> initContainerEnvironmentVars;
+        private java.util.List<InitContainerEnvironmentVars> initContainerEnvironmentVars;
 
         @com.aliyun.core.annotation.NameInMap("InitContainerPorts")
-        private java.util.List < InitContainerPorts> initContainerPorts;
+        private java.util.List<InitContainerPorts> initContainerPorts;
 
         @com.aliyun.core.annotation.NameInMap("InitContainerVolumeMounts")
-        private java.util.List < InitContainerVolumeMounts> initContainerVolumeMounts;
+        private java.util.List<InitContainerVolumeMounts> initContainerVolumeMounts;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
@@ -2380,7 +2385,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("SecurityContextCapabilityAdds")
-        private java.util.List < String > securityContextCapabilityAdds;
+        private java.util.List<String> securityContextCapabilityAdds;
 
         @com.aliyun.core.annotation.NameInMap("SecurityContextReadOnlyRootFilesystem")
         private Boolean securityContextReadOnlyRootFilesystem;
@@ -2448,35 +2453,35 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return initContainerArgs
          */
-        public java.util.List < String > getInitContainerArgs() {
+        public java.util.List<String> getInitContainerArgs() {
             return this.initContainerArgs;
         }
 
         /**
          * @return initContainerCommands
          */
-        public java.util.List < String > getInitContainerCommands() {
+        public java.util.List<String> getInitContainerCommands() {
             return this.initContainerCommands;
         }
 
         /**
          * @return initContainerEnvironmentVars
          */
-        public java.util.List < InitContainerEnvironmentVars> getInitContainerEnvironmentVars() {
+        public java.util.List<InitContainerEnvironmentVars> getInitContainerEnvironmentVars() {
             return this.initContainerEnvironmentVars;
         }
 
         /**
          * @return initContainerPorts
          */
-        public java.util.List < InitContainerPorts> getInitContainerPorts() {
+        public java.util.List<InitContainerPorts> getInitContainerPorts() {
             return this.initContainerPorts;
         }
 
         /**
          * @return initContainerVolumeMounts
          */
-        public java.util.List < InitContainerVolumeMounts> getInitContainerVolumeMounts() {
+        public java.util.List<InitContainerVolumeMounts> getInitContainerVolumeMounts() {
             return this.initContainerVolumeMounts;
         }
 
@@ -2497,7 +2502,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return securityContextCapabilityAdds
          */
-        public java.util.List < String > getSecurityContextCapabilityAdds() {
+        public java.util.List<String> getSecurityContextCapabilityAdds() {
             return this.securityContextCapabilityAdds;
         }
 
@@ -2527,14 +2532,14 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private Integer gpu; 
             private String image; 
             private String imagePullPolicy; 
-            private java.util.List < String > initContainerArgs; 
-            private java.util.List < String > initContainerCommands; 
-            private java.util.List < InitContainerEnvironmentVars> initContainerEnvironmentVars; 
-            private java.util.List < InitContainerPorts> initContainerPorts; 
-            private java.util.List < InitContainerVolumeMounts> initContainerVolumeMounts; 
+            private java.util.List<String> initContainerArgs; 
+            private java.util.List<String> initContainerCommands; 
+            private java.util.List<InitContainerEnvironmentVars> initContainerEnvironmentVars; 
+            private java.util.List<InitContainerPorts> initContainerPorts; 
+            private java.util.List<InitContainerVolumeMounts> initContainerVolumeMounts; 
             private Float memory; 
             private String name; 
-            private java.util.List < String > securityContextCapabilityAdds; 
+            private java.util.List<String> securityContextCapabilityAdds; 
             private Boolean securityContextReadOnlyRootFilesystem; 
             private String securityContextRunAsUser; 
             private String workingDir; 
@@ -2586,7 +2591,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The arguments that are passed to the startup commands of the init container.</p>
              */
-            public Builder initContainerArgs(java.util.List < String > initContainerArgs) {
+            public Builder initContainerArgs(java.util.List<String> initContainerArgs) {
                 this.initContainerArgs = initContainerArgs;
                 return this;
             }
@@ -2594,7 +2599,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The commands that are used to start the init container.</p>
              */
-            public Builder initContainerCommands(java.util.List < String > initContainerCommands) {
+            public Builder initContainerCommands(java.util.List<String> initContainerCommands) {
                 this.initContainerCommands = initContainerCommands;
                 return this;
             }
@@ -2602,7 +2607,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The environment variables of the init container.</p>
              */
-            public Builder initContainerEnvironmentVars(java.util.List < InitContainerEnvironmentVars> initContainerEnvironmentVars) {
+            public Builder initContainerEnvironmentVars(java.util.List<InitContainerEnvironmentVars> initContainerEnvironmentVars) {
                 this.initContainerEnvironmentVars = initContainerEnvironmentVars;
                 return this;
             }
@@ -2610,7 +2615,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The ports of the init container.</p>
              */
-            public Builder initContainerPorts(java.util.List < InitContainerPorts> initContainerPorts) {
+            public Builder initContainerPorts(java.util.List<InitContainerPorts> initContainerPorts) {
                 this.initContainerPorts = initContainerPorts;
                 return this;
             }
@@ -2618,7 +2623,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The volume mounts of the init container.</p>
              */
-            public Builder initContainerVolumeMounts(java.util.List < InitContainerVolumeMounts> initContainerVolumeMounts) {
+            public Builder initContainerVolumeMounts(java.util.List<InitContainerVolumeMounts> initContainerVolumeMounts) {
                 this.initContainerVolumeMounts = initContainerVolumeMounts;
                 return this;
             }
@@ -2648,7 +2653,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The permissions that are granted to the processes in the init container. Valid values: NET_ADMIN and NET_RAW.</p>
              */
-            public Builder securityContextCapabilityAdds(java.util.List < String > securityContextCapabilityAdds) {
+            public Builder securityContextCapabilityAdds(java.util.List<String> securityContextCapabilityAdds) {
                 this.securityContextCapabilityAdds = securityContextCapabilityAdds;
                 return this;
             }
@@ -2940,7 +2945,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
      */
     public static class Volumes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigFileVolumeConfigFileToPaths")
-        private java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
+        private java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
 
         @com.aliyun.core.annotation.NameInMap("ConfigFileVolumeDefaultMode")
         private Integer configFileVolumeDefaultMode;
@@ -3021,7 +3026,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return configFileVolumeConfigFileToPaths
          */
-        public java.util.List < ConfigFileVolumeConfigFileToPaths> getConfigFileVolumeConfigFileToPaths() {
+        public java.util.List<ConfigFileVolumeConfigFileToPaths> getConfigFileVolumeConfigFileToPaths() {
             return this.configFileVolumeConfigFileToPaths;
         }
 
@@ -3138,7 +3143,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         }
 
         public static final class Builder {
-            private java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths; 
+            private java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths; 
             private Integer configFileVolumeDefaultMode; 
             private String diskVolumeDiskId; 
             private Integer diskVolumeDiskSize; 
@@ -3159,7 +3164,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The paths to the configuration files.</p>
              */
-            public Builder configFileVolumeConfigFileToPaths(java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
+            public Builder configFileVolumeConfigFileToPaths(java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
                 this.configFileVolumeConfigFileToPaths = configFileVolumeConfigFileToPaths;
                 return this;
             }
@@ -3362,7 +3367,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
      */
     public static class ScalingConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcrRegistryInfos")
-        private java.util.List < AcrRegistryInfos> acrRegistryInfos;
+        private java.util.List<AcrRegistryInfos> acrRegistryInfos;
 
         @com.aliyun.core.annotation.NameInMap("ActiveDeadlineSeconds")
         private Integer activeDeadlineSeconds;
@@ -3374,13 +3379,13 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private Boolean autoMatchImageCache;
 
         @com.aliyun.core.annotation.NameInMap("ComputeCategory")
-        private java.util.List < String > computeCategory;
+        private java.util.List<String> computeCategory;
 
         @com.aliyun.core.annotation.NameInMap("ContainerGroupName")
         private String containerGroupName;
 
         @com.aliyun.core.annotation.NameInMap("Containers")
-        private java.util.List < Containers> containers;
+        private java.util.List<Containers> containers;
 
         @com.aliyun.core.annotation.NameInMap("CostOptimization")
         private Boolean costOptimization;
@@ -3413,13 +3418,13 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("DnsConfigNameServers")
-        private java.util.List < String > dnsConfigNameServers;
+        private java.util.List<String> dnsConfigNameServers;
 
         @com.aliyun.core.annotation.NameInMap("DnsConfigOptions")
-        private java.util.List < DnsConfigOptions> dnsConfigOptions;
+        private java.util.List<DnsConfigOptions> dnsConfigOptions;
 
         @com.aliyun.core.annotation.NameInMap("DnsConfigSearches")
-        private java.util.List < String > dnsConfigSearches;
+        private java.util.List<String> dnsConfigSearches;
 
         @com.aliyun.core.annotation.NameInMap("DnsPolicy")
         private String dnsPolicy;
@@ -3443,13 +3448,13 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private Integer ephemeralStorage;
 
         @com.aliyun.core.annotation.NameInMap("HostAliases")
-        private java.util.List < HostAliases> hostAliases;
+        private java.util.List<HostAliases> hostAliases;
 
         @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
         @com.aliyun.core.annotation.NameInMap("ImageRegistryCredentials")
-        private java.util.List < ImageRegistryCredentials> imageRegistryCredentials;
+        private java.util.List<ImageRegistryCredentials> imageRegistryCredentials;
 
         @com.aliyun.core.annotation.NameInMap("ImageSnapshotId")
         private String imageSnapshotId;
@@ -3458,13 +3463,13 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private Long ingressBandwidth;
 
         @com.aliyun.core.annotation.NameInMap("InitContainers")
-        private java.util.List < InitContainers> initContainers;
+        private java.util.List<InitContainers> initContainers;
 
         @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
 
         @com.aliyun.core.annotation.NameInMap("InstanceTypes")
-        private java.util.List < String > instanceTypes;
+        private java.util.List<String> instanceTypes;
 
         @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
         private Integer ipv6AddressCount;
@@ -3479,7 +3484,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private Float memory;
 
         @com.aliyun.core.annotation.NameInMap("NtpServers")
-        private java.util.List < String > ntpServers;
+        private java.util.List<String> ntpServers;
 
         @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
@@ -3503,7 +3508,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private String scalingGroupId;
 
         @com.aliyun.core.annotation.NameInMap("SecurityContextSysCtls")
-        private java.util.List < SecurityContextSysCtls> securityContextSysCtls;
+        private java.util.List<SecurityContextSysCtls> securityContextSysCtls;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -3518,13 +3523,13 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private String spotStrategy;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
         private Integer terminationGracePeriodSeconds;
 
         @com.aliyun.core.annotation.NameInMap("Volumes")
-        private java.util.List < Volumes> volumes;
+        private java.util.List<Volumes> volumes;
 
         private ScalingConfiguration(Builder builder) {
             this.acrRegistryInfos = builder.acrRegistryInfos;
@@ -3595,7 +3600,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return acrRegistryInfos
          */
-        public java.util.List < AcrRegistryInfos> getAcrRegistryInfos() {
+        public java.util.List<AcrRegistryInfos> getAcrRegistryInfos() {
             return this.acrRegistryInfos;
         }
 
@@ -3623,7 +3628,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return computeCategory
          */
-        public java.util.List < String > getComputeCategory() {
+        public java.util.List<String> getComputeCategory() {
             return this.computeCategory;
         }
 
@@ -3637,7 +3642,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return containers
          */
-        public java.util.List < Containers> getContainers() {
+        public java.util.List<Containers> getContainers() {
             return this.containers;
         }
 
@@ -3714,21 +3719,21 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return dnsConfigNameServers
          */
-        public java.util.List < String > getDnsConfigNameServers() {
+        public java.util.List<String> getDnsConfigNameServers() {
             return this.dnsConfigNameServers;
         }
 
         /**
          * @return dnsConfigOptions
          */
-        public java.util.List < DnsConfigOptions> getDnsConfigOptions() {
+        public java.util.List<DnsConfigOptions> getDnsConfigOptions() {
             return this.dnsConfigOptions;
         }
 
         /**
          * @return dnsConfigSearches
          */
-        public java.util.List < String > getDnsConfigSearches() {
+        public java.util.List<String> getDnsConfigSearches() {
             return this.dnsConfigSearches;
         }
 
@@ -3784,7 +3789,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return hostAliases
          */
-        public java.util.List < HostAliases> getHostAliases() {
+        public java.util.List<HostAliases> getHostAliases() {
             return this.hostAliases;
         }
 
@@ -3798,7 +3803,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return imageRegistryCredentials
          */
-        public java.util.List < ImageRegistryCredentials> getImageRegistryCredentials() {
+        public java.util.List<ImageRegistryCredentials> getImageRegistryCredentials() {
             return this.imageRegistryCredentials;
         }
 
@@ -3819,7 +3824,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return initContainers
          */
-        public java.util.List < InitContainers> getInitContainers() {
+        public java.util.List<InitContainers> getInitContainers() {
             return this.initContainers;
         }
 
@@ -3833,7 +3838,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return instanceTypes
          */
-        public java.util.List < String > getInstanceTypes() {
+        public java.util.List<String> getInstanceTypes() {
             return this.instanceTypes;
         }
 
@@ -3868,7 +3873,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return ntpServers
          */
-        public java.util.List < String > getNtpServers() {
+        public java.util.List<String> getNtpServers() {
             return this.ntpServers;
         }
 
@@ -3924,7 +3929,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return securityContextSysCtls
          */
-        public java.util.List < SecurityContextSysCtls> getSecurityContextSysCtls() {
+        public java.util.List<SecurityContextSysCtls> getSecurityContextSysCtls() {
             return this.securityContextSysCtls;
         }
 
@@ -3959,7 +3964,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -3973,18 +3978,18 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         /**
          * @return volumes
          */
-        public java.util.List < Volumes> getVolumes() {
+        public java.util.List<Volumes> getVolumes() {
             return this.volumes;
         }
 
         public static final class Builder {
-            private java.util.List < AcrRegistryInfos> acrRegistryInfos; 
+            private java.util.List<AcrRegistryInfos> acrRegistryInfos; 
             private Integer activeDeadlineSeconds; 
             private Boolean autoCreateEip; 
             private Boolean autoMatchImageCache; 
-            private java.util.List < String > computeCategory; 
+            private java.util.List<String> computeCategory; 
             private String containerGroupName; 
-            private java.util.List < Containers> containers; 
+            private java.util.List<Containers> containers; 
             private Boolean costOptimization; 
             private Float cpu; 
             private Integer cpuOptionsCore; 
@@ -3995,9 +4000,9 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String dataCachePL; 
             private Integer dataCacheProvisionedIops; 
             private String description; 
-            private java.util.List < String > dnsConfigNameServers; 
-            private java.util.List < DnsConfigOptions> dnsConfigOptions; 
-            private java.util.List < String > dnsConfigSearches; 
+            private java.util.List<String> dnsConfigNameServers; 
+            private java.util.List<DnsConfigOptions> dnsConfigOptions; 
+            private java.util.List<String> dnsConfigSearches; 
             private String dnsPolicy; 
             private Long egressBandwidth; 
             private Integer eipBandwidth; 
@@ -4005,19 +4010,19 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String eipISP; 
             private String eipPublicIpAddressPoolId; 
             private Integer ephemeralStorage; 
-            private java.util.List < HostAliases> hostAliases; 
+            private java.util.List<HostAliases> hostAliases; 
             private String hostName; 
-            private java.util.List < ImageRegistryCredentials> imageRegistryCredentials; 
+            private java.util.List<ImageRegistryCredentials> imageRegistryCredentials; 
             private String imageSnapshotId; 
             private Long ingressBandwidth; 
-            private java.util.List < InitContainers> initContainers; 
+            private java.util.List<InitContainers> initContainers; 
             private String instanceFamilyLevel; 
-            private java.util.List < String > instanceTypes; 
+            private java.util.List<String> instanceTypes; 
             private Integer ipv6AddressCount; 
             private String lifecycleState; 
             private Integer loadBalancerWeight; 
             private Float memory; 
-            private java.util.List < String > ntpServers; 
+            private java.util.List<String> ntpServers; 
             private String ramRoleName; 
             private String regionId; 
             private String resourceGroupId; 
@@ -4025,19 +4030,19 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String scalingConfigurationId; 
             private String scalingConfigurationName; 
             private String scalingGroupId; 
-            private java.util.List < SecurityContextSysCtls> securityContextSysCtls; 
+            private java.util.List<SecurityContextSysCtls> securityContextSysCtls; 
             private String securityGroupId; 
             private Boolean slsEnable; 
             private Float spotPriceLimit; 
             private String spotStrategy; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Integer terminationGracePeriodSeconds; 
-            private java.util.List < Volumes> volumes; 
+            private java.util.List<Volumes> volumes; 
 
             /**
              * <p>The information about the Container Registry Enterprise Edition instance.</p>
              */
-            public Builder acrRegistryInfos(java.util.List < AcrRegistryInfos> acrRegistryInfos) {
+            public Builder acrRegistryInfos(java.util.List<AcrRegistryInfos> acrRegistryInfos) {
                 this.acrRegistryInfos = acrRegistryInfos;
                 return this;
             }
@@ -4078,7 +4083,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The computing power types. A value of economy indicates that economic instance types are returned.</p>
              */
-            public Builder computeCategory(java.util.List < String > computeCategory) {
+            public Builder computeCategory(java.util.List<String> computeCategory) {
                 this.computeCategory = computeCategory;
                 return this;
             }
@@ -4097,7 +4102,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The containers in the elastic container instance.</p>
              */
-            public Builder containers(java.util.List < Containers> containers) {
+            public Builder containers(java.util.List<Containers> containers) {
                 this.containers = containers;
                 return this;
             }
@@ -4241,7 +4246,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The IP addresses of DNS servers.</p>
              */
-            public Builder dnsConfigNameServers(java.util.List < String > dnsConfigNameServers) {
+            public Builder dnsConfigNameServers(java.util.List<String> dnsConfigNameServers) {
                 this.dnsConfigNameServers = dnsConfigNameServers;
                 return this;
             }
@@ -4249,7 +4254,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The DNS options.</p>
              */
-            public Builder dnsConfigOptions(java.util.List < DnsConfigOptions> dnsConfigOptions) {
+            public Builder dnsConfigOptions(java.util.List<DnsConfigOptions> dnsConfigOptions) {
                 this.dnsConfigOptions = dnsConfigOptions;
                 return this;
             }
@@ -4257,7 +4262,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The search domains of the DNS servers.</p>
              */
-            public Builder dnsConfigSearches(java.util.List < String > dnsConfigSearches) {
+            public Builder dnsConfigSearches(java.util.List<String> dnsConfigSearches) {
                 this.dnsConfigSearches = dnsConfigSearches;
                 return this;
             }
@@ -4346,7 +4351,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The custom hostname mappings of a container in the elastic container instance.</p>
              */
-            public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
+            public Builder hostAliases(java.util.List<HostAliases> hostAliases) {
                 this.hostAliases = hostAliases;
                 return this;
             }
@@ -4365,7 +4370,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The image repositories.</p>
              */
-            public Builder imageRegistryCredentials(java.util.List < ImageRegistryCredentials> imageRegistryCredentials) {
+            public Builder imageRegistryCredentials(java.util.List<ImageRegistryCredentials> imageRegistryCredentials) {
                 this.imageRegistryCredentials = imageRegistryCredentials;
                 return this;
             }
@@ -4395,7 +4400,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The init containers.</p>
              */
-            public Builder initContainers(java.util.List < InitContainers> initContainers) {
+            public Builder initContainers(java.util.List<InitContainers> initContainers) {
                 this.initContainers = initContainers;
                 return this;
             }
@@ -4419,7 +4424,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The specified ECS instance types. You can specify up to five instance types.</p>
              */
-            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
                 return this;
             }
@@ -4480,7 +4485,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The endpoints of the Network Time Protocol (NTP) servers.</p>
              */
-            public Builder ntpServers(java.util.List < String > ntpServers) {
+            public Builder ntpServers(java.util.List<String> ntpServers) {
                 this.ntpServers = ntpServers;
                 return this;
             }
@@ -4570,7 +4575,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The system information of the security context in which the elastic container instance is run.</p>
              */
-            public Builder securityContextSysCtls(java.util.List < SecurityContextSysCtls> securityContextSysCtls) {
+            public Builder securityContextSysCtls(java.util.List<SecurityContextSysCtls> securityContextSysCtls) {
                 this.securityContextSysCtls = securityContextSysCtls;
                 return this;
             }
@@ -4628,7 +4633,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The tags of the elastic container instance. Tags are specified in the key-value format.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -4647,7 +4652,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             /**
              * <p>The volumes.</p>
              */
-            public Builder volumes(java.util.List < Volumes> volumes) {
+            public Builder volumes(java.util.List<Volumes> volumes) {
                 this.volumes = volumes;
                 return this;
             }

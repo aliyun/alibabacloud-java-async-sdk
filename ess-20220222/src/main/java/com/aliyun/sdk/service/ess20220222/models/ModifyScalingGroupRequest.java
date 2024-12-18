@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -59,7 +64,7 @@ public class ModifyScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckTypes")
-    private java.util.List < String > healthCheckTypes;
+    private java.util.List<String> healthCheckTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
@@ -67,7 +72,7 @@ public class ModifyScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateOverrides")
-    private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides;
+    private java.util.List<LaunchTemplateOverrides> launchTemplateOverrides;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
@@ -107,7 +112,7 @@ public class ModifyScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemovalPolicies")
-    private java.util.List < String > removalPolicies;
+    private java.util.List<String> removalPolicies;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -148,7 +153,7 @@ public class ModifyScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    private java.util.List<String> vSwitchIds;
 
     private ModifyScalingGroupRequest(Builder builder) {
         super(builder);
@@ -281,7 +286,7 @@ public class ModifyScalingGroupRequest extends Request {
     /**
      * @return healthCheckTypes
      */
-    public java.util.List < String > getHealthCheckTypes() {
+    public java.util.List<String> getHealthCheckTypes() {
         return this.healthCheckTypes;
     }
 
@@ -295,7 +300,7 @@ public class ModifyScalingGroupRequest extends Request {
     /**
      * @return launchTemplateOverrides
      */
-    public java.util.List < LaunchTemplateOverrides> getLaunchTemplateOverrides() {
+    public java.util.List<LaunchTemplateOverrides> getLaunchTemplateOverrides() {
         return this.launchTemplateOverrides;
     }
 
@@ -365,7 +370,7 @@ public class ModifyScalingGroupRequest extends Request {
     /**
      * @return removalPolicies
      */
-    public java.util.List < String > getRemovalPolicies() {
+    public java.util.List<String> getRemovalPolicies() {
         return this.removalPolicies;
     }
 
@@ -435,7 +440,7 @@ public class ModifyScalingGroupRequest extends Request {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -451,9 +456,9 @@ public class ModifyScalingGroupRequest extends Request {
         private Boolean disableDesiredCapacity; 
         private Boolean groupDeletionProtection; 
         private String healthCheckType; 
-        private java.util.List < String > healthCheckTypes; 
+        private java.util.List<String> healthCheckTypes; 
         private String launchTemplateId; 
-        private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides; 
+        private java.util.List<LaunchTemplateOverrides> launchTemplateOverrides; 
         private String launchTemplateVersion; 
         private Integer maxInstanceLifetime; 
         private Integer maxSize; 
@@ -463,7 +468,7 @@ public class ModifyScalingGroupRequest extends Request {
         private Integer onDemandPercentageAboveBaseCapacity; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > removalPolicies; 
+        private java.util.List<String> removalPolicies; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scalingGroupId; 
@@ -473,7 +478,7 @@ public class ModifyScalingGroupRequest extends Request {
         private Integer spotInstancePools; 
         private Boolean spotInstanceRemedy; 
         private Integer stopInstanceTimeout; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
 
         private Builder() {
             super();
@@ -564,7 +569,7 @@ public class ModifyScalingGroupRequest extends Request {
         }
 
         /**
-         * CapacityOptions.
+         * <p>The capacity options.</p>
          */
         public Builder capacityOptions(CapacityOptions capacityOptions) {
             this.putQueryParameter("CapacityOptions", capacityOptions);
@@ -679,7 +684,7 @@ public class ModifyScalingGroupRequest extends Request {
          * <p> You can specify multiple values for this parameter to enable multiple health check options at the same time. If you specify HealthCheckType, this parameter is ignored.</p>
          * </blockquote>
          */
-        public Builder healthCheckTypes(java.util.List < String > healthCheckTypes) {
+        public Builder healthCheckTypes(java.util.List<String> healthCheckTypes) {
             this.putQueryParameter("HealthCheckTypes", healthCheckTypes);
             this.healthCheckTypes = healthCheckTypes;
             return this;
@@ -700,7 +705,7 @@ public class ModifyScalingGroupRequest extends Request {
         /**
          * <p>Details of the instance types that are specified in the extended configurations of the launch template.</p>
          */
-        public Builder launchTemplateOverrides(java.util.List < LaunchTemplateOverrides> launchTemplateOverrides) {
+        public Builder launchTemplateOverrides(java.util.List<LaunchTemplateOverrides> launchTemplateOverrides) {
             this.putQueryParameter("LaunchTemplateOverrides", launchTemplateOverrides);
             this.launchTemplateOverrides = launchTemplateOverrides;
             return this;
@@ -844,7 +849,7 @@ public class ModifyScalingGroupRequest extends Request {
          * <li>OldestScalingConfiguration: removes ECS instances that are created based on the earliest scaling configuration.</li>
          * </ul>
          */
-        public Builder removalPolicies(java.util.List < String > removalPolicies) {
+        public Builder removalPolicies(java.util.List<String> removalPolicies) {
             this.putQueryParameter("RemovalPolicies", removalPolicies);
             this.removalPolicies = removalPolicies;
             return this;
@@ -987,7 +992,7 @@ public class ModifyScalingGroupRequest extends Request {
          * <p>This parameter takes effect only when the network type of the scaling group is virtual private cloud (VPC). The specified vSwitches and the scaling group must reside in the same VPC.</p>
          * <p>The vSwitches can reside in different zones. The vSwitches are sorted in ascending order. The first vSwitch specified by using the VSwitchIds parameter has the highest priority. If Auto Scaling fails to create ECS instances in the zone where the vSwitch that has the highest priority resides, Auto Scaling creates ECS instances in the zone where the vSwitch that has the next highest priority resides.</p>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
             this.vSwitchIds = vSwitchIds;
             return this;
@@ -1084,8 +1089,8 @@ public class ModifyScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of pay-as-you-go instances that must be included in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances.</p>
-             * <p>If you set the <code>MultiAZPolicy</code> parameter to <code>COMPOSABLE</code> Policy, the default value is 0.</p>
+             * <p>The minimum number of pay-as-you-go instances that must be contained in the scaling group. When the actual number of pay-as-you-go instances in the scaling group drops below the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</p>
+             * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 0.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1096,8 +1101,8 @@ public class ModifyScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The expected percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances reaches the requirement. Valid values: 0 to 100.</p>
-             * <p>If you set the <code>MultiAZPolicy</code> parameter to <code>COMPOSABLE</code> Policy, the default value is 100.</p>
+             * <p>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances is reached. <code>OnDemandBaseCapacity</code> specifies the minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 100</p>
+             * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 100.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1108,7 +1113,15 @@ public class ModifyScalingGroupRequest extends Request {
             }
 
             /**
-             * SpotAutoReplaceOnDemand.
+             * <p>Specifies whether to replace pay-as-you-go ECS instances with preemptible ECS instances. If you specify <code>CompensateWithOnDemand</code>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <code>OnDemandPercentageAboveBaseCapacity</code>. In this scenario, Auto Scaling will try to deploy preemptible ECS instances to replace the surplus pay-as-you-go ECS instances. When <code>CompensateWithOnDemand</code> is specified, Auto Scaling creates pay-as-you-go ECS instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder spotAutoReplaceOnDemand(Boolean spotAutoReplaceOnDemand) {
                 this.spotAutoReplaceOnDemand = spotAutoReplaceOnDemand;

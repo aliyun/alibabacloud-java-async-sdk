@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class AttachDBInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstances")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > DBInstances;
+    private java.util.List<String> DBInstances;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForceAttach")
@@ -93,7 +98,7 @@ public class AttachDBInstancesRequest extends Request {
     /**
      * @return DBInstances
      */
-    public java.util.List < String > getDBInstances() {
+    public java.util.List<String> getDBInstances() {
         return this.DBInstances;
     }
 
@@ -142,7 +147,7 @@ public class AttachDBInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<AttachDBInstancesRequest, Builder> {
         private String attachMode; 
         private String clientToken; 
-        private java.util.List < String > DBInstances; 
+        private java.util.List<String> DBInstances; 
         private Boolean forceAttach; 
         private Long ownerId; 
         private String regionId; 
@@ -201,7 +206,7 @@ public class AttachDBInstancesRequest extends Request {
          * <p>The IDs of the ApsaraDB RDS instances that you want to attach to the scaling group.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder DBInstances(java.util.List < String > DBInstances) {
+        public Builder DBInstances(java.util.List<String> DBInstances) {
             this.putQueryParameter("DBInstances", DBInstances);
             this.DBInstances = DBInstances;
             return this;

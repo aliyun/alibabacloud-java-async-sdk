@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePatternTypesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PatternTypes")
-    private java.util.List < PatternTypes> patternTypes;
+    private java.util.List<PatternTypes> patternTypes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribePatternTypesResponseBody extends TeaModel {
     /**
      * @return patternTypes
      */
-    public java.util.List < PatternTypes> getPatternTypes() {
+    public java.util.List<PatternTypes> getPatternTypes() {
         return this.patternTypes;
     }
 
@@ -46,13 +51,13 @@ public class DescribePatternTypesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PatternTypes> patternTypes; 
+        private java.util.List<PatternTypes> patternTypes; 
         private String requestId; 
 
         /**
          * <p>The instance types that meet the specified requirements.</p>
          */
-        public Builder patternTypes(java.util.List < PatternTypes> patternTypes) {
+        public Builder patternTypes(java.util.List<PatternTypes> patternTypes) {
             this.patternTypes = patternTypes;
             return this;
         }

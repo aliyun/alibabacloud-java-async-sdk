@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ScalingConfigurations")
-    private java.util.List < ScalingConfigurations> scalingConfigurations;
+    private java.util.List<ScalingConfigurations> scalingConfigurations;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
     /**
      * @return scalingConfigurations
      */
-    public java.util.List < ScalingConfigurations> getScalingConfigurations() {
+    public java.util.List<ScalingConfigurations> getScalingConfigurations() {
         return this.scalingConfigurations;
     }
 
@@ -82,7 +87,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < ScalingConfigurations> scalingConfigurations; 
+        private java.util.List<ScalingConfigurations> scalingConfigurations; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * <p>The scaling configurations.</p>
          */
-        public Builder scalingConfigurations(java.util.List < ScalingConfigurations> scalingConfigurations) {
+        public Builder scalingConfigurations(java.util.List<ScalingConfigurations> scalingConfigurations) {
             this.scalingConfigurations = scalingConfigurations;
             return this;
         }
@@ -230,7 +235,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private Boolean burstingEnabled;
 
         @com.aliyun.core.annotation.NameInMap("Categories")
-        private java.util.List < String > categories;
+        private java.util.List<String> categories;
 
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -307,7 +312,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return categories
          */
-        public java.util.List < String > getCategories() {
+        public java.util.List<String> getCategories() {
             return this.categories;
         }
 
@@ -391,7 +396,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public static final class Builder {
             private String autoSnapshotPolicyId; 
             private Boolean burstingEnabled; 
-            private java.util.List < String > categories; 
+            private java.util.List<String> categories; 
             private String category; 
             private Boolean deleteWithInstance; 
             private String description; 
@@ -442,7 +447,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * <li>cloud_essd: ESSD.</li>
              * </ul>
              */
-            public Builder categories(java.util.List < String > categories) {
+            public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
                 return this;
             }
@@ -610,7 +615,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
      */
     public static class InstancePatternInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architectures")
-        private java.util.List < String > architectures;
+        private java.util.List<String> architectures;
 
         @com.aliyun.core.annotation.NameInMap("BurstablePerformance")
         private String burstablePerformance;
@@ -619,22 +624,22 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private Integer cores;
 
         @com.aliyun.core.annotation.NameInMap("CpuArchitectures")
-        private java.util.List < String > cpuArchitectures;
+        private java.util.List<String> cpuArchitectures;
 
         @com.aliyun.core.annotation.NameInMap("ExcludedInstanceTypes")
-        private java.util.List < String > excludedInstanceTypes;
+        private java.util.List<String> excludedInstanceTypes;
 
         @com.aliyun.core.annotation.NameInMap("GpuSpecs")
-        private java.util.List < String > gpuSpecs;
+        private java.util.List<String> gpuSpecs;
 
         @com.aliyun.core.annotation.NameInMap("InstanceCategories")
-        private java.util.List < String > instanceCategories;
+        private java.util.List<String> instanceCategories;
 
         @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
 
         @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
-        private java.util.List < String > instanceTypeFamilies;
+        private java.util.List<String> instanceTypeFamilies;
 
         @com.aliyun.core.annotation.NameInMap("MaxPrice")
         private Float maxPrice;
@@ -676,7 +681,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private Float minimumMemorySize;
 
         @com.aliyun.core.annotation.NameInMap("PhysicalProcessorModels")
-        private java.util.List < String > physicalProcessorModels;
+        private java.util.List<String> physicalProcessorModels;
 
         private InstancePatternInfos(Builder builder) {
             this.architectures = builder.architectures;
@@ -715,7 +720,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return architectures
          */
-        public java.util.List < String > getArchitectures() {
+        public java.util.List<String> getArchitectures() {
             return this.architectures;
         }
 
@@ -736,28 +741,28 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return cpuArchitectures
          */
-        public java.util.List < String > getCpuArchitectures() {
+        public java.util.List<String> getCpuArchitectures() {
             return this.cpuArchitectures;
         }
 
         /**
          * @return excludedInstanceTypes
          */
-        public java.util.List < String > getExcludedInstanceTypes() {
+        public java.util.List<String> getExcludedInstanceTypes() {
             return this.excludedInstanceTypes;
         }
 
         /**
          * @return gpuSpecs
          */
-        public java.util.List < String > getGpuSpecs() {
+        public java.util.List<String> getGpuSpecs() {
             return this.gpuSpecs;
         }
 
         /**
          * @return instanceCategories
          */
-        public java.util.List < String > getInstanceCategories() {
+        public java.util.List<String> getInstanceCategories() {
             return this.instanceCategories;
         }
 
@@ -771,7 +776,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return instanceTypeFamilies
          */
-        public java.util.List < String > getInstanceTypeFamilies() {
+        public java.util.List<String> getInstanceTypeFamilies() {
             return this.instanceTypeFamilies;
         }
 
@@ -869,20 +874,20 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return physicalProcessorModels
          */
-        public java.util.List < String > getPhysicalProcessorModels() {
+        public java.util.List<String> getPhysicalProcessorModels() {
             return this.physicalProcessorModels;
         }
 
         public static final class Builder {
-            private java.util.List < String > architectures; 
+            private java.util.List<String> architectures; 
             private String burstablePerformance; 
             private Integer cores; 
-            private java.util.List < String > cpuArchitectures; 
-            private java.util.List < String > excludedInstanceTypes; 
-            private java.util.List < String > gpuSpecs; 
-            private java.util.List < String > instanceCategories; 
+            private java.util.List<String> cpuArchitectures; 
+            private java.util.List<String> excludedInstanceTypes; 
+            private java.util.List<String> gpuSpecs; 
+            private java.util.List<String> instanceCategories; 
             private String instanceFamilyLevel; 
-            private java.util.List < String > instanceTypeFamilies; 
+            private java.util.List<String> instanceTypeFamilies; 
             private Float maxPrice; 
             private Integer maximumCpuCoreCount; 
             private Integer maximumGpuAmount; 
@@ -896,19 +901,18 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private Integer minimumGpuAmount; 
             private Integer minimumInitialCredit; 
             private Float minimumMemorySize; 
-            private java.util.List < String > physicalProcessorModels; 
+            private java.util.List<String> physicalProcessorModels; 
 
             /**
-             * <p>The architecture types of the instance types. Valid values:</p>
+             * <p>The architectures of instance types. Valid values:</p>
              * <ul>
-             * <li>X86: x86</li>
-             * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</li>
-             * <li>BareMetal: ECS Bare Metal Instance</li>
-             * <li>Arm: Arm</li>
-             * <li>SuperComputeCluster: Super Computing Cluster</li>
+             * <li>X86: x86.</li>
+             * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</li>
+             * <li>BareMetal: ECS Bare Metal Instance.</li>
+             * <li>Arm: Arm.</li>
              * </ul>
              */
-            public Builder architectures(java.util.List < String > architectures) {
+            public Builder architectures(java.util.List<String> architectures) {
                 this.architectures = architectures;
                 return this;
             }
@@ -950,7 +954,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * <li>Arm</li>
              * </ul>
              */
-            public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
+            public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
                 this.cpuArchitectures = cpuArchitectures;
                 return this;
             }
@@ -962,7 +966,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * <li>ecs.c6.*: The c6 instance family is excluded.</li>
              * </ul>
              */
-            public Builder excludedInstanceTypes(java.util.List < String > excludedInstanceTypes) {
+            public Builder excludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
                 this.excludedInstanceTypes = excludedInstanceTypes;
                 return this;
             }
@@ -970,36 +974,35 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The GPU models.</p>
              */
-            public Builder gpuSpecs(java.util.List < String > gpuSpecs) {
+            public Builder gpuSpecs(java.util.List<String> gpuSpecs) {
                 this.gpuSpecs = gpuSpecs;
                 return this;
             }
 
             /**
-             * <p>The categories of the instance.families. Valid values:</p>
+             * <p>The categories of ECS instances. Valid values:</p>
              * <blockquote>
-             * <p> You can specify 1 to 10 categories.</p>
+             * <p> Up to 10 categories of ECS instances are supported.</p>
              * </blockquote>
              * <ul>
-             * <li>General-purpose</li>
-             * <li>Compute-optimized</li>
-             * <li>Memory-optimized</li>
-             * <li>Big data</li>
-             * <li>Local SSDs</li>
-             * <li>High Clock Speed</li>
-             * <li>Enhanced</li>
-             * <li>Shared</li>
-             * <li>Compute-optimized with GPU</li>
-             * <li>Visual Compute-optimized</li>
-             * <li>Heterogeneous Service</li>
-             * <li>Compute-optimized with FPGA</li>
-             * <li>Compute-optimized with NPU</li>
-             * <li>ECS Bare Metal</li>
-             * <li>Super Computing Cluster</li>
-             * <li>High Performance Compute</li>
+             * <li>General-purpose: general-purpose instance type.</li>
+             * <li>Compute-optimized: compute-optimized instance type.</li>
+             * <li>Memory-optimized: memory-optimized instance type.</li>
+             * <li>Big data: big data instance type.</li>
+             * <li>Local SSDs: instance type with local SSDs.</li>
+             * <li>High Clock Speed: instance type with high clock speeds.</li>
+             * <li>Enhanced: enhanced instance type.</li>
+             * <li>Shared: shared instance type.</li>
+             * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</li>
+             * <li>Visual Compute-optimized: visual compute-optimized instance type.</li>
+             * <li>Heterogeneous Service: heterogeneous service instance type.</li>
+             * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</li>
+             * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</li>
+             * <li>ECS Bare Metal: ECS Bare Metal Instance type.</li>
+             * <li>High Performance Compute: HPC-optimized instance type.</li>
              * </ul>
              */
-            public Builder instanceCategories(java.util.List < String > instanceCategories) {
+            public Builder instanceCategories(java.util.List<String> instanceCategories) {
                 this.instanceCategories = instanceCategories;
                 return this;
             }
@@ -1023,7 +1026,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The instance families that are queried. You can query 1 to 10 instance families in each call.</p>
              */
-            public Builder instanceTypeFamilies(java.util.List < String > instanceTypeFamilies) {
+            public Builder instanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
                 this.instanceTypeFamilies = instanceTypeFamilies;
                 return this;
             }
@@ -1177,7 +1180,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The processor models of the instance types. You can specify 1 to 10 processor models.</p>
              */
-            public Builder physicalProcessorModels(java.util.List < String > physicalProcessorModels) {
+            public Builder physicalProcessorModels(java.util.List<String> physicalProcessorModels) {
                 this.physicalProcessorModels = physicalProcessorModels;
                 return this;
             }
@@ -1206,7 +1209,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private String networkInterfaceTrafficMode;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-        private java.util.List < String > securityGroupIds;
+        private java.util.List<String> securityGroupIds;
 
         private NetworkInterfaces(Builder builder) {
             this.instanceType = builder.instanceType;
@@ -1247,7 +1250,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -1255,7 +1258,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String instanceType; 
             private Integer ipv6AddressCount; 
             private String networkInterfaceTrafficMode; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
 
             /**
              * <p>The ENI type. Valid values:</p>
@@ -1301,7 +1304,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the security groups to which the ENIs belong.</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }
@@ -1398,14 +1401,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String confidentialComputingMode; 
 
             /**
-             * <p>机密计算模式。可能值：</p>
-             * <ul>
-             * <li>Enclave：表示ECS实例使用Enclave构建机密计算环境。更多信息，请参见<a href="https://help.aliyun.com/document_detail/203433.html">使用Enclave构建机密计算环境</a>。</li>
-             * <li>TDX：表示构建TDX机密计算环境。更多信息，请参见<a href="https://help.aliyun.com/document_detail/479090.html">构建TDX机密计算环境</a>。</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>TDX</p>
+             * ConfidentialComputingMode.
              */
             public Builder confidentialComputingMode(String confidentialComputingMode) {
                 this.confidentialComputingMode = confidentialComputingMode;
@@ -1587,10 +1583,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private String creditSpecification;
 
         @com.aliyun.core.annotation.NameInMap("CustomPriorities")
-        private java.util.List < CustomPriorities> customPriorities;
+        private java.util.List<CustomPriorities> customPriorities;
 
         @com.aliyun.core.annotation.NameInMap("DataDisks")
-        private java.util.List < DataDisks> dataDisks;
+        private java.util.List<DataDisks> dataDisks;
 
         @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
         private String dedicatedHostClusterId;
@@ -1641,13 +1637,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private String instanceName;
 
         @com.aliyun.core.annotation.NameInMap("InstancePatternInfos")
-        private java.util.List < InstancePatternInfos> instancePatternInfos;
+        private java.util.List<InstancePatternInfos> instancePatternInfos;
 
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         @com.aliyun.core.annotation.NameInMap("InstanceTypes")
-        private java.util.List < String > instanceTypes;
+        private java.util.List<String> instanceTypes;
 
         @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
@@ -1677,7 +1673,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private Integer memory;
 
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaces")
-        private java.util.List < NetworkInterfaces> networkInterfaces;
+        private java.util.List<NetworkInterfaces> networkInterfaces;
 
         @com.aliyun.core.annotation.NameInMap("PasswordInherit")
         private Boolean passwordInherit;
@@ -1716,7 +1712,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-        private java.util.List < String > securityGroupIds;
+        private java.util.List<String> securityGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("SecurityOptions")
         private SecurityOptions securityOptions;
@@ -1728,7 +1724,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private String spotInterruptionBehavior;
 
         @com.aliyun.core.annotation.NameInMap("SpotPriceLimits")
-        private java.util.List < SpotPriceLimits> spotPriceLimits;
+        private java.util.List<SpotPriceLimits> spotPriceLimits;
 
         @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
@@ -1746,7 +1742,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private Boolean systemDiskBurstingEnabled;
 
         @com.aliyun.core.annotation.NameInMap("SystemDiskCategories")
-        private java.util.List < String > systemDiskCategories;
+        private java.util.List<String> systemDiskCategories;
 
         @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
@@ -1776,7 +1772,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private Integer systemDiskSize;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Tenancy")
         private String tenancy;
@@ -1785,7 +1781,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         private String userData;
 
         @com.aliyun.core.annotation.NameInMap("WeightedCapacities")
-        private java.util.List < Integer > weightedCapacities;
+        private java.util.List<Integer> weightedCapacities;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
@@ -1904,14 +1900,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return customPriorities
          */
-        public java.util.List < CustomPriorities> getCustomPriorities() {
+        public java.util.List<CustomPriorities> getCustomPriorities() {
             return this.customPriorities;
         }
 
         /**
          * @return dataDisks
          */
-        public java.util.List < DataDisks> getDataDisks() {
+        public java.util.List<DataDisks> getDataDisks() {
             return this.dataDisks;
         }
 
@@ -2030,7 +2026,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return instancePatternInfos
          */
-        public java.util.List < InstancePatternInfos> getInstancePatternInfos() {
+        public java.util.List<InstancePatternInfos> getInstancePatternInfos() {
             return this.instancePatternInfos;
         }
 
@@ -2044,7 +2040,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return instanceTypes
          */
-        public java.util.List < String > getInstanceTypes() {
+        public java.util.List<String> getInstanceTypes() {
             return this.instanceTypes;
         }
 
@@ -2114,7 +2110,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return networkInterfaces
          */
-        public java.util.List < NetworkInterfaces> getNetworkInterfaces() {
+        public java.util.List<NetworkInterfaces> getNetworkInterfaces() {
             return this.networkInterfaces;
         }
 
@@ -2205,7 +2201,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -2233,7 +2229,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return spotPriceLimits
          */
-        public java.util.List < SpotPriceLimits> getSpotPriceLimits() {
+        public java.util.List<SpotPriceLimits> getSpotPriceLimits() {
             return this.spotPriceLimits;
         }
 
@@ -2275,7 +2271,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return systemDiskCategories
          */
-        public java.util.List < String > getSystemDiskCategories() {
+        public java.util.List<String> getSystemDiskCategories() {
             return this.systemDiskCategories;
         }
 
@@ -2345,7 +2341,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -2366,7 +2362,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         /**
          * @return weightedCapacities
          */
-        public java.util.List < Integer > getWeightedCapacities() {
+        public java.util.List<Integer> getWeightedCapacities() {
             return this.weightedCapacities;
         }
 
@@ -2382,8 +2378,8 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private Integer cpu; 
             private String creationTime; 
             private String creditSpecification; 
-            private java.util.List < CustomPriorities> customPriorities; 
-            private java.util.List < DataDisks> dataDisks; 
+            private java.util.List<CustomPriorities> customPriorities; 
+            private java.util.List<DataDisks> dataDisks; 
             private String dedicatedHostClusterId; 
             private String dedicatedHostId; 
             private Boolean deletionProtection; 
@@ -2400,9 +2396,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String instanceDescription; 
             private String instanceGeneration; 
             private String instanceName; 
-            private java.util.List < InstancePatternInfos> instancePatternInfos; 
+            private java.util.List<InstancePatternInfos> instancePatternInfos; 
             private String instanceType; 
-            private java.util.List < String > instanceTypes; 
+            private java.util.List<String> instanceTypes; 
             private String internetChargeType; 
             private Integer internetMaxBandwidthIn; 
             private Integer internetMaxBandwidthOut; 
@@ -2412,7 +2408,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String lifecycleState; 
             private Integer loadBalancerWeight; 
             private Integer memory; 
-            private java.util.List < NetworkInterfaces> networkInterfaces; 
+            private java.util.List<NetworkInterfaces> networkInterfaces; 
             private Boolean passwordInherit; 
             private Boolean passwordSetted; 
             private String privatePoolOptions_id; 
@@ -2425,17 +2421,17 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private SchedulerOptions schedulerOptions; 
             private String securityEnhancementStrategy; 
             private String securityGroupId; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
             private SecurityOptions securityOptions; 
             private Integer spotDuration; 
             private String spotInterruptionBehavior; 
-            private java.util.List < SpotPriceLimits> spotPriceLimits; 
+            private java.util.List<SpotPriceLimits> spotPriceLimits; 
             private String spotStrategy; 
             private String storageSetId; 
             private Integer storageSetPartitionNumber; 
             private String systemDiskAutoSnapshotPolicyId; 
             private Boolean systemDiskBurstingEnabled; 
-            private java.util.List < String > systemDiskCategories; 
+            private java.util.List<String> systemDiskCategories; 
             private String systemDiskCategory; 
             private String systemDiskDescription; 
             private String systemDiskEncryptAlgorithm; 
@@ -2445,10 +2441,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String systemDiskPerformanceLevel; 
             private Long systemDiskProvisionedIops; 
             private Integer systemDiskSize; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String tenancy; 
             private String userData; 
-            private java.util.List < Integer > weightedCapacities; 
+            private java.util.List<Integer> weightedCapacities; 
             private String zoneId; 
 
             /**
@@ -2520,7 +2516,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * <li>Example: the specified order of vSwitches for your scaling group is vsw1 and vsw2 and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify [&quot;vsw2+type2&quot;, &quot;vsw1+type2&quot;]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.</li>
              * </ul>
              */
-            public Builder customPriorities(java.util.List < CustomPriorities> customPriorities) {
+            public Builder customPriorities(java.util.List<CustomPriorities> customPriorities) {
                 this.customPriorities = customPriorities;
                 return this;
             }
@@ -2528,7 +2524,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The data disks.</p>
              */
-            public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
+            public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
                 this.dataDisks = dataDisks;
                 return this;
             }
@@ -2608,7 +2604,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpEndpoint.
+             * <p>Indicates whether the access channel is enabled for instance metadata. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder httpEndpoint(String httpEndpoint) {
                 this.httpEndpoint = httpEndpoint;
@@ -2616,7 +2619,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpTokens.
+             * <p>Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:</p>
+             * <ul>
+             * <li>optional: The security hardening mode IMDSv2 is not forcibly used.</li>
+             * <li>required: The security hardening mode (IMDSv2) is forcibly used. After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>optional</p>
              */
             public Builder httpTokens(String httpTokens) {
                 this.httpTokens = httpTokens;
@@ -2724,7 +2734,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The intelligent configuration settings, which determine the available instance types.</p>
              */
-            public Builder instancePatternInfos(java.util.List < InstancePatternInfos> instancePatternInfos) {
+            public Builder instancePatternInfos(java.util.List<InstancePatternInfos> instancePatternInfos) {
                 this.instancePatternInfos = instancePatternInfos;
                 return this;
             }
@@ -2743,7 +2753,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The ECS instance types.</p>
              */
-            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
                 return this;
             }
@@ -2764,7 +2774,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum inbound bandwidth. Unit: Mbit/s. Valid values: 1 to 200.</p>
+             * <p>The maximum inbound public bandwidth. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2775,11 +2785,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum outbound bandwidth. Unit: Mbit/s. Valid values:</p>
-             * <ul>
-             * <li>0 to 1024 if you set InternetChargeType to PayByBandwidth. If you leave this parameter empty, this parameter is automatically set to 0.</li>
-             * <li>0 to 1024 if you set InternetChargeType to PayByTraffic. If you leave this parameter empty, an error is returned.</li>
-             * </ul>
+             * <p>The maximum outbound public bandwidth. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2870,7 +2876,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The ENIs.</p>
              */
-            public Builder networkInterfaces(java.util.List < NetworkInterfaces> networkInterfaces) {
+            public Builder networkInterfaces(java.util.List<NetworkInterfaces> networkInterfaces) {
                 this.networkInterfaces = networkInterfaces;
                 return this;
             }
@@ -3007,13 +3013,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the security groups to which the ECS instances belong. ECS instances that belong to the same security group can communicate with each other.</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }
 
             /**
-             * <p>安全选项。</p>
+             * SecurityOptions.
              */
             public Builder securityOptions(SecurityOptions securityOptions) {
                 this.securityOptions = securityOptions;
@@ -3045,7 +3051,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The preemptible instances.</p>
              */
-            public Builder spotPriceLimits(java.util.List < SpotPriceLimits> spotPriceLimits) {
+            public Builder spotPriceLimits(java.util.List<SpotPriceLimits> spotPriceLimits) {
                 this.spotPriceLimits = spotPriceLimits;
                 return this;
             }
@@ -3126,7 +3132,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * <li>cloud_essd: ESSD</li>
              * </ul>
              */
-            public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
+            public Builder systemDiskCategories(java.util.List<String> systemDiskCategories) {
                 this.systemDiskCategories = systemDiskCategories;
                 return this;
             }
@@ -3252,7 +3258,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -3287,7 +3293,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The weights of the instance types. The value of this parameter indicates the capacity of an instance of the specified instance type in the scaling group. A higher weight indicates that a smaller number of instances of the instance type are required to meet the expected capacity requirement.</p>
              */
-            public Builder weightedCapacities(java.util.List < Integer > weightedCapacities) {
+            public Builder weightedCapacities(java.util.List<Integer> weightedCapacities) {
                 this.weightedCapacities = weightedCapacities;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -48,7 +53,7 @@ public class DescribeScalingActivitiesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingActivityIds")
-    private java.util.List < String > scalingActivityIds;
+    private java.util.List<String> scalingActivityIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
@@ -145,7 +150,7 @@ public class DescribeScalingActivitiesRequest extends Request {
     /**
      * @return scalingActivityIds
      */
-    public java.util.List < String > getScalingActivityIds() {
+    public java.util.List<String> getScalingActivityIds() {
         return this.scalingActivityIds;
     }
 
@@ -172,7 +177,7 @@ public class DescribeScalingActivitiesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > scalingActivityIds; 
+        private java.util.List<String> scalingActivityIds; 
         private String scalingGroupId; 
         private String statusCode; 
 
@@ -196,7 +201,10 @@ public class DescribeScalingActivitiesRequest extends Request {
         } 
 
         /**
-         * InstanceRefreshTaskId.
+         * <p>The ID of the instance refresh task. If you specify this parameter, this operation returns the list of scaling activities associated with the instance refresh task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ir-a12ds234fasd*****</p>
          */
         public Builder instanceRefreshTaskId(String instanceRefreshTaskId) {
             this.putQueryParameter("InstanceRefreshTaskId", instanceRefreshTaskId);
@@ -285,7 +293,7 @@ public class DescribeScalingActivitiesRequest extends Request {
          * <p> When you call this operation, you must specify one of the following parameters: <code>ScalingGroupId</code> and <code>ScalingActivityIds</code>. You cannot specify both of them at the same time. If you specify neither of them, an error is reported.</p>
          * </blockquote>
          */
-        public Builder scalingActivityIds(java.util.List < String > scalingActivityIds) {
+        public Builder scalingActivityIds(java.util.List<String> scalingActivityIds) {
             this.putQueryParameter("ScalingActivityIds", scalingActivityIds);
             this.scalingActivityIds = scalingActivityIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeElasticStrengthRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDiskCategories")
-    private java.util.List < String > dataDiskCategories;
+    private java.util.List<String> dataDiskCategories;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageFamily")
@@ -30,7 +35,7 @@ public class DescribeElasticStrengthRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypes")
-    private java.util.List < String > instanceTypes;
+    private java.util.List<String> instanceTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
@@ -51,7 +56,7 @@ public class DescribeElasticStrengthRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingGroupIds")
-    private java.util.List < String > scalingGroupIds;
+    private java.util.List<String> scalingGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotStrategy")
@@ -59,11 +64,11 @@ public class DescribeElasticStrengthRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDiskCategories")
-    private java.util.List < String > systemDiskCategories;
+    private java.util.List<String> systemDiskCategories;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    private java.util.List<String> vSwitchIds;
 
     private DescribeElasticStrengthRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class DescribeElasticStrengthRequest extends Request {
     /**
      * @return dataDiskCategories
      */
-    public java.util.List < String > getDataDiskCategories() {
+    public java.util.List<String> getDataDiskCategories() {
         return this.dataDiskCategories;
     }
 
@@ -126,7 +131,7 @@ public class DescribeElasticStrengthRequest extends Request {
     /**
      * @return instanceTypes
      */
-    public java.util.List < String > getInstanceTypes() {
+    public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
     }
 
@@ -161,7 +166,7 @@ public class DescribeElasticStrengthRequest extends Request {
     /**
      * @return scalingGroupIds
      */
-    public java.util.List < String > getScalingGroupIds() {
+    public java.util.List<String> getScalingGroupIds() {
         return this.scalingGroupIds;
     }
 
@@ -175,31 +180,31 @@ public class DescribeElasticStrengthRequest extends Request {
     /**
      * @return systemDiskCategories
      */
-    public java.util.List < String > getSystemDiskCategories() {
+    public java.util.List<String> getSystemDiskCategories() {
         return this.systemDiskCategories;
     }
 
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
     public static final class Builder extends Request.Builder<DescribeElasticStrengthRequest, Builder> {
-        private java.util.List < String > dataDiskCategories; 
+        private java.util.List<String> dataDiskCategories; 
         private String imageFamily; 
         private String imageId; 
         private String imageName; 
-        private java.util.List < String > instanceTypes; 
+        private java.util.List<String> instanceTypes; 
         private Integer ipv6AddressCount; 
         private String priorityStrategy; 
         private String regionId; 
         private String scalingGroupId; 
-        private java.util.List < String > scalingGroupIds; 
+        private java.util.List<String> scalingGroupIds; 
         private String spotStrategy; 
-        private java.util.List < String > systemDiskCategories; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> systemDiskCategories; 
+        private java.util.List<String> vSwitchIds; 
 
         private Builder() {
             super();
@@ -225,7 +230,7 @@ public class DescribeElasticStrengthRequest extends Request {
         /**
          * DataDiskCategories.
          */
-        public Builder dataDiskCategories(java.util.List < String > dataDiskCategories) {
+        public Builder dataDiskCategories(java.util.List<String> dataDiskCategories) {
             this.putQueryParameter("DataDiskCategories", dataDiskCategories);
             this.dataDiskCategories = dataDiskCategories;
             return this;
@@ -261,7 +266,7 @@ public class DescribeElasticStrengthRequest extends Request {
         /**
          * <p>The instance types. The instance types specified by this parameter overwrite the instance types specified in the scaling configuration.</p>
          */
-        public Builder instanceTypes(java.util.List < String > instanceTypes) {
+        public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
             this.instanceTypes = instanceTypes;
             return this;
@@ -322,7 +327,7 @@ public class DescribeElasticStrengthRequest extends Request {
         /**
          * <p>The IDs of the scaling groups that you want to query.</p>
          */
-        public Builder scalingGroupIds(java.util.List < String > scalingGroupIds) {
+        public Builder scalingGroupIds(java.util.List<String> scalingGroupIds) {
             this.putQueryParameter("ScalingGroupIds", scalingGroupIds);
             this.scalingGroupIds = scalingGroupIds;
             return this;
@@ -346,7 +351,7 @@ public class DescribeElasticStrengthRequest extends Request {
          * <li>cloud_essd: Enterprise SSD (ESSD).</li>
          * </ul>
          */
-        public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
+        public Builder systemDiskCategories(java.util.List<String> systemDiskCategories) {
             this.putQueryParameter("SystemDiskCategories", systemDiskCategories);
             this.systemDiskCategories = systemDiskCategories;
             return this;
@@ -355,7 +360,7 @@ public class DescribeElasticStrengthRequest extends Request {
         /**
          * VSwitchIds.
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
             this.vSwitchIds = vSwitchIds;
             return this;

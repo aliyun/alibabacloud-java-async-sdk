@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NotificationConfigurationModels")
-    private java.util.List < NotificationConfigurationModels> notificationConfigurationModels;
+    private java.util.List<NotificationConfigurationModels> notificationConfigurationModels;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
     /**
      * @return notificationConfigurationModels
      */
-    public java.util.List < NotificationConfigurationModels> getNotificationConfigurationModels() {
+    public java.util.List<NotificationConfigurationModels> getNotificationConfigurationModels() {
         return this.notificationConfigurationModels;
     }
 
@@ -46,13 +51,13 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NotificationConfigurationModels> notificationConfigurationModels; 
+        private java.util.List<NotificationConfigurationModels> notificationConfigurationModels; 
         private String requestId; 
 
         /**
          * <p>The notification settings.</p>
          */
-        public Builder notificationConfigurationModels(java.util.List < NotificationConfigurationModels> notificationConfigurationModels) {
+        public Builder notificationConfigurationModels(java.util.List<NotificationConfigurationModels> notificationConfigurationModels) {
             this.notificationConfigurationModels = notificationConfigurationModels;
             return this;
         }
@@ -85,7 +90,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         private String notificationArn;
 
         @com.aliyun.core.annotation.NameInMap("NotificationTypes")
-        private java.util.List < String > notificationTypes;
+        private java.util.List<String> notificationTypes;
 
         @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
@@ -118,7 +123,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         /**
          * @return notificationTypes
          */
-        public java.util.List < String > getNotificationTypes() {
+        public java.util.List<String> getNotificationTypes() {
             return this.notificationTypes;
         }
 
@@ -138,23 +143,23 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String notificationArn; 
-            private java.util.List < String > notificationTypes; 
+            private java.util.List<String> notificationTypes; 
             private String scalingGroupId; 
             private String timeZone; 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:</p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The value is in one of the following formats:</p>
              * <ul>
-             * <li>If you use CloudMonitor as the notification method, the value format of this parameter is acs:ess:{region-id}:{account-id}:cloudmonitor.</li>
-             * <li>If you use a Message Service (MNS) queue as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:queue/{queuename}.</li>
-             * <li>If you use an MNS topic as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:topic/{topicname}.</li>
+             * <li>If you specify CloudMonitor as the notification recipient, the value is in the acs:ess:{region-id}:{account-id}:cloudmonitor format.</li>
+             * <li>If you specify a Simple Message Queue (SMQ, formerly MNS) as the notification recipient, the value is in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</li>
+             * <li>If you specify an SMQ topic as the notification recipient, the value is in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</li>
              * </ul>
-             * <p>The variables in the preceding formats have the following meanings:</p>
+             * <p>The variables in the preceding value formats have the following meanings:</p>
              * <ul>
-             * <li>region-id: the region ID of the scaling group.</li>
-             * <li>account-id: the ID of the Alibaba Cloud account.</li>
-             * <li>queuename: the name of the MNS queue.</li>
-             * <li>topicname: the name of the MNS topic.</li>
+             * <li>region-id: the region ID of your scaling group.</li>
+             * <li>account-id: the ID of your Alibaba Cloud account.</li>
+             * <li>queuename: the name of the SMQ queue.</li>
+             * <li>topicname: the name of the SMQ topic.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -168,7 +173,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             /**
              * <p>The types of the notifications.</p>
              */
-            public Builder notificationTypes(java.util.List < String > notificationTypes) {
+            public Builder notificationTypes(java.util.List<String> notificationTypes) {
                 this.notificationTypes = notificationTypes;
                 return this;
             }

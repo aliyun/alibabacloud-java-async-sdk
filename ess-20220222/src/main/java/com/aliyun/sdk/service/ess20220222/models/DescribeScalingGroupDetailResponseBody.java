@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -719,7 +724,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private String loadBalancerId;
 
         @com.aliyun.core.annotation.NameInMap("VServerGroupAttributes")
-        private java.util.List < VServerGroupAttributes> vServerGroupAttributes;
+        private java.util.List<VServerGroupAttributes> vServerGroupAttributes;
 
         private VServerGroups(Builder builder) {
             this.loadBalancerId = builder.loadBalancerId;
@@ -744,13 +749,13 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return vServerGroupAttributes
          */
-        public java.util.List < VServerGroupAttributes> getVServerGroupAttributes() {
+        public java.util.List<VServerGroupAttributes> getVServerGroupAttributes() {
             return this.vServerGroupAttributes;
         }
 
         public static final class Builder {
             private String loadBalancerId; 
-            private java.util.List < VServerGroupAttributes> vServerGroupAttributes; 
+            private java.util.List<VServerGroupAttributes> vServerGroupAttributes; 
 
             /**
              * <p>The ID of the Classic Load Balancer (CLB, formerly known as Server Load Balancer or SLB) instance to which the backend vServer group belongs.</p>
@@ -766,7 +771,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The attributes of the backend vServer group.</p>
              */
-            public Builder vServerGroupAttributes(java.util.List < VServerGroupAttributes> vServerGroupAttributes) {
+            public Builder vServerGroupAttributes(java.util.List<VServerGroupAttributes> vServerGroupAttributes) {
                 this.vServerGroupAttributes = vServerGroupAttributes;
                 return this;
             }
@@ -792,7 +797,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private String activeScalingConfigurationId;
 
         @com.aliyun.core.annotation.NameInMap("AlbServerGroups")
-        private java.util.List < AlbServerGroups> albServerGroups;
+        private java.util.List<AlbServerGroups> albServerGroups;
 
         @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
         private String allocationStrategy;
@@ -813,7 +818,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private String customPolicyARN;
 
         @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
-        private java.util.List < String > DBInstanceIds;
+        private java.util.List<String> DBInstanceIds;
 
         @com.aliyun.core.annotation.NameInMap("DefaultCooldown")
         private Integer defaultCooldown;
@@ -834,7 +839,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private String healthCheckType;
 
         @com.aliyun.core.annotation.NameInMap("HealthCheckTypes")
-        private java.util.List < String > healthCheckTypes;
+        private java.util.List<String> healthCheckTypes;
 
         @com.aliyun.core.annotation.NameInMap("InitCapacity")
         private Integer initCapacity;
@@ -846,7 +851,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private String launchTemplateId;
 
         @com.aliyun.core.annotation.NameInMap("LaunchTemplateOverrides")
-        private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides;
+        private java.util.List<LaunchTemplateOverrides> launchTemplateOverrides;
 
         @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
         private String launchTemplateVersion;
@@ -855,10 +860,10 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private String lifecycleState;
 
         @com.aliyun.core.annotation.NameInMap("LoadBalancerConfigs")
-        private java.util.List < LoadBalancerConfigs> loadBalancerConfigs;
+        private java.util.List<LoadBalancerConfigs> loadBalancerConfigs;
 
         @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
-        private java.util.List < String > loadBalancerIds;
+        private java.util.List<String> loadBalancerIds;
 
         @com.aliyun.core.annotation.NameInMap("MaxInstanceLifetime")
         private Integer maxInstanceLifetime;
@@ -897,7 +902,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("RemovalPolicies")
-        private java.util.List < String > removalPolicies;
+        private java.util.List<String> removalPolicies;
 
         @com.aliyun.core.annotation.NameInMap("RemovingCapacity")
         private Integer removingCapacity;
@@ -918,7 +923,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private String scalingPolicy;
 
         @com.aliyun.core.annotation.NameInMap("ServerGroups")
-        private java.util.List < ServerGroups> serverGroups;
+        private java.util.List<ServerGroups> serverGroups;
 
         @com.aliyun.core.annotation.NameInMap("SpotAllocationStrategy")
         private String spotAllocationStrategy;
@@ -936,13 +941,13 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private Integer stoppedCapacity;
 
         @com.aliyun.core.annotation.NameInMap("SuspendedProcesses")
-        private java.util.List < String > suspendedProcesses;
+        private java.util.List<String> suspendedProcesses;
 
         @com.aliyun.core.annotation.NameInMap("SystemSuspended")
         private Boolean systemSuspended;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TotalCapacity")
         private Integer totalCapacity;
@@ -951,13 +956,13 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private Integer totalInstanceCount;
 
         @com.aliyun.core.annotation.NameInMap("VServerGroups")
-        private java.util.List < VServerGroups> vServerGroups;
+        private java.util.List<VServerGroups> vServerGroups;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -1049,7 +1054,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return albServerGroups
          */
-        public java.util.List < AlbServerGroups> getAlbServerGroups() {
+        public java.util.List<AlbServerGroups> getAlbServerGroups() {
             return this.albServerGroups;
         }
 
@@ -1098,7 +1103,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return DBInstanceIds
          */
-        public java.util.List < String > getDBInstanceIds() {
+        public java.util.List<String> getDBInstanceIds() {
             return this.DBInstanceIds;
         }
 
@@ -1147,7 +1152,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return healthCheckTypes
          */
-        public java.util.List < String > getHealthCheckTypes() {
+        public java.util.List<String> getHealthCheckTypes() {
             return this.healthCheckTypes;
         }
 
@@ -1175,7 +1180,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return launchTemplateOverrides
          */
-        public java.util.List < LaunchTemplateOverrides> getLaunchTemplateOverrides() {
+        public java.util.List<LaunchTemplateOverrides> getLaunchTemplateOverrides() {
             return this.launchTemplateOverrides;
         }
 
@@ -1196,14 +1201,14 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return loadBalancerConfigs
          */
-        public java.util.List < LoadBalancerConfigs> getLoadBalancerConfigs() {
+        public java.util.List<LoadBalancerConfigs> getLoadBalancerConfigs() {
             return this.loadBalancerConfigs;
         }
 
         /**
          * @return loadBalancerIds
          */
-        public java.util.List < String > getLoadBalancerIds() {
+        public java.util.List<String> getLoadBalancerIds() {
             return this.loadBalancerIds;
         }
 
@@ -1294,7 +1299,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return removalPolicies
          */
-        public java.util.List < String > getRemovalPolicies() {
+        public java.util.List<String> getRemovalPolicies() {
             return this.removalPolicies;
         }
 
@@ -1343,7 +1348,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return serverGroups
          */
-        public java.util.List < ServerGroups> getServerGroups() {
+        public java.util.List<ServerGroups> getServerGroups() {
             return this.serverGroups;
         }
 
@@ -1385,7 +1390,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return suspendedProcesses
          */
-        public java.util.List < String > getSuspendedProcesses() {
+        public java.util.List<String> getSuspendedProcesses() {
             return this.suspendedProcesses;
         }
 
@@ -1399,7 +1404,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1420,7 +1425,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return vServerGroups
          */
-        public java.util.List < VServerGroups> getVServerGroups() {
+        public java.util.List<VServerGroups> getVServerGroups() {
             return this.vServerGroups;
         }
 
@@ -1434,7 +1439,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -1448,29 +1453,29 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer activeCapacity; 
             private String activeScalingConfigurationId; 
-            private java.util.List < AlbServerGroups> albServerGroups; 
+            private java.util.List<AlbServerGroups> albServerGroups; 
             private String allocationStrategy; 
             private Boolean azBalance; 
             private Boolean compensateWithOnDemand; 
             private String creationTime; 
             private String currentHostName; 
             private String customPolicyARN; 
-            private java.util.List < String > DBInstanceIds; 
+            private java.util.List<String> DBInstanceIds; 
             private Integer defaultCooldown; 
             private Integer desiredCapacity; 
             private Boolean enableDesiredCapacity; 
             private Boolean groupDeletionProtection; 
             private String groupType; 
             private String healthCheckType; 
-            private java.util.List < String > healthCheckTypes; 
+            private java.util.List<String> healthCheckTypes; 
             private Integer initCapacity; 
             private Boolean isElasticStrengthInAlarm; 
             private String launchTemplateId; 
-            private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides; 
+            private java.util.List<LaunchTemplateOverrides> launchTemplateOverrides; 
             private String launchTemplateVersion; 
             private String lifecycleState; 
-            private java.util.List < LoadBalancerConfigs> loadBalancerConfigs; 
-            private java.util.List < String > loadBalancerIds; 
+            private java.util.List<LoadBalancerConfigs> loadBalancerConfigs; 
+            private java.util.List<String> loadBalancerIds; 
             private Integer maxInstanceLifetime; 
             private Integer maxSize; 
             private Integer minSize; 
@@ -1483,27 +1488,27 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private Integer pendingWaitCapacity; 
             private Integer protectedCapacity; 
             private String regionId; 
-            private java.util.List < String > removalPolicies; 
+            private java.util.List<String> removalPolicies; 
             private Integer removingCapacity; 
             private Integer removingWaitCapacity; 
             private String resourceGroupId; 
             private String scalingGroupId; 
             private String scalingGroupName; 
             private String scalingPolicy; 
-            private java.util.List < ServerGroups> serverGroups; 
+            private java.util.List<ServerGroups> serverGroups; 
             private String spotAllocationStrategy; 
             private Integer spotInstancePools; 
             private Boolean spotInstanceRemedy; 
             private Integer standbyCapacity; 
             private Integer stoppedCapacity; 
-            private java.util.List < String > suspendedProcesses; 
+            private java.util.List<String> suspendedProcesses; 
             private Boolean systemSuspended; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Integer totalCapacity; 
             private Integer totalInstanceCount; 
-            private java.util.List < VServerGroups> vServerGroups; 
+            private java.util.List<VServerGroups> vServerGroups; 
             private String vSwitchId; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String vpcId; 
 
             /**
@@ -1531,7 +1536,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The information about the Application Load Balancer (ALB) server groups.</p>
              */
-            public Builder albServerGroups(java.util.List < AlbServerGroups> albServerGroups) {
+            public Builder albServerGroups(java.util.List<AlbServerGroups> albServerGroups) {
                 this.albServerGroups = albServerGroups;
                 return this;
             }
@@ -1619,7 +1624,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The IDs of the ApsaraDB RDS instances that are associated with the scaling group.</p>
              */
-            public Builder DBInstanceIds(java.util.List < String > DBInstanceIds) {
+            public Builder DBInstanceIds(java.util.List<String> DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
                 return this;
             }
@@ -1715,7 +1720,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
              * <li>LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis for instances in the scaling group.</li>
              * </ul>
              */
-            public Builder healthCheckTypes(java.util.List < String > healthCheckTypes) {
+            public Builder healthCheckTypes(java.util.List<String> healthCheckTypes) {
                 this.healthCheckTypes = healthCheckTypes;
                 return this;
             }
@@ -1758,7 +1763,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The information about the instance types that are extended in the launch template.</p>
              */
-            public Builder launchTemplateOverrides(java.util.List < LaunchTemplateOverrides> launchTemplateOverrides) {
+            public Builder launchTemplateOverrides(java.util.List<LaunchTemplateOverrides> launchTemplateOverrides) {
                 this.launchTemplateOverrides = launchTemplateOverrides;
                 return this;
             }
@@ -1793,7 +1798,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The CLB configurations.</p>
              */
-            public Builder loadBalancerConfigs(java.util.List < LoadBalancerConfigs> loadBalancerConfigs) {
+            public Builder loadBalancerConfigs(java.util.List<LoadBalancerConfigs> loadBalancerConfigs) {
                 this.loadBalancerConfigs = loadBalancerConfigs;
                 return this;
             }
@@ -1801,7 +1806,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The IDs of the SLB instances that are associated with the scaling group.</p>
              */
-            public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
+            public Builder loadBalancerIds(java.util.List<String> loadBalancerIds) {
                 this.loadBalancerIds = loadBalancerIds;
                 return this;
             }
@@ -1956,7 +1961,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The instance removal policies.</p>
              */
-            public Builder removalPolicies(java.util.List < String > removalPolicies) {
+            public Builder removalPolicies(java.util.List<String> removalPolicies) {
                 this.removalPolicies = removalPolicies;
                 return this;
             }
@@ -2044,7 +2049,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
              * <p> You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups attached to your scaling group.</p>
              * </blockquote>
              */
-            public Builder serverGroups(java.util.List < ServerGroups> serverGroups) {
+            public Builder serverGroups(java.util.List<ServerGroups> serverGroups) {
                 this.serverGroups = serverGroups;
                 return this;
             }
@@ -2118,7 +2123,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
              * <li>ScheduledAction: scheduled task</li>
              * </ul>
              */
-            public Builder suspendedProcesses(java.util.List < String > suspendedProcesses) {
+            public Builder suspendedProcesses(java.util.List<String> suspendedProcesses) {
                 this.suspendedProcesses = suspendedProcesses;
                 return this;
             }
@@ -2141,7 +2146,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The tags of the scaling group.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -2171,7 +2176,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The backend vServer groups.</p>
              */
-            public Builder vServerGroups(java.util.List < VServerGroups> vServerGroups) {
+            public Builder vServerGroups(java.util.List<VServerGroups> vServerGroups) {
                 this.vServerGroups = vServerGroups;
                 return this;
             }
@@ -2190,7 +2195,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The IDs of the vSwitches that are associated with the scaling group. If you specify VSwitchIds, VSwitchId is ignored.</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateAlarmRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlarmActions")
-    private java.util.List < String > alarmActions;
+    private java.util.List<String> alarmActions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
@@ -26,7 +31,7 @@ public class CreateAlarmRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < Dimensions> dimensions;
+    private java.util.List<Dimensions> dimensions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Effective")
@@ -38,7 +43,7 @@ public class CreateAlarmRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Expressions")
-    private java.util.List < Expressions> expressions;
+    private java.util.List<Expressions> expressions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpressionsLogicOperator")
@@ -129,7 +134,7 @@ public class CreateAlarmRequest extends Request {
     /**
      * @return alarmActions
      */
-    public java.util.List < String > getAlarmActions() {
+    public java.util.List<String> getAlarmActions() {
         return this.alarmActions;
     }
 
@@ -150,7 +155,7 @@ public class CreateAlarmRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.List < Dimensions> getDimensions() {
+    public java.util.List<Dimensions> getDimensions() {
         return this.dimensions;
     }
 
@@ -171,7 +176,7 @@ public class CreateAlarmRequest extends Request {
     /**
      * @return expressions
      */
-    public java.util.List < Expressions> getExpressions() {
+    public java.util.List<Expressions> getExpressions() {
         return this.expressions;
     }
 
@@ -260,13 +265,13 @@ public class CreateAlarmRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAlarmRequest, Builder> {
-        private java.util.List < String > alarmActions; 
+        private java.util.List<String> alarmActions; 
         private String comparisonOperator; 
         private String description; 
-        private java.util.List < Dimensions> dimensions; 
+        private java.util.List<Dimensions> dimensions; 
         private String effective; 
         private Integer evaluationCount; 
-        private java.util.List < Expressions> expressions; 
+        private java.util.List<Expressions> expressions; 
         private String expressionsLogicOperator; 
         private Integer groupId; 
         private String metricName; 
@@ -310,19 +315,19 @@ public class CreateAlarmRequest extends Request {
         /**
          * <p>The list of unique identifiers of the scaling rules that are associated with the event-triggered task.</p>
          */
-        public Builder alarmActions(java.util.List < String > alarmActions) {
+        public Builder alarmActions(java.util.List<String> alarmActions) {
             this.putQueryParameter("AlarmActions", alarmActions);
             this.alarmActions = alarmActions;
             return this;
         }
 
         /**
-         * <p>The operator that is used to compare the metric value and the threshold. Valid values:</p>
+         * <p>The operator that you want to use to compare the metric value and the threshold. Valid values:</p>
          * <ul>
-         * <li>If the metric value is greater than or equal to the threshold, set the value to: &gt;=.</li>
-         * <li>If the metric value is less than or equal to the threshold, set the value to: &lt;=.</li>
-         * <li>If the metric value is greater than the threshold, set the value to: &gt;.</li>
-         * <li>If the metric value is less than the threshold, set the value to: &lt;.</li>
+         * <li>If the metric value is greater than or equal to the threshold, set the value to &gt;=.</li>
+         * <li>If the metric value is less than or equal to the metric threshold, set the value to &lt;=.</li>
+         * <li>If the metric value is greater than the metric threshold, set the value to &gt;.</li>
+         * <li>If the metric value is less than the metric threshold, set the value to &lt;.</li>
          * </ul>
          * <p>Default value: &gt;=.</p>
          * 
@@ -352,7 +357,7 @@ public class CreateAlarmRequest extends Request {
         /**
          * <p>The metric dimensions.</p>
          */
-        public Builder dimensions(java.util.List < Dimensions> dimensions) {
+        public Builder dimensions(java.util.List<Dimensions> dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
@@ -385,7 +390,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * <p>The number of times that the threshold must be reached before a scaling rule can be executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before a scaling rule is triggered.</p>
+         * <p>The number of consecutive times that the threshold must be reached before a scaling rule is executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before the scaling rule is executed.</p>
          * <p>Default value: 3.</p>
          * 
          * <strong>example:</strong>
@@ -400,7 +405,7 @@ public class CreateAlarmRequest extends Request {
         /**
          * <p>The information about the multi-metric alert rules.</p>
          */
-        public Builder expressions(java.util.List < Expressions> expressions) {
+        public Builder expressions(java.util.List<Expressions> expressions) {
             this.putQueryParameter("Expressions", expressions);
             this.expressions = expressions;
             return this;
@@ -482,10 +487,10 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * <p>The type of the metric. Valid values:</p>
+         * <p>The metric type. Valid values:</p>
          * <ul>
-         * <li>system: system metrics of CloudMonitor</li>
-         * <li>custom: custom metrics that are reported to CloudMonitor</li>
+         * <li>system: system metrics of CloudMonitor.</li>
+         * <li>custom: custom metrics that are reported to CloudMonitor.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -577,11 +582,11 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to aggregate statistics for the metric. Valid values:</p>
+         * <p>The method that you want to use to aggregate the metric data. Valid values:</p>
          * <ul>
-         * <li>Average</li>
-         * <li>Minimum</li>
-         * <li>Maximum</li>
+         * <li>Average: the average value.</li>
+         * <li>Minimum: the minimum value.</li>
+         * <li>Maximum: the maximum value.</li>
          * </ul>
          * <p>Default value: Average.</p>
          * 

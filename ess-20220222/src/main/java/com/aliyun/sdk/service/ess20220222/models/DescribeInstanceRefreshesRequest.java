@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeInstanceRefreshesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceRefreshTaskIds")
-    private java.util.List < String > instanceRefreshTaskIds;
+    private java.util.List<String> instanceRefreshTaskIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -79,7 +84,7 @@ public class DescribeInstanceRefreshesRequest extends Request {
     /**
      * @return instanceRefreshTaskIds
      */
-    public java.util.List < String > getInstanceRefreshTaskIds() {
+    public java.util.List<String> getInstanceRefreshTaskIds() {
         return this.instanceRefreshTaskIds;
     }
 
@@ -140,7 +145,7 @@ public class DescribeInstanceRefreshesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceRefreshesRequest, Builder> {
-        private java.util.List < String > instanceRefreshTaskIds; 
+        private java.util.List<String> instanceRefreshTaskIds; 
         private Integer maxResults; 
         private String nextToken; 
         private String ownerAccount; 
@@ -170,7 +175,7 @@ public class DescribeInstanceRefreshesRequest extends Request {
         /**
          * <p>The IDs of the instance refresh tasks that you want to query.</p>
          */
-        public Builder instanceRefreshTaskIds(java.util.List < String > instanceRefreshTaskIds) {
+        public Builder instanceRefreshTaskIds(java.util.List<String> instanceRefreshTaskIds) {
             this.putQueryParameter("InstanceRefreshTaskIds", instanceRefreshTaskIds);
             this.instanceRefreshTaskIds = instanceRefreshTaskIds;
             return this;

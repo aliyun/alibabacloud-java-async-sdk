@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,10 @@ public class CreateDiagnoseReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ReportId.
+         * <p>The unique ID of the diagnostic report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-uf6enpbnri1xhcy9qc7s</p>
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -58,7 +66,7 @@ public class CreateDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0189C6CB-07BA-5AFE-B533-D93892324774</p>

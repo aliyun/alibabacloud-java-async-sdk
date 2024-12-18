@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -322,11 +327,11 @@ public class ScaleWithAdjustmentRequest extends Request {
         /**
          * <p>Specifies whether to trigger the scaling activity in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid values:</p>
          * <ul>
-         * <li>true: triggers the scaling activity in a synchronous manner. The scaling activity is triggered at the time when the scaling rule is executed.</li>
-         * <li>false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number of instances and determines whether to trigger the scaling activity based on the check result.</li>
+         * <li>true: triggers the scaling activity in a synchronous manner. A scaling activity is triggered at the time when the scaling rule is executed.</li>
+         * <li>false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number and determines whether to trigger the scaling activity based on the check result.</li>
          * </ul>
          * <blockquote>
-         * <p>For more information about the Expected Number of Instances feature, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
+         * <p> For more information about the expected number of instances feature, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
          * </blockquote>
          * <p>Default value: false.</p>
          * 
@@ -357,7 +362,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         private Boolean disableLifecycleHook;
 
         @com.aliyun.core.annotation.NameInMap("IgnoredLifecycleHookIds")
-        private java.util.List < String > ignoredLifecycleHookIds;
+        private java.util.List<String> ignoredLifecycleHookIds;
 
         private LifecycleHookContext(Builder builder) {
             this.disableLifecycleHook = builder.disableLifecycleHook;
@@ -382,13 +387,13 @@ public class ScaleWithAdjustmentRequest extends Request {
         /**
          * @return ignoredLifecycleHookIds
          */
-        public java.util.List < String > getIgnoredLifecycleHookIds() {
+        public java.util.List<String> getIgnoredLifecycleHookIds() {
             return this.ignoredLifecycleHookIds;
         }
 
         public static final class Builder {
             private Boolean disableLifecycleHook; 
-            private java.util.List < String > ignoredLifecycleHookIds; 
+            private java.util.List<String> ignoredLifecycleHookIds; 
 
             /**
              * <p>Specifies whether to disable the Lifecycle Hook feature. Valid values:</p>
@@ -408,7 +413,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             /**
              * <p>The IDs of the lifecycle hooks that you want to disable.</p>
              */
-            public Builder ignoredLifecycleHookIds(java.util.List < String > ignoredLifecycleHookIds) {
+            public Builder ignoredLifecycleHookIds(java.util.List<String> ignoredLifecycleHookIds) {
                 this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
                 return this;
             }
@@ -501,16 +506,16 @@ public class ScaleWithAdjustmentRequest extends Request {
      */
     public static class ContainerOverrides extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Args")
-        private java.util.List < String > args;
+        private java.util.List<String> args;
 
         @com.aliyun.core.annotation.NameInMap("Commands")
-        private java.util.List < String > commands;
+        private java.util.List<String> commands;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
         @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
-        private java.util.List < EnvironmentVars> environmentVars;
+        private java.util.List<EnvironmentVars> environmentVars;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
@@ -538,14 +543,14 @@ public class ScaleWithAdjustmentRequest extends Request {
         /**
          * @return args
          */
-        public java.util.List < String > getArgs() {
+        public java.util.List<String> getArgs() {
             return this.args;
         }
 
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
@@ -559,7 +564,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         /**
          * @return environmentVars
          */
-        public java.util.List < EnvironmentVars> getEnvironmentVars() {
+        public java.util.List<EnvironmentVars> getEnvironmentVars() {
             return this.environmentVars;
         }
 
@@ -578,17 +583,17 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > args; 
-            private java.util.List < String > commands; 
+            private java.util.List<String> args; 
+            private java.util.List<String> commands; 
             private Float cpu; 
-            private java.util.List < EnvironmentVars> environmentVars; 
+            private java.util.List<EnvironmentVars> environmentVars; 
             private Float memory; 
             private String name; 
 
             /**
              * <p>The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.</p>
              */
-            public Builder args(java.util.List < String > args) {
+            public Builder args(java.util.List<String> args) {
                 this.args = args;
                 return this;
             }
@@ -596,7 +601,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             /**
              * <p>The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.</p>
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
@@ -615,7 +620,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             /**
              * <p>The information about the environment variables.</p>
              */
-            public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
+            public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
                 return this;
             }
@@ -657,7 +662,7 @@ public class ScaleWithAdjustmentRequest extends Request {
      */
     public static class Overrides extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContainerOverrides")
-        private java.util.List < ContainerOverrides> containerOverrides;
+        private java.util.List<ContainerOverrides> containerOverrides;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
@@ -682,7 +687,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         /**
          * @return containerOverrides
          */
-        public java.util.List < ContainerOverrides> getContainerOverrides() {
+        public java.util.List<ContainerOverrides> getContainerOverrides() {
             return this.containerOverrides;
         }
 
@@ -701,14 +706,14 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < ContainerOverrides> containerOverrides; 
+            private java.util.List<ContainerOverrides> containerOverrides; 
             private Float cpu; 
             private Float memory; 
 
             /**
              * <p>The list of parameters that you want to use to override specific configurations for containers.</p>
              */
-            public Builder containerOverrides(java.util.List < ContainerOverrides> containerOverrides) {
+            public Builder containerOverrides(java.util.List<ContainerOverrides> containerOverrides) {
                 this.containerOverrides = containerOverrides;
                 return this;
             }

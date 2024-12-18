@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeScalingGroupDiagnoseDetailsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Details")
-    private java.util.List < Details> details;
+    private java.util.List<Details> details;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeScalingGroupDiagnoseDetailsResponseBody extends TeaModel {
     /**
      * @return details
      */
-    public java.util.List < Details> getDetails() {
+    public java.util.List<Details> getDetails() {
         return this.details;
     }
 
@@ -46,13 +51,13 @@ public class DescribeScalingGroupDiagnoseDetailsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Details> details; 
+        private java.util.List<Details> details; 
         private String requestId; 
 
         /**
          * Details.
          */
-        public Builder details(java.util.List < Details> details) {
+        public Builder details(java.util.List<Details> details) {
             this.details = details;
             return this;
         }

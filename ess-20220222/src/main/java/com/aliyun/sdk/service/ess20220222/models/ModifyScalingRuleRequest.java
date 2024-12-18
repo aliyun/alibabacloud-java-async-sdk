@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ModifyScalingRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlarmDimensions")
-    private java.util.List < AlarmDimensions> alarmDimensions;
+    private java.util.List<AlarmDimensions> alarmDimensions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Cooldown")
@@ -38,7 +43,7 @@ public class ModifyScalingRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HybridMetrics")
-    private java.util.List < HybridMetrics> hybridMetrics;
+    private java.util.List<HybridMetrics> hybridMetrics;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HybridMonitorNamespace")
@@ -111,7 +116,7 @@ public class ModifyScalingRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StepAdjustments")
-    private java.util.List < StepAdjustments> stepAdjustments;
+    private java.util.List<StepAdjustments> stepAdjustments;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetValue")
@@ -177,7 +182,7 @@ public class ModifyScalingRuleRequest extends Request {
     /**
      * @return alarmDimensions
      */
-    public java.util.List < AlarmDimensions> getAlarmDimensions() {
+    public java.util.List<AlarmDimensions> getAlarmDimensions() {
         return this.alarmDimensions;
     }
 
@@ -205,7 +210,7 @@ public class ModifyScalingRuleRequest extends Request {
     /**
      * @return hybridMetrics
      */
-    public java.util.List < HybridMetrics> getHybridMetrics() {
+    public java.util.List<HybridMetrics> getHybridMetrics() {
         return this.hybridMetrics;
     }
 
@@ -331,7 +336,7 @@ public class ModifyScalingRuleRequest extends Request {
     /**
      * @return stepAdjustments
      */
-    public java.util.List < StepAdjustments> getStepAdjustments() {
+    public java.util.List<StepAdjustments> getStepAdjustments() {
         return this.stepAdjustments;
     }
 
@@ -345,11 +350,11 @@ public class ModifyScalingRuleRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyScalingRuleRequest, Builder> {
         private String adjustmentType; 
         private Integer adjustmentValue; 
-        private java.util.List < AlarmDimensions> alarmDimensions; 
+        private java.util.List<AlarmDimensions> alarmDimensions; 
         private Integer cooldown; 
         private Boolean disableScaleIn; 
         private Integer estimatedInstanceWarmup; 
-        private java.util.List < HybridMetrics> hybridMetrics; 
+        private java.util.List<HybridMetrics> hybridMetrics; 
         private String hybridMonitorNamespace; 
         private Integer initialMaxSize; 
         private String metricName; 
@@ -367,7 +372,7 @@ public class ModifyScalingRuleRequest extends Request {
         private Integer scaleOutEvaluationCount; 
         private String scalingRuleId; 
         private String scalingRuleName; 
-        private java.util.List < StepAdjustments> stepAdjustments; 
+        private java.util.List<StepAdjustments> stepAdjustments; 
         private Float targetValue; 
 
         private Builder() {
@@ -441,7 +446,7 @@ public class ModifyScalingRuleRequest extends Request {
         /**
          * <p>The dimensions. This parameter is applicable to target tracking scaling rules. You can specify this parameter if your predefined metric requires extra dimensions. For example, if you predefine the LoadBalancerRealServerAverageQps metric, you must use this parameter to specify the rulePool dimension.</p>
          */
-        public Builder alarmDimensions(java.util.List < AlarmDimensions> alarmDimensions) {
+        public Builder alarmDimensions(java.util.List<AlarmDimensions> alarmDimensions) {
             this.putQueryParameter("AlarmDimensions", alarmDimensions);
             this.alarmDimensions = alarmDimensions;
             return this;
@@ -491,7 +496,7 @@ public class ModifyScalingRuleRequest extends Request {
         /**
          * HybridMetrics.
          */
-        public Builder hybridMetrics(java.util.List < HybridMetrics> hybridMetrics) {
+        public Builder hybridMetrics(java.util.List<HybridMetrics> hybridMetrics) {
             this.putQueryParameter("HybridMetrics", hybridMetrics);
             this.hybridMetrics = hybridMetrics;
             return this;
@@ -715,7 +720,7 @@ public class ModifyScalingRuleRequest extends Request {
         /**
          * <p>Details of the step adjustments.</p>
          */
-        public Builder stepAdjustments(java.util.List < StepAdjustments> stepAdjustments) {
+        public Builder stepAdjustments(java.util.List<StepAdjustments> stepAdjustments) {
             this.putQueryParameter("StepAdjustments", stepAdjustments);
             this.stepAdjustments = stepAdjustments;
             return this;
@@ -894,7 +899,7 @@ public class ModifyScalingRuleRequest extends Request {
      */
     public static class HybridMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dimensions")
-        private java.util.List < Dimensions> dimensions;
+        private java.util.List<Dimensions> dimensions;
 
         @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
@@ -927,7 +932,7 @@ public class ModifyScalingRuleRequest extends Request {
         /**
          * @return dimensions
          */
-        public java.util.List < Dimensions> getDimensions() {
+        public java.util.List<Dimensions> getDimensions() {
             return this.dimensions;
         }
 
@@ -960,7 +965,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Dimensions> dimensions; 
+            private java.util.List<Dimensions> dimensions; 
             private String expression; 
             private String id; 
             private String metricName; 
@@ -969,7 +974,7 @@ public class ModifyScalingRuleRequest extends Request {
             /**
              * Dimensions.
              */
-            public Builder dimensions(java.util.List < Dimensions> dimensions) {
+            public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
                 return this;
             }

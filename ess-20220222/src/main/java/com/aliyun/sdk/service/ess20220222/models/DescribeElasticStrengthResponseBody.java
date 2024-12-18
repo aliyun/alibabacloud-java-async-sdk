@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeElasticStrengthResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ElasticStrengthModels")
-    private java.util.List < ElasticStrengthModels> elasticStrengthModels;
+    private java.util.List<ElasticStrengthModels> elasticStrengthModels;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourcePools")
-    private java.util.List < ResourcePools> resourcePools;
+    private java.util.List<ResourcePools> resourcePools;
 
     @com.aliyun.core.annotation.NameInMap("TotalStrength")
     private Double totalStrength;
@@ -42,7 +47,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
     /**
      * @return elasticStrengthModels
      */
-    public java.util.List < ElasticStrengthModels> getElasticStrengthModels() {
+    public java.util.List<ElasticStrengthModels> getElasticStrengthModels() {
         return this.elasticStrengthModels;
     }
 
@@ -56,7 +61,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
     /**
      * @return resourcePools
      */
-    public java.util.List < ResourcePools> getResourcePools() {
+    public java.util.List<ResourcePools> getResourcePools() {
         return this.resourcePools;
     }
 
@@ -68,15 +73,15 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ElasticStrengthModels> elasticStrengthModels; 
+        private java.util.List<ElasticStrengthModels> elasticStrengthModels; 
         private String requestId; 
-        private java.util.List < ResourcePools> resourcePools; 
+        private java.util.List<ResourcePools> resourcePools; 
         private Double totalStrength; 
 
         /**
-         * <p>The scaling strength models.</p>
+         * <p>The scaling strengths of scaling configurations that are queried at the same time.</p>
          */
-        public Builder elasticStrengthModels(java.util.List < ElasticStrengthModels> elasticStrengthModels) {
+        public Builder elasticStrengthModels(java.util.List<ElasticStrengthModels> elasticStrengthModels) {
             this.elasticStrengthModels = elasticStrengthModels;
             return this;
         }
@@ -95,7 +100,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         /**
          * <p>The resource pools.</p>
          */
-        public Builder resourcePools(java.util.List < ResourcePools> resourcePools) {
+        public Builder resourcePools(java.util.List<ResourcePools> resourcePools) {
             this.resourcePools = resourcePools;
             return this;
         }
@@ -123,6 +128,113 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
      *
      * <p>DescribeElasticStrengthResponseBody</p>
      */
+    public static class InventoryHealth extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AdequacyScore")
+        private Integer adequacyScore;
+
+        @com.aliyun.core.annotation.NameInMap("HealthScore")
+        private Integer healthScore;
+
+        @com.aliyun.core.annotation.NameInMap("HotScore")
+        private Integer hotScore;
+
+        @com.aliyun.core.annotation.NameInMap("SupplyScore")
+        private Integer supplyScore;
+
+        private InventoryHealth(Builder builder) {
+            this.adequacyScore = builder.adequacyScore;
+            this.healthScore = builder.healthScore;
+            this.hotScore = builder.hotScore;
+            this.supplyScore = builder.supplyScore;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InventoryHealth create() {
+            return builder().build();
+        }
+
+        /**
+         * @return adequacyScore
+         */
+        public Integer getAdequacyScore() {
+            return this.adequacyScore;
+        }
+
+        /**
+         * @return healthScore
+         */
+        public Integer getHealthScore() {
+            return this.healthScore;
+        }
+
+        /**
+         * @return hotScore
+         */
+        public Integer getHotScore() {
+            return this.hotScore;
+        }
+
+        /**
+         * @return supplyScore
+         */
+        public Integer getSupplyScore() {
+            return this.supplyScore;
+        }
+
+        public static final class Builder {
+            private Integer adequacyScore; 
+            private Integer healthScore; 
+            private Integer hotScore; 
+            private Integer supplyScore; 
+
+            /**
+             * AdequacyScore.
+             */
+            public Builder adequacyScore(Integer adequacyScore) {
+                this.adequacyScore = adequacyScore;
+                return this;
+            }
+
+            /**
+             * HealthScore.
+             */
+            public Builder healthScore(Integer healthScore) {
+                this.healthScore = healthScore;
+                return this;
+            }
+
+            /**
+             * HotScore.
+             */
+            public Builder hotScore(Integer hotScore) {
+                this.hotScore = hotScore;
+                return this;
+            }
+
+            /**
+             * SupplyScore.
+             */
+            public Builder supplyScore(Integer supplyScore) {
+                this.supplyScore = supplyScore;
+                return this;
+            }
+
+            public InventoryHealth build() {
+                return new InventoryHealth(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeElasticStrengthResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticStrengthResponseBody</p>
+     */
     public static class ElasticStrengthModelsResourcePools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -130,14 +242,20 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
+        @com.aliyun.core.annotation.NameInMap("InventoryHealth")
+        private InventoryHealth inventoryHealth;
+
         @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
 
         @com.aliyun.core.annotation.NameInMap("Strength")
         private Double strength;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
@@ -145,7 +263,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         private ElasticStrengthModelsResourcePools(Builder builder) {
             this.code = builder.code;
             this.instanceType = builder.instanceType;
+            this.inventoryHealth = builder.inventoryHealth;
             this.msg = builder.msg;
+            this.status = builder.status;
             this.strength = builder.strength;
             this.vSwitchIds = builder.vSwitchIds;
             this.zoneId = builder.zoneId;
@@ -174,10 +294,24 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         }
 
         /**
+         * @return inventoryHealth
+         */
+        public InventoryHealth getInventoryHealth() {
+            return this.inventoryHealth;
+        }
+
+        /**
          * @return msg
          */
         public String getMsg() {
             return this.msg;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
         }
 
         /**
@@ -190,7 +324,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -204,9 +338,11 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String instanceType; 
+            private InventoryHealth inventoryHealth; 
             private String msg; 
+            private String status; 
             private Double strength; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String zoneId; 
 
             /**
@@ -232,6 +368,14 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
+             * InventoryHealth.
+             */
+            public Builder inventoryHealth(InventoryHealth inventoryHealth) {
+                this.inventoryHealth = inventoryHealth;
+                return this;
+            }
+
+            /**
              * <p>The error message returned when the scaling strength is the weakest.</p>
              * 
              * <strong>example:</strong>
@@ -239,6 +383,14 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
              */
             public Builder msg(String msg) {
                 this.msg = msg;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
@@ -256,7 +408,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             /**
              * <p>The IDs of the vSwitches in the zones of the resource pool.</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
@@ -286,8 +438,11 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
      * <p>DescribeElasticStrengthResponseBody</p>
      */
     public static class ElasticStrengthModels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ElasticStrength")
+        private String elasticStrength;
+
         @com.aliyun.core.annotation.NameInMap("ResourcePools")
-        private java.util.List < ElasticStrengthModelsResourcePools> resourcePools;
+        private java.util.List<ElasticStrengthModelsResourcePools> resourcePools;
 
         @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
@@ -296,6 +451,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         private Double totalStrength;
 
         private ElasticStrengthModels(Builder builder) {
+            this.elasticStrength = builder.elasticStrength;
             this.resourcePools = builder.resourcePools;
             this.scalingGroupId = builder.scalingGroupId;
             this.totalStrength = builder.totalStrength;
@@ -310,9 +466,16 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         }
 
         /**
+         * @return elasticStrength
+         */
+        public String getElasticStrength() {
+            return this.elasticStrength;
+        }
+
+        /**
          * @return resourcePools
          */
-        public java.util.List < ElasticStrengthModelsResourcePools> getResourcePools() {
+        public java.util.List<ElasticStrengthModelsResourcePools> getResourcePools() {
             return this.resourcePools;
         }
 
@@ -331,14 +494,23 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ElasticStrengthModelsResourcePools> resourcePools; 
+            private String elasticStrength; 
+            private java.util.List<ElasticStrengthModelsResourcePools> resourcePools; 
             private String scalingGroupId; 
             private Double totalStrength; 
 
             /**
+             * ElasticStrength.
+             */
+            public Builder elasticStrength(String elasticStrength) {
+                this.elasticStrength = elasticStrength;
+                return this;
+            }
+
+            /**
              * <p>The resource pools.</p>
              */
-            public Builder resourcePools(java.util.List < ElasticStrengthModelsResourcePools> resourcePools) {
+            public Builder resourcePools(java.util.List<ElasticStrengthModelsResourcePools> resourcePools) {
                 this.resourcePools = resourcePools;
                 return this;
             }
@@ -392,7 +564,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         private Double strength;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
@@ -445,7 +617,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -461,7 +633,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             private String instanceType; 
             private String msg; 
             private Double strength; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String zoneId; 
 
             /**
@@ -511,7 +683,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             /**
              * <p>The IDs of the vSwitches in the zones of the resource pool.</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }

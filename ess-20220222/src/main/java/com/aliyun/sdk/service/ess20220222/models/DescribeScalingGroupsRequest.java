@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -52,7 +57,7 @@ public class DescribeScalingGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingGroupIds")
-    private java.util.List < String > scalingGroupIds;
+    private java.util.List<String> scalingGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingGroupName")
@@ -60,11 +65,11 @@ public class DescribeScalingGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingGroupNames")
-    private java.util.List < String > scalingGroupNames;
+    private java.util.List<String> scalingGroupNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private DescribeScalingGroupsRequest(Builder builder) {
         super(builder);
@@ -162,7 +167,7 @@ public class DescribeScalingGroupsRequest extends Request {
     /**
      * @return scalingGroupIds
      */
-    public java.util.List < String > getScalingGroupIds() {
+    public java.util.List<String> getScalingGroupIds() {
         return this.scalingGroupIds;
     }
 
@@ -176,14 +181,14 @@ public class DescribeScalingGroupsRequest extends Request {
     /**
      * @return scalingGroupNames
      */
-    public java.util.List < String > getScalingGroupNames() {
+    public java.util.List<String> getScalingGroupNames() {
         return this.scalingGroupNames;
     }
 
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -197,10 +202,10 @@ public class DescribeScalingGroupsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > scalingGroupIds; 
+        private java.util.List<String> scalingGroupIds; 
         private String scalingGroupName; 
-        private java.util.List < String > scalingGroupNames; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<String> scalingGroupNames; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -333,7 +338,7 @@ public class DescribeScalingGroupsRequest extends Request {
          * <p>The IDs of the scaling groups that you want to query.</p>
          * <p>The IDs of inactive scaling groups are not included in the query results, and no error is returned.</p>
          */
-        public Builder scalingGroupIds(java.util.List < String > scalingGroupIds) {
+        public Builder scalingGroupIds(java.util.List<String> scalingGroupIds) {
             this.putQueryParameter("ScalingGroupIds", scalingGroupIds);
             this.scalingGroupIds = scalingGroupIds;
             return this;
@@ -355,7 +360,7 @@ public class DescribeScalingGroupsRequest extends Request {
          * <p>The names of the scaling groups that you want to query.</p>
          * <p>The names of inactive scaling groups are not displayed in the query results, and no error is reported.</p>
          */
-        public Builder scalingGroupNames(java.util.List < String > scalingGroupNames) {
+        public Builder scalingGroupNames(java.util.List<String> scalingGroupNames) {
             this.putQueryParameter("ScalingGroupNames", scalingGroupNames);
             this.scalingGroupNames = scalingGroupNames;
             return this;
@@ -364,7 +369,7 @@ public class DescribeScalingGroupsRequest extends Request {
         /**
          * <p>The tags of the scaling group.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

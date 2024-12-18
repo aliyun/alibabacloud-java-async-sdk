@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class AttachInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecycleHook")
@@ -30,7 +35,7 @@ public class AttachInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerWeights")
-    private java.util.List < Integer > loadBalancerWeights;
+    private java.util.List<Integer> loadBalancerWeights;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -102,7 +107,7 @@ public class AttachInstancesRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -116,7 +121,7 @@ public class AttachInstancesRequest extends Request {
     /**
      * @return loadBalancerWeights
      */
-    public java.util.List < Integer > getLoadBalancerWeights() {
+    public java.util.List<Integer> getLoadBalancerWeights() {
         return this.loadBalancerWeights;
     }
 
@@ -165,9 +170,9 @@ public class AttachInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<AttachInstancesRequest, Builder> {
         private String clientToken; 
         private Boolean entrusted; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private Boolean lifecycleHook; 
-        private java.util.List < Integer > loadBalancerWeights; 
+        private java.util.List<Integer> loadBalancerWeights; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -230,7 +235,7 @@ public class AttachInstancesRequest extends Request {
         /**
          * <p>The IDs of the ECS instances, elastic container instances, non-Alibaba Cloud instances, or instances in Economical Mode.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
@@ -259,7 +264,7 @@ public class AttachInstancesRequest extends Request {
         /**
          * <p>The weight of an ECS instance or elastic container instance as a backend server. You can use this parameter to specify weights for multiple instances at the same time.</p>
          */
-        public Builder loadBalancerWeights(java.util.List < Integer > loadBalancerWeights) {
+        public Builder loadBalancerWeights(java.util.List<Integer> loadBalancerWeights) {
             this.putQueryParameter("LoadBalancerWeights", loadBalancerWeights);
             this.loadBalancerWeights = loadBalancerWeights;
             return this;

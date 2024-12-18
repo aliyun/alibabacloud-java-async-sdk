@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyAlarmRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlarmActions")
-    private java.util.List < String > alarmActions;
+    private java.util.List<String> alarmActions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlarmTaskId")
@@ -31,7 +36,7 @@ public class ModifyAlarmRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < Dimensions> dimensions;
+    private java.util.List<Dimensions> dimensions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Effective")
@@ -43,7 +48,7 @@ public class ModifyAlarmRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Expressions")
-    private java.util.List < Expressions> expressions;
+    private java.util.List<Expressions> expressions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpressionsLogicOperator")
@@ -129,7 +134,7 @@ public class ModifyAlarmRequest extends Request {
     /**
      * @return alarmActions
      */
-    public java.util.List < String > getAlarmActions() {
+    public java.util.List<String> getAlarmActions() {
         return this.alarmActions;
     }
 
@@ -157,7 +162,7 @@ public class ModifyAlarmRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.List < Dimensions> getDimensions() {
+    public java.util.List<Dimensions> getDimensions() {
         return this.dimensions;
     }
 
@@ -178,7 +183,7 @@ public class ModifyAlarmRequest extends Request {
     /**
      * @return expressions
      */
-    public java.util.List < Expressions> getExpressions() {
+    public java.util.List<Expressions> getExpressions() {
         return this.expressions;
     }
 
@@ -260,14 +265,14 @@ public class ModifyAlarmRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyAlarmRequest, Builder> {
-        private java.util.List < String > alarmActions; 
+        private java.util.List<String> alarmActions; 
         private String alarmTaskId; 
         private String comparisonOperator; 
         private String description; 
-        private java.util.List < Dimensions> dimensions; 
+        private java.util.List<Dimensions> dimensions; 
         private String effective; 
         private Integer evaluationCount; 
-        private java.util.List < Expressions> expressions; 
+        private java.util.List<Expressions> expressions; 
         private String expressionsLogicOperator; 
         private Integer groupId; 
         private String metricName; 
@@ -310,7 +315,7 @@ public class ModifyAlarmRequest extends Request {
         /**
          * <p>The list of unique identifiers of the scaling rules that are associated with the event-triggered task.</p>
          */
-        public Builder alarmActions(java.util.List < String > alarmActions) {
+        public Builder alarmActions(java.util.List<String> alarmActions) {
             this.putQueryParameter("AlarmActions", alarmActions);
             this.alarmActions = alarmActions;
             return this;
@@ -364,7 +369,7 @@ public class ModifyAlarmRequest extends Request {
         /**
          * <p>Details of the dimensions.</p>
          */
-        public Builder dimensions(java.util.List < Dimensions> dimensions) {
+        public Builder dimensions(java.util.List<Dimensions> dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
@@ -411,7 +416,7 @@ public class ModifyAlarmRequest extends Request {
         /**
          * <p>The expressions that are specified in the multi-metric alert rule.</p>
          */
-        public Builder expressions(java.util.List < Expressions> expressions) {
+        public Builder expressions(java.util.List<Expressions> expressions) {
             this.putQueryParameter("Expressions", expressions);
             this.expressions = expressions;
             return this;
@@ -488,10 +493,10 @@ public class ModifyAlarmRequest extends Request {
         }
 
         /**
-         * <p>The type of the metric. Valid values:</p>
+         * <p>The metric type. Valid values:</p>
          * <ul>
          * <li>system: system metrics of CloudMonitor</li>
-         * <li>custom: custom metrics that are reported to CloudMonitor</li>
+         * <li>custom: custom metrics that are reported to CloudMonitor.</li>
          * </ul>
          * 
          * <strong>example:</strong>

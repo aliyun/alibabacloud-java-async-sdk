@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeLifecycleHooksRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecycleHookIds")
-    private java.util.List < String > lifecycleHookIds;
+    private java.util.List<String> lifecycleHookIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecycleHookName")
@@ -77,7 +82,7 @@ public class DescribeLifecycleHooksRequest extends Request {
     /**
      * @return lifecycleHookIds
      */
-    public java.util.List < String > getLifecycleHookIds() {
+    public java.util.List<String> getLifecycleHookIds() {
         return this.lifecycleHookIds;
     }
 
@@ -138,7 +143,7 @@ public class DescribeLifecycleHooksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLifecycleHooksRequest, Builder> {
-        private java.util.List < String > lifecycleHookIds; 
+        private java.util.List<String> lifecycleHookIds; 
         private String lifecycleHookName; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -168,7 +173,7 @@ public class DescribeLifecycleHooksRequest extends Request {
         /**
          * <p>The IDs of the lifecycle hooks that you want to query.</p>
          */
-        public Builder lifecycleHookIds(java.util.List < String > lifecycleHookIds) {
+        public Builder lifecycleHookIds(java.util.List<String> lifecycleHookIds) {
             this.putQueryParameter("LifecycleHookIds", lifecycleHookIds);
             this.lifecycleHookIds = lifecycleHookIds;
             return this;

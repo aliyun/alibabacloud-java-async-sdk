@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNotificationTypesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NotificationTypes")
-    private java.util.List < String > notificationTypes;
+    private java.util.List<String> notificationTypes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeNotificationTypesResponseBody extends TeaModel {
     /**
      * @return notificationTypes
      */
-    public java.util.List < String > getNotificationTypes() {
+    public java.util.List<String> getNotificationTypes() {
         return this.notificationTypes;
     }
 
@@ -46,7 +51,7 @@ public class DescribeNotificationTypesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > notificationTypes; 
+        private java.util.List<String> notificationTypes; 
         private String requestId; 
 
         /**
@@ -62,7 +67,7 @@ public class DescribeNotificationTypesResponseBody extends TeaModel {
          * <li>AUTOSCALING:SCHEDULE_TASK_EXPIRING: Auto Scaling sends a notification when a scheduled task is about to expire.</li>
          * </ul>
          */
-        public Builder notificationTypes(java.util.List < String > notificationTypes) {
+        public Builder notificationTypes(java.util.List<String> notificationTypes) {
             this.notificationTypes = notificationTypes;
             return this;
         }

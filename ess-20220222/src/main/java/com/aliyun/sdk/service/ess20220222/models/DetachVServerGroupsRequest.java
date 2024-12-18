@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,7 +46,7 @@ public class DetachVServerGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VServerGroups")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < VServerGroups> vServerGroups;
+    private java.util.List<VServerGroups> vServerGroups;
 
     private DetachVServerGroupsRequest(Builder builder) {
         super(builder);
@@ -112,7 +117,7 @@ public class DetachVServerGroupsRequest extends Request {
     /**
      * @return vServerGroups
      */
-    public java.util.List < VServerGroups> getVServerGroups() {
+    public java.util.List<VServerGroups> getVServerGroups() {
         return this.vServerGroups;
     }
 
@@ -123,7 +128,7 @@ public class DetachVServerGroupsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
-        private java.util.List < VServerGroups> vServerGroups; 
+        private java.util.List<VServerGroups> vServerGroups; 
 
         private Builder() {
             super();
@@ -218,7 +223,7 @@ public class DetachVServerGroupsRequest extends Request {
          * <p>The collection of information about the vServer groups marked for detachment.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder vServerGroups(java.util.List < VServerGroups> vServerGroups) {
+        public Builder vServerGroups(java.util.List<VServerGroups> vServerGroups) {
             this.putQueryParameter("VServerGroups", vServerGroups);
             this.vServerGroups = vServerGroups;
             return this;
@@ -315,7 +320,7 @@ public class DetachVServerGroupsRequest extends Request {
         private String loadBalancerId;
 
         @com.aliyun.core.annotation.NameInMap("VServerGroupAttributes")
-        private java.util.List < VServerGroupAttributes> vServerGroupAttributes;
+        private java.util.List<VServerGroupAttributes> vServerGroupAttributes;
 
         private VServerGroups(Builder builder) {
             this.loadBalancerId = builder.loadBalancerId;
@@ -340,13 +345,13 @@ public class DetachVServerGroupsRequest extends Request {
         /**
          * @return vServerGroupAttributes
          */
-        public java.util.List < VServerGroupAttributes> getVServerGroupAttributes() {
+        public java.util.List<VServerGroupAttributes> getVServerGroupAttributes() {
             return this.vServerGroupAttributes;
         }
 
         public static final class Builder {
             private String loadBalancerId; 
-            private java.util.List < VServerGroupAttributes> vServerGroupAttributes; 
+            private java.util.List<VServerGroupAttributes> vServerGroupAttributes; 
 
             /**
              * <p>The ID of the load balancer to which the vServer group belongs.</p>
@@ -365,7 +370,7 @@ public class DetachVServerGroupsRequest extends Request {
             /**
              * <p>The attributes of the backend vServer group.</p>
              */
-            public Builder vServerGroupAttributes(java.util.List < VServerGroupAttributes> vServerGroupAttributes) {
+            public Builder vServerGroupAttributes(java.util.List<VServerGroupAttributes> vServerGroupAttributes) {
                 this.vServerGroupAttributes = vServerGroupAttributes;
                 return this;
             }

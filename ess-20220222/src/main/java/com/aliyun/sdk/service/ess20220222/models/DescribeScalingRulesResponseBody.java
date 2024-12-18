@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ScalingRules")
-    private java.util.List < ScalingRules> scalingRules;
+    private java.util.List<ScalingRules> scalingRules;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
     /**
      * @return scalingRules
      */
-    public java.util.List < ScalingRules> getScalingRules() {
+    public java.util.List<ScalingRules> getScalingRules() {
         return this.scalingRules;
     }
 
@@ -82,7 +87,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < ScalingRules> scalingRules; 
+        private java.util.List<ScalingRules> scalingRules; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         /**
          * <p>The scaling rules.</p>
          */
-        public Builder scalingRules(java.util.List < ScalingRules> scalingRules) {
+        public Builder scalingRules(java.util.List<ScalingRules> scalingRules) {
             this.scalingRules = scalingRules;
             return this;
         }
@@ -310,7 +315,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         private String comparisonOperator;
 
         @com.aliyun.core.annotation.NameInMap("Dimensions")
-        private java.util.List < Dimensions> dimensions;
+        private java.util.List<Dimensions> dimensions;
 
         @com.aliyun.core.annotation.NameInMap("EvaluationCount")
         private Integer evaluationCount;
@@ -371,7 +376,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         /**
          * @return dimensions
          */
-        public java.util.List < Dimensions> getDimensions() {
+        public java.util.List<Dimensions> getDimensions() {
             return this.dimensions;
         }
 
@@ -414,7 +419,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private String alarmTaskId; 
             private String alarmTaskName; 
             private String comparisonOperator; 
-            private java.util.List < Dimensions> dimensions; 
+            private java.util.List<Dimensions> dimensions; 
             private Integer evaluationCount; 
             private String metricName; 
             private String metricType; 
@@ -465,7 +470,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             /**
              * <p>The dimensions of the event-triggered task that is associated with the scaling rule.</p>
              */
-            public Builder dimensions(java.util.List < Dimensions> dimensions) {
+            public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
                 return this;
             }
@@ -626,7 +631,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
      */
     public static class HybridMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dimensions")
-        private java.util.List < HybridMetricsDimensions> dimensions;
+        private java.util.List<HybridMetricsDimensions> dimensions;
 
         @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
@@ -659,7 +664,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         /**
          * @return dimensions
          */
-        public java.util.List < HybridMetricsDimensions> getDimensions() {
+        public java.util.List<HybridMetricsDimensions> getDimensions() {
             return this.dimensions;
         }
 
@@ -692,7 +697,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HybridMetricsDimensions> dimensions; 
+            private java.util.List<HybridMetricsDimensions> dimensions; 
             private String expression; 
             private String id; 
             private String metricName; 
@@ -701,7 +706,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             /**
              * <p>The dimensions of the event-triggered task that is associated with the scaling rule.</p>
              */
-            public Builder dimensions(java.util.List < HybridMetricsDimensions> dimensions) {
+            public Builder dimensions(java.util.List<HybridMetricsDimensions> dimensions) {
                 this.dimensions = dimensions;
                 return this;
             }
@@ -858,10 +863,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         private Integer adjustmentValue;
 
         @com.aliyun.core.annotation.NameInMap("AlarmDimensions")
-        private java.util.List < AlarmDimensions> alarmDimensions;
+        private java.util.List<AlarmDimensions> alarmDimensions;
 
         @com.aliyun.core.annotation.NameInMap("Alarms")
-        private java.util.List < Alarms> alarms;
+        private java.util.List<Alarms> alarms;
 
         @com.aliyun.core.annotation.NameInMap("Cooldown")
         private Integer cooldown;
@@ -873,7 +878,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         private Integer estimatedInstanceWarmup;
 
         @com.aliyun.core.annotation.NameInMap("HybridMetrics")
-        private java.util.List < HybridMetrics> hybridMetrics;
+        private java.util.List<HybridMetrics> hybridMetrics;
 
         @com.aliyun.core.annotation.NameInMap("HybridMonitorNamespace")
         private String hybridMonitorNamespace;
@@ -930,7 +935,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         private String scalingRuleType;
 
         @com.aliyun.core.annotation.NameInMap("StepAdjustments")
-        private java.util.List < StepAdjustments> stepAdjustments;
+        private java.util.List<StepAdjustments> stepAdjustments;
 
         @com.aliyun.core.annotation.NameInMap("TargetValue")
         private Float targetValue;
@@ -991,14 +996,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         /**
          * @return alarmDimensions
          */
-        public java.util.List < AlarmDimensions> getAlarmDimensions() {
+        public java.util.List<AlarmDimensions> getAlarmDimensions() {
             return this.alarmDimensions;
         }
 
         /**
          * @return alarms
          */
-        public java.util.List < Alarms> getAlarms() {
+        public java.util.List<Alarms> getAlarms() {
             return this.alarms;
         }
 
@@ -1026,7 +1031,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         /**
          * @return hybridMetrics
          */
-        public java.util.List < HybridMetrics> getHybridMetrics() {
+        public java.util.List<HybridMetrics> getHybridMetrics() {
             return this.hybridMetrics;
         }
 
@@ -1159,7 +1164,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         /**
          * @return stepAdjustments
          */
-        public java.util.List < StepAdjustments> getStepAdjustments() {
+        public java.util.List<StepAdjustments> getStepAdjustments() {
             return this.stepAdjustments;
         }
 
@@ -1173,12 +1178,12 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String adjustmentType; 
             private Integer adjustmentValue; 
-            private java.util.List < AlarmDimensions> alarmDimensions; 
-            private java.util.List < Alarms> alarms; 
+            private java.util.List<AlarmDimensions> alarmDimensions; 
+            private java.util.List<Alarms> alarms; 
             private Integer cooldown; 
             private Boolean disableScaleIn; 
             private Integer estimatedInstanceWarmup; 
-            private java.util.List < HybridMetrics> hybridMetrics; 
+            private java.util.List<HybridMetrics> hybridMetrics; 
             private String hybridMonitorNamespace; 
             private Integer initialMaxSize; 
             private Integer maxSize; 
@@ -1197,7 +1202,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private String scalingRuleId; 
             private String scalingRuleName; 
             private String scalingRuleType; 
-            private java.util.List < StepAdjustments> stepAdjustments; 
+            private java.util.List<StepAdjustments> stepAdjustments; 
             private Float targetValue; 
 
             /**
@@ -1230,7 +1235,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             /**
              * <p>The dimensions. This parameter is applicable to target tracking scaling rules. You can specify this parameter if your predefined metric requires extra dimensions. For example, if you predefine the LoadBalancerRealServerAverageQps metric, you must use this parameter to specify the rulePool dimension.</p>
              */
-            public Builder alarmDimensions(java.util.List < AlarmDimensions> alarmDimensions) {
+            public Builder alarmDimensions(java.util.List<AlarmDimensions> alarmDimensions) {
                 this.alarmDimensions = alarmDimensions;
                 return this;
             }
@@ -1238,7 +1243,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             /**
              * <p>The event-triggered tasks that are associated with the scaling rule. The value of this parameter is returned only if you set ShowAlarmRules to true. Otherwise, null is returned.</p>
              */
-            public Builder alarms(java.util.List < Alarms> alarms) {
+            public Builder alarms(java.util.List<Alarms> alarms) {
                 this.alarms = alarms;
                 return this;
             }
@@ -1283,7 +1288,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             /**
              * HybridMetrics.
              */
-            public Builder hybridMetrics(java.util.List < HybridMetrics> hybridMetrics) {
+            public Builder hybridMetrics(java.util.List<HybridMetrics> hybridMetrics) {
                 this.hybridMetrics = hybridMetrics;
                 return this;
             }
@@ -1505,7 +1510,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             /**
              * <p>The step adjustments of the step scaling rule.</p>
              */
-            public Builder stepAdjustments(java.util.List < StepAdjustments> stepAdjustments) {
+            public Builder stepAdjustments(java.util.List<StepAdjustments> stepAdjustments) {
                 this.stepAdjustments = stepAdjustments;
                 return this;
             }

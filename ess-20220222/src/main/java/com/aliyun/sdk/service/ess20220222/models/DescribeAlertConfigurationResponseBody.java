@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeAlertConfigurationResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ScaleStatuses")
-    private java.util.List < String > scaleStatuses;
+    private java.util.List<String> scaleStatuses;
 
     private DescribeAlertConfigurationResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeAlertConfigurationResponseBody extends TeaModel {
     /**
      * @return scaleStatuses
      */
-    public java.util.List < String > getScaleStatuses() {
+    public java.util.List<String> getScaleStatuses() {
         return this.scaleStatuses;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > scaleStatuses; 
+        private java.util.List<String> scaleStatuses; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class DescribeAlertConfigurationResponseBody extends TeaModel {
         /**
          * <p>The status of the scaling activities that trigger text message, internal message, or email-based notifications.</p>
          */
-        public Builder scaleStatuses(java.util.List < String > scaleStatuses) {
+        public Builder scaleStatuses(java.util.List<String> scaleStatuses) {
             this.scaleStatuses = scaleStatuses;
             return this;
         }

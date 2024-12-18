@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribePatternTypesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Architecture")
-    private java.util.List < String > architecture;
+    private java.util.List<String> architecture;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BurstablePerformance")
@@ -30,23 +35,23 @@ public class DescribePatternTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CoresList")
-    private java.util.List < Integer > coresList;
+    private java.util.List<Integer> coresList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CpuArchitectures")
-    private java.util.List < String > cpuArchitectures;
+    private java.util.List<String> cpuArchitectures;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExcludedInstanceType")
-    private java.util.List < String > excludedInstanceType;
+    private java.util.List<String> excludedInstanceType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GpuSpecs")
-    private java.util.List < String > gpuSpecs;
+    private java.util.List<String> gpuSpecs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceCategories")
-    private java.util.List < String > instanceCategories;
+    private java.util.List<String> instanceCategories;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
@@ -54,7 +59,7 @@ public class DescribePatternTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
-    private java.util.List < String > instanceTypeFamilies;
+    private java.util.List<String> instanceTypeFamilies;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxPrice")
@@ -78,7 +83,7 @@ public class DescribePatternTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemoryList")
-    private java.util.List < Float > memoryList;
+    private java.util.List<Float> memoryList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MinimumBaselineCredit")
@@ -114,7 +119,7 @@ public class DescribePatternTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PhysicalProcessorModels")
-    private java.util.List < String > physicalProcessorModels;
+    private java.util.List<String> physicalProcessorModels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -127,11 +132,11 @@ public class DescribePatternTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
-    private java.util.List < String > vSwitchId;
+    private java.util.List<String> vSwitchId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
-    private java.util.List < String > zoneId;
+    private java.util.List<String> zoneId;
 
     private DescribePatternTypesRequest(Builder builder) {
         super(builder);
@@ -183,7 +188,7 @@ public class DescribePatternTypesRequest extends Request {
     /**
      * @return architecture
      */
-    public java.util.List < String > getArchitecture() {
+    public java.util.List<String> getArchitecture() {
         return this.architecture;
     }
 
@@ -211,35 +216,35 @@ public class DescribePatternTypesRequest extends Request {
     /**
      * @return coresList
      */
-    public java.util.List < Integer > getCoresList() {
+    public java.util.List<Integer> getCoresList() {
         return this.coresList;
     }
 
     /**
      * @return cpuArchitectures
      */
-    public java.util.List < String > getCpuArchitectures() {
+    public java.util.List<String> getCpuArchitectures() {
         return this.cpuArchitectures;
     }
 
     /**
      * @return excludedInstanceType
      */
-    public java.util.List < String > getExcludedInstanceType() {
+    public java.util.List<String> getExcludedInstanceType() {
         return this.excludedInstanceType;
     }
 
     /**
      * @return gpuSpecs
      */
-    public java.util.List < String > getGpuSpecs() {
+    public java.util.List<String> getGpuSpecs() {
         return this.gpuSpecs;
     }
 
     /**
      * @return instanceCategories
      */
-    public java.util.List < String > getInstanceCategories() {
+    public java.util.List<String> getInstanceCategories() {
         return this.instanceCategories;
     }
 
@@ -253,7 +258,7 @@ public class DescribePatternTypesRequest extends Request {
     /**
      * @return instanceTypeFamilies
      */
-    public java.util.List < String > getInstanceTypeFamilies() {
+    public java.util.List<String> getInstanceTypeFamilies() {
         return this.instanceTypeFamilies;
     }
 
@@ -295,7 +300,7 @@ public class DescribePatternTypesRequest extends Request {
     /**
      * @return memoryList
      */
-    public java.util.List < Float > getMemoryList() {
+    public java.util.List<Float> getMemoryList() {
         return this.memoryList;
     }
 
@@ -358,7 +363,7 @@ public class DescribePatternTypesRequest extends Request {
     /**
      * @return physicalProcessorModels
      */
-    public java.util.List < String > getPhysicalProcessorModels() {
+    public java.util.List<String> getPhysicalProcessorModels() {
         return this.physicalProcessorModels;
     }
 
@@ -379,35 +384,35 @@ public class DescribePatternTypesRequest extends Request {
     /**
      * @return vSwitchId
      */
-    public java.util.List < String > getVSwitchId() {
+    public java.util.List<String> getVSwitchId() {
         return this.vSwitchId;
     }
 
     /**
      * @return zoneId
      */
-    public java.util.List < String > getZoneId() {
+    public java.util.List<String> getZoneId() {
         return this.zoneId;
     }
 
     public static final class Builder extends Request.Builder<DescribePatternTypesRequest, Builder> {
-        private java.util.List < String > architecture; 
+        private java.util.List<String> architecture; 
         private String burstablePerformance; 
         private Long channelId; 
         private Integer cores; 
-        private java.util.List < Integer > coresList; 
-        private java.util.List < String > cpuArchitectures; 
-        private java.util.List < String > excludedInstanceType; 
-        private java.util.List < String > gpuSpecs; 
-        private java.util.List < String > instanceCategories; 
+        private java.util.List<Integer> coresList; 
+        private java.util.List<String> cpuArchitectures; 
+        private java.util.List<String> excludedInstanceType; 
+        private java.util.List<String> gpuSpecs; 
+        private java.util.List<String> instanceCategories; 
         private String instanceFamilyLevel; 
-        private java.util.List < String > instanceTypeFamilies; 
+        private java.util.List<String> instanceTypeFamilies; 
         private Float maxPrice; 
         private Integer maximumCpuCoreCount; 
         private Integer maximumGpuAmount; 
         private Float maximumMemorySize; 
         private Float memory; 
-        private java.util.List < Float > memoryList; 
+        private java.util.List<Float> memoryList; 
         private Integer minimumBaselineCredit; 
         private Integer minimumCpuCoreCount; 
         private Integer minimumEniIpv6AddressQuantity; 
@@ -416,11 +421,11 @@ public class DescribePatternTypesRequest extends Request {
         private Integer minimumGpuAmount; 
         private Integer minimumInitialCredit; 
         private Float minimumMemorySize; 
-        private java.util.List < String > physicalProcessorModels; 
+        private java.util.List<String> physicalProcessorModels; 
         private String regionId; 
         private String spotStrategy; 
-        private java.util.List < String > vSwitchId; 
-        private java.util.List < String > zoneId; 
+        private java.util.List<String> vSwitchId; 
+        private java.util.List<String> zoneId; 
 
         private Builder() {
             super();
@@ -461,17 +466,16 @@ public class DescribePatternTypesRequest extends Request {
         } 
 
         /**
-         * <p>The architectures of instance types. Valid values:</p>
+         * <p>The architecture types of the instance types. Valid values:</p>
          * <ul>
-         * <li>X86: x86</li>
-         * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</li>
-         * <li>BareMetal: ECS Bare Metal Instance</li>
-         * <li>Arm: Arm</li>
-         * <li>SuperComputeCluster: Super Computing Cluster</li>
+         * <li>X86: x86 architecture.</li>
+         * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</li>
+         * <li>BareMetal: ECS Bare Metal Instance.</li>
+         * <li>Arm: Arm.</li>
          * </ul>
          * <p>By default, all values are selected.</p>
          */
-        public Builder architecture(java.util.List < String > architecture) {
+        public Builder architecture(java.util.List<String> architecture) {
             this.putQueryParameter("Architecture", architecture);
             this.architecture = architecture;
             return this;
@@ -522,7 +526,7 @@ public class DescribePatternTypesRequest extends Request {
         /**
          * <p>The number of vCPUs that you want to assign to the instance type. You can specify multiple vCPUs.</p>
          */
-        public Builder coresList(java.util.List < Integer > coresList) {
+        public Builder coresList(java.util.List<Integer> coresList) {
             this.putQueryParameter("CoresList", coresList);
             this.coresList = coresList;
             return this;
@@ -538,7 +542,7 @@ public class DescribePatternTypesRequest extends Request {
          * <li>Arm</li>
          * </ul>
          */
-        public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
+        public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
             this.putQueryParameter("CpuArchitectures", cpuArchitectures);
             this.cpuArchitectures = cpuArchitectures;
             return this;
@@ -547,7 +551,7 @@ public class DescribePatternTypesRequest extends Request {
         /**
          * ExcludedInstanceType.
          */
-        public Builder excludedInstanceType(java.util.List < String > excludedInstanceType) {
+        public Builder excludedInstanceType(java.util.List<String> excludedInstanceType) {
             this.putQueryParameter("ExcludedInstanceType", excludedInstanceType);
             this.excludedInstanceType = excludedInstanceType;
             return this;
@@ -556,34 +560,33 @@ public class DescribePatternTypesRequest extends Request {
         /**
          * <p>The GPU models.</p>
          */
-        public Builder gpuSpecs(java.util.List < String > gpuSpecs) {
+        public Builder gpuSpecs(java.util.List<String> gpuSpecs) {
             this.putQueryParameter("GpuSpecs", gpuSpecs);
             this.gpuSpecs = gpuSpecs;
             return this;
         }
 
         /**
-         * <p>The categories of the instance types. Valid values:</p>
+         * <p>The classifications of the instance types. Valid values:</p>
          * <ul>
-         * <li>General-purpose</li>
-         * <li>Compute-optimized</li>
-         * <li>Memory-optimized</li>
-         * <li>Big data</li>
-         * <li>Local SSDs</li>
-         * <li>High Clock Speed</li>
-         * <li>Enhanced</li>
-         * <li>Shared</li>
-         * <li>Compute-optimized with GPU</li>
-         * <li>Visual Compute-optimized</li>
-         * <li>Heterogeneous Service</li>
-         * <li>Compute-optimized with FPGA</li>
-         * <li>Compute-optimized with NPU</li>
-         * <li>ECS Bare Metal</li>
-         * <li>Super Computing Cluster</li>
-         * <li>High Performance Compute</li>
+         * <li>General-purpose: general-purpose instance type.</li>
+         * <li>Compute-optimized: compute-optimized instance type.</li>
+         * <li>Memory-optimized: memory-optimized instance type.</li>
+         * <li>Big data: big data instance type.</li>
+         * <li>Local SSDs: instance type with local SSDs.</li>
+         * <li>High Clock Speed: instance type with high clock speeds.</li>
+         * <li>Enhanced: enhanced instance type.</li>
+         * <li>Shared: shared instance type.</li>
+         * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</li>
+         * <li>Visual Compute-optimized: visual compute-optimized instance type.</li>
+         * <li>Heterogeneous Service: heterogeneous service instance type.</li>
+         * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</li>
+         * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</li>
+         * <li>ECS Bare Metal: ECS Bare Metal Instance type.</li>
+         * <li>High Performance Compute: HPC-optimized instance type.</li>
          * </ul>
          */
-        public Builder instanceCategories(java.util.List < String > instanceCategories) {
+        public Builder instanceCategories(java.util.List<String> instanceCategories) {
             this.putQueryParameter("InstanceCategories", instanceCategories);
             this.instanceCategories = instanceCategories;
             return this;
@@ -609,7 +612,7 @@ public class DescribePatternTypesRequest extends Request {
         /**
          * <p>The instance families that you want to query. You can query 1 to 10 instance families in each call.</p>
          */
-        public Builder instanceTypeFamilies(java.util.List < String > instanceTypeFamilies) {
+        public Builder instanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
             this.putQueryParameter("InstanceTypeFamilies", instanceTypeFamilies);
             this.instanceTypeFamilies = instanceTypeFamilies;
             return this;
@@ -678,7 +681,7 @@ public class DescribePatternTypesRequest extends Request {
         /**
          * <p>The memory size that you want to assign to the instance type. Unit: GiB. You can specify multiple memory sizes.</p>
          */
-        public Builder memoryList(java.util.List < Float > memoryList) {
+        public Builder memoryList(java.util.List<Float> memoryList) {
             this.putQueryParameter("MemoryList", memoryList);
             this.memoryList = memoryList;
             return this;
@@ -783,7 +786,7 @@ public class DescribePatternTypesRequest extends Request {
         /**
          * <p>The processor models of the instance types. You can specify 1 to 10 processor models.</p>
          */
-        public Builder physicalProcessorModels(java.util.List < String > physicalProcessorModels) {
+        public Builder physicalProcessorModels(java.util.List<String> physicalProcessorModels) {
             this.putQueryParameter("PhysicalProcessorModels", physicalProcessorModels);
             this.physicalProcessorModels = physicalProcessorModels;
             return this;
@@ -823,16 +826,16 @@ public class DescribePatternTypesRequest extends Request {
         /**
          * <p>The IDs of the vSwitches.</p>
          */
-        public Builder vSwitchId(java.util.List < String > vSwitchId) {
+        public Builder vSwitchId(java.util.List<String> vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
             return this;
         }
 
         /**
-         * ZoneId.
+         * <p>The zone IDs. If you pass vSwitch IDs to the system, this parameter does not take effect.</p>
          */
-        public Builder zoneId(java.util.List < String > zoneId) {
+        public Builder zoneId(java.util.List<String> zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
             this.zoneId = zoneId;
             return this;

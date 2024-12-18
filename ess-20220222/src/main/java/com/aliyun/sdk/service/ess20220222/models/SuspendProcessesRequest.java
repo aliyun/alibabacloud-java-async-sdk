@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class SuspendProcessesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Processes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > processes;
+    private java.util.List<String> processes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -78,7 +83,7 @@ public class SuspendProcessesRequest extends Request {
     /**
      * @return processes
      */
-    public java.util.List < String > getProcesses() {
+    public java.util.List<String> getProcesses() {
         return this.processes;
     }
 
@@ -106,7 +111,7 @@ public class SuspendProcessesRequest extends Request {
     public static final class Builder extends Request.Builder<SuspendProcessesRequest, Builder> {
         private String clientToken; 
         private Long ownerId; 
-        private java.util.List < String > processes; 
+        private java.util.List<String> processes; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
@@ -147,18 +152,18 @@ public class SuspendProcessesRequest extends Request {
         }
 
         /**
-         * <p>The types of the processes that you want to suspend. Valid values:</p>
+         * <p>The types of processes that you want to suspend. Valid values:</p>
          * <ul>
-         * <li>scalein: the scale-in process.</li>
-         * <li>scaleout: the scale-out process.</li>
-         * <li>healthcheck: the health check process.</li>
-         * <li>alarmnotification: the process of executing an event-triggered task.</li>
-         * <li>scheduledaction: the process of executing a scheduled task.</li>
+         * <li>ScaleIn: the scale-in process.</li>
+         * <li>ScaleOut: the scale-out process.</li>
+         * <li>HealthCheck: the health check process.</li>
+         * <li>AlarmNotification: the process of executing an event-triggered task.</li>
+         * <li>ScheduledAction: the process of executing a scheduled task.</li>
          * </ul>
          * <p>Presently, Auto Scaling supports suspending the five mentioned process types. In cases where more than five types are specified, Auto Scaling will automatically disregard duplicates and proceed with suspending the unique process types.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder processes(java.util.List < String > processes) {
+        public Builder processes(java.util.List<String> processes) {
             this.putQueryParameter("Processes", processes);
             this.processes = processes;
             return this;

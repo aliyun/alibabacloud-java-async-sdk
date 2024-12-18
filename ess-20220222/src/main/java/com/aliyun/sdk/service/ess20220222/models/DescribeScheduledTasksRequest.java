@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -56,15 +61,15 @@ public class DescribeScheduledTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScheduledActions")
-    private java.util.List < String > scheduledActions;
+    private java.util.List<String> scheduledActions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScheduledTaskIds")
-    private java.util.List < String > scheduledTaskIds;
+    private java.util.List<String> scheduledTaskIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScheduledTaskNames")
-    private java.util.List < String > scheduledTaskNames;
+    private java.util.List<String> scheduledTaskNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskEnabled")
@@ -179,21 +184,21 @@ public class DescribeScheduledTasksRequest extends Request {
     /**
      * @return scheduledActions
      */
-    public java.util.List < String > getScheduledActions() {
+    public java.util.List<String> getScheduledActions() {
         return this.scheduledActions;
     }
 
     /**
      * @return scheduledTaskIds
      */
-    public java.util.List < String > getScheduledTaskIds() {
+    public java.util.List<String> getScheduledTaskIds() {
         return this.scheduledTaskIds;
     }
 
     /**
      * @return scheduledTaskNames
      */
-    public java.util.List < String > getScheduledTaskNames() {
+    public java.util.List<String> getScheduledTaskNames() {
         return this.scheduledTaskNames;
     }
 
@@ -222,9 +227,9 @@ public class DescribeScheduledTasksRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scalingGroupId; 
-        private java.util.List < String > scheduledActions; 
-        private java.util.List < String > scheduledTaskIds; 
-        private java.util.List < String > scheduledTaskNames; 
+        private java.util.List<String> scheduledActions; 
+        private java.util.List<String> scheduledTaskIds; 
+        private java.util.List<String> scheduledTaskNames; 
         private Boolean taskEnabled; 
         private String taskName; 
 
@@ -296,7 +301,16 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * RecurrenceType.
+         * <p>The interval at which scheduled task N is repeatedly executed. Valid values:</p>
+         * <ul>
+         * <li>Daily: Scheduled task N is executed once every specified number of days.</li>
+         * <li>Weekly: Scheduled task N is executed on each specified day of a week.</li>
+         * <li>Monthly: Scheduled task N is executed on each specified day of a month.</li>
+         * <li>Cron: Scheduled task N is executed based on the specified Cron expression.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Weekly</p>
          */
         public Builder recurrenceType(String recurrenceType) {
             this.putQueryParameter("RecurrenceType", recurrenceType);
@@ -305,7 +319,11 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * RecurrenceValue.
+         * <p>The number of times scheduled task N is repeatedly executed.</p>
+         * <p>You can specify this parameter only if you set RecurrenceType to Weekly. Separate multiple values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder recurrenceValue(String recurrenceValue) {
             this.putQueryParameter("RecurrenceValue", recurrenceValue);
@@ -359,7 +377,7 @@ public class DescribeScheduledTasksRequest extends Request {
         /**
          * <p>The scaling rules of the scheduled tasks. Once the scheduled tasks are triggered, the scaling rules are executed.</p>
          */
-        public Builder scheduledActions(java.util.List < String > scheduledActions) {
+        public Builder scheduledActions(java.util.List<String> scheduledActions) {
             this.putQueryParameter("ScheduledActions", scheduledActions);
             this.scheduledActions = scheduledActions;
             return this;
@@ -368,7 +386,7 @@ public class DescribeScheduledTasksRequest extends Request {
         /**
          * <p>The IDs of the scheduled tasks that you want to query.</p>
          */
-        public Builder scheduledTaskIds(java.util.List < String > scheduledTaskIds) {
+        public Builder scheduledTaskIds(java.util.List<String> scheduledTaskIds) {
             this.putQueryParameter("ScheduledTaskIds", scheduledTaskIds);
             this.scheduledTaskIds = scheduledTaskIds;
             return this;
@@ -377,14 +395,21 @@ public class DescribeScheduledTasksRequest extends Request {
         /**
          * <p>The names of the scheduled tasks that you want to query.</p>
          */
-        public Builder scheduledTaskNames(java.util.List < String > scheduledTaskNames) {
+        public Builder scheduledTaskNames(java.util.List<String> scheduledTaskNames) {
             this.putQueryParameter("ScheduledTaskNames", scheduledTaskNames);
             this.scheduledTaskNames = scheduledTaskNames;
             return this;
         }
 
         /**
-         * TaskEnabled.
+         * <p>Specifies whether scheduled task N is enabled.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder taskEnabled(Boolean taskEnabled) {
             this.putQueryParameter("TaskEnabled", taskEnabled);
@@ -393,7 +418,10 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The name of scheduled task N. Fuzzy search based on keywords is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scheduled****</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

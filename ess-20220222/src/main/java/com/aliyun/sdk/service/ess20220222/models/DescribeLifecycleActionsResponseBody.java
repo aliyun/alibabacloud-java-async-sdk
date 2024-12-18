@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeLifecycleActionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LifecycleActions")
-    private java.util.List < LifecycleActions> lifecycleActions;
+    private java.util.List<LifecycleActions> lifecycleActions;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
     /**
      * @return lifecycleActions
      */
-    public java.util.List < LifecycleActions> getLifecycleActions() {
+    public java.util.List<LifecycleActions> getLifecycleActions() {
         return this.lifecycleActions;
     }
 
@@ -79,7 +84,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LifecycleActions> lifecycleActions; 
+        private java.util.List<LifecycleActions> lifecycleActions; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         /**
          * <p>The actions of the lifecycle hook.</p>
          */
-        public Builder lifecycleActions(java.util.List < LifecycleActions> lifecycleActions) {
+        public Builder lifecycleActions(java.util.List<LifecycleActions> lifecycleActions) {
             this.lifecycleActions = lifecycleActions;
             return this;
         }
@@ -151,7 +156,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
      */
     public static class LifecycleActions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceIds")
-        private java.util.List < String > instanceIds;
+        private java.util.List<String> instanceIds;
 
         @com.aliyun.core.annotation.NameInMap("LifecycleActionResult")
         private String lifecycleActionResult;
@@ -184,7 +189,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         /**
          * @return instanceIds
          */
-        public java.util.List < String > getInstanceIds() {
+        public java.util.List<String> getInstanceIds() {
             return this.instanceIds;
         }
 
@@ -217,7 +222,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceIds; 
+            private java.util.List<String> instanceIds; 
             private String lifecycleActionResult; 
             private String lifecycleActionStatus; 
             private String lifecycleActionToken; 
@@ -226,7 +231,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the ECS instances on which the lifecycle hook takes effect</p>
              */
-            public Builder instanceIds(java.util.List < String > instanceIds) {
+            public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
                 return this;
             }

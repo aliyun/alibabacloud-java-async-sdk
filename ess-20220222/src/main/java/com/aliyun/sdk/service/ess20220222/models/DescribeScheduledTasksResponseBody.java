@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ScheduledTasks")
-    private java.util.List < ScheduledTasks> scheduledTasks;
+    private java.util.List<ScheduledTasks> scheduledTasks;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
     /**
      * @return scheduledTasks
      */
-    public java.util.List < ScheduledTasks> getScheduledTasks() {
+    public java.util.List<ScheduledTasks> getScheduledTasks() {
         return this.scheduledTasks;
     }
 
@@ -82,7 +87,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < ScheduledTasks> scheduledTasks; 
+        private java.util.List<ScheduledTasks> scheduledTasks; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         /**
          * <p>The information collection of the scheduled tasks.</p>
          */
-        public Builder scheduledTasks(java.util.List < ScheduledTasks> scheduledTasks) {
+        public Builder scheduledTasks(java.util.List<ScheduledTasks> scheduledTasks) {
             this.scheduledTasks = scheduledTasks;
             return this;
         }

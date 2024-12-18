@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DetachDBInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstances")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > DBInstances;
+    private java.util.List<String> DBInstances;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForceDetach")
@@ -81,7 +86,7 @@ public class DetachDBInstancesRequest extends Request {
     /**
      * @return DBInstances
      */
-    public java.util.List < String > getDBInstances() {
+    public java.util.List<String> getDBInstances() {
         return this.DBInstances;
     }
 
@@ -129,7 +134,7 @@ public class DetachDBInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DetachDBInstancesRequest, Builder> {
         private String clientToken; 
-        private java.util.List < String > DBInstances; 
+        private java.util.List<String> DBInstances; 
         private Boolean forceDetach; 
         private Long ownerId; 
         private String regionId; 
@@ -154,8 +159,8 @@ public class DetachDBInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
-         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -170,7 +175,7 @@ public class DetachDBInstancesRequest extends Request {
          * <p>The IDs of the ApsaraDB RDS instances. You can specify up to five ApsaraDB RDS instances.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder DBInstances(java.util.List < String > DBInstances) {
+        public Builder DBInstances(java.util.List<String> DBInstances) {
             this.putQueryParameter("DBInstances", DBInstances);
             this.DBInstances = DBInstances;
             return this;
@@ -215,7 +220,11 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>This parameter takes effect only for databases whose AttachMode is set to SecurityGroup. If you set this parameter to true, Auto Scaling removes the security group ID of the active scaling configuration from the security group whitelist of the database that you want to detach from the scaling group.</p>
+         * <p>Specifies whether to remove the security group. This parameter takes effect only if you set <code>AttachMode</code> to <code>SecurityGroup</code>. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>

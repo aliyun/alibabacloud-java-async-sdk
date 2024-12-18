@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class EnableScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
@@ -26,7 +31,7 @@ public class EnableScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateOverrides")
-    private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides;
+    private java.util.List<LaunchTemplateOverrides> launchTemplateOverrides;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
@@ -34,7 +39,7 @@ public class EnableScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerWeights")
-    private java.util.List < Integer > loadBalancerWeights;
+    private java.util.List<Integer> loadBalancerWeights;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -100,7 +105,7 @@ public class EnableScalingGroupRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -114,7 +119,7 @@ public class EnableScalingGroupRequest extends Request {
     /**
      * @return launchTemplateOverrides
      */
-    public java.util.List < LaunchTemplateOverrides> getLaunchTemplateOverrides() {
+    public java.util.List<LaunchTemplateOverrides> getLaunchTemplateOverrides() {
         return this.launchTemplateOverrides;
     }
 
@@ -128,7 +133,7 @@ public class EnableScalingGroupRequest extends Request {
     /**
      * @return loadBalancerWeights
      */
-    public java.util.List < Integer > getLoadBalancerWeights() {
+    public java.util.List<Integer> getLoadBalancerWeights() {
         return this.loadBalancerWeights;
     }
 
@@ -176,11 +181,11 @@ public class EnableScalingGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<EnableScalingGroupRequest, Builder> {
         private String activeScalingConfigurationId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String launchTemplateId; 
-        private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides; 
+        private java.util.List<LaunchTemplateOverrides> launchTemplateOverrides; 
         private String launchTemplateVersion; 
-        private java.util.List < Integer > loadBalancerWeights; 
+        private java.util.List<Integer> loadBalancerWeights; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -232,7 +237,7 @@ public class EnableScalingGroupRequest extends Request {
          * <li>If you do not specify VswitchID for the scaling group, the instances must use the classic network.</li>
          * </ul>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
@@ -253,7 +258,7 @@ public class EnableScalingGroupRequest extends Request {
         /**
          * <p>The information about the instance types that you want to extend in the launch template.</p>
          */
-        public Builder launchTemplateOverrides(java.util.List < LaunchTemplateOverrides> launchTemplateOverrides) {
+        public Builder launchTemplateOverrides(java.util.List<LaunchTemplateOverrides> launchTemplateOverrides) {
             this.putQueryParameter("LaunchTemplateOverrides", launchTemplateOverrides);
             this.launchTemplateOverrides = launchTemplateOverrides;
             return this;
@@ -280,7 +285,7 @@ public class EnableScalingGroupRequest extends Request {
          * <p>The weights of ECS instances or elastic container instances as backend servers.</p>
          * <p>Default value: 50.</p>
          */
-        public Builder loadBalancerWeights(java.util.List < Integer > loadBalancerWeights) {
+        public Builder loadBalancerWeights(java.util.List<Integer> loadBalancerWeights) {
             this.putQueryParameter("LoadBalancerWeights", loadBalancerWeights);
             this.loadBalancerWeights = loadBalancerWeights;
             return this;

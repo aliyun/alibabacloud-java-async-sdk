@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAlarmsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlarmList")
-    private java.util.List < AlarmList> alarmList;
+    private java.util.List<AlarmList> alarmList;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
     /**
      * @return alarmList
      */
-    public java.util.List < AlarmList> getAlarmList() {
+    public java.util.List<AlarmList> getAlarmList() {
         return this.alarmList;
     }
 
@@ -79,7 +84,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AlarmList> alarmList; 
+        private java.util.List<AlarmList> alarmList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         /**
          * <p>The event-triggered tasks.</p>
          */
-        public Builder alarmList(java.util.List < AlarmList> alarmList) {
+        public Builder alarmList(java.util.List<AlarmList> alarmList) {
             this.alarmList = alarmList;
             return this;
         }
@@ -538,7 +543,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
      */
     public static class HybridMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dimensions")
-        private java.util.List < HybridMetricsDimensions> dimensions;
+        private java.util.List<HybridMetricsDimensions> dimensions;
 
         @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
@@ -571,7 +576,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         /**
          * @return dimensions
          */
-        public java.util.List < HybridMetricsDimensions> getDimensions() {
+        public java.util.List<HybridMetricsDimensions> getDimensions() {
             return this.dimensions;
         }
 
@@ -604,7 +609,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HybridMetricsDimensions> dimensions; 
+            private java.util.List<HybridMetricsDimensions> dimensions; 
             private String expression; 
             private String id; 
             private String metricName; 
@@ -613,7 +618,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             /**
              * Dimensions.
              */
-            public Builder dimensions(java.util.List < HybridMetricsDimensions> dimensions) {
+            public Builder dimensions(java.util.List<HybridMetricsDimensions> dimensions) {
                 this.dimensions = dimensions;
                 return this;
             }
@@ -696,7 +701,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
      */
     public static class AlarmList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmActions")
-        private java.util.List < String > alarmActions;
+        private java.util.List<String> alarmActions;
 
         @com.aliyun.core.annotation.NameInMap("AlarmTaskId")
         private String alarmTaskId;
@@ -708,7 +713,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Dimensions")
-        private java.util.List < Dimensions> dimensions;
+        private java.util.List<Dimensions> dimensions;
 
         @com.aliyun.core.annotation.NameInMap("Effective")
         private String effective;
@@ -720,13 +725,13 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         private Integer evaluationCount;
 
         @com.aliyun.core.annotation.NameInMap("Expressions")
-        private java.util.List < Expressions> expressions;
+        private java.util.List<Expressions> expressions;
 
         @com.aliyun.core.annotation.NameInMap("ExpressionsLogicOperator")
         private String expressionsLogicOperator;
 
         @com.aliyun.core.annotation.NameInMap("HybridMetrics")
-        private java.util.List < HybridMetrics> hybridMetrics;
+        private java.util.List<HybridMetrics> hybridMetrics;
 
         @com.aliyun.core.annotation.NameInMap("HybridMonitorNamespace")
         private String hybridMonitorNamespace;
@@ -793,7 +798,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         /**
          * @return alarmActions
          */
-        public java.util.List < String > getAlarmActions() {
+        public java.util.List<String> getAlarmActions() {
             return this.alarmActions;
         }
 
@@ -821,7 +826,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         /**
          * @return dimensions
          */
-        public java.util.List < Dimensions> getDimensions() {
+        public java.util.List<Dimensions> getDimensions() {
             return this.dimensions;
         }
 
@@ -849,7 +854,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         /**
          * @return expressions
          */
-        public java.util.List < Expressions> getExpressions() {
+        public java.util.List<Expressions> getExpressions() {
             return this.expressions;
         }
 
@@ -863,7 +868,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         /**
          * @return hybridMetrics
          */
-        public java.util.List < HybridMetrics> getHybridMetrics() {
+        public java.util.List<HybridMetrics> getHybridMetrics() {
             return this.hybridMetrics;
         }
 
@@ -938,17 +943,17 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > alarmActions; 
+            private java.util.List<String> alarmActions; 
             private String alarmTaskId; 
             private String comparisonOperator; 
             private String description; 
-            private java.util.List < Dimensions> dimensions; 
+            private java.util.List<Dimensions> dimensions; 
             private String effective; 
             private Boolean enable; 
             private Integer evaluationCount; 
-            private java.util.List < Expressions> expressions; 
+            private java.util.List<Expressions> expressions; 
             private String expressionsLogicOperator; 
-            private java.util.List < HybridMetrics> hybridMetrics; 
+            private java.util.List<HybridMetrics> hybridMetrics; 
             private String hybridMonitorNamespace; 
             private String metricName; 
             private String metricType; 
@@ -963,7 +968,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             /**
              * <p>The unique identifiers of the scaling rules that are associated with the event-triggered task.</p>
              */
-            public Builder alarmActions(java.util.List < String > alarmActions) {
+            public Builder alarmActions(java.util.List<String> alarmActions) {
                 this.alarmActions = alarmActions;
                 return this;
             }
@@ -1012,7 +1017,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             /**
              * <p>The metric dimensions.</p>
              */
-            public Builder dimensions(java.util.List < Dimensions> dimensions) {
+            public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
                 return this;
             }
@@ -1057,7 +1062,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             /**
              * <p>The alert conditions of the multi-metric alert rule.</p>
              */
-            public Builder expressions(java.util.List < Expressions> expressions) {
+            public Builder expressions(java.util.List<Expressions> expressions) {
                 this.expressions = expressions;
                 return this;
             }
@@ -1080,7 +1085,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             /**
              * HybridMetrics.
              */
-            public Builder hybridMetrics(java.util.List < HybridMetrics> hybridMetrics) {
+            public Builder hybridMetrics(java.util.List<HybridMetrics> hybridMetrics) {
                 this.hybridMetrics = hybridMetrics;
                 return this;
             }

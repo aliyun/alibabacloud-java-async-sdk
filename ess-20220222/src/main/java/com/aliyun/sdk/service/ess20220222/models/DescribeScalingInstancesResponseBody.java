@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ScalingInstances")
-    private java.util.List < ScalingInstances> scalingInstances;
+    private java.util.List<ScalingInstances> scalingInstances;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -71,7 +76,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
     /**
      * @return scalingInstances
      */
-    public java.util.List < ScalingInstances> getScalingInstances() {
+    public java.util.List<ScalingInstances> getScalingInstances() {
         return this.scalingInstances;
     }
 
@@ -93,7 +98,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < ScalingInstances> scalingInstances; 
+        private java.util.List<ScalingInstances> scalingInstances; 
         private Integer totalCount; 
         private Integer totalSpotCount; 
 
@@ -133,7 +138,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         /**
          * <p>The ECS instances.</p>
          */
-        public Builder scalingInstances(java.util.List < ScalingInstances> scalingInstances) {
+        public Builder scalingInstances(java.util.List<ScalingInstances> scalingInstances) {
             this.scalingInstances = scalingInstances;
             return this;
         }

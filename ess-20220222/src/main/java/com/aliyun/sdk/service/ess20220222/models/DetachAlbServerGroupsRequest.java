@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DetachAlbServerGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlbServerGroups")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AlbServerGroups> albServerGroups;
+    private java.util.List<AlbServerGroups> albServerGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -70,7 +75,7 @@ public class DetachAlbServerGroupsRequest extends Request {
     /**
      * @return albServerGroups
      */
-    public java.util.List < AlbServerGroups> getAlbServerGroups() {
+    public java.util.List<AlbServerGroups> getAlbServerGroups() {
         return this.albServerGroups;
     }
 
@@ -117,7 +122,7 @@ public class DetachAlbServerGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DetachAlbServerGroupsRequest, Builder> {
-        private java.util.List < AlbServerGroups> albServerGroups; 
+        private java.util.List<AlbServerGroups> albServerGroups; 
         private String clientToken; 
         private Boolean forceDetach; 
         private Long ownerId; 
@@ -144,7 +149,7 @@ public class DetachAlbServerGroupsRequest extends Request {
          * <p>Details of the ALB server groups.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder albServerGroups(java.util.List < AlbServerGroups> albServerGroups) {
+        public Builder albServerGroups(java.util.List<AlbServerGroups> albServerGroups) {
             this.putQueryParameter("AlbServerGroups", albServerGroups);
             this.albServerGroups = albServerGroups;
             return this;
@@ -164,7 +169,7 @@ public class DetachAlbServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to remove the existing ECS instances from the ALB server group. Valid values:</p>
+         * <p>Specifies whether to remove the existing Elastic Compute Service (ECS) instances from the Application Load Balancer (ALB) server group marked for detachment. Valid values:</p>
          * <ul>
          * <li>true: removes the existing ECS instances from the ALB server group and returns the value of <code>ScalingActivityId</code>. You can query the value of ScalingActivityId to check whether the existing ECS instances are removed from the ALB server group.</li>
          * <li>false: does not remove the existing ECS instances from the ALB server group.</li>

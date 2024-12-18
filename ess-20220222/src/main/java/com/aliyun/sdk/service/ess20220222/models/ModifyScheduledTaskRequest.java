@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -58,6 +63,10 @@ public class ModifyScheduledTaskRequest extends Request {
     private String recurrenceValue;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -99,6 +108,7 @@ public class ModifyScheduledTaskRequest extends Request {
         this.recurrenceEndTime = builder.recurrenceEndTime;
         this.recurrenceType = builder.recurrenceType;
         this.recurrenceValue = builder.recurrenceValue;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scalingGroupId = builder.scalingGroupId;
@@ -199,6 +209,13 @@ public class ModifyScheduledTaskRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -259,6 +276,7 @@ public class ModifyScheduledTaskRequest extends Request {
         private String recurrenceEndTime; 
         private String recurrenceType; 
         private String recurrenceValue; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scalingGroupId; 
@@ -284,6 +302,7 @@ public class ModifyScheduledTaskRequest extends Request {
             this.recurrenceEndTime = request.recurrenceEndTime;
             this.recurrenceType = request.recurrenceType;
             this.recurrenceValue = request.recurrenceValue;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.scalingGroupId = request.scalingGroupId;
@@ -438,6 +457,15 @@ public class ModifyScheduledTaskRequest extends Request {
         public Builder recurrenceValue(String recurrenceValue) {
             this.putQueryParameter("RecurrenceValue", recurrenceValue);
             this.recurrenceValue = recurrenceValue;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

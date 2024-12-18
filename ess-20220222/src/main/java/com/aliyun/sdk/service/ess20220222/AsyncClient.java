@@ -350,10 +350,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can enable a CloudMonitor system event, Message Service (MNS) queue, or MNS topic to receive notifications. When a scaling event of the specified type or resource change occurs in your scaling group, Auto Scaling automatically sends notifications to CloudMonitor or MNS.</p>
+     * <p>  You can specify CloudMonitor system events, Simple Message Queue (SMQ, formerly MNS) topics, or SMQ queues as notification recipients. When a scaling event of the specified type or resource change occurs in your scaling group, Auto Scaling automatically sends notifications to CloudMonitor or SMQ.</p>
      * <ul>
      * <li>You cannot specify the same recipient for notifications of different event types in a scaling group.
-     * For example, you cannot enable the same CloudMonitor system event, MNS topic, or MNS queue to receive notifications of different event types in a scaling group.</li>
+     * For example, you cannot enable the same CloudMonitor system event, SMQ topic, or SMQ queue to receive notifications of different event types in a scaling group.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateNotificationConfiguration  CreateNotificationConfigurationRequest
@@ -1043,8 +1043,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only when the desired ECS instance enters a Pending state.\
-     * An ECS instance can stay in a Pending state for up to six hours. Each time an ECS instance enters a Pending state, you can extend the time window during which the ECS instance stays in a Pending state up to 20 times.</p>
+     * <p>You can call this operation only to extend the time window during which Elastic Compute Service (ECS) instances stay in a Pending state.
+     * An ECS instance can stay in a Pending state for up to six hours. Each time an ECS instance enters a Pending state, you can extend the time window during which the ECS instance stays in the Pending state up to 20 times.</p>
      * 
      * @param request the request parameters of RecordLifecycleActionHeartbeat  RecordLifecycleActionHeartbeatRequest
      * @return RecordLifecycleActionHeartbeatResponse
@@ -1139,9 +1139,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>  Only one instance refresh task can be executed at a time in a scaling group.</p>
      * <ul>
-     * <li>Instance refresh tasks are currently supported only by scaling groups of the Elastic Compute Service (ECS) type and using <strong>the priority policy</strong>. Scaling groups that use the number of vCPUs as the method to calculate the group capacity or scaling groups whose instance reclaim mode is <strong>Economical Mode</strong> or <strong>Forcibly Recycle</strong> do not support instance refresh tasks.</li>
-     * <li>During the execution of an instance refresh task, scaling events can be complete as expected. Take note that instances that are scaled out use the desired configurations provided by the instance refresh task.</li>
-     * <li>Instance refresh tasks does not take effect on instances that are manually added and instances that are in the Standby and Protected states.</li>
+     * <li>You can start instance refresh tasks for Elastic Compute Service (ECS) instances in scaling groups that use the <strong>priority policy</strong> as the scaling policy. Scaling groups whose capacity is measured based on the <strong>number of vCPUs</strong> and scaling groups whose instance reclaim mode is <strong>Economical Mode</strong> or <strong>Forcibly Recycle</strong> do not support the StartInstanceRefresh operation.</li>
+     * <li>When you start an instance refresh task, scaling events can be completed as expected. Take note that instances that are scaled out use the configurations specified in the instance refresh task.</li>
+     * <li>The StartInstanceRefresh operation does not take effect on instances that are manually added or instances that are in the Standby and Protected states.</li>
      * </ul>
      * 
      * @param request the request parameters of StartInstanceRefresh  StartInstanceRefreshRequest

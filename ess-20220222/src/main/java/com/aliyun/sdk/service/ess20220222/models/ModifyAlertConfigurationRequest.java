@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class ModifyAlertConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScaleStatuses")
-    private java.util.List < String > scaleStatuses;
+    private java.util.List<String> scaleStatuses;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
@@ -80,7 +85,7 @@ public class ModifyAlertConfigurationRequest extends Request {
     /**
      * @return scaleStatuses
      */
-    public java.util.List < String > getScaleStatuses() {
+    public java.util.List<String> getScaleStatuses() {
         return this.scaleStatuses;
     }
 
@@ -95,7 +100,7 @@ public class ModifyAlertConfigurationRequest extends Request {
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
-        private java.util.List < String > scaleStatuses; 
+        private java.util.List<String> scaleStatuses; 
         private String scalingGroupId; 
 
         private Builder() {
@@ -145,7 +150,7 @@ public class ModifyAlertConfigurationRequest extends Request {
         /**
          * <p>The status of the scaling activities that prompt text message or email notifications.</p>
          */
-        public Builder scaleStatuses(java.util.List < String > scaleStatuses) {
+        public Builder scaleStatuses(java.util.List<String> scaleStatuses) {
             this.putQueryParameter("ScaleStatuses", scaleStatuses);
             this.scaleStatuses = scaleStatuses;
             return this;

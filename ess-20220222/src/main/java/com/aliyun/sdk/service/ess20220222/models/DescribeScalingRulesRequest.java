@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -48,15 +53,15 @@ public class DescribeScalingRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingRuleAris")
-    private java.util.List < String > scalingRuleAris;
+    private java.util.List<String> scalingRuleAris;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingRuleIds")
-    private java.util.List < String > scalingRuleIds;
+    private java.util.List<String> scalingRuleIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingRuleNames")
-    private java.util.List < String > scalingRuleNames;
+    private java.util.List<String> scalingRuleNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingRuleType")
@@ -155,21 +160,21 @@ public class DescribeScalingRulesRequest extends Request {
     /**
      * @return scalingRuleAris
      */
-    public java.util.List < String > getScalingRuleAris() {
+    public java.util.List<String> getScalingRuleAris() {
         return this.scalingRuleAris;
     }
 
     /**
      * @return scalingRuleIds
      */
-    public java.util.List < String > getScalingRuleIds() {
+    public java.util.List<String> getScalingRuleIds() {
         return this.scalingRuleIds;
     }
 
     /**
      * @return scalingRuleNames
      */
-    public java.util.List < String > getScalingRuleNames() {
+    public java.util.List<String> getScalingRuleNames() {
         return this.scalingRuleNames;
     }
 
@@ -196,9 +201,9 @@ public class DescribeScalingRulesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scalingGroupId; 
-        private java.util.List < String > scalingRuleAris; 
-        private java.util.List < String > scalingRuleIds; 
-        private java.util.List < String > scalingRuleNames; 
+        private java.util.List<String> scalingRuleAris; 
+        private java.util.List<String> scalingRuleIds; 
+        private java.util.List<String> scalingRuleNames; 
         private String scalingRuleType; 
         private Boolean showAlarmRules; 
 
@@ -313,7 +318,7 @@ public class DescribeScalingRulesRequest extends Request {
         /**
          * <p>The unique identifiers of the scaling rules that you want to query.</p>
          */
-        public Builder scalingRuleAris(java.util.List < String > scalingRuleAris) {
+        public Builder scalingRuleAris(java.util.List<String> scalingRuleAris) {
             this.putQueryParameter("ScalingRuleAris", scalingRuleAris);
             this.scalingRuleAris = scalingRuleAris;
             return this;
@@ -322,7 +327,7 @@ public class DescribeScalingRulesRequest extends Request {
         /**
          * <p>The IDs of the scaling rules that you want to query.</p>
          */
-        public Builder scalingRuleIds(java.util.List < String > scalingRuleIds) {
+        public Builder scalingRuleIds(java.util.List<String> scalingRuleIds) {
             this.putQueryParameter("ScalingRuleIds", scalingRuleIds);
             this.scalingRuleIds = scalingRuleIds;
             return this;
@@ -331,7 +336,7 @@ public class DescribeScalingRulesRequest extends Request {
         /**
          * <p>The names of the scaling rules that you want to query.</p>
          */
-        public Builder scalingRuleNames(java.util.List < String > scalingRuleNames) {
+        public Builder scalingRuleNames(java.util.List<String> scalingRuleNames) {
             this.putQueryParameter("ScalingRuleNames", scalingRuleNames);
             this.scalingRuleNames = scalingRuleNames;
             return this;

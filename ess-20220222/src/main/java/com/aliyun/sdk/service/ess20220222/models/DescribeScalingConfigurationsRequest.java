@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -44,11 +49,11 @@ public class DescribeScalingConfigurationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingConfigurationIds")
-    private java.util.List < String > scalingConfigurationIds;
+    private java.util.List<String> scalingConfigurationIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingConfigurationNames")
-    private java.util.List < String > scalingConfigurationNames;
+    private java.util.List<String> scalingConfigurationNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
@@ -133,14 +138,14 @@ public class DescribeScalingConfigurationsRequest extends Request {
     /**
      * @return scalingConfigurationIds
      */
-    public java.util.List < String > getScalingConfigurationIds() {
+    public java.util.List<String> getScalingConfigurationIds() {
         return this.scalingConfigurationIds;
     }
 
     /**
      * @return scalingConfigurationNames
      */
-    public java.util.List < String > getScalingConfigurationNames() {
+    public java.util.List<String> getScalingConfigurationNames() {
         return this.scalingConfigurationNames;
     }
 
@@ -159,8 +164,8 @@ public class DescribeScalingConfigurationsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > scalingConfigurationIds; 
-        private java.util.List < String > scalingConfigurationNames; 
+        private java.util.List<String> scalingConfigurationIds; 
+        private java.util.List<String> scalingConfigurationNames; 
         private String scalingGroupId; 
 
         private Builder() {
@@ -260,7 +265,7 @@ public class DescribeScalingConfigurationsRequest extends Request {
          * <p>The IDs of the scaling configurations that you want to query.</p>
          * <p>The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the <code>LifecycleState</code> parameter.</p>
          */
-        public Builder scalingConfigurationIds(java.util.List < String > scalingConfigurationIds) {
+        public Builder scalingConfigurationIds(java.util.List<String> scalingConfigurationIds) {
             this.putQueryParameter("ScalingConfigurationIds", scalingConfigurationIds);
             this.scalingConfigurationIds = scalingConfigurationIds;
             return this;
@@ -270,7 +275,7 @@ public class DescribeScalingConfigurationsRequest extends Request {
          * <p>The names of the scaling configurations that you want to query.</p>
          * <p>The names of inactive scaling configurations are not displayed in the query results, and no error is reported.</p>
          */
-        public Builder scalingConfigurationNames(java.util.List < String > scalingConfigurationNames) {
+        public Builder scalingConfigurationNames(java.util.List<String> scalingConfigurationNames) {
             this.putQueryParameter("ScalingConfigurationNames", scalingConfigurationNames);
             this.scalingConfigurationNames = scalingConfigurationNames;
             return this;

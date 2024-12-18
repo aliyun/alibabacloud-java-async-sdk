@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class DescribeDiagnoseReportsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReportIds")
-    private java.util.List < String > reportIds;
+    private java.util.List<String> reportIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
@@ -80,7 +85,7 @@ public class DescribeDiagnoseReportsRequest extends Request {
     /**
      * @return reportIds
      */
-    public java.util.List < String > getReportIds() {
+    public java.util.List<String> getReportIds() {
         return this.reportIds;
     }
 
@@ -95,7 +100,7 @@ public class DescribeDiagnoseReportsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
-        private java.util.List < String > reportIds; 
+        private java.util.List<String> reportIds; 
         private String scalingGroupId; 
 
         private Builder() {
@@ -112,7 +117,10 @@ public class DescribeDiagnoseReportsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -121,7 +129,10 @@ public class DescribeDiagnoseReportsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -130,6 +141,7 @@ public class DescribeDiagnoseReportsRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the scaling group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,15 +154,16 @@ public class DescribeDiagnoseReportsRequest extends Request {
         }
 
         /**
-         * ReportIds.
+         * <p>The IDs of the diagnostic reports. You can specify at most 20 IDs.</p>
          */
-        public Builder reportIds(java.util.List < String > reportIds) {
+        public Builder reportIds(java.util.List<String> reportIds) {
             this.putQueryParameter("ReportIds", reportIds);
             this.reportIds = reportIds;
             return this;
         }
 
         /**
+         * <p>The ID of the scaling group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

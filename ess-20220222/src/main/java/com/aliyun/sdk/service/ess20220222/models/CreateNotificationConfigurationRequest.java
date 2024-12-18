@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class CreateNotificationConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NotificationTypes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > notificationTypes;
+    private java.util.List<String> notificationTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -77,7 +82,7 @@ public class CreateNotificationConfigurationRequest extends Request {
     /**
      * @return notificationTypes
      */
-    public java.util.List < String > getNotificationTypes() {
+    public java.util.List<String> getNotificationTypes() {
         return this.notificationTypes;
     }
 
@@ -118,7 +123,7 @@ public class CreateNotificationConfigurationRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateNotificationConfigurationRequest, Builder> {
         private String notificationArn; 
-        private java.util.List < String > notificationTypes; 
+        private java.util.List<String> notificationTypes; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -144,15 +149,15 @@ public class CreateNotificationConfigurationRequest extends Request {
          * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:</p>
          * <ul>
          * <li>If you specify CloudMonitor as the notification recipient, specify the value in the <code>acs:ess:{region-id}:{account-id}:cloudmonitor</code> format.</li>
-         * <li>If you specify an MNS queue as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
-         * <li>If you specify an MNS topic as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
+         * <li>If you specify an SMQ queue as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
+         * <li>If you specify an SMQ topic as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
          * </ul>
          * <p>The variables in the preceding formats have the following meanings:</p>
          * <ul>
          * <li><code>region-id</code>: the region ID of the scaling group.</li>
          * <li><code>account-id</code>: the ID of the Alibaba Cloud account.</li>
-         * <li><code>queuename</code>: the name of the MNS queue.</li>
-         * <li><code>topicname</code>: the name of the MNS topic.</li>
+         * <li><code>queuename</code>: the name of the SMQ queue.</li>
+         * <li><code>topicname</code>: the name of the SMQ topic.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -170,7 +175,7 @@ public class CreateNotificationConfigurationRequest extends Request {
          * <p>You can call the DescribeNotificationTypes operation to query the values of this parameter.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder notificationTypes(java.util.List < String > notificationTypes) {
+        public Builder notificationTypes(java.util.List<String> notificationTypes) {
             this.putQueryParameter("NotificationTypes", notificationTypes);
             this.notificationTypes = notificationTypes;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class AttachAlbServerGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlbServerGroups")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AlbServerGroups> albServerGroups;
+    private java.util.List<AlbServerGroups> albServerGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -70,7 +75,7 @@ public class AttachAlbServerGroupsRequest extends Request {
     /**
      * @return albServerGroups
      */
-    public java.util.List < AlbServerGroups> getAlbServerGroups() {
+    public java.util.List<AlbServerGroups> getAlbServerGroups() {
         return this.albServerGroups;
     }
 
@@ -117,7 +122,7 @@ public class AttachAlbServerGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AttachAlbServerGroupsRequest, Builder> {
-        private java.util.List < AlbServerGroups> albServerGroups; 
+        private java.util.List<AlbServerGroups> albServerGroups; 
         private String clientToken; 
         private Boolean forceAttach; 
         private Long ownerId; 
@@ -144,7 +149,7 @@ public class AttachAlbServerGroupsRequest extends Request {
          * <p>The information about the ALB server groups.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder albServerGroups(java.util.List < AlbServerGroups> albServerGroups) {
+        public Builder albServerGroups(java.util.List<AlbServerGroups> albServerGroups) {
             this.putQueryParameter("AlbServerGroups", albServerGroups);
             this.albServerGroups = albServerGroups;
             return this;
@@ -164,10 +169,10 @@ public class AttachAlbServerGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the ALB server group. Valid values:</p>
+         * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the new ALB server group. Valid values:</p>
          * <ul>
-         * <li>true: adds the existing ECS instances or elastic container instances in the scaling group to the ALB server group. In this case, the system returns the value of <code>ScalingActivityId</code>.</li>
-         * <li>false: does not add the existing ECS instances or elastic container instances in the scaling group to the ALB server group.</li>
+         * <li>true: adds the existing ECS instances or elastic container instances in the scaling group to the new ALB server group. In this case, the system returns the value of <code>ScalingActivityId</code>.</li>
+         * <li>false: does not add the existing ECS instances or elastic container instances in the scaling group to the new ALB server group.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 

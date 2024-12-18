@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateScalingGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlbServerGroups")
-    private java.util.List < AlbServerGroups> albServerGroups;
+    private java.util.List<AlbServerGroups> albServerGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
@@ -50,7 +55,7 @@ public class CreateScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstances")
-    private java.util.List < DBInstances> DBInstances;
+    private java.util.List<DBInstances> DBInstances;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultCooldown")
@@ -74,7 +79,7 @@ public class CreateScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckTypes")
-    private java.util.List < String > healthCheckTypes;
+    private java.util.List<String> healthCheckTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -86,7 +91,7 @@ public class CreateScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateOverrides")
-    private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides;
+    private java.util.List<LaunchTemplateOverrides> launchTemplateOverrides;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
@@ -94,11 +99,11 @@ public class CreateScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecycleHooks")
-    private java.util.List < LifecycleHooks> lifecycleHooks;
+    private java.util.List<LifecycleHooks> lifecycleHooks;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerConfigs")
-    private java.util.List < LoadBalancerConfigs> loadBalancerConfigs;
+    private java.util.List<LoadBalancerConfigs> loadBalancerConfigs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
@@ -145,7 +150,7 @@ public class CreateScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemovalPolicies")
-    private java.util.List < String > removalPolicies;
+    private java.util.List<String> removalPolicies;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -165,7 +170,7 @@ public class CreateScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerGroups")
-    private java.util.List < ServerGroups> serverGroups;
+    private java.util.List<ServerGroups> serverGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotAllocationStrategy")
@@ -189,11 +194,11 @@ public class CreateScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VServerGroups")
-    private java.util.List < VServerGroups> vServerGroups;
+    private java.util.List<VServerGroups> vServerGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -201,7 +206,7 @@ public class CreateScalingGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    private java.util.List<String> vSwitchIds;
 
     private CreateScalingGroupRequest(Builder builder) {
         super(builder);
@@ -270,7 +275,7 @@ public class CreateScalingGroupRequest extends Request {
     /**
      * @return albServerGroups
      */
-    public java.util.List < AlbServerGroups> getAlbServerGroups() {
+    public java.util.List<AlbServerGroups> getAlbServerGroups() {
         return this.albServerGroups;
     }
 
@@ -333,7 +338,7 @@ public class CreateScalingGroupRequest extends Request {
     /**
      * @return DBInstances
      */
-    public java.util.List < DBInstances> getDBInstances() {
+    public java.util.List<DBInstances> getDBInstances() {
         return this.DBInstances;
     }
 
@@ -375,7 +380,7 @@ public class CreateScalingGroupRequest extends Request {
     /**
      * @return healthCheckTypes
      */
-    public java.util.List < String > getHealthCheckTypes() {
+    public java.util.List<String> getHealthCheckTypes() {
         return this.healthCheckTypes;
     }
 
@@ -396,7 +401,7 @@ public class CreateScalingGroupRequest extends Request {
     /**
      * @return launchTemplateOverrides
      */
-    public java.util.List < LaunchTemplateOverrides> getLaunchTemplateOverrides() {
+    public java.util.List<LaunchTemplateOverrides> getLaunchTemplateOverrides() {
         return this.launchTemplateOverrides;
     }
 
@@ -410,14 +415,14 @@ public class CreateScalingGroupRequest extends Request {
     /**
      * @return lifecycleHooks
      */
-    public java.util.List < LifecycleHooks> getLifecycleHooks() {
+    public java.util.List<LifecycleHooks> getLifecycleHooks() {
         return this.lifecycleHooks;
     }
 
     /**
      * @return loadBalancerConfigs
      */
-    public java.util.List < LoadBalancerConfigs> getLoadBalancerConfigs() {
+    public java.util.List<LoadBalancerConfigs> getLoadBalancerConfigs() {
         return this.loadBalancerConfigs;
     }
 
@@ -494,7 +499,7 @@ public class CreateScalingGroupRequest extends Request {
     /**
      * @return removalPolicies
      */
-    public java.util.List < String > getRemovalPolicies() {
+    public java.util.List<String> getRemovalPolicies() {
         return this.removalPolicies;
     }
 
@@ -529,7 +534,7 @@ public class CreateScalingGroupRequest extends Request {
     /**
      * @return serverGroups
      */
-    public java.util.List < ServerGroups> getServerGroups() {
+    public java.util.List<ServerGroups> getServerGroups() {
         return this.serverGroups;
     }
 
@@ -571,14 +576,14 @@ public class CreateScalingGroupRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return vServerGroups
      */
-    public java.util.List < VServerGroups> getVServerGroups() {
+    public java.util.List<VServerGroups> getVServerGroups() {
         return this.vServerGroups;
     }
 
@@ -592,12 +597,12 @@ public class CreateScalingGroupRequest extends Request {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
     public static final class Builder extends Request.Builder<CreateScalingGroupRequest, Builder> {
-        private java.util.List < AlbServerGroups> albServerGroups; 
+        private java.util.List<AlbServerGroups> albServerGroups; 
         private String allocationStrategy; 
         private Boolean azBalance; 
         private CapacityOptions capacityOptions; 
@@ -606,19 +611,19 @@ public class CreateScalingGroupRequest extends Request {
         private String containerGroupId; 
         private String customPolicyARN; 
         private String DBInstanceIds; 
-        private java.util.List < DBInstances> DBInstances; 
+        private java.util.List<DBInstances> DBInstances; 
         private Integer defaultCooldown; 
         private Integer desiredCapacity; 
         private Boolean groupDeletionProtection; 
         private String groupType; 
         private String healthCheckType; 
-        private java.util.List < String > healthCheckTypes; 
+        private java.util.List<String> healthCheckTypes; 
         private String instanceId; 
         private String launchTemplateId; 
-        private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides; 
+        private java.util.List<LaunchTemplateOverrides> launchTemplateOverrides; 
         private String launchTemplateVersion; 
-        private java.util.List < LifecycleHooks> lifecycleHooks; 
-        private java.util.List < LoadBalancerConfigs> loadBalancerConfigs; 
+        private java.util.List<LifecycleHooks> lifecycleHooks; 
+        private java.util.List<LoadBalancerConfigs> loadBalancerConfigs; 
         private String loadBalancerIds; 
         private Integer maxInstanceLifetime; 
         private Integer maxSize; 
@@ -629,21 +634,21 @@ public class CreateScalingGroupRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < String > removalPolicies; 
+        private java.util.List<String> removalPolicies; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private String scalingGroupName; 
         private String scalingPolicy; 
-        private java.util.List < ServerGroups> serverGroups; 
+        private java.util.List<ServerGroups> serverGroups; 
         private String spotAllocationStrategy; 
         private Integer spotInstancePools; 
         private Boolean spotInstanceRemedy; 
         private Integer stopInstanceTimeout; 
         private Boolean syncAlarmRuleToCms; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < VServerGroups> vServerGroups; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<VServerGroups> vServerGroups; 
         private String vSwitchId; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
 
         private Builder() {
             super();
@@ -703,7 +708,7 @@ public class CreateScalingGroupRequest extends Request {
         /**
          * <p>The Application Load Balancer (ALB) server groups.</p>
          */
-        public Builder albServerGroups(java.util.List < AlbServerGroups> albServerGroups) {
+        public Builder albServerGroups(java.util.List<AlbServerGroups> albServerGroups) {
             this.putQueryParameter("AlbServerGroups", albServerGroups);
             this.albServerGroups = albServerGroups;
             return this;
@@ -747,7 +752,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * CapacityOptions.
+         * <p>The capacity options.</p>
          */
         public Builder capacityOptions(CapacityOptions capacityOptions) {
             this.putQueryParameter("CapacityOptions", capacityOptions);
@@ -825,7 +830,7 @@ public class CreateScalingGroupRequest extends Request {
         /**
          * <p>The databases that you want to attach to the scaling group.</p>
          */
-        public Builder DBInstances(java.util.List < DBInstances> DBInstances) {
+        public Builder DBInstances(java.util.List<DBInstances> DBInstances) {
             this.putQueryParameter("DBInstances", DBInstances);
             this.DBInstances = DBInstances;
             return this;
@@ -918,7 +923,7 @@ public class CreateScalingGroupRequest extends Request {
          * <p> You can specify multiple values for this parameter to enable multiple health check options at the same time. If you specify <code>HealthCheckType</code>, this parameter is ignored.</p>
          * </blockquote>
          */
-        public Builder healthCheckTypes(java.util.List < String > healthCheckTypes) {
+        public Builder healthCheckTypes(java.util.List<String> healthCheckTypes) {
             this.putQueryParameter("HealthCheckTypes", healthCheckTypes);
             this.healthCheckTypes = healthCheckTypes;
             return this;
@@ -951,7 +956,7 @@ public class CreateScalingGroupRequest extends Request {
         /**
          * <p>Details of the instance types that you specify by using the Extended Configurations feature of the launch template.</p>
          */
-        public Builder launchTemplateOverrides(java.util.List < LaunchTemplateOverrides> launchTemplateOverrides) {
+        public Builder launchTemplateOverrides(java.util.List<LaunchTemplateOverrides> launchTemplateOverrides) {
             this.putQueryParameter("LaunchTemplateOverrides", launchTemplateOverrides);
             this.launchTemplateOverrides = launchTemplateOverrides;
             return this;
@@ -977,7 +982,7 @@ public class CreateScalingGroupRequest extends Request {
         /**
          * <p>The lifecycle hooks.</p>
          */
-        public Builder lifecycleHooks(java.util.List < LifecycleHooks> lifecycleHooks) {
+        public Builder lifecycleHooks(java.util.List<LifecycleHooks> lifecycleHooks) {
             this.putQueryParameter("LifecycleHooks", lifecycleHooks);
             this.lifecycleHooks = lifecycleHooks;
             return this;
@@ -986,7 +991,7 @@ public class CreateScalingGroupRequest extends Request {
         /**
          * <p>The load balancer configurations.</p>
          */
-        public Builder loadBalancerConfigs(java.util.List < LoadBalancerConfigs> loadBalancerConfigs) {
+        public Builder loadBalancerConfigs(java.util.List<LoadBalancerConfigs> loadBalancerConfigs) {
             this.putQueryParameter("LoadBalancerConfigs", loadBalancerConfigs);
             this.loadBalancerConfigs = loadBalancerConfigs;
             return this;
@@ -1145,7 +1150,7 @@ public class CreateScalingGroupRequest extends Request {
          * <p>The removal of ECS instances from a scaling group is also affected by the value of the MultiAZPolicy parameter. For more information, see the <a href="https://help.aliyun.com/document_detail/254822.html">Configure a combination policy for removing instances</a> topic.</p>
          * </blockquote>
          */
-        public Builder removalPolicies(java.util.List < String > removalPolicies) {
+        public Builder removalPolicies(java.util.List<String> removalPolicies) {
             this.putQueryParameter("RemovalPolicies", removalPolicies);
             this.removalPolicies = removalPolicies;
             return this;
@@ -1222,7 +1227,7 @@ public class CreateScalingGroupRequest extends Request {
          * <p> You cannot use AlbServerGroups and ServerGroups to specify the same server group.</p>
          * </blockquote>
          */
-        public Builder serverGroups(java.util.List < ServerGroups> serverGroups) {
+        public Builder serverGroups(java.util.List<ServerGroups> serverGroups) {
             this.putQueryParameter("ServerGroups", serverGroups);
             this.serverGroups = serverGroups;
             return this;
@@ -1308,7 +1313,7 @@ public class CreateScalingGroupRequest extends Request {
         /**
          * <p>The tags that you want to add to the scaling group.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -1317,7 +1322,7 @@ public class CreateScalingGroupRequest extends Request {
         /**
          * <p>The backend vServer group that you want to associate with the scaling group.</p>
          */
-        public Builder vServerGroups(java.util.List < VServerGroups> vServerGroups) {
+        public Builder vServerGroups(java.util.List<VServerGroups> vServerGroups) {
             this.putQueryParameter("VServerGroups", vServerGroups);
             this.vServerGroups = vServerGroups;
             return this;
@@ -1350,7 +1355,7 @@ public class CreateScalingGroupRequest extends Request {
          * <p> If you do not specify VSwitchId or VSwitchIds for your scaling group, the network type of the scaling group is classic network.</p>
          * </blockquote>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
             this.vSwitchIds = vSwitchIds;
             return this;
@@ -1529,7 +1534,7 @@ public class CreateScalingGroupRequest extends Request {
             private Boolean spotAutoReplaceOnDemand; 
 
             /**
-             * <p>Specifies whether to automatically create pay-as-you-go instances to meet the requirement on the number of ECS instances when the expected capacity of preemptible instances cannot be provided due to reasons such as cost-related issues and insufficient resources. This parameter is available only if you set the MultiAZPolicy parameter to COST_OPTIMIZED. Valid values:</p>
+             * <p>Specifies whether to automatically create pay-as-you-go ECS instances to reach the required number of ECS instances when preemptible ECS instances cannot be created due to high prices or insufficient inventory of resources. This parameter takes effect when you set <code>MultiAZPolicy</code> to <code>COST_OPTIMIZED</code>. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -1545,7 +1550,8 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances.</p>
+             * <p>The minimum number of pay-as-you-go instances required in the scaling group. When the number of pay-as-you-go instances drops below the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</p>
+             * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 0.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1556,7 +1562,8 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances reaches the requirement. Valid values: 0 to 100.</p>
+             * <p>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances is reached. <code>OnDemandBaseCapacity</code> specifies the minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 100.</p>
+             * <p>If you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>, the default value is 100.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1567,7 +1574,15 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * SpotAutoReplaceOnDemand.
+             * <p>Specifies whether to replace pay-as-you-go instances with preemptible instances. If you specify <code>CompensateWithOnDemand</code>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <code>OnDemandPercentageAboveBaseCapacity</code>. In this scenario, Auto Scaling will try to deploy preemptible instances to replace the surplus pay-as-you-go instances. When <code>CompensateWithOnDemand</code> is specified, Auto Scaling creates pay-as-you-go instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder spotAutoReplaceOnDemand(Boolean spotAutoReplaceOnDemand) {
                 this.spotAutoReplaceOnDemand = spotAutoReplaceOnDemand;
@@ -2247,7 +2262,7 @@ public class CreateScalingGroupRequest extends Request {
             private String value; 
 
             /**
-             * <p>The tag key that you want to add to the scaling group.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>Department</p>
@@ -2258,10 +2273,10 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to propagate the tag that you want to add to the scaling group. Valid values:</p>
+             * <p>Specifies whether to propagate the tag that you want to add. Valid values:</p>
              * <ul>
-             * <li>true: propagates the tag to only instances that are newly created.</li>
-             * <li>false: does not propagate the tag to any instances.</li>
+             * <li>true: propagates the tag to new instances.</li>
+             * <li>false: does not propagate the tag to any instance.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -2274,7 +2289,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The tag value that you want to add to the scaling group.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>Finance</p>
@@ -2399,7 +2414,7 @@ public class CreateScalingGroupRequest extends Request {
         private String loadBalancerId;
 
         @com.aliyun.core.annotation.NameInMap("VServerGroupAttributes")
-        private java.util.List < VServerGroupAttributes> vServerGroupAttributes;
+        private java.util.List<VServerGroupAttributes> vServerGroupAttributes;
 
         private VServerGroups(Builder builder) {
             this.loadBalancerId = builder.loadBalancerId;
@@ -2424,13 +2439,13 @@ public class CreateScalingGroupRequest extends Request {
         /**
          * @return vServerGroupAttributes
          */
-        public java.util.List < VServerGroupAttributes> getVServerGroupAttributes() {
+        public java.util.List<VServerGroupAttributes> getVServerGroupAttributes() {
             return this.vServerGroupAttributes;
         }
 
         public static final class Builder {
             private String loadBalancerId; 
-            private java.util.List < VServerGroupAttributes> vServerGroupAttributes; 
+            private java.util.List<VServerGroupAttributes> vServerGroupAttributes; 
 
             /**
              * <p>The ID of the CLB instance to which the backend vServer group belongs.</p>
@@ -2446,7 +2461,7 @@ public class CreateScalingGroupRequest extends Request {
             /**
              * <p>The attributes of the backend vServer group.</p>
              */
-            public Builder vServerGroupAttributes(java.util.List < VServerGroupAttributes> vServerGroupAttributes) {
+            public Builder vServerGroupAttributes(java.util.List<VServerGroupAttributes> vServerGroupAttributes) {
                 this.vServerGroupAttributes = vServerGroupAttributes;
                 return this;
             }

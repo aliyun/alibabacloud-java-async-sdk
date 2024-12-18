@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,11 +31,11 @@ public class AttachLoadBalancersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerConfigs")
-    private java.util.List < LoadBalancerConfigs> loadBalancerConfigs;
+    private java.util.List<LoadBalancerConfigs> loadBalancerConfigs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancers")
-    private java.util.List < String > loadBalancers;
+    private java.util.List<String> loadBalancers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -94,14 +99,14 @@ public class AttachLoadBalancersRequest extends Request {
     /**
      * @return loadBalancerConfigs
      */
-    public java.util.List < LoadBalancerConfigs> getLoadBalancerConfigs() {
+    public java.util.List<LoadBalancerConfigs> getLoadBalancerConfigs() {
         return this.loadBalancerConfigs;
     }
 
     /**
      * @return loadBalancers
      */
-    public java.util.List < String > getLoadBalancers() {
+    public java.util.List<String> getLoadBalancers() {
         return this.loadBalancers;
     }
 
@@ -130,8 +135,8 @@ public class AttachLoadBalancersRequest extends Request {
         private Boolean async; 
         private String clientToken; 
         private Boolean forceAttach; 
-        private java.util.List < LoadBalancerConfigs> loadBalancerConfigs; 
-        private java.util.List < String > loadBalancers; 
+        private java.util.List<LoadBalancerConfigs> loadBalancerConfigs; 
+        private java.util.List<String> loadBalancers; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
@@ -187,7 +192,7 @@ public class AttachLoadBalancersRequest extends Request {
          * <ul>
          * <li><p>true: If you set this parameter to <code>true</code>, the attachment of the load balancer entails the addition of the existing instances in the scaling group to the backend server groups of the load balancer.</p>
          * <p>**</p>
-         * <p><strong>Note</strong> If a load balancer is currently attached to your scaling group, and you want to add the instances in your scaling group to the backend server groups of the load balancer, you can call this operation again and set the ForceAttach request parameter to true.</p>
+         * <p><strong>Note</strong> If a load balancer is currently attached to your scaling group, and you want to add the instances in your scaling group to the backend server groups of the load balancer, you can call this operation again and set ForceAttach request to true.</p>
          * </li>
          * <li><p>false: If you set this parameter to false, the attachment of the load balancer does not entail the addition of the existing instances in the scaling group to the backend server groups of the load balancer.</p>
          * </li>
@@ -206,7 +211,7 @@ public class AttachLoadBalancersRequest extends Request {
         /**
          * <p>The configurations of the classic load balancer (CLB, formerly known as SLB) instance.</p>
          */
-        public Builder loadBalancerConfigs(java.util.List < LoadBalancerConfigs> loadBalancerConfigs) {
+        public Builder loadBalancerConfigs(java.util.List<LoadBalancerConfigs> loadBalancerConfigs) {
             this.putQueryParameter("LoadBalancerConfigs", loadBalancerConfigs);
             this.loadBalancerConfigs = loadBalancerConfigs;
             return this;
@@ -215,7 +220,7 @@ public class AttachLoadBalancersRequest extends Request {
         /**
          * <p>The IDs of the load balancers that you want to attach to the scaling group.</p>
          */
-        public Builder loadBalancers(java.util.List < String > loadBalancers) {
+        public Builder loadBalancers(java.util.List<String> loadBalancers) {
             this.putQueryParameter("LoadBalancers", loadBalancers);
             this.loadBalancers = loadBalancers;
             return this;

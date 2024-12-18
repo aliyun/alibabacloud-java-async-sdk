@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceRefreshesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceRefreshTasks")
-    private java.util.List < InstanceRefreshTasks> instanceRefreshTasks;
+    private java.util.List<InstanceRefreshTasks> instanceRefreshTasks;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
     /**
      * @return instanceRefreshTasks
      */
-    public java.util.List < InstanceRefreshTasks> getInstanceRefreshTasks() {
+    public java.util.List<InstanceRefreshTasks> getInstanceRefreshTasks() {
         return this.instanceRefreshTasks;
     }
 
@@ -79,7 +84,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceRefreshTasks> instanceRefreshTasks; 
+        private java.util.List<InstanceRefreshTasks> instanceRefreshTasks; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         /**
          * <p>The instance refresh tasks.</p>
          */
-        public Builder instanceRefreshTasks(java.util.List < InstanceRefreshTasks> instanceRefreshTasks) {
+        public Builder instanceRefreshTasks(java.util.List<InstanceRefreshTasks> instanceRefreshTasks) {
             this.instanceRefreshTasks = instanceRefreshTasks;
             return this;
         }

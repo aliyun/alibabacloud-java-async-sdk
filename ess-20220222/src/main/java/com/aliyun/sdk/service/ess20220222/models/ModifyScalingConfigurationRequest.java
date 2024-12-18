@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,11 +43,11 @@ public class ModifyScalingConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomPriorities")
-    private java.util.List < CustomPriorities> customPriorities;
+    private java.util.List<CustomPriorities> customPriorities;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisks")
-    private java.util.List < DataDisks> dataDisks;
+    private java.util.List<DataDisks> dataDisks;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
@@ -98,15 +103,15 @@ public class ModifyScalingConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstancePatternInfos")
-    private java.util.List < InstancePatternInfos> instancePatternInfos;
+    private java.util.List<InstancePatternInfos> instancePatternInfos;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypeOverrides")
-    private java.util.List < InstanceTypeOverrides> instanceTypeOverrides;
+    private java.util.List<InstanceTypeOverrides> instanceTypeOverrides;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypes")
-    private java.util.List < String > instanceTypes;
+    private java.util.List<String> instanceTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetChargeType")
@@ -142,7 +147,7 @@ public class ModifyScalingConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaces")
-    private java.util.List < NetworkInterfaces> networkInterfaces;
+    private java.util.List<NetworkInterfaces> networkInterfaces;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Override")
@@ -187,7 +192,7 @@ public class ModifyScalingConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SchedulerOptions")
-    private java.util.Map < String, ? > schedulerOptions;
+    private java.util.Map<String, ?> schedulerOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
@@ -195,7 +200,7 @@ public class ModifyScalingConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-    private java.util.List < String > securityGroupIds;
+    private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityOptions")
@@ -211,7 +216,7 @@ public class ModifyScalingConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotPriceLimits")
-    private java.util.List < SpotPriceLimits> spotPriceLimits;
+    private java.util.List<SpotPriceLimits> spotPriceLimits;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotStrategy")
@@ -227,7 +232,7 @@ public class ModifyScalingConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDiskCategories")
-    private java.util.List < String > systemDiskCategories;
+    private java.util.List<String> systemDiskCategories;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
@@ -365,14 +370,14 @@ public class ModifyScalingConfigurationRequest extends Request {
     /**
      * @return customPriorities
      */
-    public java.util.List < CustomPriorities> getCustomPriorities() {
+    public java.util.List<CustomPriorities> getCustomPriorities() {
         return this.customPriorities;
     }
 
     /**
      * @return dataDisks
      */
-    public java.util.List < DataDisks> getDataDisks() {
+    public java.util.List<DataDisks> getDataDisks() {
         return this.dataDisks;
     }
 
@@ -470,21 +475,21 @@ public class ModifyScalingConfigurationRequest extends Request {
     /**
      * @return instancePatternInfos
      */
-    public java.util.List < InstancePatternInfos> getInstancePatternInfos() {
+    public java.util.List<InstancePatternInfos> getInstancePatternInfos() {
         return this.instancePatternInfos;
     }
 
     /**
      * @return instanceTypeOverrides
      */
-    public java.util.List < InstanceTypeOverrides> getInstanceTypeOverrides() {
+    public java.util.List<InstanceTypeOverrides> getInstanceTypeOverrides() {
         return this.instanceTypeOverrides;
     }
 
     /**
      * @return instanceTypes
      */
-    public java.util.List < String > getInstanceTypes() {
+    public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
     }
 
@@ -547,7 +552,7 @@ public class ModifyScalingConfigurationRequest extends Request {
     /**
      * @return networkInterfaces
      */
-    public java.util.List < NetworkInterfaces> getNetworkInterfaces() {
+    public java.util.List<NetworkInterfaces> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
 
@@ -624,7 +629,7 @@ public class ModifyScalingConfigurationRequest extends Request {
     /**
      * @return schedulerOptions
      */
-    public java.util.Map < String, ? > getSchedulerOptions() {
+    public java.util.Map<String, ?> getSchedulerOptions() {
         return this.schedulerOptions;
     }
 
@@ -638,7 +643,7 @@ public class ModifyScalingConfigurationRequest extends Request {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -666,7 +671,7 @@ public class ModifyScalingConfigurationRequest extends Request {
     /**
      * @return spotPriceLimits
      */
-    public java.util.List < SpotPriceLimits> getSpotPriceLimits() {
+    public java.util.List<SpotPriceLimits> getSpotPriceLimits() {
         return this.spotPriceLimits;
     }
 
@@ -694,7 +699,7 @@ public class ModifyScalingConfigurationRequest extends Request {
     /**
      * @return systemDiskCategories
      */
-    public java.util.List < String > getSystemDiskCategories() {
+    public java.util.List<String> getSystemDiskCategories() {
         return this.systemDiskCategories;
     }
 
@@ -733,8 +738,8 @@ public class ModifyScalingConfigurationRequest extends Request {
         private String affinity; 
         private Integer cpu; 
         private String creditSpecification; 
-        private java.util.List < CustomPriorities> customPriorities; 
-        private java.util.List < DataDisks> dataDisks; 
+        private java.util.List<CustomPriorities> customPriorities; 
+        private java.util.List<DataDisks> dataDisks; 
         private String dedicatedHostClusterId; 
         private String dedicatedHostId; 
         private Boolean deletionProtection; 
@@ -748,9 +753,9 @@ public class ModifyScalingConfigurationRequest extends Request {
         private String imageName; 
         private String instanceDescription; 
         private String instanceName; 
-        private java.util.List < InstancePatternInfos> instancePatternInfos; 
-        private java.util.List < InstanceTypeOverrides> instanceTypeOverrides; 
-        private java.util.List < String > instanceTypes; 
+        private java.util.List<InstancePatternInfos> instancePatternInfos; 
+        private java.util.List<InstanceTypeOverrides> instanceTypeOverrides; 
+        private java.util.List<String> instanceTypes; 
         private String internetChargeType; 
         private Integer internetMaxBandwidthIn; 
         private Integer internetMaxBandwidthOut; 
@@ -759,7 +764,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         private String keyPairName; 
         private Integer loadBalancerWeight; 
         private Integer memory; 
-        private java.util.List < NetworkInterfaces> networkInterfaces; 
+        private java.util.List<NetworkInterfaces> networkInterfaces; 
         private Boolean override; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -770,17 +775,17 @@ public class ModifyScalingConfigurationRequest extends Request {
         private String resourceOwnerAccount; 
         private String scalingConfigurationId; 
         private String scalingConfigurationName; 
-        private java.util.Map < String, ? > schedulerOptions; 
+        private java.util.Map<String, ?> schedulerOptions; 
         private String securityGroupId; 
-        private java.util.List < String > securityGroupIds; 
+        private java.util.List<String> securityGroupIds; 
         private SecurityOptions securityOptions; 
         private Integer spotDuration; 
         private String spotInterruptionBehavior; 
-        private java.util.List < SpotPriceLimits> spotPriceLimits; 
+        private java.util.List<SpotPriceLimits> spotPriceLimits; 
         private String spotStrategy; 
         private String storageSetId; 
         private Integer storageSetPartitionNumber; 
-        private java.util.List < String > systemDiskCategories; 
+        private java.util.List<String> systemDiskCategories; 
         private String tags; 
         private String tenancy; 
         private String userData; 
@@ -940,7 +945,7 @@ public class ModifyScalingConfigurationRequest extends Request {
          * <li>Example: The specified order of vSwitches for your scaling group is vsw1 and vsw2, and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify [&quot;vsw2+type2&quot;, &quot;vsw1+type2&quot;]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.</li>
          * </ul>
          */
-        public Builder customPriorities(java.util.List < CustomPriorities> customPriorities) {
+        public Builder customPriorities(java.util.List<CustomPriorities> customPriorities) {
             this.putQueryParameter("CustomPriorities", customPriorities);
             this.customPriorities = customPriorities;
             return this;
@@ -949,7 +954,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         /**
          * <p>The data disks.</p>
          */
-        public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
+        public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
             this.putQueryParameter("DataDisks", dataDisks);
             this.dataDisks = dataDisks;
             return this;
@@ -1040,7 +1045,18 @@ public class ModifyScalingConfigurationRequest extends Request {
         }
 
         /**
-         * HttpEndpoint.
+         * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>Default value: enabled.</p>
+         * <blockquote>
+         * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain instance metadata</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder httpEndpoint(String httpEndpoint) {
             this.putQueryParameter("HttpEndpoint", httpEndpoint);
@@ -1049,7 +1065,18 @@ public class ModifyScalingConfigurationRequest extends Request {
         }
 
         /**
-         * HttpTokens.
+         * <p>Specifies whether to forcibly use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</p>
+         * <ul>
+         * <li>optional: does not forcibly use the security hardening mode (IMDSv2).</li>
+         * <li>required: forcibly uses the security hardening mode (IMDSv2). If you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+         * </ul>
+         * <p>Default value: optional.</p>
+         * <blockquote>
+         * <p> For more information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/108460.html">Access modes of instance metadata</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>optional</p>
          */
         public Builder httpTokens(String httpTokens) {
             this.putQueryParameter("HttpTokens", httpTokens);
@@ -1122,9 +1149,9 @@ public class ModifyScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The information about the intelligent configuration settings, which determine the available instance types.</p>
+         * <p>The intelligent configuration settings, which determine the available instance types.</p>
          */
-        public Builder instancePatternInfos(java.util.List < InstancePatternInfos> instancePatternInfos) {
+        public Builder instancePatternInfos(java.util.List<InstancePatternInfos> instancePatternInfos) {
             this.putQueryParameter("InstancePatternInfos", instancePatternInfos);
             this.instancePatternInfos = instancePatternInfos;
             return this;
@@ -1133,7 +1160,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         /**
          * <p>The instance types.</p>
          */
-        public Builder instanceTypeOverrides(java.util.List < InstanceTypeOverrides> instanceTypeOverrides) {
+        public Builder instanceTypeOverrides(java.util.List<InstanceTypeOverrides> instanceTypeOverrides) {
             this.putQueryParameter("InstanceTypeOverrides", instanceTypeOverrides);
             this.instanceTypeOverrides = instanceTypeOverrides;
             return this;
@@ -1143,7 +1170,7 @@ public class ModifyScalingConfigurationRequest extends Request {
          * <p>The instance type. If you specify InstanceTypes, InstanceType is ignored.</p>
          * <p>Auto Scaling creates instances based on the priorities of instance types. If Auto Scaling cannot create instances by using the instance type that has the highest priority, Auto Scaling creates instances by using the instance type that has the next highest priority.</p>
          */
-        public Builder instanceTypes(java.util.List < String > instanceTypes) {
+        public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
             this.instanceTypes = instanceTypes;
             return this;
@@ -1166,7 +1193,14 @@ public class ModifyScalingConfigurationRequest extends Request {
         }
 
         /**
-         * InternetMaxBandwidthIn.
+         * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
+         * <ul>
+         * <li>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10. The default value is 10.</li>
+         * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the value of <code>InternetMaxBandwidthOut</code>. The default value is the value of <code>InternetMaxBandwidthOut</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
             this.putQueryParameter("InternetMaxBandwidthIn", internetMaxBandwidthIn);
@@ -1175,11 +1209,8 @@ public class ModifyScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values:</p>
-         * <ul>
-         * <li>If you set InternetChargeType to PayByBandwidth: 0 to 100. If you leave this parameter empty, this parameter is automatically set to 0.</li>
-         * <li>If you set InternetChargeType to PayByTraffic: 0 to 100. If you leave this parameter empty, an error is returned.</li>
-         * </ul>
+         * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
+         * <p>Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -1265,14 +1296,14 @@ public class ModifyScalingConfigurationRequest extends Request {
         /**
          * <p>The ENIs.</p>
          */
-        public Builder networkInterfaces(java.util.List < NetworkInterfaces> networkInterfaces) {
+        public Builder networkInterfaces(java.util.List<NetworkInterfaces> networkInterfaces) {
             this.putQueryParameter("NetworkInterfaces", networkInterfaces);
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
         /**
-         * <p>Specifies whether to override existing data. Valid values:</p>
+         * <p>Specifies whether to overwrite existing data. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -1399,7 +1430,7 @@ public class ModifyScalingConfigurationRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;testManagedPrivateSpaceId****&quot;]</p>
          */
-        public Builder schedulerOptions(java.util.Map < String, ? > schedulerOptions) {
+        public Builder schedulerOptions(java.util.Map<String, ?> schedulerOptions) {
             String schedulerOptionsShrink = shrink(schedulerOptions, "SchedulerOptions", "json");
             this.putQueryParameter("SchedulerOptions", schedulerOptionsShrink);
             this.schedulerOptions = schedulerOptions;
@@ -1421,7 +1452,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         /**
          * <p>The IDs of the security groups.</p>
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
             return this;
@@ -1471,7 +1502,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         /**
          * <p>The preemptible instance types.</p>
          */
-        public Builder spotPriceLimits(java.util.List < SpotPriceLimits> spotPriceLimits) {
+        public Builder spotPriceLimits(java.util.List<SpotPriceLimits> spotPriceLimits) {
             this.putQueryParameter("SpotPriceLimits", spotPriceLimits);
             this.spotPriceLimits = spotPriceLimits;
             return this;
@@ -1524,7 +1555,7 @@ public class ModifyScalingConfigurationRequest extends Request {
          * <p> If you specify this parameter, you cannot specify <code>SystemDisk.Category</code>.</p>
          * </blockquote>
          */
-        public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
+        public Builder systemDiskCategories(java.util.List<String> systemDiskCategories) {
             this.putQueryParameter("SystemDiskCategories", systemDiskCategories);
             this.systemDiskCategories = systemDiskCategories;
             return this;
@@ -2142,7 +2173,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         private Boolean burstingEnabled;
 
         @com.aliyun.core.annotation.NameInMap("Categories")
-        private java.util.List < String > categories;
+        private java.util.List<String> categories;
 
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -2219,7 +2250,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         /**
          * @return categories
          */
-        public java.util.List < String > getCategories() {
+        public java.util.List<String> getCategories() {
             return this.categories;
         }
 
@@ -2303,7 +2334,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         public static final class Builder {
             private String autoSnapshotPolicyId; 
             private Boolean burstingEnabled; 
-            private java.util.List < String > categories; 
+            private java.util.List<String> categories; 
             private String category; 
             private Boolean deleteWithInstance; 
             private String description; 
@@ -2357,7 +2388,7 @@ public class ModifyScalingConfigurationRequest extends Request {
              * <p> If you specify this parameter, you cannot specify <code>DataDisk.Category</code>.</p>
              * </blockquote>
              */
-            public Builder categories(java.util.List < String > categories) {
+            public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
                 return this;
             }
@@ -2540,7 +2571,7 @@ public class ModifyScalingConfigurationRequest extends Request {
      */
     public static class InstancePatternInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architectures")
-        private java.util.List < String > architectures;
+        private java.util.List<String> architectures;
 
         @com.aliyun.core.annotation.NameInMap("BurstablePerformance")
         private String burstablePerformance;
@@ -2549,22 +2580,22 @@ public class ModifyScalingConfigurationRequest extends Request {
         private Integer cores;
 
         @com.aliyun.core.annotation.NameInMap("CpuArchitectures")
-        private java.util.List < String > cpuArchitectures;
+        private java.util.List<String> cpuArchitectures;
 
         @com.aliyun.core.annotation.NameInMap("ExcludedInstanceTypes")
-        private java.util.List < String > excludedInstanceTypes;
+        private java.util.List<String> excludedInstanceTypes;
 
         @com.aliyun.core.annotation.NameInMap("GpuSpecs")
-        private java.util.List < String > gpuSpecs;
+        private java.util.List<String> gpuSpecs;
 
         @com.aliyun.core.annotation.NameInMap("InstanceCategories")
-        private java.util.List < String > instanceCategories;
+        private java.util.List<String> instanceCategories;
 
         @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
 
         @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
-        private java.util.List < String > instanceTypeFamilies;
+        private java.util.List<String> instanceTypeFamilies;
 
         @com.aliyun.core.annotation.NameInMap("MaxPrice")
         private Float maxPrice;
@@ -2606,7 +2637,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         private Float minimumMemorySize;
 
         @com.aliyun.core.annotation.NameInMap("PhysicalProcessorModels")
-        private java.util.List < String > physicalProcessorModels;
+        private java.util.List<String> physicalProcessorModels;
 
         private InstancePatternInfos(Builder builder) {
             this.architectures = builder.architectures;
@@ -2645,7 +2676,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         /**
          * @return architectures
          */
-        public java.util.List < String > getArchitectures() {
+        public java.util.List<String> getArchitectures() {
             return this.architectures;
         }
 
@@ -2666,28 +2697,28 @@ public class ModifyScalingConfigurationRequest extends Request {
         /**
          * @return cpuArchitectures
          */
-        public java.util.List < String > getCpuArchitectures() {
+        public java.util.List<String> getCpuArchitectures() {
             return this.cpuArchitectures;
         }
 
         /**
          * @return excludedInstanceTypes
          */
-        public java.util.List < String > getExcludedInstanceTypes() {
+        public java.util.List<String> getExcludedInstanceTypes() {
             return this.excludedInstanceTypes;
         }
 
         /**
          * @return gpuSpecs
          */
-        public java.util.List < String > getGpuSpecs() {
+        public java.util.List<String> getGpuSpecs() {
             return this.gpuSpecs;
         }
 
         /**
          * @return instanceCategories
          */
-        public java.util.List < String > getInstanceCategories() {
+        public java.util.List<String> getInstanceCategories() {
             return this.instanceCategories;
         }
 
@@ -2701,7 +2732,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         /**
          * @return instanceTypeFamilies
          */
-        public java.util.List < String > getInstanceTypeFamilies() {
+        public java.util.List<String> getInstanceTypeFamilies() {
             return this.instanceTypeFamilies;
         }
 
@@ -2799,20 +2830,20 @@ public class ModifyScalingConfigurationRequest extends Request {
         /**
          * @return physicalProcessorModels
          */
-        public java.util.List < String > getPhysicalProcessorModels() {
+        public java.util.List<String> getPhysicalProcessorModels() {
             return this.physicalProcessorModels;
         }
 
         public static final class Builder {
-            private java.util.List < String > architectures; 
+            private java.util.List<String> architectures; 
             private String burstablePerformance; 
             private Integer cores; 
-            private java.util.List < String > cpuArchitectures; 
-            private java.util.List < String > excludedInstanceTypes; 
-            private java.util.List < String > gpuSpecs; 
-            private java.util.List < String > instanceCategories; 
+            private java.util.List<String> cpuArchitectures; 
+            private java.util.List<String> excludedInstanceTypes; 
+            private java.util.List<String> gpuSpecs; 
+            private java.util.List<String> instanceCategories; 
             private String instanceFamilyLevel; 
-            private java.util.List < String > instanceTypeFamilies; 
+            private java.util.List<String> instanceTypeFamilies; 
             private Float maxPrice; 
             private Integer maximumCpuCoreCount; 
             private Integer maximumGpuAmount; 
@@ -2826,20 +2857,19 @@ public class ModifyScalingConfigurationRequest extends Request {
             private Integer minimumGpuAmount; 
             private Integer minimumInitialCredit; 
             private Float minimumMemorySize; 
-            private java.util.List < String > physicalProcessorModels; 
+            private java.util.List<String> physicalProcessorModels; 
 
             /**
-             * <p>The architectures of instance types. Valid values:</p>
+             * <p>The architecture types of the instance types. Valid values:</p>
              * <ul>
              * <li>X86: x86.</li>
              * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</li>
              * <li>BareMetal: ECS Bare Metal Instance.</li>
              * <li>Arm: Arm.</li>
-             * <li>SuperComputeCluster: Super Computing Cluster.</li>
              * </ul>
-             * <p>By default, all values are included.</p>
+             * <p>By default, all values are selected.</p>
              */
-            public Builder architectures(java.util.List < String > architectures) {
+            public Builder architectures(java.util.List<String> architectures) {
                 this.architectures = architectures;
                 return this;
             }
@@ -2847,7 +2877,7 @@ public class ModifyScalingConfigurationRequest extends Request {
             /**
              * <p>Specifies whether to include burstable instance types. Valid values:</p>
              * <ul>
-             * <li>Exclude: does not include burstable instance types.</li>
+             * <li>Exclude: excludes burstable instance types.</li>
              * <li>Include: includes burstable instance types.</li>
              * <li>Required: includes only burstable instance types.</li>
              * </ul>
@@ -2879,7 +2909,7 @@ public class ModifyScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The CPU architectures of instance types. Valid values:</p>
+             * <p>The CPU architectures of the instance types. Valid values:</p>
              * <blockquote>
              * <p> You can specify up to two CPU architectures.</p>
              * </blockquote>
@@ -2888,19 +2918,19 @@ public class ModifyScalingConfigurationRequest extends Request {
              * <li>Arm</li>
              * </ul>
              */
-            public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
+            public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
                 this.cpuArchitectures = cpuArchitectures;
                 return this;
             }
 
             /**
-             * <p>The instance types that you want to exclude. You can use wildcard characters, such as an asterisk (*), to exclude an instance type or an instance family. Examples:</p>
+             * <p>The instance types that you want to exclude. You can use an asterisk (*) as a wildcard character to exclude an instance type or an instance family. Examples:</p>
              * <ul>
              * <li>ecs.c6.large: excludes the ecs.c6.large instance type.</li>
              * <li>ecs.c6.*: excludes the c6 instance family.</li>
              * </ul>
              */
-            public Builder excludedInstanceTypes(java.util.List < String > excludedInstanceTypes) {
+            public Builder excludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
                 this.excludedInstanceTypes = excludedInstanceTypes;
                 return this;
             }
@@ -2908,43 +2938,42 @@ public class ModifyScalingConfigurationRequest extends Request {
             /**
              * <p>The GPU models.</p>
              */
-            public Builder gpuSpecs(java.util.List < String > gpuSpecs) {
+            public Builder gpuSpecs(java.util.List<String> gpuSpecs) {
                 this.gpuSpecs = gpuSpecs;
                 return this;
             }
 
             /**
-             * <p>The categories of instance types. Valid values:</p>
+             * <p>The categories of the instance types. Valid values:</p>
              * <ul>
-             * <li>General-purpose</li>
-             * <li>Compute-optimized</li>
-             * <li>Memory-optimized</li>
-             * <li>Big data</li>
-             * <li>Local SSDs</li>
-             * <li>High Clock Speed</li>
-             * <li>Enhanced</li>
-             * <li>Shared</li>
-             * <li>Compute-optimized with GPU</li>
-             * <li>Visual Compute-optimized</li>
-             * <li>Heterogeneous Service</li>
-             * <li>Compute-optimized with FPGA</li>
-             * <li>Compute-optimized with NPU</li>
-             * <li>ECS Bare Metal</li>
-             * <li>Super Computing Cluster</li>
-             * <li>High Performance Compute</li>
+             * <li>General-purpose: general-purpose instance type.</li>
+             * <li>Compute-optimized: compute-optimized instance type.</li>
+             * <li>Memory-optimized: memory-optimized instance type.</li>
+             * <li>Big data: big data instance type.</li>
+             * <li>Local SSDs: instance type that uses local SSDs.</li>
+             * <li>High Clock Speed: instance type that has a high clock speed.</li>
+             * <li>Enhanced: enhanced instance type.</li>
+             * <li>Shared: shared instance type.</li>
+             * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</li>
+             * <li>Visual Compute-optimized: visual compute-optimized instance type.</li>
+             * <li>Heterogeneous Service: heterogeneous service instance type.</li>
+             * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</li>
+             * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</li>
+             * <li>ECS Bare Metal: ECS Bare Metal Instance type.</li>
+             * <li>High Performance Compute: HPC-optimized instance type.</li>
              * </ul>
              */
-            public Builder instanceCategories(java.util.List < String > instanceCategories) {
+            public Builder instanceCategories(java.util.List<String> instanceCategories) {
                 this.instanceCategories = instanceCategories;
                 return this;
             }
 
             /**
-             * <p>The level of the instance family. You can specify this parameter to filter the available instance types. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
+             * <p>The level of the instance family. You can specify this parameter to obtain the available instance types. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
              * <ul>
-             * <li>EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
-             * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for business scenarios in which high stability is required. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
-             * <li>CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+             * <li>EntryLevel: entry-level (shared instance types). Instance types of this level are the most cost-effective but may not ensure stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+             * <li>EnterpriseLevel: enterprise-level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+             * <li>CreditEntryLevel: credit entry-level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a> of burstable instances.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2958,13 +2987,13 @@ public class ModifyScalingConfigurationRequest extends Request {
             /**
              * <p>The instance families that you want to specify. You can specify up to 10 instance families in each call.</p>
              */
-            public Builder instanceTypeFamilies(java.util.List < String > instanceTypeFamilies) {
+            public Builder instanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
                 this.instanceTypeFamilies = instanceTypeFamilies;
                 return this;
             }
 
             /**
-             * <p>The maximum hourly price of pay-as-you-go or preemptible instances in intelligent configuration mode. You can specify this parameter to filter the available instance types.</p>
+             * <p>The maximum hourly price of pay-as-you-go or preemptible instances in intelligent configuration mode. You can specify this parameter to obtain the available instance types.</p>
              * <blockquote>
              * <p> If you set SpotStrategy to SpotWithPriceLimit, you must specify this parameter. In other cases, this parameter is optional.</p>
              * </blockquote>
@@ -3025,7 +3054,7 @@ public class ModifyScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+             * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) of each t5 or t6 burstable instance.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -3091,7 +3120,7 @@ public class ModifyScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
+             * <p>The initial vCPU credits of each t5 or t6 burstable instance.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -3113,9 +3142,9 @@ public class ModifyScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The processor models of instance types. You can specify up to 10 processor models.</p>
+             * <p>The processor models of the instance types. You can specify up to 10 processor models.</p>
              */
-            public Builder physicalProcessorModels(java.util.List < String > physicalProcessorModels) {
+            public Builder physicalProcessorModels(java.util.List<String> physicalProcessorModels) {
                 this.physicalProcessorModels = physicalProcessorModels;
                 return this;
             }
@@ -3235,7 +3264,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         private String networkInterfaceTrafficMode;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-        private java.util.List < String > securityGroupIds;
+        private java.util.List<String> securityGroupIds;
 
         private NetworkInterfaces(Builder builder) {
             this.instanceType = builder.instanceType;
@@ -3276,7 +3305,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -3284,7 +3313,7 @@ public class ModifyScalingConfigurationRequest extends Request {
             private String instanceType; 
             private Integer ipv6AddressCount; 
             private String networkInterfaceTrafficMode; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
 
             /**
              * <p>The ENI type. If you specify this parameter, you must use NetworkInterfaces to specify a primary ENI. In addition, you cannot specify SecurityGroupId or SecurityGroupIds. Valid values:</p>
@@ -3337,7 +3366,7 @@ public class ModifyScalingConfigurationRequest extends Request {
             /**
              * <p>The IDs of the security groups to which you want to assign the ENI.</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }

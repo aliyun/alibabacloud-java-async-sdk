@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ExitStandbyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -83,7 +88,7 @@ public class ExitStandbyRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -118,7 +123,7 @@ public class ExitStandbyRequest extends Request {
     public static final class Builder extends Request.Builder<ExitStandbyRequest, Builder> {
         private Boolean async; 
         private String clientToken; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -173,7 +178,7 @@ public class ExitStandbyRequest extends Request {
          * <p>The IDs of the ECS instances. The value can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

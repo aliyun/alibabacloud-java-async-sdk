@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class CreateScalingRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlarmDimensions")
-    private java.util.List < AlarmDimensions> alarmDimensions;
+    private java.util.List<AlarmDimensions> alarmDimensions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Cooldown")
@@ -38,7 +43,7 @@ public class CreateScalingRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HybridMetrics")
-    private java.util.List < HybridMetrics> hybridMetrics;
+    private java.util.List<HybridMetrics> hybridMetrics;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HybridMonitorNamespace")
@@ -115,7 +120,7 @@ public class CreateScalingRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StepAdjustments")
-    private java.util.List < StepAdjustments> stepAdjustments;
+    private java.util.List<StepAdjustments> stepAdjustments;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetValue")
@@ -182,7 +187,7 @@ public class CreateScalingRuleRequest extends Request {
     /**
      * @return alarmDimensions
      */
-    public java.util.List < AlarmDimensions> getAlarmDimensions() {
+    public java.util.List<AlarmDimensions> getAlarmDimensions() {
         return this.alarmDimensions;
     }
 
@@ -210,7 +215,7 @@ public class CreateScalingRuleRequest extends Request {
     /**
      * @return hybridMetrics
      */
-    public java.util.List < HybridMetrics> getHybridMetrics() {
+    public java.util.List<HybridMetrics> getHybridMetrics() {
         return this.hybridMetrics;
     }
 
@@ -343,7 +348,7 @@ public class CreateScalingRuleRequest extends Request {
     /**
      * @return stepAdjustments
      */
-    public java.util.List < StepAdjustments> getStepAdjustments() {
+    public java.util.List<StepAdjustments> getStepAdjustments() {
         return this.stepAdjustments;
     }
 
@@ -357,11 +362,11 @@ public class CreateScalingRuleRequest extends Request {
     public static final class Builder extends Request.Builder<CreateScalingRuleRequest, Builder> {
         private String adjustmentType; 
         private Integer adjustmentValue; 
-        private java.util.List < AlarmDimensions> alarmDimensions; 
+        private java.util.List<AlarmDimensions> alarmDimensions; 
         private Integer cooldown; 
         private Boolean disableScaleIn; 
         private Integer estimatedInstanceWarmup; 
-        private java.util.List < HybridMetrics> hybridMetrics; 
+        private java.util.List<HybridMetrics> hybridMetrics; 
         private String hybridMonitorNamespace; 
         private Integer initialMaxSize; 
         private String metricName; 
@@ -380,7 +385,7 @@ public class CreateScalingRuleRequest extends Request {
         private String scalingGroupId; 
         private String scalingRuleName; 
         private String scalingRuleType; 
-        private java.util.List < StepAdjustments> stepAdjustments; 
+        private java.util.List<StepAdjustments> stepAdjustments; 
         private Float targetValue; 
 
         private Builder() {
@@ -455,7 +460,7 @@ public class CreateScalingRuleRequest extends Request {
         /**
          * <p>The metric dimensions. This parameter is applicable to target tracking scaling rules. If your predefined metric requires extra dimensions, you must specify this parameter. For example, if you use LoadBalancerRealServerAverageQps as your predefined metric, you must use this parameter to specify the rulePool dimension.</p>
          */
-        public Builder alarmDimensions(java.util.List < AlarmDimensions> alarmDimensions) {
+        public Builder alarmDimensions(java.util.List<AlarmDimensions> alarmDimensions) {
             this.putQueryParameter("AlarmDimensions", alarmDimensions);
             this.alarmDimensions = alarmDimensions;
             return this;
@@ -507,7 +512,7 @@ public class CreateScalingRuleRequest extends Request {
         /**
          * HybridMetrics.
          */
-        public Builder hybridMetrics(java.util.List < HybridMetrics> hybridMetrics) {
+        public Builder hybridMetrics(java.util.List<HybridMetrics> hybridMetrics) {
             this.putQueryParameter("HybridMetrics", hybridMetrics);
             this.hybridMetrics = hybridMetrics;
             return this;
@@ -745,9 +750,9 @@ public class CreateScalingRuleRequest extends Request {
          * <li>SimpleScalingRule: a simple scaling rule. After you execute a simple scaling rule, Auto Scaling adjusts the number of ECS instances or elastic container instances in the scaling group based on the values of AdjustmentType and AdjustmentValue.</li>
          * <li>TargetTrackingScalingRule: a target tracking scaling rule. After you execute a target tracking scaling rule, Auto Scaling dynamically calculates the number of ECS instances or elastic container instances to scale based on the predefined metric (MetricName) and attempts to maintain the metric value close to the expected value (TargetValue).</li>
          * <li>StepScalingRule: a step scaling rule. After you execute a step scaling rule, Auto Scaling scales instances step by step based on the predefined thresholds and metric values.</li>
-         * <li>PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to specify the value range for the scaling group.</li>
+         * <li>PredictiveScalingRule: a predictive scaling rule. After you execute a predictive scaling rule, Auto Scaling uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to specify the value range for the scaling group.</li>
          * </ul>
-         * <p>Default value: SimpleScalingRule</p>
+         * <p>Default value: SimpleScalingRule.</p>
          * 
          * <strong>example:</strong>
          * <p>SimpleScalingRule</p>
@@ -761,7 +766,7 @@ public class CreateScalingRuleRequest extends Request {
         /**
          * <p>Details of the step adjustments.</p>
          */
-        public Builder stepAdjustments(java.util.List < StepAdjustments> stepAdjustments) {
+        public Builder stepAdjustments(java.util.List<StepAdjustments> stepAdjustments) {
             this.putQueryParameter("StepAdjustments", stepAdjustments);
             this.stepAdjustments = stepAdjustments;
             return this;
@@ -940,7 +945,7 @@ public class CreateScalingRuleRequest extends Request {
      */
     public static class HybridMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dimensions")
-        private java.util.List < Dimensions> dimensions;
+        private java.util.List<Dimensions> dimensions;
 
         @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
@@ -973,7 +978,7 @@ public class CreateScalingRuleRequest extends Request {
         /**
          * @return dimensions
          */
-        public java.util.List < Dimensions> getDimensions() {
+        public java.util.List<Dimensions> getDimensions() {
             return this.dimensions;
         }
 
@@ -1006,7 +1011,7 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Dimensions> dimensions; 
+            private java.util.List<Dimensions> dimensions; 
             private String expression; 
             private String id; 
             private String metricName; 
@@ -1015,7 +1020,7 @@ public class CreateScalingRuleRequest extends Request {
             /**
              * Dimensions.
              */
-            public Builder dimensions(java.util.List < Dimensions> dimensions) {
+            public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
                 return this;
             }

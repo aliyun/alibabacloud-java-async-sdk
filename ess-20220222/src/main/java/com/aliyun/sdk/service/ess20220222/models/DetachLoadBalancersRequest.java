@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class DetachLoadBalancersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > loadBalancers;
+    private java.util.List<String> loadBalancers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -95,7 +100,7 @@ public class DetachLoadBalancersRequest extends Request {
     /**
      * @return loadBalancers
      */
-    public java.util.List < String > getLoadBalancers() {
+    public java.util.List<String> getLoadBalancers() {
         return this.loadBalancers;
     }
 
@@ -131,7 +136,7 @@ public class DetachLoadBalancersRequest extends Request {
         private Boolean async; 
         private String clientToken; 
         private Boolean forceDetach; 
-        private java.util.List < String > loadBalancers; 
+        private java.util.List<String> loadBalancers; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -184,7 +189,7 @@ public class DetachLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to remove Elastic Compute Service (ECS) instances in the scaling group from the backend server groups of the CLB instance. Valid values:</p>
+         * <p>Specifies whether to remove Elastic Compute Service (ECS) instances in the scaling group from the backend server groups of the Server Load Balancer (SLB) instance. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -204,7 +209,7 @@ public class DetachLoadBalancersRequest extends Request {
          * <p>The IDs of the CLB instances. You can specify up to five instance IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder loadBalancers(java.util.List < String > loadBalancers) {
+        public Builder loadBalancers(java.util.List<String> loadBalancers) {
             this.putQueryParameter("LoadBalancers", loadBalancers);
             this.loadBalancers = loadBalancers;
             return this;

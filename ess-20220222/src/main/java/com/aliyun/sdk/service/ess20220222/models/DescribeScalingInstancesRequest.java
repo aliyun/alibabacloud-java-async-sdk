@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeScalingInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreationTypes")
-    private java.util.List < String > creationTypes;
+    private java.util.List<String> creationTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthStatus")
@@ -26,7 +31,7 @@ public class DescribeScalingInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecycleState")
@@ -34,7 +39,7 @@ public class DescribeScalingInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecycleStates")
-    private java.util.List < String > lifecycleStates;
+    private java.util.List<String> lifecycleStates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -121,7 +126,7 @@ public class DescribeScalingInstancesRequest extends Request {
     /**
      * @return creationTypes
      */
-    public java.util.List < String > getCreationTypes() {
+    public java.util.List<String> getCreationTypes() {
         return this.creationTypes;
     }
 
@@ -135,7 +140,7 @@ public class DescribeScalingInstancesRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -149,7 +154,7 @@ public class DescribeScalingInstancesRequest extends Request {
     /**
      * @return lifecycleStates
      */
-    public java.util.List < String > getLifecycleStates() {
+    public java.util.List<String> getLifecycleStates() {
         return this.lifecycleStates;
     }
 
@@ -225,11 +230,11 @@ public class DescribeScalingInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeScalingInstancesRequest, Builder> {
         private String creationType; 
-        private java.util.List < String > creationTypes; 
+        private java.util.List<String> creationTypes; 
         private String healthStatus; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String lifecycleState; 
-        private java.util.List < String > lifecycleStates; 
+        private java.util.List<String> lifecycleStates; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -285,7 +290,7 @@ public class DescribeScalingInstancesRequest extends Request {
         /**
          * <p>The instance creation methods. If you specify this parameter, you cannot specify CreationType.</p>
          */
-        public Builder creationTypes(java.util.List < String > creationTypes) {
+        public Builder creationTypes(java.util.List<String> creationTypes) {
             this.putQueryParameter("CreationTypes", creationTypes);
             this.creationTypes = creationTypes;
             return this;
@@ -316,7 +321,7 @@ public class DescribeScalingInstancesRequest extends Request {
          * <p>The IDs of the ECS instances.</p>
          * <p>The IDs of inactive instances are not displayed in the query result, and no errors are returned.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
@@ -347,7 +352,7 @@ public class DescribeScalingInstancesRequest extends Request {
         /**
          * <p>The lifecycle status of the ECS instances in the scaling group. You can specify only one of LifecycleStates and LifecycleState at a time. We recommend that you specify this parameter.</p>
          */
-        public Builder lifecycleStates(java.util.List < String > lifecycleStates) {
+        public Builder lifecycleStates(java.util.List<String> lifecycleStates) {
             this.putQueryParameter("LifecycleStates", lifecycleStates);
             this.lifecycleStates = lifecycleStates;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ResumeProcessesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Processes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > processes;
+    private java.util.List<String> processes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -78,7 +83,7 @@ public class ResumeProcessesRequest extends Request {
     /**
      * @return processes
      */
-    public java.util.List < String > getProcesses() {
+    public java.util.List<String> getProcesses() {
         return this.processes;
     }
 
@@ -106,7 +111,7 @@ public class ResumeProcessesRequest extends Request {
     public static final class Builder extends Request.Builder<ResumeProcessesRequest, Builder> {
         private String clientToken; 
         private Long ownerId; 
-        private java.util.List < String > processes; 
+        private java.util.List<String> processes; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
@@ -151,7 +156,7 @@ public class ResumeProcessesRequest extends Request {
          * <p>Details of the processes that you want to resume.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder processes(java.util.List < String > processes) {
+        public Builder processes(java.util.List<String> processes) {
             this.putQueryParameter("Processes", processes);
             this.processes = processes;
             return this;

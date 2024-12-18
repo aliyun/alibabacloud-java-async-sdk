@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Reports")
-    private java.util.List < Reports> reports;
+    private java.util.List<Reports> reports;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
     /**
      * @return reports
      */
-    public java.util.List < Reports> getReports() {
+    public java.util.List<Reports> getReports() {
         return this.reports;
     }
 
@@ -81,12 +86,15 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Reports> reports; 
+        private java.util.List<Reports> reports; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,15 +113,15 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Reports.
+         * <p>The diagnostic reports.</p>
          */
-        public Builder reports(java.util.List < Reports> reports) {
+        public Builder reports(java.util.List<Reports> reports) {
             this.reports = reports;
             return this;
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ECA123C6-107B-5F70-A177-740A7224C996</p>
@@ -121,7 +132,10 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of diagnostic reports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -203,7 +217,21 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DiagnoseType.
+             * <p>The type of the diagnostic item. Valid values:</p>
+             * <ul>
+             * <li>AccountArrearage: Checks whether your Alibaba Cloud account has overdue payments.</li>
+             * <li>AccountNotEnoughBalance: Checks whether the balance of your Alibaba Cloud account at the China site (aliyun.com) is greater than or equal to CNY 100.</li>
+             * <li>ElasticStrength: Checks whether the instance types that are specified in the scaling configuration are sufficient.</li>
+             * <li>VSwitch: Checks whether a specific vSwitch can work as expected. For example, if a vSwitch is deleted, the vSwitch cannot provide services and an exception occurs.</li>
+             * <li>SecurityGroup: Checks whether a specific security group can work as expected. For example, if a security group is deleted, the security group cannot provide services and an exception occurs.</li>
+             * <li>KeyPair: Checks whether the key pair is available. If the specified key pair is deleted, specify another key pair for the scaling group.</li>
+             * <li>SlbBackendServerQuota: Checks whether the number of ECS instances that are added to the default server group and the vServer groups of the SLB instances associated with the scaling group has reached the upper limit.</li>
+             * <li>AlbBackendServerQuota: Checks whether the number of ECS instances that are added to the backend server groups of the ALB instances associated with the scaling group has reached the upper limit.</li>
+             * <li>NlbBackendServerQuota: Checks whether the number of ECS instances that are added to the backend server groups of the NLB instances associated with the scaling group has reached the upper limit.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AccountArrearage</p>
              */
             public Builder diagnoseType(String diagnoseType) {
                 this.diagnoseType = diagnoseType;
@@ -211,7 +239,21 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code of the diagnostic item. Valid values:</p>
+             * <ul>
+             * <li>VSwitchIdNotFound: The vSwitch does not exist.</li>
+             * <li>SecurityGroupNotFound: The security group does not exist.</li>
+             * <li>KeyPairNotFound: The key pair does not exist.</li>
+             * <li>SlbBackendServerQuotaExceeded: The number of ECS instances that are added to the default server group and the vServer groups of the SLB instances associated with the scaling group has reached the upper limit.</li>
+             * <li>AlbBackendServerQuotaExceeded: The number of ECS instances that are attached to the ALB instances of the scaling group has reached the upper limit.</li>
+             * <li>NlbBackendServerQuotaExceeded: The number of ECS instances that are attached to the NLB instances of the scaling group has reached the upper limit.</li>
+             * <li>AccountArrearage: Your account has overdue payments.</li>
+             * <li>AccountNotEnoughBalance: The balance of your Alibaba Cloud account is less than CNY 100.</li>
+             * <li>ElasticStrengthAlert: The inventory levels are lower than expected.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VSwitchIdNotFound</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -219,7 +261,10 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-280ih****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -227,7 +272,15 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the diagnostic item. Valid values:</p>
+             * <ul>
+             * <li>Normal: The diagnostic result is normal.</li>
+             * <li>Warn: The diagnostic result is warning.</li>
+             * <li>Critical: The diagnostic result is critical.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -252,7 +305,7 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         private String creationTime;
 
         @com.aliyun.core.annotation.NameInMap("Details")
-        private java.util.List < Details> details;
+        private java.util.List<Details> details;
 
         @com.aliyun.core.annotation.NameInMap("DiagnoseStatus")
         private String diagnoseStatus;
@@ -301,7 +354,7 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         /**
          * @return details
          */
-        public java.util.List < Details> getDetails() {
+        public java.util.List<Details> getDetails() {
             return this.details;
         }
 
@@ -349,7 +402,7 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String creationTime; 
-            private java.util.List < Details> details; 
+            private java.util.List<Details> details; 
             private String diagnoseStatus; 
             private String processStatus; 
             private String regionId; 
@@ -358,7 +411,10 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * CreationTime.
+             * <p>The time when the diagnostic report was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-23T02:22:30Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -366,15 +422,23 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Details.
+             * <p>The details of the diagnostic report.</p>
              */
-            public Builder details(java.util.List < Details> details) {
+            public Builder details(java.util.List<Details> details) {
                 this.details = details;
                 return this;
             }
 
             /**
-             * DiagnoseStatus.
+             * <p>The status of the diagnostic item. Only the severe status is displayed in the diagnostic report. Valid values:</p>
+             * <ul>
+             * <li>Normal: The diagnostic result is normal.</li>
+             * <li>Warn: The diagnostic result is warning.</li>
+             * <li>Critical: The diagnostic result is critical.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder diagnoseStatus(String diagnoseStatus) {
                 this.diagnoseStatus = diagnoseStatus;
@@ -382,7 +446,14 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessStatus.
+             * <p>The status of the diagnostic report. Valid values:</p>
+             * <ul>
+             * <li>processing: The diagnosis is in progress.</li>
+             * <li>Finished: The diagnosis is complete.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder processStatus(String processStatus) {
                 this.processStatus = processStatus;
@@ -390,7 +461,10 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -398,7 +472,10 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * <p>The ID of the diagnostic report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dr-bp14p0cjp7wvjob5l6hk</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -406,7 +483,10 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingGroupId.
+             * <p>The ID of the scaling group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asg-bp124uve5iph3*****</p>
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -414,7 +494,10 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID of the scaling group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161456884*******</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -38,7 +43,7 @@ public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
@@ -80,7 +85,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -101,17 +106,17 @@ public class TagResourcesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceOwnerAccount; 
         private String resourceType; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -153,7 +158,7 @@ public class TagResourcesRequest extends Request {
          * <p>The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;
@@ -182,10 +187,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Details of the tags.</p>
+         * <p>The tags that you want to add to the Auto Scaling resources.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -255,8 +260,8 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * <p>The key of the tag that you want to add to the Auto Scaling resource.</p>
-             * <p>You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The tag key.</p>
+             * <p>You cannot specify an empty string as a tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -269,8 +274,8 @@ public class TagResourcesRequest extends Request {
             /**
              * <p>Specifies whether to propagate the tag that you want to add. Valid values:</p>
              * <ul>
-             * <li>true: propagates the tag only to instances that are newly created and does not propagate the tag to instances that are already running in the scaling group.</li>
-             * <li>false: does not propagate the tag to any instances.</li>
+             * <li>true: propagates the tag to new instances.</li>
+             * <li>false: does not propagate the tag to any instance.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -283,8 +288,8 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag that you want to add to the Auto Scaling resource.</p>
-             * <p>You can specify empty strings as tag values. The tag value must be 0 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
+             * <p>The tag value.</p>
+             * <p>You can specify empty strings as tag values. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class SetInstancesProtectionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -60,7 +65,7 @@ public class SetInstancesProtectionRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -93,7 +98,7 @@ public class SetInstancesProtectionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetInstancesProtectionRequest, Builder> {
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private Long ownerId; 
         private Boolean protectedFromScaleIn; 
         private String resourceOwnerAccount; 
@@ -116,7 +121,7 @@ public class SetInstancesProtectionRequest extends Request {
          * <p>The IDs of the ECS instances.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
