@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class DescribePriceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBNode")
-    private java.util.List < DBNode> DBNode;
+    private java.util.List<DBNode> DBNode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Engine")
@@ -190,7 +195,7 @@ public class DescribePriceRequest extends Request {
     /**
      * @return DBNode
      */
-    public java.util.List < DBNode> getDBNode() {
+    public java.util.List<DBNode> getDBNode() {
         return this.DBNode;
     }
 
@@ -306,7 +311,7 @@ public class DescribePriceRequest extends Request {
         private String DBInstanceId; 
         private Integer DBInstanceStorage; 
         private String DBInstanceStorageType; 
-        private java.util.List < DBNode> DBNode; 
+        private java.util.List<DBNode> DBNode; 
         private String engine; 
         private String engineVersion; 
         private Integer instanceUsedType; 
@@ -459,7 +464,7 @@ public class DescribePriceRequest extends Request {
          * <p> This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</p>
          * </blockquote>
          */
-        public Builder DBNode(java.util.List < DBNode> DBNode) {
+        public Builder DBNode(java.util.List<DBNode> DBNode) {
             String DBNodeShrink = shrink(DBNode, "DBNode", "json");
             this.putQueryParameter("DBNode", DBNodeShrink);
             this.DBNode = DBNode;

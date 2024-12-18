@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
      */
     public static class Capacities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
-        private java.util.List < Capacity> capacity;
+        private java.util.List<Capacity> capacity;
 
         private Capacities(Builder builder) {
             this.capacity = builder.capacity;
@@ -287,17 +292,17 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         /**
          * @return capacity
          */
-        public java.util.List < Capacity> getCapacity() {
+        public java.util.List<Capacity> getCapacity() {
             return this.capacity;
         }
 
         public static final class Builder {
-            private java.util.List < Capacity> capacity; 
+            private java.util.List<Capacity> capacity; 
 
             /**
              * Capacity.
              */
-            public Builder capacity(java.util.List < Capacity> capacity) {
+            public Builder capacity(java.util.List<Capacity> capacity) {
                 this.capacity = capacity;
                 return this;
             }
@@ -317,7 +322,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
      */
     public static class InstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
-        private java.util.List < String > instanceId;
+        private java.util.List<String> instanceId;
 
         private InstanceIds(Builder builder) {
             this.instanceId = builder.instanceId;
@@ -334,17 +339,17 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         /**
          * @return instanceId
          */
-        public java.util.List < String > getInstanceId() {
+        public java.util.List<String> getInstanceId() {
             return this.instanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceId; 
+            private java.util.List<String> instanceId; 
 
             /**
              * InstanceId.
              */
-            public Builder instanceId(java.util.List < String > instanceId) {
+            public Builder instanceId(java.util.List<String> instanceId) {
                 this.instanceId = instanceId;
                 return this;
             }
@@ -362,7 +367,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
      *
      * <p>DescribeRCDeploymentSetsResponseBody</p>
      */
-    public static class TagResources extends TeaModel {
+    public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
@@ -375,7 +380,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
-        private TagResources(Builder builder) {
+        private Tag(Builder builder) {
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
             this.tagKey = builder.tagKey;
@@ -386,7 +391,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static TagResources create() {
+        public static Tag create() {
             return builder().build();
         }
 
@@ -456,8 +461,8 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
                 return this;
             }
 
-            public TagResources build() {
-                return new TagResources(this);
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 
@@ -469,42 +474,42 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
      *
      * <p>DescribeRCDeploymentSetsResponseBody</p>
      */
-    public static class DeploymentSetTagResources extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("TagResources")
-        private java.util.List < TagResources> tagResources;
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
-        private DeploymentSetTagResources(Builder builder) {
-            this.tagResources = builder.tagResources;
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static DeploymentSetTagResources create() {
+        public static Tags create() {
             return builder().build();
         }
 
         /**
-         * @return tagResources
+         * @return tag
          */
-        public java.util.List < TagResources> getTagResources() {
-            return this.tagResources;
+        public java.util.List<Tag> getTag() {
+            return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < TagResources> tagResources; 
+            private java.util.List<Tag> tag; 
 
             /**
-             * TagResources.
+             * Tag.
              */
-            public Builder tagResources(java.util.List < TagResources> tagResources) {
-                this.tagResources = tagResources;
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
                 return this;
             }
 
-            public DeploymentSetTagResources build() {
-                return new DeploymentSetTagResources(this);
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
@@ -553,8 +558,8 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Strategy")
         private String strategy;
 
-        @com.aliyun.core.annotation.NameInMap("TagResources")
-        private DeploymentSetTagResources tagResources;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
 
         private DeploymentSet(Builder builder) {
             this.capacities = builder.capacities;
@@ -569,7 +574,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             this.instanceAmount = builder.instanceAmount;
             this.instanceIds = builder.instanceIds;
             this.strategy = builder.strategy;
-            this.tagResources = builder.tagResources;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -665,10 +670,10 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagResources
+         * @return tags
          */
-        public DeploymentSetTagResources getTagResources() {
-            return this.tagResources;
+        public Tags getTags() {
+            return this.tags;
         }
 
         public static final class Builder {
@@ -684,7 +689,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             private Integer instanceAmount; 
             private InstanceIds instanceIds; 
             private String strategy; 
-            private DeploymentSetTagResources tagResources; 
+            private Tags tags; 
 
             /**
              * <p>The details of the capacities of the deployment set. This parameter is valid only when the deployment set contains existing RDS Custom instances. The value contains the details of the capacities of the deployment set in different zones.</p>
@@ -816,10 +821,10 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * TagResources.
+             * Tags.
              */
-            public Builder tagResources(DeploymentSetTagResources tagResources) {
-                this.tagResources = tagResources;
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -838,7 +843,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
      */
     public static class DeploymentSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeploymentSet")
-        private java.util.List < DeploymentSet> deploymentSet;
+        private java.util.List<DeploymentSet> deploymentSet;
 
         private DeploymentSets(Builder builder) {
             this.deploymentSet = builder.deploymentSet;
@@ -855,17 +860,17 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         /**
          * @return deploymentSet
          */
-        public java.util.List < DeploymentSet> getDeploymentSet() {
+        public java.util.List<DeploymentSet> getDeploymentSet() {
             return this.deploymentSet;
         }
 
         public static final class Builder {
-            private java.util.List < DeploymentSet> deploymentSet; 
+            private java.util.List<DeploymentSet> deploymentSet; 
 
             /**
              * DeploymentSet.
              */
-            public Builder deploymentSet(java.util.List < DeploymentSet> deploymentSet) {
+            public Builder deploymentSet(java.util.List<DeploymentSet> deploymentSet) {
                 this.deploymentSet = deploymentSet;
                 return this;
             }

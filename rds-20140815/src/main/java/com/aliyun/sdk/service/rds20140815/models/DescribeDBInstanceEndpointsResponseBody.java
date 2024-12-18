@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -251,7 +256,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
      */
     public static class AddressItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressItem")
-        private java.util.List < AddressItem> addressItem;
+        private java.util.List<AddressItem> addressItem;
 
         private AddressItems(Builder builder) {
             this.addressItem = builder.addressItem;
@@ -268,17 +273,17 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         /**
          * @return addressItem
          */
-        public java.util.List < AddressItem> getAddressItem() {
+        public java.util.List<AddressItem> getAddressItem() {
             return this.addressItem;
         }
 
         public static final class Builder {
-            private java.util.List < AddressItem> addressItem; 
+            private java.util.List<AddressItem> addressItem; 
 
             /**
              * AddressItem.
              */
-            public Builder addressItem(java.util.List < AddressItem> addressItem) {
+            public Builder addressItem(java.util.List<AddressItem> addressItem) {
                 this.addressItem = addressItem;
                 return this;
             }
@@ -395,7 +400,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
      */
     public static class NodeItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeItem")
-        private java.util.List < NodeItem> nodeItem;
+        private java.util.List<NodeItem> nodeItem;
 
         private NodeItems(Builder builder) {
             this.nodeItem = builder.nodeItem;
@@ -412,17 +417,17 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         /**
          * @return nodeItem
          */
-        public java.util.List < NodeItem> getNodeItem() {
+        public java.util.List<NodeItem> getNodeItem() {
             return this.nodeItem;
         }
 
         public static final class Builder {
-            private java.util.List < NodeItem> nodeItem; 
+            private java.util.List<NodeItem> nodeItem; 
 
             /**
              * NodeItem.
              */
-            public Builder nodeItem(java.util.List < NodeItem> nodeItem) {
+            public Builder nodeItem(java.util.List<NodeItem> nodeItem) {
                 this.nodeItem = nodeItem;
                 return this;
             }
@@ -582,7 +587,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
      */
     public static class DBInstanceEndpoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceEndpoint")
-        private java.util.List < DBInstanceEndpoint> DBInstanceEndpoint;
+        private java.util.List<DBInstanceEndpoint> DBInstanceEndpoint;
 
         private DBInstanceEndpoints(Builder builder) {
             this.DBInstanceEndpoint = builder.DBInstanceEndpoint;
@@ -599,17 +604,17 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         /**
          * @return DBInstanceEndpoint
          */
-        public java.util.List < DBInstanceEndpoint> getDBInstanceEndpoint() {
+        public java.util.List<DBInstanceEndpoint> getDBInstanceEndpoint() {
             return this.DBInstanceEndpoint;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceEndpoint> DBInstanceEndpoint; 
+            private java.util.List<DBInstanceEndpoint> DBInstanceEndpoint; 
 
             /**
              * DBInstanceEndpoint.
              */
-            public Builder DBInstanceEndpoint(java.util.List < DBInstanceEndpoint> DBInstanceEndpoint) {
+            public Builder DBInstanceEndpoint(java.util.List<DBInstanceEndpoint> DBInstanceEndpoint) {
                 this.DBInstanceEndpoint = DBInstanceEndpoint;
                 return this;
             }

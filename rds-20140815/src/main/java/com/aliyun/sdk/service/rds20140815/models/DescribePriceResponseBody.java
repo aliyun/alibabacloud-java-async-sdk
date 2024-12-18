@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -432,7 +437,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class Coupons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Coupon")
-        private java.util.List < Coupon> coupon;
+        private java.util.List<Coupon> coupon;
 
         private Coupons(Builder builder) {
             this.coupon = builder.coupon;
@@ -449,17 +454,17 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return coupon
          */
-        public java.util.List < Coupon> getCoupon() {
+        public java.util.List<Coupon> getCoupon() {
             return this.coupon;
         }
 
         public static final class Builder {
-            private java.util.List < Coupon> coupon; 
+            private java.util.List<Coupon> coupon; 
 
             /**
              * Coupon.
              */
-            public Builder coupon(java.util.List < Coupon> coupon) {
+            public Builder coupon(java.util.List<Coupon> coupon) {
                 this.coupon = coupon;
                 return this;
             }
@@ -479,7 +484,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class RuleIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
-        private java.util.List < String > ruleId;
+        private java.util.List<String> ruleId;
 
         private RuleIds(Builder builder) {
             this.ruleId = builder.ruleId;
@@ -496,17 +501,17 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return ruleId
          */
-        public java.util.List < String > getRuleId() {
+        public java.util.List<String> getRuleId() {
             return this.ruleId;
         }
 
         public static final class Builder {
-            private java.util.List < String > ruleId; 
+            private java.util.List<String> ruleId; 
 
             /**
              * RuleId.
              */
-            public Builder ruleId(java.util.List < String > ruleId) {
+            public Builder ruleId(java.util.List<String> ruleId) {
                 this.ruleId = ruleId;
                 return this;
             }
@@ -870,7 +875,7 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
-        private java.util.List < Rule> rule;
+        private java.util.List<Rule> rule;
 
         private Rules(Builder builder) {
             this.rule = builder.rule;
@@ -887,17 +892,17 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return rule
          */
-        public java.util.List < Rule> getRule() {
+        public java.util.List<Rule> getRule() {
             return this.rule;
         }
 
         public static final class Builder {
-            private java.util.List < Rule> rule; 
+            private java.util.List<Rule> rule; 
 
             /**
              * Rule.
              */
-            public Builder rule(java.util.List < Rule> rule) {
+            public Builder rule(java.util.List<Rule> rule) {
                 this.rule = rule;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -309,7 +314,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImportResultFromDB")
-        private java.util.List < ImportResultFromDB> importResultFromDB;
+        private java.util.List<ImportResultFromDB> importResultFromDB;
 
         private Items(Builder builder) {
             this.importResultFromDB = builder.importResultFromDB;
@@ -326,17 +331,17 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         /**
          * @return importResultFromDB
          */
-        public java.util.List < ImportResultFromDB> getImportResultFromDB() {
+        public java.util.List<ImportResultFromDB> getImportResultFromDB() {
             return this.importResultFromDB;
         }
 
         public static final class Builder {
-            private java.util.List < ImportResultFromDB> importResultFromDB; 
+            private java.util.List<ImportResultFromDB> importResultFromDB; 
 
             /**
              * ImportResultFromDB.
              */
-            public Builder importResultFromDB(java.util.List < ImportResultFromDB> importResultFromDB) {
+            public Builder importResultFromDB(java.util.List<ImportResultFromDB> importResultFromDB) {
                 this.importResultFromDB = importResultFromDB;
                 return this;
             }

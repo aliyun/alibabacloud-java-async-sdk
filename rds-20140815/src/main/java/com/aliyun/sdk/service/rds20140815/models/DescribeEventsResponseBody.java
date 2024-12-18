@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -454,7 +459,7 @@ public class DescribeEventsResponseBody extends TeaModel {
      */
     public static class EventItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventItems")
-        private java.util.List < EventItemsEventItems> eventItems;
+        private java.util.List<EventItemsEventItems> eventItems;
 
         private EventItems(Builder builder) {
             this.eventItems = builder.eventItems;
@@ -471,17 +476,17 @@ public class DescribeEventsResponseBody extends TeaModel {
         /**
          * @return eventItems
          */
-        public java.util.List < EventItemsEventItems> getEventItems() {
+        public java.util.List<EventItemsEventItems> getEventItems() {
             return this.eventItems;
         }
 
         public static final class Builder {
-            private java.util.List < EventItemsEventItems> eventItems; 
+            private java.util.List<EventItemsEventItems> eventItems; 
 
             /**
              * <p>The events.</p>
              */
-            public Builder eventItems(java.util.List < EventItemsEventItems> eventItems) {
+            public Builder eventItems(java.util.List<EventItemsEventItems> eventItems) {
                 this.eventItems = eventItems;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -339,7 +344,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BinLogFile")
-        private java.util.List < BinLogFile> binLogFile;
+        private java.util.List<BinLogFile> binLogFile;
 
         private Items(Builder builder) {
             this.binLogFile = builder.binLogFile;
@@ -356,17 +361,17 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         /**
          * @return binLogFile
          */
-        public java.util.List < BinLogFile> getBinLogFile() {
+        public java.util.List<BinLogFile> getBinLogFile() {
             return this.binLogFile;
         }
 
         public static final class Builder {
-            private java.util.List < BinLogFile> binLogFile; 
+            private java.util.List<BinLogFile> binLogFile; 
 
             /**
              * BinLogFile.
              */
-            public Builder binLogFile(java.util.List < BinLogFile> binLogFile) {
+            public Builder binLogFile(java.util.List<BinLogFile> binLogFile) {
                 this.binLogFile = binLogFile;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -184,7 +189,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
      */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountPrivilegeInfo")
-        private java.util.List < AccountPrivilegeInfo> accountPrivilegeInfo;
+        private java.util.List<AccountPrivilegeInfo> accountPrivilegeInfo;
 
         private Accounts(Builder builder) {
             this.accountPrivilegeInfo = builder.accountPrivilegeInfo;
@@ -201,17 +206,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return accountPrivilegeInfo
          */
-        public java.util.List < AccountPrivilegeInfo> getAccountPrivilegeInfo() {
+        public java.util.List<AccountPrivilegeInfo> getAccountPrivilegeInfo() {
             return this.accountPrivilegeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AccountPrivilegeInfo> accountPrivilegeInfo; 
+            private java.util.List<AccountPrivilegeInfo> accountPrivilegeInfo; 
 
             /**
              * AccountPrivilegeInfo.
              */
-            public Builder accountPrivilegeInfo(java.util.List < AccountPrivilegeInfo> accountPrivilegeInfo) {
+            public Builder accountPrivilegeInfo(java.util.List<AccountPrivilegeInfo> accountPrivilegeInfo) {
                 this.accountPrivilegeInfo = accountPrivilegeInfo;
                 return this;
             }
@@ -231,7 +236,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
      */
     public static class AdvancedInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdvancedDbProperty")
-        private java.util.List < java.util.Map<String, ?>> advancedDbProperty;
+        private java.util.List<java.util.Map<String, ?>> advancedDbProperty;
 
         private AdvancedInfo(Builder builder) {
             this.advancedDbProperty = builder.advancedDbProperty;
@@ -248,17 +253,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return advancedDbProperty
          */
-        public java.util.List < java.util.Map<String, ?>> getAdvancedDbProperty() {
+        public java.util.List<java.util.Map<String, ?>> getAdvancedDbProperty() {
             return this.advancedDbProperty;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> advancedDbProperty; 
+            private java.util.List<java.util.Map<String, ?>> advancedDbProperty; 
 
             /**
              * AdvancedDbProperty.
              */
-            public Builder advancedDbProperty(java.util.List < java.util.Map<String, ?>> advancedDbProperty) {
+            public Builder advancedDbProperty(java.util.List<java.util.Map<String, ?>> advancedDbProperty) {
                 this.advancedDbProperty = advancedDbProperty;
                 return this;
             }
@@ -278,7 +283,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
      */
     public static class BasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BasicDbProperty")
-        private java.util.List < java.util.Map<String, ?>> basicDbProperty;
+        private java.util.List<java.util.Map<String, ?>> basicDbProperty;
 
         private BasicInfo(Builder builder) {
             this.basicDbProperty = builder.basicDbProperty;
@@ -295,17 +300,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return basicDbProperty
          */
-        public java.util.List < java.util.Map<String, ?>> getBasicDbProperty() {
+        public java.util.List<java.util.Map<String, ?>> getBasicDbProperty() {
             return this.basicDbProperty;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> basicDbProperty; 
+            private java.util.List<java.util.Map<String, ?>> basicDbProperty; 
 
             /**
              * BasicDbProperty.
              */
-            public Builder basicDbProperty(java.util.List < java.util.Map<String, ?>> basicDbProperty) {
+            public Builder basicDbProperty(java.util.List<java.util.Map<String, ?>> basicDbProperty) {
                 this.basicDbProperty = basicDbProperty;
                 return this;
             }
@@ -325,7 +330,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
      */
     public static class RuntimeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuntimeDbProperty")
-        private java.util.List < java.util.Map<String, ?>> runtimeDbProperty;
+        private java.util.List<java.util.Map<String, ?>> runtimeDbProperty;
 
         private RuntimeInfo(Builder builder) {
             this.runtimeDbProperty = builder.runtimeDbProperty;
@@ -342,17 +347,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return runtimeDbProperty
          */
-        public java.util.List < java.util.Map<String, ?>> getRuntimeDbProperty() {
+        public java.util.List<java.util.Map<String, ?>> getRuntimeDbProperty() {
             return this.runtimeDbProperty;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> runtimeDbProperty; 
+            private java.util.List<java.util.Map<String, ?>> runtimeDbProperty; 
 
             /**
              * RuntimeDbProperty.
              */
-            public Builder runtimeDbProperty(java.util.List < java.util.Map<String, ?>> runtimeDbProperty) {
+            public Builder runtimeDbProperty(java.util.List<java.util.Map<String, ?>> runtimeDbProperty) {
                 this.runtimeDbProperty = runtimeDbProperty;
                 return this;
             }
@@ -808,7 +813,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
      */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
-        private java.util.List < Database> database;
+        private java.util.List<Database> database;
 
         private Databases(Builder builder) {
             this.database = builder.database;
@@ -825,17 +830,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return database
          */
-        public java.util.List < Database> getDatabase() {
+        public java.util.List<Database> getDatabase() {
             return this.database;
         }
 
         public static final class Builder {
-            private java.util.List < Database> database; 
+            private java.util.List<Database> database; 
 
             /**
              * Database.
              */
-            public Builder database(java.util.List < Database> database) {
+            public Builder database(java.util.List<Database> database) {
                 this.database = database;
                 return this;
             }

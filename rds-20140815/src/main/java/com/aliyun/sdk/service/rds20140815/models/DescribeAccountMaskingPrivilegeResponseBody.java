@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -166,7 +171,7 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserPrivilege")
-        private java.util.List < UserPrivilege> userPrivilege;
+        private java.util.List<UserPrivilege> userPrivilege;
 
         private Data(Builder builder) {
             this.userPrivilege = builder.userPrivilege;
@@ -183,17 +188,17 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
         /**
          * @return userPrivilege
          */
-        public java.util.List < UserPrivilege> getUserPrivilege() {
+        public java.util.List<UserPrivilege> getUserPrivilege() {
             return this.userPrivilege;
         }
 
         public static final class Builder {
-            private java.util.List < UserPrivilege> userPrivilege; 
+            private java.util.List<UserPrivilege> userPrivilege; 
 
             /**
              * UserPrivilege.
              */
-            public Builder userPrivilege(java.util.List < UserPrivilege> userPrivilege) {
+            public Builder userPrivilege(java.util.List<UserPrivilege> userPrivilege) {
                 this.userPrivilege = userPrivilege;
                 return this;
             }

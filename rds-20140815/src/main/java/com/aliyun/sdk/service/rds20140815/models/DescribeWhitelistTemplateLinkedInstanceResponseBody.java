@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -190,7 +195,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InsName")
-        private java.util.List < String > insName;
+        private java.util.List<String> insName;
 
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Integer templateId;
@@ -211,7 +216,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         /**
          * @return insName
          */
-        public java.util.List < String > getInsName() {
+        public java.util.List<String> getInsName() {
             return this.insName;
         }
 
@@ -223,13 +228,13 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         public static final class Builder {
-            private java.util.List < String > insName; 
+            private java.util.List<String> insName; 
             private Integer templateId; 
 
             /**
              * <p>The information about the instance.</p>
              */
-            public Builder insName(java.util.List < String > insName) {
+            public Builder insName(java.util.List<String> insName) {
                 this.insName = insName;
                 return this;
             }

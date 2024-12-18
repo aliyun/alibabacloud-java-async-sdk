@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -186,7 +191,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
      */
     public static class FeeOfInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FeeOfInstance")
-        private java.util.List < FeeOfInstance> feeOfInstance;
+        private java.util.List<FeeOfInstance> feeOfInstance;
 
         private FeeOfInstances(Builder builder) {
             this.feeOfInstance = builder.feeOfInstance;
@@ -203,17 +208,17 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         /**
          * @return feeOfInstance
          */
-        public java.util.List < FeeOfInstance> getFeeOfInstance() {
+        public java.util.List<FeeOfInstance> getFeeOfInstance() {
             return this.feeOfInstance;
         }
 
         public static final class Builder {
-            private java.util.List < FeeOfInstance> feeOfInstance; 
+            private java.util.List<FeeOfInstance> feeOfInstance; 
 
             /**
              * FeeOfInstance.
              */
-            public Builder feeOfInstance(java.util.List < FeeOfInstance> feeOfInstance) {
+            public Builder feeOfInstance(java.util.List<FeeOfInstance> feeOfInstance) {
                 this.feeOfInstance = feeOfInstance;
                 return this;
             }

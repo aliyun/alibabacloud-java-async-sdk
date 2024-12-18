@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class AttachRCInstancesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Responses")
-    private java.util.List < Responses> responses;
+    private java.util.List<Responses> responses;
 
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
@@ -45,7 +50,7 @@ public class AttachRCInstancesResponseBody extends TeaModel {
     /**
      * @return responses
      */
-    public java.util.List < Responses> getResponses() {
+    public java.util.List<Responses> getResponses() {
         return this.responses;
     }
 
@@ -58,7 +63,7 @@ public class AttachRCInstancesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Responses> responses; 
+        private java.util.List<Responses> responses; 
         private String taskId; 
 
         /**
@@ -75,7 +80,7 @@ public class AttachRCInstancesResponseBody extends TeaModel {
         /**
          * <p>The response parameters.</p>
          */
-        public Builder responses(java.util.List < Responses> responses) {
+        public Builder responses(java.util.List<Responses> responses) {
             this.responses = responses;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -358,7 +363,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OssDownload")
-        private java.util.List < OssDownload> ossDownload;
+        private java.util.List<OssDownload> ossDownload;
 
         private Items(Builder builder) {
             this.ossDownload = builder.ossDownload;
@@ -375,17 +380,17 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         /**
          * @return ossDownload
          */
-        public java.util.List < OssDownload> getOssDownload() {
+        public java.util.List<OssDownload> getOssDownload() {
             return this.ossDownload;
         }
 
         public static final class Builder {
-            private java.util.List < OssDownload> ossDownload; 
+            private java.util.List<OssDownload> ossDownload; 
 
             /**
              * OssDownload.
              */
-            public Builder ossDownload(java.util.List < OssDownload> ossDownload) {
+            public Builder ossDownload(java.util.List<OssDownload> ossDownload) {
                 this.ossDownload = ossDownload;
                 return this;
             }

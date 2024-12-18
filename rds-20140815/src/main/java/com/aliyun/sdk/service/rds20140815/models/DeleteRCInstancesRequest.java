@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class DeleteRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceId;
+    private java.util.List<String> instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -72,7 +77,7 @@ public class DeleteRCInstancesRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -93,7 +98,7 @@ public class DeleteRCInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteRCInstancesRequest, Builder> {
         private Boolean dryRun; 
         private Boolean force; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String regionId; 
         private Boolean terminateSubscription; 
 
@@ -146,7 +151,7 @@ public class DeleteRCInstancesRequest extends Request {
          * <p>The details of the instance.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             String instanceIdShrink = shrink(instanceId, "InstanceId", "json");
             this.putQueryParameter("InstanceId", instanceIdShrink);
             this.instanceId = instanceId;

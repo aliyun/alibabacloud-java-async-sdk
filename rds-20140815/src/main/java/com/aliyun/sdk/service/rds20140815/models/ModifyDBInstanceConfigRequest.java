@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -51,6 +56,14 @@ public class ModifyDBInstanceConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchTime")
+    private String switchTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchTimeMode")
+    private String switchTimeMode;
+
     private ModifyDBInstanceConfigRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -62,6 +75,8 @@ public class ModifyDBInstanceConfigRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.switchTime = builder.switchTime;
+        this.switchTimeMode = builder.switchTimeMode;
     }
 
     public static Builder builder() {
@@ -140,6 +155,20 @@ public class ModifyDBInstanceConfigRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return switchTime
+     */
+    public String getSwitchTime() {
+        return this.switchTime;
+    }
+
+    /**
+     * @return switchTimeMode
+     */
+    public String getSwitchTimeMode() {
+        return this.switchTimeMode;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBInstanceConfigRequest, Builder> {
         private String clientToken; 
         private String configName; 
@@ -150,6 +179,8 @@ public class ModifyDBInstanceConfigRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String switchTime; 
+        private String switchTimeMode; 
 
         private Builder() {
             super();
@@ -166,6 +197,8 @@ public class ModifyDBInstanceConfigRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.switchTime = request.switchTime;
+            this.switchTimeMode = request.switchTimeMode;
         } 
 
         /**
@@ -272,6 +305,35 @@ public class ModifyDBInstanceConfigRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * <p>The update time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-06T09:24:00Z</p>
+         */
+        public Builder switchTime(String switchTime) {
+            this.putQueryParameter("SwitchTime", switchTime);
+            this.switchTime = switchTime;
+            return this;
+        }
+
+        /**
+         * <p>The time at which the modification takes effect. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediate</strong>: immediately modifies the parameter. This is the default value.</li>
+         * <li><strong>MaintainTime</strong>: modifies the parameter during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window.</li>
+         * <li><strong>ScheduleTime</strong>: modifies the parameter at the point in time that you specify. If you specify this value, you must also specify <strong>SwitchTime</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Immediate</p>
+         */
+        public Builder switchTimeMode(String switchTimeMode) {
+            this.putQueryParameter("SwitchTimeMode", switchTimeMode);
+            this.switchTimeMode = switchTimeMode;
             return this;
         }
 

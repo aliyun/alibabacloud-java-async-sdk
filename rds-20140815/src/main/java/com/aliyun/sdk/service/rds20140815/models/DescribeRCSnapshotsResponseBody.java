@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Snapshots")
-    private java.util.List < Snapshots> snapshots;
+    private java.util.List<Snapshots> snapshots;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -67,7 +72,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
     /**
      * @return snapshots
      */
-    public java.util.List < Snapshots> getSnapshots() {
+    public java.util.List<Snapshots> getSnapshots() {
         return this.snapshots;
     }
 
@@ -82,7 +87,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
-        private java.util.List < Snapshots> snapshots; 
+        private java.util.List<Snapshots> snapshots; 
         private Long totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The details of snapshots.</p>
          */
-        public Builder snapshots(java.util.List < Snapshots> snapshots) {
+        public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
             return this;
         }

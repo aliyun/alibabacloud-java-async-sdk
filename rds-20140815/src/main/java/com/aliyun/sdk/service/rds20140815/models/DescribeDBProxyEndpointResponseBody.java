@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -549,7 +554,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
      */
     public static class DBProxyNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBProxyNodes")
-        private java.util.List < DBProxyNodesDBProxyNodes> DBProxyNodes;
+        private java.util.List<DBProxyNodesDBProxyNodes> DBProxyNodes;
 
         private DBProxyNodes(Builder builder) {
             this.DBProxyNodes = builder.DBProxyNodes;
@@ -566,17 +571,17 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         /**
          * @return DBProxyNodes
          */
-        public java.util.List < DBProxyNodesDBProxyNodes> getDBProxyNodes() {
+        public java.util.List<DBProxyNodesDBProxyNodes> getDBProxyNodes() {
             return this.DBProxyNodes;
         }
 
         public static final class Builder {
-            private java.util.List < DBProxyNodesDBProxyNodes> DBProxyNodes; 
+            private java.util.List<DBProxyNodesDBProxyNodes> DBProxyNodes; 
 
             /**
              * <p>The proxy nodes that are associated with the proxy terminal.</p>
              */
-            public Builder DBProxyNodes(java.util.List < DBProxyNodesDBProxyNodes> DBProxyNodes) {
+            public Builder DBProxyNodes(java.util.List<DBProxyNodesDBProxyNodes> DBProxyNodes) {
                 this.DBProxyNodes = DBProxyNodes;
                 return this;
             }
@@ -697,7 +702,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
      */
     public static class EndpointConnectItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndpointConnectItems")
-        private java.util.List < EndpointConnectItemsEndpointConnectItems> endpointConnectItems;
+        private java.util.List<EndpointConnectItemsEndpointConnectItems> endpointConnectItems;
 
         private EndpointConnectItems(Builder builder) {
             this.endpointConnectItems = builder.endpointConnectItems;
@@ -714,17 +719,17 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         /**
          * @return endpointConnectItems
          */
-        public java.util.List < EndpointConnectItemsEndpointConnectItems> getEndpointConnectItems() {
+        public java.util.List<EndpointConnectItemsEndpointConnectItems> getEndpointConnectItems() {
             return this.endpointConnectItems;
         }
 
         public static final class Builder {
-            private java.util.List < EndpointConnectItemsEndpointConnectItems> endpointConnectItems; 
+            private java.util.List<EndpointConnectItemsEndpointConnectItems> endpointConnectItems; 
 
             /**
              * <p>An array that consists of the information about the proxy endpoint.</p>
              */
-            public Builder endpointConnectItems(java.util.List < EndpointConnectItemsEndpointConnectItems> endpointConnectItems) {
+            public Builder endpointConnectItems(java.util.List<EndpointConnectItemsEndpointConnectItems> endpointConnectItems) {
                 this.endpointConnectItems = endpointConnectItems;
                 return this;
             }

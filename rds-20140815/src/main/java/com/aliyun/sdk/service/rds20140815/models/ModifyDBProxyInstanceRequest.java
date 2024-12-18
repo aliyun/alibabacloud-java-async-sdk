@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBProxyNodes")
-    private java.util.List < DBProxyNodes> DBProxyNodes;
+    private java.util.List<DBProxyNodes> DBProxyNodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EffectiveSpecificTime")
@@ -45,7 +50,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MigrateAZ")
-    private java.util.List < MigrateAZ> migrateAZ;
+    private java.util.List<MigrateAZ> migrateAZ;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -128,7 +133,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
     /**
      * @return DBProxyNodes
      */
-    public java.util.List < DBProxyNodes> getDBProxyNodes() {
+    public java.util.List<DBProxyNodes> getDBProxyNodes() {
         return this.DBProxyNodes;
     }
 
@@ -149,7 +154,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
     /**
      * @return migrateAZ
      */
-    public java.util.List < MigrateAZ> getMigrateAZ() {
+    public java.util.List<MigrateAZ> getMigrateAZ() {
         return this.migrateAZ;
     }
 
@@ -193,10 +198,10 @@ public class ModifyDBProxyInstanceRequest extends Request {
         private String DBProxyEngineType; 
         private String DBProxyInstanceNum; 
         private String DBProxyInstanceType; 
-        private java.util.List < DBProxyNodes> DBProxyNodes; 
+        private java.util.List<DBProxyNodes> DBProxyNodes; 
         private String effectiveSpecificTime; 
         private String effectiveTime; 
-        private java.util.List < MigrateAZ> migrateAZ; 
+        private java.util.List<MigrateAZ> migrateAZ; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -288,7 +293,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
          * <p>This parameter must be passed when the current proxy instance is deployed in multiple availability zones.</p>
          * </blockquote>
          */
-        public Builder DBProxyNodes(java.util.List < DBProxyNodes> DBProxyNodes) {
+        public Builder DBProxyNodes(java.util.List<DBProxyNodes> DBProxyNodes) {
             String DBProxyNodesShrink = shrink(DBProxyNodes, "DBProxyNodes", "json");
             this.putQueryParameter("DBProxyNodes", DBProxyNodesShrink);
             this.DBProxyNodes = DBProxyNodes;
@@ -334,7 +339,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
          * <p>Currently, only RDS MySQL cloud disk version agent instance migration is supported.</p>
          * </blockquote>
          */
-        public Builder migrateAZ(java.util.List < MigrateAZ> migrateAZ) {
+        public Builder migrateAZ(java.util.List<MigrateAZ> migrateAZ) {
             String migrateAZShrink = shrink(migrateAZ, "MigrateAZ", "json");
             this.putQueryParameter("MigrateAZ", migrateAZShrink);
             this.migrateAZ = migrateAZ;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,7 +206,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WhiteListGroups")
-        private java.util.List < WhiteListGroups> whiteListGroups;
+        private java.util.List<WhiteListGroups> whiteListGroups;
 
         private Items(Builder builder) {
             this.whiteListGroups = builder.whiteListGroups;
@@ -218,17 +223,17 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         /**
          * @return whiteListGroups
          */
-        public java.util.List < WhiteListGroups> getWhiteListGroups() {
+        public java.util.List<WhiteListGroups> getWhiteListGroups() {
             return this.whiteListGroups;
         }
 
         public static final class Builder {
-            private java.util.List < WhiteListGroups> whiteListGroups; 
+            private java.util.List<WhiteListGroups> whiteListGroups; 
 
             /**
              * WhiteListGroups.
              */
-            public Builder whiteListGroups(java.util.List < WhiteListGroups> whiteListGroups) {
+            public Builder whiteListGroups(java.util.List<WhiteListGroups> whiteListGroups) {
                 this.whiteListGroups = whiteListGroups;
                 return this;
             }

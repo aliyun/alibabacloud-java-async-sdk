@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
      */
     public static class SlaveZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("slaveRegion")
-        private java.util.List < String > slaveRegion;
+        private java.util.List<String> slaveRegion;
 
         private SlaveZones(Builder builder) {
             this.slaveRegion = builder.slaveRegion;
@@ -99,17 +104,17 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         /**
          * @return slaveRegion
          */
-        public java.util.List < String > getSlaveRegion() {
+        public java.util.List<String> getSlaveRegion() {
             return this.slaveRegion;
         }
 
         public static final class Builder {
-            private java.util.List < String > slaveRegion; 
+            private java.util.List<String> slaveRegion; 
 
             /**
              * slaveRegion.
              */
-            public Builder slaveRegion(java.util.List < String > slaveRegion) {
+            public Builder slaveRegion(java.util.List<String> slaveRegion) {
                 this.slaveRegion = slaveRegion;
                 return this;
             }
@@ -1156,7 +1161,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceAttribute")
-        private java.util.List < DBInstanceAttribute> DBInstanceAttribute;
+        private java.util.List<DBInstanceAttribute> DBInstanceAttribute;
 
         private Items(Builder builder) {
             this.DBInstanceAttribute = builder.DBInstanceAttribute;
@@ -1173,17 +1178,17 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         /**
          * @return DBInstanceAttribute
          */
-        public java.util.List < DBInstanceAttribute> getDBInstanceAttribute() {
+        public java.util.List<DBInstanceAttribute> getDBInstanceAttribute() {
             return this.DBInstanceAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceAttribute> DBInstanceAttribute; 
+            private java.util.List<DBInstanceAttribute> DBInstanceAttribute; 
 
             /**
              * DBInstanceAttribute.
              */
-            public Builder DBInstanceAttribute(java.util.List < DBInstanceAttribute> DBInstanceAttribute) {
+            public Builder DBInstanceAttribute(java.util.List<DBInstanceAttribute> DBInstanceAttribute) {
                 this.DBInstanceAttribute = DBInstanceAttribute;
                 return this;
             }

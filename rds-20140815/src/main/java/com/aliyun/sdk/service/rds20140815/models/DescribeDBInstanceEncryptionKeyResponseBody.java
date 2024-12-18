@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     private String encryptionKey;
 
     @com.aliyun.core.annotation.NameInMap("EncryptionKeyList")
-    private java.util.List < EncryptionKeyList> encryptionKeyList;
+    private java.util.List<EncryptionKeyList> encryptionKeyList;
 
     @com.aliyun.core.annotation.NameInMap("EncryptionKeyStatus")
     private String encryptionKeyStatus;
@@ -94,7 +99,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     /**
      * @return encryptionKeyList
      */
-    public java.util.List < EncryptionKeyList> getEncryptionKeyList() {
+    public java.util.List<EncryptionKeyList> getEncryptionKeyList() {
         return this.encryptionKeyList;
     }
 
@@ -138,7 +143,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         private String deleteDate; 
         private String description; 
         private String encryptionKey; 
-        private java.util.List < EncryptionKeyList> encryptionKeyList; 
+        private java.util.List<EncryptionKeyList> encryptionKeyList; 
         private String encryptionKeyStatus; 
         private String keyUsage; 
         private String materialExpireTime; 
@@ -192,7 +197,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         /**
          * <p>The details about the key.</p>
          */
-        public Builder encryptionKeyList(java.util.List < EncryptionKeyList> encryptionKeyList) {
+        public Builder encryptionKeyList(java.util.List<EncryptionKeyList> encryptionKeyList) {
             this.encryptionKeyList = encryptionKeyList;
             return this;
         }

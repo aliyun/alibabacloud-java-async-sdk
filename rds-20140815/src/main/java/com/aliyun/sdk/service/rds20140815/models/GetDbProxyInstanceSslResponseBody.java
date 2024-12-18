@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
      */
     public static class DbProxyCertListItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbProxyCertListItems")
-        private java.util.List < DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems;
+        private java.util.List<DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems;
 
         private DbProxyCertListItems(Builder builder) {
             this.dbProxyCertListItems = builder.dbProxyCertListItems;
@@ -241,17 +246,17 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         /**
          * @return dbProxyCertListItems
          */
-        public java.util.List < DbProxyCertListItemsDbProxyCertListItems> getDbProxyCertListItems() {
+        public java.util.List<DbProxyCertListItemsDbProxyCertListItems> getDbProxyCertListItems() {
             return this.dbProxyCertListItems;
         }
 
         public static final class Builder {
-            private java.util.List < DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems; 
+            private java.util.List<DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems; 
 
             /**
              * <p>An array that consists of SSL encryption settings.</p>
              */
-            public Builder dbProxyCertListItems(java.util.List < DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems) {
+            public Builder dbProxyCertListItems(java.util.List<DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems) {
                 this.dbProxyCertListItems = dbProxyCertListItems;
                 return this;
             }

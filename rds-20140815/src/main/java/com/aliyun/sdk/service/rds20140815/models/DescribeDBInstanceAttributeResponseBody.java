@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -414,7 +419,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      */
     public static class DBClusterNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterNode")
-        private java.util.List < DBClusterNode> DBClusterNode;
+        private java.util.List<DBClusterNode> DBClusterNode;
 
         private DBClusterNodes(Builder builder) {
             this.DBClusterNode = builder.DBClusterNode;
@@ -431,17 +436,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return DBClusterNode
          */
-        public java.util.List < DBClusterNode> getDBClusterNode() {
+        public java.util.List<DBClusterNode> getDBClusterNode() {
             return this.DBClusterNode;
         }
 
         public static final class Builder {
-            private java.util.List < DBClusterNode> DBClusterNode; 
+            private java.util.List<DBClusterNode> DBClusterNode; 
 
             /**
              * DBClusterNode.
              */
-            public Builder DBClusterNode(java.util.List < DBClusterNode> DBClusterNode) {
+            public Builder DBClusterNode(java.util.List<DBClusterNode> DBClusterNode) {
                 this.DBClusterNode = DBClusterNode;
                 return this;
             }
@@ -461,7 +466,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      */
     public static class DBInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-        private java.util.List < String > DBInstanceId;
+        private java.util.List<String> DBInstanceId;
 
         private DBInstanceIds(Builder builder) {
             this.DBInstanceId = builder.DBInstanceId;
@@ -478,17 +483,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return DBInstanceId
          */
-        public java.util.List < String > getDBInstanceId() {
+        public java.util.List<String> getDBInstanceId() {
             return this.DBInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > DBInstanceId; 
+            private java.util.List<String> DBInstanceId; 
 
             /**
              * DBInstanceId.
              */
-            public Builder DBInstanceId(java.util.List < String > DBInstanceId) {
+            public Builder DBInstanceId(java.util.List<String> DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
                 return this;
             }
@@ -655,7 +660,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      */
     public static class ReadOnlyDBInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadOnlyDBInstanceId")
-        private java.util.List < ReadOnlyDBInstanceId> readOnlyDBInstanceId;
+        private java.util.List<ReadOnlyDBInstanceId> readOnlyDBInstanceId;
 
         private ReadOnlyDBInstanceIds(Builder builder) {
             this.readOnlyDBInstanceId = builder.readOnlyDBInstanceId;
@@ -672,17 +677,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return readOnlyDBInstanceId
          */
-        public java.util.List < ReadOnlyDBInstanceId> getReadOnlyDBInstanceId() {
+        public java.util.List<ReadOnlyDBInstanceId> getReadOnlyDBInstanceId() {
             return this.readOnlyDBInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < ReadOnlyDBInstanceId> readOnlyDBInstanceId; 
+            private java.util.List<ReadOnlyDBInstanceId> readOnlyDBInstanceId; 
 
             /**
              * ReadOnlyDBInstanceId.
              */
-            public Builder readOnlyDBInstanceId(java.util.List < ReadOnlyDBInstanceId> readOnlyDBInstanceId) {
+            public Builder readOnlyDBInstanceId(java.util.List<ReadOnlyDBInstanceId> readOnlyDBInstanceId) {
                 this.readOnlyDBInstanceId = readOnlyDBInstanceId;
                 return this;
             }
@@ -885,7 +890,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      */
     public static class SlaveZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlaveZone")
-        private java.util.List < SlaveZone> slaveZone;
+        private java.util.List<SlaveZone> slaveZone;
 
         private SlaveZones(Builder builder) {
             this.slaveZone = builder.slaveZone;
@@ -902,17 +907,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return slaveZone
          */
-        public java.util.List < SlaveZone> getSlaveZone() {
+        public java.util.List<SlaveZone> getSlaveZone() {
             return this.slaveZone;
         }
 
         public static final class Builder {
-            private java.util.List < SlaveZone> slaveZone; 
+            private java.util.List<SlaveZone> slaveZone; 
 
             /**
              * SlaveZone.
              */
-            public Builder slaveZone(java.util.List < SlaveZone> slaveZone) {
+            public Builder slaveZone(java.util.List<SlaveZone> slaveZone) {
                 this.slaveZone = slaveZone;
                 return this;
             }
@@ -1096,6 +1101,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MultipleTempUpgrade")
         private Boolean multipleTempUpgrade;
 
+        @com.aliyun.core.annotation.NameInMap("OptimizedWritesInfo")
+        private String optimizedWritesInfo;
+
         @com.aliyun.core.annotation.NameInMap("PGBouncerEnabled")
         private String PGBouncerEnabled;
 
@@ -1224,6 +1232,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.maxIOMBPS = builder.maxIOMBPS;
             this.maxIOPS = builder.maxIOPS;
             this.multipleTempUpgrade = builder.multipleTempUpgrade;
+            this.optimizedWritesInfo = builder.optimizedWritesInfo;
             this.PGBouncerEnabled = builder.PGBouncerEnabled;
             this.payType = builder.payType;
             this.port = builder.port;
@@ -1644,6 +1653,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return optimizedWritesInfo
+         */
+        public String getOptimizedWritesInfo() {
+            return this.optimizedWritesInfo;
+        }
+
+        /**
          * @return PGBouncerEnabled
          */
         public String getPGBouncerEnabled() {
@@ -1867,6 +1883,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer maxIOMBPS; 
             private Integer maxIOPS; 
             private Boolean multipleTempUpgrade; 
+            private String optimizedWritesInfo; 
             private String PGBouncerEnabled; 
             private String payType; 
             private String port; 
@@ -2576,6 +2593,23 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * <p>OptimizedWritesInfo contains two fields:</p>
+             * <ul>
+             * <li><p>optimized_writes: Whether write optimization is enabled for the current instance.</p>
+             * </li>
+             * <li><p>init_optimized_writes: Whether write optimization can be enabled for the instance. Some instances do not display the write optimization switch in the console because init_optimized_writes is false.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;optimized_writes&quot;:true,&quot;init_optimized_writes&quot;:true}</p>
+             */
+            public Builder optimizedWritesInfo(String optimizedWritesInfo) {
+                this.optimizedWritesInfo = optimizedWritesInfo;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether PgBouncer is enabled.</p>
              * <blockquote>
              * <p> This parameter is returned only for RDS instances that run PostgreSQL. If PgBouncer is enabled, the return value is <strong>true</strong>.</p>
@@ -2880,7 +2914,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceAttribute")
-        private java.util.List < DBInstanceAttribute> DBInstanceAttribute;
+        private java.util.List<DBInstanceAttribute> DBInstanceAttribute;
 
         private Items(Builder builder) {
             this.DBInstanceAttribute = builder.DBInstanceAttribute;
@@ -2897,17 +2931,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return DBInstanceAttribute
          */
-        public java.util.List < DBInstanceAttribute> getDBInstanceAttribute() {
+        public java.util.List<DBInstanceAttribute> getDBInstanceAttribute() {
             return this.DBInstanceAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceAttribute> DBInstanceAttribute; 
+            private java.util.List<DBInstanceAttribute> DBInstanceAttribute; 
 
             /**
              * DBInstanceAttribute.
              */
-            public Builder DBInstanceAttribute(java.util.List < DBInstanceAttribute> DBInstanceAttribute) {
+            public Builder DBInstanceAttribute(java.util.List<DBInstanceAttribute> DBInstanceAttribute) {
                 this.DBInstanceAttribute = DBInstanceAttribute;
                 return this;
             }

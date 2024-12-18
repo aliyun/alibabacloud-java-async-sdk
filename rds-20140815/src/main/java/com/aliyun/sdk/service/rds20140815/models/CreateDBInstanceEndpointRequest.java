@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeItems")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < NodeItems> nodeItems;
+    private java.util.List<NodeItems> nodeItems;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Port")
@@ -134,7 +139,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
     /**
      * @return nodeItems
      */
-    public java.util.List < NodeItems> getNodeItems() {
+    public java.util.List<NodeItems> getNodeItems() {
         return this.nodeItems;
     }
 
@@ -186,7 +191,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         private String DBInstanceEndpointDescription; 
         private String DBInstanceEndpointType; 
         private String DBInstanceId; 
-        private java.util.List < NodeItems> nodeItems; 
+        private java.util.List<NodeItems> nodeItems; 
         private String port; 
         private String privateIpAddress; 
         private String resourceGroupId; 
@@ -287,7 +292,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
          * <p>The information about the endpoint.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder nodeItems(java.util.List < NodeItems> nodeItems) {
+        public Builder nodeItems(java.util.List<NodeItems> nodeItems) {
             String nodeItemsShrink = shrink(nodeItems, "NodeItems", "json");
             this.putQueryParameter("NodeItems", nodeItemsShrink);
             this.nodeItems = nodeItems;

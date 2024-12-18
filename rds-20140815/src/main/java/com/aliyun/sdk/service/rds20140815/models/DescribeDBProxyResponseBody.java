@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -443,7 +448,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
      */
     public static class DBProxyAVZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBProxyAVZones")
-        private java.util.List < String > DBProxyAVZones;
+        private java.util.List<String> DBProxyAVZones;
 
         private DBProxyAVZones(Builder builder) {
             this.DBProxyAVZones = builder.DBProxyAVZones;
@@ -460,17 +465,17 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         /**
          * @return DBProxyAVZones
          */
-        public java.util.List < String > getDBProxyAVZones() {
+        public java.util.List<String> getDBProxyAVZones() {
             return this.DBProxyAVZones;
         }
 
         public static final class Builder {
-            private java.util.List < String > DBProxyAVZones; 
+            private java.util.List<String> DBProxyAVZones; 
 
             /**
              * <p>The list of zones that are available for the database proxy.</p>
              */
-            public Builder DBProxyAVZones(java.util.List < String > DBProxyAVZones) {
+            public Builder DBProxyAVZones(java.util.List<String> DBProxyAVZones) {
                 this.DBProxyAVZones = DBProxyAVZones;
                 return this;
             }
@@ -733,7 +738,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
      */
     public static class DBProxyConnectStringItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBProxyConnectStringItems")
-        private java.util.List < DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems;
+        private java.util.List<DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems;
 
         private DBProxyConnectStringItems(Builder builder) {
             this.DBProxyConnectStringItems = builder.DBProxyConnectStringItems;
@@ -750,17 +755,17 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         /**
          * @return DBProxyConnectStringItems
          */
-        public java.util.List < DBProxyConnectStringItemsDBProxyConnectStringItems> getDBProxyConnectStringItems() {
+        public java.util.List<DBProxyConnectStringItemsDBProxyConnectStringItems> getDBProxyConnectStringItems() {
             return this.DBProxyConnectStringItems;
         }
 
         public static final class Builder {
-            private java.util.List < DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems; 
+            private java.util.List<DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems; 
 
             /**
              * <p>An array consisting of the information about the database proxy endpoint that is created for the instance.</p>
              */
-            public Builder DBProxyConnectStringItems(java.util.List < DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems) {
+            public Builder DBProxyConnectStringItems(java.util.List<DBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems) {
                 this.DBProxyConnectStringItems = DBProxyConnectStringItems;
                 return this;
             }
@@ -876,7 +881,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
      */
     public static class DBProxyNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBProxyNodes")
-        private java.util.List < DBProxyNodesDBProxyNodes> DBProxyNodes;
+        private java.util.List<DBProxyNodesDBProxyNodes> DBProxyNodes;
 
         private DBProxyNodes(Builder builder) {
             this.DBProxyNodes = builder.DBProxyNodes;
@@ -893,17 +898,17 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         /**
          * @return DBProxyNodes
          */
-        public java.util.List < DBProxyNodesDBProxyNodes> getDBProxyNodes() {
+        public java.util.List<DBProxyNodesDBProxyNodes> getDBProxyNodes() {
             return this.DBProxyNodes;
         }
 
         public static final class Builder {
-            private java.util.List < DBProxyNodesDBProxyNodes> DBProxyNodes; 
+            private java.util.List<DBProxyNodesDBProxyNodes> DBProxyNodes; 
 
             /**
              * <p>The proxy node list.</p>
              */
-            public Builder DBProxyNodes(java.util.List < DBProxyNodesDBProxyNodes> DBProxyNodes) {
+            public Builder DBProxyNodes(java.util.List<DBProxyNodesDBProxyNodes> DBProxyNodes) {
                 this.DBProxyNodes = DBProxyNodes;
                 return this;
             }
@@ -1050,7 +1055,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
      */
     public static class DbProxyEndpointItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbProxyEndpointItems")
-        private java.util.List < DbProxyEndpointItemsDbProxyEndpointItems> dbProxyEndpointItems;
+        private java.util.List<DbProxyEndpointItemsDbProxyEndpointItems> dbProxyEndpointItems;
 
         private DbProxyEndpointItems(Builder builder) {
             this.dbProxyEndpointItems = builder.dbProxyEndpointItems;
@@ -1067,17 +1072,17 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         /**
          * @return dbProxyEndpointItems
          */
-        public java.util.List < DbProxyEndpointItemsDbProxyEndpointItems> getDbProxyEndpointItems() {
+        public java.util.List<DbProxyEndpointItemsDbProxyEndpointItems> getDbProxyEndpointItems() {
             return this.dbProxyEndpointItems;
         }
 
         public static final class Builder {
-            private java.util.List < DbProxyEndpointItemsDbProxyEndpointItems> dbProxyEndpointItems; 
+            private java.util.List<DbProxyEndpointItemsDbProxyEndpointItems> dbProxyEndpointItems; 
 
             /**
              * <p>The proxy terminals of the instance.</p>
              */
-            public Builder dbProxyEndpointItems(java.util.List < DbProxyEndpointItemsDbProxyEndpointItems> dbProxyEndpointItems) {
+            public Builder dbProxyEndpointItems(java.util.List<DbProxyEndpointItemsDbProxyEndpointItems> dbProxyEndpointItems) {
                 this.dbProxyEndpointItems = dbProxyEndpointItems;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -267,7 +272,7 @@ public class DescribeParametersResponseBody extends TeaModel {
      */
     public static class ConfigParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceParameter")
-        private java.util.List < DBInstanceParameter> DBInstanceParameter;
+        private java.util.List<DBInstanceParameter> DBInstanceParameter;
 
         private ConfigParameters(Builder builder) {
             this.DBInstanceParameter = builder.DBInstanceParameter;
@@ -284,17 +289,17 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return DBInstanceParameter
          */
-        public java.util.List < DBInstanceParameter> getDBInstanceParameter() {
+        public java.util.List<DBInstanceParameter> getDBInstanceParameter() {
             return this.DBInstanceParameter;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceParameter> DBInstanceParameter; 
+            private java.util.List<DBInstanceParameter> DBInstanceParameter; 
 
             /**
              * DBInstanceParameter.
              */
-            public Builder DBInstanceParameter(java.util.List < DBInstanceParameter> DBInstanceParameter) {
+            public Builder DBInstanceParameter(java.util.List<DBInstanceParameter> DBInstanceParameter) {
                 this.DBInstanceParameter = DBInstanceParameter;
                 return this;
             }
@@ -575,7 +580,7 @@ public class DescribeParametersResponseBody extends TeaModel {
      */
     public static class RunningParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceParameter")
-        private java.util.List < RunningParametersDBInstanceParameter> DBInstanceParameter;
+        private java.util.List<RunningParametersDBInstanceParameter> DBInstanceParameter;
 
         private RunningParameters(Builder builder) {
             this.DBInstanceParameter = builder.DBInstanceParameter;
@@ -592,17 +597,17 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return DBInstanceParameter
          */
-        public java.util.List < RunningParametersDBInstanceParameter> getDBInstanceParameter() {
+        public java.util.List<RunningParametersDBInstanceParameter> getDBInstanceParameter() {
             return this.DBInstanceParameter;
         }
 
         public static final class Builder {
-            private java.util.List < RunningParametersDBInstanceParameter> DBInstanceParameter; 
+            private java.util.List<RunningParametersDBInstanceParameter> DBInstanceParameter; 
 
             /**
              * DBInstanceParameter.
              */
-            public Builder DBInstanceParameter(java.util.List < RunningParametersDBInstanceParameter> DBInstanceParameter) {
+            public Builder DBInstanceParameter(java.util.List<RunningParametersDBInstanceParameter> DBInstanceParameter) {
                 this.DBInstanceParameter = DBInstanceParameter;
                 return this;
             }

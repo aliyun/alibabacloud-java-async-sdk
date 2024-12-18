@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -286,7 +291,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
      */
     public static class RdsInstanceResourceSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RdsInstanceResourceSetting")
-        private java.util.List < RdsInstanceResourceSetting> rdsInstanceResourceSetting;
+        private java.util.List<RdsInstanceResourceSetting> rdsInstanceResourceSetting;
 
         private RdsInstanceResourceSettings(Builder builder) {
             this.rdsInstanceResourceSetting = builder.rdsInstanceResourceSetting;
@@ -303,17 +308,17 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
         /**
          * @return rdsInstanceResourceSetting
          */
-        public java.util.List < RdsInstanceResourceSetting> getRdsInstanceResourceSetting() {
+        public java.util.List<RdsInstanceResourceSetting> getRdsInstanceResourceSetting() {
             return this.rdsInstanceResourceSetting;
         }
 
         public static final class Builder {
-            private java.util.List < RdsInstanceResourceSetting> rdsInstanceResourceSetting; 
+            private java.util.List<RdsInstanceResourceSetting> rdsInstanceResourceSetting; 
 
             /**
              * RdsInstanceResourceSetting.
              */
-            public Builder rdsInstanceResourceSetting(java.util.List < RdsInstanceResourceSetting> rdsInstanceResourceSetting) {
+            public Builder rdsInstanceResourceSetting(java.util.List<RdsInstanceResourceSetting> rdsInstanceResourceSetting) {
                 this.rdsInstanceResourceSetting = rdsInstanceResourceSetting;
                 return this;
             }

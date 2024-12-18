@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -232,7 +237,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
      */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RDSRegion")
-        private java.util.List < RDSRegion> RDSRegion;
+        private java.util.List<RDSRegion> RDSRegion;
 
         private Regions(Builder builder) {
             this.RDSRegion = builder.RDSRegion;
@@ -249,17 +254,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * @return RDSRegion
          */
-        public java.util.List < RDSRegion> getRDSRegion() {
+        public java.util.List<RDSRegion> getRDSRegion() {
             return this.RDSRegion;
         }
 
         public static final class Builder {
-            private java.util.List < RDSRegion> RDSRegion; 
+            private java.util.List<RDSRegion> RDSRegion; 
 
             /**
              * RDSRegion.
              */
-            public Builder RDSRegion(java.util.List < RDSRegion> RDSRegion) {
+            public Builder RDSRegion(java.util.List<RDSRegion> RDSRegion) {
                 this.RDSRegion = RDSRegion;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBNodeId")
-    private java.util.List < String > DBNodeId;
+    private java.util.List<String> DBNodeId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EngineVersion")
@@ -143,7 +148,7 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
     /**
      * @return DBNodeId
      */
-    public java.util.List < String > getDBNodeId() {
+    public java.util.List<String> getDBNodeId() {
         return this.DBNodeId;
     }
 
@@ -216,7 +221,7 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         private String clientToken; 
         private String commodityCode; 
         private String DBInstanceId; 
-        private java.util.List < String > DBNodeId; 
+        private java.util.List<String> DBNodeId; 
         private String engineVersion; 
         private String nodeType; 
         private Long ownerId; 
@@ -331,7 +336,7 @@ public class PreCheckCreateOrderForDeleteDBNodesRequest extends Request {
         /**
          * <p>The node IDs.</p>
          */
-        public Builder DBNodeId(java.util.List < String > DBNodeId) {
+        public Builder DBNodeId(java.util.List<String> DBNodeId) {
             String DBNodeIdShrink = shrink(DBNodeId, "DBNodeId", "json");
             this.putQueryParameter("DBNodeId", DBNodeIdShrink);
             this.DBNodeId = DBNodeId;

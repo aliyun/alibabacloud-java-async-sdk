@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRCClusterNodesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Nodes")
-    private java.util.List < Nodes> nodes;
+    private java.util.List<Nodes> nodes;
 
     @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
@@ -38,7 +43,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -57,14 +62,14 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private Page page; 
         private String requestId; 
 
         /**
          * <p>The details of the nodes.</p>
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
             return this;
         }
@@ -117,7 +122,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         private String instanceRole;
 
         @com.aliyun.core.annotation.NameInMap("IpAddresses")
-        private java.util.List < String > ipAddresses;
+        private java.util.List<String> ipAddresses;
 
         @com.aliyun.core.annotation.NameInMap("IsAliyunNode")
         private Boolean isAliyunNode;
@@ -198,7 +203,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         /**
          * @return ipAddresses
          */
-        public java.util.List < String > getIpAddresses() {
+        public java.util.List<String> getIpAddresses() {
             return this.ipAddresses;
         }
 
@@ -250,7 +255,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             private String imageId; 
             private String instanceId; 
             private String instanceRole; 
-            private java.util.List < String > ipAddresses; 
+            private java.util.List<String> ipAddresses; 
             private Boolean isAliyunNode; 
             private String nodeName; 
             private String nodePoolId; 
@@ -320,7 +325,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             /**
              * <p>The IP address.</p>
              */
-            public Builder ipAddresses(java.util.List < String > ipAddresses) {
+            public Builder ipAddresses(java.util.List<String> ipAddresses) {
                 this.ipAddresses = ipAddresses;
                 return this;
             }

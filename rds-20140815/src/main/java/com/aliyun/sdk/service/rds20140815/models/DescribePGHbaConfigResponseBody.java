@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -410,7 +415,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
      */
     public static class DefaultHbaItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HbaItem")
-        private java.util.List < HbaItem> hbaItem;
+        private java.util.List<HbaItem> hbaItem;
 
         private DefaultHbaItems(Builder builder) {
             this.hbaItem = builder.hbaItem;
@@ -427,17 +432,17 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         /**
          * @return hbaItem
          */
-        public java.util.List < HbaItem> getHbaItem() {
+        public java.util.List<HbaItem> getHbaItem() {
             return this.hbaItem;
         }
 
         public static final class Builder {
-            private java.util.List < HbaItem> hbaItem; 
+            private java.util.List<HbaItem> hbaItem; 
 
             /**
              * HbaItem.
              */
-            public Builder hbaItem(java.util.List < HbaItem> hbaItem) {
+            public Builder hbaItem(java.util.List<HbaItem> hbaItem) {
                 this.hbaItem = hbaItem;
                 return this;
             }
@@ -673,7 +678,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
      */
     public static class RunningHbaItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HbaItem")
-        private java.util.List < RunningHbaItemsHbaItem> hbaItem;
+        private java.util.List<RunningHbaItemsHbaItem> hbaItem;
 
         private RunningHbaItems(Builder builder) {
             this.hbaItem = builder.hbaItem;
@@ -690,17 +695,17 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         /**
          * @return hbaItem
          */
-        public java.util.List < RunningHbaItemsHbaItem> getHbaItem() {
+        public java.util.List<RunningHbaItemsHbaItem> getHbaItem() {
             return this.hbaItem;
         }
 
         public static final class Builder {
-            private java.util.List < RunningHbaItemsHbaItem> hbaItem; 
+            private java.util.List<RunningHbaItemsHbaItem> hbaItem; 
 
             /**
              * HbaItem.
              */
-            public Builder hbaItem(java.util.List < RunningHbaItemsHbaItem> hbaItem) {
+            public Builder hbaItem(java.util.List<RunningHbaItemsHbaItem> hbaItem) {
                 this.hbaItem = hbaItem;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -538,7 +543,7 @@ public class DescribeTasksResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskProgressInfo")
-        private java.util.List < TaskProgressInfo> taskProgressInfo;
+        private java.util.List<TaskProgressInfo> taskProgressInfo;
 
         private Items(Builder builder) {
             this.taskProgressInfo = builder.taskProgressInfo;
@@ -555,17 +560,17 @@ public class DescribeTasksResponseBody extends TeaModel {
         /**
          * @return taskProgressInfo
          */
-        public java.util.List < TaskProgressInfo> getTaskProgressInfo() {
+        public java.util.List<TaskProgressInfo> getTaskProgressInfo() {
             return this.taskProgressInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TaskProgressInfo> taskProgressInfo; 
+            private java.util.List<TaskProgressInfo> taskProgressInfo; 
 
             /**
              * TaskProgressInfo.
              */
-            public Builder taskProgressInfo(java.util.List < TaskProgressInfo> taskProgressInfo) {
+            public Builder taskProgressInfo(java.util.List<TaskProgressInfo> taskProgressInfo) {
                 this.taskProgressInfo = taskProgressInfo;
                 return this;
             }

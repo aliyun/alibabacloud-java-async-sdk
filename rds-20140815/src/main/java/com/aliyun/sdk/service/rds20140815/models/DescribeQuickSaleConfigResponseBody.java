@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
     private String commodity;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.Map < String, ? > items;
+    private java.util.Map<String, ?> items;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.Map < String, ? > getItems() {
+    public java.util.Map<String, ?> getItems() {
         return this.items;
     }
 
@@ -58,7 +63,7 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private String commodity; 
-        private java.util.Map < String, ? > items; 
+        private java.util.Map<String, ?> items; 
         private String requestId; 
 
         /**
@@ -79,7 +84,7 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         /**
          * <p>The configuration details of the product.</p>
          */
-        public Builder items(java.util.Map < String, ? > items) {
+        public Builder items(java.util.Map<String, ?> items) {
             this.items = items;
             return this;
         }

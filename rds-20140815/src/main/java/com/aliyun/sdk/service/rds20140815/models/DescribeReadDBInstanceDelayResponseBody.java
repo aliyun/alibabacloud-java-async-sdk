@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
      */
     public static class ReadDBInstanceNames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadDBInstanceName")
-        private java.util.List < String > readDBInstanceName;
+        private java.util.List<String> readDBInstanceName;
 
         private ReadDBInstanceNames(Builder builder) {
             this.readDBInstanceName = builder.readDBInstanceName;
@@ -168,17 +173,17 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         /**
          * @return readDBInstanceName
          */
-        public java.util.List < String > getReadDBInstanceName() {
+        public java.util.List<String> getReadDBInstanceName() {
             return this.readDBInstanceName;
         }
 
         public static final class Builder {
-            private java.util.List < String > readDBInstanceName; 
+            private java.util.List<String> readDBInstanceName; 
 
             /**
              * ReadDBInstanceName.
              */
-            public Builder readDBInstanceName(java.util.List < String > readDBInstanceName) {
+            public Builder readDBInstanceName(java.util.List<String> readDBInstanceName) {
                 this.readDBInstanceName = readDBInstanceName;
                 return this;
             }
@@ -198,7 +203,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
      */
     public static class ReadDelayTimes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadDelayTime")
-        private java.util.List < String > readDelayTime;
+        private java.util.List<String> readDelayTime;
 
         private ReadDelayTimes(Builder builder) {
             this.readDelayTime = builder.readDelayTime;
@@ -215,17 +220,17 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         /**
          * @return readDelayTime
          */
-        public java.util.List < String > getReadDelayTime() {
+        public java.util.List<String> getReadDelayTime() {
             return this.readDelayTime;
         }
 
         public static final class Builder {
-            private java.util.List < String > readDelayTime; 
+            private java.util.List<String> readDelayTime; 
 
             /**
              * ReadDelayTime.
              */
-            public Builder readDelayTime(java.util.List < String > readDelayTime) {
+            public Builder readDelayTime(java.util.List<String> readDelayTime) {
                 this.readDelayTime = readDelayTime;
                 return this;
             }
@@ -456,7 +461,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
      */
     public static class ItemsReadonlyInstanceDelay extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadonlyInstanceDelay")
-        private java.util.List < ReadonlyInstanceDelay> readonlyInstanceDelay;
+        private java.util.List<ReadonlyInstanceDelay> readonlyInstanceDelay;
 
         private ItemsReadonlyInstanceDelay(Builder builder) {
             this.readonlyInstanceDelay = builder.readonlyInstanceDelay;
@@ -473,17 +478,17 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         /**
          * @return readonlyInstanceDelay
          */
-        public java.util.List < ReadonlyInstanceDelay> getReadonlyInstanceDelay() {
+        public java.util.List<ReadonlyInstanceDelay> getReadonlyInstanceDelay() {
             return this.readonlyInstanceDelay;
         }
 
         public static final class Builder {
-            private java.util.List < ReadonlyInstanceDelay> readonlyInstanceDelay; 
+            private java.util.List<ReadonlyInstanceDelay> readonlyInstanceDelay; 
 
             /**
              * ReadonlyInstanceDelay.
              */
-            public Builder readonlyInstanceDelay(java.util.List < ReadonlyInstanceDelay> readonlyInstanceDelay) {
+            public Builder readonlyInstanceDelay(java.util.List<ReadonlyInstanceDelay> readonlyInstanceDelay) {
                 this.readonlyInstanceDelay = readonlyInstanceDelay;
                 return this;
             }
@@ -616,7 +621,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < ItemsItems> items;
+        private java.util.List<ItemsItems> items;
 
         private Items(Builder builder) {
             this.items = builder.items;
@@ -633,17 +638,17 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < ItemsItems> getItems() {
+        public java.util.List<ItemsItems> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < ItemsItems> items; 
+            private java.util.List<ItemsItems> items; 
 
             /**
              * <p>The latency information.</p>
              */
-            public Builder items(java.util.List < ItemsItems> items) {
+            public Builder items(java.util.List<ItemsItems> items) {
                 this.items = items;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -803,7 +808,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      */
     public static class DedicatedHosts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedHosts")
-        private java.util.List < DedicatedHostsDedicatedHosts> dedicatedHosts;
+        private java.util.List<DedicatedHostsDedicatedHosts> dedicatedHosts;
 
         private DedicatedHosts(Builder builder) {
             this.dedicatedHosts = builder.dedicatedHosts;
@@ -820,17 +825,17 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         /**
          * @return dedicatedHosts
          */
-        public java.util.List < DedicatedHostsDedicatedHosts> getDedicatedHosts() {
+        public java.util.List<DedicatedHostsDedicatedHosts> getDedicatedHosts() {
             return this.dedicatedHosts;
         }
 
         public static final class Builder {
-            private java.util.List < DedicatedHostsDedicatedHosts> dedicatedHosts; 
+            private java.util.List<DedicatedHostsDedicatedHosts> dedicatedHosts; 
 
             /**
              * <p>The host information.</p>
              */
-            public Builder dedicatedHosts(java.util.List < DedicatedHostsDedicatedHosts> dedicatedHosts) {
+            public Builder dedicatedHosts(java.util.List<DedicatedHostsDedicatedHosts> dedicatedHosts) {
                 this.dedicatedHosts = dedicatedHosts;
                 return this;
             }

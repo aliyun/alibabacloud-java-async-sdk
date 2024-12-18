@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -429,13 +434,13 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Connections")
-        private java.util.List < Connections> connections;
+        private java.util.List<Connections> connections;
 
         @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         private Data(Builder builder) {
             this.connections = builder.connections;
@@ -454,7 +459,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return connections
          */
-        public java.util.List < Connections> getConnections() {
+        public java.util.List<Connections> getConnections() {
             return this.connections;
         }
 
@@ -468,19 +473,19 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
         public static final class Builder {
-            private java.util.List < Connections> connections; 
+            private java.util.List<Connections> connections; 
             private String DBInstanceName; 
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
 
             /**
              * <p>The network connection information of the instance.</p>
              */
-            public Builder connections(java.util.List < Connections> connections) {
+            public Builder connections(java.util.List<Connections> connections) {
                 this.connections = connections;
                 return this;
             }
@@ -499,7 +504,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             /**
              * <p>The queried nodes.</p>
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }

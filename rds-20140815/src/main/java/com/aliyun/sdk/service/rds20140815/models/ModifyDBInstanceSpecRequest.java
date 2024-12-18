@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -69,6 +74,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IoAccelerationEnabled")
     private String ioAccelerationEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OptimizedWrites")
+    private String optimizedWrites;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -150,6 +159,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.effectiveTime = builder.effectiveTime;
         this.engineVersion = builder.engineVersion;
         this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
+        this.optimizedWrites = builder.optimizedWrites;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
@@ -280,6 +290,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return optimizedWrites
+     */
+    public String getOptimizedWrites() {
+        return this.optimizedWrites;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -406,6 +423,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private String effectiveTime; 
         private String engineVersion; 
         private String ioAccelerationEnabled; 
+        private String optimizedWrites; 
         private String ownerAccount; 
         private Long ownerId; 
         private String payType; 
@@ -443,6 +461,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.effectiveTime = request.effectiveTime;
             this.engineVersion = request.engineVersion;
             this.ioAccelerationEnabled = request.ioAccelerationEnabled;
+            this.optimizedWrites = request.optimizedWrites;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.payType = request.payType;
@@ -717,6 +736,25 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the write optimization feature.</p>
+         * <ul>
+         * <li><strong>optimized</strong>: enables the feature.</li>
+         * <li><strong>none</strong>: disables the feature.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about the write optimization feature, see <a href="https://help.aliyun.com/document_detail/2858761.html">Write optimization</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>optimized</p>
+         */
+        public Builder optimizedWrites(String optimizedWrites) {
+            this.putQueryParameter("OptimizedWrites", optimizedWrites);
+            this.optimizedWrites = optimizedWrites;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -752,7 +790,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>723298850895</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -236,7 +241,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
      */
     public static class DBInstanceWeights extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceWeight")
-        private java.util.List < DBInstanceWeight> DBInstanceWeight;
+        private java.util.List<DBInstanceWeight> DBInstanceWeight;
 
         private DBInstanceWeights(Builder builder) {
             this.DBInstanceWeight = builder.DBInstanceWeight;
@@ -253,17 +258,17 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         /**
          * @return DBInstanceWeight
          */
-        public java.util.List < DBInstanceWeight> getDBInstanceWeight() {
+        public java.util.List<DBInstanceWeight> getDBInstanceWeight() {
             return this.DBInstanceWeight;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceWeight> DBInstanceWeight; 
+            private java.util.List<DBInstanceWeight> DBInstanceWeight; 
 
             /**
              * DBInstanceWeight.
              */
-            public Builder DBInstanceWeight(java.util.List < DBInstanceWeight> DBInstanceWeight) {
+            public Builder DBInstanceWeight(java.util.List<DBInstanceWeight> DBInstanceWeight) {
                 this.DBInstanceWeight = DBInstanceWeight;
                 return this;
             }
@@ -356,7 +361,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
      */
     public static class SecurityIPGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("securityIPGroup")
-        private java.util.List < SecurityIPGroup> securityIPGroup;
+        private java.util.List<SecurityIPGroup> securityIPGroup;
 
         private SecurityIPGroups(Builder builder) {
             this.securityIPGroup = builder.securityIPGroup;
@@ -373,17 +378,17 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         /**
          * @return securityIPGroup
          */
-        public java.util.List < SecurityIPGroup> getSecurityIPGroup() {
+        public java.util.List<SecurityIPGroup> getSecurityIPGroup() {
             return this.securityIPGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SecurityIPGroup> securityIPGroup; 
+            private java.util.List<SecurityIPGroup> securityIPGroup; 
 
             /**
              * securityIPGroup.
              */
-            public Builder securityIPGroup(java.util.List < SecurityIPGroup> securityIPGroup) {
+            public Builder securityIPGroup(java.util.List<SecurityIPGroup> securityIPGroup) {
                 this.securityIPGroup = securityIPGroup;
                 return this;
             }
@@ -766,7 +771,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
      */
     public static class DBInstanceNetInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceNetInfo")
-        private java.util.List < DBInstanceNetInfo> DBInstanceNetInfo;
+        private java.util.List<DBInstanceNetInfo> DBInstanceNetInfo;
 
         private DBInstanceNetInfos(Builder builder) {
             this.DBInstanceNetInfo = builder.DBInstanceNetInfo;
@@ -783,17 +788,17 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         /**
          * @return DBInstanceNetInfo
          */
-        public java.util.List < DBInstanceNetInfo> getDBInstanceNetInfo() {
+        public java.util.List<DBInstanceNetInfo> getDBInstanceNetInfo() {
             return this.DBInstanceNetInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceNetInfo> DBInstanceNetInfo; 
+            private java.util.List<DBInstanceNetInfo> DBInstanceNetInfo; 
 
             /**
              * DBInstanceNetInfo.
              */
-            public Builder DBInstanceNetInfo(java.util.List < DBInstanceNetInfo> DBInstanceNetInfo) {
+            public Builder DBInstanceNetInfo(java.util.List<DBInstanceNetInfo> DBInstanceNetInfo) {
                 this.DBInstanceNetInfo = DBInstanceNetInfo;
                 return this;
             }

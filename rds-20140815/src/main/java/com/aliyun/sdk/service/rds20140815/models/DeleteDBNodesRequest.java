@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class DeleteDBNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBNodeId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > DBNodeId;
+    private java.util.List<String> DBNodeId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -88,7 +93,7 @@ public class DeleteDBNodesRequest extends Request {
     /**
      * @return DBNodeId
      */
-    public java.util.List < String > getDBNodeId() {
+    public java.util.List<String> getDBNodeId() {
         return this.DBNodeId;
     }
 
@@ -130,7 +135,7 @@ public class DeleteDBNodesRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteDBNodesRequest, Builder> {
         private String clientToken; 
         private String DBInstanceId; 
-        private java.util.List < String > DBNodeId; 
+        private java.util.List<String> DBNodeId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceGroupId; 
@@ -183,7 +188,7 @@ public class DeleteDBNodesRequest extends Request {
          * <p>The node IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder DBNodeId(java.util.List < String > DBNodeId) {
+        public Builder DBNodeId(java.util.List<String> DBNodeId) {
             String DBNodeIdShrink = shrink(DBNodeId, "DBNodeId", "json");
             this.putQueryParameter("DBNodeId", DBNodeIdShrink);
             this.DBNodeId = DBNodeId;

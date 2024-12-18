@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRCDisksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Disks")
-    private java.util.List < Disks> disks;
+    private java.util.List<Disks> disks;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -46,7 +51,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
     /**
      * @return disks
      */
-    public java.util.List < Disks> getDisks() {
+    public java.util.List<Disks> getDisks() {
         return this.disks;
     }
 
@@ -79,7 +84,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Disks> disks; 
+        private java.util.List<Disks> disks; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         /**
          * <p>The information about the disks.</p>
          */
-        public Builder disks(java.util.List < Disks> disks) {
+        public Builder disks(java.util.List<Disks> disks) {
             this.disks = disks;
             return this;
         }

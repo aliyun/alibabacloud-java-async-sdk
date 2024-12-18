@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAvailableZonesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AvailableZones")
-    private java.util.List < AvailableZones> availableZones;
+    private java.util.List<AvailableZones> availableZones;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     /**
      * @return availableZones
      */
-    public java.util.List < AvailableZones> getAvailableZones() {
+    public java.util.List<AvailableZones> getAvailableZones() {
         return this.availableZones;
     }
 
@@ -46,13 +51,13 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AvailableZones> availableZones; 
+        private java.util.List<AvailableZones> availableZones; 
         private String requestId; 
 
         /**
          * <p>The available zones in the region.</p>
          */
-        public Builder availableZones(java.util.List < AvailableZones> availableZones) {
+        public Builder availableZones(java.util.List<AvailableZones> availableZones) {
             this.availableZones = availableZones;
             return this;
         }
@@ -135,7 +140,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         private String category;
 
         @com.aliyun.core.annotation.NameInMap("SupportedStorageTypes")
-        private java.util.List < SupportedStorageTypes> supportedStorageTypes;
+        private java.util.List<SupportedStorageTypes> supportedStorageTypes;
 
         private SupportedCategorys(Builder builder) {
             this.category = builder.category;
@@ -160,13 +165,13 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         /**
          * @return supportedStorageTypes
          */
-        public java.util.List < SupportedStorageTypes> getSupportedStorageTypes() {
+        public java.util.List<SupportedStorageTypes> getSupportedStorageTypes() {
             return this.supportedStorageTypes;
         }
 
         public static final class Builder {
             private String category; 
-            private java.util.List < SupportedStorageTypes> supportedStorageTypes; 
+            private java.util.List<SupportedStorageTypes> supportedStorageTypes; 
 
             /**
              * <p>The RDS edition of the instance.</p>
@@ -182,7 +187,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             /**
              * <p>The storage types that are available for purchase.</p>
              */
-            public Builder supportedStorageTypes(java.util.List < SupportedStorageTypes> supportedStorageTypes) {
+            public Builder supportedStorageTypes(java.util.List<SupportedStorageTypes> supportedStorageTypes) {
                 this.supportedStorageTypes = supportedStorageTypes;
                 return this;
             }
@@ -202,7 +207,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
      */
     public static class SupportedEngineVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedCategorys")
-        private java.util.List < SupportedCategorys> supportedCategorys;
+        private java.util.List<SupportedCategorys> supportedCategorys;
 
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
@@ -223,7 +228,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         /**
          * @return supportedCategorys
          */
-        public java.util.List < SupportedCategorys> getSupportedCategorys() {
+        public java.util.List<SupportedCategorys> getSupportedCategorys() {
             return this.supportedCategorys;
         }
 
@@ -235,13 +240,13 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SupportedCategorys> supportedCategorys; 
+            private java.util.List<SupportedCategorys> supportedCategorys; 
             private String version; 
 
             /**
              * <p>The RDS editions that are available that are available for purchase.</p>
              */
-            public Builder supportedCategorys(java.util.List < SupportedCategorys> supportedCategorys) {
+            public Builder supportedCategorys(java.util.List<SupportedCategorys> supportedCategorys) {
                 this.supportedCategorys = supportedCategorys;
                 return this;
             }
@@ -275,7 +280,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         private String engine;
 
         @com.aliyun.core.annotation.NameInMap("SupportedEngineVersions")
-        private java.util.List < SupportedEngineVersions> supportedEngineVersions;
+        private java.util.List<SupportedEngineVersions> supportedEngineVersions;
 
         private SupportedEngines(Builder builder) {
             this.engine = builder.engine;
@@ -300,13 +305,13 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         /**
          * @return supportedEngineVersions
          */
-        public java.util.List < SupportedEngineVersions> getSupportedEngineVersions() {
+        public java.util.List<SupportedEngineVersions> getSupportedEngineVersions() {
             return this.supportedEngineVersions;
         }
 
         public static final class Builder {
             private String engine; 
-            private java.util.List < SupportedEngineVersions> supportedEngineVersions; 
+            private java.util.List<SupportedEngineVersions> supportedEngineVersions; 
 
             /**
              * <p>The database engine of the instance.</p>
@@ -322,7 +327,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             /**
              * <p>The database engine versions that are available for purchase.</p>
              */
-            public Builder supportedEngineVersions(java.util.List < SupportedEngineVersions> supportedEngineVersions) {
+            public Builder supportedEngineVersions(java.util.List<SupportedEngineVersions> supportedEngineVersions) {
                 this.supportedEngineVersions = supportedEngineVersions;
                 return this;
             }
@@ -345,7 +350,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("SupportedEngines")
-        private java.util.List < SupportedEngines> supportedEngines;
+        private java.util.List<SupportedEngines> supportedEngines;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
@@ -374,7 +379,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         /**
          * @return supportedEngines
          */
-        public java.util.List < SupportedEngines> getSupportedEngines() {
+        public java.util.List<SupportedEngines> getSupportedEngines() {
             return this.supportedEngines;
         }
 
@@ -387,7 +392,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String regionId; 
-            private java.util.List < SupportedEngines> supportedEngines; 
+            private java.util.List<SupportedEngines> supportedEngines; 
             private String zoneId; 
 
             /**
@@ -404,7 +409,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             /**
              * <p>The database engines that are available for purchase.</p>
              */
-            public Builder supportedEngines(java.util.List < SupportedEngines> supportedEngines) {
+            public Builder supportedEngines(java.util.List<SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;
                 return this;
             }

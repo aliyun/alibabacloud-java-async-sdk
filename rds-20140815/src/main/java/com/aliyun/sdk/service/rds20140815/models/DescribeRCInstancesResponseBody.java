@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("RCInstances")
-    private java.util.List < RCInstances> RCInstances;
+    private java.util.List<RCInstances> RCInstances;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
     /**
      * @return RCInstances
      */
-    public java.util.List < RCInstances> getRCInstances() {
+    public java.util.List<RCInstances> getRCInstances() {
         return this.RCInstances;
     }
 
@@ -81,7 +86,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < RCInstances> RCInstances; 
+        private java.util.List<RCInstances> RCInstances; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -110,7 +115,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         /**
          * <p>The details of the instance.</p>
          */
-        public Builder RCInstances(java.util.List < RCInstances> RCInstances) {
+        public Builder RCInstances(java.util.List<RCInstances> RCInstances) {
             this.RCInstances = RCInstances;
             return this;
         }
@@ -256,6 +261,113 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeRCInstancesResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private String resourceType;
+
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.resourceId = builder.resourceId;
+            this.resourceType = builder.resourceType;
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String resourceId; 
+            private String resourceType; 
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * ResourceId.
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRCInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstancesResponseBody</p>
+     */
     public static class RCInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
@@ -294,7 +406,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("TagResources")
-        private java.util.List < TagResources> tagResources;
+        private java.util.List<TagResources> tagResources;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -316,6 +431,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             this.spotStrategy = builder.spotStrategy;
             this.status = builder.status;
             this.tagResources = builder.tagResources;
+            this.tags = builder.tags;
             this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
         }
@@ -415,8 +531,15 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         /**
          * @return tagResources
          */
-        public java.util.List < TagResources> getTagResources() {
+        public java.util.List<TagResources> getTagResources() {
             return this.tagResources;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -446,7 +569,8 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String regionId; 
             private String spotStrategy; 
             private String status; 
-            private java.util.List < TagResources> tagResources; 
+            private java.util.List<TagResources> tagResources; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
             private String zoneId; 
 
@@ -586,8 +710,16 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             /**
              * TagResources.
              */
-            public Builder tagResources(java.util.List < TagResources> tagResources) {
+            public Builder tagResources(java.util.List<TagResources> tagResources) {
                 this.tagResources = tagResources;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

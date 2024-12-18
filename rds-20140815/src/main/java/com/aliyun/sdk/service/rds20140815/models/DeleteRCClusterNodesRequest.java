@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteRCClusterNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Nodes")
-    private java.util.List < String > nodes;
+    private java.util.List<String> nodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -52,14 +57,14 @@ public class DeleteRCClusterNodesRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
     /**
      * @return nodes
      */
-    public java.util.List < String > getNodes() {
+    public java.util.List<String> getNodes() {
         return this.nodes;
     }
 
@@ -78,8 +83,8 @@ public class DeleteRCClusterNodesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteRCClusterNodesRequest, Builder> {
-        private java.util.List < String > instanceIds; 
-        private java.util.List < String > nodes; 
+        private java.util.List<String> instanceIds; 
+        private java.util.List<String> nodes; 
         private String regionId; 
         private String vpcId; 
 
@@ -98,7 +103,7 @@ public class DeleteRCClusterNodesRequest extends Request {
         /**
          * <p>The instance IDs.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "simple");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
@@ -108,7 +113,7 @@ public class DeleteRCClusterNodesRequest extends Request {
         /**
          * <p>The node information.</p>
          */
-        public Builder nodes(java.util.List < String > nodes) {
+        public Builder nodes(java.util.List<String> nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "simple");
             this.putQueryParameter("Nodes", nodesShrink);
             this.nodes = nodes;

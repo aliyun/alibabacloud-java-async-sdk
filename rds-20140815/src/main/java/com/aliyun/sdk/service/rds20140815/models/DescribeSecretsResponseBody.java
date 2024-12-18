@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Secrets")
-    private java.util.List < Secrets> secrets;
+    private java.util.List<Secrets> secrets;
 
     private DescribeSecretsResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -63,7 +68,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
     /**
      * @return secrets
      */
-    public java.util.List < Secrets> getSecrets() {
+    public java.util.List<Secrets> getSecrets() {
         return this.secrets;
     }
 
@@ -71,7 +76,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
-        private java.util.List < Secrets> secrets; 
+        private java.util.List<Secrets> secrets; 
 
         /**
          * <p>The page number.</p>
@@ -109,7 +114,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         /**
          * <p>The details of the credential.</p>
          */
-        public Builder secrets(java.util.List < Secrets> secrets) {
+        public Builder secrets(java.util.List<Secrets> secrets) {
             this.secrets = secrets;
             return this;
         }

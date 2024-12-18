@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class CreateDBNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBNode")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DBNode> DBNode;
+    private java.util.List<DBNode> DBNode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -88,7 +93,7 @@ public class CreateDBNodesRequest extends Request {
     /**
      * @return DBNode
      */
-    public java.util.List < DBNode> getDBNode() {
+    public java.util.List<DBNode> getDBNode() {
         return this.DBNode;
     }
 
@@ -130,7 +135,7 @@ public class CreateDBNodesRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDBNodesRequest, Builder> {
         private String clientToken; 
         private String DBInstanceId; 
-        private java.util.List < DBNode> DBNode; 
+        private java.util.List<DBNode> DBNode; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceGroupId; 
@@ -183,7 +188,7 @@ public class CreateDBNodesRequest extends Request {
          * <p>The details of the node.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder DBNode(java.util.List < DBNode> DBNode) {
+        public Builder DBNode(java.util.List<DBNode> DBNode) {
             String DBNodeShrink = shrink(DBNode, "DBNode", "json");
             this.putQueryParameter("DBNode", DBNodeShrink);
             this.DBNode = DBNode;

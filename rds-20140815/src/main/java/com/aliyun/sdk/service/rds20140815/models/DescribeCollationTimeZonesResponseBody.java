@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
      */
     public static class CollationTimeZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CollationTimeZone")
-        private java.util.List < CollationTimeZone> collationTimeZone;
+        private java.util.List<CollationTimeZone> collationTimeZone;
 
         private CollationTimeZones(Builder builder) {
             this.collationTimeZone = builder.collationTimeZone;
@@ -195,17 +200,17 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
         /**
          * @return collationTimeZone
          */
-        public java.util.List < CollationTimeZone> getCollationTimeZone() {
+        public java.util.List<CollationTimeZone> getCollationTimeZone() {
             return this.collationTimeZone;
         }
 
         public static final class Builder {
-            private java.util.List < CollationTimeZone> collationTimeZone; 
+            private java.util.List<CollationTimeZone> collationTimeZone; 
 
             /**
              * CollationTimeZone.
              */
-            public Builder collationTimeZone(java.util.List < CollationTimeZone> collationTimeZone) {
+            public Builder collationTimeZone(java.util.List<CollationTimeZone> collationTimeZone) {
                 this.collationTimeZone = collationTimeZone;
                 return this;
             }

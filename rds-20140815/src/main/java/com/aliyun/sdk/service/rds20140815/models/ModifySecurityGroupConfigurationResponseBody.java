@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsSecurityGroupRelation")
-        private java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation;
+        private java.util.List<EcsSecurityGroupRelation> ecsSecurityGroupRelation;
 
         private Items(Builder builder) {
             this.ecsSecurityGroupRelation = builder.ecsSecurityGroupRelation;
@@ -222,17 +227,17 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         /**
          * @return ecsSecurityGroupRelation
          */
-        public java.util.List < EcsSecurityGroupRelation> getEcsSecurityGroupRelation() {
+        public java.util.List<EcsSecurityGroupRelation> getEcsSecurityGroupRelation() {
             return this.ecsSecurityGroupRelation;
         }
 
         public static final class Builder {
-            private java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation; 
+            private java.util.List<EcsSecurityGroupRelation> ecsSecurityGroupRelation; 
 
             /**
              * EcsSecurityGroupRelation.
              */
-            public Builder ecsSecurityGroupRelation(java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation) {
+            public Builder ecsSecurityGroupRelation(java.util.List<EcsSecurityGroupRelation> ecsSecurityGroupRelation) {
                 this.ecsSecurityGroupRelation = ecsSecurityGroupRelation;
                 return this;
             }

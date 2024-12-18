@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -264,13 +269,13 @@ public class CreateMaskingRulesRequest extends Request {
      */
     public static class RuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < String > columns;
+        private java.util.List<String> columns;
 
         @com.aliyun.core.annotation.NameInMap("Databases")
-        private java.util.List < String > databases;
+        private java.util.List<String> databases;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < String > tables;
+        private java.util.List<String> tables;
 
         private RuleConfig(Builder builder) {
             this.columns = builder.columns;
@@ -289,33 +294,33 @@ public class CreateMaskingRulesRequest extends Request {
         /**
          * @return columns
          */
-        public java.util.List < String > getColumns() {
+        public java.util.List<String> getColumns() {
             return this.columns;
         }
 
         /**
          * @return databases
          */
-        public java.util.List < String > getDatabases() {
+        public java.util.List<String> getDatabases() {
             return this.databases;
         }
 
         /**
          * @return tables
          */
-        public java.util.List < String > getTables() {
+        public java.util.List<String> getTables() {
             return this.tables;
         }
 
         public static final class Builder {
-            private java.util.List < String > columns; 
-            private java.util.List < String > databases; 
-            private java.util.List < String > tables; 
+            private java.util.List<String> columns; 
+            private java.util.List<String> databases; 
+            private java.util.List<String> tables; 
 
             /**
              * Columns.
              */
-            public Builder columns(java.util.List < String > columns) {
+            public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
                 return this;
             }
@@ -323,7 +328,7 @@ public class CreateMaskingRulesRequest extends Request {
             /**
              * Databases.
              */
-            public Builder databases(java.util.List < String > databases) {
+            public Builder databases(java.util.List<String> databases) {
                 this.databases = databases;
                 return this;
             }
@@ -331,7 +336,7 @@ public class CreateMaskingRulesRequest extends Request {
             /**
              * Tables.
              */
-            public Builder tables(java.util.List < String > tables) {
+            public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -339,7 +344,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
      */
     public static class AfterHbaItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HbaItem")
-        private java.util.List < HbaItem> hbaItem;
+        private java.util.List<HbaItem> hbaItem;
 
         private AfterHbaItems(Builder builder) {
             this.hbaItem = builder.hbaItem;
@@ -356,17 +361,17 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         /**
          * @return hbaItem
          */
-        public java.util.List < HbaItem> getHbaItem() {
+        public java.util.List<HbaItem> getHbaItem() {
             return this.hbaItem;
         }
 
         public static final class Builder {
-            private java.util.List < HbaItem> hbaItem; 
+            private java.util.List<HbaItem> hbaItem; 
 
             /**
              * HbaItem.
              */
-            public Builder hbaItem(java.util.List < HbaItem> hbaItem) {
+            public Builder hbaItem(java.util.List<HbaItem> hbaItem) {
                 this.hbaItem = hbaItem;
                 return this;
             }
@@ -597,7 +602,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
      */
     public static class BeforeHbaItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HbaItem")
-        private java.util.List < BeforeHbaItemsHbaItem> hbaItem;
+        private java.util.List<BeforeHbaItemsHbaItem> hbaItem;
 
         private BeforeHbaItems(Builder builder) {
             this.hbaItem = builder.hbaItem;
@@ -614,17 +619,17 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         /**
          * @return hbaItem
          */
-        public java.util.List < BeforeHbaItemsHbaItem> getHbaItem() {
+        public java.util.List<BeforeHbaItemsHbaItem> getHbaItem() {
             return this.hbaItem;
         }
 
         public static final class Builder {
-            private java.util.List < BeforeHbaItemsHbaItem> hbaItem; 
+            private java.util.List<BeforeHbaItemsHbaItem> hbaItem; 
 
             /**
              * HbaItem.
              */
-            public Builder hbaItem(java.util.List < BeforeHbaItemsHbaItem> hbaItem) {
+            public Builder hbaItem(java.util.List<BeforeHbaItemsHbaItem> hbaItem) {
                 this.hbaItem = hbaItem;
                 return this;
             }
@@ -785,7 +790,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
      */
     public static class HbaLogItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HbaLogItem")
-        private java.util.List < HbaLogItem> hbaLogItem;
+        private java.util.List<HbaLogItem> hbaLogItem;
 
         private HbaLogItems(Builder builder) {
             this.hbaLogItem = builder.hbaLogItem;
@@ -802,17 +807,17 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         /**
          * @return hbaLogItem
          */
-        public java.util.List < HbaLogItem> getHbaLogItem() {
+        public java.util.List<HbaLogItem> getHbaLogItem() {
             return this.hbaLogItem;
         }
 
         public static final class Builder {
-            private java.util.List < HbaLogItem> hbaLogItem; 
+            private java.util.List<HbaLogItem> hbaLogItem; 
 
             /**
              * HbaLogItem.
              */
-            public Builder hbaLogItem(java.util.List < HbaLogItem> hbaLogItem) {
+            public Builder hbaLogItem(java.util.List<HbaLogItem> hbaLogItem) {
                 this.hbaLogItem = hbaLogItem;
                 return this;
             }

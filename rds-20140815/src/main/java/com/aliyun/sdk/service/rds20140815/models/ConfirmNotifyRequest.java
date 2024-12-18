@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class ConfirmNotifyRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NotifyIdList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > notifyIdList;
+    private java.util.List<Long> notifyIdList;
 
     private ConfirmNotifyRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class ConfirmNotifyRequest extends Request {
     /**
      * @return notifyIdList
      */
-    public java.util.List < Long > getNotifyIdList() {
+    public java.util.List<Long> getNotifyIdList() {
         return this.notifyIdList;
     }
 
     public static final class Builder extends Request.Builder<ConfirmNotifyRequest, Builder> {
         private Long confirmor; 
-        private java.util.List < Long > notifyIdList; 
+        private java.util.List<Long> notifyIdList; 
 
         private Builder() {
             super();
@@ -86,7 +91,7 @@ public class ConfirmNotifyRequest extends Request {
          * <p>The notification IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder notifyIdList(java.util.List < Long > notifyIdList) {
+        public Builder notifyIdList(java.util.List<Long> notifyIdList) {
             String notifyIdListShrink = shrink(notifyIdList, "NotifyIdList", "json");
             this.putBodyParameter("NotifyIdList", notifyIdListShrink);
             this.notifyIdList = notifyIdList;

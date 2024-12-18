@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -321,7 +326,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogFile")
-        private java.util.List < LogFile> logFile;
+        private java.util.List<LogFile> logFile;
 
         private Items(Builder builder) {
             this.logFile = builder.logFile;
@@ -338,17 +343,17 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         /**
          * @return logFile
          */
-        public java.util.List < LogFile> getLogFile() {
+        public java.util.List<LogFile> getLogFile() {
             return this.logFile;
         }
 
         public static final class Builder {
-            private java.util.List < LogFile> logFile; 
+            private java.util.List<LogFile> logFile; 
 
             /**
              * LogFile.
              */
-            public Builder logFile(java.util.List < LogFile> logFile) {
+            public Builder logFile(java.util.List<LogFile> logFile) {
                 this.logFile = logFile;
                 return this;
             }

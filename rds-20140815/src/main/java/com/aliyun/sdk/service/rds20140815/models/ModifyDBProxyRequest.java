@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class ModifyDBProxyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBProxyNodes")
-    private java.util.List < DBProxyNodes> DBProxyNodes;
+    private java.util.List<DBProxyNodes> DBProxyNodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
@@ -144,7 +149,7 @@ public class ModifyDBProxyRequest extends Request {
     /**
      * @return DBProxyNodes
      */
-    public java.util.List < DBProxyNodes> getDBProxyNodes() {
+    public java.util.List<DBProxyNodes> getDBProxyNodes() {
         return this.DBProxyNodes;
     }
 
@@ -217,7 +222,7 @@ public class ModifyDBProxyRequest extends Request {
         private String DBProxyEngineType; 
         private String DBProxyInstanceNum; 
         private String DBProxyInstanceType; 
-        private java.util.List < DBProxyNodes> DBProxyNodes; 
+        private java.util.List<DBProxyNodes> DBProxyNodes; 
         private String instanceNetworkType; 
         private Long ownerId; 
         private String persistentConnectionStatus; 
@@ -328,7 +333,7 @@ public class ModifyDBProxyRequest extends Request {
         /**
          * <p>The proxy nodes.</p>
          */
-        public Builder DBProxyNodes(java.util.List < DBProxyNodes> DBProxyNodes) {
+        public Builder DBProxyNodes(java.util.List<DBProxyNodes> DBProxyNodes) {
             String DBProxyNodesShrink = shrink(DBProxyNodes, "DBProxyNodes", "json");
             this.putQueryParameter("DBProxyNodes", DBProxyNodesShrink);
             this.DBProxyNodes = DBProxyNodes;

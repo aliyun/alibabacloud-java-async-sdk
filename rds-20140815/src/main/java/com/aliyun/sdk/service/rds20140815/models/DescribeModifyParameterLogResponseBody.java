@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -366,7 +371,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterChangeLog")
-        private java.util.List < ParameterChangeLog> parameterChangeLog;
+        private java.util.List<ParameterChangeLog> parameterChangeLog;
 
         private Items(Builder builder) {
             this.parameterChangeLog = builder.parameterChangeLog;
@@ -383,17 +388,17 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         /**
          * @return parameterChangeLog
          */
-        public java.util.List < ParameterChangeLog> getParameterChangeLog() {
+        public java.util.List<ParameterChangeLog> getParameterChangeLog() {
             return this.parameterChangeLog;
         }
 
         public static final class Builder {
-            private java.util.List < ParameterChangeLog> parameterChangeLog; 
+            private java.util.List<ParameterChangeLog> parameterChangeLog; 
 
             /**
              * ParameterChangeLog.
              */
-            public Builder parameterChangeLog(java.util.List < ParameterChangeLog> parameterChangeLog) {
+            public Builder parameterChangeLog(java.util.List<ParameterChangeLog> parameterChangeLog) {
                 this.parameterChangeLog = parameterChangeLog;
                 return this;
             }

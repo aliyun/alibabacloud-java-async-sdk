@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
     private String bid;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -61,7 +66,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -82,7 +87,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
     public static final class Builder {
         private Long aliUid; 
         private String bid; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String regionId; 
         private String requestId; 
 
@@ -114,7 +119,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         /**
          * <p>The activity parameters</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }

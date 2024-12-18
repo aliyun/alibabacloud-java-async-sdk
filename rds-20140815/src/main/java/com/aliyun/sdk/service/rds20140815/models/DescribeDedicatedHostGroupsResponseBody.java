@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
      */
     public static class ZoneIDList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneIDList")
-        private java.util.List < String > zoneIDList;
+        private java.util.List<String> zoneIDList;
 
         private ZoneIDList(Builder builder) {
             this.zoneIDList = builder.zoneIDList;
@@ -99,17 +104,17 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         /**
          * @return zoneIDList
          */
-        public java.util.List < String > getZoneIDList() {
+        public java.util.List<String> getZoneIDList() {
             return this.zoneIDList;
         }
 
         public static final class Builder {
-            private java.util.List < String > zoneIDList; 
+            private java.util.List<String> zoneIDList; 
 
             /**
              * ZoneIDList.
              */
-            public Builder zoneIDList(java.util.List < String > zoneIDList) {
+            public Builder zoneIDList(java.util.List<String> zoneIDList) {
                 this.zoneIDList = zoneIDList;
                 return this;
             }
@@ -147,7 +152,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("DedicatedHostCountGroupByHostType")
-        private java.util.Map < String, ? > dedicatedHostCountGroupByHostType;
+        private java.util.Map<String, ?> dedicatedHostCountGroupByHostType;
 
         @com.aliyun.core.annotation.NameInMap("DedicatedHostGroupDesc")
         private String dedicatedHostGroupDesc;
@@ -292,7 +297,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         /**
          * @return dedicatedHostCountGroupByHostType
          */
-        public java.util.Map < String, ? > getDedicatedHostCountGroupByHostType() {
+        public java.util.Map<String, ?> getDedicatedHostCountGroupByHostType() {
             return this.dedicatedHostCountGroupByHostType;
         }
 
@@ -443,7 +448,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             private Float cpuAllocatedAmount; 
             private Integer cpuAllocationRatio; 
             private String createTime; 
-            private java.util.Map < String, ? > dedicatedHostCountGroupByHostType; 
+            private java.util.Map<String, ?> dedicatedHostCountGroupByHostType; 
             private String dedicatedHostGroupDesc; 
             private String dedicatedHostGroupId; 
             private Float diskAllocateRation; 
@@ -545,7 +550,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>dhg_cloud_ssd</p>
              */
-            public Builder dedicatedHostCountGroupByHostType(java.util.Map < String, ? > dedicatedHostCountGroupByHostType) {
+            public Builder dedicatedHostCountGroupByHostType(java.util.Map<String, ?> dedicatedHostCountGroupByHostType) {
                 this.dedicatedHostCountGroupByHostType = dedicatedHostCountGroupByHostType;
                 return this;
             }
@@ -791,7 +796,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
      */
     public static class DedicatedHostGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedHostGroups")
-        private java.util.List < DedicatedHostGroupsDedicatedHostGroups> dedicatedHostGroups;
+        private java.util.List<DedicatedHostGroupsDedicatedHostGroups> dedicatedHostGroups;
 
         private DedicatedHostGroups(Builder builder) {
             this.dedicatedHostGroups = builder.dedicatedHostGroups;
@@ -808,17 +813,17 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         /**
          * @return dedicatedHostGroups
          */
-        public java.util.List < DedicatedHostGroupsDedicatedHostGroups> getDedicatedHostGroups() {
+        public java.util.List<DedicatedHostGroupsDedicatedHostGroups> getDedicatedHostGroups() {
             return this.dedicatedHostGroups;
         }
 
         public static final class Builder {
-            private java.util.List < DedicatedHostGroupsDedicatedHostGroups> dedicatedHostGroups; 
+            private java.util.List<DedicatedHostGroupsDedicatedHostGroups> dedicatedHostGroups; 
 
             /**
              * <p>The information about dedicated clusters returned.</p>
              */
-            public Builder dedicatedHostGroups(java.util.List < DedicatedHostGroupsDedicatedHostGroups> dedicatedHostGroups) {
+            public Builder dedicatedHostGroups(java.util.List<DedicatedHostGroupsDedicatedHostGroups> dedicatedHostGroups) {
                 this.dedicatedHostGroups = dedicatedHostGroups;
                 return this;
             }

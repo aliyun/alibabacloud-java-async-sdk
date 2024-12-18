@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,7 +50,7 @@ public class CreateGadInstanceMemberRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UnitNode")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < UnitNode> unitNode;
+    private java.util.List<UnitNode> unitNode;
 
     private CreateGadInstanceMemberRequest(Builder builder) {
         super(builder);
@@ -116,7 +121,7 @@ public class CreateGadInstanceMemberRequest extends Request {
     /**
      * @return unitNode
      */
-    public java.util.List < UnitNode> getUnitNode() {
+    public java.util.List<UnitNode> getUnitNode() {
         return this.unitNode;
     }
 
@@ -127,7 +132,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         private String centralRegionId; 
         private String DBList; 
         private String gadInstanceId; 
-        private java.util.List < UnitNode> unitNode; 
+        private java.util.List<UnitNode> unitNode; 
 
         private Builder() {
             super();
@@ -235,7 +240,7 @@ public class CreateGadInstanceMemberRequest extends Request {
          * <p>The information about the unit node.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder unitNode(java.util.List < UnitNode> unitNode) {
+        public Builder unitNode(java.util.List<UnitNode> unitNode) {
             this.putQueryParameter("UnitNode", unitNode);
             this.unitNode = unitNode;
             return this;

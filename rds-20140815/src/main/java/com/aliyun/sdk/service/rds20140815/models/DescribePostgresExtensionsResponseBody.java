@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,16 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePostgresExtensionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstalledExtensions")
-    private java.util.List < InstalledExtensions> installedExtensions;
+    private java.util.List<InstalledExtensions> installedExtensions;
 
     @com.aliyun.core.annotation.NameInMap("Overview")
-    private java.util.Map < String, ? > overview;
+    private java.util.Map<String, ?> overview;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UninstalledExtensions")
-    private java.util.List < UninstalledExtensions> uninstalledExtensions;
+    private java.util.List<UninstalledExtensions> uninstalledExtensions;
 
     private DescribePostgresExtensionsResponseBody(Builder builder) {
         this.installedExtensions = builder.installedExtensions;
@@ -42,14 +47,14 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
     /**
      * @return installedExtensions
      */
-    public java.util.List < InstalledExtensions> getInstalledExtensions() {
+    public java.util.List<InstalledExtensions> getInstalledExtensions() {
         return this.installedExtensions;
     }
 
     /**
      * @return overview
      */
-    public java.util.Map < String, ? > getOverview() {
+    public java.util.Map<String, ?> getOverview() {
         return this.overview;
     }
 
@@ -63,20 +68,20 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
     /**
      * @return uninstalledExtensions
      */
-    public java.util.List < UninstalledExtensions> getUninstalledExtensions() {
+    public java.util.List<UninstalledExtensions> getUninstalledExtensions() {
         return this.uninstalledExtensions;
     }
 
     public static final class Builder {
-        private java.util.List < InstalledExtensions> installedExtensions; 
-        private java.util.Map < String, ? > overview; 
+        private java.util.List<InstalledExtensions> installedExtensions; 
+        private java.util.Map<String, ?> overview; 
         private String requestId; 
-        private java.util.List < UninstalledExtensions> uninstalledExtensions; 
+        private java.util.List<UninstalledExtensions> uninstalledExtensions; 
 
         /**
          * <p>The list of extensions that are installed on the specified database.</p>
          */
-        public Builder installedExtensions(java.util.List < InstalledExtensions> installedExtensions) {
+        public Builder installedExtensions(java.util.List<InstalledExtensions> installedExtensions) {
             this.installedExtensions = installedExtensions;
             return this;
         }
@@ -87,7 +92,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>None</p>
          */
-        public Builder overview(java.util.Map < String, ? > overview) {
+        public Builder overview(java.util.Map<String, ?> overview) {
             this.overview = overview;
             return this;
         }
@@ -106,7 +111,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         /**
          * <p>The list of extensions that are not installed on the specified database.</p>
          */
-        public Builder uninstalledExtensions(java.util.List < UninstalledExtensions> uninstalledExtensions) {
+        public Builder uninstalledExtensions(java.util.List<UninstalledExtensions> uninstalledExtensions) {
             this.uninstalledExtensions = uninstalledExtensions;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -49,7 +54,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -69,7 +74,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBInstanceName; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
         private Integer totalRecordCount; 
 
@@ -87,7 +92,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         /**
          * <p>Details of the Enhanced Monitoring metric.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }

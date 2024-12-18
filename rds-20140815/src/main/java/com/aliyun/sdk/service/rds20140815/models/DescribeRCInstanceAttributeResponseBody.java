@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -129,6 +134,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("StoppedMode")
     private String stoppedMode;
 
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private Tags tags;
+
     @com.aliyun.core.annotation.NameInMap("VlanId")
     private String vlanId;
 
@@ -178,6 +186,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         this.spotStrategy = builder.spotStrategy;
         this.status = builder.status;
         this.stoppedMode = builder.stoppedMode;
+        this.tags = builder.tags;
         this.vlanId = builder.vlanId;
         this.vpcAttributes = builder.vpcAttributes;
         this.zoneId = builder.zoneId;
@@ -465,6 +474,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return vlanId
      */
     public String getVlanId() {
@@ -525,6 +541,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private String spotStrategy; 
         private String status; 
         private String stoppedMode; 
+        private Tags tags; 
         private String vlanId; 
         private VpcAttributes vpcAttributes; 
         private String zoneId; 
@@ -964,6 +981,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(Tags tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * <p>The virtual LAN (VLAN) ID of the instance.</p>
          * <blockquote>
          * <p> This parameter will be deprecated. We recommend that you use other parameters to ensure compatibility.</p>
@@ -1160,7 +1185,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      */
     public static class DataDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDisk")
-        private java.util.List < DataDisk> dataDisk;
+        private java.util.List<DataDisk> dataDisk;
 
         private DataDisks(Builder builder) {
             this.dataDisk = builder.dataDisk;
@@ -1177,17 +1202,17 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return dataDisk
          */
-        public java.util.List < DataDisk> getDataDisk() {
+        public java.util.List<DataDisk> getDataDisk() {
             return this.dataDisk;
         }
 
         public static final class Builder {
-            private java.util.List < DataDisk> dataDisk; 
+            private java.util.List<DataDisk> dataDisk; 
 
             /**
              * DataDisk.
              */
-            public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+            public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
                 return this;
             }
@@ -1406,7 +1431,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      */
     public static class InnerIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
-        private java.util.List < String > ipAddress;
+        private java.util.List<String> ipAddress;
 
         private InnerIpAddress(Builder builder) {
             this.ipAddress = builder.ipAddress;
@@ -1423,12 +1448,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
 
             /**
              * <p>The EIP.</p>
@@ -1436,7 +1461,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>8.147.XXX.XXX</p>
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }
@@ -1513,7 +1538,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
-        private java.util.List < LockReason> lockReason;
+        private java.util.List<LockReason> lockReason;
 
         private OperationLocks(Builder builder) {
             this.lockReason = builder.lockReason;
@@ -1530,12 +1555,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return lockReason
          */
-        public java.util.List < LockReason> getLockReason() {
+        public java.util.List<LockReason> getLockReason() {
             return this.lockReason;
         }
 
         public static final class Builder {
-            private java.util.List < LockReason> lockReason; 
+            private java.util.List<LockReason> lockReason; 
 
             /**
              * <p>The reason why the instance is locked. Valid values:</p>
@@ -1550,7 +1575,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>None</p>
              */
-            public Builder lockReason(java.util.List < LockReason> lockReason) {
+            public Builder lockReason(java.util.List<LockReason> lockReason) {
                 this.lockReason = lockReason;
                 return this;
             }
@@ -1570,7 +1595,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      */
     public static class PublicIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
-        private java.util.List < String > ipAddress;
+        private java.util.List<String> ipAddress;
 
         private PublicIpAddress(Builder builder) {
             this.ipAddress = builder.ipAddress;
@@ -1587,12 +1612,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
 
             /**
              * <p>The EIP.</p>
@@ -1600,7 +1625,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>8.147.XXX.XXX</p>
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }
@@ -1620,7 +1645,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      */
     public static class SecurityGroupIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private java.util.List < String > securityGroupId;
+        private java.util.List<String> securityGroupId;
 
         private SecurityGroupIds(Builder builder) {
             this.securityGroupId = builder.securityGroupId;
@@ -1637,17 +1662,17 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return securityGroupId
          */
-        public java.util.List < String > getSecurityGroupId() {
+        public java.util.List<String> getSecurityGroupId() {
             return this.securityGroupId;
         }
 
         public static final class Builder {
-            private java.util.List < String > securityGroupId; 
+            private java.util.List<String> securityGroupId; 
 
             /**
              * SecurityGroupId.
              */
-            public Builder securityGroupId(java.util.List < String > securityGroupId) {
+            public Builder securityGroupId(java.util.List<String> securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -1665,9 +1690,163 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      *
      * <p>DescribeRCInstanceAttributeResponseBody</p>
      */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private String resourceType;
+
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.resourceId = builder.resourceId;
+            this.resourceType = builder.resourceType;
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String resourceId; 
+            private String resourceType; 
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * ResourceId.
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List<Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List<Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
     public static class PrivateIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
-        private java.util.List < String > ipAddress;
+        private java.util.List<String> ipAddress;
 
         private PrivateIpAddress(Builder builder) {
             this.ipAddress = builder.ipAddress;
@@ -1684,12 +1863,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
 
             /**
              * <p>The EIP.</p>
@@ -1697,7 +1876,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>8.147.XXX.XXX</p>
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }

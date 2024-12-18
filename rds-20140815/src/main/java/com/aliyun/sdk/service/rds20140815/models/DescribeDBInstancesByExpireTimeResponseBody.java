@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -332,7 +337,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceExpireTime")
-        private java.util.List < DBInstanceExpireTime> DBInstanceExpireTime;
+        private java.util.List<DBInstanceExpireTime> DBInstanceExpireTime;
 
         private Items(Builder builder) {
             this.DBInstanceExpireTime = builder.DBInstanceExpireTime;
@@ -349,17 +354,17 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         /**
          * @return DBInstanceExpireTime
          */
-        public java.util.List < DBInstanceExpireTime> getDBInstanceExpireTime() {
+        public java.util.List<DBInstanceExpireTime> getDBInstanceExpireTime() {
             return this.DBInstanceExpireTime;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceExpireTime> DBInstanceExpireTime; 
+            private java.util.List<DBInstanceExpireTime> DBInstanceExpireTime; 
 
             /**
              * DBInstanceExpireTime.
              */
-            public Builder DBInstanceExpireTime(java.util.List < DBInstanceExpireTime> DBInstanceExpireTime) {
+            public Builder DBInstanceExpireTime(java.util.List<DBInstanceExpireTime> DBInstanceExpireTime) {
                 this.DBInstanceExpireTime = DBInstanceExpireTime;
                 return this;
             }

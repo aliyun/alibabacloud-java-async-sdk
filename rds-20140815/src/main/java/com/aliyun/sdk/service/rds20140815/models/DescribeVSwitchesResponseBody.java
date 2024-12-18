@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VSwitchs")
-    private java.util.List < VSwitchs> vSwitchs;
+    private java.util.List<VSwitchs> vSwitchs;
 
     private DescribeVSwitchesResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -74,7 +79,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     /**
      * @return vSwitchs
      */
-    public java.util.List < VSwitchs> getVSwitchs() {
+    public java.util.List<VSwitchs> getVSwitchs() {
         return this.vSwitchs;
     }
 
@@ -83,7 +88,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VSwitchs> vSwitchs; 
+        private java.util.List<VSwitchs> vSwitchs; 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -132,7 +137,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         /**
          * <p>Details of the vSwitches.</p>
          */
-        public Builder vSwitchs(java.util.List < VSwitchs> vSwitchs) {
+        public Builder vSwitchs(java.util.List<VSwitchs> vSwitchs) {
             this.vSwitchs = vSwitchs;
             return this;
         }

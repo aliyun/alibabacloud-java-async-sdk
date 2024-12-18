@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeItems")
-    private java.util.List < NodeItems> nodeItems;
+    private java.util.List<NodeItems> nodeItems;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
@@ -92,7 +97,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
     /**
      * @return nodeItems
      */
-    public java.util.List < NodeItems> getNodeItems() {
+    public java.util.List<NodeItems> getNodeItems() {
         return this.nodeItems;
     }
 
@@ -108,7 +113,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         private String DBInstanceEndpointDescription; 
         private String DBInstanceEndpointId; 
         private String DBInstanceId; 
-        private java.util.List < NodeItems> nodeItems; 
+        private java.util.List<NodeItems> nodeItems; 
         private Long resourceOwnerId; 
 
         private Builder() {
@@ -179,7 +184,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         /**
          * <p>The information about the endpoint.</p>
          */
-        public Builder nodeItems(java.util.List < NodeItems> nodeItems) {
+        public Builder nodeItems(java.util.List<NodeItems> nodeItems) {
             String nodeItemsShrink = shrink(nodeItems, "NodeItems", "json");
             this.putQueryParameter("NodeItems", nodeItemsShrink);
             this.nodeItems = nodeItems;

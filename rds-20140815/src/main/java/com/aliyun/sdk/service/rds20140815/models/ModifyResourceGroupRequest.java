@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,6 +47,10 @@ public class ModifyResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
     private ModifyResourceGroupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -51,6 +60,7 @@ public class ModifyResourceGroupRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -115,6 +125,13 @@ public class ModifyResourceGroupRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public static final class Builder extends Request.Builder<ModifyResourceGroupRequest, Builder> {
         private String clientToken; 
         private String DBInstanceId; 
@@ -123,6 +140,7 @@ public class ModifyResourceGroupRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -137,6 +155,7 @@ public class ModifyResourceGroupRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -210,6 +229,18 @@ public class ModifyResourceGroupRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

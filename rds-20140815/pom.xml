@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-rds20140815</artifactId>
-  <version>7.0.1</version>
+  <version>8.0.0</version>
   <packaging>jar</packaging>
   <name>alibabacloud-rds20140815</name>
   <description>Alibaba Cloud Rds (20140815) Async SDK for Java

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -335,7 +340,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         private String insName;
 
         @com.aliyun.core.annotation.NameInMap("Templates")
-        private java.util.List < Templates> templates;
+        private java.util.List<Templates> templates;
 
         private Data(Builder builder) {
             this.insName = builder.insName;
@@ -360,13 +365,13 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         /**
          * @return templates
          */
-        public java.util.List < Templates> getTemplates() {
+        public java.util.List<Templates> getTemplates() {
             return this.templates;
         }
 
         public static final class Builder {
             private String insName; 
-            private java.util.List < Templates> templates; 
+            private java.util.List<Templates> templates; 
 
             /**
              * <p>The instance name.</p>
@@ -382,7 +387,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             /**
              * <p>The information about whitelists that are returned by page.</p>
              */
-            public Builder templates(java.util.List < Templates> templates) {
+            public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -344,7 +349,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         private Integer maxRecordsPerPage;
 
         @com.aliyun.core.annotation.NameInMap("Templates")
-        private java.util.List < Templates> templates;
+        private java.util.List<Templates> templates;
 
         @com.aliyun.core.annotation.NameInMap("TotalPageNumbers")
         private Integer totalPageNumbers;
@@ -401,7 +406,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         /**
          * @return templates
          */
-        public java.util.List < Templates> getTemplates() {
+        public java.util.List<Templates> getTemplates() {
             return this.templates;
         }
 
@@ -424,7 +429,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             private Boolean hasNext; 
             private Boolean hasPrev; 
             private Integer maxRecordsPerPage; 
-            private java.util.List < Templates> templates; 
+            private java.util.List<Templates> templates; 
             private Integer totalPageNumbers; 
             private Integer totalRecords; 
 
@@ -483,7 +488,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             /**
              * <p>The information about whitelist templates that are returned by page.</p>
              */
-            public Builder templates(java.util.List < Templates> templates) {
+            public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;
                 return this;
             }

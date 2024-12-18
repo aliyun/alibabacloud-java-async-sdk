@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -324,7 +329,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
      */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateRecord")
-        private java.util.List < TemplateRecord> templateRecord;
+        private java.util.List<TemplateRecord> templateRecord;
 
         private Parameters(Builder builder) {
             this.templateRecord = builder.templateRecord;
@@ -341,17 +346,17 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         /**
          * @return templateRecord
          */
-        public java.util.List < TemplateRecord> getTemplateRecord() {
+        public java.util.List<TemplateRecord> getTemplateRecord() {
             return this.templateRecord;
         }
 
         public static final class Builder {
-            private java.util.List < TemplateRecord> templateRecord; 
+            private java.util.List<TemplateRecord> templateRecord; 
 
             /**
              * TemplateRecord.
              */
-            public Builder templateRecord(java.util.List < TemplateRecord> templateRecord) {
+            public Builder templateRecord(java.util.List<TemplateRecord> templateRecord) {
                 this.templateRecord = templateRecord;
                 return this;
             }

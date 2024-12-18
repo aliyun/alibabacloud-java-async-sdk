@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -185,7 +190,7 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
      */
     public static class Failures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Failures")
-        private java.util.List < FailuresFailures> failures;
+        private java.util.List<FailuresFailures> failures;
 
         private Failures(Builder builder) {
             this.failures = builder.failures;
@@ -202,17 +207,17 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         /**
          * @return failures
          */
-        public java.util.List < FailuresFailures> getFailures() {
+        public java.util.List<FailuresFailures> getFailures() {
             return this.failures;
         }
 
         public static final class Builder {
-            private java.util.List < FailuresFailures> failures; 
+            private java.util.List<FailuresFailures> failures; 
 
             /**
              * <p>The information about the failed order.</p>
              */
-            public Builder failures(java.util.List < FailuresFailures> failures) {
+            public Builder failures(java.util.List<FailuresFailures> failures) {
                 this.failures = failures;
                 return this;
             }

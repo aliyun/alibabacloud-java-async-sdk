@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ModifyOrder")
-    private java.util.List < ModifyOrder> modifyOrder;
+    private java.util.List<ModifyOrder> modifyOrder;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
     /**
      * @return modifyOrder
      */
-    public java.util.List < ModifyOrder> getModifyOrder() {
+    public java.util.List<ModifyOrder> getModifyOrder() {
         return this.modifyOrder;
     }
 
@@ -46,13 +51,13 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ModifyOrder> modifyOrder; 
+        private java.util.List<ModifyOrder> modifyOrder; 
         private String requestId; 
 
         /**
          * <p>The specification change order.</p>
          */
-        public Builder modifyOrder(java.util.List < ModifyOrder> modifyOrder) {
+        public Builder modifyOrder(java.util.List<ModifyOrder> modifyOrder) {
             this.modifyOrder = modifyOrder;
             return this;
         }

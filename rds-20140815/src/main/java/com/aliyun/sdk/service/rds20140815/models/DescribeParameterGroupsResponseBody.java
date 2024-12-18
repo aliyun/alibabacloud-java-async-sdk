@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -383,7 +388,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
      */
     public static class ParameterGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterGroup")
-        private java.util.List < ParameterGroup> parameterGroup;
+        private java.util.List<ParameterGroup> parameterGroup;
 
         private ParameterGroups(Builder builder) {
             this.parameterGroup = builder.parameterGroup;
@@ -400,17 +405,17 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         /**
          * @return parameterGroup
          */
-        public java.util.List < ParameterGroup> getParameterGroup() {
+        public java.util.List<ParameterGroup> getParameterGroup() {
             return this.parameterGroup;
         }
 
         public static final class Builder {
-            private java.util.List < ParameterGroup> parameterGroup; 
+            private java.util.List<ParameterGroup> parameterGroup; 
 
             /**
              * ParameterGroup.
              */
-            public Builder parameterGroup(java.util.List < ParameterGroup> parameterGroup) {
+            public Builder parameterGroup(java.util.List<ParameterGroup> parameterGroup) {
                 this.parameterGroup = parameterGroup;
                 return this;
             }

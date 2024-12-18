@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeRCInstanceAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+    private String privateIpAddress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -24,6 +32,7 @@ public class DescribeRCInstanceAttributeRequest extends Request {
     private DescribeRCInstanceAttributeRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.privateIpAddress = builder.privateIpAddress;
         this.regionId = builder.regionId;
     }
 
@@ -48,6 +57,13 @@ public class DescribeRCInstanceAttributeRequest extends Request {
     }
 
     /**
+     * @return privateIpAddress
+     */
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -56,6 +72,7 @@ public class DescribeRCInstanceAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRCInstanceAttributeRequest, Builder> {
         private String instanceId; 
+        private String privateIpAddress; 
         private String regionId; 
 
         private Builder() {
@@ -65,12 +82,12 @@ public class DescribeRCInstanceAttributeRequest extends Request {
         private Builder(DescribeRCInstanceAttributeRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.privateIpAddress = request.privateIpAddress;
             this.regionId = request.regionId;
         } 
 
         /**
          * <p>The instance ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>rc-dh2jf9n6j4s14926****</p>
@@ -78,6 +95,15 @@ public class DescribeRCInstanceAttributeRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * PrivateIpAddress.
+         */
+        public Builder privateIpAddress(String privateIpAddress) {
+            this.putQueryParameter("PrivateIpAddress", privateIpAddress);
+            this.privateIpAddress = privateIpAddress;
             return this;
         }
 

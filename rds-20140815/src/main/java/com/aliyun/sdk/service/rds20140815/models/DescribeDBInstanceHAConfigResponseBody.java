@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -364,7 +369,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
      */
     public static class HostInstanceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeInfo")
-        private java.util.List < NodeInfo> nodeInfo;
+        private java.util.List<NodeInfo> nodeInfo;
 
         private HostInstanceInfos(Builder builder) {
             this.nodeInfo = builder.nodeInfo;
@@ -381,17 +386,17 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         /**
          * @return nodeInfo
          */
-        public java.util.List < NodeInfo> getNodeInfo() {
+        public java.util.List<NodeInfo> getNodeInfo() {
             return this.nodeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < NodeInfo> nodeInfo; 
+            private java.util.List<NodeInfo> nodeInfo; 
 
             /**
              * NodeInfo.
              */
-            public Builder nodeInfo(java.util.List < NodeInfo> nodeInfo) {
+            public Builder nodeInfo(java.util.List<NodeInfo> nodeInfo) {
                 this.nodeInfo = nodeInfo;
                 return this;
             }

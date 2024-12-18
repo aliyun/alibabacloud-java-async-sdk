@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     private Integer maxRecordsPerPage;
 
     @com.aliyun.core.annotation.NameInMap("MinorVersionItems")
-    private java.util.List < MinorVersionItems> minorVersionItems;
+    private java.util.List<MinorVersionItems> minorVersionItems;
 
     @com.aliyun.core.annotation.NameInMap("PageNumbers")
     private Integer pageNumbers;
@@ -64,7 +69,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     /**
      * @return minorVersionItems
      */
-    public java.util.List < MinorVersionItems> getMinorVersionItems() {
+    public java.util.List<MinorVersionItems> getMinorVersionItems() {
         return this.minorVersionItems;
     }
 
@@ -92,7 +97,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     public static final class Builder {
         private String DBInstanceId; 
         private Integer maxRecordsPerPage; 
-        private java.util.List < MinorVersionItems> minorVersionItems; 
+        private java.util.List<MinorVersionItems> minorVersionItems; 
         private Integer pageNumbers; 
         private String requestId; 
         private Integer totalCount; 
@@ -122,7 +127,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         /**
          * <p>The details of the minor engine version.</p>
          */
-        public Builder minorVersionItems(java.util.List < MinorVersionItems> minorVersionItems) {
+        public Builder minorVersionItems(java.util.List<MinorVersionItems> minorVersionItems) {
             this.minorVersionItems = minorVersionItems;
             return this;
         }

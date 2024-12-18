@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
      */
     public static class Values extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PerformanceValue")
-        private java.util.List < PerformanceValue> performanceValue;
+        private java.util.List<PerformanceValue> performanceValue;
 
         private Values(Builder builder) {
             this.performanceValue = builder.performanceValue;
@@ -264,17 +269,17 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         /**
          * @return performanceValue
          */
-        public java.util.List < PerformanceValue> getPerformanceValue() {
+        public java.util.List<PerformanceValue> getPerformanceValue() {
             return this.performanceValue;
         }
 
         public static final class Builder {
-            private java.util.List < PerformanceValue> performanceValue; 
+            private java.util.List<PerformanceValue> performanceValue; 
 
             /**
              * PerformanceValue.
              */
-            public Builder performanceValue(java.util.List < PerformanceValue> performanceValue) {
+            public Builder performanceValue(java.util.List<PerformanceValue> performanceValue) {
                 this.performanceValue = performanceValue;
                 return this;
             }
@@ -366,7 +371,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Service.
+             * <p>The service dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reserve_3</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -407,7 +415,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
      */
     public static class PerformanceKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PerformanceKey")
-        private java.util.List < PerformanceKey> performanceKey;
+        private java.util.List<PerformanceKey> performanceKey;
 
         private PerformanceKeys(Builder builder) {
             this.performanceKey = builder.performanceKey;
@@ -424,17 +432,17 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         /**
          * @return performanceKey
          */
-        public java.util.List < PerformanceKey> getPerformanceKey() {
+        public java.util.List<PerformanceKey> getPerformanceKey() {
             return this.performanceKey;
         }
 
         public static final class Builder {
-            private java.util.List < PerformanceKey> performanceKey; 
+            private java.util.List<PerformanceKey> performanceKey; 
 
             /**
              * PerformanceKey.
              */
-            public Builder performanceKey(java.util.List < PerformanceKey> performanceKey) {
+            public Builder performanceKey(java.util.List<PerformanceKey> performanceKey) {
                 this.performanceKey = performanceKey;
                 return this;
             }

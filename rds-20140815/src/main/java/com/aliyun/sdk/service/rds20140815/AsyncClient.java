@@ -114,6 +114,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateReadWriteSplittingConnectionResponse> allocateReadWriteSplittingConnection(AllocateReadWriteSplittingConnectionRequest request);
 
     /**
+     * @param request the request parameters of AssociateEipAddressWithRCInstance  AssociateEipAddressWithRCInstanceRequest
+     * @return AssociateEipAddressWithRCInstanceResponse
+     */
+    CompletableFuture<AssociateEipAddressWithRCInstanceResponse> associateEipAddressWithRCInstance(AssociateEipAddressWithRCInstanceRequest request);
+
+    /**
      * @param request the request parameters of AttachRCDisk  AttachRCDiskRequest
      * @return AttachRCDiskResponse
      */
@@ -4975,6 +4981,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SyncRCKeyPairResponse> syncRCKeyPair(SyncRCKeyPairRequest request);
 
     /**
+     * @param request the request parameters of SyncRCSecurityGroup  SyncRCSecurityGroupRequest
+     * @return SyncRCSecurityGroupResponse
+     */
+    CompletableFuture<SyncRCSecurityGroupResponse> syncRCSecurityGroup(SyncRCSecurityGroupRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -5035,6 +5047,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TransformDBInstancePayTypeResponse
      */
     CompletableFuture<TransformDBInstancePayTypeResponse> transformDBInstancePayType(TransformDBInstancePayTypeRequest request);
+
+    /**
+     * @param request the request parameters of UnassociateEipAddressWithRCInstance  UnassociateEipAddressWithRCInstanceRequest
+     * @return UnassociateEipAddressWithRCInstanceResponse
+     */
+    CompletableFuture<UnassociateEipAddressWithRCInstanceResponse> unassociateEipAddressWithRCInstance(UnassociateEipAddressWithRCInstanceRequest request);
 
     /**
      * <b>description</b> :

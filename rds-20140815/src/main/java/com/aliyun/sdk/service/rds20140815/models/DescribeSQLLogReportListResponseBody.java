@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -250,7 +255,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
      */
     public static class LatencyTopNItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LatencyTopNItem")
-        private java.util.List < LatencyTopNItem> latencyTopNItem;
+        private java.util.List<LatencyTopNItem> latencyTopNItem;
 
         private LatencyTopNItems(Builder builder) {
             this.latencyTopNItem = builder.latencyTopNItem;
@@ -267,17 +272,17 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         /**
          * @return latencyTopNItem
          */
-        public java.util.List < LatencyTopNItem> getLatencyTopNItem() {
+        public java.util.List<LatencyTopNItem> getLatencyTopNItem() {
             return this.latencyTopNItem;
         }
 
         public static final class Builder {
-            private java.util.List < LatencyTopNItem> latencyTopNItem; 
+            private java.util.List<LatencyTopNItem> latencyTopNItem; 
 
             /**
              * LatencyTopNItem.
              */
-            public Builder latencyTopNItem(java.util.List < LatencyTopNItem> latencyTopNItem) {
+            public Builder latencyTopNItem(java.util.List<LatencyTopNItem> latencyTopNItem) {
                 this.latencyTopNItem = latencyTopNItem;
                 return this;
             }
@@ -373,7 +378,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
      */
     public static class QPSTopNItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QPSTopNItem")
-        private java.util.List < QPSTopNItem> QPSTopNItem;
+        private java.util.List<QPSTopNItem> QPSTopNItem;
 
         private QPSTopNItems(Builder builder) {
             this.QPSTopNItem = builder.QPSTopNItem;
@@ -390,17 +395,17 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         /**
          * @return QPSTopNItem
          */
-        public java.util.List < QPSTopNItem> getQPSTopNItem() {
+        public java.util.List<QPSTopNItem> getQPSTopNItem() {
             return this.QPSTopNItem;
         }
 
         public static final class Builder {
-            private java.util.List < QPSTopNItem> QPSTopNItem; 
+            private java.util.List<QPSTopNItem> QPSTopNItem; 
 
             /**
              * QPSTopNItem.
              */
-            public Builder QPSTopNItem(java.util.List < QPSTopNItem> QPSTopNItem) {
+            public Builder QPSTopNItem(java.util.List<QPSTopNItem> QPSTopNItem) {
                 this.QPSTopNItem = QPSTopNItem;
                 return this;
             }
@@ -510,7 +515,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
-        private java.util.List < Item> item;
+        private java.util.List<Item> item;
 
         private Items(Builder builder) {
             this.item = builder.item;
@@ -527,17 +532,17 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
+            private java.util.List<Item> item; 
 
             /**
              * Item.
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -142,6 +147,10 @@ public class CreateDBInstanceRequest extends Request {
     private String ioAccelerationEnabled;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OptimizedWrites")
+    private String optimizedWrites;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
@@ -206,7 +215,7 @@ public class CreateDBInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetDedicatedHostIdForLog")
@@ -289,6 +298,7 @@ public class CreateDBInstanceRequest extends Request {
         this.engineVersion = builder.engineVersion;
         this.instanceNetworkType = builder.instanceNetworkType;
         this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
+        this.optimizedWrites = builder.optimizedWrites;
         this.payType = builder.payType;
         this.period = builder.period;
         this.port = builder.port;
@@ -550,6 +560,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return optimizedWrites
+     */
+    public String getOptimizedWrites() {
+        return this.optimizedWrites;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -657,7 +674,7 @@ public class CreateDBInstanceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -777,6 +794,7 @@ public class CreateDBInstanceRequest extends Request {
         private String engineVersion; 
         private String instanceNetworkType; 
         private String ioAccelerationEnabled; 
+        private String optimizedWrites; 
         private String payType; 
         private String period; 
         private String port; 
@@ -792,7 +810,7 @@ public class CreateDBInstanceRequest extends Request {
         private Integer storageThreshold; 
         private Integer storageUpperBound; 
         private String systemDBCharset; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String targetDedicatedHostIdForLog; 
         private String targetDedicatedHostIdForMaster; 
         private String targetDedicatedHostIdForSlave; 
@@ -843,6 +861,7 @@ public class CreateDBInstanceRequest extends Request {
             this.engineVersion = request.engineVersion;
             this.instanceNetworkType = request.instanceNetworkType;
             this.ioAccelerationEnabled = request.ioAccelerationEnabled;
+            this.optimizedWrites = request.optimizedWrites;
             this.payType = request.payType;
             this.period = request.period;
             this.port = request.port;
@@ -1468,6 +1487,25 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the write optimization feature.</p>
+         * <ul>
+         * <li><strong>optimized</strong>: enables the feature.</li>
+         * <li><strong>none</strong>: disables the feature.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about the write optimization feature, see <a href="https://help.aliyun.com/document_detail/2858761.html">Write optimization</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>optimized</p>
+         */
+        public Builder optimizedWrites(String optimizedWrites) {
+            this.putQueryParameter("OptimizedWrites", optimizedWrites);
+            this.optimizedWrites = optimizedWrites;
+            return this;
+        }
+
+        /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
          * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
@@ -1697,7 +1735,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The tags that are added to instances.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

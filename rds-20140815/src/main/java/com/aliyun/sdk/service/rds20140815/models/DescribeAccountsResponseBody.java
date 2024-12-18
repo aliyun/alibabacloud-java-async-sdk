@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -310,7 +315,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
      */
     public static class DatabasePrivileges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabasePrivilege")
-        private java.util.List < DatabasePrivilege> databasePrivilege;
+        private java.util.List<DatabasePrivilege> databasePrivilege;
 
         private DatabasePrivileges(Builder builder) {
             this.databasePrivilege = builder.databasePrivilege;
@@ -327,17 +332,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return databasePrivilege
          */
-        public java.util.List < DatabasePrivilege> getDatabasePrivilege() {
+        public java.util.List<DatabasePrivilege> getDatabasePrivilege() {
             return this.databasePrivilege;
         }
 
         public static final class Builder {
-            private java.util.List < DatabasePrivilege> databasePrivilege; 
+            private java.util.List<DatabasePrivilege> databasePrivilege; 
 
             /**
              * DatabasePrivilege.
              */
-            public Builder databasePrivilege(java.util.List < DatabasePrivilege> databasePrivilege) {
+            public Builder databasePrivilege(java.util.List<DatabasePrivilege> databasePrivilege) {
                 this.databasePrivilege = databasePrivilege;
                 return this;
             }
@@ -758,7 +763,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
      */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceAccount")
-        private java.util.List < DBInstanceAccount> DBInstanceAccount;
+        private java.util.List<DBInstanceAccount> DBInstanceAccount;
 
         private Accounts(Builder builder) {
             this.DBInstanceAccount = builder.DBInstanceAccount;
@@ -775,17 +780,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return DBInstanceAccount
          */
-        public java.util.List < DBInstanceAccount> getDBInstanceAccount() {
+        public java.util.List<DBInstanceAccount> getDBInstanceAccount() {
             return this.DBInstanceAccount;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceAccount> DBInstanceAccount; 
+            private java.util.List<DBInstanceAccount> DBInstanceAccount; 
 
             /**
              * DBInstanceAccount.
              */
-            public Builder DBInstanceAccount(java.util.List < DBInstanceAccount> DBInstanceAccount) {
+            public Builder DBInstanceAccount(java.util.List<DBInstanceAccount> DBInstanceAccount) {
                 this.DBInstanceAccount = DBInstanceAccount;
                 return this;
             }

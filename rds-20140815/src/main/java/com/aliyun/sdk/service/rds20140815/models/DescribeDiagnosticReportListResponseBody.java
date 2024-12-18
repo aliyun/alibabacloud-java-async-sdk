@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.NameInMap("ReportList")
-    private java.util.List < ReportList> reportList;
+    private java.util.List<ReportList> reportList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     /**
      * @return reportList
      */
-    public java.util.List < ReportList> getReportList() {
+    public java.util.List<ReportList> getReportList() {
         return this.reportList;
     }
 
@@ -58,7 +63,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBInstanceId; 
-        private java.util.List < ReportList> reportList; 
+        private java.util.List<ReportList> reportList; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         /**
          * <p>The details of a diagnostic report.</p>
          */
-        public Builder reportList(java.util.List < ReportList> reportList) {
+        public Builder reportList(java.util.List<ReportList> reportList) {
             this.reportList = reportList;
             return this;
         }

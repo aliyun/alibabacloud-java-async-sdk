@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class DeleteBackupFileResponseBody extends TeaModel {
      */
     public static class DeletedBaksetIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeletedBaksetIds")
-        private java.util.List < Integer > deletedBaksetIds;
+        private java.util.List<Integer> deletedBaksetIds;
 
         private DeletedBaksetIds(Builder builder) {
             this.deletedBaksetIds = builder.deletedBaksetIds;
@@ -99,17 +104,17 @@ public class DeleteBackupFileResponseBody extends TeaModel {
         /**
          * @return deletedBaksetIds
          */
-        public java.util.List < Integer > getDeletedBaksetIds() {
+        public java.util.List<Integer> getDeletedBaksetIds() {
             return this.deletedBaksetIds;
         }
 
         public static final class Builder {
-            private java.util.List < Integer > deletedBaksetIds; 
+            private java.util.List<Integer> deletedBaksetIds; 
 
             /**
              * <p>An array that consists of the IDs of deleted backup sets.</p>
              */
-            public Builder deletedBaksetIds(java.util.List < Integer > deletedBaksetIds) {
+            public Builder deletedBaksetIds(java.util.List<Integer> deletedBaksetIds) {
                 this.deletedBaksetIds = deletedBaksetIds;
                 return this;
             }

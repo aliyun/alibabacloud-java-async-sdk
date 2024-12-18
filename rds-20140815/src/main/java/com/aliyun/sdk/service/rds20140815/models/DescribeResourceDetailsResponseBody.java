@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     private String instanceStorageType;
 
     @com.aliyun.core.annotation.NameInMap("RdsEcsSecurityGroupRel")
-    private java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel;
+    private java.util.List<RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel;
 
     @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
@@ -131,7 +136,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     /**
      * @return rdsEcsSecurityGroupRel
      */
-    public java.util.List < RdsEcsSecurityGroupRel> getRdsEcsSecurityGroupRel() {
+    public java.util.List<RdsEcsSecurityGroupRel> getRdsEcsSecurityGroupRel() {
         return this.rdsEcsSecurityGroupRel;
     }
 
@@ -185,7 +190,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         private String dbProxyInstanceName; 
         private Long diskUsed; 
         private String instanceStorageType; 
-        private java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel; 
+        private java.util.List<RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel; 
         private String region; 
         private String requestId; 
         private String resourceGroupId; 
@@ -273,7 +278,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         /**
          * <p>The rule for the IP address whitelist of the instance.</p>
          */
-        public Builder rdsEcsSecurityGroupRel(java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel) {
+        public Builder rdsEcsSecurityGroupRel(java.util.List<RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel) {
             this.rdsEcsSecurityGroupRel = rdsEcsSecurityGroupRel;
             return this;
         }

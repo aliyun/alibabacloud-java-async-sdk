@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -362,7 +367,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SQLRecord")
-        private java.util.List < SQLRecord> SQLRecord;
+        private java.util.List<SQLRecord> SQLRecord;
 
         private Items(Builder builder) {
             this.SQLRecord = builder.SQLRecord;
@@ -379,17 +384,17 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         /**
          * @return SQLRecord
          */
-        public java.util.List < SQLRecord> getSQLRecord() {
+        public java.util.List<SQLRecord> getSQLRecord() {
             return this.SQLRecord;
         }
 
         public static final class Builder {
-            private java.util.List < SQLRecord> SQLRecord; 
+            private java.util.List<SQLRecord> SQLRecord; 
 
             /**
              * SQLRecord.
              */
-            public Builder SQLRecord(java.util.List < SQLRecord> SQLRecord) {
+            public Builder SQLRecord(java.util.List<SQLRecord> SQLRecord) {
                 this.SQLRecord = SQLRecord;
                 return this;
             }

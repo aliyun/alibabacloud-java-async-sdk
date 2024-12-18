@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGadInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GadInstances")
-    private java.util.List < GadInstances> gadInstances;
+    private java.util.List<GadInstances> gadInstances;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
     /**
      * @return gadInstances
      */
-    public java.util.List < GadInstances> getGadInstances() {
+    public java.util.List<GadInstances> getGadInstances() {
         return this.gadInstances;
     }
 
@@ -46,13 +51,13 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GadInstances> gadInstances; 
+        private java.util.List<GadInstances> gadInstances; 
         private String requestId; 
 
         /**
          * <p>The details about the global active database cluster.</p>
          */
-        public Builder gadInstances(java.util.List < GadInstances> gadInstances) {
+        public Builder gadInstances(java.util.List<GadInstances> gadInstances) {
             this.gadInstances = gadInstances;
             return this;
         }
@@ -313,7 +318,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("GadInstanceMembers")
-        private java.util.List < GadInstanceMembers> gadInstanceMembers;
+        private java.util.List<GadInstanceMembers> gadInstanceMembers;
 
         @com.aliyun.core.annotation.NameInMap("GadInstanceName")
         private String gadInstanceName;
@@ -362,7 +367,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         /**
          * @return gadInstanceMembers
          */
-        public java.util.List < GadInstanceMembers> getGadInstanceMembers() {
+        public java.util.List<GadInstanceMembers> getGadInstanceMembers() {
             return this.gadInstanceMembers;
         }
 
@@ -397,7 +402,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String creationTime; 
             private String description; 
-            private java.util.List < GadInstanceMembers> gadInstanceMembers; 
+            private java.util.List<GadInstanceMembers> gadInstanceMembers; 
             private String gadInstanceName; 
             private String modificationTime; 
             private String service; 
@@ -428,7 +433,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             /**
              * <p>The information about each node in the cluster.</p>
              */
-            public Builder gadInstanceMembers(java.util.List < GadInstanceMembers> gadInstanceMembers) {
+            public Builder gadInstanceMembers(java.util.List<GadInstanceMembers> gadInstanceMembers) {
                 this.gadInstanceMembers = gadInstanceMembers;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -396,7 +401,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MigrateTask")
-        private java.util.List < MigrateTask> migrateTask;
+        private java.util.List<MigrateTask> migrateTask;
 
         private Items(Builder builder) {
             this.migrateTask = builder.migrateTask;
@@ -413,17 +418,17 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         /**
          * @return migrateTask
          */
-        public java.util.List < MigrateTask> getMigrateTask() {
+        public java.util.List<MigrateTask> getMigrateTask() {
             return this.migrateTask;
         }
 
         public static final class Builder {
-            private java.util.List < MigrateTask> migrateTask; 
+            private java.util.List<MigrateTask> migrateTask; 
 
             /**
              * MigrateTask.
              */
-            public Builder migrateTask(java.util.List < MigrateTask> migrateTask) {
+            public Builder migrateTask(java.util.List<MigrateTask> migrateTask) {
                 this.migrateTask = migrateTask;
                 return this;
             }

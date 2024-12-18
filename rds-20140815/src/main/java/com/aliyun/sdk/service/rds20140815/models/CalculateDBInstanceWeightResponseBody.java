@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceWeight")
-        private java.util.List < DBInstanceWeight> DBInstanceWeight;
+        private java.util.List<DBInstanceWeight> DBInstanceWeight;
 
         private Items(Builder builder) {
             this.DBInstanceWeight = builder.DBInstanceWeight;
@@ -222,17 +227,17 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         /**
          * @return DBInstanceWeight
          */
-        public java.util.List < DBInstanceWeight> getDBInstanceWeight() {
+        public java.util.List<DBInstanceWeight> getDBInstanceWeight() {
             return this.DBInstanceWeight;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceWeight> DBInstanceWeight; 
+            private java.util.List<DBInstanceWeight> DBInstanceWeight; 
 
             /**
              * DBInstanceWeight.
              */
-            public Builder DBInstanceWeight(java.util.List < DBInstanceWeight> DBInstanceWeight) {
+            public Builder DBInstanceWeight(java.util.List<DBInstanceWeight> DBInstanceWeight) {
                 this.DBInstanceWeight = DBInstanceWeight;
                 return this;
             }

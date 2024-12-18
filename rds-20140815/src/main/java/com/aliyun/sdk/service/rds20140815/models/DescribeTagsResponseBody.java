@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class DescribeTagsResponseBody extends TeaModel {
      */
     public static class DBInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
-        private java.util.List < String > DBInstanceIds;
+        private java.util.List<String> DBInstanceIds;
 
         private DBInstanceIds(Builder builder) {
             this.DBInstanceIds = builder.DBInstanceIds;
@@ -99,17 +104,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * @return DBInstanceIds
          */
-        public java.util.List < String > getDBInstanceIds() {
+        public java.util.List<String> getDBInstanceIds() {
             return this.DBInstanceIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > DBInstanceIds; 
+            private java.util.List<String> DBInstanceIds; 
 
             /**
              * DBInstanceIds.
              */
-            public Builder DBInstanceIds(java.util.List < String > DBInstanceIds) {
+            public Builder DBInstanceIds(java.util.List<String> DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
                 return this;
             }
@@ -222,7 +227,7 @@ public class DescribeTagsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagInfos")
-        private java.util.List < TagInfos> tagInfos;
+        private java.util.List<TagInfos> tagInfos;
 
         private Items(Builder builder) {
             this.tagInfos = builder.tagInfos;
@@ -239,17 +244,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * @return tagInfos
          */
-        public java.util.List < TagInfos> getTagInfos() {
+        public java.util.List<TagInfos> getTagInfos() {
             return this.tagInfos;
         }
 
         public static final class Builder {
-            private java.util.List < TagInfos> tagInfos; 
+            private java.util.List<TagInfos> tagInfos; 
 
             /**
              * TagInfos.
              */
-            public Builder tagInfos(java.util.List < TagInfos> tagInfos) {
+            public Builder tagInfos(java.util.List<TagInfos> tagInfos) {
                 this.tagInfos = tagInfos;
                 return this;
             }

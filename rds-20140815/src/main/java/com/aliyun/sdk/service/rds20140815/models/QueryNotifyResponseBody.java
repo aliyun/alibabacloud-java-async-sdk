@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -421,7 +426,7 @@ public class QueryNotifyResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotifyItemList")
-        private java.util.List < NotifyItemList> notifyItemList;
+        private java.util.List<NotifyItemList> notifyItemList;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -450,7 +455,7 @@ public class QueryNotifyResponseBody extends TeaModel {
         /**
          * @return notifyItemList
          */
-        public java.util.List < NotifyItemList> getNotifyItemList() {
+        public java.util.List<NotifyItemList> getNotifyItemList() {
             return this.notifyItemList;
         }
 
@@ -476,7 +481,7 @@ public class QueryNotifyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < NotifyItemList> notifyItemList; 
+            private java.util.List<NotifyItemList> notifyItemList; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalRecordCount; 
@@ -484,7 +489,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             /**
              * <p>The details of notifications.</p>
              */
-            public Builder notifyItemList(java.util.List < NotifyItemList> notifyItemList) {
+            public Builder notifyItemList(java.util.List<NotifyItemList> notifyItemList) {
                 this.notifyItemList = notifyItemList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Slots")
-    private java.util.List < Slots> slots;
+    private java.util.List<Slots> slots;
 
     private DescribeSlotsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeSlotsResponseBody extends TeaModel {
     /**
      * @return slots
      */
-    public java.util.List < Slots> getSlots() {
+    public java.util.List<Slots> getSlots() {
         return this.slots;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Slots> slots; 
+        private java.util.List<Slots> slots; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
         /**
          * <p>The information about the replication slot.</p>
          */
-        public Builder slots(java.util.List < Slots> slots) {
+        public Builder slots(java.util.List<Slots> slots) {
             this.slots = slots;
             return this;
         }

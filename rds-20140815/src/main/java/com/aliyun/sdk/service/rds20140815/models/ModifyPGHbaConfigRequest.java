@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class ModifyPGHbaConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HbaItem")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < HbaItem> hbaItem;
+    private java.util.List<HbaItem> hbaItem;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OpsType")
@@ -89,7 +94,7 @@ public class ModifyPGHbaConfigRequest extends Request {
     /**
      * @return hbaItem
      */
-    public java.util.List < HbaItem> getHbaItem() {
+    public java.util.List<HbaItem> getHbaItem() {
         return this.hbaItem;
     }
 
@@ -131,7 +136,7 @@ public class ModifyPGHbaConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyPGHbaConfigRequest, Builder> {
         private String clientToken; 
         private String DBInstanceId; 
-        private java.util.List < HbaItem> hbaItem; 
+        private java.util.List<HbaItem> hbaItem; 
         private String opsType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -183,7 +188,7 @@ public class ModifyPGHbaConfigRequest extends Request {
          * <p>An array that consists of the details of the AD domain services.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder hbaItem(java.util.List < HbaItem> hbaItem) {
+        public Builder hbaItem(java.util.List<HbaItem> hbaItem) {
             this.putQueryParameter("HbaItem", hbaItem);
             this.hbaItem = hbaItem;
             return this;
