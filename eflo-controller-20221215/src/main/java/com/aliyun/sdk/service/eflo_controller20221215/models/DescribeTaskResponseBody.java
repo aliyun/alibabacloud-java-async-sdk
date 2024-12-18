@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTaskResponseBody</p>
  */
 public class DescribeTaskResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NodeIds")
-    private java.util.List < String > nodeIds;
+    @com.aliyun.core.annotation.NameInMap("NodeIds")
+    private java.util.List<String> nodeIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Steps")
-    private java.util.List < Steps> steps;
+    @com.aliyun.core.annotation.NameInMap("Steps")
+    private java.util.List<Steps> steps;
 
-    @NameInMap("TaskState")
+    @com.aliyun.core.annotation.NameInMap("TaskState")
     private String taskState;
 
-    @NameInMap("TaskType")
+    @com.aliyun.core.annotation.NameInMap("TaskType")
     private String taskType;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private DescribeTaskResponseBody(Builder builder) {
@@ -94,7 +99,7 @@ public class DescribeTaskResponseBody extends TeaModel {
     /**
      * @return nodeIds
      */
-    public java.util.List < String > getNodeIds() {
+    public java.util.List<String> getNodeIds() {
         return this.nodeIds;
     }
 
@@ -108,7 +113,7 @@ public class DescribeTaskResponseBody extends TeaModel {
     /**
      * @return steps
      */
-    public java.util.List < Steps> getSteps() {
+    public java.util.List<Steps> getSteps() {
         return this.steps;
     }
 
@@ -138,9 +143,9 @@ public class DescribeTaskResponseBody extends TeaModel {
         private String clusterName; 
         private String createTime; 
         private String message; 
-        private java.util.List < String > nodeIds; 
+        private java.util.List<String> nodeIds; 
         private String requestId; 
-        private java.util.List < Steps> steps; 
+        private java.util.List<Steps> steps; 
         private String taskState; 
         private String taskType; 
         private String updateTime; 
@@ -180,7 +185,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         /**
          * NodeIds.
          */
-        public Builder nodeIds(java.util.List < String > nodeIds) {
+        public Builder nodeIds(java.util.List<String> nodeIds) {
             this.nodeIds = nodeIds;
             return this;
         }
@@ -196,7 +201,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         /**
          * Steps.
          */
-        public Builder steps(java.util.List < Steps> steps) {
+        public Builder steps(java.util.List<Steps> steps) {
             this.steps = steps;
             return this;
         }
@@ -231,23 +236,29 @@ public class DescribeTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskResponseBody</p>
+     */
     public static class SubTasks extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskState")
+        @com.aliyun.core.annotation.NameInMap("TaskState")
         private String taskState;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private SubTasks(Builder builder) {
@@ -372,29 +383,35 @@ public class DescribeTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskResponseBody</p>
+     */
     public static class Steps extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("StageTag")
+        @com.aliyun.core.annotation.NameInMap("StageTag")
         private String stageTag;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StepName")
+        @com.aliyun.core.annotation.NameInMap("StepName")
         private String stepName;
 
-        @NameInMap("StepState")
+        @com.aliyun.core.annotation.NameInMap("StepState")
         private String stepState;
 
-        @NameInMap("StepType")
+        @com.aliyun.core.annotation.NameInMap("StepType")
         private String stepType;
 
-        @NameInMap("SubTasks")
-        private java.util.List < SubTasks> subTasks;
+        @com.aliyun.core.annotation.NameInMap("SubTasks")
+        private java.util.List<SubTasks> subTasks;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Steps(Builder builder) {
@@ -461,7 +478,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         /**
          * @return subTasks
          */
-        public java.util.List < SubTasks> getSubTasks() {
+        public java.util.List<SubTasks> getSubTasks() {
             return this.subTasks;
         }
 
@@ -479,7 +496,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             private String stepName; 
             private String stepState; 
             private String stepType; 
-            private java.util.List < SubTasks> subTasks; 
+            private java.util.List<SubTasks> subTasks; 
             private String updateTime; 
 
             /**
@@ -533,7 +550,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             /**
              * SubTasks.
              */
-            public Builder subTasks(java.util.List < SubTasks> subTasks) {
+            public Builder subTasks(java.util.List<SubTasks> subTasks) {
                 this.subTasks = subTasks;
                 return this;
             }

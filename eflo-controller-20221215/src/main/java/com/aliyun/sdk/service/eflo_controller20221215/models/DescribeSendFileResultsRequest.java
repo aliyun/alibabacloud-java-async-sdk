@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSendFileResultsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSendFileResultsRequest</p>
  */
 public class DescribeSendFileResultsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("InvokeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InvokeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String invokeId;
 
-    @Body
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
     private DescribeSendFileResultsRequest(Builder builder) {
@@ -92,7 +97,10 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * InvokeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-bj038i0d6r8zoqo</p>
          */
         public Builder invokeId(String invokeId) {
             this.putBodyParameter("InvokeId", invokeId);

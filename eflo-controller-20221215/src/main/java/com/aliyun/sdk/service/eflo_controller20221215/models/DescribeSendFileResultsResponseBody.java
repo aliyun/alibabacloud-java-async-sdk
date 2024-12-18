@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSendFileResultsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSendFileResultsResponseBody</p>
  */
 public class DescribeSendFileResultsResponseBody extends TeaModel {
-    @NameInMap("Invocations")
+    @com.aliyun.core.annotation.NameInMap("Invocations")
     private Invocations invocations;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeSendFileResultsResponseBody(Builder builder) {
@@ -70,7 +75,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,29 +99,35 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSendFileResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSendFileResultsResponseBody</p>
+     */
     public static class InvokeNode extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private InvokeNode(Builder builder) {
@@ -272,9 +286,15 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSendFileResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSendFileResultsResponseBody</p>
+     */
     public static class InvokeNodes extends TeaModel {
-        @NameInMap("InvokeNode")
-        private java.util.List < InvokeNode> invokeNode;
+        @com.aliyun.core.annotation.NameInMap("InvokeNode")
+        private java.util.List<InvokeNode> invokeNode;
 
         private InvokeNodes(Builder builder) {
             this.invokeNode = builder.invokeNode;
@@ -291,17 +311,17 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         /**
          * @return invokeNode
          */
-        public java.util.List < InvokeNode> getInvokeNode() {
+        public java.util.List<InvokeNode> getInvokeNode() {
             return this.invokeNode;
         }
 
         public static final class Builder {
-            private java.util.List < InvokeNode> invokeNode; 
+            private java.util.List<InvokeNode> invokeNode; 
 
             /**
              * InvokeNode.
              */
-            public Builder invokeNode(java.util.List < InvokeNode> invokeNode) {
+            public Builder invokeNode(java.util.List<InvokeNode> invokeNode) {
                 this.invokeNode = invokeNode;
                 return this;
             }
@@ -313,44 +333,50 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSendFileResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSendFileResultsResponseBody</p>
+     */
     public static class Invocation extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FileGroup")
+        @com.aliyun.core.annotation.NameInMap("FileGroup")
         private String fileGroup;
 
-        @NameInMap("FileMode")
+        @com.aliyun.core.annotation.NameInMap("FileMode")
         private String fileMode;
 
-        @NameInMap("FileOwner")
+        @com.aliyun.core.annotation.NameInMap("FileOwner")
         private String fileOwner;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("InvokeNodes")
+        @com.aliyun.core.annotation.NameInMap("InvokeNodes")
         private InvokeNodes invokeNodes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NodeCount")
+        @com.aliyun.core.annotation.NameInMap("NodeCount")
         private Integer nodeCount;
 
-        @NameInMap("Overwrite")
+        @com.aliyun.core.annotation.NameInMap("Overwrite")
         private Boolean overwrite;
 
-        @NameInMap("TargetDir")
+        @com.aliyun.core.annotation.NameInMap("TargetDir")
         private String targetDir;
 
         private Invocation(Builder builder) {
@@ -594,9 +620,15 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSendFileResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSendFileResultsResponseBody</p>
+     */
     public static class Invocations extends TeaModel {
-        @NameInMap("Invocation")
-        private java.util.List < Invocation> invocation;
+        @com.aliyun.core.annotation.NameInMap("Invocation")
+        private java.util.List<Invocation> invocation;
 
         private Invocations(Builder builder) {
             this.invocation = builder.invocation;
@@ -613,17 +645,17 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         /**
          * @return invocation
          */
-        public java.util.List < Invocation> getInvocation() {
+        public java.util.List<Invocation> getInvocation() {
             return this.invocation;
         }
 
         public static final class Builder {
-            private java.util.List < Invocation> invocation; 
+            private java.util.List<Invocation> invocation; 
 
             /**
              * Invocation.
              */
-            public Builder invocation(java.util.List < Invocation> invocation) {
+            public Builder invocation(java.util.List<Invocation> invocation) {
                 this.invocation = invocation;
                 return this;
             }

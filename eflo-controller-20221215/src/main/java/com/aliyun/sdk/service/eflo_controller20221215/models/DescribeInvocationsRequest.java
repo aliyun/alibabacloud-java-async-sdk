@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvocationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInvocationsRequest</p>
  */
 public class DescribeInvocationsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ContentEncoding")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContentEncoding")
     private String contentEncoding;
 
-    @Body
-    @NameInMap("IncludeOutput")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeOutput")
     private Boolean includeOutput;
 
-    @Body
-    @NameInMap("InvokeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InvokeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String invokeId;
 
-    @Body
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
     private DescribeInvocationsRequest(Builder builder) {
@@ -138,7 +143,10 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * InvokeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-cd03crwys0lrls0</p>
          */
         public Builder invokeId(String invokeId) {
             this.putBodyParameter("InvokeId", invokeId);

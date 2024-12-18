@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExtendClusterRequest} extends {@link RequestModel}
  *
  * <p>ExtendClusterRequest</p>
  */
 public class ExtendClusterRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Body
-    @NameInMap("IgnoreFailedNodeTasks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IgnoreFailedNodeTasks")
     private Boolean ignoreFailedNodeTasks;
 
-    @Body
-    @NameInMap("IpAllocationPolicy")
-    private java.util.List < IpAllocationPolicy> ipAllocationPolicy;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IpAllocationPolicy")
+    private java.util.List<IpAllocationPolicy> ipAllocationPolicy;
 
-    @Body
-    @NameInMap("NodeGroups")
-    private java.util.List < NodeGroups> nodeGroups;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeGroups")
+    private java.util.List<NodeGroups> nodeGroups;
 
-    @Body
-    @NameInMap("VSwitchZoneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VSwitchZoneId")
     private String vSwitchZoneId;
 
-    @Body
-    @NameInMap("VpdSubnets")
-    private java.util.List < String > vpdSubnets;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpdSubnets")
+    private java.util.List<String> vpdSubnets;
 
     private ExtendClusterRequest(Builder builder) {
         super(builder);
@@ -88,14 +93,14 @@ public class ExtendClusterRequest extends Request {
     /**
      * @return ipAllocationPolicy
      */
-    public java.util.List < IpAllocationPolicy> getIpAllocationPolicy() {
+    public java.util.List<IpAllocationPolicy> getIpAllocationPolicy() {
         return this.ipAllocationPolicy;
     }
 
     /**
      * @return nodeGroups
      */
-    public java.util.List < NodeGroups> getNodeGroups() {
+    public java.util.List<NodeGroups> getNodeGroups() {
         return this.nodeGroups;
     }
 
@@ -109,7 +114,7 @@ public class ExtendClusterRequest extends Request {
     /**
      * @return vpdSubnets
      */
-    public java.util.List < String > getVpdSubnets() {
+    public java.util.List<String> getVpdSubnets() {
         return this.vpdSubnets;
     }
 
@@ -117,10 +122,10 @@ public class ExtendClusterRequest extends Request {
         private String regionId; 
         private String clusterId; 
         private Boolean ignoreFailedNodeTasks; 
-        private java.util.List < IpAllocationPolicy> ipAllocationPolicy; 
-        private java.util.List < NodeGroups> nodeGroups; 
+        private java.util.List<IpAllocationPolicy> ipAllocationPolicy; 
+        private java.util.List<NodeGroups> nodeGroups; 
         private String vSwitchZoneId; 
-        private java.util.List < String > vpdSubnets; 
+        private java.util.List<String> vpdSubnets; 
 
         private Builder() {
             super();
@@ -167,7 +172,7 @@ public class ExtendClusterRequest extends Request {
         /**
          * IpAllocationPolicy.
          */
-        public Builder ipAllocationPolicy(java.util.List < IpAllocationPolicy> ipAllocationPolicy) {
+        public Builder ipAllocationPolicy(java.util.List<IpAllocationPolicy> ipAllocationPolicy) {
             String ipAllocationPolicyShrink = shrink(ipAllocationPolicy, "IpAllocationPolicy", "json");
             this.putBodyParameter("IpAllocationPolicy", ipAllocationPolicyShrink);
             this.ipAllocationPolicy = ipAllocationPolicy;
@@ -177,7 +182,7 @@ public class ExtendClusterRequest extends Request {
         /**
          * NodeGroups.
          */
-        public Builder nodeGroups(java.util.List < NodeGroups> nodeGroups) {
+        public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
             this.putBodyParameter("NodeGroups", nodeGroupsShrink);
             this.nodeGroups = nodeGroups;
@@ -196,7 +201,7 @@ public class ExtendClusterRequest extends Request {
         /**
          * VpdSubnets.
          */
-        public Builder vpdSubnets(java.util.List < String > vpdSubnets) {
+        public Builder vpdSubnets(java.util.List<String> vpdSubnets) {
             String vpdSubnetsShrink = shrink(vpdSubnets, "VpdSubnets", "json");
             this.putBodyParameter("VpdSubnets", vpdSubnetsShrink);
             this.vpdSubnets = vpdSubnets;
@@ -210,11 +215,17 @@ public class ExtendClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ExtendClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ExtendClusterRequest</p>
+     */
     public static class Bonds extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Subnet")
+        @com.aliyun.core.annotation.NameInMap("Subnet")
         private String subnet;
 
         private Bonds(Builder builder) {
@@ -271,12 +282,18 @@ public class ExtendClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ExtendClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ExtendClusterRequest</p>
+     */
     public static class BondPolicy extends TeaModel {
-        @NameInMap("BondDefaultSubnet")
+        @com.aliyun.core.annotation.NameInMap("BondDefaultSubnet")
         private String bondDefaultSubnet;
 
-        @NameInMap("Bonds")
-        private java.util.List < Bonds> bonds;
+        @com.aliyun.core.annotation.NameInMap("Bonds")
+        private java.util.List<Bonds> bonds;
 
         private BondPolicy(Builder builder) {
             this.bondDefaultSubnet = builder.bondDefaultSubnet;
@@ -301,13 +318,13 @@ public class ExtendClusterRequest extends Request {
         /**
          * @return bonds
          */
-        public java.util.List < Bonds> getBonds() {
+        public java.util.List<Bonds> getBonds() {
             return this.bonds;
         }
 
         public static final class Builder {
             private String bondDefaultSubnet; 
-            private java.util.List < Bonds> bonds; 
+            private java.util.List<Bonds> bonds; 
 
             /**
              * BondDefaultSubnet.
@@ -320,7 +337,7 @@ public class ExtendClusterRequest extends Request {
             /**
              * Bonds.
              */
-            public Builder bonds(java.util.List < Bonds> bonds) {
+            public Builder bonds(java.util.List<Bonds> bonds) {
                 this.bonds = bonds;
                 return this;
             }
@@ -332,11 +349,17 @@ public class ExtendClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ExtendClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ExtendClusterRequest</p>
+     */
     public static class MachineTypePolicyBonds extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Subnet")
+        @com.aliyun.core.annotation.NameInMap("Subnet")
         private String subnet;
 
         private MachineTypePolicyBonds(Builder builder) {
@@ -393,11 +416,17 @@ public class ExtendClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ExtendClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ExtendClusterRequest</p>
+     */
     public static class MachineTypePolicy extends TeaModel {
-        @NameInMap("Bonds")
-        private java.util.List < MachineTypePolicyBonds> bonds;
+        @com.aliyun.core.annotation.NameInMap("Bonds")
+        private java.util.List<MachineTypePolicyBonds> bonds;
 
-        @NameInMap("MachineType")
+        @com.aliyun.core.annotation.NameInMap("MachineType")
         private String machineType;
 
         private MachineTypePolicy(Builder builder) {
@@ -416,7 +445,7 @@ public class ExtendClusterRequest extends Request {
         /**
          * @return bonds
          */
-        public java.util.List < MachineTypePolicyBonds> getBonds() {
+        public java.util.List<MachineTypePolicyBonds> getBonds() {
             return this.bonds;
         }
 
@@ -428,13 +457,13 @@ public class ExtendClusterRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < MachineTypePolicyBonds> bonds; 
+            private java.util.List<MachineTypePolicyBonds> bonds; 
             private String machineType; 
 
             /**
              * Bonds.
              */
-            public Builder bonds(java.util.List < MachineTypePolicyBonds> bonds) {
+            public Builder bonds(java.util.List<MachineTypePolicyBonds> bonds) {
                 this.bonds = bonds;
                 return this;
             }
@@ -454,11 +483,17 @@ public class ExtendClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ExtendClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ExtendClusterRequest</p>
+     */
     public static class NodePolicyBonds extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Subnet")
+        @com.aliyun.core.annotation.NameInMap("Subnet")
         private String subnet;
 
         private NodePolicyBonds(Builder builder) {
@@ -515,11 +550,17 @@ public class ExtendClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ExtendClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ExtendClusterRequest</p>
+     */
     public static class NodePolicy extends TeaModel {
-        @NameInMap("Bonds")
-        private java.util.List < NodePolicyBonds> bonds;
+        @com.aliyun.core.annotation.NameInMap("Bonds")
+        private java.util.List<NodePolicyBonds> bonds;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
         private NodePolicy(Builder builder) {
@@ -538,7 +579,7 @@ public class ExtendClusterRequest extends Request {
         /**
          * @return bonds
          */
-        public java.util.List < NodePolicyBonds> getBonds() {
+        public java.util.List<NodePolicyBonds> getBonds() {
             return this.bonds;
         }
 
@@ -550,13 +591,13 @@ public class ExtendClusterRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < NodePolicyBonds> bonds; 
+            private java.util.List<NodePolicyBonds> bonds; 
             private String nodeId; 
 
             /**
              * Bonds.
              */
-            public Builder bonds(java.util.List < NodePolicyBonds> bonds) {
+            public Builder bonds(java.util.List<NodePolicyBonds> bonds) {
                 this.bonds = bonds;
                 return this;
             }
@@ -576,15 +617,21 @@ public class ExtendClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ExtendClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ExtendClusterRequest</p>
+     */
     public static class IpAllocationPolicy extends TeaModel {
-        @NameInMap("BondPolicy")
+        @com.aliyun.core.annotation.NameInMap("BondPolicy")
         private BondPolicy bondPolicy;
 
-        @NameInMap("MachineTypePolicy")
-        private java.util.List < MachineTypePolicy> machineTypePolicy;
+        @com.aliyun.core.annotation.NameInMap("MachineTypePolicy")
+        private java.util.List<MachineTypePolicy> machineTypePolicy;
 
-        @NameInMap("NodePolicy")
-        private java.util.List < NodePolicy> nodePolicy;
+        @com.aliyun.core.annotation.NameInMap("NodePolicy")
+        private java.util.List<NodePolicy> nodePolicy;
 
         private IpAllocationPolicy(Builder builder) {
             this.bondPolicy = builder.bondPolicy;
@@ -610,21 +657,21 @@ public class ExtendClusterRequest extends Request {
         /**
          * @return machineTypePolicy
          */
-        public java.util.List < MachineTypePolicy> getMachineTypePolicy() {
+        public java.util.List<MachineTypePolicy> getMachineTypePolicy() {
             return this.machineTypePolicy;
         }
 
         /**
          * @return nodePolicy
          */
-        public java.util.List < NodePolicy> getNodePolicy() {
+        public java.util.List<NodePolicy> getNodePolicy() {
             return this.nodePolicy;
         }
 
         public static final class Builder {
             private BondPolicy bondPolicy; 
-            private java.util.List < MachineTypePolicy> machineTypePolicy; 
-            private java.util.List < NodePolicy> nodePolicy; 
+            private java.util.List<MachineTypePolicy> machineTypePolicy; 
+            private java.util.List<NodePolicy> nodePolicy; 
 
             /**
              * BondPolicy.
@@ -637,7 +684,7 @@ public class ExtendClusterRequest extends Request {
             /**
              * MachineTypePolicy.
              */
-            public Builder machineTypePolicy(java.util.List < MachineTypePolicy> machineTypePolicy) {
+            public Builder machineTypePolicy(java.util.List<MachineTypePolicy> machineTypePolicy) {
                 this.machineTypePolicy = machineTypePolicy;
                 return this;
             }
@@ -645,7 +692,7 @@ public class ExtendClusterRequest extends Request {
             /**
              * NodePolicy.
              */
-            public Builder nodePolicy(java.util.List < NodePolicy> nodePolicy) {
+            public Builder nodePolicy(java.util.List<NodePolicy> nodePolicy) {
                 this.nodePolicy = nodePolicy;
                 return this;
             }
@@ -657,20 +704,26 @@ public class ExtendClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ExtendClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ExtendClusterRequest</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("LoginPassword")
+        @com.aliyun.core.annotation.NameInMap("LoginPassword")
         private String loginPassword;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Nodes(Builder builder) {
@@ -778,17 +831,23 @@ public class ExtendClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ExtendClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ExtendClusterRequest</p>
+     */
     public static class NodeGroups extends TeaModel {
-        @NameInMap("NodeGroupId")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
-        @NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        @com.aliyun.core.annotation.NameInMap("Nodes")
+        private java.util.List<Nodes> nodes;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private NodeGroups(Builder builder) {
@@ -816,7 +875,7 @@ public class ExtendClusterRequest extends Request {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -836,7 +895,7 @@ public class ExtendClusterRequest extends Request {
 
         public static final class Builder {
             private String nodeGroupId; 
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private String userData; 
             private String zoneId; 
 
@@ -851,7 +910,7 @@ public class ExtendClusterRequest extends Request {
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }

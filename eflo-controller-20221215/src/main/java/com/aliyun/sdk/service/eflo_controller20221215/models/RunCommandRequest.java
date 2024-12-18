@@ -1,72 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCommandRequest} extends {@link RequestModel}
  *
  * <p>RunCommandRequest</p>
  */
 public class RunCommandRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("CommandContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CommandContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commandContent;
 
-    @Body
-    @NameInMap("ContentEncoding")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContentEncoding")
     private String contentEncoding;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("EnableParameter")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableParameter")
     private Boolean enableParameter;
 
-    @Body
-    @NameInMap("Frequency")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Frequency")
     private String frequency;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("NodeIdList")
-    private java.util.List < String > nodeIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeIdList")
+    private java.util.List<String> nodeIdList;
 
-    @Body
-    @NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.Map<String, ?> parameters;
 
-    @Body
-    @NameInMap("RepeatMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RepeatMode")
     private String repeatMode;
 
-    @Body
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
-    @Body
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
-    @Body
-    @NameInMap("WorkingDir")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkingDir")
     private String workingDir;
 
     private RunCommandRequest(Builder builder) {
@@ -159,14 +164,14 @@ public class RunCommandRequest extends Request {
     /**
      * @return nodeIdList
      */
-    public java.util.List < String > getNodeIdList() {
+    public java.util.List<String> getNodeIdList() {
         return this.nodeIdList;
     }
 
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -207,8 +212,8 @@ public class RunCommandRequest extends Request {
         private Boolean enableParameter; 
         private String frequency; 
         private String name; 
-        private java.util.List < String > nodeIdList; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.List<String> nodeIdList; 
+        private java.util.Map<String, ?> parameters; 
         private String repeatMode; 
         private Integer timeout; 
         private String username; 
@@ -255,7 +260,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * CommandContent.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZWNobyAxMjM=</p>
          */
         public Builder commandContent(String commandContent) {
             this.putBodyParameter("CommandContent", commandContent);
@@ -311,7 +319,7 @@ public class RunCommandRequest extends Request {
         /**
          * NodeIdList.
          */
-        public Builder nodeIdList(java.util.List < String > nodeIdList) {
+        public Builder nodeIdList(java.util.List<String> nodeIdList) {
             String nodeIdListShrink = shrink(nodeIdList, "NodeIdList", "json");
             this.putBodyParameter("NodeIdList", nodeIdListShrink);
             this.nodeIdList = nodeIdList;
@@ -321,7 +329,7 @@ public class RunCommandRequest extends Request {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putBodyParameter("Parameters", parametersShrink);
             this.parameters = parameters;

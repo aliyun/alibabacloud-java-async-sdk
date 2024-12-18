@@ -1,63 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterResponseBody</p>
  */
 public class DescribeClusterResponseBody extends TeaModel {
-    @NameInMap("ClusterDescription")
+    @com.aliyun.core.annotation.NameInMap("ClusterDescription")
     private String clusterDescription;
 
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @NameInMap("Components")
-    private java.util.List < Components> components;
+    @com.aliyun.core.annotation.NameInMap("Components")
+    private java.util.List<Components> components;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("ComputingIpVersion")
+    private String computingIpVersion;
+
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("HpnZone")
+    @com.aliyun.core.annotation.NameInMap("HpnZone")
     private String hpnZone;
 
-    @NameInMap("Networks")
-    private java.util.List < Networks> networks;
+    @com.aliyun.core.annotation.NameInMap("Networks")
+    private java.util.List<Networks> networks;
 
-    @NameInMap("NodeCount")
+    @com.aliyun.core.annotation.NameInMap("NodeCount")
     private Long nodeCount;
 
-    @NameInMap("NodeGroupCount")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupCount")
     private Long nodeGroupCount;
 
-    @NameInMap("OperatingState")
+    @com.aliyun.core.annotation.NameInMap("OpenEniJumboFrame")
+    private String openEniJumboFrame;
+
+    @com.aliyun.core.annotation.NameInMap("OperatingState")
     private String operatingState;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeClusterResponseBody(Builder builder) {
@@ -66,11 +77,13 @@ public class DescribeClusterResponseBody extends TeaModel {
         this.clusterName = builder.clusterName;
         this.clusterType = builder.clusterType;
         this.components = builder.components;
+        this.computingIpVersion = builder.computingIpVersion;
         this.createTime = builder.createTime;
         this.hpnZone = builder.hpnZone;
         this.networks = builder.networks;
         this.nodeCount = builder.nodeCount;
         this.nodeGroupCount = builder.nodeGroupCount;
+        this.openEniJumboFrame = builder.openEniJumboFrame;
         this.operatingState = builder.operatingState;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -118,8 +131,15 @@ public class DescribeClusterResponseBody extends TeaModel {
     /**
      * @return components
      */
-    public java.util.List < Components> getComponents() {
+    public java.util.List<Components> getComponents() {
         return this.components;
+    }
+
+    /**
+     * @return computingIpVersion
+     */
+    public String getComputingIpVersion() {
+        return this.computingIpVersion;
     }
 
     /**
@@ -139,7 +159,7 @@ public class DescribeClusterResponseBody extends TeaModel {
     /**
      * @return networks
      */
-    public java.util.List < Networks> getNetworks() {
+    public java.util.List<Networks> getNetworks() {
         return this.networks;
     }
 
@@ -155,6 +175,13 @@ public class DescribeClusterResponseBody extends TeaModel {
      */
     public Long getNodeGroupCount() {
         return this.nodeGroupCount;
+    }
+
+    /**
+     * @return openEniJumboFrame
+     */
+    public String getOpenEniJumboFrame() {
+        return this.openEniJumboFrame;
     }
 
     /**
@@ -204,12 +231,14 @@ public class DescribeClusterResponseBody extends TeaModel {
         private String clusterId; 
         private String clusterName; 
         private String clusterType; 
-        private java.util.List < Components> components; 
+        private java.util.List<Components> components; 
+        private String computingIpVersion; 
         private String createTime; 
         private String hpnZone; 
-        private java.util.List < Networks> networks; 
+        private java.util.List<Networks> networks; 
         private Long nodeCount; 
         private Long nodeGroupCount; 
+        private String openEniJumboFrame; 
         private String operatingState; 
         private String requestId; 
         private String resourceGroupId; 
@@ -252,8 +281,16 @@ public class DescribeClusterResponseBody extends TeaModel {
         /**
          * Components.
          */
-        public Builder components(java.util.List < Components> components) {
+        public Builder components(java.util.List<Components> components) {
             this.components = components;
+            return this;
+        }
+
+        /**
+         * ComputingIpVersion.
+         */
+        public Builder computingIpVersion(String computingIpVersion) {
+            this.computingIpVersion = computingIpVersion;
             return this;
         }
 
@@ -276,7 +313,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         /**
          * Networks.
          */
-        public Builder networks(java.util.List < Networks> networks) {
+        public Builder networks(java.util.List<Networks> networks) {
             this.networks = networks;
             return this;
         }
@@ -294,6 +331,14 @@ public class DescribeClusterResponseBody extends TeaModel {
          */
         public Builder nodeGroupCount(Long nodeGroupCount) {
             this.nodeGroupCount = nodeGroupCount;
+            return this;
+        }
+
+        /**
+         * OpenEniJumboFrame.
+         */
+        public Builder openEniJumboFrame(String openEniJumboFrame) {
+            this.openEniJumboFrame = openEniJumboFrame;
             return this;
         }
 
@@ -351,11 +396,17 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class Components extends TeaModel {
-        @NameInMap("ComponentId")
+        @com.aliyun.core.annotation.NameInMap("ComponentId")
         private String componentId;
 
-        @NameInMap("ComponentType")
+        @com.aliyun.core.annotation.NameInMap("ComponentType")
         private String componentType;
 
         private Components(Builder builder) {
@@ -412,8 +463,14 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class Networks extends TeaModel {
-        @NameInMap("VpdId")
+        @com.aliyun.core.annotation.NameInMap("VpdId")
         private String vpdId;
 
         private Networks(Builder builder) {

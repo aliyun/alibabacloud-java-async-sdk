@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInvocationRequest} extends {@link RequestModel}
  *
  * <p>StopInvocationRequest</p>
  */
 public class StopInvocationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("InvokeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InvokeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String invokeId;
 
-    @Body
-    @NameInMap("NodeIdList")
-    private java.util.List < String > nodeIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeIdList")
+    private java.util.List<String> nodeIdList;
 
     private StopInvocationRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class StopInvocationRequest extends Request {
     /**
      * @return nodeIdList
      */
-    public java.util.List < String > getNodeIdList() {
+    public java.util.List<String> getNodeIdList() {
         return this.nodeIdList;
     }
 
     public static final class Builder extends Request.Builder<StopInvocationRequest, Builder> {
         private String regionId; 
         private String invokeId; 
-        private java.util.List < String > nodeIdList; 
+        private java.util.List<String> nodeIdList; 
 
         private Builder() {
             super();
@@ -92,7 +97,10 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * InvokeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-hz044748dzepds0</p>
          */
         public Builder invokeId(String invokeId) {
             this.putBodyParameter("InvokeId", invokeId);
@@ -103,7 +111,7 @@ public class StopInvocationRequest extends Request {
         /**
          * NodeIdList.
          */
-        public Builder nodeIdList(java.util.List < String > nodeIdList) {
+        public Builder nodeIdList(java.util.List<String> nodeIdList) {
             String nodeIdListShrink = shrink(nodeIdList, "NodeIdList", "json");
             this.putBodyParameter("NodeIdList", nodeIdListShrink);
             this.nodeIdList = nodeIdList;

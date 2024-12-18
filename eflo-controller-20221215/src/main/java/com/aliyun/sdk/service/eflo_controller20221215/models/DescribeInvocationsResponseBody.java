@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInvocationsResponseBody</p>
  */
 public class DescribeInvocationsResponseBody extends TeaModel {
-    @NameInMap("Invocations")
+    @com.aliyun.core.annotation.NameInMap("Invocations")
     private Invocations invocations;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInvocationsResponseBody(Builder builder) {
@@ -71,50 +76,56 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationsResponseBody</p>
+     */
     public static class InvokeNode extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Dropped")
+        @com.aliyun.core.annotation.NameInMap("Dropped")
         private Integer dropped;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private Boolean errorCode;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Integer exitCode;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeInvokeStatus")
+        @com.aliyun.core.annotation.NameInMap("NodeInvokeStatus")
         private String nodeInvokeStatus;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
-        @NameInMap("Repeats")
+        @com.aliyun.core.annotation.NameInMap("Repeats")
         private Integer repeats;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StopTime")
+        @com.aliyun.core.annotation.NameInMap("StopTime")
         private String stopTime;
 
-        @NameInMap("Timed")
+        @com.aliyun.core.annotation.NameInMap("Timed")
         private String timed;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private InvokeNode(Builder builder) {
@@ -392,9 +403,15 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationsResponseBody</p>
+     */
     public static class InvokeNodes extends TeaModel {
-        @NameInMap("InvokeNode")
-        private java.util.List < InvokeNode> invokeNode;
+        @com.aliyun.core.annotation.NameInMap("InvokeNode")
+        private java.util.List<InvokeNode> invokeNode;
 
         private InvokeNodes(Builder builder) {
             this.invokeNode = builder.invokeNode;
@@ -411,17 +428,17 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         /**
          * @return invokeNode
          */
-        public java.util.List < InvokeNode> getInvokeNode() {
+        public java.util.List<InvokeNode> getInvokeNode() {
             return this.invokeNode;
         }
 
         public static final class Builder {
-            private java.util.List < InvokeNode> invokeNode; 
+            private java.util.List<InvokeNode> invokeNode; 
 
             /**
              * InvokeNode.
              */
-            public Builder invokeNode(java.util.List < InvokeNode> invokeNode) {
+            public Builder invokeNode(java.util.List<InvokeNode> invokeNode) {
                 this.invokeNode = invokeNode;
                 return this;
             }
@@ -433,47 +450,53 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationsResponseBody</p>
+     */
     public static class Invocation extends TeaModel {
-        @NameInMap("CommandContent")
+        @com.aliyun.core.annotation.NameInMap("CommandContent")
         private String commandContent;
 
-        @NameInMap("CommandDescription")
+        @com.aliyun.core.annotation.NameInMap("CommandDescription")
         private String commandDescription;
 
-        @NameInMap("CommandName")
+        @com.aliyun.core.annotation.NameInMap("CommandName")
         private String commandName;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Frequency")
+        @com.aliyun.core.annotation.NameInMap("Frequency")
         private String frequency;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("InvokeId")
+        @com.aliyun.core.annotation.NameInMap("InvokeId")
         private String invokeId;
 
-        @NameInMap("InvokeNodes")
+        @com.aliyun.core.annotation.NameInMap("InvokeNodes")
         private InvokeNodes invokeNodes;
 
-        @NameInMap("InvokeStatus")
+        @com.aliyun.core.annotation.NameInMap("InvokeStatus")
         private String invokeStatus;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private String parameters;
 
-        @NameInMap("RepeatMode")
+        @com.aliyun.core.annotation.NameInMap("RepeatMode")
         private String repeatMode;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private Invocation(Builder builder) {
@@ -734,9 +757,15 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationsResponseBody</p>
+     */
     public static class Invocations extends TeaModel {
-        @NameInMap("Invocation")
-        private java.util.List < Invocation> invocation;
+        @com.aliyun.core.annotation.NameInMap("Invocation")
+        private java.util.List<Invocation> invocation;
 
         private Invocations(Builder builder) {
             this.invocation = builder.invocation;
@@ -753,17 +782,17 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         /**
          * @return invocation
          */
-        public java.util.List < Invocation> getInvocation() {
+        public java.util.List<Invocation> getInvocation() {
             return this.invocation;
         }
 
         public static final class Builder {
-            private java.util.List < Invocation> invocation; 
+            private java.util.List<Invocation> invocation; 
 
             /**
              * Invocation.
              */
-            public Builder invocation(java.util.List < Invocation> invocation) {
+            public Builder invocation(java.util.List<Invocation> invocation) {
                 this.invocation = invocation;
                 return this;
             }

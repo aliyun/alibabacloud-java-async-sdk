@@ -1,67 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendFileRequest} extends {@link RequestModel}
  *
  * <p>SendFileRequest</p>
  */
 public class SendFileRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Body
-    @NameInMap("ContentType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContentType")
     private String contentType;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("FileGroup")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileGroup")
     private String fileGroup;
 
-    @Body
-    @NameInMap("FileMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileMode")
     private String fileMode;
 
-    @Body
-    @NameInMap("FileOwner")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileOwner")
     private String fileOwner;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("NodeIdList")
-    @Validation(required = true)
-    private java.util.List < String > nodeIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeIdList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> nodeIdList;
 
-    @Body
-    @NameInMap("Overwrite")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Overwrite")
     private Boolean overwrite;
 
-    @Body
-    @NameInMap("TargetDir")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetDir")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetDir;
 
-    @Body
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
     private SendFileRequest(Builder builder) {
@@ -152,7 +157,7 @@ public class SendFileRequest extends Request {
     /**
      * @return nodeIdList
      */
-    public java.util.List < String > getNodeIdList() {
+    public java.util.List<String> getNodeIdList() {
         return this.nodeIdList;
     }
 
@@ -186,7 +191,7 @@ public class SendFileRequest extends Request {
         private String fileMode; 
         private String fileOwner; 
         private String name; 
-        private java.util.List < String > nodeIdList; 
+        private java.util.List<String> nodeIdList; 
         private Boolean overwrite; 
         private String targetDir; 
         private Integer timeout; 
@@ -221,7 +226,10 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#!/bin/bash echo &quot;Current User is :&quot; echo $(ps | grep &quot;$$&quot; | awk &quot;{print $2}&quot;) -------- oss://bucketName/objectName</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -275,7 +283,10 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file.txt</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -284,9 +295,9 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * NodeIdList.
+         * <p>This parameter is required.</p>
          */
-        public Builder nodeIdList(java.util.List < String > nodeIdList) {
+        public Builder nodeIdList(java.util.List<String> nodeIdList) {
             String nodeIdListShrink = shrink(nodeIdList, "NodeIdList", "json");
             this.putBodyParameter("NodeIdList", nodeIdListShrink);
             this.nodeIdList = nodeIdList;
@@ -303,7 +314,10 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * TargetDir.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home</p>
          */
         public Builder targetDir(String targetDir) {
             this.putBodyParameter("TargetDir", targetDir);

@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZonesResponseBody</p>
  */
 public class DescribeZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Zones")
-    private java.util.List < Zones> zones;
+    @com.aliyun.core.annotation.NameInMap("Zones")
+    private java.util.List<Zones> zones;
 
     private DescribeZonesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeZonesResponseBody extends TeaModel {
     /**
      * @return zones
      */
-    public java.util.List < Zones> getZones() {
+    public java.util.List<Zones> getZones() {
         return this.zones;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Zones> zones; 
+        private java.util.List<Zones> zones; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * Zones.
          */
-        public Builder zones(java.util.List < Zones> zones) {
+        public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
             return this;
         }
@@ -71,11 +76,17 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Zones(Builder builder) {

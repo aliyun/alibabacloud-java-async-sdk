@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ShrinkClusterRequest} extends {@link RequestModel}
  *
  * <p>ShrinkClusterRequest</p>
  */
 public class ShrinkClusterRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Body
-    @NameInMap("IgnoreFailedNodeTasks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IgnoreFailedNodeTasks")
     private Boolean ignoreFailedNodeTasks;
 
-    @Body
-    @NameInMap("NodeGroups")
-    private java.util.List < NodeGroups> nodeGroups;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeGroups")
+    private java.util.List<NodeGroups> nodeGroups;
 
     private ShrinkClusterRequest(Builder builder) {
         super(builder);
@@ -73,7 +78,7 @@ public class ShrinkClusterRequest extends Request {
     /**
      * @return nodeGroups
      */
-    public java.util.List < NodeGroups> getNodeGroups() {
+    public java.util.List<NodeGroups> getNodeGroups() {
         return this.nodeGroups;
     }
 
@@ -81,7 +86,7 @@ public class ShrinkClusterRequest extends Request {
         private String regionId; 
         private String clusterId; 
         private Boolean ignoreFailedNodeTasks; 
-        private java.util.List < NodeGroups> nodeGroups; 
+        private java.util.List<NodeGroups> nodeGroups; 
 
         private Builder() {
             super();
@@ -125,7 +130,7 @@ public class ShrinkClusterRequest extends Request {
         /**
          * NodeGroups.
          */
-        public Builder nodeGroups(java.util.List < NodeGroups> nodeGroups) {
+        public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
             this.putBodyParameter("NodeGroups", nodeGroupsShrink);
             this.nodeGroups = nodeGroups;
@@ -139,8 +144,14 @@ public class ShrinkClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ShrinkClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ShrinkClusterRequest</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
         private Nodes(Builder builder) {
@@ -180,12 +191,18 @@ public class ShrinkClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ShrinkClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ShrinkClusterRequest</p>
+     */
     public static class NodeGroups extends TeaModel {
-        @NameInMap("NodeGroupId")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
-        @NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        @com.aliyun.core.annotation.NameInMap("Nodes")
+        private java.util.List<Nodes> nodes;
 
         private NodeGroups(Builder builder) {
             this.nodeGroupId = builder.nodeGroupId;
@@ -210,13 +227,13 @@ public class ShrinkClusterRequest extends Request {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
         public static final class Builder {
             private String nodeGroupId; 
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
 
             /**
              * NodeGroupId.
@@ -229,7 +246,7 @@ public class ShrinkClusterRequest extends Request {
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }

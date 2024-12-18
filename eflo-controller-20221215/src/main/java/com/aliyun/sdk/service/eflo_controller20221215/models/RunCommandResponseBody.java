@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCommandResponseBody} extends {@link TeaModel}
  *
  * <p>RunCommandResponseBody</p>
  */
 public class RunCommandResponseBody extends TeaModel {
-    @NameInMap("InvokeId")
+    @com.aliyun.core.annotation.NameInMap("InvokeId")
     private String invokeId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RunCommandResponseBody(Builder builder) {
@@ -58,7 +63,10 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

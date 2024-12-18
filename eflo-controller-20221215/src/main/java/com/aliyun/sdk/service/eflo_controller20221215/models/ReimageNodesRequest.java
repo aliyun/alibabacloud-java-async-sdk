@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReimageNodesRequest} extends {@link RequestModel}
  *
  * <p>ReimageNodesRequest</p>
  */
 public class ReimageNodesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Body
-    @NameInMap("IgnoreFailedNodeTasks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IgnoreFailedNodeTasks")
     private Boolean ignoreFailedNodeTasks;
 
-    @Body
-    @NameInMap("Nodes")
-    private java.util.List < Nodes> nodes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Nodes")
+    private java.util.List<Nodes> nodes;
 
-    @Body
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private ReimageNodesRequest(Builder builder) {
@@ -78,7 +83,7 @@ public class ReimageNodesRequest extends Request {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -93,7 +98,7 @@ public class ReimageNodesRequest extends Request {
         private String regionId; 
         private String clusterId; 
         private Boolean ignoreFailedNodeTasks; 
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private String userData; 
 
         private Builder() {
@@ -139,7 +144,7 @@ public class ReimageNodesRequest extends Request {
         /**
          * Nodes.
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "json");
             this.putBodyParameter("Nodes", nodesShrink);
             this.nodes = nodes;
@@ -162,17 +167,23 @@ public class ReimageNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ReimageNodesRequest} extends {@link TeaModel}
+     *
+     * <p>ReimageNodesRequest</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("LoginPassword")
+        @com.aliyun.core.annotation.NameInMap("LoginPassword")
         private String loginPassword;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
         private Nodes(Builder builder) {

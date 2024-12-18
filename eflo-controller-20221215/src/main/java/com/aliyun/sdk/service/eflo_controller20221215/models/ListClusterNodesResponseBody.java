@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterNodesResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterNodesResponseBody</p>
  */
 public class ListClusterNodesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Nodes")
-    private java.util.List < Nodes> nodes;
+    @com.aliyun.core.annotation.NameInMap("Nodes")
+    private java.util.List<Nodes> nodes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListClusterNodesResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -58,7 +63,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         /**
          * Nodes.
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
             return this;
         }
@@ -91,17 +96,23 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterNodesResponseBody</p>
+     */
     public static class Networks extends TeaModel {
-        @NameInMap("BondName")
+        @com.aliyun.core.annotation.NameInMap("BondName")
         private String bondName;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("SubnetId")
+        @com.aliyun.core.annotation.NameInMap("SubnetId")
         private String subnetId;
 
-        @NameInMap("VpdId")
+        @com.aliyun.core.annotation.NameInMap("VpdId")
         private String vpdId;
 
         private Networks(Builder builder) {
@@ -192,44 +203,50 @@ public class ListClusterNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClusterNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterNodesResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("HpnZone")
+        @com.aliyun.core.annotation.NameInMap("HpnZone")
         private String hpnZone;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("MachineType")
+        @com.aliyun.core.annotation.NameInMap("MachineType")
         private String machineType;
 
-        @NameInMap("Networks")
-        private java.util.List < Networks> networks;
+        @com.aliyun.core.annotation.NameInMap("Networks")
+        private java.util.List<Networks> networks;
 
-        @NameInMap("NodeGroupId")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
-        @NameInMap("NodeGroupName")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupName")
         private String nodeGroupName;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("OperatingState")
+        @com.aliyun.core.annotation.NameInMap("OperatingState")
         private String operatingState;
 
-        @NameInMap("Sn")
+        @com.aliyun.core.annotation.NameInMap("Sn")
         private String sn;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Nodes(Builder builder) {
@@ -301,7 +318,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         /**
          * @return networks
          */
-        public java.util.List < Networks> getNetworks() {
+        public java.util.List<Networks> getNetworks() {
             return this.networks;
         }
 
@@ -354,7 +371,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             private String hpnZone; 
             private String imageId; 
             private String machineType; 
-            private java.util.List < Networks> networks; 
+            private java.util.List<Networks> networks; 
             private String nodeGroupId; 
             private String nodeGroupName; 
             private String nodeId; 
@@ -413,7 +430,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             /**
              * Networks.
              */
-            public Builder networks(java.util.List < Networks> networks) {
+            public Builder networks(java.util.List<Networks> networks) {
                 this.networks = networks;
                 return this;
             }

@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of ApproveOperation  ApproveOperationRequest
+     * @return ApproveOperationResponse
+     */
     @Override
     public CompletableFuture<ApproveOperationResponse> approveOperation(ApproveOperationRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCluster  CreateClusterRequest
+     * @return CreateClusterResponse
+     */
     @Override
     public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCluster  DeleteClusterRequest
+     * @return DeleteClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCluster  DescribeClusterRequest
+     * @return DescribeClusterResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterResponse> describeCluster(DescribeClusterRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInvocations  DescribeInvocationsRequest
+     * @return DescribeInvocationsResponse
+     */
     @Override
     public CompletableFuture<DescribeInvocationsResponse> describeInvocations(DescribeInvocationsRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNode  DescribeNodeRequest
+     * @return DescribeNodeResponse
+     */
     @Override
     public CompletableFuture<DescribeNodeResponse> describeNode(DescribeNodeRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSendFileResults  DescribeSendFileResultsRequest
+     * @return DescribeSendFileResultsResponse
+     */
     @Override
     public CompletableFuture<DescribeSendFileResultsResponse> describeSendFileResults(DescribeSendFileResultsRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTask  DescribeTaskRequest
+     * @return DescribeTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeTaskResponse> describeTask(DescribeTaskRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeZones  DescribeZonesRequest
+     * @return DescribeZonesResponse
+     */
     @Override
     public CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExtendCluster  ExtendClusterRequest
+     * @return ExtendClusterResponse
+     */
     @Override
     public CompletableFuture<ExtendClusterResponse> extendCluster(ExtendClusterRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusterNodes  ListClusterNodesRequest
+     * @return ListClusterNodesResponse
+     */
     @Override
     public CompletableFuture<ListClusterNodesResponse> listClusterNodes(ListClusterNodesRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusters  ListClustersRequest
+     * @return ListClustersResponse
+     */
     @Override
     public CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFreeNodes  ListFreeNodesRequest
+     * @return ListFreeNodesResponse
+     */
     @Override
     public CompletableFuture<ListFreeNodesResponse> listFreeNodes(ListFreeNodesRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RebootNodes  RebootNodesRequest
+     * @return RebootNodesResponse
+     */
     @Override
     public CompletableFuture<RebootNodesResponse> rebootNodes(RebootNodesRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReimageNodes  ReimageNodesRequest
+     * @return ReimageNodesResponse
+     */
     @Override
     public CompletableFuture<ReimageNodesResponse> reimageNodes(ReimageNodesRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunCommand  RunCommandRequest
+     * @return RunCommandResponse
+     */
     @Override
     public CompletableFuture<RunCommandResponse> runCommand(RunCommandRequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendFile  SendFileRequest
+     * @return SendFileResponse
+     */
     @Override
     public CompletableFuture<SendFileResponse> sendFile(SendFileRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ShrinkCluster  ShrinkClusterRequest
+     * @return ShrinkClusterResponse
+     */
     @Override
     public CompletableFuture<ShrinkClusterResponse> shrinkCluster(ShrinkClusterRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopInvocation  StopInvocationRequest
+     * @return StopInvocationResponse
+     */
     @Override
     public CompletableFuture<StopInvocationResponse> stopInvocation(StopInvocationRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {

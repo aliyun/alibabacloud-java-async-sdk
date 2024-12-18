@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendFileResponseBody} extends {@link TeaModel}
  *
  * <p>SendFileResponseBody</p>
  */
 public class SendFileResponseBody extends TeaModel {
-    @NameInMap("InvokeId")
+    @com.aliyun.core.annotation.NameInMap("InvokeId")
     private String invokeId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SendFileResponseBody(Builder builder) {
@@ -58,7 +63,10 @@ public class SendFileResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C683243-7915-57FB-9570-A2932C1C0F78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
