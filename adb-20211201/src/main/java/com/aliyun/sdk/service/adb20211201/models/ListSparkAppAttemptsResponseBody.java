@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttemptInfoList")
-        private java.util.List < SparkAttemptInfo > attemptInfoList;
+        private java.util.List<SparkAttemptInfo> attemptInfoList;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
@@ -111,7 +116,7 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
         /**
          * @return attemptInfoList
          */
-        public java.util.List < SparkAttemptInfo > getAttemptInfoList() {
+        public java.util.List<SparkAttemptInfo> getAttemptInfoList() {
             return this.attemptInfoList;
         }
 
@@ -137,7 +142,7 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SparkAttemptInfo > attemptInfoList; 
+            private java.util.List<SparkAttemptInfo> attemptInfoList; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
@@ -190,7 +195,7 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
              * </li>
              * </ul>
              */
-            public Builder attemptInfoList(java.util.List < SparkAttemptInfo > attemptInfoList) {
+            public Builder attemptInfoList(java.util.List<SparkAttemptInfo> attemptInfoList) {
                 this.attemptInfoList = attemptInfoList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class SparkBatchSQL extends TeaModel {
     private String schema;
 
     @com.aliyun.core.annotation.NameInMap("Statements")
-    private java.util.List < SparkBatchSQLStatement > statements;
+    private java.util.List<SparkBatchSQLStatement> statements;
 
     @com.aliyun.core.annotation.NameInMap("Uid")
     private Long uid;
@@ -144,7 +149,7 @@ public class SparkBatchSQL extends TeaModel {
     /**
      * @return statements
      */
-    public java.util.List < SparkBatchSQLStatement > getStatements() {
+    public java.util.List<SparkBatchSQLStatement> getStatements() {
         return this.statements;
     }
 
@@ -166,7 +171,7 @@ public class SparkBatchSQL extends TeaModel {
         private Long querySubmissionTime; 
         private String resourceGroupName; 
         private String schema; 
-        private java.util.List < SparkBatchSQLStatement > statements; 
+        private java.util.List<SparkBatchSQLStatement> statements; 
         private Long uid; 
 
         /**
@@ -252,7 +257,7 @@ public class SparkBatchSQL extends TeaModel {
         /**
          * Statements.
          */
-        public Builder statements(java.util.List < SparkBatchSQLStatement > statements) {
+        public Builder statements(java.util.List<SparkBatchSQLStatement> statements) {
             this.statements = statements;
             return this;
         }

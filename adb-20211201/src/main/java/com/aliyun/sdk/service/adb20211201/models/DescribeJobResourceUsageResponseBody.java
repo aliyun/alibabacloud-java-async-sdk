@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -392,7 +397,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         private String endTime;
 
         @com.aliyun.core.annotation.NameInMap("JobAcuUsage")
-        private java.util.List < JobAcuUsage> jobAcuUsage;
+        private java.util.List<JobAcuUsage> jobAcuUsage;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
@@ -429,7 +434,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         /**
          * @return jobAcuUsage
          */
-        public java.util.List < JobAcuUsage> getJobAcuUsage() {
+        public java.util.List<JobAcuUsage> getJobAcuUsage() {
             return this.jobAcuUsage;
         }
 
@@ -443,7 +448,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public static final class Builder {
             private String DBClusterId; 
             private String endTime; 
-            private java.util.List < JobAcuUsage> jobAcuUsage; 
+            private java.util.List<JobAcuUsage> jobAcuUsage; 
             private String startTime; 
 
             /**
@@ -471,7 +476,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             /**
              * <p>The AnalyticDB compute unit (ACU) usage of the job resource group.</p>
              */
-            public Builder jobAcuUsage(java.util.List < JobAcuUsage> jobAcuUsage) {
+            public Builder jobAcuUsage(java.util.List<JobAcuUsage> jobAcuUsage) {
                 this.jobAcuUsage = jobAcuUsage;
                 return this;
             }

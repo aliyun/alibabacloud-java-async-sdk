@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -156,7 +161,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseSummaryModels")
-        private java.util.List < DatabaseSummaryModel > databaseSummaryModels;
+        private java.util.List<DatabaseSummaryModel> databaseSummaryModels;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
@@ -185,7 +190,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
         /**
          * @return databaseSummaryModels
          */
-        public java.util.List < DatabaseSummaryModel > getDatabaseSummaryModels() {
+        public java.util.List<DatabaseSummaryModel> getDatabaseSummaryModels() {
             return this.databaseSummaryModels;
         }
 
@@ -211,7 +216,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DatabaseSummaryModel > databaseSummaryModels; 
+            private java.util.List<DatabaseSummaryModel> databaseSummaryModels; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
@@ -219,7 +224,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
             /**
              * <p>The queried database.</p>
              */
-            public Builder databaseSummaryModels(java.util.List < DatabaseSummaryModel > databaseSummaryModels) {
+            public Builder databaseSummaryModels(java.util.List<DatabaseSummaryModel> databaseSummaryModels) {
                 this.databaseSummaryModels = databaseSummaryModels;
                 return this;
             }

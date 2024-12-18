@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -218,10 +223,10 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         private Boolean enableAutoMc;
 
         @com.aliyun.core.annotation.NameInMap("Engine")
-        private java.util.List < String > engine;
+        private java.util.List<String> engine;
 
         @com.aliyun.core.annotation.NameInMap("GroupType")
-        private java.util.List < String > groupType;
+        private java.util.List<String> groupType;
 
         @com.aliyun.core.annotation.NameInMap("KeyName")
         private String keyName;
@@ -255,14 +260,14 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         /**
          * @return engine
          */
-        public java.util.List < String > getEngine() {
+        public java.util.List<String> getEngine() {
             return this.engine;
         }
 
         /**
          * @return groupType
          */
-        public java.util.List < String > getGroupType() {
+        public java.util.List<String> getGroupType() {
             return this.groupType;
         }
 
@@ -282,8 +287,8 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enableAutoMc; 
-            private java.util.List < String > engine; 
-            private java.util.List < String > groupType; 
+            private java.util.List<String> engine; 
+            private java.util.List<String> groupType; 
             private String keyName; 
             private Boolean selected; 
 
@@ -298,7 +303,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             /**
              * Engine.
              */
-            public Builder engine(java.util.List < String > engine) {
+            public Builder engine(java.util.List<String> engine) {
                 this.engine = engine;
                 return this;
             }
@@ -306,7 +311,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             /**
              * GroupType.
              */
-            public Builder groupType(java.util.List < String > groupType) {
+            public Builder groupType(java.util.List<String> groupType) {
                 this.groupType = groupType;
                 return this;
             }
@@ -355,7 +360,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         private String category;
 
         @com.aliyun.core.annotation.NameInMap("Keys")
-        private java.util.List < Keys> keys;
+        private java.util.List<Keys> keys;
 
         private Categories(Builder builder) {
             this.category = builder.category;
@@ -380,13 +385,13 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         /**
          * @return keys
          */
-        public java.util.List < Keys> getKeys() {
+        public java.util.List<Keys> getKeys() {
             return this.keys;
         }
 
         public static final class Builder {
             private String category; 
-            private java.util.List < Keys> keys; 
+            private java.util.List<Keys> keys; 
 
             /**
              * <p>The name of the metric category. Valid values:</p>
@@ -408,7 +413,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
             /**
              * <p>The metrics.</p>
              */
-            public Builder keys(java.util.List < Keys> keys) {
+            public Builder keys(java.util.List<Keys> keys) {
                 this.keys = keys;
                 return this;
             }
@@ -428,7 +433,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
      */
     public static class ViewDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
-        private java.util.List < Categories> categories;
+        private java.util.List<Categories> categories;
 
         @com.aliyun.core.annotation.NameInMap("ChartLinked")
         private Boolean chartLinked;
@@ -453,7 +458,7 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         /**
          * @return categories
          */
-        public java.util.List < Categories> getCategories() {
+        public java.util.List<Categories> getCategories() {
             return this.categories;
         }
 
@@ -472,14 +477,14 @@ public class DescribePerformanceViewAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Categories> categories; 
+            private java.util.List<Categories> categories; 
             private Boolean chartLinked; 
             private Integer chartsPerLine; 
 
             /**
              * <p>The metric category.</p>
              */
-            public Builder categories(java.util.List < Categories> categories) {
+            public Builder categories(java.util.List<Categories> categories) {
                 this.categories = categories;
                 return this;
             }

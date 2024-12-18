@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeElasticPlansResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ElasticPlans")
-    private java.util.List < ElasticPlans> elasticPlans;
+    private java.util.List<ElasticPlans> elasticPlans;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
     /**
      * @return elasticPlans
      */
-    public java.util.List < ElasticPlans> getElasticPlans() {
+    public java.util.List<ElasticPlans> getElasticPlans() {
         return this.elasticPlans;
     }
 
@@ -79,7 +84,7 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ElasticPlans> elasticPlans; 
+        private java.util.List<ElasticPlans> elasticPlans; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         /**
          * <p>The queried scaling plans.</p>
          */
-        public Builder elasticPlans(java.util.List < ElasticPlans> elasticPlans) {
+        public Builder elasticPlans(java.util.List<ElasticPlans> elasticPlans) {
             this.elasticPlans = elasticPlans;
             return this;
         }

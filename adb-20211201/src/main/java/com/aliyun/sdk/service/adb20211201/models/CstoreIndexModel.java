@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CstoreIndexModel extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ColumnOrds")
-    private java.util.List < String > columnOrds;
+    private java.util.List<String> columnOrds;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -22,7 +27,7 @@ public class CstoreIndexModel extends TeaModel {
     private String databaseName;
 
     @com.aliyun.core.annotation.NameInMap("IndexColumns")
-    private java.util.List < FieldSchemaModel > indexColumns;
+    private java.util.List<FieldSchemaModel> indexColumns;
 
     @com.aliyun.core.annotation.NameInMap("IndexName")
     private String indexName;
@@ -31,7 +36,7 @@ public class CstoreIndexModel extends TeaModel {
     private String indexType;
 
     @com.aliyun.core.annotation.NameInMap("Options")
-    private java.util.Map < String, String > options;
+    private java.util.Map<String, String> options;
 
     @com.aliyun.core.annotation.NameInMap("PhysicalTableName")
     private String physicalTableName;
@@ -62,7 +67,7 @@ public class CstoreIndexModel extends TeaModel {
     /**
      * @return columnOrds
      */
-    public java.util.List < String > getColumnOrds() {
+    public java.util.List<String> getColumnOrds() {
         return this.columnOrds;
     }
 
@@ -83,7 +88,7 @@ public class CstoreIndexModel extends TeaModel {
     /**
      * @return indexColumns
      */
-    public java.util.List < FieldSchemaModel > getIndexColumns() {
+    public java.util.List<FieldSchemaModel> getIndexColumns() {
         return this.indexColumns;
     }
 
@@ -104,7 +109,7 @@ public class CstoreIndexModel extends TeaModel {
     /**
      * @return options
      */
-    public java.util.Map < String, String > getOptions() {
+    public java.util.Map<String, String> getOptions() {
         return this.options;
     }
 
@@ -123,20 +128,20 @@ public class CstoreIndexModel extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > columnOrds; 
+        private java.util.List<String> columnOrds; 
         private String createTime; 
         private String databaseName; 
-        private java.util.List < FieldSchemaModel > indexColumns; 
+        private java.util.List<FieldSchemaModel> indexColumns; 
         private String indexName; 
         private String indexType; 
-        private java.util.Map < String, String > options; 
+        private java.util.Map<String, String> options; 
         private String physicalTableName; 
         private String updateTime; 
 
         /**
          * ColumnOrds.
          */
-        public Builder columnOrds(java.util.List < String > columnOrds) {
+        public Builder columnOrds(java.util.List<String> columnOrds) {
             this.columnOrds = columnOrds;
             return this;
         }
@@ -160,7 +165,7 @@ public class CstoreIndexModel extends TeaModel {
         /**
          * IndexColumns.
          */
-        public Builder indexColumns(java.util.List < FieldSchemaModel > indexColumns) {
+        public Builder indexColumns(java.util.List<FieldSchemaModel> indexColumns) {
             this.indexColumns = indexColumns;
             return this;
         }
@@ -184,7 +189,7 @@ public class CstoreIndexModel extends TeaModel {
         /**
          * Options.
          */
-        public Builder options(java.util.Map < String, String > options) {
+        public Builder options(java.util.Map<String, String> options) {
             this.options = options;
             return this;
         }

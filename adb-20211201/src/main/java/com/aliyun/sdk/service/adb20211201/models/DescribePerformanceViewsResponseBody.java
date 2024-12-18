@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Views")
-    private java.util.List < Views> views;
+    private java.util.List<Views> views;
 
     private DescribePerformanceViewsResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
@@ -52,14 +57,14 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
     /**
      * @return views
      */
-    public java.util.List < Views> getViews() {
+    public java.util.List<Views> getViews() {
         return this.views;
     }
 
     public static final class Builder {
         private String accessDeniedDetail; 
         private String requestId; 
-        private java.util.List < Views> views; 
+        private java.util.List<Views> views; 
 
         /**
          * <p>The details about the access denial.</p>
@@ -97,7 +102,7 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
         /**
          * <p>the list of view.</p>
          */
-        public Builder views(java.util.List < Views> views) {
+        public Builder views(java.util.List<Views> views) {
             this.views = views;
             return this;
         }

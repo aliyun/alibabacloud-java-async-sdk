@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,19 +18,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClientIps")
-    private java.util.List < String > clientIps;
+    private java.util.List<String> clientIps;
 
     @com.aliyun.core.annotation.NameInMap("Databases")
-    private java.util.List < String > databases;
+    private java.util.List<String> databases;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceGroups")
-    private java.util.List < String > resourceGroups;
+    private java.util.List<String> resourceGroups;
 
     @com.aliyun.core.annotation.NameInMap("UserNames")
-    private java.util.List < String > userNames;
+    private java.util.List<String> userNames;
 
     private DescribeDiagnosisDimensionsResponseBody(Builder builder) {
         this.clientIps = builder.clientIps;
@@ -46,14 +51,14 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
     /**
      * @return clientIps
      */
-    public java.util.List < String > getClientIps() {
+    public java.util.List<String> getClientIps() {
         return this.clientIps;
     }
 
     /**
      * @return databases
      */
-    public java.util.List < String > getDatabases() {
+    public java.util.List<String> getDatabases() {
         return this.databases;
     }
 
@@ -67,28 +72,28 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
     /**
      * @return resourceGroups
      */
-    public java.util.List < String > getResourceGroups() {
+    public java.util.List<String> getResourceGroups() {
         return this.resourceGroups;
     }
 
     /**
      * @return userNames
      */
-    public java.util.List < String > getUserNames() {
+    public java.util.List<String> getUserNames() {
         return this.userNames;
     }
 
     public static final class Builder {
-        private java.util.List < String > clientIps; 
-        private java.util.List < String > databases; 
+        private java.util.List<String> clientIps; 
+        private java.util.List<String> databases; 
         private String requestId; 
-        private java.util.List < String > resourceGroups; 
-        private java.util.List < String > userNames; 
+        private java.util.List<String> resourceGroups; 
+        private java.util.List<String> userNames; 
 
         /**
          * <p>The queried source IP addresses.</p>
          */
-        public Builder clientIps(java.util.List < String > clientIps) {
+        public Builder clientIps(java.util.List<String> clientIps) {
             this.clientIps = clientIps;
             return this;
         }
@@ -96,7 +101,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         /**
          * <p>The queried database names.</p>
          */
-        public Builder databases(java.util.List < String > databases) {
+        public Builder databases(java.util.List<String> databases) {
             this.databases = databases;
             return this;
         }
@@ -115,7 +120,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         /**
          * <p>The queried resource group names.</p>
          */
-        public Builder resourceGroups(java.util.List < String > resourceGroups) {
+        public Builder resourceGroups(java.util.List<String> resourceGroups) {
             this.resourceGroups = resourceGroups;
             return this;
         }
@@ -123,7 +128,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         /**
          * <p>The queried usernames.</p>
          */
-        public Builder userNames(java.util.List < String > userNames) {
+        public Builder userNames(java.util.List<String> userNames) {
             this.userNames = userNames;
             return this;
         }

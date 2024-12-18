@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeKernelVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AvailableKernelVersions")
-    private java.util.List < AvailableKernelVersions> availableKernelVersions;
+    private java.util.List<AvailableKernelVersions> availableKernelVersions;
 
     @com.aliyun.core.annotation.NameInMap("ExpireDate")
     private String expireDate;
@@ -42,7 +47,7 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
     /**
      * @return availableKernelVersions
      */
-    public java.util.List < AvailableKernelVersions> getAvailableKernelVersions() {
+    public java.util.List<AvailableKernelVersions> getAvailableKernelVersions() {
         return this.availableKernelVersions;
     }
 
@@ -68,7 +73,7 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AvailableKernelVersions> availableKernelVersions; 
+        private java.util.List<AvailableKernelVersions> availableKernelVersions; 
         private String expireDate; 
         private String kernelVersion; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
         /**
          * AvailableKernelVersions.
          */
-        public Builder availableKernelVersions(java.util.List < AvailableKernelVersions> availableKernelVersions) {
+        public Builder availableKernelVersions(java.util.List<AvailableKernelVersions> availableKernelVersions) {
             this.availableKernelVersions = availableKernelVersions;
             return this;
         }

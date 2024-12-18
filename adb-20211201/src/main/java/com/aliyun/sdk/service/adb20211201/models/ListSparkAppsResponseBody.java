@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class ListSparkAppsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppInfoList")
-        private java.util.List < SparkAppInfo > appInfoList;
+        private java.util.List<SparkAppInfo> appInfoList;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
@@ -180,7 +185,7 @@ public class ListSparkAppsResponseBody extends TeaModel {
         /**
          * @return appInfoList
          */
-        public java.util.List < SparkAppInfo > getAppInfoList() {
+        public java.util.List<SparkAppInfo> getAppInfoList() {
             return this.appInfoList;
         }
 
@@ -206,7 +211,7 @@ public class ListSparkAppsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SparkAppInfo > appInfoList; 
+            private java.util.List<SparkAppInfo> appInfoList; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
@@ -228,7 +233,7 @@ public class ListSparkAppsResponseBody extends TeaModel {
              * <li><strong>DurationInMillis</strong>: the amount of time it takes to run the Spark application. Unit: milliseconds.</li>
              * </ul>
              */
-            public Builder appInfoList(java.util.List < SparkAppInfo > appInfoList) {
+            public Builder appInfoList(java.util.List<SparkAppInfo> appInfoList) {
                 this.appInfoList = appInfoList;
                 return this;
             }

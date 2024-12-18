@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class StorageDescriptorModel extends TeaModel {
     private String outputFormat;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, String > parameters;
+    private java.util.Map<String, String> parameters;
 
     @com.aliyun.core.annotation.NameInMap("SdId")
     private Long sdId;
@@ -97,7 +102,7 @@ public class StorageDescriptorModel extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.Map < String, String > getParameters() {
+    public java.util.Map<String, String> getParameters() {
         return this.parameters;
     }
 
@@ -128,7 +133,7 @@ public class StorageDescriptorModel extends TeaModel {
         private String location; 
         private Long numBuckets; 
         private String outputFormat; 
-        private java.util.Map < String, String > parameters; 
+        private java.util.Map<String, String> parameters; 
         private Long sdId; 
         private SerDeInfoModel serDeInfo; 
         private Boolean storedAsSubDirectories; 
@@ -176,7 +181,7 @@ public class StorageDescriptorModel extends TeaModel {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.Map < String, String > parameters) {
+        public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
             return this;
         }

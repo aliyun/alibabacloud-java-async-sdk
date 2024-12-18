@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class ModifyDBResourceGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EngineParams")
-    private java.util.Map < String, ? > engineParams;
+    private java.util.Map<String, ?> engineParams;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
@@ -77,7 +82,7 @@ public class ModifyDBResourceGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    private java.util.List<Rules> rules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpecName")
@@ -165,7 +170,7 @@ public class ModifyDBResourceGroupRequest extends Request {
     /**
      * @return engineParams
      */
-    public java.util.Map < String, ? > getEngineParams() {
+    public java.util.Map<String, ?> getEngineParams() {
         return this.engineParams;
     }
 
@@ -235,7 +240,7 @@ public class ModifyDBResourceGroupRequest extends Request {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
@@ -266,7 +271,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         private String clusterSizeResource; 
         private String DBClusterId; 
         private Boolean enableSpot; 
-        private java.util.Map < String, ? > engineParams; 
+        private java.util.Map<String, ?> engineParams; 
         private String groupName; 
         private String groupType; 
         private Integer maxClusterCount; 
@@ -276,7 +281,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         private String minComputeResource; 
         private Integer minGpuQuantity; 
         private String regionId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
         private String specName; 
         private String status; 
         private String targetResourceGroupName; 
@@ -373,7 +378,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         /**
          * EngineParams.
          */
-        public Builder engineParams(java.util.Map < String, ? > engineParams) {
+        public Builder engineParams(java.util.Map<String, ?> engineParams) {
             String engineParamsShrink = shrink(engineParams, "EngineParams", "json");
             this.putQueryParameter("EngineParams", engineParamsShrink);
             this.engineParams = engineParams;
@@ -508,7 +513,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         /**
          * <p>The job resubmission rules.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
             this.putQueryParameter("Rules", rulesShrink);
             this.rules = rules;

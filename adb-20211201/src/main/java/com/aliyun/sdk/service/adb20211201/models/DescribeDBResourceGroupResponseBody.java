@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBResourceGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GroupsInfo")
-    private java.util.List < GroupsInfo> groupsInfo;
+    private java.util.List<GroupsInfo> groupsInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     /**
      * @return groupsInfo
      */
-    public java.util.List < GroupsInfo> getGroupsInfo() {
+    public java.util.List<GroupsInfo> getGroupsInfo() {
         return this.groupsInfo;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GroupsInfo> groupsInfo; 
+        private java.util.List<GroupsInfo> groupsInfo; 
         private String requestId; 
 
         /**
          * <p>The queried resource groups.</p>
          */
-        public Builder groupsInfo(java.util.List < GroupsInfo> groupsInfo) {
+        public Builder groupsInfo(java.util.List<GroupsInfo> groupsInfo) {
             this.groupsInfo = groupsInfo;
             return this;
         }
@@ -199,7 +204,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         private String engine;
 
         @com.aliyun.core.annotation.NameInMap("EngineParams")
-        private java.util.Map < String, ? > engineParams;
+        private java.util.Map<String, ?> engineParams;
 
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -233,7 +238,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         private Integer minGpuQuantity;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         @com.aliyun.core.annotation.NameInMap("RunningClusterCount")
         private Integer runningClusterCount;
@@ -337,7 +342,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         /**
          * @return engineParams
          */
-        public java.util.Map < String, ? > getEngineParams() {
+        public java.util.Map<String, ?> getEngineParams() {
             return this.engineParams;
         }
 
@@ -414,7 +419,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -461,7 +466,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String elasticMinComputeResource; 
             private String enableSpot; 
             private String engine; 
-            private java.util.Map < String, ? > engineParams; 
+            private java.util.Map<String, ?> engineParams; 
             private String groupName; 
             private String groupType; 
             private String groupUsers; 
@@ -472,7 +477,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private Integer minClusterCount; 
             private String minComputeResource; 
             private Integer minGpuQuantity; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
             private Integer runningClusterCount; 
             private String specName; 
             private String status; 
@@ -558,7 +563,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             /**
              * EngineParams.
              */
-            public Builder engineParams(java.util.Map < String, ? > engineParams) {
+            public Builder engineParams(java.util.Map<String, ?> engineParams) {
                 this.engineParams = engineParams;
                 return this;
             }
@@ -674,7 +679,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             /**
              * <p>The job resubmission rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

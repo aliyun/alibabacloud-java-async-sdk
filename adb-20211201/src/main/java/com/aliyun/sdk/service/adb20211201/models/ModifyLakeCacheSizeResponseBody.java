@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -105,7 +110,7 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
         private Long dataSize;
 
         @com.aliyun.core.annotation.NameInMap("Instances")
-        private java.util.List < String > instances;
+        private java.util.List<String> instances;
 
         private Data(Builder builder) {
             this.capacity = builder.capacity;
@@ -138,14 +143,14 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
         /**
          * @return instances
          */
-        public java.util.List < String > getInstances() {
+        public java.util.List<String> getInstances() {
             return this.instances;
         }
 
         public static final class Builder {
             private Long capacity; 
             private Long dataSize; 
-            private java.util.List < String > instances; 
+            private java.util.List<String> instances; 
 
             /**
              * Capacity.
@@ -166,7 +171,7 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
             /**
              * Instances.
              */
-            public Builder instances(java.util.List < String > instances) {
+            public Builder instances(java.util.List<String> instances) {
                 this.instances = instances;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("DetectionItems")
-    private java.util.List < DetectionItems> detectionItems;
+    private java.util.List<DetectionItems> detectionItems;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
@@ -33,7 +38,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tables")
-    private java.util.List < Tables> tables;
+    private java.util.List<Tables> tables;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
@@ -74,7 +79,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
     /**
      * @return detectionItems
      */
-    public java.util.List < DetectionItems> getDetectionItems() {
+    public java.util.List<DetectionItems> getDetectionItems() {
         return this.detectionItems;
     }
 
@@ -102,7 +107,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
     /**
      * @return tables
      */
-    public java.util.List < Tables> getTables() {
+    public java.util.List<Tables> getTables() {
         return this.tables;
     }
 
@@ -116,11 +121,11 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String DBClusterId; 
-        private java.util.List < DetectionItems> detectionItems; 
+        private java.util.List<DetectionItems> detectionItems; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Tables> tables; 
+        private java.util.List<Tables> tables; 
         private String totalCount; 
 
         /**
@@ -156,7 +161,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         /**
          * <p>The queried detection items and detection results.</p>
          */
-        public Builder detectionItems(java.util.List < DetectionItems> detectionItems) {
+        public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
             return this;
         }
@@ -202,7 +207,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         /**
          * <p>The queried tables that have excessive primary key fields.</p>
          */
-        public Builder tables(java.util.List < Tables> tables) {
+        public Builder tables(java.util.List<Tables> tables) {
             this.tables = tables;
             return this;
         }

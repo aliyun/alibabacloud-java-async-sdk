@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountPrivileges")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AccountPrivileges> accountPrivileges;
+    private java.util.List<AccountPrivileges> accountPrivileges;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
@@ -63,7 +68,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
     /**
      * @return accountPrivileges
      */
-    public java.util.List < AccountPrivileges> getAccountPrivileges() {
+    public java.util.List<AccountPrivileges> getAccountPrivileges() {
         return this.accountPrivileges;
     }
 
@@ -83,7 +88,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyAccountPrivilegesRequest, Builder> {
         private String accountName; 
-        private java.util.List < AccountPrivileges> accountPrivileges; 
+        private java.util.List<AccountPrivileges> accountPrivileges; 
         private String DBClusterId; 
         private String regionId; 
 
@@ -116,7 +121,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
          * <p>The permissions that you want to grant to the database account.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder accountPrivileges(java.util.List < AccountPrivileges> accountPrivileges) {
+        public Builder accountPrivileges(java.util.List<AccountPrivileges> accountPrivileges) {
             String accountPrivilegesShrink = shrink(accountPrivileges, "AccountPrivileges", "json");
             this.putQueryParameter("AccountPrivileges", accountPrivilegesShrink);
             this.accountPrivileges = accountPrivileges;
@@ -266,7 +271,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
         private String privilegeType;
 
         @com.aliyun.core.annotation.NameInMap("Privileges")
-        private java.util.List < String > privileges;
+        private java.util.List<String> privileges;
 
         private AccountPrivileges(Builder builder) {
             this.privilegeObject = builder.privilegeObject;
@@ -299,14 +304,14 @@ public class ModifyAccountPrivilegesRequest extends Request {
         /**
          * @return privileges
          */
-        public java.util.List < String > getPrivileges() {
+        public java.util.List<String> getPrivileges() {
             return this.privileges;
         }
 
         public static final class Builder {
             private PrivilegeObject privilegeObject; 
             private String privilegeType; 
-            private java.util.List < String > privileges; 
+            private java.util.List<String> privileges; 
 
             /**
              * <p>The objects on which you want to grant permissions, including databases, tables, and columns.</p>
@@ -330,7 +335,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             /**
              * <p>The permissions that you want to grant to the database account.</p>
              */
-            public Builder privileges(java.util.List < String > privileges) {
+            public Builder privileges(java.util.List<String> privileges) {
                 this.privileges = privileges;
                 return this;
             }

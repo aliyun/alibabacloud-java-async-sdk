@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class TableModel extends TeaModel {
     private Long bucketCount;
 
     @com.aliyun.core.annotation.NameInMap("Cols")
-    private java.util.List < FieldSchemaModel > cols;
+    private java.util.List<FieldSchemaModel> cols;
 
     @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
@@ -46,7 +51,7 @@ public class TableModel extends TeaModel {
     private Boolean dictEncode;
 
     @com.aliyun.core.annotation.NameInMap("DistributeColumns")
-    private java.util.List < FieldSchemaModel > distributeColumns;
+    private java.util.List<FieldSchemaModel> distributeColumns;
 
     @com.aliyun.core.annotation.NameInMap("DistributeType")
     private String distributeType;
@@ -58,7 +63,7 @@ public class TableModel extends TeaModel {
     private Long hotPartitionCount;
 
     @com.aliyun.core.annotation.NameInMap("Indexes")
-    private java.util.List < CstoreIndexModel > indexes;
+    private java.util.List<CstoreIndexModel> indexes;
 
     @com.aliyun.core.annotation.NameInMap("IsAllIndex")
     private Boolean isAllIndex;
@@ -70,7 +75,7 @@ public class TableModel extends TeaModel {
     private Long maxColumnId;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, String > parameters;
+    private java.util.Map<String, String> parameters;
 
     @com.aliyun.core.annotation.NameInMap("PartitionColumn")
     private String partitionColumn;
@@ -79,7 +84,7 @@ public class TableModel extends TeaModel {
     private Long partitionCount;
 
     @com.aliyun.core.annotation.NameInMap("PartitionKeys")
-    private java.util.List < FieldSchemaModel > partitionKeys;
+    private java.util.List<FieldSchemaModel> partitionKeys;
 
     @com.aliyun.core.annotation.NameInMap("PartitionType")
     private String partitionType;
@@ -97,7 +102,7 @@ public class TableModel extends TeaModel {
     private String rawTableName;
 
     @com.aliyun.core.annotation.NameInMap("RouteColumns")
-    private java.util.List < FieldSchemaModel > routeColumns;
+    private java.util.List<FieldSchemaModel> routeColumns;
 
     @com.aliyun.core.annotation.NameInMap("RouteEffectiveColumn")
     private FieldSchemaModel routeEffectiveColumn;
@@ -246,7 +251,7 @@ public class TableModel extends TeaModel {
     /**
      * @return cols
      */
-    public java.util.List < FieldSchemaModel > getCols() {
+    public java.util.List<FieldSchemaModel> getCols() {
         return this.cols;
     }
 
@@ -295,7 +300,7 @@ public class TableModel extends TeaModel {
     /**
      * @return distributeColumns
      */
-    public java.util.List < FieldSchemaModel > getDistributeColumns() {
+    public java.util.List<FieldSchemaModel> getDistributeColumns() {
         return this.distributeColumns;
     }
 
@@ -323,7 +328,7 @@ public class TableModel extends TeaModel {
     /**
      * @return indexes
      */
-    public java.util.List < CstoreIndexModel > getIndexes() {
+    public java.util.List<CstoreIndexModel> getIndexes() {
         return this.indexes;
     }
 
@@ -351,7 +356,7 @@ public class TableModel extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.Map < String, String > getParameters() {
+    public java.util.Map<String, String> getParameters() {
         return this.parameters;
     }
 
@@ -372,7 +377,7 @@ public class TableModel extends TeaModel {
     /**
      * @return partitionKeys
      */
-    public java.util.List < FieldSchemaModel > getPartitionKeys() {
+    public java.util.List<FieldSchemaModel> getPartitionKeys() {
         return this.partitionKeys;
     }
 
@@ -414,7 +419,7 @@ public class TableModel extends TeaModel {
     /**
      * @return routeColumns
      */
-    public java.util.List < FieldSchemaModel > getRouteColumns() {
+    public java.util.List<FieldSchemaModel> getRouteColumns() {
         return this.routeColumns;
     }
 
@@ -556,31 +561,31 @@ public class TableModel extends TeaModel {
         private Long blockSize; 
         private Long bucket; 
         private Long bucketCount; 
-        private java.util.List < FieldSchemaModel > cols; 
+        private java.util.List<FieldSchemaModel> cols; 
         private String comment; 
         private String compression; 
         private String createTime; 
         private Long currentVersion; 
         private String dbName; 
         private Boolean dictEncode; 
-        private java.util.List < FieldSchemaModel > distributeColumns; 
+        private java.util.List<FieldSchemaModel> distributeColumns; 
         private String distributeType; 
         private Boolean enableDfs; 
         private Long hotPartitionCount; 
-        private java.util.List < CstoreIndexModel > indexes; 
+        private java.util.List<CstoreIndexModel> indexes; 
         private Boolean isAllIndex; 
         private Boolean isFulltextDict; 
         private Long maxColumnId; 
-        private java.util.Map < String, String > parameters; 
+        private java.util.Map<String, String> parameters; 
         private String partitionColumn; 
         private Long partitionCount; 
-        private java.util.List < FieldSchemaModel > partitionKeys; 
+        private java.util.List<FieldSchemaModel> partitionKeys; 
         private String partitionType; 
         private String physicalDatabaseName; 
         private String physicalTableName; 
         private Long previousVersion; 
         private String rawTableName; 
-        private java.util.List < FieldSchemaModel > routeColumns; 
+        private java.util.List<FieldSchemaModel> routeColumns; 
         private FieldSchemaModel routeEffectiveColumn; 
         private String routeType; 
         private String rtEngineType; 
@@ -636,7 +641,7 @@ public class TableModel extends TeaModel {
         /**
          * Cols.
          */
-        public Builder cols(java.util.List < FieldSchemaModel > cols) {
+        public Builder cols(java.util.List<FieldSchemaModel> cols) {
             this.cols = cols;
             return this;
         }
@@ -692,7 +697,7 @@ public class TableModel extends TeaModel {
         /**
          * DistributeColumns.
          */
-        public Builder distributeColumns(java.util.List < FieldSchemaModel > distributeColumns) {
+        public Builder distributeColumns(java.util.List<FieldSchemaModel> distributeColumns) {
             this.distributeColumns = distributeColumns;
             return this;
         }
@@ -724,7 +729,7 @@ public class TableModel extends TeaModel {
         /**
          * Indexes.
          */
-        public Builder indexes(java.util.List < CstoreIndexModel > indexes) {
+        public Builder indexes(java.util.List<CstoreIndexModel> indexes) {
             this.indexes = indexes;
             return this;
         }
@@ -756,7 +761,7 @@ public class TableModel extends TeaModel {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.Map < String, String > parameters) {
+        public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -780,7 +785,7 @@ public class TableModel extends TeaModel {
         /**
          * PartitionKeys.
          */
-        public Builder partitionKeys(java.util.List < FieldSchemaModel > partitionKeys) {
+        public Builder partitionKeys(java.util.List<FieldSchemaModel> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
@@ -828,7 +833,7 @@ public class TableModel extends TeaModel {
         /**
          * RouteColumns.
          */
-        public Builder routeColumns(java.util.List < FieldSchemaModel > routeColumns) {
+        public Builder routeColumns(java.util.List<FieldSchemaModel> routeColumns) {
             this.routeColumns = routeColumns;
             return this;
         }

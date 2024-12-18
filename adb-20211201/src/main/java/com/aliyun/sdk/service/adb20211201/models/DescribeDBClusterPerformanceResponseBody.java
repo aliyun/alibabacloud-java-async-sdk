@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     private String endTime;
 
     @com.aliyun.core.annotation.NameInMap("Performances")
-    private java.util.List < Performances> performances;
+    private java.util.List<Performances> performances;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     /**
      * @return performances
      */
-    public java.util.List < Performances> getPerformances() {
+    public java.util.List<Performances> getPerformances() {
         return this.performances;
     }
 
@@ -81,7 +86,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public static final class Builder {
         private String DBClusterId; 
         private String endTime; 
-        private java.util.List < Performances> performances; 
+        private java.util.List<Performances> performances; 
         private String requestId; 
         private String startTime; 
 
@@ -113,7 +118,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         /**
          * <p>The queried performance metrics.</p>
          */
-        public Builder performances(java.util.List < Performances> performances) {
+        public Builder performances(java.util.List<Performances> performances) {
             this.performances = performances;
             return this;
         }
@@ -163,7 +168,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         private String translateKey;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Series(Builder builder) {
             this.name = builder.name;
@@ -204,7 +209,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
@@ -212,7 +217,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private String name; 
             private String tags; 
             private String translateKey; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
              * <ul>
@@ -484,7 +489,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             /**
              * <p>The values of the performance metric at different points in time.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -507,7 +512,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Series")
-        private java.util.List < Series> series;
+        private java.util.List<Series> series;
 
         @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
@@ -536,7 +541,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < Series> getSeries() {
+        public java.util.List<Series> getSeries() {
             return this.series;
         }
 
@@ -549,7 +554,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String key; 
-            private java.util.List < Series> series; 
+            private java.util.List<Series> series; 
             private String unit; 
 
             /**
@@ -566,7 +571,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             /**
              * <p>The queried performance metric data.</p>
              */
-            public Builder series(java.util.List < Series> series) {
+            public Builder series(java.util.List<Series> series) {
                 this.series = series;
                 return this;
             }

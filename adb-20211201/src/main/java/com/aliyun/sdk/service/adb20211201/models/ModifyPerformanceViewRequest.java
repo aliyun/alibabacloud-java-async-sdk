@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -342,7 +347,7 @@ public class ModifyPerformanceViewRequest extends Request {
         private String category;
 
         @com.aliyun.core.annotation.NameInMap("Keys")
-        private java.util.List < Keys> keys;
+        private java.util.List<Keys> keys;
 
         private Categories(Builder builder) {
             this.category = builder.category;
@@ -367,13 +372,13 @@ public class ModifyPerformanceViewRequest extends Request {
         /**
          * @return keys
          */
-        public java.util.List < Keys> getKeys() {
+        public java.util.List<Keys> getKeys() {
             return this.keys;
         }
 
         public static final class Builder {
             private String category; 
-            private java.util.List < Keys> keys; 
+            private java.util.List<Keys> keys; 
 
             /**
              * <p>The name of the metric category. Valid values:</p>
@@ -395,7 +400,7 @@ public class ModifyPerformanceViewRequest extends Request {
             /**
              * <p>The metrics.</p>
              */
-            public Builder keys(java.util.List < Keys> keys) {
+            public Builder keys(java.util.List<Keys> keys) {
                 this.keys = keys;
                 return this;
             }
@@ -415,7 +420,7 @@ public class ModifyPerformanceViewRequest extends Request {
      */
     public static class ViewDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
-        private java.util.List < Categories> categories;
+        private java.util.List<Categories> categories;
 
         @com.aliyun.core.annotation.NameInMap("ChartLinked")
         private Boolean chartLinked;
@@ -440,7 +445,7 @@ public class ModifyPerformanceViewRequest extends Request {
         /**
          * @return categories
          */
-        public java.util.List < Categories> getCategories() {
+        public java.util.List<Categories> getCategories() {
             return this.categories;
         }
 
@@ -459,14 +464,14 @@ public class ModifyPerformanceViewRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Categories> categories; 
+            private java.util.List<Categories> categories; 
             private Boolean chartLinked; 
             private Integer chartsPerLine; 
 
             /**
              * <p>The metric categories.</p>
              */
-            public Builder categories(java.util.List < Categories> categories) {
+            public Builder categories(java.util.List<Categories> categories) {
                 this.categories = categories;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
     private String accessDeniedDetail;
 
     @com.aliyun.core.annotation.NameInMap("ActionLogs")
-    private java.util.List < ActionLogs> actionLogs;
+    private java.util.List<ActionLogs> actionLogs;
 
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
@@ -65,7 +70,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
     /**
      * @return actionLogs
      */
-    public java.util.List < ActionLogs> getActionLogs() {
+    public java.util.List<ActionLogs> getActionLogs() {
         return this.actionLogs;
     }
 
@@ -113,7 +118,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accessDeniedDetail; 
-        private java.util.List < ActionLogs> actionLogs; 
+        private java.util.List<ActionLogs> actionLogs; 
         private String DBClusterId; 
         private String pageNumber; 
         private String pageSize; 
@@ -143,7 +148,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         /**
          * <p>The queried logs.</p>
          */
-        public Builder actionLogs(java.util.List < ActionLogs> actionLogs) {
+        public Builder actionLogs(java.util.List<ActionLogs> actionLogs) {
             this.actionLogs = actionLogs;
             return this;
         }

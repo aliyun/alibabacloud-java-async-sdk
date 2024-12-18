@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -111,7 +116,7 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
         private Boolean enableLakeCache;
 
         @com.aliyun.core.annotation.NameInMap("Instances")
-        private java.util.List < String > instances;
+        private java.util.List<String> instances;
 
         private Data(Builder builder) {
             this.capacity = builder.capacity;
@@ -160,7 +165,7 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
         /**
          * @return instances
          */
-        public java.util.List < String > getInstances() {
+        public java.util.List<String> getInstances() {
             return this.instances;
         }
 
@@ -169,7 +174,7 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
             private String DBClusterId; 
             private Long dataSize; 
             private Boolean enableLakeCache; 
-            private java.util.List < String > instances; 
+            private java.util.List<String> instances; 
 
             /**
              * Capacity.
@@ -206,7 +211,7 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
             /**
              * Instances.
              */
-            public Builder instances(java.util.List < String > instances) {
+            public Builder instances(java.util.List<String> instances) {
                 this.instances = instances;
                 return this;
             }

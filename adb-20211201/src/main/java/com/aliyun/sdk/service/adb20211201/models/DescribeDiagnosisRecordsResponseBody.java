@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Querys")
-    private java.util.List < Querys> querys;
+    private java.util.List<Querys> querys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     /**
      * @return querys
      */
-    public java.util.List < Querys> getQuerys() {
+    public java.util.List<Querys> getQuerys() {
         return this.querys;
     }
 
@@ -81,7 +86,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Querys> querys; 
+        private java.util.List<Querys> querys; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -115,7 +120,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         /**
          * <p>The queried SQL statements.</p>
          */
-        public Builder querys(java.util.List < Querys> querys) {
+        public Builder querys(java.util.List<Querys> querys) {
             this.querys = querys;
             return this;
         }
@@ -253,7 +258,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         private String processId;
 
         @com.aliyun.core.annotation.NameInMap("QueryProperties")
-        private java.util.List < QueryProperties> queryProperties;
+        private java.util.List<QueryProperties> queryProperties;
 
         @com.aliyun.core.annotation.NameInMap("QueueTime")
         private Long queueTime;
@@ -406,7 +411,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         /**
          * @return queryProperties
          */
-        public java.util.List < QueryProperties> getQueryProperties() {
+        public java.util.List<QueryProperties> getQueryProperties() {
             return this.queryProperties;
         }
 
@@ -519,7 +524,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             private String patternId; 
             private Long peakMemory; 
             private String processId; 
-            private java.util.List < QueryProperties> queryProperties; 
+            private java.util.List<QueryProperties> queryProperties; 
             private Long queueTime; 
             private String rcHost; 
             private Integer resourceCostRank; 
@@ -648,7 +653,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             /**
              * QueryProperties.
              */
-            public Builder queryProperties(java.util.List < QueryProperties> queryProperties) {
+            public Builder queryProperties(java.util.List<QueryProperties> queryProperties) {
                 this.queryProperties = queryProperties;
                 return this;
             }

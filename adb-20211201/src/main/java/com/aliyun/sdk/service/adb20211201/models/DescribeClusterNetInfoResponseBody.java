@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -184,7 +189,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
      */
     public static class AddressPorts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ports")
-        private java.util.List < Ports> ports;
+        private java.util.List<Ports> ports;
 
         private AddressPorts(Builder builder) {
             this.ports = builder.ports;
@@ -201,17 +206,17 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < Ports> getPorts() {
+        public java.util.List<Ports> getPorts() {
             return this.ports;
         }
 
         public static final class Builder {
-            private java.util.List < Ports> ports; 
+            private java.util.List<Ports> ports; 
 
             /**
              * ports.
              */
-            public Builder ports(java.util.List < Ports> ports) {
+            public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
                 return this;
             }
@@ -461,7 +466,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
-        private java.util.List < Address> address;
+        private java.util.List<Address> address;
 
         private Items(Builder builder) {
             this.address = builder.address;
@@ -478,17 +483,17 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         /**
          * @return address
          */
-        public java.util.List < Address> getAddress() {
+        public java.util.List<Address> getAddress() {
             return this.address;
         }
 
         public static final class Builder {
-            private java.util.List < Address> address; 
+            private java.util.List<Address> address; 
 
             /**
              * Address.
              */
-            public Builder address(java.util.List < Address> address) {
+            public Builder address(java.util.List<Address> address) {
                 this.address = address;
                 return this;
             }

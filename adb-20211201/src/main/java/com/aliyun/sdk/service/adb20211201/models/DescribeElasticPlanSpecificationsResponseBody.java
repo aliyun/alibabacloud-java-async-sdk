@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Specifications")
-    private java.util.List < String > specifications;
+    private java.util.List<String> specifications;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
     /**
      * @return specifications
      */
-    public java.util.List < String > getSpecifications() {
+    public java.util.List<String> getSpecifications() {
         return this.specifications;
     }
 
@@ -82,7 +87,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < String > specifications; 
+        private java.util.List<String> specifications; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         /**
          * <p>The queried resource specifications.</p>
          */
-        public Builder specifications(java.util.List < String > specifications) {
+        public Builder specifications(java.util.List<String> specifications) {
             this.specifications = specifications;
             return this;
         }

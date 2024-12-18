@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -227,7 +232,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -244,17 +249,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -421,7 +426,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
      */
     public static class TaskInfoStepList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StepList")
-        private java.util.List < StepList> stepList;
+        private java.util.List<StepList> stepList;
 
         private TaskInfoStepList(Builder builder) {
             this.stepList = builder.stepList;
@@ -438,17 +443,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * @return stepList
          */
-        public java.util.List < StepList> getStepList() {
+        public java.util.List<StepList> getStepList() {
             return this.stepList;
         }
 
         public static final class Builder {
-            private java.util.List < StepList> stepList; 
+            private java.util.List<StepList> stepList; 
 
             /**
              * StepList.
              */
-            public Builder stepList(java.util.List < StepList> stepList) {
+            public Builder stepList(java.util.List<StepList> stepList) {
                 this.stepList = stepList;
                 return this;
             }
@@ -1596,7 +1601,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBCluster")
-        private java.util.List < DBCluster> DBCluster;
+        private java.util.List<DBCluster> DBCluster;
 
         private Items(Builder builder) {
             this.DBCluster = builder.DBCluster;
@@ -1613,17 +1618,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * @return DBCluster
          */
-        public java.util.List < DBCluster> getDBCluster() {
+        public java.util.List<DBCluster> getDBCluster() {
             return this.DBCluster;
         }
 
         public static final class Builder {
-            private java.util.List < DBCluster> DBCluster; 
+            private java.util.List<DBCluster> DBCluster; 
 
             /**
              * DBCluster.
              */
-            public Builder DBCluster(java.util.List < DBCluster> DBCluster) {
+            public Builder DBCluster(java.util.List<DBCluster> DBCluster) {
                 this.DBCluster = DBCluster;
                 return this;
             }

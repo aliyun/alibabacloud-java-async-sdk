@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -207,7 +212,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         private String privilegeType;
 
         @com.aliyun.core.annotation.NameInMap("Privileges")
-        private java.util.List < String > privileges;
+        private java.util.List<String> privileges;
 
         private Result(Builder builder) {
             this.privilegeObject = builder.privilegeObject;
@@ -240,14 +245,14 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         /**
          * @return privileges
          */
-        public java.util.List < String > getPrivileges() {
+        public java.util.List<String> getPrivileges() {
             return this.privileges;
         }
 
         public static final class Builder {
             private PrivilegeObject privilegeObject; 
             private String privilegeType; 
-            private java.util.List < String > privileges; 
+            private java.util.List<String> privileges; 
 
             /**
              * <p>The objects on which the permission takes effect, including databases, tables, and columns. If Global is returned for the PrivilegeType parameter, an empty string is returned for this parameter.</p>
@@ -271,7 +276,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             /**
              * <p>The name of the permission, which is the same as the permission name returned by the <code>DescribeEnabledPrivileges</code> operation.</p>
              */
-            public Builder privileges(java.util.List < String > privileges) {
+            public Builder privileges(java.util.List<String> privileges) {
                 this.privileges = privileges;
                 return this;
             }
@@ -294,7 +299,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         private String marker;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("Truncated")
         private Boolean truncated;
@@ -323,7 +328,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -336,7 +341,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String marker; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Boolean truncated; 
 
             /**
@@ -353,7 +358,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
             /**
              * <p>The permissions.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -162,7 +167,7 @@ public class GetTableObjectsResponseBody extends TeaModel {
         private Long pageSize;
 
         @com.aliyun.core.annotation.NameInMap("TableSummaryModels")
-        private java.util.List < TableSummaryModel > tableSummaryModels;
+        private java.util.List<TableSummaryModel> tableSummaryModels;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
@@ -199,7 +204,7 @@ public class GetTableObjectsResponseBody extends TeaModel {
         /**
          * @return tableSummaryModels
          */
-        public java.util.List < TableSummaryModel > getTableSummaryModels() {
+        public java.util.List<TableSummaryModel> getTableSummaryModels() {
             return this.tableSummaryModels;
         }
 
@@ -213,7 +218,7 @@ public class GetTableObjectsResponseBody extends TeaModel {
         public static final class Builder {
             private Long pageNumber; 
             private Long pageSize; 
-            private java.util.List < TableSummaryModel > tableSummaryModels; 
+            private java.util.List<TableSummaryModel> tableSummaryModels; 
             private Long totalCount; 
 
             /**
@@ -246,7 +251,7 @@ public class GetTableObjectsResponseBody extends TeaModel {
             /**
              * <p>Details of the tables.</p>
              */
-            public Builder tableSummaryModels(java.util.List < TableSummaryModel > tableSummaryModels) {
+            public Builder tableSummaryModels(java.util.List<TableSummaryModel> tableSummaryModels) {
                 this.tableSummaryModels = tableSummaryModels;
                 return this;
             }

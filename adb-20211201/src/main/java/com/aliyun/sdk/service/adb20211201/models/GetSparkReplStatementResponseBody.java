@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -91,7 +96,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
         private String codeType;
 
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < String > columns;
+        private java.util.List<String> columns;
 
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -164,7 +169,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < String > getColumns() {
+        public java.util.List<String> getColumns() {
             return this.columns;
         }
 
@@ -215,7 +220,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             private String code; 
             private String codeState; 
             private String codeType; 
-            private java.util.List < String > columns; 
+            private java.util.List<String> columns; 
             private Long endTime; 
             private String error; 
             private String output; 
@@ -258,7 +263,7 @@ public class GetSparkReplStatementResponseBody extends TeaModel {
             /**
              * Columns.
              */
-            public Builder columns(java.util.List < String > columns) {
+            public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
                 return this;
             }

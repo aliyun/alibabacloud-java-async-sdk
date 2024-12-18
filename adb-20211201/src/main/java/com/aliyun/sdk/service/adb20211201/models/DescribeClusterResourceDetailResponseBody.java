@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -452,7 +457,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         private String freeComputeResource;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupList")
-        private java.util.List < ResourceGroupList> resourceGroupList;
+        private java.util.List<ResourceGroupList> resourceGroupList;
 
         @com.aliyun.core.annotation.NameInMap("StorageResource")
         private String storageResource;
@@ -497,7 +502,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         /**
          * @return resourceGroupList
          */
-        public java.util.List < ResourceGroupList> getResourceGroupList() {
+        public java.util.List<ResourceGroupList> getResourceGroupList() {
             return this.resourceGroupList;
         }
 
@@ -512,7 +517,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             private String computeResource; 
             private String DBClusterId; 
             private String freeComputeResource; 
-            private java.util.List < ResourceGroupList> resourceGroupList; 
+            private java.util.List<ResourceGroupList> resourceGroupList; 
             private String storageResource; 
 
             /**
@@ -551,7 +556,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             /**
              * <p>The resource groups.</p>
              */
-            public Builder resourceGroupList(java.util.List < ResourceGroupList> resourceGroupList) {
+            public Builder resourceGroupList(java.util.List<ResourceGroupList> resourceGroupList) {
                 this.resourceGroupList = resourceGroupList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("PatternDetails")
-    private java.util.List < PatternDetails> patternDetails;
+    private java.util.List<PatternDetails> patternDetails;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     /**
      * @return patternDetails
      */
-    public java.util.List < PatternDetails> getPatternDetails() {
+    public java.util.List<PatternDetails> getPatternDetails() {
         return this.patternDetails;
     }
 
@@ -93,7 +98,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < PatternDetails> patternDetails; 
+        private java.util.List<PatternDetails> patternDetails; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -130,7 +135,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         /**
          * <p>The queried SQL patterns.</p>
          */
-        public Builder patternDetails(java.util.List < PatternDetails> patternDetails) {
+        public Builder patternDetails(java.util.List<PatternDetails> patternDetails) {
             this.patternDetails = patternDetails;
             return this;
         }

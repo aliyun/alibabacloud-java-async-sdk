@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -162,7 +167,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         private Boolean available;
 
         @com.aliyun.core.annotation.NameInMap("CuOptions")
-        private java.util.List < Long > cuOptions;
+        private java.util.List<Long> cuOptions;
 
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -207,7 +212,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         /**
          * @return cuOptions
          */
-        public java.util.List < Long > getCuOptions() {
+        public java.util.List<Long> getCuOptions() {
             return this.cuOptions;
         }
 
@@ -248,7 +253,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean available; 
-            private java.util.List < Long > cuOptions; 
+            private java.util.List<Long> cuOptions; 
             private String groupName; 
             private String groupType; 
             private Integer leftComputeResource; 
@@ -273,7 +278,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             /**
              * CuOptions.
              */
-            public Builder cuOptions(java.util.List < Long > cuOptions) {
+            public Builder cuOptions(java.util.List<Long> cuOptions) {
                 this.cuOptions = cuOptions;
                 return this;
             }
@@ -363,7 +368,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroups")
-        private java.util.List < ResourceGroups> resourceGroups;
+        private java.util.List<ResourceGroups> resourceGroups;
 
         @com.aliyun.core.annotation.NameInMap("Step")
         private Long step;
@@ -384,7 +389,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         /**
          * @return resourceGroups
          */
-        public java.util.List < ResourceGroups> getResourceGroups() {
+        public java.util.List<ResourceGroups> getResourceGroups() {
             return this.resourceGroups;
         }
 
@@ -396,13 +401,13 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ResourceGroups> resourceGroups; 
+            private java.util.List<ResourceGroups> resourceGroups; 
             private Long step; 
 
             /**
              * <p>The queried resource groups.</p>
              */
-            public Builder resourceGroups(java.util.List < ResourceGroups> resourceGroups) {
+            public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
                 this.resourceGroups = resourceGroups;
                 return this;
             }

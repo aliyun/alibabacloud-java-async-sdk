@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class OperatorNode extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("children")
-    private java.util.List < OperatorNode > children;
+    private java.util.List<OperatorNode> children;
 
     @com.aliyun.core.annotation.NameInMap("id")
     private Integer id;
@@ -58,7 +63,7 @@ public class OperatorNode extends TeaModel {
     /**
      * @return children
      */
-    public java.util.List < OperatorNode > getChildren() {
+    public java.util.List<OperatorNode> getChildren() {
         return this.children;
     }
 
@@ -112,7 +117,7 @@ public class OperatorNode extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OperatorNode > children; 
+        private java.util.List<OperatorNode> children; 
         private Integer id; 
         private Integer levelWidth; 
         private Integer nodeDepth; 
@@ -124,7 +129,7 @@ public class OperatorNode extends TeaModel {
         /**
          * children.
          */
-        public Builder children(java.util.List < OperatorNode > children) {
+        public Builder children(java.util.List<OperatorNode> children) {
             this.children = children;
             return this;
         }

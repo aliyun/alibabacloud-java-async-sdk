@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Schemas")
-    private java.util.List < String > schemas;
+    private java.util.List<String> schemas;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -56,7 +61,7 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
     /**
      * @return schemas
      */
-    public java.util.List < String > getSchemas() {
+    public java.util.List<String> getSchemas() {
         return this.schemas;
     }
 
@@ -70,7 +75,7 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
     public static final class Builder {
         private String message; 
         private String requestId; 
-        private java.util.List < String > schemas; 
+        private java.util.List<String> schemas; 
         private Boolean success; 
 
         /**
@@ -102,7 +107,7 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
         /**
          * <p>The queried databases.</p>
          */
-        public Builder schemas(java.util.List < String > schemas) {
+        public Builder schemas(java.util.List<String> schemas) {
             this.schemas = schemas;
             return this;
         }

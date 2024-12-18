@@ -836,6 +836,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExistRunningSQLEngineResponse> existRunningSQLEngine(ExistRunningSQLEngineRequest request);
 
     /**
+     * @param request the request parameters of GetCreateTableSQL  GetCreateTableSQLRequest
+     * @return GetCreateTableSQLResponse
+     */
+    CompletableFuture<GetCreateTableSQLResponse> getCreateTableSQL(GetCreateTableSQLRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     private Double cpuUtilization;
 
     @com.aliyun.core.annotation.NameInMap("DiagnosisInfoList")
-    private java.util.List < Adb4MysqlSparkDiagnosisInfo > diagnosisInfoList;
+    private java.util.List<Adb4MysqlSparkDiagnosisInfo> diagnosisInfoList;
 
     @com.aliyun.core.annotation.NameInMap("DurationInMillis")
     private Long durationInMillis;
@@ -99,7 +104,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     /**
      * @return diagnosisInfoList
      */
-    public java.util.List < Adb4MysqlSparkDiagnosisInfo > getDiagnosisInfoList() {
+    public java.util.List<Adb4MysqlSparkDiagnosisInfo> getDiagnosisInfoList() {
         return this.diagnosisInfoList;
     }
 
@@ -170,7 +175,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String appId; 
         private Double cpuUtilization; 
-        private java.util.List < Adb4MysqlSparkDiagnosisInfo > diagnosisInfoList; 
+        private java.util.List<Adb4MysqlSparkDiagnosisInfo> diagnosisInfoList; 
         private Long durationInMillis; 
         private Long JVMGcCostInMillis; 
         private Long peakMemoryInByte; 
@@ -208,7 +213,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         /**
          * DiagnosisInfoList.
          */
-        public Builder diagnosisInfoList(java.util.List < Adb4MysqlSparkDiagnosisInfo > diagnosisInfoList) {
+        public Builder diagnosisInfoList(java.util.List<Adb4MysqlSparkDiagnosisInfo> diagnosisInfoList) {
             this.diagnosisInfoList = diagnosisInfoList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -97,7 +102,7 @@ public class CreateDBClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsedTime")
@@ -303,7 +308,7 @@ public class CreateDBClusterRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -356,7 +361,7 @@ public class CreateDBClusterRequest extends Request {
         private String restoreType; 
         private String sourceDbClusterId; 
         private String storageResource; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String usedTime; 
         private String VPCId; 
         private String vSwitchId; 
@@ -664,7 +669,7 @@ public class CreateDBClusterRequest extends Request {
         /**
          * <p>The tags to add to the cluster.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

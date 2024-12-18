@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("Tables")
-    private java.util.List < String > tables;
+    private java.util.List<String> tables;
 
     private DescribeAdbMySqlTablesResponseBody(Builder builder) {
         this.message = builder.message;
@@ -74,7 +79,7 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
     /**
      * @return tables
      */
-    public java.util.List < String > getTables() {
+    public java.util.List<String> getTables() {
         return this.tables;
     }
 
@@ -83,7 +88,7 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         private String requestId; 
         private String schema; 
         private Boolean success; 
-        private java.util.List < String > tables; 
+        private java.util.List<String> tables; 
 
         /**
          * <p>The message returned for the operation. Valid values:</p>
@@ -140,7 +145,7 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
         /**
          * <p>The names of tables.</p>
          */
-        public Builder tables(java.util.List < String > tables) {
+        public Builder tables(java.util.List<String> tables) {
             this.tables = tables;
             return this;
         }

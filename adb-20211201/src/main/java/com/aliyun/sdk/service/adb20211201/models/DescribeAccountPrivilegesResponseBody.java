@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAccountPrivilegesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -46,7 +51,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,7 +84,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         /**
          * <p>Details of the permissions.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -276,7 +281,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         private String privilegeType;
 
         @com.aliyun.core.annotation.NameInMap("Privileges")
-        private java.util.List < String > privileges;
+        private java.util.List<String> privileges;
 
         private Data(Builder builder) {
             this.privilegeObject = builder.privilegeObject;
@@ -309,14 +314,14 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         /**
          * @return privileges
          */
-        public java.util.List < String > getPrivileges() {
+        public java.util.List<String> getPrivileges() {
             return this.privileges;
         }
 
         public static final class Builder {
             private PrivilegeObject privilegeObject; 
             private String privilegeType; 
-            private java.util.List < String > privileges; 
+            private java.util.List<String> privileges; 
 
             /**
              * <p>The objects on which the permission takes effect, including databases, tables, columns, and additional descriptions.</p>
@@ -340,7 +345,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
             /**
              * <p>The name of the permission. You can call the <code>DescribeEnabledPrivileges</code> operation to query the name of the permission.</p>
              */
-            public Builder privileges(java.util.List < String > privileges) {
+            public Builder privileges(java.util.List<String> privileges) {
                 this.privileges = privileges;
                 return this;
             }

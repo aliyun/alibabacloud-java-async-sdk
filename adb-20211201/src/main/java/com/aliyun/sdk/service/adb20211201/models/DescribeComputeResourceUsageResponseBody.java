@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -108,7 +113,7 @@ public class DescribeComputeResourceUsageResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private AcuInfo(Builder builder) {
             this.name = builder.name;
@@ -133,13 +138,13 @@ public class DescribeComputeResourceUsageResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
              * <p>The resource usage metric. Valid values:</p>
@@ -160,7 +165,7 @@ public class DescribeComputeResourceUsageResponseBody extends TeaModel {
             /**
              * <p>The values of the metric at specific points in time.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -180,7 +185,7 @@ public class DescribeComputeResourceUsageResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcuInfo")
-        private java.util.List < AcuInfo> acuInfo;
+        private java.util.List<AcuInfo> acuInfo;
 
         @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
@@ -217,7 +222,7 @@ public class DescribeComputeResourceUsageResponseBody extends TeaModel {
         /**
          * @return acuInfo
          */
-        public java.util.List < AcuInfo> getAcuInfo() {
+        public java.util.List<AcuInfo> getAcuInfo() {
             return this.acuInfo;
         }
 
@@ -257,7 +262,7 @@ public class DescribeComputeResourceUsageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AcuInfo> acuInfo; 
+            private java.util.List<AcuInfo> acuInfo; 
             private String DBClusterId; 
             private String endTime; 
             private String resourceGroupName; 
@@ -267,7 +272,7 @@ public class DescribeComputeResourceUsageResponseBody extends TeaModel {
             /**
              * <p>The AnalyticDB compute unit (ACU) usage of the cluster.</p>
              */
-            public Builder acuInfo(java.util.List < AcuInfo> acuInfo) {
+            public Builder acuInfo(java.util.List<AcuInfo> acuInfo) {
                 this.acuInfo = acuInfo;
                 return this;
             }

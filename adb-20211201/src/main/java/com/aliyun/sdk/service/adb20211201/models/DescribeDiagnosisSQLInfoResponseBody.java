@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StageInfos")
-    private java.util.List < StageInfos> stageInfos;
+    private java.util.List<StageInfos> stageInfos;
 
     private DescribeDiagnosisSQLInfoResponseBody(Builder builder) {
         this.diagnosisSQLInfo = builder.diagnosisSQLInfo;
@@ -52,14 +57,14 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     /**
      * @return stageInfos
      */
-    public java.util.List < StageInfos> getStageInfos() {
+    public java.util.List<StageInfos> getStageInfos() {
         return this.stageInfos;
     }
 
     public static final class Builder {
         private String diagnosisSQLInfo; 
         private String requestId; 
-        private java.util.List < StageInfos> stageInfos; 
+        private java.util.List<StageInfos> stageInfos; 
 
         /**
          * <p>The queried execution information, including the SQL statement, statistics, execution plan, and operator information.</p>
@@ -83,7 +88,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         /**
          * <p>The queried execution information by stage.</p>
          */
-        public Builder stageInfos(java.util.List < StageInfos> stageInfos) {
+        public Builder stageInfos(java.util.List<StageInfos> stageInfos) {
             this.stageInfos = stageInfos;
             return this;
         }
