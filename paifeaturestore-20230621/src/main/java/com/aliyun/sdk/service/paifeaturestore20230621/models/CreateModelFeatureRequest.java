@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class CreateModelFeatureRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Features")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Features> features;
+    private java.util.List<Features> features;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LabelPriorityLevel")
@@ -46,7 +51,7 @@ public class CreateModelFeatureRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SequenceFeatureViewIds")
-    private java.util.List < String > sequenceFeatureViewIds;
+    private java.util.List<String> sequenceFeatureViewIds;
 
     private CreateModelFeatureRequest(Builder builder) {
         super(builder);
@@ -90,7 +95,7 @@ public class CreateModelFeatureRequest extends Request {
     /**
      * @return features
      */
-    public java.util.List < Features> getFeatures() {
+    public java.util.List<Features> getFeatures() {
         return this.features;
     }
 
@@ -125,19 +130,19 @@ public class CreateModelFeatureRequest extends Request {
     /**
      * @return sequenceFeatureViewIds
      */
-    public java.util.List < String > getSequenceFeatureViewIds() {
+    public java.util.List<String> getSequenceFeatureViewIds() {
         return this.sequenceFeatureViewIds;
     }
 
     public static final class Builder extends Request.Builder<CreateModelFeatureRequest, Builder> {
         private String instanceId; 
         private String regionId; 
-        private java.util.List < Features> features; 
+        private java.util.List<Features> features; 
         private Long labelPriorityLevel; 
         private String labelTableId; 
         private String name; 
         private String projectId; 
-        private java.util.List < String > sequenceFeatureViewIds; 
+        private java.util.List<String> sequenceFeatureViewIds; 
 
         private Builder() {
             super();
@@ -176,7 +181,7 @@ public class CreateModelFeatureRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder features(java.util.List < Features> features) {
+        public Builder features(java.util.List<Features> features) {
             this.putBodyParameter("Features", features);
             this.features = features;
             return this;
@@ -230,7 +235,7 @@ public class CreateModelFeatureRequest extends Request {
         /**
          * SequenceFeatureViewIds.
          */
-        public Builder sequenceFeatureViewIds(java.util.List < String > sequenceFeatureViewIds) {
+        public Builder sequenceFeatureViewIds(java.util.List<String> sequenceFeatureViewIds) {
             this.putBodyParameter("SequenceFeatureViewIds", sequenceFeatureViewIds);
             this.sequenceFeatureViewIds = sequenceFeatureViewIds;
             return this;

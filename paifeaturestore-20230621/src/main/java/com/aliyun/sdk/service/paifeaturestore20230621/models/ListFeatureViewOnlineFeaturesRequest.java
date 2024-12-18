@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JoinIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > joinIds;
+    private java.util.List<String> joinIds;
 
     private ListFeatureViewOnlineFeaturesRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
     /**
      * @return joinIds
      */
-    public java.util.List < String > getJoinIds() {
+    public java.util.List<String> getJoinIds() {
         return this.joinIds;
     }
 
@@ -84,7 +89,7 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
         private String regionId; 
         private String instanceId; 
         private String featureViewId; 
-        private java.util.List < String > joinIds; 
+        private java.util.List<String> joinIds; 
 
         private Builder() {
             super();
@@ -134,7 +139,7 @@ public class ListFeatureViewOnlineFeaturesRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder joinIds(java.util.List < String > joinIds) {
+        public Builder joinIds(java.util.List<String> joinIds) {
             String joinIdsShrink = shrink(joinIds, "JoinIds", "json");
             this.putQueryParameter("JoinIds", joinIdsShrink);
             this.joinIds = joinIds;

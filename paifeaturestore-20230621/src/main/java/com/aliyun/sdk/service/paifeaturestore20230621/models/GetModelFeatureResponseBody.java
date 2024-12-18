@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
     private String exportTrainingSetTableScript;
 
     @com.aliyun.core.annotation.NameInMap("Features")
-    private java.util.List < Features> features;
+    private java.util.List<Features> features;
 
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
@@ -93,7 +98,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
     /**
      * @return features
      */
-    public java.util.List < Features> getFeatures() {
+    public java.util.List<Features> getFeatures() {
         return this.features;
     }
 
@@ -190,7 +195,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
 
     public static final class Builder {
         private String exportTrainingSetTableScript; 
-        private java.util.List < Features> features; 
+        private java.util.List<Features> features; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private Long labelPriorityLevel; 
@@ -216,7 +221,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
         /**
          * Features.
          */
-        public Builder features(java.util.List < Features> features) {
+        public Builder features(java.util.List<Features> features) {
             this.features = features;
             return this;
         }
@@ -643,10 +648,10 @@ public class GetModelFeatureResponseBody extends TeaModel {
      */
     public static class Relations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domains")
-        private java.util.List < Domains> domains;
+        private java.util.List<Domains> domains;
 
         @com.aliyun.core.annotation.NameInMap("Links")
-        private java.util.List < Links> links;
+        private java.util.List<Links> links;
 
         private Relations(Builder builder) {
             this.domains = builder.domains;
@@ -664,25 +669,25 @@ public class GetModelFeatureResponseBody extends TeaModel {
         /**
          * @return domains
          */
-        public java.util.List < Domains> getDomains() {
+        public java.util.List<Domains> getDomains() {
             return this.domains;
         }
 
         /**
          * @return links
          */
-        public java.util.List < Links> getLinks() {
+        public java.util.List<Links> getLinks() {
             return this.links;
         }
 
         public static final class Builder {
-            private java.util.List < Domains> domains; 
-            private java.util.List < Links> links; 
+            private java.util.List<Domains> domains; 
+            private java.util.List<Links> links; 
 
             /**
              * Domains.
              */
-            public Builder domains(java.util.List < Domains> domains) {
+            public Builder domains(java.util.List<Domains> domains) {
                 this.domains = domains;
                 return this;
             }
@@ -690,7 +695,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
             /**
              * Links.
              */
-            public Builder links(java.util.List < Links> links) {
+            public Builder links(java.util.List<Links> links) {
                 this.links = links;
                 return this;
             }

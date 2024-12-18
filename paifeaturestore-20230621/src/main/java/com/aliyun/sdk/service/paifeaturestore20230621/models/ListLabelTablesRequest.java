@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListLabelTablesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LabelTableIds")
-    private java.util.List < String > labelTableIds;
+    private java.util.List<String> labelTableIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -47,7 +52,6 @@ public class ListLabelTablesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
     @com.aliyun.core.annotation.Query
@@ -98,7 +102,7 @@ public class ListLabelTablesRequest extends Request {
     /**
      * @return labelTableIds
      */
-    public java.util.List < String > getLabelTableIds() {
+    public java.util.List<String> getLabelTableIds() {
         return this.labelTableIds;
     }
 
@@ -154,7 +158,7 @@ public class ListLabelTablesRequest extends Request {
     public static final class Builder extends Request.Builder<ListLabelTablesRequest, Builder> {
         private String instanceId; 
         private String regionId; 
-        private java.util.List < String > labelTableIds; 
+        private java.util.List<String> labelTableIds; 
         private String name; 
         private String order; 
         private String owner; 
@@ -205,7 +209,7 @@ public class ListLabelTablesRequest extends Request {
         /**
          * LabelTableIds.
          */
-        public Builder labelTableIds(java.util.List < String > labelTableIds) {
+        public Builder labelTableIds(java.util.List<String> labelTableIds) {
             String labelTableIdsShrink = shrink(labelTableIds, "LabelTableIds", "simple");
             this.putQueryParameter("LabelTableIds", labelTableIdsShrink);
             this.labelTableIds = labelTableIds;
@@ -258,10 +262,7 @@ public class ListLabelTablesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>project1</p>
+         * ProjectId.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class ListFeatureViewsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FeatureViewIds")
-    private java.util.List < String > featureViewIds;
+    private java.util.List<String> featureViewIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -51,7 +56,6 @@ public class ListFeatureViewsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
     @com.aliyun.core.annotation.Query
@@ -120,7 +124,7 @@ public class ListFeatureViewsRequest extends Request {
     /**
      * @return featureViewIds
      */
-    public java.util.List < String > getFeatureViewIds() {
+    public java.util.List<String> getFeatureViewIds() {
         return this.featureViewIds;
     }
 
@@ -191,7 +195,7 @@ public class ListFeatureViewsRequest extends Request {
         private String instanceId; 
         private String regionId; 
         private String featureName; 
-        private java.util.List < String > featureViewIds; 
+        private java.util.List<String> featureViewIds; 
         private String name; 
         private String order; 
         private String owner; 
@@ -256,7 +260,7 @@ public class ListFeatureViewsRequest extends Request {
         /**
          * FeatureViewIds.
          */
-        public Builder featureViewIds(java.util.List < String > featureViewIds) {
+        public Builder featureViewIds(java.util.List<String> featureViewIds) {
             String featureViewIdsShrink = shrink(featureViewIds, "FeatureViewIds", "simple");
             this.putQueryParameter("FeatureViewIds", featureViewIdsShrink);
             this.featureViewIds = featureViewIds;
@@ -309,10 +313,7 @@ public class ListFeatureViewsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
+         * ProjectId.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

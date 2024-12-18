@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,20 +33,20 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LookupFeatures")
-    private java.util.List < LookupFeatures> lookupFeatures;
+    private java.util.List<LookupFeatures> lookupFeatures;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RawFeatures")
-    private java.util.List < RawFeatures> rawFeatures;
+    private java.util.List<RawFeatures> rawFeatures;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Reserves")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > reserves;
+    private java.util.List<String> reserves;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SequenceFeatures")
-    private java.util.List < SequenceFeatures> sequenceFeatures;
+    private java.util.List<SequenceFeatures> sequenceFeatures;
 
     private UpdateModelFeatureFGFeatureRequest(Builder builder) {
         super(builder);
@@ -91,28 +96,28 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
     /**
      * @return lookupFeatures
      */
-    public java.util.List < LookupFeatures> getLookupFeatures() {
+    public java.util.List<LookupFeatures> getLookupFeatures() {
         return this.lookupFeatures;
     }
 
     /**
      * @return rawFeatures
      */
-    public java.util.List < RawFeatures> getRawFeatures() {
+    public java.util.List<RawFeatures> getRawFeatures() {
         return this.rawFeatures;
     }
 
     /**
      * @return reserves
      */
-    public java.util.List < String > getReserves() {
+    public java.util.List<String> getReserves() {
         return this.reserves;
     }
 
     /**
      * @return sequenceFeatures
      */
-    public java.util.List < SequenceFeatures> getSequenceFeatures() {
+    public java.util.List<SequenceFeatures> getSequenceFeatures() {
         return this.sequenceFeatures;
     }
 
@@ -120,10 +125,10 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         private String instanceId; 
         private String modelFeatureId; 
         private String regionId; 
-        private java.util.List < LookupFeatures> lookupFeatures; 
-        private java.util.List < RawFeatures> rawFeatures; 
-        private java.util.List < String > reserves; 
-        private java.util.List < SequenceFeatures> sequenceFeatures; 
+        private java.util.List<LookupFeatures> lookupFeatures; 
+        private java.util.List<RawFeatures> rawFeatures; 
+        private java.util.List<String> reserves; 
+        private java.util.List<SequenceFeatures> sequenceFeatures; 
 
         private Builder() {
             super();
@@ -176,7 +181,7 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         /**
          * LookupFeatures.
          */
-        public Builder lookupFeatures(java.util.List < LookupFeatures> lookupFeatures) {
+        public Builder lookupFeatures(java.util.List<LookupFeatures> lookupFeatures) {
             this.putBodyParameter("LookupFeatures", lookupFeatures);
             this.lookupFeatures = lookupFeatures;
             return this;
@@ -185,7 +190,7 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         /**
          * RawFeatures.
          */
-        public Builder rawFeatures(java.util.List < RawFeatures> rawFeatures) {
+        public Builder rawFeatures(java.util.List<RawFeatures> rawFeatures) {
             this.putBodyParameter("RawFeatures", rawFeatures);
             this.rawFeatures = rawFeatures;
             return this;
@@ -194,7 +199,7 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder reserves(java.util.List < String > reserves) {
+        public Builder reserves(java.util.List<String> reserves) {
             this.putBodyParameter("Reserves", reserves);
             this.reserves = reserves;
             return this;
@@ -203,7 +208,7 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         /**
          * SequenceFeatures.
          */
-        public Builder sequenceFeatures(java.util.List < SequenceFeatures> sequenceFeatures) {
+        public Builder sequenceFeatures(java.util.List<SequenceFeatures> sequenceFeatures) {
             this.putBodyParameter("SequenceFeatures", sequenceFeatures);
             this.sequenceFeatures = sequenceFeatures;
             return this;
@@ -777,7 +782,7 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         private Long sequenceLength;
 
         @com.aliyun.core.annotation.NameInMap("SubFeatures")
-        private java.util.List < SubFeatures> subFeatures;
+        private java.util.List<SubFeatures> subFeatures;
 
         private SequenceFeatures(Builder builder) {
             this.attributeDelim = builder.attributeDelim;
@@ -826,7 +831,7 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         /**
          * @return subFeatures
          */
-        public java.util.List < SubFeatures> getSubFeatures() {
+        public java.util.List<SubFeatures> getSubFeatures() {
             return this.subFeatures;
         }
 
@@ -835,7 +840,7 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             private String featureName; 
             private String sequenceDelim; 
             private Long sequenceLength; 
-            private java.util.List < SubFeatures> subFeatures; 
+            private java.util.List<SubFeatures> subFeatures; 
 
             /**
              * <p>This parameter is required.</p>
@@ -884,7 +889,7 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             /**
              * SubFeatures.
              */
-            public Builder subFeatures(java.util.List < SubFeatures> subFeatures) {
+            public Builder subFeatures(java.util.List<SubFeatures> subFeatures) {
                 this.subFeatures = subFeatures;
                 return this;
             }

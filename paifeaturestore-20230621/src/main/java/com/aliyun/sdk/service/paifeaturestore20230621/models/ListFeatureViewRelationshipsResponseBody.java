@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Relationships")
-    private java.util.List < Relationships> relationships;
+    private java.util.List<Relationships> relationships;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
     /**
      * @return relationships
      */
-    public java.util.List < Relationships> getRelationships() {
+    public java.util.List<Relationships> getRelationships() {
         return this.relationships;
     }
 
@@ -46,13 +51,13 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Relationships> relationships; 
+        private java.util.List<Relationships> relationships; 
         private String requestId; 
 
         /**
          * Relationships.
          */
-        public Builder relationships(java.util.List < Relationships> relationships) {
+        public Builder relationships(java.util.List<Relationships> relationships) {
             this.relationships = relationships;
             return this;
         }
@@ -149,7 +154,7 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
         private String featureViewName;
 
         @com.aliyun.core.annotation.NameInMap("Models")
-        private java.util.List < Models> models;
+        private java.util.List<Models> models;
 
         @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
@@ -178,7 +183,7 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
         /**
          * @return models
          */
-        public java.util.List < Models> getModels() {
+        public java.util.List<Models> getModels() {
             return this.models;
         }
 
@@ -191,7 +196,7 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String featureViewName; 
-            private java.util.List < Models> models; 
+            private java.util.List<Models> models; 
             private String projectName; 
 
             /**
@@ -205,7 +210,7 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
             /**
              * Models.
              */
-            public Builder models(java.util.List < Models> models) {
+            public Builder models(java.util.List<Models> models) {
                 this.models = models;
                 return this;
             }

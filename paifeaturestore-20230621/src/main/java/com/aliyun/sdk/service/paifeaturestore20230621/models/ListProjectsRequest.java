@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class ListProjectsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectIds")
-    private java.util.List < String > projectIds;
+    private java.util.List<String> projectIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
@@ -132,7 +137,7 @@ public class ListProjectsRequest extends Request {
     /**
      * @return projectIds
      */
-    public java.util.List < String > getProjectIds() {
+    public java.util.List<String> getProjectIds() {
         return this.projectIds;
     }
 
@@ -158,7 +163,7 @@ public class ListProjectsRequest extends Request {
         private String owner; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > projectIds; 
+        private java.util.List<String> projectIds; 
         private String sortBy; 
         private String workspaceId; 
 
@@ -249,7 +254,7 @@ public class ListProjectsRequest extends Request {
         /**
          * ProjectIds.
          */
-        public Builder projectIds(java.util.List < String > projectIds) {
+        public Builder projectIds(java.util.List<String> projectIds) {
             String projectIdsShrink = shrink(projectIds, "ProjectIds", "simple");
             this.putQueryParameter("ProjectIds", projectIdsShrink);
             this.projectIds = projectIds;

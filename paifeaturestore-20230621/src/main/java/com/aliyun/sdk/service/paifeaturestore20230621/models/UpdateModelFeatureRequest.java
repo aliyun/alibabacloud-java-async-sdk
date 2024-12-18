@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,11 @@ public class UpdateModelFeatureRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Features")
-    private java.util.List < Features> features;
+    private java.util.List<Features> features;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelPriorityLevel")
+    private Long labelPriorityLevel;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LabelTableId")
@@ -36,7 +45,7 @@ public class UpdateModelFeatureRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SequenceFeatureViewIds")
-    private java.util.List < String > sequenceFeatureViewIds;
+    private java.util.List<String> sequenceFeatureViewIds;
 
     private UpdateModelFeatureRequest(Builder builder) {
         super(builder);
@@ -44,6 +53,7 @@ public class UpdateModelFeatureRequest extends Request {
         this.modelFeatureId = builder.modelFeatureId;
         this.regionId = builder.regionId;
         this.features = builder.features;
+        this.labelPriorityLevel = builder.labelPriorityLevel;
         this.labelTableId = builder.labelTableId;
         this.sequenceFeatureViewIds = builder.sequenceFeatureViewIds;
     }
@@ -85,8 +95,15 @@ public class UpdateModelFeatureRequest extends Request {
     /**
      * @return features
      */
-    public java.util.List < Features> getFeatures() {
+    public java.util.List<Features> getFeatures() {
         return this.features;
+    }
+
+    /**
+     * @return labelPriorityLevel
+     */
+    public Long getLabelPriorityLevel() {
+        return this.labelPriorityLevel;
     }
 
     /**
@@ -99,7 +116,7 @@ public class UpdateModelFeatureRequest extends Request {
     /**
      * @return sequenceFeatureViewIds
      */
-    public java.util.List < String > getSequenceFeatureViewIds() {
+    public java.util.List<String> getSequenceFeatureViewIds() {
         return this.sequenceFeatureViewIds;
     }
 
@@ -107,9 +124,10 @@ public class UpdateModelFeatureRequest extends Request {
         private String instanceId; 
         private String modelFeatureId; 
         private String regionId; 
-        private java.util.List < Features> features; 
+        private java.util.List<Features> features; 
+        private Long labelPriorityLevel; 
         private String labelTableId; 
-        private java.util.List < String > sequenceFeatureViewIds; 
+        private java.util.List<String> sequenceFeatureViewIds; 
 
         private Builder() {
             super();
@@ -121,6 +139,7 @@ public class UpdateModelFeatureRequest extends Request {
             this.modelFeatureId = request.modelFeatureId;
             this.regionId = request.regionId;
             this.features = request.features;
+            this.labelPriorityLevel = request.labelPriorityLevel;
             this.labelTableId = request.labelTableId;
             this.sequenceFeatureViewIds = request.sequenceFeatureViewIds;
         } 
@@ -161,9 +180,18 @@ public class UpdateModelFeatureRequest extends Request {
         /**
          * Features.
          */
-        public Builder features(java.util.List < Features> features) {
+        public Builder features(java.util.List<Features> features) {
             this.putBodyParameter("Features", features);
             this.features = features;
+            return this;
+        }
+
+        /**
+         * LabelPriorityLevel.
+         */
+        public Builder labelPriorityLevel(Long labelPriorityLevel) {
+            this.putBodyParameter("LabelPriorityLevel", labelPriorityLevel);
+            this.labelPriorityLevel = labelPriorityLevel;
             return this;
         }
 
@@ -179,7 +207,7 @@ public class UpdateModelFeatureRequest extends Request {
         /**
          * SequenceFeatureViewIds.
          */
-        public Builder sequenceFeatureViewIds(java.util.List < String > sequenceFeatureViewIds) {
+        public Builder sequenceFeatureViewIds(java.util.List<String> sequenceFeatureViewIds) {
             this.putBodyParameter("SequenceFeatureViewIds", sequenceFeatureViewIds);
             this.sequenceFeatureViewIds = sequenceFeatureViewIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFeatureEntitiesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FeatureEntities")
-    private java.util.List < FeatureEntities> featureEntities;
+    private java.util.List<FeatureEntities> featureEntities;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
     /**
      * @return featureEntities
      */
-    public java.util.List < FeatureEntities> getFeatureEntities() {
+    public java.util.List<FeatureEntities> getFeatureEntities() {
         return this.featureEntities;
     }
 
@@ -57,14 +62,14 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FeatureEntities> featureEntities; 
+        private java.util.List<FeatureEntities> featureEntities; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * FeatureEntities.
          */
-        public Builder featureEntities(java.util.List < FeatureEntities> featureEntities) {
+        public Builder featureEntities(java.util.List<FeatureEntities> featureEntities) {
             this.featureEntities = featureEntities;
             return this;
         }

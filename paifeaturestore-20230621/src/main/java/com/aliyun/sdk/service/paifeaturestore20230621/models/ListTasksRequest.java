@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,6 @@ public class ListTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
     @com.aliyun.core.annotation.Query
@@ -48,7 +52,7 @@ public class ListTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskIds")
-    private java.util.List < String > taskIds;
+    private java.util.List<String> taskIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -140,7 +144,7 @@ public class ListTasksRequest extends Request {
     /**
      * @return taskIds
      */
-    public java.util.List < String > getTaskIds() {
+    public java.util.List<String> getTaskIds() {
         return this.taskIds;
     }
 
@@ -160,7 +164,7 @@ public class ListTasksRequest extends Request {
         private Integer pageSize; 
         private String projectId; 
         private String status; 
-        private java.util.List < String > taskIds; 
+        private java.util.List<String> taskIds; 
         private String type; 
 
         private Builder() {
@@ -239,10 +243,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
+         * ProjectId.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -262,7 +263,7 @@ public class ListTasksRequest extends Request {
         /**
          * TaskIds.
          */
-        public Builder taskIds(java.util.List < String > taskIds) {
+        public Builder taskIds(java.util.List<String> taskIds) {
             String taskIdsShrink = shrink(taskIds, "TaskIds", "simple");
             this.putQueryParameter("TaskIds", taskIdsShrink);
             this.taskIds = taskIds;

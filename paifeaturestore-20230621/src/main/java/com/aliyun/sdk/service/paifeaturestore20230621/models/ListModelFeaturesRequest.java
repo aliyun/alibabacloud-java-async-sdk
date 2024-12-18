@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListModelFeaturesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModelFeatureIds")
-    private java.util.List < String > modelFeatureIds;
+    private java.util.List<String> modelFeatureIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -47,7 +52,6 @@ public class ListModelFeaturesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
     @com.aliyun.core.annotation.Query
@@ -98,7 +102,7 @@ public class ListModelFeaturesRequest extends Request {
     /**
      * @return modelFeatureIds
      */
-    public java.util.List < String > getModelFeatureIds() {
+    public java.util.List<String> getModelFeatureIds() {
         return this.modelFeatureIds;
     }
 
@@ -154,7 +158,7 @@ public class ListModelFeaturesRequest extends Request {
     public static final class Builder extends Request.Builder<ListModelFeaturesRequest, Builder> {
         private String instanceId; 
         private String regionId; 
-        private java.util.List < String > modelFeatureIds; 
+        private java.util.List<String> modelFeatureIds; 
         private String name; 
         private String order; 
         private String owner; 
@@ -205,7 +209,7 @@ public class ListModelFeaturesRequest extends Request {
         /**
          * ModelFeatureIds.
          */
-        public Builder modelFeatureIds(java.util.List < String > modelFeatureIds) {
+        public Builder modelFeatureIds(java.util.List<String> modelFeatureIds) {
             String modelFeatureIdsShrink = shrink(modelFeatureIds, "ModelFeatureIds", "simple");
             this.putQueryParameter("ModelFeatureIds", modelFeatureIdsShrink);
             this.modelFeatureIds = modelFeatureIds;
@@ -258,10 +262,7 @@ public class ListModelFeaturesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
+         * ProjectId.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

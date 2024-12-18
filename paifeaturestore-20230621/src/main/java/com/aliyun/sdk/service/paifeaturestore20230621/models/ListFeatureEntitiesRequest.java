@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListFeatureEntitiesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FeatureEntityIds")
-    private java.util.List < String > featureEntityIds;
+    private java.util.List<String> featureEntityIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -47,7 +52,6 @@ public class ListFeatureEntitiesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
     @com.aliyun.core.annotation.Query
@@ -98,7 +102,7 @@ public class ListFeatureEntitiesRequest extends Request {
     /**
      * @return featureEntityIds
      */
-    public java.util.List < String > getFeatureEntityIds() {
+    public java.util.List<String> getFeatureEntityIds() {
         return this.featureEntityIds;
     }
 
@@ -154,7 +158,7 @@ public class ListFeatureEntitiesRequest extends Request {
     public static final class Builder extends Request.Builder<ListFeatureEntitiesRequest, Builder> {
         private String instanceId; 
         private String regionId; 
-        private java.util.List < String > featureEntityIds; 
+        private java.util.List<String> featureEntityIds; 
         private String name; 
         private String order; 
         private String owner; 
@@ -205,7 +209,7 @@ public class ListFeatureEntitiesRequest extends Request {
         /**
          * FeatureEntityIds.
          */
-        public Builder featureEntityIds(java.util.List < String > featureEntityIds) {
+        public Builder featureEntityIds(java.util.List<String> featureEntityIds) {
             String featureEntityIdsShrink = shrink(featureEntityIds, "FeatureEntityIds", "simple");
             this.putQueryParameter("FeatureEntityIds", featureEntityIdsShrink);
             this.featureEntityIds = featureEntityIds;
@@ -258,10 +262,7 @@ public class ListFeatureEntitiesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
+         * ProjectId.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

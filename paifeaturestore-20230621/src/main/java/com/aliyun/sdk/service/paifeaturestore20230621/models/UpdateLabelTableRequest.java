@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class UpdateLabelTableRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Fields")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -93,7 +98,7 @@ public class UpdateLabelTableRequest extends Request {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -109,7 +114,7 @@ public class UpdateLabelTableRequest extends Request {
         private String labelTableId; 
         private String regionId; 
         private String datasourceId; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String name; 
 
         private Builder() {
@@ -171,7 +176,7 @@ public class UpdateLabelTableRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.putBodyParameter("Fields", fields);
             this.fields = fields;
             return this;
@@ -202,7 +207,7 @@ public class UpdateLabelTableRequest extends Request {
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > attributes;
+        private java.util.List<String> attributes;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -229,7 +234,7 @@ public class UpdateLabelTableRequest extends Request {
         /**
          * @return attributes
          */
-        public java.util.List < String > getAttributes() {
+        public java.util.List<String> getAttributes() {
             return this.attributes;
         }
 
@@ -248,14 +253,14 @@ public class UpdateLabelTableRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > attributes; 
+            private java.util.List<String> attributes; 
             private String name; 
             private String type; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder attributes(java.util.List < String > attributes) {
+            public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
                 return this;
             }

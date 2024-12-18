@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
     private String featureEntityName;
 
     @com.aliyun.core.annotation.NameInMap("Fields")
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
@@ -73,7 +78,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
     private Integer TTL;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
@@ -143,7 +148,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -262,7 +267,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -291,7 +296,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         private String config; 
         private String featureEntityId; 
         private String featureEntityName; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String gmtSyncTime; 
@@ -308,7 +313,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         private String requestId; 
         private Boolean syncOnlineTable; 
         private Integer TTL; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private String type; 
         private String writeMethod; 
         private Boolean writeToFeatureDB; 
@@ -340,7 +345,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         /**
          * Fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
             return this;
         }
@@ -476,7 +481,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.tags = tags;
             return this;
         }
@@ -519,7 +524,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
      */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.List < String > attributes;
+        private java.util.List<String> attributes;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -544,7 +549,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < String > getAttributes() {
+        public java.util.List<String> getAttributes() {
             return this.attributes;
         }
 
@@ -563,14 +568,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > attributes; 
+            private java.util.List<String> attributes; 
             private String name; 
             private String type; 
 
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < String > attributes) {
+            public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
                 return this;
             }

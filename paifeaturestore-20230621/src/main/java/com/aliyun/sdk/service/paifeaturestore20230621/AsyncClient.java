@@ -62,12 +62,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateModelFeatureResponse> createModelFeature(CreateModelFeatureRequest request);
 
     /**
-     * @param request the request parameters of CreateModelFeatureTrainingSetFGTable  CreateModelFeatureTrainingSetFGTableRequest
-     * @return CreateModelFeatureTrainingSetFGTableResponse
-     */
-    CompletableFuture<CreateModelFeatureTrainingSetFGTableResponse> createModelFeatureTrainingSetFGTable(CreateModelFeatureTrainingSetFGTableRequest request);
-
-    /**
      * @param request the request parameters of CreateProject  CreateProjectRequest
      * @return CreateProjectResponse
      */
@@ -114,12 +108,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteProjectResponse
      */
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
-
-    /**
-     * @param request the request parameters of ExportModelFeatureTrainingSetFGTable  ExportModelFeatureTrainingSetFGTableRequest
-     * @return ExportModelFeatureTrainingSetFGTableResponse
-     */
-    CompletableFuture<ExportModelFeatureTrainingSetFGTableResponse> exportModelFeatureTrainingSetFGTable(ExportModelFeatureTrainingSetFGTableRequest request);
 
     /**
      * @param request the request parameters of ExportModelFeatureTrainingSetTable  ExportModelFeatureTrainingSetTableRequest
@@ -324,12 +312,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateModelFeatureFGFeatureResponse
      */
     CompletableFuture<UpdateModelFeatureFGFeatureResponse> updateModelFeatureFGFeature(UpdateModelFeatureFGFeatureRequest request);
-
-    /**
-     * @param request the request parameters of UpdateModelFeatureFGInfo  UpdateModelFeatureFGInfoRequest
-     * @return UpdateModelFeatureFGInfoResponse
-     */
-    CompletableFuture<UpdateModelFeatureFGInfoResponse> updateModelFeatureFGInfo(UpdateModelFeatureFGInfoRequest request);
 
     /**
      * @param request the request parameters of UpdateProject  UpdateProjectRequest

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AvaliableFeatures")
-    private java.util.List < AvaliableFeatures> avaliableFeatures;
+    private java.util.List<AvaliableFeatures> avaliableFeatures;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -38,7 +43,7 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
     /**
      * @return avaliableFeatures
      */
-    public java.util.List < AvaliableFeatures> getAvaliableFeatures() {
+    public java.util.List<AvaliableFeatures> getAvaliableFeatures() {
         return this.avaliableFeatures;
     }
 
@@ -57,14 +62,14 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AvaliableFeatures> avaliableFeatures; 
+        private java.util.List<AvaliableFeatures> avaliableFeatures; 
         private Long totalCount; 
         private String requestId; 
 
         /**
          * AvaliableFeatures.
          */
-        public Builder avaliableFeatures(java.util.List < AvaliableFeatures> avaliableFeatures) {
+        public Builder avaliableFeatures(java.util.List<AvaliableFeatures> avaliableFeatures) {
             this.avaliableFeatures = avaliableFeatures;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FeatureViewConfig")
-    private java.util.Map < String, FeatureViewConfigValue > featureViewConfig;
+    private java.util.Map<String, FeatureViewConfigValue> featureViewConfig;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LabelInputConfig")
@@ -95,7 +100,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
     /**
      * @return featureViewConfig
      */
-    public java.util.Map < String, FeatureViewConfigValue > getFeatureViewConfig() {
+    public java.util.Map<String, FeatureViewConfigValue> getFeatureViewConfig() {
         return this.featureViewConfig;
     }
 
@@ -131,7 +136,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         private String instanceId; 
         private String modelFeatureId; 
         private String regionId; 
-        private java.util.Map < String, FeatureViewConfigValue > featureViewConfig; 
+        private java.util.Map<String, FeatureViewConfigValue> featureViewConfig; 
         private LabelInputConfig labelInputConfig; 
         private Long realTimeIterateInterval; 
         private Long realTimePartitionCountValue; 
@@ -189,7 +194,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         /**
          * FeatureViewConfig.
          */
-        public Builder featureViewConfig(java.util.Map < String, FeatureViewConfigValue > featureViewConfig) {
+        public Builder featureViewConfig(java.util.Map<String, FeatureViewConfigValue> featureViewConfig) {
             this.putBodyParameter("FeatureViewConfig", featureViewConfig);
             this.featureViewConfig = featureViewConfig;
             return this;
@@ -249,7 +254,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         private String eventTime;
 
         @com.aliyun.core.annotation.NameInMap("Partitions")
-        private java.util.Map < String, java.util.Map<String, ?>> partitions;
+        private java.util.Map<String, java.util.Map<String, ?>> partitions;
 
         private LabelInputConfig(Builder builder) {
             this.eventTime = builder.eventTime;
@@ -274,13 +279,13 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         /**
          * @return partitions
          */
-        public java.util.Map < String, java.util.Map<String, ?>> getPartitions() {
+        public java.util.Map<String, java.util.Map<String, ?>> getPartitions() {
             return this.partitions;
         }
 
         public static final class Builder {
             private String eventTime; 
-            private java.util.Map < String, java.util.Map<String, ?>> partitions; 
+            private java.util.Map<String, java.util.Map<String, ?>> partitions; 
 
             /**
              * EventTime.
@@ -293,7 +298,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
             /**
              * Partitions.
              */
-            public Builder partitions(java.util.Map < String, java.util.Map<String, ?>> partitions) {
+            public Builder partitions(java.util.Map<String, java.util.Map<String, ?>> partitions) {
                 this.partitions = partitions;
                 return this;
             }
@@ -313,7 +318,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
      */
     public static class TrainingSetConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Partitions")
-        private java.util.Map < String, java.util.Map<String, ?>> partitions;
+        private java.util.Map<String, java.util.Map<String, ?>> partitions;
 
         private TrainingSetConfig(Builder builder) {
             this.partitions = builder.partitions;
@@ -330,17 +335,17 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         /**
          * @return partitions
          */
-        public java.util.Map < String, java.util.Map<String, ?>> getPartitions() {
+        public java.util.Map<String, java.util.Map<String, ?>> getPartitions() {
             return this.partitions;
         }
 
         public static final class Builder {
-            private java.util.Map < String, java.util.Map<String, ?>> partitions; 
+            private java.util.Map<String, java.util.Map<String, ?>> partitions; 
 
             /**
              * Partitions.
              */
-            public Builder partitions(java.util.Map < String, java.util.Map<String, ?>> partitions) {
+            public Builder partitions(java.util.Map<String, java.util.Map<String, ?>> partitions) {
                 this.partitions = partitions;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class PublishFeatureViewTableRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Partitions")
-    private java.util.Map < String, java.util.Map<String, ?>> partitions;
+    private java.util.Map<String, java.util.Map<String, ?>> partitions;
 
     private PublishFeatureViewTableRequest(Builder builder) {
         super(builder);
@@ -125,7 +130,7 @@ public class PublishFeatureViewTableRequest extends Request {
     /**
      * @return partitions
      */
-    public java.util.Map < String, java.util.Map<String, ?>> getPartitions() {
+    public java.util.Map<String, java.util.Map<String, ?>> getPartitions() {
         return this.partitions;
     }
 
@@ -137,7 +142,7 @@ public class PublishFeatureViewTableRequest extends Request {
         private String eventTime; 
         private String mode; 
         private Boolean offlineToOnline; 
-        private java.util.Map < String, java.util.Map<String, ?>> partitions; 
+        private java.util.Map<String, java.util.Map<String, ?>> partitions; 
 
         private Builder() {
             super();
@@ -233,7 +238,7 @@ public class PublishFeatureViewTableRequest extends Request {
         /**
          * Partitions.
          */
-        public Builder partitions(java.util.Map < String, java.util.Map<String, ?>> partitions) {
+        public Builder partitions(java.util.Map<String, java.util.Map<String, ?>> partitions) {
             this.putBodyParameter("Partitions", partitions);
             this.partitions = partitions;
             return this;

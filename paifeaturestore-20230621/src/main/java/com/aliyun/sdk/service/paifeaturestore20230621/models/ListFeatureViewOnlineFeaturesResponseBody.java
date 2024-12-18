@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFeatureViewOnlineFeaturesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OnlineFeatures")
-    private java.util.List < String > onlineFeatures;
+    private java.util.List<String> onlineFeatures;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListFeatureViewOnlineFeaturesResponseBody extends TeaModel {
     /**
      * @return onlineFeatures
      */
-    public java.util.List < String > getOnlineFeatures() {
+    public java.util.List<String> getOnlineFeatures() {
         return this.onlineFeatures;
     }
 
@@ -46,13 +51,13 @@ public class ListFeatureViewOnlineFeaturesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > onlineFeatures; 
+        private java.util.List<String> onlineFeatures; 
         private String requestId; 
 
         /**
          * OnlineFeatures.
          */
-        public Builder onlineFeatures(java.util.List < String > onlineFeatures) {
+        public Builder onlineFeatures(java.util.List<String> onlineFeatures) {
             this.onlineFeatures = onlineFeatures;
             return this;
         }
