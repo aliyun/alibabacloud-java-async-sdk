@@ -26,10 +26,14 @@ public class FeatureViewConfigValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Equal")
     private Boolean equal;
 
+    @com.aliyun.core.annotation.NameInMap("UseMock")
+    private Boolean useMock;
+
     private FeatureViewConfigValue(Builder builder) {
         this.partitions = builder.partitions;
         this.eventTime = builder.eventTime;
         this.equal = builder.equal;
+        this.useMock = builder.useMock;
     }
 
     public static Builder builder() {
@@ -61,10 +65,18 @@ public class FeatureViewConfigValue extends TeaModel {
         return this.equal;
     }
 
+    /**
+     * @return useMock
+     */
+    public Boolean getUseMock() {
+        return this.useMock;
+    }
+
     public static final class Builder {
         private java.util.Map<String, FeatureViewConfigValuePartitionsValue> partitions; 
         private String eventTime; 
         private Boolean equal; 
+        private Boolean useMock; 
 
         /**
          * Partitions.
@@ -87,6 +99,14 @@ public class FeatureViewConfigValue extends TeaModel {
          */
         public Builder equal(Boolean equal) {
             this.equal = equal;
+            return this;
+        }
+
+        /**
+         * UseMock.
+         */
+        public Builder useMock(Boolean useMock) {
+            this.useMock = useMock;
             return this;
         }
 

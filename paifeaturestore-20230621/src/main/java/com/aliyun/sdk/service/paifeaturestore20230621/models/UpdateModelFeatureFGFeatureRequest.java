@@ -41,7 +41,6 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Reserves")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> reserves;
 
     @com.aliyun.core.annotation.Body
@@ -197,7 +196,7 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * Reserves.
          */
         public Builder reserves(java.util.List<String> reserves) {
             this.putBodyParameter("Reserves", reserves);

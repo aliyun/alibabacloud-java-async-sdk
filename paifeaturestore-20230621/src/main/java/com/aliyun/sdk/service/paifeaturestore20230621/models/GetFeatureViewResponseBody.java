@@ -44,6 +44,9 @@ public class GetFeatureViewResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LastSyncConfig")
     private String lastSyncConfig;
 
+    @com.aliyun.core.annotation.NameInMap("MockTableName")
+    private String mockTableName;
+
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -99,6 +102,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         this.gmtSyncTime = builder.gmtSyncTime;
         this.joinId = builder.joinId;
         this.lastSyncConfig = builder.lastSyncConfig;
+        this.mockTableName = builder.mockTableName;
         this.name = builder.name;
         this.owner = builder.owner;
         this.projectId = builder.projectId;
@@ -185,6 +189,13 @@ public class GetFeatureViewResponseBody extends TeaModel {
      */
     public String getLastSyncConfig() {
         return this.lastSyncConfig;
+    }
+
+    /**
+     * @return mockTableName
+     */
+    public String getMockTableName() {
+        return this.mockTableName;
     }
 
     /**
@@ -302,6 +313,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         private String gmtSyncTime; 
         private String joinId; 
         private String lastSyncConfig; 
+        private String mockTableName; 
         private String name; 
         private String owner; 
         private String projectId; 
@@ -387,6 +399,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
          */
         public Builder lastSyncConfig(String lastSyncConfig) {
             this.lastSyncConfig = lastSyncConfig;
+            return this;
+        }
+
+        /**
+         * MockTableName.
+         */
+        public Builder mockTableName(String mockTableName) {
+            this.mockTableName = mockTableName;
             return this;
         }
 
